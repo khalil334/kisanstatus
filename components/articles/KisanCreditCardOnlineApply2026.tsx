@@ -2,8 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
-const PUBLISHED = '2026-01-10T08:00:00+05:30';
-const MODIFIED = '2026-08-08T08:00:00+05:30';
+import { AUTHOR_NAME } from '@/lib/site-config';
+const PUBLISHED = '2025-12-24T10:29:44+05:30';
+const MODIFIED = '2025-12-29T08:11:53+05:30';
 
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
@@ -19,19 +20,17 @@ const RELATED_CARDS = [
     slug: 'PmKisan24viKist2026',
     title: 'PM Kisan 24vi Kist Status',
     desc: 'Apna ₹2000 installment status aur eKYC errors abhi fix karein.',
-    emoji: '📅'
   },
   {
     slug: 'KisanRinKahaSeLe2026',
     title: 'Kisan Loan Kahan Se Milega',
     desc: 'Mudra aur KCC ke beech sahi agriculture loan choice kaise karein.',
-    emoji: '🏦'
+    emoji: ''
   },
   {
     slug: 'AgriStackKyaHai2026',
     title: 'Digital Kisan ID (AgriStack)',
     desc: 'Unified ID banakar fast-track loan approval kaise paayein.',
-    emoji: '🆔'
   },
 ];
 
@@ -89,10 +88,10 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -134,7 +133,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         <section className="mb-8">
           <SH>Kisan Credit Card (KCC) Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Seedhi baat karo. Yeh koi personal ya business loan nahi hai. RBI aur NABARD ne isse specifically kheti ke cash-flow gaps ko cover karne ke liye design kiya hai. Chahe Kharif ki buwai ho ya Rabi ki katai, KCC aapko local sahukar ke 24-36% byaj se bachata hai.
+            Ek galatfehmi pehle door kar lein. Yeh koi personal ya business loan nahi hai. RBI aur NABARD ne isse specifically kheti ke cash-flow gaps ko cover karne ke liye design kiya hai. Chahe Kharif ki buwai ho ya Rabi ki katai, KCC aapko local sahukar ke 24-36% byaj se bachata hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Banks ke paas directive hai ki eligible kisanon ko yeh facility deni hi hogi. Agar koi branch arbitrary reason dekar reject karti hai, toh unhe written justification dena padta hai.
@@ -176,7 +175,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             </div>
             <div className="flex gap-3 text-sm">
               <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Stage 2</span>
-              <p className="text-[var(--color-text-muted)]"><strong>Application + verification.</strong> Form ke saath bank PM Kisan beneficiary status aur KYC verify karta hai — agar aapka PM Kisan eKYC pehle se complete hai to ye step aasaan ho jaata hai. Acknowledgement receipt zaroor lein; follow-up isi se hota hai.</p>
+              <p className="text-[var(--color-text-muted)]"><strong>Application + verification.</strong> Form ke saath bank PM Kisan beneficiary status aur KYC verify karta hai — agar aapka PM Kisan eKYC pehle se complete hai to ye step aasaan ho jaata hai. Acknowledgement receipt le lein; follow-up isi se hota hai.</p>
             </div>
             <div className="flex gap-3 text-sm">
               <span className="font-black text-green-700 dark:text-green-400 whitespace-nowrap">Stage 3</span>
@@ -393,7 +392,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Pro Tip:</strong> Hamesha 2 photocopies aur 1 digital scan apne phone mein ready rakhein. Branch ke bahar xerox machine aksar kharab hoti hai. Original documents wapas lene ke liye hamesha remind karein.
+            <strong>Ek Kaam Ki Baat:</strong> Hamesha 2 photocopies aur 1 digital scan apne phone mein ready rakhein. Branch ke bahar xerox machine aksar kharab hoti hai. Original documents wapas lene ke liye hamesha remind karein.
           </p>
         </section>
 
@@ -417,13 +416,13 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Branch Visit (Recommended)</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Online portals exist karte hain, lekin sach bolun? Branch visit zyada reliable hai. Kyun? Kyunki land record verification kai banks (khas kar Cooperative aur RRBs) mein abhi bhi manual hota hai. Online submit karne ke 2-3 hafte baad pata chalta hai ki document reject hua. Branch mein turant feedback milta hai aur galti wahin correct ho jaati hai.
+            Online portals exist karte hain, lekin sach bolun? Branch visit zyada reliable hai. Kyun? Kyunki land record verification kai banks (khas kar Cooperative aur RRBs) mein abhi bhi manual hota hai. Online submit karne ke 2-3 hafte baad pata chalta hai ki document reject hua. Branch mein feedback wahin mil jaata hai aur galti usi counter par correct ho jaati hai.
           </p>
           <StepList>
             <SI n={1}>Subah 10:00 - 11:00 baje jaayein (Officers fresh hote hain, dopahar mein rush).</SI>
             <SI n={2}>Direct Loan Officer ya Agriculture desk se miliye.</SI>
             <SI n={3}>Naam spelling triple-check karein: Aadhaar = Bank Passbook = Land Record.</SI>
-            <SI n={4}>Acknowledgement receipt with reference number zaroor collect karein.</SI>
+            <SI n={4}>Acknowledgement receipt with reference number counter se collect karein.</SI>
             <SI n={5}>7-10 din baad follow-up karein (call ya visit dono chalega).</SI>
           </StepList>
 
@@ -452,7 +451,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         </div>
 
         <section className="mb-8">
-          <SH>Top 5 Rejection Reasons + Turant Fix</SH>
+          <SH>Top 5 Rejection Reasons Aur Unka Fix</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Yeh 5 reasons sabse zyada common hain jo bank counter par dekhe jaate hain.
           </p>
@@ -533,9 +532,11 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Timing Hi Sab Kuch Hai: May-June Ya Agla Season</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Kharif June-July mein. Kisan Credit Card chahiye toh May-June mein apply karo. Last minute = planting miss.
+            Kharif ki bijai June-July mein hoti hai, aur naye applicants ki full verification mein 15-20 din tak
+            nikal sakte hain — upar se document reject hua toh cycle dobara. Isliye May-June wali window chook
+            gaye toh paisa bijai ke baad aayega, jab uska sabse zyada matlab tha. Neeche ka order isi wajah se hai:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
             <li>Documents ready karo (checklist upar hai)</li>
@@ -555,15 +556,15 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         />
 
         <CalcBanner
-          icon="🏦"
+          icon=""
           title="Apni EMI Calculate Karo"
           desc="KCC loan ki monthly payment aur total interest jaano — 4% effective rate par"
-          primaryCta={{ href: '/calculator/kcc-loan-emi', label: '🏦 EMI Calculator →' }}
-          secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities Dekho' }}
+          primaryCta={{ href: '/calculator/kcc-loan-emi', label: 'EMI Calculator →' }}
+          secondaryCta={{ href: '/calculator', label: 'Sab Utilities Dekho' }}
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Zaroori Articles</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Related Articles — Yeh Bhi Padho</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link
@@ -588,9 +589,9 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/KisanRinKahaSeLe2026', l: '🏦 Kisan Loan Guide' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/calculator/kcc-loan-emi', l: '🧮 EMI Calculator' },
+          { href: '/articles/KisanRinKahaSeLe2026', l: 'Kisan Loan Guide' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/calculator/kcc-loan-emi', l: 'EMI Calculator' },
         ]} />
         <Disclaimer />
       </div>

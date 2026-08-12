@@ -407,7 +407,7 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
       </div>
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
-        <p className="text-2xl mb-2">🌾</p>
+        <p className="text-2xl mb-2"></p>
         <p className="font-black text-lg mb-1">Mandi Bhav Roz Dekho</p>
         <p className="text-green-100 text-sm mb-4">
           Apni mandi ka taaza bhav aur rujhaan — bechne ka sahi din pakdo.
@@ -417,13 +417,13 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
             href="/articles/mandi-bhav-today"
             className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
           >
-            📈 Mandi Bhav Dekho →
+             Mandi Bhav Dekho →
           </Link>
           <Link
             href="/calculator"
             className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
           >
-            🧮 Sab Utilities Dekho
+             सारे किसान tools एक जगह
           </Link>
         </div>
       </div>
@@ -483,19 +483,19 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
-        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">आगे पढ़ने लायक</h3>
+        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">Related Articles — Yeh Bhi Padho</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li>
-            <Link href="/articles/mandi-bhav-today">📈 Mandi Bhav Today</Link>
+            <Link href="/articles/mandi-bhav-today">Mandi Bhav Today</Link>
           </li>
           <li>
-            <Link href="/articles/hi/npci-aadhaar-seeding">🏦 NPCI आधार सीडिंग</Link>
+            <Link href="/articles/hi/npci-aadhaar-seeding">आधार सीडिंग और DBT की guide</Link>
           </li>
           <li>
-            <Link href="/articles/hi/kcc-limit-kaise-badhaye">💳 KCC लिमिट कैसे बढ़ाएं</Link>
+            <Link href="/articles/hi/kcc-limit-kaise-badhaye">KCC limit ₹5 लाख तक ले जाने का रास्ता</Link>
           </li>
           <li>
-            <Link href="/articles/KisanRinKahaSeLe2026">🏦 Kisan Rin — कहां से लें</Link>
+            <Link href="/articles/KisanRinKahaSeLe2026">खेती के loan के सब विकल्प</Link>
           </li>
         </ul>
       </div>

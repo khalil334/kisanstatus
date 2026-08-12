@@ -2,9 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { IB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
-const PUBLISHED = '2026-07-31T09:00:00+05:30';
-const MODIFIED = '2026-07-31T16:30:00+05:30';
+const PUBLISHED = '2026-05-24T20:56:18+05:30';
+const MODIFIED = '2026-06-02T15:23:46+05:30';
 
 const FAQS_DATA = [
   {
@@ -25,7 +26,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Agar main beech mein payment karna band kar dun toh kya hoga?',
-    a: 'Ghabraiye mat, aapka pura paisa nahi doobta, lekin nuksan zaroor hota hai. Aapko aapka apna jama kiya hua contribution aur uspar bana simple interest wapas mil jayega. Lekin dhyan rahe, government ka diya hua hissa pension fund mein hi chala jata hai. Isliye main hamesha kehta hoon ki beech mein chhodna financially nuksan deh hai.',
+    a: 'Ghabraiye mat, aapka pura paisa nahi doobta, lekin nuksan hota hai. Aapko aapka apna jama kiya hua contribution aur uspar bana simple interest wapas mil jayega. Lekin dhyan rahe, government ka diya hua hissa pension fund mein hi chala jata hai. Isliye main hamesha kehta hoon ki beech mein chhodna financially nuksan deh hai.',
   },
   {
     q: 'Kya APY wale ko bhi PM Kisan Samman Nidhi ka fayda milta hai?',
@@ -51,9 +52,9 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
               articleSection: 'Agriculture & Pension Schemes',
               wordCount: 2200,
               author: {
-                '@type': 'Organization',
-                name: 'KisanStatus Team',
-                url: 'https://kisanstatus.com/about',
+                '@type': 'Person',
+                name: AUTHOR_NAME,
+                url: AUTHOR_URL,
               },
               publisher: {
                 '@type': 'Organization',
@@ -92,10 +93,10 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -199,13 +200,13 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
 
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-              <h4 className="font-black text-green-800 dark:text-green-300 mb-2">👨🏾‍🌾 Ramesh (PMKMY choose kiya)</h4>
+              <h4 className="font-black text-green-800 dark:text-green-300 mb-2">Ramesh (PMKMY choose kiya)</h4>
               <p className="text-xs text-[var(--color-text-muted)] mb-2">Ramesh ke paas 1.5 acre zameen hai. 25 saal ki umar mein uska monthly contribution <strong>₹80</strong> hai. Government bhi ₹80 degi. Total fund mein har mahine ₹160 jayenge. 35 saal tak yeh silsila chala.</p>
               <p className="text-xs font-bold text-green-800 dark:text-green-300">Result: Kam monthly bojh uthakar, government ke bharose ₹3000/month pension pakki.</p>
             </div>
 
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
-              <h4 className="font-black text-blue-800 dark:text-blue-300 mb-2">👨🏽‍🌾 Suresh (APY choose kiya)</h4>
+              <h4 className="font-black text-blue-800 dark:text-blue-300 mb-2">Suresh (APY choose kiya)</h4>
               <p className="text-xs text-[var(--color-text-muted)] mb-2">Suresh ne APY mein ₹3000 pension ka slab chuna. 25 saal ki umar mein uska monthly contribution lagbhag <strong>₹210</strong> hai. Government ka koi match nahi milega. 35 saal tak yeh amount uski jeb se jayega.</p>
               <p className="text-xs font-bold text-blue-800 dark:text-blue-300">Result: Zyada monthly bojh uthakar same ₹3000/month pension, bina kisi extra help ke.</p>
             </div>
@@ -269,7 +270,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
             <strong>APY mein:</strong> Yahan bhi premature exit par aapko corpus mil sakta hai, lekin iske liye bhi strict conditions hain aur process thoda lamba ho sakta hai.
           </p>
           <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-            <em>Ek limitation acknowledge karun:</em> Exact exit calculation har individual case par depend karti hai (kitne saal contribution diya, interest rate kya tha). Isliye beech mein nikalne ka sochne se pehle apne nazdeeki CSC ya bank branch se ek baar written mein confirm zaroor kar lein.
+            <em>Ek limitation acknowledge karun:</em> Exact exit calculation har individual case par depend karti hai (kitne saal contribution diya, interest rate kya tha). Isliye beech mein nikalne ka sochne se pehle apne nazdeeki CSC ya bank branch se ek baar written mein confirm kara lein.
           </p>
         </section>
 
@@ -304,18 +305,18 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Poochhe Jaane Wale Sawal
+            Compare Karte Waqt Ke Zaroori Sawal
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PMKMY vs APY — Common Confusions" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Aakhri Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Faisla Ek Number Par Tikta Hai: 1:1 Match</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Dost, pension scheme koi lottery nahi hai, yeh aapke aaj ke chhote tyag ka kal ka bada sahara hai. Dono schemes mein ₹3000 pension ka farak sirf numbers ka nahi, balki "government support" ka hai.
+            Poori comparison ko ek number mein nichoda ja sakta hai: PMKMY mein sarkar aapke har rupaye ke saamne apna rupaya rakhti hai, APY mein nahi. 40 saal ki umar par ₹3000 pension ke liye PMKMY ₹200/mahina maangti hai, APY ₹420–430 — same pension, dogune se zyada daam.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Agar aap eligible hain, toh PMKMY se behtar koi deal market mein nahi hai. Jaldi karein, kyunki umar badhne ke saath monthly contribution bhi badhta jayega. Koi doubt ho toh niche comment karein ya apne nazdeeki CSC se baat karein. Aapka budhapa surakshit, toh aapka parivaar surakshit.
+            APY sirf do surat mein aage hai: aapke paas 2 hectare wali kisan eligibility nahi hai, ya aapko ₹3000 se bade slab (₹5000 tak) ki zaroorat hai. In dono mein se koi lagoo nahi hota toh comparison yahin khatam ho jaata hai — eligible kisan ke liye 1:1 match ko haraane wala product filhaal market mein nahi hai.
           </p>
         </div>
 
@@ -328,22 +329,19 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Ye Bhi Padhein</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Scheme Samajhne Ke Aur Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link href="/maandhan/pm-kisan-maandhan-auto-debit-poora-sach" className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300">
-              <div className="text-2xl mb-2">💳</div>
               <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">Auto Debit Ka Sach</h4>
               <p className="text-xs text-gray-500 dark:text-gray-400 mb-3 line-clamp-2">PM Kisan ki kist se paisa kyun kat raha hai? NACH mandate samjhiye.</p>
               <span className="text-xs font-semibold text-green-600 flex items-center gap-1">Read More →</span>
             </Link>
             <Link href="/maandhan/pm-kisan-maandhan-withdrawal-refund-rules" className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300">
-              <div className="text-2xl mb-2">💸</div>
               <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">Withdrawal Rules</h4>
               <p className="text-xs text-gray-500 dark:text-gray-400 mb-3 line-clamp-2">Beech mein nikalne par kitna paisa wapas milta hai, jaaniye sach.</p>
               <span className="text-xs font-semibold text-green-600 flex items-center gap-1">Read More →</span>
             </Link>
             <Link href="/articles/PmKisanMasterGuide2026" className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300">
-              <div className="text-2xl mb-2">📚</div>
               <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">Master Guide</h4>
               <p className="text-xs text-gray-500 dark:text-gray-400 mb-3 line-clamp-2">PM Kisan se judi har chhoti-badi jankari ek hi jagah.</p>
               <span className="text-xs font-semibold text-green-600 flex items-center gap-1">Read More →</span>
@@ -353,9 +351,9 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: '📝 Registration Guide' },
-          { href: '/maandhan/pm-kisan-maandhan-auto-debit-poora-sach', l: '💳 Auto Debit' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: 'Registration Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-auto-debit-poora-sach', l: 'Auto Debit' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
         <Disclaimer />
       </div>

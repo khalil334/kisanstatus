@@ -2,14 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan Interest Rate', emoji: '🏦' },
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashupalan Loan Yojana', emoji: '🐃' },
-  { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan Loan & NLM Subsidy', emoji: '🐔' },
-  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Rashtriya Gokul Mission Subsidy', emoji: '🐄' },
-  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Portal Loan Apply', emoji: '💻' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan — Rate Guide' },
+  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Gokul Mission Subsidy' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
 ];
 
 const FAQS_DATA = [
@@ -124,10 +122,10 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
             Dairy Farm Loan Bina Collateral 2026: Zameen Girvi Rakhe Bina ₹20 Lakh Tak Kaise Milega
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 11 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -404,7 +402,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         <DB>
           <strong>Sabse aam galti:</strong> working capital DPR mein daala hi nahi jata. Pashu aa gaye, shed ban gaya,
           aur pehle mahine chara kharidne ke paise nahi bache. Bank se udhaar lena mushkil, aur doodh abhi shuru nahi
-          hua. Kam se kam 3 mahine ka chara kharch DPR mein zaroor jodwao.
+          hua. Kam se kam 3 mahine ka chara kharch DPR mein jodwa hi lo.
         </DB>
 
         <Image
@@ -571,7 +569,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         <SH>Aapke Sawaal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             PMEGP e-portal — Khadi and Village Industries Commission (KVIC).{' '}
@@ -594,9 +592,9 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles/sbi-dairy-loan-interest-rate', l: '🏦 SBI Dairy Loan Rate' },
-          { href: '/articles/bihar-pashupalan-loan-yojana', l: '🐃 Bihar Pashupalan Loan' },
-          { href: '/articles/category/loan', l: '📂 Loan Guides' },
+          { href: '/articles/sbi-dairy-loan-interest-rate', l: 'SBI Dairy Loan Rate' },
+          { href: '/articles/bihar-pashupalan-loan-yojana', l: 'Bihar Pashupalan Loan' },
+          { href: '/articles/category/loan', l: 'Loan Guides' },
         ]} />
         <Disclaimer />
       </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import PMKisanBenefitCalcPage from '@/components/calculators/PMKisanBenefitCalcPage';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/pm-kisan-benefit`;
@@ -7,6 +8,8 @@ const PAGE_URL = `${DOMAIN}/calculator/pm-kisan-benefit`;
 export const metadata: Metadata = {
   title: 'PM Kisan Benefit Calculator 2026',
   description: 'PM Kisan Samman Nidhi se kitna paisa milega, jaano turant. 1, 3 ya 5 saal ka total benefit calculate karein. ₹6,000 saalana. Bilkul free tool.',
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  creator: AUTHOR_NAME,
   keywords: [
     'pm kisan calculator',
     'pm kisan kitna paisa milega',
@@ -51,11 +54,6 @@ export default function Page() {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'INR',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      ratingCount: '2156',
     },
   };
 

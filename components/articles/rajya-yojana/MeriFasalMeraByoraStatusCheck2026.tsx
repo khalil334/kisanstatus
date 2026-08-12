@@ -114,7 +114,7 @@ const FAQS = [
   },
   {
     q: 'Registration ki koi fees lagti hai kya? CSC wala 200 rupay maang raha hai.',
-    a: 'Portal par registration bilkul free hai. CSC par sirf mamooli service charge banta hai — koi "file aage badhane" ke naam par zyada paisa maange to mana kar do aur helpline par shikayat karo.',
+    a: 'Portal par registration ka koi paisa nahi lagta. CSC par sirf mamooli service charge banta hai — koi "file aage badhane" ke naam par zyada paisa maange to mana kar do aur helpline par shikayat karo.',
   },
 ];
 
@@ -178,7 +178,7 @@ export default function MeriFasalMeraByoraStatusCheck2026({
       </p>
 
       <p>
-        Seedhi baat: <strong>MFMB me register aur verify hui fasal hi e-Kharid ke through
+        Is portal ka poora matlab ek line mein: <strong>MFMB me register aur verify hui fasal hi e-Kharid ke through
         MSP par bikti hai.</strong> Mandi ka gate pass isi data se banta hai, taul ki entry
         isi se judti hai, aur payment isi record ke bank account me jaati hai. Iske alawa
         fasal kharaab hone par muawza, Bhavantar Bharpai, bima — sab isi byore se linked
@@ -325,7 +325,7 @@ export default function MeriFasalMeraByoraStatusCheck2026({
           <td>Verified by Patwari</td>
           <td>
             Sab sahi. Ab e-Kharid schedule ka SMS aayega — mandi jaane se pehle wo message
-            zaroor check karo.
+            khol kar check karo.
           </td>
         </tr>
         <tr>
@@ -356,7 +356,7 @@ export default function MeriFasalMeraByoraStatusCheck2026({
       </p>
 
       <p>
-        Ek baat saaf-saaf: ye incentive turant nahi aata. Kharif 2024 wale round me bhi{' '}
+        Ek baat saaf-saaf: ye incentive usi hafte nahi aata. Kharif 2024 wale round me bhi{' '}
         <Ext href="https://timesofindia.indiatimes.com/city/chandigarh/direct-seeded-rice-haryana-govt-provided-rs-4k/acre-incentive-to-farmers-says-min/articleshow/129111044.cms">
           hazaron kisano ka payment mahino tak process me raha
         </Ext>{' '}
@@ -501,7 +501,7 @@ export default function MeriFasalMeraByoraStatusCheck2026({
 
       <section className="mb-8 not-prose">
         <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">
-          Meri Fasal Mera Byora FAQ 2026 — counter par roz poochhe jaane wale sawaal
+          Meri Fasal Mera Byora: CSC counter par roz uthne wale sawaal, seedhe jawab ke saath
         </p>
         <div className="space-y-4">
           {FAQS.map(({ q, a }) => (
@@ -510,10 +510,10 @@ export default function MeriFasalMeraByoraStatusCheck2026({
               className="border border-[var(--color-border)] rounded-xl overflow-hidden"
             >
               <p className="p-4 pb-2 font-semibold text-[var(--color-text)] text-sm m-0">
-                🧑‍🌾 Kisan: {q}
+                Kisan: {q}
               </p>
               <p className="px-4 pb-4 text-sm text-[var(--color-text-muted)] leading-relaxed m-0">
-                💬 Operator: {a}
+                 Operator: {a}
               </p>
             </div>
           ))}
@@ -524,15 +524,15 @@ export default function MeriFasalMeraByoraStatusCheck2026({
         <strong>Zaroori yaad-dihani:</strong> registration, verification, status check aur
         MSP payment — is poori chain me kahin koi sarkari fees nahi hai. Koi bhi &quot;paisa
         do, verify karwa denge&quot; kahe to samajh jao ki thagi hai. Aisi maang ki shikayat
-        turant krishi vibhag ya CM Window par karo.
+        usi din krishi vibhag ya CM Window par karo.
       </InfoBox>
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Ye article sirf madad ke liye hai. Window ki tareekh, incentive ki raqam aur
+          Ye guide registration ki uljhan door karne ke liye banayi gayi hai. Window ki tareekh, incentive ki raqam aur
           shartein har season badal sakti hain — final decision se pehle official portal ya
-          krishi office se zaroor confirm karein.
+          krishi office se confirm kara lein.
         </p>
       </div>
 

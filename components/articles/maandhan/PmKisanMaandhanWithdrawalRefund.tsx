@@ -2,28 +2,29 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
-const PUBLISHED = '2024-01-21T10:11:00+05:30';
-const MODIFIED = '2026-07-21T08:00:00+05:30';
+const PUBLISHED = '2026-03-23T11:18:53+05:30';
+const MODIFIED = '2026-04-06T10:23:34+05:30';
 
 const RELATED_CARDS = [
   {
     slug: 'pm-kisan-maandhan-registration-2026',
     title: 'Registration Kaise Karein',
     desc: 'CSC center ya online, dono tarike se apply karne ka poora tareeka.',
-    emoji: '📝',
+    
   },
   {
     slug: 'pm-kisan-maandhan-eligibility-documents',
     title: 'Kaun Apply Kar Sakta Hai',
     desc: 'Umar limit, zaroori documents aur kin farmers ko chhoot hai.',
-    emoji: '📄',
+    
   },
   {
     slug: 'pm-kisan-maandhan-pension-calculator',
     title: 'Contribution Calculator',
     desc: 'Apni umar daal kar dekhein har mahine kitna paisa jama karna hoga.',
-    emoji: '🧮',
+    
   },
 ];
 
@@ -67,7 +68,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
               headline: 'PM Kisan Maandhan Chhodne Ka Faisla Lene Se Pehle Ye Zaroor Padhein: Refund, Family Pension Aur Exit Ke Sach',
               description:
                 'Scheme beech mein chhodne par kitna paisa wapas milta hai, kisan ki mrityu par family ko kya milta hai, aur refund process mein kitna time lagta hai — sab kuch practical udaharan ke saath.',
-              author: { '@type': 'Organization', name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' },
+              author: { '@type': 'Person', name: AUTHOR_NAME, url: AUTHOR_URL },
               publisher: {
                 '@type': 'Organization',
                 name: 'KisanStatus',
@@ -111,14 +112,14 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️{' '}
+            <span>{' '}
               <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">
-                KisanStatus Team
+                {AUTHOR_NAME}
               </Link>
             </span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Update: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 9 min padhne mein</span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Update: {fmtDate(MODIFIED)}</span>
+            <span>9 min padhne mein</span>
           </div>
         </div>
       </div>
@@ -136,7 +137,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Exit se pehle apni passbook aur contribution history zaroor check karein
+            Exit se pehle apni passbook aur contribution history milaa kar check karein
           </p>
         </div>
 
@@ -345,24 +346,26 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Poochhe Jaane Wale Sawal
+            Withdrawal Aur Refund — Uthne Wale Sawal
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="Withdrawal aur Refund se judi FAQs" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Nichod Ye Hai</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Exit Ki Asli Keemat Sarkari Hissa Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Jab tak koi bahut majboori na ho, is scheme ko beech mein mat todiye — jo sarkari hissa aap chhod denge
-            wo asal mein aapki hi retirement security tha. Aur agar ghar mein koi hadsa ho jaye, toh ghabrane ki
-            zaroorat nahi: spouse ke paas hamesha koi na koi rasta khula rehta hai.
+            Withdrawal form bharne se pehle ek hisaab kaagaz par kar lein: voluntary exit par sirf aapka apna jama hissa
+            (+ interest) wapas aata hai — sarkar ka 1:1 co-contribution fund mein hi reh jaata hai. Yaani jitne saal
+            aap scheme mein rahe, utne saal ka matching paisa exit ke din chhod dete hain. Majboori ho toh yeh rasta
+            khula hai, lekin "paisa phas gaya" wali ghabrahat mein exit karna aadha corpus chhod kar jaana hai — aur
+            subscriber ki death par spouse ke paas continue karne se lekar corpus lene tak ke alag options waise bhi maujood hain.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Abhi tak registration nahi karwaya? Hamari{' '}
+            Exit rules pehle se samajh kar enroll karna hi sabse achha bachav hai — hamari{' '}
             <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="underline text-blue-600 dark:text-blue-400 font-medium">
               step-by-step registration guide
             </Link>{' '}
-            padh kar aaj hi shuru karein.
+            mein yeh section alag se diya gaya hai.
           </p>
         </div>
 
@@ -402,7 +405,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
         </div>
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Ye Bhi Padhein</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Milte-Julte Topics</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link
@@ -410,7 +413,6 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
                 href={`/maandhan/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
-                <div className="text-2xl mb-2">{card.emoji}</div>
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
                   {card.title}
                 </h4>
@@ -426,9 +428,9 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
         <AuthorBox modified={MODIFIED} />
         <BottomNav
           extraLinks={[
-            { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: '📝 Registration' },
-            { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: '📄 Eligibility' },
-            { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: '🧮 Calculator' },
+            { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: 'Registration' },
+            { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: 'Eligibility' },
+            { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: 'Calculator' },
           ]}
         />
         <Disclaimer />

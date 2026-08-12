@@ -2,6 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
+import { AuthorBox, FAQBlock } from '@/components/ArticleShared';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import GuideDisclaimer from '@/components/GuideDisclaimer';
+import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
   title: 'Silage Business Guide 2026: SMAM Subsidy & Profit',
@@ -18,7 +22,7 @@ export const metadata: Metadata = {
     'fodder preservation technique india',
     'small scale chara processing unit'
   ],
-  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
     title: 'Silage Business Guide 2026: SMAM Subsidy & Profit',
     description: 'Silage banane ka business kaise shuru karein — chara storage tarika, chaff cutter cost, SMAM subsidy aur real profit calculation, sab kuch is guide mein.',
@@ -46,82 +50,40 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'FAQPage',
-      '@id': 'https://kisanstatus.com/articles/silage-making-business-guide/#faq',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Packaged fodder packet kholne ke baad kitne din tak use karna chahiye?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Packet khulne ke 3-4 din ke andar use kar lena chahiye. Uske baad hawa lagne se fermentation reverse ho jata hai aur fungus lag sakta hai. Rozana thoda-thoda kaat kar nikalna sahi tarika hai.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kya yeh preserved fodder sirf gaay/bhains ke liye hai ya bakri/bhed bhi kha sakti hain?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Bakri, bhed aur ghode bhi khila sakte hain. Bas quantity alag hogi — chhote janwaron ke liye 1-2 kg rozana kaafi hai, bhains ko 8-10 kg tak chahiye.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Off-season (garmiyon) mein machinery aur staff ka kya karein?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Garmiyon mein demand girti hai kyunki hari ghaas khud hi available ho jaati hai. Ye time machinery servicing ke liye use karo. Staff ko hay making ya mineral mixture blending jaisa kaam do, taaki fixed cost nikalta rahe.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kya packaged fodder banane ke liye koi special training ya license chahiye?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Udyam Registration aur GST basic zaroorat hai. Branded feed bechna ho toh FSSAI license lagega. NDDB ya KVK ke short-term courses se fermentation aur quality control ka practical gyaan mil jata hai.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Silage business shuru karne ke liye kam se kam kitni zameen chahiye?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Apni zameen par makka ugana ho toh 2-3 acre se bhi shuruaat ho sakti hai, par 5 acre se upar hone par per-unit cost kam padta hai. Zameen bilkul na ho toh sirf processing unit laga kar kisaanon se makka khareed sakte ho — is model mein zameen ki zaroorat hi nahi.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Silage aur hay (sukha chara) mein kya farak hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Hay dhoop mein sukhaya jata hai aur ismein moisture 15% se kam reh jaati hai. Silage geeli hi rehti hai (moisture 60-70%) aur fermentation se preserve hoti hai, isliye nutrition aur palatability dono hay se better mani jaati hai.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ek chota silage unit kitne mahino mein apna paisa wapas kama leta hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Chhoti scale (1,000-1,500 packet mahina) par, achhi sales aur kam wastage ho toh 10-14 mahino mein investment recover ho sakta hai. Ye area ki demand aur pehle season ki quality control par kaafi depend karta hai.',
-          },
-        },
-      ],
-    },
-  ],
-};
+const silageMakingFaqs = [
+  {
+    q: 'Packaged fodder packet kholne ke baad kitne din tak use karna chahiye?',
+    a: 'Packet khulne ke 3-4 din ke andar use kar lena chahiye. Uske baad hawa lagne se fermentation reverse ho jata hai aur fungus lag sakta hai. Rozana thoda-thoda kaat kar nikalna sahi tarika hai.',
+  },
+  {
+    q: 'Kya yeh preserved fodder sirf gaay/bhains ke liye hai ya bakri/bhed bhi kha sakti hain?',
+    a: 'Bakri, bhed aur ghode bhi khila sakte hain. Bas quantity alag hogi — chhote janwaron ke liye 1-2 kg rozana kaafi hai, bhains ko 8-10 kg tak chahiye.',
+  },
+  {
+    q: 'Off-season (garmiyon) mein machinery aur staff ka kya karein?',
+    a: 'Garmiyon mein demand girti hai kyunki hari ghaas khud hi available ho jaati hai. Ye time machinery servicing ke liye use karo. Staff ko hay making ya mineral mixture blending jaisa kaam do, taaki fixed cost nikalta rahe.',
+  },
+  {
+    q: 'Kya packaged fodder banane ke liye koi special training ya license chahiye?',
+    a: 'Udyam Registration aur GST basic zaroorat hai. Branded feed bechna ho toh FSSAI license lagega. NDDB ya KVK ke short-term courses se fermentation aur quality control ka practical gyaan mil jata hai.',
+  },
+  {
+    q: 'Silage business shuru karne ke liye kam se kam kitni zameen chahiye?',
+    a: 'Apni zameen par makka ugana ho toh 2-3 acre se bhi shuruaat ho sakti hai, par 5 acre se upar hone par per-unit cost kam padta hai. Zameen bilkul na ho toh sirf processing unit laga kar kisaanon se makka khareed sakte ho.',
+  },
+  {
+    q: 'Silage aur hay (sukha chara) mein kya farak hai?',
+    a: 'Hay dhoop mein sukhaya jata hai aur ismein moisture 15% se kam reh jaati hai. Silage geeli hi rehti hai (moisture 60-70%) aur fermentation se preserve hoti hai, isliye poshan aur palatability dono hay se better mani jaati hai.',
+  },
+  {
+    q: 'Ek chota silage unit kitne mahino mein apna paisa wapas kama leta hai?',
+    a: 'Chhoti scale (1,000-1,500 packet mahina) par, achhi sales aur kam wastage ho toh 10-14 mahino mein investment recover ho sakta hai. Ye area ki demand aur pehle season ki quality control par kaafi depend karta hai.',
+  },
+];
 
 export default function SilageMaking() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
       <Image
         src="/images/kisanguides/silage-hero.webp"
         alt="Silage Packets Stacked Near Dairy Farm - Agri Business Guide 2026"
@@ -259,11 +221,11 @@ export default function SilageMaking() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Is investment ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> ek badhiya option hai — working capital ke liye limit badhwa sakte ho.
+        Is investment ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">KCC (Kisan Credit Card) guide</Link> ek badhiya option hai — working capital ke liye limit badhwa sakte ho.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Machinery ke liye <a href="https://www.mudra.org.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Mudra Loan</a> bhi le sakte ho — Tarun category mein ₹10 lakh tak bina collateral ke milta hai.
+        Machinery ke liye <a href="https://www.mudra.org.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Mudra Loan scheme</a> bhi le sakte ho — Tarun category mein ₹10 lakh tak bina collateral ke milta hai.
       </p>
 
       <Image
@@ -550,7 +512,7 @@ export default function SilageMaking() {
 
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
-          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">Bilkul Karein, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Dairy belt mein rehte ho (Haryana, Punjab, Gujarat, UP west, Maharashtra).</li>
             <li>• 5-10 acre zameen hai, ya contract farming kar sakte ho.</li>
@@ -561,12 +523,12 @@ export default function SilageMaking() {
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Nahi, agar:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">Sochna Padega, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Non-dairy area mein ho — grahak milna mushkil hoga.</li>
             <li>• Zameen nahi hai aur contract farming bhi option nahi hai.</li>
             <li>• Marketing se bachte ho — sirf utpadan karke baithna nahi chalega.</li>
-            <li>• Turant returns chahte ho — pehle 6 mahine sirf setup karne mein jaate hain.</li>
+            <li>• Pehle mahine se returns chahte ho — pehle 6 mahine sirf setup karne mein jaate hain.</li>
           </ul>
         </div>
       </div>
@@ -576,7 +538,7 @@ export default function SilageMaking() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Subsidy ka fayda zaroor uthao — 40-50% tak machinery par mil rahi hai. Par ye guaranteed nahi hai. Application process mein 3-6 mahine lag sakte hain, isliye planning subsidy ke bina karo. Mil gayi toh bonus samajh lo.
+        Subsidy ka fayda uthao — 40-50% tak machinery par mil rahi hai. Par ye guaranteed nahi hai. Application process mein 3-6 mahine lag sakte hain, isliye planning subsidy ke bina karo. Mil gayi toh bonus samajh lo.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -586,47 +548,18 @@ export default function SilageMaking() {
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Frequently Asked Questions (FAQs)
       </h2>
-      <div className="space-y-4 mb-8 not-prose">
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Packaged fodder packet kholne ke baad kitne din tak use karna chahiye?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Packet khulne ke 3-4 din ke andar use kar lena chahiye. Uske baad hawa lagne se fermentation reverse ho jata hai aur fungus lag sakta hai. Rozana thoda-thoda kaat kar nikalna sahi tarika hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Kya yeh preserved fodder sirf gaay/bhains ke liye hai ya bakri/bhed bhi kha sakti hain?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Bakri, bhed aur ghode bhi khila sakte hain. Bas quantity alag hogi — chhote janwaron ke liye 1-2 kg rozana kaafi hai, bhains ko 8-10 kg tak chahiye.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Off-season (garmiyon) mein machinery aur staff ka kya karein?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Garmiyon mein demand girti hai kyunki hari ghaas khud hi available ho jaati hai. Ye time machinery servicing ke liye use karo. Staff ko hay making ya mineral mixture blending jaisa kaam do, taaki fixed cost nikalta rahe.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Kya packaged fodder banane ke liye koi special training ya license chahiye?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Udyam Registration aur GST basic zaroorat hai. Branded feed bechna ho toh FSSAI license lagega. NDDB ya KVK ke short-term courses se fermentation aur quality control ka practical gyaan mil jata hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">5. Silage business shuru karne ke liye kam se kam kitni zameen chahiye?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Apni zameen par makka ugana ho toh 2-3 acre se bhi shuruaat ho sakti hai, par 5 acre se upar hone par per-unit cost kam padta hai. Zameen bilkul na ho toh sirf processing unit laga kar kisaanon se makka khareed sakte ho.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">6. Silage aur hay (sukha chara) mein kya farak hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Hay dhoop mein sukhaya jata hai aur ismein moisture 15% se kam reh jaati hai. Silage geeli hi rehti hai (moisture 60-70%) aur fermentation se preserve hoti hai, isliye poshan aur palatability dono hay se better mani jaati hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">7. Ek chota silage unit kitne mahino mein apna paisa wapas kama leta hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Chhoti scale (1,000-1,500 packet mahina) par, achhi sales aur kam wastage ho toh 10-14 mahino mein investment recover ho sakta hai. Ye area ki demand aur pehle season ki quality control par kaafi depend karta hai.</p>
-        </div>
-      </div>
+      <FAQBlock faqs={silageMakingFaqs} variant="inline" />
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Related reading: <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana guide</Link> aur <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">KCC online apply karne ka tarika</Link> bhi zaroor padhein, agar aap silage unit ke liye funding plan kar rahe ho.
+        Related reading: <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana guide</Link> aur <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">KCC online apply karne ka tarika</Link> bhi dekh lo, agar aap silage unit ke liye funding plan kar rahe ho.
       </p>
 
-      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
-        <p className="text-sm text-gray-700 dark:text-gray-300">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Yeh article general information ke liye hai. Actual costs, subsidies, aur procedures location aur circumstances ke hisaab se badal sakte hain. Koi bhi financial decision lene se pehle qualified professionals (agriculture officers, CAs) se consult karein. Latest information ke liye official sources se verify karte rahein. Last updated: July 2026.
-        </p>
-      </div>
+      <AuthorBox modified={getArticleBySlug('silage-making-business-guide')!.modifiedTime} />
+
+      <GuideDisclaimer
+        consult="agriculture officers, CAs"
+        modified={getArticleBySlug('silage-making-business-guide')!.modifiedTime}
+      />
     </article>
   );
 }

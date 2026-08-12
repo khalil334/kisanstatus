@@ -126,7 +126,7 @@ export default function RythuBharosaStatusCheck2026() {
       <h2>Naye Kisan Ka Pehla Season — Kis Kram Mein Kya Karein</h2>
 
       <p>
-        Zameen abhi naam par aayi hai — kharidi ya virasat se — to Rythu Bharosa ka safar
+        Zameen abhi naam par aayi hai — kharidi ya virasat se — to is scheme ka safar
         Dharani se shuru hota hai, portal se nahi. Kram ye hai: pehle registration ya
         succession ke zariye Dharani mein apna naam pattadar ke roop mein darj karwaayein
         aur nayi pattadar passbook lein. Phir bank mein Aadhaar seeding confirm karein —
@@ -179,14 +179,14 @@ export default function RythuBharosaStatusCheck2026() {
       </p>
 
       <ol>
-        <li>Rythu Bharosa portal par "Reports" ya "Beneficiary List" section mein jaayein.</li>
+        <li>Portal par "Reports" ya "Beneficiary List" section mein jaayein.</li>
         <li>Apna Zila (District), Mandal, aur Panchayat/Village select karein.</li>
         <li>Financial Year aur Season (Kharif/Rabi) select karein.</li>
         <li>"Get List" par click karein.</li>
         <li>Ek PDF ya table generate hoga jisme aapke gaon ke sabhi beneficiaries ke naam, account numbers (masked), aur amount likha hoga. Apna naam dhundhein.</li>
       </ol>
 
-      <h2>Padosi Ko Mil Gaya, Mujhe Nahi — Phase System Samjhein</h2>
+      <h2>List Mein Naam, Khaate Mein Sannata? Pehle Phase System Samjhein</h2>
 
       <p>
         Padosi ke account mein credit, aapke mein sannata — gussa aana laazmi hai. Lekin
@@ -225,7 +225,7 @@ export default function RythuBharosaStatusCheck2026() {
 
       <h3>1. Dharani Portal Mein Naam Update Nahi Hai</h3>
       <p>
-        <strong>Hal:</strong> Rythu Bharosa ka data seedha Dharani portal se aata hai. Agar aapne haal hi mein zameen khareedi hai ya virasat (inheritance) mein mili hai, lekin Dharani par mutation (namantaran) nahi hua, toh paisa purane malik ke account mein jaane ki koshish karega ya fail ho jayega. Turant MRO (Mandal Revenue Officer) office jaakar Dharani update karwayein.
+        <strong>Hal:</strong> Scheme ka data seedha Dharani portal se aata hai. Agar aapne haal hi mein zameen khareedi hai ya virasat (inheritance) mein mili hai, lekin Dharani par mutation (namantaran) nahi hua, toh paisa purane malik ke account mein jaane ki koshish karega ya fail ho jayega. Bina der MRO (Mandal Revenue Officer) office jaakar Dharani update karwayein.
       </p>
 
       <Fig
@@ -254,7 +254,7 @@ export default function RythuBharosaStatusCheck2026() {
       <p>
         Waise, iske baare mein maine upar seedha nahi bataya, par ek scenario itna common hai ki alag se likhna zaroori hai. Pita ka dehant ho gaya.
         Zameen ab bete-betiyon ke naam aani hai, lekin Dharani par mutation abhi purane
-        naam par hi hai. Aise mein Rythu Bharosa ka paisa purane record ke hisaab se
+        naam par hi hai. Aise mein paisa purane record ke hisaab se
         process hota hai, aur dehant ke baad account freeze hone se payment fail ho jaati
         hai. Ghar pehle hi dukh mein hai, upar se ye jhamela.
       </p>
@@ -265,7 +265,7 @@ export default function RythuBharosaStatusCheck2026() {
         (Meeseva se banta hai), sabhi legal heirs ke Aadhaar, aur agar koi heir apna hissa chhod
         raha hai toh registered relinquishment deed. MRO verification ke baad naye pattadar
         passbooks bante hain. Process mein aam taur par 3 se 6 hafte lagte hain. Jab tak mutation
-        complete nahi hota, us zameen ki Rythu Bharosa payment rukegi — isliye is kaam ko season
+        complete nahi hota, us zameen ki payment rukegi — isliye is kaam ko season
         shuru hone se pehle nipta lena sabse samajhdari ka kadam hai.
       </p>
 
@@ -407,17 +407,17 @@ export default function RythuBharosaStatusCheck2026() {
         Kai kisan sochte hain ki state scheme mili toh central wali cut jayegi. Aisa nahi hai.
         Rythu Bharosa aur PM Kisan bilkul alag-alag systems hain aur dono ka paisa ek hi account
         mein aa sakta hai. Farq itna hai ki PM Kisan mein amount fixed ₹6,000 saalana hai (zameen
-        chahe kitni bhi ho), jabki Rythu Bharosa per acre chalti hai.
+        chahe kitni bhi ho), jabki state wali scheme per acre chalti hai.
       </p>
 
       <p>
         Lekin dono ke records alag chalte hain, aur yahi se dikkat aati hai. Dharani mein aapka
         record perfect ho sakta hai aur phir bhi PM Kisan mein e-KYC pending hone se central wali
         kist ruk sakti hai — ya iska ulta. Isliye season mein ek baar dono status alag-alag check
-        kar lein: Rythu Bharosa portal par state wali, aur <code>pmkisan.gov.in</code> par central
-        wali. Passbook mein entry dekhte waqt bhi dhyan rakhein: Rythu Bharosa ki entry mein
+        kar lein: state portal par state wali, aur <code>pmkisan.gov.in</code> par central
+        wali. Passbook mein entry dekhte waqt bhi dhyan rakhein: state scheme ki entry mein
         "RYTHU" ya treasury ka reference hota hai, jabki PM Kisan ki entry "PMKISAN" naam se aati
-        hai. Isse turant pata chal jaata hai ki kaun sa paisa aaya aur kaun sa atka hai.
+        hai. Isse ek nazar mein pata chal jaata hai ki kaun sa paisa aaya aur kaun sa atka hai.
       </p>
 
       <h2>Baaki Rajyon Ka Hisaab</h2>
@@ -469,7 +469,7 @@ export default function RythuBharosaStatusCheck2026() {
         }}
       />
       <section className="mb-8 not-prose">
-        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Rythu Bharosa FAQ 2026</p>
+        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Rythu Bharosa par Telangana ke kisano ke chune hue sawaal</p>
         <div className="space-y-3">
           {FAQS_DATA.map(({ q, a }) => (
             <details
@@ -491,13 +491,13 @@ export default function RythuBharosaStatusCheck2026() {
       </section>
 
       <InfoBox type="tip">
-        <strong>Fraud se bachein:</strong> Rythu Bharosa registration ya status theek karne ke liye koi bhi sarkari officer ya agent aapse paise nahi maangta. Ye scheme 100% free hai. Agar koi "commission" maange, toh turant MRO office ya 1800-425-0888 (Telangana Kisan Call Center) par shikayat karein.
+        <strong>Fraud se bachein:</strong> Registration ya status theek karne ke liye koi bhi sarkari officer ya agent aapse paise nahi maangta. Ye scheme 100% free hai. Agar koi "commission" maange, toh seedha MRO office ya 1800-425-0888 (Telangana Kisan Call Center) par shikayat karein.
       </InfoBox>
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+          Is article ko sahayak samjhein, pramaan nahi. Payment aur patrata ka aakhri sach official portal ya MRO office ke record mein hi hota hai.
         </p>
       </div>
 

@@ -249,11 +249,11 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
         या पुरानी नौकरी की गलत जानकारी। आपत्ति का वजन कागजों से बनता है, बहस से नहीं। साथ ले जाइए:
       </p>
       <ul className="my-4 space-y-2 list-none pl-0">
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">📎</span><span><strong>Notice की copy</strong> — उसी पर लिखा होगा कि किस आधार पर अपात्र गिने गए।</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">📎</span><span><strong>खतौनी/जमीन का ताजा record</strong> — अगर वजह जमीन से जुड़ी बताई गई है।</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">📎</span><span><strong>आधार card</strong> और registration का विवरण।</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">📎</span><span><strong>Tax न भरने का प्रमाण</strong> — अगर वजह income tax बताई गई है (हमनाम की गड़बड़ी यहीं पकड़ी जाती है)।</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">📎</span><span>अपना लिखित जवाब — दो प्रतियों में, ताकि एक पर received की मुहर लगवाकर वापस ले सकें।</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span><strong>Notice की copy</strong> — उसी पर लिखा होगा कि किस आधार पर अपात्र गिने गए।</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span><strong>खतौनी/जमीन का ताजा record</strong> — अगर वजह जमीन से जुड़ी बताई गई है।</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span><strong>आधार card</strong> और registration का विवरण।</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span><strong>Tax न भरने का प्रमाण</strong> — अगर वजह income tax बताई गई है (हमनाम की गड़बड़ी यहीं पकड़ी जाती है)।</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span>अपना लिखित जवाब — दो प्रतियों में, ताकि एक पर received की मुहर लगवाकर वापस ले सकें।</span></li>
       </ul>
       <p>
         जवाब ब्लॉक/जिला कृषि कार्यालय में दें और उसी दिन portal की grievance (Help Desk) में भी entry डाल
@@ -420,7 +420,7 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
         ऊपर की UP वाली कहानी का दूसरा पहलू भी याद रखिए — जांच में अपात्र निकले लाखों लोगों में बहुतों को
         पता ही नहीं था कि income tax भरने से पात्रता चली जाती है। नियम पढ़े बिना योजना में बने रहना ही
         जोखिम है — पात्रता की पूरी सूची{' '}
-        <Link href="/articles/PmKisanMasterGuide2026">Master Guide</Link> में देख लें।
+        <Link href="/articles/PmKisanMasterGuide2026">पात्रता के नियमों वाली guide</Link> में देख लें।
       </Panel>
 
       <T>Notice मिलने के बाद उठने वाले सवाल — सीधे जवाब</T>
@@ -457,12 +457,12 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
-        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">🔗 आगे काम आने वाले page</h3>
+        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">आगे काम आने वाले page</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
-          <li><Link href="/articles/PmKisanVoluntarySurrenderGuide">🙏 Voluntary Surrender Guide</Link></li>
-          <li><Link href="/articles/PmKisanRejectedStatusReApplyGuide">🔁 Rejected Status — Re-apply</Link></li>
-          <li><Link href="/articles/hi/helpline-shikayat">📞 हेल्पलाइन और शिकायत</Link></li>
-          <li><Link href="/articles/PmKisanMasterGuide2026">📚 PM Kisan Master Guide</Link></li>
+          <li><Link href="/articles/PmKisanVoluntarySurrenderGuide">Voluntary Surrender Guide</Link></li>
+          <li><Link href="/articles/PmKisanRejectedStatusReApplyGuide">Rejected Status — Re-apply</Link></li>
+          <li><Link href="/articles/hi/helpline-shikayat">शिकायत कहां और कैसे करें</Link></li>
+          <li><Link href="/articles/PmKisanMasterGuide2026">योजना का पूरा नक्शा — Master Guide</Link></li>
         </ul>
       </div>
     </>

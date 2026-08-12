@@ -54,7 +54,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya mujhe alag se PM Kisan ke liye apply karna padega?',
-    a: 'Aapka data state database mein hai toh sarkar PM Kisan ke liye bhi consider karti hai. Lekin apna PM Kisan status alag se pmkisan.gov.in par zaroor check kar lein, kyunki dono ke records alag chalte hain.',
+    a: 'Aapka data state database mein hai toh sarkar PM Kisan ke liye bhi consider karti hai. Lekin apna PM Kisan status alag se pmkisan.gov.in par alag se check kar lein, kyunki dono ke records alag chalte hain.',
   },
   {
     q: 'Agar main government employee hoon, kya mujhe ye paisa milega?',
@@ -67,7 +67,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
     <article className="prose prose-lg max-w-4xl mx-auto">
 
       <InfoBox type="update" date="4 August 2026">
-        <strong>Latest Update:</strong> Andhra Pradesh sarkar ne 20 June 2026 ko Annadata Sukhibhava ka pehla installment (₹7,000: ₹5,000 State + ₹2,000 PM Kisan) jaari kar diya hai. ⚠️ Agle installment ki koi date officially announce nahi hui hai. Apna <strong>annadata sukhibhava status check</strong> karne ke liye neeche diye gaye official steps follow karein.
+        <strong>Latest Update:</strong> Andhra Pradesh sarkar ne 20 June 2026 ko Annadata Sukhibhava ka pehla installment (₹7,000: ₹5,000 State + ₹2,000 PM Kisan) jaari kar diya hai.  Agle installment ki koi date officially announce nahi hui hai. Apna <strong>annadata sukhibhava status check</strong> karne ke liye neeche diye gaye official steps follow karein.
       </InfoBox>
 
       <h1>Annadata Sukhibhava Status Check 2026: Payment, Eligibility aur Beneficiary List</h1>
@@ -138,7 +138,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <h3>1. Bank Account DBT Enabled Nahi Hai</h3>
       <p>
-        Karna kya hai: apne bank branch jaakar pata karein ki aapka account "NPCI Mapper" mein Aadhaar ke saath linked hai ya nahi. Agar nahi hai, toh turant DBT enable karwayein.
+        Karna kya hai: apne bank branch jaakar pata karein ki aapka account "NPCI Mapper" mein Aadhaar ke saath linked hai ya nahi. Agar nahi hai, toh usi visit mein DBT enable karwayein.
       </p>
 
       <h3>2. Aadhaar Name aur Bank Account Name Match Nahi Kar Rahe</h3>
@@ -228,13 +228,13 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         </tr>
         <tr>
           <td>Tenant Farmers Eligible?</td>
-          <td>❌ Nahi</td>
-          <td>✅ Haan (with CCRC Card)</td>
+          <td>Nahi</td>
+          <td>Haan (with CCRC Card)</td>
         </tr>
         <tr>
           <td>Landless Laborers?</td>
-          <td>❌ Nahi</td>
-          <td>❌ Nahi (Except specific state sub-schemes)</td>
+          <td>Nahi</td>
+          <td>Nahi (Except specific state sub-schemes)</td>
         </tr>
         <tr>
           <td>Application Process</td>
@@ -456,13 +456,13 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         <tr>
           <td>2nd Installment</td>
           <td>Rabi 2026-27</td>
-          <td>⚠️ Announce nahi hui</td>
+          <td>Announce nahi hui</td>
           <td>Pending</td>
         </tr>
         <tr>
           <td>3rd Installment</td>
           <td>Summer 2026-27</td>
-          <td>⚠️ Announce nahi hui</td>
+          <td>Announce nahi hui</td>
           <td>Pending</td>
         </tr>
       </SchemeTable>
@@ -518,7 +518,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         }}
       />
       <section className="mb-8 not-prose">
-        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Annadata Sukhibhava FAQ 2026</p>
+        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Annadata Sukhibhava — kisano ke aam sawaal (2026)</p>
         <div className="space-y-3">
           {FAQS_DATA.map(({ q, a }) => (
             <details
@@ -546,7 +546,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+          Ye guide sirf jaankari ke iraade se likhi gayi hai. Aakhri faisla hamesha official portal ya apne mandal ke krishi adhikari se poochh kar hi lein.
         </p>
       </div>
 

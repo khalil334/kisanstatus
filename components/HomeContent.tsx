@@ -2,157 +2,21 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ARTICLES, getArticlesByFreshness, CATEGORIES } from '@/lib/articles-data';
 import { getHindiArticlesByFreshness } from '@/lib/hindi-articles-data';
-import { SITE_URL } from '@/lib/site-config';
+import { SITE_URL, AUTHOR_NAME, WHATSAPP_CHANNEL_URL } from '@/lib/site-config';
 import SearchBar from './SearchBar';
 import FaqItem from './FaqItem';
 
+import { TOOLS, FAQS, IconArrowRight, IconBookOpen, IconCheck } from './home-data';
+
 const TOP_ARTICLES_LIMIT = 3;
 
-function IconWallet({ className = 'w-6 h-6' }: { className?: string }) {
+function IconWhatsApp({ className }: { className?: string }) {
   return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9.75A2.25 2.25 0 0018.75 7.5H5.25A2.25 2.25 0 003 9.75V12m18 0h-6" />
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.174-.297-.019-.458.13-.606.132-.132.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.05-.52-.099-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.075-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884a9.82 9.82 0 016.988 2.896 9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
     </svg>
   );
 }
-
-function IconCreditCard({ className = 'w-6 h-6' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
-    </svg>
-  );
-}
-
-function IconTractor({ className = 'w-6 h-6' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
-      <circle cx="7.5" cy="17.25" r="1.5" fill="currentColor" />
-      <circle cx="16.5" cy="17.25" r="1.5" fill="currentColor" />
-    </svg>
-  );
-}
-
-function IconCalculator({ className = 'w-6 h-6' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-  );
-}
-
-function IconSprout({ className = 'w-6 h-6' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-    </svg>
-  );
-}
-
-function IconBookOpen({ className = 'w-6 h-6' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-    </svg>
-  );
-}
-
-function IconArrowRight({ className = 'w-5 h-5' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-    </svg>
-  );
-}
-
-function IconCheck({ className = 'w-5 h-5' }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-    </svg>
-  );
-}
-
-const TOOLS = [
-  {
-    href: '/articles/PmKisan24viKist2026',
-    icon: IconWallet,
-    bg: 'bg-green-50 dark:bg-green-900/20',
-    border: 'border-green-200 dark:border-green-800',
-    iconBg: 'bg-green-100 dark:bg-green-800 text-green-600 dark:text-green-300',
-    title: 'PM Kisan Status',
-    desc: '24vi kist kab aayegi? Status check, eKYC, beneficiary list — sab yahan.',
-  },
-  {
-    href: '/articles/KisanCreditCardOnlineApply2026',
-    icon: IconCreditCard,
-    bg: 'bg-blue-50 dark:bg-blue-900/20',
-    border: 'border-blue-200 dark:border-blue-800',
-    iconBg: 'bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300',
-    title: 'KCC Loan',
-    desc: '₹5 Lakh tak loan, 4% interest. Online apply process aur document checklist.',
-  },
-  {
-    href: '/articles/KisanTractorLoan2026',
-    icon: IconTractor,
-    bg: 'bg-amber-50 dark:bg-amber-900/20',
-    border: 'border-amber-200 dark:border-amber-800',
-    iconBg: 'bg-amber-100 dark:bg-amber-800 text-amber-600 dark:text-amber-300',
-    title: 'Tractor Subsidy',
-    desc: 'SMAM subsidy 35-50%. Bina down payment ke tractor kaise lein.',
-  },
-  {
-    href: '/calculator/kcc-loan-emi',
-    icon: IconCalculator,
-    bg: 'bg-purple-50 dark:bg-purple-900/20',
-    border: 'border-purple-200 dark:border-purple-800',
-    iconBg: 'bg-purple-100 dark:bg-purple-800 text-purple-600 dark:text-purple-300',
-    title: 'EMI Calculator',
-    desc: 'Loan amount, interest, tenure daalo — monthly EMI turant calculate karo.',
-  },
-  {
-    href: '/articles/PmfbyCropInsurance2026',
-    icon: IconSprout,
-    bg: 'bg-emerald-50 dark:bg-emerald-900/20',
-    border: 'border-emerald-200 dark:border-emerald-800',
-    iconBg: 'bg-emerald-100 dark:bg-emerald-800 text-emerald-600 dark:text-emerald-300',
-    title: 'Farming Schemes',
-    desc: 'PMFBY, Soil Health Card, Nano DAP, AgriStack — sab schemes ki jankari.',
-  },
-  {
-    href: '/articles',
-    icon: IconBookOpen,
-    bg: 'bg-rose-50 dark:bg-rose-900/20',
-    border: 'border-rose-200 dark:border-rose-800',
-    iconBg: 'bg-rose-100 dark:bg-rose-800 text-rose-600 dark:text-rose-300',
-    title: 'Latest Articles',
-    desc: 'PM Kisan updates, farming tips, loan guides — Hindi mein simple bhasha.',
-  },
-];
-
-const FAQS = [
-  {
-    question: 'PM Kisan 24vi kist kab aayegi 2026 mein?',
-    answer: 'PM Kisan ki 24vi kist October 2026 mein aane ki ummeed hai. Beneficiaries ko ₹2,000 seedha unke registered bank account mein Direct Benefit Transfer (DBT) ke through milenge. Apna status pmkisan.gov.in par check karein.',
-  },
-  {
-    question: 'PM Kisan status check kaise karein online?',
-    answer: 'PM Kisan status check karne ke liye: 1) pmkisan.gov.in par jayein, 2) "Beneficiary Status" par click karein, 3) Apna Aadhaar number ya registered mobile number enter karein, 4) OTP verify karein, 5) Apna latest payment status dekhein.',
-  },
-  {
-    question: 'Kisan Credit Card (KCC) ke liye kaise apply karein?',
-    answer: 'KCC apply karne ke liye apne nazdiki bank branch jayein, application form bharein, aur land documents, Aadhaar, aur PAN card submit karein. Bank verification ke baad aapko ₹5 lakh tak ka loan 4% ki concessional interest rate par mil jayega.',
-  },
-  {
-    question: 'PM Kisan eKYC kaise complete karein?',
-    answer: 'eKYC complete karne ke liye pmkisan.gov.in par jakar "Farmers Corner" mein "eKYC" option select karein. Apna Aadhaar number enter karke OTP ya biometric authentication ke through verify karein. Confirmation SMS aane par eKYC complete ho jati hai.',
-  },
-  {
-    question: 'Tractor subsidy kaise milegi SMAM yojana mein?',
-    answer: 'SMAM (Sub-Mission on Agricultural Mechanization) ke tahat tractor subsidy ke liye Kisan portal par register karein. Chhote aur seemant kisanon ko 35-50% tak subsidy milti hai, jo seedha dealer ko transfer ho jati hai, jisse bina down payment ke loan lena aasan ho jata hai.',
-  },
-];
 
 function FeaturedImageCard({ src, title, desc, border }: { src: string; title: string; desc: string; border: string }) {
   return (
@@ -178,7 +42,7 @@ function FeaturedImageCard({ src, title, desc, border }: { src: string; title: s
   );
 }
 
-function ArticleImage({ image, emoji, title }: { image: string; emoji: string; title: string }) {
+function ArticleImage({ image, emoji, title }: { image: string; emoji?: string; title: string }) {
   return (
     <div className="relative w-full overflow-hidden bg-gray-100 dark:bg-gray-800 shrink-0" style={{ aspectRatio: '16/9' }}>
       {image ? (
@@ -194,17 +58,17 @@ function ArticleImage({ image, emoji, title }: { image: string; emoji: string; t
         />
       ) : (
         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-800 dark:to-gray-700" role="img" aria-label={title}>
-          <span className="text-6xl" aria-hidden="true">{emoji}</span>
+          {emoji ? <span className="text-6xl" aria-hidden="true">{emoji}</span> : null}
         </div>
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10 pointer-events-none" aria-hidden="true" />
-      <span className="absolute bottom-3 left-4 text-2xl drop-shadow-lg z-20" aria-hidden="true">{emoji}</span>
+      {emoji ? <span className="absolute bottom-3 left-4 text-2xl drop-shadow-lg z-20" aria-hidden="true">{emoji}</span> : null}
     </div>
   );
 }
 
 function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICLES[0]; showNewBadge?: boolean }) {
-  const categoryInfo = CATEGORIES[article.category] as { name: string; nameHi: string; icon: string } | undefined;
+  const categoryInfo = CATEGORIES[article.category] as { name: string; nameHi: string; icon?: string } | undefined;
   const emoji = categoryInfo?.icon || '';
   const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Article';
 
@@ -223,8 +87,6 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
           <div className="absolute top-4 right-4 z-30">
             <span className="relative inline-flex items-center gap-1.5 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
               </span>
               NEW
             </span>
@@ -233,7 +95,7 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
       </div>
       <div className="p-6 flex flex-col flex-1">
         <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 text-green-700 dark:text-green-300 w-fit mb-4 border border-green-200/50 dark:border-green-700/50">
-          <span className="text-base" aria-hidden="true">{emoji}</span>
+          {emoji ? <span className="text-base" aria-hidden="true">{emoji}</span> : null}
           <span>{categoryName}</span>
         </span>
         <h3 className="font-bold text-gray-900 dark:text-white text-lg leading-snug group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors duration-300 mb-3 line-clamp-2">
@@ -243,7 +105,7 @@ function ArticleCard({ article, showNewBadge = false }: { article: typeof ARTICL
           {article.desc}
         </p>
         <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700/50">
-          <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">✍️ KisanStatus Team</span>
+          <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">{AUTHOR_NAME}</span>
           <Link href={`/articles/${article.slug}`} className="text-sm font-bold text-green-700 dark:text-green-400 group-hover:translate-x-2 transition-transform duration-300 inline-flex items-center gap-1.5" aria-label={`Padhein: ${article.title}`}>
             Padhein
             <IconArrowRight className="w-4 h-4" />
@@ -341,10 +203,6 @@ export default function HomeContent() {
               </span>
               <span className="px-3 py-1.5 bg-white/10 rounded-full flex items-center gap-1">
                 <IconCheck className="w-3 h-3" />
-                50+ Govt Schemes
-              </span>
-              <span className="px-3 py-1.5 bg-white/10 rounded-full flex items-center gap-1">
-                <IconCheck className="w-3 h-3" />
                 100% Free Tools
               </span>
             </div>
@@ -355,18 +213,59 @@ export default function HomeContent() {
       <section className="py-12 bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700" aria-labelledby="trust-heading">
         <h2 id="trust-heading" className="sr-only">Trust Indicators</h2>
         <div className="container-site mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               { value: '11 Cr+', label: 'Registered Kisan' },
-              { value: '50+', label: 'Govt Schemes' },
               { value: '₹6,000', label: 'Annual Benefit' },
-              { value: '4.8★', label: 'User Rating' },
+              { value: '100%', label: 'Free Tools' },
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <div className="text-2xl md:text-3xl font-black text-green-600 dark:text-green-400">{stat.value}</div>
                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-1 font-medium">{stat.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 bg-white dark:bg-gray-900" aria-labelledby="whatsapp-heading">
+        <div className="container-site mx-auto px-4">
+          <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden border border-green-200 dark:border-green-800/60 bg-gradient-to-br from-[#25D366]/10 via-green-50 to-emerald-50 dark:from-[#25D366]/10 dark:via-gray-800/60 dark:to-gray-900 shadow-sm">
+            <div className="p-7 md:p-10 flex flex-col md:flex-row md:items-center gap-7">
+              <div className="shrink-0 mx-auto md:mx-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-[#25D366] flex items-center justify-center shadow-lg shadow-[#25D366]/30">
+                <IconWhatsApp className="w-9 h-9 md:w-11 md:h-11 text-white" />
+              </div>
+
+              <div className="flex-1 text-center md:text-left">
+                <h2
+                  id="whatsapp-heading"
+                  className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white mb-2 tracking-tight"
+                >
+                  WhatsApp Channel Par Judein
+                </h2>
+                <p className="text-sm md:text-base text-gray-600 dark:text-gray-300 max-w-xl">
+                  Kist ki date announce hoti hai ya beneficiary list update hoti hai, to main
+                  wahi cheez channel par post kar deta hoon — bina afwaah, bina spam. Roz
+                  message nahi aayega, sirf jab kaam ki baat ho.
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                  — {AUTHOR_NAME}, KisanStatus
+                </p>
+              </div>
+
+              <div className="shrink-0 text-center">
+                <a
+                  href={WHATSAPP_CHANNEL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#1ebe5b] text-white font-bold px-7 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl shadow-[#25D366]/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#25D366]"
+                  aria-label="KisanStatus WhatsApp Channel join karein (naye tab mein khulega)"
+                >
+                  <IconWhatsApp className="w-5 h-5" />
+                  Channel Join Karein
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -526,8 +425,6 @@ export default function HomeContent() {
             </div>
             <span className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-bold px-5 py-2.5 rounded-full shadow-lg self-start md:self-auto">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
               </span>
               {latestArticles.length} latest
             </span>
@@ -564,7 +461,7 @@ export default function HomeContent() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {getHindiArticlesByFreshness().slice(0, TOP_ARTICLES_LIMIT).map((a) => {
-              const categoryInfo = CATEGORIES[a.category] as { name: string; nameHi: string; icon: string } | undefined;
+              const categoryInfo = CATEGORIES[a.category] as { name: string; nameHi: string; icon?: string } | undefined;
               const emoji = categoryInfo?.icon || '';
               const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Guide';
               return (
@@ -580,7 +477,7 @@ export default function HomeContent() {
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/30 dark:to-orange-900/30 text-amber-700 dark:text-amber-300 w-fit mb-4 border border-amber-200/50 dark:border-amber-700/50">
-                      <span className="text-base" aria-hidden="true">{emoji}</span>
+                      {emoji ? <span className="text-base" aria-hidden="true">{emoji}</span> : null}
                       <span>{categoryName}</span>
                     </span>
                     <h3 className="font-bold text-gray-900 dark:text-white text-lg leading-snug group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors duration-300 mb-3 line-clamp-2">
@@ -588,7 +485,7 @@ export default function HomeContent() {
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-2 flex-1 mb-5">{a.desc}</p>
                     <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700/50">
-                      <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">✍️ KisanStatus Team</span>
+                      <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">{AUTHOR_NAME}</span>
                       <Link href={`/articles/${a.slug}`} className="text-sm font-bold text-amber-700 dark:text-amber-400 group-hover:translate-x-2 transition-transform duration-300 inline-flex items-center gap-1.5" aria-label={`पढ़ें: ${a.titleHi}`}>
                         पढ़ें
                         <IconArrowRight className="w-4 h-4" />
@@ -710,16 +607,15 @@ export default function HomeContent() {
           <nav aria-label="Quick links to popular articles">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-6xl mx-auto">
               {[
-                { href: '/articles/PmKisan24viKist2026', icon: '📊', title: 'Status Check', desc: 'Kist aayi ya nahi', color: 'from-blue-500 to-cyan-500' },
-                { href: '/articles/KisanCreditCardOnlineApply2026', icon: '💳', title: 'KCC Apply', desc: '₹5 Lakh Loan', color: 'from-green-500 to-emerald-500' },
-                { href: '/articles/PmKisanBeneficiaryList2026', icon: '📋', title: 'Beneficiary List', desc: 'Naam check karo', color: 'from-red-500 to-pink-500' },
-                { href: '/articles/soil-health-card-complete-guide-2026', icon: '🧪', title: 'Soil Health Card', desc: 'Mitti test karo', color: 'from-purple-500 to-indigo-500' },
+                { href: '/articles/PmKisan24viKist2026', title: 'Status Check', desc: 'Kist aayi ya nahi', color: 'from-blue-500 to-cyan-500' },
+                { href: '/articles/KisanCreditCardOnlineApply2026', title: 'KCC Apply', desc: '₹5 Lakh Loan', color: 'from-green-500 to-emerald-500' },
+                { href: '/articles/PmKisanBeneficiaryList2026', title: 'Beneficiary List', desc: 'Naam check karo', color: 'from-red-500 to-pink-500' },
+                { href: '/articles/soil-health-card-complete-guide-2026', title: 'Soil Health Card', desc: 'Mitti test karo', color: 'from-purple-500 to-indigo-500' },
               ].map((link, i) => (
                 <Link key={i} href={link.href} className="group relative bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl p-8 text-center hover:shadow-2xl hover:border-transparent transition-all duration-500 hover:-translate-y-2 overflow-hidden" aria-label={`${link.title}: ${link.desc}`}>
                   <div className={`absolute inset-0 bg-gradient-to-br ${link.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} aria-hidden="true" />
                   <div className="relative">
                     <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${link.color} mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`} aria-hidden="true">
-                      <div className="text-4xl">{link.icon}</div>
                     </div>
                     <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2">{link.title}</h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400">{link.desc}</p>
@@ -728,40 +624,6 @@ export default function HomeContent() {
               ))}
             </div>
           </nav>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gray-900 dark:bg-black" aria-labelledby="app-heading">
-        <div className="container-site mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12 max-w-5xl mx-auto">
-            <div className="flex-1 text-center md:text-left">
-              <h2 id="app-heading" className="text-3xl md:text-4xl font-black text-white mb-4">
-                Track Everything in One App
-              </h2>
-              <p className="text-gray-400 text-base leading-relaxed mb-8 max-w-md">
-                PM Kisan status, loan EMI calculator, mandi bhav — sab ek app mein. Download karo aur updates paao.
-              </p>
-              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                <div className="relative">
-                  <button disabled className="px-6 py-3 bg-white/10 text-white/50 font-bold rounded-xl text-sm flex items-center gap-2 border border-white/10 cursor-not-allowed" aria-label="App Store download coming soon">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                    App Store
-                  </button>
-                  <span className="absolute -top-2 -right-2 bg-yellow-400 text-yellow-900 text-[10px] font-bold px-2 py-0.5 rounded-full">Soon</span>
-                </div>
-                <div className="relative">
-                  <button disabled className="px-6 py-3 bg-white/10 text-white/50 font-bold rounded-xl text-sm flex items-center gap-2 border border-white/10 cursor-not-allowed" aria-label="Play Store download coming soon">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
-                    Play Store
-                  </button>
-                  <span className="absolute -top-2 -right-2 bg-yellow-400 text-yellow-900 text-[10px] font-bold px-2 py-0.5 rounded-full">Soon</span>
-                </div>
-              </div>
-              <div className="mt-6 text-sm text-gray-500 justify-center md:justify-start">
-                <span>App jald launch hoga — updates ke liye site visit karte rahein</span>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 

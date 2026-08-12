@@ -2,6 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
+import { AuthorBox, FAQBlock } from '@/components/ArticleShared';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import GuideDisclaimer from '@/components/GuideDisclaimer';
+import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
   title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
@@ -14,7 +18,7 @@ export const metadata: Metadata = {
     'earthworm farming',
     'gobar se khaad banana'
   ],
-  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
     title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
     description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',
@@ -42,58 +46,28 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'FAQPage',
-      '@id': 'https://kisanstatus.com/articles/vermi-compost-business-guide/#faq',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Kya vermi compost ko chemical fertilizer ke saath mix karke use kar sakte hain?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Haan, shuruat mein aap vermi compost ko chemical fertilizer ke saath 50:50 ratio mein mix karke use kar sakte hain. Isse mitti ko organic matter milta hai aur chemical ka shock bhi kam hota hai. Dheere-dheere chemical ki matra kam karke sirf organic par shift ho sakte hain.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Agar galti se earthworms mar jayein, toh poori batch kharab ho jati hai ya bachayi ja sakti hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Agar worms mar bhi jayein, toh organic material phir bhi decompose hota hai, lekin usme vermi compost wali premium quality (microbial activity) nahi aati. Usse aap normal FYM (Farm Yard Manure) ke roop mein bech sakte hain, jiska rate thoda kam (₹5-8/kg) hota hai. Agli batch ke liye naye worms lene padenge.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Branded packaging mein bechne ke liye FSSAI zaroori hai ya sirf lab report kaafi hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Vermi compost ek "fertilizer" hai, "food" nahi, isliye iske liye FSSAI ki zaroorat nahi hoti. Iske liye FCO (Fertilizer Control Order) ke under state agriculture department se registration aur authorized lab se quality testing report kaafi hoti hai.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kya vermi compost ki jagah normal gobar ki khaad (FYM) use nahi ki ja sakti?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Normal gobar ki khaad (FYM) mein bhi nutrients hote hain, lekin vermi compost mein earthworms ki wajah se enzymes aur beneficial microbes ki matra 10-20 guna zyada hoti hai. Yeh mitti ki structure ko FYM ke mukable jaldi aur behtar tarike se improve karti hai, isliye iska market rate aur demand dono zyada hain.',
-          },
-        },
-      ],
-    },
-  ],
-};
+const verminCompostFaqs = [
+  {
+    q: 'Chemical fertilizer ke saath mix kar sakte hain?',
+    a: 'Haan, shuruat mein aap ise chemical fertilizer ke saath 50:50 ratio mein mix karke use kar sakte hain. Isse mitti ko organic matter milta hai aur chemical ka shock bhi kam hota hai. Dheere-dheere chemical ki matra kam karke sirf organic par shift ho sakte hain.',
+  },
+  {
+    q: 'Earthworms mar jayein toh batch kharab?',
+    a: 'Agar worms mar bhi jayein, toh organic material phir bhi decompose hota hai, lekin usme wo premium quality nahi aati. Usse aap normal FYM ke roop mein bech sakte hain (₹5 - ₹8/kg). Agli batch ke liye naye worms lene padenge.',
+  },
+  {
+    q: 'Branded packaging ke liye FSSAI zaroori hai?',
+    a: 'Yeh ek "fertilizer" hai, "food" nahi, isliye iske liye FSSAI ki zaroorat nahi hoti. Iske liye FCO (Fertilizer Control Order) ke under state agriculture department se registration aur authorized lab se quality testing report kaafi hoti hai.',
+  },
+  {
+    q: 'Normal gobar ki khaad (FYM) use nahi kar sakte?',
+    a: 'Normal gobar ki khaad (FYM) mein bhi nutrients hote hain, lekin kenchua khaad mein earthworms ki wajah se enzymes aur beneficial microbes ki matra 10-20 guna zyada hoti hai. Yeh mitti ki structure ko FYM ke mukable jaldi aur behtar tarike se improve karti hai.',
+  },
+];
 
 export default function VerminCompost() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
       <Image
         src="/images/kisanguides/vermi-compost-hero.webp"
         alt="Vermi Compost Pit with Earthworms - Organic Fertilizer Business Guide"
@@ -110,7 +84,7 @@ export default function VerminCompost() {
 
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Sach kahoon toh:</strong> Chemical fertilizers ke daam lagatar badhne se kisaanon ki lagat badh rahi hai. Aise mein, apne hi khet ke gobar aur kachre ko khaad mein badalna ek practical aur sasta solution ban gaya hai.
+          <strong>Dil Se Bataun Toh:</strong> Chemical fertilizers ke daam lagatar badhne se kisaanon ki lagat badh rahi hai. Aise mein, apne hi khet ke gobar aur kachre ko khaad mein badalna ek practical aur sasta solution ban gaya hai.
         </p>
       </div>
 
@@ -262,26 +236,26 @@ export default function VerminCompost() {
         <ul className="space-y-4 text-sm text-gray-800 dark:text-gray-200">
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">1. Paramparagat Krishi Vikas Yojana (PKVY):</strong>
-            Yeh scheme organic farming ko promote karti hai. Vermi compost units par 50-75% subsidy milti hai. Maximum subsidy ₹50,000 - ₹1 lakh per unit. FPOs aur SHGs ko priority milti hai.
+            Yeh scheme organic farming ko promote karti hai. In units par 50-75% subsidy milti hai. Maximum subsidy ₹50,000 - ₹1 lakh per unit. FPOs aur SHGs ko priority milti hai.
           </li>
 
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">2. Mission Organic Value Chain Development (MOVCDNER):</strong>
-            North-East states ke liye special scheme. Vermi compost units par 75-90% subsidy milti hai. Maximum subsidy ₹2 lakh tak.
+            North-East states ke liye special scheme. Compost units par 75-90% subsidy milti hai. Maximum subsidy ₹2 lakh tak.
           </li>
 
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">3. Soil Health Management Scheme:</strong>
-            Organic matter badhane ke liye yeh scheme hai. Vermi compost units par 50% subsidy milti hai. Maximum subsidy ₹25,000 - ₹50,000.
+            Organic matter badhane ke liye yeh scheme hai. Isme units par 50% subsidy milti hai. Maximum subsidy ₹25,000 - ₹50,000.
           </li>
 
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">4. PM FME Yojana:</strong>
-            Agar aap vermi compost ko branded packaging mein bechna chahte hain, toh PM FME ke under 35% subsidy mil sakti hai (maximum ₹10 lakh).
+            Agar aap apni khaad ko branded packaging mein bechna chahte hain, toh PM FME ke under 35% subsidy mil sakti hai (maximum ₹10 lakh).
           </li>
         </ul>
         <p className="mt-4 text-xs text-gray-600 dark:text-gray-400 italic border-t border-blue-200 dark:border-blue-800 pt-3">
-          <strong>Note:</strong> In schemes ki guidelines state ke hisaab se vary karti hain. Apply karne se pehle apne nazdeeki Agriculture Department se latest norms zaroor confirm karein.
+          <strong>Chhota Sa Note:</strong> In schemes ki guidelines state ke hisaab se vary karti hain. Apply karne se pehle apne nazdeeki Agriculture Department se latest norms poochh kar confirm karein.
         </p>
       </div>
 
@@ -419,7 +393,7 @@ export default function VerminCompost() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Real Risks - Jo Koi Nahi Batata
+        Vermi Compost Ke Chhupe Hue Risks
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -481,10 +455,10 @@ export default function VerminCompost() {
       </p>
 
       <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
-        <li><strong>Udyam Registration:</strong> Free hai, online ho jata hai. MSME benefits milte hain.</li>
+        <li><strong>Udyam (MSME) Registration:</strong> Free hai, online ho jata hai. MSME benefits milte hain.</li>
         <li><strong>FCO Registration:</strong> Fertilizer Control Order ke under state agriculture department se registration zaroori hai.</li>
         <li><strong>Lab Testing:</strong> Har batch ko test karna padega - NPK content, heavy metals, pH. ₹2,000 - ₹5,000 per sample.</li>
-        <li><strong>NOC from Local Authorities:</strong> Gram panchayat ya municipal corporation se.</li>
+        <li><strong>Local Authority Se NOC:</strong> Gram panchayat ya municipal corporation se.</li>
       </ul>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -493,27 +467,27 @@ export default function VerminCompost() {
       <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-blue-900 dark:text-blue-200 mb-2 flex items-center gap-2">
-            💳 Kisan Credit Card (KCC)
+             Kisan Credit Card (KCC)
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Working capital aur setup cost ke liye low-interest loan. 4% interest rate with timely repayment.</p>
           <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 text-sm font-medium flex items-center gap-1">
-            KCC Guide Padhein <span>→</span>
+            KCC Ki Puri Jankari Lein <span>→</span>
           </Link>
         </div>
 
         <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-green-900 dark:text-green-200 mb-2 flex items-center gap-2">
-            🏭 PM FME Yojana
+            PM FME Yojana
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Branded packaging aur value addition ke liye 35% tak subsidy. Maximum ₹10 lakh.</p>
           <Link href="/articles/pm-fme-yojana-food-processing" className="text-green-600 hover:underline dark:text-green-400 text-sm font-medium flex items-center gap-1">
-            PM FME Details Dekhein <span>→</span>
+            PM FME Scheme Samjhein <span>→</span>
           </Link>
         </div>
 
         <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg border border-amber-200 dark:border-amber-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-amber-900 dark:text-amber-200 mb-2 flex items-center gap-2">
-            ️ PM Fasal Bima Yojana
+            PM Fasal Bima Yojana
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Agricultural business ke liye crop insurance coverage. Natural calamities se protection.</p>
           <Link href="/articles/PmfbyCropInsurance2026" className="text-amber-700 hover:underline dark:text-amber-400 text-sm font-medium flex items-center gap-1">
@@ -528,7 +502,7 @@ export default function VerminCompost() {
 
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
-          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">Sahi Choice Hai, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Gaon ya semi-urban area mein rehte hain.</li>
             <li>• 5-10 gaaye/bhains hain (ya dairy farms se gobar mil sakta hai).</li>
@@ -539,7 +513,7 @@ export default function VerminCompost() {
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Nahi, agar:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">Risk Hai, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Urban area mein hain jahan raw material nahi milta.</li>
             <li>• Raw material (gobar, organic waste) available nahi hai.</li>
@@ -554,41 +528,24 @@ export default function VerminCompost() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Subsidy ka fayda zaroor uthayein. 50-75% subsidy mil rahi hai organic farming schemes mein. Par yaad rakho - subsidy milna guaranteed nahi hai. Application process mein 3-6 months lag sakte hain. Isliye apni planning subsidy ke bina karein. Agar mil gayi, toh bonus samjho.
+        Organic farming schemes mein 50-75% tak subsidy hai, aur uska form bharna banta hai — par pits ka kharch usi mahine aata hai jab aap unhe banate hain, aur subsidy ka paisa aksar 3-6 mahine baad. Is business mein yeh gap aur chubhta hai kyunki pehla batch hi 60-90 din leta hai, yani do taraf se paisa ruka rehta hai. Isliye pits ka budget apni jeb ya KCC se planning karein aur subsidy ko baad mein aane wali rakam maanein, shuruaati punji nahi.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Agar aap seriously interested hain, toh pehle apne area ke 5-10 organic farmers se baat karein. Unse pata karein ki wo vermi compost use karte hain ya nahi, kahan se khareedte hain, rate kya hai. Market research karo, phir decision lo.
+        Agar aap seriously interested hain, toh pehle apne area ke 5-10 organic farmers se baat karein. Unse pata karein ki wo kenchua khaad use karte hain ya nahi, kahan se khareedte hain, rate kya hai. Market research karo, phir decision lo.
       </p>
 
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Frequently Asked Questions (FAQs)
+        Vermi Compost Business Ke Common Doubts
       </h2>
-      <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Chemical fertilizer ke saath mix kar sakte hain?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, shuruat mein aap vermi compost ko chemical fertilizer ke saath 50:50 ratio mein mix karke use kar sakte hain. Isse mitti ko organic matter milta hai aur chemical ka shock bhi kam hota hai. Dheere-dheere chemical ki matra kam karke sirf organic par shift ho sakte hain.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Earthworms mar jayein toh batch kharab?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Agar worms mar bhi jayein, toh organic material phir bhi decompose hota hai, lekin usme vermi compost wali premium quality nahi aati. Usse aap normal FYM ke roop mein bech sakte hain (₹5 - ₹8/kg). Agli batch ke liye naye worms lene padenge.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Branded packaging ke liye FSSAI zaroori hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Vermi compost ek "fertilizer" hai, "food" nahi, isliye iske liye FSSAI ki zaroorat nahi hoti. Iske liye FCO (Fertilizer Control Order) ke under state agriculture department se registration aur authorized lab se quality testing report kaafi hoti hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Normal gobar ki khaad (FYM) use nahi kar sakte?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Normal gobar ki khaad (FYM) mein bhi nutrients hote hain, lekin vermi compost mein earthworms ki wajah se enzymes aur beneficial microbes ki matra 10-20 guna zyada hoti hai. Yeh mitti ki structure ko FYM ke mukable jaldi aur behtar tarike se improve karti hai.</p>
-        </div>
-      </div>
+      <FAQBlock faqs={verminCompostFaqs} variant="cards" />
 
-      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
-        <p className="text-sm text-gray-700 dark:text-gray-300">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Yeh article general information ke liye hai. Actual costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial decision lene se pehle qualified professionals (agriculture officers, CAs) se consult karein. Prices aur guidelines change hote rehte hain, isliye latest information ke liye official sources se verify karein. Last updated: July 2026.
-        </p>
-      </div>
+      <AuthorBox modified={getArticleBySlug('vermi-compost-business-guide')!.modifiedTime} />
+
+      <GuideDisclaimer
+        consult="agriculture officers, CAs"
+        modified={getArticleBySlug('vermi-compost-business-guide')!.modifiedTime}
+      />
     </article>
   );
 }

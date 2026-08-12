@@ -2,14 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Dairy Loan Bina Collateral', emoji: '🐄' },
-  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan Interest Rate', emoji: '🏦' },
-  { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan Loan NLM Subsidy', emoji: '🐔' },
-  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Rashtriya Gokul Mission', emoji: '🐮' },
-  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Portal Apply', emoji: '💻' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'dairy-farm-loan-without-collateral', title: 'Bina Guarantee Dairy Loan' },
+  { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan NLM Subsidy' },
+  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Loan Apply' },
 ];
 
 const FAQS_DATA = [
@@ -51,10 +49,10 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
             Bihar Pashupalan Loan Yojana 2026: Samagra Gavya Vikas Yojana Se 50-75% Subsidy — Eligibility, Documents Aur Apply Ka Poora Process
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 11 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -73,7 +71,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
         </div>
 
         <DB>
-          <strong>TL;DR — 30 second mein faisla:</strong>
+          <strong>Aadha Minute — poori picture:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>Bihar sarkar dairy unit ki project cost par <strong>EBC/SC/ST ko 75% tak, baaki ko 50% tak</strong> subsidy deti hai (2-4 pashu units); badi 15-20 pashu units par sab ke liye ~40% ka slab.</li>
             <li>Application <strong>sirf online, bilkul free</strong> — dairy.bihar.gov.in par, notification window ke andar. Agent ki zaroorat nahi.</li>
@@ -239,7 +237,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>Apply Kaise Karein — Step by Step</SH>
+        <SH>Apply Kaise Karein — Kadam Se Kadam</SH>
         <StepList>
           <SI n={1}><strong>Notification ka wait karo</strong> — application window saal bhar nahi khuli rehti; 2025 mein last date 25 July thi. dairy.bihar.gov.in aur akhbaar ke vigyapan par nazar rakho. Window aam taur par kuch hafton ki hoti hai.</SI>
           <SI n={2}><strong>Portal par registration karo</strong> — apna Aadhaar, mobile number aur basic details bharo, OTP verify karo.</SI>
@@ -344,7 +342,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
 
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             Samagra Gavya Vikas Yojana — official portal, Directorate of Dairy Development, Bihar.{' '}
@@ -359,8 +357,8 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Articles' },
-          { href: '/articles/category/pashupalan', l: '📂 Pashupalan Guides' },
+          { href: '/articles', l: 'Sabhi Articles' },
+          { href: '/articles/category/pashupalan', l: 'Pashupalan Guides' },
         ]} />
         <Disclaimer />
       </div>

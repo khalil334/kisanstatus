@@ -6,28 +6,27 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 import CountdownModal from '@/components/CountdownModal';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-07-07T09:55:00+05:30';
-const MODIFIED = '2026-08-03T06:40:00+05:30';
+const PUBLISHED = '2026-02-22T13:03:46+05:30';
+const MODIFIED = '2026-03-03T10:37:18+05:30';
 
 const RELATED_CARDS = [
   {
     slug: 'PmKisanEkycOnline2026',
     title: 'PM Kisan eKYC Complete Guide',
     desc: 'Naya number link karne ke baad eKYC kaise karein, step-by-step jaane.',
-    emoji: '🔐'
   },
   {
     slug: 'PmKisanCscRegistrationCharges',
     title: 'CSC Registration & Charges',
     desc: 'CSC par kis service ka kitna sarkari rate hai, puri list dekhein.',
-    emoji: '🏪'
+    emoji: ''
   },
   {
     slug: 'PmKisanRejectedStatusReApplyGuide',
     title: 'Rejected Status Fix Guide',
     desc: 'Agar number change ke baad bhi status rejected dikhaye toh kya karein.',
-    emoji: '❌'
   },
 ];
 
@@ -46,7 +45,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Mobile number change karne ke baad OTP aane mein kitna time lagta hai?',
-    a: 'Iska koi official fixed time publish nahi hai. Database sync mein kuch din lag sakte hain — turant check karne par purana number hi dikh sakta hai. Din-do-din ruk kar test karo; agar hafta nikal jaye aur naya number reflect na ho, to usi CSC par receipt leke wapas jao ya PM Kisan helpline par transaction ID ke saath baat karo.',
+    a: 'Iska koi official fixed time publish nahi hai. Database sync mein kuch din lag sakte hain — usi din check karne par purana number hi dikh sakta hai. Din-do-din ruk kar test karo; agar hafta nikal jaye aur naya number reflect na ho, to usi CSC par receipt leke wapas jao ya PM Kisan helpline par transaction ID ke saath baat karo.',
   },
   {
     q: 'Kya pm kisan registered mobile change karne se meri kist rukegi?',
@@ -85,9 +84,8 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
-          icon="🔗"
           countdownNote="seconds mein redirect hoga..."
-          infoNote="📌 Kripya dhairya rakhein. Aapko official sarkari portal par le jaaya ja raha hai."
+          infoNote="Kripya dhairya rakhein. Aapko official sarkari portal par le jaaya ja raha hai."
           cancelLabel="Cancel / Raho Yahi"
         />
       )}
@@ -108,10 +106,10 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 15 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>15 min read</span>
           </div>
         </div>
       </div>
@@ -120,7 +118,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            <strong>Seedha Jawab:</strong> Agar aapka purana SIM band ho gaya hai, toh <strong>PM Kisan mobile number change</strong> online nahi ho sakta — OTP purane number par hi jaata hai. Aapko nazdiki CSC (Common Service Centre) jaakar Aadhaar biometric verification ke through naya number link karwana hoga. Database update hone mein kuch din lag sakte hain, isliye receipt sambhal kar rakhein.
+            <strong>Do Took Jawab:</strong> Agar aapka purana SIM band ho gaya hai, toh <strong>PM Kisan mobile number change</strong> online nahi ho sakta — OTP purane number par hi jaata hai. Aapko nazdiki CSC (Common Service Centre) jaakar Aadhaar biometric verification ke through naya number link karwana hoga. Database update hone mein kuch din lag sakte hain, isliye receipt sambhal kar rakhein.
           </p>
         </div>
 
@@ -177,7 +175,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </p>
           <div className="bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-500 dark:border-amber-700 rounded-xl p-5 mb-6">
             <p className="text-sm font-black text-amber-800 dark:text-amber-300 mb-2">
-              ⚠️ Self Service Portal Trap:
+               Self Service Portal Trap:
             </p>
             <p className="text-xs text-amber-800 dark:text-amber-300 mb-3">
               Bahut sare YouTube videos mein bataya jata hai ki "Ghar baithe mobile number change karo". Bhai, wo videos tab kaam karti hain jab purana SIM aapke hath mein ho. Agar SIM dead hai, toh wo videos dekh kar time waste mat karo. Seedha CSC ya BAO jao.
@@ -190,7 +188,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               )}
               className="w-full px-4 py-3 bg-amber-600 hover:bg-amber-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              🔗 Yahan Click Karo → Agar Purana SIM Active Hai To Mobile Update Hoga
+               Yahan Click Karo → Agar Purana SIM Active Hai To Mobile Update Hoga
             </button>
           </div>
           <Image
@@ -205,7 +203,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
         <section className="mb-8">
           <SH>Method 1: CSC Center Se Karo (Sabse Fast Aur Aasan)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bhai, 90% logon ka kaam CSC (Common Service Center) se hi ban jata hai. Ye sabse fast aur reliable tarika hai. Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC center</Link> par chale jao.
+            Bhai, 90% logon ka kaam CSC (Common Service Center) se hi ban jata hai. Ye sabse fast aur reliable tarika hai. Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">Common Service Center (CSC)</Link> par chale jao.
           </p>
           <StepList>
             <SI n={1}>
@@ -239,13 +237,13 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           <WB>
             <strong>Paise Ki Baat:</strong>
             <p className="text-xs text-[var(--color-text-muted)] mt-2">
-              Kitne paise lagenge? Har CSC center ko apna rate card display karna hota hai — kaam se pehle usi se charge confirm karo aur kaam ke baad <strong>receipt zaroor lo</strong> (us par amount aur transaction ID dono hote hain). Operator rate card se alag ya bahut zyada maang raha hai to behes karne ki zaroorat nahi — uski CSC ID note karo, digitalseva portal par complaint daalo, aur kaam kisi doosre center se karwa lo.
+              Kitne paise lagenge? Har CSC center ko apna rate card display karna hota hai — kaam se pehle usi se charge confirm karo aur kaam ke baad <strong>receipt leke hi hatna</strong> (us par amount aur transaction ID dono hote hain). Operator rate card se alag ya bahut zyada maang raha hai to behes karne ki zaroorat nahi — uski CSC ID note karo, digitalseva portal par complaint daalo, aur kaam kisi doosre center se karwa lo.
             </p>
           </WB>
 
           <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
             <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-              🔍 Nazdiki CSC Center Kaise Dhundhein?
+               Nazdiki CSC Center Kaise Dhundhein?
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Official CSC portal par jakar apne area ka nearest center dhundh sakte hain.
@@ -258,7 +256,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              🏪 Yahan Click Karo → Nazdiki CSC Center Ka Address Milega
+              Yahan Click Karo → Nazdiki CSC Center Ka Address Milega
             </button>
           </div>
         </section>
@@ -280,7 +278,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               <li>Form mein naya mobile number clearly likho.</li>
               <li>Form ke sath Aadhaar ki self-attested (khud se sign ki hui) copy lagao.</li>
               <li>Agar office wale bole, toh patwari ya Lekhpal se sign karwa kar lao (kabhi kabhi wo mangte hain).</li>
-              <li>Form counter par jama karo aur ek receiving (acknowledgement) zaroor lo.</li>
+              <li>Form counter par jama karo aur ek receiving (acknowledgement) maang kar lo.</li>
             </ol>
           </div>
           <Image
@@ -296,7 +294,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
 
           <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl">
             <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-2">
-              📞 State Nodal Officer Se Sampark Karein
+               State Nodal Officer Se Sampark Karein
             </p>
             <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
               Agar BAO office se bhi kaam na bane ya wo form lene se mana karein, toh apne state ke Nodal Officer se direct contact kar sakte hain.
@@ -309,7 +307,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               )}
               className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              📋 Yahan Click Karo → Apne State Ke Nodal Officer Ka Number Milega
+               Yahan Click Karo → Apne State Ke Nodal Officer Ka Number Milega
             </button>
           </div>
         </section>
@@ -379,16 +377,16 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-2">❌ Galat Fahmi</p>
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-2">Galat Fahmi</p>
               <p className="text-xs text-[var(--color-text-muted)]">"Bank mein number badal diya, ab PM Kisan ka OTP naye number par aayega."</p>
             </div>
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">✅ Sachai</p>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">Sachai</p>
               <p className="text-xs text-[var(--color-text-muted)]">Bank ka mobile number aur PM Kisan portal ka mobile number dono alag-alag databases mein hote hain. Dono ko alag-alag update karna padta hai.</p>
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            <strong>Meri Salah:</strong> Dono jagah ek hi active number rakho. Pehle bank jaakar account ka number update karo, phir CSC jaakar PM Kisan ka number update karo. Isse DBT (Direct Benefit Transfer) mein kabhi dikkat nahi aayegi.
+            <strong>Meri Taraf Se Rai:</strong> Dono jagah ek hi active number rakho. Pehle bank jaakar account ka number update karo, phir CSC jaakar PM Kisan ka number update karo. Isse DBT (Direct Benefit Transfer) mein kabhi dikkat nahi aayegi.
           </p>
         </section>
 
@@ -406,7 +404,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               { doc: 'Ek Passport Size Photo', note: 'Offline form par lagane ke liye kaam aa jati hai.' },
             ].map(({ doc, note }) => (
               <div key={doc} className="p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-                <p className="font-black text-sm text-[var(--color-text)] mb-1">📄 {doc}</p>
+                <p className="font-black text-sm text-[var(--color-text)] mb-1">{doc}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{note}</p>
               </div>
             ))}
@@ -430,13 +428,13 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
                 fix: 'Bina receipt ke kaam hua hi nahi maana jata. Receipt par Transaction ID hoti hai, jisse aap baad mein track kar sakte ho ki kaam hua ya nahi.'
               },
               {
-                mistake: 'Turant Status Check Karne Chale Jana',
-                fix: 'Mobile update turant reflect nahi hota — database sync mein kuch din lag sakte hain. Turant check karne par purana number hi dikh sakta hai; ek-do din ruk kar test karo, aur receipt tab tak sambhal kar rakho.'
+                mistake: 'Usi Din Status Check Karne Chale Jana',
+                fix: 'Mobile update usi waqt reflect nahi hota — database sync mein kuch din lag sakte hain. Same-day check karne par purana number hi dikh sakta hai; ek-do din ruk kar test karo, aur receipt tab tak sambhal kar rakho.'
               },
             ].map(({ mistake, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {mistake}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Sahi Tarika:</strong> {fix}</p>
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">{mistake}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>Aise Karo Sahi Se:</strong> {fix}</p>
               </div>
             ))}
           </div>
@@ -491,7 +489,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              ✅ Yahan Click Karo → Apna Naam List Mein Check Kar Sakte Hain
+               Yahan Click Karo → Apna Naam List Mein Check Kar Sakte Hain
             </button>
           </div>
         </section>
@@ -529,7 +527,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Zaroori Articles</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Related Articles — Yeh Bhi Padho</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link
@@ -554,9 +552,9 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanCscRegistrationCharges', l: '🏪 CSC Charges' },
-          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 eKYC Guide' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/articles/PmKisanCscRegistrationCharges', l: 'CSC Charges' },
+          { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Guide' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
         <Disclaimer />
       </div>

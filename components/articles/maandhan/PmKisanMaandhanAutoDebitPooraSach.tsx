@@ -2,28 +2,29 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
-const PUBLISHED = '2026-07-24T08:00:00+05:30';
-const MODIFIED = '2026-08-05T06:13:00+05:30';
+const PUBLISHED = '2026-04-02T20:27:48+05:30';
+const MODIFIED = '2026-05-02T08:42:07+05:30';
 
 const RELATED_CARDS = [
   {
     slug: 'pm-kisan-maandhan-registration-2026',
     title: 'Registration Kaise Karein',
     desc: 'CSC ya online application se apply karne ka poora tarika, screenshot ke saath.',
-    emoji: '📝',
+    
   },
   {
     slug: 'pm-kisan-maandhan-pension-calculator',
     title: 'Apna Contribution Nikalein',
-    desc: 'Umar daliye aur turant dekhiye har mahine kitna jama karna hoga.',
-    emoji: '🧮',
+    desc: 'Umar daliye aur wahin dekhiye har mahine kitna jama karna hoga.',
+    
   },
   {
     slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
     title: 'Beech Mein Chhodne Ke Niyam',
     desc: 'Agar 60 saal se pehle scheme chhodni pade toh paisa kaise wapas milta hai.',
-    emoji: '💸',
+    
   },
 ];
 
@@ -34,7 +35,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Auto-debit band kaise karein PM Kisan Maandhan se?',
-    a: 'Apni bank branch jakar NACH mandate cancellation form submit karein, ya net banking/mobile banking ke "Mandates" section se cancel karein. 5-7 din mein process complete ho jata hai. Cancellation ka acknowledgement receipt zaroor lein.',
+    a: 'Apni bank branch jakar NACH mandate cancellation form submit karein, ya net banking/mobile banking ke "Mandates" section se cancel karein. 5-7 din mein process complete ho jata hai. Cancellation ka acknowledgement receipt maang kar lein.',
   },
   {
     q: 'Kya PM Kisan aur PM Kisan Maandhan alag scheme hain?',
@@ -65,9 +66,9 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
               articleSection: 'Agriculture & Pension Schemes',
               wordCount: 1800,
               author: {
-                '@type': 'Organization',
-                name: 'KisanStatus Team',
-                url: 'https://kisanstatus.com/about',
+                '@type': 'Person',
+                name: AUTHOR_NAME,
+                url: AUTHOR_URL,
               },
               publisher: {
                 '@type': 'Organization',
@@ -106,10 +107,10 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -134,7 +135,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
 
         <div className="my-6 p-5 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded-r-xl">
           <p className="text-sm md:text-base text-red-900 dark:text-red-100 leading-relaxed font-medium">
-            <strong>Seedhi baat:</strong> Agar aapke PM Kisan ke ₹2000 mein se ₹55, ₹100, ya ₹200 kat rahe hain aur aapko samajh nahi aa raha ke yeh kahan jaa raha hai — toh ghabraiye mat. Aapne hi CSC center pe ek form sign kiya tha jismein likha tha ke PM Kisan ki kist se aapka Maandhan share kat jaye. Yeh chori nahi hai, yeh aapki khud ki pension ka hissa hai.
+            <strong>Sach Pehle Jaan Lijiye:</strong> Agar aapke PM Kisan ke ₹2000 mein se ₹55, ₹100, ya ₹200 kat rahe hain aur aapko samajh nahi aa raha ke yeh kahan jaa raha hai — toh ghabraiye mat. Aapne hi CSC center pe ek form sign kiya tha jismein likha tha ke PM Kisan ki kist se aapka Maandhan share kat jaye. Yeh chori nahi hai, yeh aapki khud ki pension ka hissa hai.
           </p>
         </div>
 
@@ -143,7 +144,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Aaj ke is guide mein main aapko bataunga ke yeh auto-debit kaise kaam karta hai, kyun kat ta hai, kitna kat ta hai, aur agar aap chahein toh is process ko kaise control kar sakte hain. Saath hi yeh bhi samjhaunga ke agar kisi mahine payment miss ho jaye toh kya hota hai, aur default hone se kaise bacha jaye. Sab kuch official sources — PIB release, DAC&amp;FW operational guidelines, aur maandhan.in portal — se verify karke.
+          Aaj main aapko yahan bataunga ke yeh katauti kaise kaam karti hai, kyun kat ta hai, kitna kat ta hai, aur agar aap chahein toh is process ko kaise control kar sakte hain. Saath hi yeh bhi samjhaunga ke agar kisi mahine payment miss ho jaye toh kya hota hai, aur default hone se kaise bacha jaye. Sab kuch official sources — PIB release, DAC&amp;FW operational guidelines, aur maandhan.in portal — se verify karke.
         </p>
 
         <section className="mb-8">
@@ -217,7 +218,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
             Aapke account se jo amount kat raha hai wo aapki entry age par fix hua tha — ₹55 (18 saal) se ₹200 (40 saal) tak. Har ek umar ka exact figure, government match ke saath, reference chart mein dekhein aur apni passbook entry se milayein:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📊 Age-Wise Contribution Chart (18–40) →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Age-Wise Contribution Chart (18–40) →</Link>
           </div>
         </section>
 
@@ -239,53 +240,53 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
         <section className="mb-8">
           <SH>Agar Bank Account Mein Balance Nahi Hai Toh Kya Hota Hai? Default Ka Exact Process</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Yeh sabse important section hai. Kai kisan sochte hain ke "Maine toh auto-debit band kar diya tha apne man se, ab kuch nahi hoga." Lekin aisa nahi chalta. NACH mandate aapke bank mein tab tak active rehta hai jab tak aap officially cancel nahi karwate.
+            Yeh sabse important section hai. Kai kisan sochte hain ke "Maine toh mandate band kar diya tha apne man se, ab kuch nahi hoga." Lekin aisa nahi chalta. NACH mandate aapke bank mein tab tak active rehta hai jab tak aap officially cancel nahi karwate.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Jab aapka monthly share due hota hai, toh LIC demand generate karti hai. Sponsor bank IDBI usse NPCI ke through aapke bank ko bhejta hai. Aapke bank try karta hai amount debit karne ka. Agar balance nahi hai, toh debit fail ho jata hai. Isko "bounced debit" kehte hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ab yahan official guidelines ka exact process samajhna zaroori hai. DAC&amp;FW ke operational guidelines ke hisaab se, agar auto-debit fail hota hai, toh account "default" mein chala jata hai. Lekin turant khatra nahi hai. LIC demand ko agle payment cycle mein dobara raise karti hai. Payment cycles har mahine 1st, 11th, aur 21st ko hote hain. Agar yeh dates public holiday hain, toh agla working day hota hai.
+            Ab yahan official guidelines ka exact process samajhna zaroori hai. DAC&amp;FW ke operational guidelines ke hisaab se, agar debit fail hota hai, toh account "default" mein chala jata hai. Lekin usi waqt khatra nahi hai. LIC demand ko agle payment cycle mein dobara raise karti hai. Payment cycles har mahine 1st, 11th, aur 21st ko hote hain. Agar yeh dates public holiday hain, toh agla working day hota hai.
           </p>
 
           <div className="space-y-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-              <p className="font-black text-sm text-green-800 dark:text-green-300 mb-1">🟢 Pehle Mahine (First Unpaid)</p>
+              <p className="font-black text-sm text-green-800 dark:text-green-300 mb-1">Pehle Mahine (First Unpaid)</p>
               <p className="text-xs text-[var(--color-text-muted)]">Koi late fee nahi lagti. Aap sirf due amount pay karke account regular karwa sakte hain. Teen payment cycles tak demand raise hoti hai bina kisi interest ke.</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <p className="font-black text-sm text-amber-800 dark:text-amber-300 mb-1">🟡 1 Mahine Ke Baad</p>
+              <p className="font-black text-sm text-amber-800 dark:text-amber-300 mb-1">1 Mahine Ke Baad</p>
               <p className="text-xs text-[var(--color-text-muted)]">Late fee lagti hai jo savings bank interest rate ke barabar hoti hai. Agar default 12 mahine se kam hai, toh simple interest calculate hota hai. Agar 12 mahine se zyada ho gaya, toh completed years ke liye compounding interest aur bache hue months ke liye simple interest lagta hai.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">🔴 6 Mahine Tak Payment Nahi Hui</p>
+              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">6 Mahine Tak Payment Nahi Hui</p>
               <p className="text-xs text-[var(--color-text-muted)]">Account status "dormant" ho jata hai. Ab further demand raise nahi hoti, lekin 3 saal tak SMS alerts aate rehte hain. Is dauran bhi aap entire outstanding amount + interest jama karke account regular karwa sakte hain.</p>
             </div>
             <div className="p-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl">
-              <p className="font-black text-sm text-gray-800 dark:text-gray-300 mb-1">⚪ 3 Saal Ke Baad</p>
+              <p className="font-black text-sm text-gray-800 dark:text-gray-300 mb-1">3 Saal Ke Baad</p>
               <p className="text-xs text-[var(--color-text-muted)]">SMS alerts band ho jate hain, lekin aap phir bhi call center ya online inquiry karke status check kar sakte hain. Account regularize karne ka option ab bhi available hai — poora due amount + applicable interest jama karke.</p>
             </div>
           </div>
 
           <WB>
-            <strong>Default hone se bachne ke liye:</strong> Har hafte apne bank account ka balance check karein. Agar auto-debit fail ho, toh turant CSC center jakar manual payment karein. 3 mahine se zyada gap mat dein. Agar kisi mahine PM Kisan ki kist late aayi, toh manual payment ka option use karein.
+            <strong>Default hone se bachne ke liye:</strong> Har hafte apne bank account ka balance check karein. Agar debit fail ho, toh us hafte hi CSC center jakar manual payment karein. 3 mahine se zyada gap mat dein. Agar kisi mahine PM Kisan ki kist late aayi, toh manual payment ka option use karein.
           </WB>
         </section>
 
         <section className="mb-8">
           <SH>Auto-Debit Band Kaise Karein? NACH Mandate Cancellation Ka Exact Process</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Agar aap chahte hain ke PM Kisan ke paise se share na kata jaye, balki aap khud alag se jama karein, toh aap auto-debit band karwa sakte hain. Lekin band karne se aapka monthly payment band nahi hota — aapko khud se jama karna padta hai, warna default ho jayega.
+            Agar aap chahte hain ke PM Kisan ke paise se share na kata jaye, balki aap khud alag se jama karein, toh aap ye mandate band karwa sakte hain. Lekin band karne se aapka monthly payment band nahi hota — aapko khud se jama karna padta hai, warna default ho jayega.
           </p>
 
           <StepList>
             <SI n={1}><strong>Net Banking / Mobile Banking Se:</strong> Apne bank ke net banking ya mobile banking app mein login karein. "Mandates" ya "Standing Instructions" section mein jayein. Active mandates ki list mein PM-KMY ya LIC wala mandate dhundein. Uspe "Cancel" ya "Delete" karein. Confirmation ke baad ek reference number milega — usse save kar lein. NPCI guidelines ke hisaab se cancellation 5 working days mein complete ho jata hai.</SI>
-            <SI n={2}><strong>Bank Branch Ja Kar:</strong> Apni bank branch mein jayein aur NACH mandate cancellation form maangein. Form mein account number, mandate reference number (agar pata ho), scheme name (PM Kisan Maandhan Yojana), aur cancellation reason likhein. Saath mein Aadhaar card aur bank passbook le jayein. Form submit karne ke baad bank se acknowledgement receipt zaroor lein. RBI aur NPCI guidelines ke hisaab se koi cancellation charge nahi lagti.</SI>
+            <SI n={2}><strong>Bank Branch Ja Kar:</strong> Apni bank branch mein jayein aur NACH mandate cancellation form maangein. Form mein account number, mandate reference number (agar pata ho), scheme name (PM Kisan Maandhan Yojana), aur cancellation reason likhein. Saath mein Aadhaar card aur bank passbook le jayein. Form submit karne ke baad bank se acknowledgement receipt le lein. RBI aur NPCI guidelines ke hisaab se koi cancellation charge nahi lagti.</SI>
             <SI n={3}><strong>Confirmation:</strong> Aapko confirmation SMS aayega jismein UMR number, entity name, account ke last 4 digits, aur cancellation date likhi hogi. Process 5-7 working days mein complete hota hai.</SI>
           </StepList>
 
           <IB>
-            Mandate cancel karne se aapka PM-KMY account band nahi hota. Sirf auto-debit band hota hai. Aapko ab har mahine khud se payment karni hogi — chahe CSC center ja kar cash dein, ya maandhan.in pe online pay karein, ya bank branch mein jama karwayein. Agar payment miss hui, toh wohi default process shuru ho jayega.
+            Mandate cancel karne se aapka PM-KMY account band nahi hota. Sirf katauti rukti hai. Aapko ab har mahine khud se payment karni hogi — chahe CSC center ja kar cash dein, ya maandhan.in pe online pay karein, ya bank branch mein jama karwayein. Agar payment miss hui, toh wohi default process shuru ho jayega.
           </IB>
         </section>
 
@@ -300,20 +301,20 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Bank se cancellation ka acknowledgement receipt zaroor lein
+            Bank se cancellation ka acknowledgement receipt leke aaiye
           </p>
         </div>
 
         <section className="mb-8">
           <SH>Manual Payment Ke Tareeke: Jab Auto-Debit Band Ho Gaya</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Auto-debit band karne ke baad aapke paas 3 tareeke hain apna share jama karne ke.
+            Mandate band karne ke baad aapke paas 3 tareeke hain apna share jama karne ke.
           </p>
 
           <div className="space-y-3 mb-4">
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <div className="flex items-start gap-3">
-                <span className="text-xl mt-0.5">🏪</span>
+                <span className="text-xl mt-0.5"></span>
                 <div>
                   <p className="font-black text-sm text-[var(--color-text)] mb-1">CSC Center</p>
                   <p className="text-xs text-[var(--color-text-muted)]">Yeh sabse aasan tareeqa hai gaon mein rehne wale farmers ke liye. Apne nazdeeki CSC center jayein. VLE (Village Level Entrepreneur) ke paas PM-KMY portal ka access hota hai. Aap cash dekar apna due amount jama karwa sakte hain. CSC wala aapko ek receipt dega — usse sambhal kar rakhein.</p>
@@ -322,7 +323,6 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <div className="flex items-start gap-3">
-                <span className="text-xl mt-0.5">💻</span>
                 <div>
                   <p className="font-black text-sm text-[var(--color-text)] mb-1">Online (maandhan.in)</p>
                   <p className="text-xs text-[var(--color-text-muted)]">Agar aapke paas smartphone hai aur thodi internet samajh hai, toh aap official portal pe login karke payment kar sakte hain. Debit card, UPI, ya net banking se transaction ho jata hai. Login ke liye aapka registered mobile number aur OTP chahiye hoga.</p>
@@ -331,7 +331,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <div className="flex items-start gap-3">
-                <span className="text-xl mt-0.5">🏦</span>
+                <span className="text-xl mt-0.5"></span>
                 <div>
                   <p className="font-black text-sm text-[var(--color-text)] mb-1">Bank Branch</p>
                   <p className="text-xs text-[var(--color-text-muted)]">Kuch banks direct contribution accept karti hain pension schemes ke liye. Apni bank branch mein poochhiye ke kya woh PM-KMY ka payment accept karti hain. Agar haan, toh aap wahan cash ya cheque se jama karwa sakte hain. Lekin yeh facility har bank mein available nahi hoti, isliye pehle confirm kar lein.</p>
@@ -341,7 +341,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
           </div>
 
           <IB>
-            Agar aap gaon mein hain aur CSC center aasani se available hai, toh auto-debit band mat karo. Kyunki har mahine CSC jana ya online payment karna ek extra responsibility hai. Auto-debit mein aapka share time par chala jata hai aur account active rehta hai. Sirf tab band karo jab aapko sach mein problem ho rahi ho — jaise account change karna hai ya PM Kisan ki kist irregular aati hai.
+            Agar aap gaon mein hain aur CSC center aasani se available hai, toh ise band mat karo. Kyunki har mahine CSC jana ya online payment karna ek extra responsibility hai. Auto-debit mein aapka share time par chala jata hai aur account active rehta hai. Sirf tab band karo jab aapko sach mein problem ho rahi ho — jaise account change karna hai ya PM Kisan ki kist irregular aati hai.
           </IB>
         </section>
 
@@ -352,10 +352,10 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
               { title: '"Kya government ne meri marzi ke bagair paisa kat liya?"', desc: 'Nahi. Aapne hi enrollment form mein consent di thi. Form mein clearly likha hota hai ke aap authorize kar rahe hain automatic debit ke liye. Agar aapko yaad nahi, toh shayad CSC operator ne theek se explain nahi kiya tha. Lekin legally aapne sign kiya hai, isliye bank debit karne ka haq rakhta hai.' },
               { title: '"Kya main Maandhan se nikal kar PM Kisan ka pura paisa le sakta hoon?"', desc: 'Dono schemes ka koi direct link nahi hai. PM Kisan ka paisa aapko milta hi rahega chahe aap Maandhan mein ho ya na ho. Maandhan se exit karne ke rules aapke joining ke saalon par depend karte hain: 10 saal se pehle exit karne par sirf aapka deposited amount + savings bank interest wapas milta hai. 10 saal ke baad (lekin 60 saal se pehle) exit karne par contribution + accumulated interest milta hai.' },
               { title: '"Mera share zyada kyun kat raha hai? Maine toh ₹55 bola tha."', desc: 'Share aapki entry age ke hisaab se fix hota hai. 18 saal pe ₹55, 25 pe ₹80, 30 pe ₹105, 40 pe ₹200. Agar zyada kat raha hai, toh ho sakta hai enrollment ke waqt aapki date of birth galat enter hui ho. Date of birth kabhi change nahi hoti, lekin agar genuine mistake hai toh CSC pe correction request daal sakte hain.' },
-              { title: '"Kya main apna share amount baad mein badal sakta hoon?"', desc: 'Nahi. Entry age ke hisaab se jo amount fix hua hai, woh poori scheme duration ke liye wahi rehta hai. Isliye enrollment se pehle apni financial situation zaroor dekh lein.' },
+              { title: '"Kya main apna share amount baad mein badal sakta hoon?"', desc: 'Nahi. Entry age ke hisaab se jo amount fix hua hai, woh poori scheme duration ke liye wahi rehta hai. Isliye enrollment se pehle apni financial situation thok-bajaa kar dekh lein.' },
             ].map(({ title, desc }) => (
               <div key={title} className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-                <p className="font-black text-sm text-[var(--color-text)] mb-1">❓ {title}</p>
+                <p className="font-black text-sm text-[var(--color-text)] mb-1">{title}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{desc}</p>
               </div>
             ))}
@@ -398,15 +398,15 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Poochhe Jaane Wale Sawal (FAQs)
+            Auto-Debit Ko Lekar Kisan Kya Poochhte Hain
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM-KMY Auto Debit Aur Contribution — Sawal Jawab" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Ek Baat Yaad Rakhein</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Band Karwane Se Pehle SMS Trail Set Kar Lein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Auto-debit ek facility hai, ek zabardasti nahi. Aapne enrollment ke waqt chuna tha, aur aap kabhi bhi band karwa sakte hain. Lekin band karne se monthly contribution ki responsibility aapki ban jati hai. Har mahine time par payment karna na bhoolein, warna default hone se aapki 60 saal ki pension khatre mein pad sakti hai.
+            Ye consent aapne enrollment par diya tha aur kabhi bhi wapas le sakte hain — lekin band karwane ke baad har mahine khud jama karne ki zimmedari aap par aa jaati hai, aur wahi woh mod hai jahan zyada tar accounts dormant hote hain. Isliye band karwane se pehle registered mobile number active karwa lein: har jama contribution ka SMS aata hai, aur jis mahine SMS na aaye, usi hafte KPAN se maandhan.in par balance check kar lein. Ye chhota sa trail 60 saal wali ₹3000 pension ko default se bachaata hai.
           </p>
         </div>
 
@@ -419,7 +419,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Ye Bhi Padhein</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aur Jaankari Ke Liye</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link
@@ -427,7 +427,6 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
                 href={`/maandhan/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
-                <div className="text-2xl mb-2">{card.emoji}</div>
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
                   {card.title}
                 </h4>
@@ -444,9 +443,9 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: '📝 Registration Guide' },
-          { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: '🧮 Calculator' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: 'Registration Guide' },
+          { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: 'Calculator' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
         <Disclaimer />
       </div>

@@ -2,14 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashupalan Loan Yojana', emoji: '🐃' },
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Dairy Loan Bina Collateral', emoji: '🐄' },
-  { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan NLM Subsidy', emoji: '🐔' },
-  { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan NLM Subsidy', emoji: '🐐' },
-  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan Interest Rate', emoji: '🏦' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan NLM Subsidy' },
+  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan — Rate Guide' },
+  { slug: 'dairy-farm-loan-without-collateral', title: 'Bina Guarantee Dairy Loan' },
 ];
 
 const FAQS_DATA = [
@@ -71,10 +69,10 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
             Rashtriya Gokul Mission 2026: Desi Gay Palan Par Kya-Kya Milta Hai — IVF ₹5,000, Sex-Sorted Semen 50%, Breed Farm ₹2 Crore Tak
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 11 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -110,19 +108,19 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Rashtriya Gokul Mission (RGM) ka naam suna sabne hai, par zyada tar kisan yeh nahi jaante ki isme unke
           liye asal mein kya rakha hai. Kuch log samajhte hain ki yeh gay kharidne ki subsidy hai — nahi hai. Kuch
-          samajhte hain ki yeh sirf sarkari farms ki scheme hai — yeh bhi adhoora sach hai. Asli baat yeh hai ki
+          samajhte hain ki yeh sirf sarkari farms ki scheme hai — yeh bhi adhoora sach hai. Hota yeh hai ki
           RGM ke teen components <strong>seedha kisan ki jeb tak</strong> pahunchte hain: IVF pregnancy par ₹5,000,
           sex-sorted semen par 50% subsidy, aur darwaze par muft artificial insemination.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
           Aur agar aap bade level par sochte ho, toh Breed Multiplication Farm par 50% capital subsidy — ₹2 crore
-          tak — bhi isi mission ka hissa hai. Is guide mein poora naksha hai: kaunsa component kiske liye hai,
+          tak — bhi isi mission ka hissa hai. Aage poora naksha hai: kaunsa component kiske liye hai,
           paisa kaise aur kahan se milta hai, 2025 mein kya naya juda, aur woh galatfehmiyan jo logon ka time
           barbaad karti hain.
         </p>
 
-        <SH>🐄 RGM Hai Kya — Ek Line Mein Samjho</SH>
+        <SH>RGM Hai Kya — Ek Line Mein Samjho</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           December 2014 se chal rahi yeh scheme Ministry of Fisheries, Animal Husbandry &amp; Dairying ke under
           desi gay-bhains ki <strong>nasl sudhaarne</strong> ka national mission hai. Maqsad simple hai — Gir,
@@ -148,7 +146,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>💰 Kisan Ko Seedha Kya Milta Hai — 3 Cheezein</SH>
+        <SH>Kisan Ko Seedha Kya Milta Hai — 3 Cheezein</SH>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
             <thead>
@@ -194,7 +192,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🧬 Sex-Sorted Semen — Bachhiya Ki Guarantee Jaisi Cheez</SH>
+        <SH>Sex-Sorted Semen — Bachhiya Ki Guarantee Jaisi Cheez</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Normal AI mein 50-50 hota hai — bachhda bhi ho sakta hai, bachhiya bhi. Dairy kisan ke liye bachhda
           matlab do saal khilao aur phir bhi income kuch nahi. Sex-sorted semen mein lab technology se sirf female
@@ -203,7 +201,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Iski dose normal semen se mehngi hoti hai — isliye RGM cost ka 50% tak subsidy deti hai. Kai states
           (UP, Maharashtra, Gujarat samet) apni taraf se aur bhi ghata dete hain, toh kisan ko dose ₹100-₹250
-          jaise rate par mil jaati hai. Apne district ke pashupalan office se current rate zaroor pucho — yeh
+          jaise rate par mil jaati hai. Apne district ke pashupalan office se current rate pooch lo — yeh
           state-to-state alag hai.
         </p>
         <WB>
@@ -221,7 +219,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🔬 IVF Se ₹5,000 — Kaise Kaam Karta Hai</SH>
+        <SH>IVF Se ₹5,000 — Kaise Kaam Karta Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           IVF (In Vitro Fertilization) mein high genetic merit gay ke embryo lab mein taiyar karke aapki gay/bhains
           mein transfer kiye jaate hain. Aapki apni gay average nasl ki bhi ho, paida hone wali bachhiya top
@@ -250,7 +248,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🏗️ Breed Multiplication Farm — ₹2 Crore Tak Ka Bada Game</SH>
+        <SH>Breed Multiplication Farm — ₹2 Crore Tak Ka Bada Game</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Yeh RGM ka entrepreneurship component hai — un logon ke liye jo dairy ko business ki tarah dekhte hain.
           Breed Multiplication Farm ek structured commercial farm hota hai (aam taur par 200 milch animals tak ka
@@ -303,7 +301,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           Husbandry)</Link> sabse sasta option rehta hai.
         </p>
 
-        <SH>💻 Apply Kaise Karein — Component-Wise Rasta</SH>
+        <SH>Apply Kaise Karein — Component-Wise Rasta</SH>
         <StepList>
           <SI n={1}><strong>Muft AI chahiye:</strong> koi application nahi. Apne gaon ke MAITRI technician ya nazdeeki pashu chikitsalay se sampark karo. AI hone par pashu ka ear tag aur record automatically ban jaata hai.</SI>
           <SI n={2}><strong>Sex-sorted semen chahiye:</strong> district pashupalan vibhag ya AI technician se pucho ki aapke state mein kis rate par available hai. Subsidy rate state-wise alag hota hai.</SI>
@@ -327,7 +325,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🌾 Desi Nasl Ka Economics — Yeh Scheme Kyon Matter Karti Hai</SH>
+        <SH>Desi Nasl Ka Economics — Yeh Scheme Kyon Matter Karti Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Number khud bolte hain — sarkari record ke mutabik 10 saal mein desh ka doodh production <strong>63.55%</strong> badha,
           per capita availability 307 gram/din (2013-14) se <strong>471 gram/din</strong> (2023-24) hui, aur productivity
@@ -345,7 +343,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           zyada return deta hai.
         </p>
 
-        <SH>⚠️ 4 Galatfehmiyan Jo Time Barbaad Karti Hain</SH>
+        <SH>4 Galatfehmiyan Jo Time Barbaad Karti Hain</SH>
         <StepList>
           <SI n={1}><strong>&ldquo;RGM se gay kharidne ka paisa milega&rdquo;</strong> — nahi. Yeh breeding scheme hai. Pashu kharid ke liye state schemes ya bank loan dekho. Sirf HGM IVF bachhiya ke loan par 3% interest subvention RGM se milta hai.</SI>
           <SI n={2}><strong>&ldquo;Application kisi agent se karani padegi&rdquo;</strong> — NAIP ki AI ke liye koi application hi nahi hai, aur BMF ki EOI khud online hoti hai. Agent sirf paisa khaate hain.</SI>
@@ -353,10 +351,10 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           <SI n={4}><strong>&ldquo;Sex-sorted semen se 100% bachhiya hogi&rdquo;</strong> — 90%+ hai, 100% nahi. Aur conception mein repeat lag sakta hai. Realistic expectation ke saath jao, tabhi faida dikhega.</SI>
         </StepList>
 
-        <SH>❓ FAQ — Aksar Puche Jaane Wale Sawal</SH>
+        <SH>FAQ — Aksar Puche Jaane Wale Sawal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             Rashtriya Gokul Mission — official page, Dept of Animal Husbandry & Dairying.{' '}
@@ -379,8 +377,8 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Articles' },
-          { href: '/articles/category/pashupalan', l: '📂 Pashupalan Guides' },
+          { href: '/articles', l: 'Article Hub' },
+          { href: '/articles/category/pashupalan', l: 'Dudh-Dairy-Pashu Guides' },
         ]} />
         <Disclaimer />
       </div>

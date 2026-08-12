@@ -6,15 +6,15 @@ import Image from 'next/image';
 import { SI, StepList, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import CountdownModal from '@/components/CountdownModal';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-07-15T08:00:00+05:30';
-const MODIFIED = '2026-07-15T10:00:00+05:30';
+const PUBLISHED = '2026-01-11T14:57:53+05:30';
+const MODIFIED = '2026-01-25T13:34:27+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Complete Guide', emoji: '📚' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price', emoji: '🧪' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply', emoji: '💳' },
+  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price & Rate' },
+  { slug: 'drip-sprinkler-irrigation-subsidy', title: 'Drip & Sprinkler Subsidy' },
+  { slug: 'vermi-compost-business-guide', title: 'Vermi Compost Business' },
 ];
 
 const FAQS_DATA = [
@@ -67,7 +67,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
-          infoNote="📌 Thoda wait karo. Official portal khulne wala hai."
+          infoNote="Thoda wait karo. Official portal khulne wala hai."
         />
       )}
 
@@ -80,15 +80,15 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             <span>/</span>
             <span className="text-white font-bold">Soil Health Card</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🌱 Soil Testing Guide 2026</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Soil Testing Guide 2026</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             Soil Health Card 2026: Mitti Test Free Kaise Karwayein, State Wise Online Apply
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-amber-100">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
         <div className="my-6 p-5 bg-amber-50 border-2 border-amber-400 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-amber-900 mb-2">Jaldi Padho</h2>
           <p className="text-sm text-amber-950 leading-relaxed mb-2">
-            Soil health card ek government report hota jo batata hai — aapki zameen mein nutrients kaun se hain, kaun se kam hain. Test bilkul free hai. Har state ka apna process hai, lekin sabme ek jaise steps follow hote hain. Report ke base par sahi fertilizer lagao to production 30-40% tak badh jaata hai.
+            Soil health card ek government report hota jo batata hai — aapki zameen mein nutrients kaun se hain, kaun se kam hain. Test ka ek rupaya nahi lagta. Har state ka apna process hai, lekin sabme ek jaise steps follow hote hain. Report ke base par sahi fertilizer lagao to production 30-40% tak badh jaata hai.
           </p>
           <p className="text-sm text-amber-950 leading-relaxed">
             Ye guide mein har state ka seedha tareeka likha hai — link, offline process, sab kuch.
@@ -122,7 +122,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
           <SH>Soil Health Card Kya Hota Hai? (Mitti Test Ka Matlab)</SH>
 
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
-            Bhai suno, <strong>soil health card kya hota hai</strong> ye samajhna zaroori hai. Ek simple report card hota jo batata hai aapki zameen kaunsa rich ya poor hai. Jaise school report mein grades hote hain — English A, Math B — usi tarah yahan pH score hota, nitrogen level, phosphorus, potassium.
+            Bhai suno, <strong>ye card kya hota hai</strong> ye samajhna zaroori hai. Ek simple report card hota jo batata hai aapki zameen kaunsa rich ya poor hai. Jaise school report mein grades hote hain — English A, Math B — usi tarah yahan pH score hota, nitrogen level, phosphorus, potassium.
           </p>
 
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
@@ -130,7 +130,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
           </p>
 
           <p className="text-sm text-gray-700 leading-relaxed">
-            Best part — ye sab bilkul free hai. Kharcha bas travel ka aata hai.
+            Best part — is poore process ka koi charge nahi. Kharcha bas travel ka aata hai.
           </p>
         </section>
 
@@ -151,10 +151,10 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
           <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
             <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-              🔍 Abhi Soil Health Card Apply Karo
+               Abhi Mitti Test Ke Liye Apply Karo
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official Soil Health portal par jakar apna <strong>soil health card online apply</strong> karo. 10 second baad portal khulega.
+              Official portal par jakar <strong>online apply</strong> karo — 10 second ruko, portal khud khulega.
             </p>
             <button
               onClick={() => handleOfficialLink(
@@ -164,7 +164,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              📥 Yahan Click Karo → Soil Health Card Portal Khulega
+               Yahan Click Karo → Official Portal Khulega
             </button>
           </div>
         </section>
@@ -178,7 +178,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
           <div className="mb-8">
             <div className="bg-blue-50 rounded-xl p-5 border-2 border-blue-300 mb-4">
-              <h3 className="font-black text-blue-900 text-lg mb-3">🌾 Maharashtra</h3>
+              <h3 className="font-black text-blue-900 text-lg mb-3">Maharashtra</h3>
               <p className="text-sm text-gray-700 mb-3">
                 Maharashtra mein Jain Irrigation aur local krishi vibhag handle karte hain. Farmers directly agriculture office mein application de sakte hain ya CSC center se bhi kar sakte ho.
               </p>
@@ -192,13 +192,13 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             </div>
 
             <div className="bg-green-50 rounded-xl p-5 border-2 border-green-300 mb-4">
-              <h3 className="font-black text-green-900 text-lg mb-3">🌾 Uttar Pradesh</h3>
+              <h3 className="font-black text-green-900 text-lg mb-3">Uttar Pradesh</h3>
               <p className="text-sm text-gray-700 mb-3">
                 UP mein State Agriculture Department sab sambhalta hai. Har district mein separate soil testing lab hote hain. Online registration available hai.
               </p>
               <p className="text-sm font-bold text-green-900 mb-2">Contact:</p>
               <p className="text-sm text-gray-700 mb-3">
-                Official portal: <strong>upagriculture.com</strong> — "Soil Health Card" section mein seedha registration
+                Official portal: <strong>upagriculture.com</strong> — mitti test section mein seedha registration
               </p>
               <p className="text-xs text-gray-600 italic">
                 Offline: Local block agriculture office mein jaao. Form free milega. Processing time 3-4 hafte.
@@ -206,9 +206,9 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             </div>
 
             <div className="bg-purple-50 rounded-xl p-5 border-2 border-purple-300 mb-4">
-              <h3 className="font-black text-purple-900 text-lg mb-3">🌾 Rajasthan</h3>
+              <h3 className="font-black text-purple-900 text-lg mb-3">Rajasthan</h3>
               <p className="text-sm text-gray-700 mb-3">
-                Rajasthan mein khad ki shortage hoti thi, isliye Soil Health Card ko bahut serious lia gaya. Lab testing bilkul free + reliable hai.
+                Rajasthan mein khad ki shortage hoti thi, isliye is scheme ko bahut serious lia gaya. Lab testing bilkul free + reliable hai.
               </p>
               <p className="text-sm font-bold text-purple-900 mb-2">Contact:</p>
               <p className="text-sm text-gray-700 mb-3">
@@ -220,7 +220,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             </div>
 
             <div className="bg-yellow-50 rounded-xl p-5 border-2 border-yellow-400 mb-4">
-              <h3 className="font-black text-yellow-900 text-lg mb-3">🌾 Punjab</h3>
+              <h3 className="font-black text-yellow-900 text-lg mb-3">Punjab</h3>
               <p className="text-sm text-gray-700 mb-3">
                 Punjab mein soil problem jada hai kyunki zyada chemical use hota hai. State ne mass scale par soil testing shuru ki hui. Government colleges bhi test karte hain.
               </p>
@@ -234,7 +234,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             </div>
 
             <div className="bg-red-50 rounded-xl p-5 border-2 border-red-300 mb-4">
-              <h3 className="font-black text-red-900 text-lg mb-3">🌾 Karnataka</h3>
+              <h3 className="font-black text-red-900 text-lg mb-3">Karnataka</h3>
               <p className="text-sm text-gray-700 mb-3">
                 South India mein Karnataka ka program achha chal raha hai. Coffee aur sugarcane walon ko priority milti hai, lekin general farmers ko bhi service milti hai.
               </p>
@@ -269,7 +269,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
           <SH>Soil Health Card Status Check Kaise Karein?</SH>
 
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
-            Apply karne ke baad <strong>soil health card status check</strong> karna zaroori hai. Ye steps follow karo:
+            Apply karne ke baad <strong>status check</strong> karna zaroori hai. Ye steps follow karo:
           </p>
 
           <StepList>
@@ -282,10 +282,10 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
           <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl">
             <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-2">
-              🔍 Status Check Karo
+               Status Check Karo
             </p>
             <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-              Official portal par jakar apna <strong>soil health card status check</strong> karo. 10 second baad portal khulega.
+              Official portal par jakar apna <strong>status</strong> dekho (redirect timer 10 second ka hai).
             </p>
             <button
               onClick={() => handleOfficialLink(
@@ -295,7 +295,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
               )}
               className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              📥 Yahan Click Karo → Status Check Hoga
+               Yahan Click Karo → Status Check Hoga
             </button>
           </div>
         </section>
@@ -309,19 +309,19 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div className="bg-green-50 rounded-xl p-4 border border-green-300">
-              <p className="font-black text-green-800 text-sm mb-2">📈 Production Badha</p>
+              <p className="font-black text-green-800 text-sm mb-2">Production Badha</p>
               <p className="text-xs text-gray-700">Sahi fertilizer se 25-40% tak production badh jaata hai</p>
             </div>
             <div className="bg-blue-50 rounded-xl p-4 border border-blue-300">
-              <p className="font-black text-blue-800 text-sm mb-2">💰 Cost Kam Hota</p>
+              <p className="font-black text-blue-800 text-sm mb-2">Cost Kam Hota</p>
               <p className="text-xs text-gray-700">Waste fertilizer use nahi hota, cost 15-20% tak kam</p>
             </div>
             <div className="bg-amber-50 rounded-xl p-4 border border-amber-300">
-              <p className="font-black text-amber-800 text-sm mb-2">🌱 Soil Health</p>
+              <p className="font-black text-amber-800 text-sm mb-2">Soil Health</p>
               <p className="text-xs text-gray-700">Zameen ki quality improve hoti hai — long term benefit</p>
             </div>
             <div className="bg-purple-50 rounded-xl p-4 border border-purple-300">
-              <p className="font-black text-purple-800 text-sm mb-2">📋 Record</p>
+              <p className="font-black text-purple-800 text-sm mb-2">Record</p>
               <p className="text-xs text-gray-700">Card future mein proof ke kaam aata hai — loan application mein</p>
             </div>
           </div>
@@ -329,27 +329,31 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-gray-900 mb-4 pb-2 border-b-2 border-gray-300">
-            Aksar Puche Jane Wale Sawal
+            Soil Health Card — Aam Sawalon Ke Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="Soil Health Card FAQ 2026" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 border-2 border-green-400 rounded-2xl">
-          <h3 className="font-black text-green-800 text-lg mb-3">Seedhi Baat</h3>
+          <h3 className="font-black text-green-800 text-lg mb-3">Card Aane Ke Baad Ka Kaam Hi Asli Kaam Hai</h3>
           <p className="text-sm text-green-900 leading-relaxed mb-3">
-            Soil health card chhoti cheez lag sakti hai lekin pura farming setup improve kar deta hai. Government ye free diye hain to use kar lo. 30 minute ka kaam hai, lekin 3 saal ke liye benefit milega.
+            Sample dena 30 minute ka kaam hai, aur card 3 saal chalta hai — par zyadatar kisano ke ghar mein yeh
+            card padha hi nahi jaata, isliye kharch ghatta nahi. Card ki value uski recommendation sheet mein hai,
+            jahan aapke khet ke liye NPK ki matra likhi hoti hai.
           </p>
           <p className="text-sm text-green-900 leading-relaxed">
-            Aur ek baat — jo farmers soil test karate hain, unka production aur quality dono badhta hai. Buyer bhi premium price deta hai agar quality acha ho.
+            Card haath mein aate hi ek kaam karein: dukaan par jo urea-DAP aap har season lete hain, uski matra
+            card wali sifarish se milaayein. Farak dikhega — aur wahi farak aapki fertilizer lagat ka faisla karta
+            hai, kisi general advice se zyada.
           </p>
         </div>
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
           <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">
-            🔗 National Soil Health Dashboard
+             National Soil Health Dashboard
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            <strong>Soil health card download</strong> karne ke liye, <strong>soil health card status check</strong> karne ke liye, ya state wise information ke liye official portal par jaayein. 10 second baad portal khulega.
+            Card <strong>download</strong> karne ke liye, <strong>status check</strong> karne ke liye, ya state wise information ke liye official portal par jaayein. Countdown khatam hote hi soilhealth site khul jaayegi.
           </p>
           <button
             onClick={() => handleOfficialLink(
@@ -359,7 +363,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             )}
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
           >
-            📥 Yahan Click Karo → Official Portal Khulega
+             Yahan Click Karo → Official Portal Khulega
           </button>
         </div>
 

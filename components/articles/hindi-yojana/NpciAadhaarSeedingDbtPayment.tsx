@@ -332,23 +332,22 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
       </p>
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
-        <p className="text-2xl mb-2">📆</p>
-        <p className="font-black text-lg mb-1">Kist Ruki Hai? Pata Karo Kyun</p>
+        <p className="font-black text-lg mb-1">Paisa Atka Hai? Wajah Yahin Milegi</p>
         <p className="text-green-100 text-sm mb-4">
-          eKYC, bank seeding, land seeding check karo — 4 sawaal mein exact reason.
+          Seeding, eKYC aur land record — teen jaanch, ek hi tracker mein.
         </p>
         <div className="flex flex-wrap justify-center gap-2.5">
           <Link
             href="/calculator/installment-tracker"
             className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors"
           >
-            📆 Kist Tracker Kholo →
+             Kist Tracker se jaanch karo →
           </Link>
           <Link
             href="/calculator"
             className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors"
           >
-            🧮 Sab Utilities Dekho
+             Utilities ka poora panel
           </Link>
         </div>
       </div>
@@ -380,7 +379,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         <Link href="/articles/hi/payment-stopped-by-state">उसकी guide यहां</Link> है।
       </p>
       <p>
-        एक आखिरी बात, जो अनुभव से कहते हैं — seeding एक बार की चीज नहीं, एक <em>स्थिति</em> है। खाता बदला,
+        अनुभव से निकला सबसे बड़ा सबक — seeding एक बार की चीज नहीं, एक <em>स्थिति</em> है। खाता बदला,
         बैंक merge हुआ, खाता dormant हुआ — किसी भी घटना से mapping बदल या टूट सकती है। तो साल में दो बार,
         बुवाई और कटाई की तरह, myAadhaar खोलकर 2 मिनट का status-check कर लेने की आदत बना लीजिए। जितनी मेहनत
         खेत के दस्तावेज़ संभालने में लगाते हैं, उसका सौवां हिस्सा इस digital कागज पर भी लगा दें — किस्त अटकने की
@@ -391,7 +390,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
       <dl className="mb-8 divide-y divide-[var(--color-border)] border border-[var(--color-border)] rounded-2xl overflow-hidden">
         {FAQS.map(({ q, a }) => (
           <div key={q} className="p-4 bg-[var(--color-card)]">
-            <dt className="font-semibold text-[var(--color-text)] text-sm mb-1.5">❓ {q}</dt>
+            <dt className="font-semibold text-[var(--color-text)] text-sm mb-1.5">{q}</dt>
             <dd className="text-sm text-[var(--color-text-muted)] leading-relaxed m-0">{a}</dd>
           </div>
         ))}
@@ -421,16 +420,16 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">इसी विषय की बाकी कड़ियां</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li>
-            <Link href="/articles/PmKisanBankAccountChangeProcess">🏦 Bank Account Change Process</Link>
+            <Link href="/articles/PmKisanBankAccountChangeProcess">Bank Account Change Process</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanPaymentFailedFix2026">🛠️ Payment Failed — Fix Guide</Link>
+            <Link href="/articles/PmKisanPaymentFailedFix2026">Payment Failed — Fix Guide</Link>
           </li>
           <li>
-            <Link href="/articles/hi/payment-stopped-by-state">⛔ Payment Stopped by State</Link>
+            <Link href="/articles/hi/payment-stopped-by-state">Payment Stopped by State</Link>
           </li>
           <li>
-            <Link href="/articles/hi/status-check-mobile-se">📱 मोबाइल से स्टेटस चेक</Link>
+            <Link href="/articles/hi/status-check-mobile-se">सिर्फ mobile number से status</Link>
           </li>
         </ul>
       </div>

@@ -1,85 +1,7 @@
 import Link from 'next/link';
+import { FAQBlock } from '@/components/ArticleShared';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
-
-const FAQ_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'क्या पूरे देश के लिए कोई एक कर्ज माफी योजना है?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'नहीं। कर्ज माफी राज्य सरकारों का फैसला होता है — हर राज्य की अपनी scheme, अपनी शर्तें, अपनी list। केंद्र की तरफ से आखिरी nationwide scheme 2008 (ADWDRS) थी। अभी कोई अखिल भारतीय माफी योजना चालू नहीं है।',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'महाराष्ट्र की नई कर्ज माफी में कितना माफ होगा?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'March 2026 के बजट में सरकार ने ₹2 लाख तक के overdue crop loans (September 2025 तक बकाया) माफ करने की घोषणा की है। साथ में नियमित कर्ज चुकाने वालों को ₹50,000 तक incentive की बात है। लागू होने की details और list सरकारी GR से confirm करें।',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'लिस्ट में नाम कैसे check करें?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'जिस राज्य की scheme है, उसी के official portal पर — आधार नंबर या loan account number से। Portal का link हमेशा राज्य सरकार की site से लें, WhatsApp के forward से नहीं। जब तक official list जारी नहीं होती, कोई भी "list" fake है।',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'KCC का loan भी माफ होता है क्या?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'निर्भर करता है scheme की शर्तों पर। ज्यादातर माफी योजनाएं short-term crop loan cover करती हैं — जिनमें KCC से लिया crop loan भी आ सकता है। Tractor loan और dairy loan — अर्थात् term loans — आम तौर पर बाहर रहते हैं। अपनी scheme का GR पढ़ें।',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'कोई agent बोल रहा है पैसे देकर नाम डलवा देगा — सच है?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'बिल्कुल fraud है। कर्ज माफी की list बैंक record से बनती है — कोई नाम "डलवा" नहीं सकता। पैसे देने से सिर्फ पैसे जाएंगे। ऐसे agent की शिकायत police में करें।',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'माफी के बाद CIBIL score ठीक हो जाता है?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Loan settle होने से default का दाग हल्का जरूर होता है, लेकिन record में waiver का जिक्र रह सकता है। नया loan लेते समय बैंक पूरी history देखता है। इसीलिए हो सके तो नियमित repayment ही best रास्ता है — कई राज्य उसका इनाम भी दे रहे हैं।',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'नाम list में आ गया — अब मुझे क्या करना होगा?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'ज्यादातर schemes में आधार से biometric सत्यापन कराना पड़ता है — पिछली फुले कर्जमुक्ती में यह CSC/बैंक पर होता था। सत्यापन के बाद रकम सीधे loan account में jama होती है। आपके हाथ में cash नहीं आता — जो कहे “माफी का पैसा निकालने में मदद करूंगा”, वह ठग है।',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Loan settle होने के बाद कौन सा कागज लेना जरूरी है?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'बैंक से NOC (No Objection Certificate) या loan closure letter जरूर लें और संभाल कर रखें। जमीन गिरवी रखी थी तो उसके कागज वापस लेना न भूलें। आगे नया loan लेते समय यही कागज सबूत होगा कि पुराना खाता साफ है।',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'मेरा loan दो बैंकों में है — दोनों माफ होंगे?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Scheme की शर्तों पर निर्भर है — ज्यादातर में प्रति किसान/परिवार एक सीमा (मिसाल के तौर पर ₹2 लाख तक) तय होती है, चाहे खाते कितने भी हों। दोनों खातों का मिलाकर बकाया सीमा से ज्यादा है तो बचा हिस्सा आपको खुद चुकाना होगा। GR में family-unit की परिभाषा ध्यान से पढ़ें।',
-      },
-    },
-  ],
-};
 
 function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
   return (
@@ -131,13 +53,48 @@ function DB({ children }: { children: React.ReactNode }) {
   );
 }
 
+const karjMafiFaqs = [
+  {
+    q: 'क्या पूरे देश के लिए कोई एक कर्ज माफी योजना है?',
+    a: 'नहीं। कर्ज माफी राज्य सरकारों का फैसला होता है — हर राज्य की अपनी scheme, अपनी शर्तें, अपनी list। केंद्र की तरफ से आखिरी nationwide scheme 2008 (ADWDRS) थी। अभी कोई अखिल भारतीय माफी योजना चालू नहीं है।',
+  },
+  {
+    q: 'महाराष्ट्र की नई कर्ज माफी में कितना माफ होगा?',
+    a: 'March 2026 के बजट में सरकार ने ₹2 लाख तक के overdue crop loans (September 2025 तक बकाया) माफ करने की घोषणा की है। साथ में नियमित कर्ज चुकाने वालों को ₹50,000 तक incentive की बात है। लागू होने की details और list सरकारी GR से confirm करें।',
+  },
+  {
+    q: 'लिस्ट में नाम कैसे check करें?',
+    a: 'जिस राज्य की scheme है, उसी के official portal पर — आधार नंबर या loan account number से। Portal का link हमेशा राज्य सरकार की site से लें, WhatsApp के forward से नहीं। जब तक official list जारी नहीं होती, कोई भी "list" fake है।',
+  },
+  {
+    q: 'KCC का loan भी माफ होता है क्या?',
+    a: 'निर्भर करता है scheme की शर्तों पर। ज्यादातर माफी योजनाएं short-term crop loan cover करती हैं — जिनमें KCC से लिया crop loan भी आ सकता है। Tractor loan और dairy loan — अर्थात् term loans — आम तौर पर बाहर रहते हैं। अपनी scheme का GR पढ़ें।',
+  },
+  {
+    q: 'कोई agent बोल रहा है पैसे देकर नाम डलवा देगा — सच है?',
+    a: 'बिल्कुल fraud है। कर्ज माफी की list बैंक record से बनती है — कोई नाम "डलवा" नहीं सकता। पैसे देने से सिर्फ पैसे जाएंगे। ऐसे agent की शिकायत police में करें।',
+  },
+  {
+    q: 'माफी के बाद CIBIL score ठीक हो जाता है?',
+    a: 'Loan settle होने से default का दाग हल्का जरूर होता है, लेकिन record में waiver का जिक्र रह सकता है। नया loan लेते समय बैंक पूरी history देखता है। इसीलिए हो सके तो नियमित repayment ही best रास्ता है — कई राज्य उसका इनाम भी दे रहे हैं।',
+  },
+  {
+    q: 'नाम list में आ गया — अब मुझे क्या करना होगा?',
+    a: 'ज्यादातर schemes में आधार से biometric सत्यापन कराना पड़ता है — पिछली फुले कर्जमुक्ती में यह CSC/बैंक पर होता था। सत्यापन के बाद रकम सीधे loan account में jama होती है। आपके हाथ में cash नहीं आता — जो कहे “माफी का पैसा निकालने में मदद करूंगा”, वह ठग है।',
+  },
+  {
+    q: 'Loan settle होने के बाद कौन सा कागज लेना जरूरी है?',
+    a: 'बैंक से NOC (No Objection Certificate) या loan closure letter जरूर लें और संभाल कर रखें। जमीन गिरवी रखी थी तो उसके कागज वापस लेना न भूलें। आगे नया loan लेते समय यही कागज सबूत होगा कि पुराना खाता साफ है।',
+  },
+  {
+    q: 'मेरा loan दो बैंकों में है — दोनों माफ होंगे?',
+    a: 'Scheme की शर्तों पर निर्भर है — ज्यादातर में प्रति किसान/परिवार एक सीमा (मिसाल के तौर पर ₹2 लाख तक) तय होती है, चाहे खाते कितने भी हों। दोनों खातों का मिलाकर बकाया सीमा से ज्यादा है तो बचा हिस्सा आपको खुद चुकाना होगा। GR में family-unit की परिभाषा ध्यान से पढ़ें।',
+  },
+];
+
 export default function KisanKarjMafiList2027({ article }: { article: HindiArticle }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
-      />
       <p>
         &quot;कर्ज माफ हो गया, लिस्ट आ गई है, अपना नाम देख लो&quot; — यह message आपको भी WhatsApp पर मिला
         होगा। Link पर click किया तो या तो कोई ad-भरी site खुली, या नाम-आधार मांगने वाला form। रुकिए। इस
@@ -433,7 +390,7 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
       </p>
       <ol className="my-4 pl-5 space-y-2 list-decimal">
         <li className="text-sm text-[var(--color-text)] leading-relaxed pl-1">
-          कर्ज महंगे साहूकार से है तो पहले उसे <Link href="/articles/KisanCreditCardOnlineApply2026">KCC</Link>{' '}
+          कर्ज महंगे साहूकार से है तो पहले उसे <Link href="/articles/KisanCreditCardOnlineApply2026">Kisan Credit Card</Link>{' '}
           की तरह के सस्ते रास्ते में shift करने की सोचें — 4% तक effective interest वाला crop loan हर हाल में
           बेहतर है।
         </li>
@@ -448,47 +405,7 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
       </ol>
 
       <SH>सवाल-जवाब — जो उलझनें बार-बार आती हैं</SH>
-      <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">
-        कर्ज माफी पर बार-बार पूछे जाने वाले सवाल।
-      </p>
-      <div className="space-y-4 mb-8">
-        <div>
-          <p className="font-semibold text-[var(--color-text)] text-sm mb-1">क्या पूरे देश के लिए कोई एक कर्ज माफी योजना है?</p>
-          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">नहीं। कर्ज माफी राज्य सरकारों का फैसला होता है — हर राज्य की अपनी scheme, अपनी शर्तें, अपनी list। केंद्र की तरफ से आखिरी nationwide scheme 2008 (ADWDRS) थी। अभी कोई अखिल भारतीय माफी योजना चालू नहीं है।</p>
-        </div>
-        <div>
-          <p className="font-semibold text-[var(--color-text)] text-sm mb-1">महाराष्ट्र की नई कर्ज माफी में कितना माफ होगा?</p>
-          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">March 2026 के बजट में सरकार ने ₹2 लाख तक के overdue crop loans (September 2025 तक बकाया) माफ करने की घोषणा की है। साथ में नियमित कर्ज चुकाने वालों को ₹50,000 तक incentive की बात है। लागू होने की details और list सरकारी GR से confirm करें।</p>
-        </div>
-        <div>
-          <p className="font-semibold text-[var(--color-text)] text-sm mb-1">लिस्ट में नाम कैसे check करें?</p>
-          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">जिस राज्य की scheme है, उसी के official portal पर — आधार नंबर या loan account number से। Portal का link हमेशा राज्य सरकार की site से लें, WhatsApp के forward से नहीं। जब तक official list जारी नहीं होती, कोई भी &quot;list&quot; fake है।</p>
-        </div>
-        <div>
-          <p className="font-semibold text-[var(--color-text)] text-sm mb-1">KCC का loan भी माफ होता है क्या?</p>
-          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">निर्भर करता है scheme की शर्तों पर। ज्यादातर माफी योजनाएं short-term crop loan cover करती हैं — जिनमें KCC से लिया crop loan भी आ सकता है। Tractor loan और dairy loan — अर्थात् term loans — आम तौर पर बाहर रहते हैं। अपनी scheme का GR पढ़ें।</p>
-        </div>
-        <div>
-          <p className="font-semibold text-[var(--color-text)] text-sm mb-1">कोई agent बोल रहा है पैसे देकर नाम डलवा देगा — सच है?</p>
-          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">बिल्कुल fraud है। कर्ज माफी की list बैंक record से बनती है — कोई नाम &quot;डलवा&quot; नहीं सकता। पैसे देने से सिर्फ पैसे जाएंगे। ऐसे agent की शिकायत police में करें।</p>
-        </div>
-        <div>
-          <p className="font-semibold text-[var(--color-text)] text-sm mb-1">माफी के बाद CIBIL score ठीक हो जाता है?</p>
-          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Loan settle होने से default का दाग हल्का जरूर होता है, लेकिन record में waiver का जिक्र रह सकता है। नया loan लेते समय बैंक पूरी history देखता है। इसीलिए हो सके तो नियमित repayment ही best रास्ता है — कई राज्य उसका इनाम भी दे रहे हैं।</p>
-        </div>
-        <div>
-          <p className="font-semibold text-[var(--color-text)] text-sm mb-1">नाम list में आ गया — अब मुझे क्या करना होगा?</p>
-          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">ज्यादातर schemes में आधार से biometric सत्यापन कराना पड़ता है — पिछली फुले कर्जमुक्ती में यह CSC/बैंक पर होता था। सत्यापन के बाद रकम सीधे loan account में jama होती है। आपके हाथ में cash नहीं आता — जो कहे “माफी का पैसा निकालने में मदद करूंगा”, वह ठग है।</p>
-        </div>
-        <div>
-          <p className="font-semibold text-[var(--color-text)] text-sm mb-1">Loan settle होने के बाद कौन सा कागज लेना जरूरी है?</p>
-          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">बैंक से NOC (No Objection Certificate) या loan closure letter जरूर लें और संभाल कर रखें। जमीन गिरवी रखी थी तो उसके कागज वापस लेना न भूलें। आगे नया loan लेते समय यही कागज सबूत होगा कि पुराना खाता साफ है।</p>
-        </div>
-        <div>
-          <p className="font-semibold text-[var(--color-text)] text-sm mb-1">मेरा loan दो बैंकों में है — दोनों माफ होंगे?</p>
-          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Scheme की शर्तों पर निर्भर है — ज्यादातर में प्रति किसान/परिवार एक सीमा (मिसाल के तौर पर ₹2 लाख तक) तय होती है, चाहे खाते कितने भी हों। दोनों खातों का मिलाकर बकाया सीमा से ज्यादा है तो बचा हिस्सा आपको खुद चुकाना होगा। GR में family-unit की परिभाषा ध्यान से पढ़ें।</p>
-        </div>
-      </div>
+      <FAQBlock faqs={karjMafiFaqs} variant="inline" caption="कर्ज माफी पर बार-बार पूछे जाने वाले सवाल।" />
 
       <SH>चलते-चलते — आज शाम तक का काम</SH>
       <p>
@@ -516,36 +433,34 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
         <h3 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
-          <span>🔗</span> Related Articles — Yeh Bhi Padho
+          Related Articles — Yeh Bhi Padho
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           <Link
             href="/articles/KisanRinKahaSeLe2026"
             className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
           >
-            <span className="text-xl shrink-0">🏦</span>
+            <span className="text-xl shrink-0"></span>
             <span>Kisan Rin Kahan Se Le</span>
           </Link>
           <Link
             href="/articles/KisanCreditCardOnlineApply2026"
             className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
           >
-            <span className="text-xl shrink-0">💳</span>
-            <span>KCC Online Apply</span>
+            <span>KCC बनवाने का online तरीका</span>
           </Link>
           <Link
             href="/articles/KisanTractorLoan2026"
             className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
           >
-            <span className="text-xl shrink-0">🚜</span>
-            <span>Tractor Loan Guide</span>
+            <span className="text-xl shrink-0"></span>
+            <span>Tractor loan — ब्याज और subsidy</span>
           </Link>
           <Link
             href="/articles/PmKisanMasterGuide2026"
             className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
           >
-            <span className="text-xl shrink-0">📚</span>
-            <span>PM Kisan Master Guide</span>
+            <span>PM Kisan की संपूर्ण guide</span>
           </Link>
         </div>
       </div>

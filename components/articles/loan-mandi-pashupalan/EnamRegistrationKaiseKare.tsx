@@ -2,20 +2,18 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📊' },
-  { slug: 'msp-list-2026-27', title: 'MSP List 2026-27', emoji: '📋' },
-  { slug: 'mandi-bhav-app-comparison', title: 'Best Mandi Bhav Apps', emoji: '📱' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
-  { slug: 'AgriStackKyaHai2026', title: 'AgriStack Kya Hai', emoji: '🆔' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
+  { slug: 'msp-list-2026-27', title: 'MSP List 2026-27' },
+  { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu Bhav: MSP vs Mandi' },
 ];
 
 const FAQS_DATA = [
   {
     q: 'eNAM registration free hai ya paisa lagta hai?',
-    a: 'Farmer registration bilkul free hai. enam.gov.in par ya mandi ke eNAM help desk par — kahin bhi paisa nahi lagta. Agar koi CSC ya agent charge maange toh woh sirf apni service fee hai, portal ki koi fee nahi.',
+    a: 'Farmer registration ka ek rupaya nahi lagta. enam.gov.in par ya mandi ke eNAM help desk par — kahin bhi paisa nahi lagta. Agar koi CSC ya agent charge maange toh woh sirf apni service fee hai, portal ki koi fee nahi.',
   },
   {
     q: 'eNAM par fasal bechne ke liye kya documents chahiye?',
@@ -71,10 +69,10 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
             eNAM Registration 2026: Online Mandi Mein Fasal Kaise Bechein — Step-by-Step Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 9 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>9 min read</span>
           </div>
         </div>
       </div>
@@ -93,7 +91,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </div>
 
         <DB>
-          <strong>TL;DR — 30 second mein:</strong>
+          <strong>Ek line mein poori kahani:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>eNAM registration <strong>bilkul free</strong> — enam.gov.in par ya mandi ke help desk par; documents sirf 3 (Aadhaar, bank passbook, mobile).</li>
             <li>Fasal apni hi mandi le jaani hai — sirf <strong>boli online</strong> hoti hai; zyada buyers, behtar rate, payment seedha bank mein.</li>
@@ -113,7 +111,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Registration ka kharcha zero, kagaz sirf teen. Is guide mein registration se le kar gate entry, boli
+          Registration ka kharcha zero, kagaz sirf teen. Neeche registration se le kar gate entry, boli
           aur payment tak ka poora rasta hai — aur woh atakne wali jagahein bhi jo pehli baar walon ko pareshan
           karti hain.
         </p>
@@ -323,7 +321,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           states ke buyers bhi. Jitna bada pool, utna behtar rate milne ka chance.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Ab ek seedhi baat, jo koi brochure nahi batayega — inter-state trade abhi bhi bahut chhota hai. Financial
+          Ab woh baat, jo koi brochure nahi batayega — inter-state trade abhi bhi bahut chhota hai. Financial
           Express ki April 2025 report ke according FY25 mein inter-state eNAM trade sirf ₹21 crore ka tha (FY24 ke
           ₹42 crore se aadha), jabki state ke andar inter-mandi trade ₹1,769 crore aur total turnover ₹80,262 crore
           raha (<a href="https://www.financialexpress.com/policy/economy-enam-remains-local-inter-state-trade-minimal-halves-in-fy25-3817271/" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: Financial Express</a>).
@@ -390,21 +388,24 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </div>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Pehla Kaam: Apni Mandi Ka Naam List Mein Dhoondho</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Registration free hai, documents sirf 3, aur process 10-15 minute ka. Agar aapki mandi eNAM se
-            judi hai toh register na karne ki koi wajah nahi.
+            eNAM registration ka faayda poora aapki mandi par tika hai, aapke form par nahi. Agar aapki local
+            mandi 1,400+ integrated mandis wali list mein nahi hai, toh ID ban jayegi par online bidding
+            aapke lot par nahi khulegi — kaagaz sahi, nateeja zero.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Ek baar register ho gaye toh har season online bidding ka fayda — zyada buyers, behtar rate,
-            aur payment seedha bank mein. <strong>Abhi enam.gov.in par apni mandi ki list check karo.</strong>
+            Isliye order ulta rakho: pehle <strong>enam.gov.in ki mandi list</strong> mein apna APMC dhoondho,
+            phir 3 documents lekar 10-15 minute ka registration karo. Mandi list mein hai toh ID us din se
+            kaam ki hai; nahi hai toh nazdeeki integrated mandi ka rate compare karke tay karo ki maal wahan
+            le jaana transport kharch ke baad bhi bachta hai ya nahi.
           </p>
         </div>
 
         <SH>Aapke Sawaal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             eNAM — National Agriculture Market official portal & blog (Adoni mandi case).{' '}
@@ -419,9 +420,9 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles/mandi-bhav-today', l: '📊 Aaj Ka Mandi Bhav' },
-          { href: '/articles/msp-list-2026-27', l: '📋 MSP List 2026-27' },
-          { href: '/articles/category/mandi', l: '📂 Market Rates' },
+          { href: '/articles/mandi-bhav-today', l: 'Aaj Ka Mandi Bhav' },
+          { href: '/articles/msp-list-2026-27', l: 'MSP List 2026-27' },
+          { href: '/articles/category/mandi', l: 'Market Rates' },
         ]} />
         <Disclaimer />
       </div>

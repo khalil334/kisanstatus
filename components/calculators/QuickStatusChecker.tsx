@@ -2,13 +2,10 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const SITE_URL = 'https://kisanstatus.com';
-const SITE_NAME = 'KisanStatus';
-const AUTHOR_NAME = 'KisanStatus Team';
-const AUTHOR_URL = `${SITE_URL}/about`;
-const PUBLISHED = '2026-03-10T08:00:00+05:30';
-const MODIFIED = '2026-07-07T08:20:00+05:30';
+const PUBLISHED = '2026-03-30T12:24:48+05:30';
+const MODIFIED = '2026-05-10T18:26:39+05:30';
 
 function fmtDate(iso: string) {
   return new Date(iso).toLocaleDateString('en-IN', {
@@ -34,17 +31,17 @@ export default function QuickStatusChecker() {
     setRedirectFailed(false);
 
     if (!aadhaar && !mobile && !regNumber) {
-      setError('⚠️ Bhai, kam se kam ek toh detail daalo — Aadhaar, mobile ya registration number.');
+      setError('Bhai, kam se kam ek toh detail daalo — Aadhaar, mobile ya registration number.');
       return;
     }
 
     if (aadhaar && (aadhaar.length !== 12 || !/^\d+$/.test(aadhaar))) {
-      setError('⚠️ Aadhaar number 12 digit ka hona chahiye.');
+      setError('Aadhaar number 12 digit ka hona chahiye.');
       return;
     }
 
     if (mobile && (mobile.length !== 10 || !/^[6-9]\d{9}$/.test(mobile))) {
-      setError('⚠️ Mobile number 10 digit ka hona chahiye.');
+      setError('Mobile number 10 digit ka hona chahiye.');
       return;
     }
 
@@ -75,7 +72,7 @@ export default function QuickStatusChecker() {
 
           <div className="relative z-10">
             <span className="inline-block bg-white/20 backdrop-blur-sm border border-white/30 text-green-100 text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider mb-4">
-              🔍 Free Status Check Tool
+               Free Status Check Tool
             </span>
             <h1 className="text-3xl md:text-4xl font-black text-white mt-2 mb-3 leading-tight">
               PM Kisan Status Check Karo
@@ -89,14 +86,14 @@ export default function QuickStatusChecker() {
         </div>
 
         <div className="flex flex-wrap justify-center gap-3 text-xs text-gray-500 mb-4">
-          <span>✍️ <Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
-          <span>📅 {fmtDate(PUBLISHED)}</span>
-          <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+          <span><Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
+          <span>{fmtDate(PUBLISHED)}</span>
+          <span>Updated: {fmtDate(MODIFIED)}</span>
         </div>
 
         <div className="mb-6 p-5 bg-white rounded-2xl border border-gray-200 shadow-sm">
           <h2 className="font-black text-gray-900 text-base mb-3 flex items-center gap-2">
-            <span>📖</span> PM Kisan Status Check Kaise Karein?
+            PM Kisan Status Check Kaise Karein?
           </h2>
           <p className="text-sm text-gray-700 leading-relaxed mb-3">
             Status check karna asal mein kaafi seedha kaam hai — <strong>Aadhaar number</strong>, <strong>mobile number</strong>, ya <strong>registration number</strong>, in mein se koi bhi ek daalo aur apni kist ka status dekh lo.
@@ -105,7 +102,7 @@ export default function QuickStatusChecker() {
             <strong>24vi kist October 2026</strong> mein aane wali hai — ₹2,000 seedha bank account mein aayega. Agar <strong>eKYC</strong> abhi tak complete nahi kiya hai toh pehle wahi kar lena, warna kist wahin atak jayegi.
           </p>
           <div className="p-3 bg-green-50 border border-green-200 rounded-xl">
-            <p className="text-xs text-green-800 font-bold mb-1">💡 Quick Tip:</p>
+            <p className="text-xs text-green-800 font-bold mb-1">Quick Tip:</p>
             <p className="text-xs text-green-700">Upar Aadhaar number daal ke "Status Check Karo" dabao — seedha pmkisan.gov.in par pahunch jaoge, wahan apna asli status dikhega.</p>
           </div>
         </div>
@@ -114,7 +111,7 @@ export default function QuickStatusChecker() {
 
           {redirectFailed && (
             <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-xl">
-              <p className="text-sm text-blue-800 font-semibold mb-2">⚠️ Portal directly open nahi hua?</p>
+              <p className="text-sm text-blue-800 font-semibold mb-2">Portal directly open nahi hua?</p>
               <p className="text-xs text-blue-700 mb-3">
                 Shayad popup blocker on hai. Neeche button se manually jaao:
               </p>
@@ -124,7 +121,7 @@ export default function QuickStatusChecker() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors"
               >
-                🏛️ Official Portal Kholein →
+                Official Portal Kholein →
               </a>
             </div>
           )}
@@ -141,7 +138,6 @@ export default function QuickStatusChecker() {
           ) : (
             <>
               <h2 className="text-xl font-black text-gray-900 mb-6 flex items-center gap-2">
-                <span className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center text-lg">📝</span>
                 Apni Details Daalo
               </h2>
 
@@ -196,11 +192,11 @@ export default function QuickStatusChecker() {
                 onClick={handleCheckNow}
                 className="w-full mt-8 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-black py-4 rounded-xl text-lg transition-all hover:scale-[1.01] hover:shadow-lg hover:shadow-green-600/30 active:scale-[0.99] flex items-center justify-center gap-2"
               >
-                🔍 Status Check Karo
+                 Status Check Karo
               </button>
 
               <p className="text-center text-[11px] text-gray-400 mt-4 flex items-center justify-center gap-1">
-                🔒 100% Safe — Aapka data kahin save nahi hota
+                 100% Safe — Aapka data kahin save nahi hota
               </p>
             </>
           )}
@@ -208,24 +204,21 @@ export default function QuickStatusChecker() {
 
         <div className="grid grid-cols-3 gap-3 mt-6">
           <div className="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 p-4 rounded-xl text-center">
-            <span className="text-xl block mb-1">💰</span>
             <p className="font-black text-gray-900 text-sm">₹2,000</p>
             <p className="text-[10px] text-gray-500 font-medium">Har Kist</p>
           </div>
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 p-4 rounded-xl text-center">
-            <span className="text-xl block mb-1">🔐</span>
             <p className="font-black text-gray-900 text-sm">eKYC</p>
             <p className="text-[10px] text-gray-500 font-medium">Zaroori Hai</p>
           </div>
           <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 p-4 rounded-xl text-center">
-            <span className="text-xl block mb-1">📞</span>
             <p className="font-black text-gray-900 text-sm">155261</p>
             <p className="text-[10px] text-gray-500 font-medium">Helpline</p>
           </div>
         </div>
 
         <div className="mt-6 bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
-          <h3 className="font-black text-gray-900 text-sm mb-4">📋 PM Kisan Status Check Karne Ka Tarika</h3>
+          <h3 className="font-black text-gray-900 text-sm mb-4">PM Kisan Status Check Karne Ka Tarika</h3>
           <div className="space-y-3">
             {[
               {n:1, s:'pmkisan.gov.in kholo — upar button se seedha khul jayega'},
@@ -244,22 +237,22 @@ export default function QuickStatusChecker() {
         </div>
 
         <div className="mt-6 bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
-          <h3 className="font-black text-gray-900 text-sm mb-4">⚠️ Status Check Mein Common Problems</h3>
+          <h3 className="font-black text-gray-900 text-sm mb-4">Status Check Mein Common Problems</h3>
           <div className="space-y-3 text-sm">
             <div className="p-3 bg-red-50 border border-red-200 rounded-xl">
-              <p className="font-bold text-red-900 text-xs mb-1">❌ "No Records Found" aata hai</p>
+              <p className="font-bold text-red-900 text-xs mb-1">"No Records Found" aata hai</p>
               <p className="text-xs text-red-800">Matlab abhi aapka naam beneficiary list mein hai hi nahi — registration karna padega, ya patwari se land records update karwana hoga.</p>
             </div>
             <div className="p-3 bg-orange-50 border border-orange-200 rounded-xl">
-              <p className="font-bold text-orange-900 text-xs mb-1">⏳ "FTO Generated" dikh raha hai par paisa nahi aaya</p>
+              <p className="font-bold text-orange-900 text-xs mb-1">"FTO Generated" dikh raha hai par paisa nahi aaya</p>
               <p className="text-xs text-orange-800">Ghabrao mat, bank tak pahunchne mein aksar 7-10 din lag jaate hain. 15 din se zyada ho jaye toh bank ya helpline 155261 try karo.</p>
             </div>
             <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-xl">
-              <p className="font-bold text-yellow-900 text-xs mb-1">🔒 "eKYC Pending" dikh raha hai</p>
+              <p className="font-bold text-yellow-900 text-xs mb-1">"eKYC Pending" dikh raha hai</p>
               <p className="text-xs text-yellow-800">Isse turant nipta do — CSC center jao ya Aadhaar OTP se online kar lo. Bina eKYC ke kist nahi aayegi.</p>
             </div>
             <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl">
-              <p className="font-bold text-blue-900 text-xs mb-1">🏦 "Bank Account Not Seeded" error</p>
+              <p className="font-bold text-blue-900 text-xs mb-1">"Bank Account Not Seeded" error</p>
               <p className="text-xs text-blue-800">Bank account ko PM Kisan se link karna padega — bank jao, Aadhaar seed karwao, phir portal par update kar do.</p>
             </div>
           </div>
@@ -267,40 +260,40 @@ export default function QuickStatusChecker() {
 
         <div className="mt-6 bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="font-bold text-gray-900 text-sm">📚 Problem Aaye Toh Yeh Padhein:</h3>
+            <h3 className="font-bold text-gray-900 text-sm">Problem Aaye Toh Yeh Padhein:</h3>
             <a
               href="https://pmkisan.gov.in"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[10px] font-bold text-blue-600 hover:text-blue-800 hover:underline flex items-center gap-1"
             >
-              🏛️ pmkisan.gov.in ↗
+              pmkisan.gov.in ↗
             </a>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <Link href="/articles/PmKisan24viKist2026" className="p-2.5 bg-gray-50 hover:bg-green-50 border border-gray-200 hover:border-green-300 rounded-lg text-xs font-semibold text-gray-700 hover:text-green-700 transition-all">
-              📆 24vi Kist Status →
+               24vi Kist Status →
             </Link>
             <Link href="/articles/PmKisanEkycOnline2026" className="p-2.5 bg-gray-50 hover:bg-green-50 border border-gray-200 hover:border-green-300 rounded-lg text-xs font-semibold text-gray-700 hover:text-green-700 transition-all">
-              🔐 eKYC Guide →
+               eKYC Guide →
             </Link>
             <Link href="/articles/PmKisanPaymentFailedFix2026" className="p-2.5 bg-gray-50 hover:bg-green-50 border border-gray-200 hover:border-green-300 rounded-lg text-xs font-semibold text-gray-700 hover:text-green-700 transition-all">
-              💸 Payment Fix →
+               Payment Fix →
             </Link>
             <Link href="/articles/PmKisanMasterGuide2026" className="p-2.5 bg-gray-50 hover:bg-green-50 border border-gray-200 hover:border-green-300 rounded-lg text-xs font-semibold text-gray-700 hover:text-green-700 transition-all">
-              📚 Complete Guide →
+               Complete Guide →
             </Link>
             <Link href="/articles/PmKisanBeneficiaryList2026" className="p-2.5 bg-gray-50 hover:bg-green-50 border border-gray-200 hover:border-green-300 rounded-lg text-xs font-semibold text-gray-700 hover:text-green-700 transition-all">
-              📋 Beneficiary List →
+               Beneficiary List →
             </Link>
             <Link href="/articles/KisanCreditCardOnlineApply2026" className="p-2.5 bg-gray-50 hover:bg-green-50 border border-gray-200 hover:border-green-300 rounded-lg text-xs font-semibold text-gray-700 hover:text-green-700 transition-all">
-              💳 KCC Loan →
+               KCC Loan →
             </Link>
           </div>
         </div>
 
         <div className="mt-6 bg-white rounded-2xl border border-gray-200 shadow-sm p-5">
-          <h3 className="font-black text-gray-900 text-sm mb-4">❓ PM Kisan Status Ke Baare Mein Sawaal</h3>
+          <h3 className="font-black text-gray-900 text-sm mb-4">PM Kisan Status Ke Baare Mein Sawaal</h3>
           <div className="space-y-3 text-xs">
             <details className="bg-gray-50 border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">PM Kisan status kaise check karein?</summary>
@@ -326,7 +319,7 @@ export default function QuickStatusChecker() {
         </div>
 
         <div className="mt-5 p-3 bg-amber-50/80 border border-amber-200/60 rounded-xl text-[11px] text-amber-800 text-center leading-relaxed">
-          ⚠️ Yeh tool aapko seedha <strong>pmkisan.gov.in</strong> par le jayega. Real status sirf official website par hi dikhega. KisanStatus.com ek independent portal hai — government se affiliated nahi hai.
+           Yeh tool aapko seedha <strong>pmkisan.gov.in</strong> par le jayega. Real status sirf official website par hi dikhega. KisanStatus.com ek independent portal hai — government se affiliated nahi hai.
         </div>
       </div>
     </div>

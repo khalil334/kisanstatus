@@ -43,7 +43,7 @@ function createBackup(filePath) {
 
   const backupPath = `${filePath}.backup-${Date.now()}`;
   fs.copyFileSync(filePath, backupPath);
-  console.log(`💾 Backup created: ${backupPath}`);
+  console.log(`Backup created: ${backupPath}`);
 }
 
 function findComponentFile(componentName) {
@@ -58,7 +58,7 @@ function findComponentFile(componentName) {
 
 function updateArticlesData() {
   if (!fs.existsSync(CONFIG.articlesDataPath)) {
-    console.log('❌ articles-data.ts not found!');
+    console.log('articles-data.ts not found!');
     process.exit(1);
   }
 
@@ -73,10 +73,10 @@ function updateArticlesData() {
   const componentPattern = /component:\s*'([^']+)'/g;
   const matches = [...content.matchAll(componentPattern)];
 
-  console.log(`\n🔍 Found ${matches.length} articles to check...\n`);
+  console.log(`\nFound ${matches.length} articles to check...\n`);
 
   if (CONFIG.dryRun) {
-    console.log('🔸 DRY RUN MODE - No changes will be made\n');
+    console.log('DRY RUN MODE - No changes will be made\n');
   }
 
   matches.forEach((match) => {
@@ -85,7 +85,7 @@ function updateArticlesData() {
     const componentFile = findComponentFile(componentName);
 
     if (!componentFile) {
-      console.log(`❌ ${componentName} - File not found`);
+      console.log(`${componentName} - File not found`);
       skippedCount++;
       return;
     }
@@ -94,7 +94,7 @@ function updateArticlesData() {
       const dates = getGitDates(componentFile);
 
       if (!dates) {
-        console.log(`⚠️  ${componentName} - No git history for ${componentFile}; keeping existing dates (shallow clone?)`);
+        console.log(` ${componentName} - No git history for ${componentFile}; keeping existing dates (shallow clone?)`);
         noGitCount++;
         skippedCount++;
         return;
@@ -124,34 +124,34 @@ function updateArticlesData() {
 
       if (updated) {
         updatedCount++;
-        console.log(`✅ ${componentName}`);
-        console.log(`   📁 Found at: ${componentFile}`);
-        console.log(`   📅 Published: ${dates.publishedTime}`);
-        console.log(`   🔄 Modified:  ${dates.modifiedTime}`);
+        console.log(`${componentName}`);
+        console.log(`   Found at: ${componentFile}`);
+        console.log(`   Published: ${dates.publishedTime}`);
+        console.log(`   Modified:  ${dates.modifiedTime}`);
         console.log('');
       } else {
-        console.log(`⏭️  ${componentName} - No dates found in entry`);
+        console.log(`⏭ ${componentName} - No dates found in entry`);
         skippedCount++;
       }
     } catch (e) {
-      console.log(`❌ ${componentName} - Error: ${e.message}`);
+      console.log(`${componentName} - Error: ${e.message}`);
       skippedCount++;
     }
   });
 
   if (!CONFIG.dryRun && content !== originalContent) {
     fs.writeFileSync(CONFIG.articlesDataPath, content, 'utf-8');
-    console.log(`\n🎉 Updated ${updatedCount} articles successfully!`);
+    console.log(`\nUpdated ${updatedCount} articles successfully!`);
   } else if (CONFIG.dryRun) {
-    console.log(`\n🔸 DRY RUN: Would update ${updatedCount} articles`);
+    console.log(`\nDRY RUN: Would update ${updatedCount} articles`);
   } else {
-    console.log(`\nℹ️  No changes needed`);
+    console.log(`\nℹ No changes needed`);
   }
 
-  console.log(`📊 Summary: ${updatedCount} updated, ${skippedCount} skipped`);
+  console.log(`Summary: ${updatedCount} updated, ${skippedCount} skipped`);
 
   if (matches.length > 0 && noGitCount === matches.length) {
-    console.log('\n⚠️  Git history unavailable for ALL articles (shallow clone?). Dates were NOT updated — existing values kept.');
+    console.log('\n Git history unavailable for ALL articles (shallow clone?). Dates were NOT updated — existing values kept.');
   }
 }
 

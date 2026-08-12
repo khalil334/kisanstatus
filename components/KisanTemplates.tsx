@@ -33,16 +33,16 @@ function TemplatePMKisanScheme() {
         <rect x="24" y="14" width="4" height="44" fill="#138808"/>
 
         <circle cx="48" cy="36" r="20" fill="#fff" opacity="0.15"/>
-        <text x="48" y="42" textAnchor="middle" fontSize="18">🏛️</text>
+        <text x="48" y="42" textAnchor="middle" fontSize="18"></text>
 
         <text x="80" y="30" fontSize="14" fontWeight="bold" fill="#fff">Cultivator Benefit Program</text>
         <text x="80" y="48" fontSize="10" fill="#a7f3d0">Agrarian Welfare Scheme — Govt. of India</text>
         <text x="80" y="63" fontSize="9" fill="#86efac">Since 2019 • 11 Crore+ Cultivators • Direct Benefit Transfer</text>
 
         {[
-          { x:20, label:'Saalana Benefit', value:'₹6,000', sub:'Teen tranches mein', icon:'💰', color:'#16a34a' },
-          { x:180, label:'Har Tranche Mein', value:'₹2,000', sub:'DBT — seedha bank', icon:'🏦', color:'#2563eb' },
-          { x:340, label:'Registered', value:'11 Cr+', sub:'Poore India mein', icon:'👨‍🌾', color:'#d97706' },
+          { x:20, label:'Saalana Benefit', value:'₹6,000', sub:'Teen tranches mein', color:'#16a34a' },
+          { x:180, label:'Har Tranche Mein', value:'₹2,000', sub:'DBT — seedha bank', icon:'', color:'#2563eb' },
+          { x:340, label:'Registered', value:'11 Cr+', sub:'Poore India mein', icon:'', color:'#d97706' },
         ].map(card => (
           <g key={card.label}>
             <rect x={card.x} y="88" width="140" height="80" rx="12" fill="#fff" stroke={card.color} strokeWidth="1.5"/>
@@ -54,11 +54,11 @@ function TemplatePMKisanScheme() {
         ))}
 
         <rect x="20" y="182" width="440" height="34" rx="8" fill="#f0fdf4" stroke="#bbf7d0" strokeWidth="1"/>
-        <text x="35" y="200" fontSize="10" fontWeight="bold" fill="#15803d">✅ Eligibility:</text>
+        <text x="35" y="200" fontSize="10" fontWeight="bold" fill="#15803d">Eligibility:</text>
         <text x="115" y="200" fontSize="9" fill="#374151">Small cultivator • Land record required • Biometric credential linked bank account</text>
         <text x="35" y="212" fontSize="9" fill="#6b7280">Digital verification zaruri hai • Family mein ek hi member ko milta hai</text>
 
-        <text x="20" y="238" fontSize="9" fontWeight="bold" fill="#15803d">📋 Process:</text>
+        <text x="20" y="238" fontSize="9" fontWeight="bold" fill="#15803d">Process:</text>
         {[
           'Enroll',
           '→  Verify',
@@ -75,7 +75,7 @@ function TemplatePMKisanScheme() {
         <text x="240" y="274" textAnchor="middle" fontSize="8" fill="#86efac">kisanstatus.com • 100% Free Information • Verified from official portal</text>
       </svg>
       <div className="bg-white px-4 py-3 border-t border-green-100">
-        <p className="text-xs font-bold text-green-800">🌾 Cultivator Benefit Program — Complete Overview</p>
+        <p className="text-xs font-bold text-green-800">Cultivator Benefit Program — Complete Overview</p>
         <p className="text-[10px] text-gray-500 mt-0.5">Eligibility, benefit amount aur enrollment process</p>
       </div>
     </div>
@@ -106,14 +106,14 @@ function TemplateKisanLoan() {
           <rect x="55" y="8" width="5" height="18" rx="2" fill="#fff"/>
         </g>
 
-        <text x="20" y="28" fontSize="9" fill="#93c5fd">🏦 AGRICULTURAL CREDIT FACILITY</text>
+        <text x="20" y="28" fontSize="9" fill="#93c5fd">AGRICULTURAL CREDIT FACILITY</text>
         <text x="20" y="46" fontSize="15" fontWeight="bold" fill="#fff">Credit Facility Guide 2026</text>
         <text x="20" y="61" fontSize="9" fill="#bfdbfe">KCC • Bank Loan • CSC Center — Puri Jankari</text>
 
         {[
-          { y:84,  icon:'💳', title:'Credit Facility (KCC)', rate:'4% p.a.', limit:'₹3 Lakh tak', badge:'BEST', badgeClr:'#16a34a' },
-          { y:140, icon:'🏛️', title:'Bank Agriculture Loan',   rate:'7-9% p.a.', limit:'Upar tak',   badge:'POPULAR', badgeClr:'#2563eb' },
-          { y:196, icon:'🏪', title:'CSC / MFI Loan',           rate:'12-18%', limit:'Chhota amount', badge:'FAST', badgeClr:'#d97706' },
+          { y:84, title:'Credit Facility (KCC)', rate:'4% p.a.', limit:'₹3 Lakh tak', badge:'BEST', badgeClr:'#16a34a' },
+          { y:140, icon:'', title:'Bank Agriculture Loan',   rate:'7-9% p.a.', limit:'Upar tak',   badge:'POPULAR', badgeClr:'#2563eb' },
+          { y:196, icon:'', title:'CSC / MFI Loan',           rate:'12-18%', limit:'Chhota amount', badge:'FAST', badgeClr:'#d97706' },
         ].map(opt => (
           <g key={opt.title}>
             <rect x="20" y={opt.y} width="440" height="48" rx="10" fill="#fff" stroke="#dbeafe" strokeWidth="1.5"/>
@@ -129,7 +129,7 @@ function TemplateKisanLoan() {
         <text x="240" y="273" textAnchor="middle" fontSize="8" fill="#93c5fd">kisanstatus.com • Credit Facility Guide • Free Information</text>
       </svg>
       <div className="bg-white px-4 py-3 border-t border-blue-100">
-        <p className="text-xs font-bold text-blue-800">💰 Credit Facility — KCC aur Bank Loan Guide</p>
+        <p className="text-xs font-bold text-blue-800">Credit Facility — KCC aur Bank Loan Guide</p>
         <p className="text-[10px] text-gray-500 mt-0.5">Sabse sasta loan kahan se milega — full comparison</p>
       </div>
     </div>
@@ -164,16 +164,16 @@ function TemplateFasalBima() {
         ))}
 
         <rect width="480" height="60" fill="url(#fb1)"/>
-        <text x="20" y="22" fontSize="9" fill="#fde68a">🌱 CROP PROTECTION SCHEME</text>
+        <text x="20" y="22" fontSize="9" fill="#fde68a">CROP PROTECTION SCHEME</text>
         <text x="20" y="42" fontSize="15" fontWeight="bold" fill="#fff">Crop Protection 2026</text>
         <text x="20" y="56" fontSize="9" fill="#fcd34d">Fasal kharab hone par sarkar degi muavza</text>
 
         <rect x="20" y="150" width="440" height="110" rx="14" fill="#fff" fillOpacity="0.9" stroke="#fbbf24" strokeWidth="1.5"/>
 
         {[
-          { x:30,  emoji:'🌾', label:'Covered Crops', value:'Kharif + Rabi', sub:'Sabzi, dal, anaaj' },
-          { x:190, emoji:'💰', label:'Premium Rate',  value:'2% Kharif', sub:'1.5% Rabi crops'     },
-          { x:340, emoji:'✅', label:'Claim Process', value:'Online/CSC', sub:'7 din mein settle'   },
+          { x:30,  emoji:'', label:'Covered Crops', value:'Kharif + Rabi', sub:'Sabzi, dal, anaaj' },
+          { x:190, label:'Premium Rate',  value:'2% Kharif', sub:'1.5% Rabi crops'     },
+          { x:340, label:'Claim Process', value:'Online/CSC', sub:'7 din mein settle'   },
         ].map(item => (
           <g key={item.label}>
             <text x={item.x} y="178" fontSize="18">{item.emoji}</text>
@@ -183,7 +183,7 @@ function TemplateFasalBima() {
           </g>
         ))}
 
-        <text x="30" y="242" fontSize="9" fontWeight="bold" fill="#92400e">📋 Apply Kaise Karein:</text>
+        <text x="30" y="242" fontSize="9" fontWeight="bold" fill="#92400e">Apply Kaise Karein:</text>
         {['Bank', '→ CSC', '→ Online', '→ Mobile App'].map((s,i)=>(
           <g key={s}>
             <rect x={140+i*82} y="232" width="74" height="18" rx="5" fill={i===3?'#d97706':'#fef3c7'} stroke="#fbbf24" strokeWidth="1"/>
@@ -195,7 +195,7 @@ function TemplateFasalBima() {
         <text x="240" y="274" textAnchor="middle" fontSize="8" fill="#fde68a">kisanstatus.com • Crop Protection Guide • Free Information</text>
       </svg>
       <div className="bg-white px-4 py-3 border-t border-amber-100">
-        <p className="text-xs font-bold text-amber-800">🌱 Crop Protection Scheme — Complete Guide</p>
+        <p className="text-xs font-bold text-amber-800">Crop Protection Scheme — Complete Guide</p>
         <p className="text-[10px] text-gray-500 mt-0.5">Claim status check aur enrollment guide</p>
       </div>
     </div>
@@ -222,21 +222,21 @@ function TemplateEKYC() {
           <circle cx="35" cy="78" r="4" fill="#fff"/>
         </g>
 
-        <text x="20" y="26" fontSize="9" fill="#c4b5fd">🔐 DIGITAL VERIFICATION GUIDE</text>
+        <text x="20" y="26" fontSize="9" fill="#c4b5fd">DIGITAL VERIFICATION GUIDE</text>
         <text x="20" y="46" fontSize="15" fontWeight="bold" fill="#fff">Verification Kaise Karo — 2026</text>
         <text x="20" y="62" fontSize="9" fill="#ddd6fe">Bina verification ke tranche NAHI milegi — Abhi karo!</text>
 
         <rect x="20" y="78" width="440" height="30" rx="8" fill="#fee2e2" stroke="#fca5a5" strokeWidth="1"/>
-        <text x="240" y="98" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#dc2626">⚠️ Digital Verification Mandatory Hai — Sabhi Cultivators Karein — Bilkul Free!</text>
+        <text x="240" y="98" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#dc2626">Digital Verification Mandatory Hai — Sabhi Cultivators Karein — Bilkul Free!</text>
 
         <text x="20" y="128" fontSize="10" fontWeight="bold" fill="#6d28d9">Step-by-Step Process:</text>
 
         {[
-          { step:'1', title:'Official portal kholein', desc:'Website ya app', icon:'🌐' },
-          { step:'2', title:'Verification button dabao',      desc:'Farmers Corner mein milega', icon:'👆' },
-          { step:'3', title:'Biometric credential daalo',   desc:'12 digit number', icon:'🪪' },
-          { step:'4', title:'OTP verify karo',        desc:'Mobile par OTP aayega', icon:'📱' },
-          { step:'5', title:'Done! ✅',               desc:'Verification complete ho gayi', icon:'🎉' },
+          { step:'1', title:'Official portal kholein', desc:'Website ya app' },
+          { step:'2', title:'Verification button dabao',      desc:'Farmers Corner mein milega', icon:'' },
+          { step:'3', title:'Biometric credential daalo',   desc:'12 digit number' },
+          { step:'4', title:'OTP verify karo',        desc:'Mobile par OTP aayega' },
+          { step:'5', title:'Done!',               desc:'Verification complete ho gayi' },
         ].map((s, i) => (
           <g key={s.step}>
             {i < 4 && <line x1="42" y1={148+i*22} x2="42" y2={158+i*22} stroke="#ddd6fe" strokeWidth="2" strokeDasharray="3"/>}
@@ -249,7 +249,7 @@ function TemplateEKYC() {
         ))}
 
         <rect x="240" y="136" width="220" height="108" rx="10" fill="#f3e8ff" stroke="#ddd6fe" strokeWidth="1"/>
-        <text x="350" y="158" textAnchor="middle" fontSize="9" fontWeight="bold" fill="#6d28d9">🏪 CSC Center Se Bhi Ho Sakta Hai</text>
+        <text x="350" y="158" textAnchor="middle" fontSize="9" fontWeight="bold" fill="#6d28d9">CSC Center Se Bhi Ho Sakta Hai</text>
         <text x="350" y="174" textAnchor="middle" fontSize="8" fill="#6b7280">Biometric credential scan se</text>
         <text x="350" y="190" textAnchor="middle" fontSize="8" fill="#6b7280">Bujurg cultivators ke liye best option</text>
         <rect x="270" y="200" width="160" height="22" rx="6" fill="#7c3aed"/>
@@ -260,7 +260,7 @@ function TemplateEKYC() {
         <text x="240" y="274" textAnchor="middle" fontSize="8" fill="#ddd6fe">kisanstatus.com • Digital Verification Guide • Free Help</text>
       </svg>
       <div className="bg-white px-4 py-3 border-t border-purple-100">
-        <p className="text-xs font-bold text-purple-800">🔐 Digital Verification — Step by Step Guide</p>
+        <p className="text-xs font-bold text-purple-800">Digital Verification — Step by Step Guide</p>
         <p className="text-[10px] text-gray-500 mt-0.5">Online OTP ya CSC biometric — dono tarike</p>
       </div>
     </div>
@@ -273,7 +273,7 @@ export default function KisanTemplates() {
       <div className="container-site">
         <div className="text-center mb-10">
           <span className="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
-            🖼️ Visual Guides
+             Visual Guides
           </span>
           <h2 id="templates-heading" className="text-2xl md:text-3xl font-black text-gray-900 mb-2">
             Agrarian Schemes — Quick Visual Templates
@@ -291,7 +291,7 @@ export default function KisanTemplates() {
         </div>
 
         <p className="text-center text-xs text-gray-400 mt-6">
-          ℹ️ Ye templates sirf jankari ke liye hain — official data ke liye{' '}
+          ℹYe templates sirf jankari ke liye hain — official data ke liye{' '}
           <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 underline">
             pmkisan.gov.in
           </a>{' '}

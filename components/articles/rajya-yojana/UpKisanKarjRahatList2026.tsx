@@ -60,7 +60,7 @@ const QUIZ = [
   {
     s: 'List me naam dekhne ke liye koi fees lagti hai.',
     v: false,
-    e: 'Status aur list dekhna bilkul free hai. Paisa maangne wala har aadmi ya website fraud hai.',
+    e: 'Status aur list dekhne ka koi paisa nahi lagta. Paisa maangne wala har aadmi ya website fraud hai.',
   },
   {
     s: 'Karj mafi ka paisa kisan ke haath me cash aata hai.',
@@ -95,7 +95,7 @@ const QUIZ = [
   {
     s: 'Karj maaf hone ke baad bank se NOC ya statement lena chahiye.',
     v: true,
-    e: 'Zaroor lena chahiye. Wahi kagaz aage naya KCC ya loan lene me kaam aayega, aur record ka pakka saboot rahega.',
+    e: 'Lena hi chahiye. Wahi kagaz aage naya KCC ya loan lene me kaam aayega, aur record ka pakka saboot rahega.',
   },
 ];
 
@@ -118,7 +118,7 @@ export default function UpKisanKarjRahatList2026({
       />
 
       <p>
-        Dekhiye bhaisaab, aapke gaon ke WhatsApp group me bhi wo message zaroor aaya hoga —
+        Dekhiye bhaisaab, aapke gaon ke WhatsApp group me bhi wo message aaya hi hoga —
         &quot;sabka karz maaf, list jaari, is link par click karke apna naam dekho.&quot;
         Ruk jaiye. Us link par ungli rakhne se pehle do minute ye padh lijiye.
       </p>
@@ -126,7 +126,7 @@ export default function UpKisanKarjRahatList2026({
       <p>
         Hum sahkari samiti me barson se yahi kaam karte aa rahe hain — list check karna,
         shikayat likhwana, aur sabse zyada... logon ko ye samjhana ki wo message jhooth hai.
-        Asli baat ye hai: UP me karj rahat ka ek hi official portal hai, aur is keyword par
+        Kaam ki baat pehle: UP me karj rahat ka ek hi official portal hai, aur is keyword par
         aane wale aadhe se zyada log asal me is yojana ke dayre me aate hi nahi. ( Kadwa
         lagega, par pehle yahi saaf karna zaroori hai — warna aap galat ummeed me mahino
         bhatakte rahenge. )
@@ -248,7 +248,7 @@ export default function UpKisanKarjRahatList2026({
         . Ek galat click, aur DBT ka paisa hi khatre me.
       </p>
 
-      <h2>List Kaise Dekhiye — Step By Step</h2>
+      <h2>List Kaise Dekhiye — Ek-Ek Kadam</h2>
 
       <Fig
         src="list-check-steps.webp"
@@ -331,7 +331,7 @@ export default function UpKisanKarjRahatList2026({
         </li>
         <li>
           Bhara hua form apne <strong>collectorate ke helpdesk / zila krishi adhikari</strong>{' '}
-          ke yahan jama kariye — receiving copy zaroor lijiye.
+          ke yahan jama kariye — receiving copy leke aaiye.
         </li>
         <li>
           Portal par hi <strong>&quot;शिकायत की स्थिति जानें&quot;</strong> se complaint ka
@@ -369,7 +369,7 @@ export default function UpKisanKarjRahatList2026({
           PIB Fact Check aise fake yojana portals ka bhandafod pehle bhi kar chuka hai
         </Ext>{' '}
         — sarkari naam ki milti-julti website banana inka purana khel hai. Thagi ho jaaye to
-        turant <strong>1930 (cyber crime helpline)</strong> par call kariye aur apne bank ko
+        usi waqt <strong>1930 (cyber crime helpline)</strong> par call kariye aur apne bank ko
         bhi khabar kariye — pehle ghante me paisa rukne ke chance sabse zyada hote hain.
       </p>
 
@@ -468,7 +468,7 @@ export default function UpKisanKarjRahatList2026({
       </section>
 
       <InfoBox type="warning">
-        <strong>Yaad rakhiye:</strong> list check, status, shikayat — is poore process me
+        <strong>Ek rupaya bhi mat dijiye:</strong> list check, status, shikayat — is poore process me
         kahin ek rupaya nahi lagta. &quot;Naam chadhwane&quot; ya &quot;file aage
         badhane&quot; ke naam par paisa maangne wala har aadmi thag hai. Aisi maang ki
         shikayat 1930 par aur apne thane me kariye.
@@ -477,7 +477,7 @@ export default function UpKisanKarjRahatList2026({
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Ye article sirf madad ke liye hai. Patrata ki shartein aur cut-off ki tareekh
+          Is lekh ka mool kaam karj rahat ki prakriya asaan bhasha mein samjhana hai. Patrata ki shartein aur cut-off ki tareekh
           official portal/GO se hi confirm karein — final decision ke liye apni bank shaakha
           ya zila krishi adhikari se sampark karein.
         </p>

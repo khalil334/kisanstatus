@@ -5,18 +5,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import CountdownModal from '@/components/CountdownModal';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-07-18T09:17:00+05:30';
-const MODIFIED = '2026-07-19T10:44:00+05:30';
+const PUBLISHED = '2026-02-19T07:49:49+05:30';
+const MODIFIED = '2026-02-28T08:36:31+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Check', emoji: '📋' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '📚' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide', emoji: '🔐' },
-  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form', emoji: '📝' },
-  { slug: 'PmKisanVoluntarySurrenderGuide', title: 'Voluntary Surrender Guide', emoji: '🚪' },
-  { slug: 'pm-kisan-self-registered-status-check', title: 'Self Registration Status Check', emoji: '✅' },
-  { slug: 'PmKisanFaceAuthenticationEkyc', title: 'Face Auth eKYC Guide', emoji: '🤳' },
+  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
+  { slug: 'pm-kisan-self-registered-status-check', title: 'Self Registration Status' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
 ];
 
 const FAQS_DATA = [
@@ -38,7 +35,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Agar dobara apply karne par bhi reject ho jaye toh?',
-    a: 'Toh phir aapko apne district ke Agriculture Officer ya State Nodal Officer ko physical complaint deni padegi. Email ya phone par baat karo. Unke contact details is article mein neeche diye hain.',
+    a: 'Toh phir aapko apne district ke Agriculture Officer ya State Nodal Officer ko physical complaint deni padegi. Email ya phone par baat karo. Unke contact details neeche wali list mein diye hain.',
   },
   {
     q: 'Income tax filer hoon, kya main dobara apply karun?',
@@ -73,7 +70,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
-          infoNote="📌 Thoda wait karo. Official PM Kisan portal khulne wala hai."
+          infoNote="Bas kuch pal — official portal abhi khulega."
         />
       )}
 
@@ -91,10 +88,10 @@ export default function PmKisanRejectedStatusReApplyGuide() {
             PM Kisan Rejected Status: Naam List Se Kyun Kata, Dobara Apply Kaise Karein?
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 17 min read</span>
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>17 min read</span>
           </div>
         </div>
       </div>
@@ -134,14 +131,14 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           />
 
           <DB>
-            <strong>Real Story:</strong>
+            <strong>Ek Kisan Ki Aap Beeti:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
               Jaipur ke Bhanwar Lal ji ka status achanak reject ho gaya. Wo pareshan ho gaye. Patwari ke paas gaye, BAO ke paas gaye. Pata chala ki unki zameen ka record digital nahi tha aur bank account mein IFSC code purana tha. Dono cheezein theek karke CSC se dobara form bhara. 25 din baad status active ho gaya aur pichli ruki hui kist bhi mil gayi.
             </p>
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Neeche har rejection reason alag-alag diya hai, aur saath mein ye bhi ki <strong>pm kisan dobara apply kaise karein</strong> ka sahi tarika kya hai. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">Beneficiary list</Link> check karne se pehle ye guide zaroor padh lena.
+            Neeche har rejection reason alag-alag diya hai, aur saath mein ye bhi ki <strong>pm kisan dobara apply kaise karein</strong> ka sahi tarika kya hai. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">beneficiary status page</Link> check karne se pehle ye guide padh lena.
           </p>
         </section>
 
@@ -155,12 +152,10 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-4">
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <span className="text-2xl block mb-2">❌</span>
               <p className="font-black text-sm text-red-800 dark:text-red-300">Hamesha Ke Liye Reject</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Aap eligible hi nahi ho (Jaise Income Tax Filer).</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <span className="text-2xl block mb-2">⚠️</span>
               <p className="font-black text-sm text-amber-800 dark:text-amber-300">Asthayi Reject - Theek Ho Sakta Hai</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Details galat hain. Theek karo, dobara apply karo.</p>
             </div>
@@ -207,7 +202,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
               },
             ].map(({ reason, desc }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4 hover:border-red-300 dark:hover:border-red-700 transition-all">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ Reason {i + 1}: {reason}</p>
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">Reason {i + 1}: {reason}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{desc}</p>
               </div>
             ))}
@@ -221,41 +216,41 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           </p>
           <StepList>
             <SI n={1}>
-              <strong>Galti Pehchano:</strong> Upar diye gaye 7 reasons mein se apni problem dhundo. Agar samajh na aaye toh <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">Master Guide</Link> padho ya nazdiki CSC wale se pucho.
+              <strong>Galti Pehchano:</strong> Upar diye gaye 7 reasons mein se apni problem dhundo. Agar samajh na aaye toh <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">poora PM Kisan guide</Link> padho ya nazdiki CSC wale se pucho.
             </SI>
             <SI n={2}>
               <strong>Documents Theek Karo:</strong> Agar naam galat hai toh patwari se Khatauni theek karwao. Agar bank account mein dikkat hai toh bank branch jakar NPCI seeding aur IFSC update karwao.
             </SI>
             <SI n={3}>
-              <strong>CSC Center Par Jao:</strong> Apne nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC center</Link> par jao. Unhe bolo "PM Kisan Correction aur Re-Application" karna hai.
+              <strong>CSC Center Par Jao:</strong> Apne nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC digital seva kendra</Link> par jao. Unhe bolo "PM Kisan Correction aur Re-Application" karna hai.
             </SI>
             <SI n={4}>
               <strong>Correction Form Bharo:</strong> CSC wala portal par <strong>PM Kisan correction form</strong> open karega. Usme aapki purani details hongi. Galat details ko mita kar sahi details daalo.
             </SI>
             <SI n={5}>
-              <strong>OTP Verification:</strong> Mobile par OTP aayega. Verify karo. Form submit ho jayega.
+              <strong>OTP Se Pushti:</strong> Mobile par OTP aayega. Verify karo. Form submit ho jayega.
             </SI>
             <SI n={6}>
-              <strong>Receipt Lo:</strong> Ek nayi acknowledgement slip milegi. Us par "Correction Request Submitted" likha hoga. Usko sambhal kar rakho.
+              <strong>Parchi Leke Aana:</strong> Ek nayi acknowledgement slip milegi. Us par "Correction Request Submitted" likha hoga. Usko sambhal kar rakho.
             </SI>
           </StepList>
 
           <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
             <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-              🔍 PM Kisan Status Check Karo
+               PM Kisan Status Check Karo
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official PM Kisan portal par jakar apna <strong>pm kisan status check</strong> karo. 10 second baad portal khulega.
+              Official PM Kisan portal par jakar apna <strong>pm kisan status check</strong> karo; 10-second timer ke baad site khulegi.
             </p>
             <button
               onClick={() => handleOfficialLink(
                 'PM Kisan Official Portal',
-                'PM Kisan portal khulne wala hai. Thoda wait karo...',
+                'Official portal load ho raha hai, bas kuch second...',
                 'https://pmkisan.gov.in/BeneficiaryStatus.aspx'
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              📥 Yahan Click Karo → PM Kisan Portal Khulega
+               Yahan Click Karo → PM Kisan Portal Khulega
             </button>
           </div>
 
@@ -290,7 +285,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
               { doc: 'Rejection Screenshot', note: 'Mobile mein jo reject dikha raha hai uska screenshot.' },
             ].map(({ doc, note }) => (
               <div key={doc} className="p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-                <p className="font-black text-sm text-[var(--color-text)] mb-1">📄 {doc}</p>
+                <p className="font-black text-sm text-[var(--color-text)] mb-1">{doc}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{note}</p>
               </div>
             ))}
@@ -319,7 +314,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
             className="w-full rounded-xl my-4"
           />
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Isliye jab bhi status reject dikhe, turant action lo. Jitna time waste karoge, utne hi mahine ke paise doob sakte hain.
+            Isliye jab bhi status reject dikhe, usi hafte action lo. Jitna time waste karoge, utne hi mahine ke paise doob sakte hain.
           </p>
         </section>
 
@@ -330,24 +325,24 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           </p>
           <div className="space-y-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-              <p className="font-black text-sm text-green-800 dark:text-green-300 mb-2">🏔️ Uttar Pradesh & Bihar</p>
+              <p className="font-black text-sm text-green-800 dark:text-green-300 mb-2">Uttar Pradesh & Bihar</p>
               <p className="text-xs text-[var(--color-text-muted)]">Yahan sabse badi problem "Bhulekh/Khatauni" mein naam ka spelling galat hona hai. Patwari se spelling theek karwao, phir CSC jao.</p>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
-              <p className="font-black text-sm text-blue-800 dark:text-blue-300 mb-2">🌿 Madhya Pradesh & Rajasthan</p>
+              <p className="font-black text-sm text-blue-800 dark:text-blue-300 mb-2">Madhya Pradesh & Rajasthan</p>
               <p className="text-xs text-[var(--color-text-muted)]">Yahan "Bhu-Abhilekh" aur "Apna Khata" portal par zameen ka record digital nahi hota. Pehle patwari se record digitize karwao.</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <p className="font-black text-sm text-amber-800 dark:text-amber-300 mb-2">🌾 Maharashtra & Gujarat</p>
+              <p className="font-black text-sm text-amber-800 dark:text-amber-300 mb-2">Maharashtra & Gujarat</p>
               <p className="text-xs text-[var(--color-text-muted)]">Yahan "7/12 Utara" aur "AnyROR" mein joint ownership ka masla aata hai. Agar zameen bhaiyon ke naam par hai, toh sirf ek bhai ka naam form mein hona chahiye.</p>
             </div>
             <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
-              <p className="font-black text-sm text-purple-800 dark:text-purple-300 mb-2">🌊 South States (TN, Kerala, AP)</p>
+              <p className="font-black text-sm text-purple-800 dark:text-purple-300 mb-2">South States (TN, Kerala, AP)</p>
               <p className="text-xs text-[var(--color-text-muted)]">Yahan "Patta" aur "Chitta" records mein family head ka naam update nahi hota. Revenue office jakar patta transfer karwana padta hai.</p>
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Apne state ki specific jankari ke liye <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">state-wise page</Link> par jao.
+            Apne state ki specific jankari ke liye <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">state ke hisab se list page</Link> par jao.
           </p>
         </section>
 
@@ -365,7 +360,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
               },
               {
                 mistake: 'Bina Receipt Ke Wapas Aana',
-                fix: 'CSC wale se acknowledgement slip zaroor lo. Usi par aapka case track hoga.'
+                fix: 'CSC wale se acknowledgement slip maang kar lo. Usi par aapka case track hoga.'
               },
               {
                 mistake: 'Roz Roz Status Check Karna',
@@ -373,8 +368,8 @@ export default function PmKisanRejectedStatusReApplyGuide() {
               },
             ].map(({ mistake, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {mistake}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Sahi Tarika:</strong> {fix}</p>
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">{mistake}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>Ye Raha Sahi Rasta:</strong> {fix}</p>
               </div>
             ))}
           </div>
@@ -392,56 +387,56 @@ export default function PmKisanRejectedStatusReApplyGuide() {
             <SI n={4}>Agar sab sahi hai, toh status "Active" dikhne lagega.</SI>
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Agar 30 din baad bhi status active na ho, toh samajh jao file kahin atki hai. Ab time aa gaya hai ki aap <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">State Nodal Officer</Link> ko email karo ya physical complaint do.
+            Agar 30 din baad bhi status active na ho, toh samajh jao file kahin atki hai. Ab time aa gaya hai ki aap <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">apne state ke nodal officer</Link> ko email karo ya physical complaint do.
           </p>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Rejection Ke Baad Ke Sawal — Jawab Ke Saath
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Rejected Status Re-Apply FAQ 2026" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Reject Hua Hai, Band Nahi — Order Ka Dhyan Rakhein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Bhai, PM Kisan rejected status fix karna mushkil nahi hai. Bas teen cheezein yaad rakho:
+            Sabse common galti: log pehle dobara apply kar dete hain aur reason baad mein dekhte hain — toh wahi wajah dobara reject karwa deti hai. Sahi order yeh hai:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
-            <li>Pehle reason dhundo — kyun reject hua</li>
-            <li>Us galti ko theek karo — bank, land, ya eKYC</li>
-            <li>CSC se correction form bharke dobara apply karo</li>
+            <li>Portal par rejection reason note karein — bank, land record ya eKYC, teeno ke fix alag hain</li>
+            <li>Pehle woh galti theek karwayein (upar reason-wise steps diye hain)</li>
+            <li>Uske baad hi CSC se correction form bharke dobara apply karein</li>
           </ol>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mt-3">
-            15-30 din mein status active ho jayega. Simple hai!
+            Is order mein karne par status aam taur par 15-30 din mein Active ho jaata hai.
           </p>
         </div>
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
           <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">
-            🔗 PM Kisan Official Portal
+             PM Kisan Official Portal
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            <strong>PM Kisan status check</strong>, <strong>PM Kisan grievance</strong>, ya koi bhi kaam ke liye official portal par jaayein. 10 second baad portal khulega.
+            <strong>PM Kisan status check</strong>, <strong>PM Kisan grievance</strong>, ya koi bhi kaam ke liye official portal par jaayein. Button dabao, thoda ruk jao — portal khud khul jaayega.
           </p>
           <button
             onClick={() => handleOfficialLink(
               'PM Kisan Official Portal',
-              'PM Kisan portal khulne wala hai. Thoda wait karo...',
+              'Official portal load ho raha hai, bas kuch second...',
               'https://pmkisan.gov.in'
             )}
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
           >
-            📥 Yahan Click Karo → PM Kisan Portal Khulega
+             Yahan Click Karo → PM Kisan Portal Khulega
           </button>
         </div>
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/articles/PmKisanCorrectionForm2026', l: ' Correction Form' },
         ]} />
         <Disclaimer />

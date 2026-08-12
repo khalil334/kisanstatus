@@ -2,28 +2,29 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
-const PUBLISHED = '2026-07-27T08:00:00+05:30';
-const MODIFIED = '2026-08-09T08:29:00+05:30';
+const PUBLISHED = '2026-04-30T07:56:05+05:30';
+const MODIFIED = '2026-05-30T09:35:47+05:30';
 
 const RELATED_CARDS = [
   {
     slug: 'pm-kisan-maandhan-pension-card-download',
     title: 'Pension Card Download',
     desc: 'PMKMY pension card/acknowledgement ghar baithe kaise download karein.',
-    emoji: '📄',
+    
   },
   {
     slug: 'pm-kisan-maandhan-status-check-online',
     title: 'Status Check Online',
     desc: 'PM Kisan Maandhan Yojana mein apna status kaise verify kijiye aur contribution history dekhein.',
-    emoji: '🔍',
+    
   },
   {
     slug: 'pm-kisan-maandhan-eligibility-documents',
     title: 'Eligibility & Documents',
     desc: 'Kaun PM Kisan Maandhan Yojana ke liye eligible hai aur kaun se documents zaroori hain.',
-    emoji: '✅',
+    
   },
 ];
 
@@ -80,9 +81,9 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
               articleSection: 'Agriculture & Pension Schemes',
               wordCount: 2000,
               author: {
-                '@type': 'Organization',
-                name: 'KisanStatus Team',
-                url: 'https://kisanstatus.com/about',
+                '@type': 'Person',
+                name: AUTHOR_NAME,
+                url: AUTHOR_URL,
               },
               publisher: {
                 '@type': 'Organization',
@@ -121,10 +122,10 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 11 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -201,7 +202,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             </table>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Do cheezein is table se yaad rakhni hain. Ek — confirmation SMS aane tak purana account zinda aur balance-wala rehna chahiye. Do — SMS aane ke baad bhi pehla naya debit khud check karo; agar agle cycle me kisi bhi account se paisa nahi kata, to turant CSC par acknowledgement slip lekar jao.
+            Do cheezein is table se yaad rakhni hain. Ek — confirmation SMS aane tak purana account zinda aur balance-wala rehna chahiye. Do — SMS aane ke baad bhi pehla naya debit khud check karo; agar agle cycle me kisi bhi account se paisa nahi kata, to bina rukey CSC par acknowledgement slip lekar jao.
           </p>
         </section>
 
@@ -212,27 +213,27 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
           </p>
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-lg border border-blue-100 dark:border-blue-800">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">🏦 Bank Branch Band Hona</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Bank Branch Band Hona</h3>
               <p className="text-sm text-[var(--color-text-muted)]">Chhoti branches ka merger ya permanent closure — gaon me ye ab common ho gaya hai.</p>
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-100 dark:border-green-800">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">📍 Location Shift</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Location Shift</h3>
               <p className="text-sm text-[var(--color-text-muted)]">Dusra sheher ya gaon me shift hone par purani branch accessible nahi rehti.</p>
             </div>
             <div className="bg-yellow-50 dark:bg-yellow-900/20 p-5 rounded-lg border border-yellow-100 dark:border-yellow-800">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">📕 Passbook Lost/Theft</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Passbook Lost/Theft</h3>
               <p className="text-sm text-[var(--color-text-muted)]">Passbook kho jaane ya chori hone par bank naya account number issue kar deta hai.</p>
             </div>
             <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-100 dark:border-red-800">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">🔄 IFSC Code Change</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">IFSC Code Change</h3>
               <p className="text-sm text-[var(--color-text-muted)]">Bank merger ya technology upgrade se IFSC code badal jata hai.</p>
             </div>
             <div className="bg-purple-50 dark:bg-purple-900/20 p-5 rounded-lg border border-purple-100 dark:border-purple-800">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">👥 Joint Account Issue</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Joint Account Issue</h3>
               <p className="text-sm text-[var(--color-text-muted)]">Joint account se individual account me shift karna — especially widow/divorce cases me.</p>
             </div>
             <div className="bg-pink-50 dark:bg-pink-900/20 p-5 rounded-lg border border-pink-100 dark:border-pink-800">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">💰 Better Services</h3>
+              <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Better Services</h3>
               <p className="text-sm text-[var(--color-text-muted)]">Nearby branch, lower charges, ya better customer service ke liye bank change.</p>
             </div>
           </div>
@@ -296,7 +297,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             </SI>
             <SI n={3}><strong>CSC Center Ya Bank Branch Me Visit Karein:</strong> Official PMKMY guidelines ke mutabik, bank details update karne ke liye sabse standard aur recommended tarika hai apne nazdeeki Common Service Centre (CSC) ya VLE (Village Level Entrepreneur) ke paas jaana. <strong>Option A (Recommended - Official Channel):</strong> Nazdeeki CSC center par jaayein. Apna PMKMY pension account number, Aadhaar card, aur naye bank ki passbook ki copy le jaayein. VLE operator aapki biometric verification karke seedha PMKMY portal par request raise karega. (Note: CSC par standard nominal service charge ₹20-₹50 lag sakta hai, jo ki official hai). <strong>Option B (Alternative):</strong> Agar CSC accessible nahi hai, to aap apne naye bank branch me bhi ja sakte hain, lekin wahan se bhi request ultimately CSC/portal ke through hi process hoti hai, isliye pehle bank manager se confirm karein ki wo PMKMY update directly kar sakte hain ya nahi.</SI>
             <SI n={4}><strong>Verification Process:</strong> CSC ya Bank wale ye verification karenge: Aadhaar se biometric verification (fingerprint/iris), Mobile number par OTP bhejkar confirm karenge, Naye bank account ki details cross-check karenge, aur Purana PMKMY account verify karenge.</SI>
-            <SI n={5}><strong>Acknowledgement Slip Lein:</strong> Application submit karne ke baad ek acknowledgement slip zaroor lein jisme ye details hon: Application reference number, Submission date, aur CSC/Bank ka stamp aur signature. Is slip ko safe rakhein — status check karne me kaam aayegi.</SI>
+            <SI n={5}><strong>Acknowledgement Slip Lein:</strong> Application submit karne ke baad ek acknowledgement slip le lein jisme ye details hon: Application reference number, Submission date, aur CSC/Bank ka stamp aur signature. Is slip ko safe rakhein — status check karne me kaam aayegi.</SI>
             <SI n={6}><strong>Confirmation Ka Wait Karein:</strong> Update complete hone me time lagta hai: Minimum 7-10 working days, Maximum 30 working days, Average 15-20 din. Confirmation SMS aapke registered mobile par aayega jab account change ho jayega. Samay state aur bank ke hisab se thoda alag ho sakta hai.</SI>
           </StepList>
 
@@ -465,14 +466,14 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
               <p className="text-xs text-[var(--color-text-muted)]">Apne nazdeeki CSC ya naye bank branch me jaakar puchhein ki PMKMY account update ho gaya hai ya nahi.</p>
             </div>
             <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-100 dark:border-yellow-800">
-              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">💻 Online Portal</h3>
+              <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-2">Online Portal</h3>
               <p className="text-xs text-[var(--color-text-muted)]">PMKMY official portal par login karke apni updated details check karein.</p>
             </div>
           </div>
         </section>
 
         <section className="mb-8">
-          <SH>Ye 7 Baatein Hamesha Yaad Rakhein</SH>
+          <SH>Application Se Pehle Aur Baad Ki 7 Checks</SH>
           <div className="space-y-3">
             <div className="flex items-start">
               <span className="text-red-600 mr-3 font-bold text-xl">!</span>
@@ -507,15 +508,15 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Poochhe Jaane Wale Sawal (FAQs)
+            Bank Account Change Se Jude Sawal-Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM-KMY Khata Update — Sawal Jawab" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Ek Baat Yaad Rakhein</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Purana Account Kab Band Karein — Iska Jawab Pehla Debit Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Khata badalna shuru me thoda complicated lag sakta hai, lekin agar aap sahi documents aur official CSC process follow karein, to ye bahut aasan hai. Ye ek baar ka process hai, aur uske baad aapki pension life-time naye account me aayegi. Agar aapko koi confusion hai ya process me koi dikkat aa rahi hai, to apne nazdeeki CSC ya bank branch par zaroor jaayein.
+            Is process ki ek hi galti mehengi padti hai: confirmation aane se pehle purana account band kar dena. Sahi sequence yeh hai — change application ke waqt purane account mein 3 mahine ka contribution balance rakhein, naye account ka Aadhaar-link aur IFSC do baar milaayein, aur jab tak pehla contribution naye account se kat-ta hua na dikhe, purana account chalu rakhein. Wahi pehla debit is transfer ka asli "completion certificate" hai; acknowledgement slip uske record ke saath sambhaal kar rakh lein.
           </p>
         </div>
 
@@ -528,7 +529,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Ye Bhi Padhein</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Aur Guides</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link
@@ -536,7 +537,6 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
                 href={`/maandhan/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
-                <div className="text-2xl mb-2">{card.emoji}</div>
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
                   {card.title}
                 </h4>
@@ -553,9 +553,9 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/maandhan/pm-kisan-maandhan-pension-card-download', l: '📄 Pension Card' },
-          { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: '🔍 Status Check' },
-          { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: '✅ Eligibility' },
+          { href: '/maandhan/pm-kisan-maandhan-pension-card-download', l: 'Pension Card' },
+          { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: 'Status Check' },
+          { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: 'Eligibility' },
         ]} />
         <Disclaimer />
       </div>

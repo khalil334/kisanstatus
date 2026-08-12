@@ -1,15 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-07-01T13:47:00+05:30';
-const MODIFIED = '2026-08-11T08:00:00+05:30';
+const PUBLISHED = '2026-01-17T07:41:23+05:30';
+const MODIFIED = '2026-01-22T12:01:39+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanEkycOnline2026', title: 'Normal eKYC Guide', emoji: '🔐' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '📚' },
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Fix', emoji: '💸' },
-  { slug: 'PmKisanCscRegistrationCharges', title: 'CSC Registration', emoji: '🏪' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
+  { slug: 'PmKisanCscRegistrationCharges', title: 'CSC Ki Sahi Fees' },
+  { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change' },
 ];
 
 const FAQS_DATA = [
@@ -56,10 +56,10 @@ export default function PmKisanFaceAuthenticationEkyc() {
             PM Kisan Face Authentication eKYC 2026: Bina OTP Ke Ghar Baithe Photo Verification
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
             <span> Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 15 min read</span>
+            <span>15 min read</span>
           </div>
         </div>
       </div>
@@ -124,7 +124,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
           />
 
           <DB>
-            <strong>Real Example:</strong>
+            <strong>Ek Jeeta Jaagta Case:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
               Patna ke Rajesh Kumar ji ka experience: "Mera mobile number 5 saal pehle band ho gaya tha. Naya number liya lekin Aadhaar se link nahi karaya. Jab PM Kisan ke liye apply kiya toh OTP nahi aaya. Chehre wale tarike se 5 minute mein eKYC ho gayi. Ab har 4 mahine mein paisa aa raha hai."
             </p>
@@ -172,7 +172,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
             </table>
           </div>
           <IB>
-            <strong>Important:</strong> Dono app free hain. Koi app ya website is kaam ke paise maange (khud karne par), toh wo fraud hai. CSC par karwane ka charge alag baat hai — uski receipt milti hai.
+            <strong>Kaam Shuru Karne Se Pehle:</strong> Dono app free hain. Koi app ya website is kaam ke paise maange (khud karne par), toh wo fraud hai. CSC par karwane ka charge alag baat hai — uski receipt milti hai.
           </IB>
         </section>
 
@@ -221,7 +221,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
           />
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Green tick ke baad kaam khatam nahi hota. 2-3 din mein database update hota hai — phir <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">beneficiary list</Link> mein naam check karo, eKYC "YES" dikhna chahiye. Agar hai, toh agli kist mein aapka paisa rukega nahi. Nahi dikha ek hafte tak, toh helpline <strong>155261</strong> par reference ke saath baat karo.
+            Green tick ke baad kaam khatam nahi hota. 2-3 din mein database update hota hai — phir <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">list wale page</Link> mein naam check karo, eKYC "YES" dikhna chahiye. Agar hai, toh agli kist mein aapka paisa rukega nahi. Nahi dikha ek hafte tak, toh helpline <strong>155261</strong> par reference ke saath baat karo.
           </p>
         </section>
 
@@ -235,7 +235,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
               <strong>Ghar ke kisi jawaan ka smartphone use karo.</strong> App mein login aapke Aadhaar se hota hai, phone kiska hai isse fark nahi padta. Beta/beti/pota — kisi ka bhi phone, 5 minute ka kaam. Kai gharon mein ek hi phone se dada, dadi, chacha sabki eKYC hui hai — ye bilkul allowed hai.
             </li>
             <li>
-              <strong>Ya seedha <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC center</Link> jao.</strong> Aadhaar card original le jao. Operator biometric device se fingerprint ya chehra scan karega. ₹20-30 lagenge, receipt zaroor lo. 5 minute mein kaam hota hai — line ka time alag.
+              <strong>Ya seedha <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC seva kendra</Link> jao.</strong> Aadhaar card original le jao. Operator biometric device se fingerprint ya chehra scan karega. ₹20-30 lagenge, receipt lekar hi uthna. 5 minute mein kaam hota hai — line ka time alag.
             </li>
           </ul>
           <Image
@@ -246,7 +246,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
             className="w-full rounded-xl my-4"
           />
           <IB>
-            <strong>CSC par ye zaroor bolna:</strong> "PM Kisan ki eKYC karni hai." Operator ko pata hota hai kaunsa portal kholna hai. Receipt lena mat bhoolna — baad mein dikkat aayi toh yahi proof hai.
+            <strong>CSC par ye line bol dena:</strong> "PM Kisan ki eKYC karni hai." Operator ko pata hota hai kaunsa portal kholna hai. Receipt lena mat bhoolna — baad mein dikkat aayi toh yahi proof hai.
           </IB>
           <Image
             src="/images/articles/pm-kisan-face-authentication-ekyc/who-should-use.webp"
@@ -286,8 +286,8 @@ export default function PmKisanFaceAuthenticationEkyc() {
               },
             ].map(({ error, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {error}</p>
-                <p className="text-xs text-[var(--color-text-muted)]"><strong className="text-green-700 dark:text-green-400">✅ Fix:</strong> {fix}</p>
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">{error}</p>
+                <p className="text-xs text-[var(--color-text-muted)]"><strong className="text-green-700 dark:text-green-400">Fix:</strong> {fix}</p>
               </div>
             ))}
           </div>
@@ -305,7 +305,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Face eKYC — Har Sawal Ka Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="Chehre se eKYC — FAQ" />
         </section>
@@ -321,9 +321,9 @@ export default function PmKisanFaceAuthenticationEkyc() {
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 Normal eKYC' },
-          { href: '/articles/PmKisanPaymentFailedFix2026', l: '💸 Payment Fix' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/articles/PmKisanEkycOnline2026', l: 'Normal eKYC' },
+          { href: '/articles/PmKisanPaymentFailedFix2026', l: 'Payment Fix' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
         <Disclaimer />
       </div>

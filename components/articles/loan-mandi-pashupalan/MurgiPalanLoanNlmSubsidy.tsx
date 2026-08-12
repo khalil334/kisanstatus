@@ -2,14 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan NLM Subsidy', emoji: '🐐' },
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Dairy Loan Bina Collateral', emoji: '🐄' },
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashupalan Loan Yojana', emoji: '🐃' },
-  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Portal Apply', emoji: '💻' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
-  { slug: 'pm-matsya-sampada-yojana-fish-farming', title: 'PM Matsya Sampada Yojana', emoji: '🐟' },
+  { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan Yojana' },
+  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Gokul Mission Subsidy' },
+  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Loan Apply' },
 ];
 
 const FAQS_DATA = [
@@ -71,10 +69,10 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
             Murgi Palan Loan 2026: NLM Se 50% Subsidy (₹25 Lakh Tak) — Eligibility, Layer vs Broiler Aur Apply Ka Poora Process
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 11 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -93,7 +91,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
         </div>
 
         <DB>
-          <strong>TL;DR — seedha faisla:</strong>
+          <strong>Ek Nazar Mein — poora hisaab:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>NLM-EDP mein poultry project par <strong>50% capital subsidy, ₹25 lakh tak</strong> — parent farm, hatchery, brooder unit.</li>
             <li>Subsidy <strong>back-ended</strong> hai: pehle apna margin + bank loan, subsidy verification ke baad. Advance nahi milti.</li>
@@ -120,7 +118,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           udyamimitra portal se apply ka process, aur woh galtiyan jo application ko latka deti hain.
         </p>
 
-        <SH>🐔 NLM-EDP Kya Hai — Structure Samjho</SH>
+        <SH>NLM-EDP Kya Hai — Structure Samjho</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           National Livestock Mission, Ministry of Fisheries, Animal Husbandry &amp; Dairying ki central scheme hai.
           Iske Entrepreneurship Development (EDP) component mein poultry, bakri-bhed, sukar (piggery) aur chara
@@ -167,7 +165,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           subsidy baad mein — yahi order hai.
         </DB>
 
-        <SH>✅ Eligibility — Chaar Cheezein Chahiye</SH>
+        <SH>Eligibility — Chaar Cheezein Chahiye</SH>
         <StepList>
           <SI n={1}><strong>Training ya anubhav:</strong> poultry ki training, livestock ka anubhav, ya trained staff — teeno mein se kuch ek. KVK ya sarkari poultry training centre ka certificate file ko mazboot karta hai.</SI>
           <SI n={2}><strong>Zameen:</strong> khud ki ya registered lease par. Location bhi socho — hatchery/farm ke liye bijli-paani aur market ki doori matter karti hai.</SI>
@@ -184,7 +182,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🥚 Layer vs Broiler — Pehla Bada Faisla</SH>
+        <SH>Layer vs Broiler — Pehla Bada Faisla</SH>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
             <thead>
@@ -239,7 +237,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>💻 Apply Kaise Karein — udyamimitra Portal</SH>
+        <SH>Apply Kaise Karein — udyamimitra Portal</SH>
         <StepList>
           <SI n={1}><strong>Project report (DPR) banao:</strong> unit ka type, capacity, cost breakdown, income projection, repayment plan. DPR jitni realistic, file utni mazboot. Hawai numbers wali DPR verification mein pakdi jaati hai.</SI>
           <SI n={2}><strong>nlm.udyamimitra.in par registration karo</strong> — apni details bharo aur applicant type chuno (individual/SHG/FPO...).</SI>
@@ -258,7 +256,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
 
         <WB>
           Subsidy pattern, unit-wise caps aur eligible project types scheme guidelines ke updates ke saath badal
-          sakte hain. Apply se pehle nlm.udyamimitra.in par current guidelines PDF zaroor dekho — aur kisi bhi
+          sakte hain. Apply se pehle nlm.udyamimitra.in par current guidelines PDF khol kar dekho — aur kisi bhi
           &ldquo;guaranteed approval&rdquo; wale agent se door raho. Application free hai aur khud ho jaati hai.
         </WB>
 
@@ -271,7 +269,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🧮 Kharche Ka Sach — Feed Hi Asli Game Hai</SH>
+        <SH>Kharche Ka Sach — Feed Hi Asli Game Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Poultry ke chalu kharche ka 60-70% sirf feed hota hai. Iska matlab: aapke munafe ka faisla shed ki
           chamak se nahi, feed conversion se hota hai — kitna feed kha kar murgi kitna anda/weight deti hai. Achhi
@@ -282,8 +280,8 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           Doosra bada kharcha working capital hai — har batch ke liye chooza, feed, dawai ka paisa chahiye. Iske
           liye KCC (Animal Husbandry) sabse sasta rasta hai. Capital cost NLM + term loan se, chalane ka kharcha
           KCC se — yeh combination yahan bhi wahi hai jo har livestock project mein kaam karta hai. Working capital
-          ke options ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC
-          Online Apply</Link> guide dekho.
+          ke options ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC banwane
+          ke online process</Link> wali guide dekho.
         </p>
 
         <Image
@@ -295,7 +293,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>💔 Mortality Aur Vaccination — Jo Numbers Mein Nahi Dikhta</SH>
+        <SH>Mortality Aur Vaccination — Jo Numbers Mein Nahi Dikhta</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Har DPR mein mortality ka ek chhota sa percentage likha hota hai, par asli farm par yeh number
           discipline se banta hai. Ranikhet (Newcastle), Gumboro aur fowl pox ka vaccination schedule din ke
@@ -314,7 +312,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🏗️ Shed Aur Setup — Jahan Paisa Sahi Lagana Hai</SH>
+        <SH>Shed Aur Setup — Jahan Paisa Sahi Lagana Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Naye log aksar paisa galat jagah lagate hain — chamakdaar gate aur pakki boundary par, jabki murgi ko
           chahiye <strong>hawa, sookha farsh aur sahi temperature</strong>. Shed ki disha east-west rakho taaki
@@ -330,7 +328,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           chahiye — appraisal karne wala bhi samajh jaata hai ki plan zameen se juda hai ya internet se utha hai.
         </p>
 
-        <SH>⚠️ 5 Galtiyan Jo Application Aur Farm Dono Dubati Hain</SH>
+        <SH>5 Galtiyan Jo Application Aur Farm Dono Dubati Hain</SH>
         <StepList>
           <SI n={1}><strong>Subsidy ko advance samajhna</strong> — pehle financing, phir subsidy. Ulta socha toh project shuru hi nahi hoga.</SI>
           <SI n={2}><strong>Copy-paste DPR</strong> — internet se uthai DPR mein local rates nahi hote; appraisal mein pakdi jaati hai. Apne district ke asli rates par banao.</SI>
@@ -339,7 +337,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           <SI n={5}><strong>Capacity se bada unit</strong> — pehli baar mein hi sabse bada project lene ka lalach. Chhota shuru karo, seekho, phir badhao — scheme baad mein bhi rahegi.</SI>
         </StepList>
 
-        <SH>🌱 Zameen Se Ek Misaal — Khagaria (Bihar) Ke Dayanand Singh</SH>
+        <SH>Zameen Se Ek Misaal — Khagaria (Bihar) Ke Dayanand Singh</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Yeh dhandha chhoti zameen par bhi khada hota hai — iska documented example KVK Khagaria (Bihar) ke
           record mein hai. Parbatta gaon ke <strong>Dayanand Singh</strong> ke paas sirf 1 acre zameen thi. 500
@@ -355,7 +353,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           KVK ke guidance ke saath hua, ek jhatke mein nahi.
         </p>
 
-        <SH>🐐 Bakri Ya Machhli Mein Bhi Interest Hai?</SH>
+        <SH>Bakri Ya Machhli Mein Bhi Interest Hai?</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           NLM ke isi structure mein bakri-bhed palan ka bhi component hai — uska poora ganit humne alag guide mein
           likha hai: <Link href="/articles/bakri-palan-yojana-nlm-subsidy" className="underline font-bold">Bakri Palan
@@ -366,7 +364,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
 
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             NLM Entrepreneurship — Udyamimitra portal, scheme guidelines.{' '}
@@ -385,8 +383,8 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Articles' },
-          { href: '/articles/category/pashupalan', l: '📂 Pashupalan Guides' },
+          { href: '/articles', l: 'Baaki Articles Dekhein' },
+          { href: '/articles/category/pashupalan', l: 'Pashu Palan Ke Sab Articles' },
         ]} />
         <Disclaimer />
       </div>

@@ -41,7 +41,7 @@ export default function RajasthanKisanSammanNidhi9000() {
   const faqs = [
     {
       q: 'Kya ₹12,000 ki badhotri confirm ho chuki hai?',
-      a: '⚠️ Ye abhi sirf ghoshna hai, official notification nahi aaya. Jab tak Finance ya Agriculture Department ka gazette notification na aaye, paisa ₹9,000 wale hisaab se hi maano.',
+      a: 'Ye abhi sirf ghoshna hai, official notification nahi aaya. Jab tak Finance ya Agriculture Department ka gazette notification na aaye, paisa ₹9,000 wale hisaab se hi maano.',
     },
     {
       q: '6vi kist kab tak aa jaani chahiye?',
@@ -71,7 +71,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
           <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Status (4 August 2026):</strong> 6vi kist abhi pending hai. ⚠️ Next kist date officially announce nahi hua. Jan Soochna portal check karte rahein — kisi bhi WhatsApp forward wali tareekh par bharosa na karein.
+            <strong>Status (4 August 2026):</strong> 6vi kist abhi pending hai.  Next kist date officially announce nahi hua. Jan Soochna portal check karte rahein — kisi bhi WhatsApp forward wali tareekh par bharosa na karein.
           </p>
         </div>
 
@@ -121,7 +121,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <Fig
           src="status-check-phone.webp"
           alt="Kisan mobile par Jan Soochna portal kholkar Kisan Samman Nidhi ka payment status check kar raha hai"
-          caption="Status check bilkul free hai — Jan Soochna portal mobile par bhi khul jaata hai"
+          caption="Status check ka koi paisa nahi — Jan Soochna portal mobile par bhi khul jaata hai"
         />
 
         <h3>Jan Soochna Portal</h3>
@@ -202,7 +202,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <p>
           Tehsil ke chakkar lagane se pehle apna land record khud padh lena samajhdari hai — Rajasthan
-          mein ye bilkul free hai. <code>apnakhata.rajasthan.gov.in</code> (jise e-Dharti bhi kehte hain)
+          mein iska koi shulk nahi. <code>apnakhata.rajasthan.gov.in</code> (jise e-Dharti bhi kehte hain)
           kholein, apna zila chunein, phir tehsil aur gaon, aur khata number, khasra number ya malik ke
           naam se apni jamabandi nikaal lein.
         </p>
@@ -232,7 +232,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <h2>₹12,000 Ka Sach — Announcement Aur Notification Mein Fark Hai</h2>
 
         <p>
-          CM Bhajanlal Sharma ne prastaav rakha hai ki state apna ₹3,000 wala hissa badhakar ₹6,000 kar de — jisse total ₹12,000 tak pahunch jaaye. ⚠️ Ye abhi sirf ghoshna hai, official notification nahi aaya.
+          CM Bhajanlal Sharma ne prastaav rakha hai ki state apna ₹3,000 wala hissa badhakar ₹6,000 kar de — jisse total ₹12,000 tak pahunch jaaye.  Ye abhi sirf ghoshna hai, official notification nahi aaya.
         </p>
 
         <p>
@@ -240,7 +240,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         </p>
 
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-          <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">⚠️ Savdhaan</h3>
+          <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">Savdhaan</h3>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
             WhatsApp aur YouTube par "₹12,000 aa gaye" jaisi khabrein ghoom rahi hain — ye sach nahi hain. Apna budget ₹9,000 ke hisaab se hi rakho. Badhotri aayi to bonus samjho, plan mat karo.
           </p>
@@ -523,7 +523,7 @@ export default function RajasthanKisanSammanNidhi9000() {
           }}
         />
         <section className="mb-8 not-prose">
-          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Rajasthan Kisan Samman Nidhi FAQ 2026</p>
+          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Rajasthan Kisan Samman Nidhi — ₹9,000 wale sawaal jo sab poochhte hain</p>
           <div className="space-y-3">
             {faqs.map(({ q, a }) => (
               <details
@@ -557,7 +557,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
             <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-            Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+            Ye lekh jaankari ka saathi hai, sarkari dastavez nahi. ₹9,000 se judi har baat Raj Kisan Sathi portal ya nazdeeki krishi paryavekshak se jaanch lein.
           </p>
         </div>
 
@@ -569,7 +569,7 @@ export default function RajasthanKisanSammanNidhi9000() {
               <p className="text-xs text-gray-600 dark:text-gray-400">Next installment kab aayegi.</p>
             </Link>
             <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 hover:shadow-lg transition-all">
-              <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 transition-colors mb-1">State Kisan Yojana List</h4>
+              <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 transition-colors mb-1">Sabhi Rajyon Ki Kisan Yojanaen</h4>
               <p className="text-xs text-gray-600 dark:text-gray-400">Sab states ka comparison ek jagah.</p>
             </Link>
             <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-purple-500 hover:shadow-lg transition-all">

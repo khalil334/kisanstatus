@@ -177,7 +177,7 @@ export default function PariharaPaymentStatusCheck2026({
       <InfoBox type="info">
         <strong>Last updated: August 2026.</strong> Ye guide official portal{' '}
         <Ext href="https://parihara.karnataka.gov.in">parihara.karnataka.gov.in</Ext> aur
-        Bhoomi ke steps par based hai. Parihara status check bilkul free hai — kisi agent ko
+        Bhoomi ke steps par based hai. Parihara status check ka koi charge nahi — kisi agent ko
         paisa dene ki koi zaroorat nahi.
       </InfoBox>
 
@@ -335,7 +335,7 @@ export default function PariharaPaymentStatusCheck2026({
         </li>
         <li>
           <strong>Objection do.</strong> Survey chhoota hai to VA ke through likhit objection
-          / application do — tehsildar office me iski receiving zaroor lo. Zubaani shikayat
+          / application do — tehsildar office me iski receiving leke aao. Zubaani shikayat
           ka koi record nahi bachta.
         </li>
         <li>
@@ -505,7 +505,7 @@ export default function PariharaPaymentStatusCheck2026({
 
       <section className="mb-8 not-prose">
         <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">
-          Parihara status check me dikhne wale 9 aam messages — turant matlab aur ilaaj
+          Parihara status check me dikhne wale 9 aam messages — matlab aur ilaaj
         </p>
         <div className="space-y-3">
           {MICRO_FAQS.map(({ error, matlab, fix }) => (
@@ -513,7 +513,7 @@ export default function PariharaPaymentStatusCheck2026({
               key={error}
               className="border border-[var(--color-border)] rounded-xl p-4 text-sm space-y-1.5"
             >
-              <p className="font-semibold text-[var(--color-text)] m-0">⚠️ {error}</p>
+              <p className="font-semibold text-[var(--color-text)] m-0">{error}</p>
               <p className="text-[var(--color-text-muted)] m-0">
                 <strong>Matlab:</strong> {matlab}
               </p>
@@ -526,7 +526,7 @@ export default function PariharaPaymentStatusCheck2026({
       </section>
 
       <InfoBox type="warning">
-        <strong>Yaad rakho:</strong> survey, list, status check aur payment — is poori chain
+        <strong>Poori chain free hai:</strong> survey, list, status check aur payment — is poori chain
         me kahin bhi koi sarkari fees nahi hai. Goverment ka relief seedha DBT se aata hai;
         beech me paisa maangne wala har aadmi thag hai. Aisi maang ki shikayat cyber
         helpline 1930 ya nazdeeki police station me karo.
@@ -536,8 +536,8 @@ export default function PariharaPaymentStatusCheck2026({
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
           Relief ki raqam, round aur declared taluk ki list har calamity me alag hoti hai —
-          final jaankari ke liye official portal ya tehsildar office se zaroor confirm
-          karein. Ye article sirf raasta dikhane ke liye hai.
+          final jaankari ke liye official portal ya tehsildar office se ek baar confirm
+          karein. Is guide ko naksha samjhein — manzil ki pushti sarkari zariye se hi hogi.
         </p>
       </div>
 

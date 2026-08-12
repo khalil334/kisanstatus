@@ -290,13 +290,13 @@ const FRUIT_BASE: readonly CommodityBase[] = [
 ];
 
 const WEATHER_FALLBACK: readonly WeatherData[] = [
-  { day: 'Aaj', date: '11 Jul', temp: '32°/26°', condition: '🌧️ Bharish', rain: '80%' },
-  { day: 'Kal', date: '12 Jul', temp: '31°/25°', condition: '🌦️ Halki Barish', rain: '65%' },
-  { day: 'Sat', date: '13 Jul', temp: '33°/26°', condition: '🌦️ Halki Barish', rain: '40%' },
-  { day: 'Sun', date: '14 Jul', temp: '34°/27°', condition: '⛅ Baadal', rain: '20%' },
-  { day: 'Mon', date: '15 Jul', temp: '35°/28°', condition: '☀️ Dhoop', rain: '5%' },
-  { day: 'Tue', date: '16 Jul', temp: '34°/27°', condition: '🌤️ Halki Dhoop', rain: '10%' },
-  { day: 'Wed', date: '17 Jul', temp: '33°/26°', condition: '🌦️ Halki Barish', rain: '35%' },
+  { day: 'Aaj', date: '11 Jul', temp: '32°/26°', condition: 'Bharish', rain: '80%' },
+  { day: 'Kal', date: '12 Jul', temp: '31°/25°', condition: 'Halki Barish', rain: '65%' },
+  { day: 'Sat', date: '13 Jul', temp: '33°/26°', condition: 'Halki Barish', rain: '40%' },
+  { day: 'Sun', date: '14 Jul', temp: '34°/27°', condition: 'Baadal', rain: '20%' },
+  { day: 'Mon', date: '15 Jul', temp: '35°/28°', condition: 'Dhoop', rain: '5%' },
+  { day: 'Tue', date: '16 Jul', temp: '34°/27°', condition: 'Halki Dhoop', rain: '10%' },
+  { day: 'Wed', date: '17 Jul', temp: '33°/26°', condition: 'Halki Barish', rain: '35%' },
 ];
 
 const VEG_NAME_MAP: Record<string, string> = {
@@ -310,10 +310,9 @@ const FRUIT_NAME_MAP: Record<string, string> = {
 };
 
 const RELATED = [
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '💰' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '📋' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Guide', emoji: '🏦' },
+  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Pyaz-Aloo-Tamatar Bhav Guide' },
+  { slug: 'mandi-bhav-app-comparison', title: 'Best Mandi Bhav Apps' },
+  { slug: 'msp-list-2026-27', title: 'MSP List 2026-27' },
 ];
 
 const FAQS_DATA = [
@@ -355,7 +354,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Fasal bechne ka sahi time kaise tay karein?',
-    a: 'Agar paise ki turant zaroorat hai, current rate par bech dena hi safe hai — market kabhi bhi neeche ja sakta hai. Aloo-pyaaz jaisi cheezein thodi der store ho sakti hain, isliye agar rate badhne ka pattern dikh raha ho toh 2-3 hafte rukna ek option hai. Lekin yeh gamble bhi hai.',
+    a: 'Agar paise ki abhi zaroorat hai, current rate par bech dena hi safe hai — market kabhi bhi neeche ja sakta hai. Aloo-pyaaz jaisi cheezein thodi der store ho sakti hain, isliye agar rate badhne ka pattern dikh raha ho toh 2-3 hafte rukna ek option hai. Lekin yeh gamble bhi hai.',
   },
   {
     q: 'Data kahan se aata hai — bharosemand hai kya?',
@@ -582,7 +581,6 @@ export default function MandiBhavToday() {
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
-          icon="🔗"
           countdownNote="seconds mein official website khulega..."
           infoNote="Thoda wait karo. Official government website khulne wala hai."
         />
@@ -599,8 +597,8 @@ export default function MandiBhavToday() {
             {selectedState} Mandi Bhav Aaj Ka Rate — Sabzi, Phal Aur 7 Din Ka Mausam
           </h1>
           <div className="flex gap-3 text-xs text-green-100">
-            <span>🕐 {currentTime}</span>
-            <span>{isLive ? '🟢 Live' : '🔄 Updated'}: {lastUpdated}</span>
+            <span>{currentTime}</span>
+            <span>{isLive ? 'Live' : 'Updated'}: {lastUpdated}</span>
           </div>
         </div>
       </div>
@@ -646,7 +644,7 @@ export default function MandiBhavToday() {
                 <div className="text-sm font-black mb-1">{w.date}</div>
                 <div className="text-2xl mb-1">{w.condition.split(' ')[0]}</div>
                 <div className="text-sm font-black mb-1">{w.temp}</div>
-                <div className="text-[10px] font-bold text-blue-600">💧 {w.rain}</div>
+                <div className="text-[10px] font-bold text-blue-600">{w.rain}</div>
               </div>
             ))}
           </div>
@@ -658,7 +656,7 @@ export default function MandiBhavToday() {
         <section className="mb-8">
           <SH>Apna State Chuno — Har State Ka Rate Alag Hai</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
-            Transport, local demand aur us jagah ki apni upaj — teeno factor state ke rate ko national average se upar ya neeche le jaate hain. Neeche button dabao, sabzi-phal ke rate aur mausam dono turant refresh honge.
+            Transport, local demand aur us jagah ki apni upaj — teeno factor state ke rate ko national average se upar ya neeche le jaate hain. Neeche button dabao, sabzi-phal ke rate aur mausam dono ek saath refresh honge.
           </p>
           <div className="flex flex-wrap gap-2 mb-4 max-h-64 overflow-y-auto p-2 border-2 border-gray-300 rounded-xl">
             {STATE_CHECKLISTS.map((s) => (
@@ -680,7 +678,7 @@ export default function MandiBhavToday() {
             <div className="font-black text-lg mb-3">{currentStateData.state} — Mandi Checklist</div>
 
             <div className="mb-4">
-              <p className="text-sm font-bold text-green-800 mb-2">🏬 Badi Mandiyan:</p>
+              <p className="text-sm font-bold text-green-800 mb-2">Badi Mandiyan:</p>
               <ul className="text-xs text-green-700 space-y-1">
                 {currentStateData.mandis.map((mandi, i) => (
                   <li key={i}>• {mandi}</li>
@@ -690,7 +688,7 @@ export default function MandiBhavToday() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div className="bg-white rounded-xl p-4 border-2 border-green-300">
-                <p className="text-xs font-bold text-green-800 mb-2">🥬 Top Sabziyan:</p>
+                <p className="text-xs font-bold text-green-800 mb-2">Top Sabziyan:</p>
                 <ul className="text-xs text-green-700 space-y-1">
                   {currentStateData.topVegetables.map((veg, i) => (
                     <li key={i}>• {veg}</li>
@@ -698,7 +696,7 @@ export default function MandiBhavToday() {
                 </ul>
               </div>
               <div className="bg-white rounded-xl p-4 border-2 border-amber-300">
-                <p className="text-xs font-bold text-amber-800 mb-2">🍎 Top Phal:</p>
+                <p className="text-xs font-bold text-amber-800 mb-2">Top Phal:</p>
                 <ul className="text-xs text-amber-700 space-y-1">
                   {currentStateData.topFruits.map((fruit, i) => (
                     <li key={i}>• {fruit}</li>
@@ -709,7 +707,7 @@ export default function MandiBhavToday() {
 
             <div className="bg-blue-50 rounded-lg p-3 border border-blue-300">
               <p className="text-xs text-blue-800">
-                <strong>💡 Note:</strong> {currentStateData.notes}
+                <strong>Note:</strong> {currentStateData.notes}
               </p>
             </div>
           </div>
@@ -819,22 +817,22 @@ export default function MandiBhavToday() {
           <div className="space-y-3">
             <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-xl">
               <p className="text-sm text-green-800">
-                <strong>✅ Rate achha hai:</strong> Agar paisa turant chahiye aur aaj ka rate theek dikh raha hai, bech dena hi safe rehta hai — market kal kya karega, koi guarantee nahi.
+                <strong>Rate achha hai:</strong> Agar paisa is hafte chahiye aur aaj ka rate theek dikh raha hai, bech dena hi safe rehta hai — market kal kya karega, koi guarantee nahi.
               </p>
             </div>
             <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl">
               <p className="text-sm text-amber-800">
-                <strong>📦 Store kiya ja sakta hai:</strong> Aloo, pyaaz jaisi sabzi thodi der rukwaayi ja sakti hai. Rate badhne ka pattern dikhe toh 2-3 hafte wait karna ek reasonable gamble hai.
+                <strong>Store kiya ja sakta hai:</strong> Aloo, pyaaz jaisi sabzi thodi der rukwaayi ja sakti hai. Rate badhne ka pattern dikhe toh 2-3 hafte wait karna ek reasonable gamble hai.
               </p>
             </div>
             <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-xl">
               <p className="text-sm text-red-800">
-                <strong>⚠️ Barish aane wali hai:</strong> Forecast check karo. Transport ruka toh rate upar-neeche dono ho sakta hai, isliye stock jaldi clear karna behtar.
+                <strong>Barish aane wali hai:</strong> Forecast check karo. Transport ruka toh rate upar-neeche dono ho sakta hai, isliye stock jaldi clear karna behtar.
               </p>
             </div>
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl">
               <p className="text-sm text-blue-800">
-                <strong>📊 Roz track karo:</strong> Ek hafta bhi daily check karoge toh pattern dikhne lagega — kaun se din rate upar jaata hai, kab neeche.
+                <strong>Roz track karo:</strong> Ek hafta bhi daily check karoge toh pattern dikhne lagega — kaun se din rate upar jaata hai, kab neeche.
               </p>
             </div>
           </div>
@@ -871,7 +869,7 @@ export default function MandiBhavToday() {
               <span className="text-green-600 font-black text-lg shrink-0">04</span>
               <div>
                 <p className="font-bold text-sm mb-1">Direct search karo</p>
-                <p className="text-xs text-gray-600">Ek specific item ka rate chahiye? Naam type karo, list turant filter ho jaayegi.</p>
+                <p className="text-xs text-gray-600">Ek specific item ka rate chahiye? Naam type karo, list saath-saath filter hoti jaayegi.</p>
               </div>
             </div>
           </div>
@@ -885,12 +883,15 @@ export default function MandiBhavToday() {
         </section>
 
         <div className="my-8 p-6 bg-green-50 border-2 border-green-400 rounded-2xl">
-          <h3 className="font-black text-green-800 text-lg mb-3">Seedhi Baat</h3>
+          <h3 className="font-black text-green-800 text-lg mb-3">Ek Mandi Ka Rate Adhoori Tasveer Hai</h3>
           <p className="text-sm text-green-800 leading-relaxed mb-3">
-            Mandi bhav dekhna luxury nahi, zaroorat hai — chahe aap apni fasal bech rahe ho ya ghar ke liye sabzi khareed rahe ho, rate pata hone se bargaining position better hoti hai.
+            Yahan diya rate mol-bhav ki shuruaat hai, ant nahi. Sirf apni mandi ka number dekhkar nikalne se aksar
+            nuksan hota hai — kai baar 30-40 km door wali mandi ka rate transport kharch nikaalne ke baad bhi upar
+            baithta hai.
           </p>
           <p className="text-sm text-green-800 leading-relaxed mb-3">
-            Page bookmark kar lo, apna state set kar lo, aur mausam ko bhi saath mein dekhte raho. Baaki decision aapka hai — hum sirf number saaf-saaf saamne rakhte hain.
+            Isliye bechne se pehle do-teen aas-paas ki mandiyon ka rate saath mein dekhein, aur usmein se dhulai aur
+            labour ghata kar tulna karein. Agar bacha hua farak dhulai se kam nikle, toh apni mandi hi theek hai.
           </p>
           <p className="text-xs text-green-700 italic mt-2">
             Base data sarkari agmarknet feed se aata hai. Mandi floor par thodi negotiation ho sakti hai, isliye final deal rate mein ₹1-2 ka farak sambhav hai.
@@ -898,7 +899,7 @@ export default function MandiBhavToday() {
         </div>
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
-          <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">🔗 Official Government Data</h3>
+          <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">Official Government Data</h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
             <strong>Agmarknet</strong> par jaake raw sarkari mandi data dekho. Click karne ke 10 second baad website naye tab mein khulegi.
           </p>

@@ -50,10 +50,10 @@ const FAQS = [
 ];
 
 const RELATED = [
-  { slug: 'hi/status-check-mobile-se', title: 'मोबाइल नंबर से स्टेटस चेक', emoji: '📱' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Online Guide', emoji: '🔐' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Guide', emoji: '📋' },
-  { slug: 'hi/npci-aadhaar-seeding', title: 'NPCI आधार सीडिंग', emoji: '🏦' },
+  { slug: 'hi/status-check-mobile-se', title: 'मोबाइल नंबर से स्टेटस चेक' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC पूरी करने की guide' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Guide' },
+  { slug: 'hi/npci-aadhaar-seeding', title: 'आधार-DBT seeding guide', emoji: '' },
 ];
 
 const FAQ_SCHEMA = {
@@ -270,14 +270,14 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
       <div className="my-5 border-2 border-[var(--color-border)] rounded-2xl overflow-hidden bg-[var(--color-card)] shadow-sm">
         <div className="bg-green-50 dark:bg-green-900/20 border-b border-[var(--color-border)] px-4 py-2.5">
           <span className="text-green-700 dark:text-green-300 text-xs font-bold">
-            📖 Pehle guide padhi? Ab official site par jao:
+             Pehle guide padhi? Ab official site par jao:
           </span>
         </div>
         <div className="p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">
           <div>
             <p className="font-bold text-[var(--color-text)] text-sm">PM Kisan Portal — Farmers Corner</p>
             <p className="text-xs text-[var(--color-text-muted)] mt-0.5">
-              Government of India — pmkisan.gov.in
+              भारत सरकार का आधिकारिक portal — pmkisan.gov.in
             </p>
           </div>
           <a
@@ -413,28 +413,24 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
       </p>
       <ul className="space-y-2 my-4 list-none pl-0">
         <li className="flex gap-2 text-sm leading-relaxed">
-          <span className="shrink-0">✅</span>
           <span>
             <strong>Status के तीनों field एक बार खोलकर देख लें</strong> — eKYC, बैंक seeding, land seeding।
             तीनों YES हैं तो आपका काम पूरा है; कोई NO है तो उसी पर आज लग जाइए।
           </span>
         </li>
         <li className="flex gap-2 text-sm leading-relaxed">
-          <span className="shrink-0">✅</span>
           <span>
             <strong>Registered मोबाइल नंबर चालू रखिए</strong> — OTP और बैंक message दोनों उसी पर आते हैं। जिस
             SIM में recharge खत्म हो चुका है, उसे किस्त से पहले ठीक करा लीजिए।
           </span>
         </li>
         <li className="flex gap-2 text-sm leading-relaxed">
-          <span className="shrink-0">✅</span>
           <span>
             <strong>खाता चालू है या नहीं, पक्का कर लें</strong> — लंबे समय से लेन-देन न हुआ हो तो खाता निष्क्रिय
             पड़ सकता है। एक छोटी entry या शाखा में जाकर उसे चालू रखवाना बेहतर है।
           </span>
         </li>
         <li className="flex gap-2 text-sm leading-relaxed">
-          <span className="shrink-0">✅</span>
           <span>
             <strong>गांव की सूची में अपना नाम मिला लें</strong> — Beneficiary List में नाम है तो निश्चिंत रहिए।
             नहीं है तो इंतजार करने का फायदा नहीं; कृषि अधिकारी से आवेदन की स्थिति पूछिए।
@@ -471,7 +467,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
         <h3 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
-          <span>🔗</span> Related Articles — Yeh Bhi Padho
+          Related Articles — Yeh Bhi Padho
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {RELATED.map((a) => (

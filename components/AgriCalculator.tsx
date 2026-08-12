@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { InputField, SelectField, ResultRow, fmt } from './calculators/CalcShared';
+import { AUTHOR_NAME, SITE_NAME } from '@/lib/site-config';
 
 type Tab = 'pmkisan' | 'msp' | 'profit' | 'emi' | 'fertilizer' | 'irrigation';
 
@@ -53,16 +54,16 @@ function PmKisanCalc() {
         <ResultRow label={`${years} Saal Mein Total`} value={fmt(total)} highlight />
         {!eligible && (
           <p className="text-xs text-red-600 dark:text-red-400 pt-2">
-            {reg === 'no' ? '️ Pehle enrollment karo bhai — official portal par free' : '⚠️ eKYC complete karo — bina verification kist nahi milti'}
+            {reg === 'no' ? 'Pehle enrollment karo bhai — official portal par free' : 'eKYC complete karo — bina verification kist nahi milti'}
           </p>
         )}
         {eligible && (
-          <p className="text-xs text-green-600 dark:text-green-400 pt-2">✅ Aap {years} saal mein {fmt(total)} ke haqdaar hain bhai!</p>
+          <p className="text-xs text-green-600 dark:text-green-400 pt-2">Aap {years} saal mein {fmt(total)} ke haqdaar hain bhai!</p>
         )}
       </div>
 
       <div className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl text-xs text-blue-800 dark:text-blue-300">
-        <strong>📌 Note:</strong> PM Kisan Samman Nidhi ₹6,000/saal sabhi registered eligible kisanon ko milta hai — zameen ki size se fark nahi padta (jab tak chote/marginal farmer hain).
+        <strong>Note:</strong> PM Kisan Samman Nidhi ₹6,000/saal sabhi registered eligible kisanon ko milta hai — zameen ki size se fark nahi padta (jab tak chote/marginal farmer hain).
       </div>
     </div>
   );
@@ -101,14 +102,14 @@ function MspCalc() {
               value={`${diff >= 0 ? '+' : ''}${fmt(Math.abs(diff))}`}
             />
             {diff < 0 && (
-              <p className="text-xs text-amber-700 dark:text-amber-400 pt-1">💡 MSP rate par becho bhai — market se {fmt(Math.abs(diff))} zyada milega!</p>
+              <p className="text-xs text-amber-700 dark:text-amber-400 pt-1">MSP rate par becho bhai — market se {fmt(Math.abs(diff))} zyada milega!</p>
             )}
           </>
         )}
       </div>
 
       <div className="p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-xs text-amber-800 dark:text-amber-300">
-        <strong>📌 2025-26 Rates:</strong> Government guaranteed minimum price. Agar market rate kam ho to sarkar kharidegi is rate par bhai.
+        <strong>2025-26 Rates:</strong> Government guaranteed minimum price. Agar market rate kam ho to sarkar kharidegi is rate par bhai.
       </div>
     </div>
   );
@@ -151,7 +152,7 @@ function ProfitCalc() {
 
       {profit < 0 && (
         <div className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-xs text-red-800 dark:text-red-300">
-          ⚠️ Is rate par nuksan ho raha hai bhai. Kharcha kam karo ya MSP rate par becho.
+           Is rate par nuksan ho raha hai bhai. Kharcha kam karo ya MSP rate par becho.
         </div>
       )}
     </div>
@@ -198,7 +199,7 @@ function EmiCalc() {
       </div>
 
       <div className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl text-xs text-blue-800 dark:text-blue-300">
-        <strong>💳 KCC Tip:</strong> Kisan Credit Card par 3 lakh tak ka loan 7% par milta hai — agar time par chukao to 3% aur subsidy bhi milti hai — effective rate sirf 4% bhai!
+        <strong>KCC Tip:</strong> Kisan Credit Card par 3 lakh tak ka loan 7% par milta hai — agar time par chukao to 3% aur subsidy bhi milti hai — effective rate sirf 4% bhai!
       </div>
     </div>
   );
@@ -256,7 +257,7 @@ function FertCalc() {
       </div>
 
       <div className="p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-xs">
-        <p className="font-bold text-amber-800 dark:text-amber-300 mb-1">📋 Recommended NPK per Acre ({crop}):</p>
+        <p className="font-bold text-amber-800 dark:text-amber-300 mb-1">Recommended NPK per Acre ({crop}):</p>
         <div className="flex gap-4 text-amber-700 dark:text-amber-400">
           <span>N: <strong>{rec.n} kg</strong></span>
           <span>P: <strong>{rec.p} kg</strong></span>
@@ -330,7 +331,7 @@ function IrrigationCalc() {
       </div>
 
       <div className="p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-xs text-green-800 dark:text-green-300">
-        <strong>💧 Tip:</strong> Drip ya sprinkler irrigation se 35-50% paani bachta hai bhai — PM Krishi Sinchai Yojana mein 55% subsidy milti hai!
+        <strong>Tip:</strong> Drip ya sprinkler irrigation se 35-50% paani bachta hai bhai — PM Krishi Sinchai Yojana mein 55% subsidy milti hai!
       </div>
     </div>
   );
@@ -339,13 +340,13 @@ function IrrigationCalc() {
 export default function AgriCalculator() {
   const [tab, setTab] = useState<Tab>('pmkisan');
 
-  const tabs: { id: Tab; label: string; emoji: string; desc: string }[] = [
-    { id: 'pmkisan',    label: 'PM Kisan',         emoji: '🌾', desc: 'Labh Calculator' },
-    { id: 'msp',        label: 'MSP Rate',         emoji: '💰', desc: 'Fasal Income'    },
-    { id: 'profit',     label: 'Crop Profit',      emoji: '', desc: 'Munafa Hisab'   },
-    { id: 'emi',        label: 'KCC EMI',          emoji: '', desc: 'EMI Calculator' },
-    { id: 'fertilizer', label: 'Fertilizer',       emoji: '🌿', desc: 'Khad Kharcha'   },
-    { id: 'irrigation', label: 'Irrigation',       emoji: '', desc: 'Paani Kharcha'  },
+  const tabs: { id: Tab; label: string; emoji?: string; desc: string }[] = [
+    { id: 'pmkisan',    label: 'PM Kisan',         emoji: '', desc: 'Labh Calculator' },
+    { id: 'msp',        label: 'MSP Rate', desc: 'Fasal Income'    },
+    { id: 'profit',     label: 'Crop Profit', desc: 'Munafa Hisab'   },
+    { id: 'emi',        label: 'KCC EMI', desc: 'EMI Calculator' },
+    { id: 'fertilizer', label: 'Fertilizer',       emoji: '', desc: 'Khad Kharcha'   },
+    { id: 'irrigation', label: 'Irrigation', desc: 'Paani Kharcha'  },
   ];
 
   return (
@@ -353,7 +354,7 @@ export default function AgriCalculator() {
       <div className="container-site max-w-4xl mx-auto">
         <div className="text-center mb-10">
           <span className="inline-block bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
-            🧮 Free Calculators
+             Free Calculators
           </span>
           <h2 id="calc-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-2">
             Kisan Calculator Suite 2026
@@ -397,8 +398,8 @@ export default function AgriCalculator() {
           </div>
 
           <div className="bg-green-50 dark:bg-green-900/20 border-t border-green-100 dark:border-green-800 px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[var(--color-text-muted)]">
-            <span>✍️ By KisanStatus Team | KisanStatus.com</span>
-            <span>⚠️ Yeh tools sirf estimate dete hain bhai — final figures official sources se verify karein</span>
+            <span>By {AUTHOR_NAME} | {SITE_NAME}</span>
+            <span>Yeh tools sirf estimate dete hain bhai — final figures official sources se verify karein</span>
           </div>
         </div>
       </div>

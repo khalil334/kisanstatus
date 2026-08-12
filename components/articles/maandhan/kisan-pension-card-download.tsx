@@ -2,28 +2,29 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
-const PUBLISHED = '2026-07-25T08:00:00+05:30';
-const MODIFIED = '2026-08-04T06:18:00+05:30';
+const PUBLISHED = '2026-04-14T18:42:23+05:30';
+const MODIFIED = '2026-04-23T10:28:53+05:30';
 
 const RELATED_CARDS = [
   {
     slug: 'pm-kisan-maandhan-status-check-online',
     title: 'Apna Status Check Karein',
     desc: 'Pension card download karne ke baad apna contribution history aur active status verify karein.',
-    emoji: '🔍',
+    
   },
   {
     slug: 'pmkmy-bank-account-change',
     title: 'Bank Account Change Karein',
     desc: 'Agar purana bank band ho gaya hai, to naye account me pension details kaise update karein.',
-    emoji: '🏦',
+    emoji: '',
   },
   {
     slug: 'pm-kisan-maandhan-eligibility-documents',
     title: 'Eligibility Aur Documents',
     desc: 'Pension scheme ke liye kaun eligible hai aur kaun se documents zaroori hain, jaanein.',
-    emoji: '📄',
+    
   },
 ];
 
@@ -38,7 +39,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Download kiye hue PDF me naam ki spelling galat hai — ab kya karun?',
-    a: 'Chhoti spelling mistakes (jaise "Ram" ki jagah "Raam") aksar ignore ho jaati hain aur kaam chal jata hai. Lekin agar poora naam hi galat hai ya date of birth wrong hai, to CSC ya apni bank branch me jaakar correction request karni padegi — isme kitna time lagega ye branch/CSC ke process par depend karta hai, koi fixed SLA publish nahi hai. Isliye deri na karein aur receiving/acknowledgement zaroor lein.',
+    a: 'Chhoti spelling mistakes (jaise "Ram" ki jagah "Raam") aksar ignore ho jaati hain aur kaam chal jata hai. Lekin agar poora naam hi galat hai ya date of birth wrong hai, to CSC ya apni bank branch me jaakar correction request karni padegi — isme kitna time lagega ye branch/CSC ke process par depend karta hai, koi fixed SLA publish nahi hai. Isliye deri na karein aur receiving/acknowledgement leke aayein.',
   },
   {
     q: 'PMKMY ka pension card aur APY (Atal Pension Yojana) ka PRAN card ek hi cheez hai kya?',
@@ -71,9 +72,9 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
               keywords: 'PM Kisan Maandhan Pension Card Download, KPAN card online, PMKMY acknowledgement slip, pension card kaise nikale',
               articleSection: 'Agriculture & Pension Schemes',
               author: {
-                '@type': 'Organization',
-                name: 'KisanStatus Team',
-                url: 'https://kisanstatus.com/about',
+                '@type': 'Person',
+                name: AUTHOR_NAME,
+                url: AUTHOR_URL,
               },
               publisher: {
                 '@type': 'Organization',
@@ -112,10 +113,10 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 10 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>10 min read</span>
           </div>
         </div>
       </div>
@@ -140,7 +141,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
 
         <div className="my-6 p-5 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded-r-xl">
           <p className="text-sm md:text-base text-red-900 dark:text-red-100 leading-relaxed font-medium">
-            <strong>Seedhi baat:</strong> Is scheme me enrollment ke waqt bas ek acknowledgement slip milti hai — aur zyadatar cases me wo CSC par hi print hoti hai. Saalon tak contribution auto-debit se katta rehta hai, lekin haath me koi document nahi hota. Phir jab proof ki zaroorat padti hai — status verify karna ho, bank me sawal puchna ho, ya 60 ke baad pension claim karni ho — tab pata chalta hai ki na slip hai, na KPAN number yaad hai. Yehi is guide ka kaam hai: bina purani slip ke apna pension record (KPAN samet) wapas kaise nikalein.
+            <strong>Asli Dikkat:</strong> Is scheme me enrollment ke waqt bas ek acknowledgement slip milti hai — aur zyadatar cases me wo CSC par hi print hoti hai. Saalon tak contribution auto-debit se katta rehta hai, lekin haath me koi document nahi hota. Phir jab proof ki zaroorat padti hai — status verify karna ho, bank me sawal puchna ho, ya 60 ke baad pension claim karni ho — tab pata chalta hai ki na slip hai, na KPAN number yaad hai. Yehi is guide ka kaam hai: bina purani slip ke apna pension record (KPAN samet) wapas kaise nikalein.
           </p>
         </div>
 
@@ -155,7 +156,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           </p>
 
           <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
-            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">📄 Scheme Ke Documented Rules — Jinke Liye Ye Kagaz Chahiye Hoga</h3>
+            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-3">Scheme Ke Documented Rules — Jinke Liye Ye Kagaz Chahiye Hoga</h3>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
               Ye sirf "sambhal ke rakho" wali general salah nahi hai — scheme ke apne rules (
               <a href="https://maandhan.in" target="_blank" rel="noopener noreferrer nofollow" className="underline text-green-700 dark:text-green-400">maandhan.in</a>
@@ -179,8 +180,8 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
             Agar aap abhi scheme mein registered nahi hain to pehle wo step poora karein — card download registration ke baad hi possible hai. Eligibility aur registration dono ki alag guides yahan hain:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">✅ Kya Main Eligible Hoon? →</Link>
-            <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">📝 Registration Kaise Karein →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Kya Main Eligible Hoon? →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Registration Kaise Karein →</Link>
           </div>
         </section>
 
@@ -220,7 +221,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           </p>
 
           <StepList>
-            <SI n={1}><strong>Sahi Portal Kholiye:</strong> Browser me official scheme website type karein. Google par search karte waqt pehla result chunein, lekin dhyan rahe ki URL ke end me <code className="bg-gray-100 px-1 rounded text-red-600 font-mono text-xs">.gov.in</code> zaroor ho. Internet par kai fake websites hain jo aapki details chura sakti hain, isliye URL check karna sabse pehla kadam hai.</SI>
+            <SI n={1}><strong>Sahi Portal Kholiye:</strong> Browser me official scheme website type karein. Google par search karte waqt pehla result chunein, lekin dhyan rahe ki URL ke end me <code className="bg-gray-100 px-1 rounded text-red-600 font-mono text-xs">.gov.in</code> hona chahiye. Internet par kai fake websites hain jo aapki details chura sakti hain, isliye URL check karna sabse pehla kadam hai.</SI>
             <SI n={2}><strong>Self-Service Section Me Jaayein:</strong> Homepage par aapko "Self Service", "Subscriber Login", ya "Farmer Corner" jaisa tab dikhega. Us par click karein. Yahan kuch log confuse ho jaate hain kyunki do-teen options milte hain. Aapko wo chahiye jisme "View / Print Pensioner Details" ya "Acknowledgement Slip" likha ho.</SI>
             <SI n={3}><strong>Apni Details Dhyan Se Bhariye:</strong> Ab aapse pucha jayega — Aadhaar number, ya pension account number (agar yaad ho), ya registered mobile number. Yahan sabse common galti ye hoti hai ki log apna naya mobile number daal dete hain jo unhone baad me banwaya. OTP purane number par jayega, aur aap atak jaoge. Isliye wahi number daalein jo enrollment time par diya tha.</SI>
             <SI n={4}><strong>OTP Verify Kijiye (Sabr Se Kaam Lein):</strong> OTP aane me kabhi-kabhi 2 se 3 minute lag jaate hain. Jaldi me "Resend OTP" baar baar mat dabaiye — system aapko 15 minute ke liye temporarily lock kar deta hai. Ek baar OTP aane ka wait karein. Agar 5 minute me na aaye, to apna network check karein, ya DND service band karke dekhein.</SI>
@@ -243,7 +244,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           </div>
 
           <WB>
-            <strong>Pro Tip:</strong> PDF download hone ke baad turant uska naam badal dijiye — jaise "Brijesh-Pension-Card-2026.pdf" — aur ek alag folder me daal dijiye. Bahut se log download to kar lete hain lekin "Downloads" folder me chhod dete hain, phir baad me wo file milti hi nahi.
+            <strong>Pro Tip:</strong> PDF download hone ke saath hi uska naam badal dijiye — jaise "Brijesh-Pension-Card-2026.pdf" — aur ek alag folder me daal dijiye. Bahut se log download to kar lete hain lekin "Downloads" folder me chhod dete hain, phir baad me wo file milti hi nahi.
           </WB>
         </section>
 
@@ -349,23 +350,23 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
 
           <div className="space-y-3 mb-4">
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-[var(--color-text)] mb-1">❌ Galt Aadhaar Daalna (Family Confusion)</p>
+              <p className="font-black text-sm text-[var(--color-text)] mb-1">Galt Aadhaar Daalna (Family Confusion)</p>
               <p className="text-xs text-[var(--color-text-muted)]">Kai parivaar me sabke Aadhaar number milte-julte hain ya yaad nahi rehte. Galti se bête ya patni ka number daal diya, to "No record found" aa jayega. Hamesha physical card dekh kar 12 digit type karein.</p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-[var(--color-text)] mb-1">❌ Browser Cache Ka Ghost</p>
+              <p className="font-black text-sm text-[var(--color-text)] mb-1">Browser Cache Ka Ghost</p>
               <p className="text-xs text-[var(--color-text-muted)]">Kabhi-kabhi aap sahi details dalte hain, lekin purana data load ho jata hai kyunki browser me purani files saved hain. Agar error aaye, to "Incognito Mode" ya "Private Window" me try karein.</p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-[var(--color-text)] mb-1">❌ PDF Download Karke Bhool Jaana</p>
+              <p className="font-black text-sm text-[var(--color-text)] mb-1">PDF Download Karke Bhool Jaana</p>
               <p className="text-xs text-[var(--color-text-muted)]">File "Downloads" me gayi, phir phone clean karte waqt ya gallery saaf karte waqt delete ho gayi. Hamesha download karte hi uska screenshot le lein, ya WhatsApp par apne hi number par forward kar dein.</p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-[var(--color-text)] mb-1">❌ Naam ki Spelling Ka Mismatch</p>
+              <p className="font-black text-sm text-[var(--color-text)] mb-1">Naam ki Spelling Ka Mismatch</p>
               <p className="text-xs text-[var(--color-text-muted)]">Aadhaar me "Rameshwar" hai, lekin scheme me "Rameshwar Kumar" register ho gaya. Aisi chhoti si cheez bhi kabhi-kabhi automated verification rok deti hai. Is case me ghabrayein nahi, CSC wale ki madad se manual check karwayein.</p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-[var(--color-text)] mb-1">❌ Screenshot Ko Official Document Samajhna</p>
+              <p className="font-black text-sm text-[var(--color-text)] mb-1">Screenshot Ko Official Document Samajhna</p>
               <p className="text-xs text-[var(--color-text-muted)]">Bahut se log screen ka photo le lete hain, lekin screenshot official document nahi maana jaata. Hamesha PDF hi rakhiye jisme scheme ka official logo, watermark, aur aapka account number clearly dikh raha ho.</p>
             </div>
           </div>
@@ -377,7 +378,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
             Ye sabse common aur frustrating problem hai. 2019-20 me jab scheme shuru hui, to kai CSC walon ne jaldi-baazi me form bhare, aur galti se apna khud ka number ya kisi aur ka number daal diya. Ab kisan ko OTP hi nahi mil raha, aur wo bechaara hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Iska ek hi solid solution hai — aapko apni nazdeeki bank branch jaana hoga jahan aapka pension account linked hai. Wahan ek chhoti si application likhni hoti hai ki "mera registered mobile number update kiya jaye." Sath me Aadhaar ki copy aur naye number ka proof lagana hota hai. Bank verify karke update kar deta hai — kitne din lagenge iska koi fixed publish SLA nahi hai, isliye application ki receiving zaroor lein aur usi se follow-up karein.
+            Iska ek hi solid solution hai — aapko apni nazdeeki bank branch jaana hoga jahan aapka pension account linked hai. Wahan ek chhoti si application likhni hoti hai ki "mera registered mobile number update kiya jaye." Sath me Aadhaar ki copy aur naye number ka proof lagana hota hai. Bank verify karke update kar deta hai — kitne din lagenge iska koi fixed publish SLA nahi hai, isliye application ki receiving apne paas rakhein aur usi se follow-up karein.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ek aur rasta — aap scheme ke toll-free number par call karke bhi guidance le sakte hain. Lekin dhyan rahe, call par wo aapka mobile number update nahi karenge (security reasons ki wajah se), sirf bataenge ki aapko kis form ke sath kahan jaana hai. Physical verification zaroori hoti hai fraud rokne ke liye.
@@ -392,7 +393,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           <StepList>
             <SI n={1}>Ek print nikalke halka sa lamination karwa lijiye — ₹20 lagenge, lekin ye saalon tak chalega aur phatne se bach jayega.</SI>
             <SI n={2}>Har saal ek baar apni status check karein — ki contribution sahi se kat raha hai ya nahi, aur account active hai ya nahi.</SI>
-            <SI n={3}>Apne parivaar ke kisi bharosemand sadasya ko bata dijiye ki ye card kahan rakha hai, taaki zaroorat padne par wo turant dhoondh sakein.</SI>
+            <SI n={3}>Apne parivaar ke kisi bharosemand sadasya ko bata dijiye ki ye card kahan rakha hai, taaki zaroorat padne par wo bina bhaag-daud dhoondh sakein.</SI>
             <SI n={4}>Agar aapki income badh gayi hai ya aap income tax return file karte hain, to scheme ke rules ke mutabiq aapka naam hat sakta hai — isliye apni eligibility check karte rahein.</SI>
           </StepList>
           <IB>
@@ -402,15 +403,15 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Poochhe Jaane Wale Sawal (FAQs)
+            Pension Card Par Chhote Sawal, Kaam Ke Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM-KMY Pension Card Download — Sawal Jawab" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Ek Baat Yaad Rakhein</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Download Ke Saath Hi Ye Do Cheezein Milaayen</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Dekhiye, sarkari schemeon me kagaz sambhaalna thoda thaka dene wala kaam zaroor hai. Lekin jab 60 saal ki umar me har mahine 3000 rupaye aapke account me aayenge bina kisi bheek ya bhaag-daud ke — tab aapko ye chhoti si mehnat yaad aayegi aur achha lagega. Agar aapke koi aur sawal hain jo yahan cover nahi hue, to apne nazdeeki CSC ya bank branch me jaakar zaroor puchiye.
+            Card download hote hi file band mat kijiye — do cheezein Aadhaar se milaa lijiye: naam ki spelling aur date of birth. Chhota sa spelling farak (Ram/Raam) chalta hai, lekin poora naam ya janm tithi galat hai toh correction request CSC ya bank branch se abhi karwa lijiye, kyunki iska koi fixed SLA nahi hai aur 60 saal ke waqt yehi mismatch pension release rok sakta hai. Correction dete waqt acknowledgement lena mat bhooliye — wahi aapka proof hai.
           </p>
         </div>
 
@@ -423,7 +424,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Ye Bhi Padhein</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Kaam Ke Aur Articles</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link
@@ -448,9 +449,9 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: '🔍 Status Check' },
+          { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: 'Status Check' },
           { href: '/maandhan/pmkmy-bank-account-change', l: ' Bank Change' },
-          { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: '📄 Eligibility' },
+          { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: 'Eligibility' },
         ]} />
         <Disclaimer />
       </div>

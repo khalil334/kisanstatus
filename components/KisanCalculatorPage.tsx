@@ -114,12 +114,11 @@ function PMKisanCalc() {
       <p className="text-gray-500 text-sm mb-5">Kitna agrarian welfare benefit milega — years ke hisaab se estimate karo</p>
       <InputField label="Aap kitne saal se enrolled hain ya rahenge?" value={years} onChange={setYears} min={1} placeholder="3" hint="1 se 30 saal ke beech" />
       <InputField label="Aapki zameen (hectare mein)" value={land} onChange={setLand} min={0} placeholder="2" hint="2 hectare tak ke cultivators eligible hain" />
-      <SelectField label="Digital verification complete hai?" value={hasVerification} onChange={setHasVerification} options={[{ value: 'yes', label: '✅ Haan — complete hai' }, { value: 'no', label: '❌ Nahi — pending hai' }]} />
+      <SelectField label="Digital verification complete hai?" value={hasVerification} onChange={setHasVerification} options={[{ value: 'yes', label: 'Haan — complete hai' }, { value: 'no', label: 'Nahi — pending hai' }]} />
 
       <ResultBox color="green">
         {!eligible ? (
           <div className="text-center py-2">
-            <p className="text-2xl mb-2">⚠️</p>
             {hasVerification === 'no'
               ? <p className="font-bold text-orange-700">Digital verification complete nahi hai — payment rok sakti hai!<br/><span className="text-sm font-normal">Official portal par free verification karein.</span></p>
               : <p className="font-bold text-red-700">2 hectare se zyada zameen wale eligible nahi hain.</p>
@@ -137,7 +136,7 @@ function PMKisanCalc() {
       </ResultBox>
 
       <div className="mt-4 p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-800">
-        <strong>📌 Dhyan rakhein:</strong> Yeh estimate hai. Actual amount government ke rules ke hisaab se badal sakti hai. Latest info ke liye <strong>official portal</strong> check karein.
+        <strong>Dhyan rakhein:</strong> Yeh estimate hai. Actual amount government ke rules ke hisaab se badal sakti hai. Latest info ke liye <strong>official portal</strong> check karein.
       </div>
     </div>
   );
@@ -185,7 +184,7 @@ function KCCLoanCalc() {
         </ResultBox>
       )}
       <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-xl text-xs text-blue-800">
-        <strong>📌 Credit facility tip:</strong> Time par repay karo — 2% extra interest subvention milti hai government se. Total effective rate 5% tak aa sakta hai.
+        <strong>Credit facility tip:</strong> Time par repay karo — 2% extra interest subvention milti hai government se. Total effective rate 5% tak aa sakta hai.
       </div>
     </div>
   );
@@ -209,7 +208,7 @@ function PMFBYCalc() {
     <div>
       <p className="text-gray-500 text-sm mb-5">Crop protection scheme — aapka premium aur government contribution</p>
       <SelectField label="Fasal (Crop)" value={crop} onChange={setCrop} options={cropOptions} />
-      <SelectField label="Season" value={season} onChange={setSeason} options={[{ value: 'kharif', label: '🌧️ Kharif (June–Oct)' }, { value: 'rabi', label: '❄️ Rabi (Nov–Mar)' }]} />
+      <SelectField label="Season" value={season} onChange={setSeason} options={[{ value: 'kharif', label: 'Kharif (June–Oct)' }, { value: 'rabi', label: 'Rabi (Nov–Mar)' }]} />
       <InputField label="Sum Insured (₹ per hectare)" value={sumInsured} onChange={setSumInsured} min={1000} placeholder="50000" hint="Apne district ke liye actual sum insured bank ya CSC se poochein" />
 
       {insuredAmt > 0 && (
@@ -219,12 +218,12 @@ function PMFBYCalc() {
           <ResultRow label="Aapka share (cultivator)" value={fmt(farmerShare)} bold />
           <ResultRow label="Govt + Insurer share" value={fmt(govShare)} />
           <div className="mt-3 pt-3 border-t border-yellow-200 text-xs text-yellow-800">
-            🛡️ Cover: Agar fasal kharab hui toh <strong>{fmt(insuredAmt)}</strong> tak claim kar sakte hain
+             Cover: Agar fasal kharab hui toh <strong>{fmt(insuredAmt)}</strong> tak claim kar sakte hain
           </div>
         </ResultBox>
       )}
       <div className="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-xl text-xs text-yellow-800">
-        <strong>📌 Crop protection tip:</strong> Premium rates approximate hain. Actual rates district-wise alag hote hain. Apne bank ya CSC center se confirm karein.
+        <strong>Crop protection tip:</strong> Premium rates approximate hain. Actual rates district-wise alag hote hain. Apne bank ya CSC center se confirm karein.
       </div>
     </div>
   );
@@ -277,12 +276,12 @@ function MSPCalc() {
           <ResultRow label="Guaranteed rate" value={`₹${cropData.msp.toLocaleString('en-IN')}/qtl`} />
           <ResultRow label="Estimated procurement income" value={fmt(totalIncome)} bold />
           <div className="mt-3 pt-3 border-t border-orange-200 text-xs text-orange-800">
-            💡 Mandi mein sell karne ke liye apne state ki agriculture mandi app ya e-NAM portal use karein.
+             Mandi mein sell karne ke liye apne state ki agriculture mandi app ya e-NAM portal use karein.
           </div>
         </ResultBox>
       )}
       <div className="mt-4 p-4 bg-orange-50 border border-orange-200 rounded-xl text-xs text-orange-800">
-        <strong>📌 Procurement rate note:</strong> Yeh 2025-26 rates hain. Actual market price alag ho sakti hai. Official rates: <strong>dfpd.gov.in</strong>
+        <strong>Procurement rate note:</strong> Yeh 2025-26 rates hain. Actual market price alag ho sakti hai. Official rates: <strong>dfpd.gov.in</strong>
       </div>
     </div>
   );
@@ -323,10 +322,10 @@ function CropProfitCalc() {
           <ResultRow label="Kul amdani (Revenue)" value={fmt(totalRevenue)} />
           <ResultRow label="Kul kharcha (Cost)" value={fmt(totalCost)} />
           <ResultRow label="Profit / Hectare" value={fmt(profitPerHa)} />
-          <ResultRow label={isProfit ? '🎉 Net Profit' : '⚠️ Net Loss'} value={fmt(Math.abs(profit))} bold />
+          <ResultRow label={isProfit ? 'Net Profit' : 'Net Loss'} value={fmt(Math.abs(profit))} bold />
           {!isProfit && (
             <div className="mt-3 p-3 bg-red-50 rounded-xl text-xs text-red-700">
-              💡 Nuksan ho raha hai — Credit facility loan, agrarian welfare benefit ya crop protection insurance consider karein.
+               Nuksan ho raha hai — Credit facility loan, agrarian welfare benefit ya crop protection insurance consider karein.
             </div>
           )}
         </ResultBox>
@@ -336,22 +335,22 @@ function CropProfitCalc() {
 }
 
 const RELATED_ARTICLES = [
-  { href: '/articles/PmKisan24viKist2026', label: '📅 24vi Tranche Verification' },
-  { href: '/articles/PmKisanMasterGuide2026', label: '📊 Tranche History' },
-  { href: '/articles/KisanRinKahaSeLe2026', label: '💰 Credit Facility Guide' },
-  { href: '/articles/PmfbyCropInsurance2026', label: '🌱 Crop Protection Guide' },
-  { href: '/articles/KisanTractorLoan2026', label: '🚜 Farm Equipment Loan' },
-  { href: '/articles/PmKisanMasterGuide2026', label: '📝 Scheme Enrollment' },
-  { href: '/articles/PmKisanEkycOnline2026', label: '🔐 Digital Verification Guide' },
-  { href: '/articles/PmKisanPaymentFailedFix2026', label: '💸 Payment Fix Guide' },
+  { href: '/articles/PmKisan24viKist2026', label: '24vi Tranche Verification' },
+  { href: '/articles/PmKisanMasterGuide2026', label: 'Tranche History' },
+  { href: '/articles/KisanRinKahaSeLe2026', label: 'Credit Facility Guide' },
+  { href: '/articles/PmfbyCropInsurance2026', label: 'Crop Protection Guide' },
+  { href: '/articles/KisanTractorLoan2026', label: 'Farm Equipment Loan' },
+  { href: '/articles/PmKisanMasterGuide2026', label: 'Scheme Enrollment' },
+  { href: '/articles/PmKisanEkycOnline2026', label: 'Digital Verification Guide' },
+  { href: '/articles/PmKisanPaymentFailedFix2026', label: 'Payment Fix Guide' },
 ];
 
-const CALCS: { id: CalcId; emoji: string; title: string; shortTitle: string; color: string; component: React.ComponentType }[] = [
-  { id: 'pmkisan', emoji: '🌾', title: 'Welfare Benefit Estimator',  shortTitle: 'Benefit',    color: 'green',  component: PMKisanCalc  },
-  { id: 'kcc',     emoji: '🏦', title: 'Credit Facility EMI',        shortTitle: 'Credit',     color: 'blue',   component: KCCLoanCalc  },
-  { id: 'pmfby',   emoji: '🛡️', title: 'Crop Protection Premium',    shortTitle: 'Protection', color: 'yellow', component: PMFBYCalc    },
-  { id: 'msp',     emoji: '💹', title: 'Procurement Rate Income',    shortTitle: 'Procurement',color: 'orange', component: MSPCalc      },
-  { id: 'profit',  emoji: '📊', title: 'Yield Profit/Loss',          shortTitle: 'Yield',      color: 'purple', component: CropProfitCalc },
+const CALCS: { id: CalcId; emoji?: string; title: string; shortTitle: string; color: string; component: React.ComponentType }[] = [
+  { id: 'pmkisan', emoji: '', title: 'Welfare Benefit Estimator',  shortTitle: 'Benefit',    color: 'green',  component: PMKisanCalc  },
+  { id: 'kcc',     emoji: '', title: 'Credit Facility EMI',        shortTitle: 'Credit',     color: 'blue',   component: KCCLoanCalc  },
+  { id: 'pmfby', title: 'Crop Protection Premium',    shortTitle: 'Protection', color: 'yellow', component: PMFBYCalc    },
+  { id: 'msp', title: 'Procurement Rate Income',    shortTitle: 'Procurement',color: 'orange', component: MSPCalc      },
+  { id: 'profit', title: 'Yield Profit/Loss',          shortTitle: 'Yield',      color: 'purple', component: CropProfitCalc },
 ];
 
 const TAB_COLORS: Record<string, string> = {
@@ -374,7 +373,7 @@ export default function KisanCalculatorPage() {
       <section className="bg-gradient-to-br from-green-800 via-green-700 to-green-600 text-white py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-200 text-xs font-bold px-4 py-2 rounded-full mb-4">
-            🧮 Free Agricultural Utilities — KisanStatus.com
+             Free Agricultural Utilities — KisanStatus.com
           </div>
           <h1 className="text-3xl md:text-4xl font-black mb-3">
             Cultivator Calculator Suite 2026
@@ -425,7 +424,7 @@ export default function KisanCalculatorPage() {
 
           <div className="space-y-4">
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
-              <h3 className="font-bold text-gray-700 text-sm mb-3">🧮 Doosre Utilities</h3>
+              <h3 className="font-bold text-gray-700 text-sm mb-3">Doosre Utilities</h3>
               <div className="space-y-2">
                 {CALCS.filter(c => c.id !== activeCalc).map(c => (
                   <button
@@ -441,7 +440,7 @@ export default function KisanCalculatorPage() {
             </div>
 
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
-              <h3 className="font-bold text-gray-700 text-sm mb-3">📚 Related Guides</h3>
+              <h3 className="font-bold text-gray-700 text-sm mb-3">Related Guides</h3>
               <div className="space-y-2">
                 {RELATED_ARTICLES.map(a => (
                   <Link
@@ -456,7 +455,7 @@ export default function KisanCalculatorPage() {
             </div>
 
             <div className="bg-green-50 border border-green-200 rounded-2xl p-5">
-              <p className="text-xs font-bold text-green-800 mb-2">🌐 Official Portal</p>
+              <p className="text-xs font-bold text-green-800 mb-2">Official Portal</p>
               <a
                 href="https://pmkisan.gov.in"
                 target="_blank"
@@ -489,7 +488,7 @@ export default function KisanCalculatorPage() {
         </div>
 
         <div className="mt-8 p-4 bg-gray-100 rounded-2xl text-xs text-gray-500">
-          <strong>⚠️ Disclaimer:</strong> Yeh utilities sirf estimate ke liye hain. Actual amounts government rules, bank policies aur local conditions ke hisaab se alag ho sakte hain. Financial decisions lene se pehle apne bank, CSC center ya agriculture officer se confirm karein.
+          <strong>Disclaimer:</strong> Yeh utilities sirf estimate ke liye hain. Actual amounts government rules, bank policies aur local conditions ke hisaab se alag ho sakte hain. Financial decisions lene se pehle apne bank, CSC center ya agriculture officer se confirm karein.
         </div>
       </div>
     </main>

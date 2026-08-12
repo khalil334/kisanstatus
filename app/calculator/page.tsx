@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: `Free PM Kisan Tools 2026 — EMI & MSP`,
   description: '7 free kisan tools: PM Kisan status check, KCC loan EMI, MSP income, aur fasal bima premium calculator. Bina registration ke, bilkul free.',
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  creator: AUTHOR_NAME,
   alternates: { canonical: `${SITE_URL}/calculator` },
   keywords: [
     'pm kisan calculator', 'kcc loan emi calculator', 'crop insurance premium calculator',
@@ -76,7 +78,7 @@ const CALCS = [
   { href: '/calculator/crop-profit', index: '06', icon: IconChart, title: 'Kheti Ka Munafa', hindi: 'खेती का मुनाफा', desc: 'Beej, khad, mazdoori aur sinchai ka kharcha daal kar fasal ka net profit ya loss turant jaanein.', tags: ['Full Season', 'All Costs', 'Net Profit'], group: 'data' },
 ];
 
-const GROUP_STYLES: Record<string, { bar: string; chip: string; btn: string; glow: string; icon: string }> = {
+const GROUP_STYLES: Record<string, { bar: string; chip: string; btn: string; glow: string; icon?: string }> = {
   scheme:    { bar: 'bg-emerald-600', chip: 'text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-900/30', btn: 'bg-emerald-700 hover:bg-emerald-800', glow: 'hover:shadow-emerald-100 dark:hover:shadow-emerald-900/20', icon: 'text-emerald-600 dark:text-emerald-400' },
   credit:    { bar: 'bg-blue-600',    chip: 'text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-900/30',        btn: 'bg-blue-700 hover:bg-blue-800',       glow: 'hover:shadow-blue-100 dark:hover:shadow-blue-900/20',       icon: 'text-blue-600 dark:text-blue-400' },
   insurance: { bar: 'bg-amber-600',   chip: 'text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-900/30',      btn: 'bg-amber-700 hover:bg-amber-800',     glow: 'hover:shadow-amber-100 dark:hover:shadow-amber-900/20',     icon: 'text-amber-600 dark:text-amber-400' },

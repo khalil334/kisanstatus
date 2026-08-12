@@ -29,7 +29,7 @@ export default function FAQSection({
       <div className="container-site">
         <div className="text-center mb-10">
           <span className="inline-block bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 text-xs font-bold px-3 py-1.5 rounded-full mb-3 uppercase tracking-wider">
-            ❓ Common Questions
+             Common Questions
           </span>
           <h2 id="faq-heading" className="text-2xl md:text-3xl font-black text-[var(--color-text)] mb-3">
             {title}
@@ -112,10 +112,9 @@ export default function FAQSection({
 
           <div className="mt-8 p-5 md:p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/10 border-2 border-green-200 dark:border-green-800 rounded-2xl">
             <div className="flex items-start gap-3">
-              <span className="text-3xl shrink-0" aria-hidden="true">📞</span>
               <div className="flex-1">
                 <h3 className="font-bold text-green-900 dark:text-green-300 text-base md:text-lg mb-2">
-                  Koi Aur Sawal Hai? Humari Team Se Baat Karein
+                  Koi Aur Sawal Hai? Humse Baat Karein
                 </h3>
                 <div className="space-y-2 text-sm md:text-base text-green-800 dark:text-green-400">
                   <p className="flex flex-wrap items-center gap-2">

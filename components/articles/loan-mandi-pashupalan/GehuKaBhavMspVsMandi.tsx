@@ -2,14 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'msp-list-2026-27', title: 'MSP List 2026-27', emoji: '📋' },
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📊' },
-  { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration Guide', emoji: '🖥️' },
-  { slug: 'mandi-bhav-app-comparison', title: 'Best Mandi Bhav Apps', emoji: '📱' },
-  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Sabzi Bhav Guide', emoji: '🥔' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'msp-list-2026-27', title: 'MSP List 2026-27' },
+  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Pyaz-Aloo-Tamatar Bhav Guide' },
+  { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration' },
 ];
 
 const FAQS_DATA = [
@@ -27,7 +25,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Mandi mein rate MSP se neeche kyun chala jata hai?',
-    a: 'Harvest ke turant baad (April-May) sab kisan ek saath bechne aate hain — aavak ka pahad ban jata hai aur boli dab jaati hai. Buyers ko pata hai ki kisan ko paisa turant chahiye. Yahi woh waqt hai jab MSP ki sarkari kharid sabse zyada kaam aati hai.',
+    a: 'Harvest hote hi (April-May) sab kisan ek saath bechne aate hain — aavak ka pahad ban jata hai aur boli dab jaati hai. Buyers ko pata hai ki kisan ko paisa usi hafte chahiye. Yahi woh waqt hai jab MSP ki sarkari kharid sabse zyada kaam aati hai.',
   },
   {
     q: 'Gehu rok kar bechne se kitna fayda ho sakta hai?',
@@ -39,7 +37,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya main aadha MSP par aur aadha market mein bech sakta hoon?',
-    a: 'Haan, aur samajhdaar kisan aksar yahi karte hain. Turant kharche ke liye ek hissa MSP/mandi mein bech do, baaki quality wala maal rok lo. Isse risk bant jata hai — na poora maal daba, na poora sasta bika.',
+    a: 'Haan, aur samajhdaar kisan aksar yahi karte hain. Sar par khade kharche ke liye ek hissa MSP/mandi mein bech do, baaki quality wala maal rok lo. Isse risk bant jata hai — na poora maal daba, na poora sasta bika.',
   },
   {
     q: 'MSP kharid mein quality cut kya hota hai?',
@@ -51,7 +49,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya state apna bonus bhi deta hai MSP ke upar?',
-    a: 'Kuch states dete hain — jaise Madhya Pradesh ne 2026-27 season mein ₹40 per quintal ka state bonus diya, jisse kisan ko total ₹2,625 mila. Yeh har saal aur har state mein alag hota hai. Apne state ke procurement portal ya kharid kendra se current season ka bonus zaroor pucho — yeh seedha extra paisa hai.',
+    a: 'Kuch states dete hain — jaise Madhya Pradesh ne 2026-27 season mein ₹40 per quintal ka state bonus diya, jisse kisan ko total ₹2,625 mila. Yeh har saal aur har state mein alag hota hai. Apne state ke procurement portal ya kharid kendra se current season ka bonus pooch lo — yeh seedha extra paisa hai.',
   },
   {
     q: 'Premium variety (sharbati/lokwan) ka kya karein — MSP mein dena to ghata hai?',
@@ -75,10 +73,10 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
             Gehu Ka Bhav 2026: MSP Par Bechein Ya Mandi Mein — Faisla Kaise Karein, Kab Bechein, Kab Rokein
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 10 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>10 min read</span>
           </div>
         </div>
       </div>
@@ -97,7 +95,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </div>
 
         <DB>
-          <strong>TL;DR — seedha faisla:</strong>
+          <strong>Kaam Ki Baat — bechne se pehle:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>Gehu ka MSP RMS 2026-27 mein <strong>₹2,585/quintal</strong> hai (pichhle saal se ₹160 zyada). State bonus alag: MP +₹40 = ₹2,625, Rajasthan +₹150 = ₹2,735, UP mein koi bonus nahi.</li>
             <li>Mandi ka rate MSP se <strong>neeche</strong> chal raha hai → sarkari kendra. <strong>Upar</strong> hai aur maal saaf-sookha hai → mandi/eNAM.</li>
@@ -138,7 +136,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
 
         <IB>
           MSP ka poora table (dhan, chana, sarson samet) aur kharid ka process humne alag guide mein diya hai:{' '}
-          <Link href="/articles/msp-list-2026-27" className="underline font-bold">MSP List 2026-27</Link>. Yahan hum
+          <Link href="/articles/msp-list-2026-27" className="underline font-bold">sabhi faslon ki MSP wali list</Link>. Yahan hum
           sirf gehu ke faisle par focus karenge.
         </IB>
 
@@ -238,7 +236,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         <StepList>
           <SI n={1}><strong>Aaj mandi ka rate MSP se upar hai ya neeche?</strong> Neeche hai → MSP registration karke sarkari kendra ka rasta pakdo. Upar hai → agla sawaal.</SI>
           <SI n={2}><strong>Meri quality kaisi hai?</strong> Saaf, sookha, premium variety → open market mein behtar boli milegi. Nami/kachra wala maal → pehle saaf-sukha karo, warna dono jagah cut lagega.</SI>
-          <SI n={3}><strong>Paise ki zaroorat kitni urgent hai?</strong> Turant chahiye → jo rate aaj sahi mile, bech do; majboori mein rokna sabse mehenga sauda hai. Ruk sakte ho → hissa rok lo.</SI>
+          <SI n={3}><strong>Paise ki zaroorat kitni urgent hai?</strong> Abhi chahiye → jo rate aaj sahi mile, bech do; majboori mein rokna sabse mehenga sauda hai. Ruk sakte ho → hissa rok lo.</SI>
           <SI n={4}><strong>Storage ka intezam pukhta hai?</strong> Nahi hai → rokne ka khayal chhodo ya warehouse dekho. Kharab storage mein rokna nuksan ko time dena hai.</SI>
         </StepList>
 
@@ -333,7 +331,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
 
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             Agmarknet — daily mandi rates, Govt of India.{' '}
@@ -352,8 +350,8 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Articles' },
-          { href: '/articles/category/mandi', l: '📂 Mandi Guides' },
+          { href: '/articles', l: 'Poori Article Library' },
+          { href: '/articles/category/mandi', l: 'Mandi Guides' },
         ]} />
         <Disclaimer />
       </div>

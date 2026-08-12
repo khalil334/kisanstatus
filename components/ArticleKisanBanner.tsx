@@ -29,12 +29,12 @@ function BannerEKYC() {
       <circle cx="85" cy="148" r="14" fill="#16a34a" fillOpacity="0.9"/>
       <text x="85" y="154" textAnchor="middle" fontSize="14">✓</text>
 
-      <text x="180" y="55" fontSize="11" fill="#ddd6fe">🔐 PM KISAN eKYC VERIFICATION 2026</text>
+      <text x="180" y="55" fontSize="11" fill="#ddd6fe">PM KISAN eKYC VERIFICATION 2026</text>
       <text x="180" y="85" fontSize="24" fontWeight="900" fill="#fff">Aadhaar OTP se</text>
       <text x="180" y="112" fontSize="24" fontWeight="900" fill="#c4b5fd">eKYC Karo — Free!</text>
       <text x="180" y="140" fontSize="11" fill="#ddd6fe" fontWeight="normal">Bina eKYC ke ek bhi kist nahi milegi.</text>
       <text x="180" y="156" fontSize="11" fill="#ddd6fe">Official portal ya CSC center — dono tarike.</text>
-      {['Aadhaar number daalo','OTP milega','Verify karo','Done ✅'].map((s,i)=>(
+      {['Aadhaar number daalo','OTP milega','Verify karo','Done'].map((s,i)=>(
         <g key={s}>
           <rect x={180+i*145} y="170" width="132" height="24" rx="8" fill="#fff" fillOpacity={i===3?0.25:0.12}/>
           <text x={246+i*145} y="186" textAnchor="middle" fontSize="9" fill="#fff" fontWeight={i===3?"bold":"normal"}>{`${i+1}. ${s}`}</text>
@@ -45,7 +45,7 @@ function BannerEKYC() {
         <ellipse key={i} cx="730" cy="110" rx={20+i*14} ry={12+i*8}
           fill="none" stroke="#fff" strokeWidth="1.5" opacity={0.08+i*0.04}/>
       ))}
-      <text x="730" y="116" textAnchor="middle" fontSize="28" opacity="0.3">👆</text>
+      <text x="730" y="116" textAnchor="middle" fontSize="28" opacity="0.3"></text>
     </svg>
   );
 }
@@ -63,9 +63,8 @@ function BannerPayment() {
       <rect width="800" height="220" fill="url(#art-pay)" rx="14"/>
       <polygon points="80,170 140,60 200,170" fill="#fff" fillOpacity="0.1"/>
       <polygon points="90,165 140,72 190,165" fill="#fff" fillOpacity="0.08"/>
-      <text x="140" y="138" textAnchor="middle" fontSize="44" opacity="0.5">⚠️</text>
 
-      <text x="240" y="55" fontSize="11" fill="#fca5a5">💸 PM KISAN PAYMENT FAILED — SOLUTIONS 2026</text>
+      <text x="240" y="55" fontSize="11" fill="#fca5a5">PM KISAN PAYMENT FAILED — SOLUTIONS 2026</text>
       <text x="240" y="85" fontSize="22" fontWeight="900" fill="#fff">Payment Nahi Aayi?</text>
       <text x="240" y="112" fontSize="22" fontWeight="900" fill="#fed7aa">Yeh 5 Kaam Karo!</text>
       {[
@@ -122,13 +121,13 @@ function BannerRegistration() {
         <ellipse cx="55" cy="16" rx="22" ry="10" fill="#fff"/>
       </g>
 
-      <text x="200" y="52" fontSize="11" fill="#a7f3d0">📝 PM KISAN ENROLLMENT GUIDE 2026</text>
+      <text x="200" y="52" fontSize="11" fill="#a7f3d0">PM KISAN ENROLLMENT GUIDE 2026</text>
       <text x="200" y="80" fontSize="22" fontWeight="900" fill="#fff">Naya Registration</text>
       <text x="200" y="107" fontSize="22" fontWeight="900" fill="#86efac">Kaise Karein — Free!</text>
       <text x="200" y="134" fontSize="10" fill="#d1fae5">Online ya CSC center se — koi bhi fee nahi lagti</text>
 
-      <text x="200" y="158" fontSize="9" fontWeight="bold" fill="#a7f3d0">📄 Zaruri Documents:</text>
-      {['🪪 Aadhaar Card', '🏦 Bank Passbook', '📋 Khasra/Khatauni', '📱 Mobile Number'].map((d,i)=>(
+      <text x="200" y="158" fontSize="9" fontWeight="bold" fill="#a7f3d0">Zaruri Documents:</text>
+      {['Aadhaar Card', 'Bank Passbook', 'Khasra/Khatauni', 'Mobile Number'].map((d,i)=>(
         <text key={d} x={200+i*148} y="176" fontSize="8" fill="#fff">{d}</text>
       ))}
       {['Apply','Verify','Approve','₹2000'].map((s,i)=>(
@@ -181,7 +180,7 @@ function BannerLoan() {
         <ellipse cx="114" cy="12" rx="10" ry="5" fill="#fff" opacity="0.5"/>
       </g>
 
-      <text x="230" y="52" fontSize="11" fill="#93c5fd">💰 KISAN CREDIT CARD (KCC) GUIDE 2026</text>
+      <text x="230" y="52" fontSize="11" fill="#93c5fd">KISAN CREDIT CARD (KCC) GUIDE 2026</text>
       <text x="230" y="82" fontSize="22" fontWeight="900" fill="#fff">KCC Loan — Sirf 4%</text>
       <text x="230" y="109" fontSize="22" fontWeight="900" fill="#93c5fd">Byaaj Dar Mein!</text>
       <text x="230" y="136" fontSize="10" fill="#bfdbfe">Kisan Credit Card — Sabse Sasta Agricultural Loan</text>
@@ -204,7 +203,6 @@ function BannerLoan() {
         <rect width="160" height="35" rx="12" fill="#1e40af" fillOpacity="0.6"/>
         <text x="80" y="22" textAnchor="middle" fontSize="10" fill="#fff" fontWeight="bold">KISAN CREDIT CARD</text>
         <rect x="12" y="44" width="40" height="28" rx="4" fill="#fbbf24" fillOpacity="0.8"/>
-        <text x="32" y="62" textAnchor="middle" fontSize="16">💳</text>
         <text x="62" y="55" fontSize="8" fill="#bfdbfe">Limit upto</text>
         <text x="62" y="68" fontSize="12" fontWeight="bold" fill="#fff">₹3 Lakh</text>
         <text x="12" y="94" fontSize="7" fontFamily="monospace" fill="#93c5fd">**** **** **** KISAN</text>
@@ -240,18 +238,17 @@ function BannerInsurance() {
       <ellipse cx="55" cy="42" rx="28" ry="18" fill="#374151" fillOpacity="0.5"/>
       <ellipse cx="110" cy="42" rx="28" ry="18" fill="#374151" fillOpacity="0.5"/>
 
-      <text x="220" y="52" fontSize="11" fill="#fde68a">🌱 PMFBY CROP INSURANCE GUIDE 2026</text>
+      <text x="220" y="52" fontSize="11" fill="#fde68a">PMFBY CROP INSURANCE GUIDE 2026</text>
       <text x="220" y="80" fontSize="22" fontWeight="900" fill="#fff">PMFBY — Fasal</text>
       <text x="220" y="108" fontSize="22" fontWeight="900" fill="#fde68a">Kharab? Paise Milenge!</text>
       <text x="220" y="135" fontSize="10" fill="#fef3c7">PMFBY — Sirf 2% premium mein poori fasal protect</text>
       {[
-        ['🌾','Covered','Kharif + Rabi'],
-        ['💰','Premium','Sirf 2% (Kharif)'],
-        ['✅','Claim','7 din settle'],
-        ['📱','Apply','Online / Bank / CSC'],
-      ].map(([icon,label,val],i)=>(
+        ['Covered','Kharif + Rabi'],
+        ['Premium','Sirf 2% (Kharif)'],
+        ['Claim','7 din settle'],
+        ['Apply','Online / Bank / CSC'],
+      ].map(([label,val],i)=>(
         <g key={label}>
-          <text x={220+i*145} y="158" fontSize="14">{icon}</text>
           <text x={220+i*145} y="174" fontSize="9" fontWeight="bold" fill="#fff">{val}</text>
           <text x={220+i*145} y="188" fontSize="8" fill="#fde68a">{label}</text>
         </g>
@@ -281,12 +278,12 @@ function BannerBeneficiary() {
         ))}
       </g>
 
-      <text x="220" y="52" fontSize="11" fill="#7dd3fc">📋 PM KISAN BENEFICIARY LIST 2026</text>
+      <text x="220" y="52" fontSize="11" fill="#7dd3fc">PM KISAN BENEFICIARY LIST 2026</text>
       <text x="220" y="80" fontSize="22" fontWeight="900" fill="#fff">Village Wise List</text>
       <text x="220" y="108" fontSize="22" fontWeight="900" fill="#7dd3fc">Online Dekho + PDF!</text>
       <text x="220" y="134" fontSize="10" fill="#bae6fd">Apna naam list mein hai ya nahi — step by step check karo</text>
 
-      <text x="220" y="158" fontSize="9" fontWeight="bold" fill="#7dd3fc">🔍 Kaise Check Karein:</text>
+      <text x="220" y="158" fontSize="9" fontWeight="bold" fill="#7dd3fc">Kaise Check Karein:</text>
       {[
         'Official portal kholein',
         'Beneficiary Status → District/Block/Village chunein',
@@ -297,7 +294,6 @@ function BannerBeneficiary() {
       ))}
 
       <g transform="translate(620,30)" opacity="0.25">
-        <text x="80" y="100" textAnchor="middle" fontSize="120" fill="#fff">🗺️</text>
       </g>
     </svg>
   );

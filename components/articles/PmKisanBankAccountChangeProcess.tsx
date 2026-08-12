@@ -4,9 +4,10 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-07-10T08:00:00+05:30';
-const MODIFIED = '2026-07-25T08:00:00+05:30';
+const PUBLISHED = '2026-01-28T12:49:15+05:30';
+const MODIFIED = '2026-03-11T06:46:19+05:30';
 
 const FALLBACK_IMG = '/images/articles/pm-kisan-bank-account-change/bank-change-hero.webp';
 
@@ -23,11 +24,9 @@ function SafeImage({ src, alt, ...rest }: React.ComponentProps<typeof Image>) {
 }
 
 const RELATED = [
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed Fix', emoji: '💸' },
-  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Status Guide', emoji: '💳' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide', emoji: '🔐' },
-  { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Change', emoji: '🏦' },
+  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed — 7 Fixes' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning' },
+  { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change' },
 ];
 
 const FAQS_DATA = [
@@ -41,7 +40,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Agar purana account band ho gaya toh?',
-    a: 'Turant naya account khulwa kar link karwao. Beech ki kist fail hogi, lekin correction form ya CSC se update karwane ke baad agle cycle mein naye account mein aa jaayegi. Koshish karo account dormant hone se pehle hi ye kaam nipta lo.',
+    a: 'Naya account khulwa kar bina der link karwao. Beech ki kist fail hogi, lekin correction form ya CSC se update karwane ke baad agle cycle mein naye account mein aa jaayegi. Koshish karo account dormant hone se pehle hi ye kaam nipta lo.',
   },
   {
     q: 'Naya bank account kis naam par hona chahiye?',
@@ -84,10 +83,10 @@ export default function PmKisanBankAccountChangeProcess() {
             PM Kisan Bank Change 2026: Naya Account
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
             <span> Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 16 min read</span>
+            <span>16 min read</span>
           </div>
         </div>
       </div>
@@ -145,13 +144,13 @@ export default function PmKisanBankAccountChangeProcess() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { icon: '🏦', title: 'Account Dormant/Band', desc: 'Do saal tak koi len-den na ho toh bank account ko dormant ya freeze kar deta hai. Jan Dhan account bhi istemal na hone par freeze ho jaata hai.' },
-              { icon: '🔄', title: 'IFSC Code Change', desc: 'Branches merge hone se IFSC badal jaata hai, aur purana code portal par kaam karna band kar deta hai.' },
-              { icon: '', title: 'Galat Account Link', desc: 'Registration ke waqt kabhi galat account number ya IFSC daal diya jaata hai, ya Current account de diya jaata hai jabki PM Kisan sirf Savings account mein aata hai.' },
-              { icon: '', title: 'Naam Mismatch', desc: 'Passbook aur Aadhaar mein naam thoda alag ho toh payment reject ho jaati hai — isko system "Name Mismatch" kehta hai.' },
+              { icon: '', title: 'Account Dormant/Band', desc: 'Do saal tak koi len-den na ho toh bank account ko dormant ya freeze kar deta hai. Jan Dhan account bhi istemal na hone par freeze ho jaata hai.' },
+              { title: 'IFSC Code Change', desc: 'Branches merge hone se IFSC badal jaata hai, aur purana code portal par kaam karna band kar deta hai.' },
+              { title: 'Galat Account Link', desc: 'Registration ke waqt kabhi galat account number ya IFSC daal diya jaata hai, ya Current account de diya jaata hai jabki PM Kisan sirf Savings account mein aata hai.' },
+              { title: 'Naam Mismatch', desc: 'Passbook aur Aadhaar mein naam thoda alag ho toh payment reject ho jaati hai — isko system "Name Mismatch" kehta hai.' },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-green-300 dark:hover:border-green-700 transition-all">
-                <span className="text-2xl block mb-2">{icon}</span>
+                {icon ? <span className="text-2xl block mb-2">{icon}</span> : null}
                 <p className="font-black text-sm text-[var(--color-text)] mb-1">{title}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{desc}</p>
               </div>
@@ -172,7 +171,7 @@ export default function PmKisanBankAccountChangeProcess() {
               <strong>CSC Operator Ko Boliye:</strong> Saaf-saaf boliye "PM Kisan Bank Account Update karna hai". Jab operator details daal raha ho, screen ki ek photo le lo — kisi gadbad mein ye proof kaam aayega.
             </SI>
             <SI n={3}>
-              <strong>Details Enter:</strong> Naya account number aur IFSC daala jaayega, purana apne aap hat jaayega. Transaction ID zaroor note karo.
+              <strong>Details Enter:</strong> Naya account number aur IFSC daala jaayega, purana apne aap hat jaayega. Transaction ID likh kar rakh lo.
             </SI>
             <SI n={4}>
               <strong>OTP Verification:</strong> Mobile par OTP aayega, wo daalne ke baad hi process poora hoga.
@@ -228,7 +227,7 @@ export default function PmKisanBankAccountChangeProcess() {
             className="w-full rounded-xl my-4"
           />
           <IB>
-            <strong>Pro Tip:</strong> Bank branch wale aksar bolte hain "server down hai, kal aana". Aise mein gussa mat hone ka. Unse pre-printed Aadhaar seeding form maang lijiye, ghar par fill karke agle din jama kar aaiye. Form par receipt zaroor lijiye. Bank se bahar aane ke baad *99# dial karke check kar lijiye ki seeding successful hui ya nahi.
+            <strong>Andar Ki Baat:</strong> Bank branch wale aksar bolte hain "server down hai, kal aana". Aise mein gussa mat hone ka. Unse pre-printed Aadhaar seeding form maang lijiye, ghar par fill karke agle din jama kar aaiye. Form par receipt lekar hi wapas aaiye. Bank se bahar aane ke baad *99# dial karke check kar lijiye ki seeding successful hui ya nahi.
           </IB>
         </section>
 
@@ -242,7 +241,7 @@ export default function PmKisanBankAccountChangeProcess() {
           </p>
           <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-4">
             <p className="text-xs text-amber-800 dark:text-amber-300">
-              <strong>⚠️ Dhyan Rahe:</strong> BAO office ke process mein 30 se 45 din lag sakte hain, CSC se 15 din mein ho jaata hai. Pehle CSC try karo — wahan se kaam na bane tabhi BAO ke chakkar kaato.
+              <strong>Dhyan Rahe:</strong> BAO office ke process mein 30 se 45 din lag sakte hain, CSC se 15 din mein ho jaata hai. Pehle CSC try karo — wahan se kaam na bane tabhi BAO ke chakkar kaato.
             </p>
           </div>
           <SafeImage
@@ -305,7 +304,7 @@ export default function PmKisanBankAccountChangeProcess() {
               },
               {
                 mistake: 'NPCI Seeding Bhool Gaye',
-                fix: 'Portal par account update karne ke baad bank jakar NPCI seeding zaroor karwani chahiye. Warna paisa aayega nahi.',
+                fix: 'Portal par account update karne ke baad bank jakar NPCI seeding bhi karwani chahiye. Warna paisa aayega nahi.',
               },
               {
                 mistake: 'Jan Dhan Account Bina Active Kiye Link Kar Diya',
@@ -313,8 +312,8 @@ export default function PmKisanBankAccountChangeProcess() {
               },
             ].map(({ mistake, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {mistake}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Sahi Tarika:</strong> {fix}</p>
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">{mistake}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>Sahi Tarika:</strong> {fix}</p>
               </div>
             ))}
           </div>
@@ -395,7 +394,7 @@ export default function PmKisanBankAccountChangeProcess() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Bank Account Change Ke Sawaal — Jawab Yahin
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="Bank Account Change FAQ" />
         </section>
@@ -411,10 +410,10 @@ export default function PmKisanBankAccountChangeProcess() {
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanPaymentFailedFix2026', l: '💸 Payment Fix' },
-          { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', l: '💳 FTO Status' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 eKYC' },
+          { href: '/articles/PmKisanPaymentFailedFix2026', l: 'Payment Fix' },
+          { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', l: 'FTO Status' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC' },
         ]} />
         <Disclaimer />
       </div>

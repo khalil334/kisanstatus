@@ -27,7 +27,6 @@ export default function CropProfitCalcPage() {
     <>
 
       <CalcHeader
-        emoji="📊"
         title="Kheti Ka Munafa Calculator 2026"
         subtitle="Fasal ka poora hisaab — kharcha, amdani, net profit ya loss — per hectare"
         breadcrumb="Fasal Munafa"
@@ -36,7 +35,7 @@ export default function CropProfitCalcPage() {
       <div className="container-site max-w-2xl py-8">
 
         <div className="mb-6 p-5 bg-purple-50 border border-purple-200 rounded-xl text-sm text-gray-700 leading-relaxed">
-          <p className="font-bold text-purple-900 mb-2">📊 Kheti Mein Kitna Profit Hua — Jaano Turant</p>
+          <p className="font-bold text-purple-900 mb-2">Kheti Mein Kitna Profit Hua — Jaano Turant</p>
           <p className="mb-2">
             Har kisan ke mann mein yeh sawaal aata hai — <strong>"Meri fasal mein kitna munafa hua?"</strong> ya <strong>"Kya nuksan ho gaya?"</strong>
           </p>
@@ -44,15 +43,15 @@ export default function CropProfitCalcPage() {
             Yeh calculator aapki madad karega — beej se lekar mandi tak ka poora hisaab lagao. Pata chalega ki kahan zyada kharcha hua, kahan bachat ho sakti hai, aur agli season mein kya karna chahiye.
           </p>
           <p className="text-xs text-purple-700 mt-3">
-            💡 <strong>Tip:</strong> Pichhle saal ka data rakho — comparison karke samajh aayega ki kya improve karna hai.
+             <strong>Tip:</strong> Pichhle saal ka data rakho — comparison karke samajh aayega ki kya improve karna hai.
           </p>
         </div>
 
         <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-          <h2 className="font-black text-gray-900 text-base mb-5">🧮 Apna Hisaab Bharo</h2>
+          <h2 className="font-black text-gray-900 text-base mb-5">Apna Hisaab Bharo</h2>
 
           <div className="mb-5 p-4 bg-green-50 border border-green-200 rounded-xl">
-            <p className="font-bold text-green-800 text-xs mb-3 uppercase tracking-wide">💰 Amdani (Revenue)</p>
+            <p className="font-bold text-green-800 text-xs mb-3 uppercase tracking-wide">Amdani (Revenue)</p>
             <InputField
               label="Zameen ka size (hectare)"
               value={land}
@@ -80,25 +79,25 @@ export default function CropProfitCalcPage() {
           </div>
 
           <div className="mb-5 p-4 bg-red-50 border border-red-200 rounded-xl">
-            <p className="font-bold text-red-800 text-xs mb-3 uppercase tracking-wide">💸 Kharcha (Cost per Hectare)</p>
-            <InputField label="🌱 Beej ka kharcha (₹)" value={seed} onChange={setSeed} min={0} placeholder="2000" hint="Certified seeds mehenge hote hain par yield zyada"/>
-            <InputField label="🧪 Khad + spray (₹)" value={fertilizer} onChange={setFertilizer} min={0} placeholder="3000" hint="Urea, DAP, pesticide — sab mila ke"/>
-            <InputField label="👷 Mazdoori (₹)" value={labor} onChange={setLabor} min={0} placeholder="4000" hint="Jutai, buwai, katai — sab mazdoori"/>
-            <InputField label="💧 Sinchai (₹)" value={irrigation} onChange={setIrrigation} min={0} placeholder="1500" hint="Bijli, diesel, ya tube well ka kharcha"/>
-            <InputField label="🚜 Doosra kharcha (₹)" value={other} onChange={setOther} min={0} placeholder="1000" hint="Transport, godown rent, mandi commission"/>
+            <p className="font-bold text-red-800 text-xs mb-3 uppercase tracking-wide">Kharcha (Cost per Hectare)</p>
+            <InputField label="Beej ka kharcha (₹)" value={seed} onChange={setSeed} min={0} placeholder="2000" hint="Certified seeds mehenge hote hain par yield zyada"/>
+            <InputField label="Khad + spray (₹)" value={fertilizer} onChange={setFertilizer} min={0} placeholder="3000" hint="Urea, DAP, pesticide — sab mila ke"/>
+            <InputField label="Mazdoori (₹)" value={labor} onChange={setLabor} min={0} placeholder="4000" hint="Jutai, buwai, katai — sab mazdoori"/>
+            <InputField label="Sinchai (₹)" value={irrigation} onChange={setIrrigation} min={0} placeholder="1500" hint="Bijli, diesel, ya tube well ka kharcha"/>
+            <InputField label="Doosra kharcha (₹)" value={other} onChange={setOther} min={0} placeholder="1000" hint="Transport, godown rent, mandi commission"/>
           </div>
 
           {revenue>0 && (
             <div className={`mt-4 border-2 rounded-2xl p-5 ${isProfit?'bg-green-50 border-green-300':'bg-red-50 border-red-300'}`}>
               <p className={`text-xs font-bold uppercase tracking-wide mb-3 ${isProfit?'text-green-700':'text-red-700'}`}>
-                {isProfit?'📊 Munafa Ho Raha Hai! 🎉':'📊 Nuksan Ho Raha Hai ⚠️'}
+                {isProfit?'Munafa Ho Raha Hai!':'Nuksan Ho Raha Hai'}
               </p>
               <ResultRow label="Kul Amdani (Total Revenue)" value={fmt(revenue)} />
               <ResultRow label="Kul Kharcha (Total Cost)" value={fmt(totalCost)} />
               <ResultRow label="Munafa per Hectare" value={fmt(profitPH)} />
               <ResultRow label="ROI (Investment par return)" value={`${roi.toFixed(1)}%`} />
               <ResultRow
-                label={isProfit?'🎉 Net Profit':'⚠️ Net Loss'}
+                label={isProfit?'Net Profit':'Net Loss'}
                 value={fmt(Math.abs(profit))}
                 bold
                 highlight
@@ -106,7 +105,7 @@ export default function CropProfitCalcPage() {
 
               {!isProfit && (
                 <div className="mt-4 p-4 bg-red-100 rounded-xl text-xs text-red-900 space-y-2">
-                  <p className="font-bold text-sm">💡 Nuksan Kyun Hua? Yeh Try Karo:</p>
+                  <p className="font-bold text-sm">Nuksan Kyun Hua? Yeh Try Karo:</p>
                   <ul className="space-y-1.5 ml-4">
                     <li>• <strong>PM Kisan ₹6,000 saalana</strong> — yeh toh milna hi chahiye. <Link href="/articles/PmKisan24viKist2026" className="text-green-700 underline">Status check karo →</Link></li>
                     <li>• <strong>KCC Loan lo</strong> — sirf 4% interest mein ₹3 lakh tak. <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-green-700 underline">Apply karo →</Link></li>
@@ -119,7 +118,7 @@ export default function CropProfitCalcPage() {
 
               {isProfit && profitPH > 50000 && (
                 <div className="mt-4 p-4 bg-green-100 rounded-xl text-xs text-green-900">
-                  <p className="font-bold text-sm">🎉 Bahut Accha! Aapka Munafa Accha Hai!</p>
+                  <p className="font-bold text-sm">Bahut Accha! Aapka Munafa Accha Hai!</p>
                   <p className="mt-2">Ab yeh karo:</p>
                   <ul className="space-y-1 ml-4 mt-1">
                     <li>• <strong>PM Kisan ka paisa</strong> — agar nahi aa raha toh check karo</li>
@@ -132,43 +131,43 @@ export default function CropProfitCalcPage() {
           )}
 
           <div className="mt-6">
-            <h3 className="font-black text-gray-900 text-sm mb-3">💡 Kheti Mein Munafa Badhane Ke Tarike</h3>
+            <h3 className="font-black text-gray-900 text-sm mb-3">Kheti Mein Munafa Badhane Ke Tarike</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl">
-                <p className="font-bold text-blue-900 mb-1">🌱 Beej Bachat</p>
+                <p className="font-bold text-blue-900 mb-1">Beej Bachat</p>
                 <p className="text-blue-800">Certified seeds bulk mein lo — 15-20% sasta padega. Government subsidy bhi milti hai. CSC center se pata karo.</p>
               </div>
               <div className="p-3 bg-green-50 border border-green-200 rounded-xl">
-                <p className="font-bold text-green-900 mb-1">🧪 Khad Mein Bachat</p>
+                <p className="font-bold text-green-900 mb-1">Khad Mein Bachat</p>
                 <p className="text-green-800">Nano DAP use karo — kam mein zyada asar. Soil test karwao — sirf wahi khad dalo jo chahiye. Fertilizer subsidy check karo.</p>
               </div>
               <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl">
-                <p className="font-bold text-amber-900 mb-1">💧 Paani Bachat</p>
+                <p className="font-bold text-amber-900 mb-1">Paani Bachat</p>
                 <p className="text-amber-800">Drip irrigation — 40% paani bachta hai. PMKSY scheme mein subsidy milti hai. Solar pump lo — bijli bill zero.</p>
               </div>
               <div className="p-3 bg-purple-50 border border-purple-200 rounded-xl">
-                <p className="font-bold text-purple-900 mb-1">💰 Sahi Daam Par Becho</p>
+                <p className="font-bold text-purple-900 mb-1">Sahi Daam Par Becho</p>
                 <p className="text-purple-800">E-NAM portal par daily rate dekho. FPO se judo — direct buyer milte hain. Mandi commission bachao — FPO se becho.</p>
               </div>
               <div className="p-3 bg-teal-50 border border-teal-200 rounded-xl">
-                <p className="font-bold text-teal-900 mb-1">🚜 Machine Hire Karo</p>
+                <p className="font-bold text-teal-900 mb-1">Machine Hire Karo</p>
                 <p className="text-teal-800">Tractor, harvester — khareedne ki jagah rent par lo. Custom hiring centers mein sasti mil jayegi. Subsidy bhi check karo.</p>
               </div>
               <div className="p-3 bg-orange-50 border border-orange-200 rounded-xl">
-                <p className="font-bold text-orange-900 mb-1">📊 Record Rakho</p>
+                <p className="font-bold text-orange-900 mb-1">Record Rakho</p>
                 <p className="text-orange-800">Har season ka hisaab likho — kya kharcha hua, kya kamai hui. Agli baar compare karke decisions lo. Excel ya notebook — kuch bhi use karo.</p>
               </div>
             </div>
           </div>
 
           <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
-            <p className="font-bold text-yellow-900 text-sm mb-2">⚠️ Kisan Aksar Yeh Galtiyan Karte Hain:</p>
+            <p className="font-bold text-yellow-900 text-sm mb-2">Kisan Aksar Yeh Galtiyan Karte Hain:</p>
             <ul className="space-y-1.5 text-xs text-yellow-800">
-              <li>❌ <strong>Bina soil test ke khad dalna</strong> — paisa barbad, mitti kharab</li>
-              <li>❌ <strong>Sasti seeds lena</strong> — yield kam hoti hai, beemari zyada</li>
-              <li>❌ <strong>Mandi mein panic mein bechna</strong> — rate gir jata hai. Wait karo, FPO se judo</li>
-              <li>❌ <strong>Fasal bima nahi lena</strong> — ek baar kharab fasal = saal barbad</li>
-              <li>❌ <strong>Hisab nahi rakhna</strong> — pata hi nahi chalta kahan loss hua</li>
+              <li><strong>Bina soil test ke khad dalna</strong> — paisa barbad, mitti kharab</li>
+              <li><strong>Sasti seeds lena</strong> — yield kam hoti hai, beemari zyada</li>
+              <li><strong>Mandi mein panic mein bechna</strong> — rate gir jata hai. Wait karo, FPO se judo</li>
+              <li><strong>Fasal bima nahi lena</strong> — ek baar kharab fasal = saal barbad</li>
+              <li><strong>Hisab nahi rakhna</strong> — pata hi nahi chalta kahan loss hua</li>
             </ul>
           </div>
         </div>
@@ -178,31 +177,31 @@ export default function CropProfitCalcPage() {
         <OtherCalcs current="/calculator/crop-profit" />
 
         <div className="mt-6 p-5 bg-green-50 border border-green-200 rounded-xl">
-          <p className="font-bold text-green-900 text-sm mb-3">📖 Yeh Bhi Padhein — Kheti Mein Madad Milegi</p>
+          <p className="font-bold text-green-900 text-sm mb-3">Yeh Bhi Padhein — Kheti Mein Madad Milegi</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <Link href="/articles/KisanRinKahaSeLe2026" className="p-3 bg-white border border-green-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-green-600 hover:text-white transition-colors">
-              💰 Kisan Loan Kahan Se Le — Complete Guide
+               Kisan Loan Kahan Se Le — Complete Guide
             </Link>
             <Link href="/articles/PmfbyCropInsurance2026" className="p-3 bg-white border border-green-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-green-600 hover:text-white transition-colors">
-              🛡️ Fasal Bima Yojana — Sirf 2% Premium
+               Fasal Bima Yojana — Sirf 2% Premium
             </Link>
             <Link href="/articles/soil-health-card-complete-guide-2026" className="p-3 bg-white border border-green-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-green-600 hover:text-white transition-colors">
-              🌱 Soil Health Card — Mitti Test Karwao
+              Soil Health Card — Mitti Test Karwao
             </Link>
             <Link href="/articles/NanoDap500mlPriceInIndia2026" className="p-3 bg-white border border-green-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-green-600 hover:text-white transition-colors">
-              🧪 Nano DAP — Kam Kharcha, Zyada Utpadan
+               Nano DAP — Kam Kharcha, Zyada Utpadan
             </Link>
             <Link href="/articles/PmKisanEkycOnline2026" className="p-3 bg-white border border-green-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-green-600 hover:text-white transition-colors">
-              🔐 PM Kisan eKYC — Ghar Baithe Karo
+               PM Kisan eKYC — Ghar Baithe Karo
             </Link>
             <Link href="/calculator/msp-income" className="p-3 bg-white border border-green-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-green-600 hover:text-white transition-colors">
-              💹 MSP Income Calculator — Sahi Daam Jaano
+               MSP Income Calculator — Sahi Daam Jaano
             </Link>
           </div>
         </div>
 
         <div className="mt-6 p-5 bg-gray-50 border border-gray-200 rounded-xl">
-          <p className="font-bold text-gray-900 text-sm mb-3">❓ Aksar Puche Jaane Wale Sawaal</p>
+          <p className="font-bold text-gray-900 text-sm mb-3">Aksar Puche Jaane Wale Sawaal</p>
           <div className="space-y-3 text-xs">
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">Kheti mein sabse zyada kharcha kahan hota hai?</summary>

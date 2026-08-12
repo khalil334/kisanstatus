@@ -1,10 +1,10 @@
 # KisanStatus.com
 
->  PM Kisan Samman Nidhi status, eKYC, beneficiary list, aur farming guides — Hinglish mein.
+>PM Kisan Samman Nidhi status, eKYC, beneficiary list, aur farming guides — Hinglish mein.
 
 Independent informational portal for Indian farmers covering PM Kisan Yojana status checks, eKYC, installment tracking, beneficiary lists, loans, and farming scheme guides.
 
-## 🌾 About
+## About
 
 KisanStatus provides free, verified guidance in Hinglish for:
 - PM Kisan beneficiary status & installment (kist) tracking
@@ -16,13 +16,13 @@ KisanStatus provides free, verified guidance in Hinglish for:
 
 This is **not** an official Government of India website. All official actions point to `pmkisan.gov.in`.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework:** Next.js (App Router)
 - **Styling:** Tailwind CSS
 - **Language:** TypeScript
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 kisanstatus/
@@ -48,9 +48,9 @@ kisanstatus/
 └── public/
 ```
 
-> ℹ️ Article counts are data-driven: `/articles` lists everything registered in `lib/articles-data.ts`, `lib/loan-mandi-pashupalan-data.ts`, `lib/maandhan-data.ts` and `lib/rajya-yojana-data.ts` (currently 73 live articles). Update this section after any redesign so it never goes stale.
+> ℹArticle counts are data-driven: `/articles` lists everything registered in `lib/articles-data.ts`, `lib/loan-mandi-pashupalan-data.ts`, `lib/maandhan-data.ts` and `lib/rajya-yojana-data.ts` (currently 73 live articles). Update this section after any redesign so it never goes stale.
 
-## 🚀 Local Development
+## Local Development
 
 ```bash
 npm install
@@ -60,22 +60,22 @@ npm run build
 npm start
 ```
 
-## 🔧 Configuration
+## Configuration
 
 | Env Variable | Purpose |
 |---|---|
 | `NEXT_PUBLIC_GA_ID` | Google Analytics 4 Measurement ID |
 | `NEXT_PUBLIC_SITE_URL` | `https://kisanstatus.com` |
 
-## ✅ SEO Checklist (keep updated)
+## SEO Checklist (keep updated)
 
 - [ ] Every page has unique title + meta description
 - [ ] Canonical URL matches actual page URL (no copy-pasted homepage canonical)
-- [ ] Author is consistently "KisanStatus Team" across all pages
+- [ ] Author is consistently "Manish Kumar" across all pages
 - [ ] No orphaned/legacy routes live outside this app's route structure
 - [ ] `sitemap.ts` only lists real, current URLs
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 KisanStatus.com is an independent informational platform, not affiliated with the Government of India. For official PM Kisan services, visit [pmkisan.gov.in](https://pmkisan.gov.in).
 

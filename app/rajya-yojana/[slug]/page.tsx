@@ -7,6 +7,7 @@ import {
   type RajyaYojanaArticleMeta,
 } from '@/lib/rajya-yojana-data';
 import { getArticleBySlug } from '@/lib/articles-data';
+import { AuthorBox } from '@/components/ArticleShared';
 import {
   SITE_URL,
   SITE_NAME,
@@ -93,14 +94,15 @@ function buildSchemas(
       datePublished,
       dateModified,
       author: {
-        '@type': 'Organization',
+        '@type': 'Person',
         '@id': `${SITE_URL}#founder`,
         name: AUTHOR_NAME,
         url: AUTHOR_URL,
         description: AUTHOR_BIO,
       },
       creator: {
-        '@type': 'Organization',
+        '@type': 'Person',
+        '@id': `${SITE_URL}#founder`,
         name: AUTHOR_NAME,
         url: AUTHOR_URL,
       },
@@ -191,6 +193,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: article.title,
     description: article.description,
     keywords: [article.mainKeyword, ...article.secondaryKeywords],
+    authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+    creator: AUTHOR_NAME,
     alternates: {
       canonical: url,
       languages: {
@@ -262,6 +266,10 @@ export default async function RajyaYojanaArticlePage({
 
       <ArticleComponent article={article} />
 
+      <section className="container-site max-w-3xl mx-auto px-4">
+        <AuthorBox modified={article.modified || article.published} />
+      </section>
+
       {article.relatedPaths.length > 0 && (
         <section
           aria-label="Related PM Kisan guides"
@@ -269,7 +277,7 @@ export default async function RajyaYojanaArticlePage({
         >
           <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
             <h2 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
-              <span>📄</span> PM Kisan Guides
+              PM Kisan Guides
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {article.relatedPaths.map((path) => {
@@ -297,7 +305,7 @@ export default async function RajyaYojanaArticlePage({
         >
           <div className="mt-4 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
             <h2 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
-              <span>🔗</span> Doosre Rajya Ki Yojana
+              Doosre Rajya Ki Yojana
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {related.map((a) => (

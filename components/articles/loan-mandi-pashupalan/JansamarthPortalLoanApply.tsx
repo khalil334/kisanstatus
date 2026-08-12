@@ -2,14 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
-  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le', emoji: '📚' },
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Dairy Loan Bina Collateral', emoji: '🐄' },
-  { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan Interest Rate', emoji: '🏦' },
-  { slug: 'AgriStackKyaHai2026', title: 'AgriStack Kya Hai', emoji: '🆔' },
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashupalan Loan Yojana', emoji: '🐃' },
+  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
+  { slug: 'AgriStackKyaHai2026', title: 'AgriStack Farmer ID Guide' },
 ];
 
 const FAQS_DATA = [
@@ -35,7 +33,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Application submit karne ke baad kitne din mein jawab aata hai?',
-    a: 'Digital flow mein initial approval kaafi tez milta hai — kai cases mein turant offer dikh jata hai. Lekin final sanction aur disbursement bank ke process par depend karta hai, jisme verification bhi shamil hai. Application ka status portal par real-time track hota hai, wahi dekhte raho.',
+    a: 'Digital flow mein initial approval kaafi tez milta hai — kai cases mein usi baithak mein offer dikh jata hai. Lekin final sanction aur disbursement bank ke process par depend karta hai, jisme verification bhi shamil hai. Application ka status portal par real-time track hota hai, wahi dekhte raho.',
   },
   {
     q: 'Mujhe portal par "not eligible" dikha raha hai, ab kya karoon?',
@@ -71,10 +69,10 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
             JanSamarth Portal 2026: Ek Jagah Se KCC, Mudra Aur Sarkari Loan Apply — Poora Process Samjho
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 10 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>10 min read</span>
           </div>
         </div>
       </div>
@@ -93,7 +91,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         </div>
 
         <DB>
-          <strong>TL;DR — seedha faisla:</strong>
+          <strong>Short Mein — apply karne se pehle:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>JanSamarth (jansamarth.in) sarkar ka <strong>free</strong> portal hai — KCC, Mudra, education/livelihood schemes ki eligibility ek jagah check hoti hai; loan bank hi deta hai.</li>
             <li>Apply se pehle 3 cheezein: <strong>Aadhaar-mobile link, Farmer ID (AgriStack), bank details + PAN</strong>. Inke bina file aage nahi badhti.</li>
@@ -115,11 +113,11 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
           Lekin portal ka sahi istemal tabhi hota hai jab aapko pata ho ki yeh karta kya hai, kya nahi karta, aur
-          apply se pehle kaunsi teen cheezein taiyar rakhni hain. Is guide mein wahi sab step-by-step hai — bina
+          apply se pehle kaunsi teen cheezein taiyar rakhni hain. Aage wahi sab step-by-step hai — bina
           bank ki bhaasha ke.
         </p>
 
-        <SH>🧭 JanSamarth Hai Kya — Aur Kya Nahi Hai</SH>
+        <SH>JanSamarth Hai Kya — Aur Kya Nahi Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Sabse pehle confusion door karo: JanSamarth koi bank nahi hai aur na hi koi nayi loan scheme. Yeh ek
           <strong> digital pul</strong> hai — ek taraf sarkari schemes (KCC, Mudra, education loan subsidy jaisi),
@@ -148,7 +146,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>📂 Kaunse Loan Milte Hain — Chaar Categories</SH>
+        <SH>Kaunse Loan Milte Hain — Chaar Categories</SH>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
             <thead>
@@ -209,7 +207,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🧾 Apply Se Pehle — Teen Cheezein Taiyar Karo</SH>
+        <SH>Apply Se Pehle — Teen Cheezein Taiyar Karo</SH>
         <StepList>
           <SI n={1}><strong>Aadhaar-mobile link:</strong> poora process OTP par chalta hai, aur OTP sirf Aadhaar se linked number par aata hai. Number band ho gaya hai ya badal gaya hai toh pehle Aadhaar centre par update karwao — yeh sabse common atkaav hai.</SI>
           <SI n={2}><strong>Farmer ID (AgriStack):</strong> KCC/crop loan ke digital flow ke liye Farmer ID zaroori hai. Nahi bani hai toh pehle banwa lo — humne iska poora process alag guide mein likha hai: <Link href="/articles/AgriStackKyaHai2026" className="underline font-bold">AgriStack Kya Hai</Link>.</SI>
@@ -231,7 +229,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>💻 Step-by-Step: JanSamarth Se Loan Apply</SH>
+        <SH>Step-by-Step: JanSamarth Se Loan Apply</SH>
         <StepList>
           <SI n={1}><strong>jansamarth.in kholo</strong> aur &ldquo;Register&rdquo; par jao. Mobile number aur email se account banao, OTP verify karo.</SI>
           <SI n={2}><strong>Loan category chuno</strong> — kisan ho toh Agriculture wali. Uske neeche schemes ki list dikhegi.</SI>
@@ -249,9 +247,9 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           portalName="jansamarth.in"
         />
 
-        <SH>⏱️ Kitna Time Lagta Hai — Sach Bataein</SH>
+        <SH>Kitna Time Lagta Hai — Sach Bataein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Portal ka digital hissa tez hai — eligibility minutes mein, aur kai cases mein initial approval bhi turant
+          Portal ka digital hissa tez hai — eligibility minutes mein, aur kai cases mein initial approval bhi screen par hi
           dikh jata hai. Lekin yeh samajhna zaroori hai ki initial approval aur haath mein paisa — do alag stations
           hain. Beech mein bank ka verification hota hai: details ka milaan, kabhi-kabhi branch visit ya field check.
         </p>
@@ -270,7 +268,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>📊 Application Track Kaise Karein — Aur Kab Awaaz Uthayein</SH>
+        <SH>Application Track Kaise Karein — Aur Kab Awaaz Uthayein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Submit karne ke baad portal par login karke <strong>“My Applications”</strong> section mein har
           application ka live status dikhta hai — pending, under review, sanctioned, ya query raised. Query
@@ -281,7 +279,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           cheezein har baat-cheet mein saath rakho; follow-up wahi kisan jeet-ta hai jiske paas record hota hai.
         </p>
 
-        <SH>⚠️ In Galtiyon Se Bacho</SH>
+        <SH>In Galtiyon Se Bacho</SH>
         <StepList>
           <SI n={1}><strong>Agent ke bharose sab chhod dena</strong> — OTP aur login aapka hai, kisi ko mat do. Fraud ka sabse bada raasta yahi hai.</SI>
           <SI n={2}><strong>Advance fee dena</strong> — &ldquo;file aage badhane ke ₹2,000&rdquo; jaisi maang sirf thagi hai. Portal aur bank, dono ka application process free hai (bank ki official processing fee sanction ke documents mein likhi hoti hai, cash mein nahi li jaati).</SI>
@@ -299,7 +297,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🏦 KCC Ke Liye JanSamarth vs Branch — Kya Chunein</SH>
+        <SH>KCC Ke Liye JanSamarth vs Branch — Kya Chunein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Agar aapki Farmer ID bani hai, zameen aapke naam hai aur Aadhaar-mobile linked hai — JanSamarth ka
           paperless flow aazmao, yahi sabse kam bhaag-daud wala raasta hai. Agar record mein koi bhi pech hai
@@ -309,8 +307,8 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           KCC ke rate, subvention aur limit ka poora ganit humne alag guides mein samjhaya hai —{' '}
           <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC Online Apply</Link>{' '}
-          aur <Link href="/articles/sbi-dairy-loan-interest-rate" className="underline font-bold">SBI Dairy Loan
-          Interest Rate</Link> zaroor padho, taaki bank mein sahi sawaal pooch sako.
+          aur <Link href="/articles/sbi-dairy-loan-interest-rate" className="underline font-bold">SBI ke dairy loan
+          rates wali guide</Link> padh lo, taaki bank mein sahi sawaal pooch sako.
         </p>
 
         <WB>
@@ -327,7 +325,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
 
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             JanSamarth — Govt of India unified credit portal.{' '}
@@ -342,8 +340,8 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Articles' },
-          { href: '/articles/category/loan', l: '📂 Loan Guides' },
+          { href: '/articles', l: 'Aur Guides Padhein' },
+          { href: '/articles/category/loan', l: 'Karj Aur Loan Articles' },
         ]} />
         <Disclaimer />
       </div>

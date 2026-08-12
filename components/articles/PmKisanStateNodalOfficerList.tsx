@@ -6,28 +6,26 @@ import Image from 'next/image';
 import { SI, StepList, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import CountdownModal from '@/components/CountdownModal';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-07-13T11:23:00+05:30';
-const MODIFIED = '2026-07-15T04:41:00+05:30';
+const PUBLISHED = '2026-01-25T13:09:31+05:30';
+const MODIFIED = '2026-02-15T14:31:22+05:30';
 
 const RELATED_CARDS = [
   {
     slug: 'PmKisanPaymentFailedFix2026',
     title: 'Payment Failed Fix Guide',
-    desc: 'FTO generate hone ke baad bhi paisa nahi aaya? 7 reasons aur turant fix jaanein.',
-    emoji: '💸'
+    desc: 'FTO generate hone ke baad bhi paisa nahi aaya? 7 reasons aur unka fix jaanein.',
   },
   {
     slug: 'PmKisanCorrectionForm2026',
     title: 'PM Kisan Correction Form',
     desc: 'Naam, IFSC ya Aadhaar mein galti sudharne ka offline aur online tarika.',
-    emoji: '📝'
   },
   {
     slug: 'PmKisanBeneficiaryList2026',
     title: 'Beneficiary List Check',
     desc: 'Apna naam state aur district wise nayi list mein kaise dhundhein.',
-    emoji: '📋'
   },
 ];
 
@@ -51,7 +49,7 @@ const OFFICERS = ALL_REGIONS.map(region => ({
 const FAQS_DATA = [
   {
     q: '155261 helpline se kaam nahi ban raha, ab kya karein?',
-    a: '155261 ek national call center hai. Agar wahan se solution na mile, toh direct apne State Nodal Officer ko email karein ya official grievance portal par shikayat darj karein. Nodal officer ke paas district administration ko order dene ki power hoti hai.',
+    a: '155261 ek national call center hai. Agar wahan se solution na mile, toh direct state ke is adhikari ko email karein ya official grievance portal par shikayat darj karein. Nodal officer ke paas district administration ko order dene ki power hoti hai.',
   },
   {
     q: 'Nodal officer ko email likhne ka sahi format kya hai?',
@@ -94,7 +92,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
-          infoNote="📌 Thoda wait karo. Official PM Kisan portal khulne wala hai."
+          infoNote="Thoda wait karo. Official PM Kisan portal khulne wala hai."
         />
       )}
 
@@ -114,10 +112,10 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 14 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>14 min read</span>
           </div>
         </div>
       </div>
@@ -126,7 +124,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            <strong>Seedha Jawab:</strong> PM Kisan State Nodal Officer har state ke Agriculture Department mein appointed ek senior official hote hain jo kisanon ki unresolved shikayaton (jaise payment fail, name mismatch) ko solve karte hain. Agar 155261 helpline se madad nahi milti, toh aap direct apne state ke Nodal Officer ko email kar sakte hain. Neeche 2026 ki updated contact guidelines aur complaint escalate karne ka poora tarika diya gaya hai.
+            <strong>Saaf Saaf Suno:</strong> PM Kisan State Nodal Officer har state ke Agriculture Department mein appointed ek senior official hote hain jo kisanon ki unresolved shikayaton (jaise payment fail, name mismatch) ko solve karte hain. Agar 155261 helpline se madad nahi milti, toh aap direct apne state ke Nodal Officer ko email kar sakte hain. Neeche 2026 ki updated contact guidelines aur complaint escalate karne ka poora tarika diya gaya hai.
           </p>
         </div>
 
@@ -164,9 +162,9 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           />
 
           <DB>
-            <strong>Real Story:</strong>
+            <strong>Zameen Ki Kahani:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
-              Varanasi ke Ramesh ji ki 23vi kist nahi aayi. 155261 par 5 baar call kiya, har baar "wait karo" bola. Phir unhone UP ke nodal officer ko email kiya aur subject mein apna Registration Number likha. Kuch din mein reply aaya, district officer ko instruction mili, problem resolve hui, aur pending kist bhi mil gayi.
+              Varanasi ke Ramesh ji ki 23vi kist nahi aayi. 155261 par 5 baar call kiya, har baar "wait karo" bola. Phir unhone UP ke adhikari ko email kiya aur subject mein apna Registration Number likha. Kuch din mein reply aaya, district officer ko instruction mili, problem resolve hui, aur pending kist bhi mil gayi.
             </p>
           </DB>
         </section>
@@ -183,7 +181,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
             <li>District officers (DAO/BAO) ki jawabdehi tay kar sakta hai.</li>
           </ul>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Isliye jab local level (Lekhpal ya BAO) par kaam nahi banta, toh nodal officer se contact karna sabse effective tarika hai.
+            Isliye jab local level (Lekhpal ya BAO) par kaam nahi banta, toh state-level adhikari se contact karna sabse effective tarika hai.
           </p>
         </section>
 
@@ -195,7 +193,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
           <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-4 mb-4">
             <p className="text-xs text-amber-800 dark:text-amber-300">
-              <strong>⚠️ Important Notice:</strong> Specific State Nodal Officer ke direct email IDs aur phone numbers frequently update hote hain. Fake ya outdated numbers se bachne ke liye, humne neeche central PM Kisan ICT email aur helpline di hai. Apne state ke exact current officer ka direct contact jaanne ke liye neeche diye gaye official link ka upyog karein.
+              <strong>Important Notice:</strong> In adhikariyon ke direct email IDs aur phone numbers frequently update hote hain. Fake ya outdated numbers se bachne ke liye, humne neeche central PM Kisan ICT email aur helpline di hai. Apne state ke exact current officer ka direct contact jaanne ke liye neeche diye gaye official link ka upyog karein.
             </p>
           </div>
 
@@ -228,20 +226,20 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
           <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
             <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-              🔍 Official Nodal Officers List Dekhein
+               Official Nodal Officers List Dekhein
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Sabhi states ke updated Nodal Officer names, direct email IDs, aur phone numbers ke liye official PM Kisan portal par jaayein.
+              Sabhi states ke updated names, direct email IDs, aur phone numbers ke liye official PM Kisan portal par jaayein.
             </p>
             <button
               onClick={() => handleOfficialLink(
                 'PM Kisan Nodal Officers List',
-                'Official PM Kisan Nodal Officers list khulne wali hai. Thoda wait karo...',
+                'Official list khulne wali hai. Thoda wait karo...',
                 'https://pmkisan.gov.in/NodalOfficers.aspx'
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              📥 Yahan Click Karo → Official List Dekhein
+               Yahan Click Karo → Official List Dekhein
             </button>
           </div>
         </section>
@@ -254,7 +252,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
           <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl p-5 mb-6">
             <p className="text-sm font-black text-blue-800 dark:text-blue-300 mb-3">
-              📧 Template 1: Payment FTO Generated Hai Par Paisa Nahi Aaya
+               Template 1: Payment FTO Generated Hai Par Paisa Nahi Aaya
             </p>
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg text-xs font-mono text-gray-800 dark:text-gray-200 space-y-2">
               <p><strong>Subject:</strong> URGENT: Payment Not Credited - Reg No. [Aapka Number]</p>
@@ -266,7 +264,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
           <div className="bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-500 dark:border-amber-700 rounded-xl p-5 mb-6">
             <p className="text-sm font-black text-amber-800 dark:text-amber-300 mb-3">
-              📧 Template 2: Naam/Aadhaar Correction BAO Ne Nahi Kiya
+               Template 2: Naam/Aadhaar Correction BAO Ne Nahi Kiya
             </p>
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg text-xs font-mono text-gray-800 dark:text-gray-200 space-y-2">
               <p><strong>Subject:</strong> Correction Ignored by Local BAO - Reg No. [Aapka Number]</p>
@@ -289,7 +287,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
             <strong>Zaroori Baatein (Email Attachments):</strong>
             <ul className="list-disc list-inside mt-2 space-y-1 text-xs">
               <li>Aadhaar Card aur Bank Passbook ki clear PDF banakar hi attach karein (Blurry photos reject ho jaati hain).</li>
-              <li>PM Kisan Status page ka screenshot zaroor bhejein.</li>
+              <li>PM Kisan Status page ka screenshot attach kar ke bhejein.</li>
               <li>Agar pehle BAO ko koi application di thi, toh uski receiving copy bhi bhejein.</li>
             </ul>
           </WB>
@@ -331,7 +329,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
             <p className="text-xs font-mono text-[var(--color-text-muted)] mb-2">
               <strong>Twitter Post Format:</strong><br/><br/>
               @PMKisanOfficial @AgriGoIIndia<br/>
-              Meri PM Kisan kist pichle 3 mahine se ruki hai. Local BAO koi sunwai nahi kar raha. Registration No: [Aapka Number]. Kripya madad karein. 🙏<br/>
+              Meri PM Kisan kist pichle 3 mahine se ruki hai. Local BAO koi sunwai nahi kar raha. Registration No: [Aapka Number]. Kripya madad karein.<br/>
               [Status ka Screenshot Attach Karein]
             </p>
           </div>
@@ -356,7 +354,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
         <section className="mb-8">
           <SH>Kis Type Ki Problems Ke Liye Contact Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Har choti-moti problem (jaise eKYC kaise karein) ke liye nodal officer ko pareshan mat karo. Ye serious problems ke liye contact karo:
+            Har choti-moti problem (jaise eKYC kaise karein) ke liye inhe pareshan mat karo. Ye serious problems ke liye contact karo:
           </p>
           <div className="space-y-3">
             {[
@@ -400,23 +398,23 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal (FAQs)
+            Nodal Officer Se Jude Sawal-Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Nodal Officer Contact FAQ 2026" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat (Bottom Line)</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Shikayat Ka Sahi Raasta — Aur Diary Number Kyun Sabse Zaroori Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Bhai, PM Kisan shikayat karna mushkil nahi hai agar aap sahi hierarchy follow karein. Bas teen cheezein yaad rakho:
+            Seedha email karna aksar bekar jaata hai agar helpline ka record nahi hai — isliye hierarchy ka order matter karta hai:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
-            <li>Pehle 155261 par call karo (Diary number lo).</li>
-            <li>Kaam na bane toh state nodal officer ko proper format mein email karo.</li>
-            <li>Uske baad bhi kaam na bane toh Twitter par tag karo ya RTI daal do.</li>
+            <li>Pehle 155261 par call karke <strong>Diary number</strong> lein — yahi number aage har level par aapka proof hai.</li>
+            <li>15 din mein hal na ho toh state adhikari ko email mein wahi Diary number, registration number aur date daalein.</li>
+            <li>Uske baad bhi jawab na aaye toh RTI daalein — usme bhi Diary number quote karein.</li>
           </ol>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mt-3">
-            Dairya (patience) rakho, documents clear rakho, aur politely baat karo. Aapka haq aapko zaroor milega!
+            Bina Diary number ke complaint ka koi trail nahi banta — wahi ek cheez hai jo aapki shikayat ko “suni gayi” se “darj hui” banati hai.
           </p>
         </div>
 
@@ -429,7 +427,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Zaroori Articles</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Inhe Bhi Padh Lena</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link
@@ -437,7 +435,6 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
                 href={`/articles/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
-                <div className="text-2xl mb-2">{card.emoji}</div>
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
                   {card.title}
                 </h4>
@@ -454,9 +451,9 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanPaymentFailedFix2026', l: '💸 Payment Fix' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
+          { href: '/articles/PmKisanPaymentFailedFix2026', l: 'Payment Fix' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
         ]} />
         <Disclaimer />
       </div>

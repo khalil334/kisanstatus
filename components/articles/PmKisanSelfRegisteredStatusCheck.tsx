@@ -2,19 +2,17 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-03-20T08:00:00+05:30';
-const MODIFIED = '2026-07-03T11:38:00+05:30';
+const PUBLISHED = '2026-02-11T18:34:34+05:30';
+const MODIFIED = '2026-03-04T16:41:58+05:30';
 
 const IMG_BASE = '/images/articles/pm-kisan-self-registered-status-check';
 
 const RELATED = [
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Complete Guide', emoji: '📚' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '📋' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide', emoji: '🔐' },
-  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Status', emoji: '💳' },
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed Fix', emoji: '❌' },
+  { slug: 'PmKisanRejectedStatusReApplyGuide', title: 'Rejected Status — Dobara Apply' },
+  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning' },
 ];
 
 const FAQS_DATA = [
@@ -28,7 +26,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Khud registration kiya lekin abhi tak koi payment nahi aayi — kyun?',
-    a: 'Teen wajah ho sakti hain: (1) eKYC nahi hui — turant karo, (2) Bank account Aadhaar se link nahi — NPCI seeding karwao, (3) Land seeding pending hai — revenue office se contact karo. Sabse pehle status check karo portal par — wahan exact reason dikhega.',
+    a: 'Teen wajah ho sakti hain: (1) eKYC nahi hui — pehle wahi nipta lo, (2) Bank account Aadhaar se link nahi — NPCI seeding karwao, (3) Land seeding pending hai — revenue office se contact karo. Sabse pehle status check karo portal par — wahan exact reason dikhega.',
   },
   {
     q: 'Reference number kho gaya hai — ab kya karun?',
@@ -86,15 +84,15 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             <span>/</span>
             <span className="text-white font-bold">Self Registration Status</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">📝 Self Registration Guide</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Self Registration Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan Self Registration Status Check 2026: Khud Kiya Registration? Yahan Se Pata Karo
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 10 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>10 min read</span>
           </div>
         </div>
       </div>
@@ -118,12 +116,12 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         </div>
 
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
-          <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Seedhi Baat</h2>
+          <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Alag Portal Dhundna Band Karein</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
             CSC se karwaya ya khud online kiya — farak nahi padta. <strong>Status check karne ka tarika same hai.</strong>
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
-            Lekin ek chhoti si baat hai jo bahut log confuse ho jaate hain — khud registration karne walon ko lagta hai alag portal par check karna padega. Nahi bhai, sab ek hi jagah check hota hai. Bas Aadhaar number chahiye.
+            Self-registration karne wale aksar sochte hain ki unke liye koi alag portal hoga — aisa kuch nahi hai. Sab ka status ek hi jagah, pmkisan.gov.in ke Beneficiary Status mein, sirf Aadhaar number se check hota hai.
           </p>
         </div>
 
@@ -188,7 +186,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </div>
 
           <WB>
-            <strong>Tip:</strong> "Not Found" dikh raha hai? Do baar check karo — Aadhaar sahi type kiya? Agar phir bhi nahi mil raha toh registration hi nahi hua hoga — kabhi-kabhi form submit hote waqt session timeout ho jaata hai aur data save nahi hota, lekin farmer ko lagta hai ho gaya. Dobara apply karo.
+            <strong>Ek Suggestion:</strong> "Not Found" dikh raha hai? Do baar check karo — Aadhaar sahi type kiya? Agar phir bhi nahi mil raha toh registration hi nahi hua hoga — kabhi-kabhi form submit hote waqt session timeout ho jaata hai aur data save nahi hota, lekin farmer ko lagta hai ho gaya. Dobara apply karo.
           </WB>
         </section>
 
@@ -215,14 +213,14 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
 
           <div className="space-y-3">
             <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-4 rounded-r-xl">
-              <h3 className="font-black text-green-800 dark:text-green-300 text-sm mb-2">✅ Active</h3>
+              <h3 className="font-black text-green-800 dark:text-green-300 text-sm mb-2">Active</h3>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
                 Matlab sab theek hai. Aap verified ho, payment eligible ho. Agli kist aayegi automatically. Bas bank account active rakho, eKYC complete rakho.
               </p>
             </div>
 
             <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl">
-              <h3 className="font-black text-amber-800 dark:text-amber-300 text-sm mb-2">⏳ Pending / Under Verification</h3>
+              <h3 className="font-black text-amber-800 dark:text-amber-300 text-sm mb-2">Pending / Under Verification</h3>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed mb-2">
                 Matlab application submit ho gayi hai lekin abhi verify nahi hui. Yeh normal hai — usually ek se do hafte ke andar clear ho jaata hai, kyunki verification State Nodal Officer ke through manually hota hai, automated nahi.
               </p>
@@ -232,7 +230,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             </div>
 
             <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-4 rounded-r-xl">
-              <h3 className="font-black text-red-800 dark:text-red-300 text-sm mb-2">❌ Rejected</h3>
+              <h3 className="font-black text-red-800 dark:text-red-300 text-sm mb-2">Rejected</h3>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed mb-2">
                 Matlab koi problem hai. Portal par reason dikhega — woh dekho.
               </p>
@@ -279,7 +277,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </div>
 
           <IB>
-            <strong>Bottom Line:</strong> Registration process mein farak hai, lekin ek baar registered ho jaane ke baad system dono ko ek jaisa treat karta hai — koi alag category ya priority nahi hoti.
+            <strong>Yaani:</strong> Registration process mein farak hai, lekin ek baar registered ho jaane ke baad system dono ko ek jaisa treat karta hai — koi alag category ya priority nahi hoti.
           </IB>
         </section>
 
@@ -316,7 +314,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
               },
               {
                 problem: 'Bank account number wrong hai',
-                solution: 'Yeh serious hai — payment galat account mein jaayegi. Turant correct karo. Branch se IFSC code bhi verify karo — ek digit galat hone se bhi transfer fail ho jaata hai.',
+                solution: 'Yeh serious hai — payment galat account mein jaayegi. Bina der correct karo. Branch se IFSC code bhi verify karo — ek digit galat hone se bhi transfer fail ho jaata hai.',
               },
               {
                 problem: 'Pending dikh raha hai 30 din se zyada',
@@ -324,7 +322,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
               },
             ].map(({ problem, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-bold text-red-700 dark:text-red-400 text-sm mb-2">❌ {problem}</p>
+                <p className="font-bold text-red-700 dark:text-red-400 text-sm mb-2">{problem}</p>
                 <p className="text-xs text-green-700 dark:text-green-400"><strong>Solution:</strong> {solution}</p>
               </div>
             ))}
@@ -355,7 +353,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
 
             <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
               <h3 className="font-black text-purple-800 dark:text-purple-300 text-sm mb-2">4. Regular Status Check</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">Har 7-10 din mein check karo. Koi problem hai toh turant pata chalega.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Har 7-10 din mein check karo. Koi problem hai toh shuru mein hi pata chal jaayega.</p>
             </div>
           </div>
         </section>
@@ -364,22 +362,22 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           <SH>Help Kahan Se Le?</SH>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
-              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">📞 Helpline</p>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">Helpline</p>
               <p className="text-xs text-[var(--color-text-muted)]">155261 (Toll Free)</p>
               <p className="text-xs text-[var(--color-text-muted)]">Mon-Sat, 9 AM - 6 PM</p>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
-              <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">🏢 Block Office</p>
+              <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">Block Office</p>
               <p className="text-xs text-[var(--color-text-muted)]">Agriculture Officer se milo</p>
               <p className="text-xs text-[var(--color-text-muted)]">Written complaint do</p>
             </div>
             <div className="p-4 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
-              <p className="font-black text-purple-800 dark:text-purple-300 text-sm mb-2">💻 CSC Center</p>
+              <p className="font-black text-purple-800 dark:text-purple-300 text-sm mb-2">CSC Center</p>
               <p className="text-xs text-[var(--color-text-muted)]">Nazdeeki CSC jaao</p>
               <p className="text-xs text-[var(--color-text-muted)]">₹20-30 charge lag sakta hai</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
-              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-2">📧 Email</p>
+              <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-2">Email</p>
               <p className="text-xs text-[var(--color-text-muted)]">pmkisan-ict@gov.in</p>
               <p className="text-xs text-[var(--color-text-muted)]">Screenshot attach karo</p>
             </div>
@@ -388,7 +386,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
 
         <section className="mb-8">
           <div className="p-4 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl">
-            <p className="text-xs font-bold text-[var(--color-text)] mb-2">📌 Official Source</p>
+            <p className="text-xs font-bold text-[var(--color-text)] mb-2">Official Source</p>
             <ul className="text-xs text-[var(--color-text-muted)] space-y-1 list-disc list-inside">
               <li>
                 Status check ka process — Farmers Corner &gt; Know Your Status, official portal:{' '}
@@ -419,22 +417,22 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Self Registration Wale Kisano Ke Sawal
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Self Registration Status FAQ 2026 — Real Answers" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Self-Registration Walon Ki Checklist</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Khud registration kiya ya CSC se — status check karne ka tarika same hai. Bas Aadhaar number chahiye.
+            Khud registration karne walon ke paas CSC operator ka reminder nahi hota — yeh 5 kaam khud track karne padte hain:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
-            <li>pmkisan.gov.in par jao</li>
-            <li>Beneficiary Status mein Aadhaar daalo</li>
-            <li>Status check karo — Active, Pending ya Rejected</li>
-            <li>eKYC complete rakho</li>
-            <li>Har 7-10 din mein check karte raho</li>
+            <li>pmkisan.gov.in par Beneficiary Status mein Aadhaar se status dekhein</li>
+            <li>Pehli baar “Pending for Approval” dikhna normal hai — state verification chal raha hai</li>
+            <li>eKYC complete karein — self-registered logon ka yeh sabse zyada chhutta hai</li>
+            <li>Land seeding status bhi dekh lein — form khud bhara hai toh Khasra galti aam hai</li>
+            <li>Har 7-10 din mein status dobara check karte rahein jab tak Active na ho</li>
           </ol>
         </div>
 
@@ -447,19 +445,18 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         />
 
         <CalcBanner
-          icon="📊"
           title="Apna Total Benefit Calculate Karo"
           desc="Kitni installments mili, kitni pending — sab jaano"
-          primaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator →' }}
-          secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities' }}
+          primaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator →' }}
+          secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisan24viKist2026', l: '📅 24vi Kist' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 eKYC Guide' },
+          { href: '/articles/PmKisan24viKist2026', l: '24vi Kist' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Guide' },
         ]} />
         <Disclaimer />
       </div>

@@ -2,12 +2,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
+import { AuthorBox, FAQBlock } from '@/components/ArticleShared';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import GuideDisclaimer from '@/components/GuideDisclaimer';
+import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
   title: 'Madhumakhi Palan 2026: KVIC Subsidy, Profit & Complete Guide',
   description: 'Madhumakhi palan (beekeeping) ka complete guide. Janein KVIC subsidy, bee box price, Apis mellifera farming aur honey business ki ground reality aur profit margin.',
   keywords: ['madhumakhi palan', 'beekeeping subsidy 2026', 'KVIC honey mission', 'chhote scale par bee farming kaise shuru karein', 'bee box price', 'honey business profit in india', 'apis mellifera farming'],
-  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
     title: 'Madhumakhi Palan 2026: KVIC Subsidy, Profit & Complete Guide',
     description: 'Madhumakhi palan ka complete guide. Janein bee farming, KVIC subsidy, bee box price aur honey business ki ground reality.',
@@ -26,24 +30,34 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://kisanstatus.com/articles/madhumakhi-palan-kvic-subsidy' },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    { '@type': 'FAQPage', '@id': 'https://kisanstatus.com/articles/madhumakhi-palan-kvic-subsidy/#faq', mainEntity: [
-        { '@type': 'Question', name: 'Kya madhumakhi ke kaatne se pehle allergy test karwana zaroori hai?', acceptedAnswer: { '@type': 'Answer', text: 'Haan, agar aapko pehle se asthma ya kisi insect sting se severe reaction ki history hai, toh doctor se consult karna chahiye. Anaphylactic shock ek real risk hai, bhale hi wo rare ho.' } },
-        { '@type': 'Question', name: 'Agar padosi kisan zabardasti pesticide spray kar de, toh colony bachane ka koi turant upay hai?', acceptedAnswer: { '@type': 'Answer', text: 'Turant upay mushkil hai, lekin agar advance mein pata chal jaye, toh hive ke entrance ko temporary mesh se band karke 2-3 din ke liye dark, cool jagah par shift kar dena chahiye. Lekin yeh short-term solution hai, long-term mein organic zones hi safe hain.' } },
-        { '@type': 'Question', name: 'Kya ghar ki chhat (terrace) par bee box rakhna safe aur practical hai?', acceptedAnswer: { '@type': 'Answer', text: 'Technically possible hai, lekin practical nahi. Bees ko paas mein paani ka source aur ample flora chahiye hota hai. Terrace par paani ki kami aur padosiyon ki shikayat ka risk hamesha rehta hai.' } },
-        { '@type': 'Question', name: 'Purane bee frames ko dobara use karne mein kya risk hai?', acceptedAnswer: { '@type': 'Answer', text: 'Bahut zyada risk. Purane frames mein American Foulbrood jaisi deadly diseases ke spores saalon tak zinda reh sakte hain. Naye beginner ko hamesha naye, sterilized frames ke saath shuruat karni chahiye.' } }
-      ]
-    }
-  ]
-};
+const madhumakhiPalanFaqs = [
+  {
+    q: 'Kya madhumakhi ke kaatne se pehle allergy test karwana zaroori hai?',
+    a: 'Haan, agar aapko pehle se asthma ya kisi insect sting se severe reaction ki history hai, toh doctor se consult karna chahiye. Anaphylactic shock ek real risk hai, bhale hi wo rare ho. Pehli baar hive kholte waqt hamesha kisi experienced saathi ke saath rahein.',
+  },
+  {
+    q: 'Padosi pesticide spray kare toh?',
+    a: (
+      <>
+        Us waqt upay mushkil hai, lekin agar advance mein pata chal jaye, toh hive ke entrance ko temporary mesh se band karke 2-3 din ke liye dark, cool jagah par shift kar dena chahiye. Long-term mein <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">organic farming zones</Link> ke paas hi apiary setup karna safe hai.
+      </>
+    ),
+    schemaText:
+      'Us waqt upay mushkil hai, lekin agar advance mein pata chal jaye, toh hive ke entrance ko temporary mesh se band karke 2-3 din ke liye dark, cool jagah par shift kar dena chahiye. Long-term mein organic farming zones ke paas hi apiary setup karna safe hai.',
+  },
+  {
+    q: 'Terrace par bee box rakhna safe hai?',
+    a: 'Technically possible hai, lekin practical nahi. Bees ko paas mein paani ka source aur ample flora chahiye hota hai. Terrace par paani ki kami aur padosiyon ki shikayat ka risk hamesha rehta hai.',
+  },
+  {
+    q: 'Purane frames reuse karne ka risk?',
+    a: 'Bahut zyada risk. Purane frames mein American Foulbrood jaisi deadly diseases ke spores saalon tak zinda reh sakte hain. Naye beginner ko hamesha naye, sterilized frames ke saath shuruat karni chahiye.',
+  },
+];
 
 export default function MadhumakhiPalan() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-
       <Image
         src="/images/kisanguides/madhumakhi-palan-hero.webp"
         alt="Beekeeping Boxes in Mustard Field - Apis Mellifera Colony"
@@ -163,7 +177,7 @@ export default function MadhumakhiPalan() {
 
       <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-          <h4 className="font-semibold text-blue-900 dark:text-blue-200 mb-2">💳 Kisan Credit Card (KCC)</h4>
+          <h4 className="font-semibold text-blue-900 dark:text-blue-200 mb-2">Kisan Credit Card (KCC)</h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">Beekeeping ke liye low-interest loan. 4% interest rate with timely repayment.</p>
           <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 text-sm font-medium">KCC Guide →</Link>
         </div>
@@ -220,7 +234,7 @@ export default function MadhumakhiPalan() {
         <li><strong>Jan - March (Build-up Phase):</strong> Sarson aur litchi ke bloom ke dauran colony tezi se expand karti hai. Yahan <strong>bee swarm control</strong> ke practical tarike aana chahiye, jaise time par super chamber add karna taaki bees ko shahad store karne ki jagah mile aur wo bhage nahi.</li>
         <li><strong>April - June (Lean/Summer Period):</strong> Flora kam ho jata hai. Colony ko zinda rakhne ke liye 1:1 ratio ka sugar syrup feed karna padta hai. Paani ki availability ensure karein, warna bees paani dhoondhne ke chakkar mein mar jati hain.</li>
         <li><strong>July - September (Monsoon Risks):</strong> High humidity ke karan fungal infections aur wax moth ka khatra badh jata hai. Hive ko elevated (zameen se upar) rakhein aur ventilation achha rakhein.</li>
-        <li><strong>October - December (Main Honey Flow):</strong> Eucalyptus, Sunflower, aur Ber ke phoolon ke dauran main honey extraction hota hai. Is time Varroa mite treatment zaroor karein taaki winter colony strong rahe.</li>
+        <li><strong>October - December (Main Honey Flow):</strong> Eucalyptus, Sunflower, aur Ber ke phoolon ke dauran main honey extraction hota hai. Is time Varroa mite treatment kar hi lein taaki winter colony strong rahe.</li>
       </ul>
 
       <Image
@@ -264,7 +278,7 @@ export default function MadhumakhiPalan() {
       />
 
       <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-        <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">⚠️ Common Mistakes Jo Naye Beekeepers Karte Hain:</h3>
+        <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">Common Mistakes Jo Naye Beekeepers Karte Hain:</h3>
         <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
           <li><strong>Overcrowding:</strong> Ek hi jagah par bahut saare boxes rakh dena, jisse bees mein competition aur disease failne ka khatra badh jata hai.</li>
           <li><strong>Ignoring Varroa Mite:</strong> Yeh sabse common disease hai. Iska regular treatment na karne se poori colony khatam ho sakti hai.</li>
@@ -274,12 +288,12 @@ export default function MadhumakhiPalan() {
       </div>
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-5 my-6 not-prose">
-        <h3 className="font-bold text-blue-800 dark:text-blue-300 mb-3 text-sm">🛡️ Biosecurity aur Disease Prevention Basics:</h3>
+        <h3 className="font-bold text-blue-800 dark:text-blue-300 mb-3 text-sm">Biosecurity aur Disease Prevention Basics:</h3>
         <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700 dark:text-gray-300">
           <li>Farm mein entry par proper hygiene maintain karein.</li>
           <li>Naye colonies ko 15-30 din alag quarantine karein.</li>
           <li>Regular hive cleaning aur disinfection karein.</li>
-          <li>Dead bees ya infected frames ko turant remove aur destroy karein.</li>
+          <li>Dead bees ya infected frames ko dekhte hi remove aur destroy karein.</li>
           <li>Visitors ko hive ke paas limited access dein.</li>
         </ul>
       </div>
@@ -287,24 +301,7 @@ export default function MadhumakhiPalan() {
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Frequently Asked Questions (Unexpected Realities)
       </h2>
-      <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Kya madhumakhi ke kaatne se pehle allergy test karwana zaroori hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, agar aapko pehle se asthma ya kisi insect sting se severe reaction ki history hai, toh doctor se consult karna chahiye. Anaphylactic shock ek real risk hai, bhale hi wo rare ho. Pehli baar hive kholte waqt hamesha kisi experienced saathi ke saath rahein.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Padosi pesticide spray kare toh?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Turant upay mushkil hai, lekin agar advance mein pata chal jaye, toh hive ke entrance ko temporary mesh se band karke 2-3 din ke liye dark, cool jagah par shift kar dena chahiye. Long-term mein <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">organic farming zones</Link> ke paas hi apiary setup karna safe hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Terrace par bee box rakhna safe hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Technically possible hai, lekin practical nahi. Bees ko paas mein paani ka source aur ample flora chahiye hota hai. Terrace par paani ki kami aur padosiyon ki shikayat ka risk hamesha rehta hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Purane frames reuse karne ka risk?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Bahut zyada risk. Purane frames mein American Foulbrood jaisi deadly diseases ke spores saalon tak zinda reh sakte hain. Naye beginner ko hamesha naye, sterilized frames ke saath shuruat karni chahiye.</p>
-        </div>
-      </div>
+      <FAQBlock faqs={madhumakhiPalanFaqs} variant="cards" />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Final Assessment: Kya Yeh Business Aapke Liye Hai?
@@ -314,7 +311,7 @@ export default function MadhumakhiPalan() {
       </p>
 
       <div className="bg-amber-50 dark:bg-amber-900/20 p-5 rounded-lg border border-amber-200 dark:border-amber-800 mb-8 not-prose">
-        <h4 className="font-semibold text-amber-900 dark:text-amber-200 mb-2">🛡️ Risk Management</h4>
+        <h4 className="font-semibold text-amber-900 dark:text-amber-200 mb-2">Risk Management</h4>
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">Subsidy ek bonus hai, guarantee nahi. Apna business plan aise banayein jaise subsidy milegi hi nahi. Risk management ke liye, kuch regions mein beekeeping units ke liye bhi insurance options explore kiye ja sakte hain.</p>
         <Link href="/articles/PmfbyCropInsurance2026" className="text-amber-700 hover:underline dark:text-amber-400 text-sm font-medium">PM Fasal Bima Yojana (PMFBY) →</Link>
       </div>
@@ -329,12 +326,12 @@ export default function MadhumakhiPalan() {
         <li><strong>FSSAI:</strong> Regulatory guidelines for packaged honey and food safety licensing.</li>
       </ul>
 
-      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
-        <p className="text-sm text-gray-700 dark:text-gray-300">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Yeh article general educational purpose ke liye hai. Actual costs, subsidies, aur procedures aapke location, state policies, aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial investment karne se pehle qualified professionals (apiculture officers, KVIC officials, ya bank managers) se consult karein. Last updated: July 2026.
-        </p>
-      </div>
+      <AuthorBox modified={getArticleBySlug('madhumakhi-palan-kvic-subsidy')!.modifiedTime} />
+
+      <GuideDisclaimer
+        consult="apiculture officers, KVIC officials, ya bank managers"
+        modified={getArticleBySlug('madhumakhi-palan-kvic-subsidy')!.modifiedTime}
+      />
     </article>
   );
 }

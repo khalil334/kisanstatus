@@ -6,15 +6,21 @@ export const SITE_DESCRIPTION = 'PM Kisan guides, farming subsidies, loans & cro
 export const COPYRIGHT_START_YEAR = 2024;
 export const CURRENT_YEAR = new Date().getFullYear();
 
-export const AUTHOR_NAME = 'KisanStatus Team';
+export const AUTHOR_NAME = 'Manish Kumar';
 export const AUTHOR_URL = `${SITE_URL}/about`;
-export const AUTHOR_BIO = 'Indian kisaanon ko government schemes navigate karne mein help karne wala independent expert team.';
+export const AUTHOR_IMAGE = '/images/author-manish-kumar.webp';
+export const AUTHOR_IMAGE_URL = `${SITE_URL}${AUTHOR_IMAGE}`;
+export const AUTHOR_BIO = 'Main pichhle kai saalon se PM Kisan aur doosri sarkari yojanaon ko track kar raha hoon. Jo bhi likhta hoon, pehle pmkisan.gov.in aur state portals par khud check karta hoon — phir aasan bhasha mein samjhata hoon, taaki aapko sahi jankari ke liye idhar-udhar bhatakna na pade.';
 
 export const TWITTER_HANDLE = '@kisanstatus';
+
+export const WHATSAPP_CHANNEL_URL =
+  'https://whatsapp.com/channel/0029VbDvYxx8kyyS2jexHM0k';
 
 export const SOCIAL_LINKS = {
   facebook: 'https://www.facebook.com/profile.php?id=61590430994270',
   twitter: 'https://twitter.com/kisanstatus',
+  whatsapp: WHATSAPP_CHANNEL_URL,
 } as const;
 
 export const LOGO_URL = `${SITE_URL}/logo.png`;

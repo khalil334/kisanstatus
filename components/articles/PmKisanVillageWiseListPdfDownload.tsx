@@ -4,15 +4,15 @@ import { useState, useEffect, useCallback, useMemo, memo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-07-11T13:52:00+05:30';
-const MODIFIED = '2026-08-09T03:40:00+05:30';
+const PUBLISHED = '2026-02-17T09:13:27+05:30';
+const MODIFIED = '2026-03-19T22:46:55+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List Guide', emoji: '📋' },
-  { slug: 'PmKisanRejectedStatusReApplyGuide', title: 'Rejected Status Fix', emoji: '❌' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '📚' },
-  { slug: 'PmKisanStateNodalOfficerList', title: 'Nodal Officer List', emoji: '📞' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
+  { slug: 'PmKisanRejectedStatusReApplyGuide', title: 'Rejected Status — Dobara Apply' },
+  { slug: 'PmKisanStateNodalOfficerList', title: 'Nodal Officer Contacts' },
 ];
 
 const FAQS_DATA = [
@@ -42,7 +42,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Document download kar li, ab isme se apna naam kaise dhoondhun?',
-    a: 'File khol kar upar right corner mein search (🔍) icon par tap karein aur apna naam type karein. Suggestions turant dikhne lagenge.',
+    a: 'File khol kar upar right corner mein search () icon par tap karein aur apna naam type karein. Suggestions type karte hi dikhne lagenge.',
   },
   {
     q: 'List mein sirf 10-12 naam hain, mere gaon mein toh 200 se zyada log hain?',
@@ -109,7 +109,7 @@ const CountdownButton = memo(function CountdownButton({
           className={`block text-center w-full px-6 py-4 ${bgColor} text-white text-sm font-bold rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98]`}
           aria-label={`${buttonText}. Opens the official portal in a new tab.`}
         >
-          ✅ Portal taiyar hai — yahan tap karke kholein
+           Portal taiyar hai — yahan tap karke kholein
         </a>
       ) : count === null ? (
         <button
@@ -187,10 +187,10 @@ export default function PmKisanVillageWiseListPdfDownload() {
             PM Kisan Village Wise List 2026: Gaon Ki Puri List Kaise Nikalein?
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -286,7 +286,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
 
           <div className="my-6 p-6 rounded-2xl border-2 border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20 shadow-sm">
             <h3 className="text-base font-bold text-gray-900 dark:text-gray-100 mb-2">
-              🔍 PM Kisan Portal Par Beneficiary Data Dekho
+               PM Kisan Portal Par Beneficiary Data Dekho
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
               Government website par jakar apne area ka complete information view karein.
@@ -297,7 +297,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
               rel="noopener noreferrer"
               className="block w-full text-center px-6 py-4 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98]"
             >
-              📥 Click Here to Open Official Portal
+               Click Here to Open Official Portal
             </Link>
           </div>
 
@@ -318,7 +318,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
           <SH>Mobile Par PDF Kaise Save Karein? (Android & iPhone)</SH>
           <div className="space-y-4">
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-[var(--color-text)] mb-2">📱 Android Phone (Chrome)</p>
+              <p className="font-black text-sm text-[var(--color-text)] mb-2">Android Phone (Chrome)</p>
               <ol className="list-decimal list-inside text-xs text-[var(--color-text-muted)] space-y-1">
                 <li>List khulne ke baad upar right corner mein <strong>3 dots (⋮)</strong> par tap karo.</li>
                 <li>"Share" option par click karo.</li>
@@ -327,7 +327,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
               </ol>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-sm text-[var(--color-text)] mb-2">📱 iPhone (Safari)</p>
+              <p className="font-black text-sm text-[var(--color-text)] mb-2">iPhone (Safari)</p>
               <ol className="list-decimal list-inside text-xs text-[var(--color-text-muted)] space-y-1">
                 <li>Niche <strong>Share button</strong> (box with arrow) par tap karo.</li>
                 <li>Niche scroll karke <strong>"Print"</strong> par tap karo.</li>
@@ -453,8 +453,8 @@ export default function PmKisanVillageWiseListPdfDownload() {
               },
             ].map(({ reason, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">❌ {reason}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Fix:</strong> {fix}</p>
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">{reason}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>Solution Ye Hai:</strong> {fix}</p>
               </div>
             ))}
           </div>
@@ -478,15 +478,15 @@ export default function PmKisanVillageWiseListPdfDownload() {
               },
             ].map(({ issue, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-black text-sm text-amber-600 dark:text-amber-400 mb-2">⚠️ {issue}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Solution:</strong> {solution}</p>
+                <p className="font-black text-sm text-amber-600 dark:text-amber-400 mb-2">{issue}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>Solution:</strong> {solution}</p>
               </div>
             ))}
           </div>
         </section>
 
         <section className="mb-8">
-          <SH>⚠️ Zaroori Chetawani (Privacy & Fraud)</SH>
+          <SH>Zaroori Chetawani (Privacy & Fraud)</SH>
           <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-4 rounded-r-xl">
             <p className="text-sm text-red-800 dark:text-red-300 mb-2">
               <strong>Fraud Se Bacho:</strong>
@@ -505,29 +505,29 @@ export default function PmKisanVillageWiseListPdfDownload() {
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">List Download Karke Kya Karein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            PM Kisan ka ye roster ek powerful tool hai. Isse aap apne gaon ka audit khud kar sakte hain. Transparency badhti hai, fraud pakde jaate hain, aur asli kisanon ko unka haq milta hai.
+            Gaon ki list sirf apna naam dekhne ke liye nahi hai — isi se pata chalta hai ki kaun ineligible hote hue paisa le raha hai aur kaun eligible hote hue chhut gaya hai. Har kist se pehle list update hoti hai, isliye purani save ki hui PDF par bharosa na karein.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Aaj hi apne gaon ki ye list save karein aur apne Gram Pradhan ya Patwari ko bhi bhejein.
+            Naam list mein hai par payment nahi aayi — toh problem list mein nahi, bank seeding mein hai; woh alag check karni padegi.
           </p>
         </div>
 
         <CountdownButton
-          title="🔗 PM Kisan Official Portal"
-          description="Beneficiary data access karne ke liye, ya saari jaankari ke liye government website par jaayein. 10 second baad portal khulega."
+          title="PM Kisan Official Portal"
+          description="Beneficiary data access karne ke liye, ya saari jaankari ke liye government website par jaayein — countdown poora hote hi portal khulega."
           url="https://pmkisan.gov.in/BeneficiaryList.aspx"
-          buttonText="📥 Yahan Click Karo → PM Kisan Portal Khulega"
+          buttonText="Yahan Click Karo → PM Kisan Portal Khulega"
           variant="blue"
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
-          { href: '/articles/PmKisanRejectedStatusReApplyGuide', l: '❌ Rejected Status Fix' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
+          { href: '/articles/PmKisanRejectedStatusReApplyGuide', l: 'Rejected Status Fix' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
         <Disclaimer />
       </div>

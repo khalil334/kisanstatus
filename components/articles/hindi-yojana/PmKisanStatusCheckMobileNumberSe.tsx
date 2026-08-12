@@ -54,10 +54,10 @@ const FAQS = [
 ];
 
 const RELATED = [
-  { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change/Update', emoji: '📱' },
-  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Ka Matlab', emoji: '💳' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
+  { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change/Update' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Ka Matlab' },
+  { slug: 'PmKisanMasterGuide2026', title: 'योजना की A-to-Z Master Guide' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
 ];
 
 const FAQ_SCHEMA = {
@@ -240,7 +240,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       <div className="my-5 border-2 border-[var(--color-border)] rounded-2xl overflow-hidden bg-[var(--color-card)] shadow-sm">
         <div className="bg-green-50 dark:bg-green-900/20 border-b border-[var(--color-border)] px-4 py-2.5">
           <span className="text-green-700 dark:text-green-300 text-xs font-bold">
-            📖 Pehle guide padhi? Ab official site par jao:
+             Pehle guide padhi? Ab official site par jao:
           </span>
         </div>
         <div className="p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">
@@ -367,23 +367,22 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       </p>
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
-        <p className="text-2xl mb-2">📆</p>
-        <p className="font-black text-lg mb-1">Kist Ruki Hai? Pata Karo Kyun</p>
+        <p className="font-black text-lg mb-1">Status Se Aage — Kist Kahan Atki?</p>
         <p className="text-green-100 text-sm mb-4">
-          eKYC, bank seeding, land seeding check karo — 4 sawaal mein exact reason.
+          Teenon jaanch ka result tracker mein ek saath dekho.
         </p>
         <div className="flex flex-wrap justify-center gap-2.5">
           <Link
             href="/calculator/installment-tracker"
             className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors"
           >
-            📆 Kist Tracker Kholo →
+             Kist Tracker try karo →
           </Link>
           <Link
             href="/calculator"
             className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors"
           >
-            🧮 Sab Utilities Dekho
+             Aur bhi utilities yahan
           </Link>
         </div>
       </div>
@@ -537,7 +536,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       <p>
         Honestly, यह article सिर्फ mobile-number वाले रास्ते पर focused है। अगर आपको पूरी योजना की A-to-Z
         जानकारी चाहिए — eligibility, नई registration, exclusion rules — तो उसके लिए हमारी{' '}
-        <Link href="/articles/PmKisanMasterGuide2026">Master Guide</Link> बनी हुई है। और अगर सवाल यह है कि
+        <Link href="/articles/PmKisanMasterGuide2026">A-to-Z master guide</Link> बनी हुई है। और अगर सवाल यह है कि
         अगली किस्त कब आएगी, तो <Link href="/articles/PmKisan24viKist2026">किस्त वाला article</Link> पढ़ें।
         यहां वो सब दोहराने की जरूरत नहीं।
       </p>
@@ -579,7 +578,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
         <h3 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
-          <span>🔗</span> Related Articles — Yeh Bhi Padho
+          Related Articles — Yeh Bhi Padho
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {RELATED.map((a) => (
@@ -588,7 +587,6 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
               href={`/articles/${a.slug}`}
               className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
             >
-              {a.emoji && <span className="text-xl shrink-0">{a.emoji}</span>}
               <span>{a.title}</span>
             </Link>
           ))}

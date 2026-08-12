@@ -143,7 +143,7 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
       </p>
 
       <Box tone="info">
-        <strong>📞 सीधे काम के official नंबर:</strong> हेल्पलाइन <strong>155261</strong> · लैंडलाइन{' '}
+        <strong>सीधे काम के official नंबर:</strong> हेल्पलाइन <strong>155261</strong> · लैंडलाइन{' '}
         <strong>011-24300606</strong>, <strong>011-23381092</strong> · ईमेल{' '}
         <strong>pmkisan-ict@gov.in</strong> · Online:{' '}
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> →
@@ -252,7 +252,7 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
             PM Kisan Official Portal — Help Desk
           </p>
           <p className="text-xs text-[var(--color-text-muted)] mt-0.5 mb-0">
-            Government of India — pmkisan.gov.in
+            आधिकारिक स्रोत: pmkisan.gov.in (भारत सरकार)
           </p>
         </div>
         <a
@@ -492,16 +492,16 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">इनसे भी काम बनेगा</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li>
-            <Link href="/articles/PmKisanPaymentFailedFix2026">💸 Payment Failed Fix Guide</Link>
+            <Link href="/articles/PmKisanPaymentFailedFix2026">Payment Failed Fix Guide</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanStateNodalOfficerList">📋 State Nodal Officer List</Link>
+            <Link href="/articles/PmKisanStateNodalOfficerList">State Nodal Officer List</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanRejectedStatusReApplyGuide">🔄 Rejected Status Re-Apply</Link>
+            <Link href="/articles/PmKisanRejectedStatusReApplyGuide">Rejected Status Re-Apply</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC Online Guide</Link>
+            <Link href="/articles/PmKisanEkycOnline2026">eKYC कैसे पूरी करें</Link>
           </li>
         </ul>
       </div>

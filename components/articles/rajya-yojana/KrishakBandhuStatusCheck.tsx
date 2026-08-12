@@ -123,7 +123,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         <p>
           Ek baar comment section mein ek sawaal tha — kisan ke EPIC number mein &lsquo;O&rsquo; ki jagah
           &lsquo;0&rsquo; tha, portal bar-bar &ldquo;no record found&rdquo; dikha raha tha aur
-          wo samajh baitha ki naam kat gaya. Card se milaa kar dobara bhara, record turant khul
+          wo samajh baitha ki naam kat gaya. Card se milaa kar dobara bhara, record usi waqt khul
           gaya. Bas itni si baat thi. Yehi tha poora maamla.
         </p>
 
@@ -174,7 +174,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           <li>Financial year aur season (Kharif ya Rabi) select karein.</li>
           <li>
             List generate karein — kai bar ye PDF ke roop mein aati hai. Naam ke saath area ka
-            column bhi zaroor mila lein.
+            column bhi saath mila lein.
           </li>
         </ol>
 
@@ -198,7 +198,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
             chalega.
           </li>
           <li>
-            Zameen ka koi bhi lena-den hone ke turant baad mutation karwaayein, kist ke season
+            Zameen ka koi bhi lena-den hone ke saath hi mutation karwaayein, kist ke season
             ka intezaar na karein.
           </li>
           <li>
@@ -335,7 +335,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           mein purana mobile number chadha ho.
         </p>
 
-        <h2>Padosi Ko Mil Gaya, Mujhe Nahi — Ye Kyun Hota Hai</h2>
+        <h2>Gaon Mein Sabke Khaate Mein Aaya, Aapke Mein Nahi — Wajah Ye Hai</h2>
 
         <p>
           Ye wala sawaal sabse zyada aata hai, aur iska jawab PM Kisan aur Krishak Bandhu
@@ -488,7 +488,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           }}
         />
         <section className="mb-8 not-prose">
-          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Krishak Bandhu status, slab aur death benefit FAQ 2026</p>
+          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Krishak Bandhu par sabse zyada poochhe gaye prashn — status, slab, death benefit</p>
           <div className="space-y-3">
             {FAQS_DATA.map(({ q, a }) => (
               <details
@@ -541,7 +541,6 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
           ID wali pehchaan ka tareeka bhi kisi doosre rajya mein nahi milta.
         </p>
 
-
         <p>
           <Link href="/rajya-yojana">← Sabhi rajya ki kisan yojana</Link>
         </p>
@@ -549,7 +548,7 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Ye article sirf madad ke liye hai. Final decision ke liye official portal ya krishi office se sampark karein.
+          Yahan di gayi jaankari samajhne-samjhaane ke liye hai. Kisi bhi kadam se pehle Krishak Bandhu portal ya block ke ADA office se pushti kar lein.
         </p>
       </div>
 

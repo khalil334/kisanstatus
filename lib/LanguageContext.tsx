@@ -10,8 +10,8 @@ const DEFAULT_LANG: LangCode = 'hi';
 const SUPPORTED_LANGS: LangCode[] = ['hi', 'en'];
 
 const LANGUAGE_META = {
-  hi: { name: 'Hindi', nativeName: 'हिंदी', flag: '🇮🇳', dir: 'ltr' as const },
-  en: { name: 'English', nativeName: 'English', flag: '🇬🇧', dir: 'ltr' as const },
+  hi: { name: 'Hindi', nativeName: 'हिंदी', flag: '', dir: 'ltr' as const },
+  en: { name: 'English', nativeName: 'English', flag: '', dir: 'ltr' as const },
 };
 
 interface LangContextType {
@@ -137,7 +137,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   const contextValue = useMemo<LangContextType>(() => ({
     lang,
     setLang,
-    tr: t[lang] || t[DEFAULT_LANG],
+    tr: lang === 'en' ? t.en : t.hi,
     isLoaded,
     getLangName,
     supportedLangs: SUPPORTED_LANGS,
@@ -171,5 +171,5 @@ export function getLanguageName(lang: LangCode): string {
 }
 
 export function getLanguageFlag(lang: LangCode): string {
-  return LANGUAGE_META[lang as keyof typeof LANGUAGE_META]?.flag || '🌐';
+  return LANGUAGE_META[lang as keyof typeof LANGUAGE_META]?.flag || '';
 }

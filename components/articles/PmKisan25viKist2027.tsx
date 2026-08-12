@@ -2,17 +2,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-07-06T08:00:00+05:30';
-const MODIFIED = '2026-07-06T08:00:00+05:30';
+const PUBLISHED = '2026-02-09T08:58:39+05:30';
+const MODIFIED = '2026-03-11T09:19:18+05:30';
 
 const RELATED = [
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
-  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning', emoji: '💳' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '📋' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide', emoji: '🔐' },
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed Fix', emoji: '💸' },
+  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
+  { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
 ];
 
 const FAQS_DATA = [
@@ -62,10 +60,10 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
             PM Kisan 25vi Kist 2027: Kab Aayegi, Kitni Milegi — Sach Yeh Hai Ki Abhi Kisi Ko Pata Nahi
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 8 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>8 min read</span>
           </div>
         </div>
       </div>
@@ -97,7 +95,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         </p>
 
         <WB>
-          <strong>Seedhi baat:</strong> Yeh article predictions de raha hai, promises nahi. Jo hum definitely jaante hain woh likhenge. Baaki sab andaza hai.
+          <strong>Pehle hi bata dein:</strong> Yeh article predictions de raha hai, promises nahi. Jo hum definitely jaante hain woh likhenge. Baaki sab andaza hai.
         </WB>
 
         <section className="mb-8 mt-8">
@@ -233,13 +231,13 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </p>
 
           <DB>
-            <strong>Warning:</strong> Baaki jo suna hai — amount badhna, eligibility rules change hona — inka koi official confirmation nahi hai. Jab tak sarkar na bole, inpar bharosa mat karo.
+            <strong>Hoshiyar Raho:</strong> Baaki jo suna hai — amount badhna, eligibility rules change hona — inka koi official confirmation nahi hai. Jab tak sarkar na bole, inpar bharosa mat karo.
           </DB>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal (FAQ)
+            25vi Kist Ke Common Doubts, Ek Jagah
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan 25vi Kist 2027 — FAQ" />
         </section>
@@ -260,12 +258,12 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         </div>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">25vi Kist Ka Sahi Hisaab</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            23vi ho chuki hai. 24vi ka intezaar hai. 25vi abhi bahut door ki baat hai.
+            23vi ho chuki hai, 24vi ka intezaar hai — matlab 25vi tak kam se kam do release cycles baaki hain, yaani 2027 ki pehli chhamahi se pehle iski umeed rakhna bekar hai.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Jo control mein hai — eKYC, bank, zameen — woh abhi theek kar lo. Baaki, jab date aayegi, khud pata chal jayega.
+            Is beech jo aapke haath mein hai — eKYC, NPCI seeding, land record — wahi 25vi aane par payment atakne se bachayega. Date ka andaza lagane se zyada kaam ka yahi hai.
           </p>
         </div>
 
@@ -278,19 +276,18 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         />
 
         <CalcBanner
-          icon="📅"
           title="Ab Tak Ka Total Nikaalo"
           desc="21vi se ab tak kitna mila, kitna baaki — sab calculate karo"
-          primaryCta={{ href: '/calculator/installment-tracker', label: '📅 Tracker Kholo →' }}
-          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calculator' }}
+          primaryCta={{ href: '/calculator/installment-tracker', label: 'Tracker Kholo →' }}
+          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator' }}
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisan24viKist2026', l: '📅 24vi Kist Status' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 eKYC Guide' },
+          { href: '/articles/PmKisan24viKist2026', l: '24vi Kist Status' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Guide' },
         ]} />
         <Disclaimer />
       </div>

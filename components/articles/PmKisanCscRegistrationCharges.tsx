@@ -1,15 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-06-30T09:15:00+05:30';
-const MODIFIED = '2026-07-10T08:00:00+05:30';
+const PUBLISHED = '2026-01-31T20:57:54+05:30';
+const MODIFIED = '2026-02-21T16:05:48+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Online Guide', emoji: '🔐' },
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '' },
-  { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Account Change', emoji: '🏦' },
-  { slug: 'PmKisanStateNodalOfficerList', title: 'Nodal Officer List', emoji: '📞' },
+  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
+  { slug: 'PmKisanFaceAuthenticationEkyc', title: 'Face Auth eKYC (Bina OTP)' },
+  { slug: 'PmKisanStateNodalOfficerList', title: 'Nodal Officer Contacts' },
 ];
 
 const FAQS_DATA = [
@@ -43,11 +43,11 @@ const FAQS_DATA = [
   },
   {
     q: 'Agar CSC wale ne galat data daal diya toh?',
-    a: 'Turant usi waqt screen par check karo. Agar galti ho gayi hai, toh <Link href="/articles/PmKisanCorrectionForm2026" class="underline">correction form</Link> se fix karo ya naye center par dobara try karo.',
+    a: 'Usi waqt screen par check karo, counter chhodne se pehle. Agar galti ho gayi hai, toh <Link href="/articles/PmKisanCorrectionForm2026" class="underline">correction form</Link> se fix karo ya naye center par dobara try karo.',
   },
   {
     q: 'Kya PM Kisan ka kaam sarkari office mein free hota hai?',
-    a: 'Haan, Block Agriculture Office (BAO) ya Tehsil mein ye kaam bilkul free hai. Lekin wahan bheed zyada hoti hai aur time lagta hai.',
+    a: 'Haan, Block Agriculture Office (BAO) ya Tehsil mein ye kaam free mein ho jaata hai. Lekin wahan bheed zyada hoti hai aur time lagta hai.',
   },
 ];
 
@@ -68,10 +68,10 @@ export default function PmKisanCscRegistrationCharges() {
             PM Kisan CSC Registration Charges: Sahi Fees, Kaise Karein?
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 14 min read</span>
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>14 min read</span>
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@ export default function PmKisanCscRegistrationCharges() {
           />
 
           <DB>
-            <strong>Real Story:</strong>
+            <strong>Sachcha Kissa:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
               Etawah ke Rakesh bhai ko CSC wale ne ₹300 maange. Unhone diye. Baad mein pata chala ki sarkari rate sirf ₹25 hai. Unne CSC portal par complaint ki. 3 din mein paise wapas hue aur us operator ka license suspend ho gaya.
             </p>
@@ -220,12 +220,12 @@ export default function PmKisanCscRegistrationCharges() {
             ))}
           </ol>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            <strong>Pro Tip:</strong> Receipt maangna mat bhoolna. Bina receipt ke kaam hua hi nahi maana jata. Agar wo kahe "system mein hai, receipt nahi dega", toh samajh jao kuch gadbad hai.
+            <strong>Smart Tareeka:</strong> Receipt maangna mat bhoolna. Bina receipt ke kaam hua hi nahi maana jata. Agar wo kahe "system mein hai, receipt nahi dega", toh samajh jao kuch gadbad hai.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>⚠️ CSC Fraud Se Kaise Bachen? (Red Flags)</SH>
+          <SH>CSC Fraud Se Kaise Bachen? (Red Flags)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Bhai, kuch log CSC ka fayda utha kar gareeb kisanon ko loot te hain. In signs par dhyan do:
           </p>
@@ -233,7 +233,7 @@ export default function PmKisanCscRegistrationCharges() {
             {[
               {
                 sign: '100 se zyada maangna',
-                action: 'Turant mana kar do. Sarkari rate ₹25 hai. Usse zyada dena kanoonan galat hai.',
+                action: 'Saaf mana kar do. Sarkari rate ₹25 hai. Usse zyada dena kanoonan galat hai.',
               },
               {
                 sign: 'Bina receipt ke paise lena',
@@ -249,12 +249,12 @@ export default function PmKisanCscRegistrationCharges() {
               },
               {
                 sign: 'Aadhaar number ya OTP chupke se note karna',
-                action: 'Ye data theft hai. Turant wahan se nikal jao aur complaint karo.',
+                action: 'Ye data theft hai. Wahan se uth kar nikal jao aur complaint karo.',
               },
             ].map(({ sign, action }, i) => (
               <div key={i} className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-1">🚩 {sign}</p>
-                <p className="text-xs text-red-700 dark:text-red-300"><strong>✅ Kya Karein:</strong> {action}</p>
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-1">{sign}</p>
+                <p className="text-xs text-red-700 dark:text-red-300"><strong>Kya Karein:</strong> {action}</p>
               </div>
             ))}
           </div>
@@ -301,7 +301,7 @@ export default function PmKisanCscRegistrationCharges() {
               { doc: 'Pen', note: 'Form sign karne ke liye (agar offline form bharna ho).' },
             ].map(({ doc, note }) => (
               <div key={doc} className="p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-                <p className="font-black text-sm text-[var(--color-text)] mb-1">📄 {doc}</p>
+                <p className="font-black text-sm text-[var(--color-text)] mb-1">{doc}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{note}</p>
               </div>
             ))}
@@ -350,14 +350,14 @@ export default function PmKisanCscRegistrationCharges() {
           </p>
           <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl p-5">
             <p className="text-sm text-green-800 dark:text-green-300">
-              <strong> Tip:</strong> Apne block ke Krishi Vigyan Kendra (KVK) ya Agriculture Office par puch lo ki koi free camp chal raha hai ya nahi. Gaon ke pradhan ko bhi pata hota hai.
+              <strong> Free Ka Jugaad:</strong> Apne block ke Krishi Vigyan Kendra (KVK) ya Agriculture Office par puch lo ki koi free camp chal raha hai ya nahi. Gaon ke pradhan ko bhi pata hota hai.
             </p>
           </div>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            CSC Charges Par Aapke Doubts Clear
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="CSC Registration & Charges FAQ" />
         </section>
@@ -373,9 +373,9 @@ export default function PmKisanCscRegistrationCharges() {
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanEkycOnline2026', l: '🔐 Free Online eKYC' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisanBankAccountChangeProcess', l: '🏦 Bank Account Change' },
+          { href: '/articles/PmKisanEkycOnline2026', l: 'Free Online eKYC' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/articles/PmKisanBankAccountChangeProcess', l: 'Bank Account Change' },
         ]} />
         <Disclaimer />
       </div>

@@ -2,12 +2,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
+import { AuthorBox, FAQBlock } from '@/components/ArticleShared';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import GuideDisclaimer from '@/components/GuideDisclaimer';
+import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
   title: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide',
   description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.',
   keywords: ['mushroom farming in small room at home profit', 'oyster mushroom spawn price in India 2026', 'khumbi ki kheti mein kitna pani lagta hai', 'green mold in mushroom treatment home remedy', 'mushroom business plan 10x10 room', 'nhb mushroom subsidy'],
-  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
     title: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide',
     description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.',
@@ -26,25 +30,32 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy' },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    { '@type': 'FAQPage', '@id': 'https://kisanstatus.com/articles/mushroom-kheti-nhb-subsidy/#faq', mainEntity: [
-        { '@type': 'Question', name: 'Kya 10x10 feet ke chhote kamre mein mushroom farming profitable hai?', acceptedAnswer: { '@type': 'Answer', text: 'Haan, 100-150 bags aaram se aa jate hain. Pehle saal seekhne ka hota hai, isliye break-even hona bhi badi baat hai. Doosre saal se direct marketing karke 20-25% net margin nikalna shuru ho jata hai.' } },
-        { '@type': 'Question', name: 'Khumbi ke kamre mein badboo ya smell kyun aati hai?', acceptedAnswer: { '@type': 'Answer', text: 'Agar sterilization sahi se hua ho toh smell minimal hoti hai. Lekin agar straw zyada geela chhod diya ya koi bag kharab ho gaya aur use turant bahar nahi nikala, toh ammonia ya sadan ki badboo aane lagti hai.' } },
-        { '@type': 'Question', name: 'Green mold (hara fungus) dikhe toh turant kya karein?', acceptedAnswer: { '@type': 'Answer', text: 'Us bag ko chupke se kamre se bahar nikal kar jala dein ya gehra gaad dein. Bachaye hue bags ke aas-paas Neem oil (5ml/litre) ya Trichoderma viride spray karein. Bleaching powder se farsh saaf karein.' } },
-        { '@type': 'Question', name: 'Asli mushroom beej (spawn) kahan se aur kitne mein milega?', acceptedAnswer: { '@type': 'Answer', text: '2026 mein certified labs se oyster spawn ka rate ₹180 se ₹250 per kg hai. Hamesha DMR Solan ya state agricultural university ke authorized vendors se hi lein. Local mandi ke anjaam sources se bachein.' } },
-        { '@type': 'Question', name: 'NHB mushroom subsidy kitni milti hai aur kaise apply karein?', acceptedAnswer: { '@type': 'Answer', text: 'NHB back-ended capital subsidy deta hai, jiska percentage state aur unit size ke hisaab se badalta hai — zyadatar general category ke liye 40% ke aas-paas rehta hai. Apply apne zila Horticulture Office se ya NHB ke online portal se hota hai, project report ke saath.' } }
-      ]
-    }
-  ]
-};
+const mushroomKhetiFaqs = [
+  {
+    q: 'Kya 10x10 feet ke chhote kamre mein mushroom farming profitable hai?',
+    a: 'Haan, 100-150 bags aaram se aa jate hain. Pehle saal seekhne ka hota hai, isliye break-even hona bhi badi baat hai. Doosre saal se direct marketing karke 20-25% net margin nikalna shuru ho jata hai.',
+  },
+  {
+    q: 'Khumbi ke kamre mein badboo ya smell kyun aati hai?',
+    a: 'Agar sterilization sahi se hua ho toh smell minimal hoti hai. Lekin agar straw zyada geela chhod diya ya koi bag kharab ho gaya aur use waqt par bahar nahi nikala, toh ammonia ya sadan ki badboo aane lagti hai.',
+  },
+  {
+    q: 'Green mold (hara fungus) dikhe toh turant kya karein?',
+    a: 'Us bag ko chupke se kamre se bahar nikal kar jala dein ya gehra gaad dein. Bachaye hue bags ke aas-paas Neem oil (5ml/litre) ya Trichoderma viride spray karein. Bleaching powder se farsh saaf karein.',
+  },
+  {
+    q: 'Asli mushroom beej (spawn) kahan se aur kitne mein milega?',
+    a: '2026 mein certified labs se oyster spawn ka rate ₹180 se ₹250 per kg hai. Hamesha DMR Solan ya state agricultural university ke authorized vendors se hi lein. Local mandi ke anjaam sources se bachein.',
+  },
+  {
+    q: 'NHB mushroom subsidy kitni milti hai aur kaise apply karein?',
+    a: 'NHB back-ended capital subsidy deta hai, jiska percentage state aur unit size ke hisaab se badalta hai — zyadatar general category ke liye 40% ke aas-paas rehta hai. Apply apne zila Horticulture Office se ya NHB ke online portal se hota hai, project report ke saath.',
+  },
+];
 
 export default function MushroomKheti() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-
       <Image
         src="/images/kisanguides/Mushroomhero.webp"
         alt="Oyster Mushroom Farming Setup in Dark Room"
@@ -61,7 +72,7 @@ export default function MushroomKheti() {
 
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Seedhi baat:</strong> YouTube par "zero investment, mahine ke lakhon" wale videos dekhkar bahut se naujawan seedha 200-300 bags laga lete hain. Par 15 din baad jab green mold (hara fungus) puri batch kharab kar deta hai, tab pata chalta hai ki khumbi ugana sirf bags latakane ka naam nahi hai. Yeh ek controlled science hai. Jab aap sterilization aur humidity control ka practical tareeka samajh jate hain, tabhi yeh business ek stable income source ban pata hai.
+          <strong>Pehle yeh jaan lein:</strong> YouTube par "zero investment, mahine ke lakhon" wale videos dekhkar bahut se naujawan seedha 200-300 bags laga lete hain. Par 15 din baad jab green mold (hara fungus) puri batch kharab kar deta hai, tab pata chalta hai ki khumbi ugana sirf bags latakane ka naam nahi hai. Yeh ek controlled science hai. Jab aap sterilization aur humidity control ka practical tareeka samajh jate hain, tabhi yeh business ek stable income source ban pata hai.
         </p>
       </div>
 
@@ -173,7 +184,7 @@ export default function MushroomKheti() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Is capital ko manage karne ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> ek behtareen vikalp hai. Mushroom farming ko officially horticulture activity ke under cover kiya jata hai. Chhote scale par food processing ke liye <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> se 35% tak ki subsidy claim ki ja sakti hai.
+        Is capital ko manage karne ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">KCC card</Link> ek behtareen vikalp hai. Mushroom farming ko officially horticulture activity ke under cover kiya jata hai. Chhote scale par food processing ke liye <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME subsidy guide</Link> se 35% tak ki subsidy claim ki ja sakti hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -230,8 +241,8 @@ export default function MushroomKheti() {
         Fungi cultivation mein rog tezi se failta hai. Prevention hi best cure hai.
       </p>
       <ul className="list-disc pl-5 space-y-3 mb-8 text-gray-700 dark:text-gray-300">
-        <li><strong>Green Mold (Trichoderma):</strong> Agar bag mein hara chhakka dikhayi de, toh us bag ko turant kamre se bahar nikal kar jala dein ya gehra gaad dein. Bachaye hue bags ke aas-paas <em>Trichoderma viride</em> ka live culture spray karein, jo is harmful fungus ko kha jata hai. Neem oil spray (5ml/litre) bhi ek asardaar upay hai.</li>
-        <li><strong>Bacterial Blotch:</strong> Mushroom ke cap par peele ya bhure dhabbe. Iska karan zyada nami aur hawa ka na rukna hai. Turant watering band karein, exhaust fan chalayein, aur bleaching powder ke halke solution se floor saaf karein.</li>
+        <li><strong>Green Mold (Trichoderma):</strong> Agar bag mein hara chhakka dikhayi de, toh us bag ko usi waqt kamre se bahar nikal kar jala dein ya gehra gaad dein. Bachaye hue bags ke aas-paas <em>Trichoderma viride</em> ka live culture spray karein, jo is harmful fungus ko kha jata hai. Neem oil spray (5ml/litre) bhi ek asardaar upay hai.</li>
+        <li><strong>Bacterial Blotch:</strong> Mushroom ke cap par peele ya bhure dhabbe. Iska karan zyada nami aur hawa ka na rukna hai. Watering foran band karein, exhaust fan chalayein, aur bleaching powder ke halke solution se floor saaf karein.</li>
       </ul>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -341,7 +352,7 @@ export default function MushroomKheti() {
         Ek kadwi sachai yeh hai ki subsidy process mein 3-6 mahine lag sakte hain, aur paperwork thoda complex hota hai.
       </p>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Mera strong suggestion hai: apna kaam subsidy ke intezaar mein na rokiye. Pehle apni pocket se chhota setup karein, bank se loan lein, aur application daal dein. Agar subsidy aa gayi, toh use future expansion mein lagayein. Apne zila ke Horticulture Officer se mil kar latest state-specific scheme ki jankari zaroor lein.
+        Mera strong suggestion hai: apna kaam subsidy ke intezaar mein na rokiye. Pehle apni pocket se chhota setup karein, bank se loan lein, aur application daal dein. Agar subsidy aa gayi, toh use future expansion mein lagayein. Apne zila ke Horticulture Officer se mil kar latest state-specific scheme ki jankari le lein.
       </p>
 
       <ExternalLinkButton
@@ -370,28 +381,7 @@ export default function MushroomKheti() {
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Frequently Asked Questions
       </h2>
-      <div className="space-y-4 mb-8 not-prose">
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Kya 10x10 feet ke chhote kamre mein mushroom farming profitable hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, 100-150 bags aaram se aa jate hain. Pehle saal seekhne ka hota hai, isliye break-even hona bhi badi baat hai. Doosre saal se direct marketing karke 20-25% net margin nikalna shuru ho jata hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Khumbi ke kamre mein badboo ya smell kyun aati hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Agar sterilization sahi se hua ho toh smell minimal hoti hai. Lekin agar straw zyada geela chhod diya ya koi bag kharab ho gaya aur use turant bahar nahi nikala, toh ammonia ya sadan ki badboo aane lagti hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Green mold (hara fungus) dikhe toh turant kya karein?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Us bag ko chupke se kamre se bahar nikal kar jala dein ya gehra gaad dein. Bachaye hue bags ke aas-paas Neem oil (5ml/litre) ya Trichoderma viride spray karein. Bleaching powder se farsh saaf karein.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Asli mushroom beej (spawn) kahan se aur kitne mein milega?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">2026 mein certified labs se oyster spawn ka rate ₹180 se ₹250 per kg hai. Hamesha DMR Solan ya state agricultural university ke authorized vendors se hi lein. Local mandi ke anjaam sources se bachein.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">5. NHB mushroom subsidy kitni milti hai aur kaise apply karein?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">NHB back-ended capital subsidy deta hai, jiska percentage state aur unit size ke hisaab se badalta hai — zyadatar general category ke liye 40% ke aas-paas rehta hai. Apply apne zila Horticulture Office se ya NHB ke online portal se hota hai, project report ke saath.</p>
-        </div>
-      </div>
+      <FAQBlock faqs={mushroomKhetiFaqs} variant="inline" />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Final Decision: Kya Yeh Aapke Liye Sahi Hai?
@@ -399,7 +389,7 @@ export default function MushroomKheti() {
 
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
-          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">Haan, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Kam jagah (100-200 sq ft) available hai.</li>
             <li>• Daily 3-4 hours de sakte hain (monitoring zaroori hai).</li>
@@ -410,7 +400,7 @@ export default function MushroomKheti() {
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Nahi, agar:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">Nahi, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Temperature control nahi kar sakte.</li>
             <li>• Daily monitoring nahi kar sakte (yeh 365 din ka kaam hai).</li>
@@ -421,7 +411,7 @@ export default function MushroomKheti() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        <strong>Dhyan rakhein:</strong> Bina research ke kisi private vendor ki baaton mein aakar decision na lein jo "lakhon ka profit" ka wada karein. Pehle apne nazdeeki Krishi Vigyan Kendra (KVK) jayein. Wahan ke officers aapko exact subsidy, eligible vendors ki list, aur free practical training ke baare mein guide karenge. Uske baad kam se kam 3 vendors se quotation lein, unke purane installations dekhne jayein, aur phir hi apply karein.
+        <strong>Ek Cheez Ka Khayal Rakhein:</strong> Bina research ke kisi private vendor ki baaton mein aakar decision na lein jo "lakhon ka profit" ka wada karein. Pehle apne nazdeeki Krishi Vigyan Kendra (KVK) jayein. Wahan ke officers aapko exact subsidy, eligible vendors ki list, aur free practical training ke baare mein guide karenge. Uske baad kam se kam 3 vendors se quotation lein, unke purane installations dekhne jayein, aur phir hi apply karein.
       </p>
 
       <Image
@@ -434,21 +424,21 @@ export default function MushroomKheti() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Sources & References
+        Jankari Ke Official Sources
       </h2>
       <ul className="list-disc pl-5 space-y-2 mb-8 text-sm text-gray-600 dark:text-gray-400 not-prose">
         <li><strong>National Horticulture Board (NHB):</strong> Official guidelines for mushroom farming subsidies, training modules, and back-ended capital assistance.</li>
         <li><strong>Directorate of Mushroom Research (DMR), Solan:</strong> Government of India premier portal for scheme details, spawn quality standards, and application protocols.</li>
-        <li><strong>Krishi Vigyan Kendra (KVK):</strong> District-level practical training modules, hands-on mushroom cultivation support, and local vendor verification.</li>
-        <li><strong>FSSAI:</strong> Regulatory guidelines for packaged mushroom, food safety licensing, and value-added product norms.</li>
+        <li><strong>Apne Zile Ka KVK:</strong> District-level practical training modules, hands-on mushroom cultivation support, and local vendor verification.</li>
+        <li><strong>FSSAI Ka License:</strong> Regulatory guidelines for packaged mushroom, food safety licensing, and value-added product norms.</li>
       </ul>
 
-      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
-        <p className="text-sm text-gray-700 dark:text-gray-300">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Yeh article general educational purpose ke liye hai. Actual costs, subsidies, aur procedures aapke location, state policies, aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial investment karne se pehle qualified professionals (horticulture officers, NHB officials, ya bank managers) se consult karein. Last updated: August 2026.
-        </p>
-      </div>
+      <AuthorBox modified={getArticleBySlug('mushroom-kheti-nhb-subsidy')!.modifiedTime} />
+
+      <GuideDisclaimer
+        consult="horticulture officers, NHB officials, ya bank managers"
+        modified={getArticleBySlug('mushroom-kheti-nhb-subsidy')!.modifiedTime}
+      />
     </article>
   );
 }

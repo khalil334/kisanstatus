@@ -1,14 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import { Disclaimer } from '@/components/ArticleShared';
-import { EXTERNAL_LINK_PROPS } from '@/lib/site-config';
+import { getArticleBySlug } from '@/lib/articles-data';
+import { Disclaimer, AuthorBox } from '@/components/ArticleShared';
+import { EXTERNAL_LINK_PROPS, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Drip aur Sprinkler Subsidy: PDMC ke 55% / 45% Niyam Aur Poora Process',
   description: 'Micro-irrigation subsidy ka asli structure — PDMC ke tahat small/marginal kisan ko 55% aur baaki kisan ko 45% assistance, unit cost norms, state top-up, application steps aur maintenance reality.',
   keywords: ['drip irrigation subsidy', 'sprinkler irrigation subsidy', 'PDMC per drop more crop', 'micro irrigation unit cost', 'water conservation', 'irrigation subsidy'],
-  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
     title: 'Drip aur Sprinkler Subsidy: PDMC ke 55% / 45% Niyam Aur Poora Process',
     description: 'Micro-irrigation subsidy ka asli structure — PDMC assistance rates, unit cost norms, state top-up aur application process.',
@@ -297,7 +298,7 @@ export default function DripSprinkler() {
       </ul>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Apply kaise karein — step by step
+        Apply kaise karein — kadam se kadam
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Application state ke portal se hota hai, central portal se nahi. Har state ka apna system
@@ -343,7 +344,7 @@ export default function DripSprinkler() {
       />
 
       <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-        <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">⚠️ Jahan log sabse zyada phanste hain</h3>
+        <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">Jahan log sabse zyada phanste hain</h3>
         <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
           <li><strong>Quotation vs unit cost ka gap:</strong> subsidy notified cost par hai. Vendor ka bill upar gaya to farak poora aapka.</li>
           <li><strong>Approval se pehle kharidari:</strong> file mein pre-approval nahi hai to claim atak jaata hai.</li>
@@ -370,7 +371,7 @@ export default function DripSprinkler() {
               <li>✓ Filter aur pressure gauge par nazar rakhein — pressure girna pehla warning signal hai.</li>
               <li>✓ Filter backwash / cleaning routine follow karein.</li>
               <li>✓ Laterals ke end caps khol kar flushing karein.</li>
-              <li>✓ Leak ya toota pipe turant theek karein; ek leak poore block ka pressure kharab karti hai.</li>
+              <li>✓ Leak ya toota pipe usi din theek karein; ek leak poore block ka pressure kharab karti hai.</li>
             </ul>
           </div>
           <div>
@@ -426,7 +427,7 @@ export default function DripSprinkler() {
 
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
-          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Aapke liye theek hai, agar</h3>
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">Aapke liye theek hai, agar</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Aapke ilake mein paani ki kami hai ya water table gir raha hai.</li>
             <li>• Pumping ka bijli/diesel kharcha aapke input cost mein bada hissa hai.</li>
@@ -436,7 +437,7 @@ export default function DripSprinkler() {
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Ruk kar sochein, agar</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">Ruk kar sochein, agar</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Har season crop aur spacing badalta hai (layout dobara karna padega).</li>
             <li>• Water source hi bharosemand nahi hai — system paani banata nahi, bachata hai.</li>
@@ -457,8 +458,8 @@ export default function DripSprinkler() {
         </a>{' '}
         Isi statement mein ye bhi hai ki states ko ab kharch limits se aage jaane ki zyada
         flexibility di gayi hai — yani aane wale saalon mein state-level variation aur badh sakta
-        hai. Isliye is page ka number nahi, <em>tareeka</em> yaad rakhein: apne state ka current
-        order hi aapka sach hai.
+        hai. Isliye is page ke number par mat rukein — <em>tareeka</em> hi kaam aayega: apne state ka
+        current order hi aapka sach hai.
       </p>
 
       <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-5 mb-8 not-prose">
@@ -472,6 +473,7 @@ export default function DripSprinkler() {
       </div>
 
       <Disclaimer />
+      <AuthorBox modified={getArticleBySlug('drip-sprinkler-irrigation-subsidy')!.modifiedTime} />
     </article>
   );
 }

@@ -4,15 +4,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import { useState, useEffect } from 'react';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-07-20T11:40:00+05:30';
-const MODIFIED = '2026-07-23T16:05:00+05:30';
+const PUBLISHED = '2026-02-13T17:44:35+05:30';
+const MODIFIED = '2026-02-18T06:27:23+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '📋' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide', emoji: '🔐' },
-  { slug: 'PmfbyCropInsurance2026', title: 'PMFBY Insurance', emoji: '🌾' },
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
+  { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Account Change' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
 ];
 
 const FAQS_DATA = [
@@ -115,7 +115,6 @@ function CountdownButton({
         </>
       ) : (
         <>
-          <span>🔗</span>
           <span>{label}</span>
         </>
       )}
@@ -135,13 +134,13 @@ function ExternalLinkCard({
   description: string;
   href: string;
   buttonText: string;
-  icon: string;
+  icon?: string;
   variant?: 'primary' | 'secondary' | 'success';
 }) {
   return (
     <div className="bg-white dark:bg-gray-800 border-2 border-[var(--color-border)] rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
       <div className="flex items-start gap-3 mb-3">
-        <span className="text-3xl">{icon}</span>
+        {icon ? <span className="text-3xl">{icon}</span> : null}
         <div>
           <h3 className="font-black text-base text-[var(--color-text)] mb-1">{title}</h3>
           <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">{description}</p>
@@ -174,10 +173,10 @@ export default function PmKisanMaandhanYojanaPension() {
             PM Kisan Maandhan Yojana: 60 Saal Ke Baad ₹3000 Pension Ka Sahi Tarika
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
             <span> {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>️ 16 min read</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>16 min read</span>
           </div>
         </div>
       </div>
@@ -255,7 +254,7 @@ export default function PmKisanMaandhanYojanaPension() {
           </p>
           <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl p-5 mb-6">
             <p className="text-sm font-black text-green-800 dark:text-green-300 mb-3">
-              ✅ Eligible Kaun Hai:
+               Eligible Kaun Hai:
             </p>
             <ul className="list-disc list-inside text-xs text-green-800 dark:text-green-300 space-y-2">
               <li>Umra <strong>18 se 40 saal</strong> ke beech honi chahiye</li>
@@ -268,7 +267,7 @@ export default function PmKisanMaandhanYojanaPension() {
 
           <div className="bg-red-50 dark:bg-red-900/20 border-2 border-red-500 dark:border-red-700 rounded-xl p-5">
             <p className="text-sm font-black text-red-800 dark:text-red-300 mb-3">
-              ❌ Kaun Join Nahi Kar Sakta:
+               Kaun Join Nahi Kar Sakta:
             </p>
             <ul className="list-disc list-inside text-xs text-red-800 dark:text-red-300 space-y-2">
               <li>Jo log <strong>income tax</strong> dete hain</li>
@@ -289,7 +288,7 @@ export default function PmKisanMaandhanYojanaPension() {
           />
 
           <IB>
-            <strong>Important:</strong> Agar aap <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">PM Kisan Samman Nidhi</Link> ke beneficiary hain, toh aap automatically Maandhan Yojana ke liye bhi eligible hain. Dono schemes ek saath chal sakti hain.
+            <strong>Pehle Ye Samajh Lo:</strong> Agar aap <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">PM Kisan Samman Nidhi</Link> ke beneficiary hain, toh aap automatically Maandhan Yojana ke liye bhi eligible hain. Dono schemes ek saath chal sakti hain.
           </IB>
         </section>
 
@@ -349,9 +348,9 @@ export default function PmKisanMaandhanYojanaPension() {
             Apply karne ke 3 tareeke hain. Jo aapko aasan lage wo chuno:
           </p>
 
-          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">🏪 Method 1: CSC Center Se (Sabse Aasan)</h3>
+          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Method 1: CSC Center Se (Sabse Aasan)</h3>
           <StepList>
-            <SI n={1}>Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC center</Link> par jao.</SI>
+            <SI n={1}>Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">apne gaon ke paas wale CSC</Link> par jao.</SI>
             <SI n={2}>Aadhaar card, bank passbook, aur passport size photo le jao.</SI>
             <SI n={3}>CSC operator ko bolo "PM Kisan Maandhan Yojana mein enroll karna hai".</SI>
             <SI n={4}>Wo aapki details portal par dalega.</SI>
@@ -359,12 +358,12 @@ export default function PmKisanMaandhanYojanaPension() {
             <SI n={6}>Ek acknowledgement slip milegi. Sambhal kar rakho.</SI>
           </StepList>
 
-          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">🏦 Method 2: Bank Branch Se</h3>
+          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Method 2: Bank Branch Se</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Agar CSC door hai, toh apne bank branch chale jao. Wahan bhi ye facility available hai. Form milega, bharo, submit karo.
           </p>
 
-          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">🌐 Method 3: Online (Self Service)</h3>
+          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Method 3: Online (Self Service)</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Agar aap tech-savvy ho, toh <strong>maandhan.in</strong> website par jakar khud apply kar sakte ho. Lekin ismein thodi technical knowledge chahiye.
           </p>
@@ -393,7 +392,7 @@ export default function PmKisanMaandhanYojanaPension() {
               { doc: 'Age Proof', note: 'Aadhaar mein DOB likha hai, wahi kaafi hai.' },
             ].map(({ doc, note }) => (
               <div key={doc} className="p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-                <p className="font-black text-sm text-[var(--color-text)] mb-1">📄 {doc}</p>
+                <p className="font-black text-sm text-[var(--color-text)] mb-1">{doc}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{note}</p>
               </div>
             ))}
@@ -448,7 +447,7 @@ export default function PmKisanMaandhanYojanaPension() {
           <div className="space-y-3">
             <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 rounded-r-xl">
               <p className="text-sm text-blue-800 dark:text-blue-300">
-                <strong>👤 Kisan Ki Maut:</strong> Agar kisan ki maut 60 saal se pehle ho jaye, toh uski <strong>patni ko 50% pension</strong> (₹1500 har mahine) milti hai. Ye pension bhi umar bhar milti rehti hai.
+                <strong>Kisan Ki Maut:</strong> Agar kisan ki maut 60 saal se pehle ho jaye, toh uski <strong>patni ko 50% pension</strong> (₹1500 har mahine) milti hai. Ye pension bhi umar bhar milti rehti hai.
               </p>
             </div>
             <div className="bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500 p-4 rounded-r-xl">
@@ -458,7 +457,7 @@ export default function PmKisanMaandhanYojanaPension() {
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-4 rounded-r-xl">
               <p className="text-sm text-green-800 dark:text-green-300">
-                <strong>👤 60 Ke Baad Maut:</strong> Agar pension shuru hone ke baad kisan ki maut ho jaye, toh <strong>patni ko 50% pension</strong> (₹1500 har mahine) umar bhar milti rehti hai. Official documents ke mutabik, pension corpus spouse ko family pension ke roop mein jaari rehta hai.
+                <strong>60 Ke Baad Maut:</strong> Agar pension shuru hone ke baad kisan ki maut ho jaye, toh <strong>patni ko 50% pension</strong> (₹1500 har mahine) umar bhar milti rehti hai. Official documents ke mutabik, pension corpus spouse ko family pension ke roop mein jaari rehta hai.
               </p>
             </div>
           </div>
@@ -498,7 +497,7 @@ export default function PmKisanMaandhanYojanaPension() {
             ].map(({ problem, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
                 <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2"> {problem}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>✅ Fix:</strong> {solution}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>Iska Hal:</strong> {solution}</p>
               </div>
             ))}
           </div>
@@ -556,7 +555,7 @@ export default function PmKisanMaandhanYojanaPension() {
               { state: 'Punjab/Haryana', note: 'Chhote farmers ke liye best option.' },
             ].map(({ state, note }) => (
               <div key={state} className="p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-                <p className="font-black text-sm text-[var(--color-text)] mb-1">📍 {state}</p>
+                <p className="font-black text-sm text-[var(--color-text)] mb-1">{state}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{note}</p>
               </div>
             ))}
@@ -573,22 +572,22 @@ export default function PmKisanMaandhanYojanaPension() {
           </p>
           <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl mb-3">
             <p className="text-sm text-amber-800 dark:text-amber-300">
-              <strong>⚠️ CSC Availability:</strong> Kuch remote areas mein CSC centers door hain. Travel karna padta hai, jo chhote farmers ke liye extra kharcha hai.
+              <strong>CSC Availability:</strong> Kuch remote areas mein CSC centers door hain. Travel karna padta hai, jo chhote farmers ke liye extra kharcha hai.
             </p>
           </div>
           <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl mb-3">
             <p className="text-sm text-amber-800 dark:text-amber-300">
-              <strong>⚠️ Processing Time:</strong> 60 saal hone ke baad pension start hone mein 2-3 mahine lag sakte hain. Documentation complete hona zaroori hai.
+              <strong>Processing Time:</strong> 60 saal hone ke baad pension start hone mein 2-3 mahine lag sakte hain. Documentation complete hona zaroori hai.
             </p>
           </div>
           <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl mb-3">
             <p className="text-sm text-amber-800 dark:text-amber-300">
-              <strong>️ Missed Contributions:</strong> Agar monthly paisa nahi diya toh baad mein penalty ke saath bharna padta hai. Consistent payment zaroori hai.
+              <strong>Missed Contributions:</strong> Agar monthly paisa nahi diya toh baad mein penalty ke saath bharna padta hai. Consistent payment zaroori hai.
             </p>
           </div>
           <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl">
             <p className="text-sm text-amber-800 dark:text-amber-300">
-              <strong>⚠️ Correction Charges:</strong> Naam, DOB, ya bank details mein correction karne par ₹20-50 lagte hain. Isliye enrollment ke waqt details sahi check karo.
+              <strong>Correction Charges:</strong> Naam, DOB, ya bank details mein correction karne par ₹20-50 lagte hain. Isliye enrollment ke waqt details sahi check karo.
             </p>
           </div>
         </section>
@@ -596,7 +595,7 @@ export default function PmKisanMaandhanYojanaPension() {
         <section className="mb-8">
           <SH>Kuch Galat Fahmiyan Jo Door Karni Zaroori Hain</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Kuch log sochte hain ki ye scheme fraud hai ya pension kabhi nahi milegi. Sach ye hai ki ye LIC aur government jointly manage karti hain, aur ab tak lakhon kisanon ko regular pension mil rahi hai.
+            Kuch log sochte hain ki ye scheme fraud hai ya pension kabhi nahi milegi. Jabki is scheme ko LIC aur government jointly manage karti hain, aur ab tak lakhon kisanon ko regular pension mil rahi hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Ek aur common confusion hai ki ₹3000 bahut kam hai. Lekin gaon ke expenses ke hisaab se ye amount bijli, paani, aur dawai ke liye kaafi helpful hota hai — aur ye har mahine guaranteed milega.
@@ -616,7 +615,6 @@ export default function PmKisanMaandhanYojanaPension() {
               description="Yahan se online apply karein, apna status check karein, aur scheme ki puri jaankari lein."
               href="https://maandhan.in"
               buttonText="Official Portal Par Jayein"
-              icon="🌐"
               variant="primary"
             />
             <ExternalLinkCard
@@ -624,7 +622,6 @@ export default function PmKisanMaandhanYojanaPension() {
               description="PM Kisan ki beneficiary list check karein aur eKYC complete karein."
               href="https://pmkisan.gov.in"
               buttonText="PM Kisan Portal"
-              icon="💰"
               variant="secondary"
             />
             <ExternalLinkCard
@@ -632,7 +629,7 @@ export default function PmKisanMaandhanYojanaPension() {
               description="Nazdiki CSC center dhoondhein jahan jakar aap Maandhan Yojana mein enroll kar sakte hain."
               href="https://find.csc.gov.in"
               buttonText="CSC Dhoondhein"
-              icon="🏪"
+              icon=""
               variant="success"
             />
           </div>
@@ -640,7 +637,7 @@ export default function PmKisanMaandhanYojanaPension() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Pension Yojana — Doubts Aur Unke Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Maandhan Yojana FAQ" />
         </section>
@@ -649,8 +646,8 @@ export default function PmKisanMaandhanYojanaPension() {
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanMasterGuide2026', l: ' Master Guide' },
-          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
-          { href: '/articles/PmfbyCropInsurance2026', l: '🌾 PMFBY Insurance' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
+          { href: '/articles/PmfbyCropInsurance2026', l: 'PMFBY Insurance' },
         ]} />
         <Disclaimer />
       </div>

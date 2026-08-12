@@ -2,14 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu Ka Bhav — MSP vs Mandi', emoji: '🌾' },
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📊' },
-  { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration', emoji: '🏪' },
-  { slug: 'mandi-bhav-app-comparison', title: 'Best Mandi Bhav Apps', emoji: '📱' },
-  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Sabzi Bhav Guide', emoji: '🧅' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu Bhav: MSP vs Mandi' },
+  { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
 ];
 
 const FAQS_DATA = [
@@ -108,10 +106,10 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
             MSP List 2026-27: Rabi &amp; Kharif Ki Poori Table, Pichhle Saal Se Comparison
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 11 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -162,7 +160,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           wagairah). Isliye ek hi &quot;2026-27 list&quot; mein dono announcements ke numbers aate hain.
         </IB>
 
-        <SH>🌾 Rabi MSP 2026-27 — Gehu, Chana, Sarson</SH>
+        <SH>Rabi MSP 2026-27 — Gehu, Chana, Sarson</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Rabi ki bo-ai October-December mein hoti hai aur katai March-April mein. Is season ki khaas baat:
           gehu ka margin 109% nikla — matlab MSP production cost se do guna se bhi upar hai. Safflower mein
@@ -211,7 +209,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           loading="lazy"
         />
 
-        <SH>☀️ Kharif MSP 2026-27 — Dhan, Kapas, Dalhan, Tilhan</SH>
+        <SH>Kharif MSP 2026-27 — Dhan, Kapas, Dalhan, Tilhan</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Kharif ki bo-ai monsoon ke saath June-July mein hoti hai. 14 faslon ke rate declare hote hain, lekin
           dhan, jowar aur kapas ki do-do grades hone ki wajah se table mein 17 entries banti hain.
@@ -257,7 +255,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           loading="lazy"
         />
 
-        <SH>📈 Is Baar Kahan Sabse Zyada Fayda Hua</SH>
+        <SH>Is Baar Kahan Sabse Zyada Fayda Hua</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Table lambi hai, isliye seedhe kaam ki baat. Tilhan (oilseeds) mein badhotri sabse tez rahi —
           sunflower ₹622, til ₹500, nigerseed ₹515. Iski wajah policy hai: India abhi bhi khaane ka tel bahut
@@ -275,7 +273,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           desh mein ek hai, lekin uski sarkari kharid har district mein nahi hoti.
         </DB>
 
-        <SH>🧮 MSP Ka Number Kaise Banta Hai</SH>
+        <SH>MSP Ka Number Kaise Banta Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Process har saal ek jaisa chalta hai:
         </p>
@@ -323,7 +321,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           loading="lazy"
         />
 
-        <SH>🏪 MSP Par Bechna Hai Toh Kya Karna Padega</SH>
+        <SH>MSP Par Bechna Hai Toh Kya Karna Padega</SH>
         <StepList>
           <SI n={1}>
             <strong>State procurement portal par registration</strong> — window sowing ke baad khulti hai.
@@ -375,7 +373,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           loading="lazy"
         />
 
-        <SH>⚖️ MSP Par Bechein Ya Mandi Mein — Faisla Kaise Karein</SH>
+        <SH>MSP Par Bechein Ya Mandi Mein — Faisla Kaise Karein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Har season ye sawal aata hai. Seedha jawab: dono rate compare karo, aur sirf rate nahi — kharche aur
           risk bhi.
@@ -449,7 +447,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           loading="lazy"
         />
 
-        <SH>❌ Char Galat Baatein Jo Aksar Suni Jati Hain</SH>
+        <SH>Char Galat Baatein Jo Aksar Suni Jati Hain</SH>
         <div className="space-y-3 my-4">
           <div className="p-4 border border-[var(--color-border)] rounded-xl">
             <p className="font-bold text-sm text-[var(--color-text)] mb-1">&quot;MSP par bechna kanooni haq hai&quot;</p>
@@ -481,7 +479,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           </div>
         </div>
 
-        <SH>⚠️ Aam Galtiyan — Jo Registration Aur Kharid Mein Files Rukwati Hain</SH>
+        <SH>Aam Galtiyan — Jo Registration Aur Kharid Mein Files Rukwati Hain</SH>
         <StepList>
           <SI n={1}><strong>Naam ka mismatch:</strong> Aadhaar mein "Ram Kumar", khatauni mein "Ramkumar", bank mein "R. Kumar" — aur registration atak gaya. Portal par form bharne se pehle teeno kagaz saamne rakh kar naam ki spelling milao. Hazaron files isi ek wajah se rukti hain.</SI>
           <SI n={2}><strong>Registration window miss karna:</strong> window sowing ke baad khulti hai aur kharid shuru hone se pehle band ho jati hai. "Katai ke baad dekhenge" wali soch season kha jati hai — abhi apne state portal par dates check karo.</SI>
@@ -491,23 +489,24 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </StepList>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">MSP Ki Table Se Zyada Kaam Ki Cheez: Nami Ka Meter</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            2026-27 mein gehu ₹2,585 aur dhan ₹2,441 (common) par hai. Badhotri sabse zyada tilhan mein hui —
-            sunflower ₹622, nigerseed ₹515, til ₹500. Makka aur moong lagbhag wahin rahe kyunki unka margin
-            pehle se upar tha.
+            2026-27 ki badhotri tilhan mein sabse mote paise laayi — sunflower ₹622, nigerseed ₹515, til ₹500 —
+            jabki gehu ₹2,585 aur dhan ₹2,441 (common) par hai aur makka-moong lagbhag wahin rahe. Par saal bhar
+            ka farak in numbers se nahi, kaante par tay hota hai.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            MSP ko floor samjho, target nahi. Bechne se pehle mandi ka rate check karo, procurement portal par
-            registration time se karwa lo, aur nami ka dhyan rakho — sabse zyada paisa wahin katta hai.{' '}
-            <strong>Abhi apne state ke procurement portal par jao aur registration status check karo.</strong>
+            Poori MSP tab milti hai jab teen cheezein pehle se theek hon: procurement portal par registration
+            (window fasal katne se pehle band ho jaati hai), DBT ke liye active aur Aadhaar-mapped account, aur
+            nami limit — gehu ~12%, dhan ~17%. Nami ek-do percent upar nikli toh table ka rate kagaz par rehta
+            hai aur haath mein kata hua rate aata hai. Isliye bechne se pehle nami napwao, uske baad tarikh tay karo.
           </p>
         </div>
 
-        <SH>❓ FAQ — Aapke Sawaal</SH>
+        <SH>FAQ — Aapke Sawaal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             CCEA press release, Rabi Marketing Season 2026-27 MSP — 1 October 2025.{' '}
@@ -530,9 +529,9 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles/mandi-bhav-today', l: '📊 Aaj Ka Mandi Bhav' },
-          { href: '/articles/gehu-ka-bhav-msp-vs-mandi', l: '🌾 Gehu MSP vs Mandi' },
-          { href: '/articles/category/mandi', l: '📂 Market Rates' },
+          { href: '/articles/mandi-bhav-today', l: 'Mandi Ke Aaj Ke Rates' },
+          { href: '/articles/gehu-ka-bhav-msp-vs-mandi', l: 'Gehu MSP vs Mandi' },
+          { href: '/articles/category/mandi', l: 'Mandi-Bhav Section' },
         ]} />
         <Disclaimer />
       </div>

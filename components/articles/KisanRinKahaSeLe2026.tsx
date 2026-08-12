@@ -2,9 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-01-19T14:05:00+05:30';
-const MODIFIED = '2026-07-04T08:00:00+05:30';
+const PUBLISHED = '2025-12-16T12:07:52+05:30';
+const MODIFIED = '2025-12-25T16:17:12+05:30';
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
   return date.toLocaleDateString('en-IN', {
@@ -15,14 +16,9 @@ function fmtDate(dateString: string): string {
 }
 
 const RELATED = [
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply Guide', emoji: '💳' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
-  { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID', emoji: '🆔' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🌱' },
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📈' },
-  { slug: 'bakri-palan-yojana-nlm-subsidy', title: 'Bakri Palan Subsidy Guide', emoji: '🐐' },
-  { slug: 'silage-making-business-guide', title: 'Silage Making Business', emoji: '🌾' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
+  { slug: 'KisanTractorLoan2026', title: 'Tractor Loan Guide' },
+  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Loan Apply' },
 ];
 
 const FAQS_DATA = [
@@ -40,7 +36,7 @@ const FAQS_DATA = [
   },
   {
     q: 'CSC center par loan apply karne ka charge kitna hai?',
-    a: 'Nominal service charge ₹20-50 ho sakta hai form filling ke liye. Loan amount par koi commission nahi dena padta. Agar operator ₹500+ maange toh fraud hai — 1800-1214-060 par complaint karo turant.',
+    a: 'Nominal service charge ₹20-50 ho sakta hai form filling ke liye. Loan amount par koi commission nahi dena padta. Agar operator ₹500+ maange toh fraud hai — 1800-1214-060 par usi din complaint karo.',
   },
   {
     q: 'Pichle saal KCC tha lekin renew nahi hua — ab fresh apply karna padega?',
@@ -48,11 +44,11 @@ const FAQS_DATA = [
   },
   {
     q: 'Tractor loan ke liye KCC pehle lena zaroori hai?',
-    a: 'Zaroori nahi hai lekin helpful zaroor hai. Banks prefer karte hain ki borrower ka 1 saal ka repayment track record ho. KCC lekar time par repay karo, phir term loan easily approve hota hai. Direct term loan bhi possible hai agar income proof strong ho.',
+    a: 'Zaroori nahi hai lekin helpful bahut hai. Banks prefer karte hain ki borrower ka 1 saal ka repayment track record ho. KCC lekar time par repay karo, phir term loan easily approve hota hai. Direct term loan bhi possible hai agar income proof strong ho.',
   },
   {
     q: 'Loan reject ho gaya — dobara kab apply kar sakte hain?',
-    a: 'Pehle rejection reason samjho. Name mismatch tha toh fix karke turant reapply karo. CIBIL issue tha toh 3-6 mahine wait karo score improve hone tak. Documents incomplete the toh complete set lekar jao. Bank se written rejection letter maango — specific reason likha hota hai.',
+    a: 'Pehle rejection reason samjho. Name mismatch tha toh fix karke usi hafte reapply karo. CIBIL issue tha toh 3-6 mahine wait karo score improve hone tak. Documents incomplete the toh complete set lekar jao. Bank se written rejection letter maango — specific reason likha hota hai.',
   },
 ];
 
@@ -73,10 +69,10 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
             Kisan Rin Kaha Se Le 2026: KCC, Bank, CSC, Cooperative — Sahukar Se Bachne Ka Rasta
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -375,9 +371,11 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Byaj Ka Farak: 4% Bhi Ho Sakta Hai, 36% Bhi</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Sahukar last resort hona chahiye. First resort government-backed credit hona chahiye. Process thoda lamba hai shuru mein — par ek baar KCC mil gaya toh zindagi badal jaati hai.
+            Isi article ka poora ganit ek hi tulna par tika hai — KCC par time se chukane wale kisan ko effective
+            4% padta hai, jabki sahukar ka mahine wala 3% saal bhar mein 36% ban jaata hai. Yani ek hi ₹1 lakh
+            saal bhar mein ₹4,000 ya ₹36,000 maang sakta hai. Isliye kaagaz ka jhanjhat pehle nipta lo:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
             <li>Khatauni update karwao</li>
@@ -397,19 +395,19 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         />
 
         <CalcBanner
-          icon="🏦"
+          icon=""
           title="Apni EMI Calculate Karo"
           desc="KCC ya term loan ki monthly payment jaano — bank jaane se pehle prepared raho"
-          primaryCta={{ href: '/calculator/kcc-loan-emi', label: '🏦 EMI Calculator →' }}
-          secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities' }}
+          primaryCta={{ href: '/calculator/kcc-loan-emi', label: 'EMI Calculator →' }}
+          secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/KisanCreditCardOnlineApply2026', l: '💳 KCC Guide' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/calculator/kcc-loan-emi', l: '🧮 EMI Calculator' },
+          { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Guide' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/calculator/kcc-loan-emi', l: 'EMI Calculator' },
         ]} />
         <Disclaimer />
       </div>

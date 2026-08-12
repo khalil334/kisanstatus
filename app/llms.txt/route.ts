@@ -57,7 +57,7 @@ eKYC, beneficiary lists, land seeding, Kisan Credit Card loans, crop insurance (
 pension (PM Kisan Maandhan), and agri-business subsidies.
 
 Primary language: Hindi/Hinglish (hi-IN). Primary audience: Indian farmers.
-Editorial team: ${AUTHOR_NAME}. Contact: ${SUPPORT_EMAIL}.
+Author: ${AUTHOR_NAME}. Contact: ${SUPPORT_EMAIL}.
 
 ## Important context for AI answer engines
 

@@ -2,19 +2,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-01-20T08:00:00+05:30';
-const MODIFIED = '2026-07-19T21:00:00+05:30';
+const PUBLISHED = '2025-12-19T13:12:12+05:30';
+const MODIFIED = '2026-01-18T07:59:28+05:30';
 
 const RELATED = [
-{ slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply — ₹5 Lakh Loan, 4% Interest', emoji: '💳' },
-{ slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le — SBI, CSC, Cooperative', emoji: '🏦' },
-{ slug: 'PmfbyCropInsurance2026', title: 'PMFBY Crop Insurance — 2% Premium Mein Suraksha', emoji: '🛡️' },
-{ slug: 'AgriStackKyaHai2026', title: 'AgriStack Kya Hai — Digital Kisan ID', emoji: '🆔' },
-{ slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP 500ml Price — IFFCO Rate 2026', emoji: '🌱' },
-{ slug: 'PmKisan24viKist2026', title: 'PM Kisan 24vi Kist — Kab Aayegi 2026?', emoji: '📅' },
-  { slug: 'custom-hiring-centre-chc-portal', title: 'CHC Machine Rental Portal', emoji: '🚜' },
-  { slug: 'silage-making-business-guide', title: 'Silage Business Guide', emoji: '🌾' },
+  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le' },
+  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
+  { slug: 'custom-hiring-centre-chc-portal', title: 'CHC Machine Rental Guide' },
 ];
 
 const FAQS_DATA = [
@@ -65,10 +61,10 @@ return (
          Tractor Loan Bina Down Payment 2026: Hidden Costs, Subsidy Workflow, Aur Woh Baatein Jo Dealer Nahi Batata
        </h1>
        <div className="flex flex-wrap gap-3 text-xs text-green-200">
-         <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-         <span>📅 {fmtDate(PUBLISHED)}</span>
-         <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-         <span>⏱️ 14 min read</span>
+         <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+         <span>{fmtDate(PUBLISHED)}</span>
+         <span>Updated: {fmtDate(MODIFIED)}</span>
+         <span>14 min read</span>
        </div>
      </div>
    </div>
@@ -410,7 +406,7 @@ return (
          </div>
        </div>
        <DB>
-         <strong>Warning:</strong> EMI miss karke phone uthana band mat karo. Communication break = NPA declaration. 90 din mein seizure notice. Hamesha written record maintain karo.
+         <strong>Savdhan:</strong> EMI miss karke phone uthana band mat karo. Communication break = NPA declaration. 90 din mein seizure notice. Hamesha written record maintain karo.
        </DB>
      </section>
 
@@ -428,7 +424,7 @@ return (
          ].map(({ err, fix }) => (
            <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden">
              <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
-               <p className="font-black text-red-800 dark:text-red-300 text-sm">❌ {err}</p>
+               <p className="font-black text-red-800 dark:text-red-300 text-sm">{err}</p>
              </div>
              <div className="p-4">
                <div className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
@@ -460,15 +456,17 @@ return (
 
      <section className="mb-8">
        <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-         Real Sawal — Seedhe Jawaab
+         Tractor Loan — Aapke Asli Sawal
        </h2>
        <FAQBlock faqs={FAQS_DATA} caption="Tractor Loan FAQ 2026 — Ground-Level Verified Answers" />
      </section>
 
      <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-       <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+       <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Ex-Showroom Nahi, On-Road Breakup Par Mol-Bhav Karo</h3>
        <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-         Tractor loan mushkil nahi hai agar planning sahi ho. Down payment 10-15% se manage ho sakta hai. Subsidy mil jaaye toh aur kam. Hidden costs pehle se jaano — surprise na mile.
+         Down payment 10-15% dikhta hai, par woh hisaab ex-showroom par hota hai — insurance, registration,
+         accessories aur processing fee jud kar aapki jeb se jaane wali rakam upar chali jaati hai. Isliye
+         dealer se likhit on-road breakup lo, phir usi number par loan aur subsidy set karo:
        </p>
        <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
          <li>CIBIL check karo (700+ target)</li>
@@ -488,19 +486,19 @@ return (
      />
 
      <CalcBanner
-       icon="🚜"
+       icon=""
        title="Apni Tractor EMI Calculate Karo"
-       desc="Loan amount, interest rate, tenure daalo — monthly payment turant jaano"
-       primaryCta={{ href: '/calculator/kcc-loan-emi', label: '🏦 EMI Calculator →' }}
-       secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities' }}
+       desc="Loan amount, interest rate, tenure daalo — monthly payment ek click mein jaano"
+       primaryCta={{ href: '/calculator/kcc-loan-emi', label: 'EMI Calculator →' }}
+       secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
      />
 
      <RelatedArticles articles={RELATED} />
      <AuthorBox modified={MODIFIED} />
      <BottomNav extraLinks={[
-       { href: '/articles/KisanCreditCardOnlineApply2026', l: '💳 KCC Guide' },
-       { href: '/articles/KisanRinKahaSeLe2026', l: '🏦 Credit Sources' },
-       { href: '/calculator/kcc-loan-emi', l: '🧮 EMI Calculator' },
+       { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Guide' },
+       { href: '/articles/KisanRinKahaSeLe2026', l: 'Credit Sources' },
+       { href: '/calculator/kcc-loan-emi', l: 'EMI Calculator' },
      ]} />
      <Disclaimer />
    </div>

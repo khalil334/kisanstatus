@@ -290,7 +290,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         <div>
           <p className="font-bold text-[var(--color-text)] text-sm m-0">PM Kisan Portal — e-KYC</p>
           <p className="text-xs text-[var(--color-text-muted)] mt-0.5 mb-0">
-            Government of India — pmkisan.gov.in
+            pmkisan.gov.in — Govt. of India
           </p>
         </div>
         <a
@@ -329,23 +329,22 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
       </ul>
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
-        <p className="text-2xl mb-2">📆</p>
-        <p className="font-black text-lg mb-1">Kist Ruki Hai? Pata Karo Kyun</p>
+        <p className="font-black text-lg mb-1">eKYC Ho Gayi, Kist Phir Bhi Nahi?</p>
         <p className="text-green-100 text-sm mb-4">
-          eKYC, bank seeding, land seeding check karo — 4 sawaal mein exact reason.
+          Tracker se pata karo kaunsa step abhi bhi pending hai.
         </p>
         <div className="flex flex-wrap justify-center gap-2.5">
           <Link
             href="/calculator/installment-tracker"
             className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors"
           >
-            📆 Kist Tracker Kholo →
+             Installment Tracker kholo →
           </Link>
           <Link
             href="/calculator"
             className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors"
           >
-            🧮 Sab Utilities Dekho
+             Baaki calculators bhi dekho
           </Link>
         </div>
       </div>
@@ -361,7 +360,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
       </p>
       <p>
         नंबर बदल गया हो तो portal के record में भी नया नंबर डलवाना समझदारी है — कैसे, यह{' '}
-        <Link href="/articles/PmKisanMobileNumberChangeUpdate">इस page पर समझाया है</Link>। वरना status
+        <Link href="/articles/PmKisanMobileNumberChangeUpdate">यहां step-by-step बताया है</Link>। वरना status
         check और शिकायत, दोनों में आगे दिक्कत आएगी।
       </p>
       <p>
@@ -495,16 +494,16 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">आगे किस page पर जाएं</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li>
-            <Link href="/articles/PmKisanFaceAuthenticationEkyc">🤳 Face Auth eKYC App Guide</Link>
+            <Link href="/articles/PmKisanFaceAuthenticationEkyc">Face Auth eKYC App Guide</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC Online — पूरी guide</Link>
+            <Link href="/articles/PmKisanEkycOnline2026">eKYC Online — पूरी guide</Link>
           </li>
           <li>
-            <Link href="/articles/hi/status-check-mobile-se">📱 मोबाइल से स्टेटस चेक</Link>
+            <Link href="/articles/hi/status-check-mobile-se">बिना registration number के status</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanMobileNumberChangeUpdate">☎️ Mobile Number Update Guide</Link>
+            <Link href="/articles/PmKisanMobileNumberChangeUpdate">Mobile Number Update Guide</Link>
           </li>
         </ul>
       </div>

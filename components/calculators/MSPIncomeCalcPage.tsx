@@ -3,13 +3,10 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { InputField, SelectField, ResultRow, fmt, OtherCalcs, CalcHeader, CalcDisclaimer } from './CalcShared';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const SITE_URL = 'https://kisanstatus.com';
-const SITE_NAME = 'KisanStatus';
-const AUTHOR_NAME = 'KisanStatus Team';
-const AUTHOR_URL = `${SITE_URL}/about`;
-const PUBLISHED = '2026-03-01T08:00:00+05:30';
-const MODIFIED = '2026-07-05T09:33:00+05:30';
+const PUBLISHED = '2026-03-10T19:42:43+05:30';
+const MODIFIED = '2026-05-20T09:33:04+05:30';
 
 function fmtDate(iso: string) {
   return new Date(iso).toLocaleDateString('en-IN', {
@@ -55,7 +52,6 @@ export default function MSPIncomeCalcPage() {
     <>
 
       <CalcHeader
-        emoji="💹"
         title="MSP Income Calculator 2026"
         subtitle="Fasal ka MSP rate jaano — kitna paisa milega government se"
         breadcrumb="MSP Income"
@@ -64,13 +60,13 @@ export default function MSPIncomeCalcPage() {
       <div className="container-site max-w-2xl py-8">
 
         <div className="flex flex-wrap gap-3 text-xs text-gray-500 mb-4">
-          <span>✍️ <Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
-          <span>📅 {fmtDate(PUBLISHED)}</span>
-          <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
+          <span><Link href="/about" className="underline hover:text-gray-700">{AUTHOR_NAME}</Link></span>
+          <span>{fmtDate(PUBLISHED)}</span>
+          <span>Updated: {fmtDate(MODIFIED)}</span>
         </div>
 
         <div className="mb-6 p-5 bg-orange-50 border border-orange-200 rounded-xl text-sm text-gray-700 leading-relaxed">
-          <p className="font-bold text-orange-900 mb-2">💹 MSP Kya Hai — Fasal Ka Sahi Daam Jaano</p>
+          <p className="font-bold text-orange-900 mb-2">MSP Kya Hai — Fasal Ka Sahi Daam Jaano</p>
           <p className="mb-2">
             <strong>MSP (Minimum Support Price)</strong> ek tarah ki guarantee hai — mandi mein rate kitna bhi gir jaye, government isse kam mein aapki fasal nahi khareedne degi. Ye kisano ko bade nuksan se bachane ke liye banayi gayi hai.
           </p>
@@ -78,12 +74,12 @@ export default function MSPIncomeCalcPage() {
             Jaise agar gehun ka MSP ₹2,550/quintal hai aur aapke paas 10 quintal gehun hai — to <strong>₹25,500</strong> milna tay hai, chahe mandi mein rate ₹2,000 chal raha ho ya ₹3,000.
           </p>
           <p className="text-xs text-orange-700 mt-3">
-            💡 MSP par bechna hai to FCI ya state procurement centers ka rukh karo. E-NAM portal par bhi ek baar dekh lena.
+             MSP par bechna hai to FCI ya state procurement centers ka rukh karo. E-NAM portal par bhi ek baar dekh lena.
           </p>
         </div>
 
         <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
-          <h2 className="font-black text-gray-900 text-base mb-5">🧮 Fasal Details Bharo</h2>
+          <h2 className="font-black text-gray-900 text-base mb-5">Fasal Details Bharo</h2>
 
           <SelectField
             label="Kaunsi fasal hai?"
@@ -117,7 +113,7 @@ export default function MSPIncomeCalcPage() {
           {qtl>0 && (
             <div className="mt-4 bg-orange-50 border-2 border-orange-200 rounded-2xl p-5">
               <p className="text-xs text-orange-700 font-bold uppercase tracking-wide mb-3">
-                📊 {cropData.name} — MSP Income 2025-26
+                 {cropData.name} — MSP Income 2025-26
               </p>
               <ResultRow label="MSP Rate" value={`₹${cropData.msp.toLocaleString('en-IN')}/quintal`} />
               <ResultRow label="Total Fasal (quintal)" value={`${qtl.toFixed(2)} qtl`} />
@@ -125,18 +121,18 @@ export default function MSPIncomeCalcPage() {
               <ResultRow label="Total MSP Income" value={fmt(income)} bold highlight />
 
               <div className="mt-3 p-3 bg-white rounded-xl text-xs text-gray-700">
-                <p className="font-bold mb-1">📖 Iska Matlab:</p>
+                <p className="font-bold mb-1">Iska Matlab:</p>
                 <p>Aapke paas {qtl.toFixed(2)} quintal {cropData.name} hai. MSP rate ₹{cropData.msp}/quintal hai. Total income {fmt(income)} hogi. Agar {landN} hectare zameen hai to per hectare {fmt(perHectare)} milega.</p>
               </div>
 
               <div className="mt-3 pt-3 border-t border-orange-200 text-xs text-orange-700">
-                💡 Yeh rates 2025-26 ke hain — official confirmation ke liye dfpd.gov.in check karo
+                 Yeh rates 2025-26 ke hain — official confirmation ke liye dfpd.gov.in check karo
               </div>
             </div>
           )}
 
           <div className="mt-5">
-            <p className="font-bold text-gray-900 text-xs mb-3">📋 Sabhi Fasal Ka MSP Rate 2025-26</p>
+            <p className="font-bold text-gray-900 text-xs mb-3">Sabhi Fasal Ka MSP Rate 2025-26</p>
             <div className="overflow-x-auto rounded-xl border border-gray-200">
               <table className="w-full text-xs border-collapse">
                 <thead>
@@ -161,7 +157,7 @@ export default function MSPIncomeCalcPage() {
         </div>
 
         <div className="mt-6 bg-white border border-gray-200 rounded-2xl p-5 shadow-sm">
-          <h3 className="font-black text-gray-900 text-sm mb-4">🏪 MSP Par Fasal Kaise Bechein</h3>
+          <h3 className="font-black text-gray-900 text-sm mb-4">MSP Par Fasal Kaise Bechein</h3>
           <div className="space-y-3">
             {[
               {n:1,s:'Pehle fasal taiyar karo — safai, grading, moisture check, sab FCI standards ke hisaab se'},
@@ -179,7 +175,7 @@ export default function MSPIncomeCalcPage() {
           </div>
 
           <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-xl">
-            <p className="text-xs text-green-800 font-bold mb-1">📄 Documents Checklist:</p>
+            <p className="text-xs text-green-800 font-bold mb-1">Documents Checklist:</p>
             <ul className="text-xs text-green-700 space-y-0.5 ml-4">
               <li>✓ Aadhaar card</li>
               <li>✓ Land records (khasra/khatauni)</li>
@@ -191,35 +187,35 @@ export default function MSPIncomeCalcPage() {
         </div>
 
         <div className="mt-6">
-          <h3 className="font-black text-gray-900 text-sm mb-3">💡 MSP Se Maximum Fayda Kaise Uthao</h3>
+          <h3 className="font-black text-gray-900 text-sm mb-3">MSP Se Maximum Fayda Kaise Uthao</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             <div className="p-3 bg-green-50 border border-green-200 rounded-xl">
-              <p className="font-bold text-green-900 mb-1">📊 Quality Maintain Karo</p>
+              <p className="font-bold text-green-900 mb-1">Quality Maintain Karo</p>
               <p className="text-green-800">Moisture aur grading theek rakho — quality achhi hogi tabhi reject hone ka risk nahi rahega</p>
             </div>
             <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl">
-              <p className="font-bold text-blue-900 mb-1">🏪 Sahi Center Chuno</p>
+              <p className="font-bold text-blue-900 mb-1">Sahi Center Chuno</p>
               <p className="text-blue-800">FCI, MARKFED ya state procurement centers hi MSP dete hain — private traders isse bachte hain</p>
             </div>
             <div className="p-3 bg-purple-50 border border-purple-200 rounded-xl">
-              <p className="font-bold text-purple-900 mb-1">⏰ Time Par Becho</p>
+              <p className="font-bold text-purple-900 mb-1">Time Par Becho</p>
               <p className="text-purple-800">Harvest hote hi jaldi bech do, storage cost bhi bachegi aur mandi ki rush se bhi bach jaoge</p>
             </div>
             <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl">
-              <p className="font-bold text-amber-900 mb-1">💰 E-NAM Use Karo</p>
+              <p className="font-bold text-amber-900 mb-1">E-NAM Use Karo</p>
               <p className="text-amber-800">Ek baar E-NAM par bhi try karo — multiple buyers compete karte hain, kabhi behtar rate mil jata hai</p>
             </div>
           </div>
         </div>
 
         <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
-          <p className="font-bold text-yellow-900 text-sm mb-2">⚠️ MSP Mein Aksar Yeh Galtiyan Hoti Hain:</p>
+          <p className="font-bold text-yellow-900 text-sm mb-2">MSP Mein Aksar Yeh Galtiyan Hoti Hain:</p>
           <ul className="space-y-1.5 text-xs text-yellow-800">
-            <li>❌ Private trader ke paas MSP ki umeed se jana — woh apna hi rate dete hain, MSP nahi</li>
-            <li>❌ Moisture ya grading kharab hona — isse fasal seedhe reject ho sakti hai</li>
-            <li>❌ Documents bhool jana — bina inke procurement possible nahi hota</li>
-            <li>❌ Der se pahunchna — mandi mein rush ho jata hai, ghante wait karna padta hai</li>
-            <li>❌ Receipt na lena — baad mein koi dispute ho to proof nahi milega</li>
+            <li>Private trader ke paas MSP ki umeed se jana — woh apna hi rate dete hain, MSP nahi</li>
+            <li>Moisture ya grading kharab hona — isse fasal seedhe reject ho sakti hai</li>
+            <li>Documents bhool jana — bina inke procurement possible nahi hota</li>
+            <li>Der se pahunchna — mandi mein rush ho jata hai, ghante wait karna padta hai</li>
+            <li>Receipt na lena — baad mein koi dispute ho to proof nahi milega</li>
           </ul>
         </div>
 
@@ -228,31 +224,31 @@ export default function MSPIncomeCalcPage() {
         <OtherCalcs current="/calculator/msp-income" />
 
         <div className="mt-6 p-5 bg-orange-50 border border-orange-200 rounded-xl">
-          <p className="font-bold text-orange-900 text-sm mb-3">📖 MSP Se Related Guides</p>
+          <p className="font-bold text-orange-900 text-sm mb-3">MSP Se Related Guides</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <Link href="/articles/PmKisan24viKist2026" className="p-3 bg-white border border-orange-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-orange-600 hover:text-white transition-colors">
-              📆 PM Kisan Status — ₹6,000 Free
+               PM Kisan Status — ₹6,000 Free
             </Link>
             <Link href="/articles/KisanCreditCardOnlineApply2026" className="p-3 bg-white border border-orange-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-orange-600 hover:text-white transition-colors">
-              💳 KCC Loan — Kheti Ke Liye Paisa
+               KCC Loan — Kheti Ke Liye Paisa
             </Link>
             <Link href="/articles/PmfbyCropInsurance2026" className="p-3 bg-white border border-orange-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-orange-600 hover:text-white transition-colors">
-              🛡️ Fasal Bima — MSP Ke Sath Zaroori
+               Fasal Bima — MSP Ke Sath Zaroori
             </Link>
             <Link href="/articles/soil-health-card-complete-guide-2026" className="p-3 bg-white border border-orange-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-orange-600 hover:text-white transition-colors">
-              🌱 Soil Health Card — Better Yield
+              Soil Health Card — Better Yield
             </Link>
             <Link href="/calculator/crop-profit" className="p-3 bg-white border border-orange-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-orange-600 hover:text-white transition-colors">
-              📊 Kheti Munafa Calculator
+               Kheti Munafa Calculator
             </Link>
             <Link href="/articles/NanoDap500mlPriceInIndia2026" className="p-3 bg-white border border-orange-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-orange-600 hover:text-white transition-colors">
-              🧪 Nano DAP — Kam Kharcha
+               Nano DAP — Kam Kharcha
             </Link>
           </div>
         </div>
 
         <div className="mt-6 p-5 bg-gray-50 border border-gray-200 rounded-xl">
-          <p className="font-bold text-gray-900 text-sm mb-3">❓ MSP Ke Baare Mein Aksar Sawaal</p>
+          <p className="font-bold text-gray-900 text-sm mb-3">MSP Ke Baare Mein Aksar Sawaal</p>
           <div className="space-y-3 text-xs">
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">MSP kya hota hai?</summary>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import MSPIncomeCalcPage from '@/components/calculators/MSPIncomeCalcPage';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/msp-income`;
@@ -7,6 +8,8 @@ const PAGE_URL = `${DOMAIN}/calculator/msp-income`;
 export const metadata: Metadata = {
   title: 'MSP Income Calculator 2026 — Fasal MSP Rate',
   description: 'MSP rate par fasal bechne par kitna paisa milega, jaano turant. Gehun, dhaan, sarson, kapas ka MSP 2025-26 check karein. Bilkul free calculator.',
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  creator: AUTHOR_NAME,
   keywords: [
     'msp income calculator',
     'fasal ka msp rate',
@@ -51,11 +54,6 @@ export default function Page() {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'INR',
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      ratingCount: '1423',
     },
   };
 

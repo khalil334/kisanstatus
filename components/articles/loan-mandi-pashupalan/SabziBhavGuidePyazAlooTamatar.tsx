@@ -2,14 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📊' },
-  { slug: 'mandi-bhav-app-comparison', title: 'Mandi Bhav Apps Comparison', emoji: '📱' },
-  { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu: MSP vs Mandi Bhav', emoji: '🌾' },
-  { slug: 'msp-list-2026-27', title: 'MSP List 2026-27', emoji: '📋' },
-  { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration Guide', emoji: '💻' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
+  { slug: 'mandi-bhav-app-comparison', title: 'Best Mandi Bhav Apps' },
+  { slug: 'msp-list-2026-27', title: 'MSP List 2026-27' },
 ];
 
 const FAQS_DATA = [
@@ -43,7 +41,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya cold storage ke against loan milta hai?',
-    a: 'Haan — isko pledge finance ya warehouse receipt loan kehte hain. Aloo cold storage mein rakh kar uski receipt ke against bank se loan mil sakta hai. Isse fayda yeh hai ki turant paise ki zaroorat bhi poori ho jaati hai aur stock hold bhi rehta hai. KCC limit bhi working capital ke liye kaam aati hai — dono options apne bank se discuss karo.',
+    a: 'Haan — isko pledge finance ya warehouse receipt loan kehte hain. Aloo cold storage mein rakh kar uski receipt ke against bank se loan mil sakta hai. Isse fayda yeh hai ki haath-kharch ki zaroorat bhi poori ho jaati hai aur stock hold bhi rehta hai. KCC limit bhi working capital ke liye kaam aati hai — dono options apne bank se discuss karo.',
   },
   {
     q: 'Sabzi mandi mein commission aur katauti kitni hoti hai?',
@@ -71,10 +69,10 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
             Pyaz, Aloo, Tamatar Kab Bechein? Seasonal Price Cycle, Cold Storage Ka Hisaab Aur NAFED Ka Asar — Poori Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 11 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -93,7 +91,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         </div>
 
         <DB>
-          <strong>TL;DR — seedha faisla:</strong>
+          <strong>Teen fasal, teen alag calendar:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>Pyaz-aloo-tamatar par <strong>MSP nahi hota</strong> — bhav pura demand-supply ka khel hai, timing hi hathiyar hai.</li>
             <li>Sirf <strong>rabi pyaz aur aloo store</strong> hote hain — tamatar mein hold ki strategy hai hi nahi, wahan planting ki timing hi game hai.</li>
@@ -123,11 +121,11 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         <IB>
           Pehli baat note kar lo — pyaz, aloo, tamatar par <strong>MSP nahi hota</strong>. MSP sirf 23 notified
           crops par hai. Sabzi ka bhav pura demand-supply ka khel hai, isliye timing hi sab kuch hai. MSP wali
-          fasal ka hisaab samajhna ho toh <Link href="/articles/msp-list-2026-27" className="underline font-bold">MSP
-          List 2026-27</Link> dekho.
+          fasal ka hisaab samajhna ho toh <Link href="/articles/msp-list-2026-27" className="underline font-bold">MSP ka
+          poora rate chart</Link> dekho.
         </IB>
 
-        <SH>🧅 Pyaz — Do Fasal, Ek Gap, Aur Wahi Kahani Har Saal</SH>
+        <SH>Pyaz — Do Fasal, Ek Gap, Aur Wahi Kahani Har Saal</SH>
         <Image
           src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/pyaz-khudai.webp"
           alt="Khet mein pyaz ki khudai — boriyon mein bharti hui fasal"
@@ -138,7 +136,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           loading="lazy"
         />
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Pyaz ki kahani samajhne ke liye bas do fasal yaad rakho. <strong>Rabi pyaz</strong> (March-May mein
+          Pyaz ki kahani do fasal par tiki hai. <strong>Rabi pyaz</strong> (March-May mein
           harvest) — saal ke total production ka sabse bada hissa, aur yahi woh pyaz hai jo 4-6 mahine store ho
           sakta hai. <strong>Kharif pyaz</strong> (October-December harvest) — nami wala, jaldi kharab hone
           wala, seedha mandi jaane wala.
@@ -190,7 +188,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           arrival aksar achha rate pakad leti hai.
         </WB>
 
-        <SH>🏛️ NAFED Buffer Stock — Jo Aapki Strategy Badal Deta Hai</SH>
+        <SH>NAFED Buffer Stock — Jo Aapki Strategy Badal Deta Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Sarkar ke liye pyaz political sabzi hai — bhav chadhte hi shor machta hai. Isliye Price Stabilisation
           Fund (PSF) ke under NAFED aur NCCF har saal rabi season mein kisano se pyaz kharid kar buffer stock
@@ -206,7 +204,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           poora risk ek din par nahi lagta.
         </p>
 
-        <SH>🥔 Aloo — Cold Storage Ka Khel, Par Hisaab Ke Saath</SH>
+        <SH>Aloo — Cold Storage Ka Khel, Par Hisaab Ke Saath</SH>
         <Image
           src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/cold-storage.webp"
           alt="Aloo cold storage ke andar — boriyon ke oonche stack"
@@ -232,12 +230,12 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Aloo ka price pattern bhi supply gap wala hi hai — harvest (Jan-March) par sabse sasta, phir jaise-jaise
           cold storage ka stock nikalta hai, August se November tak bhav aam taur par behtar hota jaata hai.
-          Lekin yaad rakho: jis saal storage mein maal zyada bhara hota hai, us saal ka September bhi thanda reh
-          sakta hai. Isliye storage bharne se pehle yeh zaroor pucho ki is saal aas-paas ke storages kitne bhare
+          Ek apwaad bhi hai: jis saal storage mein maal zyada bhara hota hai, us saal ka September bhi thanda reh
+          sakta hai. Isliye storage bharne se pehle yeh pata karo ki is saal aas-paas ke storages kitne bhare
           hain — yeh chhoti si jaankari aadhi strategy hai.
         </p>
 
-        <SH>🍅 Tamatar — Store Nahi Hota, Isliye Game Alag Hai</SH>
+        <SH>Tamatar — Store Nahi Hota, Isliye Game Alag Hai</SH>
         <Image
           src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/tamatar-crate.webp"
           alt="Crate mein taiyar pakka tamatar — mandi le jaane ke liye"
@@ -268,7 +266,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           retail/direct supply jahan mandi se behtar rate milta hai.
         </DB>
 
-        <SH>📰 2026 Ka Asli Scene — Nashik Se Seedha Sabak</SH>
+        <SH>2026 Ka Asli Scene — Nashik Se Seedha Sabak</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Yeh cycle kitaabi baat nahi hai — 2026 ka rabi season khud dekho. May 2026 mein rabi harvest ke flood
           mein Nashik belt ki mandiyon mein average pyaz ₹800-1,000 per quintal tak gira, aur Nandgaon APMC ke
@@ -285,7 +283,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           hafte ka bhi sabr rakh saka, uska average behtar nikla.
         </p>
 
-        <SH>📊 Roz Ka Bhav Check Karna — 5 Minute Ki Aadat</SH>
+        <SH>Roz Ka Bhav Check Karna — 5 Minute Ki Aadat</SH>
         <Image
           src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/bhav-check.webp"
           alt="Mandi jaane se pehle kisan phone par bhav check karta hua"
@@ -311,11 +309,11 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           Kaunsa app sabse kaam ka hai — iska poora comparison{' '}
           <Link href="/articles/mandi-bhav-app-comparison" className="underline font-bold">Mandi Bhav Apps
           Guide</Link> mein hai. Aur agar aap eNAM ke through doosri mandiyon mein bechne ka rasta kholna chahte
-          ho toh <Link href="/articles/enam-registration-kaise-kare" className="underline font-bold">eNAM
-          Registration Guide</Link> dekho — registration ek baar ka kaam hai, option hamesha ke liye khul jaata hai.
+          ho toh <Link href="/articles/enam-registration-kaise-kare" className="underline font-bold">eNAM par
+          panjikaran ki step-by-step guide</Link> dekho — registration ek baar ka kaam hai, option hamesha ke liye khul jaata hai.
         </p>
 
-        <SH>⚠️ 5 Galtiyan Jo Sabzi Kisan Ka Munafa Kha Jaati Hain</SH>
+        <SH>5 Galtiyan Jo Sabzi Kisan Ka Munafa Kha Jaati Hain</SH>
         <Image
           src="/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/sabzi-boli.webp"
           alt="Sabzi mandi mein boli — buyers crate ke aas-paas"
@@ -333,10 +331,10 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           <SI n={5}><strong>NAFED/buffer stock ko ignore karna</strong> — pyaz mein bade boom ka intezaar karne walo ka stock aksar tab bikta hai jab sarkar buffer utar chuki hoti hai. Sarkari intervention ab cycle ka permanent hissa hai — strategy usi ke hisaab se banao.</SI>
         </StepList>
 
-        <SH>❓ FAQ — Aksar Puche Jaane Wale Sawal</SH>
+        <SH>FAQ — Aksar Puche Jaane Wale Sawal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             Free Press Journal — Nashik onion MAPP ₹1,580 order, May 2026.{' '}
@@ -355,8 +353,8 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Articles' },
-          { href: '/articles/category/mandi', l: '📂 Mandi Bhav Guides' },
+          { href: '/articles', l: 'Sabhi Guides' },
+          { href: '/articles/category/mandi', l: 'Mandi Bhav Guides' },
         ]} />
         <Disclaimer />
       </div>

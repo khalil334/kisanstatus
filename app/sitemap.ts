@@ -59,6 +59,20 @@ const REFERENCE_DATE = new Date(
 
 const FALLBACK_DATE = REFERENCE_DATE;
 
+// Hub pages inherit the freshest date of the content they list, so they can never
+// drift out of sync with their children the way hardcoded dates did.
+const MAANDHAN_UPDATED = new Date(
+  Math.max(
+    ...MAANDHAN_ARTICLES.map((a) => {
+      const t = new Date(a.modified || a.published).getTime();
+      return Number.isFinite(t) ? t : 0;
+    }),
+  ),
+);
+
+// Kept in sync with the per-calculator `MODIFIED` consts in components/calculators/.
+const CALCULATORS_UPDATED = new Date('2026-05-20');
+
 const CORNERSTONE_SLUGS = new Set([
   'PmKisanMasterGuide2026',
   'PmKisan24viKist2026',
@@ -85,7 +99,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: SITE_URL,
-      lastModified: new Date('2026-07-19'),
+      lastModified: now,
       changeFrequency: 'daily',
       priority: 1.0,
       alternates: {
@@ -96,7 +110,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${SITE_URL}/articles`,
-      lastModified: new Date('2026-07-19'),
+      lastModified: now,
       changeFrequency: 'daily',
       priority: 0.90,
     },
@@ -108,7 +122,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${SITE_URL}/maandhan`,
-      lastModified: new Date('2026-08-08'),
+      lastModified: MAANDHAN_UPDATED,
       changeFrequency: 'weekly',
       priority: 0.90,
     },
@@ -122,49 +136,49 @@ export default function sitemap(): MetadataRoute.Sitemap {
       : []),
     {
       url: `${SITE_URL}/calculator`,
-      lastModified: new Date('2026-07-15'),
+      lastModified: CALCULATORS_UPDATED,
       changeFrequency: 'weekly',
       priority: 0.90,
     },
     {
       url: `${SITE_URL}/calculator/quick-status-check`,
-      lastModified: new Date('2026-07-15'),
+      lastModified: new Date('2026-05-10'),
       changeFrequency: 'weekly',
       priority: 0.70,
     },
     {
       url: `${SITE_URL}/calculator/installment-tracker`,
-      lastModified: new Date('2026-07-15'),
+      lastModified: new Date('2026-03-10'),
       changeFrequency: 'weekly',
       priority: 0.70,
     },
     {
       url: `${SITE_URL}/calculator/pm-kisan-benefit`,
-      lastModified: new Date('2026-07-15'),
+      lastModified: new Date('2026-04-05'),
       changeFrequency: 'weekly',
       priority: 0.70,
     },
     {
       url: `${SITE_URL}/calculator/kcc-loan-emi`,
-      lastModified: new Date('2026-07-15'),
+      lastModified: new Date('2026-04-16'),
       changeFrequency: 'weekly',
       priority: 0.70,
     },
     {
       url: `${SITE_URL}/calculator/pmfby-premium`,
-      lastModified: new Date('2026-07-15'),
+      lastModified: new Date('2026-04-24'),
       changeFrequency: 'weekly',
       priority: 0.70,
     },
     {
       url: `${SITE_URL}/calculator/msp-income`,
-      lastModified: new Date('2026-07-15'),
+      lastModified: new Date('2026-05-20'),
       changeFrequency: 'weekly',
       priority: 0.70,
     },
     {
       url: `${SITE_URL}/calculator/crop-profit`,
-      lastModified: new Date('2026-07-15'),
+      lastModified: new Date('2026-04-28'),
       changeFrequency: 'weekly',
       priority: 0.70,
     },

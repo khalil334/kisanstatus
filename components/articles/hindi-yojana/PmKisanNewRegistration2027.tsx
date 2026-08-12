@@ -141,7 +141,7 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
         याद दिला दें — योजना में क्या मिलता है: ₹6,000 सालाना, ₹2,000 की तीन किस्तों में, सीधे बैंक account
         में (DBT)। Landholding किसान परिवार eligible हैं; income tax payer, सरकारी कर्मचारी और
         constitutional post वाले बाहर। पूरी eligibility{' '}
-        <Link href="/articles/PmKisanMasterGuide2026">Master Guide</Link> में।
+        <Link href="/articles/PmKisanMasterGuide2026">eligibility के पूरे ब्योरे वाली guide</Link> में।
       </Callout>
 
       <H2x>आवेदन से पहले — खुद से पांच सवाल</H2x>
@@ -150,11 +150,11 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
         कमी दूर कीजिए, क्योंकि अधूरी तैयारी पर डाला आवेदन महीनों लटकता है:
       </p>
       <ul className="list-none pl-0 my-4 space-y-2 text-sm leading-relaxed">
-        <li>☑️ खेती की जमीन खतौनी में <strong>मेरे नाम</strong> दर्ज है?</li>
-        <li>☑️ परिवार (पति/पत्नी) में कोई और यह लाभ <strong>नहीं</strong> ले रहा?</li>
-        <li>☑️ मैं income tax नहीं भरता, सरकारी सेवा/बड़ी pension में नहीं हूं?</li>
-        <li>☑️ आधार में mobile number जुड़ा है (या CSC जाने को तैयार हूं)?</li>
-        <li>☑️ बैंक खाता चालू हालत में है और आधार से seeded है?</li>
+        <li>खेती की जमीन खतौनी में <strong>मेरे नाम</strong> दर्ज है?</li>
+        <li>परिवार (पति/पत्नी) में कोई और यह लाभ <strong>नहीं</strong> ले रहा?</li>
+        <li>मैं income tax नहीं भरता, सरकारी सेवा/बड़ी pension में नहीं हूं?</li>
+        <li>आधार में mobile number जुड़ा है (या CSC जाने को तैयार हूं)?</li>
+        <li>बैंक खाता चालू हालत में है और आधार से seeded है?</li>
       </ul>
       <p>
         सवाल 1 पर अटके हैं तो पहले तहसील से वरासत/नामांतरण का काम कराइए — यह PM Kisan का नहीं, राजस्व विभाग
@@ -247,7 +247,7 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
             PM Kisan Portal — New Farmer Registration
           </p>
           <p className="text-xs text-[var(--color-text-muted)] mt-0.5 mb-0">
-            Government of India — pmkisan.gov.in
+            Official website — pmkisan.gov.in
           </p>
         </div>
         <a
@@ -311,23 +311,22 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
       </p>
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
-        <p className="text-2xl mb-2">📆</p>
-        <p className="font-black text-lg mb-1">Kist Ruki Hai? Pata Karo Kyun</p>
+        <p className="font-black text-lg mb-1">Registration Ke Baad Kist Ka Intezaar?</p>
         <p className="text-green-100 text-sm mb-4">
-          eKYC, bank seeding, land seeding check karo — 4 sawaal mein exact reason.
+          Tracker batayega aapki application kis stage par hai.
         </p>
         <div className="flex flex-wrap justify-center gap-2.5">
           <Link
             href="/calculator/installment-tracker"
             className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors"
           >
-            📆 Kist Tracker Kholo →
+             Kist ka hisaab yahan dekho →
           </Link>
           <Link
             href="/calculator"
             className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors"
           >
-            🧮 Sab Utilities Dekho
+             Kisan utilities kholo
           </Link>
         </div>
       </div>
@@ -505,19 +504,19 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
-        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">आगे पढ़ने लायक</h3>
+        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">Related Articles — Yeh Bhi Padho</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li>
-            <Link href="/articles/PmKisanCorrectionForm2026">📝 Correction Form Guide</Link>
+            <Link href="/articles/PmKisanCorrectionForm2026">Record सुधारने वाला form</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanEkycOnline2026">🔐 eKYC Online Guide</Link>
+            <Link href="/articles/PmKisanEkycOnline2026">eKYC online — पूरा process</Link>
           </li>
           <li>
-            <Link href="/articles/pm-kisan-self-registered-status-check">🔎 Self-Registered Status Check</Link>
+            <Link href="/articles/pm-kisan-self-registered-status-check">Self-Registered Status Check</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanCscRegistrationCharges">💰 CSC Registration Charges</Link>
+            <Link href="/articles/PmKisanCscRegistrationCharges">CSC Registration Charges</Link>
           </li>
         </ul>
       </div>

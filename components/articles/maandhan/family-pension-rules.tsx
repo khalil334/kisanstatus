@@ -2,28 +2,29 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
-const PUBLISHED = '2026-07-26T08:00:00+05:30';
-const MODIFIED = '2026-07-29T10:30:00+05:30';
+const PUBLISHED = '2026-04-22T17:52:14+05:30';
+const MODIFIED = '2026-05-22T08:37:43+05:30';
 
 const RELATED_CARDS = [
   {
     slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
     title: 'Withdrawal & Refund Rules',
     desc: 'Agar 60 saal se pehle scheme chhodni pade ya death ho jaye, toh paisa kaise wapas milta hai.',
-    emoji: '💸',
+    
   },
   {
     slug: 'pm-kisan-maandhan-status-check-online',
     title: 'Apna Status Check Karein',
     desc: 'Pension card download karne ke baad apna contribution history aur active status verify karein.',
-    emoji: '🔍',
+    
   },
   {
     slug: 'pmkmy-bank-account-change',
     title: 'Bank Account Change Karein',
     desc: 'Agar purana bank band ho gaya hai, to naye account me pension details kaise update karein.',
-    emoji: '🏦',
+    emoji: '',
   },
 ];
 
@@ -76,9 +77,9 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
               articleSection: 'Agriculture & Pension Schemes',
               wordCount: 2100,
               author: {
-                '@type': 'Organization',
-                name: 'KisanStatus Team',
-                url: 'https://kisanstatus.com/about',
+                '@type': 'Person',
+                name: AUTHOR_NAME,
+                url: AUTHOR_URL,
               },
               publisher: {
                 '@type': 'Organization',
@@ -117,10 +118,10 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -145,7 +146,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
 
         <div className="my-6 p-5 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded-r-xl">
           <p className="text-sm md:text-base text-red-900 dark:text-red-100 leading-relaxed font-medium">
-            <strong>Seedhi baat:</strong> Maan lijiye ek kisan ne 40 ki umar mein PM Kisan Maandhan Yojana (PMKMY) join ki. Har mahine unke account se premium kata. Lekin 55 ki umar mein unka achanak dehant ho gaya. Ab unke parivar ke man mein ek hi sawal hai: <em>"Kya jama kiya hua paisa wapas milega ya pension shuru hogi?"</em> Yeh confusion bahut common hai, aur iska jawab scheme ke rules mein chhupa hai.
+            <strong>Ek Case Samjhiye:</strong> Maan lijiye ek kisan ne 40 ki umar mein PM Kisan Maandhan Yojana (PMKMY) join ki. Har mahine unke account se premium kata. Lekin 55 ki umar mein unka achanak dehant ho gaya. Ab unke parivar ke man mein ek hi sawal hai: <em>"Kya jama kiya hua paisa wapas milega ya pension shuru hogi?"</em> Yeh confusion bahut common hai, aur iska jawab scheme ke rules mein chhupa hai.
           </p>
         </div>
 
@@ -184,14 +185,14 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
 
             <div className="space-y-3 mb-4">
               <div className="p-4 bg-white dark:bg-gray-800 border-l-4 border-green-500 rounded">
-                <p className="font-bold text-sm text-green-700 dark:text-green-400 mb-2">✅ Option 1: Scheme Continue Karein</p>
+                <p className="font-bold text-sm text-green-700 dark:text-green-400 mb-2">Option 1: Scheme Continue Karein</p>
                 <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
                   Surviving spouse scheme ko continue kar sakte hain. Is case mein, unhe regular monthly contributions deni hongi jab tak woh 60 saal ki umar tak nahi pahunch jate. 60 saal hone par, unhe ₹3,000 monthly pension milna shuru ho jayegi — bilkul waise hi jaise original subscriber ko milta.
                 </p>
               </div>
 
               <div className="p-4 bg-white dark:bg-gray-800 border-l-4 border-blue-500 rounded">
-                <p className="font-bold text-sm text-blue-700 dark:text-blue-400 mb-2">💰 Option 2: Exit Karein Aur Lump-Sum Le Lein</p>
+                <p className="font-bold text-sm text-blue-700 dark:text-blue-400 mb-2">Option 2: Exit Karein Aur Lump-Sum Le Lein</p>
                 <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
                   Agar spouse scheme continue nahi karna chahte, to woh exit kar sakte hain. Is case mein, unhe accumulated corpus (jama kiya hua fund + sarkar ka matching share + earned interest) ek saath lump-sum refund ke roop mein mil jata hai.
                 </p>
@@ -223,7 +224,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
             Udaharan ke liye, maan lijiye ek kisan ne enrolment ke waqt nomination mein apne bhai ya pita ka naam likh diya tha, lekin ab woh is duniya mein nahi hain. Aise mein bank bina legal no-objection certificate ya succession certificate ke wife ko paisa dene se inkar kar sakta hai, jisse process mein mahino ki deri ho sakti hai.
           </p>
           <WB>
-            <strong>Pro Tip:</strong> Apni nomination aaj hi check karein. Agar aapka naam nahi hai, ya listed person ab appropriate nahi hai, to nearest Common Service Centre (CSC) ya <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="text-green-700 underline hover:text-green-900">PMKMY portal</Link> ke through ise turant update karwayein. Yeh 15 minute ka kaam aapke parivar ko saalon ki pareshani se bacha sakta hai.
+            <strong>Pro Tip:</strong> Apni nomination aaj hi check karein. Agar aapka naam nahi hai, ya listed person ab appropriate nahi hai, to nearest Common Service Centre (CSC) ya <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="text-green-700 underline hover:text-green-900">PMKMY portal</Link> ke through ise bina taale update karwayein. Yeh 15 minute ka kaam aapke parivar ko saalon ki pareshani se bacha sakta hai.
           </WB>
         </section>
 
@@ -261,7 +262,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
           </div>
 
           <StepList>
-            <SI n={1}><strong>Death Certificate Prapt Karein:</strong> Yeh sabse pehla aur mandatory document hai. Ise municipal corporation ya gram panchayat office se turant banwayein. Iske bina koi bhi process aage nahi badhega.</SI>
+            <SI n={1}><strong>Death Certificate Prapt Karein:</strong> Yeh sabse pehla aur mandatory document hai. Ise municipal corporation ya gram panchayat office se pehle hi banwayein. Iske bina koi bhi process aage nahi badhega.</SI>
             <SI n={2}><strong>Enrolment Bank ya CSC Visit Karein:</strong> Claim form usi bank branch ya CSC mein submit karna hota hai jahan farmer ne originally enrolment kiya tha. Koi bhi random branch isme madad nahi kar sakti.</SI>
             <SI n={3}><strong>Survivor Claim Form Fill Karein:</strong> Form mein deceased, claimant, aur bank account ki details dhyan se bharein. Ek bhi spelling mistake ya account number ka galat digit pure file ko reject karwa sakta hai.</SI>
             <SI n={4}><strong>Supporting Documents Attach Karein:</strong> Death certificate, claimant ka ID proof (Aadhaar), address proof, original PMKMY card/receipt, cancelled cheque/passbook copy, aur marriage certificate. <br/><em>State-wise Variation:</em> Kuch states (jaise UP, Bihar, MP) mein Tehsil se 'Legal Heir Certificate' ya additional affidavit mandatory maang sakte hain. Apne district ke specific rules CSC ya bank se confirm karein.</SI>
@@ -302,23 +303,23 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
 
           <div className="space-y-3 mb-4">
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">❌ Galti 1: Nominee Ko Update Na Karna</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Enrolment ke waqt parent ya sibling ko nominee banana, aur baad mein unke guzarne par use update na karna. Shadi ya kisi bhi major life event ke baad CSC jakar nomination update zaroor karein.</p>
+              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">Galti 1: Nominee Ko Update Na Karna</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Enrolment ke waqt parent ya sibling ko nominee banana, aur baad mein unke guzarne par use update na karna. Shadi ya kisi bhi major life event ke baad CSC jakar nomination update kara lein.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">❌ Galti 2: Bank Account Ko Dormant Hone Dena</p>
+              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">Galti 2: Bank Account Ko Dormant Hone Dena</p>
               <p className="text-xs text-[var(--color-text-muted)]">Agar linked savings account mein 2 saal se koi transaction nahi hua, to bank use 'dormant' mark kar deta hai. Claim process ke waqt transfer fail ho jata hai. Account ko active rakhne ke liye chote transactions (jaise ₹100) karte rahein.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">❌ Galti 3: Enrolment Receipt Phenk Dena</p>
+              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">Galti 3: Enrolment Receipt Phenk Dena</p>
               <p className="text-xs text-[var(--color-text-muted)]">Enrolment receipt mein aapka unique number aur contribution history hoti hai. Ise hamesha safe rakhein ya uski photo apne phone mein save kar lein. Har query mein yeh number kaam aata hai.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">❌ Galti 4: Marriage Ko Legally Register Na Karwana</p>
+              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">Galti 4: Marriage Ko Legally Register Na Karwana</p>
               <p className="text-xs text-[var(--color-text-muted)]">Gaon mein traditional shadi ke baad legal registration na karwana baad mein marital relationship prove karne mein rukawat ban sakta hai. Ration card ya voter list mein dono ke naam ek saath hone se madad milti hai.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">❌ Galti 5: Claim File Karne Mein Bahut Deri Karna</p>
+              <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">Galti 5: Claim File Karne Mein Bahut Deri Karna</p>
               <p className="text-xs text-[var(--color-text-muted)]">Grief ke waqt delay natural hai, lekin mahino tak deri karne se documents degrade hote hain aur bank staff change ho jate hain. Ideal yahi hai ki death ke 30 din ke andar process shuru kar dein.</p>
             </div>
           </div>
@@ -327,7 +328,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
         <section className="mb-8">
           <SH>Red Flags: Kab Aur Kaise Karein Escalate?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Normal processing time 30 se 60 din hota hai. Lekin kuch situations mein aapko turant higher authorities ke paas jana chahiye:
+            Normal processing time 30 se 60 din hota hai. Lekin kuch situations mein aapko seedha higher authorities ke paas jana chahiye:
           </p>
           <ul className="list-disc pl-5 text-sm text-[var(--color-text-muted)] space-y-2 mb-4">
             <li><strong>Unreasonable Delay:</strong> Yadi bank ya CSC 45 din se zyada time le raha hai bina kisi likhit (written) reason ke.</li>
@@ -392,9 +393,9 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Ek Baat Yaad Rakhein</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Claim Ka Sahi Order: Certificate → Nomination → Bank</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Aapke loved one ne jo paisa jama kiya, woh ek right hai, koi ehsaan nahi. System thoda slow ho sakta hai, lekin persistence se kaam zaroor hota hai. Ek step ek time lein. Pehle death certificate, phir nomination check, phir bank visit. Kisi bhi official ko aapko darane na dein. Aapka haq hai wahan khade hone ka.
+            Family pension ke claim atakne ki sabse badi wajah order ka ulta hona hai — log pehle bank jaate hain aur wahan se nomination record dekhne wapas bheje jaate hain. Sahi kram yeh hai: pehle death certificate banwayein, phir CSC/maandhan record mein nominee ka naam aur spelling check karein, tabhi bank jaayein. Spouse ko milne wali ₹1,500 (50%) pension inhi teen kadmon ke sahi order par tikti hai — jama kiya hua paisa parivaar ka adhikaar hai, aur record saaf ho toh koi official use rok nahi sakta.
           </p>
         </div>
 
@@ -432,9 +433,9 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/maandhan/pm-kisan-maandhan-withdrawal-refund-rules', l: '💸 Withdrawal Rules' },
-          { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: '🔍 Status Check' },
-          { href: '/maandhan/pmkmy-bank-account-change', l: '🏦 Bank Change' },
+          { href: '/maandhan/pm-kisan-maandhan-withdrawal-refund-rules', l: 'Withdrawal Rules' },
+          { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: 'Status Check' },
+          { href: '/maandhan/pmkmy-bank-account-change', l: 'Bank Change' },
         ]} />
         <Disclaimer />
       </div>

@@ -2,6 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
+import { AuthorBox, FAQBlock } from '@/components/ArticleShared';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import GuideDisclaimer from '@/components/GuideDisclaimer';
+import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
   title: 'PM FME Yojana 2026: Chhote Food Business Ke Liye 35% Subsidy Guide',
@@ -15,7 +19,7 @@ export const metadata: Metadata = {
     'fssai license',
     'odop scheme'
   ],
-  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
     title: 'PM FME Yojana 2026: Chhote Food Business Ke Liye 35% Subsidy Guide',
     description: 'PM FME Yojana complete guide. Janein micro food processing subsidy kaise lein, ODOP benefits, loan process, aur real ground reality.',
@@ -43,58 +47,28 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'FAQPage',
-      '@id': 'https://kisanstatus.com/articles/pm-fme-yojana-food-processing/#faq',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Kya rented jagah par kaam karne walon ko PM FME subsidy milti hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Haan, lekin shart yeh hai ki rent agreement valid ho. Subsidy kiraye (rent) par nahi milti, lekin agar aap us rented space mein renovation, electrical work, ya machinery installation karte hain, toh un expenses par 35% subsidy claim ki ja sakti hai.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Agar bank loan reject ho jaye, toh kya PM FME subsidy mil sakti hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Nahi. PM FME ek "credit-linked" subsidy scheme hai. Iska matlab hai ki subsidy tabhi release hoti hai jab bank aapka loan approve aur disburse kar deta hai. Bina loan sanction ke subsidy claim nahi ki ja sakti.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kya PM FME mein working capital ke liye alag se collateral (girvi) dena padta hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Zyadatar cases mein nahi. PM FME ke under working capital loan CGTMSE (Credit Guarantee Fund Trust for Micro and Small Enterprises) ke cover mein aata hai, jisme ₹2 crore tak ke loan par collateral ki requirement waive ho sakti hai. Lekin final decision bank ki internal credit policy par depend karta hai.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kya purani machinery ko replace karne par bhi subsidy milti hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Haan, PM FME "Technology Upgradation" ko bhi support karti hai. Agar aap purani, inefficient machinery ki jagah nayi, automated, ya food-safe equipment lagate hain, toh uski cost par bhi 35% subsidy claim ki ja sakti hai.',
-          },
-        },
-      ],
-    },
-  ],
-};
+const pMFMEYojanaFaqs = [
+  {
+    q: 'Kya rented jagah par kaam karne walon ko PM FME subsidy milti hai?',
+    a: 'Haan, lekin shart yeh hai ki rent agreement valid ho. Subsidy kiraye (rent) par nahi milti, lekin agar aap us rented space mein renovation, electrical work, ya machinery installation karte hain, toh un expenses par 35% subsidy claim ki ja sakti hai.',
+  },
+  {
+    q: 'Agar bank loan reject ho jaye, toh kya PM FME subsidy mil sakti hai?',
+    a: 'Nahi. Yeh ek "credit-linked" subsidy scheme hai. Iska matlab hai ki subsidy tabhi release hoti hai jab bank aapka loan approve aur disburse kar deta hai. Bina loan sanction ke subsidy claim nahi ki ja sakti.',
+  },
+  {
+    q: 'Kya PM FME mein working capital ke liye alag se collateral (girvi) dena padta hai?',
+    a: 'Zyadatar cases mein nahi. Is scheme ke under working capital loan CGTMSE (Credit Guarantee Fund Trust for Micro and Small Enterprises) ke cover mein aata hai, jisme ₹2 crore tak ke loan par collateral ki requirement waive ho sakti hai. Lekin final decision bank ki internal credit policy par depend karta hai.',
+  },
+  {
+    q: 'Kya purani machinery ko replace karne par bhi subsidy milti hai?',
+    a: 'Haan, yeh scheme "Technology Upgradation" ko bhi support karti hai. Agar aap purani, inefficient machinery ki jagah nayi, automated, ya food-safe equipment lagate hain, toh uski cost par bhi 35% subsidy claim ki ja sakti hai.',
+  },
+];
 
 export default function PMFMEYojana() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
       <Image
         src="/images/kisanguides/pmfhero.webp"
         alt="Small Food Processing Unit Making Pickle - PM FME Yojana Subsidy Guide"
@@ -111,7 +85,7 @@ export default function PMFMEYojana() {
 
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Sach kahoon toh:</strong> Bharat mein hazaron chhote food businesses (jaise achar, papad, bakery, ya namkeen) sirf isliye local market tak seemit reh jate hain kyunki unke paas proper branding, FSSAI license, ya modern packaging ka budget nahi hota. Aksar dekha jata hai ki jab aise micro units ko thoda financial support aur technical guidance milta hai, toh unka turnover 3-4 guna tak badh sakta hai.
+          <strong>Asli samasya paise ki nahi, packaging ki hai:</strong> Bharat mein hazaron chhote food businesses (jaise achar, papad, bakery, ya namkeen) sirf isliye local market tak seemit reh jate hain kyunki unke paas proper branding, FSSAI license, ya modern packaging ka budget nahi hota. Aksar dekha jata hai ki jab aise micro units ko thoda financial support aur technical guidance milta hai, toh unka turnover 3-4 guna tak badh sakta hai.
         </p>
       </div>
 
@@ -124,7 +98,7 @@ export default function PMFMEYojana() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        PM FME Yojana 2020 mein launch hui thi, jiska mukhya uddeshya unregistered micro food processing units ko formal economy mein lana hai. India mein 2.5 crore se zyada aise chhote units hain, lekin unmein se 90% se zyada bina kisi legal registration ya quality certification ke chal rahe hain. Iska seedha asar unki earning par padta hai, kyunki bina FSSAI license ke wo bade retailers ya online platforms par apna product nahi bech sakte.
+        Yeh yojana 2020 mein launch hui thi, jiska mukhya uddeshya unregistered micro food processing units ko formal economy mein lana hai. India mein 2.5 crore se zyada aise chhote units hain, lekin unmein se 90% se zyada bina kisi legal registration ya quality certification ke chal rahe hain. Iska seedha asar unki earning par padta hai, kyunki bina FSSAI license ke wo bade retailers ya online platforms par apna product nahi bech sakte.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 font-semibold">
@@ -148,7 +122,7 @@ export default function PMFMEYojana() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        PM FME ka sabse unique aur powerful feature hai ODOP (One District One Product) concept. Iske tahat, har district ne ek specific food product choose kiya hai jo wahan traditionally banta hai ya jiske liye wahan ka raw material sabse achha hai.
+        Is scheme ka sabse unique aur powerful feature hai ODOP (One District One Product) concept. Iske tahat, har district ne ek specific food product choose kiya hai jo wahan traditionally banta hai ya jiske liye wahan ka raw material sabse achha hai.
       </p>
 
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8 border border-gray-200 dark:border-gray-700 not-prose">
@@ -192,7 +166,7 @@ export default function PMFMEYojana() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        PM FME ke under 35% credit-linked subsidy milti hai. "Credit-linked" ka matlab yeh hai ki pehle aapko bank se loan lena padega, aur jab bank loan disburse karega, tab government aapko 35% amount subsidy ke roop mein wapas karegi (jo bank aapke loan principal mein adjust kar dega).
+        Iske under 35% credit-linked subsidy milti hai. "Credit-linked" ka matlab yeh hai ki pehle aapko bank se loan lena padega, aur jab bank loan disburse karega, tab government aapko 35% amount subsidy ke roop mein wapas karegi (jo bank aapke loan principal mein adjust kar dega).
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-sm italic">
@@ -241,7 +215,7 @@ export default function PMFMEYojana() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        PM FME ke under yeh sab expenses cover hote hain:
+        Scheme ke under yeh sab expenses cover hote hain:
       </p>
 
       <div className="overflow-x-auto mb-8 not-prose">
@@ -302,7 +276,7 @@ export default function PMFMEYojana() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        PM FME ke under apply karne ka process thoda detailed hai, lekin agar aap step-by-step follow karein, toh mushkil nahi hai. Poore process mein 4-6 mahine lag sakte hain, isliye patience rakhein.
+        Apply karne ka process thoda detailed hai, lekin agar aap step-by-step follow karein, toh mushkil nahi hai. Poore process mein 4-6 mahine lag sakte hain, isliye patience rakhein.
       </p>
 
       <Image
@@ -319,7 +293,7 @@ export default function PMFMEYojana() {
           <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
           <div>
             <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Udyam Registration Karwayein</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Sabse pehle aapka business MSME registered hona chahiye. <a href="https://udyamregistration.gov.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Udyam Registration</a> bilkul free hai aur online ho jata hai. 1 din mein certificate mil jata hai. Yeh PM FME ke liye mandatory hai.</p>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Sabse pehle aapka business MSME registered hona chahiye. <a href="https://udyamregistration.gov.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Udyam Registration</a> ka koi shulk nahi aur online ho jata hai. 1 din mein certificate mil jata hai. Yeh PM FME ke liye mandatory hai.</p>
           </div>
         </div>
 
@@ -350,7 +324,7 @@ export default function PMFMEYojana() {
           <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
           <div>
             <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Bank Se Loan Apply Karein</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Apni nazdeeki bank branch jayein. PM FME ke under loan apply karein. Documents chahiye: Udyam certificate, FSSAI license, DPR, Aadhaar, PAN, bank statements (last 1 year), aur machinery quotations. Loan approval mein 30-60 din lag sakte hain. Agar aap working capital ke liye kam interest wala loan chahte hain, toh <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC) online apply karne ka tarika</Link> bhi zaroor padhein.</p>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Apni nazdeeki bank branch jayein aur scheme ke under loan apply karein. Documents chahiye: Udyam certificate, FSSAI license, DPR, Aadhaar, PAN, bank statements (last 1 year), aur machinery quotations. Loan approval mein 30-60 din lag sakte hain. Agar aap working capital ke liye kam interest wala loan chahte hain, toh <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC) online apply karne ka tarika</Link> bhi padh lijiye.</p>
           </div>
         </div>
 
@@ -400,13 +374,13 @@ export default function PMFMEYojana() {
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm">
           <h4 className="font-bold text-blue-600 dark:text-blue-400 mb-1">Scenario 1: Ghar Ka Achar Unit</h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-2"><strong>Pehle:</strong> Ghar mein achar banta tha, ₹10,000 - ₹15,000 mahina kamai hoti thi. Product simple plastic pouches mein becha jata tha, jiski shelf life kam thi.</p>
-          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>PM FME ke baad:</strong> ₹8 lakh ki subsidy mili. Ek chhoti packaging machine li gayi, aur product ko glass jars mein pack kiya gaya. FSSAI license aur ek catchy brand name register kiya gaya. Ab monthly turnover ₹2 - ₹3 lakh tak pahunch gaya hai, aur product local supermarkets mein bhi milta hai.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Subsidy milne ke baad:</strong> ₹8 lakh ki subsidy mili. Ek chhoti packaging machine li gayi, aur product ko glass jars mein pack kiya gaya. FSSAI license aur ek catchy brand name register kiya gaya. Ab monthly turnover ₹2 - ₹3 lakh tak pahunch gaya hai, aur product local supermarkets mein bhi milta hai.</p>
         </div>
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500 shadow-sm">
           <h4 className="font-bold text-blue-600 dark:text-blue-400 mb-1">Scenario 2: SHG Papad Unit</h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-2"><strong>Pehle:</strong> 5 mahilaon ka group manual rolling karta tha. Production slow thi aur monthly income ₹20,000 - ₹25,000 ke aas-paas thi.</p>
-          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>PM FME ke baad:</strong> ₹10 lakh ki subsidy se automatic papad making machine li gayi. Production 5 guna badh gayi. Branded packaging start ki, aur ab monthly turnover ₹1.5 - ₹2 lakh hai.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Scheme ke baad:</strong> ₹10 lakh ki subsidy se automatic papad making machine li gayi. Production 5 guna badh gayi. Branded packaging start ki, aur ab monthly turnover ₹1.5 - ₹2 lakh hai.</p>
         </div>
       </div>
 
@@ -420,7 +394,7 @@ export default function PMFMEYojana() {
       />
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Yeh examples dikhate hain ki PM FME se waqai business transform ho sakta hai. Par yeh tabhi hota hai jab aap quality maintain karte hain aur marketing par dhyan dete hain. Sirf subsidy lene se business apne aap nahi chalta.
+        Yeh examples dikhate hain ki is subsidy se waqai business transform ho sakta hai. Par yeh tabhi hota hai jab aap quality maintain karte hain aur marketing par dhyan dete hain. Sirf subsidy lene se business apne aap nahi chalta.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -428,7 +402,7 @@ export default function PMFMEYojana() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        PM FME application ke liye yeh documents chahiye:
+        Application ke liye yeh documents chahiye:
       </p>
 
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8 border border-gray-200 dark:border-gray-700 not-prose">
@@ -485,7 +459,7 @@ export default function PMFMEYojana() {
       <div className="space-y-4 mb-8 not-prose">
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
           <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">1. Business Actually Nahi Chal Raha</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">PM FME existing business ko upgrade karne ke liye hai. Verification mein officers dekhenge ki unit actually kaam kar rahi hai ya nahi. Fake bills ya dummy units pakde jate hain.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Yeh scheme existing business ko upgrade karne ke liye hai. Verification mein officers dekhenge ki unit actually kaam kar rahi hai ya nahi. Fake bills ya dummy units pakde jate hain.</p>
         </div>
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
@@ -509,7 +483,7 @@ export default function PMFMEYojana() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Do similar schemes hain - PM FME aur PMEGP. Dono mein confusion hota hai. Clear karte hain:
+        Do similar schemes hain - yeh aur PMEGP. Dono mein confusion hota hai. Clear karte hain:
       </p>
 
       <div className="overflow-x-auto mb-8 not-prose">
@@ -557,16 +531,16 @@ export default function PMFMEYojana() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        <strong>Simple rule:</strong> Agar aapka food business already chal raha hai aur aap usko upgrade karna chahte hain, toh PM FME apply karein. Agar aap naya business start karna chahte hain (food ya non-food), toh official <a href="https://www.pmegp.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">PMEGP portal</a> par apply karein. Food processing ke alawa doosri subsidy-based schemes bhi dekhna chahte hain, toh <Link href="/articles/PmKusumYojanaSolarSubsidy2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM Kusum solar subsidy</Link> aur <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">vermi-compost business guide</Link> ise related options hain.
+        <strong>Simple rule:</strong> Agar aapka food business already chal raha hai aur aap usko upgrade karna chahte hain, toh isi scheme mein apply karein. Agar aap naya business start karna chahte hain (food ya non-food), toh official <a href="https://www.pmegp.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">PMEGP portal</a> par apply karein. Food processing ke alawa doosri subsidy-based schemes bhi dekhna chahte hain, toh <Link href="/articles/PmKusumYojanaSolarSubsidy2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM Kusum solar subsidy</Link> aur <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">vermi-compost business guide</Link> ise related options hain.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Kya Aapke Liye Sahi Hai? Final Decision Framework
+        Apply Karein Ya Nahi? Aakhri Faisla Aise Lein
       </h2>
 
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
-          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">Aage Badhein, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Already food processing business chala rahe hain (chahe chhote level par).</li>
             <li>• Business ko formal banana chahte hain (FSSAI, GST, branding).</li>
@@ -577,7 +551,7 @@ export default function PMFMEYojana() {
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Nahi, agar:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">Abhi Mat Karein, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Abhi tak koi business nahi kiya (pehle PMEGP try karein).</li>
             <li>• Food processing mein interested nahi hain.</li>
@@ -588,38 +562,21 @@ export default function PMFMEYojana() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        <strong>Meri advice:</strong> Pehle apne district ka ODOP product pata karein. Agar aap wahi product process karte hain, toh extra benefits milenge. Phir Udyam registration aur FSSAI lein. Uske baad bank jayein, loan apply karein, aur phir PM FME portal par apply karein. Apne nazdeeki District Industries Center (DIC) ke officers se zaroor consult karein, wo application mein bahut help kar sakte hain.
+        <strong>Meri advice:</strong> Pehle apne district ka ODOP product pata karein. Agar aap wahi product process karte hain, toh extra benefits milenge. Phir Udyam registration aur FSSAI lein. Uske baad bank jayein, loan apply karein, aur phir PM FME portal par apply karein. Apne nazdeeki District Industries Center (DIC) ke officers se baat kar lein, wo application mein bahut help kar sakte hain.
       </p>
 
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Frequently Asked Questions (FAQs)
+        PM FME Par Poochhe Gaye Asli Sawal
       </h2>
-      <div className="space-y-4 mb-8 not-prose">
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Kya rented jagah par kaam karne walon ko PM FME subsidy milti hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, lekin shart yeh hai ki rent agreement valid ho. Subsidy kiraye (rent) par nahi milti, lekin agar aap us rented space mein renovation, electrical work, ya machinery installation karte hain, toh un expenses par 35% subsidy claim ki ja sakti hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Agar bank loan reject ho jaye, toh kya PM FME subsidy mil sakti hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Nahi. PM FME ek "credit-linked" subsidy scheme hai. Iska matlab hai ki subsidy tabhi release hoti hai jab bank aapka loan approve aur disburse kar deta hai. Bina loan sanction ke subsidy claim nahi ki ja sakti.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Kya PM FME mein working capital ke liye alag se collateral (girvi) dena padta hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Zyadatar cases mein nahi. PM FME ke under working capital loan CGTMSE (Credit Guarantee Fund Trust for Micro and Small Enterprises) ke cover mein aata hai, jisme ₹2 crore tak ke loan par collateral ki requirement waive ho sakti hai. Lekin final decision bank ki internal credit policy par depend karta hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Kya purani machinery ko replace karne par bhi subsidy milti hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, PM FME "Technology Upgradation" ko bhi support karti hai. Agar aap purani, inefficient machinery ki jagah nayi, automated, ya food-safe equipment lagate hain, toh uski cost par bhi 35% subsidy claim ki ja sakti hai.</p>
-        </div>
-      </div>
+      <FAQBlock faqs={pMFMEYojanaFaqs} variant="inline" />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Related Guides & Financial Support
+        Aage Padhne Layak Guides Aur Paise Ka Intezam
       </h2>
       <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-blue-900 dark:text-blue-200 mb-2 flex items-center gap-2">
-            💳 Kisan Credit Card (KCC)
+             Kisan Credit Card (KCC)
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Working capital aur setup cost ke liye low-interest loan. Timely repayment par sirf 4% effective interest.</p>
           <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 text-sm font-medium flex items-center gap-1">
@@ -629,7 +586,7 @@ export default function PMFMEYojana() {
 
         <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg border border-amber-200 dark:border-amber-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-amber-900 dark:text-amber-200 mb-2 flex items-center gap-2">
-            ☀️ PM Kusum Solar Subsidy
+            PM Kusum Solar Subsidy
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Solar pump aur solar plant lagane par bhaari subsidy. Bijli ka kharcha kam karein.</p>
           <Link href="/articles/PmKusumYojanaSolarSubsidy2026" className="text-amber-700 hover:underline dark:text-amber-400 text-sm font-medium flex items-center gap-1">
@@ -639,7 +596,7 @@ export default function PMFMEYojana() {
 
         <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-green-900 dark:text-green-200 mb-2 flex items-center gap-2">
-            🐛 Vermi Compost Business
+            Vermi Compost Business
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Kam lagat wala organic khaad business. Setup, licensing aur marketing ka poora guide.</p>
           <Link href="/articles/vermi-compost-business-guide" className="text-green-600 hover:underline dark:text-green-400 text-sm font-medium flex items-center gap-1">
@@ -649,7 +606,7 @@ export default function PMFMEYojana() {
 
         <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg border border-purple-200 dark:border-purple-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-purple-900 dark:text-purple-200 mb-2 flex items-center gap-2">
-            🍄 Mushroom Kheti (NHB Subsidy)
+            Mushroom Kheti (NHB Subsidy)
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Chhoti jagah mein high-value mushroom farming. NHB subsidy aur training ki jankari.</p>
           <Link href="/articles/mushroom-kheti-nhb-subsidy" className="text-purple-700 hover:underline dark:text-purple-400 text-sm font-medium flex items-center gap-1">
@@ -659,7 +616,7 @@ export default function PMFMEYojana() {
 
         <div className="bg-rose-50 dark:bg-rose-900/20 p-4 rounded-lg border border-rose-200 dark:border-rose-800 hover:shadow-md transition-shadow md:col-span-2">
           <h4 className="font-semibold text-rose-900 dark:text-rose-200 mb-2 flex items-center gap-2">
-            👵 PM Kisan Maandhan Pension
+            PM Kisan Maandhan Pension
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Chhote kisanon ke liye ₹3000 monthly pension scheme. Eligibility aur registration ka process.</p>
           <Link href="/articles/PmKisanMaandhanYojanaPension" className="text-rose-700 hover:underline dark:text-rose-400 text-sm font-medium flex items-center gap-1">
@@ -668,12 +625,13 @@ export default function PMFMEYojana() {
         </div>
       </div>
 
-      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
-        <p className="text-sm text-gray-700 dark:text-gray-300">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Yeh article general information ke liye hai. PM FME ki guidelines aur eligibility criteria change ho sakti hain. Latest information ke liye hamesha official website pmfme.mofpi.gov.in ya apne zila ke District Industries Center se confirm karein. Kisi bhi financial decision lene se pehle qualified professionals (CAs, business consultants) se consult karein. Last updated: July 2026.
-        </p>
-      </div>
+      <AuthorBox modified={getArticleBySlug('pm-fme-yojana-food-processing')!.modifiedTime} />
+
+      <GuideDisclaimer
+        consult="CAs, business consultants"
+        extra="PM FME ki guidelines aur eligibility criteria change ho sakti hain — official website pmfme.mofpi.gov.in ya apne zila ke District Industries Center se confirm karein."
+        modified={getArticleBySlug('pm-fme-yojana-food-processing')!.modifiedTime}
+      />
     </article>
   );
 }

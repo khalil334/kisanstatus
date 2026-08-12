@@ -2,14 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'dairy-farm-loan-without-collateral', title: 'Dairy Loan Bina Collateral', emoji: '🐄' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
-  { slug: 'bihar-pashupalan-loan-yojana', title: 'Bihar Pashupalan Loan Yojana', emoji: '🐃' },
-  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Rashtriya Gokul Mission', emoji: '🐮' },
-  { slug: 'jansamarth-portal-loan-apply', title: 'JanSamarth Portal Apply', emoji: '💻' },
-  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le', emoji: '📚' },
+  { slug: 'dairy-farm-loan-without-collateral', title: 'Bina Guarantee Dairy Loan' },
+  { slug: 'rashtriya-gokul-mission-subsidy', title: 'Gokul Mission Subsidy' },
+  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le' },
 ];
 
 const FAQS_DATA = [
@@ -43,7 +41,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Moratorium ya gestation period milta hai?',
-    a: 'Dairy term loan mein aam taur par gestation period diya jata hai, kyunki naya pashu turant poora doodh nahi deta aur shed banne mein waqt lagta hai. Yeh period bank aur project ke hisaab se tay hota hai. Isko sanction letter mein likhit confirm karwana zaroori hai — warna disbursement ke agle mahine se hi kist shuru ho jayegi, aur income tab tak chalu nahi hui hogi.',
+    a: 'Dairy term loan mein aam taur par gestation period diya jata hai, kyunki naya pashu pehle din se poora doodh nahi deta aur shed banne mein waqt lagta hai. Yeh period bank aur project ke hisaab se tay hota hai. Isko sanction letter mein likhit confirm karwana zaroori hai — warna disbursement ke agle mahine se hi kist shuru ho jayegi, aur income tab tak chalu nahi hui hogi.',
   },
   {
     q: 'Pashu insurance zaroori hai kya?',
@@ -75,10 +73,10 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
             SBI Dairy Loan Interest Rate 2026: MCLR Ka Ganit, KCC vs Term Loan, EMI Aur Apply Ka Poora Process
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 11 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -97,7 +95,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         </div>
 
         <DB>
-          <strong>TL;DR — seedha faisla:</strong>
+          <strong>Chhota Jawab — rate aur EMI:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>SBI ke paas &ldquo;dairy loan&rdquo; naam ka fixed-rate product nahi hai — rate = <strong>MCLR + spread</strong>, branch aur profile ke hisaab se banta hai.</li>
             <li>Roz ka kharcha <strong>KCC (Animal Husbandry)</strong> se — subvention + prompt repayment se effective rate ~4% tak. Pashu/shed kharid <strong>term loan</strong> se.</li>
@@ -119,11 +117,11 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
           Pashupalan ka finance do raaston se hota hai — KCC (Allied Activities) aur agri term loan — aur dono ka rate
-          MCLR ke upar branch ka spread lagne ke baad banta hai. Is guide mein wahi ganit khol kar samjhaya gaya hai,
+          MCLR ke upar branch ka spread lagne ke baad banta hai. Neeche wahi ganit khol kar samjhaya gaya hai,
           taaki branch mein aap sahi sawaal pooch sako aur andaze wale number par bharosa na karo.
         </p>
 
-        <SH>📐 Rate Banta Kaise Hai — MCLR + Spread</SH>
+        <SH>Rate Banta Kaise Hai — MCLR + Spread</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           MCLR matlab Marginal Cost of Funds-Based Lending Rate — bank ko khud paisa jutane mein jo lagat aati hai,
           uske hisaab se banaya gaya benchmark. Agri aur allied loan aam taur par 1-year MCLR se jude hote hain. Bank
@@ -150,7 +148,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🔀 KCC (Allied) vs Term Loan — Dono Ka Kaam Alag</SH>
+        <SH>KCC (Allied) vs Term Loan — Dono Ka Kaam Alag</SH>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
             <thead>
@@ -205,7 +203,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>💸 Interest Subvention — Effective Rate Ka Asli Khel</SH>
+        <SH>Interest Subvention — Effective Rate Ka Asli Khel</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Animal husbandry, dairy aur fisheries ke KCC par sarkar Modified Interest Subvention Scheme (MISS) ke through
           concessional rate deti hai, aur time par chukane wale kisan ko Prompt Repayment Incentive alag se milta hai.
@@ -226,7 +224,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           date phone mein reminder laga kar rakho.
         </DB>
 
-        <SH>📏 Loan Amount — Scale of Finance Ka Role</SH>
+        <SH>Loan Amount — Scale of Finance Ka Role</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Allied activities mein bank aapko manmana amount nahi de sakta. Har district ki District Level Technical
           Committee (DLTC) &ldquo;Scale of Finance&rdquo; tay karti hai — per animal ya per unit kitna finance justified hai,
@@ -240,7 +238,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
 
         <WB>
           SoF mein margin already build-in hota hai, isliye alag se margin ka sawaal aksar nahi uthta. Phir bhi
-          sanction letter mein margin ka column zaroor dekh lo — kai baar bade project par bank apni policy ke hisaab
+          sanction letter mein margin ka column khud dekh lo — kai baar bade project par bank apni policy ke hisaab
           se contribution maangta hai.
         </WB>
 
@@ -253,7 +251,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🧮 EMI Ka Andaza — Do Rate, Do Tasveer</SH>
+        <SH>EMI Ka Andaza — Do Rate, Do Tasveer</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Neeche ke figures illustrative hain — sirf yeh dikhane ke liye ki rate ka fark kitna bada hota hai. Aapka
           asli rate MCLR + spread se banega, aur subvention lagne par effective rate isse kam ho sakta hai.
@@ -323,7 +321,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>📄 Documents — Branch Jaane Se Pehle Ki Checklist</SH>
+        <SH>Documents — Branch Jaane Se Pehle Ki Checklist</SH>
         <StepList>
           <SI n={1}>
             <strong>Aadhaar aur PAN</strong> — naam ki spelling ek jaisi. Mismatch par KYC wahin ruk jati hai.
@@ -362,7 +360,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>🏦 Apply Ka Process — Step by Step</SH>
+        <SH>Apply Ka Process — Kadam Se Kadam</SH>
         <StepList>
           <SI n={1}>
             <strong>Branch chuno soch kar</strong> — agri branch ya jahan aapka operative account hai. Agri officer wali
@@ -400,7 +398,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           portalName="sbi.co.in"
         />
 
-        <SH>🌱 Zameen Ki Misaal — KCC Se Dairy Kaise Khadi Hoti Hai</SH>
+        <SH>Zameen Ki Misaal — KCC Se Dairy Kaise Khadi Hoti Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           KCC-AH ka asar sirf theory nahi hai. Kupwara (J&amp;K) district administration ke documented record mein
           Ramhall ke Harduna gaon ki <strong>Shaheena Begum</strong> ki kahani hai — 2016 mein 30 mahilaon ka group,
@@ -412,7 +410,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           Sabak: sahi finance structure (KCC working capital ke liye) chhote unit ko bhi scale de deta hai.
         </p>
 
-        <SH>⚠️ Yeh Chaar Galtiyan Sabse Zyada Nuksan Karti Hain</SH>
+        <SH>Yeh Chaar Galtiyan Sabse Zyada Nuksan Karti Hain</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Pehli: internet ka rate maan lena aur sanction letter na padhna. MCLR reset hone par EMI badh jati hai, aur
           jinhone terms nahi padhe woh chaunk jate hain. Doosri: term loan se chara kharidna. Yeh sabse mehnga paisa
@@ -425,7 +423,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         </p>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Sabse Kaam Ki Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Rate Nahi, Sanction Letter Ki Teen Lines Padho</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
             Koi ek &ldquo;SBI dairy loan rate&rdquo; nahi hota. Aapka rate = us mahine ka MCLR + aapka spread, aur KCC par
             subvention lagne se effective rate isse kaafi kam baithta hai. Isliye rate dhoondhne ke bajaye sanction
@@ -433,7 +431,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
             Structure yeh rakho: pashu aur shed ke liye <strong>term loan</strong>, roz ke kharch ke liye{' '}
-            <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC</Link>. Bina
+            <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">Kisan Credit Card</Link>. Bina
             zameen wale raaste dekhne hain toh{' '}
             <Link href="/articles/dairy-farm-loan-without-collateral" className="underline font-bold">
               bina collateral dairy loan
@@ -442,10 +440,10 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           </p>
         </div>
 
-        <SH>❓ FAQ — Aapke Sawaal</SH>
+        <SH>FAQ — Aapke Sawaal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             SBI — Agriculture & Rural banking, official product pages.{' '}
@@ -465,9 +463,9 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles/dairy-farm-loan-without-collateral', l: '🐄 Dairy Loan Bina Collateral' },
-          { href: '/articles/KisanCreditCardOnlineApply2026', l: '💳 KCC Online Apply' },
-          { href: '/articles/category/loan', l: '📂 Loan Guides' },
+          { href: '/articles/dairy-farm-loan-without-collateral', l: 'Dairy Loan Bina Collateral' },
+          { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Online Apply' },
+          { href: '/articles/category/loan', l: 'Loan Ki Aur Jaankari' },
         ]} />
         <Disclaimer />
       </div>

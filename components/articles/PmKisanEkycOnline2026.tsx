@@ -1,37 +1,34 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
-import { EXTERNAL_LINK_PROPS } from '@/lib/site-config';
+import { EXTERNAL_LINK_PROPS, AUTHOR_NAME } from '@/lib/site-config';
 import type { ArticleMeta } from '@/lib/articles-data';
 
-const PUBLISHED = '2026-03-15T08:00:00+05:30';
-const MODIFIED = '2026-08-08T21:45:00+05:30';
+const PUBLISHED = '2025-12-29T10:12:36+05:30';
+const MODIFIED = '2026-01-12T21:49:17+05:30';
 
 const RELATED_CARDS = [
   {
     slug: 'PmKisan24viKist2026',
-    title: 'PM Kisan 24vi Kist Status',
+    title: 'October Wali 24vi Kist Ka Update',
     desc: 'Apna ₹2000 installment status aur eKYC errors abhi check karein.',
-    emoji: '📅'
   },
   {
     slug: 'PmKisanBeneficiaryList2026',
     title: 'PM Kisan Beneficiary List',
     desc: 'Apna naam naye list mein dhundhein aur status verify karein.',
-    emoji: '📋'
   },
   {
     slug: 'KisanCreditCardOnlineApply2026',
     title: 'Kisan Credit Card (KCC) Guide',
     desc: '4% byaj dar par ₹5 lakh tak ka agriculture loan kaise lein.',
-    emoji: '💳'
   },
 ];
 
 const FAQS_DATA = [
   {
     q: 'PM Kisan eKYC bina mobile number ke kaise karein?',
-    a: 'Agar Aadhaar mein mobile number link nahi hai, toh online OTP wala tarika kaam nahi karega. Aapko apne nazdeeki CSC (Common Service Centre) jaana hoga. Wahan fingerprint (biometric) scan karke eKYC ho jayegi. Yeh process bilkul free hai.',
+    a: 'Agar Aadhaar mein mobile number link nahi hai, toh online OTP wala tarika kaam nahi karega. Aapko apne nazdeeki CSC (Common Service Centre) jaana hoga. Wahan fingerprint (biometric) scan karke eKYC ho jayegi. Yeh process free mein hoti hai.',
   },
   {
     q: 'PM Kisan Face Authentication kya hai aur kaise karein?',
@@ -39,7 +36,7 @@ const FAQS_DATA = [
   },
   {
     q: 'CSC par PM Kisan eKYC ke liye kitna paisa dena chahiye?',
-    a: 'Bilkul ZERO. Government ne ise free service declare kiya hai. Agar koi operator ₹10, ₹20 ya ₹50 maangta hai, toh woh galat hai. Turant 1800-1214-060 par complaint karein.',
+    a: 'Bilkul ZERO. Government ne ise free service declare kiya hai. Agar koi operator ₹10, ₹20 ya ₹50 maangta hai, toh woh galat hai. Usi waqt 1800-1214-060 par complaint karein.',
   },
   {
     q: 'Mera naam Aadhaar mein "Sunita Devi" hai aur PM Kisan mein "Sunita" — kya eKYC hogi?',
@@ -91,17 +88,17 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             <span>/</span>
             <span className="text-white font-bold">eKYC Guide</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🔐 eKYC Verification</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">eKYC Verification</span>
 
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kisan eKYC 2026: OTP Based eKYC, Biometric aur Face Auth Puri Jankari
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 14 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>14 min read</span>
           </div>
         </div>
       </div>
@@ -131,7 +128,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         </div>
 
         <div className="my-6 p-5 bg-red-50 dark:bg-red-900/20 border-2 border-red-400 dark:border-red-700 border-l-[6px] rounded-xl">
-          <h2 className="text-base font-black text-red-800 dark:text-red-300 mb-2">⚠️ Bina eKYC Ke Kist Ruk Jayegi (Ground Reality)</h2>
+          <h2 className="text-base font-black text-red-800 dark:text-red-300 mb-2">Bina eKYC Ke Kist Ruk Jayegi (Ground Reality)</h2>
           <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed mb-3">
             Suno bhai, yeh koi optional ya "baad mein kar lenge" wali cheez nahi hai. Government ne DBT (Direct Benefit Transfer) rules ke under 2023 se ise sakhti se compulsory kar diya hai. Ab system automatically un accounts ko filter kar deta hai jinki eKYC pending hai.
           </p>
@@ -146,7 +143,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             Simple shabdon mein samjhein — sarkar yeh confirm karna chahti hai ki jo insaan PM Kisan Samman Nidhi ka paisa le raha hai, woh sach mein wahi kisan hai jiske naam par zameen hai. Pehle ke saalon mein bahut se fake ya duplicate beneficiaries ne system ka faayda uthaya tha.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            eKYC (Electronic Know Your Customer) ka matlab hai aapki Aadhaar details ko PM Kisan database se live match karna. Jab aap OTP dalte hain ya fingerprint scan karte hain, toh UIDAI (Aadhaar wale) sarkar ko turant "Haan" ya "Na" mein jawab dete hain.
+            eKYC (Electronic Know Your Customer) ka matlab hai aapki Aadhaar details ko PM Kisan database se live match karna. Jab aap OTP dalte hain ya fingerprint scan karte hain, toh UIDAI (Aadhaar wale) sarkar ko wahin "Haan" ya "Na" mein jawab dete hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             <strong>Ek baar ka kaam:</strong> Ek baar eKYC successful ho gayi, toh aapko baar-baar nahi karni padti. Haan, agar aapne haal hi mein apna mobile number badla hai, naam mein sudhaar karaya hai, ya naya bank account khulwaya hai, toh system dobara verification maang sakta hai.
@@ -184,10 +181,10 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             <SI n={2}>Right side mein "Farmers Corner" section mein "eKYC" option par click karo.</SI>
             <SI n={3}>Apna 12-digit Aadhaar number bina kisi galti ke dalo aur "Search" button dabao.</SI>
             <SI n={4}>Aapke registered mobile number par ek 6-digit ka OTP aayega. Use box mein enter karo.</SI>
-            <SI n={5}>"Submit" dabao. Screen par hara rang ka "eKYC Successful" message dikhega! ✅</SI>
+            <SI n={5}>"Submit" dabao. Screen par hara rang ka "eKYC Successful" message dikhega!</SI>
           </StepList>
           <WB>
-            <strong>Pro Tip:</strong> OTP sirf 5 minute ke liye valid hota hai. Jaldi dalo. Agar network ki wajah se na aaye, toh "Resend OTP" par click karo, lekin 2-3 baar se zyada try mat karna warna number temporary block ho sakta hai.
+            <strong>Ek Secret Tip:</strong> OTP sirf 5 minute ke liye valid hota hai. Jaldi dalo. Agar network ki wajah se na aaye, toh "Resend OTP" par click karo, lekin 2-3 baar se zyada try mat karna warna number temporary block ho sakta hai.
           </WB>
         </section>
 
@@ -216,7 +213,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             <SI n={2}>Aadhaar card ki original ya ek clear photocopy saath le jao.</SI>
             <SI n={3}>Operator ko saaf shabdon mein bolo — "Mujhe PM Kisan eKYC karna hai".</SI>
             <SI n={4}>Woh aapse machine par apna fingerprint (anguthe ya ungli ka nishaan) scan karne ko kahenge.</SI>
-            <SI n={5}>Scan successful hote hi confirmation message aayega. Transaction ki chhoti si receipt zaroor le lo.</SI>
+            <SI n={5}>Scan successful hote hi confirmation message aayega. Transaction ki chhoti si receipt sambhal kar le lo.</SI>
           </StepList>
           <DB>
             <strong>Chetawani (Warning):</strong> Yeh service sarkar ki taraf se bilkul FREE (shulk mukt) hai. Koi bhi operator ₹10, ₹20 ya ₹50 maange, toh woh galat hai. Seedha 1800-1214-060 (CSC Helpline) par call karke us operator ki complaint karo. Complaint karte waqt CSC centre ka naam/location aur date batayein — tabhi action possible hota hai.
@@ -236,7 +233,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             <SI n={5}>Match successful hote hi eKYC complete ho jayegi.</SI>
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            <strong>Note:</strong> Face authentication UIDAI ki <a href="https://uidai.gov.in" {...EXTERNAL_LINK_PROPS} className="underline">Aadhaar FaceRD service</a> par chalta hai — app pehli baar use karne par FaceRD install karne ko keh sakti hai, ye normal hai. Ye tarika un kisanon ke liye sabse kaam ka hai jinke haath kaam karne ki wajah se fingerprint clear nahi aata.
+            <strong>Ek Baat Aur:</strong> Face authentication UIDAI ki <a href="https://uidai.gov.in" {...EXTERNAL_LINK_PROPS} className="underline">Aadhaar FaceRD service</a> par chalta hai — app pehli baar use karne par FaceRD install karne ko keh sakti hai, ye normal hai. Ye tarika un kisanon ke liye sabse kaam ka hai jinke haath kaam karne ki wajah se fingerprint clear nahi aata.
           </p>
         </section>
 
@@ -315,21 +312,21 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           </p>
           <div className="space-y-4">
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <h4 className="font-bold text-[var(--color-text)] text-sm mb-2">👴 Kisan Bedridden (Bimaar) Hai, Ghar Par Kaise Hoga?</h4>
+              <h4 className="font-bold text-[var(--color-text)] text-sm mb-2">Kisan Bedridden (Bimaar) Hai, Ghar Par Kaise Hoga?</h4>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
                 Aise cases mein, family member ke phone se online eKYC nahi ho sakti (kyunki face/fingerprint match nahi hoga). Aapko apne nazdeeki bank branch ya CSC ko call karke "Doorstep Banking" ya "Home Visit" ki special request karni hogi. Bahut se nationalised banks ab yeh suvidha dete hain.
               </p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <h4 className="font-bold text-[var(--color-text)] text-sm mb-2">👰 Shaadi Ke Baad Naam Badal Gaya Hai</h4>
+              <h4 className="font-bold text-[var(--color-text)] text-sm mb-2">Shaadi Ke Baad Naam Badal Gaya Hai</h4>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
                 Agar PM Kisan mein purana naam (maike ka) hai aur Aadhaar mein naya naam (sasural ka), toh eKYC fail ho jayegi. Pehle apne patwari/tehsil office jaakar PM Kisan portal par naam update (mutation) karwayein, uske baad hi eKYC ka try karein.
               </p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <h4 className="font-bold text-[var(--color-text)] text-sm mb-2">👨‍🌾 Beneficiary Ki Mrityu Ho Chuki Hai</h4>
+              <h4 className="font-bold text-[var(--color-text)] text-sm mb-2">Beneficiary Ki Mrityu Ho Chuki Hai</h4>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
-                Turant apne nazdeeki Jan Seva Kendra ya Tehsil office jaakar "Beneficiary Death Status" update karein. Iske baad, legal heir (uttaradhikari) ko naye sire se application karni hogi. Purane account par eKYC karne ki koshish na karein, yeh fraud ki shreni mein aa sakta hai.
+                Bina der apne nazdeeki Jan Seva Kendra ya Tehsil office jaakar "Beneficiary Death Status" update karein. Iske baad, legal heir (uttaradhikari) ko naye sire se application karni hogi. Purane account par eKYC karne ki koshish na karein, yeh fraud ki shreni mein aa sakta hai.
               </p>
             </div>
           </div>
@@ -350,7 +347,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             ].map(({ err, fix }) => (
               <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden shadow-sm">
                 <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
-                  <p className="font-black text-red-800 dark:text-red-300 text-sm">❌ {err}</p>
+                  <p className="font-black text-red-800 dark:text-red-300 text-sm">{err}</p>
                 </div>
                 <div className="p-4">
                   <div className="flex items-start gap-2 bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
@@ -375,11 +372,11 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           </StepList>
           <div className="mt-4 grid grid-cols-2 gap-3">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-center">
-              <p className="font-black text-green-800 dark:text-green-300 text-sm">✅ eKYC: YES</p>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm">eKYC: YES</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Sab theek hai, agla paisa aayega.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-center">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm">❌ eKYC: NO</p>
+              <p className="font-black text-red-800 dark:text-red-300 text-sm">eKYC: NO</p>
               <p className="text-xs text-[var(--color-text-muted)] mt-1">Ruko mat, upar diye tarike se abhi complete karo.</p>
             </div>
           </div>
@@ -405,9 +402,9 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat (Bottom Line)</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">eKYC Ke Baad Ek Kaam Aur Bacha Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Aaj hi kar lo bhai. Kal ka wait mat karo. Phone se 2 minute lagte hain. Phone na ho toh CSC free hai. Bahana mat banao — yeh ₹6000 saalana aapka haq hai, bas ek baar verify karna hai taake sarkar ka system aapko rok na sake. Agar koi dikkat aaye, toh upar diye gaye error fixes ko dhyan se padhein.
+            OTP wala tarika 2 minute ka hai, lekin woh sirf tab chalega jab Aadhaar mein mobile number linked ho — warna seedha CSC jaayein, wahan biometric se ho jayega. Aur eKYC “YES” ho jaane par bhi paisa tabhi aata hai jab bank mein NPCI seeding bhi ho — yeh dono alag kaam hain, dono check karein. Error aaye toh upar wali table mein 108, demographic mismatch aur server-timing wale fixes diye hain.
           </p>
         </div>
 
@@ -420,15 +417,14 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         />
 
         <CalcBanner
-          icon="🔐"
           title="Apna Benefit Calculate Karo"
           desc="Kitni kist mili, kitni pending — apna hisaab jaano"
-          primaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Calculator →' }}
-          secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities' }}
+          primaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Calculator →' }}
+          secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Aapke Liye Zaroori Articles</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Related Articles — Yeh Bhi Padho</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link
@@ -436,7 +432,6 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
                 href={`/articles/${card.slug}`}
                 className="group block p-4 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm hover:shadow-lg hover:border-green-500 transition-all duration-300"
               >
-                <div className="text-2xl mb-2">{card.emoji}</div>
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm mb-1 group-hover:text-green-600 transition-colors">
                   {card.title}
                 </h4>
@@ -453,9 +448,9 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
 
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisan24viKist2026', l: '📅 24vi Kist' },
-          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/articles/PmKisan24viKist2026', l: '24vi Kist' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
         ]} />
         <Disclaimer />
       </div>

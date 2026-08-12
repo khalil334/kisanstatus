@@ -1,108 +1,11 @@
-'use client';
-
-import { useState } from 'react';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
+import { FAQBlock, AuthorBox } from '@/components/ArticleShared';
+import { getArticleBySlug } from '@/lib/articles-data';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function FaqItem({ question, answer }: { question: string; answer: React.ReactNode }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden bg-white dark:bg-gray-800 mb-3 shadow-sm hover:shadow-md transition-shadow">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-4 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-inset"
-        aria-expanded={isOpen}
-      >
-        <span className="font-semibold text-gray-900 dark:text-gray-100 pr-4 text-sm md:text-base">{question}</span>
-        <span
-          className={`text-xl text-green-600 dark:text-green-400 transition-transform duration-300 shrink-0 ${
-            isOpen ? 'rotate-45' : ''
-          }`}
-          aria-hidden="true"
-        >
-          +
-        </span>
-      </button>
-      <div
-        className={`transition-all duration-300 ease-in-out overflow-hidden ${
-          isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className="p-4 pt-0 text-sm text-gray-700 dark:text-gray-300 leading-relaxed border-t border-gray-100 dark:border-gray-700">
-          {answer}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function BakriPalanYojana() {
   const canonicalUrl = 'https://kisanstatus.com/articles/bakri-palan-yojana-nlm-subsidy';
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Kya main bina zameen ke bakri palan subsidy le sakta hoon?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Nahi. Apni zameen ya kam se kam 5 saal ka registered lease agreement dikhana padta hai. Land proof ke bina application shuru mein hi ruk jaati hai.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Backyard mein 10-15 bakriyan hain, kya mujhe NLM subsidy milegi?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Nahi milegi. National Livestock Mission ka threshold 100 female aur 5 male bakriyan hai. Chhote setup ke liye apne district ke Pashu Palan vibhag ki alag schemes dekhni padegi.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Subsidy ka paisa kitne din mein bank account mein aata hai?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Jaldi nahi aata. Approval aur site visit mein hi 2-3 mahine nikal jaate hain, aur paisa do tranches mein aata hai. Poore 4-6 mahine ka wait dhyan mein rakhein.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Kya main bank loan ke saath NLM subsidy le sakta hoon?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Haan, aur zyadatar log yahi karte hain. 50% sarkar deti hai, baaki 50% KCC ya normal loan se. Subsidy seedhe account mein aati hai, bank beech mein nahi rukti.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Bihar ya UP se bahar ke state se bakriyan mangwa sakte hain kya?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Mangwa sakte hain, par quarantine certificate aur vehicle fitness certificate saath rakhna padega. Warna transport illegal maana jata hai aur checkpoint par pakde jaate hain.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Agar meri NLM application reject ho gayi, toh kya main dobara apply kar sakta hoon?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Haan. Portal par reject hone ki wajah likhi milti hai. Wo galti thik karo, dobara documents lagao, submit kar do. Koi ban nahi lagta.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Bakri Palan Yojana 2026 ki last date kya hai?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'NLM mein ek fixed last date nahi hoti — portal financial year ke hisab se saal bhar applications leta hai, jab tak us cycle ka budget khatam nahi ho jata. State ke Pashu Palan office se current status confirm kar lena sabse safe rahega.',
-        },
-      },
-    ],
-  };
 
   const faqs = [
     {
@@ -128,6 +31,8 @@ export default function BakriPalanYojana() {
           mein poora tarika likha hai.
         </>
       ),
+      schemaText:
+        'Bilkul, aur ye common practice hai. 50% subsidy, 50% loan. KCC Loan Guide mein poora tarika likha hai.',
     },
     {
       q: 'Bahar ke state se bakriyan mangwane par kya documents chahiye?',
@@ -139,14 +44,12 @@ export default function BakriPalanYojana() {
     },
     {
       q: 'Bakri Palan Yojana 2026 ki last date kya hai?',
-      a: 'Fixed last date nahi hai. Portal saal bhar applications leta hai, financial year ke budget khatam hone tak. Apne state ke Pashu Palan office se current status zaroor confirm kar lena.',
+      a: 'Fixed last date nahi hai. Portal saal bhar applications leta hai, financial year ke budget khatam hone tak. Apne state ke Pashu Palan office se current status ek baar confirm kar lena.',
     },
   ];
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-
       <article className="max-w-4xl mx-auto px-4 py-8 prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
         <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
           Bakri Palan Yojana 2026: 50% NLM Subsidy Lene Ka Sahi Tarika aur Complete Guide
@@ -242,7 +145,7 @@ export default function BakriPalanYojana() {
         />
 
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-          <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">⚠️ Breed Final Karne Se Pehle:</h3>
+          <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">Breed Final Karne Se Pehle:</h3>
           <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
             <li>Local climate suit karta hai ya nahi, dekh lo.</li>
             <li>Mandi mein us breed ka rate stable rehta hai ya upar-neeche hota rehta hai.</li>
@@ -355,7 +258,7 @@ export default function BakriPalanYojana() {
         </ul>
 
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-          <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">💰 Cash-Flow Se Pehle Ye Soch Lo:</h3>
+          <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">Cash-Flow Se Pehle Ye Soch Lo:</h3>
           <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
             <li>Subsidy aane mein 4-6 mahine lag sakte hain, sabr rakho.</li>
             <li>Pehle 6 mahine ka kharcha apni pocket ya loan se pehle hi plan kar lo.</li>
@@ -389,7 +292,7 @@ export default function BakriPalanYojana() {
         />
 
         <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">⚠️ Site Inspection Mein Ye Galtiyan Baar-Baar Hoti Hain:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">Site Inspection Mein Ye Galtiyan Baar-Baar Hoti Hain:</h3>
           <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
             <li>Officer aane tak shed poora ready nahi hota.</li>
             <li>Quotation mein dikhaya equipment asal mein khareeda nahi gaya.</li>
@@ -401,11 +304,7 @@ export default function BakriPalanYojana() {
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
           FAQs
         </h2>
-        <div className="space-y-3 my-8 not-prose">
-          {faqs.map((faq, index) => (
-            <FaqItem key={index} question={faq.q} answer={faq.a} />
-          ))}
-        </div>
+        <FAQBlock faqs={faqs} variant="accordion" />
 
         <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl my-8 not-prose border border-blue-200 dark:border-blue-800 shadow-sm">
           <h3 className="font-semibold text-blue-800 dark:text-blue-300 mb-4 text-sm uppercase tracking-wide">Official Links</h3>
@@ -427,7 +326,7 @@ export default function BakriPalanYojana() {
         </div>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-          Aakhri Baat
+          Do-Teen Saal Tikne Wale Hi Profit Dekhte Hain
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Paisa tabhi banta hai jab bakri palan ko business ki tarah loge, shauk ki tarah nahi. Documentation pe dhyan do, vet ki baat suno, shuruat mein patience rakho. Raaton-raat kuch nahi hota. Jo 2-3 saal tik jaate hain, wahi profit dekhte hain.
@@ -438,7 +337,6 @@ export default function BakriPalanYojana() {
 
         <div className="mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700 not-prose">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2 flex items-center gap-2">
-            <span className="text-3xl" aria-hidden="true">📚</span>
             Aage Kya Padhein?
           </h3>
           <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm">
@@ -448,7 +346,7 @@ export default function BakriPalanYojana() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <Link href="/articles/madhumakhi-palan-kvic-subsidy" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-green-500 dark:hover:border-green-500 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true">🐝</span>
+                <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true"></span>
                 <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">Madhumakhi Palan</h4>
               </div>
               <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">KVIC subsidy ke saath shahad ka business.</p>
@@ -456,7 +354,7 @@ export default function BakriPalanYojana() {
 
             <Link href="/articles/pm-matsya-sampada-yojana-fish-farming" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true">🐟</span>
+                <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true"></span>
                 <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">PM Matsya Sampada</h4>
               </div>
               <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">Machli palan par 60% tak subsidy.</p>
@@ -464,13 +362,15 @@ export default function BakriPalanYojana() {
 
             <Link href="/articles/drip-sprinkler-irrigation-subsidy" className="group flex flex-col bg-white dark:bg-gray-800 p-5 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-500 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true">💧</span>
+                <span className="text-2xl group-hover:scale-110 transition-transform" aria-hidden="true"></span>
                 <h4 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">Drip Irrigation</h4>
               </div>
               <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">Chara ugane ke liye 75% tak subsidy.</p>
             </Link>
           </div>
         </div>
+
+        <AuthorBox modified={getArticleBySlug('bakri-palan-yojana-nlm-subsidy')!.modifiedTime} />
 
         <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
           <p className="text-sm text-gray-700 dark:text-gray-300">

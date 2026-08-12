@@ -2,7 +2,17 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import React from 'react';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
-import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from '@/lib/site-config';
+import {
+  SITE_URL,
+  SITE_NAME,
+  DEFAULT_OG_IMAGE,
+  AUTHOR_NAME,
+  AUTHOR_URL,
+  AUTHOR_BIO,
+  LOGO_URL,
+  LOGO_WIDTH,
+  LOGO_HEIGHT,
+} from '@/lib/site-config';
 
 import PmKisanMaandhanRegistration2026 from '@/components/articles/maandhan/PmKisanMaandhanRegistration2026';
 import PmKisanMaandhanEligibilityDocuments from '@/components/articles/maandhan/PmKisanMaandhanEligibilityDocuments';
@@ -40,6 +50,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: article.title,
     description: article.description,
+    authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+    creator: AUTHOR_NAME,
     alternates: {
       canonical: url,
       languages: {
@@ -97,6 +109,7 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
   const related = Array.from({ length: Math.min(6, siblings.length) }, (_, i) => siblings[(idx + i) % siblings.length]);
 
   const url = `${SITE_URL}/maandhan/${slug}`;
+  const ogImage = article.ogImage ? `${SITE_URL}${article.ogImage}` : DEFAULT_OG_IMAGE;
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -108,8 +121,51 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
     ],
   };
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': `${url}#article`,
+    headline: article.title,
+    description: article.description,
+    image: {
+      '@type': 'ImageObject',
+      url: ogImage,
+      width: 1200,
+      height: 630,
+      caption: article.title,
+    },
+    datePublished: article.published,
+    dateModified: article.modified || article.published,
+    inLanguage: 'hi-IN',
+    author: {
+      '@type': 'Person',
+      '@id': `${SITE_URL}#founder`,
+      name: AUTHOR_NAME,
+      url: AUTHOR_URL,
+      description: AUTHOR_BIO,
+    },
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${SITE_URL}#organization`,
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: {
+        '@type': 'ImageObject',
+        url: LOGO_URL,
+        width: LOGO_WIDTH,
+        height: LOGO_HEIGHT,
+      },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    breadcrumb: { '@id': `${url}#breadcrumb` },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
@@ -118,7 +174,7 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
       <section aria-label="Related maandhan articles" className="container-site max-w-3xl mx-auto px-4 pb-10">
         <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
           <h2 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
-            <span>🔗</span> Related Articles — Yeh Bhi Padho
+            Related Articles — Yeh Bhi Padho
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {related.map((a) => (

@@ -2,17 +2,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-06-21T08:00:00+05:30';
-const MODIFIED = '2026-08-02T08:00:00+05:30';
+const PUBLISHED = '2026-01-03T08:52:27+05:30';
+const MODIFIED = '2026-01-12T09:57:33+05:30';
 
 const RELATED = [
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply Guide', emoji: '💳' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary Roster 2026', emoji: '📋' },
-  { slug: 'PmKisan24viKist2026', title: '24vi Kist Status', emoji: '📅' },
-  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card', emoji: '🌱' },
-  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Guide', emoji: '🏦' },
-  { slug: 'AgriStackKyaHai2026', title: 'Digital Kisan ID', emoji: '🆔' },
+  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card Guide' },
+  { slug: 'vermi-compost-business-guide', title: 'Vermi Compost Business' },
+  { slug: 'drip-sprinkler-irrigation-subsidy', title: 'Drip & Sprinkler Subsidy' },
 ];
 
 const FAQS_DATA = [
@@ -22,7 +20,7 @@ const FAQS_DATA = [
   { q: 'Traditional DAP se ye kaise alag hai?', a: 'Liquid DAP ek foliar spray hai — nano particles seedhe pattiyon se absorb hote hain. Traditional DAP zameen mein daala jaata hai. Dono ko ek doosre ka replacement nahi, saathi samjhein — kai experts inka combination hi suggest karte hain.' },
   { q: 'Urea ya pesticide ke saath mix karna theek hai?', a: 'Pehle compatibility test kar lena zaroori hai — chhote patch par try karke dekhein. Kisi bhi mix se pehle KVK ya IFFCO guideline padh lena safe rahega, warna crop damage ka risk rehta hai.' },
   { q: 'Result kitne din mein dikhna shuru hota hai?', a: '7-10 din mein kuch farak nazar aa sakta hai. Do-teen sprays ke baad tasveer clearer hoti hai. Soil, mausam aur crop type par bhi kaafi kuch depend karta hai, isliye fixed timeline nahi de sakte.' },
-  { q: 'Online kahan se kharidna safe hai?', a: 'IFFCO ki official website sabse reliable option hai. Amazon-Flipkart par sirf verified seller se lein. Local Krishi Kendra mein subsidy milne ke chances bhi rehte hain — original packaging ka QR code zaroor check karein.' },
+  { q: 'Online kahan se kharidna safe hai?', a: 'IFFCO ki official website sabse reliable option hai. Amazon-Flipkart par sirf verified seller se lein. Local Krishi Kendra mein subsidy milne ke chances bhi rehte hain — original packaging ka QR code scan kar ke check karein.' },
 ];
 
 const howToSchema = {
@@ -59,10 +57,10 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
             Nano DAP 500ml Price 2026: Rate, Dosage Chart, Aur Woh Baatein Jo Dealer Nahi Batata
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 13 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>13 min read</span>
           </div>
         </div>
       </div>
@@ -217,7 +215,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
               { title: 'Dealer Commission', desc: 'Retailer apna margin jodta hai, isliye wholesale rate hamesha sasta padta hai.' },
               { title: 'Season Demand', desc: 'Sowing season shuru hote hi demand ek dum badh jaati hai aur rate bhi.' },
               { title: 'Online vs Offline', desc: 'E-commerce par kabhi kabhi discount mil jaata hai, local dukaan par usually fixed rate.' },
-              { title: 'Original vs Duplicate', desc: 'IFFCO ka asli product thoda mehnga zaroor hai, par quality guaranteed hai. Bohot sasta mila toh saavdhan rahein.' },
+              { title: 'Original vs Duplicate', desc: 'IFFCO ka asli product thoda mehnga padta hai, par quality guaranteed hai. Bohot sasta mila toh saavdhan rahein.' },
             ].map(({ title, desc }) => (
               <div key={title} className="border-l-4 border-green-400 dark:border-green-600 pl-4 py-1">
                 <p className="font-bold text-[var(--color-text)] text-sm">{title}</p>
@@ -328,7 +326,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
             <SI n={6}>Kisi bhi pesticide ke saath mix karne se pehle chhote patch par test kar lein</SI>
           </StepList>
           <IB>
-            <strong>Tip:</strong> Fine spray nozzle use karein — absorption behtar hoti hai. Coarse droplets zyadatar waste ho jaate hain.
+            <strong>Dhyan Dein:</strong> Fine spray nozzle use karein — absorption behtar hoti hai. Coarse droplets zyadatar waste ho jaate hain.
           </IB>
         </section>
 
@@ -390,9 +388,9 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           <div className="space-y-3">
             {[
               { src: 'IFFCO Official Website', note: 'Sabse trustworthy source — original product ki guarantee milti hai.' },
-              { src: 'Amazon / Flipkart', note: 'Sirf official seller se lein, ratings zaroor padhein.' },
+              { src: 'Amazon / Flipkart', note: 'Sirf official seller se lein, ratings padh kar order karein.' },
               { src: 'Krishi Kendra / State Portals', note: 'Government authorized hai, subsidy milne ke chances rehte hain.' },
-              { src: 'Local Authorized Dealer', note: 'Zyadatar kisan offline lena prefer karte hain — receipt zaroor le lein.' },
+              { src: 'Local Authorized Dealer', note: 'Zyadatar kisan offline lena prefer karte hain — receipt maang kar le lein.' },
             ].map(({ src, note }) => (
               <div key={src} className="flex gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
                 <span className="text-green-600 dark:text-green-400 font-bold shrink-0">✓</span>
@@ -404,7 +402,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
             ))}
           </div>
           <WB>
-            <strong>Fraud Alert:</strong> Original packaging ka QR code hamesha scan karein. Bohot sasta rate dikhe toh saavdhan rahein. Fertilizer ke liye loan chahiye toh <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC guide</Link> padh lein.
+            <strong>Nakli Se Bacho:</strong> Original packaging ka QR code hamesha scan karein. Bohot sasta rate dikhe toh saavdhan rahein. Fertilizer ke liye loan chahiye toh <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC guide</Link> padh lein.
           </WB>
         </section>
 
@@ -444,15 +442,17 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Nano DAP Par Aapke Sawaal, Seedhe Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="Nano DAP FAQ 2026 — Verified Answers" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Nano DAP Replacement Nahi, Top-Up Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Nano DAP ek convenient option hai — kam quantity, aasan application. Par ye akela sab kuch nahi kar sakta. Sahi beej, samay par paani aur balanced nutrition — inke bina koi bhi fertilizer poora asar nahi dikhayega.
+            Sabse mehengi galti yahi hoti hai ki 500 ml ki bottle ko bori wale DAP ka badal maan liya jaye.
+            Foliar spray patti se absorb hota hai, mitti ka phosphorus stock nahi bharta — isliye ise basal dose
+            ke saath chalayein, uski jagah nahi. Kharidne se pehle itna karein:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
             <li>Pehle chhote area par test karein</li>
@@ -472,19 +472,19 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
         />
 
         <CalcBanner
-          icon="🌾"
+          icon=""
           title="Apni Fasal Ki Income Calculate Karo"
           desc="MSP income, crop profit, KCC EMI — sab free calculators se"
-          primaryCta={{ href: '/calculator/msp-income', label: '📊 MSP Calculator →' }}
-          secondaryCta={{ href: '/calculator', label: '🧮 Sab Utilities' }}
+          primaryCta={{ href: '/calculator/msp-income', label: 'MSP Calculator →' }}
+          secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/soil-health-card-complete-guide-2026', l: '🌱 Soil Card' },
-          { href: '/articles/KisanCreditCardOnlineApply2026', l: '💳 KCC Guide' },
-          { href: '/calculator/crop-profit', l: '📊 Crop Profit' },
+          { href: '/articles/soil-health-card-complete-guide-2026', l: 'Soil Card' },
+          { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Guide' },
+          { href: '/calculator/crop-profit', l: 'Crop Profit' },
         ]} />
         <Disclaimer />
       </div>

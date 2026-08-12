@@ -6,17 +6,15 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import CountdownModal from '@/components/CountdownModal';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-07-08T10:00:00+05:30';
-const MODIFIED = '2026-07-11T10:00:00+05:30';
+const PUBLISHED = '2026-02-15T21:25:25+05:30';
+const MODIFIED = '2026-02-24T14:27:25+05:30';
 
 const RELATED = [
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Loan Apply Online', emoji: '💳' },
-  { slug: 'KisanTractorLoan2026', title: 'Tractor Loan Bina Down Payment', emoji: '🚜' },
-  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide', emoji: '📚' },
-  { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card Guide', emoji: '🌱' },
-  { slug: 'PmfbyCropInsurance2026', title: 'Fasal Bima Yojana 2026', emoji: '🛡️' },
-  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price Guide', emoji: '🧪' },
+  { slug: 'drip-sprinkler-irrigation-subsidy', title: 'Drip & Sprinkler Subsidy' },
+  { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le' },
+  { slug: 'custom-hiring-centre-chc-portal', title: 'CHC Machine Rental Guide' },
 ];
 
 const FAQS_DATA = [
@@ -73,7 +71,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
           message={modal.message}
           redirectUrl={modal.url}
           onClose={() => setModal(null)}
-          infoNote="📌 Thoda wait karo. Official PM Kusum portal khulne wala hai."
+          infoNote="Thoda wait karo. Official PM Kusum portal khulne wala hai."
         />
       )}
 
@@ -86,15 +84,15 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             <span>/</span>
             <span className="text-white font-bold">Solar Pump Subsidy</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">☀️ PM Kusum Yojana 2026</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">PM Kusum Yojana 2026</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
             PM Kusum Yojana Solar Pump Subsidy 2026: 60% Subsidy Kaise Milegi, Apply Karne Ka Sahi Tarika
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -146,7 +144,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             </div>
 
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-600 rounded-xl relative">
-              <span className="absolute -top-3 right-4 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">TUMHARA YE HAI ⭐</span>
+              <span className="absolute -top-3 right-4 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">TUMHARA YE HAI</span>
               <p className="font-black text-green-800 dark:text-green-300 text-sm mb-1">Component B — Standalone Solar Pump</p>
               <p className="text-xs text-[var(--color-text-muted)]">Apne khet mein akela solar pump lagao. 60% tak subsidy. Diesel/grid replace karne walon ko priority milti hai. <strong>Kusum yojana component b standalone solar pump</strong> yahi hai jiske liye tum yahan aaye ho.</p>
             </div>
@@ -166,7 +164,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4">
-              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-3">✅ Haan, Apply Kar Sakte Ho</p>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-3">Haan, Apply Kar Sakte Ho</p>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1.5">
                 <li>✓ Indian citizen ho</li>
                 <li>✓ Zameen tumhare naam par registered hai</li>
@@ -177,7 +175,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
               </ul>
             </div>
             <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-3">❌ Sorry, Eligible Nahi Ho</p>
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-3">Sorry, Eligible Nahi Ho</p>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1.5">
                 <li>✗ Zameen kiraye/lease par hai (owner consent nahi)</li>
                 <li>✗ Land record mein naam galat/purana hai</li>
@@ -189,7 +187,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
           </div>
 
           <WB>
-            <strong>Sabse Badi Galti Jo Log Karte Hain:</strong> Apply kar dete hain bina <strong>pm kusum yojana land record verification</strong> kiye. Phir 2 mahine baad rejection letter aata hai. Pehle Patwari/Tehsildar se Khatauni update karwao, naam match karwao Aadhaar se, tabhi form bharo.
+            <strong>Sabse Badi Galti Jo Log Karte Hain:</strong> Apply kar dete hain bina <strong>land record verification</strong> kiye. Phir 2 mahine baad rejection letter aata hai. Pehle Patwari/Tehsildar se Khatauni update karwao, naam match karwao Aadhaar se, tabhi form bharo.
           </WB>
         </section>
 
@@ -276,7 +274,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             ))}
           </div>
           <p className="text-xs text-[var(--color-text-muted)] italic">
-            💡 Blur photo upload mat karna bhai. Reject hone ka #1 reason yahi hai. Clear scan ya acche phone se click karo.
+             Blur photo upload mat karna bhai. Reject hone ka #1 reason yahi hai. Clear scan ya acche phone se click karo.
           </p>
         </section>
 
@@ -298,7 +296,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
         <section className="mb-8">
           <SH>Ghar Baithe Apply Kaise Karein (Portal Se)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Pm kusum yojana online apply kaise kare 2026</strong> — bahut simple hai. Agent ko ₹500 dene ki zaroorat nahi:
+            <strong>Online apply kaise kare 2026</strong> — bahut simple hai. Agent ko ₹500 dene ki zaroorat nahi:
           </p>
           <StepList>
             <SI n={1}>Apne state ka PM Kusum portal kholo (links neeche hain)</SI>
@@ -311,10 +309,10 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
 
           <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
             <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-              🔍 Abhi Apply Karo
+               Abhi Apply Karo
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official PM Kusum portal par jakar apna <strong>pm kusum yojana registration form</strong> bharo. 10 second baad portal khulega.
+              Official portal par jakar apna <strong>registration form</strong> bharo — 10 second ke countdown ke baad aap pmkusum portal par pahunch jaoge.
             </p>
             <button
               onClick={() => handleOfficialLink(
@@ -324,12 +322,12 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              📥 Yahan Click Karo → PM Kusum Portal Khulega
+               Yahan Click Karo → PM Kusum Portal Khulega
             </button>
           </div>
 
           <IB>
-            <strong>Zaruri Tip:</strong> <strong>Pm kusum yojana registration form kaise bhare</strong> mein sabse important field hai "Survey/Khasra Number." Ise Khatauni se exactly copy karo. Ek digit bhi galat = rejection.
+            <strong>Zaruri Tip:</strong> <strong>Registration form bharte waqt</strong> sabse important field hai "Survey/Khasra Number." Ise Khatauni se exactly copy karo. Ek digit bhi galat = rejection.
           </IB>
         </section>
 
@@ -368,15 +366,15 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             State portal par "Track Application" ya "Check Status" option hota hai. Reference number ya Aadhaar daalo. Status dikhega: <em>Pending Verification → Approved → Vendor Assigned → Installed → Subsidy Released.</em>
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Pm kusum yojana status check online</strong> karne par agar 30 din se zyada "Pending" dikhe toh helpline par call karo. Kabhi kabhi file atak jaati hai — follow up zaroori hai.
+            <strong>Status online check</strong> karne par agar 30 din se zyada "Pending" dikhe toh helpline par call karo. Kabhi kabhi file atak jaati hai — follow up zaroori hai.
           </p>
 
           <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl">
             <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-2">
-              🔍 Status Check Karo
+               Status Check Karo
             </p>
             <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-              Official portal par jakar apna <strong>pm kusum yojana status check</strong> karo. 10 second baad portal khulega.
+              Official portal par jakar apna <strong>application status</strong> dekho. Redirect mein 10 second lagte hain.
             </p>
             <button
               onClick={() => handleOfficialLink(
@@ -386,7 +384,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
               )}
               className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-              📥 Yahan Click Karo → Status Check Hoga
+               Yahan Click Karo → Status Check Hoga
             </button>
           </div>
         </section>
@@ -394,7 +392,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
         <section className="mb-8">
           <SH>Reject Kyu Hoti Hai? Ye 5 Galtiyan Mat Karna</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Pm kusum yojana application rejected reasons</strong> jaan lo pehle se. 90% rejections inhi wajah se hote hain:
+            <strong>Application reject hone ki wajahein</strong> jaan lo pehle se. 90% rejections inhi wajah se hote hain:
           </p>
           <div className="space-y-2">
             {[
@@ -406,7 +404,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             ].map(({ err, fix }) => (
               <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden">
                 <div className="bg-red-50 dark:bg-red-900/20 px-4 py-2">
-                  <p className="font-black text-red-800 dark:text-red-300 text-xs">❌ {err}</p>
+                  <p className="font-black text-red-800 dark:text-red-300 text-xs">{err}</p>
                 </div>
                 <div className="p-3 bg-green-50 dark:bg-green-900/10">
                   <p className="text-xs text-green-800 dark:text-green-300"><span className="font-bold">FIX:</span> {fix}</p>
@@ -441,14 +439,14 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
               <thead>
                 <tr className="bg-[var(--color-primary)] text-white">
                   <th className="p-3 text-left">Cheez</th>
-                  <th className="p-3 text-left">Diesel Pump 😩</th>
-                  <th className="p-3 text-left">Solar Pump ☀️</th>
+                  <th className="p-3 text-left">Diesel Pump</th>
+                  <th className="p-3 text-left">Solar Pump</th>
                 </tr>
               </thead>
               <tbody>
                 {[
                   { item: 'Khareedne Ka Kharcha', d: '₹25K-35K', s: '₹40K-55K (subsidy baad)' },
-                  { item: 'Saal Ka Fuel/Bijli', d: '₹40K-60K 💸', s: '₹0 FREE ✅' },
+                  { item: 'Saal Ka Fuel/Bijli', d: '₹40K-60K', s: '₹0 FREE' },
                   { item: 'Maintenance/Saal', d: '₹5K-8K', s: '₹500-1K' },
                   { item: 'Umar', d: '8-10 saal', s: '25 saal' },
                   { item: '5 Saal Total Kharcha', d: '₹2.5 Lakh+', s: '₹45K-60K' },
@@ -471,11 +469,11 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
         <section className="mb-8">
           <SH>Private Company Se Mat Lagwana!</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Kuch dealers bolenge "hum sasta laga denge." Suno mat. <strong>Pm kusum yojana vs private solar company</strong> ka farq samjho:
+            Kuch dealers bolenge "hum sasta laga denge." Suno mat. <strong>Sarkari scheme vs private solar company</strong> ka farq samjho:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
             <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4">
-              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">✅ PM Kusum</p>
+              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">PM Kusum</p>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
                 <li>• 60-90% subsidy</li>
                 <li>• Govt approved vendor</li>
@@ -485,7 +483,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
               </ul>
             </div>
             <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-2">❌ Private Dealer</p>
+              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-2">Private Dealer</p>
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
                 <li>• Full price (no subsidy)</li>
                 <li>• Quality uncertain</li>
@@ -508,24 +506,25 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bhai, Ab Socho Mat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Yeh Scheme Deadline Par Nahi, Quota Par Band Hoti Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Solar pump ek baar lagao, agle 25 saal sukoon se kheti karo. Diesel ka kharcha khatam, bijli ka bill zero, paani jab chahiye tab milega.
+            PM-KUSUM mein aam galatfehmi yeh hai ki koi ek last date hai. Hota ulta hai — state ko pumps ka quota
+            milta hai, aur applications usi hisaab se lete hain. Quota bhar gaya toh portal aapka form le lega par
+            number agli window mein lagega, chahe aapke documents poore hon.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Lekin ek cheez yaad rakho — <strong>subsidy quota limited hota hai</strong>. Jab state ka quota fill ho jata hai toh agli window ka wait karna padta hai. Isliye aaj hi apply karo. Kal ka intezaar mat karo.
-          </p>
-          <p className="text-xs text-green-700 dark:text-green-400 italic mt-2">
-            💡 Meri personal advice: Documents aaj ready karo, kal subah portal par apply karo. Jitni jaldi form jayegi, utni jaldi pump lagega.
+            Isliye is page ka kaam ki cheez woh 60% subsidy nahi, apne state ki current window ka status hai.
+            Portal par jaake pehle yeh dekhein ki Component B ke liye registration khula hai ya waitlist chal rahi
+            hai — phir hi pump ki capacity aur apna hissa tay karein.
           </p>
         </div>
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
           <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">
-            🔗 PM Kusum Official Portal
+             PM Kusum Official Portal
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            <strong>PM Kusum yojana apply online</strong> karne ke liye, <strong>PM Kusum yojana status check</strong> karne ke liye, ya helpline number ke liye official portal par jaayein. 10 second baad portal khulega.
+            <strong>Apply online</strong> karne ke liye, <strong>status check</strong> karne ke liye, ya helpline number ke liye official portal par jaayein; button ke baad portal apne aap khulta hai.
           </p>
           <button
             onClick={() => handleOfficialLink(
@@ -535,24 +534,24 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             )}
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
           >
-            📥 Yahan Click Karo → PM Kusum Portal Khulega
+             Yahan Click Karo → PM Kusum Portal Khulega
           </button>
         </div>
 
         <CalcBanner
-          icon="☀️"
+          icon=""
           title="Kitna Bachoge? Calculate Karo"
           desc="Diesel vs Solar — 5 saal ka total saving jaano"
-          primaryCta={{ href: '/calculator/crop-profit', label: '📊 Profit Calc →' }}
-          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: '💰 Benefit Calc' }}
+          primaryCta={{ href: '/calculator/crop-profit', label: 'Profit Calc →' }}
+          secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calc' }}
         />
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/KisanCreditCardOnlineApply2026', l: '💳 KCC Loan' },
-          { href: '/articles/KisanTractorLoan2026', l: '🚜 Tractor Loan' },
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
+          { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Loan' },
+          { href: '/articles/KisanTractorLoan2026', l: 'Tractor Loan' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
         <Disclaimer />
       </div>

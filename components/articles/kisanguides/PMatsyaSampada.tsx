@@ -2,6 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import GuideDisclaimer from '@/components/GuideDisclaimer';
+import { AuthorBox, FAQBlock } from '@/components/ArticleShared';
+import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
   title: 'PM Matsya Sampada Yojana 2026: 60% Subsidy & Complete Guide',
@@ -14,7 +18,7 @@ export const metadata: Metadata = {
     'fish pond setup',
     'aquaculture business'
   ],
-  authors: [{ name: 'KisanStatus Team', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
     title: 'PM Matsya Sampada Yojana 2026: 60% Subsidy & Complete Guide',
     description: 'PM Matsya Sampada Yojana complete guide. Janein fish farming subsidy, biofloc technology, pond setup aur real profit calculation ke baare mein.',
@@ -42,58 +46,28 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'FAQPage',
-      '@id': 'https://kisanstatus.com/articles/pm-matsya-sampada-yojana-fish-farming/#faq',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Kya kiraye ki zameen par fish farming karne par subsidy milti hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Haan, lekin rent agreement kam se kam 7-10 saal ka hona chahiye. Subsidy ke liye aapka pond construction ya setup apni ownership mein hona chahiye. Rent par sirf operational costs cover hote hain.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kya biofloc technology mein electricity ka kharcha bahut zyada hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Haan, biofloc mein aerators 24x7 chalne padte hain. Ek 10-tank setup ka monthly electricity bill ₹3,000 - ₹5,000 tak aa sakta hai. Solar panels lagane se yeh cost kam ki ja sakti hai.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Pehli baar fish farming karne wale ke liye kaunsi technology best hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Traditional pond farming sabse best hai beginners ke liye. Isme risk kam hai, technical complexity kam hai, aur PMMSY subsidy bhi ispar zyada milti hai (40-60%).',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Kya fish farming mein insurance available hai?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kuch states mein PM Fasal Bima Yojana ke under fisheries ko cover kiya ja raha hai. Natural calamities, disease outbreak, aur flood ke liye insurance available hai. Apne zila ke fisheries office se pata karein.',
-          },
-        },
-      ],
-    },
-  ],
-};
+const pMatsyaSampadaFaqs = [
+  {
+    q: 'Kya kiraye ki zameen par fish farming karne par subsidy milti hai?',
+    a: 'Haan, lekin rent agreement kam se kam 7-10 saal ka hona chahiye. Subsidy ke liye aapka pond construction ya setup apni ownership mein hona chahiye. Rent par sirf operational costs cover hote hain.',
+  },
+  {
+    q: 'Kya biofloc technology mein electricity ka kharcha bahut zyada hai?',
+    a: 'Haan, biofloc mein aerators 24x7 chalne padte hain. Ek 10-tank setup ka monthly electricity bill ₹3,000 - ₹5,000 tak aa sakta hai. Solar panels lagane se yeh cost kam ki ja sakti hai.',
+  },
+  {
+    q: 'Pehli baar fish farming karne wale ke liye kaunsi technology best hai?',
+    a: 'Traditional pond farming sabse best hai beginners ke liye. Isme risk kam hai, technical complexity kam hai, aur PMMSY subsidy bhi ispar zyada milti hai (40-60%).',
+  },
+  {
+    q: 'Kya fish farming mein insurance available hai?',
+    a: 'Kuch states mein PM Fasal Bima Yojana ke under fisheries ko cover kiya ja raha hai. Natural calamities, disease outbreak, aur flood ke liye insurance available hai. Apne zila ke fisheries office se pata karein.',
+  },
+];
 
 export default function PMatsyaSampada() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
       <Image
         src="/images/kisanguides/fish-farming-hero.webp"
         alt="Fish Pond with Rohu and Catla - PM Matsya Sampada Yojana Subsidy Guide"
@@ -110,7 +84,7 @@ export default function PMatsyaSampada() {
 
       <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Sach kahoon toh:</strong> Machli palan mein pehle saal oxygen management ya disease control mein chhoti galtiyan 20-30% tak crop loss karwa sakti hain. Par experience ke saath, doosre-teesre saal tak returns stabilize ho jate hain aur profit consistent hone lagta hai.
+          <strong>Bina Lag Lapet Ke:</strong> Machli palan mein pehle saal oxygen management ya disease control mein chhoti galtiyan 20-30% tak crop loss karwa sakti hain. Par experience ke saath, doosre-teesre saal tak returns stabilize ho jate hain aur profit consistent hone lagta hai.
         </p>
       </div>
 
@@ -243,7 +217,7 @@ export default function PMatsyaSampada() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Yeh investment lagti hai. Par agar aapke paas <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link> hai, toh fisheries ke liye bhi loan mil jata hai. KCC ke under ₹3 lakh tak loan milta hai, aur interest rate 4% (timely repayment par) hai.
+        Yeh investment lagti hai. Par agar aapke paas <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card</Link> hai, toh fisheries ke liye bhi loan mil jata hai. KCC ke under ₹3 lakh tak loan milta hai, aur interest rate 4% (timely repayment par) hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -270,7 +244,7 @@ export default function PMatsyaSampada() {
           </li>
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">3. Cold Storage aur Processing Unit:</strong>
-            Agar aap fish processing unit ya cold storage lagana chahte hain, toh 35-50% subsidy mil sakti hai. <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> ke under bhi food processing units par 35% subsidy milti hai.
+            Agar aap fish processing unit ya cold storage lagana chahte hain, toh 35-50% subsidy mil sakti hai. <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana ki poori detail</Link> ke under bhi food processing units par 35% subsidy milti hai.
           </li>
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">4. Feed Mill Setup:</strong>
@@ -282,11 +256,11 @@ export default function PMatsyaSampada() {
           </li>
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">6. PMEGP (Prime Minister's Employment Generation Programme):</strong>
-            Chhote fish farming units par 25-35% subsidy mil sakti hai (rural areas mein zyada). Maximum project cost ₹25 lakh hai. KVIC ke through apply hota hai. Official <a href="https://www.pmegp.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">PMEGP portal</a> par details check karein.
+            Chhote fish farming units par 25-35% subsidy mil sakti hai (rural areas mein zyada). Maximum project cost ₹25 lakh hai. KVIC ke through apply hota hai. Official <a href="https://www.pmegp.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">PMEGP ki official site</a> par details check karein.
           </li>
         </ul>
         <p className="mt-4 text-xs text-gray-600 dark:text-gray-400 italic border-t border-blue-200 dark:border-blue-800 pt-3">
-          <strong>Note:</strong> PMMSY aur related schemes ki guidelines aur subsidy limits samay-samay par update hoti rehti hain. Apply karne se pehle apne nazdeeki Fisheries Department office se latest norms zaroor confirm karein.
+          <strong>Note:</strong> PMMSY aur related schemes ki guidelines aur subsidy limits samay-samay par update hoti rehti hain. Apply karne se pehle apne nazdeeki Fisheries Department office se latest norms confirm kara lein.
         </p>
       </div>
 
@@ -578,7 +552,7 @@ export default function PMatsyaSampada() {
           <strong>Central Institute of Brackishwater Aquaculture (CIBA), Chennai:</strong> Agar aap shrimp farming karna chahte hain, toh yeh best institute hai.
         </li>
         <li>
-          <strong>Krishi Vigyan Kendra (KVK):</strong> Har district mein KVK fish farming training deta hai. Free ya nominal fee mein. Practical hands-on training hoti hai.
+          <strong>KVK (Krishi Vigyan Kendra) Se Training:</strong> Har district mein KVK fish farming training deta hai. Free ya nominal fee mein. Practical hands-on training hoti hai.
         </li>
         <li>
           <strong>State Fisheries Departments:</strong> Har state ki apni training centers hain. Wo regular training programs karte hain.
@@ -617,12 +591,12 @@ export default function PMatsyaSampada() {
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Related Guides & Financial Support
+        Fisheries Ke Saath Kaam Aane Wali Guides Aur Funding
       </h2>
       <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-blue-900 dark:text-blue-200 mb-2 flex items-center gap-2">
-            💳 Kisan Credit Card (KCC)
+             Kisan Credit Card (KCC)
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Fisheries ke liye low-interest loan. 4% interest rate with timely repayment aur flexible limits.</p>
           <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 text-sm font-medium flex items-center gap-1">
@@ -632,7 +606,7 @@ export default function PMatsyaSampada() {
 
         <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-green-900 dark:text-green-200 mb-2 flex items-center gap-2">
-            🏭 PM FME Yojana
+            PM FME Yojana
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Fish processing aur cold storage units ke liye 35% tak subsidy. Branded packaging ke liye ideal.</p>
           <Link href="/articles/pm-fme-yojana-food-processing" className="text-green-600 hover:underline dark:text-green-400 text-sm font-medium flex items-center gap-1">
@@ -642,7 +616,7 @@ export default function PMatsyaSampada() {
 
         <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg border border-amber-200 dark:border-amber-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-amber-900 dark:text-amber-200 mb-2 flex items-center gap-2">
-            🛡️ PM Fasal Bima Yojana (PMFBY)
+             PM Fasal Bima Yojana (PMFBY)
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Natural calamities, disease outbreak, aur flood ke liye fisheries insurance coverage.</p>
           <Link href="/articles/PmfbyCropInsurance2026" className="text-amber-700 hover:underline dark:text-amber-400 text-sm font-medium flex items-center gap-1">
@@ -652,7 +626,7 @@ export default function PMatsyaSampada() {
 
         <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg border border-purple-200 dark:border-purple-800 hover:shadow-md transition-shadow">
           <h4 className="font-semibold text-purple-900 dark:text-purple-200 mb-2 flex items-center gap-2">
-            ♻️ Vermi Compost Business
+             Vermi Compost Business
           </h4>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">Fish waste aur pond sludge ko organic fertilizer mein badal kar extra income generate karein.</p>
           <Link href="/articles/vermi-compost-business-guide" className="text-purple-600 hover:underline dark:text-purple-400 text-sm font-medium flex items-center gap-1">
@@ -662,12 +636,12 @@ export default function PMatsyaSampada() {
       </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Kya Aapke Liye Sahi Hai? Final Decision Framework
+        Machli Palan Aapke Liye Hai Ya Nahi — Khud Check Karein
       </h2>
 
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
         <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-200 dark:border-green-800">
-          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">✅ Haan, agar:</h3>
+          <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 flex items-center gap-2">Shuru Kar Dein, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Zameen hai (preferably low-lying area jahan paani bhara rehta hai)</li>
             <li>• Water source available hai (borewell, canal, ya natural water body)</li>
@@ -680,7 +654,7 @@ export default function PMatsyaSampada() {
         </div>
 
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
-          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">❌ Nahi, agar:</h3>
+          <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">Door Rahein, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Water availability nahi hai</li>
             <li>• Daily monitoring nahi kar sakte</li>
@@ -696,7 +670,7 @@ export default function PMatsyaSampada() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Subsidy ka fayda zaroor uthayein. 40-60% subsidy mil rahi hai, isse na lena bewakoofi hogi. Par yaad rakho - subsidy milna guaranteed nahi hai. Application process mein 3-6 months lag sakte hain. Isliye apni planning subsidy ke bina karein. Agar mil gayi, toh bonus samjho.
+        PMMSY ki 40-60% subsidy ke liye apply karein, lekin project ka ganit uske bina banayein. Sanction aur pehli installment ke beech aksar 3-6 mahine nikal jate hain, aur talab ki khudai, seed stocking aur feed ka kharch usse pehle shuru ho jata hai. Jo log subsidy ke paise se feed kharidne ka plan banate hain, unka pehla crop cycle wahin atak jata hai. Subsidy ko reimbursement maankar chalein — aa gayi toh working capital, na aayi toh bhi talab chalta rahe.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -708,33 +682,16 @@ export default function PMatsyaSampada() {
       </p>
 
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Frequently Asked Questions (FAQs)
+        Matsya Sampada Yojana — Sawal Jawab Corner
       </h2>
-      <div className="space-y-4 mb-8 not-prose">
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Kya kiraye ki zameen par fish farming karne par subsidy milti hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, lekin rent agreement kam se kam 7-10 saal ka hona chahiye. Subsidy ke liye aapka pond construction ya setup apni ownership mein hona chahiye. Rent par sirf operational costs cover hote hain.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Kya biofloc technology mein electricity ka kharcha bahut zyada hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, biofloc mein aerators 24x7 chalne padte hain. Ek 10-tank setup ka monthly electricity bill ₹3,000 - ₹5,000 tak aa sakta hai. Solar panels lagane se yeh cost kam ki ja sakti hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Pehli baar fish farming karne wale ke liye kaunsi technology best hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Traditional pond farming sabse best hai beginners ke liye. Isme risk kam hai, technical complexity kam hai, aur PMMSY subsidy bhi ispar zyada milti hai (40-60%).</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Kya fish farming mein insurance available hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Kuch states mein PM Fasal Bima Yojana ke under fisheries ko cover kiya ja raha hai. Natural calamities, disease outbreak, aur flood ke liye insurance available hai. Apne zila ke fisheries office se pata karein.</p>
-        </div>
-      </div>
+      <FAQBlock faqs={pMatsyaSampadaFaqs} variant="inline" />
 
-      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
-        <p className="text-sm text-gray-700 dark:text-gray-300">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Yeh article general information ke liye hai. Actual costs, subsidies, aur procedures aapke location aur specific circumstances ke hisaab se vary kar sakte hain. Koi bhi financial decision lene se pehle qualified professionals (fisheries officers, aquaculture experts) se consult karein. Prices aur guidelines change hote rehte hain, isliye latest information ke liye official sources se verify karein. Last updated: July 2026.
-        </p>
-      </div>
+      <AuthorBox modified={getArticleBySlug('pm-matsya-sampada-yojana-fish-farming')!.modifiedTime} />
+
+      <GuideDisclaimer
+        consult="fisheries officers, aquaculture experts"
+        modified={getArticleBySlug('pm-matsya-sampada-yojana-fish-farming')!.modifiedTime}
+      />
     </article>
   );
 }

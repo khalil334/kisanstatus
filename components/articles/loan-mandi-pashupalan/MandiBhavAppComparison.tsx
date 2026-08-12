@@ -2,14 +2,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
-  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav', emoji: '📊' },
-  { slug: 'enam-registration-kaise-kare', title: 'eNAM Registration Guide', emoji: '🖥️' },
-  { slug: 'msp-list-2026-27', title: 'MSP List 2026-27', emoji: '📋' },
-  { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu Ka Bhav: MSP vs Mandi', emoji: '🌾' },
-  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Sabzi Bhav Guide', emoji: '🥔' },
-  { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply', emoji: '💳' },
+  { slug: 'mandi-bhav-today', title: 'Aaj Ka Mandi Bhav' },
+  { slug: 'sabzi-bhav-guide-pyaz-aloo-tamatar', title: 'Pyaz-Aloo-Tamatar Bhav Guide' },
+  { slug: 'gehu-ka-bhav-msp-vs-mandi', title: 'Gehu Bhav: MSP vs Mandi' },
 ];
 
 const FAQS_DATA = [
@@ -71,10 +69,10 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
             Best Mandi Bhav Apps 2026: Kaunsa App Sahi Rate Batata Hai — Sarkari vs Private, Poora Comparison
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(article.publishedTime)}</span>
-            <span>🔄 Last Updated: 5 August 2026</span>
-            <span>⏱️ 10 min read</span>
+            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(article.publishedTime)}</span>
+            <span>Last Updated: 5 August 2026</span>
+            <span>10 min read</span>
           </div>
         </div>
       </div>
@@ -93,7 +91,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
         </div>
 
         <DB>
-          <strong>TL;DR — seedha faisla:</strong>
+          <strong>Jaldi Mein Hain? Ye 3 Baatein:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>Phone mein sirf <strong>2 apps</strong> chahiye: ek sarkari (eNAM app ya AgMarknet) + ek jo aapki local mandiyan cover kare. Baaki uninstall.</li>
             <li>Sab apps ka rate ek hi jagah se aata hai — <strong>sarkari mandi records</strong>. Accuracy ka sawaal hi galat hai; sawaal speed aur coverage ka hai.</li>
@@ -119,7 +117,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           sirf jagah gher raha hai.
         </p>
 
-        <SH>🧠 Pehle Yeh Samjho — Rate Aata Kahan Se Hai</SH>
+        <SH>Pehle Yeh Samjho — Rate Aata Kahan Se Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Har mandi (APMC) mein din bhar ke sauda ka record banta hai — kaunsi fasal, kitni aavak, kis rate par biki.
           Yeh data sarkari system (AgMarknet aur eNAM network) mein report hota hai. Wahan se teen number nikalte
@@ -148,7 +146,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           loading="lazy"
         />
 
-        <SH>🏛️ Sarkari Apps — Base Yahi Rakho</SH>
+        <SH>Sarkari Apps — Base Yahi Rakho</SH>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
             <thead>
@@ -206,7 +204,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           loading="lazy"
         />
 
-        <SH>📱 Private Apps — Sahulat Zyada, Parakh Ke Saath Use Karo</SH>
+        <SH>Private Apps — Sahulat Zyada, Parakh Ke Saath Use Karo</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Private mandi bhav apps (Bijak, Krishi Network, IFFCO Kisan jaise agri apps, aur dher saare chhote
           &ldquo;Mandi Bhav&rdquo; apps) ki asli value teen cheezon mein hai — behtar design, apne ilaake ki mandiyon ke
@@ -238,7 +236,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           loading="lazy"
         />
 
-        <SH>📈 App Ka Number Padhna Seekho — 3 Cheezein Jo Kaam Ki Hain</SH>
+        <SH>App Ka Number Padhna Seekho — 3 Cheezein Jo Kaam Ki Hain</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           App install karna aasan hai — asli hunar us data ko padhna hai. Teen aadatein bana lo:
         </p>
@@ -258,14 +256,14 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           loading="lazy"
         />
 
-        <SH>📵 Bina App Ke — Yeh Raaste Bhi Kaam Karte Hain</SH>
+        <SH>Bina App Ke — Yeh Raaste Bhi Kaam Karte Hain</SH>
         <StepList>
           <SI n={1}><strong>Kisan Call Centre — 1800-180-1551:</strong> free call, apni bhasha mein fasal aur mandi ka bhav pucho.</SI>
           <SI n={2}><strong>Aadhati ka phone number:</strong> sabse fresh rate aaj bhi mandi ke andar se hi milta hai. Do-teen aadhatiyon se baat karo taaki ek ki batayi price par nirbhar na raho.</SI>
           <SI n={3}><strong>SMS advisory (mKisan):</strong> registered kisano ko fasal aur ilaake ke hisaab se SMS aate hain — data kharch zero.</SI>
         </StepList>
 
-        <SH>🗺️ Ilaake Ke Hisaab Se Bhi Socho — Har App Har Belt Mein Barabar Nahi</SH>
+        <SH>Ilaake Ke Hisaab Se Bhi Socho — Har App Har Belt Mein Barabar Nahi</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Ek baat jo comparison articles aksar chhod dete hain — apps ki coverage <strong>region-wise bahut
           alag</strong> hoti hai. Jo app UP-Bihar ke anaaj belt mein har mandi dikhata hai, wahi Maharashtra ki
@@ -276,7 +274,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           aur number one ho.
         </p>
 
-        <SH>⚠️ Aam Galtiyan — Jo App Users Se Roz Hoti Hain</SH>
+        <SH>Aam Galtiyan — Jo App Users Se Roz Hoti Hain</SH>
         <StepList>
           <SI n={1}><strong>Max price ko apna rate maan lena:</strong> app mein sabse bada number dekh kar mandi jaana aur wahan modal ke aas-paas boli sun kar "app jhooth bolta hai" kehna. App theek tha — aapne galat column padha.</SI>
           <SI n={2}><strong>WhatsApp forward par trolley bhar lena:</strong> "falana mandi mein aaj itna rate" wala forward aksar purana ya kisi aur grade ka hota hai. Bina AgMarknet/eNAM ya aadhati se confirm kiye 50 km trolley le jaana seedha diesel ka nuksan hai.</SI>
@@ -285,7 +283,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           <SI n={5}><strong>Das apps rakh kar kisi ka bhi trend na dekhna:</strong> notifications ka shor data nahi hota. Ek source roz dekhna das sources kabhi-kabhi dekhne se hamesha behtar hai.</SI>
         </StepList>
 
-        <SH>🎯 Toh Karna Kya Hai — Seedha Jawab</SH>
+        <SH>Toh Karna Kya Hai — Seedha Jawab</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Phone mein do cheezein rakho: <strong>ek sarkari source</strong> (eNAM app ya AgMarknet — bharose ke liye)
           aur <strong>ek app jo aapki local mandiyan sabse achhe se cover kare</strong> (sahulat ke liye). Bas.
@@ -294,7 +292,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           Aur bhav dekhne ka tareeka bhi seekho — sirf aaj ka number mat dekho. Hafte bhar ka trend dekho (rate chadh
           raha hai ya gir raha hai), aavak dekho (aavak badhegi toh rate dabega), aur apne kharche ka ganit saath
           rakho. Kab bechna hai iska faisla in teeno se milkar hota hai — is par humne alag guides likhi hain:{' '}
-          <Link href="/articles/gehu-ka-bhav-msp-vs-mandi" className="underline font-bold">Gehu: MSP vs Mandi</Link>{' '}
+          <Link href="/articles/gehu-ka-bhav-msp-vs-mandi" className="underline font-bold">gehu bechne ka MSP-vs-mandi hisaab</Link>{' '}
           aur <Link href="/articles/sabzi-bhav-guide-pyaz-aloo-tamatar" className="underline font-bold">Pyaz-Aloo-Tamatar
           Bhav Guide</Link>.
         </p>
@@ -323,7 +321,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           portalName="enam.gov.in"
         />
 
-        <SH>🖥️ eNAM Se Bechna Bhi Hai?</SH>
+        <SH>eNAM Se Bechna Bhi Hai?</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Agar aapki mandi eNAM se judi hai toh sirf bhav dekhne se aage badho — registration karke online bidding
           ka fayda lo, jahan doosre district ke buyers bhi aapki fasal par boli lagate hain. Registration free hai
@@ -334,7 +332,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
 
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>📚 Sources</SH>
+        <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             eNAM — National Agriculture Market, official portal (registration, mandis aur commodities).{' '}
@@ -357,8 +355,8 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={article.modifiedTime} />
         <BottomNav extraLinks={[
-          { href: '/articles', l: '📚 Sabhi Articles' },
-          { href: '/articles/category/mandi', l: '📂 Mandi Guides' },
+          { href: '/articles', l: 'Sab Guides Ek Jagah' },
+          { href: '/articles/category/mandi', l: 'Mandi Ki Sab Guides' },
         ]} />
         <Disclaimer />
       </div>

@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-07-03T12:18:00+05:30';
-const MODIFIED = '2026-07-20T05:45:00+05:30';
+const PUBLISHED = '2026-01-20T17:46:17+05:30';
+const MODIFIED = '2026-01-29T19:09:12+05:30';
 
 const RELATED = [
-  { slug: 'PmKisanMasterGuide2026', title: 'Master Guide', emoji: '📚' },
-  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form', emoji: '📝' },
-  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List', emoji: '📋' },
+  { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
 ];
 
 const FAQS_DATA = [
@@ -34,7 +35,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya koi fees lagti hai?',
-    a: 'Official portal par bilkul free hai. Agar CSC se karwana ho toh nominal ₹20-30 service charge lag sakte hain.',
+    a: 'Official portal par iska koi charge nahi lagta. Agar CSC se karwana ho toh nominal ₹20-30 service charge lag sakte hain.',
   },
 ];
 
@@ -55,10 +56,10 @@ export default function PmKisanVoluntarySurrenderGuide() {
             PM Kisan Voluntary Surrender: Galti Se Register Ho Gaye Toh Kaise Hatte?
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">KisanStatus Team</Link></span>
-            <span>📅 {fmtDate(PUBLISHED)}</span>
-            <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
-            <span>⏱️ 12 min read</span>
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span>{fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>12 min read</span>
           </div>
         </div>
       </div>
@@ -99,40 +100,40 @@ export default function PmKisanVoluntarySurrenderGuide() {
           />
 
           <DB>
-            <strong>Field Observation:</strong>
+            <strong>Maidan Se Dekha Hua:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
-              Kai baar government employees, pensioners ya income tax filers galti se register ho jate hain. Voluntary surrender karne se unki future kist turant band ho jati hai aur sarkari rules ke tahat unpar hone wali karrawai ya penalty se bacha ja sakta hai.
+              Kai baar government employees, pensioners ya income tax filers galti se register ho jate hain. Voluntary surrender karne se unki future kist agle cycle se band ho jati hai aur sarkari rules ke tahat unpar hone wali karrawai ya penalty se bacha ja sakta hai.
             </p>
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Dhyan rahe, agar aap eligible nahi the toh sarkar pehle se mile hue paiso ki recovery kar sakti hai. Surrender karne se future ki kist aana band ho jayegi aur <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">Beneficiary list</Link> se naam hat jayega.
+            Dhyan rahe, agar aap eligible nahi the toh sarkar pehle se mile hue paiso ki recovery kar sakti hai. Surrender karne se future ki kist aana band ho jayegi aur <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">labharthi list</Link> se naam hat jayega.
           </p>
         </section>
 
         <section className="mb-8">
           <SH>Kaun Logon Ko Surrender Karna Chahiye?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ye logon ko turant surrender karna chahiye:
+            In logon ko der kiye bina surrender karna chahiye:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
             {[
-              { icon: '👨‍🏫', title: 'Government Employees', desc: 'Teachers, clerks, officers — sabhi government jobs wale' },
-              { icon: '💰', title: 'Income Tax Filers', desc: 'Jo log income tax return file karte hain' },
-              { icon: '👴', title: 'Pensioners', desc: 'Old age pension ya family pension lene wale' },
-              { icon: '🏛️', title: 'MP/MLA/Officials', desc: 'Elected representatives aur unke family members' },
-              { icon: '👨‍💼', title: 'Professionals', desc: 'CA, Doctor, Lawyer, Engineer — registered professionals' },
-              { icon: '🏢', title: 'Institutional Land', desc: 'Jinki zameen trust ya company ke naam par hai' },
+              { icon: '', title: 'Government Employees', desc: 'Teachers, clerks, officers — sabhi government jobs wale' },
+              { title: 'Income Tax Filers', desc: 'Jo log income tax return file karte hain' },
+              { icon: '', title: 'Pensioners', desc: 'Old age pension ya family pension lene wale' },
+              { icon: '', title: 'MP/MLA/Officials', desc: 'Elected representatives aur unke family members' },
+              { icon: '', title: 'Professionals', desc: 'CA, Doctor, Lawyer, Engineer — registered professionals' },
+              { icon: '', title: 'Institutional Land', desc: 'Jinki zameen trust ya company ke naam par hai' },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
-                <span className="text-2xl block mb-2">{icon}</span>
+                {icon ? <span className="text-2xl block mb-2">{icon}</span> : null}
                 <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">{title}</p>
                 <p className="text-xs text-red-700 dark:text-red-400">{desc}</p>
               </div>
             ))}
           </div>
           <IB>
-            <strong>Important:</strong> Agar aap inme se kisi category mein aate hain, toh turant surrender kar do. Baad mein problem ho sakti hai.
+            <strong>Sabse Zaroori:</strong> Agar aap inme se kisi category mein aate hain, toh khud aage badh kar surrender kar do. Baad mein problem ho sakti hai.
           </IB>
         </section>
 
@@ -184,7 +185,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
               <li>Mobile number wahi hona chahiye jo registration time par diya tha</li>
               <li>OTP aayega, usko enter karna padega</li>
               <li>Ek baar submit karne ke baad undo nahi ho sakta</li>
-              <li>15 din baad <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">beneficiary list</Link> check karo</li>
+              <li>15 din baad <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">official list</Link> check karo</li>
             </ul>
           </WB>
         </section>
@@ -216,14 +217,14 @@ export default function PmKisanVoluntarySurrenderGuide() {
             loading="lazy"
           />
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            15 din ke andar aapka naam list se hat jayega. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">Beneficiary list</Link> check karke confirm kar lena.
+            15 din ke andar aapka naam list se hat jayega. <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">sarkari beneficiary record</Link> check karke confirm kar lena.
           </p>
         </section>
 
         <section className="mb-8">
           <SH>CSC Center Se Bhi Karwa Sakte Ho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Agar online nahi ho pa raha aur BAO jane ka time nahi hai, toh <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC center</Link> par chale jao.
+            Agar online nahi ho pa raha aur BAO jane ka time nahi hai, toh <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">paas ke CSC outlet</Link> par chale jao.
           </p>
           <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl p-5">
             <p className="text-sm text-green-800 dark:text-green-300 mb-3">
@@ -255,7 +256,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
               { doc: 'Registration Number', note: 'Agar yaad ho toh' },
             ].map(({ doc, note }) => (
               <div key={doc} className="p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-                <p className="font-black text-sm text-[var(--color-text)] mb-1">📄 {doc}</p>
+                <p className="font-black text-sm text-[var(--color-text)] mb-1">{doc}</p>
                 <p className="text-xs text-[var(--color-text-muted)]">{note}</p>
               </div>
             ))}
@@ -293,26 +294,26 @@ export default function PmKisanVoluntarySurrenderGuide() {
         </section>
 
         <section className="mb-8">
-          <SH>Zaroori Baatein Jo Yaad Rakhein</SH>
+          <SH>Surrender Se Pehle Ke Chaar Checkpoints</SH>
           <div className="space-y-3">
             <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl">
               <p className="text-sm text-amber-800 dark:text-amber-300">
-                <strong>⚠️ Recovery Ka Niyam:</strong> Agar aap eligible nahi the, toh sarkar pehle se disbursed kiye gaye paiso ki recovery kar sakti hai. Surrender karne se sirf future ki kist rukti hai aur legal penalty se bacha ja sakta hai.
+                <strong>Recovery Ka Niyam:</strong> Agar aap eligible nahi the, toh sarkar pehle se disbursed kiye gaye paiso ki recovery kar sakti hai. Surrender karne se sirf future ki kist rukti hai aur legal penalty se bacha ja sakta hai.
               </p>
             </div>
             <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-4 rounded-r-xl">
               <p className="text-sm text-red-800 dark:text-red-300">
-                <strong>❌ Ek Baar Ka Decision:</strong> Surrender karne ke baad usi Aadhaar/zameen par dobara register karna mushkil ho sakta hai aur portal par restriction lag sakti hai. Soch samajh kar karo.
+                <strong>Ek Baar Ka Decision:</strong> Surrender karne ke baad usi Aadhaar/zameen par dobara register karna mushkil ho sakta hai aur portal par restriction lag sakti hai. Soch samajh kar karo.
               </p>
             </div>
             <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 rounded-r-xl">
               <p className="text-sm text-blue-800 dark:text-blue-300">
-                <strong>✅ List Check Karo:</strong> 30 din baad <Link href="/articles/PmKisanBeneficiaryList2026" className="underline">beneficiary list</Link> mein apna naam check karo. Hat gaya hona chahiye.
+                <strong>List Check Karo:</strong> 30 din baad <Link href="/articles/PmKisanBeneficiaryList2026" className="underline">updated list</Link> mein apna naam check karo. Hat gaya hona chahiye.
               </p>
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-4 rounded-r-xl">
               <p className="text-sm text-green-800 dark:text-green-300">
-                <strong>📝 Receipt Rakhein:</strong> Online ho ya offline, receipt ka screenshot/photo zaroor lein. Future mein kaam aayega.
+                <strong>Receipt Rakhein:</strong> Online ho ya offline, receipt ka screenshot/photo apne phone mein rakh lein. Future mein kaam aayega.
               </p>
             </div>
           </div>
@@ -331,19 +332,19 @@ export default function PmKisanVoluntarySurrenderGuide() {
               { problem: 'Penalty', desc: 'Fine ya penalty lag sakti hai.' },
             ].map(({ problem, desc }, i) => (
               <div key={i} className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
-                <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">❌ {problem}</p>
+                <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">{problem}</p>
                 <p className="text-xs text-red-700 dark:text-red-400">{desc}</p>
               </div>
             ))}
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Isliye agar eligible nahi ho toh turant surrender kar do. <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">Master Guide</Link> mein eligibility criteria check karo.
+            Isliye agar eligible nahi ho toh apni marzi se surrender kar do. <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">Master Guide 2026 wala article</Link> mein eligibility criteria check karo.
           </p>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Aksar Puche Jane Wale Sawal
+            Surrender Se Pehle Ke Sawal, Yahan Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="Voluntary Surrender FAQ" />
         </section>
@@ -359,9 +360,9 @@ export default function PmKisanVoluntarySurrenderGuide() {
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} />
         <BottomNav extraLinks={[
-          { href: '/articles/PmKisanMasterGuide2026', l: '📚 Master Guide' },
-          { href: '/articles/PmKisanCorrectionForm2026', l: '📝 Correction Form' },
-          { href: '/articles/PmKisanBeneficiaryList2026', l: '📋 Beneficiary List' },
+          { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
+          { href: '/articles/PmKisanCorrectionForm2026', l: 'Correction Form' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
         ]} />
         <Disclaimer />
       </div>
