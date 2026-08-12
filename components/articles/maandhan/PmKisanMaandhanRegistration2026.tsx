@@ -73,7 +73,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
               "keywords": "PM Kisan Maandhan Registration, Kisan Pension Scheme, Maandhan Yojana, PM-KMY 2026, CSC Registration, Kisan Maandhan Documents, ₹3000 Pension, PM Kisan Maandhan 2026",
               "articleSection": "Agriculture & Pension Schemes",
               "author": {
-                "@type": "Organization",
+                "@type": "Person",
                 "name": AUTHOR_NAME,
                 "url": AUTHOR_URL
               },
