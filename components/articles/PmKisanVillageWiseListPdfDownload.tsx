@@ -506,12 +506,12 @@ export default function PmKisanVillageWiseListPdfDownload() {
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Seedhi Baat</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">List Download Karke Kya Karein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            PM Kisan ka ye roster ek powerful tool hai. Isse aap apne gaon ka audit khud kar sakte hain. Transparency badhti hai, fraud pakde jaate hain, aur asli kisanon ko unka haq milta hai.
+            Gaon ki list sirf apna naam dekhne ke liye nahi hai — isi se pata chalta hai ki kaun ineligible hote hue paisa le raha hai aur kaun eligible hote hue chhut gaya hai. Har kist se pehle list update hoti hai, isliye purani save ki hui PDF par bharosa na karein.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Aaj hi apne gaon ki ye list save karein aur apne Gram Pradhan ya Patwari ko bhi bhejein.
+            Naam list mein hai par payment nahi aayi — toh problem list mein nahi, bank seeding mein hai; woh alag check karni padegi.
           </p>
         </div>
 

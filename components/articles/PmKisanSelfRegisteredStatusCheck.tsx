@@ -119,12 +119,12 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         </div>
 
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
-          <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Seedhi Baat</h2>
+          <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Alag Portal Dhundna Band Karein</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
             CSC se karwaya ya khud online kiya — farak nahi padta. <strong>Status check karne ka tarika same hai.</strong>
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
-            Lekin ek chhoti si baat hai jo bahut log confuse ho jaate hain — khud registration karne walon ko lagta hai alag portal par check karna padega. Nahi bhai, sab ek hi jagah check hota hai. Bas Aadhaar number chahiye.
+            Self-registration karne wale aksar sochte hain ki unke liye koi alag portal hoga — aisa kuch nahi hai. Sab ka status ek hi jagah, pmkisan.gov.in ke Beneficiary Status mein, sirf Aadhaar number se check hota hai.
           </p>
         </div>
 
@@ -280,7 +280,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </div>
 
           <IB>
-            <strong>Bottom Line:</strong> Registration process mein farak hai, lekin ek baar registered ho jaane ke baad system dono ko ek jaisa treat karta hai — koi alag category ya priority nahi hoti.
+            <strong>Yaani:</strong> Registration process mein farak hai, lekin ek baar registered ho jaane ke baad system dono ko ek jaisa treat karta hai — koi alag category ya priority nahi hoti.
           </IB>
         </section>
 
@@ -426,16 +426,16 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Bottom Line</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Self-Registration Walon Ki Checklist</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Khud registration kiya ya CSC se — status check karne ka tarika same hai. Bas Aadhaar number chahiye.
+            Khud registration karne walon ke paas CSC operator ka reminder nahi hota — yeh 5 kaam khud track karne padte hain:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
-            <li>pmkisan.gov.in par jao</li>
-            <li>Beneficiary Status mein Aadhaar daalo</li>
-            <li>Status check karo — Active, Pending ya Rejected</li>
-            <li>eKYC complete rakho</li>
-            <li>Har 7-10 din mein check karte raho</li>
+            <li>pmkisan.gov.in par Beneficiary Status mein Aadhaar se status dekhein</li>
+            <li>Pehli baar “Pending for Approval” dikhna normal hai — state verification chal raha hai</li>
+            <li>eKYC complete karein — self-registered logon ka yeh sabse zyada chhutta hai</li>
+            <li>Land seeding status bhi dekh lein — form khud bhara hai toh Khasra galti aam hai</li>
+            <li>Har 7-10 din mein status dobara check karte rahein jab tak Active na ho</li>
           </ol>
         </div>
 
