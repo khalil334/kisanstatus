@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import { useState, useEffect } from 'react';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-13T17:44:35+05:30';
 const MODIFIED = '2026-02-18T06:27:23+05:30';
@@ -174,7 +175,7 @@ export default function PmKisanMaandhanYojanaPension() {
             PM Kisan Maandhan Yojana: 60 Saal Ke Baad ₹3000 Pension Ka Sahi Tarika
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
             <span> {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>️ 16 min read</span>

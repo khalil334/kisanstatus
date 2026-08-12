@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'PM Matsya Sampada Yojana 2026: 60% Subsidy & Complete Guide',
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
     'fish pond setup',
     'aquaculture business'
   ],
-  authors: [{ name: 'Manish Kumar', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
     title: 'PM Matsya Sampada Yojana 2026: 60% Subsidy & Complete Guide',
     description: 'PM Matsya Sampada Yojana complete guide. Janein fish farming subsidy, biofloc technology, pond setup aur real profit calculation ke baare mein.',

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import CropProfitCalcPage from '@/components/calculators/CropProfitCalcPage';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/crop-profit`;
@@ -7,6 +8,8 @@ const PAGE_URL = `${DOMAIN}/calculator/crop-profit`;
 export const metadata: Metadata = {
   title: 'Kheti Ka Munafa Calculator 2026',
   description: 'Kheti mein kitna profit ya loss hua, jaano turant. Beej, khad, mazdoori aur sinchai ka kharcha dalo aur net munafa nikalo. Free per hectare calculator.',
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  creator: AUTHOR_NAME,
   keywords: [
     'kheti ka munafa calculator',
     'fasal profit loss calculator hindi',

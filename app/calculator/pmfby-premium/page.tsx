@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import PMFBYCalcPage from '@/components/calculators/PMFBYCalcPage';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/pmfby-premium`;
@@ -7,6 +8,8 @@ const PAGE_URL = `${DOMAIN}/calculator/pmfby-premium`;
 export const metadata: Metadata = {
   title: 'Fasal Bima Premium Calculator 2026',
   description: 'PM Fasal Bima Yojana (PMFBY) ka premium calculate karein. Kharif aur Rabi dono ke liye government subsidy aur net premium jaanein. Bilkul free tool.',
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  creator: AUTHOR_NAME,
   keywords: [
     'fasal bima premium calculator',
     'pmfby premium calculator hindi',

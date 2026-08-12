@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'PM FME Yojana 2026: Chhote Food Business Ke Liye 35% Subsidy Guide',
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     'fssai license',
     'odop scheme'
   ],
-  authors: [{ name: 'Manish Kumar', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
     title: 'PM FME Yojana 2026: Chhote Food Business Ke Liye 35% Subsidy Guide',
     description: 'PM FME Yojana complete guide. Janein micro food processing subsidy kaise lein, ODOP benefits, loan process, aur real ground reality.',

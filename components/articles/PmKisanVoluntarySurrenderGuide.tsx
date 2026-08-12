@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-20T17:46:17+05:30';
 const MODIFIED = '2026-01-29T19:09:12+05:30';
@@ -55,7 +56,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
             PM Kisan Voluntary Surrender: Galti Se Register Ho Gaye Toh Kaise Hatte?
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span>✍️ <Link href="/about" className="underline hover:text-white">Manish Kumar</Link></span>
+            <span>✍️ <Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
             <span>📅 {fmtDate(PUBLISHED)}</span>
             <span>🔄 Updated: {fmtDate(MODIFIED)}</span>
             <span>⏱️ 12 min read</span>

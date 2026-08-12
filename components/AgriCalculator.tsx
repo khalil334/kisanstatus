@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { InputField, SelectField, ResultRow, fmt } from './calculators/CalcShared';
+import { AUTHOR_NAME, SITE_NAME } from '@/lib/site-config';
 
 type Tab = 'pmkisan' | 'msp' | 'profit' | 'emi' | 'fertilizer' | 'irrigation';
 
@@ -397,7 +398,7 @@ export default function AgriCalculator() {
           </div>
 
           <div className="bg-green-50 dark:bg-green-900/20 border-t border-green-100 dark:border-green-800 px-6 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[var(--color-text-muted)]">
-            <span>✍️ By Manish Kumar | KisanStatus.com</span>
+            <span>✍️ By {AUTHOR_NAME} | {SITE_NAME}</span>
             <span>⚠️ Yeh tools sirf estimate dete hain bhai — final figures official sources se verify karein</span>
           </div>
         </div>

@@ -2,12 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
+import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide',
   description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.',
   keywords: ['mushroom farming in small room at home profit', 'oyster mushroom spawn price in India 2026', 'khumbi ki kheti mein kitna pani lagta hai', 'green mold in mushroom treatment home remedy', 'mushroom business plan 10x10 room', 'nhb mushroom subsidy'],
-  authors: [{ name: 'Manish Kumar', url: 'https://kisanstatus.com/about' }],
+  authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
     title: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide',
     description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.',
