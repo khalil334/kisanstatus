@@ -433,7 +433,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         थी। मौखिक शिकायत का कोई record नहीं बनता — और बिना record के follow-up सिर्फ नए चक्कर हैं।
       </p>
 
-      <Hd>सीधी बात</Hd>
+      <Hd>नमो शेतकरी = PM Kisan की परछाई</Hd>
       <p>
         नमो शेतकरी कोई पहेली नहीं है — यह PM Kisan की परछाई है। वहां सब ठीक, तो यहां भी पैसा आएगा; वहां
         अटका, तो यहां भी अटकेगा। साल में दो बार portal पर status देख लेने की आदत, eKYC-बैंक-जमीन

@@ -379,7 +379,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         <Link href="/articles/hi/payment-stopped-by-state">उसकी guide यहां</Link> है।
       </p>
       <p>
-        एक आखिरी बात, जो अनुभव से कहते हैं — seeding एक बार की चीज नहीं, एक <em>स्थिति</em> है। खाता बदला,
+        अनुभव से निकला सबसे बड़ा सबक — seeding एक बार की चीज नहीं, एक <em>स्थिति</em> है। खाता बदला,
         बैंक merge हुआ, खाता dormant हुआ — किसी भी घटना से mapping बदल या टूट सकती है। तो साल में दो बार,
         बुवाई और कटाई की तरह, myAadhaar खोलकर 2 मिनट का status-check कर लेने की आदत बना लीजिए। जितनी मेहनत
         खेत के दस्तावेज़ संभालने में लगाते हैं, उसका सौवां हिस्सा इस digital कागज पर भी लगा दें — किस्त अटकने की
