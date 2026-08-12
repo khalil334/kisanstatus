@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { Metadata } from 'next';
-import { AuthorBox } from '@/components/ArticleShared';
+import { AuthorBox, FAQBlock } from '@/components/ArticleShared';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
@@ -30,24 +30,34 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://kisanstatus.com/articles/madhumakhi-palan-kvic-subsidy' },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    { '@type': 'FAQPage', '@id': 'https://kisanstatus.com/articles/madhumakhi-palan-kvic-subsidy/#faq', mainEntity: [
-        { '@type': 'Question', name: 'Kya madhumakhi ke kaatne se pehle allergy test karwana zaroori hai?', acceptedAnswer: { '@type': 'Answer', text: 'Haan, agar aapko pehle se asthma ya kisi insect sting se severe reaction ki history hai, toh doctor se consult karna chahiye. Anaphylactic shock ek real risk hai, bhale hi wo rare ho.' } },
-        { '@type': 'Question', name: 'Agar padosi kisan zabardasti pesticide spray kar de, toh colony bachane ka koi turant upay hai?', acceptedAnswer: { '@type': 'Answer', text: 'Turant upay mushkil hai, lekin agar advance mein pata chal jaye, toh hive ke entrance ko temporary mesh se band karke 2-3 din ke liye dark, cool jagah par shift kar dena chahiye. Lekin yeh short-term solution hai, long-term mein organic zones hi safe hain.' } },
-        { '@type': 'Question', name: 'Kya ghar ki chhat (terrace) par bee box rakhna safe aur practical hai?', acceptedAnswer: { '@type': 'Answer', text: 'Technically possible hai, lekin practical nahi. Bees ko paas mein paani ka source aur ample flora chahiye hota hai. Terrace par paani ki kami aur padosiyon ki shikayat ka risk hamesha rehta hai.' } },
-        { '@type': 'Question', name: 'Purane bee frames ko dobara use karne mein kya risk hai?', acceptedAnswer: { '@type': 'Answer', text: 'Bahut zyada risk. Purane frames mein American Foulbrood jaisi deadly diseases ke spores saalon tak zinda reh sakte hain. Naye beginner ko hamesha naye, sterilized frames ke saath shuruat karni chahiye.' } }
-      ]
-    }
-  ]
-};
+const madhumakhiPalanFaqs = [
+  {
+    q: 'Kya madhumakhi ke kaatne se pehle allergy test karwana zaroori hai?',
+    a: 'Haan, agar aapko pehle se asthma ya kisi insect sting se severe reaction ki history hai, toh doctor se consult karna chahiye. Anaphylactic shock ek real risk hai, bhale hi wo rare ho. Pehli baar hive kholte waqt hamesha kisi experienced saathi ke saath rahein.',
+  },
+  {
+    q: 'Padosi pesticide spray kare toh?',
+    a: (
+      <>
+        Turant upay mushkil hai, lekin agar advance mein pata chal jaye, toh hive ke entrance ko temporary mesh se band karke 2-3 din ke liye dark, cool jagah par shift kar dena chahiye. Long-term mein <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">organic farming zones</Link> ke paas hi apiary setup karna safe hai.
+      </>
+    ),
+    schemaText:
+      'Turant upay mushkil hai, lekin agar advance mein pata chal jaye, toh hive ke entrance ko temporary mesh se band karke 2-3 din ke liye dark, cool jagah par shift kar dena chahiye. Long-term mein organic farming zones ke paas hi apiary setup karna safe hai.',
+  },
+  {
+    q: 'Terrace par bee box rakhna safe hai?',
+    a: 'Technically possible hai, lekin practical nahi. Bees ko paas mein paani ka source aur ample flora chahiye hota hai. Terrace par paani ki kami aur padosiyon ki shikayat ka risk hamesha rehta hai.',
+  },
+  {
+    q: 'Purane frames reuse karne ka risk?',
+    a: 'Bahut zyada risk. Purane frames mein American Foulbrood jaisi deadly diseases ke spores saalon tak zinda reh sakte hain. Naye beginner ko hamesha naye, sterilized frames ke saath shuruat karni chahiye.',
+  },
+];
 
 export default function MadhumakhiPalan() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-
       <Image
         src="/images/kisanguides/madhumakhi-palan-hero.webp"
         alt="Beekeeping Boxes in Mustard Field - Apis Mellifera Colony"
@@ -291,24 +301,7 @@ export default function MadhumakhiPalan() {
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Frequently Asked Questions (Unexpected Realities)
       </h2>
-      <div className="grid md:grid-cols-2 gap-4 mb-8 not-prose">
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">1. Kya madhumakhi ke kaatne se pehle allergy test karwana zaroori hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Haan, agar aapko pehle se asthma ya kisi insect sting se severe reaction ki history hai, toh doctor se consult karna chahiye. Anaphylactic shock ek real risk hai, bhale hi wo rare ho. Pehli baar hive kholte waqt hamesha kisi experienced saathi ke saath rahein.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">2. Padosi pesticide spray kare toh?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Turant upay mushkil hai, lekin agar advance mein pata chal jaye, toh hive ke entrance ko temporary mesh se band karke 2-3 din ke liye dark, cool jagah par shift kar dena chahiye. Long-term mein <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">organic farming zones</Link> ke paas hi apiary setup karna safe hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">3. Terrace par bee box rakhna safe hai?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Technically possible hai, lekin practical nahi. Bees ko paas mein paani ka source aur ample flora chahiye hota hai. Terrace par paani ki kami aur padosiyon ki shikayat ka risk hamesha rehta hai.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">4. Purane frames reuse karne ka risk?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Bahut zyada risk. Purane frames mein American Foulbrood jaisi deadly diseases ke spores saalon tak zinda reh sakte hain. Naye beginner ko hamesha naye, sterilized frames ke saath shuruat karni chahiye.</p>
-        </div>
-      </div>
+      <FAQBlock faqs={madhumakhiPalanFaqs} variant="cards" />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Final Assessment: Kya Yeh Business Aapke Liye Hai?
