@@ -16,9 +16,9 @@ const bullets = [
     heading: 'Shuruat kahan se hui',
     body: `Poori kahani Bulandshahr zile ki Syana tehsil ke Narsena gaon se nikalti hai. Wahan ek FPO — kisano ka apna sangathan — ye kaam sambhal raha hai, aur aagwaai Dr. Praveen kar rahe hain.
 
-Shuruat mein sirf apna gaon tha. Dheere-dheere aaspaas ke karib pandrah gaon jud gaye, aur aaj rozana karib paanch sau litre ikattha ho raha hai. Paanch sau litre sun kar bada lagta hai, par pandrah gaon mein baant dein to har gaon se ek-do can. Yani koi badi machinery nahi, bas roz ka thoda-thoda.
+Shuruat mein sirf apna gaon tha. Dheere-dheere aaspaas ke karib pandrah gaon jud gaye, aur aaj rozana kareeb paanch sau litre ikattha ho raha hai. Paanch sau litre sun kar bada lagta hai, par pandrah gaon mein baant dein to har gaon se ek-do can. Yani koi badi machinery nahi, bas roz ka thoda-thoda.
 
-Mahilaon ke samooh bhi is kaam mein seedhe jud gaye hain, aur unhe do rupaye prati litre alag se commission mil raha hai. Yani samooh ke zariye maal aaya to bechne wale ko baraah rupaye tak ban jaate hain. Ye choti si baat gaon mein bahut kaam karti hai, kyunki jama karne ka kaam ghar ki aurton ke haath mein hi rehta hai.`,
+Mahilaon ke samooh bhi is kaam mein seedhe jud gaye hain, aur unhe do rupaye prati litre alag se commission mil raha hai. Yani samooh ke zariye maal aaya to bechne wale ko barah rupaye tak ban jate hain. Ye choti si baat gaon mein bahut kaam karti hai, kyuki jama karne ka kaam ghar ki aurton ke haath mein hi rehta hai.`,
     img: {
       src: '/images/mahila-samooh-gau-mutra-commission.webp',
       alt: 'Gaon ki mahilaon ka samooh register mein rozana sangrahan ki entry karta hua',
@@ -42,9 +42,9 @@ To dono taraf se baat milti hai. Sarkaar ko kachche maal ki zaroorat hai; kisan 
     heading: 'Yogi sarkaar ki soch ke peeche kya tark hai',
     body: `Soch yeh hai ki gaay jab doodh dena band kar de, tab bhi use paalna ghaate ka sauda na lage.
 
-Iske peeche jo asli samasya hai, wo har gaon jaanta hai. Boodhi gaay ka chara-pani mahine bhar mein theek-thaak kharcha khada karta hai, aur badle mein doodh sifar. Isliye log use bech dete hain, ya sadak par chod dete hain. Awara pashu, fasal ka nuksan, raat bhar khet ki pehradaari — ye poori chain wahin se shuru hoti hai.
+Iske peeche jo asli samasya hai, wo har gaon jaanta hai. Boodhi gaay ka chara-pani mahine bhar me thik-thak kharcha khada karta hai, aur badle mein doodh sifar. Isliye log use bech dete hain, ya sadak par chod dete hain. Awara pashu, fasal ka nuksan, raat bhar khet ki pehradaari — ye poori chain wahin se shuru hoti hai.
 
-Ab agar wahi gaay khadi-khadi mahine ke kuch hazaar kama de, to sameekaran badal jaata hai. Aadmi use rakhega. Mera maanna hai ki is soch ka asli maqsad kamai se zyada yahi hai — gaay ko baade mein rokna.
+Ab agar wahi gaay khadi-khadi mahine ke kuch hazaar kama de, to samikaran badal jata hai. Aadmi use rakhega. Mera maanna hai ki is soch ka asli maqsad kamai se zyada yahi hai — gaay ko baade mein rokna.
 
 Chhattisgarh mein bhi aisi ek scheme pehle chal chuki hai, wahan rate kam tha — chaar rupaye litre. To vichaar naya nahi hai, par das rupaye ka rate pehli baar sunai de raha hai.`,
     img: {
@@ -57,7 +57,7 @@ Chhattisgarh mein bhi aisi ek scheme pehle chal chuki hai, wahan rate kam tha �
     heading: 'Gaon walon ke liye asal mein matlab kya hai',
     body: `Teen baatein hain jo asal mein farq daalti hain.
 
-Pehli — boodhi ya ghair-dudharu gaay bhi kamai ka zariya ban jaati hai. Pehle wo sirf kharcha thi. Ab roz chaar-paanch litre bhi bike to mahine bhar mein theek-thaak jod ban jaata hai, khaaskar un gharon ke liye jinke paas doosra koi zariya nahi tha.
+Pehli — boodhi ya ghair-dudharu gaay bhi kamai ka zariya ban jaati hai. Pehle wo sirf kharcha thi. Ab roz chaar-paanch litre bhi bike to mahine bhar mein thik thak jod ban jaata hai, khaskar un gharon ke liye jinke paas doosra koi zariya nahi tha.
 
 Doosri — paisa usi din. Doodh ka hisaab mahine ke baad aata hai, dairy ki parchi ke saath. Isme raqam haath mein aa jaati hai, aur chhote ghar mein ye farq bada hota hai: bacche ki kitaab, dawa, ration, sab isi rozana ke paise se nikal jaata hai.
 
@@ -99,12 +99,12 @@ const collectSteps = [
   {
     n: '4',
     h: 'Dhoop se dur, thandi jagah',
-    p: `Sidhi dhoop mein rakha bartan garam ho kar bhaap chhodta hai aur haalat badal jaati hai. Chhaya wala kona, ya bori se dhaka drum — yahi behtar hai. Aur jitni jaldi kendra pahuncha dein, utna achha daam milne ki gunjaish rehti hai. Shaam tak rakh chhodne ka koi fayda nahi.`,
+    p: `Sidhi dhoop mein rakha bartan garam ho kar bhaap chhodta hai aur haalat badal jaati hai. Chhaya wala kona, ya bori se dhaka drum — yahi behtar hai. Aur jitni jaldi kendra pahuncha dein, utna acha daam milne ki gunjaish rehti hai. Shaam tak rakh chhodne ka koi fayda nahi.`,
   },
   {
     n: '5',
     h: 'Paani milane ki galti kabhi na karein',
-    p: `Matra badhane ka lalach aata hai, main jaanta hoon. Par kendra par har can ki jaanch hoti hai, aur ek baar milawat pakdi gayi to poore gaon ka bharosa jaata hai — kai jagah aage lena hi band kar dete hain. Ye apni kamai ka rasta khud band karne wali baat hai.`,
+    p: `Matra badhane ka lalach aata hai, main jaanta hoon. Par kendra par har can ki jaanch hoti hai, aur ek baar milawat pakdi gayi to pure gaon ka bharosa jata hai — kai jagah aage lena hi band kar dete hain. Ye apni kamai ka rasta khud band karne wali baat hai.`,
   },
 ] as const;
 
@@ -112,7 +112,7 @@ const collectSteps = [
 const channels = [
   {
     k: 'FPO ka sangrah kendra',
-    v: `Sabse seedha rasta, aur Bulandshahr mein yahi model chal raha hai. Kisan can lekar aata hai, matra napi jaati hai, jaanch hoti hai, wahin bhugtaan. Apne zile ka FPO khojne ke liye block ke BDO daftar ya Krishi Vibhag se poochhein.`,
+    v: `Sabse seedha rasta, aur Bulandshahr mein yahi model chal raha hai. Kisan can lekar aata hai, matra napi jaati hai, jaanch hoti hai, wahin bhugtaan. Apne zile ka FPO khojne ke liye block ke BDO daftar ya Krishi Vibhag se poochein.`,
   },
   {
     k: 'Gaushala aur pashu ashray sthal',
@@ -124,11 +124,11 @@ const channels = [
   },
   {
     k: 'Panchgavya aur ayurvedic units',
-    v: `Kuch private units ise saaf kar ke, distil kar ke arq banati hain. Ye ache daam de sakti hain, lekin matra aur safaai ke unke apne paimane hote hain. Pehle jaakar baat kar lein, phir jama karna shuru karein — warna maal tayyar rahega aur khareedar nahi.`,
+    v: `Kuch private units ise saaf kar ke, distil kar ke arq banati hain. Ye achhe daam de sakti hai, lekin matra aur safaai ke unke apne paimane hote hain. Pehle jaakar baat kar lein, phir jama karna shuru karein — warna maal tayyar rahega aur khareedar nahi.`,
   },
   {
     k: 'Aaspaas ke jaivik kisan',
-    v: `Jo padosi rasayan chhod kar prakritik tareeke par aa gaye hain, unhe har pandrah din drum bharne ke liye maal chahiye hota hai. Bina kisi bicholiye ka, sabse saral sauda — aur gaadi ka kiraya bhi bach jaata hai.`,
+    v: `Jo padosi rasayan chhod kar prakritik tareeke par aa gaye hain, unhe har pandrah din drum bharne ke liye maal chahiye hota hai. Bina kisi bicholiye ka, sabse saral sauda — aur gadi ka kiraya bhi bach jata hai.`,
   },
 ] as const;
 
@@ -184,7 +184,7 @@ const summary: readonly (readonly [string, string])[] = [
 const faqs = [
   {
     q: 'Isse kitni kamai ho sakti hai?',
-    a: 'Rate ₹10 prati litre hai. Ghar ki ek gaay se rozana chaar litre maan lein to mahine mein baraah sau ke aaspaas. Chaar gaay wale ghar mein hisaab chaar guna. Ye kamai doodh ki jagah nahi leti, uske upar aati hai.',
+    a: 'Rate ₹10 prati litre hai. Ghar ki ek gaay se rozana chaar litre maan lein to mahine me barah sau ke aas paas. Chaar gaay wale ghar mein hisaab chaar guna. Ye kamai doodh ki jagah nahi leti, uske upar aati hai.',
   },
   {
     q: 'Kya yeh poore UP mein shuru ho chuka hai?',
@@ -205,7 +205,7 @@ const faqs = [
   },
   {
     q: 'Kaunsi nasl ki gaay chalegi?',
-    a: 'Prakritik kheti ke nuskhon mein desi nasl bataayi jaati hai — Sahiwal, Gir, Hariana, Tharparkar jaisi. Kharidne wala kendra apni shart khud batata hai, isliye pehle jaakar poochh lena behtar hai.',
+    a: 'Prakritik kheti ke nuskhon mein desi nasl bataayi jaati hai — Sahiwal, Gir, Hariana, Tharparkar jaisi. Kharidne wala kendra apni shart khud batata hai, isliye pehle jakar puch lena behtar hai.',
   },
   {
     q: 'Bimar gaay ya dawa chal rahi ho to?',
@@ -217,7 +217,7 @@ const faqs = [
   },
   {
     q: 'Kitne din tak rakh sakte hain?',
-    a: 'Jitna taaza, utna achha. Do-teen din se zyada rakhne par gandh aur haalat badalti hai, aur kendra par jaanch mein dikkat aa sakti hai.',
+    a: 'Jitna taaza, utna achha. Do-teen din se jyada rakhne par gandh aur haalat badalti hai, aur kendra par jaanch mein dikkat aa sakti hai.',
   },
   {
     q: 'Bechne ke bajaye khud khaad banaun to?',
@@ -225,7 +225,7 @@ const faqs = [
   },
   {
     q: 'Buffalo ka bhi liya jaata hai?',
-    a: 'Prakritik kheti ke paramparik nuskhe desi gaay ki baat karte hain. Bhains ke maamle mein kendra ki apni policy hoti hai — jama karne se pehle saaf poochh lein, warna gaadi bhar kar wapas laani padegi.',
+    a: 'Prakritik kheti ke paramparik nuskhe desi gaay ki baat karte hain. Bhains ke maamle mein kendra ki apni policy hoti hai — jama karne se pehle saaf poochh lein, warna gadi bhar kar wapas lani padegi.',
   },
   {
     q: 'Registration jaisa kuch karana padta hai?',
