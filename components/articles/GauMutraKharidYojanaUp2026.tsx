@@ -184,64 +184,35 @@ const summary: readonly (readonly [string, string])[] = [
 const faqs = [
   {
     q: 'Isse kitni kamai ho sakti hai?',
-    a: 'Rate ₹10 prati litre hai. Ghar ki ek gaay se rozana chaar litre maan lein to mahine me barah sau ke aas paas. Chaar gaay wale ghar mein hisaab chaar guna. Ye kamai doodh ki jagah nahi leti, uske upar aati hai.',
+    a: 'Bulandshahr mein rate ₹10 litre hai. Ek gaay roz ka chaar litre de de to mahine ke barah sau ke aas-paas banta hai — bada paisa nahi, par ye doodh ke upar ki kamai hai, uski jagah nahi. Chaar gaay hain to hisaab chaar guna kar lijiye. Haan, mahila samooh se jude ghar ko ₹2 litre upar se milta hai.',
   },
   {
     q: 'Kya yeh poore UP mein shuru ho chuka hai?',
-    a: 'Nahi. Abhi sirf Bulandshahr ke kuch gaanvon mein pilot chal raha hai, aur baki zilon ke liye koi aadesh samne nahi aya.',
-  },
-  {
-    q: 'Jama kahan karna padta hai?',
-    a: 'Sthaniya FPO ke sangrah kendra par. Aapke gaon mein kaun le raha hai, ye block daftar ya KVK se pata karein.',
-  },
-  {
-    q: 'Mahilaon ko alag fayda milta hai?',
-    a: 'Haan, samooh ke zariye jude gharon ko +₹2 prati litre commission — yani effective ₹12 prati litre.',
-  },
-  { q: 'Istemaal kis kaam mein hoga?', a: 'Jaivik keetnashak aur jeevamrit khaad banane mein.' },
-  {
-    q: 'Doosre zilon mein kab aayega?',
-    a: 'Abhi tarikh tay nahi, pilot ke natijo par nirbhar.',
-  },
-  {
-    q: 'Kaunsi nasl ki gaay chalegi?',
-    a: 'Prakritik kheti ke nuskhon mein desi nasl bataayi jaati hai — Sahiwal, Gir, Hariana, Tharparkar jaisi. Kharidne wala kendra apni shart khud batata hai, isliye pehle jakar puch lena behtar hai.',
-  },
-  {
-    q: 'Bimar gaay ya dawa chal rahi ho to?',
-    a: 'Us dauran jama karna theek nahi. Antibiotic ya koi ilaaj chal raha ho to pashu chikitsak se poochh lein ki kab tak rukna hai.',
-  },
-  {
-    q: 'Bartan kaisa hona chahiye?',
-    a: 'Steel ya khaadya-star ka plastic, saaf aur dhakan wala. Loha-tamba nahi. Sabun ka jhag bilkul na bache.',
-  },
-  {
-    q: 'Kitne din tak rakh sakte hain?',
-    a: 'Jitna taaza, utna achha. Do-teen din se jyada rakhne par gandh aur haalat badalti hai, aur kendra par jaanch mein dikkat aa sakti hai.',
-  },
-  {
-    q: 'Bechne ke bajaye khud khaad banaun to?',
-    a: 'Kai kisan yahi karte hain. Ek drum jeevamrit karib ek ekad ke liye kaafi maana jaata hai, aur khaad ka kharcha seedha ghat jaata hai. Bechna aur khud banana — dono ek saath bhi chal sakte hain.',
-  },
-  {
-    q: 'Buffalo ka bhi liya jaata hai?',
-    a: 'Prakritik kheti ke paramparik nuskhe desi gaay ki baat karte hain. Bhains ke maamle mein kendra ki apni policy hoti hai — jama karne se pehle saaf poochh lein, warna gadi bhar kar wapas lani padegi.',
-  },
-  {
-    q: 'Registration jaisa kuch karana padta hai?',
-    a: 'Bulandshahr wale model mein FPO apne saath jude gharon ka register rakhta hai. Koi online portal ya fees ki baat saamne nahi ayi hai. Fees maangne wale se door rahein.',
-  },
-  {
-    q: 'Paisa nakad milta hai ya khaate mein?',
-    a: 'Pilot mein turant bhugtaan ki baat kahi gayi hai. Aapke gaon mein kaun kharid raha hai, uske hisaab se nakad ya khaate — dono ho sakta hai. Parchi zaroor lein.',
-  },
-  {
-    q: 'Kis sarkari daftar se jaankari milegi?',
-    a: 'Zila Krishi Vibhag, block ka BDO daftar, ya Krishi Vigyan Kendra. Prakritik kheti aur BRC se judi baat KVK behtar bataata hai. UP pashupalan vibhag ki website animalhusb.upsdc.gov.in hai.',
+    a: 'Nahi. Abhi sirf Bulandshahr ke kuch gaanv. Baki zilon ke liye na koi aadesh aya hai, na tarikh. Koi kahe ki aapke zile mein bhi sarkari kharid chalu ho gayi — to pehle block daftar se pushti karein.',
   },
   {
     q: 'Kya kisi rajya mein sarkaar sach mein gau mutra kharidti hai?',
-    a: 'Haan. Chhattisgarh ki Godhan Nyay Yojana mein sarkaar Gauthan kendron par gau mutra ₹4 prati litre kharidti rahi hai — iska sarkari portal godhannyay.cgstate.gov.in hai. UP mein abhi sirf Bulandshahr ka pilot hai, rajya-vyapi kharid nahi.',
+    a: 'Chhattisgarh mein kharidti rahi hai — Godhan Nyay Yojana, ₹4 litre, Gauthan kendron par. Scheme ka apna sarkari portal hai: godhannyay.cgstate.gov.in. Yani baat hawa-hawai nahi hai; bas UP mein abhi wo star ki vyavastha nahi bani.',
+  },
+  {
+    q: 'Jama kahan karna padta hai, aur registration ka kya chakkar hai?',
+    a: 'Sthaniya FPO ke sangrah kendra par. FPO apna register khud rakhta hai — koi online form, koi portal, koi fees nahi. Aapke ilaake mein kaun le raha hai, ye block ka BDO daftar ya KVK bata dega. Fees maangne wala aadmi galat hai, seedhi baat.',
+  },
+  {
+    q: 'Paisa kab aur kaise milta hai?',
+    a: 'Pilot mein usi din bhugtaan ki baat hai — nakad ya khaate mein, kharidne wale par nirbhar. Bas parchi zaroor lein, aur bina tolai ke sauda kabhi na karein.',
+  },
+  {
+    q: 'Bhains ka bhi chalega ya sirf gaay ka?',
+    a: 'Prakritik kheti ke paramparik nuskhe desi gaay ki baat karte hain — Sahiwal, Gir, Hariana jaisi naslein. Bhains par har kendra ki apni policy hai. Gadi bhar kar le jaane se pehle phone par hi poochh lein.',
+  },
+  {
+    q: 'Gaay bimar ho ya dawa chal rahi ho to?',
+    a: 'Tab jama na karein. Antibiotic ya koi ilaaj chal raha ho to pashu chikitsak se poochh lein ki kitne din rukna hai — ye maal khaad aur keetnashak mein jaata hai, isliye ye savdhani zaroori hai.',
+  },
+  {
+    q: 'Kharidar hi na mile to jama karna bekar gaya?',
+    a: 'Bilkul nahi. Jeevamrit khud bana lijiye — ek drum karib ek ekad ke liye kaafi maana jaata hai, aur khaad ki dukaan ka bill seedha ghat jaata hai. Upar poora tareeka diya hai. Kai ghar aadha bechte hain, aadha apne khet mein daalte hain.',
   },
 ] as const;
 
