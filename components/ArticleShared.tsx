@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 import { AUTHOR_NAME, AUTHOR_IMAGE, AUTHOR_LINKEDIN, DISCLAIMER_TEXT } from '@/lib/site-config';
-import { getAuthorBio } from '@/lib/author-bios';
+import { getAuthorBio, getAuthorTagline } from '@/lib/author-bios';
 
 export function fmtDate(iso: string) {
   return new Date(iso).toLocaleDateString('en-IN', {
@@ -151,6 +151,7 @@ export function RelatedArticles({
 export function AuthorBox({ modified, bioKey }: { modified: string; bioKey?: string }) {
   const formattedDate = fmtDate(modified);
   const bio = getAuthorBio(bioKey || modified);
+  const tagline = getAuthorTagline(bioKey || modified);
 
   return (
     <div className="flex items-start gap-4 p-5 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/10 border border-[var(--color-border)] rounded-2xl my-8">
@@ -184,7 +185,7 @@ export function AuthorBox({ modified, bioKey }: { modified: string; bioKey?: str
           </a>
         </span>
         <p className="text-xs text-green-700 dark:text-green-400 font-semibold mt-0.5">
-          Sarkari yojana information — official sources se verified
+          {tagline}
         </p>
         <p className="text-xs text-[var(--color-text-muted)] mt-1">{bio}</p>
         <p className="text-xs text-[var(--color-text-muted)] mt-1">
