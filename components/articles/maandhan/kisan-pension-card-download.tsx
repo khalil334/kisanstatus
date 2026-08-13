@@ -30,11 +30,11 @@ const RELATED_CARDS = [
 
 const FAQS_DATA = [
   {
-    q: 'Mera naam portal par nahi aa raha, kya main enroll hi nahi hua?',
+    q: 'Portal par naam hi nahi aa raha — enroll hua tha ya nahi?',
     a: 'Ho sakta hai aapka form reject ho gaya ho (age ya documents ki wajah se), ya phir aapne jo details daali hain wo system se match nahi ho rahi. Pehle apne bank me jaakar puchiye ki aapke account se PMKMY ke naam se kabhi contribution kata hai ya nahi. Agar paisa kata hai, to aap enrolled hain — bas portal par search me kuch technical gadbad hai.',
   },
   {
-    q: 'Kya main apne pita ya pati ka card download kar sakta hoon?',
+    q: 'Pita ya pati ka card main download kar sakta hoon?',
     a: 'Haan, bilkul. Lekin sirf tab jab aapke paas unka Aadhaar number aur unka registered mobile number ho. OTP usi mobile par aayega. Agar wo uplabdh nahi hai, to bank branch se hi print karwana padega, kyunki bina OTP ke access allowed nahi hai.',
   },
   {

@@ -129,7 +129,7 @@ const FAQS_DATA = [
     a: 'Nahi, entry sirf 18 se 40 saal ke beech hi allowed hai. Isse bahar ki age walon ke liye ye scheme applicable nahi hoti.',
   },
   {
-    q: 'PM Kisan Samman Nidhi aur PM Kisan Maandhan ek hi scheme hai kya?',
+    q: 'Samman Nidhi aur PM Kisan Maandhan ek hi scheme hai kya?',
     a: 'Bilkul alag hain. Samman Nidhi mein saal ke ₹6,000 seedha account mein aate hain, jabki Maandhan ek pension scheme hai jisme aap khud paisa jama karte hain aur 60 ke baad monthly pension milti hai. Dono ka fayda saath-saath liya ja sakta hai.',
   },
   {

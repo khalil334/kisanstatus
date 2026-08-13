@@ -30,7 +30,7 @@ const FAQS_DATA = [
     a: 'Dashboard option use karo portal par. State, District, Block, aur phir Village select kar lo. Poori list khul jayegi jise aap PDF mein save kar sakte hain.',
   },
   {
-    q: 'PM Kisan list PDF download kaise karein?',
+    q: 'PDF mein PM Kisan list kaise download karein?',
     a: 'Official portal par village list kholne ke baad browser ka Print option use karo (Ctrl+P) aur "Save as PDF" select karo. Ya neeche diye gaye state buttons par click karo.',
   },
   {
@@ -42,15 +42,15 @@ const FAQS_DATA = [
     a: 'Registration aur verification complete hone ke baad aamtaur par 15 se 30 din lagte hain.',
   },
   {
-    q: 'Kya main apne district ki beneficiary list download kar sakta hoon?',
+    q: 'Apne district ki beneficiary list download ho sakti hai?',
     a: 'Haan bilkul! Har state/district/block/village ki list publicly available hai. Neeche diye gaye state buttons par click karo — 10 second baad official portal par PDF download ka option aa jayega.',
   },
   {
-    q: 'PM Kisan village wise list 2026 kaise check karein?',
+    q: 'Village wise PM Kisan list 2026 kaise check karein?',
     a: 'pmkisan.gov.in → Dashboard → State select karo → District → Block → Village. Poori list khul jayegi. Browser se PDF save kar sakte ho.',
   },
   {
-    q: 'Kya PM Kisan beneficiary list mein caste ka mention hota hai?',
+    q: 'Beneficiary list mein caste ka mention hota hai kya?',
     a: 'Nahi, list mein sirf naam, father name, mobile number, aur bank details hote hain. Caste ka column nahi hota.',
   },
   {
@@ -58,7 +58,7 @@ const FAQS_DATA = [
     a: 'Pehle eKYC check karo, phir land seeding verify karo. Dono complete hain toh 155261 helpline par call karo ya Block Agriculture Office mein complaint darj karo.',
   },
   {
-    q: 'Kya main pichli kiston ki list dekh sakta hoon?',
+    q: 'Pichli kiston ki list bhi dikhegi?',
     a: 'Haan, portal par aap previous years ki beneficiary lists bhi access kar sakte hain. Dashboard mein year ka option hota hai.',
   },
 ];

@@ -45,7 +45,7 @@ const FAQS_DATA = [
     a: 'Government ka co-contribution pre-mature exit par kabhi wapas nahi milta, woh pension fund mein hi rehta hai. Aapka apna deposited amount + applicable interest wapas mil jata hai. Exact terms apne CSC center ya pmkmy.gov.in se confirm kar lena.',
   },
   {
-    q: 'PM Kisan Maandhan ka asli helpline number kaunsa hai?',
+    q: 'Asli helpline number kaunsa hai PM Kisan Maandhan ka?',
     a: 'Official helpline 1800-3000-3468 hai (Monday se Saturday, 9:30 AM se 6 PM). State-wise numbers ke liye pmkmy.gov.in par "Contact Us" section check karein.',
   },
   {

@@ -57,7 +57,7 @@ const pMFMEYojanaFaqs = [
     a: 'Nahi. Yeh ek "credit-linked" subsidy scheme hai. Iska matlab hai ki subsidy tabhi release hoti hai jab bank aapka loan approve aur disburse kar deta hai. Bina loan sanction ke subsidy claim nahi ki ja sakti.',
   },
   {
-    q: 'Kya PM FME mein working capital ke liye alag se collateral (girvi) dena padta hai?',
+    q: 'Working capital ke liye PM FME mein alag se collateral (girvi) dena padta hai?',
     a: 'Zyadatar cases mein nahi. Is scheme ke under working capital loan CGTMSE (Credit Guarantee Fund Trust for Micro and Small Enterprises) ke cover mein aata hai, jisme ₹2 crore tak ke loan par collateral ki requirement waive ho sakti hai. Lekin final decision bank ki internal credit policy par depend karta hai.',
   },
   {

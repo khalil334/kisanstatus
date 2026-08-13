@@ -30,7 +30,7 @@ const RELATED_CARDS = [
 
 const FAQS_DATA = [
   {
-    q: 'PM Kisan Maandhan Yojana ka official toll-free helpline number kya hai 2026 mein?',
+    q: 'Official toll-free helpline number PM Kisan Maandhan Yojana ka kya hai 2026 mein?',
     a: 'PMKMY ka official toll-free helpline number hai: 18002676888 aur 14434. Ye numbers Ministry of Labour & Employment dwara provide kiye gaye hain aur LIC inhe manage karti hai. CSC users ke liye alag helpdesk number 14599 hai (9:30 AM se 6:00 PM, Monday to Saturday).',
   },
   {

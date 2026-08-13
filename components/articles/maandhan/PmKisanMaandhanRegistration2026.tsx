@@ -47,7 +47,7 @@ const FAQS_DATA = [
     a: 'Registration free hai — dena sirf pehla monthly contribution hota hai (₹55–₹200, umar ke hisaab se). Alag se "processing fee" maangna galat hai; aisa ho toh CSC helpline 1800-3000-3468 par shikayat karein.',
   },
   {
-    q: 'Kya PM Kisan ki ₹2,000 wali kist se Maandhan ka contribution kat sakta hai?',
+    q: '₹2,000 wali PM Kisan kist se Maandhan ka contribution kat sakta hai?',
     a: 'Haan, ye official option hai — PM-KISAN beneficiary apni samman nidhi se contribution auto-debit karwane ki consent de sakta hai. Ye poori tarah optional hai; bina aapke likhit consent ke kist se paisa nahi kat sakta.',
   },
   {
