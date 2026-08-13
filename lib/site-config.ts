@@ -11,7 +11,7 @@ export const AUTHOR_URL = `${SITE_URL}/about`;
 export const AUTHOR_LINKEDIN = 'https://www.linkedin.com/in/manish-kumar-65ab33419';
 export const AUTHOR_IMAGE = '/images/author-manish-kumar.webp';
 export const AUTHOR_IMAGE_URL = `${SITE_URL}${AUTHOR_IMAGE}`;
-export const AUTHOR_BIO = 'Main pichhle kai saalon se PM Kisan aur doosri sarkari yojanaon ko track kar raha hoon. Jo bhi likhta hoon, pehle pmkisan.gov.in aur state portals par khud check karta hoon — phir aasan bhasha mein samjhata hoon, taaki aapko sahi jankari ke liye idhar-udhar bhatakna na pade.';
+export const AUTHOR_BIO = 'Sach kahoon to ye site ek personal pareshani se shuru hui thi — ghar me PM Kisan ki kist atki thi aur portal se kuch samajh nahi aa raha tha. Wahin se yojanaon ko khud track karna shuru kiya. Ab kai saal ho gaye; PM Kisan, KCC, Maandhan, subsidy — jo bhi likhta hoon, pehle official portal par khud check karta hoon. Galti ho jaye to log email par bata dete hain, aur main theek kar deta hoon. Bas yahi tareeqa hai mera.';
 
 export const TWITTER_HANDLE = '@kisanstatus';
 
