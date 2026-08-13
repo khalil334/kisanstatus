@@ -329,22 +329,22 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
       </ul>
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
-        <p className="font-black text-lg mb-1">eKYC Ho Gayi, Kist Phir Bhi Nahi?</p>
+        <p className="font-black text-lg mb-1">eKYC हो गई, किस्त फिर भी नहीं?</p>
         <p className="text-green-100 text-sm mb-4">
-          Tracker se pata karo kaunsa step abhi bhi pending hai.
+          Tracker से पता करें कि कौनसा step अभी भी pending है।
         </p>
         <div className="flex flex-wrap justify-center gap-2.5">
           <Link
             href="/calculator/installment-tracker"
             className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors"
           >
-             Installment Tracker kholo →
+             Installment Tracker खोलें →
           </Link>
           <Link
             href="/calculator"
             className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors"
           >
-             Baaki calculators bhi dekho
+             बाकी calculators भी देखें
           </Link>
         </div>
       </div>
