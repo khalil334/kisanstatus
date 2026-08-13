@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { RajyaYojanaArticleMeta } from '@/lib/rajya-yojana-data';
 import InfoBox from '@/components/ui/InfoBox';
+import { FAQBlock } from '@/components/ArticleShared';
 
 const IMG_BASE = '/images/articles/rajya-yojna/parihara-payment-status-check-2026';
 
@@ -135,6 +136,53 @@ const MICRO_FAQS: { error: string; matlab: string; fix: string }[] = [
     error: 'Status "Released" hai par 2 hafte se paisa nahi aaya',
     matlab: 'Release treasury se hua hai, par bank leg me atak gaya — zyada tar Aadhaar-NPCI mapping ka lafda.',
     fix: 'Bank jao, poochho ki DBT ke liye aapka Aadhaar kis account se map hai. Doosre bank se map hai to wahan ki passbook dekho.',
+  },
+];
+
+const FAQS_DATA = [
+  {
+    q: 'Parihara ka status check karne ka sahi portal kaunsa hai?',
+    a: 'Status parihara.karnataka.gov.in par — wahan Aadhaar se payment status aur village-wise report dono milti hai. Record (RTC/pahani, mutation, Aadhaar seeding report) landrecords.karnataka.gov.in par. Ek line me: status parihara portal par, record Bhoomi par. .com ya .in wali private "parihara list download" sites sarkari nahi hain — wahan Aadhaar number kabhi mat daalo.',
+  },
+  {
+    q: 'Status dekhne ke liye OTP ya bank detail deni padti hai?',
+    a: 'Nahi. Aadhaar number aur captcha se report dikh jaati hai — OTP ki zaroorat nahi padti. Koi site OTP ke bahane bank detail maange to wahin ruk jao, wo sarkari page nahi hai. Poori chain — survey, list, status check aur payment — free hai; beech me paisa maangne wale ki shikayat cyber helpline 1930 par karo.',
+  },
+  {
+    q: 'Village-wise list kaise kholein?',
+    a: 'Portal par village-wise / report wala option chuno, year-season aur calamity type select karo, phir District → Taluk → Hobli → Village drill-down karo. Hobli wahi chuno jo aapke RTC me likhi hai, warna gaon dropdown me nahi milega. Report me Entry ID, applicant name, payment status aur amount ki poori list khulti hai — naam Kannada me hoga.',
+  },
+  {
+    q: 'Padosi ka paisa aa gaya, mera nahi — iska matlab kya hai?',
+    a: 'Village-wise list ka yahi sabse bada fayda hai. Gaon me doosron ka credit ho gaya aur aapka nahi, to dikkat round me nahi, aapki entry me hai — us haalat me list me naam hai ya nahi, wahi se apna branch pakdo.',
+  },
+  {
+    q: 'Mera naam list me hi nahi hai — kya karun?',
+    a: 'Aksar iska matlab hai ki aapke khet ka bele hani survey hua hi nahi, ya survey me entry chhoot gayi. Village accountant (VA) ya RI se poochho ki aapke survey number ka nuksan darj hua tha ya nahi, crop survey app ki entry dekho, aur survey chhoota hai to VA ke through likhit objection do — tehsildar office se receiving copy leke aao. Zubaani shikayat ka koi record nahi bachta, aur objection usi season ke round me uthana hota hai.',
+  },
+  {
+    q: 'Naam list me hai par payment pending hai — kitna wait karna chahiye?',
+    a: 'Release ki chain hai: survey data → taluk level approval → treasury se fund release → bank credit. Fund kisto me release hota hai aur har taluk ka number alag waqt par aata hai, isliye padosi taluk se 2-4 hafte ka farq aam baat hai. 2-3 mahine se zyada ho jaaye to pending ko chhupi hui rejection samjho — Entry ID lekar VA, tehsildar office, phir DC office helpline tak jao.',
+  },
+  {
+    q: 'Portal "Released" dikha raha hai par bank me paisa nahi aaya?',
+    a: 'DBT ka paisa account number par nahi, Aadhaar par jaata hai. Isi order me teen check karo: (1) Aadhaar-bank seeding — bank me seeding form 10 minute ka kaam hai; (2) NPCI mapping — Aadhaar ek se zyada account se juda ho to paisa wahan gaya hoga jahan mapping sabse aakhir me hui, us purane account ki passbook update karwa ke dekho; (3) account ki sehat — dormant account, KYC pending ya naam mismatch par sarkari credit laut jaata hai. Theek karwa ke re-process ki request do.',
+  },
+  {
+    q: 'Paisa kisi aur ke khate me chala gaya — joint khata ya purane malik ka case?',
+    a: 'Relief RTC ke record se banta hai, isliye payment usi taraf jaati hai jiska naam pehle darj hai ya jiska Aadhaar seeded hai. Joint khata me ek hissedar ko, mutation na chadhne par purane malik ko, aur batayidar ke case me malik ko hi jaata hai. Raasta ek hi hai — tehsildar office me likhit application, saath me RTC, Aadhaar aur apna paksh saabit karne wale kagaz. Portal par is case ka koi button nahi hota.',
+  },
+  {
+    q: 'Amount ummeed se kam dikh raha hai, aisa kyun?',
+    a: 'Relief rakbe ke hisaab se hisse me aata hai aur kai baar pehli kist hi pehle chadhti hai. Apne survey number ka darj rakba RTC se milao — rakba hi kam darj hai to VA ke paas objection ka raasta hai.',
+  },
+  {
+    q: 'FRUITS ID (FID) ka relief se kya lena-dena hai?',
+    a: 'Karnataka me ab har scheme ek ID par simat rahi hai — FID PM-Kisan, bele parihara aur fasal bima, sab me pehchaan banta hai, aur pichhle rounds me kai kist FID-linked kisano ko pehle gayi hain. Portal par "not linked" jaisa message aaye to nazdeeki Raitha Samparka Kendra ja kar FID me Aadhaar aur RTC dono link karwao, aur apni saari zameen ke survey number jude hain ya nahi ye check karao. FID adhoora = agla relief phir se atka.',
+  },
+  {
+    q: 'Parihara list dekhne ke liye koi app install karni chahiye?',
+    a: 'Kabhi nahi. Sarkari status sirf browser me, sarkari portal par dikhta hai — "parihara list download" ke naam par ghoomne wali APK file phone ka data churane ke liye banti hai. Aur koi agent kahe ki "paisa release karwa denge, itna kharcha lagega" to wo jhooth hai; release ka faisla treasury aur record se hota hai.',
   },
 ];
 
@@ -523,6 +571,13 @@ export default function PariharaPaymentStatusCheck2026({
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-bold mb-4 text-[var(--color-text)]">
+          Parihara Status Par Aksar Poochhe Jaane Wale Sawal
+        </h2>
+        <FAQBlock faqs={FAQS_DATA} variant="accordion" />
       </section>
 
       <InfoBox type="warning">
