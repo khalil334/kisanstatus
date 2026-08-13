@@ -557,7 +557,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanMasterGuide2026" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisan24viKist2026', l: '24vi Kist' },
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },

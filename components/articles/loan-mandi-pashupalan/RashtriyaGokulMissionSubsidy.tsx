@@ -375,7 +375,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         </ul>
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={article.modifiedTime} />
+        <AuthorBox modified={article.modifiedTime} bioKey="RashtriyaGokulMissionSubsidy" />
         <BottomNav extraLinks={[
           { href: '/articles', l: 'Article Hub' },
           { href: '/articles/category/pashupalan', l: 'Dudh-Dairy-Pashu Guides' },

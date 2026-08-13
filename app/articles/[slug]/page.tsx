@@ -14,7 +14,7 @@ import {
   SITE_NAME,
   AUTHOR_NAME,
   AUTHOR_URL,
-  AUTHOR_BIO,
+  AUTHOR_LINKEDIN,
   AUTHOR_IMAGE_URL,
   TWITTER_HANDLE,
   DEFAULT_OG_IMAGE,
@@ -22,6 +22,7 @@ import {
   LOGO_WIDTH,
   LOGO_HEIGHT,
 } from '@/lib/site-config';
+import { getAuthorBio } from '@/lib/author-bios';
 import { hinglishAlternates } from '@/lib/hindi-hreflang';
 
 function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
@@ -71,7 +72,8 @@ function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
         name: AUTHOR_NAME,
         url: AUTHOR_URL,
         image: AUTHOR_IMAGE_URL,
-        description: AUTHOR_BIO,
+        description: getAuthorBio(article.slug),
+        sameAs: [AUTHOR_LINKEDIN],
       },
       creator: {
         '@type': 'Person',

@@ -304,7 +304,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanCorrectionForm2026" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/articles/PmKisanPaymentFailedFix2026', l: 'Payment Fix' },

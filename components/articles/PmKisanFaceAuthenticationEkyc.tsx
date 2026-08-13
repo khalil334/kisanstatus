@@ -319,7 +319,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanFaceAuthenticationEkyc" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanEkycOnline2026', l: 'Normal eKYC' },
           { href: '/articles/PmKisanPaymentFailedFix2026', l: 'Payment Fix' },

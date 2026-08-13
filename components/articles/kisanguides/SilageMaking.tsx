@@ -554,7 +554,7 @@ export default function SilageMaking() {
         Related reading: <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana guide</Link> aur <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">KCC online apply karne ka tarika</Link> bhi dekh lo, agar aap silage unit ke liye funding plan kar rahe ho.
       </p>
 
-      <AuthorBox modified={getArticleBySlug('silage-making-business-guide')!.modifiedTime} />
+      <AuthorBox modified={getArticleBySlug('silage-making-business-guide')!.modifiedTime} bioKey="SilageMaking" />
 
       <GuideDisclaimer
         consult="agriculture officers, CAs"

@@ -686,7 +686,7 @@ export default function PMatsyaSampada() {
       </h2>
       <FAQBlock faqs={pMatsyaSampadaFaqs} variant="inline" />
 
-      <AuthorBox modified={getArticleBySlug('pm-matsya-sampada-yojana-fish-farming')!.modifiedTime} />
+      <AuthorBox modified={getArticleBySlug('pm-matsya-sampada-yojana-fish-farming')!.modifiedTime} bioKey="PMatsyaSampada" />
 
       <GuideDisclaimer
         consult="fisheries officers, aquaculture experts"

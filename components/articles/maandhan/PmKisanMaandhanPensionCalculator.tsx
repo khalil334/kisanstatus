@@ -428,7 +428,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
           </div>
         </section>
 
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanMaandhanPensionCalculator" />
         <BottomNav extraLinks={[
           { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: 'Registration' },
           { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: 'Eligibility' },

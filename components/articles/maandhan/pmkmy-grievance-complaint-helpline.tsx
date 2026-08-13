@@ -557,7 +557,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
           </p>
         </div>
 
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="pmkmy-grievance-complaint-helpline" />
         <BottomNav extraLinks={[
           { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: ' Status Check' },
           { href: '/maandhan/pmkmy-bank-account-change', l: 'Bank Change' },

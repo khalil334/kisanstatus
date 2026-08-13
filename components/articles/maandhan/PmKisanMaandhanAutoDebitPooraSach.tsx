@@ -441,7 +441,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
           </div>
         </section>
 
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanMaandhanAutoDebitPooraSach" />
         <BottomNav extraLinks={[
           { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: 'Registration Guide' },
           { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: 'Calculator' },

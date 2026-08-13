@@ -353,7 +353,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
         </ul>
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={article.modifiedTime} />
+        <AuthorBox modified={article.modifiedTime} bioKey="MandiBhavAppComparison" />
         <BottomNav extraLinks={[
           { href: '/articles', l: 'Sab Guides Ek Jagah' },
           { href: '/articles/category/mandi', l: 'Mandi Ki Sab Guides' },
