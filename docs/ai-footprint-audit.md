@@ -304,20 +304,25 @@ The 8 hand-typed files:
 
 **Fix:** migrate those 8 files to `<FAQBlock>` — one array, schema derived. This is a real correctness fix (structured data matching visible text is a Google requirement), not just de-duplication.
 
-### 6d. 10 files have no FAQ at all
+### 6d. FAQ coverage — the original list was over-counted (resolved 2026-08-13)
 
-- `ArticleStub.tsx`
-- `kisanguides/CHCPortal.tsx`
-- `kisanguides/DripSprinkler.tsx`
-- ~~`maandhan/PmKisanMaandhanStatusCheckOnline.tsx`~~ — **false positive**, it has 5 FAQs as hand-typed markup (no `FAQS_DATA` const, so the scan missed them). Migrated to `<FAQBlock>` in PR #275; see Part 2b.
-- `rajya-yojana/PariharaPaymentStatusCheck2026.tsx`
-- `rajya-yojana/UpKisanKarjRahatList2026.tsx`
-- `rajya-yojana/tools/KrishakBandhuChecker.tsx`
-- `rajya-yojana/tools/OdishaCmKisanChecker.tsx`
-- `rajya-yojana/tools/PmKisanFamilyChecker.tsx`
-- `rajya-yojana/tools/StateYojanaFinder.tsx`
+The scan behind this section only recognised files with a `FAQS_DATA`-shaped const, so it
+listed 10 files as "no FAQ at all". Checked file-by-file against the tree, only **3** were
+real, and all 3 are now fixed:
 
-Four of those are `rajya-yojana/tools/*` interactive checkers where FAQs may not fit; the other six are ordinary guides. Coverage swings from 0 to 18 questions per article with a mode of 7 — and the 7/8-question articles cluster inside the same template families.
+| File | Verdict | Resolution |
+|---|---|---|
+| `kisanguides/CHCPortal.tsx` | real | 8 FAQs added — PR #277 |
+| `kisanguides/DripSprinkler.tsx` | real | 10 FAQs added — PR #278 |
+| `rajya-yojana/PariharaPaymentStatusCheck2026.tsx` | real (had `HowTo`, no `FAQPage`) | 11 FAQs added — PR #278 |
+| `maandhan/PmKisanMaandhanStatusCheckOnline.tsx` | **false positive** — 5 hand-typed FAQs | migrated to `<FAQBlock>` — PR #275 (Part 2b) |
+| `rajya-yojana/UpKisanKarjRahatList2026.tsx` | **false positive** — its 10-item "Sach Ya Jhooth" quiz already emits `FAQPage` via `QUIZ.map(...)` | left alone |
+| `ArticleStub.tsx` | not an article (fallback renderer) | n/a |
+| `rajya-yojana/tools/*` ×4 | interactive checkers, not articles | n/a |
+
+**Every article component under `components/articles/` now carries FAQ structured data**
+except `ArticleStub.tsx` and the 4 tool widgets. Coverage still swings in *count* per
+article (mode ~7), which is a separate concern from presence.
 
 ## 7. Internal-link / related-card frames
 
@@ -568,6 +573,23 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 Part 1 → Part 2 → Part 3 (a–d) → Part 4 → Part 5 → Part 6. Each part ships as its own PR and waits for owner review before the next starts.
 
 ## 12. Changelog
+
+### 2026-08-13 — FAQ coverage closed (PRs #277, #278)
+
+- **`kisanguides/CHCPortal.tsx` — 8 FAQs (PR #277).** Revived the abandoned `fix/chc-portal-faqs` branch (commit `f952eb7`, never opened as a PR, 2 commits behind `main`). Rebased; the one conflict was the `bioKey="CHCPortal"` prop from #269, resolved by keeping it. Answers grounded in the article's own tables and boxes: the "free tractor" ₹50,000 agent scam line, the ₹5L individual vs ₹10L CHC/FPO subsidy ceiling, 50% (≤2 ha) vs 40%, the "approval aane par hi machinery khareedein" step, the KVK / longest-waiting-machine method, the ₹18–25.5L project-cost breakup, and the peak-vs-lean economics (gross ₹2,08,000 · expenses ₹88,000–₹1,25,000 · net ₹80,000–₹1,20,000 · summer demand −60-70%).
+- **`kisanguides/DripSprinkler.tsx` — 10 FAQs (PR #278).** PDMC 55%/45%; the "NE & Himalayan = +25% *unit cost*, not +25 percentage points" correction that kills the "90% subsidy in hilly states" claim; 5 ha cap + 7-year repeat rule; quotation-above-notified-cost warning; filtration as the costliest false economy; the 4-document method for finding a state's real norms; PM-KUSUM Component B split. **No per-acre rupee figure was introduced** — the article deliberately refuses to publish one, so the FAQ gives the formula and says why.
+- **`rajya-yojana/PariharaPaymentStatusCheck2026.tsx` — 11 FAQs (PR #278).** The three-portal distinction ("status parihara portal par, record Bhoomi par"), no-OTP rule, the District → Taluk → Hobli → Village drill-down and RTC-hobli gotcha, all four branches (A survey missed / B pending-vs-hidden-rejection at 2-3 months / C seeding → NPCI mapping → account health / D joint khata, un-mutated sale, batayidar), rakba-vs-RTC for a low amount, the FRUITS/FID linkage, and the APK/agent warnings with helpline 1930. Existing `HowTo` schema left intact — the page now emits both `HowTo` and `FAQPage`.
+- **All three use `<FAQBlock>`**, so schema derives from visible text and the Part 2 / 2b hand-typed drift class cannot recur.
+- **Nothing invented.** Every answer traces to a specific number, step or warning already in that article's body; no new rates, dates, deadlines, amounts or scheme rules. All three diffs are purely additive — no prose, heading, table, keyword or related-card touched.
+- `tsc --noEmit` clean · `eslint` clean (one pre-existing unused-`article` warning on Parihara, present on `main` too) · `npm run check:titles` passes.
+
+**Pages to re-check after deploy:**
+
+- `/articles/custom-hiring-centre-chc-portal` — 8 FAQs, Rich Results shows FAQPage
+- `/articles/drip-sprinkler-irrigation-subsidy` — 10 FAQs, Rich Results shows FAQPage
+- `/rajya-yojana/parihara-payment-status-check-2026` — 11 FAQs, Rich Results shows **both** HowTo and FAQPage
+
+**Next:** §6b FAQ-opener monotony (re-measured on current `main`: 709 questions, 20 start "PM Kisan…", 18 "Kya main…", 8 "Kya PM…") and the §6a near-duplicate question pairs. §10's P3 title-frame item (59 of 76 titles carry a year) is **held pending owner decision** — the year is a real query modifier for a scheme site and editing `lib/*-data.ts` titles carries ranking risk. Part 6's structure-variation half (6b/6c/6d) also remains held — #270 measured reorder-only as ineffective and genuine section-type divergence collides with ground rule 1 (no article rewrites).
 
 ### 2026-08-13 — Part 2b complete (`fix/part-2b-maandhan-status-faq-schema`, PR #275)
 
