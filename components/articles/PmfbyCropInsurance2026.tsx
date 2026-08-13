@@ -27,7 +27,7 @@ const FAQS_DATA = [
     a: 'Kharif mein 2%, Rabi mein 1.5%, Horticulture mein 5%. Baaki sab sarkar deti hai subsidy mein. Matlab ₹50,000 ki fasal ka sirf ₹1,000 premium lagega.',
   },
   {
-    q: 'Claim kitne din mein milta hai?',
+    q: 'Fasal nuksan ka claim ka paisa kab tak milta hai?',
     a: 'Assessment ke 2 mahine ke andar paisa aana chahiye. State yield data bhejti hai → verify hota hai → paisa seedha account mein.',
   },
   {
@@ -47,11 +47,11 @@ const FAQS_DATA = [
     a: 'Loanee ke liye haan. Non-loanee voluntary hai. Par lena chahiye — 2% premium mein itna bada cover mil raha hai.',
   },
   {
-    q: 'Online status kaise check karein?',
+    q: 'pmfby.gov.in par application status kahan dikhta hai?',
     a: 'pmfby.gov.in par jao → Application Status → Aadhaar ya registration number daalo. Pura track kar sakte ho.',
   },
   {
-    q: 'PMFBY ka helpline number kya hai?',
+    q: 'Fasal bima ki shikayat ke liye kahan call karein?',
     a: 'Toll-free number 14447 hai, subah 9 se shaam 6 baje tak available. State ke hisaab se alag helpline bhi ho sakti hai, jo pmfby.gov.in par "Contact Us" section mein mil jaati hai.',
   },
   {

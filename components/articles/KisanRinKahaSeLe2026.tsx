@@ -27,7 +27,7 @@ const FAQS_DATA = [
     a: 'KCC revolving credit hai — limit set hoti hai ek baar, jab chaaho withdraw karo, jab chaaho wapas karo. Normal term loan ek baar milta hai fixed tenure mein. KCC flexible hai seasonal expenses ke liye, term loan bade investments (tractor, irrigation) ke liye.',
   },
   {
-    q: 'Bina zameen ke loan mil sakta hai?',
+    q: 'Zameen na ho toh bhi kisan loan milta hai?',
     a: 'Haan bilkul mil sakta hai. Tenant farmers lease agreement ya landowner certificate ke saath apply kar sakte hain. Sharecroppers bhi eligible hain kuch schemes mein. Landless farmers ke liye NABARD microfinance aur SHG loans available hain — ₹50,000-2 lakh tak.',
   },
   {
@@ -47,7 +47,7 @@ const FAQS_DATA = [
     a: 'Zaroori nahi hai lekin helpful bahut hai. Banks prefer karte hain ki borrower ka 1 saal ka repayment track record ho. KCC lekar time par repay karo, phir term loan easily approve hota hai. Direct term loan bhi possible hai agar income proof strong ho.',
   },
   {
-    q: 'Loan reject ho gaya — dobara kab apply kar sakte hain?',
+    q: 'Loan reject hua — CIBIL aur documents mein pehle kya theek karun?',
     a: 'Pehle rejection reason samjho. Name mismatch tha toh fix karke usi hafte reapply karo. CIBIL issue tha toh 3-6 mahine wait karo score improve hone tak. Documents incomplete the toh complete set lekar jao. Bank se written rejection letter maango — specific reason likha hota hai.',
   },
 ];

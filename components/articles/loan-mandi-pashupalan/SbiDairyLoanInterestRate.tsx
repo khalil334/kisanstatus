@@ -48,7 +48,7 @@ const FAQS_DATA = [
     a: 'Bank aksar isko mandatory rakhta hai, aur imaandaari se kaha jaye toh aapke apne hit mein hai. Ek bhains ki maut poore project ka ganit bigad deti hai. Premium DPR mein pehle se jodwa lo, aur ear tag number policy par sahi likha ho — claim ke waqt sabse zyada jhagda tag mismatch par hota hai.',
   },
   {
-    q: 'Loan sanction hone mein kitna time lagta hai?',
+    q: 'Dairy loan sanction hone mein kitne hafte lagte hain?',
     a: 'Poore documents ke saath chhoti file 2-4 hafte mein nikal jati hai; badi file jisme site inspection aur committee involvement ho, usme 1-2 mahine lag sakte hain. Sabse zyada delay do cheezon se hota hai — adhoori DPR aur account statement ka issue. Isliye branch jaane se pehle checklist tick karke jao, ek visit mein kaam ho jayega.',
   },
   {

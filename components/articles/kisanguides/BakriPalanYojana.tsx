@@ -39,7 +39,7 @@ export default function BakriPalanYojana() {
       a: 'Quarantine certificate aur vehicle fitness certificate — dono zaroori. Bina inke transport illegal count hota hai.',
     },
     {
-      q: 'Application reject ho gayi, dobara apply kar sakte hain?',
+      q: 'Bakri palan subsidy reject ho gayi — dobara bhej sakte hain?',
       a: 'Kar sakte hain, aksar log karte bhi hain. Portal reason bata deta hai, wo fix karo aur fir se bhej do.',
     },
     {

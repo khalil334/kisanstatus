@@ -30,7 +30,7 @@ const FAQS_DATA = [
     a: 'Surrender karne ke baad usi Aadhaar ya zameen par dobara register karna mushkil ho sakta hai aur portal par restriction lag sakti hai. Isliye soch samajh kar decision lein.',
   },
   {
-    q: 'Surrender karne mein kitna time lagta hai?',
+    q: 'Surrender ke baad list se naam kab hatta hai?',
     a: 'Lagbhag 15-30 din. BAO details verify karta hai, uske baad list se naam hat jata hai.',
   },
   {
