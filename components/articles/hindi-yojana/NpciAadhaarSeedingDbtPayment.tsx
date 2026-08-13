@@ -332,22 +332,22 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
       </p>
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
-        <p className="font-black text-lg mb-1">Paisa Atka Hai? Wajah Yahin Milegi</p>
+        <p className="font-black text-lg mb-1">पैसा अटका है? वजह यहीं मिलेगी</p>
         <p className="text-green-100 text-sm mb-4">
-          Seeding, eKYC aur land record — teen jaanch, ek hi tracker mein.
+          Seeding, eKYC और land record — तीन जांच, एक ही tracker में।
         </p>
         <div className="flex flex-wrap justify-center gap-2.5">
           <Link
             href="/calculator/installment-tracker"
             className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors"
           >
-             Kist Tracker se jaanch karo →
+             किस्त Tracker से जांच करें →
           </Link>
           <Link
             href="/calculator"
             className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors"
           >
-             Utilities ka poora panel
+             Utilities का पूरा panel
           </Link>
         </div>
       </div>
