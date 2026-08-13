@@ -120,7 +120,7 @@ const channels = [
   },
   {
     k: 'Bio-Input Resource Centre (BRC)',
-    v: `Prakritik kheti mission ke tehet gaon star par khule ye kendra jeevamrit aur neemastra jaisi cheezein bana kar aage bechte hain, isliye inhe roz kachcha maal chahiye hota hai. Zile ke Krishi Vigyan Kendra (KVK) se poochh lein ki aaspaas koi BRC hai ya nahi.`,
+    v: `Prakritik kheti mission ke tehet gaon star par khule ye kendra jeevamrit aur neemastra jaisi cheezein bana kar aage bechte hain, isliye inhe roz kachcha maal chahiye hota hai. Kendra sarkaar in kendron ko National Mission on Natural Farming ke tehet khada kar rahi hai — desh bhar mein das hazaar BRC ka lakshya hai. Zile ke Krishi Vigyan Kendra (KVK) se poochh lein ki aaspaas koi BRC hai ya nahi.`,
   },
   {
     k: 'Panchgavya aur ayurvedic units',
@@ -237,7 +237,11 @@ const faqs = [
   },
   {
     q: 'Kis sarkari daftar se jaankari milegi?',
-    a: 'Zila Krishi Vibhag, block ka BDO daftar, ya Krishi Vigyan Kendra. Prakritik kheti aur BRC se judi baat KVK behtar bataata hai.',
+    a: 'Zila Krishi Vibhag, block ka BDO daftar, ya Krishi Vigyan Kendra. Prakritik kheti aur BRC se judi baat KVK behtar bataata hai. UP pashupalan vibhag ki website animalhusb.upsdc.gov.in hai.',
+  },
+  {
+    q: 'Kya kisi rajya mein sarkaar sach mein gau mutra kharidti hai?',
+    a: 'Haan. Chhattisgarh ki Godhan Nyay Yojana mein sarkaar Gauthan kendron par gau mutra ₹4 prati litre kharidti rahi hai — iska sarkari portal godhannyay.cgstate.gov.in hai. UP mein abhi sirf Bulandshahr ka pilot hai, rajya-vyapi kharid nahi.',
   },
 ] as const;
 
@@ -484,6 +488,76 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           </p>
         </div>
 
+        {/* Bikta hai ya nahi — seedha jawab + kaise pakka karein */}
+        <div className="mt-3 rounded-2xl bg-[#2A1830] p-5">
+          <SectionLabel>Seedha sawaal, seedha jawab</SectionLabel>
+          <h2 className="mt-2 text-lg font-bold text-[#F5EDE3]">
+            Kya gau mutra sach mein bikta hai? Aur kaise pakka karein?
+          </h2>
+          <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
+            Haan, bikta hai — lekin har jagah nahi, aur har jagah sarkari daam par nahi. Yeh baat
+            saaf samajh lein, kyuki isi par sara faisla tikta hai.
+          </p>
+          <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
+            Desh mein sarkari kharid ka sabse pakka udaharan Chhattisgarh ka hai. Wahan{' '}
+            <a
+              href="https://godhannyay.cgstate.gov.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-[#FFB238] hover:text-[#F5EDE3]"
+            >
+              Godhan Nyay Yojana
+            </a>{' '}
+            ke tehet sarkaar Gauthan kendron par gau mutra chaar rupaye litre kharidti rahi hai —
+            yeh scheme ka apna sarkari portal hai, koi sunee-sunayi baat nahi. Usi mutra se wahan
+            Brahmastra keetnashak aur Jeevamrit banaya jaata hai.
+          </p>
+          <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
+            UP mein abhi aisi rajya-vyapi sarkari kharid nahi hai — sirf Bulandshahr ka pilot hai,
+            jiska zikr upar ho chuka. Baki zilon mein bikri private raston se hoti hai: gaushala,
+            BRC, ayurvedic unit, ya jaivik kisan. Wahan daam aapas ki baat-cheet se tay hota hai —
+            kahin paanch rupaye, kahin das, kahin usse zyada bhi, agar maal saaf aur bharosemand ho.
+          </p>
+          <p className="mt-3 text-[15px] leading-7 text-[#D8C9DE]">
+            Jama karna shuru karne se <strong className="text-[#F5EDE3]">pehle</strong> yeh chaar
+            kaam kar lein:
+          </p>
+          <ol className="mt-3 space-y-2">
+            <li className="flex gap-3 rounded-xl bg-[#1B1023] px-4 py-3">
+              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#7FD1AE] text-[12px] font-black text-[#1B1023]">1</span>
+              <p className="text-[14px] leading-6 text-[#D8C9DE]">
+                <strong className="text-[#F5EDE3]">Kharidar khud dhundhein, intezaar na karein.</strong>{' '}
+                Block ke BDO daftar ya zila Krishi Vibhag se poochein ki aaspaas koi FPO ya BRC
+                gau mutra le raha hai ya nahi. KVK ko phone karna sabse tez raasta hai.
+              </p>
+            </li>
+            <li className="flex gap-3 rounded-xl bg-[#1B1023] px-4 py-3">
+              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#7FD1AE] text-[12px] font-black text-[#1B1023]">2</span>
+              <p className="text-[14px] leading-6 text-[#D8C9DE]">
+                <strong className="text-[#F5EDE3]">Aamne-saamne teen sawaal poochein:</strong>{' '}
+                rate kya hai, jaanch kaise hoti hai, aur paisa kab milta hai. Jo in teeno ka saaf
+                jawab na de, uske bharose bartan mat bhariye.
+              </p>
+            </li>
+            <li className="flex gap-3 rounded-xl bg-[#1B1023] px-4 py-3">
+              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#7FD1AE] text-[12px] font-black text-[#1B1023]">3</span>
+              <p className="text-[14px] leading-6 text-[#D8C9DE]">
+                <strong className="text-[#F5EDE3]">Pehla sauda chhota rakhein.</strong> Dus-pandrah
+                litre le jaakar poora chakkar khud dekh lein — tolai, parchi, bhugtaan. Bharosa bane
+                to hi rozana ka silsila shuru karein.
+              </p>
+            </li>
+            <li className="flex gap-3 rounded-xl bg-[#1B1023] px-4 py-3">
+              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#7FD1AE] text-[12px] font-black text-[#1B1023]">4</span>
+              <p className="text-[14px] leading-6 text-[#D8C9DE]">
+                <strong className="text-[#F5EDE3]">Kharidar na mile to bhi mutra bekar nahi.</strong>{' '}
+                Neeche jeevamrit ka poora tareeka diya hai — khud khaad banaiye, khaad ki dukaan ka
+                bill ghataiye. Bechna aur banana, dono saath chal sakte hain.
+              </p>
+            </li>
+          </ol>
+        </div>
+
         {/* Jeevamrit table */}
         <div className="mt-3 rounded-2xl bg-[#2A1830] p-5">
           <SectionLabel>Khud banaiye</SectionLabel>
@@ -653,7 +727,15 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
               </p>
               <p className="mt-1 text-[14px] leading-6 text-[#D8C9DE]">
                 Bakri, murgi, sooar aur chara ikaiyon par poonji sahayta deti hai. Aavedan{' '}
-                <span className="text-[#C9A8D6]">nlm.udyamimitra.in</span> par hota hai. Bakri palan
+                <a
+                  href="https://nlm.udyamimitra.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-[#C9A8D6] hover:text-[#F5EDE3]"
+                >
+                  nlm.udyamimitra.in
+                </a>{' '}
+                par hota hai. Bakri palan
                 ka hisaab dekhna ho to{' '}
                 <Link
                   href="/articles/bakri-palan-yojana-nlm-subsidy"
@@ -684,6 +766,57 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
             Subsidy ke aankde saal-dar-saal badalte hain. Jo bhi raqam kahin padhein, aavedan se
             pehle usi yojana ke sarkari portal par ya zila pashupalan adhikari se pushti kar lein.
           </p>
+          <div className="mt-3 rounded-xl bg-[#1B1023] px-4 py-3">
+            <p className="text-[12px] font-bold uppercase tracking-wide text-[#7FD1AE]">
+              Sarkari website — seedha link
+            </p>
+            <ul className="mt-2 space-y-1.5 text-[13px] leading-6 text-[#D8C9DE]">
+              <li>
+                · Godhan Nyay Yojana (Chhattisgarh — gau mutra kharid):{' '}
+                <a
+                  href="https://godhannyay.cgstate.gov.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-[#FFB238] hover:text-[#F5EDE3]"
+                >
+                  godhannyay.cgstate.gov.in
+                </a>
+              </li>
+              <li>
+                · National Mission on Natural Farming (BRC / jeevamrit):{' '}
+                <a
+                  href="https://naturalfarming.dac.gov.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-[#FFB238] hover:text-[#F5EDE3]"
+                >
+                  naturalfarming.dac.gov.in
+                </a>
+              </li>
+              <li>
+                · UP Pashupalan Vibhag:{' '}
+                <a
+                  href="http://animalhusb.upsdc.gov.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-[#FFB238] hover:text-[#F5EDE3]"
+                >
+                  animalhusb.upsdc.gov.in
+                </a>
+              </li>
+              <li>
+                · Sarkari yojnaon ki ek jagah jaankari:{' '}
+                <a
+                  href="https://www.myscheme.gov.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-[#FFB238] hover:text-[#F5EDE3]"
+                >
+                  myscheme.gov.in
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* summary grid — like a shared-status card */}
