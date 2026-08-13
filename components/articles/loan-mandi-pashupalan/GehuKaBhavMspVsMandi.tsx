@@ -36,7 +36,7 @@ const FAQS_DATA = [
     a: 'Nami (moisture) sabse bada dushman hai — gehu achhi tarah sukha kar (dry) store karo, zameen se upar lakdi/pallet par rakho, aur bori ko deewar se sata kar mat rakho. Ghun se bachne ke liye saaf-sutharaa bhandaran aur time par jaanch zaroori hai. Kharab storage mein 3 mahine mein hi weight loss aur quality cut ka nuksan rate ke fayde ko kha jata hai.',
   },
   {
-    q: 'Kya main aadha MSP par aur aadha market mein bech sakta hoon?',
+    q: 'Aadha MSP par aur aadha market mein bech doon to chalega?',
     a: 'Haan, aur samajhdaar kisan aksar yahi karte hain. Sar par khade kharche ke liye ek hissa MSP/mandi mein bech do, baaki quality wala maal rok lo. Isse risk bant jata hai — na poora maal daba, na poora sasta bika.',
   },
   {

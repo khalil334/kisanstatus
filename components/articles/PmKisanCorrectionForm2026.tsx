@@ -23,7 +23,7 @@ const FAQS_DATA = [
     a: 'Haan bhai, 100% milegi. Jab details fix ho jayengi, toh pichhli saari pending kistein ek saath aa jayengi.',
   },
   {
-    q: 'PM Kisan naam correction online karne ke liye kaunse documents chahiye?',
+    q: 'Naam correction online karne ke liye PM Kisan mein kaunse documents chahiye?',
     a: 'Sirf Aadhaar card aur bank passbook chahiye. Portal par naam exactly wahi likho jo Aadhaar aur bank mein hai. Koi extra document upload nahi karna padta.',
   },
   {
@@ -31,7 +31,7 @@ const FAQS_DATA = [
     a: 'Agar purana number band hai toh tum OTP receive nahi kar paoge. Aise mein seedha najdiki CSC center jao. Wo biometric authentication se number update kar denge. Ghar baithe iska koi tarika nahi hai.',
   },
   {
-    q: 'PM Kisan application rejected reason kya ho sakta hai?',
+    q: 'Application rejected reason PM Kisan mein kya ho sakta hai?',
     a: 'Zyada tar cases mein rejection ki wajah naam mismatch, galat IFSC code, ya phir Aadhaar seeding na hona hoti hai. Kabhi kabhi land record mismatch bhi rejection ka karan banta hai. Portal par status check karke exact reason dekh sakte ho.',
   },
   {
@@ -39,7 +39,7 @@ const FAQS_DATA = [
     a: 'Dekho bhai, ye thoda lamba process hai. Pehle naye bank account mein Aadhaar seeding karwao (branch jaake "DBT enable" bolna). Phir pmkisan.gov.in par Farmers Corner > Edit Aadhaar Details mein jaake naya account number aur IFSC daalo. Purana account tab tak band mat karna jab tak naye account mein pehli kist na aa jaye. Agar NPCI mapping mein dikkat aaye toh bank manager se "Aadhaar seeding error fix" karne ko bolo, wo backend se NPCI mapper update kar denge.',
   },
   {
-    q: 'Kya main pm kisan gender/DOB correction aur land record mismatch solution ghar baithe kar sakta hoon?',
+    q: 'Gender/DOB correction aur land record mismatch ka solution ghar baithe pm kisan portal par ho jayega?',
     a: 'Gender aur DOB correction thoda tricky hai. Agar portal par edit option aa raha hai toh kar sakte ho, lekin aksar ye fields locked hoti hain. Aise mein CSC jana padta hai. Land record mismatch ka solution portal par nahi hota — iske liye tumhe apne district ke Agriculture Officer ya Patwari ke paas jaake land records (Khatauni) update karwane honge. Jab sarkari records mein naam aur zameen sahi ho jayegi, tabhi portal par reflect hogi.',
   },
 ];

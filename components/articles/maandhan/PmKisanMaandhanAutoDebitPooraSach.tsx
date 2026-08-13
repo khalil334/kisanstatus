@@ -30,7 +30,7 @@ const RELATED_CARDS = [
 
 const FAQS_DATA = [
   {
-    q: 'PM Kisan ke ₹2000 mein se ₹55 kyun kat gaye?',
+    q: '₹2000 ki PM Kisan kist mein se ₹55 kyun kat gaye?',
     a: 'Jab aap PM Kisan Maandhan Yojana mein register karte hain, toh aapka bank account NACH auto-debit mandate ke liye link ho jata hai. Har baar jab PM Kisan ki kist aati hai, toh usme se aapka monthly share (₹55 se ₹200 tak) automatically kat jata hai.',
   },
   {
@@ -38,7 +38,7 @@ const FAQS_DATA = [
     a: 'Apni bank branch jakar NACH mandate cancellation form submit karein, ya net banking/mobile banking ke "Mandates" section se cancel karein. 5-7 din mein process complete ho jata hai. Cancellation ka acknowledgement receipt maang kar lein.',
   },
   {
-    q: 'Kya PM Kisan aur PM Kisan Maandhan alag scheme hain?',
+    q: 'Maandhan aur PM Kisan — alag-alag scheme hain?',
     a: 'Haan, dono bilkul alag hain. PM Kisan Samman Nidhi mein government aapko ₹6000 saal deti hai. PM Kisan Maandhan mein aap khud share dete hain taaki 60 saal ke baad ₹3000 pension mile. Dono ka koi direct link nahi hai, bas ek optional facility hai ke PM Kisan ki kist se aapka Maandhan share kat jaye.',
   },
   {

@@ -16,7 +16,7 @@ const FAQS_PAISA = [
     a: 'SMS न आना आम बात है — कई बार बैंक का alert service बंद होता है या नंबर पुराना होता है। Passbook update कराएं या बैंक के mini-statement से देखें। Entry में DBT/PFMS लिखा आएगा — ₹2,000 की entry PM Kisan भी हो सकती है और राज्य योजना भी, तारीख से मिलान करें।',
   },
   {
-    q: 'PM Kisan आ रही है लेकिन राज्य वाली नहीं — क्यों?',
+    q: 'राज्य वाली किस्त नहीं आ रही और PM Kisan आ रही है — क्यों?',
     a: 'दो आम कारण: पटवारी verification pending है, या राज्य की किस्त release ही नहीं हुई (राज्य की किस्तें अपने schedule से आती हैं, PM Kisan के साथ नहीं)। पहले saara portal पर status देखें, फिर पटवारी/तहसील से मिलें।',
   },
   {

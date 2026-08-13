@@ -157,7 +157,7 @@ const FAQS_DATA = [
     a: 'Village-wise list ka yahi sabse bada fayda hai. Gaon me doosron ka credit ho gaya aur aapka nahi, to dikkat round me nahi, aapki entry me hai — us haalat me list me naam hai ya nahi, wahi se apna branch pakdo.',
   },
   {
-    q: 'Mera naam list me hi nahi hai — kya karun?',
+    q: 'List me naam hi nahi mila — kya karun?',
     a: 'Aksar iska matlab hai ki aapke khet ka bele hani survey hua hi nahi, ya survey me entry chhoot gayi. Village accountant (VA) ya RI se poochho ki aapke survey number ka nuksan darj hua tha ya nahi, crop survey app ki entry dekho, aur survey chhoota hai to VA ke through likhit objection do — tehsildar office se receiving copy leke aao. Zubaani shikayat ka koi record nahi bachta, aur objection usi season ke round me uthana hota hai.',
   },
   {

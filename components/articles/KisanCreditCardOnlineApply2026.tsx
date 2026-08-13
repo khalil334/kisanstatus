@@ -36,7 +36,7 @@ const RELATED_CARDS = [
 
 const FAQS_DATA = [
   {
-    q: 'Mera naam Aadhaar mein "Rajesh Kumar Singh" hai lekin bank passbook mein "R. K. Singh" — kya application reject hogi?',
+    q: 'Aadhaar mein "Rajesh Kumar Singh" aur bank passbook mein "R. K. Singh" — kya application reject hogi?',
     a: 'Haan, yeh sabse common rejection reason hai. Bank ka verification system exact string match karta hai. Apply karne se pehle bank branch jaakar Aadhaar copy ke saath naam update karwayein. Isme 7-10 din lagte hain, uske baad hi form bharein.',
   },
   {

@@ -64,7 +64,7 @@ const FAQS_DATA = [
     a: 'Yahan RTI (Right to Information) ek prabhavi madhyam hai. ₹10 ke postal order ke sath RTI daalein ki "Meri shikayat par kya action liya gaya?". RTI Act ke tahat 30 din mein legally reply dena padta hai.',
   },
   {
-    q: 'Kya main Twitter (X) par shikayat kar sakta hoon?',
+    q: 'Twitter (X) par shikayat kar sakta hoon?',
     a: 'Haan. Apni problem ka screenshot lekar Twitter par post karein aur @PMKisanOfficial, @AgriGoIIndia aur apne state ke Agriculture Department ke official handle (agar available ho) ko tag karein. Social media escalation par sambandhit vibhag se jaldi response milne ki sambhavna badh jaati hai.',
   },
   {
