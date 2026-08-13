@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME, AUTHOR_IMAGE, AUTHOR_LINKEDIN } from '@/lib/site-config';
-import { getAuthorBio } from '@/lib/author-bios';
+import { getAuthorBio, getAuthorTagline } from '@/lib/author-bios';
 
 const HERO_IMAGE = {
   src: '/images/gau-mutra-kharid-yojana-bulandshahr-hero.webp',
@@ -873,7 +873,7 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
               </a>
             </span>
             <p className="mt-0.5 text-[11px] font-semibold text-[#7FD1AE]">
-              Sarkari yojana information — official sources se verified
+              {getAuthorTagline(article.slug)}
             </p>
             <p className="mt-1 text-[12px] leading-5 text-[#9C86A6]">
               {getAuthorBio(article.slug)}
