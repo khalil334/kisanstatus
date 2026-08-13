@@ -272,7 +272,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     category: 'pashupalan',
     publishedTime: '2026-08-13T18:30:00+05:30',
     modifiedTime: '2026-08-13T18:30:00+05:30',
-    readingTime: 6,
+    readingTime: 11,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('gau-mutra-kharid-yojana-up-2026'),
     states: ['uttar-pradesh'],
