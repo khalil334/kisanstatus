@@ -217,6 +217,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   MurgiPalanLoanNlmSubsidy: dynamic(() => import('@/components/articles/loan-mandi-pashupalan/MurgiPalanLoanNlmSubsidy'), { ssr: true }),
   BiharPashupalanLoanYojana: dynamic(() => import('@/components/articles/loan-mandi-pashupalan/BiharPashupalanLoanYojana'), { ssr: true }),
   RashtriyaGokulMissionSubsidy: dynamic(() => import('@/components/articles/loan-mandi-pashupalan/RashtriyaGokulMissionSubsidy'), { ssr: true }),
+  GauMutraKharidYojanaUp2026: dynamic(() => import('@/components/articles/GauMutraKharidYojanaUp2026'), { ssr: true }),
 };
 
 export const revalidate = 86400;
