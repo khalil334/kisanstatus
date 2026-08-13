@@ -1,7 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { ArticleMeta } from '@/lib/articles-data';
-import { AUTHOR_NAME } from '@/lib/site-config';
+import { AUTHOR_NAME, AUTHOR_IMAGE, AUTHOR_LINKEDIN } from '@/lib/site-config';
+import { getAuthorBio } from '@/lib/author-bios';
 
 const bullets = [
   {
@@ -256,6 +258,46 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
             magar poora laabh ab tak nahi utha paaye.
           </p>
         </Bubble>
+
+        {/* author box — same info as the standard AuthorBox, styled for the bulletin theme */}
+        <div className="mt-3 flex items-start gap-4 rounded-2xl bg-[#241430] p-5">
+          <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full border-2 border-[#7FD1AE]">
+            <Image
+              src={AUTHOR_IMAGE}
+              alt={AUTHOR_NAME}
+              width={48}
+              height={48}
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div>
+            <span className="inline-flex items-center gap-2">
+              <Link
+                href="/about"
+                className="text-[14px] font-bold text-[#F5EDE3] underline-offset-2 hover:underline"
+              >
+                {AUTHOR_NAME}
+              </Link>
+              <a
+                href={AUTHOR_LINKEDIN}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${AUTHOR_NAME} on LinkedIn`}
+                className="text-[#7FD1AE] transition-opacity hover:opacity-80"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+            </span>
+            <p className="mt-0.5 text-[11px] font-semibold text-[#7FD1AE]">
+              Sarkari yojana information — official sources se verified
+            </p>
+            <p className="mt-1 text-[12px] leading-5 text-[#9C86A6]">
+              {getAuthorBio(article.slug)}
+            </p>
+          </div>
+        </div>
 
         <p className="mt-6 text-center text-[11px] tracking-wide text-[#6E5A76]">
           🔁 Aage share karein · Kisan Status Bulletin
