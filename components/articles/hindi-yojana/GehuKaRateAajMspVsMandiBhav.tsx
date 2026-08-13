@@ -408,16 +408,16 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
         <p className="text-2xl mb-2"></p>
-        <p className="font-black text-lg mb-1">Mandi Bhav Roz Dekho</p>
+        <p className="font-black text-lg mb-1">मंडी भाव रोज देखिए</p>
         <p className="text-green-100 text-sm mb-4">
-          Apni mandi ka taaza bhav aur rujhaan — bechne ka sahi din pakdo.
+          अपनी मंडी का ताजा भाव और रुझान — बेचने का सही दिन पकड़िए।
         </p>
         <div className="flex flex-wrap justify-center gap-2.5">
           <Link
             href="/articles/mandi-bhav-today"
             className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
           >
-             Mandi Bhav Dekho →
+             मंडी भाव देखें →
           </Link>
           <Link
             href="/calculator"

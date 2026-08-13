@@ -311,22 +311,22 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
       </p>
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
-        <p className="font-black text-lg mb-1">Registration Ke Baad Kist Ka Intezaar?</p>
+        <p className="font-black text-lg mb-1">Registration के बाद किस्त का इंतजार?</p>
         <p className="text-green-100 text-sm mb-4">
-          Tracker batayega aapki application kis stage par hai.
+          Tracker बताएगा कि आपकी application किस stage पर है।
         </p>
         <div className="flex flex-wrap justify-center gap-2.5">
           <Link
             href="/calculator/installment-tracker"
             className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors"
           >
-             Kist ka hisaab yahan dekho →
+             किस्त का हिसाब यहां देखें →
           </Link>
           <Link
             href="/calculator"
             className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors"
           >
-             Kisan utilities kholo
+             किसान utilities खोलें
           </Link>
         </div>
       </div>

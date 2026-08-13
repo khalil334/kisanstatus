@@ -240,7 +240,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       <div className="my-5 border-2 border-[var(--color-border)] rounded-2xl overflow-hidden bg-[var(--color-card)] shadow-sm">
         <div className="bg-green-50 dark:bg-green-900/20 border-b border-[var(--color-border)] px-4 py-2.5">
           <span className="text-green-700 dark:text-green-300 text-xs font-bold">
-             Pehle guide padhi? Ab official site par jao:
+             पहले guide पढ़ी? अब official site पर जाएं:
           </span>
         </div>
         <div className="p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">
@@ -367,22 +367,22 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       </p>
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
-        <p className="font-black text-lg mb-1">Status Se Aage — Kist Kahan Atki?</p>
+        <p className="font-black text-lg mb-1">Status से आगे — किस्त कहां अटकी?</p>
         <p className="text-green-100 text-sm mb-4">
-          Teenon jaanch ka result tracker mein ek saath dekho.
+          तीनों जांच का result tracker में एक साथ देखें।
         </p>
         <div className="flex flex-wrap justify-center gap-2.5">
           <Link
             href="/calculator/installment-tracker"
             className="inline-flex items-center gap-2 bg-white text-green-800 font-black px-6 py-3 rounded-xl text-sm hover:bg-green-50 transition-colors"
           >
-             Kist Tracker try karo →
+             किस्त Tracker आजमाएं →
           </Link>
           <Link
             href="/calculator"
             className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white font-bold px-6 py-3 rounded-xl text-sm hover:bg-white/25 transition-colors"
           >
-             Aur bhi utilities yahan
+             और भी utilities यहां
           </Link>
         </div>
       </div>
