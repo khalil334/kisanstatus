@@ -181,9 +181,9 @@ export default function AboutPage() {
               </p>
               <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mt-3">{AUTHOR_BIO}</p>
               <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mt-2">
-                PM Kisan, KCC loan, tractor subsidy aur mandi bhav jaise topics par har guide official
-                sources se verify karke likhta hoon, taaki kisan bhaiyon ko sahi aur updated jankari
-                ek hi jagah mil jaye.
+                Zyada tar guides PM Kisan, KCC loan, tractor subsidy aur mandi bhav par hain —
+                yani wahi cheezein jinke baare me log sabse zyada poochte hain. Koi topic chahiye
+                jo abhi cover nahi hua? Email kar dijiye, list me daal loonga.
               </p>
               <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-4">
                 <a
