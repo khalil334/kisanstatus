@@ -24,7 +24,7 @@ const FAQS = [
     a: 'Aadhaar OTP से verification तुरंत होता है, लेकिन land record की जांच में समय लगता है — कुछ दिनों से कुछ हफ्तों तक। Status portal पर "Check Enrollment Status" से देख सकते हैं।',
   },
   {
-    q: 'आधार में mobile number link नहीं है, तो?',
+    q: 'आधार से नंबर लिंक नहीं है तो Farmer ID कैसे बनेगी?',
     a: 'तब OTP नहीं आएगा और online registration अटक जाएगी। पहले आधार केंद्र जाकर mobile number link/update कराएं, या CSC पर biometric से registration कराएं।',
   },
   {

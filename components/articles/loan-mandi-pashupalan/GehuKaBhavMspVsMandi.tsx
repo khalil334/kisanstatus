@@ -12,7 +12,7 @@ const RELATED = [
 
 const FAQS_DATA = [
   {
-    q: 'Gehu ka MSP 2026 mein kitna hai?',
+    q: 'Is saal gehu ka sarkari kharid rate kya chal raha hai?',
     a: 'Rabi Marketing Season 2026-27 ke liye gehu ka MSP ₹2,585 per quintal hai — pichhle saal ke ₹2,425 se ₹160 zyada. Yeh rate sarkari kharid kendra par milta hai, mandi ki khuli boli mein nahi. Poori faslon ki list ke liye hamari MSP List 2026-27 guide dekho.',
   },
   {
@@ -20,7 +20,7 @@ const FAQS_DATA = [
     a: 'Nahi — MSP floor hai, ceiling nahi. Jab open market ka rate MSP se neeche chal raha ho, tab sarkari kharid aapko bachati hai. Lekin achhi quality ka gehu, sahi time par, open market mein MSP se upar bhi bik jata hai. Faisla har saal ke rate aur apni quality dekh kar karo, aadat se nahi.',
   },
   {
-    q: 'MSP par bechne ke liye kya karna padta hai?',
+    q: 'Sarkari kharid kendra par bechne ke liye kya taiyari chahiye?',
     a: 'Apne state ke procurement portal par registration (zyada tar states mein online hota hai), phir slot/token lekar apne kharid kendra par gehu le jao. Aadhaar, bank details aur zameen ke record chahiye hote hain. Payment seedha bank account mein aati hai. Registration window season se pehle khulti hai — miss mat karo.',
   },
   {

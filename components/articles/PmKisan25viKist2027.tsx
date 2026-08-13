@@ -23,7 +23,7 @@ const FAQS_DATA = [
     a: '₹2,000 hi chal raha hai 2019 se. Har budget ke time afwah aati hai ki ₹2,500 ya ₹3,000 ho jayega — kabhi hua nahi. Iss baar bhi shayad nahi hoga. Agar hua toh hum update karenge.',
   },
   {
-    q: 'Dobara registration karna padega kya?',
+    q: 'Har kist ke liye naya registration karna padta hai?',
     a: 'Nahi bhai. Ek baar ho gaya toh ho gaya. Bas eKYC aur bank details sahi rakho. Automatic aata rehta hai har kist.',
   },
   {

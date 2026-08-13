@@ -49,7 +49,7 @@ const FAQS_DATA = [
     a: 'Pattern ye raha hai ki rajya ka hapta kendriya kist aane ke kuch hafton baad release hota hai — kyunki suchi usi verified data se banti hai.  Agle hapte ki koi date officially announce nahi hui hai; GR (Government Resolution) nikalne ke baad hi tareekh pakki hoti hai.',
   },
   {
-    q: 'Mera naam beneficiary list mein nahi hai, kya karein?',
+    q: 'Namo Shetkari list mein naam nahi hai, kya karein?',
     a: 'Pehle dekhein ki aap kendriya list mein eligible hain ya nahi. Agar wahan darj hain, toh apne taluka krishi adhikari (TAL) se sampark karein aur apna 7/12 Utara aur Aadhaar details verify karwayein.',
   },
   {

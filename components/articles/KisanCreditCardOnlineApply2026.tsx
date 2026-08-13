@@ -48,7 +48,7 @@ const FAQS_DATA = [
     a: '4% effective rate sirf tab milta hai jab aap due date se pehle poora amount repay karte hain. Prompt Repayment Incentive (3% subvention) repayment ke baad account mein credit hota hai, upfront nahi. Ek bhi installment late hui toh us cycle ka full 7% byaj lagega.',
   },
   {
-    q: 'Cooperative bank se apply karun ya SBI/PNB se — kya farak hai?',
+    q: 'KCC ke liye cooperative bank ya SBI/PNB — kahan approval jaldi milti hai?',
     a: 'Interest rate dono jagah same hai (7% base, 4% effective). Lekin cooperative banks mein approval faster hota hai (5-7 din) kyunki woh local land records se familiar hote hain. Agar aapko advanced digital services chahiye, toh SBI/PNB behtar hai.',
   },
   {

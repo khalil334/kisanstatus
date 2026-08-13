@@ -101,7 +101,7 @@ const FAQS = [
     a: 'Jitna rakba darj hai utni hi fasal MSP par bikegi — isliye ye galti mehngi padti hai. Window khuli hai to portal se hi edit karo ya CSC jao. Window band ho gayi to district krishi office me likhit application do.',
   },
   {
-    q: 'Paisa "Payment Released" dikha raha hai par bank me aaya nahi?',
+    q: 'Paisa release ho gaya par khate mein nahi — kahan atka hai?',
     a: 'Release hone ke baad bhi 2-4 kaam ke din lagte hain. Uske baad bhi na aaye to bank jao — account dormant, KYC pending ya IFSC badla hona sabse aam wajah hai. Ye article ke payment wale section me chaaron cause ka fix likha hai.',
   },
   {
