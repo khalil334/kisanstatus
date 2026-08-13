@@ -1,11 +1,34 @@
 import Image from "next/image";
 import Link from "next/link";
 import ExternalLinkButton from "@/components/ExternalLinkButton";
-import { AuthorBox, fmtDate } from "@/components/ArticleShared";
+import { AuthorBox, FAQBlock, fmtDate } from "@/components/ArticleShared";
 import { AUTHOR_NAME, AUTHOR_URL } from "@/lib/site-config";
 
 const PUBLISHED = "2026-07-24";
 const MODIFIED = "2026-08-08";
+
+const FAQS_DATA = [
+  {
+    q: "PM Kisan Maandhan status online kaise check karein?",
+    a: "pmkmy.gov.in pe jakar apna registered mobile number ya KPAN no. daaliye. OTP verify kijiye. Dashboard pe aapka status, contribution history, aur pension card sab dikhega.",
+  },
+  {
+    q: "Maandhan pension card kaise download karein?",
+    a: "Login karne ke baad Download KPAN Card option pe click karein. PDF format mein card download ho jayega. Isko print karke apne paas sambhal kar rakhein.",
+  },
+  {
+    q: "Contribution history mobile se kaise dekhein?",
+    a: "Mobile browser mein pmkmy.gov.in kholein. Login karke Contribution History ya Passbook section mein jayein. Har mahine ka record dikhega — success, failed, ya pending.",
+  },
+  {
+    q: "Payment diya tha par history mein nahi dikh raha — kya karein?",
+    a: "Ek hafta wait karein — record update hone mein time lagta hai. Uske baad bhi na dikhe toh receipt lekar usi CSC center jayein jahan payment kiya tha, aur wahan se solve na ho toh upar bataye escalation order (CSC → portal grievance → LIC branch) follow karein. Payment ka proof kabhi delete na karein.",
+  },
+  {
+    q: "Portal nahi khul raha toh kya karein?",
+    a: "Peak hours mein server slow hota hai. Raat ya subah try karein. Agar 2-3 din se nahi khul raha, toh apne nazdeeki CSC center jakar status verify karwayein. CSC operator ke paas special access hota hai jo directly LIC system se connected hai.",
+  },
+];
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -20,15 +43,6 @@ const jsonLd = {
       "datePublished": PUBLISHED,
       "dateModified": MODIFIED,
       "mainEntityOfPage": { "@type": "WebPage", "@id": "https://kisanstatus.com/maandhan/pm-kisan-maandhan-status-check-online/" }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://kisanstatus.com/maandhan/pm-kisan-maandhan-status-check-online/#faq",
-      "mainEntity": [
-        { "@type": "Question", "name": "PM Kisan Maandhan status online kaise verify kijiye?", "acceptedAnswer": { "@type": "Answer", "text": "pmkmy.gov.in pe jakar apna mobile no. ya KPAN no. daaliye. OTP aayega, verify kijiye. Dashboard pe aapka status, contribution history, aur pension card sab dikhega." } },
-        { "@type": "Question", "name": "Maandhan pension card kaise download kijiye?", "acceptedAnswer": { "@type": "Answer", "text": "Login karne ke baad Download KPAN Card option pe click kijiye. PDF format mein card download ho jayega. Isko print karke apne paas sambhal kar rakhein." } },
-        { "@type": "Question", "name": "Contribution history mobile se kaise dekhein?", "acceptedAnswer": { "@type": "Answer", "text": "Mobile browser mein pmkmy.gov.in kholein. Login karke Contribution History ya Passbook section mein jayein. Har mahine ka record dikhega." } }
-      ]
     }
   ]
 };
@@ -466,27 +480,8 @@ export default function PmKisanMaandhanStatusCheckOnline() {
         Kisanon Ke Asli Sawal, Seedhe Jawab
       </h2>
 
-      <div className="space-y-4 mb-8 not-prose">
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">PM Kisan Maandhan status online kaise check karein?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">pmkmy.gov.in pe jakar apna registered mobile number ya KPAN no. daaliye. OTP verify kijiye. Dashboard pe aapka status, contribution history, aur pension card sab dikhega.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">Maandhan pension card kaise download karein?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Login karne ke baad Download KPAN Card option pe click karein. PDF format mein card download ho jayega. Isko print karke apne paas sambhal kar rakhein.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">Contribution history mobile se kaise dekhein?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Mobile browser mein pmkmy.gov.in kholein. Login karke Contribution History ya Passbook section mein jayein. Har mahine ka record dikhega — success, failed, ya pending.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">Payment diya tha par history mein nahi dikh raha — kya karein?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Ek hafta wait karein — record update hone mein time lagta hai. Uske baad bhi na dikhe toh receipt lekar usi CSC center jayein jahan payment kiya tha, aur wahan se solve na ho toh upar bataye escalation order (CSC → portal grievance → LIC branch) follow karein. Payment ka proof kabhi delete na karein.</p>
-        </div>
-        <div className="bg-gray-50 dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2 text-base">Portal nahi khul raha toh kya karein?</h3>
-          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">Peak hours mein server slow hota hai. Raat ya subah try karein. Agar 2-3 din se nahi khul raha, toh apne nazdeeki CSC center jakar status verify karwayein. CSC operator ke paas special access hota hai jo directly LIC system se connected hai.</p>
-        </div>
+      <div className="not-prose mb-8">
+        <FAQBlock faqs={FAQS_DATA} variant="inline" />
       </div>
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
