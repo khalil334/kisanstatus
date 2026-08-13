@@ -429,7 +429,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmfbyCropInsurance2026" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanMasterGuide2026', l: 'Guide' },
           { href: '/articles/soil-health-card-complete-guide-2026', l: 'Soil' },

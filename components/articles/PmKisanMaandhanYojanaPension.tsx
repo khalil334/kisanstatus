@@ -643,7 +643,7 @@ export default function PmKisanMaandhanYojanaPension() {
         </section>
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanMaandhanYojanaPension" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanMasterGuide2026', l: ' Master Guide' },
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },

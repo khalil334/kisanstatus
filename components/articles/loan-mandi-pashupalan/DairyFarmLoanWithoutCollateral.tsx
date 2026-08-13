@@ -590,7 +590,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         </ul>
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={article.modifiedTime} />
+        <AuthorBox modified={article.modifiedTime} bioKey="DairyFarmLoanWithoutCollateral" />
         <BottomNav extraLinks={[
           { href: '/articles/sbi-dairy-loan-interest-rate', l: 'SBI Dairy Loan Rate' },
           { href: '/articles/bihar-pashupalan-loan-yojana', l: 'Bihar Pashupalan Loan' },

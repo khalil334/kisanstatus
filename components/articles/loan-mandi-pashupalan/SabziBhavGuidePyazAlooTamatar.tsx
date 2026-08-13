@@ -351,7 +351,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         </ul>
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={article.modifiedTime} />
+        <AuthorBox modified={article.modifiedTime} bioKey="SabziBhavGuidePyazAlooTamatar" />
         <BottomNav extraLinks={[
           { href: '/articles', l: 'Sabhi Guides' },
           { href: '/articles/category/mandi', l: 'Mandi Bhav Guides' },
