@@ -473,7 +473,7 @@ export default function DripSprinkler() {
       </div>
 
       <Disclaimer />
-      <AuthorBox modified={getArticleBySlug('drip-sprinkler-irrigation-subsidy')!.modifiedTime} />
+      <AuthorBox modified={getArticleBySlug('drip-sprinkler-irrigation-subsidy')!.modifiedTime} bioKey="DripSprinkler" />
     </article>
   );
 }

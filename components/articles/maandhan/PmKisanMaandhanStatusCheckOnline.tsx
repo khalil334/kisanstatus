@@ -496,7 +496,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
         </p>
       </div>
 
-      <AuthorBox modified={MODIFIED} />
+      <AuthorBox modified={MODIFIED} bioKey="PmKisanMaandhanStatusCheckOnline" />
     </article>
   );
 }

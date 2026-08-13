@@ -355,7 +355,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
         </ul>
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={article.modifiedTime} />
+        <AuthorBox modified={article.modifiedTime} bioKey="BiharPashupalanLoanYojana" />
         <BottomNav extraLinks={[
           { href: '/articles', l: 'Sabhi Articles' },
           { href: '/articles/category/pashupalan', l: 'Pashupalan Guides' },

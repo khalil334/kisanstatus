@@ -547,7 +547,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKusumYojanaSolarSubsidy2026" />
         <BottomNav extraLinks={[
           { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Loan' },
           { href: '/articles/KisanTractorLoan2026', l: 'Tractor Loan' },

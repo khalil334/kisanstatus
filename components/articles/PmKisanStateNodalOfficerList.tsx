@@ -449,7 +449,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           </div>
         </section>
 
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanStateNodalOfficerList" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanPaymentFailedFix2026', l: 'Payment Fix' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },

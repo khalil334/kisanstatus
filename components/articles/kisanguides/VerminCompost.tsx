@@ -540,7 +540,7 @@ export default function VerminCompost() {
       </h2>
       <FAQBlock faqs={verminCompostFaqs} variant="cards" />
 
-      <AuthorBox modified={getArticleBySlug('vermi-compost-business-guide')!.modifiedTime} />
+      <AuthorBox modified={getArticleBySlug('vermi-compost-business-guide')!.modifiedTime} bioKey="VerminCompost" />
 
       <GuideDisclaimer
         consult="agriculture officers, CAs"

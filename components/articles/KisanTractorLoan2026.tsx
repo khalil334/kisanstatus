@@ -494,7 +494,7 @@ return (
      />
 
      <RelatedArticles articles={RELATED} />
-     <AuthorBox modified={MODIFIED} />
+     <AuthorBox modified={MODIFIED} bioKey="KisanTractorLoan2026" />
      <BottomNav extraLinks={[
        { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Guide' },
        { href: '/articles/KisanRinKahaSeLe2026', l: 'Credit Sources' },

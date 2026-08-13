@@ -918,7 +918,7 @@ export default function MandiBhavToday() {
         </div>
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={lastUpdated} />
+        <AuthorBox modified={lastUpdated} bioKey="mandi-bhav-today" />
         <BottomNav />
         <Disclaimer />
       </div>

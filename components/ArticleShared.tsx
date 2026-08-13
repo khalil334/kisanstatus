@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
-import { AUTHOR_NAME, AUTHOR_BIO, AUTHOR_IMAGE, DISCLAIMER_TEXT } from '@/lib/site-config';
+import { AUTHOR_NAME, AUTHOR_IMAGE, AUTHOR_LINKEDIN, DISCLAIMER_TEXT } from '@/lib/site-config';
+import { getAuthorBio } from '@/lib/author-bios';
 
 export function fmtDate(iso: string) {
   return new Date(iso).toLocaleDateString('en-IN', {
@@ -147,8 +148,9 @@ export function RelatedArticles({
   );
 }
 
-export function AuthorBox({ modified }: { modified: string }) {
+export function AuthorBox({ modified, bioKey }: { modified: string; bioKey?: string }) {
   const formattedDate = fmtDate(modified);
+  const bio = getAuthorBio(bioKey || modified);
 
   return (
     <div className="flex items-start gap-4 p-5 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/10 border border-[var(--color-border)] rounded-2xl my-8">
@@ -162,16 +164,29 @@ export function AuthorBox({ modified }: { modified: string }) {
         />
       </div>
       <div>
-        <Link
-          href="/about"
-          className="font-black text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded"
-        >
-          {AUTHOR_NAME}
-        </Link>
+        <span className="inline-flex items-center gap-2">
+          <Link
+            href="/about"
+            className="font-black text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded"
+          >
+            {AUTHOR_NAME}
+          </Link>
+          <a
+            href={AUTHOR_LINKEDIN}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${AUTHOR_NAME} on LinkedIn`}
+            className="text-[#0a66c2] hover:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+        </span>
         <p className="text-xs text-green-700 dark:text-green-400 font-semibold mt-0.5">
           Sarkari yojana information — official sources se verified
         </p>
-        <p className="text-xs text-[var(--color-text-muted)] mt-1">{AUTHOR_BIO}</p>
+        <p className="text-xs text-[var(--color-text-muted)] mt-1">{bio}</p>
         <p className="text-xs text-[var(--color-text-muted)] mt-1">
            Last Updated: {formattedDate}
         </p>

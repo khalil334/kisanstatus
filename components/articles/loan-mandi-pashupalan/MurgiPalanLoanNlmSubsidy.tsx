@@ -381,7 +381,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
         </ul>
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={article.modifiedTime} />
+        <AuthorBox modified={article.modifiedTime} bioKey="MurgiPalanLoanNlmSubsidy" />
         <BottomNav extraLinks={[
           { href: '/articles', l: 'Baaki Articles Dekhein' },
           { href: '/articles/category/pashupalan', l: 'Pashu Palan Ke Sab Articles' },

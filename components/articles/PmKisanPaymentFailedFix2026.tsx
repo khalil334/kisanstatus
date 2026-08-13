@@ -432,7 +432,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           </div>
         </section>
 
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanPaymentFailedFix2026" />
 
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Guide' },

@@ -433,7 +433,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
         </div>
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanRejectedStatusReApplyGuide" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
