@@ -425,7 +425,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
           </div>
         </section>
 
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanMaandhanWithdrawalRefund" />
         <BottomNav
           extraLinks={[
             { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: 'Registration' },

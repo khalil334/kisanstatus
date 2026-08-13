@@ -461,7 +461,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         </ul>
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={article.modifiedTime} />
+        <AuthorBox modified={article.modifiedTime} bioKey="SbiDairyLoanInterestRate" />
         <BottomNav extraLinks={[
           { href: '/articles/dairy-farm-loan-without-collateral', l: 'Dairy Loan Bina Collateral' },
           { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Online Apply' },

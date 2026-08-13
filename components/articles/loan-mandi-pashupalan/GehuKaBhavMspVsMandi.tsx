@@ -348,7 +348,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </ul>
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={article.modifiedTime} />
+        <AuthorBox modified={article.modifiedTime} bioKey="GehuKaBhavMspVsMandi" />
         <BottomNav extraLinks={[
           { href: '/articles', l: 'Poori Article Library' },
           { href: '/articles/category/mandi', l: 'Mandi Guides' },

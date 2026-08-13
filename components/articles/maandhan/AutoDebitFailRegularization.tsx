@@ -455,7 +455,7 @@ export default function AutoDebitFailRegularization() {
           </p>
         </div>
 
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="AutoDebitFailRegularization" />
         <BottomNav extraLinks={[
           { href: '/articles/KisanTractorLoan2026', l: 'CIBIL & Tractor Loan' },
           { href: '/articles/PmKisanMaandhanYojanaPension', l: 'Maandhan Yojana' },

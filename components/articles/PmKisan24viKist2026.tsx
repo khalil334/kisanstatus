@@ -476,7 +476,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisan24viKist2026" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', l: ' FTO Guide' },

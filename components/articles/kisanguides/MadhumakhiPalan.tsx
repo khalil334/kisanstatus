@@ -326,7 +326,7 @@ export default function MadhumakhiPalan() {
         <li><strong>FSSAI:</strong> Regulatory guidelines for packaged honey and food safety licensing.</li>
       </ul>
 
-      <AuthorBox modified={getArticleBySlug('madhumakhi-palan-kvic-subsidy')!.modifiedTime} />
+      <AuthorBox modified={getArticleBySlug('madhumakhi-palan-kvic-subsidy')!.modifiedTime} bioKey="MadhumakhiPalan" />
 
       <GuideDisclaimer
         consult="apiculture officers, KVIC officials, ya bank managers"

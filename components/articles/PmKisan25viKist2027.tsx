@@ -283,7 +283,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisan25viKist2027" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisan24viKist2026', l: '24vi Kist Status' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },

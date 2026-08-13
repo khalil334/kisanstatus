@@ -529,7 +529,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="pm-kisan-fto-generated-ka-matlab-kya-hai" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisan24viKist2026', l: '24vi Kist' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },

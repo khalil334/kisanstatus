@@ -550,7 +550,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           </div>
         </section>
 
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanMobileNumberChangeUpdate" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanCscRegistrationCharges', l: 'CSC Charges' },
           { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Guide' },

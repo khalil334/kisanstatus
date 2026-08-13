@@ -433,7 +433,7 @@ export default function MushroomKheti() {
         <li><strong>FSSAI Ka License:</strong> Regulatory guidelines for packaged mushroom, food safety licensing, and value-added product norms.</li>
       </ul>
 
-      <AuthorBox modified={getArticleBySlug('mushroom-kheti-nhb-subsidy')!.modifiedTime} />
+      <AuthorBox modified={getArticleBySlug('mushroom-kheti-nhb-subsidy')!.modifiedTime} bioKey="MushroomKheti" />
 
       <GuideDisclaimer
         consult="horticulture officers, NHB officials, ya bank managers"

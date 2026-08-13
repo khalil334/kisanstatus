@@ -452,7 +452,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanSelfRegisteredStatusCheck" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisan24viKist2026', l: '24vi Kist' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
