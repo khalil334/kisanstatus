@@ -8,11 +8,12 @@ import {
   DEFAULT_OG_IMAGE,
   AUTHOR_NAME,
   AUTHOR_URL,
-  AUTHOR_BIO,
+  AUTHOR_LINKEDIN,
   LOGO_URL,
   LOGO_WIDTH,
   LOGO_HEIGHT,
 } from '@/lib/site-config';
+import { getAuthorBio } from '@/lib/author-bios';
 
 import PmKisanMaandhanRegistration2026 from '@/components/articles/maandhan/PmKisanMaandhanRegistration2026';
 import PmKisanMaandhanEligibilityDocuments from '@/components/articles/maandhan/PmKisanMaandhanEligibilityDocuments';
@@ -142,7 +143,8 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
       '@id': `${SITE_URL}#founder`,
       name: AUTHOR_NAME,
       url: AUTHOR_URL,
-      description: AUTHOR_BIO,
+      description: getAuthorBio(article.slug),
+      sameAs: [AUTHOR_LINKEDIN],
     },
     publisher: {
       '@type': 'Organization',

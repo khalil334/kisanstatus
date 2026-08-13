@@ -462,7 +462,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
           </div>
         </section>
 
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="MaandhanContributionGuide" />
         <BottomNav extraLinks={[
           { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: 'Registration Guide' },
           { href: '/maandhan/pm-kisan-maandhan-auto-debit-poora-sach', l: 'Auto Debit' },

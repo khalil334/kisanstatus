@@ -480,7 +480,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="NanoDap500mlPriceInIndia2026" />
         <BottomNav extraLinks={[
           { href: '/articles/soil-health-card-complete-guide-2026', l: 'Soil Card' },
           { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Guide' },
