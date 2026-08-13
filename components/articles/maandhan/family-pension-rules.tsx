@@ -431,7 +431,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
           </div>
         </section>
 
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="family-pension-rules" />
         <BottomNav extraLinks={[
           { href: '/maandhan/pm-kisan-maandhan-withdrawal-refund-rules', l: 'Withdrawal Rules' },
           { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: 'Status Check' },

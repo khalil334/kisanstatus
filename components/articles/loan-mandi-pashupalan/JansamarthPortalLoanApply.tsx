@@ -338,7 +338,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         </ul>
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={article.modifiedTime} />
+        <AuthorBox modified={article.modifiedTime} bioKey="JansamarthPortalLoanApply" />
         <BottomNav extraLinks={[
           { href: '/articles', l: 'Aur Guides Padhein' },
           { href: '/articles/category/loan', l: 'Karj Aur Loan Articles' },

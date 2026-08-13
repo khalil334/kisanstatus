@@ -8,6 +8,7 @@ export const CURRENT_YEAR = new Date().getFullYear();
 
 export const AUTHOR_NAME = 'Manish Kumar';
 export const AUTHOR_URL = `${SITE_URL}/about`;
+export const AUTHOR_LINKEDIN = 'https://www.linkedin.com/in/manish-kumar-65ab33419';
 export const AUTHOR_IMAGE = '/images/author-manish-kumar.webp';
 export const AUTHOR_IMAGE_URL = `${SITE_URL}${AUTHOR_IMAGE}`;
 export const AUTHOR_BIO = 'Main pichhle kai saalon se PM Kisan aur doosri sarkari yojanaon ko track kar raha hoon. Jo bhi likhta hoon, pehle pmkisan.gov.in aur state portals par khud check karta hoon — phir aasan bhasha mein samjhata hoon, taaki aapko sahi jankari ke liye idhar-udhar bhatakna na pade.';
@@ -21,6 +22,7 @@ export const SOCIAL_LINKS = {
   facebook: 'https://www.facebook.com/profile.php?id=61590430994270',
   twitter: 'https://twitter.com/kisanstatus',
   whatsapp: WHATSAPP_CHANNEL_URL,
+  linkedin: AUTHOR_LINKEDIN,
 } as const;
 
 export const LOGO_URL = `${SITE_URL}/logo.png`;

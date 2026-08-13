@@ -446,7 +446,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           </div>
         </section>
 
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanEkycOnline2026" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/articles/PmKisan24viKist2026', l: '24vi Kist' },

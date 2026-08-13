@@ -349,7 +349,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
           </div>
         </section>
 
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmkmyVsApyComparison2026" />
         <BottomNav extraLinks={[
           { href: '/maandhan/pm-kisan-maandhan-registration-2026', l: 'Registration Guide' },
           { href: '/maandhan/pm-kisan-maandhan-auto-debit-poora-sach', l: 'Auto Debit' },

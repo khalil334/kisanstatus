@@ -403,7 +403,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="KisanRinKahaSeLe2026" />
         <BottomNav extraLinks={[
           { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Guide' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },

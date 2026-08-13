@@ -551,7 +551,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
           </div>
         </section>
 
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="pmkmy-bank-account-change" />
         <BottomNav extraLinks={[
           { href: '/maandhan/pm-kisan-maandhan-pension-card-download', l: 'Pension Card' },
           { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: 'Status Check' },

@@ -371,7 +371,7 @@ export default function PmKisanCscRegistrationCharges() {
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanCscRegistrationCharges" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanEkycOnline2026', l: 'Free Online eKYC' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },

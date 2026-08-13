@@ -358,7 +358,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanVoluntarySurrenderGuide" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/articles/PmKisanCorrectionForm2026', l: 'Correction Form' },
