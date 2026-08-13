@@ -587,7 +587,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </div>
         </section>
 
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="KisanCreditCardOnlineApply2026" />
         <BottomNav extraLinks={[
           { href: '/articles/KisanRinKahaSeLe2026', l: 'Kisan Loan Guide' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },

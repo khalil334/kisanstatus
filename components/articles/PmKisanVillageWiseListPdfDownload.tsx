@@ -523,7 +523,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanVillageWiseListPdfDownload" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
           { href: '/articles/PmKisanRejectedStatusReApplyGuide', l: 'Rejected Status Fix' },

@@ -625,7 +625,7 @@ export default function PMFMEYojana() {
         </div>
       </div>
 
-      <AuthorBox modified={getArticleBySlug('pm-fme-yojana-food-processing')!.modifiedTime} />
+      <AuthorBox modified={getArticleBySlug('pm-fme-yojana-food-processing')!.modifiedTime} bioKey="PMFMEYojana" />
 
       <GuideDisclaimer
         consult="CAs, business consultants"

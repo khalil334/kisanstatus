@@ -408,7 +408,7 @@ export default function PmKisanBankAccountChangeProcess() {
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanBankAccountChangeProcess" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanPaymentFailedFix2026', l: 'Payment Fix' },
           { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', l: 'FTO Status' },

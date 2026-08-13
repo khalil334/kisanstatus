@@ -14,11 +14,12 @@ import {
   DEFAULT_OG_IMAGE,
   AUTHOR_NAME,
   AUTHOR_URL,
-  AUTHOR_BIO,
+  AUTHOR_LINKEDIN,
   LOGO_URL,
   LOGO_WIDTH,
   LOGO_HEIGHT,
 } from '@/lib/site-config';
+import { getAuthorBio } from '@/lib/author-bios';
 import RajasthanKisanSammanNidhi9000 from '@/components/articles/rajya-yojana/RajasthanKisanSammanNidhi9000';
 import AnnadataSukhibhavaStatusCheck from '@/components/articles/rajya-yojana/AnnadataSukhibhavaStatusCheck';
 import MpKisanKalyanYojanaKist from '@/components/articles/rajya-yojana/MpKisanKalyanYojanaKist';
@@ -98,7 +99,8 @@ function buildSchemas(
         '@id': `${SITE_URL}#founder`,
         name: AUTHOR_NAME,
         url: AUTHOR_URL,
-        description: AUTHOR_BIO,
+        description: getAuthorBio(article.slug),
+        sameAs: [AUTHOR_LINKEDIN],
       },
       creator: {
         '@type': 'Person',
@@ -267,7 +269,7 @@ export default async function RajyaYojanaArticlePage({
       <ArticleComponent article={article} />
 
       <section className="container-site max-w-3xl mx-auto px-4">
-        <AuthorBox modified={article.modified || article.published} />
+        <AuthorBox modified={article.modified || article.published} bioKey={article.slug} />
       </section>
 
       {article.relatedPaths.length > 0 && (

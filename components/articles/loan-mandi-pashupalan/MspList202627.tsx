@@ -527,7 +527,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </ul>
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={article.modifiedTime} />
+        <AuthorBox modified={article.modifiedTime} bioKey="MspList202627" />
         <BottomNav extraLinks={[
           { href: '/articles/mandi-bhav-today', l: 'Mandi Ke Aaj Ke Rates' },
           { href: '/articles/gehu-ka-bhav-msp-vs-mandi', l: 'Gehu MSP vs Mandi' },

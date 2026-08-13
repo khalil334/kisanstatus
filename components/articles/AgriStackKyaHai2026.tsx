@@ -381,7 +381,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="AgriStackKyaHai2026" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Process' },
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
