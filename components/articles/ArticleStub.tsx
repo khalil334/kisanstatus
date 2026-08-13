@@ -46,7 +46,7 @@ export default function ArticleStub({ article }: { article: ArticleMeta }) {
           ke baaki articles dekh sakte hain.
         </IB>
 
-        <AuthorBox modified={article.modifiedTime} bioKey="ArticleStub" />
+        <AuthorBox modified={article.modifiedTime} bioKey={article.slug} />
         <BottomNav extraLinks={[
           { href: '/articles', l: 'Sabhi Articles' },
           { href: `/articles/category/${article.category}`, l: `${category?.name ?? 'Category'}` },
