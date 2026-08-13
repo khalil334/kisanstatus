@@ -447,7 +447,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           </div>
         </section>
 
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="kisan-pension-card-download" />
         <BottomNav extraLinks={[
           { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: 'Status Check' },
           { href: '/maandhan/pmkmy-bank-account-change', l: ' Bank Change' },

@@ -368,7 +368,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
         </div>
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="soil-health-card-complete-guide-2026" />
         <BottomNav />
         <Disclaimer />
       </div>

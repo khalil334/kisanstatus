@@ -163,7 +163,7 @@ export default async function HindiArticlePage({
           <ArticleBody article={article} />
         </div>
       </article>
-      <AuthorBox modified={article.modifiedTime} />
+      <AuthorBox modified={article.modifiedTime} bioKey={article.slug} />
       <RelatedHindiGuides currentSlug={article.slug} />
     </main>
   );

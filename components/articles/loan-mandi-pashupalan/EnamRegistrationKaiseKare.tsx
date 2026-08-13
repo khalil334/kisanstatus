@@ -418,7 +418,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </ul>
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={article.modifiedTime} />
+        <AuthorBox modified={article.modifiedTime} bioKey="EnamRegistrationKaiseKare" />
         <BottomNav extraLinks={[
           { href: '/articles/mandi-bhav-today', l: 'Aaj Ka Mandi Bhav' },
           { href: '/articles/msp-list-2026-27', l: 'MSP List 2026-27' },

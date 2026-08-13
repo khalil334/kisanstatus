@@ -483,7 +483,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
         />
 
         <RelatedArticles articles={RELATED} />
-        <AuthorBox modified={MODIFIED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanLandSeedingForm" />
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
           { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Guide' },
