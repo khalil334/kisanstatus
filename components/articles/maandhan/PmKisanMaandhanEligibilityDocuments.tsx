@@ -34,7 +34,7 @@ const FAQS_DATA = [
     a: 'Nahi hoga. Scheme ki seema 2 hectare (karib 5 acre) tak hi hai. Isse ek inch bhi zyada hui toh system mein hi entry nahi kar payega, kyunki ye check land record ke saath automatically ho jata hai.',
   },
   {
-    q: 'PM Kisan ki 6000 wali yojana aur ye Maandhan wali pension yojana same hai kya?',
+    q: '6000 wali PM Kisan yojana aur ye Maandhan wali pension yojana same hai kya?',
     a: 'Bilkul alag hain, log aksar confuse ho jate hain. PM Kisan Samman Nidhi mein saal ke 6000 rupaye milte hain, jabki Maandhan ek pension scheme hai jisme aap khud paisa jama karte hain aur 60 saal ke baad 3000 rupaye mahina milta hai. Maandhan ke liye eligible hone ka pehla step hi PM Kisan list mein hona hai.',
   },
   {

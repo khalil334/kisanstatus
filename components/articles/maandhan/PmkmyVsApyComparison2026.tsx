@@ -9,7 +9,7 @@ const MODIFIED = '2026-06-02T15:23:46+05:30';
 
 const FAQS_DATA = [
   {
-    q: 'kya main pmkmy aur apy dono le sakta hoon?',
+    q: 'pmkmy aur apy dono ek saath le sakta hoon?',
     a: 'Technically haan, kyunki PMKMY (LIC) aur APY (PFRDA) ke databases alag hain aur aaj ki tareekh mein fully interlinked nahi hain. Lekin financial planning ke nazariye se, ek chhote kisan ke liye do alag jagah monthly paisa nikalna budget par bojh ban sakta hai. Meri salah yahi rahegi ki ek scheme mein focus karna zyada samajhdari hai.',
   },
   {

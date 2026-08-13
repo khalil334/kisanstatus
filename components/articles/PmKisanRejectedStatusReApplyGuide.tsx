@@ -46,7 +46,7 @@ const FAQS_DATA = [
     a: 'Sarkari rate ₹25-₹30 hai bhai. Usse zyada mat dena. Aur haan, correction form ke liye alag se charge nahi banta - ye ek hi process hai.',
   },
   {
-    q: 'Kya main ghar baithe online dobara apply kar sakta hoon?',
+    q: 'Dobara apply ghar baithe online ho jayega?',
     a: 'Nahi bhai. Jab ek baar status reject ho jata hai, toh portal par "Edit" ka option band ho jata hai. Aapko CSC ya BAO office hi jana padega. Online nahi ho sakta.',
   },
 ];

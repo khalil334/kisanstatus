@@ -52,7 +52,7 @@ export default function RajasthanKisanSammanNidhi9000() {
       a: 'Nahi. Ye scheme ka sabse acha part hai — PM Kisan mein naam hai to yahan bhi automatically aa jaate ho. Kuch extra bharne ki zaroorat nahi.',
     },
     {
-      q: 'PM Kisan band ho jaaye to ye chalti rahegi?',
+      q: 'Agar PM Kisan band ho jaaye to ye chalti rahegi?',
       a: 'Nahi chalegi. State wali scheme central wali ke upar khadi hai — jad kaat do to poora paudha hi sookh jaata hai.',
     },
     {

@@ -36,7 +36,7 @@ const FAQS_DATA = [
     a: 'Bhai, agar purana SIM band hai toh aap ghar baithe online change nahi kar sakte. Aapko nazdiki CSC (Common Service Centre) ya Block Agriculture Office (BAO) jana padega, jahan wo biometric ya offline form ke through naya number update karenge.',
   },
   {
-    q: 'Kya main PM Kisan portal par khud mobile number edit kar sakta hoon?',
+    q: 'Khud se PM Kisan portal par mobile number edit hota hai?',
     a: 'Haan, lekin sirf tab jab aapke paas purana SIM card active ho aur usme balance ho. System OTP purane number par hi bhejta hai. Agar SIM dead hai, toh ye "self-edit" option bilkul kaam nahi karega.',
   },
   {
@@ -48,7 +48,7 @@ const FAQS_DATA = [
     a: 'Iska koi official fixed time publish nahi hai. Database sync mein kuch din lag sakte hain — usi din check karne par purana number hi dikh sakta hai. Din-do-din ruk kar test karo; agar hafta nikal jaye aur naya number reflect na ho, to usi CSC par receipt leke wapas jao ya PM Kisan helpline par transaction ID ke saath baat karo.',
   },
   {
-    q: 'Kya pm kisan registered mobile change karne se meri kist rukegi?',
+    q: 'Registered mobile change karne se meri pm kisan kist rukegi?',
     a: 'Bilkul nahi. Kist aapke linked bank account mein hi aayegi. Mobile number ka use sirf OTP receive karne aur SMS updates ke liye hota hai, paisa transfer karne ke liye nahi.',
   },
   {
@@ -60,7 +60,7 @@ const FAQS_DATA = [
     a: 'Submit hone se pehle screen par number khud padho — ye sabse sasta bachav hai. Receipt par bhi number check karo. Galti pakad mein aa jaye to usi visit mein correction karwao; baad mein pakdi to wahi correction process dobara karna padega aur tab tak OTP galat number par jaata rahega.',
   },
   {
-    q: 'Kya main apne bhai, bete ya patni ka mobile number link kar sakta hoon?',
+    q: 'Bhai, bete ya patni ka mobile number link ho sakta hai?',
     a: 'Haan, koi zaroorat nahi ki number aapke hi naam par ho. Bas wo number active hona chahiye, aapke paas hona chahiye, aur OTP receive kar sake. Beneficiary ka naam aur Aadhaar match hona chahiye, number ka nahi.',
   },
 ];

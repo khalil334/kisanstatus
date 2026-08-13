@@ -16,7 +16,7 @@ const FAQS = [
     a: 'NSMNY portal (nsmny.mahait.org) पर Beneficiary Status option है — registered mobile number या registration number डालकर OTP से status दिखता है। PM Kisan वाली किस्तों के लिए pmkisan.gov.in का Know Your Status अलग से देखना होगा।',
   },
   {
-    q: 'PM Kisan आ रही है पर नमो शेतकरी की किस्त नहीं आई — क्यों?',
+    q: 'नमो शेतकरी की किस्त नहीं आई पर PM Kisan आ गई — क्यों?',
     a: 'आम तौर पर तीन कारण मिलते हैं: eKYC अधूरी, बैंक खाता आधार से linked/DBT-enabled नहीं, या land record verification pending। चौथा कारण schedule का है — राज्य की किस्तें PM Kisan के साथ-साथ नहीं, अपने कार्यक्रम से release होती हैं। पहले NSMNY portal पर status देखें, फिर कृषि सहायक/तलाठी से मिलें।',
   },
   {
