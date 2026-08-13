@@ -249,7 +249,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     ],
     category: 'pashupalan',
     publishedTime: '2026-08-13T18:30:00+05:30',
-    modifiedTime: '2026-08-13T18:30:00+05:30',
+    modifiedTime: '2026-08-14T02:00:00+05:30',
     author: AUTHOR_NAME,
     component: 'GauMutraKharidYojanaHindi',
     ogImage: '/og-image.webp',
