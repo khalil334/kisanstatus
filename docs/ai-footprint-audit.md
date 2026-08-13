@@ -237,7 +237,12 @@ Some of these are legitimately shared facts (the 155261 helpline, the 18–40 ag
 
 **86 of 96** files carry FAQs; **714 questions** total. Good news: **zero exact duplicates** across files.
 
-### 6a. Near-duplicate questions (same question, one noun swapped)
+### 6a. Near-duplicate questions (same question, one noun swapped) ✅ RESOLVED (2026-08-13, PR #281)
+
+**Closed.** Cross-file pairs ≥0.75 went **46 → 2** by re-angling the weaker question in
+each pair to what that article's own answer actually covers. The 2 survivors are
+deliberate (different topics, same sentence shape). The table below is the original
+finding, kept for the record.
 
 | Sim | Question A | Question B | Files |
 |---|---|---|---|
@@ -260,7 +265,11 @@ Some of these are legitimately shared facts (the 155261 helpline, the 18–40 ag
 | 0.6 | Bina zameen ke loan mil sakta hai? | kya bina zameen ke solar pump mil sakta hai? | `KisanRinKahaSeLe2026.tsx` / `PmKusumYojanaSolarSubsidy2026.tsx` |
 | 0.6 | Bank account change karne mein kitna time lagta hai? | Surrender karne mein kitna time lagta hai? | `PmKisanBankAccountChangeProcess.tsx` / `PmKisanVoluntarySurrenderGuide.tsx` |
 
-### 6b. Question-opener monotony
+### 6b. Question-opener monotony ✅ RESOLVED (2026-08-13, PR #280)
+
+**Closed.** Largest opener bucket **21 → 5**; "Kya main…" 18 → 0, "Kya PM…" 8 → 0,
+"Mera naam…" 6 → 1. 47 questions reworded across 31 files; question count unchanged.
+The table below is the original finding, kept for the record.
 
 Openers repeated across the FAQ corpus:
 
@@ -561,6 +570,16 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 
 - Target branded head phrases only, from 8–20/1000w down to ~5–6/1000w by swapping surplus mid-body repeats for variants ("is yojana", "iska", scheme short-forms). Anchor placements (title/H1/intro/headings/FAQ) untouched. Repeated bare URLs (`gov in` hits) handled as link-text cleanup, not keyword edits.
 
+### Part 7 — FAQ question quality ✅ DONE (2026-08-13, PRs #280, #281)
+
+*Files: 62 file-touches (31 + 32, overlapping) · Type: per-file copy, question text only*
+
+- **§6b opener monotony (PR #280):** largest opener bucket 21 → 5. Keyword-protected —
+  in the "PM Kisan…" bucket the head phrase was moved off the sentence-start, never removed.
+- **§6a near-duplicate questions (PR #281):** pairs ≥0.75 went 46 → 2.
+- Neither PR touched an answer, a count, prose, a heading, a table or a related card.
+  All 88 changed lines were question strings.
+
 ### Part 6 — Structure + internal links (biggest, last)
 
 *Files: ~30 · Type: structural/editorial*
@@ -573,6 +592,47 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 Part 1 → Part 2 → Part 3 (a–d) → Part 4 → Part 5 → Part 6. Each part ships as its own PR and waits for owner review before the next starts.
 
 ## 12. Changelog
+
+### 2026-08-13 — FAQ question quality: §6b + §6a closed (PRs #280, #281)
+
+- **PR #280 — opener diversity.** 47 questions across 31 files. Openers on `main` → after:
+  "PM Kisan…" 21 → 5 · "Kya main…" 18 → 0 · "Kya PM…" 8 → 0 · "Mera naam…" 6 → 1.
+  Phrasing moved toward elliptical real-query shapes (`Kya main ghar baithe free mein kar
+  sakta hoon?` → `Ghar baithe free mein ho jayega?`). Ground rule 3 honoured by *relocating*
+  the head phrase, not deleting it (`PM Kisan list PDF download kaise karein?` →
+  `PDF mein PM Kisan list kaise download karein?`).
+- **PR #281 — near-duplicate questions.** 41 questions across 32 files; pairs ≥0.75 **46 → 2**.
+  Clusters collapsed: reject/re-apply (5 files), "kitna time lagta hai" (6), "paisa/claim
+  kitne din" (4), helpline (4), "naam list mein nahi" (3), MP/Maharashtra twins (4 questions),
+  CSC charges (3). Several rewrites *added* the article's own scheme name where the question
+  was generic, which sharpens per-page targeting.
+- **2 pairs deliberately left:** tractor-loan vs solar-pump "bina zameen" (0.767) and
+  kist-registration vs MSP-registration (0.752) — same shape, genuinely different topics.
+- **Question count 742 → 742 across both PRs.** Nothing added, dropped or answered differently.
+- All touched files feed `FAQBlock`/`FAQS_DATA`, so JSON-LD derives from visible text — the
+  Part 2 / 2b hand-typed drift class cannot recur.
+- `tsc --noEmit` clean · `check:titles` passes · `eslint` 13 warnings, byte-identical to `main`.
+
+**⚠️ Two factual self-contradictions surfaced while verifying answers — NOT fixed, owner decision needed:**
+
+| Conflict | File A | File B |
+|---|---|---|
+| CSC registration fee | `PmKisanCscRegistrationCharges.tsx`: official rate ₹25–30 new / ₹15–20 eKYC | `pm-kisan-fto-generated-ka-matlab-kya-hai.tsx`: service must be **free**, ₹20–50 is "unauthorized" |
+| Mobile-number change charge | `PmKisanMasterGuide2026.tsx`: "Bilkul free hai", CSC ₹20–30 | `PmKisanMobileNumberChangeUpdate.tsx`: no fixed amount, check the rate card |
+
+Both are money questions farmers act on. No reconciliation was invented; whichever is
+correct should be settled and the other corrected in its own PR.
+
+**Pages to re-check after deploy:** `/articles/pm-kisan-beneficiary-list-2026` (5 questions
+across both PRs), `/articles/pm-kisan-ekyc-online-2026` (3), `/articles/pm-kisan-correction-form-2026` (3),
+`/articles/pm-kisan-mobile-number-change-update` (3), `/articles/pmfby-crop-insurance-2026` (3),
+the MSP twins (`/loan-mandi-pashupalan/msp-list-2026-27` + `…/gehu-ka-bhav-msp-vs-mandi`),
+the state twins (`/hindi-yojana/mukhyamantri-kisan-kalyan-yojana-mp` +
+`/hindi-yojana/namo-shetkari-yojana-maharashtra`). Spot-check Rich Results on one: FAQPage
+question text must match the new visible text.
+
+**Next:** the two fee contradictions above; Part 6b/6c/6d (structure variation) and §10's P3
+title-frame item both remain **held** — see the note in the 2026-08-13 FAQ-coverage entry.
 
 ### 2026-08-13 — FAQ coverage closed (PRs #277, #278)
 
