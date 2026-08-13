@@ -44,7 +44,7 @@ const FAQS_DATA = [
     a: 'Dono Department of Animal Husbandry & Dairying ki schemes hain, par focus alag hai. RGM sirf gay-bhains (bovine) ki nasl sudhaar ke liye hai — AI, IVF, semen, breed farms. NLM poultry, bakri-bhed, piggery aur chara units ke liye entrepreneurship subsidy deti hai (50%, ₹50 lakh tak). Dairy farm ka infrastructure banana ho toh AHIDF alag scheme hai. Apne project ke hisaab se sahi scheme chunna zaroori hai.',
   },
   {
-    q: 'Application kahan aur kaise hoti hai?',
+    q: 'Gokul Mission mein application kahan aur kaise hoti hai?',
     a: 'Component par depend karta hai. Breed Multiplication Farm ke liye eoi.nddb.coop par online EOI (Expression of Interest) file hoti hai. IVF aur sex-sorted semen ke liye implementing agency/district pashupalan vibhag ke through kaam hota hai. NAIP ki muft AI ke liye koi application nahi — bas MAITRI ya nazdeeki veterinary centre se sampark karo.',
   },
   {

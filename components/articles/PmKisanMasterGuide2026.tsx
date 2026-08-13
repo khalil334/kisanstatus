@@ -42,7 +42,7 @@ const FAQS_DATA = [
     a: 'Ghabrao mat. Pehle portal par reason dekho - kyun reject hua. Land record mein kuch dikkat hai? Khatauni update karwao. eKYC pending hai? Pehle wahi complete karo. Documents clear nahi the? Dobara clear scan upload karo. Fix karne ke baad dobara apply kar do. CSC center par jaake help le sakte ho - wo log manually check karke bata denge ki exactly kya problem hai.'
   },
   {
-    q: 'Mobile number change karne ka kitna charge lagta hai?',
+    q: 'Mobile number update karana free hai ya paisa lagta hai?',
     a: 'Bilkul free hai bhai! Agar purana number abhi active hai, toh online kar sakte ho. pmkisan.gov.in par jao, Edit Mobile option dhundo, OTP verify karo, naya number daal do. Agar purana number band ho chuka hai, toh CSC center jao - operator update kar dega. Wo log ₹20-30 service charge le sakte hain, lekin official charge zero hai.'
   },
   {

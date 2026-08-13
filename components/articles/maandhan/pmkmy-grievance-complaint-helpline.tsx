@@ -50,7 +50,7 @@ const FAQS_DATA = [
     a: 'Ye technical glitch ya NACH file mismatch ki wajah se hota hai. Bank se transaction proof (statement screenshot) lekar PMKMY portal par grievance file karein aur scpms@licindia.com par email karein. 7-10 working days mein update ho jayega.',
   },
   {
-    q: 'Helpline number par call connect nahi ho rahi, kya karun?',
+    q: 'Call connect hi nahi ho rahi — shikayat ka doosra rasta kya hai?',
     a: 'Call volume high hone ki wajah se kabhi-kabhi lines busy rehti hain. Subah 10:30 se 11:30 baje ke beech call karne ka try karein (jab lines kam busy hoti hain). Agar fir bhi na lage, to online grievance portal sabse behtar option hai.',
   },
   {

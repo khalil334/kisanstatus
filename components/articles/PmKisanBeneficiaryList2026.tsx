@@ -38,7 +38,7 @@ const FAQS_DATA = [
     a: 'Pehle check karo ki eKYC hui hai ya nahi. 60% cases mein yahi dikkat hoti hai. Agar eKYC done hai, toh land seeding pending ho sakta hai. Patwari se baat karo. 15-30 din mein naam aa jayega.',
   },
   {
-    q: 'Naam aane mein kitna time lagta hai?',
+    q: 'Registration ke baad list mein naam kitne din mein aata hai?',
     a: 'Registration aur verification complete hone ke baad aamtaur par 15 se 30 din lagte hain.',
   },
   {
@@ -54,7 +54,7 @@ const FAQS_DATA = [
     a: 'Nahi, list mein sirf naam, father name, mobile number, aur bank details hote hain. Caste ka column nahi hota.',
   },
   {
-    q: 'Agar mera naam list mein nahi hai toh kya karun?',
+    q: 'Beneficiary list mein naam nahi mila — pehle eKYC dekhun ya land seeding?',
     a: 'Pehle eKYC check karo, phir land seeding verify karo. Dono complete hain toh 155261 helpline par call karo ya Block Agriculture Office mein complaint darj karo.',
   },
   {

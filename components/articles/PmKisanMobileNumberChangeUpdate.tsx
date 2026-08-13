@@ -40,7 +40,7 @@ const FAQS_DATA = [
     a: 'Haan, lekin sirf tab jab aapke paas purana SIM card active ho aur usme balance ho. System OTP purane number par hi bhejta hai. Agar SIM dead hai, toh ye "self-edit" option bilkul kaam nahi karega.',
   },
   {
-    q: 'CSC wala pm kisan mobile update ke kitne paise lega?',
+    q: 'Mobile update ka CSC rate card kahan laga hota hai?',
     a: 'Fixed rakam batana galat hoga kyunki charge service aur state ke hisaab se alag hota hai — sahi jawab center par laga rate card hai, jo display karna CSC rules me zaroori hai. Kaam se pehle rate card dekho, kaam ke baad receipt lo (amount us par likha hota hai). Operator rate card se zyada maange to CSC ID note karke digitalseva portal par grievance daal do.',
   },
   {

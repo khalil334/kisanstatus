@@ -44,7 +44,7 @@ const FAQS_DATA = [
     a: 'Woh aapke doodh bechne ke intezaam par depend karta hai, gaay ki ginti par nahi. Agar gaon mein cooperative ya dairy collection centre hai jo roz uthata hai, toh 8-10 pashu ka unit sambhal jata hai. Sirf local grahak par depend ho toh 4-5 se shuru karo — warna doodh bachega, khali paisa chara mein jayega. Bank bhi yahi dekhta hai ki milk kahan bikega.',
   },
   {
-    q: 'Application reject ho gayi toh dobara kab apply kar sakta hoon?',
+    q: 'Dairy loan file reject hui — usi branch mein dobara lagana theek hai?',
     a: 'Koi fixed waiting period nahi hai, lekin usi branch mein wahi file dobara daalna bekar hai. Pehle likhit reason lo — bank ko rejection ka reason batana padta hai. Aam wajahein: DPR mein doodh ka rate zyada dikha diya, chara ka kharcha kam dikha diya, ya repayment capacity match nahi hui. Numbers theek karke 1-2 mahine baad dobara file karo, chahe usi bank mein ya doosri branch mein.',
   },
   {

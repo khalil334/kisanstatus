@@ -30,7 +30,7 @@ const RELATED_CARDS = [
 
 const FAQS_DATA = [
   {
-    q: 'Mere paas 2.5 hectare zameen hai, kya main apply kar sakta hoon?',
+    q: '2.5 hectare zameen wala Maandhan mein apply kar sakta hai?',
     a: 'Nahi hoga. Scheme ki seema 2 hectare (karib 5 acre) tak hi hai. Isse ek inch bhi zyada hui toh system mein hi entry nahi kar payega, kyunki ye check land record ke saath automatically ho jata hai.',
   },
   {
