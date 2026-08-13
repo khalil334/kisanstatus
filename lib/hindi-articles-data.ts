@@ -234,6 +234,26 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     component: 'NamoShetkariYojanaMaharashtra',
     ogImage: '/images/articles/hindi-yojna/namo-shetkari/shetkari-field.webp',
   },
+  {
+    slug: 'hi/gau-mutra-kharid-yojana',
+    titleHi: 'गाय के मूत्र की खरीद योजना — बुलंदशहर में 10 रुपये लीटर',
+    seoTitleHi: 'गौ मूत्र खरीद योजना UP — 10 रुपये प्रति लीटर',
+    desc: 'बुलंदशहर के नरसेना गांव से शुरू हुई योजना — गाय का मूत्र 10 रुपये प्रति लीटर, FPO के संग्रह केंद्र, महिलाओं को 2 रुपये कमीशन। पूरी जानकारी यहां।',
+    keywords: [
+      'गाय के मूत्र की खरीद योजना',
+      'गौ मूत्र 10 रुपये प्रति लीटर',
+      'बुलंदशहर पायलट प्रोजेक्ट गौ मूत्र',
+      'जीवामूत जैविक कीटनाशक',
+      'gau mutra kharid yojana up',
+      'narsena gaon fpo sangrah kendra',
+    ],
+    category: 'pashupalan',
+    publishedTime: '2026-08-13T18:30:00+05:30',
+    modifiedTime: '2026-08-13T18:30:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'GauMutraKharidYojanaHindi',
+    ogImage: '/og-image.webp',
+  },
 ] as const;
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(
