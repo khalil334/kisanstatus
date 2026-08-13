@@ -5,6 +5,11 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME, AUTHOR_IMAGE, AUTHOR_LINKEDIN } from '@/lib/site-config';
 import { getAuthorBio } from '@/lib/author-bios';
 
+const HERO_IMAGE = {
+  src: '/images/gau-mutra-kharid-yojana-bulandshahr-hero.webp',
+  alt: 'Bulandshahr ke gaon mein kisan subah gau mutra steel bartan mein ikattha karta hua',
+} as const;
+
 const bullets = [
   {
     tag: 'Shuruat',
@@ -12,21 +17,37 @@ const bullets = [
     body: `Poori baat Bulandshahr zile ki Syana tehsil ke Narsena gaon se shuru hoti hai. Yahan ek FPO kaam sambhal raha hai, agua'i Dr. Praveen kar rahe hain. Aaspaas ke karib pandrah gaon isse jud chuke hain, aur rozana karib paanch sau litre ikattha ho raha hai.
 
 Mahilaon ke samooh bhi seedhe jud gaye hain, unhe alag se do rupaye prati litre ka commission mil raha hai.`,
+    img: {
+      src: '/images/mahila-samooh-gau-mutra-commission.webp',
+      alt: 'Gaon ki mahilaon ka samooh register mein gau mutra sangrahan ki entry karta hua',
+    },
   },
   {
     tag: 'Maqsad',
     heading: 'Aakhir sarkaar karegi kya isse',
     body: `Jawaab seedha jaivik kheti se juda hai. Jo tarl ikattha ho raha hai, usse jaivik keetnashak aur jeevamrit jaisi khaad taiyaar hogi, taaki mehngi rasayanik khaad par nirbharta kam ho.`,
+    img: {
+      src: '/images/jaivik-keetnashak-jeevamrit-nirman.webp',
+      alt: 'Jeevamrit aur jaivik keetnashak banane ke liye drum mein ghol taiyaar karta kisan',
+    },
   },
   {
     tag: 'Wajah',
     heading: 'Yogi sarkaar ki soch ke peeche kya tark hai',
     body: `Soch yeh hai ki gaay doodh dena band kar de tab bhi use paalna ghaate ka sauda na lage, taaki log use sadak par na chhode. Chhattisgarh mein bhi pehle aisi scheme chal chuki hai, wahan rate kam tha — chaar rupaye litre.`,
+    img: {
+      src: '/images/desi-gaay-gaushala-bulandshahr.webp',
+      alt: 'Gaushala mein boodhi desi gaay ko chara khilata hua kisan',
+    },
   },
   {
     tag: 'Fayda',
     heading: 'Gaon walon ke liye asal mein matlab kya hai',
     body: `Boodhi ya ghair-dudharu gaay bhi ab kamai ka zariya ban sakti hai. Roz chaar-paanch litre bechne par mahine bhar mein ek theek-thaak jod ban jaata hai, khaaskar un gharon ke liye jinke paas doosra zariya nahi tha.`,
+    img: {
+      src: '/images/kisan-ko-turant-bhugtan-gau-mutra.webp',
+      alt: 'Sangrah kendra par kisan ko gau mutra ke badle turant nakad bhugtaan milta hua',
+    },
   },
   {
     tag: 'Aage',
@@ -42,11 +63,19 @@ Mahilaon ke samooh bhi seedhe jud gaye hain, unhe alag se do rupaye prati litre 
     tag: 'Tareeka',
     heading: 'Bechna kahan aur kaise hai',
     body: `Sthaniya FPO ke sangrah kendra par saaf bartan lekar jaana hota hai, matra naapi jaati hai, milawat check hoti hai, aur turant bhugtaan mil jaata hai.`,
+    img: {
+      src: '/images/fpo-sangrah-kendra-gau-mutra.webp',
+      alt: 'FPO sangrah kendra par bartan mein laaya gaya gau mutra naapa jaata hua',
+    },
   },
   {
     tag: 'Disha',
     heading: 'Jaivik kheti ki taraf ek aur kadam',
     body: `Rasayanik khaad mehngi hoti ja rahi hai aur mitti ko nuksaan pahunchati hai. Yeh model chala toh sabse zyada fayda chhote-mazhole kisano ko hoga.`,
+    img: {
+      src: '/images/jaivik-kheti-keetnashak-spray.webp',
+      alt: 'Kisan gehun ke khet mein jaivik keetnashak ka chhidkaav karta hua',
+    },
   },
 ] as const;
 
@@ -174,6 +203,16 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           <p className="mt-3 text-[15px] leading-7 text-[#D8C9DE]">
             Subah doodh ki can ke saath ab ek aur bartan bhi nikal raha hai — poori kahani niche ↓
           </p>
+          <div className="mt-4 overflow-hidden rounded-xl">
+            <Image
+              src={HERO_IMAGE.src}
+              alt={HERO_IMAGE.alt}
+              width={1200}
+              height={669}
+              priority
+              className="h-auto w-full object-cover"
+            />
+          </div>
           <div className="mt-4 flex flex-wrap gap-3 text-[11px] text-[#9C86A6]">
             <span>
               <Link href="/about" className="underline hover:text-[#F5EDE3]">
@@ -206,6 +245,18 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
                   {para}
                 </p>
               ))}
+              {'img' in b && b.img && (
+                <div className="mt-3 overflow-hidden rounded-xl">
+                  <Image
+                    src={b.img.src}
+                    alt={b.img.alt}
+                    width={1200}
+                    height={669}
+                    loading="lazy"
+                    className="h-auto w-full object-cover"
+                  />
+                </div>
+              )}
             </Bubble>
           ))}
         </div>
