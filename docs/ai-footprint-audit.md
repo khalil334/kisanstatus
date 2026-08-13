@@ -309,7 +309,7 @@ The 8 hand-typed files:
 - `ArticleStub.tsx`
 - `kisanguides/CHCPortal.tsx`
 - `kisanguides/DripSprinkler.tsx`
-- `maandhan/PmKisanMaandhanStatusCheckOnline.tsx`
+- ~~`maandhan/PmKisanMaandhanStatusCheckOnline.tsx`~~ — **false positive**, it has 5 FAQs as hand-typed markup (no `FAQS_DATA` const, so the scan missed them). Migrated to `<FAQBlock>` in PR #275; see Part 2b.
 - `rajya-yojana/PariharaPaymentStatusCheck2026.tsx`
 - `rajya-yojana/UpKisanKarjRahatList2026.tsx`
 - `rajya-yojana/tools/KrishakBandhuChecker.tsx`
@@ -530,11 +530,12 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 - Rewrite the 7-file portal CTA sentence ("…10 second baad portal khulega") so each file words it differently.
 - One related-section label site-wide (replaces the 4 rotating labels).
 
-### Part 2 — FAQ schema correctness (Google requirement) ✅ DONE (2026-08-12, PR: fix/part-2-faq-schema)
+### Part 2 — FAQ schema correctness (Google requirement) ✅ DONE (2026-08-12, PR: fix/part-2-faq-schema · 2b: PR #275)
 
-*Files: 8 · Type: template*
+*Files: 8 + 1 · Type: template*
 
 - Migrate the 8 hand-typed `FAQPage` JSON-LD files (`kisanguides/` ×7 + `hindi-yojana/KisanKarjMafiList2027.tsx`) to `<FAQBlock>` — one Q&A array, schema derived from visible text. Fixes the drift (e.g. `VerminCompost.tsx`). FAQ wording itself is not changed beyond picking the correct single version.
+- **2b (2026-08-13, PR #275):** the audit's list of hand-typed files was incomplete — `maandhan/PmKisanMaandhanStatusCheckOnline.tsx` was a 9th, missed because §6d had mis-filed it as "no FAQ at all" (its FAQs are hand-typed markup with no `FAQS_DATA` const, so the scan didn't see them). Same class of defect, now fixed the same way.
 
 ### Part 3 — Closing blocks ("Seedhi Baat" formula), 4 batches — 3a ✅ · 3b ✅ · 3c ✅ · 3d ✅ DONE (2026-08-12)
 
@@ -567,6 +568,26 @@ P0/P1 are where the AI feel actually lives. P2/P3 are polish.
 Part 1 → Part 2 → Part 3 (a–d) → Part 4 → Part 5 → Part 6. Each part ships as its own PR and waits for owner review before the next starts.
 
 ## 12. Changelog
+
+### 2026-08-13 — Part 2b complete (`fix/part-2b-maandhan-status-faq-schema`, PR #275)
+
+- **The 9th hand-typed `FAQPage` file, missed by Part 2.** `maandhan/PmKisanMaandhanStatusCheckOnline.tsx` maintained its FAQs twice — hand-typed JSON-LD in the `@graph` **and** re-typed visible markup — and the two had already drifted:
+
+| | Schema (JSON-LD) | Visible page |
+|---|---|---|
+| Question count | 3 | **5** |
+| Q1 | "status online kaise **verify kijiye**?" | "status online kaise **check karein**?" |
+| Q2 | "pension card kaise **download kijiye**?" | "pension card kaise **download karein**?" |
+| Q3 answer | "Har mahine ka record dikhega." | "Har mahine ka record dikhega — success, failed, ya pending." |
+
+- **Why the audit missed it:** §6c only counted files with a `FAQS_DATA`-shaped const, and §6d listed this file under "no FAQ at all". Both were wrong — the FAQs were there, just hand-typed. §6d is corrected above.
+- **Fix:** one `FAQS_DATA` array now feeds the visible block (`<FAQBlock variant="inline">`) and the schema; the stale hand-typed `FAQPage` node was dropped from the `@graph`, leaving exactly one FAQPage on the page (emitted by the shared component). Drift can no longer recur by construction.
+- **Visible wording is the source of truth and unchanged** — all 5 Q&A strings byte-identical to before. The 2 questions that existed only on the page are now in the schema too. Nothing invented, no answers reworded, no other section touched.
+- `tsc --noEmit` clean · `eslint` clean · `npm run check:titles` passes (39 pairs).
+
+**Page to re-check after deploy:** `/maandhan/pm-kisan-maandhan-status-check-online` — confirm 5 FAQs render and Rich Results Test reports 5 questions matching visible text.
+
+**Next:** the 4 real "no FAQ" guides (`kisanguides/CHCPortal.tsx` — branch `fix/chc-portal-faqs` exists but was never opened as a PR, `kisanguides/DripSprinkler.tsx`, `rajya-yojana/PariharaPaymentStatusCheck2026.tsx`, `rajya-yojana/UpKisanKarjRahatList2026.tsx`), then FAQ-opener diversification (§6b).
 
 ### 2026-08-12 — Part 5 complete (`fix/part-5-keyword-destuffing`, PR #262)
 
