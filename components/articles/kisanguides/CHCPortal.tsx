@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { getArticleBySlug } from '@/lib/articles-data';
-import { AuthorBox } from '@/components/ArticleShared';
+import { AuthorBox, FAQBlock } from '@/components/ArticleShared';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const metadata: Metadata = {
@@ -27,6 +27,41 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://kisanstatus.com/articles/custom-hiring-centre-chc-portal' },
 };
+
+const FAQS_DATA = [
+  {
+    q: 'Tractor par bhi subsidy milti hai ya sirf implements par?',
+    a: 'Sirf implements par. Rotavator, Happy Seeder, Laser Leveler jaise tractor ke peeche lagne wale saaman par SMAM subsidy milti hai — tractor khud aapko apne paise ya bank loan se lena padta hai. Isi ek line ka fayda utha kar agent "paisa do, free tractor dilwa denge" wala jaal bichhate hain.',
+  },
+  {
+    q: 'Group ya FPO ke naam par apply karne se kya fayda hota hai?',
+    a: 'Limit dugni ho jati hai. Individual kisan ke case mein implements par 40-50% subsidy ₹5 lakh tak rukti hai, jabki Custom Hiring Centre (group ya FPO) ke roop mein wahi 40-50% ₹10 lakh tak ja sakti hai. Percentage lagbhag wahi rehta hai — badalta sirf maximum ceiling hai.',
+  },
+  {
+    q: 'Chhote aur seemant kisan ko 50% kaise milta hai, 40% kise?',
+    a: '2 hectare tak zameen wale chhote/seemant kisan ko implement par 50% milta hai; usse zyada zameen walon ko 40%. Dono case mein max limit ₹5 lakh ke aas-paas rehti hai, aur category ka proof file ke saath lagana padta hai — isi kagaz par aapka 10% ka farak tay hota hai.',
+  },
+  {
+    q: 'Machine pehle khareed lein ya approval ka wait karein?',
+    a: 'Approval aane ke baad hi khareedein. Process mein pehle physical verification hota hai — officer aapki zameen aur storage facility dekhne aata hai — aur uske baad bills submit hote hain. Approval se pehle ki gayi kharidari par claim atakne ka poora risk aapka hai.',
+  },
+  {
+    q: 'Kaunsa implement pehle lena chahiye, ye kaise tay karein?',
+    a: 'Apne nazdeeki Krishi Vigyan Kendra (KVK) ya block ke progressive farmers se poochein ki season mein kis machine ke liye sabse lambi waiting lagti hai. Jis implement ke liye log doosre gaon jaate hain, wahi aapka pehla investment hai. Punjab-Haryana mein Happy Seeder aur straw management chalta hai, MP-UP-Bihar mein Rotavator, Cultivator aur Seed Drill.',
+  },
+  {
+    q: 'Ek tractor aur 7 implements ke setup mein kul kitna lagta hai?',
+    a: 'Total project cost ₹18 se ₹25.5 lakh ke beech baithti hai — 55 HP naya tractor ₹7.5-9 lakh, implements ₹8-12 lakh, shed ya secure storage ₹1.5-3 lakh, aur 3 mahine ka working capital buffer ₹1-1.5 lakh. Implements par 40-50% subsidy ke baad isme se ₹4-6 lakh wapas aata hai.',
+  },
+  {
+    q: 'Peak season ki kamai saal bhar chalti hai kya?',
+    a: 'Nahi. Peak (Oct-Nov aur March-April) mein gross ₹2 lakh ke aas-paas aur ₹88,000-₹1,25,000 kharche ke baad net ₹80,000-₹1,20,000 mahina banta hai. Lean season mein yahi profit aadha ya usse bhi kam ho jata hai, aur garmiyon mein agricultural demand 60-70% gir jati hai — isliye tractor ke liye goods transport jaisa off-season plan pehle se socha jata hai.',
+  },
+  {
+    q: 'Gaon mein udhaari aur driver ka jhagda kaise sambhalein?',
+    a: 'Naye customers se hamesha 50% advance lein — gaon mein udhaari phailne se cash flow wahin ruk jata hai. Driver ke liye "base salary + incentive" model rakhein, taaki machine ki care uske apne fayde se judi rahe. Peak season mein belts, blades aur nuts-bolts stock mein rakhein; ek din ka breakdown bhi reputation le doobta hai.',
+  },
+];
 
 export default function CHCPortal() {
   return (
@@ -351,6 +386,11 @@ export default function CHCPortal() {
           </ul>
         </div>
       </div>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        CHC Shuru Karne Se Pehle Ke Sawaal
+      </h2>
+      <FAQBlock faqs={FAQS_DATA} variant="accordion" />
 
       <AuthorBox modified={getArticleBySlug('custom-hiring-centre-chc-portal')!.modifiedTime} bioKey="CHCPortal" />
 
