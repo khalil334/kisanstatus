@@ -40,7 +40,7 @@ const FAQS_DATA = [
     a: 'Dono options hain. Bank/NCDC se sanctioned loan wala rasta aam hai. Self-finance karna ho toh scheduled bank se bank guarantee deni hoti hai. Kisi bhi case mein project ka non-subsidy hissa aapko hi arrange karna hai — subsidy baad mein aati hai.',
   },
   {
-    q: 'Kitne din mein subsidy milti hai?',
+    q: 'NLM subsidy ki installment kab-kab release hoti hai?',
     a: 'Timeline project aur state par depend karti hai. Application approval, loan release aur SIA verification ke baad subsidy installments mein aati hai — pehli installment loan ki pehli release/project shuru hone par, baaki project poora hone ke verification par. Mahino ka process maan kar chalo aur beech ka cash flow apne plan mein rakho.',
   },
   {

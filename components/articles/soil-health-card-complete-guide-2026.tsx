@@ -35,7 +35,7 @@ const FAQS_DATA = [
     a: 'Har 2-3 saal mein ek baar test karwana acha hota hai. Lekin agar aap new chemicals use kar rahe ho ya soil quality gir gayi likhe to dobara kar sakte ho.',
   },
   {
-    q: 'Soil card banane mein kitna time lagta hai?',
+    q: 'Sample dene ke baad soil card kab tak mil jata hai?',
     a: 'Lab analysis mein 1-2 hafte lagta hai. Card print karte ho to 3-4 hafte total. Zyada tar states mein 1 mahina standard time limit hai.',
   },
   {

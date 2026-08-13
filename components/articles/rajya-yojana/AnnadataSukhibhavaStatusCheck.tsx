@@ -45,11 +45,11 @@ const FAQS_DATA = [
     a: 'Haan. Andhra Pradesh sarkar ne YSR Rythu Bharosa ko officially rename karke "Annadata Sukhibhava" kar diya hai. Benefits aur eligibility lagbhag same hain, bas naam aur kuch administrative processes update hue hain.',
   },
   {
-    q: 'Agar mere paas zameen nahi hai, kya main apply kar sakta hoon?',
+    q: 'Zameen apne naam nahi hai — Annadata Sukhibhava milegi?',
     a: 'Haan. Tenant farmer hain aur valid CCRC (Crop Cultivator Rights Card) hai toh aap eligible hain. Yahi is scheme ka sabse bada fark hai. Dusre states mein bataidar aksar bahar reh jaate hain.',
   },
   {
-    q: 'Payment status mein "Pending" dikh raha hai, kya karein?',
+    q: 'Status "Pending" hai — verification baaki hai ya bank mein atka hai?',
     a: '"Pending" ka matlab verification chal raha hai, ya payment file ho chuki hai lekin bank tak nahi pahunchi. 7-10 din intezaar karein. Phir bhi na aaye toh bank se NPCI mapping check karwayein.',
   },
   {

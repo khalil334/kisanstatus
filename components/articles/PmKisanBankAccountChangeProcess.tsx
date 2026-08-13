@@ -35,7 +35,7 @@ const FAQS_DATA = [
     a: 'PM Kisan ki website par khud se "Edit Bank Account" ka koi button nahi milta. Aapko ya toh CSC center jana padega ya phir BAO office. Ghar baithe ye kaam nahi hota, kisi na kisi ka verification zaroori hai.',
   },
   {
-    q: 'Bank account change karne mein kitna time lagta hai?',
+    q: 'Naya bank account portal par kab tak update dikhega?',
     a: 'CSC wale se karwane par lagbhag 15 din lagte hain. BAO office ke chakkar kaat rahe ho toh 30 se 45 din bhi nikal sakte hain. Jab tak portal update nahi hota, paisa purane account mein hi jaayega aur wapas fail ho jaayega.',
   },
   {

@@ -15,7 +15,7 @@ const RELATED = [
 
 const FAQS_DATA = [
   { q: 'Nano DAP 500ml price India mein 2026 kya hai?', a: 'Lagbhag ₹250-350 ke beech. Subsidy mil jaaye toh ₹200-280 tak bhi aa sakta hai. Exact price ke liye authorized dealer ya IFFCO website confirm karna behtar rahega — state aur season se rate badalta hai.' },
-  { q: 'IFFCO liquid DAP ka aaj ka rate kya chal raha hai?', a: 'Authorized dealers ₹280-320 charge kar rahe hain. Kuch states mein subsidized rate ₹220-270 tak mil jaata hai. Rate roz nahi badalta, par season shuru hote hi update lena samajhdari hai.' },
+  { q: 'IFFCO liquid DAP ki 500ml bottle ka price kitna hai?', a: 'Authorized dealers ₹280-320 charge kar rahe hain. Kuch states mein subsidized rate ₹220-270 tak mil jaata hai. Rate roz nahi badalta, par season shuru hote hi update lena samajhdari hai.' },
   { q: '1 acre ke liye foliar spray ka dosage kitna hota hai?', a: 'Label ke mutabik 500ml per acre — 100-150 litre paani mein ghol kar 2-3 baar spray. Crop ke hisaab se KVK dosage thoda change bhi karwa sakta hai.' },
   { q: 'Traditional DAP se ye kaise alag hai?', a: 'Liquid DAP ek foliar spray hai — nano particles seedhe pattiyon se absorb hote hain. Traditional DAP zameen mein daala jaata hai. Dono ko ek doosre ka replacement nahi, saathi samjhein — kai experts inka combination hi suggest karte hain.' },
   { q: 'Urea ya pesticide ke saath mix karna theek hai?', a: 'Pehle compatibility test kar lena zaroori hai — chhote patch par try karke dekhein. Kisi bhi mix se pehle KVK ya IFFCO guideline padh lena safe rahega, warna crop damage ka risk rehta hai.' },

@@ -20,7 +20,7 @@ const FAQS_DATA = [
     a: 'Aadhaar card, bank passbook (ya cancelled cheque) aur active mobile number — bas. Kuch states mein zameen ke kagaz bhi mange ja sakte hain, lekin basic registration in teen se ho jata hai.',
   },
   {
-    q: 'Payment kitne din mein aati hai?',
+    q: 'eNAM par trade hone ke baad payment kab aati hai?',
     a: 'Trade complete hone ke baad payment seedha aapke bank account mein aati hai — zyada tar cases mein usi din ya 1-2 working days mein. Isliye bank details bilkul sahi bharna zaroori hai.',
   },
   {
@@ -48,7 +48,7 @@ const FAQS_DATA = [
     a: 'Haan. Sabse oonchi bid aapko dikhai jaati hai — accept karna aapki marzi hai. Rate pasand nahi toh mana kar do; fasal aapki hai, aap wapas le ja sakte ho ya agle din phir lot lagwa sakte ho. Koi penalty nahi hai. Bas yeh dekho ki roz ke transport ka kharcha na badh jaye.',
   },
   {
-    q: 'eNAM helpline number kya hai?',
+    q: 'eNAM par dikkat aaye toh support kahan milegi?',
     a: 'Toll-free helpline 1800 270 0224 hai. Iske alawa har integrated mandi mein eNAM help desk / Mandi Analyst hota hai jo registration se lekar trade tak har step mein free madad karta hai. Email support enam.helpdesk@gmail.com par bhi hai.',
   },
 ];

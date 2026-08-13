@@ -30,7 +30,7 @@ const FAQS_DATA = [
     a: 'Sach baat bataun? Agar rejection aapki galti se hua tha (jaise galat bank details, naam mismatch), toh pichle ruke hue paise nahi milte. Jab se status active hoga uske baad ka paisa aayega. Lekin agar sarkar ki galti thi, toh grievance cell se claim kar sakte ho.',
   },
   {
-    q: 'Dobara apply karne mein kitna time lagta hai?',
+    q: 'Dobara apply karne ke baad status "Active" kab hota hai?',
     a: 'Bhai, form submit karne ke baad verification mein 15 se 30 din lagte hain. Uske baad status "Active" ho jata hai. Agar 30 din se zyada ho jaye toh nodal officer ko email karna padega.',
   },
   {
