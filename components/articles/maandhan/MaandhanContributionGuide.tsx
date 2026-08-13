@@ -41,7 +41,7 @@ const FAQS_DATA = [
     a: '40 saal par monthly contribution ₹200 hota hai (Govt bhi ₹200 degi). Pension amount sabhi ko same ₹3000/month milegi, bas farak itna hai ke 40 saal wale ko sirf 20 saal contribute karna hota hai.',
   },
   {
-    q: 'Beech mein scheme chhodi toh paisa wapas milega ya doob jayega?',
+    q: 'Pre-mature exit par sarkar ka co-contribution wapas milta hai?',
     a: 'Government ka co-contribution pre-mature exit par kabhi wapas nahi milta, woh pension fund mein hi rehta hai. Aapka apna deposited amount + applicable interest wapas mil jata hai. Exact terms apne CSC center ya pmkmy.gov.in se confirm kar lena.',
   },
   {

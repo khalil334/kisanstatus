@@ -32,7 +32,7 @@ const FAQS_DATA = [
     a: 'Apne state ke procurement portal par. Har state ka apna portal hai — UP mein fcs.up.gov.in, MP mein mpeuparjan.nic.in, Punjab mein anaaj kharid portal, Haryana mein Meri Fasal Mera Byora. Registration ki window sowing ke baad khulti hai aur procurement season se pehle band ho jati hai, isliye date miss mat karo.',
   },
   {
-    q: 'MSP par bechne ke baad paisa kitne din mein aata hai?',
+    q: 'Kharid ke baad DBT se paisa kab tak khate mein aata hai?',
     a: 'Rules ke hisaab se 48-72 ghante mein DBT se seedha bank account mein. Practice mein 3-7 din lag jaate hain, aur peak season mein isse zyada bhi. Paisa usi account mein aayega jo procurement registration mein diya tha — isliye account active hona chahiye aur KYC poori honi chahiye.',
   },
   {

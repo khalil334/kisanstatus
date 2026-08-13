@@ -36,7 +36,7 @@ const FAQS_DATA = [
     a: 'eNAM par registration ke baad online bidding mein fasal bik sakti hai (upaj mandi le jaani padti hai assaying ke liye). Kuch private platforms buyers se seedha connect karte hain. Sirf bhav dekhne wale apps par bikri nahi hoti. eNAM se bechne ka poora process humne alag guide mein likha hai.',
   },
   {
-    q: 'Bina smartphone ke mandi bhav kaise pata karein?',
+    q: 'Keypad phone par mandi bhav pata karne ka tarika kya hai?',
     a: 'Kisan Call Centre (1800-180-1551) par phone karke apni fasal aur mandi ka bhav puchh sakte ho — yeh free hai. mKisan ke SMS advisory se bhi rate milte hain. Aur sabse purana tareeka aaj bhi kaam karta hai: apni mandi ke aadhati ka number save rakho.',
   },
   {
