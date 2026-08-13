@@ -19,6 +19,7 @@ import {
   LOGO_WIDTH,
   LOGO_HEIGHT,
 } from '@/lib/site-config';
+import { hinglishAlternates } from '@/lib/hindi-hreflang';
 import { getAuthorBio } from '@/lib/author-bios';
 import RajasthanKisanSammanNidhi9000 from '@/components/articles/rajya-yojana/RajasthanKisanSammanNidhi9000';
 import AnnadataSukhibhavaStatusCheck from '@/components/articles/rajya-yojana/AnnadataSukhibhavaStatusCheck';
@@ -199,10 +200,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     creator: AUTHOR_NAME,
     alternates: {
       canonical: url,
-      languages: {
+      languages: hinglishAlternates(`/rajya-yojana/${slug}`, {
         'hi-IN': url,
         'x-default': url,
-      },
+      }),
     },
     openGraph: {
       title: article.ogTitle || article.title,
