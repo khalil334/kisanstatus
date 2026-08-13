@@ -1,5 +1,6 @@
 import type { ArticleMeta } from './categories';
-import { AUTHOR_NAME, AUTHOR_BIO } from '@/lib/site-config';
+import { AUTHOR_NAME } from '@/lib/site-config';
+import { getAuthorBio } from '@/lib/author-bios';
 
 export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
@@ -24,7 +25,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-08-01T08:27:01+05:30',
     readingTime: 11,
     author: AUTHOR_NAME,
-    authorBio: AUTHOR_BIO,
+    authorBio: getAuthorBio('dairy-farm-loan-without-collateral'),
     schemes: ['mudra', 'pmegp', 'cgtmse'],
     relatedSlugs: ['KisanRinKahaSeLe2026', 'KisanCreditCardOnlineApply2026', 'bakri-palan-yojana-nlm-subsidy'],
   },
@@ -50,7 +51,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-03-21T08:13:49+05:30',
     readingTime: 11,
     author: AUTHOR_NAME,
-    authorBio: AUTHOR_BIO,
+    authorBio: getAuthorBio('sbi-dairy-loan-interest-rate'),
     banks: ['sbi'],
     schemes: ['kcc'],
     relatedSlugs: ['KisanRinKahaSeLe2026', 'KisanCreditCardOnlineApply2026', 'dairy-farm-loan-without-collateral'],
@@ -72,7 +73,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-04T08:32:11+05:30',
     readingTime: 10,
     author: AUTHOR_NAME,
-    authorBio: AUTHOR_BIO,
+    authorBio: getAuthorBio('jansamarth-portal-loan-apply'),
     schemes: ['kcc', 'mudra'],
     relatedSlugs: ['KisanRinKahaSeLe2026', 'dairy-farm-loan-without-collateral', 'KisanCreditCardOnlineApply2026'],
   },
@@ -95,7 +96,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-16T16:28:23+05:30',
     readingTime: 11,
     author: AUTHOR_NAME,
-    authorBio: AUTHOR_BIO,
+    authorBio: getAuthorBio('enam-registration-kaise-kare'),
     schemes: ['enam'],
     relatedSlugs: ['mandi-bhav-today', 'msp-list-2026-27', 'mandi-bhav-app-comparison'],
   },
@@ -119,7 +120,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-06-08T17:37:18+05:30',
     readingTime: 11,
     author: AUTHOR_NAME,
-    authorBio: AUTHOR_BIO,
+    authorBio: getAuthorBio('msp-list-2026-27'),
     relatedSlugs: ['mandi-bhav-today', 'gehu-ka-bhav-msp-vs-mandi', 'enam-registration-kaise-kare'],
   },
   {
@@ -140,7 +141,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-03-12T06:16:58+05:30',
     readingTime: 10,
     author: AUTHOR_NAME,
-    authorBio: AUTHOR_BIO,
+    authorBio: getAuthorBio('mandi-bhav-app-comparison'),
     relatedSlugs: ['mandi-bhav-today', 'enam-registration-kaise-kare', 'msp-list-2026-27'],
   },
   {
@@ -161,7 +162,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-07-07T17:24:07+05:30',
     readingTime: 10,
     author: AUTHOR_NAME,
-    authorBio: AUTHOR_BIO,
+    authorBio: getAuthorBio('gehu-ka-bhav-msp-vs-mandi'),
     relatedSlugs: ['msp-list-2026-27', 'mandi-bhav-today', 'enam-registration-kaise-kare'],
   },
   {
@@ -183,7 +184,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-04-02T19:01:54+05:30',
     readingTime: 11,
     author: AUTHOR_NAME,
-    authorBio: AUTHOR_BIO,
+    authorBio: getAuthorBio('sabzi-bhav-guide-pyaz-aloo-tamatar'),
     relatedSlugs: ['mandi-bhav-today', 'msp-list-2026-27', 'gehu-ka-bhav-msp-vs-mandi'],
   },
   {
@@ -204,7 +205,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-05-29T15:56:37+05:30',
     readingTime: 11,
     author: AUTHOR_NAME,
-    authorBio: AUTHOR_BIO,
+    authorBio: getAuthorBio('murgi-palan-loan-nlm-subsidy'),
     schemes: ['nlm'],
     relatedSlugs: ['bakri-palan-yojana-nlm-subsidy', 'dairy-farm-loan-without-collateral', 'pm-matsya-sampada-yojana-fish-farming'],
   },
@@ -226,7 +227,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-05-29T06:54:39+05:30',
     readingTime: 11,
     author: AUTHOR_NAME,
-    authorBio: AUTHOR_BIO,
+    authorBio: getAuthorBio('bihar-pashupalan-loan-yojana'),
     states: ['bihar'],
     relatedSlugs: ['bakri-palan-yojana-nlm-subsidy', 'murgi-palan-loan-nlm-subsidy', 'dairy-farm-loan-without-collateral'],
   },
@@ -249,7 +250,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-05-23T16:51:28+05:30',
     readingTime: 11,
     author: AUTHOR_NAME,
-    authorBio: AUTHOR_BIO,
+    authorBio: getAuthorBio('rashtriya-gokul-mission-subsidy'),
     schemes: ['rgm'],
     relatedSlugs: ['bakri-palan-yojana-nlm-subsidy', 'murgi-palan-loan-nlm-subsidy', 'bihar-pashupalan-loan-yojana'],
   },
@@ -273,7 +274,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     modifiedTime: '2026-08-13T18:30:00+05:30',
     readingTime: 6,
     author: AUTHOR_NAME,
-    authorBio: AUTHOR_BIO,
+    authorBio: getAuthorBio('gau-mutra-kharid-yojana-up-2026'),
     states: ['uttar-pradesh'],
     districts: ['bulandshahr'],
     relatedSlugs: ['rashtriya-gokul-mission-subsidy', 'bakri-palan-yojana-nlm-subsidy', 'soil-health-card-complete-guide-2026'],
