@@ -40,7 +40,7 @@ function Fig({
 
 const FAQS_DATA = [
   {
-    q: 'Kya PM Kisan aur state ki yojana dono ek saath milti hain?',
+    q: 'State ki yojana aur PM Kisan dono ek saath milti hain?',
     a: 'Haan, zyadatar rajyon mein dono milti hain. Kendra sarkar apna ₹6,000 deti hai aur pradesh ki yojana us ke upar judti hai. Dono ke portal judaa hain, kiston ki dates bhi judaa hain, aur ek ka status doosre par asar nahi daalta. Sirf itna dhyan rakhein ki kai jagah beneficiary list kendriya data se hi banti hai, isliye wo record active rehna zaroori hai.',
   },
   {
@@ -60,7 +60,7 @@ const FAQS_DATA = [
     a: 'Ye apne yahan ke model par depend karta hai. MP aur Maharashtra kendriya data se khud hi list bana lete hain, wahan kuch nahi karna padta. West Bengal aur Odisha mein apna judaa panjikaran hai. Neeche har block mein ye baat saaf likhi hai.',
   },
   {
-    q: 'PM Kisan aata hai lekin rajya ki kist nahi aayi, kya karein?',
+    q: 'Rajya ki kist nahi aayi lekin PM Kisan aata hai, kya karein?',
     a: 'Dono judaa systems hain, isliye ye normal hai. Pehle apne yahan ki website par sthiti dekhein. Aksar wajah e-KYC pending hona, bank account NPCI se seed na hona, ya land record mein naam ka farak hoti hai. Screen par kuch samajh na aaye to apne block ke krishi karyalay ya panchayat mein poochhein.',
   },
   {

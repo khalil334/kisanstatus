@@ -30,7 +30,7 @@ const RELATED_CARDS = [
 
 const FAQS_DATA = [
   {
-    q: 'Kya main ek se zyada bank account PMKMY me register kar sakta hoon?',
+    q: 'Ek se zyada bank account PMKMY me register hote hain?',
     a: 'Nahi, PM Kisan Maandhan Yojana me ek samay me sirf ek hi bank account register ho sakta hai. Agar aap account change karna chahte hain, to pehle purana account hatakar naya account add karna padega.',
   },
   {
@@ -50,7 +50,7 @@ const FAQS_DATA = [
     a: 'Usually 15-20 working days lagte hain. Minimum 7 din aur maximum 30 din tak ka samay lag sakta hai. Confirmation SMS aapke registered mobile par aayega. Samay state aur bank ke hisab se thoda alag ho sakta hai.',
   },
   {
-    q: 'Kya main ye kaam online ghar baithe kar sakta hoon?',
+    q: 'Ye kaam online ghar baithe ho jayega?',
     a: 'Kuch states me online facility available hai, lekin zyadatar cases me physical verification zaroori hoti hai. Isliye CSC ya bank branch me jaakar application dena behtar hai.',
   },
   {

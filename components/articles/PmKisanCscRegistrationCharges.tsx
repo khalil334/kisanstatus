@@ -22,7 +22,7 @@ const FAQS_DATA = [
     a: 'Sarkari niyam ke mutabiq eKYC aur registration ke liye ₹15 se ₹30 tak. Usse zyada maange toh complaint karo.',
   },
   {
-    q: 'Kya main ghar baithe free mein kar sakta hoon?',
+    q: 'Ghar baithe free mein ho jayega?',
     a: 'Haan, agar OTP aa raha hai toh pmkisan.gov.in se khud kar lo, ek rupya nahi lagega. CSC sirf tab jao jab online na ho pa raha ho.',
   },
   {
@@ -46,7 +46,7 @@ const FAQS_DATA = [
     a: 'Usi waqt screen par check karo, counter chhodne se pehle. Agar galti ho gayi hai, toh <Link href="/articles/PmKisanCorrectionForm2026" class="underline">correction form</Link> se fix karo ya naye center par dobara try karo.',
   },
   {
-    q: 'Kya PM Kisan ka kaam sarkari office mein free hota hai?',
+    q: 'Sarkari office mein PM Kisan ka kaam free hota hai?',
     a: 'Haan, Block Agriculture Office (BAO) ya Tehsil mein ye kaam free mein ho jaata hai. Lekin wahan bheed zyada hoti hai aur time lagta hai.',
   },
 ];
