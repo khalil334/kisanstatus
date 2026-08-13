@@ -31,7 +31,7 @@ const RELATED = [
 
 const FAQS_DATA = [
   {
-    q: 'Kya main khud online bank account change kar sakta hoon?',
+    q: 'Khud online bank account change kar paunga?',
     a: 'PM Kisan ki website par khud se "Edit Bank Account" ka koi button nahi milta. Aapko ya toh CSC center jana padega ya phir BAO office. Ghar baithe ye kaam nahi hota, kisi na kisi ka verification zaroori hai.',
   },
   {
@@ -51,7 +51,7 @@ const FAQS_DATA = [
     a: 'Sarkari rate ₹15 se ₹30 ke beech hai. Kuch operators ₹50 ya ₹100 bhi maang lete hain — mol-bhav karo, zyada mat dena.',
   },
   {
-    q: 'Kya main kisi aur ke bank account mein paisa mangwa sakta hoon?',
+    q: 'Paisa kisi aur ke bank account mein mangwa sakta hoon?',
     a: 'Bilkul nahi. PM Kisan ka paisa sirf usi kisan ke account mein aayega jiska naam registration mein hai. Patni ya bhai ka account use karne ki galti mat karna, payment fail ho jaayegi.',
   },
   {

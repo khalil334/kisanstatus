@@ -24,7 +24,7 @@ const FAQS_DATA = [
     a: 'Trade complete hone ke baad payment seedha aapke bank account mein aati hai — zyada tar cases mein usi din ya 1-2 working days mein. Isliye bank details bilkul sahi bharna zaroori hai.',
   },
   {
-    q: 'Kya main ghar baithe fasal bech sakta hoon?',
+    q: 'Fasal ghar baithe bech sakta hoon?',
     a: 'Registration ghar se ho jata hai, lekin fasal ki quality check (assaying) ke liye upaj mandi le jani padti hai. Bidding online hoti hai — aapki fasal par door ke buyers bhi bid kar sakte hain, isse rate behtar milta hai.',
   },
   {

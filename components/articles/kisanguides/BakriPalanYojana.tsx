@@ -9,7 +9,7 @@ export default function BakriPalanYojana() {
 
   const faqs = [
     {
-      q: 'Kya main bina zameen ke bakri palan subsidy le sakta hoon?',
+      q: 'Bina zameen ke bakri palan subsidy milegi?',
       a: 'Nahi. Apni zameen ya kam se kam 5 saal ka registered lease agreement chahiye hi hoga. Bahut log ye samajh kar apply karte hain ki khatauni kaafi hai, aur wahi pe fas jaate hain.',
     },
     {

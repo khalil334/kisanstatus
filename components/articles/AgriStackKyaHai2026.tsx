@@ -25,7 +25,7 @@ const RELATED = [
 
 const FAQS_DATA = [
   {
-    q: 'Mera naam land records mein galat spelling mein hai — kya register ho paunga?',
+    q: 'Land records mein naam ki spelling galat hai — register ho paunga?',
     a: 'Profile toh ban jayegi, par risk mat lo. Pehle patwari se Khasra/Khatauni mein spelling thik karwa lo. Agar bina thik kiye aage badhe, toh baad mein samman nidhi ya insurance claim mein naam mismatch ki wajah se payment atak sakti hai. Kai cases mein yahi chhoti si galti badi problem ban jati hai.',
   },
   {

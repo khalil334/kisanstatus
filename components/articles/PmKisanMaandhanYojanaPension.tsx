@@ -33,7 +33,7 @@ const FAQS_DATA = [
     a: 'Pension cancel nahi hoti. Aap jab chahein dobara shuru kar sakte hain. Jo paisa jama hua wo safe rehta hai.',
   },
   {
-    q: 'Kya PM Kisan Samman Nidhi ke sath ye scheme le sakte hain?',
+    q: 'Ye scheme PM Kisan Samman Nidhi ke sath le sakte hain?',
     a: 'Haan bilkul. Dono alag schemes hain. PM Kisan se ₹6000 saal ka milta hai, aur Maandhan se 60 saal ke baad ₹3000 har mahine.',
   },
   {

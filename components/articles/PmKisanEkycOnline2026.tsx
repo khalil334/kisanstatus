@@ -31,7 +31,7 @@ const FAQS_DATA = [
     a: 'Agar Aadhaar mein mobile number link nahi hai, toh online OTP wala tarika kaam nahi karega. Aapko apne nazdeeki CSC (Common Service Centre) jaana hoga. Wahan fingerprint (biometric) scan karke eKYC ho jayegi. Yeh process free mein hoti hai.',
   },
   {
-    q: 'PM Kisan Face Authentication kya hai aur kaise karein?',
+    q: 'Face Authentication kya hai aur PM Kisan mein kaise karein?',
     a: 'Yeh UIDAI ka naya surakshit tarika hai. PM Kisan mobile app download karein, "Face Auth" option chunein, aur camera ke saamne apna chehra scan karein. Yeh tab kaam karta hai jab aapka mobile number Aadhaar se linked ho.',
   },
   {
@@ -39,7 +39,7 @@ const FAQS_DATA = [
     a: 'Bilkul ZERO. Government ne ise free service declare kiya hai. Agar koi operator ₹10, ₹20 ya ₹50 maangta hai, toh woh galat hai. Usi waqt 1800-1214-060 par complaint karein.',
   },
   {
-    q: 'Mera naam Aadhaar mein "Sunita Devi" hai aur PM Kisan mein "Sunita" — kya eKYC hogi?',
+    q: 'Aadhaar mein "Sunita Devi" aur PM Kisan mein "Sunita" — kya eKYC hogi?',
     a: 'Nahi. System exact string match karta hai. "Devi" likha hai ya nahi, ek space ka farak bhi "Demographic Mismatch" error de dega. Pehle PM Kisan portal par ya Aadhaar mein naam correction karwayein, phir eKYC karein.',
   },
   {
@@ -59,7 +59,7 @@ const FAQS_DATA = [
     a: 'Error 104 ka matlab hai "Invalid Aadhaar Number" (dobara check karein). Error 108 ka matlab hai "Mobile Number Not Linked with Aadhaar". Iska ek hi hal hai: CSC jaakar biometric se karein.',
   },
   {
-    q: 'Kya main apne pitaji ke liye unke phone se eKYC kar sakta hoon?',
+    q: 'Pitaji ki eKYC unke phone se main kar doon?',
     a: 'Haan, agar unka mobile number unke Aadhaar se linked hai, toh aap unke phone par OTP mangwa kar eKYC complete kar sakte hain. Lekin bank account beneficiary ke naam par hi hona chahiye.',
   },
   {
