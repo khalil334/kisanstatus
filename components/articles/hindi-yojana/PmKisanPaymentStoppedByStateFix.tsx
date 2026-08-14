@@ -471,7 +471,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         एवं किसान कल्याण मंत्रालय) से ली गई है, और DBT भुगतान के ढांचे के लिए{' '}
         <a href="https://dbtbharat.gov.in" target="_blank" rel="noopener noreferrer">dbtbharat.gov.in</a> देखा
         गया। राज्य-स्तरीय verification राज्य-दर-राज्य थोड़ा अलग चलता है — इस page की जानकारी{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} तक की है।
+        {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })} तक की है।
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">

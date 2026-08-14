@@ -246,11 +246,7 @@ function SectionLabel({ children, tone = 'amber' }: { children: React.ReactNode;
 }
 
 function fmtDate(iso: string): string {
-  return new Date(iso).toLocaleDateString('en-IN', {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-  });
+  return new Date(iso).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' });
 }
 
 export default function GauMutraKharidYojanaUp2026({ article }: { article: ArticleMeta }) {

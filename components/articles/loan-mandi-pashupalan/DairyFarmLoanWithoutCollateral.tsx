@@ -124,7 +124,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
-            <span>Last Updated: 5 August 2026</span>
+            <span>Last Updated: 05/08/2026</span>
             <span>11 min read</span>
           </div>
         </div>
@@ -154,7 +154,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 5 August 2026</strong>
+          <strong>Last Updated: 05/08/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -339,7 +339,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           toh trust bank ka bada nuksan bhar dega. Bank ka dar khatam, toh property ki maang bhi khatam.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          1 April 2025 ke updated scheme document ke baad iski cover ceiling ₹10 crore tak hai, guarantee coverage
+          01/04/2025 ke updated scheme document ke baad iski cover ceiling ₹10 crore tak hai, guarantee coverage
           loan amount ka lagbhag 75%–85% (micro enterprise aur SC/ST applicant ko upar wala slab milta hai), aur annual
           guarantee fee 0.37%–1.35% ke range mein. Yeh fee borrower se hi li jati hai, isliye apne total cost mein
           isko jodna mat bhoolna.

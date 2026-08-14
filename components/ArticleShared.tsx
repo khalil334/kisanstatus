@@ -5,11 +5,7 @@ import { AUTHOR_NAME, AUTHOR_IMAGE, AUTHOR_LINKEDIN, DISCLAIMER_TEXT } from '@/l
 import { getAuthorBio, getAuthorTagline } from '@/lib/author-bios';
 
 export function fmtDate(iso: string) {
-  return new Date(iso).toLocaleDateString('en-IN', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  });
+  return new Date(iso).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' });
 }
 
 export function SI({ n, children }: { n: number; children: React.ReactNode }) {
