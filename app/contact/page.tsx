@@ -86,11 +86,12 @@ export default function ContactPage() {
               Email Karein
             </h2>
             <p className="text-sm text-[var(--color-text-muted)] mb-4 leading-relaxed">
-              Website feedback, content correction, ya collaboration ke liye humein email karein.
-              Hum aamtaur par 24–48 ghante ke andar reply karne ki koshish karte hain.
+              Koi galti dikhe, koi sujhav ho, ya kisi topic par article chahiye — email kar dein.
+              Main khud padhta hoon aur aam taur par 1–2 din mein jawab de deta hoon; kabhi kheti-baadi
+              mein busy raha to thoda time lag sakta hai, bura na maanein.
             </p>
             <p className="text-sm text-[var(--color-text-muted)] mb-4 leading-relaxed">
-              Agar aapko kisi specific topic par jankari chahiye, toh pehle hamare{' '}
+              Waise ho sakta hai aapke sawal ka jawab pehle se likha ho — ek baar mere{' '}
               <Link href="/articles" className="text-[var(--color-primary)] font-bold underline hover:text-green-700 dark:hover:text-green-400">
                 Verified Guides Section
               </Link>{' '}
@@ -152,7 +153,7 @@ export default function ContactPage() {
         </section>
 
         <section className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
-          <h2 className="text-lg font-black text-[var(--color-text)] mb-4">Hum Kis Mein Help Kar Sakte Hain?</h2>
+          <h2 className="text-lg font-black text-[var(--color-text)] mb-4">Main Kis Mein Madad Kar Sakta Hoon?</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
             {HELP_ITEMS.map((item) => (
               <div key={item.text} className={`flex items-start gap-2 ${item.canHelp ? 'text-[var(--color-text-muted)]' : 'text-red-600 dark:text-red-400'}`}>
