@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { SI, StepList, IB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
+import { SI, StepList, IB, DB, SH, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
 import ExternalLinkButton from '@/components/ExternalLinkButton';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
@@ -16,12 +16,6 @@ function fmtDate(dateString: string): string {
 
 const PUBLISHED = '2026-01-08T22:33:23+05:30';
 const MODIFIED = '2026-01-17T19:59:30+05:30';
-
-const RELATED = [
-  { slug: 'PmKisanLandSeedingForm', title: 'Land Seeding Form' },
-  { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
-  { slug: 'PmKisanFaceAuthenticationEkyc', title: 'Face Auth eKYC (Bina OTP)' },
-];
 
 const FAQS_DATA = [
   {
@@ -162,31 +156,28 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             Yeh sawal camp mein sabse zyada pucha gaya tha. Jawab aasan hai — Aadhaar batata hai <em>aap kaun ho</em>,
             Farmer ID batati hai <em>aap kisan ho, kitni zameen hai, kya ugate ho</em>. Dono ka kaam alag hai.
           </p>
-          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left"></th>
-                  <th className="p-3 text-left">Aadhaar</th>
-                  <th className="p-3 text-left">Farmer ID</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['Kya hai', 'Aam nagrik ki pehchaan', 'Kisan ki kheti waali pehchaan'],
-                  ['Data', 'Naam, pata, photo, DOB', 'Zameen, fasal, bank, yojana record'],
-                  ['Kaun banata hai', 'UIDAI', 'State krishi vibhag + kendra sarkar'],
-                  ['Zaroorat', 'Sab jagah', 'Kheti se judi yojanaon mein'],
-                  ['Aadhaar chahiye?', '—', 'Haan, bina Aadhaar ke nahi banti'],
-                ].map(([feature, aadhaar, farmerId], i) => (
-                  <tr key={feature} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
-                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{feature}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text-muted)]">{aadhaar}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text-muted)]">{farmerId}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          {/* Do-patti comparison — is article ka apna style, standard table nahi */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 my-5 rounded-2xl overflow-hidden border-2 border-[var(--color-border)]">
+            <div className="p-5 bg-[var(--color-bg-alt)] border-b sm:border-b-0 sm:border-r border-[var(--color-border)]">
+              <p className="text-xs uppercase tracking-widest font-black text-[var(--color-text-muted)] mb-1">Card #1</p>
+              <h3 className="font-black text-[var(--color-text)] text-lg mb-3">Aadhaar</h3>
+              <ul className="text-sm text-[var(--color-text-muted)] space-y-2">
+                <li><span className="font-semibold text-[var(--color-text)]">Kya hai:</span> aam nagrik ki pehchaan</li>
+                <li><span className="font-semibold text-[var(--color-text)]">Kya likha hai:</span> naam, pata, photo, DOB</li>
+                <li><span className="font-semibold text-[var(--color-text)]">Kaun banata hai:</span> UIDAI</li>
+                <li><span className="font-semibold text-[var(--color-text)]">Kahan chalta hai:</span> har sarkari kaam mein</li>
+              </ul>
+            </div>
+            <div className="p-5 bg-green-50/60 dark:bg-green-900/15">
+              <p className="text-xs uppercase tracking-widest font-black text-green-700 dark:text-green-400 mb-1">Card #2</p>
+              <h3 className="font-black text-[var(--color-text)] text-lg mb-3">Farmer ID</h3>
+              <ul className="text-sm text-[var(--color-text-muted)] space-y-2">
+                <li><span className="font-semibold text-[var(--color-text)]">Kya hai:</span> kisan ki kheti waali pehchaan</li>
+                <li><span className="font-semibold text-[var(--color-text)]">Kya likha hai:</span> zameen, fasal, bank, yojana record</li>
+                <li><span className="font-semibold text-[var(--color-text)]">Kaun banata hai:</span> state krishi vibhag + kendra sarkar</li>
+                <li><span className="font-semibold text-[var(--color-text)]">Shart:</span> bina Aadhaar ke banti hi nahi</li>
+              </ul>
+            </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ek cheez yaad rakhna — <strong>Aadhaar se linked mobile number chalu hona chahiye</strong>, kyunki OTP usi pe aata hai.
@@ -330,9 +321,9 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Kisano Ke Sawal, Seedhe Jawab (FAQs)
+            Camp Mein Jo Sawal Sabse Zyada Puchhe Gaye
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="Farmer Registry FAQ 2026" />
+          <FAQBlock faqs={FAQS_DATA} variant="cards" caption="Yeh sawal asli kisano ne puchhe the — jawab seedhe rakhe hain." />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
@@ -351,13 +342,21 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />
 
-        <RelatedArticles articles={RELATED} />
+        {/* Aage ki padhai — grid ki jagah baat-cheet waale andaz mein internal links */}
+        <div className="mt-8 p-5 border-l-4 border-[var(--color-primary)] bg-[var(--color-bg-alt)] rounded-r-2xl">
+          <h3 className="font-black text-[var(--color-text)] mb-2 text-base">Iske Baad Kya Padhein?</h3>
+          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
+            Agar aapki <Link href="/articles/PmKisanEkycOnline2026" className="text-green-700 dark:text-green-400 underline font-semibold">eKYC abhi pending hai</Link> toh
+            pehle woh nipta lo — registry ke baad wahi sabse zyada atakta hai. Kisht ka status janna hai toh{' '}
+            <Link href="/articles/PmKisanBeneficiaryList2026" className="text-green-700 dark:text-green-400 underline font-semibold">beneficiary list mein naam check karna</Link> seekh lo.
+            Zameen ki seeding mein dikkat ho toh <Link href="/articles/PmKisanLandSeedingForm" className="text-green-700 dark:text-green-400 underline font-semibold">land seeding form waala guide</Link> kaam aayega.
+            Aur kheti ke liye sasta loan chahiye toh <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-green-700 dark:text-green-400 underline font-semibold">KCC apply karne ka tarika</Link> padh lo —
+            Farmer ID banne ke baad yeh process aur aasan ho jata hai.
+          </p>
+        </div>
+
         <AuthorBox modified={MODIFIED} bioKey="AgriStackKyaHai2026" />
-        <BottomNav extraLinks={[
-          { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Process' },
-          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
-          { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Guide' },
-        ]} />
+        <BottomNav />
         <Disclaimer />
       </div>
     </>
