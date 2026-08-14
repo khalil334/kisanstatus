@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-09T08:58:39+05:30';
-const MODIFIED = '2026-08-14T22:15:00+05:30';
+const MODIFIED = '2026-08-14T23:30:00+05:30';
 
 const RELATED = [
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Ka Matlab' },
@@ -19,15 +19,15 @@ const FAQS_DATA = [
     a: 'Abhi kuch bhi official nahi hai — na sarkar ne bola, na kisi aur ko pata. Net par jo February ya March ghoom raha hai woh sab guesswork hai. Announcement hamesha release se thoda pehle hoti hai, mahino pehle kabhi nahi. Official khabar aate hi hum yahan update kar denge.',
   },
   {
-    q: 'Kya 25vi kist mein paisa badhkar ₹2,500 ya ₹3,000 ho jayega?',
+    q: 'Kya is baar amount badhkar ₹2,500 ya ₹3,000 ho jayega?',
     a: 'Iska koi official confirmation nahi. 2019 se wahi amount mil raha hai aur har budget se pehle badhne ki afwah udti hai — aaj tak ek baar bhi sach nahi hui. Planning ₹2,000 ke hisab se karo. Agar sach mein badha toh yeh page turant update hoga.',
   },
   {
-    q: 'Kist na aaye toh kahan shikayat karein?',
+    q: 'Payment na aaye toh kahan shikayat karein?',
     a: 'Helpline 155261 hai — toll free. Landline se 011-24300606 bhi try kar sakte ho. Phone se pehle apna registration ya Aadhaar number haath mein rakhna, uske bina record dhoondhna mushkil ho jata hai. Subah 10 baje ke aas paas line kam busy rehti hai. Apne krishi vibhag ke office ya CSC centre par bhi baat ho sakti hai.',
   },
   {
-    q: '24vi kist nahi mili — kya 25vi milegi?',
+    q: '24vi nahi mili — kya 25vi milegi?',
     a: 'Milni chahiye, lekin pehle yeh pata karo ki 24vi kyu ruki. Zyada tar mamlo mein wajah eKYC pending, bank mein Aadhaar seeding na hona ya land record verify na hona hoti hai. Yeh theek kiye bina agli wali bhi wahin atkegi. Ruki hui raqam baad mein alag se credit ho jati hai, agar aap eligible ho.',
   },
   {
@@ -200,7 +200,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </p>
 
           <StepList>
-            <SI n={1}><strong>eKYC status dekho:</strong> pmkisan.gov.in par jaakar dekho — &quot;YES&quot; hona chahiye. Nahi hai toh OTP se do minute mein ho jata hai, agar Aadhaar se mobile linked hai. Pura tarika, teeno methods ke sath, <Link href="/articles/PmKisanEkycOnline2026" className="text-[var(--color-primary)] underline">eKYC guide</Link> mein likha hai.</SI>
+            <SI n={1}><strong>eKYC status dekho:</strong> pmkisan.gov.in par jaakar dekho — &quot;YES&quot; hona chahiye. Nahi hai toh OTP se do minute mein ho jata hai, agar Aadhaar se mobile linked hai. Pura tarika, teeno methods ke sath, <Link href="/articles/PmKisanEkycOnline2026" className="text-[var(--color-primary)] underline">is guide</Link> mein likha hai.</SI>
             <SI n={2}><strong>Bank ki Aadhaar seeding dekho:</strong> Payment NPCI ke through Aadhaar-linked account mein hi aata hai. Bank badla hai ya account band hua toh naye wale mein yeh linking karwana jaruri hai — branch jaakar ek form bharna padta hai.</SI>
             <SI n={3}><strong>Zameen ka record dekho:</strong> Kharidi ya bechi hai toh patwari se Khatauni update karwa lo. Land record aur portal ka data match nahi hua toh payment ruk jata hai.</SI>
             <SI n={4}><strong>Aadhaar wala mobile number chalu rakho:</strong> SIM band ho gayi toh OTP nahi aayega, aur OTP ke bina na eKYC hogi na koi correction. Number badla hai toh Aadhaar centre jaakar update karwa lo — yeh kaam online nahi hota.</SI>
@@ -228,7 +228,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         </div>
 
         <section className="mb-8">
-          <SH>Status dekhne ka sahi tarika</SH>
+          <SH>Apna record dekhne ka sahi tarika</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Jab release ki khabar aane lage, tab aise dekho — koi app download karne ki jarurat nahi, koi paisa dene ki jarurat nahi:
@@ -237,7 +237,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           <StepList>
             <SI n={1}>pmkisan.gov.in kholo aur &quot;Know Your Status&quot; par jao.</SI>
             <SI n={2}>Apna registration number daalo. Yaad nahi? &quot;Know your registration no.&quot; option se mobile ya Aadhaar number se nikal jayega.</SI>
-            <SI n={3}>OTP verify karo — saamne sab aa jayega. Wahan eKYC, land seeding aur bank seeding teeno dikhte hain.</SI>
+            <SI n={3}>OTP verify karo — saamne sab aa jayega. Wahan verification, land seeding aur bank linking teeno ka status dikhta hai.</SI>
           </StepList>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4 mb-3">
@@ -247,6 +247,22 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           <DB>
             <strong>Dhoke se bacho:</strong> Status dekhne ke liye koi bhi website ya app fees maange toh samajh jao fraud hai. Sarkari portal bilkul free hai. Aur koi &quot;agent&quot; bole ki paise dekar jaldi aa jayega — aisa kuch nahi hota, seedha mana kar do.
           </DB>
+        </section>
+
+        <section className="mb-8">
+          <SH>Helpline par call karne se pehle — 2 minute ki taiyari</SH>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Bahut log 155261 par call karte hain aur khali haath lautte hain — kyuki jo cheez agent poochta hai, woh haath mein nahi hoti. Call se pehle yeh teen cheezein saamne rakh lo: apna <strong>registration number</strong> (ya Aadhaar number), apne <strong>gaon aur block ka naam</strong>, aur agar koi purana complaint number hai toh woh bhi. Itna hone par baat do minute mein ho jati hai.
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ek aur kaam ki cheez — portal par jo message dikhta hai, usko note kar lo, kyunki har message ka apna matlab hai. &quot;FTO is Generated&quot; ka matlab payment approve ho chuka, bas transfer hona baki hai. &quot;Payment Stopped&quot; matlab kahin verification atka hai — zyada tar land record ya bank linking par. &quot;Rft Signed by State&quot; matlab aapka data state se Centre pahunch gaya hai. Agent ko exact message batane par woh seedha problem par pahunch jata hai.
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Aur agar phone par baat na bane, toh apne block ke <strong>krishi vibhag office</strong> mein jaakar likhit application do aur uski receiving le lo. Likhit shikayat ka record banta hai, aur follow-up mein kaam aata hai. CSC centre wale bhi portal par grievance daal sakte hain — yeh option bhi free hai.
+          </p>
         </section>
 
         <section className="mb-8">
