@@ -17,7 +17,8 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/pm-kisan-25vi-kist',
     titleHi: 'पीएम किसान 25वीं किस्त कब आएगी? Date और Latest Update',
-    desc: 'पीएम किसान 25वीं किस्त कब आएगी 2027? Beneficiary status, eKYC और payment date की latest update यहां चेक करें — किस्त न आए तो क्या करें, पूरी जानकारी यहां।',
+    seoTitleHi: 'पीएम किसान 25वीं किस्त कब आएगी — Date Update',
+    desc: 'किस्त की तारीख का इंतजार है? 25वीं किस्त की latest स्थिति, और वो तीन चीजें — eKYC, बैंक seeding, land seeding — जिनमें से एक भी अटकी हो तो पैसा रुक जाता है।',
     keywords: [
       'पीएम किसान 25वीं किस्त',
       'pm kisan 25th installment date',
@@ -113,6 +114,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/farmer-id-kaise-banaye',
     titleHi: 'फार्मर आईडी कैसे बनाएं? AgriStack की पूरी जानकारी यहां',
+    seoTitleHi: 'फार्मर आईडी कैसे बनाएं — कागज और पूरा Process',
     desc: 'फार्मर आईडी कार्ड (AgriStack) घर बैठे मोबाइल से बनाएं — राज्यवार portal link, जरूरी documents और registration का आसान step-by-step process यहां देखें।',
     keywords: ['फार्मर आईडी कार्ड कैसे बनाएं', 'farmer id registration 2027', 'agristack farmer id'],
     category: 'farming',
