@@ -238,7 +238,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     slug: 'hi/gau-mutra-kharid-yojana',
     titleHi: 'गाय के मूत्र की खरीद योजना — बुलंदशहर में 10 रुपये लीटर',
     seoTitleHi: 'गौ मूत्र खरीद योजना UP — 10 रुपये प्रति लीटर',
-    desc: 'बुलंदशहर के नरसेना गांव से शुरू हुई योजना — गाय का मूत्र 10 रुपये प्रति लीटर, FPO के संग्रह केंद्र, महिलाओं को 2 रुपये कमीशन। पूरी जानकारी यहां।',
+    desc: 'बुलंदशहर के नरसेना गांव से शुरू योजना — गौमूत्र 10 रूपये प्रति लीटर, FPO संग्रह केंद्र, महिलाओं को 2 रूपये कमीशन, जीवामृत बनाने का नुस्खा और ठगी से बचाव यहां।',
     keywords: [
       'गाय के मूत्र की खरीद योजना',
       'गौ मूत्र 10 रुपये प्रति लीटर',
@@ -249,7 +249,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     ],
     category: 'pashupalan',
     publishedTime: '2026-08-13T18:30:00+05:30',
-    modifiedTime: '2026-08-14T02:00:00+05:30',
+    modifiedTime: '2026-08-14T05:45:00+05:30',
     author: AUTHOR_NAME,
     component: 'GauMutraKharidYojanaHindi',
     ogImage: '/og-image.webp',
