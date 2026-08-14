@@ -112,7 +112,7 @@ export default function AboutPage() {
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-2">
             About {SITE_NAME}
           </h1>
-          <p className="text-green-200 text-sm">Bharatiya Kisanon Ki Awaaz — PM Kisan aur Krishi Yojanaon ki Verified Guidance</p>
+          <p className="text-green-200 text-sm">Bharatiya Kisanon Ki Awaaz — PM Kisan aur Krishi Yojanaon ki Saral Guidance</p>
         </div>
       </div>
 
