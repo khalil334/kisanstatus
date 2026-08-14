@@ -148,9 +148,9 @@ export default function HomeContent() {
 
       <Breadcrumb />
 
-      <section className="relative bg-gradient-to-br from-green-700 via-green-600 to-emerald-700 dark:from-green-900 dark:via-green-800 dark:to-emerald-900 py-16 md:py-24 overflow-hidden" aria-labelledby="hero-heading">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3" aria-hidden="true" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/3" aria-hidden="true" />
+      <section className="relative bg-gradient-to-br from-green-800 via-green-700 to-emerald-800 dark:from-green-950 dark:via-green-900 dark:to-emerald-950 py-12 md:py-24 overflow-hidden" aria-labelledby="hero-heading">
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/20 to-transparent" aria-hidden="true" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-200/10 rounded-full -translate-y-1/2 translate-x-1/3 blur-3xl" aria-hidden="true" />
 
         <div className="container-site mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -162,7 +162,7 @@ export default function HomeContent() {
               Independent PM Kisan Guide Portal
             </div>
 
-            <h1 id="hero-heading" className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-6 tracking-tight">
+            <h1 id="hero-heading" className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-6 tracking-tight">
               <span itemProp="headline">PM Kisan Status Check 2026</span>{' '}
               <span className="block text-green-200 text-2xl md:text-4xl lg:text-5xl mt-2">Samman Nidhi Yojana Online</span>
             </h1>
@@ -182,15 +182,15 @@ export default function HomeContent() {
 
             <SearchBar />
 
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <Link href="/articles/PmKisan24viKist2026" className="group inline-flex items-center gap-2.5 bg-white text-green-700 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-8 px-2">
+              <Link href="/articles/PmKisan24viKist2026" className="group inline-flex items-center justify-center gap-2.5 bg-white text-green-700 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-xl w-full sm:w-auto">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
                 </svg>
                 <span>24vi Kist Status</span>
                 <IconArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link href="/articles" className="inline-flex items-center gap-2.5 bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 border-2 border-white/30">
+              <Link href="/articles" className="inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 border-2 border-white/30 w-full sm:w-auto">
                 <IconBookOpen className="w-6 h-6" />
                 <span>All PM Kisan Guides</span>
               </Link>
@@ -213,7 +213,7 @@ export default function HomeContent() {
       <section className="py-12 bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700" aria-labelledby="trust-heading">
         <h2 id="trust-heading" className="sr-only">Trust Indicators</h2>
         <div className="container-site mx-auto px-4">
-          <div className="grid grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-4xl mx-auto">
             {[
               { value: '11 Cr+', label: 'Yojana Beneficiaries (Govt Data)' },
               { value: '₹6,000', label: 'Annual Benefit' },
