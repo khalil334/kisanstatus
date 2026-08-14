@@ -17,13 +17,16 @@ import {
 export const revalidate = 3600;
 
 const PAGE_URL = `${SITE_URL}/articles/hi`;
-const PAGE_TITLE = `हिंदी योजना गाइड — ${HINDI_ARTICLES.length} आसान गाइड | ${SITE_NAME}`;
+// Layout's title.template already appends `| ${SITE_NAME}` — don't repeat it in
+// metadata.title or the tab/SERP title becomes "… | KisanStatus | KisanStatus".
+const PAGE_TITLE_BASE = `हिंदी योजना गाइड — ${HINDI_ARTICLES.length} आसान गाइड`;
+const PAGE_TITLE = `${PAGE_TITLE_BASE} | ${SITE_NAME}`;
 const PAGE_DESC =
   'पीएम किसान, कर्ज माफी, ट्रैक्टर सब्सिडी, KCC और मंडी भाव — सभी योजना गाइड आसान हिंदी में। हर गाइड step-by-step, बिना मुश्किल शब्दों के।';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: PAGE_TITLE,
+  title: PAGE_TITLE_BASE,
   description: PAGE_DESC,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: {
