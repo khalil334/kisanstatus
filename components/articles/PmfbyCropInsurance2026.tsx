@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
@@ -11,6 +11,20 @@ import { AUTHOR_NAME } from '@/lib/site-config';
 const PUBLISHED = '2026-01-05T09:36:58+05:30';
 const MODIFIED = '2026-08-14T21:10:00+05:30';
 
+// Inline source citation link (E-E-A-T / transparency)
+function Src({ href, children }: { href: string; children: ReactNode }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      className="text-green-700 dark:text-green-400 underline underline-offset-2 decoration-dotted"
+    >
+      {children}
+    </a>
+  );
+}
+
 const RELATED = [
   { slug: 'KisanCreditCardOnlineApply2026', title: 'KCC Online Apply' },
   { slug: 'AgriStackKyaHai2026', title: 'AgriStack Farmer ID Guide' },
@@ -20,7 +34,7 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'PMFBY enrollment kaise hota hai?',
-    a: 'Agar aapne KCC ya crop loan liya hai toh bank khud enrollment kar deta hai — aapko premium katne ki entry passbook mein dikh jaayegi. Bina loan wale kisan pmfby.gov.in par ya nazdeeki CSC se form bhar sakte hain. Kharif ke liye aam taur par 31 July tak ka time milta hai.',
+    a: 'Agar aapne KCC ya crop loan liya hai toh bank khud enrollment kar deta hai — aapko premium katne ki entry passbook mein dikh jaayegi. Bina loan wale kisan pmfby.gov.in par ya nazdeeki CSC se form bhar sakte hain. Har season ki cut-off date state aur crop ke hisaab se alag hoti hai, isliye apne rajya ki notification ya pmfby.gov.in par hi confirm karein.',
   },
   {
     q: 'Premium kitna dena padta hai?',
@@ -28,7 +42,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Claim ka paisa kab tak aata hai?',
-    a: 'Niyam ke hisaab se harvest ke 2 mahine ke andar payout ka target hai. Zameen par kabhi-kabhi isse zyada lag jaata hai kyunki state ka yield data late pahunchta hai. Der ho toh pmfby.gov.in ke grievance section mein complaint number le lein.',
+    a: 'Claim settlement ki time-limit scheme ki Operational Guidelines mein tay hai, lekin practice mein yield data (CCE) aur premium subsidy state se aane par nirbhar karta hai — isliye der ho sakti hai. Exact status pmfby.gov.in par dekhein aur der hone par grievance register karke complaint number le lein ya KRPH 14447 par baat karein.',
   },
   {
     q: 'Kya batai (tenant) par kheti karne wala kisan bhi le sakta hai?',
@@ -44,7 +58,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya PMFBY lena zaroori hai?',
-    a: 'Nahi, ab yeh scheme loanee kisano ke liye bhi voluntary hai — bank ko season ki last date se kam se kam 7 din pehle likh kar dena hota hai ki aap bahar rehna chahte hain. Waise itne kam premium mein itna cover kahin aur nahi milta.',
+    a: 'Nahi. Kharif 2020 se scheme sabhi kisano — loanee bhi — ke liye voluntary kar di gayi hai. Loan wale kisan ko bahar rehna ho toh enrollment ki cut-off date se saat din pehle apni bank branch mein ek simple declaration dena hota hai.',
   },
   {
     q: 'Application status online kahan dikhta hai?',
@@ -52,7 +66,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Shikayat ke liye kis number par call karein?',
-    a: 'Kisan Rakshak helpline 14447 par. WhatsApp se bhi baat ho sakti hai — 7065514447. State-wise alag helpline bhi hoti hai jo portal ke "Contact Us" section mein milti hai.',
+    a: 'Krishi Rakshak Portal aur Helpline (KRPH) 14447 par — yeh PMFBY ki grievance redressal ke liye kendra sarkar dwara launch ki gayi centralised helpline hai. Iske alawa pmfby.gov.in ke grievance section se online complaint register kar sakte hain. State-wise alag helpline bhi ho sakti hai, jo portal ke "Contact Us" section mein milti hai.',
   },
   {
     q: 'Survey ya khasra number galat register ho gaya, kya karein?',
@@ -160,7 +174,10 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ek badi baat jo bahut kisano ko nahi pata — Kharif 2026 se sarkar ne <strong>jangli janwaron se hue nuksan</strong> (nilgai, jangli suar waghera) ko bhi localized risk ke roop mein cover karna approve kiya hai, aur dhaan ki doob (flooding) wali coverage bhi wapas laayi gayi hai. Apne state ki notification zaroor check karein.
+            Ek nayi baat jo bahut kisano ko nahi pata — Krishi Mantralaya ke revised framework ke mutabik <strong>jangli janwaron ke hamle se hue fasal nuksan</strong> ko localized risk category mein <strong>paanchve add-on cover</strong> ke roop mein shaamil kiya gaya hai, aur <strong>dhaan ki doob (paddy inundation)</strong> — jo 2018 mein hata di gayi thi — dobara localized calamity cover ke roop mein laayi gayi hai; ye Kharif 2026 season se lagoo hone ki baat kahi gayi hai. Dhyan rahe, add-on cover <strong>optional</strong> hote hain: kaunse jangli janwar aur kaunse zile/insurance unit cover honge, ye <strong>aapka rajya notify karta hai</strong> — isliye apne state ki season notification zaroor check karein.{' '}
+            <span className="text-xs">
+              (Source: <Src href="https://www.newindianexpress.com/states/odisha/2025/Nov/19/pmfby-to-cover-crop-loss-by-animal-attack-inundation">New Indian Express, 19 Nov 2025</Src>)
+            </span>
           </p>
 
           <div className="grid grid-cols-3 gap-3 mb-4">
@@ -186,7 +203,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           <SH>Kya Kya Cover Hota Hai?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Coverage kaafi wide hai — bijai na ho paane (prevented sowing) se lekar katayi ke baad khet mein sookh rahi fasal tak. Lekin kuch cheezein saaf bahar hain:
+            Coverage kaafi wide hai — bijai na ho paane (prevented sowing) se lekar katayi ke baad khet mein sookh rahi fasal tak. Do zaroori sharten samajh lein: <strong>prevented sowing</strong> tab lagta hai jab notified area mein baarish ki bhaari kami ya adverse season ki wajah se bijai ho hi na paaye (SI ka 25% tak), aur <strong>post-harvest loss</strong> sirf un fasalon par lagta hai jo katayi ke baad khet mein “cut and spread” halat mein sukhne ke liye rakhi jaati hain — wo bhi <strong>zyada se zyada 2 hafte</strong> tak, aur cyclone, cyclonic baarish ya besmausam baarish jaise perils ke liye. Lekin kuch cheezein saaf bahar hain:
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -197,7 +214,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
                 <li>✓ Ola (hailstorm), landslide</li>
                 <li>✓ Keede aur bimari</li>
                 <li>✓ Prevented sowing (SI ka 25% tak)</li>
-                <li>✓ Post-harvest loss (katayi ke 14 din tak)</li>
+                <li>✓ Post-harvest loss (katayi ke 2 hafte tak, khet mein sukha rahi fasal)</li>
               </ul>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
@@ -216,7 +233,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           <SH>Enrollment Kaise Karein? (Online + Offline)</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            <strong>Loan wale kisan:</strong> Agar aapne <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-green-700 dark:text-green-400 underline font-medium">KCC</Link> ya crop loan liya hai toh bank enrollment khud kar deta hai. Na lena ho toh season ki last date se 7 din pehle bank ko likh kar dena hota hai.
+            <strong>Loan wale kisan:</strong> Agar aapne <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-green-700 dark:text-green-400 underline font-medium">KCC</Link> ya crop loan liya hai toh bank enrollment khud kar deta hai. Kharif 2020 se scheme sabke liye <strong>voluntary</strong> hai — na lena ho toh enrollment ki cut-off date se <strong>7 din pehle</strong> bank branch mein ek simple declaration jama karna hota hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             <strong>Bina loan wale:</strong> Khud karna padega —
@@ -249,7 +266,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </div>
 
           <DB>
-            <strong>Last Date 2026:</strong> Kharif ke liye aam taur par 31 July, Rabi ke liye 31 December. Kuch states/crops mein tareekh alag ho sakti hai — apne district ki notification dekh lein. Date nikal gayi toh us season ka cover nahi milega.
+            <strong>Last Date:</strong> PMFBY ki cut-off date har state, season aur crop ke liye alag notify hoti hai — koi ek all-India tareekh nahi hoti. Kharif mein kai states ki window July ke aakhir tak rehti hai, lekin <strong>aapke zile ke liye sahi date sirf apne rajya ki season notification ya pmfby.gov.in par hi confirm hoti hai</strong>. Date nikal gayi toh us season ka cover nahi milega, isliye enrollment aakhri din par mat chhodein.
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
@@ -302,7 +319,10 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
             <SI n={5}>Survey aur verification ke baad paisa <strong>seedha account mein</strong> aata hai</SI>
           </StepList>
           <DB>
-            <strong>Sabse zaroori:</strong> report karne ki window <strong>72 ghante</strong> ki hai. Yahi chook claim rejection ki sabse badi wajah hai. 14447 aur Crop Insurance app dono phone mein pehle se save rakhein.
+            <strong>Sabse zaroori:</strong> nuksan ki soochna dene ki window <strong>72 ghante</strong> ki hai — yeh scheme ki apni shart hai, aur revised framework mein Crop Insurance App par <strong>geo-tagged photo</strong> ke saath report karna kaha gaya hai. KRPH 14447 aur Crop Insurance app dono phone mein pehle se save rakhein.{' '}
+            <span className="text-xs">
+              (Source: <Src href="https://newindiasamachar.pib.gov.in/WriteReadData/flipbook/2023/Jan/1st/English/files/basic-html/page31.html">PIB</Src>)
+            </span>
           </DB>
         </section>
 
@@ -355,7 +375,10 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Yaad rahe, ye sirf kisan ka hissa hai. Actual (actuarial) rate isse kaafi zyada hota hai — farq kendra aur rajya sarkar milkar bharti hain. North-East states, Jammu & Kashmir aur Himachal jaise ilaakon mein toh kisan ka poora hissa bhi sarkar hi deti hai.
+            Yaad rahe, ye sirf kisan ka hissa hai. Actual (actuarial) rate isse kaafi zyada hota hai — bacha hua premium subsidy ke roop mein kendra aur rajya sarkar milkar bharti hain (aam taur par 50:50). North-Eastern states ke liye 2020 ke revamp ke baad kendra ka subsidy hissa badha kar <strong>90%</strong> kar diya gaya tha (state 10%). Dhyan dein — isse <em>kisan</em> ka apna 2% / 1.5% / 5% hissa maaf nahi hota; ye sirf sarkari subsidy ka batwara hai.{' '}
+            <span className="text-xs">
+              (Source: <Src href="https://newindiasamachar.pib.gov.in/WriteReadData/flipbook/2023/Jan/1st/English/files/basic-html/page31.html">New India Samachar / PIB</Src>)
+            </span>
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
@@ -375,7 +398,10 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </IB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ola ya baadh jaise localized nuksan mein aapke khet ka <strong>individual survey</strong> hota hai, aur muawza usi assessment par milta hai. Ab satellite imagery aur YES-TECH (technology-based yield estimation) ka bhi istemaal ho raha hai, jisse manual crop cutting par nirbharta kam ho rahi hai.
+            Ola ya baadh jaise localized nuksan mein aapke khet ka <strong>individual survey</strong> hota hai, aur muawza usi assessment par milta hai. Ab technology ka istemaal bhi badh raha hai — <strong>YES-TECH</strong> (technology-based yield estimation) aur <strong>CROPIC</strong> app, jo geo-tagged photos se fasal ki haalat aur nuksan aankta hai.{' '}
+            <span className="text-xs">
+              (Source: <Src href="https://agritimes.co.in/crops/fight-against-desert-locusts-will-take-time-says-fao-chief/cropic-app-brings-real-time-crop-loss-assessment-under-pmfby/">CROPIC, Ministry of Agriculture briefing</Src>)
+            </span>
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -384,7 +410,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
 
           <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2">
             <li><strong>Prevented sowing:</strong> Baarish hi nahi hui aur bijai nahi kar paaye (jabki kharcha ho chuka tha) — sum insured ka <strong>25% tak</strong> milta hai, aur policy wahin band ho jaati hai.</li>
-            <li><strong>Mid-season adversity:</strong> Season ke beech mein hi lag jaaye ki paidawar normal ki aadhi bhi nahi hogi — toh sarkar turant relief ke roop mein sambhavit claim ka ek hissa pehle hi dilwa sakti hai.</li>
+            <li><strong>Mid-season adversity:</strong> Jab kisi widespread calamity ya kharab season ki wajah se ummeed ho ki paidawar normal yield ke <strong>50% se bhi kam</strong> rahegi — to turant relief ke roop mein sambhavit claim ka ek hissa pehle dilwaya ja sakta hai. Ye add-on cover bhi state ke notify karne par hi lagoo hota hai.</li>
           </ul>
         </section>
 
@@ -392,7 +418,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           <SH>Report Ke Baad Kya Hota Hai? (Timeline)</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Report karne ke baad ka process aksar kisano ko blackbox lagta hai. Guidelines mein har stage ki time-limit di gayi hai:
+            Report karne ke baad ka process aksar kisano ko blackbox lagta hai. Mota-moti stage-wise safar aisa hota hai — lekin har stage ki exact time-limit PMFBY Operational Guidelines aur aapke state ki season notification mein tay hoti hai, isliye number yaad rakhne ki bajaye apna reference number rakhein aur portal par status dekhte rahein:
           </p>
 
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -400,17 +426,17 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
               <thead>
                 <tr className="bg-[var(--color-primary)] text-white">
                   <th className="p-3 text-left">Stage</th>
-                  <th className="p-3 text-left">Time Limit</th>
+                  <th className="p-3 text-left">Kya hota hai</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ['Kisan dwara nuksan ki soochna', 'Nuksan ke 72 ghante ke andar'],
-                  ['Insurance company ka acknowledgement', '48 ghante'],
-                  ['Khet ka survey / loss assessment', 'Soochna ke ~10 din mein'],
-                  ['State se yield data (CCE)', 'Harvest ke 1 mahine mein'],
-                  ['Claim calculation', 'Data milne ke ~3 hafte'],
-                  ['Account mein payout', 'Harvest ke 2 mahine ka target'],
+                  ['1. Kisan dwara nuksan ki soochna', 'Nuksan ke 72 ghante ke andar — Crop Insurance App (geo-tagged photo), KRPH 14447, CSC ya bank'],
+                  ['2. Insurance company ka acknowledgement', 'Complaint/docket number milta hai — ise sambhal kar rakhein'],
+                  ['3. Khet ka survey / loss assessment', 'Localized nuksan par company ka surveyor khet par aata hai'],
+                  ['4. Yield data (CCE) state se', 'Widespread nuksan par season ke CCE results ka intezaar'],
+                  ['5. Claim calculation aur approval', 'Yield data + premium subsidy aane ke baad'],
+                  ['6. Account mein payout', 'Seedha Aadhaar-linked bank account mein (DBT)'],
                 ].map(([stage, time], i) => (
                   <tr key={stage} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{stage}</td>
@@ -422,7 +448,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Zameen par payout mein 3-6 mahine bhi lag jaate hain, kyunki state ka yield data late pahunchna aam baat hai. Isliye timeline yaad rakhein — der ho toh chup baithne ki bajaye shikayat register karein, jiska tareeka neeche hai.
+            Practice mein payout aane mein kaafi mahine lag sakte hain — CCE data aur state ki premium subsidy time par na aane par process ruk jaata hai. Isliye der ho toh chup baithne ki bajaye shikayat register karein, jiska tareeka neeche hai.
           </p>
         </section>
 
@@ -440,7 +466,10 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </StepList>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
-            Har stage par kagaz ka record rakhein — call ki date, complaint number, kis afsar se baat hui. Yehi record aage kaam aata hai. Kisan Rakshak helpline <strong>14447</strong> aur WhatsApp <strong>7065514447</strong> se bhi status poocha ja sakta hai.
+            Har stage par kagaz ka record rakhein — call ki date, complaint number, kis afsar se baat hui. Yehi record aage kaam aata hai. Grievance ke liye kendra sarkar ne <strong>Krishi Rakshak Portal aur Helpline (KRPH) — 14447</strong> shuru ki hai, jo insurance companies ke database se juda hai aur multilingual support deta hai.{' '}
+            <span className="text-xs">
+              (Source: <Src href="https://pwonlyias.com/current-affairs/pradhan-mantri-fasal-bima-yojana/">KRPH launch, Ministry of Agriculture &amp; Farmers Welfare</Src>)
+            </span>
           </p>
         </section>
 
@@ -516,6 +545,33 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
             Yahan Click Karo → PMFBY Portal Khulega
           </button>
         </div>
+
+        <section className="my-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl">
+          <h2 className="text-base font-black text-[var(--color-text)] mb-3">Sources / Official References</h2>
+          <p className="text-xs text-[var(--color-text-muted)] leading-relaxed mb-3">
+            Is guide ke scheme-related tathya neeche diye gaye sarkari portal aur official announcements par aadharit hain. Premium rates, cut-off dates aur add-on covers har season aur har rajya ke liye alag notify hote hain — apna faisla lene se pehle hamesha official portal ya apne agriculture office se confirm karein.
+          </p>
+          <ul className="text-xs text-[var(--color-text-muted)] space-y-2 list-disc list-inside">
+            <li>
+              <Src href="https://pmfby.gov.in">PMFBY — National Crop Insurance Portal (pmfby.gov.in)</Src> — enrollment, application status, grievance aur insurance company contacts
+            </li>
+            <li>
+              <Src href="https://agriwelfare.gov.in">Ministry of Agriculture &amp; Farmers Welfare (agriwelfare.gov.in)</Src> — PMFBY Operational Guidelines aur scheme notifications
+            </li>
+            <li>
+              <Src href="https://newindiasamachar.pib.gov.in/WriteReadData/flipbook/2023/Jan/1st/English/files/basic-html/page31.html">PIB / New India Samachar</Src> — 2020 revamp, 72-ghante intimation aur North-East subsidy sharing
+            </li>
+            <li>
+              <Src href="https://www.newindianexpress.com/states/odisha/2025/Nov/19/pmfby-to-cover-crop-loss-by-animal-attack-inundation">Revised framework (Nov 2025)</Src> — wild animal attack add-on cover aur paddy inundation ki wapsi, Kharif 2026 se
+            </li>
+            <li>
+              <Src href="https://agritimes.co.in/crops/fight-against-desert-locusts-will-take-time-says-fao-chief/cropic-app-brings-real-time-crop-loss-assessment-under-pmfby/">CROPIC aur KRPH 14447</Src> — geo-tagged loss assessment aur grievance helpline
+            </li>
+          </ul>
+          <p className="text-[11px] text-[var(--color-text-muted)] leading-relaxed mt-3">
+            Last verified: {fmtDate(MODIFIED)}. KisanStatus ek independent information website hai — hum koi sarkari vibhag ya insurance company nahi hain, aur na hi enrollment ya claim process karte hain.
+          </p>
+        </section>
 
         <CalcBanner
           title="Premium Calculate Karo"
