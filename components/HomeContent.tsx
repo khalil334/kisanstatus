@@ -159,7 +159,7 @@ export default function HomeContent() {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
               </svg>
-              India Ka #1 PM Kisan Portal
+              Independent PM Kisan Guide Portal
             </div>
 
             <h1 id="hero-heading" className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-6 tracking-tight">
@@ -199,7 +199,7 @@ export default function HomeContent() {
             <div className="flex flex-wrap justify-center gap-3 text-xs text-green-200">
               <span className="px-3 py-1.5 bg-white/10 rounded-full flex items-center gap-1">
                 <IconCheck className="w-3 h-3" />
-                11 Cr+ Registered Kisan
+                11 Cr+ Yojana Beneficiaries (Govt Data)
               </span>
               <span className="px-3 py-1.5 bg-white/10 rounded-full flex items-center gap-1">
                 <IconCheck className="w-3 h-3" />
@@ -215,7 +215,7 @@ export default function HomeContent() {
         <div className="container-site mx-auto px-4">
           <div className="grid grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
-              { value: '11 Cr+', label: 'Registered Kisan' },
+              { value: '11 Cr+', label: 'Yojana Beneficiaries (Govt Data)' },
               { value: '₹6,000', label: 'Annual Benefit' },
               { value: '100%', label: 'Free Tools' },
             ].map((stat, i) => (

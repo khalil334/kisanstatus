@@ -252,7 +252,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     modifiedTime: '2026-08-14T05:45:00+05:30',
     author: AUTHOR_NAME,
     component: 'GauMutraKharidYojanaHindi',
-    ogImage: '/og-image.webp',
+    ogImage: '/images/gau-mutra-yojana-hindi-og.webp',
   },
 ] as const;
 
