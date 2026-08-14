@@ -4,7 +4,7 @@ import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const HERO_IMAGE = {
-  src: '/images/gau-mutra-kharid-yojana-bulandshahr-hero.webp',
+  src: '/images/gau-mutra-yojana-hindi-hero.webp',
   alt: 'बुलंदशहर के गांव में सुबह गौमूत्र इकट्ठा करता किसान',
 } as const;
 
@@ -16,7 +16,7 @@ const sections = [
 
 अब तक की रिपोर्ट बताती है कि रोजाना करीब पांच सौ लीटर इकट्ठा हो रहा है। एक दिलचस्प बात यह भी है कि इस पूरे संग्रहण के काम में महिलाओं के समूह भी सीधे जुड़ गए हैं, और उन्हें अलग से दो रुपये प्रति लीटर का कमीशन मिल रहा है।`,
     img: {
-      src: '/images/mahila-samooh-gau-mutra-commission.webp',
+      src: '/images/mahila-samooh-register-hindi.webp',
       alt: 'गांव की महिलाओं का समूह गौमूत्र संग्रहण की एंट्री रजिस्टर में करता हुआ',
     },
   },
@@ -27,7 +27,7 @@ const sections = [
 
 तैयार माल आगे सहकारी समितियों और स्थानीय कमेटियों के जरिए बाजार तक पहुंचेगा, ताकि एक छोटा-मोटा स्थानीय बाजार भी खड़ा हो जाए।`,
     img: {
-      src: '/images/jaivik-keetnashak-jeevamrit-nirman.webp',
+      src: '/images/jeevamrit-drum-taiyari-hindi.webp',
       alt: 'जीवामृत और जैविक कीटनाशक बनाने के लिए ड्रम में घोल तैयार करता किसान',
     },
   },
@@ -38,7 +38,7 @@ const sections = [
 
 इससे पहले छत्तीसगढ़ में भी गोबर और मूत्र खरीदने की स्कीम चल चुकी है, हालांकि वहां शुरुआती रेट उत्तर प्रदेश से कम था, महज चार रुपये प्रति लीटर।`,
     img: {
-      src: '/images/desi-gaay-gaushala-bulandshahr.webp',
+      src: '/images/desi-gaay-chara-gaushala-hindi.webp',
       alt: 'गौशाला में बूढ़ी देसी गाय को चारा खिलाता किसान',
     },
   },
@@ -49,7 +49,7 @@ const sections = [
 
 दस रुपये लीटर सुनने में मामूली रकम लग सकती है, लेकिन रोज चार-पांच लीटर बेचने पर महीने भर में यह एक ठीक-ठाक जोड़ बन जाता है।`,
     img: {
-      src: '/images/kisan-ko-turant-bhugtan-gau-mutra.webp',
+      src: '/images/nakad-bhugtan-kendra-hindi.webp',
       alt: 'संग्रह केंद्र पर किसान को गौमूत्र के बदले नकद भुगतान मिलता हुआ',
     },
   },
@@ -68,7 +68,7 @@ const sections = [
     heading: 'बेचना कहां और कैसे है, इसे लेकर उलझन',
     body: `आम तौर पर स्थानीय FPO के जरिए तय जगह पर एक संग्रह केंद्र बना दिया जाता है। लोग साफ बर्तन में लेकर वहां पहुंचते हैं, वहां मात्रा नापी जाती है, कई बार यह भी जांचा जाता है कि उसमें पानी या कोई मिलावट तो नहीं है, और फिर तय दर पर भुगतान हो जाता है।`,
     img: {
-      src: '/images/fpo-sangrah-kendra-gau-mutra.webp',
+      src: '/images/sangrah-kendra-napai-hindi.webp',
       alt: 'FPO संग्रह केंद्र पर बर्तन में लाया गया गौमूत्र नापा जाता हुआ',
     },
   },
@@ -77,7 +77,7 @@ const sections = [
     heading: 'जैविक खेती की तरफ एक और छोटा कदम',
     body: `रासायनिक खाद की बढ़ती कीमत और मिट्टी पर उसके बुरे असर को देखते हुए, किसानों को देसी विकल्पों की तरफ मोड़ने की कोशिश काफी समय से चल रही है। यह मॉडल अगर चल निकला तो सबसे ज्यादा फायदा उन छोटे-मझोले किसानों को होगा जो महंगी रासायनिक खाद खरीदने की हालत में नहीं होते।`,
     img: {
-      src: '/images/jaivik-kheti-keetnashak-spray.webp',
+      src: '/images/jaivik-spray-khet-hindi.webp',
       alt: 'खेत में जैविक कीटनाशक का छिड़काव करता किसान',
     },
   },
