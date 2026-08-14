@@ -269,6 +269,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
       'गौ मूत्र 10 रुपये प्रति लीटर',
     ],
     component: 'GauMutraKharidYojanaUp2026',
+    ogImage: '/images/gau-mutra-kharid-yojana-og.webp',
     category: 'pashupalan',
     publishedTime: '2026-08-13T18:30:00+05:30',
     modifiedTime: '2026-08-14T09:15:00+05:30',
