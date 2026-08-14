@@ -20,7 +20,7 @@ export default function LandSeedingDownloadPage() {
     }, 500);
   };
 
-  const pageTitle = `${state} PM Kisan Land Seeding Form PDF Download (2026)`;
+  const pageTitle = `${state} Bhulekh Portal — Khasra-Khatauni Nikaalein (Land Seeding 2026)`;
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -62,10 +62,10 @@ export default function LandSeedingDownloadPage() {
           <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border-2 border-green-500 dark:border-green-700 p-6 md:p-8 mb-8">
             <div className="text-center mb-6">
               <h2 className="text-xl md:text-2xl font-black text-gray-800 dark:text-white mb-3">
-                {state} Land Seeding Form PDF Download Link
+                {state} Ka Official Bhulekh / Revenue Portal
               </h2>
               <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 max-w-lg mx-auto">
-                Yahan se aap {state} ka official PM Kisan Land Seeding Form PDF bilkul free mein download kar sakte hain.
+                Yahan se aap {state} ke sarkari portal par jaakar apni khasra-khatauni / jamabandi ki copy free mein nikaal sakte hain — yahi copy land seeding form ke saath lagti hai. Land seeding form khud Patwari, CSC ya Block Agriculture Office se free milta hai.
               </p>
             </div>
 
@@ -88,7 +88,7 @@ export default function LandSeedingDownloadPage() {
                   </span>
                 ) : (
                   <span className="flex items-center justify-center gap-2">
-                     {state} Land Seeding Form PDF Download Karein
+                     {state} Ka Official Portal Kholein
                   </span>
                 )}
               </button>
@@ -102,8 +102,8 @@ export default function LandSeedingDownloadPage() {
                 Zaroori Jaankari aur Process:
               </h3>
               <ul className="text-xs text-blue-700 dark:text-blue-400 space-y-2 list-disc list-inside">
-                <li>Yeh form PDF format mein hota hai aur ise download karna bilkul <strong>free</strong> hai. Kisi bhi agent ya middleman ko paise na dein.</li>
-                <li>Form ko print nikalne ke baad, apne nazdeeki Patwari ya Lekhpal se details zaroor verify karwayein.</li>
+                <li>Land seeding ka koi ek all-India PDF nahi hota — form Patwari, CSC ya Block Agriculture Office se <strong>free</strong> milta hai. Kisi bhi agent ya middleman ko paise na dein.</li>
+                <li>Portal se khasra-khatauni ki copy nikaal kar form ke saath lagayein, aur Patwari ya Lekhpal se details zaroor verify karwayein.</li>
                 <li>Sahi details bharne ke baad ise apne Block Agriculture Office ya nazdeeki CSC centre mein submit karein.</li>
                 <li>
                   Agar aapka naam PM Kisan beneficiary list mein nahi dikh raha hai ya details galat hain, toh pehle hamari{' '}
