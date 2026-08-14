@@ -71,7 +71,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
           <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Status (4 August 2026):</strong> 6vi kist abhi pending hai.  Next kist date officially announce nahi hua. Jan Soochna portal check karte rahein — kisi bhi WhatsApp forward wali tareekh par bharosa na karein.
+            <strong>Status (04/08/2026):</strong> 6vi kist abhi pending hai.  Next kist date officially announce nahi hua. Jan Soochna portal check karte rahein — kisi bhi WhatsApp forward wali tareekh par bharosa na karein.
           </p>
         </div>
 
@@ -449,7 +449,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <p>
           Budget 2024-25 mein Rajasthan sarkar ne pehli baar ailaan kiya ki PM Kisan ke ₹6,000 ke
-          upar state apni taraf se ₹2,000 saalana dega. Scheme zameen par 30 June 2024
+          upar state apni taraf se ₹2,000 saalana dega. Scheme zameen par 30/06/2024
           ko Tonk se launch hui. Uske agle saal, Budget 2025-26 mein, ye state hissa
           ₹2,000 se badhakar ₹3,000 kar diya gaya — aur tabhi se total ₹9,000 ka aankda
           bana. Matlab ₹9,000 wala figure khud ek badhotri ka nateeja hai, shuruaati raqam nahi.
@@ -471,7 +471,7 @@ export default function RajasthanKisanSammanNidhi9000() {
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹2,000 saalana</td>
               </tr>
               <tr className="bg-gray-50 dark:bg-gray-700">
-                <td className="border border-gray-300 dark:border-gray-600 p-3">30 June 2024</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">30/06/2024</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">Tonk se launch</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹2,000 saalana</td>
               </tr>
@@ -481,7 +481,7 @@ export default function RajasthanKisanSammanNidhi9000() {
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹3,000 saalana</td>
               </tr>
               <tr className="bg-gray-50 dark:bg-gray-700">
-                <td className="border border-gray-300 dark:border-gray-600 p-3">18 October 2025</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">18/10/2025</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">Nadbai, Bharatpur se kist — 71.8 lakh kisan, ₹718 crore</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹1,000 per kisan</td>
               </tr>

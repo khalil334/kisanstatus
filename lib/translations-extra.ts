@@ -261,7 +261,7 @@ const extraTranslations: Partial<Record<LangCode, Translations>> = {
     nav_calculator: 'कॅल्क्युलेटर',
     nav_about: 'आमच्याबद्दल',
     nav_contact: 'संपर्क',
-    announcement_bar: 'PM किसान 23वा हप्ता: 20 जून 2026 रोजी प्रकाशित — ₹2,000 थेट बँकेत | 24वा हप्ता ऑक्टोबर 2026 अपेक्षित',
+    announcement_bar: 'PM किसान 23वा हप्ता: 20/06/2026 रोजी प्रकाशित — ₹2,000 थेट बँकेत | 24वा हप्ता ऑक्टोबर 2026 अपेक्षित',
 
     hero_badge: 'PM किसान सन्मान निधी 2026',
     hero_h1_line1: 'PM किसान स्थिती तपासा 2026',
@@ -276,7 +276,7 @@ const extraTranslations: Partial<Record<LangCode, Translations>> = {
     stat_amount: '₹6,000',
     stat_amount_sub: 'वार्षिक लाभ (3 हप्त्यांमध्ये)',
     stat_kist: '23वा हप्ता',
-    stat_kist_sub: '20 जून 2026 रोजी प्रकाशित',
+    stat_kist_sub: '20/06/2026 रोजी प्रकाशित',
     stat_free: '100% मोफत',
     stat_free_sub: 'कोणतेही लपलेले शुल्क नाही',
 

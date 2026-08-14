@@ -500,7 +500,7 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
         (Ministry of Agriculture &amp; Farmers Welfare) के आवेदन-ढांचे से ली गई है; Farmer ID अनिवार्यता
         वाले राज्यों की जानकारी सरकारी घोषणाओं की news coverage से। राज्य-स्तरीय rules बदलते रहते हैं, आवेदन
         से पहले अपने राज्य का ताजा निर्देश जरूर देख लें — यह लेख{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} तक की स्थिति पर खरा है।
+        {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })} तक की स्थिति पर खरा है।
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">

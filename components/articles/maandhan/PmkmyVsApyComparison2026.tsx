@@ -134,7 +134,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             <strong>Basic Rules:</strong> Umr 18 se 40 saal ke beech honi chahiye, aur cultivable land 2 hectare (lagbhag 5 acre) ya usse kam honi chahiye. 60 saal ki umar ke baad aapko fixed ₹3000 har mahine milenge.
-            <em> (Source: PIB Press Release, 9 Sept 2024 & Agriculture Ministry Operational Guidelines, Aug 2019)</em>
+            <em> (Source: PIB Press Release, 09/09/2024 & Agriculture Ministry Operational Guidelines, Aug 2019)</em>
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Meri nazar mein, yeh scheme unke liye ek solid choice hai jo eligible hain, kyunki itne kam investment par itna bada government match kisi aur jagah milna mushkil hai. Maine personally dekha hai ki jo log 20-25 ki umar mein isme enter karte hain, unka financial burden 60 ke baad practically khatam ho jata hai.

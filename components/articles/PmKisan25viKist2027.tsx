@@ -112,9 +112,9 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
               </thead>
               <tbody>
                 {[
-                  ['21vi', '19 November 2025', 'Aa chuki, ₹2,000 mila tha'],
-                  ['22vi', '13 March 2026', 'Pichli wali ke kareeb 4 mahine baad aayi'],
-                  ['23vi', '20 June 2026', 'Is baar gap sirf 3 mahine ka tha'],
+                  ['21vi', '19/11/2025', 'Aa chuki, ₹2,000 mila tha'],
+                  ['22vi', '13/03/2026', 'Pichli wali ke kareeb 4 mahine baad aayi'],
+                  ['23vi', '20/06/2026', 'Is baar gap sirf 3 mahine ka tha'],
                   ['24vi', 'Umeed: Oct–Nov 2026', 'Abhi tak nahi aayi, intezaar chalu hai'],
                   ['25vi', 'Uske 3-4 mahine baad', 'Door ki baat — pehle 24vi toh aa jaye'],
                 ].map(([kist, date, note], i) => (

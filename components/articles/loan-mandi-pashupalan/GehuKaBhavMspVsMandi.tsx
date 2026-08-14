@@ -75,7 +75,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
-            <span>Last Updated: 5 August 2026</span>
+            <span>Last Updated: 05/08/2026</span>
             <span>10 min read</span>
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 5 August 2026</strong>
+          <strong>Last Updated: 05/08/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -286,7 +286,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           <strong>System kitna asli hai — MP ka is season ka record:</strong> Rabi 2026-27 mein Madhya Pradesh mein{' '}
           <strong>19.04 lakh kisano</strong> ne wheat procurement ke liye registration kiya (pichhle saal se 3.60 lakh
           zyada), 3,171 kharid kendra chale, aur seedha Aadhaar-linked bank account mein payment gayi. Slot booking ki
-          last date 30 April 2026 thi (
+          last date 30/04/2026 thi (
           <a href="https://thetractorhub.in/msp-on-wheat-2026/" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: TheTractorHub season report</a>).
           Matlab: e-Uparjan jaisa registration system ab exception nahi, rule hai — window ke andar registration hi
           poora khel hai.

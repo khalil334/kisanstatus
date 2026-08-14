@@ -287,7 +287,7 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
 
       <StateCard name="छत्तीसगढ़" portal="CHAMPS (CG Seed & Agri Dev. Corp.)">
         छत्तीसगढ़ में कृषि यांत्रिकीकरण योजना के तहत आवेदन CG State Seed &amp; Agriculture Development
-        Corporation के CHAMPS system से होता है — 2025-26 के लिए online आवेदन 9 अक्टूबर 2025 से
+        Corporation के CHAMPS system से होता है — 2025-26 के लिए online आवेदन 09/10/2025 से
         खुले थे (स्रोत:{' '}
         <a
           href="https://www.cmv360.com/news/applications-open-for-tractor-and-agricultural-equipment-subsidy-from-october-9"

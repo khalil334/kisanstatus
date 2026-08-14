@@ -485,7 +485,7 @@ export default function PmKisanHelplineNumberComplaint({ article }: { article: H
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a>{' '}
         (Ministry of Agriculture &amp; Farmers Welfare, Govt. of India) की official जानकारी से ली गई हैं,
         पर नंबर समय के साथ बदल सकते हैं — call करने से पहले portal पर एक नजर जरूर डाल लें (हमने{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} को मिलाए थे)।
+        {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })} को मिलाए थे)।
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">

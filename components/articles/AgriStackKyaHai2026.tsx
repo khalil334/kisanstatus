@@ -7,11 +7,7 @@ import { AUTHOR_NAME } from '@/lib/site-config';
 
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
-  return date.toLocaleDateString('hi-IN', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
+  return date.toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' });
 }
 
 const PUBLISHED = '2026-01-08T22:33:23+05:30';

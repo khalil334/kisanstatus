@@ -8,11 +8,7 @@ const MODIFIED = '2025-12-29T08:11:53+05:30';
 
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
-  return date.toLocaleDateString('en-IN', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  });
+  return date.toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' });
 }
 
 const RELATED_CARDS = [

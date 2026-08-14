@@ -191,7 +191,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
 
       <T2>मामला कितना बड़ा है — आंकड़ों की गवाही</T2>
       <p>
-        यह समस्या कोई इक्का-दुक्का मामला नहीं है। 20 जून 2026 को PM Kisan की 23वीं किस्त में{' '}
+        यह समस्या कोई इक्का-दुक्का मामला नहीं है। 20/06/2026 को PM Kisan की 23वीं किस्त में{' '}
         <strong>9.44 करोड़+ किसान परिवारों</strong> को करीब ₹18,880 करोड़ गए — पर खबरों के मुताबिक लाखों
         किसान फिर भी खाली हाथ रहे, और कृषि मंत्रालय के आंकड़ों पर आधारित reports बताती हैं कि कारण बजट नहीं,
         किसानों के digital records का mismatch होता है — जिसमें NPCI seeding ऊपर के कारणों में है। सरकार
@@ -403,7 +403,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         <a href="https://www.npci.org.in" target="_blank" rel="noopener noreferrer">npci.org.in</a> से; DBT
         व्यवस्था{' '}
         <a href="https://dbtbharat.gov.in" target="_blank" rel="noopener noreferrer">dbtbharat.gov.in</a>{' '}
-        से; 23वीं किस्त (20 जून 2026, ₹18,880 करोड़ / 9.44 करोड़ परिवार) और record-mismatch वाले आंकड़े
+        से; 23वीं किस्त (20/06/2026, ₹18,880 करोड़ / 9.44 करोड़ परिवार) और record-mismatch वाले आंकड़े
         कृषि मंत्रालय के हवाले से छपी खबरों (
         <a
           href="https://www.bhaskarenglish.in/local/uttar-pradesh/news/pm-kisan-24th-installment-benefit-mistakes-delay-farmers-yojana-138397214.html"
@@ -413,7 +413,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
           Dainik Bhaskar की यह report
         </a>
         ) से। बैंक-दर-बैंक form का नाम और online सुविधा अलग हो सकती है — आखिरी बार हमने यह सब{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} को मिलाया था।
+        {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })} को मिलाया था।
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">

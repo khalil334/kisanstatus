@@ -13,7 +13,7 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Gehu ka MSP 2026-27 kitna hai?',
-    a: 'Gehu ka MSP ₹2,585 per quintal hai — pichhle saal ke ₹2,425 se ₹160 zyada. Ye rate Rabi Marketing Season 2026-27 ke liye hai, jo CCEA ne 1 October 2025 ko approve kiya tha. Ek quintal matlab 100 kilo, toh per kilo ke hisaab se ₹25.85 banta hai.',
+    a: 'Gehu ka MSP ₹2,585 per quintal hai — pichhle saal ke ₹2,425 se ₹160 zyada. Ye rate Rabi Marketing Season 2026-27 ke liye hai, jo CCEA ne 01/10/2025 ko approve kiya tha. Ek quintal matlab 100 kilo, toh per kilo ke hisaab se ₹25.85 banta hai.',
   },
   {
     q: 'Dhan (paddy) ka MSP 2026-27 kya hai?',
@@ -108,7 +108,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
-            <span>Last Updated: 5 August 2026</span>
+            <span>Last Updated: 05/08/2026</span>
             <span>11 min read</span>
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 5 August 2026</strong>
+          <strong>Last Updated: 05/08/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -155,8 +155,8 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </p>
 
         <IB>
-          <strong>Do announcements, do season:</strong> Rabi 2026-27 ke rate CCEA ne 1 October 2025 ko approve
-          kiye (gehu, chana, sarson wagairah). Kharif 2026-27 ke rate 13 May 2026 ko aaye (dhan, kapas, soybean
+          <strong>Do announcements, do season:</strong> Rabi 2026-27 ke rate CCEA ne 01/10/2025 ko approve
+          kiye (gehu, chana, sarson wagairah). Kharif 2026-27 ke rate 13/05/2026 ko aaye (dhan, kapas, soybean
           wagairah). Isliye ek hi &quot;2026-27 list&quot; mein dono announcements ke numbers aate hain.
         </IB>
 
@@ -195,7 +195,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           </table>
           <p className="text-xs text-[var(--color-text-muted)] mt-2 italic">
             Sabhi rate ₹ per quintal (100 kg). Lagat = all-India weighted average cost of production (A2+FL).
-            Source: CCEA decision, 1 October 2025 — PIB press release.
+            Source: CCEA decision, 01/10/2025 — PIB press release.
           </p>
         </div>
 
@@ -240,7 +240,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
             </tbody>
           </table>
           <p className="text-xs text-[var(--color-text-muted)] mt-2 italic">
-            Sabhi rate ₹ per quintal. Source: CCEA decision, 13 May 2026 — PIB press release.
+            Sabhi rate ₹ per quintal. Source: CCEA decision, 13/05/2026 — PIB press release.
             Kharif 2026-27 ke liye anumanit payout ₹2.60 lakh crore aur procurement target 824.41 lakh metric tonne.
           </p>
         </div>
@@ -509,11 +509,11 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
-            CCEA press release, Rabi Marketing Season 2026-27 MSP — 1 October 2025.{' '}
+            CCEA press release, Rabi Marketing Season 2026-27 MSP — 01/10/2025.{' '}
             <a href="https://pib.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in</a>
           </li>
           <li>
-            CCEA press release, Kharif Marketing Season 2026-27 MSP (14 crops) — 13 May 2026.{' '}
+            CCEA press release, Kharif Marketing Season 2026-27 MSP (14 crops) — 13/05/2026.{' '}
             <a href="https://pib.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in</a>
           </li>
           <li>

@@ -580,7 +580,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         (Ministry of Agriculture &amp; Farmers Welfare) और राज्य Farmer Registry portals (upfr.agristack.gov.in
         वगैरह) के registration flow से मिलाकर लिखी गई है। राज्य-विशेष rules बदलते रहते हैं,
         इस वजह से अपने राज्य के portal पर एक बार जरूर मिला लें (आखिरी जांच:{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')})।
+        {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })})।
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">

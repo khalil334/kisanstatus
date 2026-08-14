@@ -99,7 +99,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
         prati acre wale badlaav tak.
       </p>
 
-      <InfoBox type="update" date="4 August 2026">
+      <InfoBox type="update" date="04/08/2026">
         <strong>Do badi baatein:</strong> Kharif 2025-26 ki antar rashi is baar ekmusht release
         hui — lagbhag 25 lakh kisanon ko. Aur cabinet ne Kharif 2026 se scheme ka naya roop
         manzoor kiya hai: dhan ki jagah doosri fasal lene par ₹15,000 prati acre input
