@@ -16,51 +16,51 @@ const RELATED = [
 
 const FAQS_DATA = [
   {
-    q: 'Kya land seeding form ka koi ek official PDF hai jo sab states mein chalta hai?',
-    a: 'Nahi. Poore desh ke liye koi ek fixed "Land Seeding Form PDF" nahi hai. Har state ka revenue department apne hisaab se saadha application form ya declaration leta hai. Kai jagah toh saade kagaz par likhi application bhi chal jaati hai, bas Patwari ka verification aur khasra-khatauni ki copy saath honi chahiye. Isliye jo websites "all India land seeding form PDF" bech rahi hain ya download karwa rahi hain, unse bachein.',
+    q: 'Kya koi ek official PDF hai jo poore desh mein chalta hai?',
+    a: 'Nahi hai. Zameen ka mamla state ka vishay hai, isliye har rajya — balki kai jagah har district — apna alag format leta hai. Kai tehsilon mein toh saade kagaz par likhi application bhi chal jaati hai, bas saath mein khatauni ki copy aur Patwari ka verification hona chahiye. Jo websites "all India PDF" download karwane ka dawa karti hain, wo sirf clicks ke liye aisa likhti hain.',
   },
   {
-    q: 'Form kahan se milega?',
-    a: 'Teen jagah se: apne Patwari (Lekhpal) se, nazdiki CSC center se, ya Block Agriculture Office (BAO) se. Kuch states ke agriculture department portal par bhi format mil jaata hai. Form free hota hai — iske paise nahi lagte.',
+    q: 'Yeh kagaz milega kahan se?',
+    a: 'Teen jagah se — apne halke ke Patwari ya Lekhpal se, gaon ke CSC (Jan Seva Kendra) se, ya Block Agriculture Office se. Teeno jagah yeh muft milta hai. Kuch rajyon ke krishi vibhag ki website par bhi format pada hota hai.',
   },
   {
-    q: 'Land seeding hone mein kitne din lagte hain?',
-    a: 'Koi fixed sarkari deadline nahi hai. Aam taur par form jama karne ke baad Patwari verification aur record update mein 2 se 4 hafte lag jaate hain. Kabhi kabhi zyada bhi lag sakta hai — agar 30-40 din baad bhi status na badle toh Block Agriculture Office mein jaakar poochhein ya PM Kisan helpline 155261 par call karein.',
+    q: 'Kitne din mein kaam ho jaata hai?',
+    a: 'Koi sarkari deadline tay nahi hai. Mere anubhav mein jama karne ke baad verification aur record update mein do se chaar hafte lag jaate hain. Agar 30-40 din baad bhi kuch na badle, toh Block Agriculture Office jaakar poochhein ya helpline 155261 par baat karein.',
   },
   {
-    q: 'Khasra number kahan se milega?',
-    a: 'Khatauni (Record of Rights) mein likha hota hai. Agar Khatauni ghar par nahi hai toh apne state ke Bhulekh portal par jaakar district, tehsil aur village select karke online nikaal sakte hain — zyada tar states mein saadharan copy free milti hai. Ya phir Patwari se poochh lein.',
+    q: 'Khasra number kahan likha hota hai?',
+    a: 'Khatauni (Record of Rights) mein. Ghar par copy nahi hai toh apne rajya ke Bhulekh portal par district, tehsil aur gaon chun kar online nikaal lein — zyada tar jagah saadharan copy muft milti hai. Ya Lekhpal se poochh lein, unke paas poora record rehta hai.',
   },
   {
-    q: 'Form bharne ke paise lagte hain kya?',
-    a: 'Form khud free hai. CSC center par form bharwane ya print nikalwane ka mamooli service charge lag sakta hai. Agar koi bada amount maange — jaise seeding "karwa dene" ke naam par sau-paanch sau rupaye — toh samajh jaayein ki galat ho raha hai. Seeding sirf Patwari verification se hoti hai, paise dene se jaldi nahi hoti.',
+    q: 'Paise kitne lagenge?',
+    a: 'Kagaz muft hai. CSC par bharwane ya print ka mamooli service charge lag sakta hai — bas itna. Koi "seeding karwa dene" ke naam par sau-paanch sau maange toh saaf mana kar dein. Yeh kaam sirf Patwari ke verification se hota hai, paisa dene se na jaldi hota hai na pakka.',
   },
   {
-    q: 'Land seeding status online kaise check karein?',
-    a: 'pmkisan.gov.in kholein, Farmers Corner mein "Know Your Status" (Beneficiary Status) par jaayein, registration number daal kar OTP verify karein. Wahan Land Seeding ke saamne Yes ya No likha milega. No ka matlab hai record abhi link nahi hua — form bharna padega.',
+    q: 'Status online kahan dikhega?',
+    a: 'pmkisan.gov.in par Farmers Corner mein "Know Your Status" kholein, registration number daalein aur OTP se verify karein. Wahan Land Seeding ke saamne Yes ya No likha milega. No ka matlab — record abhi juda nahi, aavedan dena padega.',
   },
   {
-    q: 'Land seeding online apply karne ki last date kya hai?',
-    a: 'Koi last date nahi hoti — yeh koi scheme ka registration nahi, record link karne ka kaam hai. Lekin jab tak seeding pending hai, kist rukti rahegi. Isliye jitni jaldi form jama karein, utna behtar.',
+    q: 'Apply karne ki koi last date hai kya?',
+    a: 'Nahi. Yeh kisi scheme ka registration nahi, record jodne ka kaam hai — kabhi bhi karwa sakte hain. Lekin jab tak yeh adhoora hai, kist rukti rahegi, isliye taalna nuksaan ka sauda hai.',
   },
   {
-    q: 'eKYC ho gaya hai, phir bhi land seeding No kyun dikha raha hai?',
-    a: 'Kyunki dono alag cheezein hain. eKYC aapki pehchaan (Aadhaar) verify karta hai, land seeding aapki zameen ka record PM Kisan se jodta hai. Paisa aane ke liye dono complete hone chahiye — eKYC, land seeding aur Aadhaar-bank linking (DBT enabled account), teeno.',
+    q: 'eKYC ho chuka hai, phir bhi No kyun dikha raha hai?',
+    a: 'Kyunki dono alag cheezein hain. eKYC aapki pehchaan verify karta hai, seeding aapki zameen ka record jodti hai. Paisa aane ke liye teen cheezein chahiye — eKYC, seeding, aur Aadhaar se juda bank khata (DBT). Ek ho jaane se baaki do apne aap nahi hote.',
   },
   {
-    q: 'Zameen pita ji ke naam par hai, mere naam par nahi — kya karun?',
-    a: 'PM Kisan ka paisa usi ko milta hai jiske naam par zameen ka record hai. Agar zameen abhi bhi pita ji ya dada ji ke naam par hai, toh pehle virasat (mutation/namantaran) karwana hoga — yeh tehsil se hota hai. Mutation ke baad hi aapke naam par land seeding ho paayegi.',
+    q: 'Zameen pita ji ke naam par hai — mera kya hoga?',
+    a: 'Paisa usi ko milta hai jiske naam record hai. Pehle tehsil se virasat (mutation/namantaran) karwayein. Jab tak record aapke naam nahi chadhta, aapke naam par seeding ho hi nahi sakti — yeh kadwa sach hai par yahi niyam hai.',
   },
   {
-    q: 'Seeding Yes ho gaya par paisa phir bhi nahi aaya — ab kya?',
-    a: 'Toh atakne ki wajah kahin aur hai. Status page par eKYC aur Aadhaar-bank linking bhi check karein. Agar teeno Yes hain aur phir bhi kist nahi aayi, toh FTO status dekhein aur payment failed wala process follow karein — humne uspar alag article likha hai.',
+    q: 'Yes ho gaya, paisa phir bhi nahi aaya — ab?',
+    a: 'Matlab gaadi kahin aur atki hai. Status page par eKYC aur bank-Aadhaar linking bhi dekhein. Teeno Yes hain aur kist phir bhi nahi aayi, toh FTO status check karein — humne payment failed par alag se poora guide likha hai.',
   },
 ];
 
-// Har state ka OFFICIAL land-records (Bhulekh) portal — DILRMP (dilrmp.gov.in) ki
+// Har rajya ka OFFICIAL land-records (Bhulekh) portal — DILRMP (dilrmp.gov.in) ki
 // state-wise RoR list se verify kiya gaya. Jin states/UTs ka dedicated portal nahi
 // hai, wahan state ka official govt portal diya hai. In portals se khasra-khatauni
-// (RoR) ki copy nikalti hai — land seeding form yahan se download NahI hota, wo
+// (RoR) ki copy nikalti hai — seeding ka aavedan yahan se download NahI hota, wo
 // Patwari/CSC/BAO se milta hai. Isliye buttons ka label imaandaar rakha hai.
 const STATE_LINKS = [
   { name: 'Uttar Pradesh', url: 'https://upbhulekh.gov.in' },
@@ -101,6 +101,40 @@ const STATE_LINKS = [
   { name: 'Ladakh', url: 'https://ladakh.gov.in' },
 ];
 
+// Chaupal-style sawaal-jawaab — gaon mein jo asli sawaal uthte hain
+const CHAUPAL = [
+  {
+    who: 'Ramesh, Sitapur',
+    ask: 'Khasra number galat likh gaya tha, ab kya karun?',
+    ans: 'Khatauni se milaa kar sahi number ke saath naya aavedan bharo aur Lekhpal se dobara verify karwao. Aur haan — aage se andaze se number kabhi mat likhna, yahi sabse badi galti hai.',
+  },
+  {
+    who: 'Saroj Devi, Ara',
+    ask: 'Aadhaar mein naam "Saroj Devi" hai, jamabandi mein sirf "Saroj" — form atkega kya?',
+    ans: 'Atak sakta hai. Dono jagah naam ek jaisa hona chahiye. Chhota fark hai toh pehle sudhaar karwa lo — Aadhaar wala sudhaar Aadhaar center se, record wala tehsil se. Iske liye humara correction guide bhi padh lo.',
+  },
+  {
+    who: 'Vikram, Jhunjhunu',
+    ask: 'Zameen abhi bhi dada ji ke naam chal rahi hai. Seeding ho jayegi?',
+    ans: 'Nahi hogi bhai. Pehle tehsil se virasat (namantaran) karwao. Record jab tak tumhare naam nahi chadhta, tumhare naam par kuch bhi link nahi ho sakta.',
+  },
+  {
+    who: 'Mahesh, Satna',
+    ask: 'Patwari sign karne mein tal-matol kar raha hai, mahina ho gaya.',
+    ans: 'Vinamrta se likhit application do. Phir bhi na ho toh Tehsildar ya Revenue Inspector se shikayat karo. Kai rajyon mein CM helpline bhi hai — UP mein 1076. Likhit shikayat ka asar zubaani se zyada hota hai.',
+  },
+  {
+    who: 'Iqbal, Moradabad',
+    ask: 'Jama kiye mahina ho gaya, status abhi bhi No hai.',
+    ans: 'Receiving le kar Block Agriculture Office jao aur seedha poochho ki aavedan kahan atka hai. Helpline 155261 par bhi shikayat darj karwa sakte ho. Receiving isi din ke liye sambhaal kar rakhi thi na.',
+  },
+  {
+    who: 'Gurpreet, Bathinda',
+    ask: 'Yes dikha raha hai, par kist phir bhi nahi aayi.',
+    ans: 'Toh rukavat kahin aur hai — eKYC ya bank-Aadhaar linking check karo, aur FTO status dekho. Iske liye humara payment failed wala guide step-by-step kaam karega.',
+  },
+];
+
 export default function PmKisanLandSeedingFormPdf2026() {
   return (
     <>
@@ -113,9 +147,9 @@ export default function PmKisanLandSeedingFormPdf2026() {
             <span>/</span>
             <span className="text-white font-bold">Land Seeding Form</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Complete Form Guide</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Zameeni Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan Land Seeding Form 2026: Download Ka Poora Sach, Bharne Ka Tarika, State Wise Guide
+            PM Kisan Land Seeding Form 2026: Kahan Milta Hai, Kaise Bharein — Bina Ghumaye Poora Sach
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
@@ -131,7 +165,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-land-seeding-form/land-seeding-form-hero.webp"
-            alt="PM Kisan land seeding form guide — state wise process with khasra khatauni details"
+            alt="PM Kisan land seeding ka poora process — khasra khatauni ke saath zameeni guide"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -139,183 +173,143 @@ export default function PmKisanLandSeedingFormPdf2026() {
             priority
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)]">
-            Land Seeding 2026 — sahi process, sahi jagah se
+            Sahi jagah se, sahi tarike se — 2026 ki zameeni guide
           </p>
         </div>
 
         <section className="mb-8">
-          <SH>Pehle Ek Saaf Baat — Kyunki Yahi Sabse Zaroori Hai</SH>
+          <SH>Seedhi Baat, Shuru Mein Hi</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Main khud kheti-baadi se juda hua aadmi hoon, aur jab mere gaon mein logon ki kist rukne lagi thi toh maine yeh poora process khud jheel kar samjha hai. Internet par "PM Kisan Land Seeding Form PDF Download" search karoge toh dher saari websites milengi jo dawa karti hain ki unke paas har state ka official PDF hai. Sach yeh hai —
+            Kheti-baadi se juda aadmi hoon, aur jab mere gaon mein logon ki kist rukne lagi thi toh yeh poora chakkar maine khud jheel kar samjha. Google par search karoge toh dher saari websites milengi jo kahengi — "yahan se PDF download karo, kaam ho jayega." Pehle hi bata deta hoon:
           </p>
           <WB>
-            <strong>Poore Bharat ke liye koi ek official "Land Seeding Form PDF" exist hi nahi karta.</strong> Land seeding zameen ke record se juda kaam hai, aur zameen ka record state ka vishay hai. Har state — balki kai jagah har district — apne hisaab se saadha application form ya declaration leta hai. Kai tehsilon mein toh saade kagaz par likhi application bhi chal jaati hai, agar saath mein khasra-khatauni ki copy aur Patwari ka verification ho.
+            <strong>Poore Bharat ke liye aisa koi ek official PDF hai hi nahi.</strong> Zameen ka record rajya ka vishay hai — har jagah apna format chalta hai, aur kai tehsilon mein saade kagaz par likhi application bhi chal jaati hai, agar saath mein khatauni ki copy ho aur Patwari ka verification ho.
           </WB>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3 mt-4">
-            Isliye is article mein main aapko koi jaali PDF download nahi karwaunga. Iski jagah wo bataunga jo asal mein kaam aata hai: form asli mein kahan se milta hai, kaise bharte hain, kaunse documents chahiye, status kaise check karte hain, aur har state ke <strong>official sarkari Bhulekh portal</strong> ke links — jahan se aap apni khasra-khatauni nikaal sakte ho, jo is form ke saath lagti hai.
+            Isliye main aapka waqt kisi jaali download mein barbaad nahi karunga. Iski jagah wo sab bataunga jo asal mein kaam aata hai — yeh kagaz milta kahan se hai, bharte kaise hain, saath mein kya lagana hota hai, aur har rajya ke <strong>sarkari Bhulekh portal</strong> ke seedhe links, jahan se khatauni ki copy nikalti hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Agar aap beneficiary list mein naam hone ke bawajood paisa na aane se pareshan hain, toh yeh guide end tak padhein — 90% cases mein dikkat yahin se shuru hoti hai.
+            Beneficiary list mein naam hone ke bawajood paisa nahi aa raha? Toh aage padhte jaayein — dus mein se nau baar dikkat yahin se shuru hoti hai.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>Land Seeding Kya Hai? Aasaan Bhasha Mein</SH>
+          <SH>Yeh Seeding Hai Kya Cheez?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            PM Kisan Samman Nidhi mein saal ke ₹6,000 teen kiston mein milte hain — par sirf un kisano ko jinke <strong>naam par kheti ki zameen ka record</strong> hai. Ab sarkar ko kaise pata chale ki aapke naam par zameen hai? Iske liye aapke zameen ke record (khasra-khatauni / jamabandi) ko PM Kisan ke database se joda jaata hai. Isi jodne ke kaam ko <strong>Land Seeding</strong> kehte hain.
+            PM Kisan mein saal ke ₹6,000 sirf unhi ko milte hain jinke <strong>apne naam par kheti ki zameen</strong> darj hai. Sarkar ko kaise pata chale ki aapke naam kitni zameen hai? Iske liye aapki khatauni/jamabandi ka record yojana ke database se joda jaata hai — bas isi jodne ke kaam ka naam hai <strong>land seeding</strong>.
           </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Jab tak yeh linking nahi hoti, portal par status mein <strong>Land Seeding: No</strong> dikhta hai aur kist rok di jaati hai. eKYC ho chuka ho, bank account bhi sahi ho — phir bhi paisa nahi aayega, kyunki sarkar ki nazar mein aapki zameen ka record abhi verify nahi hua.
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Jab tak yeh linking adhoori hai, portal par <strong>Land Seeding: No</strong> dikhta hai aur kist roki rehti hai — chahe eKYC ho chuka ho, chahe bank khata bilkul durust ho.
           </p>
 
           <Image
             src="/images/articles/pm-kisan-land-seeding-form/land-seeding-problem.webp"
-            alt="PM Kisan land seeding pending status — kist rukne ki sabse badi wajah"
+            alt="Land Seeding No dikhne par kist rukna — sabse aam wajah"
             width={800}
             height={450}
             className="w-full rounded-xl mb-4"
           />
 
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Yahan ek confusion bahut aam hai, isliye table bana kar samjha raha hoon — <strong>eKYC, land seeding aur Aadhaar-bank linking teen alag cheezein hain</strong>, aur paisa aane ke liye teeno complete honi chahiye:
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Yahan ek galatfahmi bahut aam hai, isliye ise <strong>teen checkpost</strong> ki tarah samjhein — kist ki gaadi ko teeno paar karne padte hain, ek bhi band ho toh gaadi wahi ruk jaati hai:
           </p>
 
-          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left">Cheez</th>
-                  <th className="p-3 text-left">Kya Verify Hota Hai</th>
-                  <th className="p-3 text-left">Kahan Se Hota Hai</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['eKYC', 'Aapki pehchaan (Aadhaar OTP / biometric / face auth)', 'pmkisan.gov.in par khud, ya CSC se'],
-                  ['Land Seeding', 'Aapke naam par zameen ka record', 'Patwari / revenue department ke through'],
-                  ['Aadhaar-Bank Linking (DBT)', 'Paisa aane wala account Aadhaar se juda ho', 'Apne bank / India Post Payments Bank se'],
-                ].map(([thing, what, where], i) => (
-                  <tr key={thing} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
-                    <td className="p-3 border-b border-[var(--color-border)] font-bold text-xs text-[var(--color-text)]">{thing}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{what}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{where}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="space-y-2 mb-4">
+            {[
+              ['1', 'eKYC', 'Aapki pehchaan ki jaanch — Aadhaar OTP, biometric ya face auth se. Yeh pmkisan.gov.in par khud ho jaata hai ya CSC se.'],
+              ['2', 'Land Seeding', 'Aapki zameen ke record ka milan — yeh Patwari/revenue mehkame ke through hota hai. Isi par yeh poora article hai.'],
+              ['3', 'Bank-Aadhaar Linking (DBT)', 'Jis khaate mein paisa aana hai wo Aadhaar se juda ho. Yeh apne bank ya India Post Payments Bank se hota hai.'],
+            ].map(([n, title, desc]) => (
+              <div key={n} className="flex gap-3 items-start p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+                <span className="shrink-0 w-8 h-8 rounded-full bg-[var(--color-primary)] text-white font-black text-sm flex items-center justify-center">{n}</span>
+                <div>
+                  <p className="font-black text-sm text-[var(--color-text)]">{title}</p>
+                  <p className="text-xs text-[var(--color-text-muted)] leading-relaxed mt-1">{desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
           <IB>
-            Mere gaon mein kai log eKYC dobara-dobara karwate rahe jabki unki asli dikkat land seeding thi. Pehle status check karke yeh pata karein ki atka kahan hai — phir wahi kaam karein.
+            Mere gaon mein kai log baar-baar eKYC karwate rahe jabki unki gaadi checkpost number 2 par atki thi. Pehle yeh pata karein ki atka kahan hai — phir wahi kaam karein, mehnat bachegi.
           </IB>
         </section>
 
         <section className="mb-8">
-          <SH>Land Seeding Status Online Kaise Check Karein?</SH>
+          <SH>Pehle 2 Minute Ka Kaam: Apna Status Dekhein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Form bharne se pehle 2 minute ka yeh kaam zaroor karein — kahin aisa na ho ki seeding pehle se ho chuki ho aur aap bewajah Patwari ke chakkar kaatein:
+            Kahin aisa na ho ki seeding pehle se ho chuki ho aur aap bewajah daftar ke chakkar kaatein. Isliye sabse pehle:
           </p>
           <StepList>
             <SI n={1}><strong>pmkisan.gov.in</strong> kholein</SI>
-            <SI n={2}>Farmers Corner mein <strong>Know Your Status</strong> par click karein</SI>
-            <SI n={3}>Apna registration number daalein (agar nahi pata toh wahi page par "Know your registration no." se Aadhaar ya mobile number se nikaal lein)</SI>
-            <SI n={4}>OTP verify karein — poora status khul jayega</SI>
-            <SI n={5}><strong>Land Seeding</strong> ke saamne dekhein: <strong>Yes</strong> hai toh sab theek, <strong>No</strong> hai toh neeche ka process follow karein</SI>
+            <SI n={2}>Farmers Corner mein <strong>Know Your Status</strong> par jaayein</SI>
+            <SI n={3}>Registration number daalein — nahi pata toh wahi page par "Know your registration no." se Aadhaar ya mobile se nikaal lein</SI>
+            <SI n={4}>OTP verify karte hi poora byora khul jayega</SI>
+            <SI n={5}><strong>Land Seeding</strong> ke saamne dekhein — <strong>Yes</strong> hai toh aapka is article se kaam khatam, <strong>No</strong> hai toh aage badhein</SI>
           </StepList>
-
-          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left">Status</th>
-                  <th className="p-3 text-left">Matlab</th>
-                  <th className="p-3 text-left">Kya Karein</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['Land Seeding: Yes', 'Zameen ka record link ho chuka hai', 'Kuch nahi — eKYC aur bank linking bhi Yes hai toh kist ka intezaar karein'],
-                  ['Land Seeding: No', 'Record abhi link nahi hua', 'Form bhar kar Patwari verification ke saath jama karein'],
-                  ['Form jama kiya, abhi bhi No', 'Verification process mein hai', 'Aam taur par 2-4 hafte lagte hain; zyada ho toh BAO office mein poochhein'],
-                ].map(([status, meaning, action], i) => (
-                  <tr key={status} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
-                    <td className="p-3 border-b border-[var(--color-border)] font-bold text-xs text-[var(--color-text)]">{status}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{meaning}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{action}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <IB>
+            <strong>Yes</strong> hone par bhi kist na aayi ho toh baaki do checkpost (eKYC, bank linking) dekhein — wahan ki kahani <Link href="/articles/PmKisanPaymentFailedFix2026" className="underline">payment failed guide</Link> mein alag se likhi hai.
+          </IB>
         </section>
 
         <section className="mb-8">
-          <SH>Form Asli Mein Kahan Se Milta Hai? (3 Sahi Jagahein)</SH>
+          <SH>Yeh Kagaz Milta Kahan Se Hai? (3 Sahi Jagahein)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ab asli sawaal. Land seeding form — jise kai jagah land seeding application ya ghoshna patra bhi kehte hain — in teen jagahon se milta hai, aur teeno par yeh <strong>free</strong> hai:
+            Ab asli sawaal. Seeding ka aavedan — jise kahin application, kahin ghoshna patra kehte hain — in teen jagahon se milta hai, aur teeno jagah <strong>muft</strong>:
           </p>
           <div className="space-y-3 mb-4">
             <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
               <p className="font-black text-sm text-[var(--color-text)] mb-1">1. Patwari / Lekhpal se</p>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
-                Sabse seedha rasta. Patwari ke paas hi zameen ka record hota hai aur usi ka verification form par chahiye hota hai — toh form bhi wahin se lena sabse samajhdaari hai. Ek hi visit mein form bhi mil jaata hai aur aapke khasra-khatauni ki jaanch bhi ho jaati hai.
+                Sabse seedha rasta. Record unhi ke paas hota hai aur verification bhi unhi ka chahiye — toh ek hi mulaqat mein kagaz bhi mil jaata hai aur aapke khasra-khatauni ki jaanch bhi ho jaati hai. Do kaam, ek chakkar.
               </p>
             </div>
             <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-              <p className="font-black text-sm text-[var(--color-text)] mb-1">2. CSC (Common Service Center) se</p>
+              <p className="font-black text-sm text-[var(--color-text)] mb-1">2. CSC / Jan Seva Kendra se</p>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
-                Gaon-kasbe ke Jan Seva Kendra par bhi form mil jaata hai aur wahan bharwane mein madad bhi milti hai. Form free hai; print/bharwane ka mamooli service charge lag sakta hai. Koi seeding "karwa dene" ke naam par bada amount maange toh mana kar dein — seeding sirf Patwari verification se hoti hai.
+                Gaon-kasbe ke center par bhi mil jaata hai aur bharwane mein madad bhi. Print-bharwai ka mamooli service charge lag sakta hai, bas. Koi "seeding karwa denge" keh kar bada amount maange toh wahan se uth jaayein — yeh kaam paise se nahi, verification se hota hai.
               </p>
             </div>
             <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
               <p className="font-black text-sm text-[var(--color-text)] mb-1">3. Block Agriculture Office (BAO) se</p>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
-                Form yahin jama bhi hota hai, toh yahan se lena bhi sahi rehta hai. Saath mein yeh bhi poochh lein ki aapke block mein kaunsa format chalta hai — kyunki format district-to-district thoda alag ho sakta hai.
+                Aavedan yahin jama bhi hota hai, toh yahin se lena bhi samajhdaari hai. Saath mein yeh bhi poochh lein ki aapke block mein kaunsa format chalta hai — district-to-district thoda alag ho sakta hai.
               </p>
             </div>
           </div>
           <IB>
-            <strong>Yaad rakhein:</strong> form ka koi bhi format ho, usmein aakhir mein 3 cheezein honi hi chahiye — aapke sahi khasra-khatauni details, aapka Aadhaar-jaisa naam, aur Patwari ka sign-stamp. Baaki format ka fark nahi padta.
+            Format koi bhi ho, aakhir mein teen cheezein honi hi chahiye — sahi khasra-khatauni ka byora, Aadhaar jaisa naam, aur Patwari ka sign-stamp. Baaki format ka fark nahi padta.
           </IB>
         </section>
 
         <section className="mb-8">
-          <SH>Kaunse Documents Chahiye?</SH>
-          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left">Document</th>
-                  <th className="p-3 text-left">Kyun Chahiye</th>
-                  <th className="p-3 text-left">Kahan Se Milega</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['Khatauni / Jamabandi ki copy', 'Isi se zameen ka record verify hota hai', 'State ke Bhulekh portal se ya Patwari se'],
-                  ['Aadhaar card ki copy', 'PM Kisan record se naam match karne ke liye', 'Aapke paas hoga; nahi toh uidai.gov.in se e-Aadhaar'],
-                  ['Bank passbook ki copy', 'Account details ke milan ke liye', 'Apne bank se'],
-                  ['PM Kisan registration number', 'Aapka record dhoondhne ke liye', 'pmkisan.gov.in par "Know your registration no." se'],
-                ].map(([doc, why, where], i) => (
-                  <tr key={doc} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
-                    <td className="p-3 border-b border-[var(--color-border)] font-bold text-xs text-[var(--color-text)]">{doc}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{why}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{where}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Sabse zaroori document Khatauni hai. Aur yahi wo jagah hai jahan state ke official Bhulekh portal kaam aate hain — ghar baithe khatauni ki saadharan copy nikaal sakte ho, Patwari ke ek chakkar ki bachat.
+          <SH>Saath Mein Kya-Kya Lagana Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ghar se nikalne se pehle yeh chaar cheezein thaile mein daal lein — koi bhi chhute toh dobara chakkar pakka hai:
           </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+            {[
+              ['Khatauni / Jamabandi ki copy', 'Sabse zaroori. Bhulekh portal se online nikalti hai ya Lekhpal se milti hai.'],
+              ['Aadhaar card ki copy', 'Naam ke milan ke liye. Kho gaya ho toh uidai.gov.in se e-Aadhaar nikaal lein.'],
+              ['Bank passbook ki copy', 'Khaate ke byore ke milan ke liye — apne bank se.'],
+              ['PM Kisan registration number', 'Aapka record dhoondhne ke liye — pmkisan.gov.in par "Know your registration no." se milta hai.'],
+            ].map(([doc, note]) => (
+              <div key={doc} className="flex gap-2 items-start p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
+                <span className="shrink-0 text-green-700 dark:text-green-400 font-black">✓</span>
+                <div>
+                  <p className="font-bold text-xs text-[var(--color-text)]">{doc}</p>
+                  <p className="text-xs text-[var(--color-text-muted)] mt-0.5 leading-relaxed">{note}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-blue-800 dark:text-blue-300 mb-3">
-            State Wise Official Bhulekh Portal — Khasra-Khatauni Yahan Se Nikaalein
+            Apne Rajya Ka Sarkari Bhulekh Portal — Khatauni Yahan Se Nikaalein
           </h2>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            Yeh sabhi links seedhe <strong>sarkari portals</strong> ke hain — inse aap apni khasra-khatauni / jamabandi ki copy nikaal sakte hain jo land seeding form ke saath lagti hai. (Form khud Patwari/CSC/BAO se milta hai — upar padhein.)
+            Yeh sabhi links seedhe <strong>sarkari portals</strong> ke hain — inse khasra-khatauni / jamabandi ki copy nikalti hai jo aavedan ke saath lagti hai. (Aavedan khud Patwari/CSC/BAO se milta hai — upar padh aaye hain.)
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-96 overflow-y-auto">
             {STATE_LINKS.map((state) => (
@@ -333,158 +327,154 @@ export default function PmKisanLandSeedingFormPdf2026() {
             ))}
           </div>
           <IB>
-            <strong>Portal chalane mein dikkat aa rahi hai?</strong> Koi baat nahi — Patwari ya nazdiki CSC se khatauni ki copy nikalwa lein. Kaam wahi hai, rasta alag hai.
+            <strong>Portal chalane mein dikkat?</strong> Koi baat nahi — Lekhpal ya nazdiki CSC se copy nikalwa lein. Kaam wahi, rasta alag.
           </IB>
         </div>
 
         <section className="mb-8">
-          <SH>Land Seeding Form Kaise Bharein? Step-by-Step</SH>
+          <SH>Bharne Ka Tarika — Jaise Main Apne Bhai Ko Samjhaata</SH>
           <StepList>
-            <SI n={1}>Pehle pmkisan.gov.in par status check karein — <strong>Land Seeding: No</strong> ho tabhi aage badhein.</SI>
-            <SI n={2}>Patwari, CSC ya Block Agriculture Office se form lein.</SI>
-            <SI n={3}>Apna naam <strong>bilkul waisa hi likhein jaisa Aadhaar card par hai</strong> — matra ka fark bhi form atka sakta hai.</SI>
-            <SI n={4}>Aadhaar number aur PM Kisan registration number dhyan se bharein.</SI>
-            <SI n={5}>Khasra number aur Khatauni/khata number Khatauni ki copy se dekh kar bharein — yaaddaasht se kabhi na likhein.</SI>
-            <SI n={6}>Zameen ka rakba (hectare/acre/bigha — jo form maange) Khatauni ke hisaab se likhein.</SI>
-            <SI n={7}>Bank account number aur IFSC code passbook se dekh kar bharein.</SI>
-            <SI n={8}>Khatauni, Aadhaar aur passbook ki copy form ke saath lagayein.</SI>
-            <SI n={9}>Patwari se record verify karwa kar unka <strong>sign aur stamp</strong> lagwayein — iske bina form aage nahi badhta.</SI>
-            <SI n={10}>Form Block Agriculture Office mein jama karein aur jama karne ki <strong>receiving/pawti zaroor lein</strong>.</SI>
-            <SI n={11}>2-4 hafte baad portal par <Link href="/articles/PmKisanSelfRegisteredStatusCheck" className="underline text-green-700 dark:text-green-400">status dobara check karein</Link>.</SI>
+            <SI n={1}>Pehle status dekh lein — <strong>No</strong> ho tabhi aage badhein, warna mehnat bekar.</SI>
+            <SI n={2}>Patwari, CSC ya BAO se aavedan lein.</SI>
+            <SI n={3}>Naam <strong>bilkul waisa likhein jaisa Aadhaar par chhapa hai</strong> — ek matra ka fark bhi kaam atka sakta hai.</SI>
+            <SI n={4}>Aadhaar number aur registration number dhyan se utaarein.</SI>
+            <SI n={5}>Khasra aur khata number <strong>khatauni ki copy saamne rakh kar</strong> bharein — yaaddaasht par kabhi bharosa na karein.</SI>
+            <SI n={6}>Rakba (hectare/acre/bigha — jo bhi maanga ho) record ke hisaab se likhein.</SI>
+            <SI n={7}>Khaata number aur IFSC passbook se dekh kar utaarein.</SI>
+            <SI n={8}>Chaaron documents ki copy nathi karein.</SI>
+            <SI n={9}>Patwari se milan karwa kar unka <strong>sign aur stamp</strong> lagwayein — iske bina kagaz aage nahi badhta.</SI>
+            <SI n={10}>BAO mein jama karein aur <strong>receiving/pawti zaroor lein</strong>.</SI>
+            <SI n={11}>Do-chaar hafte baad <Link href="/articles/PmKisanSelfRegisteredStatusCheck" className="underline text-green-700 dark:text-green-400">status dobara dekhein</Link>.</SI>
           </StepList>
 
           <Image
             src="/images/articles/pm-kisan-land-seeding-form/land-seeding-form-filled-sample.webp"
-            alt="PM Kisan land seeding form bharne ka sample — khasra khatauni aur bank details"
+            alt="Aavedan bharne ka namuna — khasra khatauni aur bank byore ke saath"
             width={800}
             height={600}
             className="w-full rounded-xl my-6"
           />
 
           <WB>
-            <strong>Zaroori Salah (khud ki galtiyon se seekhi hui):</strong>
+            <strong>Apni galtiyon se seekhi hui salah:</strong>
             <ul className="list-disc list-inside mt-2 space-y-1 text-xs">
-              <li>Form black ya blue pen se bharein, overwriting na karein.</li>
-              <li>Khasra number Khatauni se milaye bina form jama na karein — sabse zyada rejections isi se hote hain.</li>
-              <li>Patwari ka sign-stamp lena na bhoolen.</li>
-              <li>Jama karne se pehle bhare hue form ki photo phone mein le lein aur photocopy apne paas rakhein.</li>
-              <li>Receiving lena na bhoolein — baad mein "form mila hi nahi" wali bahas se bachaati hai.</li>
+              <li>Black ya blue pen, overwriting bilkul nahi.</li>
+              <li>Khasra number khatauni se milaye bina jama na karein — sabse zyada rejection isi se hote hain.</li>
+              <li>Jama karne se pehle bhare hue kagaz ki photo phone mein le lein.</li>
+              <li>Receiving lena na bhoolein — baad mein "hume mila hi nahi" wali bahas se yahi bachaati hai.</li>
             </ul>
           </WB>
         </section>
 
         <section className="mb-8">
-          <SH>State Wise Process Mein Kya Fark Hai?</SH>
+          <SH>Rajya Badle Toh Kya Badalta Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Process ka dhaancha har jagah wahi hai — form + khatauni + Patwari verification + BAO mein jama. Fark bas naamon aur portals ka hai:
+            Dhaancha har jagah wahi hai — aavedan + khatauni + verification + BAO mein jama. Fark bas naamon aur portals ka:
           </p>
-
-          <h3 id="uttar-pradesh" className="font-black text-[var(--color-text)] text-base mb-2 mt-6 scroll-mt-24">Uttar Pradesh</h3>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Patwari ko yahan <strong>Lekhpal</strong> kehte hain. Khatauni <a href="https://upbhulekh.gov.in" target="_blank" rel="noopener noreferrer nofollow" className="underline">upbhulekh.gov.in</a> se online nikal jaati hai — district, tehsil, gaon select karke khasra ya naam se search karein. Form Lekhpal ya Rajkiya Krishi Beej Bhandar / block ke krishi vibhag se milta hai.
-          </p>
-
-          <h3 id="bihar" className="font-black text-[var(--color-text)] text-base mb-2 mt-6 scroll-mt-24">Bihar</h3>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Yahan zameen ke record ka kaam <strong>Karmchari / Circle Officer (Anchal Adhikari)</strong> ke paas hota hai. Jamabandi <a href="https://biharbhumi.bihar.gov.in" target="_blank" rel="noopener noreferrer nofollow" className="underline">biharbhumi.bihar.gov.in</a> se dekhi ja sakti hai. Form anchal karyalaya ya block agriculture office se lein.
-          </p>
-
-          <h3 id="madhya-pradesh" className="font-black text-[var(--color-text)] text-base mb-2 mt-6 scroll-mt-24">Madhya Pradesh</h3>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Khasra-khatauni (Bhu-Abhilekh) <a href="https://mpbhulekh.gov.in" target="_blank" rel="noopener noreferrer nofollow" className="underline">mpbhulekh.gov.in</a> se nikalti hai — saadharan pratilipi free milti hai. Verification Patwari ke through hi hota hai.
-          </p>
-
-          <h3 id="rajasthan" className="font-black text-[var(--color-text)] text-base mb-2 mt-6 scroll-mt-24">Rajasthan</h3>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Jamabandi ki nakal <a href="https://apnakhata.rajasthan.gov.in" target="_blank" rel="noopener noreferrer nofollow" className="underline">apnakhata.rajasthan.gov.in</a> (Apna Khata) se nikalti hai. Form Patwari ya <strong>E-Mitra center</strong> se mil jaata hai — E-Mitra wale bharwane mein bhi madad kar dete hain.
-          </p>
-
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Rajya</th>
+                  <th className="p-3 text-left">Record Rakhta Kaun Hai</th>
+                  <th className="p-3 text-left">Khatauni/Jamabandi Kahan Se</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['Uttar Pradesh', 'Lekhpal (yahan Patwari ko yahi kehte hain)', 'upbhulekh.gov.in — district, tehsil, gaon chun kar'],
+                  ['Bihar', 'Karmchari / Anchal Adhikari (CO)', 'biharbhumi.bihar.gov.in'],
+                  ['Madhya Pradesh', 'Patwari', 'mpbhulekh.gov.in — saadharan pratilipi muft'],
+                  ['Rajasthan', 'Patwari; E-Mitra bharwane mein madad karta hai', 'apnakhata.rajasthan.gov.in (Apna Khata)'],
+                ].map(([st, who, portal], i) => (
+                  <tr key={st} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-bold text-xs text-[var(--color-text)]">{st}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{who}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{portal}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Baaki states ke liye upar wali list mein se apna Bhulekh portal kholein — record nikaalne ka tarika sab jagah lagbhag ek jaisa hai: district → tehsil → village → khasra/naam se search.
+            Baaki rajyon ke liye upar wali portal list mein se apna link kholein — record nikaalne ka tarika sab jagah lagbhag ek jaisa hai: district → tehsil → gaon → khasra ya naam se khoj.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>Common Problems + Unke Asli Solutions</SH>
-          <div className="space-y-3">
-            {[
-              { problem: 'Khasra number galat likh diya', solution: 'Khatauni se milaa kar sahi number ke saath naya form bharein aur Patwari se dobara verify karwayein. Andaze se number kabhi na likhein.' },
-              { problem: 'Aadhaar aur Khatauni mein naam alag hai', solution: 'Dono mein naam ek jaisa hona chahiye. Chhota fark hai toh pehle record durust karwayein — Aadhaar correction Aadhaar center se, Khatauni correction tehsil se hoti hai.' },
-              { problem: 'Zameen pita ji / dada ji ke naam par hai', solution: 'Pehle virasat (mutation/namantaran) tehsil se karwayein. Jab tak record aapke naam nahi hota, aapke naam par seeding nahi ho sakti.' },
-              { problem: 'Patwari sign karne mein tal-matol kar rahe hain', solution: 'Vinamrta se likhit application dein. Phir bhi na ho toh Tehsildar ya Revenue Inspector se shikayat karein, ya CM helpline (jaise UP mein 1076) par darj karayein.' },
-              { problem: 'Form jama kiye mahina ho gaya, status abhi bhi No hai', solution: 'Receiving le kar Block Agriculture Office jaayein aur form ka status poochhein. PM Kisan helpline 155261 par bhi shikayat darj kara sakte hain.' },
-              { problem: 'Land Seeding Yes hai, par paisa phir bhi nahi aaya', solution: 'Matlab atkaav kahin aur hai — eKYC aur Aadhaar-bank (DBT) linking check karein, aur FTO/payment status dekhein. Iske liye hamara payment failed wala guide padhein.' },
-            ].map(({ problem, solution }, i) => (
-              <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
-                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2">{problem}</p>
-                <p className="text-xs text-green-700 dark:text-green-400"><strong>Aise Sudharein:</strong> {solution}</p>
+          <SH>Chaupal Ke Sawaal — Jo Asal Mein Pooche Jaate Hain</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Yeh sawaal mujhse gaon mein, phone par aur comments mein baar-baar pooche gaye hain. Naam badal diye hain, sawaal asli hain:
+          </p>
+          <div className="space-y-4">
+            {CHAUPAL.map(({ who, ask, ans }) => (
+              <div key={who} className="border-l-4 border-[var(--color-primary)] pl-4 py-1">
+                <p className="text-sm text-[var(--color-text)] leading-relaxed">
+                  <span className="font-black">{who}:</span> <em>&ldquo;{ask}&rdquo;</em>
+                </p>
+                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mt-1.5">{ans}</p>
               </div>
             ))}
           </div>
         </section>
 
         <section className="mb-8">
-          <SH>Form Jama Karne Ke Baad Kya Hota Hai?</SH>
+          <SH>Jama Karne Ke Baad Kya Hota Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Jama karne ke baad ka process aam taur par aisa chalta hai (samay ka andaza mera anubhav hai, sarkari guarantee nahi):
+            Aage ka safar kuch aisa chalta hai (samay ka andaza mera anubhav hai, sarkari vaada nahi):
           </p>
-          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left">Stage</th>
-                  <th className="p-3 text-left">Kya Hota Hai</th>
-                  <th className="p-3 text-left">Aapko Kya Karna Hai</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['Form jama', 'BAO/anchal mein aapka form register hota hai', 'Receiving sambhaal kar rakhein'],
-                  ['Patwari verification', 'Zameen ke record se aapke details ka milan', 'Zaroorat pade toh Patwari se sampark mein rahein'],
-                  ['Record update', 'Verify hone par PM Kisan database mein seeding update hoti hai', 'Har hafte-do hafte mein status check karte rahein'],
-                  ['Agli kist', 'Seeding Yes + eKYC Yes + bank linking Yes = kist release ke layak', 'Kist ki date ka intezaar — beech mein kuch karna nahi hota'],
-                ].map(([stage, what, you], i) => (
-                  <tr key={stage} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
-                    <td className="p-3 border-b border-[var(--color-border)] font-bold text-xs text-[var(--color-text)]">{stage}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{what}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{you}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="relative pl-6 space-y-5 before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-0.5 before:bg-[var(--color-border)]">
+            {[
+              ['Aavedan register hua', 'BAO/anchal mein aapka kagaz darj hota hai. Aapka kaam: receiving sambhaal kar rakhna.'],
+              ['Patwari ka milan', 'Record se aapke byore ki jaanch hoti hai. Zaroorat pade toh sampark mein rahein.'],
+              ['Record update', 'Milan sahi nikla toh database mein seeding Yes ho jaati hai. Har hafte-do hafte status dekhte rahein.'],
+              ['Agli kist', 'Teeno checkpost Yes = kist release ke layak. Ab bas kist ki date ka intezaar — beech mein kuch karna nahi hota.'],
+            ].map(([stage, desc]) => (
+              <div key={stage} className="relative">
+                <span className="absolute -left-6 top-1 w-4 h-4 rounded-full bg-[var(--color-primary)] border-4 border-[var(--color-bg)]" />
+                <p className="font-black text-sm text-[var(--color-text)]">{stage}</p>
+                <p className="text-xs text-[var(--color-text-muted)] leading-relaxed mt-0.5">{desc}</p>
+              </div>
+            ))}
           </div>
           <IB>
-            Ek baat ka dhyan rahe: seeding ho jaane ka matlab yeh nahi ki paisa usi din aa jayega. Kist apne schedule par hi aati hai — seeding bas aapka rasta saaf karti hai.
+            Seeding ho jaane ka matlab yeh nahi ki paisa usi din aa jayega — kist apne schedule par hi aati hai. Seeding bas aapka rasta saaf karti hai.
           </IB>
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Nichod — 4 Line Mein</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Chaar Line Mein Nichod</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Land seeding ka koi all-India PDF nahi hota — form Patwari/CSC/BAO se free milta hai. Pehle status check karein, "No" ho tabhi form bharein. Khasra number Khatauni se milaayein, naam Aadhaar jaisa likhein, Patwari ka sign-stamp lein, receiving rakhein. Ek baar record link ho gaya toh baar-baar yeh jhanjhat nahi karni padti.
+            All-India PDF naam ki koi cheez nahi hoti — aavedan Patwari/CSC/BAO se muft milta hai. Pehle status dekhein, "No" ho tabhi bharein. Khasra number khatauni se milaayein, naam Aadhaar jaisa likhein, sign-stamp lein, receiving rakhein. Ek baar record jud gaya toh yeh jhanjhat dobara nahi karni padti.
           </p>
         </div>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Land Seeding Ke Baare Mein Log Kya Puchte Hain
+            Aur Jo Aksar Poocha Jaata Hai
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Land Seeding Form FAQ 2026" />
+          <FAQBlock faqs={FAQS_DATA} variant="inline" caption="Land seeding se jude aam sawaal — 2026" />
         </section>
 
         <section className="mb-8">
-          <SH>Yeh Guides Bhi Kaam Aayengi</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Land seeding ke saath-saath aksar yeh dikkatein bhi judti hain — inke alag detailed guides humne likhe hain:
-          </p>
-          <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2">
-            <li><Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">eKYC online kaise karein</Link> — seeding ke saath yeh bhi complete hona zaroori hai</li>
-            <li><Link href="/articles/PmKisanPaymentFailedFix2026" className="underline text-green-700 dark:text-green-400">Payment failed / kist nahi aayi toh kya karein</Link> — seeding Yes hone ke baad bhi paisa na aaye toh</li>
-            <li><Link href="/articles/PmKisanCorrectionForm2026" className="underline text-green-700 dark:text-green-400">Naam / details correction form guide</Link> — Aadhaar-Khatauni naam mismatch waalon ke liye</li>
-            <li><Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline text-green-700 dark:text-green-400">FTO Generated ka matlab</Link> — status mein FTO dikhe toh ghabrayein nahi</li>
-            <li><Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">Beneficiary list mein naam kaise check karein</Link></li>
-            <li><Link href="/articles/AgriStackKyaHai2026" className="underline text-green-700 dark:text-green-400">AgriStack Farmer ID kya hai</Link> — aage yeh bhi zameen ke record se juda hai</li>
-          </ul>
+          <SH>Aapki Haalat Ke Hisaab Se Agla Kadam</SH>
+          <div className="space-y-2">
+            {[
+              { when: 'eKYC abhi pending hai', slug: '/articles/PmKisanEkycOnline2026', label: 'eKYC online karne ka guide' },
+              { when: 'Seeding Yes hai par kist nahi aayi', slug: '/articles/PmKisanPaymentFailedFix2026', label: 'Payment failed — poora ilaaj' },
+              { when: 'Aadhaar aur record mein naam alag hai', slug: '/articles/PmKisanCorrectionForm2026', label: 'Naam/byora correction guide' },
+              { when: 'Status mein FTO Generated dikh raha hai', slug: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', label: 'FTO ka matlab kya hota hai' },
+              { when: 'List mein apna naam hi nahi mil raha', slug: '/articles/PmKisanBeneficiaryList2026', label: 'Beneficiary list mein naam kaise dekhein' },
+              { when: 'Farmer ID / registry ki baat sunayi de rahi hai', slug: '/articles/AgriStackKyaHai2026', label: 'AgriStack kya hai — aasaan bhasha mein' },
+            ].map(({ when, slug, label }) => (
+              <div key={slug} className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 p-3 bg-[var(--color-bg-alt)] rounded-xl">
+                <span className="text-xs text-[var(--color-text-muted)] sm:w-1/2">Agar {when} →</span>
+                <Link href={slug} className="text-sm font-bold text-green-700 dark:text-green-400 underline">
+                  {label}
+                </Link>
+              </div>
+            ))}
+          </div>
         </section>
 
         <GovLink
