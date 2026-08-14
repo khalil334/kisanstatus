@@ -229,7 +229,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisan24viKist2026'),
     schemes: ['pm-kisan'],
-    ogImage: '/images/pm-kisan-24vi-kist-october-2026.webp',
+    ogImage: '/images/pm-kisan-24vi-kist-og.webp',
     relatedSlugs: ['PmKisan25viKist2027', 'PmKisanBeneficiaryList2026', 'pm-kisan-fto-generated-ka-matlab-kya-hai', 'PmKisanPaymentFailedFix2026', 'PmKisanMasterGuide2026'],
   },
   {
