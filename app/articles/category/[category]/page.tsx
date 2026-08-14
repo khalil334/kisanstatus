@@ -136,6 +136,158 @@ function CategoryIntro({ category }: { category: CategorySlug }) {
     );
   }
 
+  if (category === 'status-check') {
+    return (
+      <section className="container-site mx-auto px-4 pt-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+            PM Kisan status — pehle problem pehchaniye, phir guide chuniye
+          </h2>
+          <p className="text-gray-700 dark:text-gray-300 mb-3">
+            Status check karne wale zyada tar kisan teen situations me hote hain — aur teeno ka
+            fix alag guide me hai:
+          </p>
+          <ul className="space-y-2 text-gray-700 dark:text-gray-300 mb-3">
+            <li>
+              <strong>Kist aayi nahi:</strong> pehle{' '}
+              <Link href="/articles/PmKisanBeneficiaryList2026" className="text-green-700 dark:text-green-400 underline font-semibold">
+                beneficiary list
+              </Link>{' '}
+              me naam check karein; status me “FTO Generated” dikhe to uska matlab{' '}
+              <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="text-green-700 dark:text-green-400 underline font-semibold">
+                FTO guide
+              </Link>{' '}
+              me samjha hai — payment pipeline me hai, ruki nahi.
+            </li>
+            <li>
+              <strong>Payment failed / rejected:</strong> 7 common reasons aur unke fixes{' '}
+              <Link href="/articles/PmKisanPaymentFailedFix2026" className="text-green-700 dark:text-green-400 underline font-semibold">
+                payment failed guide
+              </Link>{' '}
+              me step-by-step hain.
+            </li>
+            <li>
+              <strong>eKYC pending:</strong> sabse common block yehi hai — 2 minute ka process{' '}
+              <Link href="/articles/PmKisanEkycOnline2026" className="text-green-700 dark:text-green-400 underline font-semibold">
+                eKYC online guide
+              </Link>{' '}
+              me hai (OTP na aaye to face authentication wala rasta bhi covered hai).
+            </li>
+          </ul>
+          <p className="text-gray-600 dark:text-gray-400 text-sm">
+            Naye ho ya sab kuch ek jagah chahiye — to{' '}
+            <Link href="/articles/PmKisanMasterGuide2026" className="text-green-700 dark:text-green-400 underline">
+              PM Kisan complete guide
+            </Link>{' '}
+            se shuru karein; usme registration se lekar har error ka index hai.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
+  if (category === 'farming') {
+    return (
+      <section className="container-site mx-auto px-4 pt-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+            Kheti ki schemes — kab kaunsi kaam aati hai?
+          </h2>
+          <p className="text-gray-700 dark:text-gray-300 mb-3">
+            Ye guides season ke hisaab se sochne par aasan ho jaati hain:
+          </p>
+          <ul className="space-y-2 text-gray-700 dark:text-gray-300 mb-3">
+            <li>
+              <strong>Buwai se pehle:</strong>{' '}
+              <Link href="/articles/soil-health-card-complete-guide-2026" className="text-green-700 dark:text-green-400 underline font-semibold">
+                Soil Health Card
+              </Link>{' '}
+              se mitti test karwayein — khaad ka kharcha isi report se tay hota hai, aur{' '}
+              <Link href="/articles/NanoDap500mlPriceInIndia2026" className="text-green-700 dark:text-green-400 underline font-semibold">
+                Nano DAP
+              </Link>{' '}
+              jaise naye options ka rate/asar bhi dekh lein.
+            </li>
+            <li>
+              <strong>Buwai ke saath:</strong> fasal ka bima{' '}
+              <Link href="/articles/PmfbyCropInsurance2026" className="text-green-700 dark:text-green-400 underline font-semibold">
+                PMFBY guide
+              </Link>{' '}
+              me — 2% premium wali window buwai season ke saath hi khulti-bandh hoti hai.
+            </li>
+            <li>
+              <strong>Lambi bachat:</strong> diesel pump ka kharcha{' '}
+              <Link href="/articles/PmKusumYojanaSolarSubsidy2026" className="text-green-700 dark:text-green-400 underline font-semibold">
+                PM Kusum solar subsidy
+              </Link>{' '}
+              se ghatta hai.
+            </li>
+          </ul>
+          <p className="text-gray-600 dark:text-gray-400 text-sm">
+            Aage har scheme ka access{' '}
+            <Link href="/articles/AgriStackKyaHai2026" className="text-green-700 dark:text-green-400 underline">
+              AgriStack ki digital kisan ID
+            </Link>{' '}
+            se judne wala hai — ek baar registry samajh lena aage kaam aayega.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
+  if (category === 'mandi') {
+    return (
+      <section className="container-site mx-auto px-4 pt-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+            Mandi bhav — sirf rate dekhna kaafi nahi
+          </h2>
+          <p className="text-gray-700 dark:text-gray-300 mb-3">
+            Sahi daam pane ke liye teen cheezein saath dekhni padti hain:
+          </p>
+          <ul className="space-y-2 text-gray-700 dark:text-gray-300 mb-3">
+            <li>
+              <strong>Aaj ka rate:</strong>{' '}
+              <Link href="/articles/mandi-bhav-today" className="text-green-700 dark:text-green-400 underline font-semibold">
+                daily mandi bhav
+              </Link>{' '}
+              yahan update hota hai; sabzi bechne walon ke liye pyaz-aloo-tamatar ka seasonal
+              pattern{' '}
+              <Link href="/articles/sabzi-bhav-guide-pyaz-aloo-tamatar" className="text-green-700 dark:text-green-400 underline font-semibold">
+                alag guide
+              </Link>{' '}
+              me hai.
+            </li>
+            <li>
+              <strong>MSP se compare:</strong> mandi ka rate MSP se neeche hai ya upar — ye jaane
+              bina bechna ghate ka sauda hai.{' '}
+              <Link href="/articles/msp-list-2026-27" className="text-green-700 dark:text-green-400 underline font-semibold">
+                MSP list 2026-27
+              </Link>{' '}
+              aur{' '}
+              <Link href="/articles/gehu-ka-bhav-msp-vs-mandi" className="text-green-700 dark:text-green-400 underline font-semibold">
+                gehu MSP vs mandi
+              </Link>{' '}
+              ka comparison dekhein.
+            </li>
+            <li>
+              <strong>Behtar mandi tak pahunch:</strong> apni local mandi ke bahar bhi bech sakte
+              hain —{' '}
+              <Link href="/articles/enam-registration-kaise-kare" className="text-green-700 dark:text-green-400 underline font-semibold">
+                eNAM registration
+              </Link>{' '}
+              se online bidding ka rasta khulta hai.
+            </li>
+          </ul>
+          <p className="text-gray-600 dark:text-gray-400 text-sm">
+            Rates roz badalte hain — bechne se pehle wale din ka trend zaroor dekh lein, sirf ek
+            din ka rate nahi.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   return null;
 }
 
