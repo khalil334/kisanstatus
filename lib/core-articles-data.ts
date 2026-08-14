@@ -156,9 +156,9 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
     title: 'FTO Ka Full Form & FTO Generated Meaning',
-    desc: 'FTO Generated dikha par paisa nahi aaya? Fund Transfer Order ke har status ka aasan matlab, verified kist record source ke saath, aur delay par din 15 aur din 30 ka action plan.',
+    desc: 'FTO Generated dikha par paisa nahi aaya? Generated, Processed aur "will be generated" — teeno ka aasan matlab, aur delay par din 15 aur 30 ka action plan.',
     ogTitle: 'FTO Ka Full Form — FTO Generated/Processed Meaning',
-    seoTitle: 'FTO Generated Matlab — PM Kisan Guide',
+    seoTitle: 'FTO Kya Hai — Generated, Processed Ka Matlab',
     keywords: [
       'FTO ka full form',
       'FTO full form in hindi',
@@ -185,7 +185,8 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'NanoDap500mlPriceInIndia2026',
     title: 'Nano DAP 500ml Price 2026: IFFCO Rate',
-    desc: 'IFFCO Nano DAP 500ml bottle ka price ₹280-320 ke beech hai. Latest rate, normal DAP se comparison aur kaha se sasta milega — puri jankari yahan.',
+    seoTitle: 'Nano DAP 500 ml Price — ₹280-320 Ka Sach',
+    desc: 'IFFCO Nano DAP 500ml bottle ₹280-320 mein milti hai — par ye normal DAP ki jagah nahi leti. State-wise rate, per acre dosage aur 6 aam galtiyan.',
     ogTitle: 'Nano DAP 500ml Price 2026 India',
     keywords: [
       'Nano DAP 500ml price India 2026',
@@ -232,7 +233,8 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'AgriStackKyaHai2026',
     title: 'AgriStack 2026: Digital Kisan ID Guide',
-    desc: 'AgriStack ek digital kisan ID hai jo PM Kisan se connected hai. Iska matlab, fayde, registration process aur eligibility ki puri jankari yahan.',
+    seoTitle: 'AgriStack ID Kaise Banaye — Kisan ID Process',
+    desc: 'AgriStack wali kisan ID do tareeke se banti hai — CSC/camp se ya khud ghar baithe. Dono ka step, documents ki list, aur ID banne ke baad kya badalta hai.',
     ogTitle: 'AgriStack Kya Hai — Kisan ID Guide',
     keywords: [
       'AgriStack kya hai',
@@ -440,7 +442,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan Land Seeding Form 2026: Poora Sach',
     desc: 'Land seeding form kahan se milta hai, kaise bharein, kaunse documents chahiye — state wise Bhulekh portal links aur khasra-khatauni ke saath complete guide.',
     ogTitle: 'PM Kisan Land Seeding Form 2026: Kahan Se Milega, Kaise Bharein',
-    seoTitle: 'PM Kisan Land Seeding Form 2026: Kahan Se Milega, Kaise Bharein',
+    seoTitle: 'PM Kisan Land Seeding Form — Kahan Se Milega',
     keywords: [
       'pm kisan land seeding form',
       'pm kisan land seeding form pdf download',
