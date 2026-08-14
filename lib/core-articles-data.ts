@@ -343,7 +343,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisan25viKist2027',
     title: 'PM Kisan 25vi Kist 2027: Date & Amount',
-    desc: '25vi kist expected Feb-Mar 2027 mein. ₹2,000 confirmed, increase possible. Abhi se eKYC, bank seeding, land records perfect karo.',
+    desc: '25vi kist ki koi official date nahi hai abhi — 24vi ke baad 3-4 mahine ka gap normal hai. ₹2,000 hi milega. Abhi se eKYC, bank seeding, land records theek karo.',
     ogTitle: 'PM Kisan 25vi Kist 2027 Guide',
     keywords: [
       'pm kisan 25vi kist 2027',
@@ -356,7 +356,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisan25viKist2027',
     category: 'status-check',
     publishedTime: '2026-02-09T08:58:39+05:30',
-    modifiedTime: '2026-03-11T09:19:18+05:30',
+    modifiedTime: '2026-08-14T18:05:00+05:30',
     readingTime: 8,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisan25viKist2027'),
