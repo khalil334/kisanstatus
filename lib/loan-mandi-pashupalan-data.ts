@@ -103,7 +103,8 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'msp-list-2026-27',
     title: 'MSP List 2026-27: Rabi & Kharif',
-    desc: 'MSP list 2026-27 ki poori table — gehu ₹2,585, dhan ₹2,441, chana ₹5,875 aur baaki faslon ke rate, pichhle saal se comparison ke saath.',
+    seoTitle: 'MSP List 2026-27 — Gehu ₹2,585, Dhan ₹2,441',
+    desc: 'Rabi aur Kharif — dono ki poori MSP table ek jagah: gehu ₹2,585, dhan ₹2,441, chana ₹5,875 aur baaki faslein, pichhle saal se kitna badha uske saath.',
     ogTitle: 'MSP List 2026-27 — Rabi & Kharif Puri List',
     ogImage: '/images/articles/loan-mandi-pashupalan/msp-list-2026-27/kharid-kendra.webp',
     keywords: [
@@ -211,10 +212,10 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'bihar-pashupalan-loan-yojana',
-    seoTitle: 'Bihar Pashupalan Loan Yojana 2026: Subsidy',
+    seoTitle: 'Bihar Pashupalan Loan 2026 — Last Date Aur Apply',
     ogImage: '/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/kisan-bhains.webp',
     title: 'Bihar Pashupalan Loan Yojana 2026',
-    desc: 'Samagra Gavya Vikas Yojana — SC/ST ko 75%, General ko 50% subsidy tak. Eligibility, documents aur dairy.bihar.gov.in par apply ka process.',
+    desc: 'SC/ST ko 75%, General ko 50% tak subsidy — par window saal bhar khuli nahi rehti (pichhli baar last date 25 July). Documents, unit size aur apply ka process.',
     ogTitle: 'Bihar Pashupalan Loan Yojana 2026 — 50-75% Subsidy',
     keywords: [
       'bihar pashupalan loan yojana 2026',
