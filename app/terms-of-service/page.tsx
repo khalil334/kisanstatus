@@ -59,9 +59,9 @@ export default function TermsPage() {
         <div className="max-w-3xl mx-auto space-y-6">
 
           <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-300 dark:border-amber-800 rounded-xl text-sm text-amber-900 dark:text-amber-200">
-            <strong>Zaruri Suchna:</strong> {SITE_NAME} ek independent informational platform hai.
-            Yeh Bharat Sarkar ya kisi bhi krishi yojana se affiliated nahi hai.
-            Official kaam ke liye hamesha{' '}
+            <strong>Zaruri Suchna:</strong> Yeh site maine apne dum par banayi hai —
+            Bharat Sarkar ya kisi krishi yojana se iska koi sambandh nahi hai.
+            Asli sarkari kaam ke liye hamesha{' '}
             <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-semibold focus:outline-none focus:ring-2 focus:ring-amber-500 rounded">
               pmkisan.gov.in ↗
             </a>{' '}

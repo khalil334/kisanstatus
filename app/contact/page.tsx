@@ -74,8 +74,8 @@ export default function ContactPage() {
       <div className="container-site max-w-3xl py-10">
 
         <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-300 dark:border-amber-700 rounded-xl mb-8 text-sm text-amber-900 dark:text-amber-300">
-          <strong>Zaruri Suchna:</strong> {SITE_NAME} ek independent informational portal hai aur kisi sarkari vibhag se affiliated nahi hai.
-          PM Kisan payment, status ya kisi bhi official kaam ke liye seedha{' '}
+          <strong>Zaruri Suchna:</strong> Ek baat pehle hi bata doon — {SITE_NAME} koi sarkari daftar nahi hai, yeh meri apni site hai.
+          Payment, status ya koi bhi asli kaam ho to seedha{' '}
           <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-bold hover:text-amber-700 dark:hover:text-amber-200">pmkisan.gov.in ↗</a>{' '}
           ya helpline <strong>155261</strong> ka hi upyog karein.
         </div>

@@ -254,8 +254,8 @@ export default function Footer() {
               </p>
             </div>
             <div className="text-center md:text-right">
-              <p className="text-xs text-gray-500">Independent Information Portal</p>
-              <p className="text-xs text-gray-600 mt-1">Not affiliated with Government of India</p>
+              <p className="text-xs text-gray-500">Ek kisan ki banayi jaankari wali site</p>
+              <p className="text-xs text-gray-600 mt-1">Sarkar se koi naata nahi — not a government website</p>
             </div>
           </div>
         </div>
