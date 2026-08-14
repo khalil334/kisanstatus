@@ -5,13 +5,13 @@ import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, AUTHOR_IMAGE, AUTHOR_IMAG
 import { ARTICLES } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
-  title: 'About Us - PM Kisan Verified Guidance',
+  title: 'About Us - PM Kisan Guidance',
   description: `KisanStatus ek independent portal hai jo Indian kisanon ko PM Kisan verification, eKYC, payment fix aur enrollment ki free, verified Hinglish guidance deta hai.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
-    title: `About Us - ${SITE_NAME} | PM Kisan Verified Guidance`,
-    description: 'PM Kisan verified guidance dene wali independent website ke baare mein jaaniye. Free, trusted, aur saral Hinglish mein.',
+    title: `About Us - ${SITE_NAME} | PM Kisan Guidance`,
+    description: 'PM Kisan guidance dene wali independent website ke baare mein jaaniye. Free aur saral Hinglish mein.',
     type: 'website',
     url: `${SITE_URL}/about`,
     siteName: SITE_NAME,
@@ -34,7 +34,7 @@ const orgSchema = {
     contactType: 'customer support',
     availableLanguage: ['Hindi', 'English'],
   },
-  description: 'PM Kisan beneficiary verification, installment dates, eKYC, payment solutions — India ka trusted independent agrarian welfare portal.',
+  description: 'PM Kisan beneficiary verification, installment dates, eKYC, payment solutions — ek independent agrarian information portal.',
 };
 
 const personSchema = {
@@ -112,7 +112,7 @@ export default function AboutPage() {
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-2">
             About {SITE_NAME}
           </h1>
-          <p className="text-green-200 text-sm">Bharatiya Kisanon Ki Awaaz — PM Kisan aur Krishi Yojanaon ki Verified Guidance</p>
+          <p className="text-green-200 text-sm">Bharatiya Kisanon Ki Awaaz — PM Kisan aur Krishi Yojanaon ki Saral Guidance</p>
         </div>
       </div>
 
