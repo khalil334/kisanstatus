@@ -462,7 +462,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         एवं किसान कल्याण मंत्रालय) से; किस्त की तारीख की आधिकारिक घोषणा{' '}
         <a href="https://pib.gov.in" target="_blank" rel="noopener noreferrer">pib.gov.in</a> पर आती है। इस
         लेख में कोई अनुमानित तारीख जानबूझकर नहीं दी गई है — आखिरी जांच-पड़ताल{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} की है।
+        {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })} की है।
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">

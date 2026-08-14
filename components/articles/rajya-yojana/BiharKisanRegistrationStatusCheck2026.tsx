@@ -288,7 +288,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
         2025 me ye{' '}
         <Ext href="https://www.cmv360.com/news/diesel-subsidy-for-irrigation-farmers-can-now-save-more-on-irrigation-costs">
           ₹75/litre ke rate par ₹750 prati acre prati sinchai tha — dhaan/makka jaisi fasal
-          par 3 sinchai tak, aur aavedan ki aakhri tareekh 10 October 2025 thi
+          par 3 sinchai tak, aur aavedan ki aakhri tareekh 10/10/2025 thi
         </Ext>
         . Har season ka rate aur window alag notify hoti hai. Claim online jaata hai —
         authorized pump ki receipt ke saath, window ke andar. Sthiti: Application Status me

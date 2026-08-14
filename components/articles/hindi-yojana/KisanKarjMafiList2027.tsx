@@ -177,11 +177,11 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
       <p>
         घोषणा और पैसे के बीच की दूरी समझनी हो तो पिछली बार का record देख लीजिए। दिसंबर 2019 में
         महाराष्ट्र सरकार ने महात्मा ज्योतिराव फुले शेतकरी कर्जमुक्ती योजना घोषित की — ₹2 लाख तक के
-        crop loans, cut-off 30 September 2019। इसके लिए एक dedicated portal बना (
+        crop loans, cut-off 30/09/2019। इसके लिए एक dedicated portal बना (
         <a href="https://mjpsky.maharashtra.gov.in/" target="_blank" rel="noopener noreferrer">
           mjpsky.maharashtra.gov.in
         </a>
-        ), और पहली beneficiary list <strong>24 February 2020</strong> को आई, दूसरी 28 February को।
+        ), और पहली beneficiary list <strong>24/02/2020</strong> को आई, दूसरी 28 February को।
         गिनें तो घोषणा से पहली list तक ही करीब ढाई महीने। उसके बाद आधार सत्यापन का दौर चला — किसान
         को खुद CSC या बैंक जाकर अंगूठा लगाना पड़ता था, तभी रकम loan account में जाती थी।
       </p>
@@ -428,7 +428,7 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
         ), farm loan waivers पर RBI Internal Working Group report (2019) की public reporting, और राज्य
         सरकारों की घोषणाओं की news coverage। योजनाओं की शर्तें GR जारी होने पर बदल सकती हैं, अतः
         अंतिम पुष्टि अपने बैंक और राज्य के कृषि/सहकारिता विभाग से ही करें — हमने ये तथ्य आखिरी बार{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} को मिलाए थे।
+        {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })} को मिलाए थे।
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">

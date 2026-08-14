@@ -70,7 +70,7 @@ export default function RythuBharosaStatusCheck2026() {
   return (
     <article className="prose prose-lg max-w-4xl mx-auto">
 
-      <InfoBox type="update" date="4 August 2026">
+      <InfoBox type="update" date="04/08/2026">
         <strong>Latest Update:</strong> Nayi kist ki prakriya shuru ho chuki hai. Release phase-wise aur
         acreage ke hisaab se ho raha hai. Isliye padosi ko paisa mil jaana aur aapko na milna abhi
         normal hai. Status dekhne ka tareeka neeche hai.

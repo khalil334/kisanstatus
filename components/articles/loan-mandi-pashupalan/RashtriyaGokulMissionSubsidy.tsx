@@ -71,7 +71,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
-            <span>Last Updated: 5 August 2026</span>
+            <span>Last Updated: 05/08/2026</span>
             <span>11 min read</span>
           </div>
         </div>
@@ -102,7 +102,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 5 August 2026</strong>
+          <strong>Last Updated: 05/08/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -125,10 +125,10 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           December 2014 se chal rahi yeh scheme Ministry of Fisheries, Animal Husbandry &amp; Dairying ke under
           desi gay-bhains ki <strong>nasl sudhaarne</strong> ka national mission hai. Maqsad simple hai — Gir,
           Sahiwal, Tharparkar, Red Sindhi jaisi desi breeds ko bachana, unki doodh dene ki capacity badhana, aur
-          behtar genetics har kisan ke pashu tak pahunchana. <strong>19 March 2025</strong> ko Cabinet ne iska revised outlay
+          behtar genetics har kisan ke pashu tak pahunchana. <strong>19/03/2025</strong> ko Cabinet ne iska revised outlay
           <strong> ₹3,400 crore</strong> (2021-26 cycle, ₹1,000 crore extra) approve kiya — matlab scheme ko aur paisa aur do naye
           components mile (
-          <a href="https://ddnews.gov.in/en/cabinet-approves-implementation-of-revised-rashtriya-gokul-mission-with-enhanced-allocation-for-2024-25-and-2025-26/" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: Cabinet decision, 19 March 2025 — DD News, Govt of India</a>).
+          <a href="https://ddnews.gov.in/en/cabinet-approves-implementation-of-revised-rashtriya-gokul-mission-with-enhanced-allocation-for-2024-25-and-2025-26/" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: Cabinet decision, 19/03/2025 — DD News, Govt of India</a>).
         </p>
         <IB>
           Ek baat pehle hi saaf kar lo: RGM <strong>pashu kharidne ki scheme nahi hai</strong>. Yeh nasl sudhaar
@@ -361,7 +361,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
             <a href="https://dahd.gov.in/schemes/programmes/rashtriya-gokul-mission" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">dahd.gov.in</a>
           </li>
           <li>
-            Cabinet decision, 19 March 2025 — Revised Rashtriya Gokul Mission, total outlay ₹3,400 crore (official Govt of India release).{' '}
+            Cabinet decision, 19/03/2025 — Revised Rashtriya Gokul Mission, total outlay ₹3,400 crore (official Govt of India release).{' '}
             <a href="https://ddnews.gov.in/en/cabinet-approves-implementation-of-revised-rashtriya-gokul-mission-with-enhanced-allocation-for-2024-25-and-2025-26/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">ddnews.gov.in — Cabinet approves implementation of revised Rashtriya Gokul Mission</a>
           </li>
           <li>

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
 };
 
-const lastUpdated = '15 July 2026';
+const lastUpdated = '15/07/2026';
 
 export default function TermsPage() {
   const breadcrumbSchema = {

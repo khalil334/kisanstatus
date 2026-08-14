@@ -429,14 +429,14 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
         यह लेख किन चीजों पर टिका है — ब्याज सहायता सीमा ₹3→₹5 लाख की घोषणा Union Budget 2025-26
-        (वित्त मंत्री का बजट भाषण, 1 फरवरी 2025;{' '}
+        (वित्त मंत्री का बजट भाषण, 01/02/2025;{' '}
         <a href="https://timesofindia.indiatimes.com/business/india-business/union-budget-2025-kisan-credit-card-loan-limit-increased-to-rs-5-lakh-from-rs-2-lakh/articleshow/117821241.cms" target="_blank" rel="noopener noreferrer">TOI report</a>) से है; KCC के operative loan (₹10.05 लाख करोड़, दिसंबर 2024) और 7.72 करोड़
         card holders का आंकड़ा सरकारी release पर आधारित coverage से; और KCC योजना का ढांचा RBI/नाबार्ड के
         दिशा-निर्देशों व{' '}
         <a href="https://www.myscheme.gov.in" target="_blank" rel="noopener noreferrer">myscheme.gov.in</a>{' '}
         से। दरें और collateral-free सीमा बैंक-दर-बैंक बदल सकती हैं, अंतिम पुष्टि अपनी branch से
         करें। साहूकारी दरों का जिक्र सामान्य ग्रामीण अनुभव पर है, कोई सरकारी आंकड़ा नहीं। (जानकारी
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} तक जांची हुई है।)
+        {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })} तक जांची हुई है।)
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">

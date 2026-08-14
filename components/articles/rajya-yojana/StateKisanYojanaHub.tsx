@@ -136,7 +136,7 @@ export default function StateKisanYojanaHub() {
   return (
     <article className="prose prose-lg max-w-4xl mx-auto">
 
-      <InfoBox type="update" date="6 August 2026">
+      <InfoBox type="update" date="06/08/2026">
         <strong>Latest Update:</strong> Neeche diye amounts har rajya ki official website aur
         hamare rajya-war guides se milaye gaye hain. Jahan current raqam confirm nahi ho paayi,
         wahan saaf likha hai ki site par khud dekh lein. Koi bhi figure WhatsApp forward se

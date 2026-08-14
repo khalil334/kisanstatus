@@ -74,7 +74,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
   return (
     <article className="prose prose-lg max-w-4xl mx-auto">
 
-      <InfoBox type="update" date="4 August 2026">
+      <InfoBox type="update" date="04/08/2026">
         <strong>Latest Update:</strong> Agle hapte ki koi official release date announce nahi hui hai.
         Maharashtra sarkar ne saaf kiya hai ki kendriya list ke eligible annadata ko judaa apply
         nahi karna hai. Paisa nahi aaya hai to neeche diye tareeke se apna{' '}

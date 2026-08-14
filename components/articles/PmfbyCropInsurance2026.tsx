@@ -176,7 +176,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ek nayi baat jo bahut kisano ko nahi pata — Krishi Mantralaya ke revised framework ke mutabik <strong>jangli janwaron ke hamle se hue fasal nuksan</strong> ko localized risk category mein <strong>paanchve add-on cover</strong> ke roop mein shaamil kiya gaya hai, aur <strong>dhaan ki doob (paddy inundation)</strong> — jo 2018 mein hata di gayi thi — dobara localized calamity cover ke roop mein laayi gayi hai; ye Kharif 2026 season se lagoo hone ki baat kahi gayi hai. Dhyan rahe, add-on cover <strong>optional</strong> hote hain: kaunse jangli janwar aur kaunse zile/insurance unit cover honge, ye <strong>aapka rajya notify karta hai</strong> — isliye apne state ki season notification zaroor check karein.{' '}
             <span className="text-xs">
-              (Source: <Src href="https://www.newindianexpress.com/states/odisha/2025/Nov/19/pmfby-to-cover-crop-loss-by-animal-attack-inundation">New Indian Express, 19 Nov 2025</Src>)
+              (Source: <Src href="https://www.newindianexpress.com/states/odisha/2025/Nov/19/pmfby-to-cover-crop-loss-by-animal-attack-inundation">New Indian Express, 19/11/2025</Src>)
             </span>
           </p>
 
