@@ -8,11 +8,7 @@ const PUBLISHED = '2025-12-16T12:07:52+05:30';
 const MODIFIED = '2025-12-25T16:17:12+05:30';
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
-  return date.toLocaleDateString('en-IN', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  });
+  return date.toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' });
 }
 
 const RELATED = [

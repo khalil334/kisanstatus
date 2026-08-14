@@ -453,7 +453,7 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
         से, और UP व Tamil Nadu के मामले NDTV की रिपोर्टों से लिए गए हैं। Refund की online प्रक्रिया{' '}
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> के
         Refund Online flow से। राज्य-स्तरीय वसूली प्रक्रिया अलग हो सकती है — notice में लिखा तरीका ही
-        अंतिम है। यह जानकारी {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} तक जांची गई है।
+        अंतिम है। यह जानकारी {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })} तक जांची गई है।
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">

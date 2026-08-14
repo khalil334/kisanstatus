@@ -494,7 +494,7 @@ export default function DripSprinkler() {
         Scheme kitni bad chuki hai (context ke liye)
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Official data ke mutabik PDMC ke tahat 2015-16 se 22 July 2025 tak{' '}
+        Official data ke mutabik PDMC ke tahat 2015-16 se 22/07/2025 tak{' '}
         <strong>102.56 lakh hectare</strong> micro-irrigation ke under aa chuka hai.{' '}
         <a href="https://hiindia.com/agriculture-ministry-offers-more-flexibility-to-states-for-promoting-drip-sprinkler-irrigation/" {...EXTERNAL_LINK_PROPS} className="underline">
           [Ministry statement, Oct 2025]

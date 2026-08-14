@@ -158,7 +158,7 @@ export default async function HindiArticlePage({
           {article.titleHi}
         </h1>
         <p className="mb-6 text-sm text-gray-500">
-          {article.author} · अपडेटेड: {new Date(article.modifiedTime).toLocaleDateString('hi-IN')}
+          {article.author} · अपडेटेड: {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })}
         </p>
         <div className="prose prose-lg max-w-none">
           <ArticleBody article={article} />

@@ -33,7 +33,7 @@ const FAQS_DATA = [
   },
   {
     q: 'October 2026 ka andaza kis aadhar par hai?',
-    a: 'Pichhle transfers ke gap se. 22vi 13 March 2026 ko aayi, 23vi 20 June ko — beech ka fasla kareeb 3 mahine ka. Wahi fasla aage jodo toh October ke aas paas number baithta hai. Par ye hisaab pehle bhi phisla hai — 2025 me 20vi ke baad wala gap November tak lamba ho gaya tha. Toh October likha zaroor hai, guarantee koi nahi.',
+    a: 'Pichhle transfers ke gap se. 22vi 13/03/2026 ko aayi, 23vi 20 June ko — beech ka fasla kareeb 3 mahine ka. Wahi fasla aage jodo toh October ke aas paas number baithta hai. Par ye hisaab pehle bhi phisla hai — 2025 me 20vi ke baad wala gap November tak lamba ho gaya tha. Toh October likha zaroor hai, guarantee koi nahi.',
   },
   {
     q: 'Is baar amount badhega kya?',
@@ -142,7 +142,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             Date abhi announce nahi hui hai. Bas, itni si baat.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Lekin jo pata hai, woh kaafi kuch bata deta hai. Pichhla transfer 20 June 2026 ko hua tha — Tarakeswar (Hooghly, West Bengal) ke event se PM ne button dabaya aur 9.44 crore parivaron ko kul ₹18,880 crore gaye. Usse pehle wala 13 March ko Guwahati se. Beech ka fasla lagbhag sava teen mahine ka — isi hisaab se agla number <strong>October 2026 ke aas-paas</strong> banta hai.
+            Lekin jo pata hai, woh kaafi kuch bata deta hai. Pichhla transfer 20/06/2026 ko hua tha — Tarakeswar (Hooghly, West Bengal) ke event se PM ne button dabaya aur 9.44 crore parivaron ko kul ₹18,880 crore gaye. Usse pehle wala 13 March ko Guwahati se. Beech ka fasla lagbhag sava teen mahine ka — isi hisaab se agla number <strong>October 2026 ke aas-paas</strong> banta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Ek baat imandari se: ye ginti pehle bhi galat ho chuki hai. 2025 me log aise hi calendar par ungli rakh rahe the, aur gap khinchte khinchte November tak pahunch gaya tha. Paisa kisi bade event ke saath nikalta hai, event PM ke schedule par tikta hai — aur schedule kisi ke haath me nahi. Toh is page ka asli maqsad tareekh ka andaza nahi, ye pakka karna hai ki jis din bhi transfer ho, aapka hissa bina atke pahunche.
@@ -208,11 +208,11 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
               <tbody>
                 {[
                   { kist: '24vi', date: 'Oct 2026 (andaza)', venue: '—', status: 'Expected', upcoming: true },
-                  { kist: '23vi', date: '20 Jun 2026', venue: 'Tarakeswar, West Bengal', status: 'Released', highlight: true },
-                  { kist: '22vi', date: '13 Mar 2026', venue: 'Guwahati, Assam', status: 'Released' },
-                  { kist: '21vi', date: '19 Nov 2025', venue: 'Coimbatore, Tamil Nadu', status: 'Released' },
-                  { kist: '20vi', date: '2 Aug 2025', venue: 'Varanasi, Uttar Pradesh', status: 'Released' },
-                  { kist: '19vi', date: '24 Feb 2025', venue: 'Bhagalpur, Bihar', status: 'Released' },
+                  { kist: '23vi', date: '20/06/2026', venue: 'Tarakeswar, West Bengal', status: 'Released', highlight: true },
+                  { kist: '22vi', date: '13/03/2026', venue: 'Guwahati, Assam', status: 'Released' },
+                  { kist: '21vi', date: '19/11/2025', venue: 'Coimbatore, Tamil Nadu', status: 'Released' },
+                  { kist: '20vi', date: '02/08/2025', venue: 'Varanasi, Uttar Pradesh', status: 'Released' },
+                  { kist: '19vi', date: '24/02/2025', venue: 'Bhagalpur, Bihar', status: 'Released' },
                 ].map((row) => (
                   <tr key={row.kist} className={
                     row.highlight ? 'bg-green-50 dark:bg-green-900/20 font-medium' :

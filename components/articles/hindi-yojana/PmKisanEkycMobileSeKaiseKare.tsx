@@ -487,7 +487,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         e-KYC flow और PM-KISAN GoI app से मिलाकर लिखी है; आधार में number update की जानकारी{' '}
         <a href="https://uidai.gov.in" target="_blank" rel="noopener noreferrer">uidai.gov.in</a> से है।
         Portal के option-नाम समय-समय पर बदलते हैं (आखिरी मिलान:{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')})।
+        {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })})।
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
