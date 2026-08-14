@@ -119,7 +119,7 @@ export const YANDEX_VERIFICATION = process.env.NEXT_PUBLIC_YANDEX_TOKEN || '';
 export const APP_NAME = 'KisanStatus';
 export const APP_SHORT_NAME = 'KisanStatus';
 export const APP_DESCRIPTION = 'PM Kisan & Farming Guides';
-export const APP_THEME_COLOR = '#16A34A';
+export const APP_THEME_COLOR = '#B85C1A';
 export const APP_BACKGROUND_COLOR = '#ffffff';
 
 export const MAIN_NAVIGATION = [

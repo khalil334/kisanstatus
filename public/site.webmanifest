@@ -4,8 +4,8 @@
   "description": "PM Kisan Samman Nidhi Status Check, 23vi Kist, Beneficiary List 2026",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFFBF0",
-  "theme_color": "#16A34A",
+  "background_color": "#FAFAF9",
+  "theme_color": "#B85C1A",
   "icons": [
     {
       "src": "/favicon-16x16.png",
