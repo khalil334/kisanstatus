@@ -319,7 +319,7 @@ export default function QuickStatusChecker() {
         </div>
 
         <div className="mt-5 p-3 bg-amber-50/80 border border-amber-200/60 rounded-xl text-[11px] text-amber-800 text-center leading-relaxed">
-           Yeh tool aapko seedha <strong>pmkisan.gov.in</strong> par le jayega. Real status sirf official website par hi dikhega. KisanStatus.com ek independent portal hai — government se affiliated nahi hai.
+           Yeh tool aapko seedha <strong>pmkisan.gov.in</strong> par le jayega — asli status wahi dikhega, yahan nahi. Aur haan, KisanStatus.com sarkari site nahi hai, yeh meri apni banayi hui site hai.
         </div>
       </div>
     </div>

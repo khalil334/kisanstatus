@@ -487,7 +487,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Sources & Disclaimer:</strong>
-          Yeh article PM Kisan Maandhan Yojana ke official operational guidelines (DAC&FW, Ministry of Agriculture & Farmers Welfare) aur maandhan.in / pmkmy.gov.in portal ke data par based hai. Portal interface, URLs, aur processes time ke saath badal sakte hain. Hamesha official pmkmy.gov.in ya maandhan.in portal hi use karein. Kisi bhi third-party website pe apna OTP ya password share na karein. Sahayata ke liye official portal par diya gaya helpline number use karein. Last verified: {fmtDate(MODIFIED)}.
+          Yeh article maine Maandhan Yojana ki official guidelines (DAC&FW, Krishi Mantralaya) aur maandhan.in / pmkmy.gov.in portal ko khud padh kar likha hai. Lekin portal ka roop-rang aur process badalta rehta hai — kal ko kuch alag dikhe to hairaan na hon. Kaam hamesha official pmkmy.gov.in ya maandhan.in par hi karein, aur OTP ya password kisi bhi doosri website par kabhi na daalein — chahe woh kitni bhi asli lage. Madad chahiye to portal par diya helpline number hi use karein. Maine yeh {fmtDate(MODIFIED)} ko aakhri baar verify kiya tha.
         </p>
       </div>
 
