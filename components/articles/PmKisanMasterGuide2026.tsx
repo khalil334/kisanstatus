@@ -13,6 +13,7 @@ const MODIFIED = '2026-02-16T10:13:52+05:30';
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
+  { slug: 'PmKisan25viKist2027', title: '25vi Kist 2027 — Kab Aayegi' },
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
   { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed — 7 Fixes' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
