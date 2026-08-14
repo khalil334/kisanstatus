@@ -437,10 +437,10 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanLandSeedingForm',
-    title: 'PM Kisan Land Seeding Form 2026: PDF',
-    desc: 'Land seeding form download karo — UP, Bihar, MP, Rajasthan ke state wise forms. Khasra-Khatauni details ke saath complete guide.',
-    ogTitle: 'PM Kisan Land Seeding Form PDF Download',
-    seoTitle: 'PM Kisan Land Seeding Form PDF Download',
+    title: 'PM Kisan Land Seeding Form 2026: Poora Sach',
+    desc: 'Land seeding form kahan se milta hai, kaise bharein, kaunse documents chahiye — state wise Bhulekh portal links aur khasra-khatauni ke saath complete guide.',
+    ogTitle: 'PM Kisan Land Seeding Form 2026: Kahan Se Milega, Kaise Bharein',
+    seoTitle: 'PM Kisan Land Seeding Form 2026: Kahan Se Milega, Kaise Bharein',
     keywords: [
       'pm kisan land seeding form',
       'pm kisan land seeding form pdf download',
@@ -456,7 +456,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     category: 'status-check',
     publishedTime: '2026-01-15T16:32:11+05:30',
     modifiedTime: '2026-02-05T18:12:48+05:30',
-    readingTime: 12,
+    readingTime: 14,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisanLandSeedingForm'),
     schemes: ['pm-kisan'],
