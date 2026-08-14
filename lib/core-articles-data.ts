@@ -156,7 +156,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
     title: 'FTO Ka Full Form & FTO Generated Meaning',
-    desc: 'FTO ka full form Fund Transfer Order hai. FTO generated, FTO processed, "FTO will be generated" — har status ka matlab, aur kist kab aayegi, sab samjhein.',
+    desc: 'FTO Generated dikha par paisa nahi aaya? Fund Transfer Order ke har status ka aasan matlab, bank-wise timeline, aur delay hone par din 15 aur din 30 ka action plan.',
     ogTitle: 'FTO Ka Full Form — FTO Generated/Processed Meaning',
     seoTitle: 'FTO Generated Matlab — PM Kisan Guide',
     keywords: [
