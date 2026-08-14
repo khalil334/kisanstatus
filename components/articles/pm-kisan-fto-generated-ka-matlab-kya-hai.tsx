@@ -278,6 +278,58 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         </section>
 
         <section className="mb-8">
+          <SH>Status Page Par Kya-Kya Dikhta Hai — Har Row Ka Matlab</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Portal ka status page pehli baar kholne par thoda bhara-bhara lagta hai — bahut saari rows, English labels, aur samajh nahi aata kaun si line important hai. Asal me sirf 4-5 rows par nazar rakhni hoti hai:
+          </p>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Row</th>
+                  <th className="p-3 text-left">Kya Batata Hai</th>
+                  <th className="p-3 text-left">Kya Hona Chahiye</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['eKYC Status', 'Aadhaar verification hui ya nahi', '"Yes" / Completed'],
+                  ['Land Seeding', 'Zameen ke record account se jude ya nahi', '"Yes" / Seeded'],
+                  ['Aadhaar-Bank Seeding', 'DBT ke liye account taiyar hai ya nahi', '"Yes"'],
+                  ['Latest Installment', 'Aakhri kist ka payment status', 'Success / Credited'],
+                  ['Eligibility Status', 'Scheme me aap active ho ya nahi', 'Eligible'],
+                ].map(([row, kya, hona], i) => (
+                  <tr key={row} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{row}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{kya}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs font-bold text-green-700 dark:text-green-400">{hona}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Simple formula: in teen seeding wali rows me se koi bhi "No" hai, to payment wahi atkegi — chahe order ban bhi jaye. Pehle "No" ko "Yes" karwao, phir kist apne aap agli batch me aa jati hai. Teeno "Yes" hain aur phir bhi paisa nahi aaya? Tab neeche wala 15-din checklist kaam aayega.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Savdhaan: Status Ke Naam Par Fraud Bhi Chalta Hai</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Jab kist ka time nazdeek aata hai, fraud calls aur fake messages bhi badh jate hain. Kisi ne call karke kaha "aapka FTO atka hua hai, OTP batao to release kar denge" — <strong>ye 100% fraud hai.</strong> Ek baat pakki samajh lo:
+          </p>
+          <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4">
+            <li>Sarkar ya bank kabhi phone karke <strong>OTP, PIN, ya password nahi maangte</strong> — kabhi nahi</li>
+            <li>Kist release karwane ke liye <strong>koi fees nahi lagti</strong> — jo paise maange, wo thug hai</li>
+            <li>WhatsApp par aaye "status check karne ka link" par click mat karo — status sirf <strong>pmkisan.gov.in</strong> se check hota hai</li>
+            <li>APK file download karwa ke "PM Kisan app" bolne wale messages fake hote hain — app sirf Google Play Store se lo</li>
+          </ul>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Aisi call ya message aaye to cyber crime helpline <strong>1930</strong> par report karo ya cybercrime.gov.in par shikayat darj karo. Aur ghar me jo bade-buzurg scheme ke beneficiary hain, unhe ye baat zaroor samjha do — fraud ka sabse zyada shikaar wahi hote hain.
+          </p>
+        </section>
+
+        <section className="mb-8">
           <SH>Mobile Se Status Check Kaise Karein?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
