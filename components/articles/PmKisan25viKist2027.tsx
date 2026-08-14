@@ -16,23 +16,23 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: '25vi kist ki exact date kya hai?',
-    a: 'Abhi koi exact date nahi hai — na sarkar ne boli hai, na kisi aur ko pata hai. Internet par jo February 2027 ya March 2027 chal raha hai, woh sab andaza hai. PM Kisan ki date hamesha release se thoda pehle hi announce hoti hai, mahino pehle kabhi nahi. Jab official announcement aayegi, hum yahan update kar denge.',
+    a: 'Abhi kuch bhi official nahi hai — na sarkar ne bola, na kisi aur ko pata. Net par jo February 2027 ya March 2027 ghoom raha hai woh sab andaza hai. Announcement hamesha release se thoda pehle hoti hai, mahino pehle kabhi nahi. Official khabar aate hi hum yahan update kar denge.',
   },
   {
     q: 'Kya 25vi kist mein paisa badhkar ₹2,500 ya ₹3,000 ho jayega?',
-    a: 'Iska koi official confirmation nahi hai. 2019 mein scheme shuru hui thi tab se ₹2,000 per kist chala aa raha hai, aur har budget ke pehle badhne ki afwah udti hai — ab tak ek baar bhi sach nahi hui. Toh planning ₹2,000 ke hisaab se hi karo. Agar sach mein badha, toh yeh page turant update hoga.',
+    a: 'Iska koi official confirmation nahi. 2019 se ₹2,000 hi mil raha hai aur har budget se pehle badhne ki afwah udti hai — aaj tak ek baar bhi sach nahi hui. Planning ₹2,000 ke hisab se karo. Agar sach mein badha toh yeh page turant update hoga.',
   },
   {
     q: 'Kist na aaye toh kahan shikayat karein?',
-    a: 'PM Kisan helpline 155261 hai — toll free. Landline se 011-24300606 bhi try kar sakte ho. Phone karne se pehle apna registration number ya Aadhaar number haath mein rakhna, bina uske helpline wale record dhoondh hi nahi paate. Subah 10 baje ke aas paas line kam busy hoti hai. Local level par apne krishi vibhag ke office ya CSC centre par bhi baat kar sakte ho.',
+    a: 'Helpline 155261 hai — toll free. Landline se 011-24300606 bhi try kar sakte ho. Phone se pehle apna registration ya Aadhaar number haath mein rakhna, uske bina record dhoondhna mushkil ho jata hai. Subah 10 baje ke aas paas line kam busy rehti hai. Apne krishi vibhag ke office ya CSC centre par bhi baat ho sakti hai.',
   },
   {
     q: '24vi kist nahi mili — kya 25vi milegi?',
-    a: 'Milni chahiye, lekin pehle yeh pata karo ki 24vi kyun ruki. Zyada tar cases mein wajah eKYC pending, bank account mein Aadhaar seeding na hona, ya land record verify na hona hoti hai. Yeh problem theek kiye bina 25vi bhi wahin atkegi. Ruki hui kist alag se baad mein credit ho jaati hai, agar aap eligible ho.',
+    a: 'Milni chahiye, lekin pehle yeh pata karo ki 24vi kyu ruki. Zyada tar mamlo mein wajah eKYC pending, bank mein Aadhaar seeding na hona ya land record verify na hona hoti hai. Yeh theek kiye bina agli wali bhi wahin atkegi. Ruka hua paisa baad mein alag se credit ho jata hai, agar aap eligible ho.',
   },
   {
     q: 'Naye registration ki koi last date hai kya?',
-    a: 'Nahi, registration saal bhar khula rehta hai. Lekin verification mein hafton ka time lagta hai — document check, land seeding, eKYC sab hone ke baad hi naam beneficiary list mein aata hai. Jitni jaldi karoge, utne jaldi kisi kist mein naam aane ke chances banenge. Der karne ka bas itna nuksan hai ki ek-do cycle miss ho sakti hai.',
+    a: 'Nahi, portal saal bhar khula rehta hai. Lekin verification mein hafto ka time lagta hai — document check, land seeding, eKYC sab hone ke baad hi naam list mein aata hai. Jitni jaldi karoge, utni jaldi paisa shuru hone ke chance banenge. Der karne ka bas itna nuksan hai ki ek-do cycle nikal sakti hai.',
   },
 ];
 
@@ -74,31 +74,31 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            25vi kist ka abhi sirf intezaar hai — pakki date kisi ke paas nahi
+            Abhi sirf intezaar hai — pakki tareekh kisi ke paas nahi
           </p>
         </div>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Google par &quot;25vi kist kab aayegi&quot; search karo toh dus articles milenge, aur dus alag dates milengi. Kisi ne February 2027 likha hai, kisi ne March. Ek-do ne toh din tak bata diya hai. Source? Kisi ke paas nahi. Bas ek dusre se copy karke likh dete hain, aur padhne wala confuse hota rehta hai.
+          Google par search karo toh dus article milenge, aur dus alag jawab. Kisi ne February 2027 likha hai, kisi ne March. Ek-do ne toh din tak bata diya. Source? Kisi ke paas nahi. Bas ek dusre se copy karte hain aur padhne wala confuse hota rehta hai.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Hum seedhi baat karenge. Sach yeh hai ki 25vi kist ki date abhi kisi ko nahi pata — na humein, na un YouTube channels ko, na un websites ko. Sarkar PM Kisan ki release date mahino pehle kabhi announce nahi karti. Zyada tar toh release se ek-do hafte pehle hi official khabar aati hai, aur kai baar toh PM ke kisi event ke saath hi paisa release ho jata hai.
+          Hum seedhi baat karenge. Sach yeh hai ki 25vi wali abhi kisi ko nahi pata — na humein, na un YouTube channelo ko, na un websites ko. Sarkar mahino pehle kabhi kuch announce nahi karti. Zyada tar toh release se ek-do hafte pehle hi khabar aati hai, aur kai baar toh PM ke kisi event ke sath hi paisa aa jata hai.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Aur ek zaroori baat — <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline font-medium">24vi kist</Link> khud abhi tak nahi aayi hai. Jab 24vi ka hi intezaar chal raha hai, toh 25vi ki &quot;confirm date&quot; batane wale khud soch lo kitne serious hain.
+          Aur ek jaruri baat — <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline font-medium">24vi kist</Link> khud abi tak nahi aayi. Jab usi ka intezaar chal raha hai, toh agli ki &quot;confirm tareekh&quot; batane wale khud soch lo kitne serious hain.
         </p>
 
         <WB>
-          <strong>Pehle hi bata dein:</strong> Is article mein jo confirm hai woh confirm likha hai, aur jo andaza hai woh andaza likha hai. Dono ko mix karke aapko bewakoof nahi banayenge. Yahi is page ka wada hai.
+          <strong>Pehle hi bata dein:</strong> Is article mein jo pakka hai woh pakka likha hai, aur jo andaza hai woh andaza. Dono ko mix karke aapko bewakoof nahi banayenge. Yahi is page ka wada hai.
         </WB>
 
         <section className="mb-8 mt-8">
-          <SH>Ab tak ka record — kya confirm hai, kya nahi</SH>
+          <SH>Ab tak ka record — kya pakka hai, kya nahi</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Date ka andaza lagane ka sabse imandaar tarika yeh hai ki pichli kisten kab aayi thin, woh dekha jaye. 21vi, 22vi aur 23vi — teeno aa chuki hain aur inki dates official record mein hain. 24vi ka intezaar hai, jiska live update hum <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline">alag article</Link> mein rakhte hain.
+            Andaza lagane ka sabse imandaar tarika yeh hai ki pichli baar kab kab paisa aaya tha, woh dekha jaye. 21vi, 22vi aur 23vi — teeno aa chuki hain aur inki dates official record mein hain. 24vi ka intezaar hai, jiska live update hum <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline">alag article</Link> mein rakhte hain.
           </p>
 
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -112,11 +112,11 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
               </thead>
               <tbody>
                 {[
-                  ['21vi', '19 November 2025', 'Confirm — aa chuki, ₹2,000 mila'],
-                  ['22vi', '13 March 2026', 'Confirm — 21vi ke lagbhag 4 mahine baad'],
-                  ['23vi', '20 June 2026', 'Confirm — is baar gap sirf 3 mahine ka tha'],
-                  ['24vi', 'Andaza: Oct–Nov 2026', 'Abhi tak release nahi hui, intezaar chalu hai'],
-                  ['25vi', '24vi ke 3-4 mahine baad', 'Door ki baat — pehle 24vi toh aa jaye'],
+                  ['21vi', '19 November 2025', 'Aa chuki, ₹2,000 mila tha'],
+                  ['22vi', '13 March 2026', 'Pichli wali ke kareeb 4 mahine baad aayi'],
+                  ['23vi', '20 June 2026', 'Is baar gap sirf 3 mahine ka tha'],
+                  ['24vi', 'Andaza: Oct–Nov 2026', 'Abhi tak nahi aayi, intezaar chalu hai'],
+                  ['25vi', 'Uske 3-4 mahine baad', 'Door ki baat — pehle 24vi toh aa jaye'],
                 ].map(([kist, date, note], i) => (
                   <tr key={kist} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{kist}</td>
@@ -129,11 +129,11 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Table dhyan se dekho. November se March — chaar mahine. March se June — teen mahine. Scheme ka official rule toh yehi hai ki saal mein teen kisten milti hain, har chaar mahine mein ek, total ₹6,000. Lekin zameen par release date kabhi teen mahine mein aa jaati hai, kabhi paanch mahine kha jaati hai.
+            Table dhyan se dekho. November se March — chaar mahine. March se June — teen. Scheme ka official rule toh yehi hai ki saal mein teen baar ₹2,000 milte hain, har chaar mahine mein ek baar, total ₹6,000. Lekin zameen par timing kabhi teen mahine mein ho jati hai, kabhi paanch mahine kha jati hai.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Isliye jo bhi confidently &quot;February 2027 confirm&quot; bol raha hai, woh bas pichla gap aage badha kar hisaab laga raha hai. Hisaab hum bhi laga sakte hain — agar 24vi October-November 2026 ke aas paas aati hai, toh 25vi uske teen-chaar mahine baad banti hai, matlab 2027 ki shuruaat ke aas paas. Lekin yeh hisaab hai, date nahi. Farak samajhna zaroori hai.
+            Isliye jo bhi confidently &quot;February 2027 pakka&quot; bol raha hai, woh bas pichla gap aage badha kar hisab laga raha hai. Hisab hum bhi laga sakte hain — agar 24vi October-November 2026 ke aas paas aati hai, toh agli uske teen-chaar mahine baad banti hai, matlab 2027 ki shuruat ke aas paas. Lekin yeh hisab hai, guarantee nahi. Farak samajhna jaruri hai.
           </p>
         </section>
 
@@ -148,27 +148,27 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Kisto ke beech ka gap har baar alag raha hai — isi liye date ka andaza pakka nahi ho sakta
+            Har baar ka gap alag raha hai — isi liye andaza pakka nahi ho sakta
           </p>
         </div>
 
         <section className="mb-8">
-          <SH>Sarkar date decide kaise karti hai — process samjho</SH>
+          <SH>Sarkar tareekh decide kaise karti hai — process samjho</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Yeh samajhna kaam aayega, kyunki isse pata chalta hai ki date pehle se fix kyun nahi hoti. PM Kisan ka paisa seedha DBT (Direct Benefit Transfer) se aata hai — sarkar ke khaate se seedha aapke bank account mein. Lekin transfer se pehle ek lambi chain chalti hai.
+            Yeh samajhna kaam aayega, kyuki isse pata chalta hai ki sab kuch pehle se fix kyu nahi hota. Paisa seedha DBT (Direct Benefit Transfer) se aata hai — sarkar ke khaate se seedha aapke bank account mein. Lekin transfer se pehle ek lambi chain chalti hai.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Pehle states apne beneficiaries ka data verify karke bhejte hain. Phir Centre us data ko check karta hai — kaun eligible hai, kiska eKYC hua hai, kiska bank account Aadhaar se juda hai. Uske baad FTO yani Fund Transfer Order generate hota hai. FTO ka matlab hai ki aapka payment approve ho gaya aur ab bas transfer hona baaki hai. FTO ke baare mein detail se <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="text-[var(--color-primary)] underline">is article</Link> mein padh sakte ho.
+            Pehle states apne beneficiaries ka data verify karke bhejte hain. Phir Centre us data ko dekhta hai — kaun eligible hai, kiska eKYC hua, kiska account Aadhaar se juda hai. Uske baad FTO yani Fund Transfer Order generate hota hai. FTO ka matlab — aapka payment approve ho gaya, ab bas transfer hona baki hai. Iske bare mein detail se <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="text-[var(--color-primary)] underline">is article</Link> mein padh sakte ho.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Aur aakhri kadam — release event. Zyada tar kisten PM ke haathon kisi program mein release hoti hain. Event ki date politics aur schedule par depend karti hai, isliye kist ka din bhi wahi tay karta hai. Yahi wajah hai ki koi bhi website mahino pehle exact date nahi bata sakti — kyunki woh date exist hi nahi karti abhi.
+            Aur aakhri kadam — release event. Zyada tar paisa PM ke haathon kisi program mein jaari hota hai. Event kab hoga yeh politics aur schedule par depend karta hai, isliye paisa kab aayega yeh bhi wahi tay karta hai. Yahi wajah hai ki koi bhi website mahino pehle exact din nahi bata sakti — kyuki woh din exist hi nahi karta abhi.
           </p>
 
           <IB>
-            <strong>Ek line mein:</strong> Data verification + FTO + PM ka event = release date. In teeno mein se koi bhi cheez aage-peeche ho sakti hai, isliye date bhi aage-peeche hoti hai.
+            <strong>Ek line mein:</strong> Data verification + FTO + PM ka event = kab milega. In teeno mein se koi bhi cheez aage-peeche ho sakti hai, isliye timing bhi aage-peeche hoti hai.
           </IB>
         </section>
 
@@ -176,39 +176,39 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           <SH>Paisa badhega ya wahi ₹2,000 rahega?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Scheme 2019 mein shuru hui thi — tab se har kist ₹2,000 ki hai, saal ke ₹6,000. Saat saal ho gaye, amount ek rupaya nahi badla.
+            Scheme 2019 mein shuru hui thi — tab se har baar ₹2,000 hi milte hain, saal ke ₹6,000. Saat saal ho gaye, ek rupaya nahi badha.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Har budget season mein wahi purani afwah wapas aati hai — is baar ₹2,500 honge, nahi nahi ₹3,000 honge, kisi ne toh ₹4,000 tak bol diya tha. News channels ko chalane ke liye masala chahiye aur YouTube walon ko views. Lekin record dekho — ek baar bhi amount nahi badha.
+            Har budget season mein wahi purani afwah wapas aa jati hai — is baar ₹2,500 honge, nahi nahi ₹3,000, kisi ne toh ₹4,000 tak bol diya tha. News channelo ko masala chahiye aur YouTube walo ko views. Lekin record utha ke dekho — ek baar bhi amount nahi badha.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Kya kabhi badh sakta hai? Haan, bilkul badh sakta hai — sarkar chahe toh kal badha de. Lekin &quot;badh sakta hai&quot; aur &quot;badhne wala hai&quot; mein zameen aasman ka farak hai. Jab tak Finance Ministry ya PM Kisan portal se official announcement na aaye, tab tak ₹2,000 hi maan kar chalo.
+            Kya kabhi badh sakta hai? Haan bilkul — sarkar chahe toh kal badha de. Lekin &quot;badh sakta hai&quot; aur &quot;badhne wala hai&quot; mein zameen aasman ka farak hai. Jab tak Finance Ministry ya portal se official announcement na aaye, tab tak ₹2,000 hi maan ke chalo.
           </p>
 
           <IB>
-            <strong>Real baat:</strong> Apna budget ₹2,000 ke hisaab se banao. Agar amount badha toh woh bonus hoga — aur hum yahan sabse pehle update karenge.
+            <strong>Real baat:</strong> Apna budget ₹2,000 ke hisab se banao. Agar badha toh woh bonus hoga — aur hum yahan sabse pehle update karenge.
           </IB>
         </section>
 
         <section className="mb-8">
-          <SH>Date ka wait chhodo — yeh 5 kaam abhi karo</SH>
+          <SH>Intezaar chhodo — yeh 5 kaam abhi karo</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ab asli kaam ki baat. Date aap control nahi kar sakte, lekin yeh zaroor control kar sakte ho ki jab kist release ho, aapka paisa atke nahi. Har kist ke time lakhs logon ka payment inhi wajahon se rukta hai — aur yeh saari cheezein pehle se theek ho sakti hain:
+            Ab asli kaam ki baat. Timing aap control nahi kar sakte, lekin yeh jarur kar sakte ho ki jab paisa jaari ho, aapka atke nahi. Har baar lakhs logo ka payment inhi wajaho se rukta hai — aur yeh sari cheezein pehle se theek ho sakti hain:
           </p>
 
           <StepList>
-            <SI n={1}><strong>eKYC status dekho:</strong> pmkisan.gov.in par jaakar check karo — status &quot;YES&quot; hona chahiye. Nahi hai toh OTP se do minute mein ho jata hai, agar Aadhaar se mobile linked hai. Poora tarika, teeno methods ke saath, <Link href="/articles/PmKisanEkycOnline2026" className="text-[var(--color-primary)] underline">eKYC guide</Link> mein likha hai.</SI>
-            <SI n={2}><strong>Bank account ki Aadhaar seeding check karo:</strong> Paisa NPCI ke through Aadhaar-linked account mein hi aata hai. Bank badla hai ya account band hua hai toh naye account mein Aadhaar seeding karwana zaroori hai — bank jaakar ek form bharna padta hai.</SI>
-            <SI n={3}><strong>Zameen ka record dekho:</strong> Zameen kharidi ya bechi hai toh patwari se Khatauni update karwa lo. Land record aur PM Kisan ka data match nahi hua toh payment ruk jata hai.</SI>
+            <SI n={1}><strong>eKYC status dekho:</strong> pmkisan.gov.in par jaakar dekho — &quot;YES&quot; hona chahiye. Nahi hai toh OTP se do minute mein ho jata hai, agar Aadhaar se mobile linked hai. Pura tarika, teeno methods ke sath, <Link href="/articles/PmKisanEkycOnline2026" className="text-[var(--color-primary)] underline">eKYC guide</Link> mein likha hai.</SI>
+            <SI n={2}><strong>Bank ki Aadhaar seeding dekho:</strong> Paisa NPCI ke through Aadhaar-linked account mein hi aata hai. Bank badla hai ya account band hua toh naye wale mein seeding karwana jaruri hai — branch jaakar ek form bharna padta hai.</SI>
+            <SI n={3}><strong>Zameen ka record dekho:</strong> Kharidi ya bechi hai toh patwari se Khatauni update karwa lo. Land record aur portal ka data match nahi hua toh payment ruk jata hai.</SI>
             <SI n={4}><strong>Aadhaar wala mobile number chalu rakho:</strong> SIM band ho gayi toh OTP nahi aayega, aur OTP ke bina na eKYC hogi na koi correction. Number badla hai toh Aadhaar centre jaakar update karwa lo — yeh kaam online nahi hota.</SI>
             <SI n={5}><strong>Naam ki spelling milao:</strong> Aadhaar mein &quot;Mohd&quot; aur bank mein &quot;Mohammad&quot; — bas itna sa farak bhi payment fail karwa deta hai. Correction form se theek ho jata hai, lekin time lagta hai isliye abhi kar lo.</SI>
           </StepList>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Aur haan — agar pichli koi kist ruki hui hai toh <Link href="/articles/PmKisanBeneficiaryList2026" className="text-[var(--color-primary)] underline">beneficiary list</Link> mein apna naam zaroor check karo. List mein naam hi nahi hai toh 25vi kya, koi bhi kist nahi aayegi. Pehle woh problem solve karo.
+            Aur haan — agar pichla koi paisa ruka hua hai toh <Link href="/articles/PmKisanBeneficiaryList2026" className="text-[var(--color-primary)] underline">beneficiary list</Link> mein apna naam jarur dekho. List mein naam hi nahi hai toh 25vi kya, kuch bhi nahi aayega. Pehle woh problem solve karo.
           </p>
         </section>
 
@@ -223,45 +223,45 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Kist se pehle ki checklist — inme se ek bhi cheez pending hai toh paisa atak sakta hai
+            Yeh checklist pehle nipta lo — inme se ek bhi cheez pending hai toh paisa atak sakta hai
           </p>
         </div>
 
         <section className="mb-8">
-          <SH>Status check karne ka sahi tarika</SH>
+          <SH>Status dekhne ka sahi tarika</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Jab release ki khabar aane lage, tab status aise check karo — koi app download karne ki zaroorat nahi, koi paisa dene ki zaroorat nahi:
+            Jab release ki khabar aane lage, tab aise dekho — koi app download karne ki jarurat nahi, koi paisa dene ki jarurat nahi:
           </p>
 
           <StepList>
             <SI n={1}>pmkisan.gov.in kholo aur &quot;Know Your Status&quot; par jao.</SI>
-            <SI n={2}>Apna registration number daalo. Number yaad nahi? &quot;Know your registration no.&quot; option se mobile ya Aadhaar number se nikal jayega.</SI>
-            <SI n={3}>OTP verify karo — status saamne aa jayega. Wahan eKYC, land seeding aur Aadhaar bank seeding teeno dikhte hain.</SI>
+            <SI n={2}>Apna registration number daalo. Yaad nahi? &quot;Know your registration no.&quot; option se mobile ya Aadhaar number se nikal jayega.</SI>
+            <SI n={3}>OTP verify karo — saamne sab aa jayega. Wahan eKYC, land seeding aur bank seeding teeno dikhte hain.</SI>
           </StepList>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4 mb-3">
-            Ek practical salah — roz roz status check karne se kist jaldi nahi aati. Jab news mein release ki baat chalne lage, tab hafte mein ek baar dekh lena kaafi hai. Poora step-by-step process screenshots ke saath <Link href="/articles/PmKisanMasterGuide2026" className="text-[var(--color-primary)] underline">master guide</Link> mein hai.
+            Ek practical salah — roz roz dekhne se paisa jaldi nahi aata. Jab news mein baat chalne lage, tab hafte mein ek baar dekh lena kafi hai. Pura step-by-step process screenshots ke sath <Link href="/articles/PmKisanMasterGuide2026" className="text-[var(--color-primary)] underline">master guide</Link> mein hai.
           </p>
 
           <DB>
-            <strong>Dhoke se bacho:</strong> Status check karne ke liye koi bhi website ya app paisa maange toh samajh jao fraud hai. Sarkari portal bilkul free hai. Aur koi &quot;agent&quot; bole ki paise dekar kist jaldi aa jayegi — aisa kuch nahi hota, seedha mana kar do.
+            <strong>Dhoke se bacho:</strong> Status dekhne ke liye koi bhi website ya app paisa maange toh samajh jao fraud hai. Sarkari portal bilkul free hai. Aur koi &quot;agent&quot; bole ki paise dekar jaldi aa jayega — aisa kuch nahi hota, seedha mana kar do.
           </DB>
         </section>
 
         <section className="mb-8">
-          <SH>Naye farmers — registration kab aur kaise?</SH>
+          <SH>Naye kisano ke liye — registration kab aur kaise?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Agar aap abhi tak scheme mein registered nahi ho, toh sabse pehli baat — registration ki koi last date nahi hoti. Portal saal bhar khula rehta hai, jab chaho apply kar sakte ho.
+            Agar aap abhi tak scheme mein registered nahi ho, toh sabse pehli baat — iski koi last date nahi hoti. Portal saal bhar khula rehta hai, jab chaho apply kar sakte ho.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Lekin ek cheez samajh lo — apply karne aur paisa aane ke beech mein lamba process hai. Aapke documents verify honge, land record check hoga, eKYC hogi, bank seeding hogi. Is sab mein hafton ka time lagta hai, kabhi kabhi zyada bhi. Registration aaj kiya aur agle mahine paisa aa gaya — aisa nahi chalta.
+            Lekin ek cheez samajh lo — apply karne aur paisa aane ke beech lamba process hai. Documents verify honge, zameen ka record match hoga, eKYC hogi, bank seeding hogi. Is sab mein hafto ka time lagta hai, kabhi kabhi jyada bhi. Aaj form bhara aur agle mahine paisa aa gaya — aisa nahi chalta.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Isliye simple funda hai: jitni jaldi register karoge, utni jaldi kisi kist mein naam aayega. Der karne ka bas yeh nuksan hai ki ek-do cycle nikal jayengi. Registration ke liye Aadhaar, bank passbook, khatauni aur mobile number chahiye — CSC centre se ya khud portal se ho jata hai.
+            Isliye simple funda: jitni jaldi karoge, utni jaldi naam aayega. Der karne ka bas yeh nuksan hai ki ek-do cycle nikal jayengi. Apply karne ke liye Aadhaar, bank passbook, khatauni aur mobile number chahiye — CSC centre se ya khud portal se ho jata hai.
           </p>
         </section>
 
@@ -269,15 +269,15 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           <SH>2027 mein rules badal rahe hain kya?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ek badlav sach mein ho raha hai — <strong>Farmer ID</strong>, jise AgriStack bhi kehte hain. Kai states mein naye PM Kisan registration ke liye yeh ID zaroori kar di gayi hai, aur dheere dheere baaki jagah bhi ho sakti hai. Yeh ek digital ID hai jo aapki zameen aur fasal ke record se judi hoti hai.
+            Ek badlav sach mein ho raha hai — <strong>Farmer ID</strong>, jise AgriStack bhi kehte hain. Kai states mein naye registration ke liye yeh ID jaruri kar di gayi hai, aur dheere dheere baki jagah bhi ho sakti hai. Yeh ek digital ID hai jo aapki zameen aur fasal ke record se judi hoti hai.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Toh agar aapke state mein Farmer ID ban rahi hai aur aapne abhi tak nahi banwayi — banwa lo. CSC centre ya krishi vibhag ke camp mein ban jaati hai, free hai. Aage jaakar kaam aayegi, sirf PM Kisan mein nahi, dusri schemes mein bhi.
+            Toh agar aapke state mein yeh ban rahi hai aur aapne abhi tak nahi banwayi — banwa lo. CSC centre ya krishi vibhag ke camp mein ban jati hai, free hai. Aage jaakar kaam aayegi, sirf is scheme mein nahi, dusri jagah bhi.
           </p>
 
           <DB>
-            <strong>Hoshiyar raho:</strong> Iske alawa jo bhi suna hai — amount badhna, eligibility rules badalna, naye documents lagna — inka koi official confirmation nahi hai. Jab tak pmkisan.gov.in ya PIB se na aaye, aisi khabron par bharosa mat karo, aur na hi WhatsApp par aage bhejo.
+            <strong>Hoshiyar raho:</strong> Iske alawa jo bhi suna hai — paisa badhna, eligibility badalna, naye documents lagna — inka koi official confirmation nahi. Jab tak pmkisan.gov.in ya PIB se na aaye, aisi khabro par bharosa mat karo, aur na hi WhatsApp par aage bhejo.
           </DB>
         </section>
 
@@ -285,15 +285,15 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           <SH>Fake news se kaise bachein — 30 second ka rule</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            &quot;25vi kist ki date confirm!&quot; wali thumbnail dekh kar click karne ka mann karta hai, pata hai. Lekin yeh channels views ke liye kuch bhi likh dete hain — aaj &quot;date confirm&quot;, kal &quot;bada update&quot;, parso &quot;khushkhabri&quot;. Inka business hi yahi hai.
+            &quot;Date confirm!&quot; wali thumbnail dekh kar click karne ka mann karta hai, pata hai. Lekin yeh channels views ke liye kuch bhi likh dete hain — aaj &quot;confirm&quot;, kal &quot;bada update&quot;, parso &quot;khushkhabri&quot;. Inka business hi yahi hai.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Isliye ek simple rule bana lo. Koi bhi date ya amount wali khabar mile — chahe YouTube se, WhatsApp se, kisi website se — toh 30 second nikaal kar do jagah check karo: <strong>pmkisan.gov.in</strong> aur <strong>PIB ki press release</strong>. In dono mein se kahin nahi hai, matlab khabar jhooti hai. Itna simple.
+            Isliye ek simple rule bana lo. Koi bhi aisi khabar mile — chahe YouTube se, WhatsApp se, kisi website se — toh 30 second nikaal kar do jagah dekho: <strong>pmkisan.gov.in</strong> aur <strong>PIB ki press release</strong>. In dono mein se kahin nahi hai, matlab khabar jhooti hai. Itna simple.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Hum bhi yahi rule follow karte hain. Isliye is article mein aapko &quot;confirm date&quot; nahi milegi — kyunki woh abhi kahin exist nahi karti. Jis din karegi, us din yeh page update ho jayega.
+            Hum bhi yahi rule follow karte hain. Isliye is article mein aapko &quot;confirm date&quot; nahi milegi — kyuki woh abhi kahin exist nahi karti. Jis din karegi, us din yeh page update ho jayega.
           </p>
         </section>
 
@@ -315,17 +315,17 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Payment aane par bank ka SMS — yeh aaya matlab kaam ho gaya
+            Paisa aane par bank ka SMS — yeh aaya matlab kaam ho gaya
           </p>
         </div>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">25vi Kist Ka Sahi Hisaab — Ek Nazar Mein</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Sahi Hisaab — Ek Nazar Mein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            23vi aa chuki hai, 24vi ka intezaar hai — matlab 25vi tak kam se kam do release cycles baaki hain. Pichle gaps ke hisaab se 2027 ki shuruaat se pehle iski umeed rakhna bekaar hai, aur exact date ka toh sawal hi nahi kyunki woh abhi kisi ke paas nahi hai.
+            23vi aa chuki, 24vi ka intezaar hai — matlab 25vi tak kam se kam do release cycles baki hain. Pichle gaps ke hisab se 2027 ki shuruat se pehle umeed rakhna bekar hai, aur exact din ka toh sawal hi nahi kyuki woh abhi kisi ke paas nahi.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Jo aapke haath mein hai — eKYC, NPCI seeding, land record, naam ki spelling — wahi 25vi aane par payment atakne se bachayega. Date ka andaza lagane se zyada kaam ka yehi hai. Koi dikkat ho toh helpline <strong>155261</strong> par seedha baat karo, WhatsApp forward par nahi.
+            Jo aapke haath mein hai — eKYC, NPCI seeding, land record, naam ki spelling — wahi paisa atakne se bachayega. Andaza lagane se jyada kaam ka yehi hai. Koi dikkat ho toh helpline <strong>155261</strong> par seedha baat karo, WhatsApp forward par nahi.
           </p>
         </div>
 
@@ -339,7 +339,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
 
         <CalcBanner
           title="Ab Tak Ka Total Nikaalo"
-          desc="21vi se ab tak kitna mila, kitna baaki — sab calculate karo"
+          desc="21vi se ab tak kitna mila, kitna baki — sab calculate karo"
           primaryCta={{ href: '/calculator/installment-tracker', label: 'Tracker Kholo →' }}
           secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator' }}
         />
