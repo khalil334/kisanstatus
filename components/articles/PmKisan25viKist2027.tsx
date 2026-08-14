@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-09T08:58:39+05:30';
-const MODIFIED = '2026-08-14T18:05:00+05:30';
+const MODIFIED = '2026-08-14T22:15:00+05:30';
 
 const RELATED = [
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Ka Matlab' },
@@ -16,11 +16,11 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: '25vi kist ki exact date kya hai?',
-    a: 'Abhi kuch bhi official nahi hai — na sarkar ne bola, na kisi aur ko pata. Net par jo February 2027 ya March 2027 ghoom raha hai woh sab andaza hai. Announcement hamesha release se thoda pehle hoti hai, mahino pehle kabhi nahi. Official khabar aate hi hum yahan update kar denge.',
+    a: 'Abhi kuch bhi official nahi hai — na sarkar ne bola, na kisi aur ko pata. Net par jo February ya March ghoom raha hai woh sab guesswork hai. Announcement hamesha release se thoda pehle hoti hai, mahino pehle kabhi nahi. Official khabar aate hi hum yahan update kar denge.',
   },
   {
     q: 'Kya 25vi kist mein paisa badhkar ₹2,500 ya ₹3,000 ho jayega?',
-    a: 'Iska koi official confirmation nahi. 2019 se ₹2,000 hi mil raha hai aur har budget se pehle badhne ki afwah udti hai — aaj tak ek baar bhi sach nahi hui. Planning ₹2,000 ke hisab se karo. Agar sach mein badha toh yeh page turant update hoga.',
+    a: 'Iska koi official confirmation nahi. 2019 se wahi amount mil raha hai aur har budget se pehle badhne ki afwah udti hai — aaj tak ek baar bhi sach nahi hui. Planning ₹2,000 ke hisab se karo. Agar sach mein badha toh yeh page turant update hoga.',
   },
   {
     q: 'Kist na aaye toh kahan shikayat karein?',
@@ -28,11 +28,11 @@ const FAQS_DATA = [
   },
   {
     q: '24vi kist nahi mili — kya 25vi milegi?',
-    a: 'Milni chahiye, lekin pehle yeh pata karo ki 24vi kyu ruki. Zyada tar mamlo mein wajah eKYC pending, bank mein Aadhaar seeding na hona ya land record verify na hona hoti hai. Yeh theek kiye bina agli wali bhi wahin atkegi. Ruka hua paisa baad mein alag se credit ho jata hai, agar aap eligible ho.',
+    a: 'Milni chahiye, lekin pehle yeh pata karo ki 24vi kyu ruki. Zyada tar mamlo mein wajah eKYC pending, bank mein Aadhaar seeding na hona ya land record verify na hona hoti hai. Yeh theek kiye bina agli wali bhi wahin atkegi. Ruki hui raqam baad mein alag se credit ho jati hai, agar aap eligible ho.',
   },
   {
     q: 'Naye registration ki koi last date hai kya?',
-    a: 'Nahi, portal saal bhar khula rehta hai. Lekin verification mein hafto ka time lagta hai — document check, land seeding, eKYC sab hone ke baad hi naam list mein aata hai. Jitni jaldi karoge, utni jaldi paisa shuru hone ke chance banenge. Der karne ka bas itna nuksan hai ki ek-do cycle nikal sakti hai.',
+    a: 'Nahi, portal saal bhar khula rehta hai. Lekin verification mein hafto ka time lagta hai — document check, land seeding, eKYC sab hone ke baad hi naam list mein aata hai. Jitni jaldi karoge, utni jaldi benefit shuru hone ke chance banenge. Der karne ka bas itna nuksan hai ki ek-do cycle nikal sakti hai.',
   },
 ];
 
@@ -83,7 +83,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Hum seedhi baat karenge. Sach yeh hai ki 25vi wali abhi kisi ko nahi pata — na humein, na un YouTube channelo ko, na un websites ko. Sarkar mahino pehle kabhi kuch announce nahi karti. Zyada tar toh release se ek-do hafte pehle hi khabar aati hai, aur kai baar toh PM ke kisi event ke sath hi paisa aa jata hai.
+          Hum seedhi baat karenge. Sach yeh hai ki 25vi wali abhi kisi ko nahi pata — na humein, na un YouTube channelo ko, na un websites ko. Sarkar mahino pehle kabhi kuch announce nahi karti. Zyada tar toh release se ek-do hafte pehle hi khabar aati hai, aur kai baar toh PM ke kisi event ke sath hi transfer ho jata hai.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
@@ -98,7 +98,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           <SH>Ab tak ka record — kya pakka hai, kya nahi</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Andaza lagane ka sabse imandaar tarika yeh hai ki pichli baar kab kab paisa aaya tha, woh dekha jaye. 21vi, 22vi aur 23vi — teeno aa chuki hain aur inki dates official record mein hain. 24vi ka intezaar hai, jiska live update hum <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline">alag article</Link> mein rakhte hain.
+            Sabse imandaar tarika yeh hai ki pichhla record dekha jaye. 21vi, 22vi aur 23vi — teeno aa chuki hain aur inki dates official record mein hain. 24vi ka intezaar hai, jiska live update hum <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline">alag article</Link> mein rakhte hain.
           </p>
 
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -115,7 +115,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
                   ['21vi', '19 November 2025', 'Aa chuki, ₹2,000 mila tha'],
                   ['22vi', '13 March 2026', 'Pichli wali ke kareeb 4 mahine baad aayi'],
                   ['23vi', '20 June 2026', 'Is baar gap sirf 3 mahine ka tha'],
-                  ['24vi', 'Andaza: Oct–Nov 2026', 'Abhi tak nahi aayi, intezaar chalu hai'],
+                  ['24vi', 'Umeed: Oct–Nov 2026', 'Abhi tak nahi aayi, intezaar chalu hai'],
                   ['25vi', 'Uske 3-4 mahine baad', 'Door ki baat — pehle 24vi toh aa jaye'],
                 ].map(([kist, date, note], i) => (
                   <tr key={kist} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
@@ -129,11 +129,11 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Table dhyan se dekho. November se March — chaar mahine. March se June — teen. Scheme ka official rule toh yehi hai ki saal mein teen baar ₹2,000 milte hain, har chaar mahine mein ek baar, total ₹6,000. Lekin zameen par timing kabhi teen mahine mein ho jati hai, kabhi paanch mahine kha jati hai.
+            Table dhyan se dekho. November se March — chaar mahine. March se June — teen. Scheme ka official rule toh yehi hai ki saal mein teen baar ₹2,000 milte hain, har chaar mahine mein ek baar, total ₹6,000. Lekin zameen par timing kabhi teen mahine mein ho jati hai, kabhi paanch kha jati hai.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Isliye jo bhi confidently &quot;February 2027 pakka&quot; bol raha hai, woh bas pichla gap aage badha kar hisab laga raha hai. Hisab hum bhi laga sakte hain — agar 24vi October-November 2026 ke aas paas aati hai, toh agli uske teen-chaar mahine baad banti hai, matlab 2027 ki shuruat ke aas paas. Lekin yeh hisab hai, guarantee nahi. Farak samajhna jaruri hai.
+            Isliye jo bhi confidently &quot;February pakka&quot; bol raha hai, woh bas pichla gap aage badha kar hisab laga raha hai. Hisab hum bhi laga sakte hain — agar 24vi October-November ke aas paas aati hai, toh agli uske teen-chaar mahine baad banti hai, matlab agle saal ki shuruat ke aas paas. Lekin yeh hisab hai, guarantee nahi. Farak samajhna jaruri hai.
           </p>
         </section>
 
@@ -156,7 +156,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           <SH>Sarkar tareekh decide kaise karti hai — process samjho</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Yeh samajhna kaam aayega, kyuki isse pata chalta hai ki sab kuch pehle se fix kyu nahi hota. Paisa seedha DBT (Direct Benefit Transfer) se aata hai — sarkar ke khaate se seedha aapke bank account mein. Lekin transfer se pehle ek lambi chain chalti hai.
+            Yeh samajhna kaam aayega, kyuki isse pata chalta hai ki sab kuch pehle se fix kyu nahi hota. Amount seedha DBT (Direct Benefit Transfer) se aata hai — sarkar ke khaate se seedha aapke bank account mein. Lekin transfer se pehle ek lambi chain chalti hai.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -164,7 +164,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Aur aakhri kadam — release event. Zyada tar paisa PM ke haathon kisi program mein jaari hota hai. Event kab hoga yeh politics aur schedule par depend karta hai, isliye paisa kab aayega yeh bhi wahi tay karta hai. Yahi wajah hai ki koi bhi website mahino pehle exact din nahi bata sakti — kyuki woh din exist hi nahi karta abhi.
+            Aur aakhri kadam — release event. Zyada tar yeh raqam PM ke haathon kisi program mein jaari hoti hai. Event ki timing politics aur schedule par depend karti hai, isliye payment ki timing bhi wahi tay karti hai. Yahi wajah hai ki koi bhi website mahino pehle exact din nahi bata sakti — kyuki woh din exist hi nahi karta abhi.
           </p>
 
           <IB>
@@ -176,7 +176,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           <SH>Paisa badhega ya wahi ₹2,000 rahega?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Scheme 2019 mein shuru hui thi — tab se har baar ₹2,000 hi milte hain, saal ke ₹6,000. Saat saal ho gaye, ek rupaya nahi badha.
+            Scheme 2019 mein shuru hui thi — tab se har baar wahi ₹2,000, saal ke ₹6,000. Saat saal ho gaye, ek rupaya nahi badha.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -188,7 +188,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </p>
 
           <IB>
-            <strong>Real baat:</strong> Apna budget ₹2,000 ke hisab se banao. Agar badha toh woh bonus hoga — aur hum yahan sabse pehle update karenge.
+            <strong>Real baat:</strong> Apna budget isi amount ke hisab se banao. Agar badha toh woh bonus hoga — aur hum yahan sabse pehle update karenge.
           </IB>
         </section>
 
@@ -196,19 +196,19 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           <SH>Intezaar chhodo — yeh 5 kaam abhi karo</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ab asli kaam ki baat. Timing aap control nahi kar sakte, lekin yeh jarur kar sakte ho ki jab paisa jaari ho, aapka atke nahi. Har baar lakhs logo ka payment inhi wajaho se rukta hai — aur yeh sari cheezein pehle se theek ho sakti hain:
+            Ab asli kaam ki baat. Timing aap control nahi kar sakte, lekin yeh jarur kar sakte ho ki jab release ho, aapka hissa atke nahi. Har baar lakhs logo ka payment inhi wajaho se rukta hai — aur yeh sari cheezein pehle se theek ho sakti hain:
           </p>
 
           <StepList>
             <SI n={1}><strong>eKYC status dekho:</strong> pmkisan.gov.in par jaakar dekho — &quot;YES&quot; hona chahiye. Nahi hai toh OTP se do minute mein ho jata hai, agar Aadhaar se mobile linked hai. Pura tarika, teeno methods ke sath, <Link href="/articles/PmKisanEkycOnline2026" className="text-[var(--color-primary)] underline">eKYC guide</Link> mein likha hai.</SI>
-            <SI n={2}><strong>Bank ki Aadhaar seeding dekho:</strong> Paisa NPCI ke through Aadhaar-linked account mein hi aata hai. Bank badla hai ya account band hua toh naye wale mein seeding karwana jaruri hai — branch jaakar ek form bharna padta hai.</SI>
+            <SI n={2}><strong>Bank ki Aadhaar seeding dekho:</strong> Payment NPCI ke through Aadhaar-linked account mein hi aata hai. Bank badla hai ya account band hua toh naye wale mein yeh linking karwana jaruri hai — branch jaakar ek form bharna padta hai.</SI>
             <SI n={3}><strong>Zameen ka record dekho:</strong> Kharidi ya bechi hai toh patwari se Khatauni update karwa lo. Land record aur portal ka data match nahi hua toh payment ruk jata hai.</SI>
             <SI n={4}><strong>Aadhaar wala mobile number chalu rakho:</strong> SIM band ho gayi toh OTP nahi aayega, aur OTP ke bina na eKYC hogi na koi correction. Number badla hai toh Aadhaar centre jaakar update karwa lo — yeh kaam online nahi hota.</SI>
             <SI n={5}><strong>Naam ki spelling milao:</strong> Aadhaar mein &quot;Mohd&quot; aur bank mein &quot;Mohammad&quot; — bas itna sa farak bhi payment fail karwa deta hai. Correction form se theek ho jata hai, lekin time lagta hai isliye abhi kar lo.</SI>
           </StepList>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Aur haan — agar pichla koi paisa ruka hua hai toh <Link href="/articles/PmKisanBeneficiaryList2026" className="text-[var(--color-primary)] underline">beneficiary list</Link> mein apna naam jarur dekho. List mein naam hi nahi hai toh 25vi kya, kuch bhi nahi aayega. Pehle woh problem solve karo.
+            Aur haan — agar pichla koi payment ruka hua hai toh <Link href="/articles/PmKisanBeneficiaryList2026" className="text-[var(--color-primary)] underline">beneficiary list</Link> mein apna naam jarur dekho. List mein naam hi nahi hai toh 25vi kya, kuch bhi nahi aayega. Pehle woh problem solve karo.
           </p>
         </section>
 
@@ -241,11 +241,11 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </StepList>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4 mb-3">
-            Ek practical salah — roz roz dekhne se paisa jaldi nahi aata. Jab news mein baat chalne lage, tab hafte mein ek baar dekh lena kafi hai. Pura step-by-step process screenshots ke sath <Link href="/articles/PmKisanMasterGuide2026" className="text-[var(--color-primary)] underline">master guide</Link> mein hai.
+            Ek practical salah — roz roz dekhne se kuch jaldi nahi aata. Jab news mein baat chalne lage, tab hafte mein ek baar dekh lena kafi hai. Pura step-by-step process screenshots ke sath <Link href="/articles/PmKisanMasterGuide2026" className="text-[var(--color-primary)] underline">master guide</Link> mein hai.
           </p>
 
           <DB>
-            <strong>Dhoke se bacho:</strong> Status dekhne ke liye koi bhi website ya app paisa maange toh samajh jao fraud hai. Sarkari portal bilkul free hai. Aur koi &quot;agent&quot; bole ki paise dekar jaldi aa jayega — aisa kuch nahi hota, seedha mana kar do.
+            <strong>Dhoke se bacho:</strong> Status dekhne ke liye koi bhi website ya app fees maange toh samajh jao fraud hai. Sarkari portal bilkul free hai. Aur koi &quot;agent&quot; bole ki paise dekar jaldi aa jayega — aisa kuch nahi hota, seedha mana kar do.
           </DB>
         </section>
 
@@ -257,16 +257,16 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Lekin ek cheez samajh lo — apply karne aur paisa aane ke beech lamba process hai. Documents verify honge, zameen ka record match hoga, eKYC hogi, bank seeding hogi. Is sab mein hafto ka time lagta hai, kabhi kabhi jyada bhi. Aaj form bhara aur agle mahine paisa aa gaya — aisa nahi chalta.
+            Lekin ek cheez samajh lo — apply karne aur pehla credit aane ke beech lamba process hai. Documents verify honge, zameen ka record match hoga, eKYC hogi, bank linking hogi. Is sab mein hafto ka time lagta hai, kabhi kabhi jyada bhi. Aaj form bhara aur agle mahine account mein aa gaya — aisa nahi chalta.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Isliye simple funda: jitni jaldi karoge, utni jaldi naam aayega. Der karne ka bas yeh nuksan hai ki ek-do cycle nikal jayengi. Apply karne ke liye Aadhaar, bank passbook, khatauni aur mobile number chahiye — CSC centre se ya khud portal se ho jata hai.
+            Isliye simple funda: jitni jaldi karoge, utni jaldi naam judega. Der karne ka bas yeh nuksan hai ki ek-do cycle nikal jayengi. Apply karne ke liye Aadhaar, bank passbook, khatauni aur mobile number chahiye — CSC centre se ya khud portal se ho jata hai.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>2027 mein rules badal rahe hain kya?</SH>
+          <SH>Aage jaakar rules badal rahe hain kya?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Ek badlav sach mein ho raha hai — <strong>Farmer ID</strong>, jise AgriStack bhi kehte hain. Kai states mein naye registration ke liye yeh ID jaruri kar di gayi hai, aur dheere dheere baki jagah bhi ho sakti hai. Yeh ek digital ID hai jo aapki zameen aur fasal ke record se judi hoti hai.
@@ -277,7 +277,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </p>
 
           <DB>
-            <strong>Hoshiyar raho:</strong> Iske alawa jo bhi suna hai — paisa badhna, eligibility badalna, naye documents lagna — inka koi official confirmation nahi. Jab tak pmkisan.gov.in ya PIB se na aaye, aisi khabro par bharosa mat karo, aur na hi WhatsApp par aage bhejo.
+            <strong>Hoshiyar raho:</strong> Iske alawa jo bhi suna hai — amount badhna, eligibility badalna, naye documents lagna — inka koi official confirmation nahi. Jab tak pmkisan.gov.in ya PIB se na aaye, aisi khabro par bharosa mat karo, aur na hi WhatsApp par aage bhejo.
           </DB>
         </section>
 
@@ -322,10 +322,10 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Sahi Hisaab — Ek Nazar Mein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            23vi aa chuki, 24vi ka intezaar hai — matlab 25vi tak kam se kam do release cycles baki hain. Pichle gaps ke hisab se 2027 ki shuruat se pehle umeed rakhna bekar hai, aur exact din ka toh sawal hi nahi kyuki woh abhi kisi ke paas nahi.
+            23vi aa chuki, 24vi ka intezaar hai — matlab 25vi tak kam se kam do release cycles baki hain. Pichle gaps ke hisab se agle saal ki shuruat se pehle umeed rakhna bekar hai, aur exact din ka toh sawal hi nahi kyuki woh abhi kisi ke paas nahi.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Jo aapke haath mein hai — eKYC, NPCI seeding, land record, naam ki spelling — wahi paisa atakne se bachayega. Andaza lagane se jyada kaam ka yehi hai. Koi dikkat ho toh helpline <strong>155261</strong> par seedha baat karo, WhatsApp forward par nahi.
+            Jo aapke haath mein hai — eKYC, NPCI seeding, land record, naam ki spelling — wahi ₹2,000 atakne se bachayega. Guesswork se jyada kaam ka yehi hai. Koi dikkat ho toh helpline <strong>155261</strong> par seedha baat karo, WhatsApp forward par nahi.
           </p>
         </div>
 
