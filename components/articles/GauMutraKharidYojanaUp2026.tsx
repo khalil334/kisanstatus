@@ -132,24 +132,6 @@ const channels = [
   },
 ] as const;
 
-/* ── Jeevamrit: ghar par banane ka tareeka ── */
-const jeevamritRows: readonly (readonly [string, string, string])[] = [
-  ['Pani', '200 litre', 'Drum bharne ke liye; klorin wala nal ka pani ho to ek raat khula rakh do'],
-  ['Desi gaay ka gobar', '10 kilo', 'Taza ho, sookha nahi'],
-  ['Desi gaay ka mutra', '5–10 litre', 'Alag alag jaankar alag matra batate hain'],
-  ['Gud', '1–2 kilo', 'Purana, kala gud bhi chal jata hai'],
-  ['Besan ya dal ka aata', '1–2 kilo', 'Chana, moong ya urad — jo ghar me ho'],
-  ['Khet ki mitti', 'ek muthi', 'Us khet se jahan rasayan na pada ho'],
-];
-
-/* ── Paisa: hisaab kitaab ── */
-const moneyRows: readonly (readonly [string, string, string])[] = [
-  ['1 gaay', '~4 litre roz', 'Sabse aam sthiti — ghar ki ek gaay'],
-  ['2 gaay', '~8 litre roz', 'Chota pashupalak ghar'],
-  ['4 gaay', '~15 litre roz', 'Doodh ke sath ye dusri aamdani'],
-  ['Mahila samooh ke zariye', 'wahi matra, upar +₹2/litre', 'Bulandshahr pilot me samooh se jude gharon ko'],
-];
-
 /* ── Dhoke se bachav ── */
 const warnings = [
   {
@@ -169,17 +151,6 @@ const warnings = [
     p: `Kisi ne 20 ya 50 rupay litre ka lalach diya to pehle pucho — kaun kharid rha hai, kahan le jayega, aur pichle mahine kisko paisa diya. Do teen gaon walo se pushti kar lo, phir haan bolo.`,
   },
 ] as const;
-
-const summary: readonly (readonly [string, string])[] = [
-  ['Jagah', 'Bulandshahr · Syana tehsil · Narsena'],
-  ['Rate', '₹10 / litre'],
-  ['Gaon shamil', '~15'],
-  ['Rozana jama', '~500 litre'],
-  ['Dekhrekh', 'FPO, Dr. Praveen'],
-  ['Mahila commission', '+₹2 / litre'],
-  ['Istemaal', 'Keetnashak · Jeevamrit'],
-  ['Aage', 'Rajya-vyapi vistaar ho sakta hai'],
-];
 
 const faqs = [
   {
@@ -542,32 +513,20 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
             Matra ke ankdon me jaankaron ke beech thoda farq milta hai — isliye niche range di gyi
             hai, ek pakka aankda nahi.
           </p>
-          <div className="mt-4 overflow-hidden rounded-xl border border-[#3A2440]">
-            <table className="w-full border-collapse text-left">
-              <thead>
-                <tr className="bg-[#1B1023]">
-                  <th className="px-3 py-2 text-[11px] uppercase tracking-wide text-[#9C86A6]">
-                    Cheez
-                  </th>
-                  <th className="px-3 py-2 text-[11px] uppercase tracking-wide text-[#9C86A6]">
-                    Matra
-                  </th>
-                  <th className="px-3 py-2 text-[11px] uppercase tracking-wide text-[#9C86A6]">
-                    Note
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {jeevamritRows.map(([a, b, c]) => (
-                  <tr key={a} className="border-t border-[#3A2440]">
-                    <td className="px-3 py-2 text-[13px] font-semibold text-[#F5EDE3]">{a}</td>
-                    <td className="px-3 py-2 text-[13px] text-[#FFB238]">{b}</td>
-                    <td className="px-3 py-2 text-[12px] leading-5 text-[#9C86A6]">{c}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <p className="mt-3 text-[15px] leading-7 text-[#D8C9DE]">
+            Saman ki list lambi nahi hai — zyada tar cheezein ghar me hi mil jayengi. 200 litre
+            pani se drum bhar lo (nal ka klorin wala pani ho to ek raat khula chhod dena). Usme{' '}
+            <strong className="text-[#F5EDE3]">10 kilo taza gobar</strong> daalo — desi gaay ka,
+            sookha nahi chalega. Mutra <strong className="text-[#F5EDE3]">5 se 10 litre</strong>{' '}
+            — alag alag jaankar alag matra batate hain, isliye range likh rha hu.
+          </p>
+          <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
+            Uske upar <strong className="text-[#F5EDE3]">ek-do kilo gud</strong> (purana kala gud
+            bhi chal jata hai) aur utna hi <strong className="text-[#F5EDE3]">besan ya kisi dal
+            ka aata</strong> — chana, moong, urad, jo ghar me pada ho. Aakhri cheez ek muthi
+            khet ki mitti, aur wo us khet se ho jahan rasayan na pada ho — isi mitti ke jeevanu
+            pure drum me phailte hain.
+          </p>
           <p className="mt-3 text-[15px] leading-7 text-[#D8C9DE]">
             Sab drum me daal ke lakdi se ghol lo. Upar bori dhak do taki hawa nikalti rahe —
             dhakan band mat karna. Roz ek bar hilate raho. Garmi me do teen din, sardi me
@@ -613,17 +572,18 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
             farq padta hai. Sabse imandar tarika ye hai ki apne ghar ka aankda do teen din khud
             naap lo, phir dus se guna kar lo. Kisi ke bataye aankde pe ghar ka hisab mat banao.
           </p>
-          <div className="mt-4 space-y-2">
-            {moneyRows.map(([a, b, c]) => (
-              <div key={a} className="rounded-xl bg-[#1B1023] px-4 py-3">
-                <div className="flex items-baseline justify-between gap-3">
-                  <p className="text-[14px] font-bold text-[#F5EDE3]">{a}</p>
-                  <p className="text-[13px] font-semibold text-[#FFB238]">{b}</p>
-                </div>
-                <p className="mt-1 text-[12px] leading-5 text-[#9C86A6]">{c}</p>
-              </div>
-            ))}
-          </div>
+          <p className="mt-3 text-[15px] leading-7 text-[#D8C9DE]">
+            Motta motta hisab aise banta hai. Ghar me ek gaay hai — sabse aam sthiti — to roz ka
+            karib 4 litre, yani ₹40 ke aas paas; mahine ka 1200 ke andar-bahar. Do gaay pe ye
+            8 litre aur 2400 tak chala jata hai. Chota pashupalak jiske paas chaar gaay hain,
+            wo roz 15 litre ke kareeb pohch jata hai — mahine ke 4500, doodh ki kamai ke upar
+            se.
+          </p>
+          <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
+            Aur agar maal mahila samooh ke zariye ja rha hai, to matra wahi rehti hai par har
+            litre pe ₹2 upar se judte hain — Bulandshahr pilot me samooh se jude gharon ke liye
+            yehi vyavastha hai. Char gaay wale ghar ka hisab tab 5400 ke aas paas baithta hai.
+          </p>
           <p className="mt-3 text-[15px] leading-7 text-[#D8C9DE]">
             Ek baat jo koi nahi batata: mehnat aur waqt bhi kharcha hai. Subah ka 15-20 minute,
             bartan dhona, kendra tak pohchana. Chalte firte kaam ke sath ho jaye to fayda saaf
@@ -789,36 +749,36 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           </div>
         </div>
 
-        {/* summary grid — like a shared-status card */}
+        {/* summary — likha hua recap, grid nahi */}
         <div className="mt-3 rounded-2xl bg-[#241430] p-5">
           <SectionLabel tone="mint">📌 Poori baat ek nazar mein</SectionLabel>
-          <div className="mt-3 grid grid-cols-2 gap-3">
-            {summary.map(([label, value]) => (
-              <div key={label} className="rounded-xl bg-[#1B1023] px-3 py-2.5">
-                <p className="text-[10px] uppercase tracking-wide text-[#9C86A6]">{label}</p>
-                <p className="mt-0.5 text-[14px] font-semibold text-[#F5EDE3]">{value}</p>
-              </div>
-            ))}
-          </div>
+          <p className="mt-3 text-[15px] leading-7 text-[#D8C9DE]">
+            Chalte chalte pura kissa do line me: Bulandshahr ki Syana tehsil ke Narsena se shuru
+            hua ye pilot ab aaspaas ke karib 15 gaon tak pohch gya hai, aur roz lagbhag 500 litre
+            jama ho rha hai. Rate <strong className="text-[#F5EDE3]">₹10 litre</strong>, mahila
+            samooh se jude gharon ko <strong className="text-[#F5EDE3]">₹2 litre</strong> upar se.
+            Dekhrekh Dr. Praveen wale FPO ke hath me hai.
+          </p>
+          <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
+            Jama hua maal keetnashak aur jeevamrit banane me lagta hai. Aage rajya bhar me
+            failane ki baat zaroor hai — par kagaz abhi tak nahi aya, isliye use umeed hi
+            samjho, wada nahi.
+          </p>
         </div>
 
-        {/* FAQ as expandable message bubbles */}
+        {/* FAQ — seedhe sawal jawab, jaise phone pe log puchte hain */}
         <div className="mt-3 rounded-2xl bg-[#2A1830] p-5">
           <SectionLabel>❓ Aksar poochhe gaye sawaal</SectionLabel>
-          <div className="mt-3 space-y-2">
+          <p className="mt-2 text-[14px] leading-6 text-[#9C86A6]">
+            Ye wo sawal hain jo article chhapne ke baad phone aur comment me sabse zyada aaye.
+            Jawab wahi likh rha hu jo aamne saamne bhi deta.
+          </p>
+          <div className="mt-4 space-y-5">
             {faqs.map((f) => (
-              <details key={f.q} className="group rounded-xl bg-[#1B1023] px-4 py-3 open:pb-3">
-                <summary className="flex cursor-pointer list-none items-center justify-between text-[14px] font-semibold text-[#F5EDE3] marker:content-none">
-                  {f.q}
-                  <span
-                    aria-hidden="true"
-                    className="ml-2 shrink-0 text-[#FFB238] transition-transform group-open:rotate-45"
-                  >
-                    +
-                  </span>
-                </summary>
-                <p className="mt-2 text-[14px] leading-6 text-[#D8C9DE]">{f.a}</p>
-              </details>
+              <div key={f.q}>
+                <p className="text-[15px] font-bold leading-6 text-[#F5EDE3]">{f.q}</p>
+                <p className="mt-1.5 text-[14px] leading-7 text-[#D8C9DE]">{f.a}</p>
+              </div>
             ))}
           </div>
         </div>
