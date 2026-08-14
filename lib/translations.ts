@@ -176,7 +176,7 @@ const t: Record<'hi' | 'en', Translations> = {
     error: 'Error aa gayi',
     success: 'Success!',
 
-    footer_disclaimer: 'KisanStatus.com ek independent informational portal hai — Government of India ka official website nahi hai.',
+    footer_disclaimer: 'Yaad rakhein — KisanStatus.com sarkari website nahi hai. Yeh ek kisan ki banayi jaankari wali site hai; asli kaam hamesha official portal par karein.',
     footer_quick_links: 'Quick Links',
     footer_official_links: 'Official Government Links',
     footer_contact: 'Contact Us',
@@ -257,7 +257,7 @@ const t: Record<'hi' | 'en', Translations> = {
     error: 'Error occurred',
     success: 'Success!',
 
-    footer_disclaimer: 'KisanStatus.com is an independent informational portal — NOT an official Government of India website.',
+    footer_disclaimer: 'A quick word — KisanStatus.com is not a government website. It is a farmer-run info site; for any real work, always use the official portal.',
     footer_quick_links: 'Quick Links',
     footer_official_links: 'Official Government Links',
     footer_contact: 'Contact Us',
