@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-09T08:58:39+05:30';
-const MODIFIED = '2026-03-11T09:19:18+05:30';
+const MODIFIED = '2026-08-14T18:05:00+05:30';
 
 const RELATED = [
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Ka Matlab' },
@@ -21,6 +21,10 @@ const FAQS_DATA = [
   {
     q: 'Kya 25vi mein paisa badhega?',
     a: '₹2,000 hi chal raha hai 2019 se. Har budget ke time afwah aati hai ki ₹2,500 ya ₹3,000 ho jayega — kabhi hua nahi. Iss baar bhi shayad nahi hoga. Agar hua toh hum update karenge.',
+  },
+  {
+    q: 'Kist na aaye toh kahan phone karein?',
+    a: 'PM Kisan helpline 155261 hai, toll free. Dusra number 011-24300606. Call karne se pehle apna registration number nikaal kar rakhna, bina uske woh log kuch nahi bata paate. Subah ke time line jaldi lagti hai.',
   },
   {
     q: 'Har kist ke liye naya registration karna padta hai?',
@@ -41,6 +45,10 @@ const FAQS_DATA = [
   {
     q: 'Status kab se check karna shuru karoon?',
     a: 'Jaldi kya hai? Jab news mein date aane lage, tab hafte mein ek baar dekh lena kaafi hai. Roz roz check karne se jaldi nahi aayegi.',
+  },
+  {
+    q: 'YouTube wale bol rahe hain date confirm ho gayi — sach hai?',
+    a: 'Nahi. Views ke liye "confirm date" wali thumbnail lagate hain. PM Kisan ki date sirf pmkisan.gov.in ya PIB press release se confirm hoti hai. Wahan nahi hai matlab kahin nahi hai. Itna simple.',
   },
 ];
 
@@ -87,11 +95,11 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         </div>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Internet par bahut se articles 25vi kist ki "exact date" bata rahe hain. February 2027, March 2027 — jo mann mein aaya likh diya.
+          Internet pe bahut saare articles 25vi kist ki "exact date" bata rahe hain. February 2027, March 2027 — jo mann mein aaya likh diya. Kisi ne source tak nahi diya.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Sach yeh hai ki koi nahi jaanta. Sarkar advance mein date announce nahi karti. Aur 24vi khud abhi tak nahi aayi hai.
+          Sach ye hai ki koi nahi jaanta. Sarkar advance mein date announce nahi karti — kabhi ki hi nahi. Aur <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline font-medium">24vi kist</Link> khud abhi tak nahi aayi hai, toh 25vi ki date ka sawal hi kahan uthta hai.
         </p>
 
         <WB>
@@ -102,7 +110,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           <SH>Ab tak ka record — teen confirmed kisten</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            21vi, 22vi, 23vi — yeh teen ho chuki hain. Dates confirm hain, records mein hain.
+            21vi, 22vi, 23vi — ye teen ho chuki hain. Dates confirm hain, records mein hain. 24vi ka intezaar chal raha hai — uska pura update <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline">yahan alag article</Link> mein rakha hai jo hum regularly update karte hain.
           </p>
 
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -112,20 +120,22 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
                   <th className="p-3 text-left">Kist</th>
                   <th className="p-3 text-left">Kab Aayi</th>
                   <th className="p-3 text-left">Kitna Paisa</th>
+                  <th className="p-3 text-left">Status</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ['21vi', '19 Nov 2025', '₹2,000'],
-                  ['22vi', '13 Mar 2026', '₹2,000'],
-                  ['23vi', '20 Jun 2026', '₹2,000'],
-                  ['24vi', 'Abhi tak nahi aayi', '—'],
-                  ['25vi', 'Pata nahi', '—'],
-                ].map(([kist, date, amount], i) => (
+                  ['21vi', '19 Nov 2025', '₹2,000', 'Aa chuki ✓'],
+                  ['22vi', '13 Mar 2026', '₹2,000', 'Aa chuki ✓'],
+                  ['23vi', '20 Jun 2026', '₹2,000', 'Aa chuki ✓'],
+                  ['24vi', 'Oct–Nov 2026 expected', '₹2,000 (hi rahega)', 'Intezaar'],
+                  ['25vi', 'Uske 3-4 mahine baad', '₹2,000 (andaza)', 'Door ki baat'],
+                ].map(([kist, date, amount, status], i) => (
                   <tr key={kist} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{kist}</td>
                     <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{date}</td>
                     <td className="p-3 border-b border-[var(--color-border)] text-xs text-green-700 dark:text-green-400 font-bold">{amount}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{status}</td>
                   </tr>
                 ))}
               </tbody>
@@ -133,11 +143,11 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Gap dekho — November se March tak chaar mahine lage. March se June tak teen mahine.
+            Gap dekho — November se March tak chaar mahine lage. March se June tak teen mahine. Scheme ka official rule bhi yehi hai — saal mein teen kisten, har chaar mahine mein ek, total ₹6,000. Lekin zameen par release date aage peeche hoti rehti hai.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Koi fix pattern nahi hai. Jo log confidently "February 2027" bol rahe hain, woh bas guess kar rahe hain.
+            Matlab koi fix pattern nahi hai. Jo log confidently "February 2027" bol rahe hain, wo bas guess maar rahe hain. Agar 24vi October–November 2026 ke aas paas aati hai, toh 25vi uske teen-chaar mahine baad banti hai — lekin ye bhi hisaab hai, date nahi.
           </p>
         </section>
 
@@ -180,12 +190,16 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </p>
 
           <StepList>
-            <SI n={1}><strong>eKYC dekh lo:</strong> Portal par status "YES" nahi dikha toh abhi kar lo. Do minute ka kaam hai.</SI>
-            <SI n={2}><strong>Bank account check karo:</strong> IFSC code sahi hai? Aadhaar seeding hui hai? Bank badla ho toh yeh miss ho jaata hai.</SI>
+            <SI n={1}><strong>eKYC dekh lo:</strong> Portal par status "YES" nahi dikha toh abhi kar lo. Do minute ka kaam hai — poora tarika <Link href="/articles/PmKisanEkycOnline2026" className="text-[var(--color-primary)] underline">eKYC guide</Link> mein likha hai.</SI>
+            <SI n={2}><strong>Bank account check karo:</strong> IFSC code sahi hai? Aadhaar seeding hui hai? Bank badla ho toh yeh miss ho jata hai.</SI>
             <SI n={3}><strong>Zameen ka record dekho:</strong> Kharidi-bechi hai toh patwari se Khatauni update karwa lo.</SI>
             <SI n={4}><strong>Mobile number active rakho:</strong> SIM band hui toh OTP nahi aayega. Phir dikkat hogi.</SI>
-            <SI n={5}><strong>Naam ki spelling match karo:</strong> Aadhaar aur bank mein chhota sa farak bhi problem create karta hai.</SI>
+            <SI n={5}><strong>Naam ki spelling match karo:</strong> Aadhaar aur bank mein chota sa farak bhi problem create karta hai. Correction form se theek ho jata hai.</SI>
           </StepList>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
+            Ek aur baat — agar pichli koi kist ruki hui hai toh <Link href="/articles/PmKisanBeneficiaryList2026" className="text-[var(--color-primary)] underline">beneficiary list</Link> mein apna naam zaroor check karo. Naam hi nahi hai list mein toh 25vi bhi nahi aayegi, simple si baat hai.
+          </p>
         </section>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
@@ -260,10 +274,10 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">25vi Kist Ka Sahi Hisaab</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            23vi ho chuki hai, 24vi ka intezaar hai — matlab 25vi tak kam se kam do release cycles baaki hain, yaani 2027 ki pehli chhamahi se pehle iski umeed rakhna bekar hai.
+            23vi ho chuki hai, 24vi ka intezaar hai — matlab 25vi tak kam se kam do release cycles baki hain, yani 2027 ki pehli chhamahi se pehle iski umeed rakhna bekaar hai.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Is beech jo aapke haath mein hai — eKYC, NPCI seeding, land record — wahi 25vi aane par payment atakne se bachayega. Date ka andaza lagane se zyada kaam ka yahi hai.
+            Is beech jo aapke haath mein hai — eKYC, NPCI seeding, land record — wahi 25vi aane par payment atakne se bachayega. Date ka andaza lagane se zyada kaam ka yehi hai. Aur koi dikkat ho toh helpline <strong>155261</strong> par seedha baat karo, idhar udhar ke WhatsApp forward par nahi.
           </p>
         </div>
 
