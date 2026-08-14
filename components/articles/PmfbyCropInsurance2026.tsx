@@ -273,7 +273,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
         </div>
 
         <section className="mb-8">
-          <SH>Status Check Kaise Karein?</SH>
+          <SH>Enrollment Hua Ya Nahi — Aise Confirm Karein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Premium kat gaya lekin pata nahi system mein registration hua ya nahi? Do minute ka kaam hai:
           </p>
@@ -355,12 +355,113 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Yaad rahe, ye sirf kisan ka hissa hai. Actual (actuarial) premium isse kaafi zyada hota hai — farq kendra aur rajya sarkar milkar bharti hain. North-East states aur J&K jaise ilaakon mein toh poora premium hi sarkar deti hai.
+            Yaad rahe, ye sirf kisan ka hissa hai. Actual (actuarial) rate isse kaafi zyada hota hai — farq kendra aur rajya sarkar milkar bharti hain. North-East states, Jammu & Kashmir aur Himachal jaise ilaakon mein toh kisan ka poora hissa bhi sarkar hi deti hai.
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
+            Sum Insured kitna hoga, ye aap tay nahi karte — har district mein crop ke hisaab se <strong>scale of finance</strong> notify hoti hai (per hectare value). Isliye padosi district ke kisan ka figure aapse alag ho sakta hai, aur ye koi galti nahi hai.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>Documents Ki List</SH>
+          <SH>Muawze Ki Rakam Ka Formula Kya Hai?</SH>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Bahut kisano ko lagta hai ki nuksan hua toh poora sum insured milega — aisa nahi hai. Widespread nuksan (sukha, kam baarish) mein hisaab <strong>yield ke aadhar par</strong> hota hai. Har area ke liye ek <strong>threshold yield</strong> tay hoti hai — pichle saalon ki average paidawar ke aadhar par. Us season crop cutting experiments (CCE) se actual yield naapi jaati hai.
+          </p>
+
+          <IB>
+            <strong>Formula:</strong> Muawza = (Threshold Yield − Actual Yield) ÷ Threshold Yield × Sum Insured. Maan lijiye threshold 20 quintal/hectare hai, is saal sirf 12 quintal nikli, aur SI ₹50,000 hai — toh (20−12)÷20 × 50,000 = <strong>₹20,000</strong> milenge.
+          </IB>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ola ya baadh jaise localized nuksan mein aapke khet ka <strong>individual survey</strong> hota hai, aur muawza usi assessment par milta hai. Ab satellite imagery aur YES-TECH (technology-based yield estimation) ka bhi istemaal ho raha hai, jisse manual crop cutting par nirbharta kam ho rahi hai.
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Do aur situations mein bhi paisa milta hai jo kam log jaante hain:
+          </p>
+
+          <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2">
+            <li><strong>Prevented sowing:</strong> Baarish hi nahi hui aur bijai nahi kar paaye (jabki kharcha ho chuka tha) — sum insured ka <strong>25% tak</strong> milta hai, aur policy wahin band ho jaati hai.</li>
+            <li><strong>Mid-season adversity:</strong> Season ke beech mein hi lag jaaye ki paidawar normal ki aadhi bhi nahi hogi — toh sarkar turant relief ke roop mein sambhavit claim ka ek hissa pehle hi dilwa sakti hai.</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <SH>Report Ke Baad Kya Hota Hai? (Timeline)</SH>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Report karne ke baad ka process aksar kisano ko blackbox lagta hai. Guidelines mein har stage ki time-limit di gayi hai:
+          </p>
+
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Stage</th>
+                  <th className="p-3 text-left">Time Limit</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['Kisan dwara nuksan ki soochna', 'Nuksan ke 72 ghante ke andar'],
+                  ['Insurance company ka acknowledgement', '48 ghante'],
+                  ['Khet ka survey / loss assessment', 'Soochna ke ~10 din mein'],
+                  ['State se yield data (CCE)', 'Harvest ke 1 mahine mein'],
+                  ['Claim calculation', 'Data milne ke ~3 hafte'],
+                  ['Account mein payout', 'Harvest ke 2 mahine ka target'],
+                ].map(([stage, time], i) => (
+                  <tr key={stage} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{stage}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{time}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Zameen par payout mein 3-6 mahine bhi lag jaate hain, kyunki state ka yield data late pahunchna aam baat hai. Isliye timeline yaad rakhein — der ho toh chup baithne ki bajaye shikayat register karein, jiska tareeka neeche hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Paisa Atak Jaaye Toh Shikayat Kahan Karein?</SH>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Seedhi si escalation ladder hai — neeche se upar chalein:
+          </p>
+
+          <StepList>
+            <SI n={1}><strong>Portal par grievance:</strong> pmfby.gov.in ke grievance section mein application number ke saath complaint register karein — tracking number zaroor note karein</SI>
+            <SI n={2}><strong>Insurance company ka district office:</strong> apni company ka contact portal ke "Insurance Company Contacts" mein milega — tracking number ke saath likhit follow-up karein</SI>
+            <SI n={3}><strong>District Agriculture Officer:</strong> zila star par DLMC (District Level Monitoring Committee) scheme ki nigrani karti hai — yahan likhit shikayat ka jawab dena unki zimmedari hai</SI>
+          </StepList>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
+            Har stage par kagaz ka record rakhein — call ki date, complaint number, kis afsar se baat hui. Yehi record aage kaam aata hai. Kisan Rakshak helpline <strong>14447</strong> aur WhatsApp <strong>7065514447</strong> se bhi status poocha ja sakta hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Paanch Chooken Jo Claim Dubo Deti Hain</SH>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Field mein claim rejection ke jo case sabse zyada dikhte hain, unmein technical kami kam aur ye aadatein zyada zimmedar hoti hain:
+          </p>
+
+          <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2">
+            <li><strong>Report mein deri</strong> — 72 ghante ki window nikal jaana. Sabse badi wajah, aur iska koi ilaj nahi.</li>
+            <li><strong>Sirf phone par bata dena</strong> — call ke baad likhit complaint bhi zaroori hai. Bina written record ke baad mein "soochna nahi mili" kehna aasan ho jaata hai.</li>
+            <li><strong>Receipt kho dena</strong> — non-loanee kisan ke paas premium receipt hi enrollment ka saboot hai. Photo kheech kar phone mein bhi rakhein.</li>
+            <li><strong>Galat khasra/survey number</strong> — enrollment ke waqt jo number register hua, claim usi zameen par milega. Pehle hi mila lein.</li>
+            <li><strong>Notified crop ka dhyan na rakhna</strong> — jo crop aapke area mein notified nahi hai, uska premium bhar bhi diya toh cover nahi milega. Bijai se pehle CSC ya agriculture office se notified list poochh lein.</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <SH>Kagaz-Pattar Jo Pehle Se Taiyar Rakhne Hain</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ye sab pehle se jama rakhein taaki CSC ke chakkar na lagane padein:
@@ -376,7 +477,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </ul>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Zameen ke records digital hone ka kaam <Link href="/articles/AgriStackKyaHai2026" className="text-green-700 dark:text-green-400 underline font-medium">AgriStack Farmer ID</Link> se juda hai — jinke records wahan updated hain, unka enrollment aur claim dono smooth rehta hai.
+            Zameen ke records digital hone ka kaam <Link href="/articles/AgriStackKyaHai2026" className="text-green-700 dark:text-green-400 underline font-medium">AgriStack Farmer ID</Link> se juda hai — jinke records wahan updated hain, unka enrollment aur claim dono smooth rehta hai. Aur agar aapko samajh nahi aa raha ki kheti ke liye paisa kahan se aur kis rate par milega, toh <Link href="/articles/KisanRinKahaSeLe2026" className="text-green-700 dark:text-green-400 underline font-medium">kisan rin ke sabhi options ki guide</Link> pehle padh lein — bima aur loan dono ek hi planning ka hissa hain.
           </p>
         </section>
 
