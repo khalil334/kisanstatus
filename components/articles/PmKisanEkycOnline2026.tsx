@@ -450,6 +450,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         <BottomNav extraLinks={[
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/articles/PmKisan24viKist2026', l: '24vi Kist' },
+          { href: '/articles/PmKisan25viKist2027', l: '25vi Kist 2027' },
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
         ]} />
         <Disclaimer />
