@@ -479,7 +479,7 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
         <a href="https://agmarknet.gov.in" target="_blank" rel="noopener noreferrer">agmarknet.gov.in</a>{' '}
         और <a href="https://enam.gov.in" target="_blank" rel="noopener noreferrer">enam.gov.in</a> ही देखें —
         यह लेख कोई live rate नहीं बताता। इस लेख की जानकारी आखिरी बार{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')} को जांची गई थी।
+        {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })} को जांची गई थी।
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">

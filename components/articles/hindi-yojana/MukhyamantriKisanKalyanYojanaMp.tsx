@@ -66,11 +66,11 @@ const FAQ_SCHEMA = {
 
 const RELEASES = [
   {
-    when: '22 सितंबर 2020',
+    when: '22/09/2020',
     what: 'तत्कालीन CM शिवराज सिंह चौहान ने योजना शुरू की — तब ₹4,000 सालाना, दो किस्तों में।',
   },
   {
-    when: '5 जुलाई 2024',
+    when: '05/07/2024',
     what: 'टीकमगढ़ से FY 2024-25 की पहली किस्त — करीब ₹1,630 करोड़, 81 लाख किसानों को।',
   },
   {
@@ -82,7 +82,7 @@ const RELEASES = [
     what: 'मंडला में बलराम जयंती के मौके पर FY 2025-26 की दूसरी किस्त DBT से भेजी गई।',
   },
   {
-    when: '27 जुलाई 2026',
+    when: '27/07/2026',
     what: 'खंडवा के बलराम कृषि महोत्सव में CM मोहन यादव ने single click से ₹3,308 करोड़ की दो किस्तें एक साथ 82.7 लाख किसानों के खातों में भेजीं।',
   },
 ];
@@ -459,7 +459,7 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
         CM का सार्वजनिक बयान, IANS coverage) से ली गई है, और process{' '}
         <a href="https://saara.mp.gov.in" target="_blank" rel="noopener noreferrer">saara.mp.gov.in</a> तथा{' '}
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> से मिलाया
-        गया है ({new Date(article.modifiedTime).toLocaleDateString('hi-IN')} तक)। किस्तों का schedule सरकार के
+        गया है ({new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })} तक)। किस्तों का schedule सरकार के
         हाथ में है — exact dates official घोषणा से ही confirm करें।
       </p>
 

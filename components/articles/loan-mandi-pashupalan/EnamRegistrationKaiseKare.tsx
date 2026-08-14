@@ -71,7 +71,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
-            <span>Last Updated: 5 August 2026</span>
+            <span>Last Updated: 05/08/2026</span>
             <span>9 min read</span>
           </div>
         </div>
@@ -95,13 +95,13 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>eNAM registration <strong>bilkul free</strong> — enam.gov.in par ya mandi ke help desk par; documents sirf 3 (Aadhaar, bank passbook, mobile).</li>
             <li>Fasal apni hi mandi le jaani hai — sirf <strong>boli online</strong> hoti hai; zyada buyers, behtar rate, payment seedha bank mein.</li>
-            <li>1,400+ mandiyan judi hain; 11 Feb 2024 tak <strong>1.77 crore+ kisan</strong> registered (Ministry of Agriculture ke figures).</li>
+            <li>1,400+ mandiyan judi hain; 11/02/2024 tak <strong>1.77 crore+ kisan</strong> registered (Ministry of Agriculture ke figures).</li>
             <li>Sabse zyada fayda anaaj-dalein-tilhan-masale walon ko — grading standardised hai. <strong>Abhi enam.gov.in par check karo</strong> ki aapki mandi judi hai ya nahi.</li>
           </ul>
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 6 August 2026</strong>
+          <strong>Last Updated: 06/08/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -118,8 +118,8 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
 
         <SH>eNAM Hai Kya Cheez</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Ek sarkari online trading portal — PM Modi ne 14 April 2016 ko pilot launch kiya tha — jisse ab 1,400 se
-          zyada APMC mandiyan judi hain. 11 February 2024 tak 1.77 crore se zyada kisan aur 2.53 lakh se zyada
+          Ek sarkari online trading portal — PM Modi ne 14/04/2016 ko pilot launch kiya tha — jisse ab 1,400 se
+          zyada APMC mandiyan judi hain. 11/02/2024 tak 1.77 crore se zyada kisan aur 2.53 lakh se zyada
           trader register ho chuke the, aur December 2023 tak platform par ₹31.9 lakh crore ka trade ho chuka tha
           (Ministry of Agriculture ke aankde, MyNation ki report ke according). Kaam karne ka tareeqa simple hai — fasal aap apni hi mandi le jaate ho, bas boli kagaz-kalam ki
           jagah online lagti hai, aur bid karne wala Jaipur mein bhi baitha ho sakta hai, Indore mein bhi.
@@ -305,7 +305,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         <IB>
           <strong>Asli misaal, record ke saath:</strong> Andhra Pradesh ke Kurnool district ki <strong>Adoni mandi</strong>
           — March 2017 se eNAM par — desh ki pehli mandi bani jisko platform par <strong>1 crore bids</strong> mile
-          (11.34 lakh lots par, 20 Jan 2023 tak; average 9 bids per lot). Wahan assaying lab, price display boards
+          (11.34 lakh lots par, 20/01/2023 tak; average 9 bids per lot). Wahan assaying lab, price display boards
           aur eNAM-integrated weighing machines lagi hain — tulai ka data seedha portal par jaata hai, haath ki
           gadbad ka chance khatam. Poori kahani eNAM ke official blog par hai:{' '}
           <a href="https://enam.gov.in/web/blog" target="_blank" rel="noopener noreferrer" className="underline font-bold">enam.gov.in/web/blog</a>.

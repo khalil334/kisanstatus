@@ -113,7 +113,7 @@ const t: Record<'hi' | 'en', Translations> = {
     nav_calculator: 'Calculator',
     nav_about: 'About',
     nav_contact: 'Contact',
-    announcement_bar: 'PM Kisan 23vi Kist: 20 June 2026 ko release ho chuki hai — ₹2,000 seedha bank mein | 24vi kist October 2026 expected',
+    announcement_bar: 'PM Kisan 23vi Kist: 20/06/2026 ko release ho chuki hai — ₹2,000 seedha bank mein | 24vi kist October 2026 expected',
 
     hero_badge: 'PM Kisan Samman Nidhi 2026',
     hero_h1_line1: 'PM Kisan Status Check Karo',
@@ -128,7 +128,7 @@ const t: Record<'hi' | 'en', Translations> = {
     stat_amount: '₹6,000',
     stat_amount_sub: 'Saalana labh — 3 kiston mein',
     stat_kist: '23vi Kist',
-    stat_kist_sub: '20 June 2026 ko release',
+    stat_kist_sub: '20/06/2026 ko release',
     stat_free: '100% Free',
     stat_free_sub: 'Koi hidden charge nahi',
 
@@ -194,7 +194,7 @@ const t: Record<'hi' | 'en', Translations> = {
     nav_calculator: 'Calculator',
     nav_about: 'About',
     nav_contact: 'Contact',
-    announcement_bar: 'PM Kisan 23rd Installment: Released on 20 June 2026 — ₹2,000 directly in bank | 24th installment expected October 2026',
+    announcement_bar: 'PM Kisan 23rd Installment: Released on 20/06/2026 — ₹2,000 directly in bank | 24th installment expected October 2026',
 
     hero_badge: 'PM Kisan Samman Nidhi 2026',
     hero_h1_line1: 'PM Kisan Status Check 2026',
@@ -209,7 +209,7 @@ const t: Record<'hi' | 'en', Translations> = {
     stat_amount: '₹6,000',
     stat_amount_sub: 'Annual benefit (3 installments)',
     stat_kist: '23rd Installment',
-    stat_kist_sub: 'Released on 20 June 2026',
+    stat_kist_sub: 'Released on 20/06/2026',
     stat_free: '100% Free',
     stat_free_sub: 'No hidden charges',
 

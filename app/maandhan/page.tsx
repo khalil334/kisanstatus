@@ -55,7 +55,7 @@ export default function MaandhanListingPage() {
       <p className="text-gray-700 mb-4">
         PM Kisan Maandhan Yojana (PM-KMY) chhote aur seemant kisanon ke liye ek voluntary pension
         scheme hai — 60 saal ki umar ke baad har mahine <strong>₹3,000 ki assured pension</strong>.
-        Scheme 12 September 2019 ko launch hui thi aur iska pension fund LIC manage karti hai.
+        Scheme 12/09/2019 ko launch hui thi aur iska pension fund LIC manage karti hai.
         Enrollment ke liye entry age 18 se 40 saal hai, aur aapki umar ke hisaab se monthly
         contribution ₹55 se ₹200 ke beech banta hai — jitna aap jama karte hain, utna hi central
         government bhi aapke pension account me daalti hai. Ye saari conditions official portal{' '}

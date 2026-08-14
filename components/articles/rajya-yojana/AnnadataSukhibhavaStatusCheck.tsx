@@ -66,8 +66,8 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
   return (
     <article className="prose prose-lg max-w-4xl mx-auto">
 
-      <InfoBox type="update" date="4 August 2026">
-        <strong>Latest Update:</strong> Andhra Pradesh sarkar ne 20 June 2026 ko Annadata Sukhibhava ka pehla installment (₹7,000: ₹5,000 State + ₹2,000 PM Kisan) jaari kar diya hai.  Agle installment ki koi date officially announce nahi hui hai. Apna <strong>annadata sukhibhava status check</strong> karne ke liye neeche diye gaye official steps follow karein.
+      <InfoBox type="update" date="04/08/2026">
+        <strong>Latest Update:</strong> Andhra Pradesh sarkar ne 20/06/2026 ko Annadata Sukhibhava ka pehla installment (₹7,000: ₹5,000 State + ₹2,000 PM Kisan) jaari kar diya hai.  Agle installment ki koi date officially announce nahi hui hai. Apna <strong>annadata sukhibhava status check</strong> karne ke liye neeche diye gaye official steps follow karein.
       </InfoBox>
 
       <h1>Annadata Sukhibhava Status Check 2026: Payment, Eligibility aur Beneficiary List</h1>
@@ -409,7 +409,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       </SchemeTable>
 
       <p>
-        Haal hi mein, 20 June 2026 ko CM N. Chandrababu Naidu ne 2026-27 ke pehle installment ke roop mein ₹3,125 crore jaari kiye, jisme har beneficiary ko ₹7,000 (₹5,000 State + ₹2,000 Central) mile.
+        Haal hi mein, 20/06/2026 ko CM N. Chandrababu Naidu ne 2026-27 ke pehle installment ke roop mein ₹3,125 crore jaari kiye, jisme har beneficiary ko ₹7,000 (₹5,000 State + ₹2,000 Central) mile.
       </p>
 
       <h2>Rythu Bharosa Se Annadata Sukhibhava Tak — Naam Kyun Badla</h2>
@@ -450,7 +450,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         <tr>
           <td>1st Installment</td>
           <td>Kharif 2026-27</td>
-          <td>20 June 2026</td>
+          <td>20/06/2026</td>
           <td>Released (₹7,000)</td>
         </tr>
         <tr>

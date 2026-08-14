@@ -573,7 +573,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> (कृषि एवं
         किसान कल्याण मंत्रालय) के Know Your Status flow से लिया गया है। Portal का layout समय-समय पर बदलता
         रहता है — options के नाम थोड़े अलग दिख सकते हैं। आखिरी बार जांचा गया:{' '}
-        {new Date(article.modifiedTime).toLocaleDateString('hi-IN')}.
+        {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })}.
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
