@@ -267,7 +267,7 @@ export default function AboutPage() {
         <div className="p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl text-xs text-[var(--color-text-muted)] leading-relaxed">
           <p className="font-bold text-[var(--color-text)] mb-2">Disclaimer</p>
           <p className="mb-2">
-            {SITE_NAME} ek independent informational website hai. Hum Government of India, PM Kisan, ya kisi sarkari vibhag se affiliated nahi hain.
+            Phir se saaf kar doon — {SITE_NAME} sarkar ki website nahi hai. Yeh main akela chalata hoon, kisi mantralaya ya vibhag se iska koi rishta nahi.
           </p>
           <p>
             Official verification, enrollment, ya payment related kaam ke liye hamesha{' '}
