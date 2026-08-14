@@ -18,9 +18,9 @@ const RELATED = [
 ];
 
 const FAQS_DATA = [
-  { q: 'FTO Generated ke baad paisa kitne din mein aata hai?', a: 'Bank pe depend karta hai. SBI-PNB walon ko aksar 8-10 din me credit mil jata hai, private banks me 10-14, aur Post Office account walon ko 25 din tak bhi lag jate hain. 15 din tak intzaar karna bilkul normal hai.' },
+  { q: 'Status Generated dikhne ke baad paisa kitne din mein aata hai?', a: 'Bank pe depend karta hai. SBI-PNB walon ko aksar 8-10 din me credit mil jata hai, private banks me 10-14, aur Post Office account walon ko 25 din tak bhi lag jate hain. 15 din tak intzaar karna bilkul normal hai.' },
   { q: 'Processed aur Generated mein kya fark hai?', a: 'Generated: sarkar ne bank ko order bhej diya. Processed: bank ne us pe kaam shuru kar diya — ek step aage. Processed dikhne ke baad paisa jaldi aane ki umeed rakh sakte ho.' },
-  { q: '"FTO will be generated" ka kya matlab hua?', a: 'Order abhi bana nahi, banna baki hai. Aap list mein ho, bas aapki batch ki bari nahi aayi. Kuch dino me ye khud hi "Generated" ho jata hai — aapko kuch nahi karna.' },
+  { q: '"Will be generated" ka kya matlab hua?', a: 'Order abhi bana nahi, banna baki hai. Aap list mein ho, bas aapki batch ki bari nahi aayi. Kuch dino me ye khud hi "Generated" ho jata hai — aapko kuch nahi karna.' },
   { q: 'Iska koi number hota hai kya jo main note kar sakoon?', a: 'Nahi hota. Ye sirf sarkar aur bank ke system ke beech ka internal reference hai — kisan ko alag se allot nahi hota. Credit aane ke baad passbook me jo UTR dikhta hai, wahi aapka asli proof hai.' },
   { q: 'Bank statement mein "MB FTO" likha aaya — ye kya hai?', a: 'Wahi kist ka credit hai. Kai banks apne system me PM Kisan payment ko is naam se dikhate hain. Alag transaction samajh ke pareshan mat ho.' },
   { q: 'Bina eKYC ke order banta hai kya?', a: '2026 me nahi. Pehle eKYC complete karni padegi, uske baad hi agli kist ka order banega. OTP se ghar baithe ho jati hai, ya CSC pe biometric se.' },
@@ -80,7 +80,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp'}
-            alt="FTO Generated meaning in Hindi — PM Kisan Fund Transfer Order status check 2026"
+            alt="Fund Transfer Order status samjhane wali guide — PM Kisan payment 2026"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -89,7 +89,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            FTO Generated = Paisa Confirm Hai
+            Status Generated = Paisa Confirm Hai
           </p>
         </div>
 
@@ -104,7 +104,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         </div>
 
         <section className="mb-8">
-          <SH>FTO Ka Full Form Kya Hai?</SH>
+          <SH>Pehle Full Form Samajh Lo</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             FTO yaani <strong>Fund Transfer Order</strong> — sarkar ki taraf se bank ko diya gaya likhit aadesh ki kis kisan ke account me kitni rakam dalni hai. Bas itna hi. Complicated kuch bhi nahi.
           </p>
@@ -114,7 +114,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         </section>
 
         <section className="mb-8">
-          <SH>FTO Generated Ka Matlab Kya Hai? (FTO Meaning in Hindi)</SH>
+          <SH>FTO Generated Ka Matlab Kya Hai?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Cheque wala example lijiye. Aapne kisi ko cheque de diya — paisa dene ka pakka order ho gya, ab use cash karna bank ka kaam hai. <strong>Ye bhi theek wahi cheez hai, bas digital roop me.</strong> Portal ke alag-alag status isi safar ke padav hain:
@@ -159,7 +159,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         </section>
 
         <section className="mb-8">
-          <SH>FTO Number Aur Transaction Ka Matlab Kya Hota Hai?</SH>
+          <SH>Iska Koi Number Bhi Hota Hai Kya?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             "Mera FTO number kya hai, kahan dekhu?" — seedha jawab: aisa koi number aapke liye hota hi nahi. Ye sirf sarkar ke system aur bank ke beech chalne wala internal reference hai; Aadhaar ya PAN ki tarah kisan ko alag se allot nahi hota.
           </p>
@@ -172,7 +172,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         </section>
 
         <section className="mb-8">
-          <SH>&ldquo;FTO is Generated and Payment Confirmation is Pending&rdquo; — Iska Matlab?</SH>
+          <SH>&ldquo;Payment Confirmation is Pending&rdquo; Wali Line Ka Matlab?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Lamba English message dekh ke lagta hai kuch reject ho gya — <strong>&ldquo;FTO is generated and payment confirmation is pending&rdquo;</strong>. Asal me ye achi khabar hai. Line ke do hisse alag-alag baat keh rahe hain:
           </p>
@@ -206,7 +206,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         </section>
 
         <section className="mb-8">
-          <SH>FTO Ke Baad Kitne Din Mein Paisa Aata Hai?</SH>
+          <SH>Order Banne Ke Baad Kitne Din Mein Paisa Aata Hai?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Iska koi ek fixed jawab nahi — har bank apni speed se chalta hai. Niche kisano ke asal experience ke hisab se andaza diya hai:
@@ -262,7 +262,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         </section>
 
         <section className="mb-8">
-          <SH>24vi Kist Kab Aayegi? (PM Kisan 24vi Kist FTO Date)</SH>
+          <SH>24vi Kist Kab Aayegi?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             October 2026 ke aas-pas expected hai — exact date ka official elaan abhi baki hai. September ke aakhri hafton me orders banne shuru ho sakte hain. eKYC ka timing yahan sab kuch decide karta hai:
@@ -298,7 +298,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         </section>
 
         <section className="mb-8">
-          <SH>Mobile Se FTO Status Check Kaise Karein?</SH>
+          <SH>Mobile Se Status Check Kaise Karein?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Panch chote steps hain, mushkil se do minute ka kaam:
@@ -309,12 +309,12 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <SI n={2}>Farmers Corner mein jaayein → <strong>Beneficiary Status</strong> par click karein</SI>
             <SI n={3}>Aadhaar number daalein (ek digit bhi galat nahi hona chahiye)</SI>
             <SI n={4}>OTP verify karein → phir <strong>Get Data</strong> button dabayein</SI>
-            <SI n={5}>Table mein FTO status ke saath credit release status bhi dikhega</SI>
+            <SI n={5}>Table mein payment status ke saath credit release status bhi dikhega</SI>
           </StepList>
 
           <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
             <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-               Abhi FTO Status Check Karein
+               Abhi Apna Status Check Karein
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Official PM Kisan portal par jaakar apna payment status check karein. Neeche ke button se 10 second mein portal khulta hai.
@@ -327,7 +327,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
               )}
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
-               Yahan Click Karein → FTO Status Check Hoga
+               Yahan Click Karein → Status Check Hoga
             </button>
           </div>
 
@@ -362,7 +362,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         </section>
 
         <section className="mb-8">
-          <SH>15 Din Ho Gaye Par Paisa Nahi Aaya? (FTO Generated But Money Not Received)</SH>
+          <SH>15 Din Ho Gaye Par Paisa Nahi Aaya?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Pandrah din nikal gaye aur account khali hai — ab hath pe hath rakh ke baithne ke bajay is order me check karte jao:
@@ -399,7 +399,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           </p>
           <div className="space-y-4">
             <div className="border-l-4 border-red-600 dark:border-red-700 pl-4 py-1">
-              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Sabse Pehle: FTO Reject Toh Nahi Hua?</h3>
+              <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Sabse Pehle: Order Reject Toh Nahi Hua?</h3>
               <p className="text-xs text-[var(--color-text-muted)]">Status page par dhyan se padhein — kahin "Rejected" ya "Returned by Bank" toh nahi likha hai. Ye do alfaaz asaani se miss ho jaate hain kyunki baaki text almost same lagta hai. Agar likha hai, toh samajh lijiye bank ne kisi galti ki wajah se paisa wapas bhej diya — aur ye apne aap dobara nahi jayega, koi na koi action lena hi padega.</p>
             </div>
             <div className="border-l-4 border-orange-600 dark:border-orange-700 pl-4 py-1">
@@ -456,7 +456,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/pm-kisan-fto-faq-kisanstatus.webp"
-            alt="PM Kisan FTO frequently asked questions — common doubts about fund transfer order"
+            alt="PM Kisan payment status se jude aam sawal aur unke jawab"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -464,19 +464,19 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            FTO Se Jude Aksar Puche Jane Wale Sawal
+            Aksar Puche Jane Wale Sawal
           </p>
         </div>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            FTO Status Ke Confusions — Saaf Jawab
+            Aam Confusions — Saaf Jawab
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="FTO Status FAQ 2026" />
+          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Payment FAQ 2026" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">FTO Ke Baad Ki Timeline</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Order Banne Ke Baad Ki Timeline</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
             Ek line me puri baat: order ban gya = paisa sanction ho gya, ab sirf bank transfer baki hai. Din 1 se 15 tak sirf intzaar — kuch karne ki zarurat nahi. Din 15 ke baad bank visit (seeding + NPCI check), aur din 30 ke baad grievance ya nodal officer. Bas yahi pura roadmap hai.
           </p>
@@ -487,7 +487,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
              PM Kisan Official Portal
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            FTO status, land seeding status, ya beneficiary list — teeno ki jaankari isi ek portal par mil jaayegi. 10 second baad khulega.
+            Payment status, land seeding, ya beneficiary list — teeno ki jaankari isi ek portal par mil jayegi. 10 second baad khulega.
           </p>
           <button
             onClick={() => handleOfficialLink(
@@ -503,7 +503,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
 
         <CalcBanner
           title="Apni Kist Track Karein"
-          desc="Kitni kist aayi, FTO status kya hai, arrears kitne — sab jaanein"
+          desc="Kitni kist aayi, payment kahan tak pahuncha, arrears kitne — sab jaanein"
           primaryCta={{ href: '/calculator/installment-tracker', label: 'Tracker Kholein →' }}
           secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator' }}
         />
