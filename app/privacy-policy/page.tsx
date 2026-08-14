@@ -4,13 +4,13 @@ import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '
 
 export const metadata: Metadata = {
   title: `Privacy Policy – Data Protection Notice`,
-  description: `${SITE_NAME} ki Privacy Policy. Hum aapka data kaise collect, use aur secure karte hain, iski puri jankari yahan padhein. Bilkul safe aur transparent.`,
+  description: `${SITE_NAME} ki Privacy Policy — seedhi bhasha mein. Kaunsa data collect hota hai, kaunsa nahi, aur ads/analytics kaise kaam karte hain — sab kuch saaf-saaf.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/privacy-policy` },
   robots: { index: true, follow: true },
   openGraph: {
     title: `Privacy Policy – ${SITE_NAME} | Data Protection Notice`,
-    description: `Hum aapka data kaise collect, use aur secure karte hain, iski puri jankari yahan padhein.`,
+    description: `Kaunsa data collect hota hai, kaunsa nahi — seedhi bhasha mein poori baat.`,
     type: 'website',
     url: `${SITE_URL}/privacy-policy`,
     siteName: SITE_NAME,
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary',
     title: `Privacy Policy – ${SITE_NAME}`,
-    description: `Hum aapka data kaise collect, use aur secure karte hain, iski puri jankari yahan padhein.`,
+    description: `Kaunsa data collect hota hai, kaunsa nahi — seedhi bhasha mein poori baat.`,
   },
 };
 
@@ -59,12 +59,12 @@ export default function PrivacyPolicyPage() {
         <div className="max-w-3xl mx-auto space-y-8">
 
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">1. Parichay (Introduction)</h2>
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">1. Pehli Baat</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              <strong>{SITE_NAME}</strong> ("hum", "hamara", ya "humein") par aapka swagat hai. Yeh privacy policy
-              batati hai ki jab aap hamari website <strong>{SITE_URL}</strong> ("Site") par aate hain, toh hum aapki
-              jankari ko kaise collect, use, disclose aur secure karte hain. Kripya is policy ko dhyan se padhein.
-              Hamari Site ka upyog karke, aap is policy ke anusaar jankari ke collection aur upyog se sahmat hote hain.
+              Main Manish, <strong>{SITE_NAME}</strong> chalata hoon. Is page par main seedhi bhasha mein bata raha
+              hoon ki jab aap <strong>{SITE_URL}</strong> par aate hain to kaunsi jaankari ikatthi hoti hai aur uska
+              kya hota hai. Koi ghuma-phira kar likhi legal bhasha nahi — jitna main samjha sakta hoon, utna saaf
+              likha hai. Site use karne ka matlab hai ki aap in baaton se sehmat hain.
             </p>
             <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl text-sm text-yellow-900 dark:text-yellow-300">
               <strong>Zaruri Suchna:</strong> Yaad rahe — {SITE_NAME} sarkar ki site nahi hai. Yeh meri khud ki banayi
@@ -73,13 +73,13 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">2. Hum Kaunsa Data Collect Karte Hain</h2>
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">2. Kaunsi Jaankari Ikatthi Hoti Hai</h2>
             <div className="text-sm text-[var(--color-text-muted)] space-y-4">
               <div>
-                <h3 className="font-semibold text-[var(--color-text)] mb-1">2.1 Automatically Collect Kiya Jane Wala Data</h3>
+                <h3 className="font-semibold text-[var(--color-text)] mb-1">2.1 Jo Apne Aap Record Hota Hai</h3>
                 <p className="leading-relaxed">
-                  Jab aap hamari website par aate hain, toh hum aapke device aur usage ke baare mein kuch jankari
-                  automatically collect kar sakte hain, jaise ki:
+                  Har website ki tarah yahan bhi kuch cheezein apne aap record ho jaati hain — main inhe alag se
+                  nahi maangta, yeh technical taur par khud aati hain:
                 </p>
                 <ul className="mt-2 space-y-1 pl-4">
                   {[
@@ -100,31 +100,32 @@ export default function PrivacyPolicyPage() {
               <div>
                 <h3 className="font-semibold text-[var(--color-text)] mb-1">2.2 Cookies</h3>
                 <p className="leading-relaxed">
-                  Hum aapke experience ko behtar banane ke liye cookies aur similar tracking technologies ka upyog karte hain.
-                  Cookies hamare dwara (first-party) ya third-party services jaise Google Analytics aur Google AdSense
-                  dwara set kiye ja sakte hain. Aap apne browser settings ke through cookies ko control kar sakte hain.
+                  Cookies chhoti si files hoti hain jo browser mein save hoti hain — inse site yaad rakh paati hai
+                  ki aap pehle aa chuke hain. Kuch cookies is site ki apni hain, aur kuch Google Analytics aur
+                  Google AdSense jaisi services lagati hain. Aap chahein to apne browser ki settings mein jaakar
+                  cookies band kar sakte hain — site phir bhi chalegi.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold text-[var(--color-text)] mb-1">2.3 Aapke Dwara Di Gayi Jankari</h3>
+                <h3 className="font-semibold text-[var(--color-text)] mb-1">2.3 Jo Main Kabhi Nahi Maangta</h3>
                 <p className="leading-relaxed">
-                  Hum aapka naam, Aadhaar number, bank account details, ya koi bhi sensitive personal data
-                  <strong> collect nahi karte</strong>. Hamari website par aisi koi bhi form nahi hai jo aapse
-                  directly aisi jankari mange.
+                  Yeh sabse zaroori baat hai — Aadhaar number, bank account, OTP, password — aisi koi bhi cheez
+                  main <strong>kabhi nahi maangta</strong>. Is site par aisa koi form hi nahi hai. Agar kahin aapko
+                  is site ke naam par aisi jaankari maangi jaye, to woh dhokha hai — mujhe email karke bata dein.
                 </p>
               </div>
             </div>
           </section>
 
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">3. Hum Aapki Jankari Ka Upyog Kaise Karte Hain</h2>
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">3. Is Jaankari Ka Hota Kya Hai</h2>
             <ul className="text-sm text-[var(--color-text-muted)] space-y-2">
               {[
-                'Website traffic ko analyze karne aur hamare content ko behtar banane ke liye',
-                'Yeh samajhne ke liye ki visitors hamari Site ka upyog kaise karte hain (Google Analytics ke through)',
-                'Aapke liye relevant vigyaapan (ads) dikhane ke liye (Google AdSense ke through)',
-                'Yeh ensure karne ke liye ki Site sahi se kaam kar rahi hai',
-                'Kanooni (legal) zimmedariyon ko pura karne ke liye',
+                'Main dekhta hoon kaun se articles log zyada padhte hain, taaki wahi topics aur behtar likhoon',
+                'Google Analytics se pata chalta hai ki log site kaise use karte hain — kahan atakte hain, kya dhoondhte hain',
+                'Google AdSense aapko aapke matlab ke ads dikhata hai — isi se site ka kharcha chalta hai',
+                'Site theek se chal rahi hai ya kahin error aa raha hai — yeh dekhne ke liye',
+                'Agar kabhi kanoon ke hisaab se kuch batana pade, to uske liye',
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2">
                   <span className="text-[var(--color-primary)] font-bold mt-0.5" aria-hidden="true">→</span>
@@ -137,12 +138,12 @@ export default function PrivacyPolicyPage() {
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">4. Google Analytics</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
-              Hum Google Analytics 4 (GA4) ka upyog isliye karte hain taaki yeh samajh sakein ki visitors hamari
-              Site ke saath kaise interact karte hain. Google Analytics cookies ka upyog karke anonymous data
-              jaise page views, session duration, aur user behavior patterns collect karta hai.
+              Site par Google Analytics 4 (GA4) laga hai. Isse mujhe bas itna pata chalta hai ki kitne log aaye,
+              kaun sa page kitni der padha gaya — kisi ka naam ya pehchan nahi dikhti, sab anonymous hota hai.
+              Isi se main samajhta hoon ki kisanon ko sabse zyada kis cheez mein dikkat aa rahi hai.
             </p>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              Google Analytics data Google Inc. dwara process kiya jata hai. Adhik jankari ke liye, kripya{' '}
+              Yeh data Google process karta hai, main nahi. Poori jaankari ke liye{' '}
               <a
                 href="https://policies.google.com/privacy"
                 target="_blank"
@@ -160,16 +161,17 @@ export default function PrivacyPolicyPage() {
               >
                 Google Analytics Opt-out Browser Add-on ↗
               </a>{' '}
-              install karke Google Analytics se opt-out kar sakte hain.
+              laga kar Google Analytics se poori tarah bahar nikal sakte hain — mujhe koi aitraaz nahi.
             </p>
           </section>
 
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">5. Google AdSense aur Vigyaapan (Ads)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
-              Hum apni Site par vigyaapan dikhane ke liye Google AdSense ka upyog kar sakte hain. Google AdSense
-              cookies ka upyog karke aapki hamari platform aur internet ki doosri sites par pichli visits ke
-              aadhar par ads serve karta hai.
+              Sach kahoon to site chalane mein kharcha lagta hai — hosting, domain, sab. Isliye yahan Google
+              AdSense ke ads dikh sakte hain. AdSense cookies ke zariye dekhta hai ki aapne pehle kaun si sites
+              dekhi hain, aur usi hisaab se ads dikhata hai. Kaun sa ad aapko dikhega, yeh Google tay karta hai —
+              mera ispar koi haath nahi.
             </p>
             <ul className="text-sm text-[var(--color-text-muted)] space-y-2">
               <li className="flex items-start gap-2">
@@ -196,37 +198,38 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">6. Teesre Paksh ke Links (Third-Party Links)</h2>
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">6. Doosri Websites Ke Links</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              Hamari Site par external platforms ke links shamil ho sakte hain, jismein official sarkari portal{' '}
-              <strong>pmkisan.gov.in</strong> bhi shamil hai. Hum in third-party sites ki privacy practices ke
-              liye jimmedar nahi hain. Hum aapse anurodh karte hain ki koi bhi personal jankari dene se pehle
-              unki privacy policies ko zaroor padhein.
+              Articles mein main <strong>pmkisan.gov.in</strong> jaise sarkari portals ke links deta hoon. Un
+              websites par jaane ke baad wahan ke niyam lagoo hote hain, mere nahi — wahan kya data liya jaata
+              hai, yeh unki privacy policy batayegi. Kahin bhi apni personal jaankari daalne se pehle ek baar
+              soch lein ki site asli hai ya nahi.
             </p>
           </section>
 
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">7. Data Suraksha (Data Security)</h2>
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">7. Data Kitna Surakshit Hai</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              Hum aapke dwara di gayi jankari ko surakshit karne ke liye uchit technical aur organizational
-              security measures lagu karte hain. Halanki, internet par koi bhi transmission 100% secure nahi hoti.
-              Kyunki hum koi bhi sensitive personal data collect nahi karte, isliye aapka risk minimal hai.
+              Site HTTPS par chalti hai aur jo thoda-bahut technical data aata hai, woh surakshit rehta hai. Waise
+              bhi internet par 100% guarantee koi nahi de sakta — lekin kyunki main aapse Aadhaar, bank jaisi koi
+              cheez leta hi nahi, isliye yahan khone ko kuch hai bhi nahi. Yahi sabse badi suraksha hai.
             </p>
           </section>
 
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">8. Bachon ki Privacy (Children's Privacy)</h2>
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">8. Bachon Ke Liye</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              Hamari Site 13 saal se kam umar ke bachon ke liye nahi hai. Hum jaan-boojhkar bachon se koi bhi
-              identifiable jankari collect nahi karte. Agar aapko lagta hai ki kisi bachche ne humein aisi
-              jankari di hai, toh kripya turant humse sampark karein.
+              Yeh site kisanon ke kaam ki hai, 13 saal se chhote bachon ke liye nahi. Main jaan-boojhkar bachon
+              se koi jaankari nahi leta. Agar aapko lage ki kisi bachche ne yahan kuch personal jaankari de di
+              hai, to mujhe email kar dein — main turant hata dunga.
             </p>
           </section>
 
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">9. Aapke Adhikar (GDPR Rights)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
-              Agar aap European Economic Area (EEA) ke nivaasi hain, toh aapke paas nimnlikhit adhikar hain:
+              Zyada tar padhne wale India se hain, lekin agar aap Europe (EEA) se yeh site dekh rahe hain to wahan
+              ke kanoon ke hisaab se aapke paas yeh adhikar hain:
             </p>
             <ul className="text-sm text-[var(--color-text-muted)] space-y-1">
               {[
@@ -246,9 +249,10 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
-            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">10. Sampark Karein (Contact Us)</h2>
+            <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">10. Mujhse Sampark Karein</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
-              Agar aapke paas is privacy policy ke baare mein koi sawal ya chinta hai, toh kripya humse sampark karein:
+              Is policy ke baare mein koi sawal ho, ya kuch samajh na aaya ho, to bina jhijhak email kar dein —
+              main khud padhta hoon aur jawab deta hoon:
             </p>
             <div className="text-sm text-[var(--color-text-muted)] space-y-2">
               <p>Email: <a href="mailto:kisanstatus.support@gmail.com" className="text-[var(--color-primary)] underline hover:no-underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">kisanstatus.support@gmail.com</a></p>
@@ -264,8 +268,8 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-            Yeh privacy policy aakhiri baar {lastUpdated} ko update ki gayi thi. Hum is policy ko kabhi bhi update
-            karne ka adhikar rakhte hain. Koi bhi badlav is page par post kiya jayega.
+            Maine yeh policy aakhiri baar {lastUpdated} ko update ki thi. Aage kabhi kuch badla to isi page par
+            likh dunga — alag se koi suchna nahi aayegi, isliye kabhi-kabhi dekh liya karein.
           </p>
         </div>
       </div>

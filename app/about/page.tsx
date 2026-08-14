@@ -6,12 +6,12 @@ import { ARTICLES } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
   title: 'About Us - PM Kisan Guidance',
-  description: `KisanStatus ek independent portal hai jo Indian kisanon ko PM Kisan verification, eKYC, payment fix aur enrollment ki free, verified Hinglish guidance deta hai.`,
+  description: `KisanStatus ek kisan ki banayi site hai — PM Kisan status, eKYC, payment fix aur registration ki saral Hinglish guidance, bilkul free. Jaaniye yeh site kisne aur kyun banayi.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
     title: `About Us - ${SITE_NAME} | PM Kisan Guidance`,
-    description: 'PM Kisan guidance dene wali independent website ke baare mein jaaniye. Free aur saral Hinglish mein.',
+    description: 'Yeh site kisne banayi aur kyun — ek kisan ki apni kahani. PM Kisan ki saral guidance, free Hinglish mein.',
     type: 'website',
     url: `${SITE_URL}/about`,
     siteName: SITE_NAME,
@@ -34,7 +34,7 @@ const orgSchema = {
     contactType: 'customer support',
     availableLanguage: ['Hindi', 'English'],
   },
-  description: 'PM Kisan beneficiary verification, installment dates, eKYC, payment solutions — ek independent agrarian information portal.',
+  description: 'PM Kisan status, kist dates, eKYC aur payment problems ki saral jaankari — ek kisan ki banayi hui information site.',
 };
 
 const personSchema = {
@@ -112,7 +112,7 @@ export default function AboutPage() {
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-2">
             About {SITE_NAME}
           </h1>
-          <p className="text-green-200 text-sm">Bharatiya Kisanon Ki Awaaz — PM Kisan aur Krishi Yojanaon ki Saral Guidance</p>
+          <p className="text-green-200 text-sm">Ek kisan ki banayi site — PM Kisan aur yojanaon ki seedhi-saadi jaankari</p>
         </div>
       </div>
 
@@ -124,33 +124,34 @@ export default function AboutPage() {
           </h2>
           <div className="space-y-3 text-sm text-[var(--color-text-muted)] leading-relaxed">
             <p>
-              <strong>{SITE_NAME}</strong> ek independent informational portal hai jo Indian kisanon ke liye
-              PM Kisan aur anya krishi yojanaon ki verified, up-to-date guidance provide karta hai. Yeh portal
-              Government of India ya kisi sarkari scheme se officially affiliated nahi hai.
+              Namaste! Main Manish, aur <strong>{SITE_NAME}</strong> meri banayi hui site hai. Pehle hi saaf
+              kar doon — yeh sarkari website nahi hai, sarkar ya kisi yojana ke daftar se mera koi naata nahi.
+              Yeh bas ek kisan ki taraf se baaki kisanon ke liye likhi gayi jaankari hai.
             </p>
             <p>
-              Humara maksad bilkul seedha hai: Har kisan ko ghar baithe PM Kisan beneficiary verification,
-              installment dates, eKYC process aur payment issues ka asaan aur tested solution mile —
-              bina kisi agent ya middleman ke chakkar mein pade.
+              Baat 2025 ki hai — ghar mein PM Kisan ki kist atki thi. Portal khola to kuch samajh nahi aaya,
+              gaon mein agent bola paise lagenge. Wahin thaan liya ki khud seekhunga. Dheere-dheere status check,
+              eKYC, land seeding — sab samajh aa gaya. Phir socha, jo maine mehnat se seekha, woh doosron ko
+              muft mein kyun na mile? Bas isi soch se yeh site bani.
             </p>
             <p>
-              Hum jante hain ki kai baar sarkari portals complex ya English mein hote hain, jisse sahi
-              jankari tak pahunchne mein dikkat hoti hai. Hum isi kami ko pura karte hain — bilkul saral
-              Hinglish mein, step-by-step aur verified solutions ke saath. Aap hamare{' '}
+              Dikkat asli mein yeh hai ki sarkari portals ya to English mein hain ya itne ghume hue ki aam aadmi
+              atak jaata hai. Main wahi cheez apni bhasha mein, step-by-step likhta hoon — jaise koi apna aadmi
+              baitha kar samjha raha ho. Aap mere{' '}
               <Link href="/articles" className="text-[var(--color-primary)] font-bold underline hover:text-green-700 dark:hover:text-green-400">
                 verified guides section
               </Link>{' '}
               mein jakar apne sawalon ke jawab dhoondh sakte hain.
             </p>
             <p>
-              Sari guidance verified official sources — khaaskar <strong>pmkisan.gov.in</strong> — se li jaati hai
-              aur regularly update ki jaati hai.
+              Aur haan, jo bhi likhta hoon, pehle <strong>pmkisan.gov.in</strong> jaise official portal par khud
+              check karta hoon — sunee-sunayi baat nahi likhta. Kuch badalta hai to article update kar deta hoon.
             </p>
           </div>
           <div className="mt-4 p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
             <p className="text-sm text-amber-900 dark:text-amber-300">
-              <strong>Zaruri Suchna:</strong> Hum aapka Aadhaar, bank account ya koi personal data collect nahi karte.
-              Official kaam ke liye hamesha{' '}
+              <strong>Zaruri Suchna:</strong> Main aapse Aadhaar, bank account ya koi bhi personal cheez nahi maangta —
+              kabhi koi maange to samajh jaayein woh main nahi hoon. Asli kaam ke liye hamesha{' '}
               <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-bold hover:text-amber-700 dark:hover:text-amber-200">
                 pmkisan.gov.in ↗
               </a>{' '}
