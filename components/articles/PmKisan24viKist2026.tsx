@@ -29,15 +29,15 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Kya sarkar ne is baar ki date bata di hai?',
-    a: 'Nahi. Aur sach kahein toh mahino pehle kabhi batati bhi nahi — 23vi ki tareekh toh sirf chaar din pehle confirm hui thi. Aaj jo bhi channel pakki date ka dawa kar raha hai, woh andaza bech raha hai. Bharosa sirf pmkisan.gov.in ke notice ya ministry ke official announcement par kijiye.',
+    a: 'Nahi. Aur sach poochho toh sarkar mahino pehle batati bhi nahi hai. 23vi ka hi example lo — official confirmation release se bas kuch din pehle aayi thi. Aaj ki tareekh me jo bhi channel pakki date bata raha hai, woh apna andaza bech raha hai. Bharosa sirf pmkisan.gov.in ke notice ya ministry ke announcement par karo.',
   },
   {
     q: 'October 2026 ka andaza kis aadhar par hai?',
-    a: 'Pichhle transfers ke gap se. 22vi 13 March 2026 ko aayi thi, 23vi 20 June ko — beech me lagbhag sava teen mahine. Yehi gap aage badhao toh October ke aas paas number baithta hai. Lekin ye hisaab pehle bhi phisla hai, 2025 me 20vi ke baad wala gap khinchte khinchte November tak chala gaya tha. Toh October likha hai, guarante nahi.',
+    a: 'Pichhle transfers ke gap se. 22vi 13 March 2026 ko aayi, 23vi 20 June ko — beech ka fasla kareeb 3 mahine ka. Wahi fasla aage jodo toh October ke aas paas number baithta hai. Par ye hisaab pehle bhi phisla hai — 2025 me 20vi ke baad wala gap November tak lamba ho gaya tha. Toh October likha zaroor hai, guarantee koi nahi.',
   },
   {
     q: 'Is baar amount badhega kya?',
-    a: 'Abhi tak aisi koi official baat nahi hui. ₹2,000 hi milenge — scheme ka structure shuru se yehi hai, saal ke ₹6,000 teen hisson me. "4000 milenge" type ke message har baar ghoomte hain; jab bhi rakam badhegi, Budget ya Cabinet ke faisle se badhegi, WhatsApp forward se nahi.',
+    a: 'Abhi tak aisi koi official baat nahi hui. ₹2,000 hi milenge — scheme ka structure shuru se yehi chala aa raha hai, saal ke ₹6,000 teen hisson me. "4000 milenge" type ke message har round se pehle ghoomte hain, aur har baar galat nikalte hain. Rakam kabhi badhi toh uski khabar Budget ya Cabinet se aayegi, kisi forward se nahi.',
   },
   {
     q: 'eKYC pehle ho chuki hai — dobara karni padegi?',
@@ -49,7 +49,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Naya registration abhi karun toh is baar mil jayega?',
-    a: 'Mil sakta hai, par pakka nahi. Form ke baad state verification, eKYC aur bank seeding — poore process me aksar 1 se 3 mahine lag jate hain. Jitni jaldi shuru karenge, chances utne behtar. Aur agar ye round chhut bhi gaya, toh eligible hone par agli baar arrears ke saath aa jata hai.',
+    a: 'Mil sakta hai, par pakka nahi. Form ke baad state verification hoti hai, phir eKYC aur bank seeding — poora process aksar 1 se 3 mahine kha jata hai. Jitni jaldi shuru karoge, chances utne behtar. Aur agar ye round chhut bhi gaya, toh ghabrao mat — eligible ho toh chhuta hua paisa agli baar jud kar aa jata hai.',
   },
   {
     q: 'Meri purani 2-3 kistein bhi ruki hui hain — woh milengi?',
@@ -149,7 +149,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             Jo hum jaante hain, woh ye hai. Pichhla transfer 20 June 2026 ko hua — Tarakeswar (Hooghly, West Bengal) me hue event se PM ne button dabaya, 9.44 crore parivaron ko kul ₹18,880 crore gaye. Usse pehle wala 13 March ko Guwahati se hua tha. Dono ke beech ka fasla nikaliye: lagbhag sava teen mahine.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Isi hisaab se agla number <strong>October 2026 ke aas-paas</strong> banta hai. Lekin ek baat imandari se — ye ginti pehle bhi galat ho chuki hai. 2025 me log aise hi calendar par ungli rakh rahe the, aur woh gap khinchte khinchte November tak pahunch gaya. Paisa kisi bade event ke saath nikalta hai, event PM ke schedule par tikta hai, aur schedule kisi ke haath me nahi.
+            Isi hisaab se agla number <strong>October 2026 ke aas-paas</strong> banta hai. Lekin ek baat imandari se — ye ginti pehle bhi galat ho chuki hai. 2025 me log aise hi calendar par ungli rakh rahe the, aur woh gap khinchte khinchte November tak pahunch gaya. Paisa kisi bade event ke saath nikalta hai. Event PM ke schedule par tikta hai. Aur schedule? Woh kisi ke haath me nahi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Toh is page ka maqsad simple hai: jis din bhi transfer ho, aapka hissa bina atke pahunche. Uske liye 3-4 cheezein pehle se durust honi chahiye — kaunsi, kaise jaanchein, aur atak jaye toh kya karein. Sab neeche hai.
@@ -343,7 +343,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <section className="mb-8">
           <SH>eKYC Aur NPCI Mapping — Yahin Sabse Zyada Paisa Atakta Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Har baar se pehle Agriculture Ministry khud yaad dilati hai ki verification jaruri hai — aur har baar ke baad lakhon logon ka amount isi par ruka milta hai. Aapki pehle se complete hai? Toh ye section chhod kar aage badh jaiye. Nahi hui, toh teen raaste hain:
+            Agriculture Ministry har release se pehle khud yaad dilati hai ki verification jaruri hai — phir bhi lakhon logon ka amount isi par atka milta hai. Aapki pehle se complete hai? Toh ye section chhod kar aage badh jaiye. Nahi hui, toh teen raaste hain:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
@@ -373,7 +373,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             {[
               { err: '"Success" likha hai lekin account me kuch nahi', fix: 'Pehle 48 ghante ka intezaar normal hai. pfms.nic.in par track kijiye, bank se mini statement lijiye — kabhi kabhi SMS nahi aata par entry hoti hai. Teen din baad bhi kuch nahi toh 155261 par registration number ke saath call kijiye.' },
               { err: 'Aadhaar Authentication Failed dikh raha hai', fix: 'Record aur Aadhaar me spelling alag hai — ek akshar ka fark bhi nahi chalta. Jo galat hai use theek karwaiye: record ka correction agriculture office se, Aadhaar ka update Aadhaar center se.' },
-              { err: 'Amount aaya aur wapas chala gaya (Reversed)', fix: 'Account dormant hai ya DBT enabled nahi. Branch jaakar activate karwaiye aur "Aadhaar seeding for DBT" ka likhit confirmation lijiye. Rakam agli cycle me arrears ke saath aa jayegi.' },
+              { err: 'Amount aaya aur wapas chala gaya (Reversed)', fix: 'Account dormant hai ya DBT enabled nahi. Branch jaakar activate karwaiye aur "Aadhaar seeding for DBT" ka likhit confirmation lijiye. Rakam kahin jaati nahi — agli cycle me pichhle bakaya samet aa jayegi.' },
               { err: 'Transfer ke din site khul hi nahi rahi', fix: 'Us din crores log ek saath check karte hain, server slow hona aam baat hai. Sham ke baad ya agle din try kijiye — isse kuch rukta nahi, sirf dikhna late hota hai.' },
               { err: 'Naam beneficiary list se gayab ho gaya', fix: 'Sarkar samay samay par verification drive chalati hai jisme ineligible naam hataye jate hain. Eligible hote hue bhi kata hai toh block ke agriculture officer ke paas grievance file kijiye — Help Desk section se online complaint bhi ho jati hai.' },
             ].map(({ err, fix }) => (
@@ -413,7 +413,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Taiyari poori ho toh paisa bina atke aata hai
+            Kagaz durust hon toh transfer wale din koi tension nahi
           </p>
         </div>
 
