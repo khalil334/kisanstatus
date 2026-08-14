@@ -18,12 +18,12 @@ const RELATED = [
 ];
 
 const FAQS_DATA = [
-  { q: 'FTO Generated ke baad paisa kitne din mein aata hai?', a: 'Bank par depend karta hai. SBI-PNB wale kisano ko aksar 8-10 din mein credit mil jata hai, private banks mein 10-14, aur Post Office account walon ko 25 din tak bhi lag sakte hain. 15 din tak intezaar karna bilkul normal hai.' },
-  { q: 'FTO Processed aur FTO Generated mein kya fark hai?', a: 'Generated: sarkar ne bank ko order bhej diya. Processed: bank ne us par kaam shuru kar diya — ek step aage. Processed dikhne ke baad credit jaldi aane ki umeed rakh sakte ho.' },
-  { q: '"FTO will be generated" ka kya matlab hua?', a: 'Order abhi bana nahi hai, banna baaki hai. Aap beneficiary list mein ho, bas aapki batch ka number nahi aaya. Kuch dino mein yahi status badal kar "FTO Generated" ho jata hai — koi action nahi lena.' },
-  { q: 'FTO ka koi number hota hai kya jo main note kar sakoon?', a: 'Nahi. Ye sirf sarkar aur bank ke system ke beech ka internal reference hai — kisan ko alag se allot nahi hota. Credit aane ke baad passbook mein jo UTR dikhta hai, wahi aapka asli proof hai.' },
-  { q: 'Bank statement mein "MB FTO" likha aaya — ye kya hai?', a: 'Wahi kist ka credit hai. Kai banks apne system mein PM Kisan payment ko is naam se dikhate hain. Alag transaction samajh kar pareshan mat ho.' },
-  { q: 'Bina eKYC ke FTO banta hai kya?', a: '2026 mein nahi. Pehle eKYC complete karni padegi, uske baad hi agli kist ka order banega. OTP se ghar baithe ho jati hai, ya CSC par biometric se.' },
+  { q: 'FTO Generated ke baad paisa kitne din mein aata hai?', a: 'Bank pe depend karta hai. SBI-PNB walon ko aksar 8-10 din me credit mil jata hai, private banks me 10-14, aur Post Office account walon ko 25 din tak bhi lag jate hain. 15 din tak intzaar karna bilkul normal hai.' },
+  { q: 'Processed aur Generated mein kya fark hai?', a: 'Generated: sarkar ne bank ko order bhej diya. Processed: bank ne us pe kaam shuru kar diya — ek step aage. Processed dikhne ke baad paisa jaldi aane ki umeed rakh sakte ho.' },
+  { q: '"FTO will be generated" ka kya matlab hua?', a: 'Order abhi bana nahi, banna baki hai. Aap list mein ho, bas aapki batch ki bari nahi aayi. Kuch dino me ye khud hi "Generated" ho jata hai — aapko kuch nahi karna.' },
+  { q: 'Iska koi number hota hai kya jo main note kar sakoon?', a: 'Nahi hota. Ye sirf sarkar aur bank ke system ke beech ka internal reference hai — kisan ko alag se allot nahi hota. Credit aane ke baad passbook me jo UTR dikhta hai, wahi aapka asli proof hai.' },
+  { q: 'Bank statement mein "MB FTO" likha aaya — ye kya hai?', a: 'Wahi kist ka credit hai. Kai banks apne system me PM Kisan payment ko is naam se dikhate hain. Alag transaction samajh ke pareshan mat ho.' },
+  { q: 'Bina eKYC ke order banta hai kya?', a: '2026 me nahi. Pehle eKYC complete karni padegi, uske baad hi agli kist ka order banega. OTP se ghar baithe ho jati hai, ya CSC pe biometric se.' },
   { q: 'Status mein "Rejected" ya "Returned by Bank" dikhe toh?', a: 'Iska matlab bank ne paisa wapas bhej diya — galat IFSC, naam mismatch, ya band account ki wajah se. Ye apne aap theek nahi hota; Farmer Corner ke correction form se galti sudhaar kar dobara submit karna padta hai.' },
   { q: 'OTP nahi aa raha, status check nahi ho pa raha — kya karoon?', a: 'Registered mobile number purana ya band ho gaya hoga. Nazdeeki CSC par jaakar number update karwa lo, uske baad OTP usi naye number par aayega.' },
   { q: '24vi kist kab tak expect karein?', a: 'October 2026 ke aas-paas — official date abhi announce nahi hui. Jinki eKYC pehle se complete hai, unka order pehli batch mein banega.' },
@@ -99,17 +99,17 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <em>"FTO dikh raha hai par paisa nahi aaya. Ye kya scene hai?"</em>
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
-            Relax — ye process ka bilkul normal hissa hai. Is guide mein hum ne sab kuch ek jagah rakh diya hai: ye status asal mein kya batata hai, paisa kab tak pahunchega, aur agar der ho jaye toh kis din kya karna hai.
+            Relax bhai — ye process ka normal hissa hai. Maine is guide me sab ek jagah likh diya hai: ye status asal me kya batata hai, paisa kab tak pahunchega, aur agar der ho jaye to kis din kya karna hai. Aaram se padhiye, 5 minute lagenge.
           </p>
         </div>
 
         <section className="mb-8">
           <SH>FTO Ka Full Form Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            FTO yaani <strong>Fund Transfer Order</strong> — sarkar ki taraf se bank ko diya gaya likhit aadesh ki kis kisan ke account mein kitni rakam daalni hai. Bas itna hi hai, isme koi complicated cheez nahi.
+            FTO yaani <strong>Fund Transfer Order</strong> — sarkar ki taraf se bank ko diya gaya likhit aadesh ki kis kisan ke account me kitni rakam dalni hai. Bas itna hi. Complicated kuch bhi nahi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Portal par "FTO Generated" dikhne ka seedha arth: ye aadesh ban chuka hai aur bank ke paas pahunch gaya hai. Ab agli zimmedari bank ki hai.
+            Portal pe "Generated" dikhne ka seedha arth — ye aadesh ban chuka hai aur bank ke pas pahunch gaya hai. Ab agli zimmedari bank ki hai, aapki nahi.
           </p>
         </section>
 
@@ -117,7 +117,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           <SH>FTO Generated Ka Matlab Kya Hai? (FTO Meaning in Hindi)</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Cheque wala example lijiye. Aapne kisi ko cheque de diya — paisa dene ka pakka order ho gaya, ab use cash karna bank ka kaam hai. <strong>FTO theek wahi cheez hai, bas digital roop mein.</strong> Portal ke alag-alag status isi safar ke padaav hain:
+            Cheque wala example lijiye. Aapne kisi ko cheque de diya — paisa dene ka pakka order ho gya, ab use cash karna bank ka kaam hai. <strong>Ye bhi theek wahi cheez hai, bas digital roop me.</strong> Portal ke alag-alag status isi safar ke padav hain:
           </p>
 
           <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-300 dark:border-green-700 rounded-xl p-5 mb-6">
@@ -131,7 +131,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Sabse zyada ghabrahat <strong>&ldquo;FTO will be generated&rdquo;</strong> dekh kar hoti hai — future tense padh kar lagta hai kuch atak gaya. Asal mein iska seedha tarjuma hai &ldquo;order banaya jayega&rdquo;: aap list mein ho, bas aapki batch ki baari nahi aayi. Kuch dino mein yahi line badal kar &ldquo;Generated&rdquo; ho jati hai, bina aapke kuch kiye.
+            Sabse zyada ghabrahat <strong>&ldquo;will be generated&rdquo;</strong> wali line dekh ke hoti hai — future tense padh ke lagta hai kuch atak gya. Asal me iska seedha tarjuma hai &ldquo;order banaya jayega&rdquo;: aap list me ho, bas aapki batch ki bari nahi aayi. Kuch dino me yahi line khud badal jati hai, aapke bina kuch kiye.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -154,27 +154,27 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            "Generated" dikh raha hai? Aap step 1 aur 2 ke beech mein ho. "Processed" aa jaye toh bank kaam par lag chuka hai — credit ab door nahi.
+            Abhi "Generated" pe atke ho? Matlab step 1 aur 2 ke beech me ho. "Processed" aa jaye to samjho bank kaam pe lag chuka — paisa ab door nahi.
           </p>
         </section>
 
         <section className="mb-8">
           <SH>FTO Number Aur Transaction Ka Matlab Kya Hota Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            "Mera FTO number kya hai, kahan dekhoon?" — seedha jawab: aisa koi number aapke liye hota hi nahi. Ye sirf sarkar ke system aur bank ke beech chalne wala internal reference hai; Aadhaar ya PAN ki tarah kisan ko individually allot nahi hota.
+            "Mera FTO number kya hai, kahan dekhu?" — seedha jawab: aisa koi number aapke liye hota hi nahi. Ye sirf sarkar ke system aur bank ke beech chalne wala internal reference hai; Aadhaar ya PAN ki tarah kisan ko alag se allot nahi hota.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Sarkar ek batch mein lakhs kisano ke liye ek saath order bhejti hai. Aapke haath jo proof aata hai woh credit ke baad ka hai — passbook ya statement mein dikhne wala UTR/reference number. Wahi note karke rakhiye, kaam usi ka hai.
+            Sarkar ek batch me lakhon kisano ke liye ek sath order bhejti hai. Aapke hath jo proof aata hai wo credit ke baad ka hai — passbook ya statement me dikhne wala UTR number. Wahi note karke rakhiye, kaam usi ka hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
-            Kuch statements mein <strong>&ldquo;MB FTO&rdquo;</strong> likha aata hai. Ghabraiye mat — kai banks apni entry mein kist ke credit ko isi naam se dikhate hain. Alag transaction nahi hai, wahi paisa hai.
+            Kuch statements me <strong>&ldquo;MB FTO&rdquo;</strong> likha aata hai. Ghabraiye mat — kai banks apni entry me kist ke credit ko isi naam se dikhate hain. Alag transaction nahi, wahi paisa hai.
           </p>
         </section>
 
         <section className="mb-8">
           <SH>&ldquo;FTO is Generated and Payment Confirmation is Pending&rdquo; — Iska Matlab?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Lamba English message dekh kar lagta hai kuch reject ho gaya — <strong>&ldquo;FTO is generated and payment confirmation is pending&rdquo;</strong>. Asal mein ye achhi khabar hai. Line ke do hisse alag-alag baat keh rahe hain:
+            Lamba English message dekh ke lagta hai kuch reject ho gya — <strong>&ldquo;FTO is generated and payment confirmation is pending&rdquo;</strong>. Asal me ye achi khabar hai. Line ke do hisse alag-alag baat keh rahe hain:
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-300 dark:border-blue-700 rounded-xl p-5 mb-4">
             <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-2">
@@ -183,14 +183,14 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             </ul>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Short mein: paisa line mein lag chuka hai, sirf confirmation ka message atka hai. Kai baar toh credit aane ke hafton baad tak yahi status dikhta rehta hai. Ek baar Aadhaar seeding aur account active hone ki tasalli kar lein, phir aaram se wait karein.
+            Short me: paisa line me lag chuka hai, sirf confirmation ka message atka hai. Kai baar to paisa aane ke hafton baad tak yahi status dikhta rehta hai — mere pas aise kai messages aaye hain. Ek baar Aadhaar seeding aur account active hone ki tasalli kar lo, phir aaram se wait karo.
           </p>
         </section>
 
         <section className="mb-8">
           <SH>Land Seeding Kya Hoti Hai Aur Iska Status Kaise Check Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Naye registration karne walon ko ye term sabse zyada uljhaati hai. <strong>Land seeding</strong> yaani aapki zameen ke revenue records — khasra number, khatauni — ko yojana ke account ke saath digitally jodna. Jab tak ye linking poori nahi hoti, application aage badhti hi nahi.
+            Naye registration karne walon ko ye term sabse zyada uljhati hai. <strong>Land seeding</strong> yani aapki zameen ke revenue records — khasra number, khatauni — ko yojana ke account ke sath digitally jodna. Jab tak ye linking puri nahi hoti, application aage badhti hi nahi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Status dekhne ke liye:
@@ -201,7 +201,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <SI n={3}>Status page par land seeding wala row alag se dikhega — "Seeded" ya "Not Seeded"</SI>
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4 mb-3">
-            "Not Seeded" dikhe toh Patwari, Lekhpal, ya taluk revenue office jaakar form jama karna hoga. Ye kaam adhiktar states mein offline hi hota hai, kyunki verification zameen ke asli record se milaan karke kiya jata hai — online self-service abhi har jagah available nahi.
+            "Not Seeded" dikhe to Patwari, Lekhpal, ya taluk revenue office jakar form jama karna hoga. Ye kaam zyadatar states me offline hi hota hai, kyunki verification zameen ke asli record se milan karke hota hai — online self-service abhi har jagah nahi hai.
           </p>
         </section>
 
@@ -209,7 +209,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           <SH>FTO Ke Baad Kitne Din Mein Paisa Aata Hai?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Iska koi ek fixed jawab nahi — har bank apni speed se kaam karta hai. Neeche kisano ke asal experience ke hisaab se andaaza diya hai:
+            Iska koi ek fixed jawab nahi — har bank apni speed se chalta hai. Niche kisano ke asal experience ke hisab se andaza diya hai:
           </p>
 
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -247,7 +247,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         <section className="mb-8">
           <SH>PM Kisan Transaction Failed Kyun Hota Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Order ban jaane ke baad bhi payment fail ho sakti hai. Aksar wajah in paanch mein se ek nikalti hai:
+            Order ban jane ke baad bhi payment fail ho sakti hai. Aksar wajah in panch me se koi ek nikalti hai:
           </p>
           <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4">
             <li>Bank account band ya inactive ho gaya hai</li>
@@ -257,7 +257,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <li>Account 6 mahine se dormant pada hai</li>
           </ul>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Bank jaakar seeding aur naam ki spelling — dono ek saath verify karwa lein; zyadatar cases wahin suljh jaate hain. Galti theek hote hi payment agli batch mein dobara try hoti hai, alag se apply nahi karna padta.
+            Bank jakar seeding aur naam ki spelling — dono ek sath verify karwa lo; zyadatar cases wahi sulajh jate hain. Galti theek hote hi payment agli batch me dubara try hoti hai, alag se apply nahi karna padta.
           </p>
         </section>
 
@@ -265,7 +265,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           <SH>24vi Kist Kab Aayegi? (PM Kisan 24vi Kist FTO Date)</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            October 2026 ke aas-paas expected hai — exact date ka official elaan abhi baaki hai. September ke aakhri hafton mein orders banne shuru ho sakte hain. eKYC ka timing yahan sab kuch decide karta hai:
+            October 2026 ke aas-pas expected hai — exact date ka official elaan abhi baki hai. September ke aakhri hafton me orders banne shuru ho sakte hain. eKYC ka timing yahan sab kuch decide karta hai:
           </p>
 
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -293,7 +293,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             </table>
           </div>
           <DB>
-            eKYC abhi tak pending hai? Aaj hi karwa lein — OTP wali ghar baithe ho jati hai. Warna seedha Feb 2027 tak ka intezaar hai.
+            eKYC abhi tak pending hai? Aaj hi karwa lo — OTP wali to ghar baithe ho jati hai. Warna seedha Feb 2027 tak ka intzaar hai.
           </DB>
         </section>
 
@@ -301,7 +301,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           <SH>Mobile Se FTO Status Check Kaise Karein?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Paanch chhote steps, do minute ka kaam:
+            Panch chote steps hain, mushkil se do minute ka kaam:
           </p>
 
           <StepList>
@@ -339,7 +339,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         <section className="mb-8">
           <SH>Self Registered Farmer Ka Status Kaise Check Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            CSC se nahi, khud portal se registration kiya tha? Toh aapke liye alag section hai — <strong>Status of Self Registered Farmer</strong>.
+            CSC se nahi, khud portal se registration kiya tha? To aapke liye alag section hai — <strong>Status of Self Registered Farmer</strong>.
           </p>
           <StepList>
             <SI n={1}>pmkisan.gov.in par "Status of Self Registered Farmer" section dhoondein</SI>
@@ -347,7 +347,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <SI n={3}>Status dikhega — approved, pending verification, ya document ki kami</SI>
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
-            Document ki kami dikhe toh state ke agriculture department portal se upload kar dein. Approval mein 2-6 hafte lagte hain — state par depend karta hai.
+            Document ki kami dikhe to state ke agriculture department portal se upload kar do. Approval me 2-6 hafte lag jate hain — state pe depend karta hai.
           </p>
         </section>
 
@@ -357,7 +357,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             Sarkari guidelines mein Common Service Centre par is registration ki koi fee prescribed nahi hai — service <strong>free honi chahiye</strong>.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Zameeni sachchai thodi alag hai: kuch operators printing ya "seva shulk" ke naam par ₹20-50 le lete hain, jo unauthorized hai. Zyada maange toh mana kar dein, ya district agriculture office mein shikayat darj karayein.
+            Zameeni sachai thodi alag hai — kuch operators printing ya "seva shulk" ke naam pe ₹20-50 le lete hain, jo unauthorized hai. Zyada mange to mana kar do, ya district agriculture office me shikayat darj kara do.
           </p>
         </section>
 
@@ -365,7 +365,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           <SH>15 Din Ho Gaye Par Paisa Nahi Aaya? (FTO Generated But Money Not Received)</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Pandrah din nikal gaye aur account khaali hai — ab haath par haath rakh kar baithne ke bajaye is order mein check karte jaayein:
+            Pandrah din nikal gaye aur account khali hai — ab hath pe hath rakh ke baithne ke bajay is order me check karte jao:
           </p>
 
           <div className="space-y-4">
@@ -395,7 +395,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         <section className="mb-8">
           <SH>30 Din Ho Gaye Aur Ab Bhi Kuch Nahi Hua? Yahan Se Ab Escalate Karo</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Upar ke saare steps ho gaye, helpline bhi call kar li, phir bhi mahina beet gaya? Ab ye aam delay nahi hai — kahin na kahin order reject ya return ho chuka hoga. Yahan se raasta formal ho jaata hai:
+            Upar ke sare steps ho gaye, helpline bhi call kar li, phir bhi mahina beet gya? Ab ye aam delay nahi — kahin na kahin order reject ya return ho chuka hoga. Yahan se rasta formal ho jata hai:
           </p>
           <div className="space-y-4">
             <div className="border-l-4 border-red-600 dark:border-red-700 pl-4 py-1">
@@ -421,7 +421,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           <SH>State Ke Hisaab Se Time</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Har raajya ki machinery apni raftaar se chalti hai — isi liye ek hi din release hui kist UP mein hafte bhar mein aa jati hai aur Bengal mein mahina lag jata hai:
+            Har rajya ki machinery apni raftar se chalti hai — isliye ek hi din release hui kist UP me hafte bhar me aa jati hai aur Bengal me mahina lag jata hai:
           </p>
 
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -478,7 +478,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">FTO Ke Baad Ki Timeline</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Ek line mein poori baat: order ban gaya = paisa sanction ho gaya, ab sirf bank transfer baaki hai. Din 1 se 15 tak sirf intezaar karein — kuch karne ki zaroorat nahi. Din 15 ke baad bank visit (seeding + NPCI check), aur din 30 ke baad grievance ya nodal officer. Bas yahi poora roadmap hai.
+            Ek line me puri baat: order ban gya = paisa sanction ho gya, ab sirf bank transfer baki hai. Din 1 se 15 tak sirf intzaar — kuch karne ki zarurat nahi. Din 15 ke baad bank visit (seeding + NPCI check), aur din 30 ke baad grievance ya nodal officer. Bas yahi pura roadmap hai.
           </p>
         </div>
 
