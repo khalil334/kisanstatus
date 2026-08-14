@@ -40,10 +40,6 @@ const FAQS_DATA = [
     a: 'Abhi tak aisi koi official baat nahi hui. ₹2,000 hi milenge — scheme ka structure shuru se yehi chala aa raha hai, saal ke ₹6,000 teen hisson me. "4000 milenge" type ke message har round se pehle ghoomte hain, aur har baar galat nikalte hain. Rakam kabhi badhi toh uski khabar Budget ya Cabinet se aayegi, kisi forward se nahi.',
   },
   {
-    q: 'eKYC pehle ho chuki hai — dobara karni padegi?',
-    a: 'Aam taur par nahi, ek baar ho gayi toh bani rehti hai. "Know Your Status" me eKYC ke aage "Yes" likha hai toh aap set hain. Haan agar Aadhaar me kuch badla ho — spelling, mobile number — toh dobara verify karna pad sakta hai.',
-  },
-  {
     q: '"Payment Success" dikh raha hai lekin account me kuch nahi aaya?',
     a: 'Do din ruk jaiye — FTO process hone ke baad credit me 24 se 48 ghante lag jate hain, gramin banks me kabhi thoda jyada. Passbook ya mini statement se bhi dekh lijiye, SMS har baar nahi aata. pfms.nic.in par bhi track ho jata hai. Teen din baad bhi kuch na dikhe toh 155261 par call kijiye, registration number saath rakhiye.',
   },
@@ -127,7 +123,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/pm-kisan-24vi-kist-og.webp'}
-            alt="PM Kisan 24vi kist — expected date, eligibility aur status check guide"
+            alt="Khet me gehu ki baaliyan haath me liye khadi ek mahila kisan"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -136,23 +132,20 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            ₹2,000 seedha bank account mein, DBT ke zariye
+            Mehnat kheton me hoti hai — ₹2,000 seedha account me DBT se pahunchta hai
           </p>
         </div>
 
         <section className="mb-8">
           <SH>Seedhi Baat Pehle</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Date abhi announce nahi hui hai. Itna padh kar aap chahein toh page band kar sakte hain — lekin ruk jaiye, kyunki asli kaam intezaar nahi, taiyari hai. Aur wahi neeche likha hai.
+            Date abhi announce nahi hui hai. Bas, itni si baat.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Jo hum jaante hain, woh ye hai. Pichhla transfer 20 June 2026 ko hua — Tarakeswar (Hooghly, West Bengal) me hue event se PM ne button dabaya, 9.44 crore parivaron ko kul ₹18,880 crore gaye. Usse pehle wala 13 March ko Guwahati se hua tha. Dono ke beech ka fasla nikaliye: lagbhag sava teen mahine.
+            Lekin jo pata hai, woh kaafi kuch bata deta hai. Pichhla transfer 20 June 2026 ko hua tha — Tarakeswar (Hooghly, West Bengal) ke event se PM ne button dabaya aur 9.44 crore parivaron ko kul ₹18,880 crore gaye. Usse pehle wala 13 March ko Guwahati se. Beech ka fasla lagbhag sava teen mahine ka — isi hisaab se agla number <strong>October 2026 ke aas-paas</strong> banta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Isi hisaab se agla number <strong>October 2026 ke aas-paas</strong> banta hai. Lekin ek baat imandari se — ye ginti pehle bhi galat ho chuki hai. 2025 me log aise hi calendar par ungli rakh rahe the, aur woh gap khinchte khinchte November tak pahunch gaya. Paisa kisi bade event ke saath nikalta hai. Event PM ke schedule par tikta hai. Aur schedule? Woh kisi ke haath me nahi.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Toh is page ka maqsad simple hai: jis din bhi transfer ho, aapka hissa bina atke pahunche. Uske liye 3-4 cheezein pehle se durust honi chahiye — kaunsi, kaise jaanchein, aur atak jaye toh kya karein. Sab neeche hai.
+            Ek baat imandari se: ye ginti pehle bhi galat ho chuki hai. 2025 me log aise hi calendar par ungli rakh rahe the, aur gap khinchte khinchte November tak pahunch gaya tha. Paisa kisi bade event ke saath nikalta hai, event PM ke schedule par tikta hai — aur schedule kisi ke haath me nahi. Toh is page ka asli maqsad tareekh ka andaza nahi, ye pakka karna hai ki jis din bhi transfer ho, aapka hissa bina atke pahunche.
           </p>
         </section>
 
@@ -185,7 +178,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/pm-kisan-24vi-kist-banner.webp"
-            alt="PM Kisan agli kist — timeline aur taiyari checklist"
+            alt="Sukhe khet me fasal ka jayza lete hue ek kisan"
             width={800}
             height={500}
             className="w-full object-cover"
@@ -193,7 +186,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Release se pehle ki taiyari hi asli kaam hai
+            Kist ka intezaar sab karte hain — kagaz durust rakhna asli taiyari hai
           </p>
         </div>
 
@@ -293,7 +286,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/pm-kisan-24vi-kist-october-2026.webp"
-            alt="PM Kisan agli kist expected date — October 2026 ka anumaan"
+            alt="Dhaan ke khet me kaam karta hua kisan"
             width={720}
             height={1080}
             className="w-full object-cover"
@@ -301,7 +294,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Pattern ke hisaab se October 2026 — confirm hote hi yahan update hoga
+            Khet ka kaam rukta nahi — pattern ke hisaab se agla transfer October 2026 ke aas-paas
           </p>
         </div>
 
@@ -420,13 +413,10 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <section className="mb-8">
           <SH>Afwahon Se Kaise Bachein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Har baar se pehle do tarah ke jaal bichhte hain.
+            Har release se pehle do tarah ke jaal bichhte hain. Pehla nuksaan kam karta hai, doosra jyada.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Pehla — badhi hui rakam ki afwah. &quot;Is baar 4000 milenge&quot;, &quot;10,000 ho gaya.&quot; Nahi hua. ₹2,000 hi hai. Jab bhi badhega, Budget ya Cabinet ke faisle se badhega — WhatsApp forward se nahi.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Doosra jaal jyada khatarnak hai — fake links. Message aata hai &quot;yahan se check karo&quot;, click karte hi Aadhaar, OTP ya bank details maangi jati hain. Yaad rakhiye: <strong>OTP batane se sarkari kaam nahi hota, account khali hota hai.</strong> Na sarkar phone karke OTP maangti hai, na kuch dene ke liye fees leti hai. Jo maange, woh thag hai.
+            Pehla — badhi hui rakam ki afwah. &quot;Is baar 4000 milenge&quot;, &quot;10,000 ho gaya.&quot; Nahi hua. ₹2,000 hi hai. Jab bhi badhega, Budget ya Cabinet ke faisle se badhega — WhatsApp forward se nahi. Doosra jaal khatarnak hai: fake links. Message aata hai &quot;yahan se check karo&quot;, click karte hi Aadhaar, OTP ya bank details maangi jati hain. Yaad rakhiye — <strong>OTP batane se sarkari kaam nahi hota, account khali hota hai.</strong> Na sarkar phone karke OTP maangti hai, na kuch dene ke liye fees leti hai. Jo maange, woh thag hai.
           </p>
           <WB>
             Bharose ki jagah sirf teen: pmkisan.gov.in ka homepage, PIB press release, aur Agriculture Ministry ke verified handles. Date in teeno mein se kahin aaye, tabhi maaniye.
