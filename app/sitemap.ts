@@ -59,6 +59,24 @@ const REFERENCE_DATE = new Date(
 
 const FALLBACK_DATE = REFERENCE_DATE;
 
+// Google ignores lastmod site-wide if it catches future timestamps — clamp
+// any content date that is still ahead of the build moment.
+function clampToNow(d: Date): Date {
+  const buildTime = new Date();
+  return d.getTime() > buildTime.getTime() ? buildTime : d;
+}
+
+// /articles/hi lists only Hindi articles — its lastmod should track the
+// freshest Hindi article, not the whole site's freshest article.
+const HINDI_UPDATED = new Date(
+  Math.max(
+    ...HINDI_ARTICLES.map((a) => {
+      const t = new Date(a.modifiedTime || a.publishedTime).getTime();
+      return Number.isFinite(t) ? t : 0;
+    }),
+  ),
+);
+
 // Hub pages inherit the freshest date of the content they list, so they can never
 // drift out of sync with their children the way hardcoded dates did.
 const MAANDHAN_UPDATED = new Date(
@@ -94,7 +112,7 @@ function getArticleFrequency(category: string): MetadataRoute.Sitemap[number]['c
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = FALLBACK_DATE;
+  const now = clampToNow(FALLBACK_DATE);
 
   const staticPages: MetadataRoute.Sitemap = [
     {
@@ -102,11 +120,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'daily',
       priority: 1.0,
-      alternates: {
-        languages: {
-          'hi-IN': SITE_URL,
-        },
-      },
+      // No hreflang alternates: single-language site — a lone self-referencing
+      // hreflang on one URL is half-done markup and adds nothing for Google.
     },
     {
       url: `${SITE_URL}/articles`,
@@ -116,7 +131,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${SITE_URL}/articles/hi`,
-      lastModified: now,
+      lastModified: clampToNow(HINDI_UPDATED),
       changeFrequency: 'weekly',
       priority: 0.90,
     },
@@ -224,7 +239,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return {
       url: `${SITE_URL}/articles/category/${category}`,
       lastModified: latestArticle
-        ? new Date(latestArticle.modifiedTime || latestArticle.publishedTime)
+        ? clampToNow(new Date(latestArticle.modifiedTime || latestArticle.publishedTime))
         : now,
       changeFrequency: 'weekly',
       priority: 0.60,
@@ -233,7 +248,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const articlePages: MetadataRoute.Sitemap = ALL_ARTICLES.map((article) => {
     const modified = article.modifiedTime || article.publishedTime;
-    const modifiedDate = modified ? new Date(modified) : now;
+    const modifiedDate = modified ? clampToNow(new Date(modified)) : now;
 
     return {
       url: `${SITE_URL}${article.path}`,
