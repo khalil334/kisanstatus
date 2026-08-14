@@ -67,8 +67,8 @@ export default function PrivacyPolicyPage() {
               Hamari Site ka upyog karke, aap is policy ke anusaar jankari ke collection aur upyog se sahmat hote hain.
             </p>
             <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl text-sm text-yellow-900 dark:text-yellow-300">
-              <strong>Zaruri Suchna:</strong> {SITE_NAME} Bharat Sarkar ya kisi bhi krishi yojana se affiliated nahi hai.
-              Hum ek independent informational platform hain.
+              <strong>Zaruri Suchna:</strong> Yaad rahe — {SITE_NAME} sarkar ki site nahi hai. Yeh meri khud ki banayi
+              jaankari wali site hai, kisi bhi yojana ke daftar se iska koi naata nahi.
             </div>
           </section>
 
