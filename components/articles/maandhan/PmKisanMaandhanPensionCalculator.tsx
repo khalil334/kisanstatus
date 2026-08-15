@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
-import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-03-20T10:58:55+05:30';
 const MODIFIED = '2026-04-03T18:06:25+05:30';
@@ -153,32 +153,6 @@ const FAQS_DATA = [
 export default function PmKisanMaandhanPensionCalculator({ article }: { article: MaandhanArticleMeta }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "Article",
-              "headline": "PM Kisan Maandhan Pension Calculator: Umar Ke Hisaab Se Kitna Jama Karna Hoga",
-              "description": "Apni age ke hisaab se jaanein PM Kisan Maandhan Yojana mein har mahine kitna dena hoga aur 60 ke baad ₹3000 pension kaise milegi — poora hisaab table aur example ke saath.",
-              "author": {
-                "@type": "Person",
-                "name": AUTHOR_NAME,
-                "url": AUTHOR_URL
-              },
-              "publisher": {
-                "@type": "Organization",
-                "name": "KisanStatus",
-                "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.png" }
-              },
-              "datePublished": PUBLISHED,
-              "dateModified": MODIFIED,
-              "mainEntityOfPage": { "@type": "WebPage", "@id": `https://kisanstatus.com/maandhan/${article.slug}` }
-            }
-          ]
-        }) }}
-      />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">

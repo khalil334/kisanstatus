@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
-import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-04-14T18:42:23+05:30';
 const MODIFIED = '2026-04-23T10:28:53+05:30';
@@ -58,44 +58,6 @@ const FAQS_DATA = [
 export default function PmKisanMaandhanPensionCardDownload({ article }: { article: MaandhanArticleMeta }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@graph': [
-            {
-              '@type': 'Article',
-              headline: 'PM Kisan Maandhan Pension Card Ghar Baithe Kaise Nikalein? (2026 Ka Complete Guide)',
-              description: 'PM Kisan Maandhan Yojana ke under aapka pension account number (jise aam bhasha me KPAN card ya acknowledgement kehte hain) ghar baithe kaise nikalein? Agar website atak rahi hai, mobile number galat hai, ya CSC wala sahi madad nahi kar raha, to ye article aapki har pareshani ka practical hal hai.',
-              image: 'https://kisanstatus.com/images/articles/maandhan/pension-card-download-hero.webp',
-              inLanguage: 'hi-IN',
-              keywords: 'PM Kisan Maandhan Pension Card Download, KPAN card online, PMKMY acknowledgement slip, pension card kaise nikale',
-              articleSection: 'Agriculture & Pension Schemes',
-              author: {
-                '@type': 'Person',
-                name: AUTHOR_NAME,
-                url: AUTHOR_URL,
-              },
-              publisher: {
-                '@type': 'Organization',
-                name: 'KisanStatus',
-                logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.png' },
-              },
-              datePublished: PUBLISHED,
-              dateModified: MODIFIED,
-              mainEntityOfPage: { '@type': 'WebPage', '@id': `https://kisanstatus.com/maandhan/${article.slug}` },
-            },
-            {
-              '@type': 'FAQPage',
-              mainEntity: FAQS_DATA.map((faq) => ({
-                '@type': 'Question',
-                name: faq.q,
-                acceptedAnswer: { '@type': 'Answer', text: faq.a },
-              })),
-            },
-          ],
-        }) }}
-      />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">

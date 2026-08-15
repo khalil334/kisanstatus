@@ -112,7 +112,6 @@ const ITEMLIST_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'iKhedut arji ka lifecycle — 7 stage',
-  inLanguage: 'hi-IN',
   itemListElement: LIFECYCLE_STAGES.map((s, i) => ({
     '@type': 'ListItem',
     position: i + 1,

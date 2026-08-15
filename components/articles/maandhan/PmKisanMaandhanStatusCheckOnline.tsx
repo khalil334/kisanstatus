@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ExternalLinkButton from "@/components/ExternalLinkButton";
 import { AuthorBox, FAQBlock, fmtDate } from "@/components/ArticleShared";
-import { AUTHOR_NAME, AUTHOR_URL } from "@/lib/site-config";
+import { AUTHOR_NAME } from "@/lib/site-config";
 
 const PUBLISHED = "2026-07-24";
 const MODIFIED = "2026-08-08";
@@ -30,27 +30,10 @@ const FAQS_DATA = [
   },
 ];
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      "@id": "https://kisanstatus.com/maandhan/pm-kisan-maandhan-status-check-online/#article",
-      "headline": "PM Kisan Maandhan Status Check Online: Pension Card, Passbook, Contribution History",
-      "description": "PM Kisan Maandhan Yojana mein apna status kaise verify kijiye. Pension card download, passbook check, contribution history aur missed payment ka pura process.",
-      "author": { "@type": "Person", "name": AUTHOR_NAME, "url": AUTHOR_URL },
-      "publisher": { "@type": "Organization", "name": "KisanStatus.com", "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.webp" } },
-      "datePublished": PUBLISHED,
-      "dateModified": MODIFIED,
-      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://kisanstatus.com/maandhan/pm-kisan-maandhan-status-check-online/" }
-    }
-  ]
-};
 
 export default function PmKisanMaandhanStatusCheckOnline() {
   return (
     <article className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200 leading-relaxed prose prose-lg dark:prose-invert prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-100 prose-a:text-blue-600 dark:prose-a:text-blue-400">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <nav className="text-sm text-gray-500 mb-4 not-prose">
         <Link href="/" className="hover:text-blue-600">Home</Link>

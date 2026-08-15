@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
-import { EXTERNAL_LINK_PROPS, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import { EXTERNAL_LINK_PROPS, AUTHOR_NAME } from '@/lib/site-config';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 
 const PUBLISHED = '2026-03-15T08:06:28+05:30';
@@ -59,36 +59,6 @@ const FAQS_DATA = [
 export default function PmKisanMaandhanRegistration2026({ article }: { article: MaandhanArticleMeta }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "Article",
-              "headline": "PM Kisan Maandhan Registration 2026: ₹3000 Pension Apply Process",
-              "description": "PM Kisan Maandhan mein register kaise karein — CSC aur online dono tarike, zaroori documents, umar-wise monthly contribution aur ₹3000 pension ki poori jankari.",
-              "image": "https://kisanstatus.com/images/articles/maandhan/registration-hero.webp",
-              "inLanguage": "hi-IN",
-              "keywords": "PM Kisan Maandhan Registration, Kisan Pension Scheme, Maandhan Yojana, PM-KMY 2026, CSC Registration, Kisan Maandhan Documents, ₹3000 Pension, PM Kisan Maandhan 2026",
-              "articleSection": "Agriculture & Pension Schemes",
-              "author": {
-                "@type": "Person",
-                "name": AUTHOR_NAME,
-                "url": AUTHOR_URL
-              },
-              "publisher": {
-                "@type": "Organization",
-                "name": "KisanStatus",
-                "logo": { "@type": "ImageObject", "url": "https://kisanstatus.com/logo.png" }
-              },
-              "datePublished": PUBLISHED,
-              "dateModified": MODIFIED,
-              "mainEntityOfPage": { "@type": "WebPage", "@id": `https://kisanstatus.com/maandhan/${article.slug}` }
-            }
-          ]
-        }) }}
-      />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">

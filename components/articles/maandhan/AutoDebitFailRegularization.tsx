@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
-import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-05-13T14:48:09+05:30';
 const MODIFIED = '2026-05-18T07:04:01+05:30';
@@ -57,49 +57,6 @@ const RELATED_CARDS = [
 export default function AutoDebitFailRegularization() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@graph': [
-            {
-              '@type': 'Article',
-              headline: 'Auto Debit Fail Hone Par Regularization Kaise Karein: Complete Guide 2026',
-              description: 'Agar aapka EMI ya SIP auto-debit fail ho gaya hai, toh ghabrayein nahi. Janiye ise bina der regularize karne ka aasan tarika, bank charges bachane ke upay aur CIBIL score ko safe rakhne ke tips.',
-              image: 'https://kisanstatus.com/images/articles/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein/kisan-emi-tension.webp',
-              inLanguage: 'hi-IN',
-              keywords: 'auto debit fail hone par regularization kaise kare, EMI bounce solution, NACH mandate fail, CIBIL score impact, bank charges waiver',
-              articleSection: 'Banking & Finance',
-              wordCount: 2800,
-              author: {
-                '@type': 'Person',
-                name: AUTHOR_NAME,
-                url: AUTHOR_URL,
-              },
-              publisher: {
-                '@type': 'Organization',
-                name: 'KisanStatus',
-                logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.png' },
-              },
-              datePublished: PUBLISHED,
-              dateModified: MODIFIED,
-              mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://kisanstatus.com/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein' },
-              speakable: {
-                '@type': 'SpeakableSpecification',
-                cssSelector: ['.hero-title', '.hero-description']
-              }
-            },
-            {
-              '@type': 'FAQPage',
-              mainEntity: FAQS_DATA.map((faq) => ({
-                '@type': 'Question',
-                name: faq.q,
-                acceptedAnswer: { '@type': 'Answer', text: faq.a },
-              })),
-            },
-          ],
-        }) }}
-      />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
