@@ -3,28 +3,6 @@ const path = require('path');
 
 const PAYLOAD_PATH = path.join(__dirname, 'indexnow-payload.json');
 const STATE_PATH = path.join(__dirname, 'indexnow-state.json');
-const SITEMAP_URL = 'https://kisanstatus.com/sitemap.xml';
-
-// Must normalise identically to build-indexnow-payload.js, or a URL the
-// builder rewrote (the bare origin -> trailing slash) never matches the
-// ledger and gets resubmitted on every single run.
-async function lastmodMap(host) {
-  const res = await fetch(SITEMAP_URL, {
-    headers: { 'User-Agent': 'kisanstatus-indexnow-submitter' },
-  });
-  if (!res.ok) return new Map();
-  const xml = await res.text();
-  const out = new Map();
-  for (const block of xml.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
-    const loc = block[1].match(/<loc>\s*([^<\s]+)\s*<\/loc>/);
-    if (!loc) continue;
-    const lastmod = block[1].match(/<lastmod>\s*([^<\s]+)\s*<\/lastmod>/);
-    const raw = loc[1].trim();
-    const normalised = raw === `https://${host}` ? `https://${host}/` : raw;
-    out.set(normalised, lastmod ? lastmod[1].trim() : '');
-  }
-  return out;
-}
 
 async function main() {
   const payload = JSON.parse(fs.readFileSync(PAYLOAD_PATH, 'utf8'));
@@ -32,6 +10,22 @@ async function main() {
   if (!Array.isArray(payload.urlList) || payload.urlList.length === 0) {
     console.log('IndexNow: nothing to submit, skipping.');
     return;
+  }
+
+  // Validate the ledger handoff BEFORE sending anything: the builder records
+  // the lastmods it compared against in state.pending, and without them we
+  // could not record what we submitted - which would resubmit the whole site.
+  const state = fs.existsSync(STATE_PATH)
+    ? JSON.parse(fs.readFileSync(STATE_PATH, 'utf8'))
+    : { submitted: {} };
+  state.submitted = state.submitted || {};
+  const pending = state.pending || {};
+  const unknown = payload.urlList.filter((url) => !(url in pending));
+  if (unknown.length > 0) {
+    throw new Error(
+      `${unknown.length} submitted URL(s) missing from state.pending; ` +
+        'run "npm run indexnow:build" instead of calling this script directly',
+    );
   }
 
   // The key must be verifiable at keyLocation or IndexNow rejects the batch.
@@ -58,14 +52,10 @@ async function main() {
   if (res.status !== 200 && res.status !== 202) process.exit(1);
 
   // Record what we submitted so the next build only sends genuine changes.
-  const live = await lastmodMap(payload.host);
-  const state = fs.existsSync(STATE_PATH)
-    ? JSON.parse(fs.readFileSync(STATE_PATH, 'utf8'))
-    : { submitted: {} };
-  state.submitted = state.submitted || {};
   for (const url of payload.urlList) {
-    state.submitted[url] = live.get(url) ?? '';
+    state.submitted[url] = pending[url];
   }
+  delete state.pending;
   state.lastSubmittedAt = new Date().toISOString();
   fs.writeFileSync(STATE_PATH, `${JSON.stringify(state, null, 1)}\n`);
   console.log(`IndexNow: recorded ${payload.urlList.length} submitted URL(s) in indexnow-state.json`);
