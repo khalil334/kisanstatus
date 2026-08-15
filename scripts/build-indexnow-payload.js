@@ -63,6 +63,18 @@ async function main() {
   const next = { ...current, urlList };
   fs.writeFileSync(PAYLOAD_PATH, `${JSON.stringify(next, null, 1)}\n`);
 
+  // Hand the submitter the exact lastmod we compared against, so it never has
+  // to re-fetch the sitemap. A second fetch could fail (recording empty
+  // lastmods and resubmitting the whole site next run) or race a deploy.
+  state.submitted = submitted;
+  state.pending = Object.fromEntries(urlList.map((url) => [url, live.get(url) ?? '']));
+  // Drop ledger entries for URLs no longer in the sitemap so the file cannot
+  // grow without bound as articles are retired.
+  for (const url of Object.keys(state.submitted)) {
+    if (!live.has(url)) delete state.submitted[url];
+  }
+  fs.writeFileSync(STATE_PATH, `${JSON.stringify(state, null, 1)}\n`);
+
   const known = Object.keys(submitted).length;
   console.log(
     `indexnow payload: ${urlList.length} URL(s) to submit ` +
