@@ -442,7 +442,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan Land Seeding Form 2026: Poora Sach',
     desc: 'Land seeding form kahan se milta hai, kaise bharein, kaunse documents chahiye — state wise Bhulekh portal links aur khasra-khatauni ke saath complete guide.',
     ogTitle: 'PM Kisan Land Seeding Form 2026: Kahan Se Milega, Kaise Bharein',
-    seoTitle: 'PM Kisan Land Seeding Form — Kahan Se Milega',
+    seoTitle: 'PM Kisan Land Seeding Form PDF Download',
     keywords: [
       'pm kisan land seeding form',
       'pm kisan land seeding form pdf download',
