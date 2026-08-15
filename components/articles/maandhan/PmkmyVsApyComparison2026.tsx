@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { IB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
-import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-05-24T20:56:18+05:30';
 const MODIFIED = '2026-06-02T15:23:46+05:30';
@@ -37,45 +37,6 @@ const FAQS_DATA = [
 export default function PmkmyVsApyComparison2026({ article }: { article: MaandhanArticleMeta }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@graph': [
-            {
-              '@type': 'Article',
-              headline: 'PM Kisan Maandhan vs Atal Pension Yojana: Kaunsi Scheme Behtar Hai? (2026)',
-              description: 'PMKMY vs APY comparison. Janiye kisan maandhan vs atal pension yojana mein kya farak hai, contribution difference, aur aapke liye kaunsi scheme best hai.',
-              image: 'https://kisanstatus.com/images/articles/maandhan/comparison-guide/hero-comparison.webp',
-              inLanguage: 'hi-IN',
-              keywords: 'pmkmy vs apy comparison, kisan maandhan vs atal pension yojana, pm kisan pension vs apy kaunsi behtar hai',
-              articleSection: 'Agriculture & Pension Schemes',
-              wordCount: 2200,
-              author: {
-                '@type': 'Person',
-                name: AUTHOR_NAME,
-                url: AUTHOR_URL,
-              },
-              publisher: {
-                '@type': 'Organization',
-                name: 'KisanStatus',
-                logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.png' },
-              },
-              datePublished: PUBLISHED,
-              dateModified: MODIFIED,
-              mainEntityOfPage: { '@type': 'WebPage', '@id': `https://kisanstatus.com/maandhan/${article.slug}` },
-            },
-            {
-              '@type': 'FAQPage',
-              mainEntity: FAQS_DATA.map((faq) => ({
-                '@type': 'Question',
-                name: faq.q,
-                acceptedAnswer: { '@type': 'Answer', text: faq.a },
-              })),
-            },
-          ],
-        }) }}
-      />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
-import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-05-11T20:55:01+05:30';
 const MODIFIED = '2026-05-25T09:56:39+05:30';
@@ -66,49 +66,6 @@ const FAQS_DATA = [
 export default function PMKMYGrievanceComplaintHelpline({ article }: { article: MaandhanArticleMeta }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@graph': [
-            {
-              '@type': 'Article',
-              headline: 'PM Kisan Maandhan Helpline Number 2026 – Verified Contact & Grievance Guide',
-              description: 'PM Kisan Maandhan Yojana ka official helpline number 18002676888, 14434. Grievance email scpms@licindia.com. Online complaint process, CSC helpdesk 14599, aur verified contact details.',
-              image: 'https://kisanstatus.com/images/articles/maandhan/pmkmy-grievance-complaint-helpline/pmkmy-grievance-complaint-helpline-hero.webp',
-              inLanguage: 'hi-IN',
-              keywords: 'PMKMY helpline number 18002676888, PM Kisan Maandhan complaint, scpms@licindia.com, grievance redressal online, CSC helpdesk 14599, LIC pension complaint',
-              articleSection: 'Agriculture & Pension Schemes',
-              wordCount: 2400,
-              author: {
-                '@type': 'Person',
-                name: AUTHOR_NAME,
-                url: AUTHOR_URL,
-              },
-              publisher: {
-                '@type': 'Organization',
-                name: 'KisanStatus',
-                logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.png' },
-              },
-              datePublished: PUBLISHED,
-              dateModified: MODIFIED,
-              mainEntityOfPage: { '@type': 'WebPage', '@id': `https://kisanstatus.com/maandhan/${article.slug}` },
-              speakable: {
-                '@type': 'SpeakableSpecification',
-                cssSelector: ['.hero-title', '.hero-description']
-              }
-            },
-            {
-              '@type': 'FAQPage',
-              mainEntity: FAQS_DATA.map((faq) => ({
-                '@type': 'Question',
-                name: faq.q,
-                acceptedAnswer: { '@type': 'Answer', text: faq.a },
-              })),
-            },
-          ],
-        }) }}
-      />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
