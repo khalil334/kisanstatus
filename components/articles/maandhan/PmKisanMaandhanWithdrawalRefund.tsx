@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
-import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-03-23T11:18:53+05:30';
 const MODIFIED = '2026-04-06T10:23:34+05:30';
@@ -58,37 +58,6 @@ const FAQS_DATA = [
 export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: MaandhanArticleMeta }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@graph': [
-            {
-              '@type': 'Article',
-              headline: 'PM Kisan Maandhan Chhodne Ka Faisla Lene Se Pehle Ye Zaroor Padhein: Refund, Family Pension Aur Exit Ke Sach',
-              description:
-                'Scheme beech mein chhodne par kitna paisa wapas milta hai, kisan ki mrityu par family ko kya milta hai, aur refund process mein kitna time lagta hai — sab kuch practical udaharan ke saath.',
-              author: { '@type': 'Person', name: AUTHOR_NAME, url: AUTHOR_URL },
-              publisher: {
-                '@type': 'Organization',
-                name: 'KisanStatus',
-                logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.png' },
-              },
-              datePublished: PUBLISHED,
-              dateModified: MODIFIED,
-              mainEntityOfPage: { '@type': 'WebPage', '@id': `https://kisanstatus.com/maandhan/${article.slug}` },
-            },
-            {
-              '@type': 'FAQPage',
-              mainEntity: FAQS_DATA.map((faq) => ({
-                '@type': 'Question',
-                name: faq.q,
-                acceptedAnswer: { '@type': 'Answer', text: faq.a },
-              })),
-            },
-          ],
-        }) }}
-      />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">

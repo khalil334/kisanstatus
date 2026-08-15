@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
-import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-04-02T20:27:48+05:30';
 const MODIFIED = '2026-05-02T08:42:07+05:30';
@@ -50,46 +50,6 @@ const FAQS_DATA = [
 export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article: MaandhanArticleMeta }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@graph': [
-            {
-              '@type': 'Article',
-              headline: 'PM Kisan Se Maandhan Ka Paisa Kyun Kat Raha Hai? Auto Debit Ka Poora Sach',
-              description:
-                'PM Kisan ke ₹2000 mein se ₹55-200 kyun kat rahe hain? NACH auto-debit mandate, CSC pe sign kiya gaya form, aur contribution pay karne ka asli process samjhiye.',
-              image: 'https://kisanstatus.com/images/articles/maandhan/auto-debit-confusion-hero.webp',
-              inLanguage: 'hi-IN',
-              keywords: 'PM Kisan Maandhan Auto Debit, PM Kisan se paisa kat raha hai, NACH mandate, PM-KMY contribution, CSC auto debit form',
-              articleSection: 'Agriculture & Pension Schemes',
-              wordCount: 1800,
-              author: {
-                '@type': 'Person',
-                name: AUTHOR_NAME,
-                url: AUTHOR_URL,
-              },
-              publisher: {
-                '@type': 'Organization',
-                name: 'KisanStatus',
-                logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.png' },
-              },
-              datePublished: PUBLISHED,
-              dateModified: MODIFIED,
-              mainEntityOfPage: { '@type': 'WebPage', '@id': `https://kisanstatus.com/maandhan/${article.slug}` },
-            },
-            {
-              '@type': 'FAQPage',
-              mainEntity: FAQS_DATA.map((faq) => ({
-                '@type': 'Question',
-                name: faq.q,
-                acceptedAnswer: { '@type': 'Answer', text: faq.a },
-              })),
-            },
-          ],
-        }) }}
-      />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
