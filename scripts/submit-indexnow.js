@@ -5,7 +5,10 @@ const PAYLOAD_PATH = path.join(__dirname, 'indexnow-payload.json');
 const STATE_PATH = path.join(__dirname, 'indexnow-state.json');
 const SITEMAP_URL = 'https://kisanstatus.com/sitemap.xml';
 
-async function lastmodMap() {
+// Must normalise identically to build-indexnow-payload.js, or a URL the
+// builder rewrote (the bare origin -> trailing slash) never matches the
+// ledger and gets resubmitted on every single run.
+async function lastmodMap(host) {
   const res = await fetch(SITEMAP_URL, {
     headers: { 'User-Agent': 'kisanstatus-indexnow-submitter' },
   });
@@ -16,7 +19,9 @@ async function lastmodMap() {
     const loc = block[1].match(/<loc>\s*([^<\s]+)\s*<\/loc>/);
     if (!loc) continue;
     const lastmod = block[1].match(/<lastmod>\s*([^<\s]+)\s*<\/lastmod>/);
-    out.set(loc[1].trim(), lastmod ? lastmod[1].trim() : '');
+    const raw = loc[1].trim();
+    const normalised = raw === `https://${host}` ? `https://${host}/` : raw;
+    out.set(normalised, lastmod ? lastmod[1].trim() : '');
   }
   return out;
 }
@@ -53,7 +58,7 @@ async function main() {
   if (res.status !== 200 && res.status !== 202) process.exit(1);
 
   // Record what we submitted so the next build only sends genuine changes.
-  const live = await lastmodMap();
+  const live = await lastmodMap(payload.host);
   const state = fs.existsSync(STATE_PATH)
     ? JSON.parse(fs.readFileSync(STATE_PATH, 'utf8'))
     : { submitted: {} };
