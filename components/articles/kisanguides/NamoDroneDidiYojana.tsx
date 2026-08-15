@@ -206,6 +206,16 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           aayenge, bas itni fees do&rdquo; — woh fraud hai. Isme aavedan ki koi fees hai hi nahi.
         </DB>
 
+        <Image
+          src="/images/articles/namo-drone-didi-yojana-shg-selection/shg-mahila-group.webp"
+          alt="Gramin mahila SHG members Krishi Mantri ke saath - Namo Drone Didi Yojana selection DAY-NRLM SHG network se hota hai"
+          width={800}
+          height={450}
+          loading="lazy"
+          sizes="(max-width: 768px) 100vw, 800px"
+          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
+        />
+
         <SH>Selection Kaise Hota Hai — Asli Process</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Yahi woh hissa hai jahan sab confuse hote hain. Koi bhi sarkari portal aisa nahi hai jahan aap
