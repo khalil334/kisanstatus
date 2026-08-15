@@ -50,6 +50,14 @@ const FAQS_DATA = [
     q: 'SHG mein nahi hoon, phir bhi drone pilot ban sakti hoon kya?',
     a: 'Is scheme ka paisa sirf DAY-NRLM wale women SHG ko milta hai, individual ko nahi. Do raste hain — apne gaon ke existing SHG se judna (ya naya SHG banwana, block mission office madad karta hai), ya phir apne kharche par DGCA-approved RPTO se training lekar private drone operator ke yahan kaam karna. Pehla rasta sasta aur subsidy wala hai, bas time lagta hai.',
   },
+  {
+    q: 'Kisan ko drone spray karwane ke liye kya taiyari karni chahiye?',
+    a: 'Teen cheezein: pehla, khet ke upar ya bagal mein bijli ke taar aur ped ka dhyan rakho — operator ko pehle bata do, warna woh mauke pe mana kar dega. Doosra, dawai apni pasand ki le lo lekin dilution operator ke hisaab se banega, zid mat karo. Teesra, spray ke din khet mein jaanwar aur bachhe na hon. Bas itna hi — baaki flight ka kaam operator ka hai.',
+  },
+  {
+    q: 'Barish ke season mein drone spray ho sakta hai kya?',
+    a: 'Halki boond mein bhi spray nahi hota — dawai dhul jati hai aur drone ke electronics ke liye bhi theek nahi. Tez hawa (lagbhag 10-12 km/ghanta se upar) mein bhi operator mana karega kyunki spray bagal ke khet mein udd jata hai, jise drift kehte hain. Isliye monsoon mein spray ki window chhoti hoti hai — operator se 2-3 din pehle baat karke mausam ke hisaab se slot rakho.',
+  },
 ];
 
 export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta }) {
@@ -71,7 +79,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
             <span>Last Updated: 15/08/2026</span>
-            <span>12 min read</span>
+            <span>15 min read</span>
           </div>
         </div>
       </div>
@@ -100,11 +108,19 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           jaa nahi rahi, aur iska agla vistaar aa raha hai.
         </p>
 
-        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
+        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Lekin internet par iske baare mein aadhi-adhoori aur kai jagah seedhi galat jankari bhari padi hai —
           sabse badi galti yeh ki &ldquo;portal par form bharo aur drone le lo.&rdquo; Aisa koi form exist hi
-          nahi karta. Is guide mein woh sab hai jo asli hai: selection ka asli rasta, training ka structure,
-          paise ka poora hisaab, kamai ka realistic andaza, aur woh baatein jo koi nahi batata.
+          nahi karta. Humare paas bhi WhatsApp pe yahi sawaal baar-baar aata hai — didi form kahan bharein? Toh
+          seedha jawab: form nahi, rasta alag hai. Is guide mein wohi asli rasta hai: selection kaise hota hai,
+          training ka structure, paise ka poora hisaab, kamai ka realistic andaza, aur woh baatein jo koi nahi
+          batata.
+        </p>
+
+        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
+          Aur haan — agar aap kisan ho aur sirf yeh jaanna chahte ho ki apne khet mein drone se spray kaise
+          karwayein, kitna kharcha aayega — toh neeche uska bhi alag section hai. Yeh scheme dono taraf ke
+          logon ke liye hai: jo service dena chahti hain, aur jo service lena chahte hain.
         </p>
 
         <SH>Yeh Scheme Hai Kya — Seedhi Bhasha Mein</SH>
@@ -212,6 +228,61 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           repeat customers se hi chal padta hai.
         </p>
 
+        <SH>Kisan Ke Liye: Drone Se Spray Karwana Sasta Padta Hai Ya Mehnga?</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Ab doosri taraf se dekho — aap kisan ho, aapke gaon mein Drone Didi aa gayi hai. Kya uski service
+          leni chahiye? Seedha hisaab lagate hain, ek acre dhaan ke spray ka:
+        </p>
+        <div className="overflow-x-auto my-4">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Baat</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Haath Se / Knapsack Pump</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Drone Se</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Time (1 acre)</td>
+                <td className="border border-[var(--color-border)] p-3">2-4 ghante (mazdoor ke hisaab se)</td>
+                <td className="border border-[var(--color-border)] p-3">7-8 minute</td>
+              </tr>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Kharcha (approx.)</td>
+                <td className="border border-[var(--color-border)] p-3">₹300-500 mazdoori + apna time</td>
+                <td className="border border-[var(--color-border)] p-3">₹300-500 service charge</td>
+              </tr>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Paani</td>
+                <td className="border border-[var(--color-border)] p-3">150-200 litre per acre</td>
+                <td className="border border-[var(--color-border)] p-3">10-20 litre — 90% tak kam</td>
+              </tr>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Dawai ki barbadi</td>
+                <td className="border border-[var(--color-border)] p-3">Zyada — asamaan chhidkav, patton ke neeche nahi pahunchta</td>
+                <td className="border border-[var(--color-border)] p-3">30-40% tak kam dawai lagti hai, spray uniform</td>
+              </tr>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Sehat ka risk</td>
+                <td className="border border-[var(--color-border)] p-3">Spray karne wale ke upar dawai girti hai — asli lekin andekha kharcha</td>
+                <td className="border border-[var(--color-border)] p-3">Aadmi khet se door khada rehta hai</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Yaani per-acre rate lagbhag barabar hai, lekin paani, dawai aur waqt teeno bachte hain — aur sabse
+          badi cheez, pesticide se seedha contact khatam. Jo kisan lagatar spray khud karte hain, unke liye yeh
+          sehat wali baat mazdoori se badi hai, bas koi ise ginta nahi.
+        </p>
+        <StepList>
+          <SI n={1}><strong>Booking kaise karein:</strong> apne block ke agriculture office, KVK ya gaon ke CSC se pucho ki nazdeeki Drone Didi ya drone service provider kaun hai. Kai jagah fertilizer dealer (IFFCO/kisan seva kendra) bhi booking karwa dete hain kyunki nano urea spray unka hi kaam hai.</SI>
+          <SI n={2}><strong>Rate pehle tay karo:</strong> per acre rate + aane-jaane ka kharcha alag hai ya nahi — yeh pehle poochh lo. Padosi kisano ke saath milkar 5-10 acre ka slot book karo toh rate aur girta hai, operator ka bhi time bachta hai.</SI>
+          <SI n={3}><strong>Dawai ka dilution operator se milke tay karo:</strong> drone spray mein paani kam hota hai isliye concentration alag banta hai. Apni marzi se ghol banake mat do — label dose per acre wahi rehta hai, bas paani kam hota hai.</SI>
+          <SI n={4}><strong>Mausam dekho:</strong> tez hawa ya dhoop ke peak time pe spray bekar jata hai. Subah ya shaam ka slot lo — achha operator khud yahi bolega, aur jo na bole usse savdhan raho.</SI>
+        </StepList>
+
         <SH>Kamai Ka Ganit — Bina Hawa-Hawai Numbers Ke</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Service rate ilaake ke hisaab se ₹300 se ₹500 per acre ke beech ghoomta hai. Drone ek acre 7-8 minute
@@ -227,6 +298,58 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           hai jaise machine rental ka —{' '}
           <Link href="/articles/custom-hiring-centre-chc-portal" className="underline font-bold">CHC portal se tractor-machine kiraye par</Link>{' '}
           dene wala dhandha, bas yahan machine hawa mein udti hai.
+        </p>
+
+        <SH>Apne State Mein Kahan Puchein — Mission Ka Naam Har Jagah Alag Hai</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Yeh chhoti si baat bahut logon ko atka deti hai — block office mein jaake &ldquo;NRLM&rdquo; bolo toh
+          kai baar samne wala bhi confuse ho jata hai, kyunki har state ne apne livelihood mission ka apna naam
+          rakha hua hai. Kaam sabka wahi hai. Kuch bade states ke naam yeh rahe:
+        </p>
+        <div className="overflow-x-auto my-4">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">State</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Mission Ka Local Naam</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Bihar</td>
+                <td className="border border-[var(--color-border)] p-3">JEEViKA (Bihar Rural Livelihoods Promotion Society)</td>
+              </tr>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Uttar Pradesh</td>
+                <td className="border border-[var(--color-border)] p-3">UPSRLM — Prerna canvas ke naam se SHG network</td>
+              </tr>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Maharashtra</td>
+                <td className="border border-[var(--color-border)] p-3">UMED (Maharashtra State Rural Livelihoods Mission)</td>
+              </tr>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Madhya Pradesh</td>
+                <td className="border border-[var(--color-border)] p-3">MP DAY-SRLM (Aajeevika Mission)</td>
+              </tr>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Rajasthan</td>
+                <td className="border border-[var(--color-border)] p-3">Rajeevika (Rajasthan Grameen Aajeevika Vikas Parishad)</td>
+              </tr>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Jharkhand</td>
+                <td className="border border-[var(--color-border)] p-3">JSLPS (Jharkhand State Livelihood Promotion Society)</td>
+              </tr>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Odisha</td>
+                <td className="border border-[var(--color-border)] p-3">Mission Shakti / OLM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Block level par ise dhoondhna ho toh Block Programme Manager (BPM) ya Community Coordinator se milo —
+          yeh log SHG network ko roz handle karte hain aur inhe pata hota hai ki drone wale phase mein aapke
+          block ka number aaya hai ya nahi. Panchayat bhavan ya block office mein inka baithna aam hai.
         </p>
 
         <SH>Ab Tak Ka Report Card</SH>
