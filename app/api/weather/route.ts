@@ -1,8 +1,11 @@
 import { NextResponse } from 'next/server';
 
-const UPSTREAM_BASE = 'https://api.openweathermap.org/data/2.5/forecast';
+// Open-Meteo: free weather API, NO API key required (https://open-meteo.com).
+// Replaces OpenWeatherMap so the site works without any WEATHER_API_KEY.
+const UPSTREAM_BASE = 'https://api.open-meteo.com/v1/forecast';
 const CACHE_SECONDS = 1800;
 const UPSTREAM_TIMEOUT_MS = 8000;
+const FORECAST_DAYS = 7;
 
 const DEFAULT_COORDS = { lat: 28.7041, lon: 77.1025 };
 
@@ -31,31 +34,43 @@ const STATE_COORDS: Record<string, { lat: number; lon: number }> = {
   'Delhi': DEFAULT_COORDS,
 };
 
-interface UpstreamEntry {
-  dt?: number;
-  main?: { temp?: number; temp_min?: number };
-  weather?: { main?: string }[];
-  clouds?: { all?: number };
+// WMO weather codes → simple condition label (same style the UI already renders).
+function codeToCondition(code: number): string {
+  if (code === 0) return 'Clear';
+  if (code === 1 || code === 2) return 'Partly Cloudy';
+  if (code === 3) return 'Clouds';
+  if (code === 45 || code === 48) return 'Fog';
+  if (code >= 51 && code <= 57) return 'Drizzle';
+  if (code >= 61 && code <= 67) return 'Rain';
+  if (code >= 71 && code <= 77) return 'Snow';
+  if (code >= 80 && code <= 82) return 'Rain';
+  if (code === 85 || code === 86) return 'Snow';
+  if (code >= 95) return 'Thunderstorm';
+  return 'Clouds';
+}
+
+interface UpstreamDaily {
+  time?: number[];
+  temperature_2m_max?: number[];
+  temperature_2m_min?: number[];
+  weather_code?: number[];
+  precipitation_probability_max?: number[];
 }
 
 export async function GET(request: Request) {
-  const apiKey = process.env.WEATHER_API_KEY || process.env.NEXT_PUBLIC_WEATHER_API_KEY || '';
-
-  if (!apiKey) {
-    return NextResponse.json(
-      { configured: false, list: [] },
-      { status: 503, headers: { 'Cache-Control': 'no-store' } },
-    );
-  }
-
   const state = (new URL(request.url).searchParams.get('state') || '').trim();
   const coords = STATE_COORDS[state] ?? DEFAULT_COORDS;
 
   const upstream = new URL(UPSTREAM_BASE);
-  upstream.searchParams.set('lat', String(coords.lat));
-  upstream.searchParams.set('lon', String(coords.lon));
-  upstream.searchParams.set('appid', apiKey);
-  upstream.searchParams.set('units', 'metric');
+  upstream.searchParams.set('latitude', String(coords.lat));
+  upstream.searchParams.set('longitude', String(coords.lon));
+  upstream.searchParams.set(
+    'daily',
+    'temperature_2m_max,temperature_2m_min,weather_code,precipitation_probability_max',
+  );
+  upstream.searchParams.set('forecast_days', String(FORECAST_DAYS));
+  upstream.searchParams.set('timezone', 'Asia/Kolkata');
+  upstream.searchParams.set('timeformat', 'unixtime');
 
   try {
     const res = await fetch(upstream, {
@@ -71,15 +86,20 @@ export async function GET(request: Request) {
     }
 
     const data: unknown = await res.json();
-    const rawList = Array.isArray((data as { list?: unknown }).list)
-      ? ((data as { list: UpstreamEntry[] }).list)
-      : [];
+    const daily: UpstreamDaily = (data as { daily?: UpstreamDaily }).daily ?? {};
+    const times = Array.isArray(daily.time) ? daily.time : [];
 
-    const list = rawList.slice(0, 40).map((item) => ({
-      dt: item.dt ?? 0,
-      main: { temp: item.main?.temp ?? 0, temp_min: item.main?.temp_min ?? 0 },
-      weather: [{ main: item.weather?.[0]?.main ?? '' }],
-      clouds: { all: item.clouds?.all ?? 0 },
+    // Same shape the frontend already consumes (ForecastEntry[]):
+    // one entry per day; dt is local midnight, so the client's per-date
+    // grouping keeps working unchanged.
+    const list = times.slice(0, FORECAST_DAYS).map((dt, i) => ({
+      dt,
+      main: {
+        temp: daily.temperature_2m_max?.[i] ?? 0,
+        temp_min: daily.temperature_2m_min?.[i] ?? 0,
+      },
+      weather: [{ main: codeToCondition(daily.weather_code?.[i] ?? 3) }],
+      clouds: { all: daily.precipitation_probability_max?.[i] ?? 0 },
     }));
 
     return NextResponse.json(
