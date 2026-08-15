@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { SI, StepList, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
@@ -123,6 +124,16 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           logon ke liye hai: jo service dena chahti hain, aur jo service lena chahte hain.
         </p>
 
+        <Image
+          src="/images/articles/namo-drone-didi-yojana-shg-selection/drone-didi-spray-hero.webp"
+          alt="Namo Drone Didi Yojana 2026 - Agriculture drone khet mein spray karta hua, SHG mahila drone pilot service"
+          width={800}
+          height={450}
+          priority
+          sizes="(max-width: 768px) 100vw, 800px"
+          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
+        />
+
         <SH>Yeh Scheme Hai Kya — Seedhi Bhasha Mein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Union Cabinet ne 28 November 2023 ko ise approve kiya aur PM ne 30 November 2023 ko launch kiya.
@@ -213,6 +224,16 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           portalName="myscheme.gov.in"
         />
 
+        <Image
+          src="/images/articles/namo-drone-didi-yojana-shg-selection/drone-spray-training-demo.webp"
+          alt="Drone Didi training - agriculture drone se khet mein spray ka practical demo, 15 din ki DGCA training"
+          width={800}
+          height={450}
+          loading="lazy"
+          sizes="(max-width: 768px) 100vw, 800px"
+          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
+        />
+
         <SH>Training Mein Hota Kya Hai — 15 Din Ka Breakdown</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Pehle 5 din DGCA-approved Remote Pilot Training Organisation (RPTO) mein katate hain — udaan ke
@@ -227,6 +248,16 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           agriculture hissa hi asli imtihaan hai. Jo didiyan spray chemistry ko seriously leti hain, unka kaam
           repeat customers se hi chal padta hai.
         </p>
+
+        <Image
+          src="/images/articles/namo-drone-didi-yojana-shg-selection/drone-spray-paddy-field.webp"
+          alt="Dhaan ke khet mein agriculture drone se spray - kisan ke liye drone spray service ka kharcha"
+          width={800}
+          height={450}
+          loading="lazy"
+          sizes="(max-width: 768px) 100vw, 800px"
+          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
+        />
 
         <SH>Kisan Ke Liye: Drone Se Spray Karwana Sasta Padta Hai Ya Mehnga?</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
