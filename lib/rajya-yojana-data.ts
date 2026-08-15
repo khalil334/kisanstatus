@@ -83,7 +83,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'kisan kalyan yojana beneficiary list mp',
       'mp kisan kalyan yojana amount',
     ],
-    title: 'MP Kisan Kalyan Yojana Status — SAARA Portal',
+    title: 'MP Kisan Kalyan Yojana Kist Status — SAARA Portal',
     description:
       'Saal ke ₹12,000 mein se aapki kist kahan atki hai — SAARA portal par status kholne ka step, list mein naam dhoondhna, aur late hone par kya karna hai.',
     ogTitle: 'MP Kisan Kalyan Yojana — Kist Aur Status Check',
@@ -188,7 +188,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'cm kisan odisha landless farmer benefit',
       'cmkisan odisha gov in status',
     ],
-    title: 'CM Kisan Odisha Status Check 2026 — List',
+    title: 'Odisha CM Kisan Status Check 2026',
     description:
       'Naam list mein hai par paisa nahi aaya? CM Kisan portal par status dekhne ka tareeka, cultivator aur landless ki alag list, aur e-KYC ka pech.',
     ogTitle: 'Odisha CM Kisan Status Check — KALIA Ka Naya Naam',

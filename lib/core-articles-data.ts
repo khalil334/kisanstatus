@@ -158,7 +158,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'FTO Ka Full Form & FTO Generated Meaning',
     desc: 'FTO Generated dikha par paisa nahi aaya? Generated, Processed aur "will be generated" — teeno ka aasan matlab, aur delay par din 15 aur 30 ka action plan.',
     ogTitle: 'FTO Ka Full Form — FTO Generated/Processed Meaning',
-    seoTitle: 'FTO Kya Hai — Generated, Processed Ka Matlab',
+    seoTitle: 'FTO Generated Ka Matlab — PM Kisan Guide',
     keywords: [
       'FTO ka full form',
       'FTO full form in hindi',
@@ -566,7 +566,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan CSC Charges 2026: Sahi Fees',
     desc: 'CSC wala ₹500 maang raha hai? Sarkari rate sirf ₹25-30 hai. Sahi fees, free online method, aur fraud se bachne ka tarika.',
     ogTitle: 'PM Kisan CSC Charges — Sahi Fees, Sahi Tarika',
-    seoTitle: 'PM Kisan CSC Registration Charges — Sahi Fees',
+    seoTitle: 'PM Kisan CSC Registration Charges — Sahi Fees, Sahi Tarika',
     keywords: [
       'pm kisan csc registration fees',
       'pm kisan csc se kaise kare',
