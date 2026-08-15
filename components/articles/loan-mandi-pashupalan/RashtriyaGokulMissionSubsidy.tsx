@@ -5,6 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const RELATED = [
+  { slug: 'gau-mutra-kharid-yojana-up-2026', title: 'Gau Mutra Kharid Yojana UP — ₹10/Litre' },
   { slug: 'murgi-palan-loan-nlm-subsidy', title: 'Murgi Palan NLM Subsidy' },
   { slug: 'sbi-dairy-loan-interest-rate', title: 'SBI Dairy Loan — Rate Guide' },
   { slug: 'dairy-farm-loan-without-collateral', title: 'Bina Guarantee Dairy Loan' },
