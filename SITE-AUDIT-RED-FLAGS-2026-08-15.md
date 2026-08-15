@@ -30,19 +30,18 @@ Traffic kam hone ki wajah samajhne ke liye site + code dono check kiya. Verified
 - **Impact:** Audience rural India / slow 3G-4G hai — heavy first byte + LCP slow = Core Web Vitals down = rankings pe pressure. Inline SVG icons har card mein repeat ho rahe hain, RSC payload mein pura FAQ/HowTo text duplicate hai.
 - **Fix ideas:** homepage sections kam karo (abhi FAQ + HowTo + 3 article-grids + quick-links sab ek page pe), repeated inline SVGs ko ek component/sprite banao, `next/dynamic` se below-fold sections lazy karo. Target: HTML < 100 KB.
 
-### 4. HSTS header 2 jagah alag-alag values ke saath
+### 4. ✅ FIXED (2026-08-15) — HSTS header 2 jagah alag-alag values ke saath
 - **Evidence:** `vercel.json` → `max-age=31536000`; `next.config.js` headers() → `max-age=63072000`. Live response pe 31536000 aa raha (vercel.json jeet raha).
 - **Impact:** Direct SEO harm nahi, lekin **headers do jagah maintain ho rahe hain** (vercel.json + next.config.js dono mein full security-header set). Future mein conflict/bhool ka risk.
-- **Fix:** Ek jagah rakho — recommend: sab headers `next.config.js` mein, `vercel.json` se headers block hatao (ya ulta).
+- **Fix applied:** `vercel.json` ka global security-headers block hata diya (CSP Report-Only bhi `next.config.js` mein move); ab single source of truth `next.config.js` hai, HSTS = 63072000. Cache-Control headers vercel.json mein hi hain (wo duplicate nahi the).
 
-### 5. `robots` meta + `X-Robots-Tag` header duplication
+### 5. ✅ FIXED (2026-08-15) — `robots` meta + `X-Robots-Tag` header duplication
 - **Evidence:** Har page pe header `x-robots-tag: index, follow...` (next.config `/:path*`) + page-level robots meta bhi. `/search` pe noindex header sahi lag raha hai ✅.
 - **Impact:** Abhi values consistent hain to harm nahi. Lekin agar kabhi kisi page ko noindex karna ho meta se, to global `index, follow` header confusion create karega (header + meta conflict mein Google restrictive option leta hai, lekin clean rakhna better hai).
-- **Fix:** Global `X-Robots-Tag: index, follow` header next.config se hata do — default hi index hota hai; sirf noindex wale exceptions rakho.
+- **Fix applied:** Global `X-Robots-Tag: index, follow` header next.config se hata diya; `/search` ka `noindex, nofollow` rakha hai.
 
-### 6. Duplicate article title data mein
-- **Evidence:** `title: 'Beneficiary List'` do data files mein duplicate.
-- **Fix:** Titles unique karo (e.g. state/context add karo) taake SERP mein duplicate-title flag na aaye.
+### 6. ~~Duplicate article title~~ — FALSE ALARM (verified)
+- Dobara check kiya: `title: 'Beneficiary List'` sirf `lib/translations.ts` mein homepage feature-card ka UI label hai (hi + en dono locales), article title nahi. Koi SEO issue nahi — **koi action nahi chahiye**.
 
 ---
 
@@ -79,7 +78,7 @@ Traffic kam hone ki wajah samajhne ke liye site + code dono check kiya. Verified
 | 2 | `MANDI_API_KEY` + `WEATHER_API_KEY` Vercel env mein set karo | Vercel dashboard | 10 min |
 | 3 | GA4 + GSC mein pichle 3 mahine ka data compare karo (measurement gap vs real drop) | GA4/GSC | 30 min |
 | 4 | Homepage HTML weight ~240KB → <100KB (SVG dedupe, sections lazy) | code | 2-4 hr |
-| 5 | Headers ek jagah consolidate (vercel.json vs next.config) | code | 30 min |
-| 6 | Duplicate 'Beneficiary List' title unique karo | lib data files | 10 min |
+| 5 | ~~Headers consolidate~~ ✅ FIXED (2026-08-15) — sab headers ab next.config.js mein, vercel.json ka duplicate block hataya, HSTS ab ek value | code | done |
+| 6 | ~~Duplicate title~~ — false alarm, UI label tha | — | n/a |
 
 > **Sabse important:** #1 aur #2 code changes nahi hain — sirf Vercel env vars missing hain. Inke bina analytics andha hai aur live-rates page toota hua hai.
