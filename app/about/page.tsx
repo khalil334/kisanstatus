@@ -6,7 +6,7 @@ import { ARTICLES } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
   title: 'About Us - PM Kisan Guidance',
-  description: `KisanStatus ek kisan ki banayi site hai — PM Kisan status, eKYC, payment fix aur registration ki saral Hinglish guidance, bilkul free. Jaaniye yeh site kisne aur kyun banayi.`,
+  description: `KisanStatus ek kisan ki banayi free site hai — PM Kisan status, eKYC, payment fix aur registration ki saral Hinglish guidance. Jaaniye kisne aur kyun banayi.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
