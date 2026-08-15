@@ -88,7 +88,6 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/mp-kisan-kalyan-yojana',
     titleHi: 'MP किसान कल्याण योजना — ₹12000 सालाना कैसे मिलेंगे? जानिए',
-    seoTitleHi: 'MP किसान कल्याण योजना — ₹12000 कैसे मिलेंगे',
     desc: 'MP मुख्यमंत्री किसान कल्याण योजना से हर साल ₹12000 पाएं — kisan kalyan yojana status check, पात्रता और अगली किस्त की date की पूरी जानकारी हिंदी में देखें।',
     keywords: ['मुख्यमंत्री किसान कल्याण योजना', 'mp kisan kalyan yojana status', '₹12000 किसान योजना MP'],
     category: 'farming',
