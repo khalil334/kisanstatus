@@ -151,6 +151,16 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           implementation mein lagi hain kyunki nano urea aur nano DAP ka spray hi iska sabse bada use-case hai.
         </p>
 
+        <Image
+          src="/images/articles/namo-drone-didi-yojana-shg-selection/drone-package-cost.webp"
+          alt="Agriculture sprayer drone package - Namo Drone Didi Yojana mein SHG ko milne wala kisan drone"
+          width={800}
+          height={450}
+          loading="lazy"
+          sizes="(max-width: 768px) 100vw, 800px"
+          className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
+        />
+
         <SH>Paise Ka Poora Hisaab — Table Mein</SH>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
@@ -433,6 +443,13 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           <li>
             DGCA — Digital Sky platform: remote pilot certificate aur drone rules ki official jankari.{' '}
             <a href="https://digitalsky.dgca.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">digitalsky.dgca.gov.in</a>
+          </li>
+          <li>
+            Photo credits — Wikimedia Commons: drone spray photos by Christopher Hedreyd / PIA 4A CALABARZON (public domain);{' '}
+            <a href="https://commons.wikimedia.org/wiki/File:Agricultural_drone_spraying_on_paddy_field.jpg" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">paddy field spray</a>{' '}
+            by Shreesha Sharma (CC BY-SA 4.0);{' '}
+            <a href="https://commons.wikimedia.org/wiki/File:An_Agriculture_Sprayer_UAV_displayed_at_Amaravati_Drone_Summit_by_Aries_Agro_Ltd._(01).jpg" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">sprayer UAV</a>{' '}
+            by iMahesh (CC BY-SA 4.0). Images resized aur watermarked.
           </li>
         </ul>
 
