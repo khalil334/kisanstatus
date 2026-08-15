@@ -10,15 +10,6 @@ export const metadata: Metadata = {
   description: 'PM Kisan status check karein Aadhaar, mobile ya registration number se. Seedha official portal par redirect. Bilkul free, bina login ke.',
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   creator: AUTHOR_NAME,
-  keywords: [
-    'pm kisan status check',
-    'pm kisan aadhaar se check',
-    'pm kisan mobile number se status',
-    '24vi kist status check',
-    'pm kisan status kaise check kare',
-    'pmkisan.gov.in status check',
-    'pm kisan payment status',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'PM Kisan Status Check 2026 — Aadhaar/Mobile',

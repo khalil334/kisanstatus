@@ -9,7 +9,6 @@ import {
   AUTHOR_URL,
   DEFAULT_OG_IMAGE,
   LOGO_URL,
-  GLOBAL_KEYWORDS,
 } from '@/lib/site-config';
 
 const HOME_TITLE = `PM Kisan Status Check 2026 | ${SITE_NAME}`;
@@ -18,7 +17,6 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: HOME_TITLE,
   description: SITE_DESCRIPTION,
-  keywords: GLOBAL_KEYWORDS,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   creator: AUTHOR_NAME,
   publisher: SITE_NAME,

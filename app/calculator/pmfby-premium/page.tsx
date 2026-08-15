@@ -10,18 +10,6 @@ export const metadata: Metadata = {
   description: 'PM Fasal Bima Yojana (PMFBY) ka premium calculate karein. Kharif aur Rabi dono ke liye government subsidy aur net premium jaanein. Bilkul free tool.',
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   creator: AUTHOR_NAME,
-  keywords: [
-    'fasal bima premium calculator',
-    'pmfby premium calculator hindi',
-    'pradhan mantri fasal bima yojana premium',
-    'crop insurance premium calculator india',
-    'fasal bima ka premium kitna hai',
-    'kharif fasal bima premium',
-    'rabi fasal bima premium',
-    'pmfby calculator 2026',
-    'fasal bima subsidy calculator',
-    'crop insurance cost hindi',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Fasal Bima Premium Calculator 2026',
