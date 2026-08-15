@@ -925,6 +925,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('namo-drone-didi-yojana-shg-selection'),
     schemes: ['namo-drone-didi', 'day-nrlm'],
+    ogImage: '/images/articles/namo-drone-didi-yojana-shg-selection/drone-didi-spray-hero.webp',
     relatedSlugs: ['custom-hiring-centre-chc-portal', 'drip-sprinkler-irrigation-subsidy', 'state-kisan-yojana-list-all-states-2026', 'KisanCreditCardOnlineApply2026', 'NanoDap500mlPriceInIndia2026'],
   },
 ] as const;
