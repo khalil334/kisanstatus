@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
-import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-03-18T19:44:07+05:30';
 const MODIFIED = '2026-04-08T11:52:48+05:30';
@@ -62,46 +62,6 @@ const FAQS_DATA = [
 export default function PmKisanMaandhanEligibilityDocuments({ article }: { article: MaandhanArticleMeta }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@graph': [
-            {
-              '@type': 'Article',
-              headline: 'PM Kisan Maandhan Eligibility Aur Documents: Poori Sach Baat',
-              description:
-                'PM Kisan Maandhan Yojana ke liye kaun eligible hai, kaun exclude hota hai, aur CSC jane se pehle kaunse documents ready rakhne hain — sab kuch official guidelines ke hisab se, real examples ke saath.',
-              image: 'https://kisanstatus.com/images/articles/maandhan/eligibility-check-farmer-documents.webp',
-              inLanguage: 'hi-IN',
-              keywords: 'PM Kisan Maandhan Eligibility, PM Kisan Maandhan Documents, Kisan Pension Yojana, PM-KMY rules, CSC registration documents, Kisan Maandhan 2026',
-              articleSection: 'Agriculture & Pension Schemes',
-              wordCount: 1200,
-              author: {
-                '@type': 'Person',
-                name: AUTHOR_NAME,
-                url: AUTHOR_URL,
-              },
-              publisher: {
-                '@type': 'Organization',
-                name: 'KisanStatus',
-                logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.png' },
-              },
-              datePublished: PUBLISHED,
-              dateModified: MODIFIED,
-              mainEntityOfPage: { '@type': 'WebPage', '@id': `https://kisanstatus.com/maandhan/${article.slug}` },
-            },
-            {
-              '@type': 'FAQPage',
-              mainEntity: FAQS_DATA.map((faq) => ({
-                '@type': 'Question',
-                name: faq.q,
-                acceptedAnswer: { '@type': 'Answer', text: faq.a },
-              })),
-            },
-          ],
-        }) }}
-      />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">

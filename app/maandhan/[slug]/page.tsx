@@ -159,7 +159,6 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
       },
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-    breadcrumb: { '@id': `${url}#breadcrumb` },
   };
 
   return (

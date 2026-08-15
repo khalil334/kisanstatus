@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, WB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
-import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-04-22T17:52:14+05:30';
 const MODIFIED = '2026-05-22T08:37:43+05:30';
@@ -62,45 +62,6 @@ const FAQS_DATA = [
 export default function FamilyPensionRules({ article }: { article: MaandhanArticleMeta }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@graph': [
-            {
-              '@type': 'Article',
-              headline: 'PMKMY Family Pension Rules: Pati Ke Baad Kya Hoga? (2026)',
-              description: 'Know what happens to PMKMY pension after a farmer death. Family pension rules, spouse claim process, corpus fund details, and real mistakes to avoid.',
-              image: 'https://kisanstatus.com/images/articles/maandhan/family-pension-rules/hero.webp',
-              inLanguage: 'hi-IN',
-              keywords: 'PMKMY family pension rules, PM Kisan Maandhan death claim, spouse pension after 60, corpus refund process',
-              articleSection: 'Agriculture & Pension Schemes',
-              wordCount: 2100,
-              author: {
-                '@type': 'Person',
-                name: AUTHOR_NAME,
-                url: AUTHOR_URL,
-              },
-              publisher: {
-                '@type': 'Organization',
-                name: 'KisanStatus',
-                logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.png' },
-              },
-              datePublished: PUBLISHED,
-              dateModified: MODIFIED,
-              mainEntityOfPage: { '@type': 'WebPage', '@id': `https://kisanstatus.com/maandhan/${article.slug}` },
-            },
-            {
-              '@type': 'FAQPage',
-              mainEntity: FAQS_DATA.map((faq) => ({
-                '@type': 'Question',
-                name: faq.q,
-                acceptedAnswer: { '@type': 'Answer', text: faq.a },
-              })),
-            },
-          ],
-        }) }}
-      />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
