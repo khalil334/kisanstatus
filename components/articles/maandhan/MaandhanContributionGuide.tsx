@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
-import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
+import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-05-22T17:41:10+05:30';
 const MODIFIED = '2026-05-31T07:51:01+05:30';
@@ -113,45 +113,6 @@ function ContributionCalculator() {
 export default function MaandhanContributionGuide({ article }: { article: MaandhanArticleMeta }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@graph': [
-            {
-              '@type': 'Article',
-              headline: 'PM Kisan Maandhan Yojana: Age-Wise Monthly Contribution Chart 2026',
-              description: 'PM-KMY mein 18–40 saal har umar ka exact monthly contribution, government co-contribution aur pension rules — official sources se verified.',
-              image: 'https://kisanstatus.com/images/articles/maandhan/MaandhanContributionGuide/hero.webp',
-              inLanguage: 'hi-IN',
-              keywords: 'PM Kisan Maandhan Yojana, PMKMY contribution chart, Kisan Maandhan monthly contribution, PMKMY pension',
-              articleSection: 'Agriculture & Pension Schemes',
-              wordCount: 1800,
-              author: {
-                '@type': 'Person',
-                name: AUTHOR_NAME,
-                url: AUTHOR_URL,
-              },
-              publisher: {
-                '@type': 'Organization',
-                name: 'KisanStatus',
-                logo: { '@type': 'ImageObject', url: 'https://kisanstatus.com/logo.png' },
-              },
-              datePublished: PUBLISHED,
-              dateModified: MODIFIED,
-              mainEntityOfPage: { '@type': 'WebPage', '@id': `https://kisanstatus.com/maandhan/${article.slug}` },
-            },
-            {
-              '@type': 'FAQPage',
-              mainEntity: FAQS_DATA.map((faq) => ({
-                '@type': 'Question',
-                name: faq.q,
-                acceptedAnswer: { '@type': 'Answer', text: faq.a },
-              })),
-            },
-          ],
-        }) }}
-      />
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
