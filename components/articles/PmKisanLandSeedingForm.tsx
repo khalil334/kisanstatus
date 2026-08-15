@@ -344,7 +344,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
             <SI n={8}>Chaaron documents ki copy nathi karein.</SI>
             <SI n={9}>Patwari se milan karwa kar unka <strong>sign aur stamp</strong> lagwayein — iske bina kagaz aage nahi badhta.</SI>
             <SI n={10}>BAO mein jama karein aur <strong>receiving/pawti zaroor lein</strong>.</SI>
-            <SI n={11}>Do-chaar hafte baad <Link href="/articles/PmKisanSelfRegisteredStatusCheck" className="underline text-green-700 dark:text-green-400">status dobara dekhein</Link>.</SI>
+            <SI n={11}>Do-chaar hafte baad <Link href="/articles/pm-kisan-self-registered-status-check" className="underline text-green-700 dark:text-green-400">status dobara dekhein</Link>.</SI>
           </StepList>
 
           <Image
