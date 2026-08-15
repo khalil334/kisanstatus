@@ -54,7 +54,6 @@ export async function generateMetadata({
     metadataBase: new URL(SITE_URL),
     title: article.seoTitleHi ?? article.titleHi,
     description: article.desc,
-    keywords: [...article.keywords],
     authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
     creator: AUTHOR_NAME,
     alternates: {

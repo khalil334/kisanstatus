@@ -10,18 +10,6 @@ export const metadata: Metadata = {
   description: 'MSP rate par fasal bechne par kitna paisa milega, jaano turant. Gehun, dhaan, sarson, kapas ka MSP 2025-26 check karein. Bilkul free calculator.',
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   creator: AUTHOR_NAME,
-  keywords: [
-    'msp income calculator',
-    'fasal ka msp rate',
-    'gehu ka msp 2026',
-    'dhaan ka msp rate',
-    'sarson ka msp',
-    'kapas ka msp',
-    'msp calculator hindi',
-    'fasal bechne par kitna paisa milega',
-    'minimum support price calculator india',
-    'msp rate 2025-26',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'MSP Income Calculator 2026 — Fasal MSP Rate',

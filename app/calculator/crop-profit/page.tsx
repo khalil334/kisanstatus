@@ -10,17 +10,6 @@ export const metadata: Metadata = {
   description: 'Kheti mein kitna profit ya loss hua, jaano turant. Beej, khad, mazdoori aur sinchai ka kharcha dalo aur net munafa nikalo. Free per hectare calculator.',
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   creator: AUTHOR_NAME,
-  keywords: [
-    'kheti ka munafa calculator',
-    'fasal profit loss calculator hindi',
-    'kheti mein kitna profit hua',
-    'crop profit calculator india',
-    'kheti ka kharcha aur kamai',
-    'fasal munafa per hectare',
-    'kheti profit loss hindi',
-    'kisan munafa calculator',
-    'kheti ka hisaab',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Kheti Ka Munafa Calculator 2026',

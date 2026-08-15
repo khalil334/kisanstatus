@@ -250,7 +250,6 @@ export async function generateMetadata({
     metadataBase: new URL(SITE_URL),
     title: seoTitle,
     description: article.desc,
-    keywords: Array.isArray(article.keywords) ? [...article.keywords] : [],
     authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
     creator: AUTHOR_NAME,
     publisher: SITE_NAME,

@@ -55,29 +55,6 @@ export const SUPPORT_HOURS = {
   close: '18:00',
 } as const;
 
-export const GLOBAL_KEYWORDS = [
-  'pm kisan status',
-  'pm kisan yojana',
-  'pm kisan samman nidhi',
-  'kisan credit card',
-  'krishi yojana hindi',
-  'farming subsidy india',
-  'kisan status check',
-  'organic farming guide',
-  'kisan loan',
-  'pm kisan ekyc',
-  'pm kisan registration',
-  'pm kisan beneficiary status',
-  'pm kisan 15th installment',
-  'pm kisan kist status',
-  'krishi input subsidy',
-  'kisan samman nidhi yojana',
-  'agriculture schemes india',
-  'farmer welfare schemes',
-  'soil health card',
-  'crop insurance pmfby',
-];
-
 export const SITE_KEYWORDS = [
   'KisanStatus',
   'Kisan Status',

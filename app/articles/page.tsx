@@ -73,22 +73,6 @@ export const metadata: Metadata = {
       'x-default': `${SITE_URL}/articles`,
     }
   },
-  keywords: [
-    'kisan status guides',
-    'pm kisan resources 2026',
-    'krishi guides hindi',
-    'agriculture business ideas',
-    'kisan loan guide',
-    'farming subsidy yojana',
-    'pm kisan ekyc guide',
-    'pm kisan payment fix',
-    'crop insurance guide',
-    'soil health card guide',
-    'bakri palan yojana',
-    'mushroom kheti guide',
-    'pm kisan maandhan yojana',
-    'kisan pension scheme',
-  ],
   openGraph: {
     title: `Kisan Guides 2026 — ${ALL_ARTICLES.length}+ Verified Resources`,
     description: 'PM Kisan, farming subsidies, loans, crop insurance, and business guides — sab ek jagah. Simple Hinglish mein.',

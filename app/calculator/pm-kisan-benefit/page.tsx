@@ -10,18 +10,6 @@ export const metadata: Metadata = {
   description: 'PM Kisan Samman Nidhi se kitna paisa milega, jaano turant. 1, 3 ya 5 saal ka total benefit calculate karein. ₹6,000 saalana. Bilkul free tool.',
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   creator: AUTHOR_NAME,
-  keywords: [
-    'pm kisan calculator',
-    'pm kisan kitna paisa milega',
-    'pm kisan 6000 calculator',
-    'pm kisan kist calculator 2026',
-    'pm kisan samman nidhi calculator',
-    'pm kisan total benefit calculator',
-    'pm kisan arrears calculator',
-    'pm kisan kitne saal mein kitna milega',
-    'pm kisan payment estimator hindi',
-    'pm kisan benefit calculator 2026',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'PM Kisan Benefit Calculator 2026',

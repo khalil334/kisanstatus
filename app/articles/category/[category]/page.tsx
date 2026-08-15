@@ -365,7 +365,6 @@ export async function generateMetadata({
     description: displayDescription,
     authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
     alternates: { canonical: url },
-    keywords: categoryData.keywords,
     openGraph: {
       title: displayTitle,
       description: displayDescription,

@@ -10,18 +10,6 @@ export const metadata: Metadata = {
   description: 'PM Kisan ki kist kyun nahi aayi? 4 steps mein jaanein — eKYC, bank seeding, land seeding check karein. Bilkul free tool, bina registration ke.',
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   creator: AUTHOR_NAME,
-  keywords: [
-    'pm kisan kist tracker',
-    'kist kyun nahi aayi',
-    'pm kisan kist kab aayegi',
-    'pm kisan status check tool',
-    'kist ruki hai kyun',
-    'pm kisan kist status hindi',
-    'pm kisan payment status check',
-    'kist tracker 2026',
-    'pm kisan ekyc status',
-    'pm kisan bank seeding',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'PM Kisan Kist Tracker 2026 — Kist Kyun Ruki Hai?',

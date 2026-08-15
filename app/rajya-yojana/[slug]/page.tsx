@@ -195,7 +195,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: article.title,
     description: article.description,
-    keywords: [article.mainKeyword, ...article.secondaryKeywords],
     authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
     creator: AUTHOR_NAME,
     alternates: {

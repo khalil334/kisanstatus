@@ -10,12 +10,6 @@ export const metadata: Metadata = {
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   creator: AUTHOR_NAME,
   alternates: { canonical: `${SITE_URL}/calculator` },
-  keywords: [
-    'pm kisan calculator', 'kcc loan emi calculator', 'crop insurance premium calculator',
-    'msp income calculator', 'crop profit calculator', 'pm kisan status check tool',
-    'kisan credit card emi', 'pmfby premium calculator', 'free kisan tools',
-    'kheti ka munafa calculator', 'fasal bima premium calculator hindi',
-  ],
   openGraph: {
     type: 'website',
     url: `${SITE_URL}/calculator`,

@@ -10,18 +10,6 @@ export const metadata: Metadata = {
   description: 'Kisan Credit Card (KCC) loan ki monthly EMI, interest aur subsidy calculate karein. Bilkul free tool, bina registration ke.',
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   creator: AUTHOR_NAME,
-  keywords: [
-    'kcc loan emi calculator',
-    'kisan credit card loan emi',
-    'kcc loan monthly payment',
-    'kisan loan emi calculator hindi',
-    'kcc loan interest rate',
-    'kisan credit card emi kitni hogi',
-    'kcc loan subsidy calculator',
-    'kcc loan 7% interest',
-    'kisan loan calculator 2026',
-    'kcc loan repayment calculator',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'KCC Loan EMI Calculator 2026',

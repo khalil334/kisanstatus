@@ -537,17 +537,25 @@ export default function HomeContent() {
             </p>
           </div>
 
-          <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage">
+          <div className="space-y-4">
             {FAQS.map((faq, index) => (
-              <div key={index} itemProp="mainEntity" itemScope itemType="https://schema.org/Question">
-                <FaqItem question={faq.question} answer={faq.answer} index={index} />
-                <meta itemProp="name" content={faq.question} />
-                <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer" className="hidden">
-                  <div itemProp="text">{faq.answer}</div>
-                </div>
-              </div>
+              <FaqItem key={index} question={faq.question} answer={faq.answer} index={index} />
             ))}
           </div>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: FAQS.map((faq) => ({
+                  '@type': 'Question',
+                  name: faq.question,
+                  acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+                })),
+              }),
+            }}
+          />
         </div>
       </section>
 
