@@ -1,6 +1,6 @@
 # Notes for AI agents working on kisanstatus
 
-## Tech stack
+#Tech stack
 - Next.js (App Router) + TypeScript + Tailwind. Deployed on Vercel.
 - Article routes: `app/maandhan/[slug]/page.tsx`, `app/rajya-yojana/[slug]/page.tsx`,
   `app/articles/[slug]/page.tsx` — each route template emits Article + BreadcrumbList
