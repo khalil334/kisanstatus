@@ -134,9 +134,17 @@ const nextConfig = {
           { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
           { key: 'X-DNS-Prefetch-Control', value: 'on' },
           {
-            key: 'Content-Security-Policy-Report-Only',
+            // Enforced CSP (was Report-Only, which protects nothing).
+            // Changes vs the old report-only policy:
+            // - removed https://api.openweathermap.org (weather now proxied
+            //   server-side through /api/weather via Open-Meteo)
+            // - added https://stats.g.doubleclick.net to connect-src (GA4 can
+            //   beacon there when Google Signals is enabled)
+            // Vercel Analytics posts to same-origin /_vercel/insights ('self');
+            // Speed Insights uses vitals.vercel-insights.com.
+            key: 'Content-Security-Policy',
             value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://api.openweathermap.org https://vitals.vercel-insights.com; frame-src https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests",
+              "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://vitals.vercel-insights.com; frame-src https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests",
           },
         ],
       },
