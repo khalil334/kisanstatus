@@ -13,7 +13,7 @@ const FAQS = [
   },
   {
     q: 'किस्त का status कहां देखें?',
-    a: 'NSMNY portal (nsmny.mahait.org) पर Beneficiary Status option है — registered mobile number या registration number डालकर OTP से status दिखता है। PM Kisan वाली किस्तों के लिए pmkisan.gov.in का Know Your Status अलग से देखना होगा।',
+    a: 'NSMNY portal (nsmny.mahait.org) पर Beneficiary Status option है — registered mobile number या registration number डालकर OTP से status दिखता है। केंद्र वाली (PM Kisan) किस्तों का status इस portal पर नहीं दिखता — उसके लिए pmkisan.gov.in खोलना होगा।',
   },
   {
     q: 'नमो शेतकरी की किस्त नहीं आई पर PM Kisan आ गई — क्यों?',
@@ -37,7 +37,7 @@ const FAQS = [
   },
   {
     q: 'किस्त किसी पुराने/बंद खाते में चली गई — अब क्या करूं?',
-    a: 'पैसा उस खाते में जाता है जो NPCI mapper में आधार से seeded है — जरूरी नहीं कि वह खाता form में लिखा हुआ ही हो। जिस खाते में पैसा चाहिए, उसी की branch में जाकर NPCI seeding form भरें — आखिरी seeded खाता ही active रहता है। बंद खाते में गया पैसा आम तौर पर वापस लौटकर अगली प्रक्रिया में दोबारा भेजा जाता है।',
+    a: 'DBT का transfer NPCI mapper के record से तय होता है, form में लिखे खाते से नहीं — जो खाता सबसे बाद में seed हुआ, रकम वहीं पहुंचती है। इसलिए जिस खाते में पैसा चाहिए, उसी branch में NPCI seeding form भर दीजिए। बंद खाते वाला transfer fail होकर अगले payment cycle में नए खाते पर री-ट्राई होता है।',
   },
   {
     q: 'शिकायत कहां करें अगर सब कुछ सही होने पर भी पैसा न आए?',

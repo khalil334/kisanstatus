@@ -15,10 +15,12 @@
 - ✅ 🔴 #1 (partial): `AnnadataSukhibhavaStatusHindi` — 3 duplicated blocks rewritten (₹20,000 hisaab para, "bichauliye" line, NPCI mapping bullet) to kill shared 5/10-grams with `RajasthanKisanSammanNidhi`. Sentence rhythm bhi toda (short sentences mix kiye) — partially addresses 🔴 #5 uniformity flag on this file.
 - ✅ 🔴 #2 (partial): fabricated "मेरे एक परिचित <district>" anecdotes removed/replaced with impersonal factual phrasing in `RythuBharosaStatusHindi` (वारंगल), `OdishaCmKisanStatusHindi` (बलांगीर), `KrishakUnnatiYojanaStatusHindi` (धमतरी).
 
+**Batch 2 — pushed 2026-08-16:**
+- ✅ 🔴 #2 complete: last three "परिचित" anecdotes rewritten impersonally — `StateKisanYojanaListHindi` (बिहार), `UpKisanKarjRahatListHindi` (सहकारी समिति), `AnnadataSukhibhava` intro (गुंटूर)। Zero fabricated anecdotes left.
+- ✅ 🔴 #1 continued: Namo↔Rajasthan/MP shared prose broken — NPCI/लौटकर-दोबारा FAQ answer rewritten in `NamoShetkari`, "Know Your Status" line varied in both `NamoShetkari` and `MukhyamantriKisanKalyanMp`; Bihar↔MeriFasal "जुबानी शिकायत हवा में" phrasing varied in `MeriFasal`.
+
 **Remaining (next batch):**
-- 🔴 #2: anecdote formula in `StateKisanYojanaListHindi` (बिहार परिचित), `UpKisanKarjRahatListHindi` (सहकारी समिति परिचित), + intro anecdote in `AnnadataSukhibhava` (गुंटूर परिचित).
-- 🔴 #1: remaining shared prose — Namo↔Rajasthan/MP ("Know Your Status" line, NPCI/लौटकर-दोबारा phrasing), Bihar↔MeriFasal ("शिकायत हवा में" line), closing "मास्टर गाइड" boilerplate variation.
-- 🟠 #4/#5: low sentence-variance rhythm fixes in `KrishakBandhu`, `RythuBharosa`, `PatiPatni`; boilerplate closing/CTA variation across 13 files.
+- 🟠 #4/#5: low sentence-variance rhythm fixes in `KrishakBandhu`, `RythuBharosa`, `PatiPatni`; closing "मास्टर गाइड" / CTA boilerplate variation across 13 files.
 - 🟡 #6: keyword-density synonym mixing in `NpciAadhaarSeeding`, `UpKarjRahat`, `EkycMobile`.
 
 ---

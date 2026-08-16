@@ -21,7 +21,7 @@ const FAQS_PAISA = [
   },
   {
     q: 'Status कहां check करें?',
-    a: 'राज्य की किस्त का status saara.mp.gov.in portal पर दिखता है (CM Kisan section में)। PM Kisan वाली किस्तों के लिए pmkisan.gov.in का Know Your Status ही रास्ता है।',
+    a: 'राज्य की किस्त का status saara.mp.gov.in portal पर दिखता है (CM Kisan section में)। केंद्र की किस्तों का हिसाब वहां नहीं मिलेगा — उसके लिए सीधे pmkisan.gov.in पर जाना होगा।',
   },
 ];
 
