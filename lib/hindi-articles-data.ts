@@ -365,6 +365,28 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     component: 'KrishakBandhuStatusHindi',
     ogImage: '/images/articles/rajya-yojna/krishak-bandhu-status-check-2026/hero.webp',
   },
+  {
+    slug: 'hi/odisha-cm-kisan-status',
+    titleHi: 'ओडिशा CM Kisan स्थिति — भूमिहीन को भी ₹12,500 का रास्ता',
+    seoTitleHi: 'ओडिशा CM Kisan स्थिति — भूमिहीन को ₹12,500',
+    desc: 'KALIA की जगह आई ओडिशा CM Kisan — आधार से स्थिति देखने का 5 मिनट का तरीका, जमीन वालों को ₹4,000 और भूमिहीन परिवार को ₹12,500 का पूरा हिसाब, गांव-वार सूची और पैसा अटकने की आम वजहें।',
+    keywords: [
+      'ओडिशा सीएम किसान स्थिति',
+      'odisha cm kisan status check',
+      'cm kisan odisha भूमिहीन 12500',
+      'cm kisan beneficiary list odisha',
+      'kalia yojana नया नाम',
+      'cmkisan odisha gov in status',
+      'सीएम किसान योजना ओडिशा लिस्ट',
+      'cm kisan village wise list',
+    ],
+    category: 'status-check',
+    publishedTime: '2026-08-17T09:30:00+05:30',
+    modifiedTime: '2026-08-17T09:30:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'OdishaCmKisanStatusHindi',
+    ogImage: '/images/articles/rajya-yojna/odisha-cm-kisan-status-check-2026/hero.webp',
+  },
 ] as const;
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(
