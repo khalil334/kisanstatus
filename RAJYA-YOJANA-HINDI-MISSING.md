@@ -76,7 +76,7 @@ KALIA se CM Kisan tak ka safar 3-4 line mein nipta do (log purane naam se search
 **Prompt:**
 Ye myth-busting article hai — style baaki sab se alag hogi. Seedha jawab pehli line mein: NAHI, ek parivar (pati-patni-nabalig bachche) mein sirf EK ko milega. Phir 'kyun' — family definition scheme guidelines se quote karo (verify karo pmkisan.gov.in ke operational guidelines se). Real-life cases banao: "Ramesh aur uski patni dono ke naam zameen hai, dono ne form bhara — ab kya hoga?" jaise 3-4 scenario, har ek ka jawab. Galti se dono le rahe the to recovery notice aur paisa wapas (voluntary surrender) ka process. Is article mein table ki zaroorat nahi — scenarios hi kaafi hain. FAQs mein sasur-bahu, bhai-bhai, adult beta jaise rishtey cover karo. Internal links: `/articles/PmKisanVoluntarySurrenderGuide`, `/articles/PmKisanRejectedStatusReApplyGuide`, `/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega`.
 
-## 7. State Kisan Yojana List 2026 — Sabhi Rajya
+## 7. ~~State Kisan Yojana List 2026 — Sabhi Rajya~~ ✅ DONE
 
 - Hinglish slug: `rajya-yojana/state-kisan-yojana-list-all-states-2026` · State: ALL
 - Suggested Hindi slug: `hi/state-kisan-yojana-list`
@@ -84,7 +84,7 @@ Ye myth-busting article hai — style baaki sab se alag hogi. Seedha jawab pehli
 **Prompt:**
 Ye ek listicle/hub hai — iska structure hi list-based hoga, lekin robotic catalog nahi. Angle: "PM Kisan ke ₹6000 ke upar tumhara rajya kitna deta hai?" Har major state (RJ, MP, MH, AP, TG, WB, OD, CG, HR, BR, KA, UP, GJ minimum) ka 3-5 line ka mini-section: scheme ka naam, kitna paisa, kaun eligible. HAR amount official source se verify karo — ye article fact-heavy hai, ek bhi galat number nahi. Ek master comparison table (state / scheme / saalana rashi) article ke beech mein. Jin states ka humara detailed Hindi/Hinglish article hai, wahan internal link lagao (jaise `/rajya-yojana/mp-kisan-kalyan-yojana-kist-status`, `/rajya-yojana/krishak-bandhu-status-check-2026`, etc. — sab 13-15 rajya-yojana articles). Ye sabse lamba article hoga, 2500+ words chalega. Internal links: `/articles/PmKisanMasterGuide2026` + sabhi state articles.
 
-## 8. Krishak Unnati Yojana Status Check 2026 (Chhattisgarh)
+## 8. ~~Krishak Unnati Yojana Status Check 2026 (Chhattisgarh)~~ ✅ DONE
 
 - Hinglish slug: `rajya-yojana/krishak-unnati-yojana-status-check-2026` · State: Chhattisgarh · Portal: khadya.cg.nic.in
 - Suggested Hindi slug: `hi/krishak-unnati-yojana-status`
@@ -92,7 +92,7 @@ Ye ek listicle/hub hai — iska structure hi list-based hoga, lekin robotic cata
 **Prompt:**
 CG ke dhan (paddy) kisano ke liye likho — ye scheme dhan bechne se judi hai, isliye article ka flow mandi/society se shuru karo: kisan ne dhan becha, ab antar rashi (difference amount) kab aur kaise milegi. 'Antar rashi' ka concept ekdum saral bhasha mein — MSP vs ₹3100 wala hisab ek chhote example ke saath (2 acre wale kisan ka calculation karke dikhao). Status check ka process, aur kya-kya documents/registration chahiye. Verify karo current rate aur per-acre limit. Ek calculation table chalega. FAQs mein "society mein becha tha lekin paisa nahi aaya" type sawal. Internal links: `/articles/PmKisanMasterGuide2026`, `/articles/PmKisan24viKist2026`, `/rajya-yojana/krishak-unnati-yojana-status-check-2026`.
 
-## 9. Meri Fasal Mera Byora Status Check 2026 (Haryana)
+## 9. ~~Meri Fasal Mera Byora Status Check 2026 (Haryana)~~ ✅ DONE
 
 - Hinglish slug: `rajya-yojana/meri-fasal-mera-byora-status-check-2026` · State: Haryana · Portal: fasal.haryana.gov.in
 - Suggested Hindi slug: `hi/meri-fasal-mera-byora-status`
