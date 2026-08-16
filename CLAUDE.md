@@ -46,3 +46,15 @@
   cut trailing "— सब एक जगह" style filler and one secondary clause first.
 - Note: Hindi matras/combining marks count as chars in Python len() the same
   way Ahrefs counts them — lengths verified to match the crawl exactly.
+
+## Ahrefs warnings batch 2 (fixed 2026-08-16)
+- Meta description too short: /articles/hi/category/* descriptions live inline
+  in CATEGORY_DATA in app/articles/hi/category/[category]/page.tsx, not in a
+  lib data file.
+- Title too long: budget is 60 chars INCLUDING the " | KisanStatus" suffix
+  (14 chars) from the root layout template — data-file titles must be ≤46 chars.
+  Hindi articles: add optional seoTitleHi (generateMetadata uses
+  seoTitleHi ?? titleHi).
+- "3XX redirect" warning: the three http/www→https 308s are Next/Vercel
+  canonical-host redirects (next.config.js host rule + platform). Intentional,
+  single-hop — known acceptable finding, do not "fix".
