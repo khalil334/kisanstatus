@@ -471,6 +471,27 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     component: 'MeriFasalMeraByoraStatusHindi',
     ogImage: '/images/articles/rajya-yojna/meri-fasal-mera-byora-status-check-2026/hero.webp',
   },
+  {
+    slug: 'hi/bihar-kisan-registration-status',
+    titleHi: 'बिहार किसान पंजीकरण स्टेटस 2026 — 13 अंकों का नंबर, सारी योजनाओं का दरवाजा',
+    seoTitleHi: 'बिहार किसान पंजीकरण स्टेटस चेक 2026 — DBT Bihar',
+    desc: 'DBT Agriculture Bihar पर 13 अंकों की पंजीकरण संख्या भूल गए? आधार से निकालने, स्टेटस चेक और डीजल अनुदान, इनपुट अनुदान, बीज अनुदान — हर योजना की अर्जी का हाल एक जगह।',
+    keywords: [
+      'बिहार किसान पंजीकरण स्टेटस',
+      'dbt agriculture bihar status check',
+      'किसान पंजीकरण संख्या कैसे निकालें',
+      'kisan registration number bihar kaise nikale',
+      'डीजल अनुदान स्टेटस बिहार',
+      'कृषि इनपुट अनुदान स्टेटस चेक',
+      'dbtagriculture bihar gov in registration',
+    ],
+    category: 'status-check',
+    publishedTime: '2026-08-16T21:30:00+05:30',
+    modifiedTime: '2026-08-16T21:30:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'BiharKisanRegistrationStatusHindi',
+    ogImage: '/images/articles/rajya-yojna/bihar-kisan-registration-status-check-2026/hero.webp',
+  },
 ] as const;
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(

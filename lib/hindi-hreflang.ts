@@ -18,6 +18,7 @@ export const HINDI_TO_HINGLISH: Readonly<Record<string, string>> = {
   'state-kisan-yojana-list': '/rajya-yojana/state-kisan-yojana-list-all-states-2026',
   'krishak-unnati-yojana-status': '/rajya-yojana/krishak-unnati-yojana-status-check-2026',
   'meri-fasal-mera-byora-status': '/rajya-yojana/meri-fasal-mera-byora-status-check-2026',
+  'bihar-kisan-registration-status': '/rajya-yojana/bihar-kisan-registration-status-check-2026',
 };
 
 export const HINGLISH_TO_HINDI: Readonly<Record<string, string>> = Object.freeze(
