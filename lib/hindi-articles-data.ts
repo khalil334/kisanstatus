@@ -299,6 +299,28 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     component: 'RajasthanKisanSammanNidhiHindi',
     ogImage: '/images/articles/rajya-yojna/rajasthan-kisan-samman-nidhi-9000/hero.webp',
   },
+  {
+    slug: 'hi/annadata-sukhibhava-status',
+    titleHi: 'अन्नदाता सुखीभव स्थिति — ₹20,000 और CCRC का पूरा हिसाब',
+    seoTitleHi: 'अन्नदाता सुखीभव स्थिति — ₹20,000 और CCRC कार्ड',
+    desc: 'आंध्र प्रदेश की अन्नदाता सुखीभव से ₹20,000 सालाना — आधार से स्थिति देखने का तरीका, किस्तों का दर्ज हिसाब, और बटाईदार किसान के लिए CCRC कार्ड की पूरी बात।',
+    keywords: [
+      'अन्नदाता सुखीभव स्थिति',
+      'annadata sukhibhava status check',
+      'अन्नदाता सुखीभव ₹20000',
+      'annadata sukhibhava beneficiary list',
+      'ccrc card kya hai',
+      'बटाईदार किसान अन्नदाता सुखीभव',
+      'ysr rythu bharosa naya naam',
+      'annadathasukhibhava ap gov in status',
+    ],
+    category: 'status-check',
+    publishedTime: '2026-08-16T22:15:00+05:30',
+    modifiedTime: '2026-08-16T22:15:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'AnnadataSukhibhavaStatusHindi',
+    ogImage: '/images/articles/rajya-yojna/annadata-sukhibhava-status-check-2026/hero.webp',
+  },
 ] as const;
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(
