@@ -272,7 +272,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     ],
     category: 'agri-business',
     publishedTime: '2026-08-15T20:30:00+05:30',
-    modifiedTime: '2026-08-15T20:30:00+05:30',
+    modifiedTime: '2026-08-16T09:00:00+05:30',
     author: AUTHOR_NAME,
     component: 'NamoDroneDidiYojanaHindi',
     ogImage: '/images/articles/namo-drone-didi-yojana-shg-selection/drone-didi-spray-hero.webp',
