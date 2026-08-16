@@ -22,7 +22,7 @@
 | og:image / twitter:card / og:locale | ✅ Present everywhere |
 | Image alt text (homepage sample) | ✅ All images have alt |
 | Security headers | ⚠️ CSP is Report-Only (H2) |
-| Hreflang for Hindi/Hinglish variants | ❌ Missing (H1) |
+| Hreflang for Hindi/Hinglish variants | ✅ Implemented (see H1 correction) |
 | Secrets in repo | ✅ None found (only `.env.example`) |
 | XSS via search reflection | ✅ Not reflected (tested) |
 
@@ -30,23 +30,8 @@
 
 ## 🔴 High priority
 
-### H1. No hreflang between Hindi (`/articles/hi/*`) and Hinglish variants — near-duplicate content risk
-The site publishes the **same topics twice**: Hinglish under `/articles/<slug>` (`lang="hi-IN"`) and Devanagari Hindi under `/articles/hi/<slug>`. Examples of near-duplicate pairs:
-
-| Hindi page | Hinglish/other page |
-|---|---|
-| `/articles/hi/pm-kisan-25vi-kist` | `/articles/PmKisan25viKist2027` |
-| `/articles/hi/gau-mutra-kharid-yojana` | `/articles/gau-mutra-kharid-yojana-up-2026` |
-| `/articles/hi/mp-kisan-kalyan-yojana` | `/rajya-yojana/mp-kisan-kalyan-yojana-kist-status` |
-| `/articles/hi/rythu-bharosa-status` | `/rajya-yojana/rythu-bharosa-status-check-2026` |
-| `/articles/hi/namo-drone-didi-yojana` | `/articles/namo-drone-didi-yojana-shg-selection` |
-
-There are **zero `hreflang` annotations** anywhere on the site, and **every page declares `lang="hi-IN"`** — including the Hinglish (Latin-script) pages. Google can treat these pairs as duplicate/competing content and pick the wrong one, split ranking signals, or filter one out.
-
-**Fix:**
-1. Add reciprocal `hreflang` alternates in `generateMetadata` for every paired article: `hi` → the `/articles/hi/...` version, `hi-Latn` (or `x-default`) → the Hinglish version. In Next.js App Router: `alternates: { languages: { 'hi': ..., 'hi-Latn': ... } }`.
-2. Consider `lang="hi-Latn-IN"` on the `<html>` element for Hinglish pages (they're currently mislabeled as Devanagari Hindi).
-3. Maintain the pairing in `lib/articles-data.ts` (e.g. a `hindiVariant` / `hinglishVariant` field) so alternates are generated automatically.
+### H1. ~~No hreflang between Hindi/Hinglish variants~~ — CORRECTED: already implemented ✅
+**Correction (post-audit):** the initial crawl reported zero hreflang due to a case-sensitive check (`hreflang=` vs the rendered `hrefLang=`). The live pages **do** emit reciprocal `hi-IN` / `hi-Latn` / `x-default` alternates via `lib/hindi-hreflang.ts` for all 22 mapped Hindi/Hinglish pairs, and unpaired pages self-reference. No action needed. (Optional polish: `<html>` still declares `lang="hi-IN"` on Latin-script Hinglish pages; `hi-Latn-IN` would be more accurate.)
 
 ### H2. Content-Security-Policy is Report-Only — never enforced, and it's stale
 `next.config.js:137` sends `Content-Security-Policy-Report-Only`, so the CSP protects nothing in practice. Worse, the policy is out of date: `connect-src` still allowlists `https://api.openweathermap.org`, but the code (`app/api/weather/route.ts`) migrated to Open-Meteo server-side. There is no `report-uri`/`report-to` endpoint either, so the "report" mode reports to nowhere.
@@ -122,8 +107,8 @@ Three URLs timed out (>25s) on first crawl attempt and returned 200 (0.1–0.4s)
 
 ## Suggested fix order
 
-1. **H1 hreflang pairing** (biggest ranking risk — duplicate-content ambiguity between Hindi/Hinglish).
-2. **H2 enforce CSP** (quick config change after policy cleanup).
+1. ~~H1 hreflang~~ — already implemented (audit correction).
+2. **H2 enforce CSP** (quick config change after policy cleanup). ✅ Fixed in this commit.
 3. **M1 hub-page JSON-LD** + **M3 real sitemap lastmod** (one PR, both touch generation code).
 4. **H3 audit non-JSON-LD `dangerouslySetInnerHTML`** (refactor when touching those articles).
 5. **M2 placeholder text / SSR** + **M4 short descriptions** (quick wins).
