@@ -439,7 +439,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/articles/PmKisanCorrectionForm2026', l: ' Correction Form' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanRejectedStatusReApplyGuide" />
       </div>
     </>
   );

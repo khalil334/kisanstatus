@@ -468,7 +468,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', l: ' FTO Guide' },
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisan24viKist2026" />
       </div>
     </>
   );

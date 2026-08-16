@@ -439,7 +439,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
           { href: '/articles/PmKisan24viKist2026', l: '24vi Kist Status' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanPaymentFailedFix2026" />
       </div>
     </>
   );

@@ -506,7 +506,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="pm-kisan-fto-generated-ka-matlab-kya-hai" />
       </div>
     </>
   );

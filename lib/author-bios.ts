@@ -35,6 +35,18 @@ export const AUTHOR_TAGLINES: readonly string[] = [
   'PM Kisan, KCC aur yojana updates cover karta hoon',
 ] as const;
 
+// Disclaimer variants — same essential message (independent site, not a
+// government portal; verify real work on official portals), worded
+// differently so the block isn't byte-identical on every article.
+export const DISCLAIMER_VARIANTS: readonly string[] = [
+  'Seedhi baat bata doon — KisanStatus.com meri apni banayi site hai, sarkar ya kisi bhi sarkari portal se iska koi lena-dena nahi. Jo bhi likhta hoon, bas samjhane ke liye likhta hoon taaki aapka kaam aasaan ho. Kist, eKYC, registration — koi bhi asli kaam ho to seedha pmkisan.gov.in jaise official portal par hi karein, wahi aakhri sach hai.',
+  'Ek baat clear kar doon — ye meri personal site hai, koi sarkari website nahi. Yahan sab kuch sirf samjhane ke liye likha gaya hai. Kist check, eKYC ya registration jaisa koi bhi asli kaam pmkisan.gov.in ya apne state ke official portal par hi karein.',
+  'KisanStatus.com ka kisi sarkari vibhag se koi sambandh nahi hai — ye ek independent guide site hai. Yahan di gayi jankari samajhne ke liye hai; final aur updated jankari ke liye hamesha official portal (jaise pmkisan.gov.in) par hi bharosa karein.',
+  'Note kar lein — ye site sarkari nahi hai, main apni taraf se yojanaon ki jankari aasan bhasha me likhta hoon. Koi bhi payment, eKYC ya form ka kaam karna ho to seedha official portal par jayein, wahi aakhri aur sahi jagah hai.',
+  'Disclaimer seedha sa hai: KisanStatus ek niji (private) website hai, sarkar se iska koi lena-dena nahi. Content sirf jankari ke liye hai. Asli kaam — kist, registration, eKYC — hamesha pmkisan.gov.in jaise official portals par hi karein.',
+  'Yahan jo bhi padha, wo samajhne ke liye likha gaya hai — KisanStatus koi sarkari portal nahi, meri apni site hai. Scheme ka koi bhi official kaam karne se pehle pmkisan.gov.in ya apne state ke portal par jaakar confirm zaroor karein.',
+] as const;
+
 function hash(key: string): number {
   let h = 0;
   for (let i = 0; i < key.length; i++) {
@@ -51,4 +63,9 @@ export function getAuthorBio(key: string): string {
 /** Deterministic pick for the short tagline; offset so bio/tagline pairs vary. */
 export function getAuthorTagline(key: string): string {
   return AUTHOR_TAGLINES[(hash(key) + 7) % AUTHOR_TAGLINES.length];
+}
+
+/** Deterministic pick for the disclaimer; offset so it doesn't pair with the bio. */
+export function getDisclaimer(key: string): string {
+  return DISCLAIMER_VARIANTS[(hash(key) + 3) % DISCLAIMER_VARIANTS.length];
 }

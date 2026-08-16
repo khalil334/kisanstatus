@@ -520,7 +520,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
           { href: '/maandhan/pmkmy-bank-account-change', l: 'Bank Change' },
           { href: '/maandhan/pm-kisan-maandhan-pension-card-download', l: 'Pension Card' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="pmkmy-grievance-complaint-helpline" />
       </div>
     </>
   );

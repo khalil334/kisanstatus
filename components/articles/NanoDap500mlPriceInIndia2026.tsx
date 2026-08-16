@@ -486,7 +486,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Guide' },
           { href: '/calculator/crop-profit', l: 'Crop Profit' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="NanoDap500mlPriceInIndia2026" />
       </div>
     </>
   );

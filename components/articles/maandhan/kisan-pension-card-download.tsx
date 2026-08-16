@@ -415,7 +415,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           { href: '/maandhan/pmkmy-bank-account-change', l: ' Bank Change' },
           { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: 'Eligibility' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="kisan-pension-card-download" />
       </div>
     </>
   );

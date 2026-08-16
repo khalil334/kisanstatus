@@ -556,7 +556,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Guide' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanMobileNumberChangeUpdate" />
       </div>
     </>
   );

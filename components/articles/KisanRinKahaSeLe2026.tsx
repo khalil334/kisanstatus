@@ -405,7 +405,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/calculator/kcc-loan-emi', l: 'EMI Calculator' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="KisanRinKahaSeLe2026" />
       </div>
     </>
   );

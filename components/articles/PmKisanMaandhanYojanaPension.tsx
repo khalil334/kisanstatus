@@ -649,7 +649,7 @@ export default function PmKisanMaandhanYojanaPension() {
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
           { href: '/articles/PmfbyCropInsurance2026', l: 'PMFBY Insurance' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanMaandhanYojanaPension" />
       </div>
     </>
   );

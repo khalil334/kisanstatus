@@ -453,7 +453,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           { href: '/articles/PmKisan25viKist2027', l: '25vi Kist 2027' },
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanEkycOnline2026" />
       </div>
     </>
   );

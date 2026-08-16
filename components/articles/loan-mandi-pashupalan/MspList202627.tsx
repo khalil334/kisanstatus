@@ -533,7 +533,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           { href: '/articles/gehu-ka-bhav-msp-vs-mandi', l: 'Gehu MSP vs Mandi' },
           { href: '/articles/category/mandi', l: 'Mandi-Bhav Section' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="MspList202627" />
       </div>
     </>
   );

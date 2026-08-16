@@ -500,7 +500,7 @@ return (
        { href: '/articles/KisanRinKahaSeLe2026', l: 'Credit Sources' },
        { href: '/calculator/kcc-loan-emi', l: 'EMI Calculator' },
      ]} />
-     <Disclaimer />
+     <Disclaimer k="KisanTractorLoan2026" />
    </div>
  </>
 );

@@ -429,7 +429,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
           { href: '/maandhan/pm-kisan-maandhan-auto-debit-poora-sach', l: 'Auto Debit' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="MaandhanContributionGuide" />
       </div>
     </>
   );

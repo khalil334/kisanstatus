@@ -455,7 +455,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanStateNodalOfficerList" />
       </div>
     </>
   );

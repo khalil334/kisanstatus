@@ -491,7 +491,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
           { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Guide' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanLandSeedingForm" />
       </div>
     </>
   );

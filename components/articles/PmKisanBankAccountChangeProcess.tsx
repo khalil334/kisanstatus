@@ -415,7 +415,7 @@ export default function PmKisanBankAccountChangeProcess() {
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanBankAccountChangeProcess" />
       </div>
     </>
   );

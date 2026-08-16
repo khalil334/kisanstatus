@@ -402,7 +402,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
             { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: 'Calculator' },
           ]}
         />
-        <Disclaimer />
+        <Disclaimer k="PmKisanMaandhanWithdrawalRefund" />
       </div>
     </>
   );

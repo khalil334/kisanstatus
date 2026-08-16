@@ -418,7 +418,7 @@ export default function AutoDebitFailRegularization() {
           { href: '/articles/PmKisanMaandhanYojanaPension', l: 'Maandhan Yojana' },
           { href: '/maandhan/pmkmy-bank-account-change', l: 'Bank Change' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="AutoDebitFailRegularization" />
       </div>
     </>
   );

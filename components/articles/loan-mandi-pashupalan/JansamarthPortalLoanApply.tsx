@@ -343,7 +343,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           { href: '/articles', l: 'Aur Guides Padhein' },
           { href: '/articles/category/loan', l: 'Karj Aur Loan Articles' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="JansamarthPortalLoanApply" />
       </div>
     </>
   );

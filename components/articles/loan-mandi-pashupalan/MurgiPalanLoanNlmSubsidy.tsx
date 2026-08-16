@@ -386,7 +386,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           { href: '/articles', l: 'Baaki Articles Dekhein' },
           { href: '/articles/category/pashupalan', l: 'Pashu Palan Ke Sab Articles' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="MurgiPalanLoanNlmSubsidy" />
       </div>
     </>
   );

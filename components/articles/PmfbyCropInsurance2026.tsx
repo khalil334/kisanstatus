@@ -587,7 +587,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           { href: '/articles/soil-health-card-complete-guide-2026', l: 'Soil' },
           { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmfbyCropInsurance2026" />
       </div>
     </>
   );

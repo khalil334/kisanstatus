@@ -361,7 +361,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           { href: '/articles', l: 'Sabhi Articles' },
           { href: '/articles/category/pashupalan', l: 'Pashupalan Guides' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="BiharPashupalanLoanYojana" />
       </div>
     </>
   );

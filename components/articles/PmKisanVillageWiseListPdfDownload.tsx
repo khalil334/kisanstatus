@@ -529,7 +529,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
           { href: '/articles/PmKisanRejectedStatusReApplyGuide', l: 'Rejected Status Fix' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanVillageWiseListPdfDownload" />
       </div>
     </>
   );

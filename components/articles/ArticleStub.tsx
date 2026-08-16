@@ -51,7 +51,7 @@ export default function ArticleStub({ article }: { article: ArticleMeta }) {
           { href: '/articles', l: 'Sabhi Articles' },
           { href: `/articles/category/${article.category}`, l: `${category?.name ?? 'Category'}` },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="ArticleStub" />
       </div>
     </>
   );

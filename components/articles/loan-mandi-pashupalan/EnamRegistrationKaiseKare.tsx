@@ -424,7 +424,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           { href: '/articles/msp-list-2026-27', l: 'MSP List 2026-27' },
           { href: '/articles/category/mandi', l: 'Market Rates' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="EnamRegistrationKaiseKare" />
       </div>
     </>
   );

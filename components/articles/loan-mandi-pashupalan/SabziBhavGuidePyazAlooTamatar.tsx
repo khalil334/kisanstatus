@@ -356,7 +356,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           { href: '/articles', l: 'Sabhi Guides' },
           { href: '/articles/category/mandi', l: 'Mandi Bhav Guides' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="SabziBhavGuidePyazAlooTamatar" />
       </div>
     </>
   );

@@ -398,7 +398,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
           { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: 'Status Check' },
           { href: '/maandhan/pmkmy-bank-account-change', l: 'Bank Change' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="family-pension-rules" />
       </div>
     </>
   );

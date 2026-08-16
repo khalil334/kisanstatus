@@ -564,7 +564,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
           { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', l: 'FTO Guide' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanMasterGuide2026" />
       </div>
     </>
   );

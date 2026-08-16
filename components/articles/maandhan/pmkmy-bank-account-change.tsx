@@ -518,7 +518,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
           { href: '/maandhan/pm-kisan-maandhan-status-check-online', l: 'Status Check' },
           { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: 'Eligibility' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="pmkmy-bank-account-change" />
       </div>
     </>
   );

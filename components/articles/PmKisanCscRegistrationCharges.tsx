@@ -377,7 +377,7 @@ export default function PmKisanCscRegistrationCharges() {
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/articles/PmKisanBankAccountChangeProcess', l: 'Bank Account Change' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanCscRegistrationCharges" />
       </div>
     </>
   );

@@ -520,7 +520,7 @@ export default function DripSprinkler() {
       </h2>
       <FAQBlock faqs={FAQS_DATA} variant="accordion" />
 
-      <Disclaimer />
+      <Disclaimer k="DripSprinkler" />
       <AuthorBox modified={getArticleBySlug('drip-sprinkler-irrigation-subsidy')!.modifiedTime} bioKey="DripSprinkler" />
     </article>
   );

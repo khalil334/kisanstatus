@@ -310,7 +310,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
           { href: '/articles/PmKisanPaymentFailedFix2026', l: 'Payment Fix' },
           { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanCorrectionForm2026" />
       </div>
     </>
   );

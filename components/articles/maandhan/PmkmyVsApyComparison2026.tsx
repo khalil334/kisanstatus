@@ -316,7 +316,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
           { href: '/maandhan/pm-kisan-maandhan-auto-debit-poora-sach', l: 'Auto Debit' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmkmyVsApyComparison2026" />
       </div>
     </>
   );

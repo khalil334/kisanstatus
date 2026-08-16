@@ -469,7 +469,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           { href: '/articles', l: 'Baaki Articles Dekhein' },
           { href: '/articles/category/agri-business', l: 'Agri Business Ke Sab Articles' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="NamoDroneDidiYojana" />
       </div>
     </>
   );

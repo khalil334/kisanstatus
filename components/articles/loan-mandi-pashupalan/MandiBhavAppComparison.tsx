@@ -358,7 +358,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           { href: '/articles', l: 'Sab Guides Ek Jagah' },
           { href: '/articles/category/mandi', l: 'Mandi Ki Sab Guides' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="MandiBhavAppComparison" />
       </div>
     </>
   );

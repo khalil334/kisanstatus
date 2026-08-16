@@ -325,7 +325,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
           { href: '/articles/PmKisanPaymentFailedFix2026', l: 'Payment Fix' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanFaceAuthenticationEkyc" />
       </div>
     </>
   );

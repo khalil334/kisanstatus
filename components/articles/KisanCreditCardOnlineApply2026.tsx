@@ -589,7 +589,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/calculator/kcc-loan-emi', l: 'EMI Calculator' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="KisanCreditCardOnlineApply2026" />
       </div>
     </>
   );

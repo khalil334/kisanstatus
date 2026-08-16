@@ -408,7 +408,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
           { href: '/maandhan/pm-kisan-maandhan-eligibility-documents', l: 'Eligibility' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanMaandhanPensionCalculator" />
       </div>
     </>
   );

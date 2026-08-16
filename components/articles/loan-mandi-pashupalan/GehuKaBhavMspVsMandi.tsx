@@ -353,7 +353,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           { href: '/articles', l: 'Poori Article Library' },
           { href: '/articles/category/mandi', l: 'Mandi Guides' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="GehuKaBhavMspVsMandi" />
       </div>
     </>
   );

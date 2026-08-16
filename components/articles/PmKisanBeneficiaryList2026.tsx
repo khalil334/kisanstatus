@@ -437,7 +437,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           { href: '/articles/PmKisan25viKist2027', l: '25vi Kist 2027' },
           { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanBeneficiaryList2026" />
       </div>
     </>
   );

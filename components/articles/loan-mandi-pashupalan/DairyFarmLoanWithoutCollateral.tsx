@@ -596,7 +596,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           { href: '/articles/bihar-pashupalan-loan-yojana', l: 'Bihar Pashupalan Loan' },
           { href: '/articles/category/loan', l: 'Loan Guides' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="DairyFarmLoanWithoutCollateral" />
       </div>
     </>
   );

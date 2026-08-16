@@ -183,7 +183,7 @@ export default function MaandhanListingPage() {
         </div>
       </div>
 
-      <Disclaimer />
+      <Disclaimer k="page" />
     </div>
   );
 }

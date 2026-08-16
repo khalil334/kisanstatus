@@ -920,7 +920,7 @@ export default function MandiBhavToday() {
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={lastUpdated} bioKey="mandi-bhav-today" />
         <BottomNav />
-        <Disclaimer />
+        <Disclaimer k="mandi-bhav-today" />
       </div>
     </>
   );

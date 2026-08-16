@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 import { AUTHOR_NAME, AUTHOR_IMAGE, AUTHOR_LINKEDIN, DISCLAIMER_TEXT } from '@/lib/site-config';
-import { getAuthorBio, getAuthorTagline } from '@/lib/author-bios';
+import { getAuthorBio, getAuthorTagline, getDisclaimer } from '@/lib/author-bios';
 
 export function fmtDate(iso: string) {
   return new Date(iso).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' });
@@ -225,10 +225,11 @@ export function BottomNav({
   );
 }
 
-export function Disclaimer() {
+export function Disclaimer({ k }: { k?: string } = {}) {
+  const text = k ? getDisclaimer(k) : DISCLAIMER_TEXT;
   return (
     <div className="mt-6 p-4 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl text-xs text-[var(--color-text-muted)] leading-relaxed">
-      <strong>Disclaimer:</strong> {DISCLAIMER_TEXT}
+      <strong>Disclaimer:</strong> {text}
     </div>
   );
 }

@@ -381,7 +381,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           { href: '/articles', l: 'Article Hub' },
           { href: '/articles/category/pashupalan', l: 'Dudh-Dairy-Pashu Guides' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="RashtriyaGokulMissionSubsidy" />
       </div>
     </>
   );

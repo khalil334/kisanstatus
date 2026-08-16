@@ -467,7 +467,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           { href: '/articles/KisanCreditCardOnlineApply2026', l: 'KCC Online Apply' },
           { href: '/articles/category/loan', l: 'Loan Ki Aur Jaankari' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="SbiDairyLoanInterestRate" />
       </div>
     </>
   );

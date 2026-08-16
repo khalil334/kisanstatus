@@ -128,7 +128,7 @@ export default function RajyaYojanaListingPage() {
         ))}
       </div>
 
-      <Disclaimer />
+      <Disclaimer k="page" />
     </div>
   );
 }

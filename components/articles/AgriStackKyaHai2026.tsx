@@ -353,7 +353,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
 
         <AuthorBox modified={MODIFIED} bioKey="AgriStackKyaHai2026" />
         <BottomNav />
-        <Disclaimer />
+        <Disclaimer k="AgriStackKyaHai2026" />
       </div>
     </>
   );

@@ -553,7 +553,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
           { href: '/articles/KisanTractorLoan2026', l: 'Tractor Loan' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKusumYojanaSolarSubsidy2026" />
       </div>
     </>
   );

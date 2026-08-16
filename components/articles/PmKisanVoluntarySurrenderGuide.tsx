@@ -364,7 +364,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
           { href: '/articles/PmKisanCorrectionForm2026', l: 'Correction Form' },
           { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanVoluntarySurrenderGuide" />
       </div>
     </>
   );

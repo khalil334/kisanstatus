@@ -458,7 +458,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
           { href: '/articles/PmKisanEkycOnline2026', l: 'eKYC Guide' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanSelfRegisteredStatusCheck" />
       </div>
     </>
   );

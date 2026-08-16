@@ -404,7 +404,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
           { href: '/maandhan/pm-kisan-maandhan-pension-calculator', l: 'Calculator' },
           { href: '/articles/PmKisanMasterGuide2026', l: 'Master Guide' },
         ]} />
-        <Disclaimer />
+        <Disclaimer k="PmKisanMaandhanRegistration2026" />
       </div>
     </>
   );
