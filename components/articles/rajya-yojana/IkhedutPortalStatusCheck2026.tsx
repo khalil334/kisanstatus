@@ -110,13 +110,16 @@ const LIFECYCLE_STAGES: { name: string; desc: string }[] = [
 
 const ITEMLIST_SCHEMA = {
   '@context': 'https://schema.org',
-  '@type': 'ItemList',
+  '@type': 'HowTo',
   name: 'iKhedut arji ka lifecycle — 7 stage',
-  itemListElement: LIFECYCLE_STAGES.map((s, i) => ({
-    '@type': 'ListItem',
+  description:
+    'iKhedut portal par arji ke saat stage — window khulne se lekar DBT se sahay khate me aane tak.',
+  inLanguage: 'hi-IN',
+  step: LIFECYCLE_STAGES.map((s, i) => ({
+    '@type': 'HowToStep',
     position: i + 1,
     name: s.name,
-    description: s.desc,
+    text: s.desc,
   })),
 };
 
