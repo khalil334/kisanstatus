@@ -1,4 +1,5 @@
-# Hindi Articles TODO + Prompts — 57 Articlesjese hinglish Alag folder ma ha i tarag Alag alag folder b banaya karo articles ke lye jese kisan guide maandhan rajya-yojna aise he Hindi version ke b banaya kaeo
+# Hindi Articles TODO + Prompts — 57 Articles
+#jese hinglish articles Alag folder ma ha or images ka path same article jese folder banaye ha images ma is tarah Alag alag folder b banaya karo hindi articles ke lye jese kisan guide maandhan rajya-yojna aise he Hindi version ke b banaya kaeo catagory b banao phly articles complete karo har 5 article ke bad direct push karo GitHub py or ye file b update kardia karo
 Har article ke liye alag prompt. **Batch rule: 5 article likhne ke baad GitHub pe push karo** aur is file me us article ke aage ✅ laga do.
 
 ## Common rules (har prompt ke saath lagu)
