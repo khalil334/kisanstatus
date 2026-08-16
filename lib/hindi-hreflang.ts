@@ -35,12 +35,12 @@ export function hindiAlternates(slug: string): HreflangLanguages {
   const hinglishPath = HINDI_TO_HINGLISH[slug];
 
   if (!hinglishPath) {
-    return { hi: hindiUrl, 'x-default': hindiUrl };
+    return { 'hi-IN': hindiUrl, 'x-default': hindiUrl };
   }
 
   const hinglishUrl = `${SITE_URL}${hinglishPath}`;
   return {
-    hi: hindiUrl,
+    'hi-IN': hindiUrl,
     'hi-Latn': hinglishUrl,
     'x-default': hinglishUrl,
   };
@@ -55,7 +55,7 @@ export function hinglishAlternates(
 
   const hinglishUrl = `${SITE_URL}${path}`;
   return {
-    hi: `${SITE_URL}/articles/hi/${hindiSlug}`,
+    'hi-IN': `${SITE_URL}/articles/hi/${hindiSlug}`,
     'hi-Latn': hinglishUrl,
     'x-default': hinglishUrl,
   };

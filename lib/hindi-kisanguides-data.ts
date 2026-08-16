@@ -21,7 +21,7 @@ export const HINDI_KISANGUIDES_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/namo-drone-didi-yojana',
     titleHi: 'नमो ड्रोन दीदी योजना — कोई form नहीं, रास्ता SHG से जाता है',
-    seoTitleHi: 'नमो ड्रोन दीदी योजना — SHG चयन और ₹8 लाख की मदद',
+    seoTitleHi: 'नमो ड्रोन दीदी योजना — SHG चयन, ₹8 लाख',
     desc: 'नमो ड्रोन दीदी में online form नहीं है — चयन SHG से होता है। 80% subsidy (₹8 लाख तक), 15 दिन की training और कमाई का सच्चा हिसाब — पूरा रास्ता यहां पढ़िए।',
     keywords: [
       'नमो ड्रोन दीदी योजना',

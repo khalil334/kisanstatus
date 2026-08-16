@@ -115,7 +115,7 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/npci-aadhaar-seeding',
-    titleHi: 'DBT पेमेंट रुका है? NPCI आधार सीडिंग Online ऐसे करें',
+    titleHi: 'NPCI आधार सीडिंग Online — DBT पेमेंट फिक्स',
     desc: 'NPCI आधार सीडिंग के बिना पीएम किसान की किस्त अटक सकती है — बैंक में aadhaar link status चेक करें और DBT enable करने का पूरा online process यहां जानिए।',
     keywords: ['npci aadhaar seeding online', 'dbt enable kaise kare', 'आधार बैंक लिंक स्टेटस'],
     category: 'status-check',

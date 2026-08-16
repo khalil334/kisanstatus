@@ -6,13 +6,13 @@ const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/installment-tracker`;
 
 export const metadata: Metadata = {
-  title: 'PM Kisan Kist Tracker 2026 — Kist Kyun Ruki Hai?',
+  title: 'PM Kisan Kist Tracker 2026 — Kyun Ruki?',
   description: 'PM Kisan ki kist kyun nahi aayi? 4 steps mein jaanein — eKYC, bank seeding, land seeding check karein. Bilkul free tool, bina registration ke.',
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   creator: AUTHOR_NAME,
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'PM Kisan Kist Tracker 2026 — Kist Kyun Ruki Hai?',
+    title: 'PM Kisan Kist Tracker 2026 — Kyun Ruki?',
     description: 'PM Kisan ki kist kyun nahi aayi? 4 steps mein jaanein — eKYC, bank seeding, land seeding check karein. Bilkul free tool.',
     type: 'website',
     url: PAGE_URL,

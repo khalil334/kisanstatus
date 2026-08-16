@@ -7,7 +7,7 @@ import type { HindiArticle } from '@/lib/hindi-articles-data';
 export const HINDI_LOAN_MANDI_PASHUPALAN_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/karj-mafi-list',
-    titleHi: 'किसान कर्ज माफी लिस्ट 2027 — राज्यवार List में नाम देखें',
+    titleHi: 'किसान कर्ज माफी लिस्ट 2027 — राज्यवार नाम',
     desc: 'किसान कर्ज माफी लिस्ट 2027 में अपना नाम ऐसे चेक करें — UP, MP, महाराष्ट्र, राजस्थान और झारखंड की राज्यवार नई list, पात्रता और आवेदन की पूरी जानकारी यहां।',
     keywords: ['किसान कर्ज माफी लिस्ट 2027', 'karj mafi list', 'kisan karj mafi 2027'],
     category: 'loan',
@@ -19,7 +19,7 @@ export const HINDI_LOAN_MANDI_PASHUPALAN_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/gehu-ka-rate-aaj',
-    titleHi: 'गेहूं का रेट आज क्या है? MSP vs मंडी भाव की तुलना देखें',
+    titleHi: 'गेहूं का रेट आज — MSP vs मंडी भाव तुलना',
     desc: 'गेहूं का आज का रेट और MSP 2027 की राज्यवार तुलना यहां देखें — आपकी मंडी में भाव MSP से ऊपर है या नीचे? Weekly update के साथ बेचने का सही समय भी जानिए।',
     keywords: ['गेहूं का रेट आज', 'gehu ka bhav today', 'गेहूं MSP 2027'],
     category: 'mandi',

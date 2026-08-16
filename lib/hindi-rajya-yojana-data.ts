@@ -34,7 +34,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/rajasthan-kisan-samman-nidhi',
     titleHi: 'राजस्थान किसान सम्मान निधि — ₹9,000 का हिसाब और किस्त की स्थिति',
-    seoTitleHi: 'राजस्थान किसान सम्मान निधि — ₹9,000 और किस्त स्थिति',
+    seoTitleHi: 'राजस्थान किसान सम्मान निधि — ₹9,000 किस्त',
     desc: 'राजस्थान के किसान को पीएम किसान के ₹6,000 के ऊपर राज्य से ₹3,000 — कुल ₹9,000। जन आधार से किस्त की स्थिति देखने का तरीका और पैसा अटकने की चार असली वजहें यहां।',
     keywords: [
       'राजस्थान किसान सम्मान निधि',
@@ -78,7 +78,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/rythu-bharosa-status',
     titleHi: 'रायथु भरोसा स्थिति — बंधु से भरोसा तक, ₹12,000 प्रति एकड़ का हिसाब',
-    seoTitleHi: 'रायथु भरोसा स्थिति — ₹12,000 प्रति एकड़ का हिसाब',
+    seoTitleHi: 'रायथु भरोसा स्थिति — ₹12,000 प्रति एकड़',
     desc: 'तेलंगाना की रायथु भरोसा से ₹6,000 प्रति एकड़ हर मौसम — रायथु बंधु से असली फर्क, आधार से स्टेटस चेक और भू भारती रिकॉर्ड की रुकावटें।',
     keywords: [
       'रायथु भरोसा स्थिति',
@@ -144,7 +144,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/pati-patni-pm-kisan-rule',
     titleHi: 'पति-पत्नी दोनों को PM Kisan मिलेगा? नियम का सीधा जवाब',
-    seoTitleHi: 'पति-पत्नी दोनों को PM Kisan मिलेगा? Family Rule',
+    seoTitleHi: 'पति-पत्नी दोनों को PM Kisan मिलेगा?',
     desc: 'नहीं — एक परिवार (पति, पत्नी, नाबालिग बच्चे) में सिर्फ एक को PM Kisan मिलता है। गाइडलाइन का नियम, असली केस और गलत पंजीकरण सरेंडर करने का तरीका।',
     keywords: [
       'पति पत्नी दोनों को पीएम किसान',
@@ -165,7 +165,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/state-kisan-yojana-list',
     titleHi: 'राज्य किसान योजना लिस्ट 2026 — किस राज्य में कितना पैसा मिलता है?',
-    seoTitleHi: 'राज्य किसान योजना लिस्ट 2026 — State Wise Amount',
+    seoTitleHi: 'राज्य किसान योजना लिस्ट 2026 State Wise',
     desc: 'PM Kisan के ₹6,000 के ऊपर आपका राज्य कितना देता है? MP, राजस्थान, महाराष्ट्र, AP, तेलंगाना, बंगाल, ओडिशा — हर राज्य की योजना, रकम और स्टेटस लिंक।',
     keywords: [
       'राज्य किसान योजना लिस्ट',
@@ -207,7 +207,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/meri-fasal-mera-byora-status',
     titleHi: 'मेरी फसल मेरा ब्योरा स्टेटस 2026 — रजिस्ट्रेशन से MSP भुगतान तक',
-    seoTitleHi: 'मेरी फसल मेरा ब्योरा स्टेटस चेक 2026 — Gate Pass Tak',
+    seoTitleHi: 'मेरी फसल मेरा ब्योरा स्टेटस चेक 2026',
     desc: 'हरियाणा में fasal.haryana.gov.in पर स्टेटस चेक, पटवारी सत्यापन, गेट पास और MSP भुगतान अटकने की 4 वजहें — पांच पड़ावों में पूरा सफर, फैमिली ID की भूमिका समेत।',
     keywords: [
       'मेरी फसल मेरा ब्योरा',
@@ -228,7 +228,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/bihar-kisan-registration-status',
     titleHi: 'बिहार किसान पंजीकरण स्टेटस 2026 — 13 अंकों का नंबर, सारी योजनाओं का दरवाजा',
-    seoTitleHi: 'बिहार किसान पंजीकरण स्टेटस चेक 2026 — DBT Bihar',
+    seoTitleHi: 'बिहार किसान पंजीकरण स्टेटस चेक 2026',
     desc: 'DBT Agriculture Bihar पर 13 अंकों की पंजीकरण संख्या भूल गए? आधार से निकालने का तरीका, स्टेटस चेक और डीजल, इनपुट, बीज अनुदान — हर अर्जी का हाल एक जगह।',
     keywords: [
       'बिहार किसान पंजीकरण स्टेटस',
@@ -249,7 +249,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/parihara-payment-status',
     titleHi: 'परिहार पेमेंट स्टेटस 2026 — फसल नुकसान मुआवजा कहां अटका, कैसे देखें?',
-    seoTitleHi: 'परिहार पेमेंट स्टेटस चेक 2026 — Karnataka Parihara',
+    seoTitleHi: 'परिहार पेमेंट स्टेटस चेक 2026 Karnataka',
     desc: 'कर्नाटक में फसल नुकसान (bele hani) का मुआवजा — parihara.karnataka.gov.in पर आधार या गांव की सूची से स्टेटस, SDRF दरें, FRUITS ID और अटके पैसे का हर रास्ता।',
     keywords: [
       'परिहार पेमेंट स्टेटस',
@@ -270,7 +270,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/up-kisan-karj-rahat-list',
     titleHi: 'UP किसान कर्ज राहत लिस्ट 2026 — नई माफी का सच और नाम देखने का तरीका',
-    seoTitleHi: 'UP किसान कर्ज राहत लिस्ट 2026 — Rin Mochan Status',
+    seoTitleHi: 'UP किसान कर्ज राहत लिस्ट 2026 — स्टेटस',
     desc: 'क्या 2026 में नई कर्ज माफी आई है? ईमानदार जवाब, साथ में upkisankarjrahat.upsdc.gov.in पर लिस्ट में नाम देखने, शिकायत और fake लिंक से बचने का पूरा रास्ता।',
     keywords: [
       'UP किसान कर्ज राहत लिस्ट',
@@ -291,7 +291,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/ikhedut-portal-status',
     titleHi: 'iKhedut पोर्टल स्टेटस चेक 2026 — अर्जी नंबर से सब्सिडी तक',
-    seoTitleHi: 'iKhedut पोर्टल अर्जी स्टेटस चेक 2026 — पूरा तरीका',
+    seoTitleHi: 'iKhedut पोर्टल अर्जी स्टेटस चेक 2026',
     desc: 'iKhedut पोर्टल पर अर्जी का स्टेटस 2 मिनट में देखें — अर्जी नंबर खो गया तो कैसे निकालें, pending से payment तक हर स्थिति का मतलब और ट्रैक्टर सहाय का पूरा सफर।',
     keywords: [
       'ikhedut portal status',

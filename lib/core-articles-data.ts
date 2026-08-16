@@ -212,7 +212,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan 24vi Kist 2026: Date & Status',
     desc: '23vi kist 20 June ko aa chuki hai, ab 24vi ka intezaar. Pattern ke hisaab se October 2026 expected — date ka sach, status check aur taiyari ki puri jankari.',
     ogTitle: 'PM Kisan 24vi Kist — Kab Aayegi?',
-    seoTitle: 'PM Kisan 24vi Kist Kab Aayegi? October 2026 Date',
+    seoTitle: 'PM Kisan 24vi Kist Kab Aayegi? Oct 2026',
     keywords: [
       'pm kisan 24vi kist 2026',
       'pm kisan 24vi kist kab aayegi',

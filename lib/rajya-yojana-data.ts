@@ -286,7 +286,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'mfmb status check family id',
       'meri fasal mera byora payment status',
     ],
-    title: 'Meri Fasal Mera Byora Status Check 2026 — MSP Tak',
+    title: 'Meri Fasal Mera Byora Status Check 2026',
     description:
       'Meri Fasal Mera Byora status 5 minute me check karein — mobile, family ID ya CSC se. Rejected entry ka fix aur MSP payment atakne ke 4 karan bhi.',
     ogTitle: 'Meri Fasal Mera Byora Status — Registration Se MSP Tak',
@@ -311,7 +311,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'krishi input anudan status',
       'bihar kisan registration number kaise nikale',
     ],
-    title: 'DBT Agriculture Bihar Status Check 2026 — Kisan Guide',
+    title: 'DBT Agriculture Bihar Status Check 2026',
     description:
       'DBT Agriculture Bihar par registration number se anudan status check karein — diesel, krishi input, beej anudan aur kho gaya number nikalne ka poora raasta.',
     ogTitle: 'DBT Agriculture Bihar — Registration Aur Anudan Status',
@@ -336,7 +336,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'bele hani parihara payment',
       'fruits id parihara status',
     ],
-    title: 'Parihara Payment Status Check 2026 Village Wise',
+    title: 'Parihara Payment Status 2026 Village Wise',
     description:
       'Parihara payment status Aadhaar se ya village wise list se check karein — naam na hone, pending ya bank me paisa na aane par har branch ka fix yahan hai.',
     ogTitle: 'Parihara Payment Status — Village Wise List Aur Fix',
@@ -361,7 +361,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'kisan karj rahat shikayat status',
       'up kisan karj mafi eligibility',
     ],
-    title: 'UP Kisan Karj Rahat List 2026 — Karj Mafi Status',
+    title: 'UP Kisan Karj Rahat List 2026 — Status',
     description:
       'UP Kisan Karj Rahat list me apna naam check karein, asli portal pehchaniye aur naam na hone par shikayat darj karne ka poora process jaaniye.',
     ogTitle: 'UP Kisan Karj Rahat List — Naam Check Aur Shikayat',
