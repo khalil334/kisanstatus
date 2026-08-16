@@ -101,7 +101,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmfbyCropInsurance2026',
     title: 'PMFBY Crop Insurance 2026: 2% Premium',
-    desc: 'Fasal kharab ho toh compensation milega. Kharif 2%, Rabi 1.5% premium. Enrollment deadline mat bhoolo.',
+    desc: 'Fasal kharab ho toh compensation milega. Kharif 2%, Rabi 1.5% premium. Eligibility, claim process aur enrollment deadline — PMFBY crop insurance 2026 ki poori guide.',
     ogTitle: 'PMFBY Crop Insurance 2026 Guide',
     keywords: [
       'pmfby crop insurance 2026',

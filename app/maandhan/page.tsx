@@ -47,9 +47,40 @@ function findArticle(slug: string) {
   return MAANDHAN_ARTICLES.find((a) => a.slug === slug);
 }
 
+const COLLECTION_JSON_LD = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'PM Kisan Maandhan Yojana — Complete Guide',
+  description:
+    'PM Kisan Maandhan Yojana (PM-KMY) ki poori jaankari Hindi mein — ₹3000 pension ka hisaab, contribution chart, eligibility, registration aur sabhi guides.',
+  url: `${SITE_URL}/maandhan`,
+  isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: SITE_URL },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'PM Kisan Maandhan Yojana', item: `${SITE_URL}/maandhan` },
+    ],
+  },
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: MAANDHAN_ARTICLES.length,
+    itemListElement: MAANDHAN_ARTICLES.map((a, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: a.title,
+      url: `${SITE_URL}/maandhan/${a.slug}`,
+    })),
+  },
+};
+
 export default function MaandhanListingPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(COLLECTION_JSON_LD) }}
+      />
       <h1 className="text-3xl font-bold mb-4">PM Kisan Maandhan Yojana — Complete Guide</h1>
 
       <p className="text-gray-700 mb-4">

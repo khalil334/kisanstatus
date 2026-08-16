@@ -96,10 +96,8 @@ function HomeLoading() {
             <div key={i} className="h-64 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl animate-pulse" />
           ))}
         </div>
-        <div className="text-center mt-8">
-          <p className="text-sm font-medium text-[var(--color-text-muted)] animate-pulse">
-            Kripya thoda intezar karein, content load ho raha hai...
-          </p>
+        <div className="text-center mt-8" aria-hidden="true">
+          <div className="loading-spinner mx-auto" />
         </div>
       </div>
     </div>
