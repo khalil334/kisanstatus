@@ -36,3 +36,13 @@
   "| KisanStatus" brand suffix (or "|"→"-" separator swap). Google strips brand
   on long titles — no code fix; left unchanged (karj-mafi-list,
   bihar-kisan-registration-status-check-2026, jansamarth-portal-loan-apply).
+
+## Ahrefs issue: Meta description too long (c64d56c9, fixed 2026-08-16)
+- 7 Hindi article pages flagged (metaDescriptionLength > 160). All meta
+  descriptions for /articles/hi/* come from the `desc` field in
+  lib/hindi-rajya-yojana-data.ts (consumed by app/articles/hi/[slug]/page.tsx
+  generateMetadata). One data file = the whole fix.
+- Fix pattern: trim `desc` to 110-160 chars, preserving the hook + key numbers;
+  cut trailing "— सब एक जगह" style filler and one secondary clause first.
+- Note: Hindi matras/combining marks count as chars in Python len() the same
+  way Ahrefs counts them — lengths verified to match the crawl exactly.
