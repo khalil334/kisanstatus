@@ -58,3 +58,16 @@
 - "3XX redirect" warning: the three http/www→https 308s are Next/Vercel
   canonical-host redirects (next.config.js host rule + platform). Intentional,
   single-hop — known acceptable finding, do not "fix".
+
+## Ahrefs notices batch (2026-08-16)
+- "Page and SERP titles do not match" round 2: fixed FTO article (Google drops
+  "Ka") and mp-kisan-kalyan-yojana-kist-status (Google drops "— SAARA Portal";
+  its H1/OG come from ogTitle so trimming `title` is safe). The other 5 flagged
+  pages were the brand-suffix false-positive class — no change.
+- "Pages to submit to IndexNow": site already has its own IndexNow pipeline
+  (scripts/build-indexnow-payload.js + submit-indexnow.js, npm run
+  indexnow:submit, ledger in scripts/indexnow-state.json). Prefer that over
+  Ahrefs' submit_url_to_index_now. Notice is informational, not a defect.
+- "HTTP to HTTPS redirect" / "Redirect chain" notices: same intentional
+  http/www→https 308 canonical-host redirects; chain is www+http→https(www)→apex,
+  2 hops only on the never-linked http://www origin. Acceptable, do not fix.
