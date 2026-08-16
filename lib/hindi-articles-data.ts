@@ -277,6 +277,28 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     component: 'NamoDroneDidiYojanaHindi',
     ogImage: '/images/articles/namo-drone-didi-yojana-shg-selection/drone-didi-spray-hero.webp',
   },
+  {
+    slug: 'hi/rajasthan-kisan-samman-nidhi',
+    titleHi: 'राजस्थान किसान सम्मान निधि — ₹9,000 का हिसाब और किस्त की स्थिति',
+    seoTitleHi: 'राजस्थान किसान सम्मान निधि — ₹9,000 और किस्त स्थिति',
+    desc: 'राजस्थान के किसान को पीएम किसान के ₹6,000 के ऊपर राज्य से ₹3,000 — कुल ₹9,000। जन आधार से किस्त की स्थिति देखने का तरीका और पैसा अटकने की चार असली वजहें यहां।',
+    keywords: [
+      'राजस्थान किसान सम्मान निधि',
+      'rajasthan kisan samman nidhi',
+      'मुख्यमंत्री किसान सम्मान निधि राजस्थान',
+      'mukhyamantri kisan samman nidhi rajasthan',
+      'राजस्थान किसान सम्मान निधि किस्त स्थिति',
+      'jan aadhaar se kisan samman nidhi status',
+      'जन सूचना पोर्टल किसान सम्मान निधि',
+      'rajasthan kisan samman nidhi 9000',
+    ],
+    category: 'farming',
+    publishedTime: '2026-08-16T21:30:00+05:30',
+    modifiedTime: '2026-08-16T21:30:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'RajasthanKisanSammanNidhiHindi',
+    ogImage: '/images/articles/rajya-yojna/rajasthan-kisan-samman-nidhi-9000/hero.webp',
+  },
 ] as const;
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(
