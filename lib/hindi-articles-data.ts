@@ -387,6 +387,27 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     component: 'OdishaCmKisanStatusHindi',
     ogImage: '/images/articles/rajya-yojna/odisha-cm-kisan-status-check-2026/hero.webp',
   },
+  {
+    slug: 'hi/pati-patni-pm-kisan-rule',
+    titleHi: 'पति-पत्नी दोनों को PM Kisan मिलेगा? नियम का सीधा जवाब',
+    seoTitleHi: 'पति-पत्नी दोनों को PM Kisan मिलेगा? Family Rule',
+    desc: 'नहीं — एक परिवार (पति, पत्नी, नाबालिग बच्चे) में सिर्फ एक को PM Kisan मिलता है। गाइडलाइन का नियम, 4 असली केस, गलत पंजीकरण सरेंडर करने का तरीका और रिकवरी से बचने का रास्ता।',
+    keywords: [
+      'पति पत्नी दोनों को पीएम किसान',
+      'pm kisan pati patni dono ko milega',
+      'pm kisan family rule',
+      'पीएम किसान एक परिवार एक लाभ',
+      'pm kisan voluntary surrender kaise kare',
+      'pm kisan recovery notice paisa wapas',
+      'पीएम किसान पात्रता परिवार की परिभाषा',
+    ],
+    category: 'status-check',
+    publishedTime: '2026-08-17T11:30:00+05:30',
+    modifiedTime: '2026-08-17T11:30:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'PatiPatniPmKisanRuleHindi',
+    ogImage: '/images/articles/rajya-yojna/pm-kisan-pati-patni-dono-ko-milega/hero.webp',
+  },
 ] as const;
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(

@@ -3,8 +3,8 @@
 Source: `lib/rajya-yojana-data.ts` vs `lib/hindi-hreflang.ts` + `lib/hindi-articles-data.ts`
 
 - Total rajya-yojana articles: 15 (sab live)
-- Hindi version maujood: 7 (MP Kisan Kalyan, Namo Shetkari, Rajasthan Kisan Samman Nidhi, Annadata Sukhibhava, Rythu Bharosa, Krishak Bandhu, Odisha CM Kisan)
-- Hindi version MISSING: 8 (neeche list + har ek ka alag writing prompt; DONE wale tick ho chuke hain)
+- Hindi version maujood: 8 (MP Kisan Kalyan, Namo Shetkari, Rajasthan Kisan Samman Nidhi, Annadata Sukhibhava, Rythu Bharosa, Krishak Bandhu, Odisha CM Kisan, Pati-Patni PM Kisan Rule)
+- Hindi version MISSING: 7 (neeche list + har ek ka alag writing prompt; DONE wale tick ho chuke hain)
 
 ## Common rules (har prompt ke saath lagu hongi)
 
@@ -68,7 +68,7 @@ Is article ki khaas baat: voter ID se status check — ye WB ka unique system ha
 **Prompt:**
 KALIA se CM Kisan tak ka safar 3-4 line mein nipta do (log purane naam se search karte hain, isliye zaroori hai) — lekin nostalgia mat bharo, aage badho. Is scheme ki sabse alag baat: landless (bhoomiheen) kisano ko bhi paisa milta hai — is par ek pura section, kyunki baaki states mein aisa nahi hai. Status check village-wise list se kaise karein, step-by-step. Kitna paisa kis category ko (chhota table). FAQs mein landless wale sawal aur "KALIA ka purana paisa" wale sawal. Structure baaki articles se alag rakhne ke liye is article mein ek "5 minute mein check karne ka shortcut" wala box-section daalo. Internal links: `/articles/PmKisanMasterGuide2026`, `/articles/PmKisanBeneficiaryList2026`, `/rajya-yojana/odisha-cm-kisan-status-check-2026`.
 
-## 6. Pati Patni Dono Ko PM Kisan Milega?
+## 6. ~~Pati Patni Dono Ko PM Kisan Milega?~~ ✅ DONE
 
 - Hinglish slug: `rajya-yojana/pm-kisan-pati-patni-dono-ko-milega` · State: ALL · Portal: pmkisan.gov.in
 - Suggested Hindi slug: `hi/pati-patni-pm-kisan-rule`
