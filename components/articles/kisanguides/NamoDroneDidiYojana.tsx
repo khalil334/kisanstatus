@@ -7,7 +7,7 @@ import { AUTHOR_NAME } from '@/lib/site-config';
 const RELATED = [
   { slug: 'custom-hiring-centre-chc-portal', title: 'CHC Portal — Machine Kiraye Par' },
   { slug: 'drip-sprinkler-irrigation-subsidy', title: 'Drip & Sprinkler Subsidy' },
-  { slug: 'state-kisan-yojana-list-all-states-2026', title: 'State Yojana List — Sab States' },
+  { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP 500ml Price — IFFCO Rate' },
 ];
 
 const FAQS_DATA = [
@@ -21,7 +21,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Drone udane ki training kaun deta hai aur kitne din ki hoti hai?',
-    a: 'Kul 15 din ka programme hai — 5 din DGCA-approved Remote Pilot Training Organisation mein pilot training (jisme Remote Pilot Certificate milta hai) aur 10 din agriculture application ki training, jaise nutrient spray, pesticide ka hisaab, flight planning. SHG ki ek aur member ya uske parivar ke kisi sadasya ko drone assistant/technician ke roop mein alag training milti hai.',
+    a: 'Kul 15 din ka programme hai — 5 din DGCA-approved Remote Pilot Training Organisation mein pilot training (jisme Remote Pilot Certificate milta hai) aur 10 din agriculture application ki training, jaise nutrient spray, pesticide ki sahi matra, flight planning. SHG ki ek aur member ya uske parivar ke kisi sadasya ko drone assistant/technician ke roop mein alag training milti hai.',
   },
   {
     q: 'Drone Didi ki kamai kitni ho sakti hai?',
@@ -29,7 +29,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya iske liye zameen ya khud kisan hona zaroori hai?',
-    a: 'Nahi. Yeh scheme service provider banane ki hai, kheti karne ki nahi. Aapke SHG ke paas zameen ho ya na ho, farq nahi padta — drone kiraye par doosre kisano ke kheton mein spray ke liye jayega. Haan, SHG aise cluster mein honi chahiye jahan aas-paas kheti achhi-khaasi ho, warna kaam hi nahi milega.',
+    a: 'Nahi. Yeh scheme service provider banane ki hai, kheti karne ki nahi. Aapke SHG ke paas zameen ho ya na ho, farq nahi padta — drone kiraye par doosre kisano ke kheton mein spray ke liye jayega. Haan, SHG aise cluster mein honi chahiye jahan aas-paas kheti ka rakba bada ho, warna kaam hi nahi milega.',
   },
   {
     q: 'Ab tak kitne drones baante gaye hain?',
@@ -37,7 +37,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Remote Pilot Certificate ke liye kya padhai-likhai chahiye?',
-    a: 'DGCA ke niyam ke hisaab se remote pilot certificate ke liye 10th pass hona aur age 18 se upar (65 tak) honi chahiye. Training ke waqt medical fitness ka self-declaration bhi hota hai. Yaani graduate hona zaroori nahi — 10vi pass mahila bhi drone pilot ban sakti hai.',
+    a: 'DGCA ke niyam ke mutabik remote pilot certificate ke liye 10th pass hona aur age 18 se upar (65 tak) honi chahiye. Training ke waqt medical fitness ka self-declaration bhi hota hai. Yaani graduate hona zaroori nahi — 10vi pass mahila bhi drone pilot ban sakti hai.',
   },
   {
     q: 'Drone kharab ho jaye toh kaun theek karega?',
@@ -53,11 +53,11 @@ const FAQS_DATA = [
   },
   {
     q: 'Kisan ko drone spray karwane ke liye kya taiyari karni chahiye?',
-    a: 'Teen cheezein: pehla, khet ke upar ya bagal mein bijli ke taar aur ped ka dhyan rakho — operator ko pehle bata do, warna woh mauke pe mana kar dega. Doosra, dawai apni pasand ki le lo lekin dilution operator ke hisaab se banega, zid mat karo. Teesra, spray ke din khet mein jaanwar aur bachhe na hon. Bas itna hi — baaki flight ka kaam operator ka hai.',
+    a: 'Teen cheezein: pehla, khet ke upar ya bagal mein bijli ke taar aur ped ka dhyan rakho — operator ko pehle bata do, warna woh mauke pe mana kar dega. Doosra, dawai apni pasand ki le lo lekin dilution operator ke bataye tareeke se banega, zid mat karo. Teesra, spray ke din khet mein jaanwar aur bachhe na hon. Bas itna hi — baaki flight ka kaam operator ka hai.',
   },
   {
     q: 'Barish ke season mein drone spray ho sakta hai kya?',
-    a: 'Halki boond mein bhi spray nahi hota — dawai dhul jati hai aur drone ke electronics ke liye bhi theek nahi. Tez hawa (lagbhag 10-12 km/ghanta se upar) mein bhi operator mana karega kyunki spray bagal ke khet mein udd jata hai, jise drift kehte hain. Isliye monsoon mein spray ki window chhoti hoti hai — operator se 2-3 din pehle baat karke mausam ke hisaab se slot rakho.',
+    a: 'Halki boond mein bhi spray nahi hota — dawai dhul jati hai aur drone ke electronics ke liye bhi theek nahi. Tez hawa (lagbhag 10-12 km/ghanta se upar) mein bhi operator mana karega kyunki spray bagal ke khet mein udd jata hai, jise drift kehte hain. Isliye monsoon mein spray ki window chhoti hoti hai — operator se 2-3 din pehle baat karke mausam dekh kar slot rakho.',
   },
 ];
 
@@ -79,7 +79,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
-            <span>Last Updated: 15/08/2026</span>
+            <span>Last Updated: 16/08/2026</span>
             <span>15 min read</span>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
 
       <div className="container-site max-w-3xl py-8">
         <DB>
-          <strong>Ek Nazar Mein — asli baatein:</strong>
+          <strong>Ek Nazar Mein — kaam ki baatein:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>Mahila SHG ko drone package par <strong>80% madad, ₹8 lakh tak</strong> — baaki 20% ke liye AIF loan (3% interest subvention).</li>
             <li><strong>Koi online form nahi hai.</strong> Selection DAY-NRLM ke SHG network se hota hai — block mission office pehla stop hai.</li>
@@ -98,7 +98,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 15/08/2026</strong>
+          <strong>Last Updated: 16/08/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -110,11 +110,11 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Lekin internet par iske baare mein aadhi-adhoori aur kai jagah seedhi galat jankari bhari padi hai —
+          Lekin internet par iske baare mein aadhi-adhoori aur kai jagah sarasar galat jankari bhari padi hai —
           sabse badi galti yeh ki &ldquo;portal par form bharo aur drone le lo.&rdquo; Aisa koi form exist hi
           nahi karta. Humare paas bhi WhatsApp pe yahi sawaal baar-baar aata hai — didi form kahan bharein? Toh
-          seedha jawab: form nahi, rasta alag hai. Is guide mein wohi asli rasta hai: selection kaise hota hai,
-          training ka structure, paise ka poora hisaab, kamai ka realistic andaza, aur woh baatein jo koi nahi
+          saaf jawab: form nahi, rasta alag hai. Is guide mein wohi asli rasta hai: selection kaise hota hai,
+          training ka structure, paise ka poora lekha-jokha, kamai ka realistic andaza, aur woh baatein jo koi nahi
           batata.
         </p>
 
@@ -134,7 +134,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
         />
 
-        <SH>Yeh Scheme Hai Kya — Seedhi Bhasha Mein</SH>
+        <SH>Yeh Scheme Hai Kya — Aasan Bhasha Mein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Union Cabinet ne 28 November 2023 ko ise approve kiya aur PM ne 30 November 2023 ko launch kiya.
           Idea simple hai: Deendayal Antyodaya Yojana – National Rural Livelihoods Mission (DAY-NRLM) ke under
@@ -222,7 +222,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           &ldquo;Drone Didi form&rdquo; bhar sako. Selection upar se neeche aata hai:
         </p>
         <StepList>
-          <SI n={1}><strong>Cluster identify hote hain:</strong> state agriculture department aur LFC milkar aise ilaake chunte hain jahan drone spray ka kaam economically chal sakta hai — yaani achhi-khaasi kheti wale blocks.</SI>
+          <SI n={1}><strong>Cluster identify hote hain:</strong> state agriculture department aur LFC milkar aise ilaake chunte hain jahan drone spray ka kaam economically chal sakta hai — yaani zyada kheti wale blocks.</SI>
           <SI n={2}><strong>SHG shortlist hoti hai:</strong> un clusters mein DAY-NRLM ke under registered, achha track record wali women SHGs ki list State Rural Livelihood Mission banata hai. Bihar mein yeh JEEViKA ke through hota hai, har state mein uska apna mission hai.</SI>
           <SI n={3}><strong>Member ka chunav:</strong> selected SHG apne mein se ek member chunti hai pilot training ke liye — 18-65 age, 10th pass, aur kaam karne ka jazba. Ek aur member (ya uske parivar se koi) assistant/technician training ke liye.</SI>
           <SI n={4}><strong>Training + RPC:</strong> 15 din ka programme hota hai, jiske baad Remote Pilot Certificate milta hai — yeh DGCA ka official certificate hai, sirf is scheme ka kagaz nahi.</SI>
@@ -233,8 +233,8 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           office mein jaakar bolo ki hamara group interested hai — list banti rehti hai aur naye phase mein
           naam aa sakta hai. SHG mein nahi ho toh pehle judna padega. Gaon ke Common Service Centre ya block
           agriculture office se bhi apne district ka status pata chal jata hai. Waise apne state ki baaki
-          yojanaon ka hisaab is list mein hai —{' '}
-          <Link href="/articles/state-kisan-yojana-list-all-states-2026" className="underline font-bold">har state ki kisan yojana list</Link>.
+          yojanaon ka poora byora is list mein hai —{' '}
+          <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026" className="underline font-bold">har state ki kisan yojana list</Link>.
         </p>
 
         <GovLink
@@ -263,9 +263,9 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           alag-alag protocols, aur battery management — jo field mein sabse zyada kaam aata hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Ek baat jo training se pehle sochni chahiye: drone chalana mushkil nahi hai, lekin dawai ka hisaab
-          galat hua toh kisan ki fasal ko nuksan aur aapki reputation dono jayegi. Isliye 10 din wala
-          agriculture hissa hi asli imtihaan hai. Jo didiyan spray chemistry ko seriously leti hain, unka kaam
+          Ek baat jo training se pehle sochni chahiye: drone chalana mushkil nahi hai, lekin dawai ki matra
+          galat hui toh kisan ki fasal ko nuksan aur aapki reputation dono jayegi. Isliye 10 din wala
+          agriculture hissa hi sabse bada imtihaan hai. Jo didiyan spray chemistry ko seriously leti hain, unka kaam
           repeat customers se hi chal padta hai.
         </p>
 
@@ -282,7 +282,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
         <SH>Kisan Ke Liye: Drone Se Spray Karwana Sasta Padta Hai Ya Mehnga?</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Ab doosri taraf se dekho — aap kisan ho, aapke gaon mein Drone Didi aa gayi hai. Kya uski service
-          leni chahiye? Seedha hisaab lagate hain, ek acre dhaan ke spray ka:
+          leni chahiye? Chalo ganit lagate hain, ek acre dhaan ke spray ka:
         </p>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
@@ -296,7 +296,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
             <tbody>
               <tr>
                 <td className="border border-[var(--color-border)] p-3 font-semibold">Time (1 acre)</td>
-                <td className="border border-[var(--color-border)] p-3">2-4 ghante (mazdoor ke hisaab se)</td>
+                <td className="border border-[var(--color-border)] p-3">2-4 ghante (mazdoor par nirbhar)</td>
                 <td className="border border-[var(--color-border)] p-3">7-8 minute</td>
               </tr>
               <tr className="bg-[var(--color-bg-alt)]">
@@ -316,7 +316,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
               </tr>
               <tr>
                 <td className="border border-[var(--color-border)] p-3 font-semibold">Sehat ka risk</td>
-                <td className="border border-[var(--color-border)] p-3">Spray karne wale ke upar dawai girti hai — asli lekin andekha kharcha</td>
+                <td className="border border-[var(--color-border)] p-3">Spray karne wale ke upar dawai girti hai — andekha lekin sach-much ka kharcha</td>
                 <td className="border border-[var(--color-border)] p-3">Aadmi khet se door khada rehta hai</td>
               </tr>
             </tbody>
@@ -336,11 +336,11 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
 
         <SH>Kamai Ka Ganit — Bina Hawa-Hawai Numbers Ke</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Service rate ilaake ke hisaab se ₹300 se ₹500 per acre ke beech ghoomta hai. Drone ek acre 7-8 minute
-          mein nipta deta hai, lekin din ka asli output batteries, khet ke beech ki doori aur mausam par depend
-          karta hai — practically 20-25 acre ek achha din hai. Ab hisaab lagao: ₹400 average rate par 20 acre
+          Service rate ilaake ke mutabik ₹300 se ₹500 per acre ke beech ghoomta hai. Drone ek acre 7-8 minute
+          mein nipta deta hai, lekin din ka final output batteries, khet ke beech ki doori aur mausam par depend
+          karta hai — practically 20-25 acre ek achha din hai. Ab ganit dekho: ₹400 average rate par 20 acre
           ka din matlab ₹8,000 gross. Isme se diesel/transport, battery charging, assistant ka hissa aur
-          maintenance nikalo toh bhi season ke mahino mein achhi-khaasi kamai banti hai.
+          maintenance nikalo toh bhi season ke mahino mein theek-thaak kamai banti hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Lekin poora saal aisa nahi chalta — spray ki demand kharif aur rabi ke khaas windows mein hi hoti

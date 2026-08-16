@@ -287,7 +287,7 @@ export default function NamoDroneDidiYojanaHindi({ article }: { article: HindiAr
         office में जाकर बता दीजिए कि हमारा समूह इच्छुक है। सूची बनती रहती है और अगले चरण में नाम आ सकता
         है। समूह में नहीं हैं, तो पहले जुड़ना होगा। गांव के Common Service Centre या block कृषि कार्यालय से
         भी अपने जिले की स्थिति पता चल जाती है। अपने राज्य की बाकी योजनाओं की सूची यहां है —{' '}
-        <Link href="/articles/state-kisan-yojana-list-all-states-2026" className="underline font-bold">
+        <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026" className="underline font-bold">
           हर राज्य की किसान योजना list
         </Link>.
       </p>
