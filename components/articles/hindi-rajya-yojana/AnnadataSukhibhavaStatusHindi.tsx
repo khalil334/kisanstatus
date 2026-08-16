@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HindiRelatedFooter from '@/components/HindiRelatedFooter';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
@@ -338,27 +339,15 @@ export default function AnnadataSukhibhavaStatusHindi({ article }: { article: Hi
         की तारीख तक अपडेट किया गया है।)
       </p>
 
-      <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
-        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">आगे काम आने वाले लेख</h3>
-        <ul className="list-disc pl-5 space-y-1.5 text-sm">
-          <li>
-            <Link href="/articles/PmKisanMasterGuide2026">पीएम किसान की मास्टर गाइड (A से Z)</Link>
-          </li>
-          <li>
-            <Link href="/articles/PmKisanBeneficiaryList2026">लाभार्थी सूची में नाम कैसे देखें</Link>
-          </li>
-          <li>
-            <Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">
-              Annadata Sukhibhava — Hinglish version
-            </Link>
-          </li>
-          <li>
-            <Link href="/articles/hi/rajasthan-kisan-samman-nidhi">
-              राजस्थान किसान सम्मान निधि — ₹9,000 का हिसाब
-            </Link>
-          </li>
-        </ul>
-      </div>
+      <HindiRelatedFooter
+        heading="आगे काम आने वाले लेख"
+        links={[
+        { href: '/articles/PmKisanMasterGuide2026', label: 'पीएम किसान की मास्टर गाइड (A से Z)' },
+        { href: '/articles/PmKisanBeneficiaryList2026', label: 'लाभार्थी सूची में नाम कैसे देखें' },
+        { href: '/rajya-yojana/annadata-sukhibhava-status-check-2026', label: 'Annadata Sukhibhava — Hinglish version' },
+        { href: '/articles/hi/rajasthan-kisan-samman-nidhi', label: 'राजस्थान किसान सम्मान निधि — ₹9,000 का हिसाब' },
+      ]}
+      />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HindiRelatedFooter from '@/components/HindiRelatedFooter';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
@@ -446,15 +447,15 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         <Bubble key={f.q} q={f.q} a={f.a} />
       ))}
 
-      <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
-        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">Related Articles — Yeh Bhi Padho</h3>
-        <ul className="list-disc pl-5 space-y-1.5 text-sm">
-          <li><Link href="/articles/hi/mp-kisan-kalyan-yojana">MP किसान कल्याण योजना ₹12000</Link></li>
-          <li><Link href="/articles/PmKisanMasterGuide2026">PM Kisan की मुख्य guide</Link></li>
-          <li><Link href="/articles/PmKisanEkycOnline2026">eKYC step-by-step process</Link></li>
-          <li><Link href="/articles/hi/npci-aadhaar-seeding">NPCI seeding — पूरा process</Link></li>
-        </ul>
-      </div>
+      <HindiRelatedFooter
+        heading="Related Articles — Yeh Bhi Padho"
+        links={[
+        { href: '/articles/hi/mp-kisan-kalyan-yojana', label: 'MP किसान कल्याण योजना ₹12000' },
+        { href: '/articles/PmKisanMasterGuide2026', label: 'PM Kisan की मुख्य guide' },
+        { href: '/articles/PmKisanEkycOnline2026', label: 'eKYC step-by-step process' },
+        { href: '/articles/hi/npci-aadhaar-seeding', label: 'NPCI seeding — पूरा process' },
+      ]}
+      />
     </>
   );
 }

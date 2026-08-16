@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HindiRelatedFooter from '@/components/HindiRelatedFooter';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
@@ -463,26 +464,16 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
         हाथ में है — exact dates official घोषणा से ही confirm करें।
       </p>
 
-      <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
-        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">आगे किस page पर क्या मिलेगा</h3>
-        <ul className="list-disc pl-5 space-y-1.5 text-sm">
-          <li>
-            <Link href="/articles/hi/namo-shetkari-yojana">नमो शेतकरी योजना Maharashtra</Link>
-          </li>
-          <li>
-            <Link href="/articles/PmKisanMasterGuide2026">योजना की master guide (केंद्र)</Link>
-          </li>
-          <li>
-            <Link href="/articles/PmKisanEkycOnline2026">eKYC online करने की विधि</Link>
-          </li>
-          <li>
-            <Link href="/articles/PmKisanBeneficiaryList2026">Beneficiary List Guide</Link>
-          </li>
-          <li>
-            <Link href="/articles/PmKisanPaymentFailedFix2026">Payment Failed Fix</Link>
-          </li>
-        </ul>
-      </div>
+      <HindiRelatedFooter
+        heading="आगे किस page पर क्या मिलेगा"
+        links={[
+        { href: '/articles/hi/namo-shetkari-yojana', label: 'नमो शेतकरी योजना Maharashtra' },
+        { href: '/articles/PmKisanMasterGuide2026', label: 'योजना की master guide (केंद्र)' },
+        { href: '/articles/PmKisanEkycOnline2026', label: 'eKYC online करने की विधि' },
+        { href: '/articles/PmKisanBeneficiaryList2026', label: 'Beneficiary List Guide' },
+        { href: '/articles/PmKisanPaymentFailedFix2026', label: 'Payment Failed Fix' },
+      ]}
+      />
     </>
   );
 }

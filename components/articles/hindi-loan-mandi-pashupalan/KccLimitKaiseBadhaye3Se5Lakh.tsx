@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HindiRelatedFooter from '@/components/HindiRelatedFooter';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
@@ -439,23 +440,15 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
         {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })} तक जांची हुई है।)
       </p>
 
-      <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
-        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">कर्ज से जुड़े बाकी लेख</h3>
-        <ul className="list-disc pl-5 space-y-1.5 text-sm">
-          <li>
-            <Link href="/articles/KisanCreditCardOnlineApply2026">KCC Online Apply Guide</Link>
-          </li>
-          <li>
-            <Link href="/articles/KisanRinKahaSeLe2026">Kisan Rin — कहां से लें</Link>
-          </li>
-          <li>
-            <Link href="/articles/KisanTractorLoan2026">Tractor के लिए loan guide</Link>
-          </li>
-          <li>
-            <Link href="/articles/hi/karj-mafi-list">कर्ज माफी लिस्ट 2027</Link>
-          </li>
-        </ul>
-      </div>
+      <HindiRelatedFooter
+        heading="कर्ज से जुड़े बाकी लेख"
+        links={[
+        { href: '/articles/KisanCreditCardOnlineApply2026', label: 'KCC Online Apply Guide' },
+        { href: '/articles/KisanRinKahaSeLe2026', label: 'Kisan Rin — कहां से लें' },
+        { href: '/articles/KisanTractorLoan2026', label: 'Tractor के लिए loan guide' },
+        { href: '/articles/hi/karj-mafi-list', label: 'कर्ज माफी लिस्ट 2027' },
+      ]}
+      />
     </>
   );
 }
