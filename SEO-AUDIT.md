@@ -38,7 +38,9 @@
 
 **Fix:** Update the policy (drop `openweathermap`, verify GTM/GA needs) and switch the header key to `Content-Security-Policy`. With 91 `dangerouslySetInnerHTML` call sites in the codebase (most are JSON-LD, but some render table content, e.g. `PmKisanCscRegistrationCharges.tsx:332`), an enforced CSP is your safety net.
 
-### H3. `dangerouslySetInnerHTML` used for non-JSON-LD content
+### H3. `dangerouslySetInnerHTML` used for non-JSON-LD content — ✅ FIXED
+**Resolution (2026-08-16):** Re-audit showed 3 of the 4 flagged call sites (`PmKisanPatiPatniRule.tsx:474`, `AnnadataSukhibhavaStatusCheck.tsx:508`, `StateKisanYojanaHub.tsx:527`) are FAQPage JSON-LD `<script>` tags — safe, no change needed. The one real content injection (`PmKisanCscRegistrationCharges.tsx:332`, table cell `__html: check`) was replaced with plain JSX (`<Link>` component instead of an HTML string).
+
 Most of the 91 usages are JSON-LD script tags (fine), but a few inject HTML into page content, e.g.:
 - `components/articles/PmKisanCscRegistrationCharges.tsx:332` — table cell `__html: check`
 - `components/articles/rajya-yojana/PmKisanPatiPatniRule.tsx:474`
@@ -53,16 +55,24 @@ Today the data is static/authored, so there's no live XSS — but it's a foot-gu
 
 ## 🟡 Medium priority
 
-### M1. Missing JSON-LD on two hub pages
+### M1. Missing JSON-LD on two hub pages — ✅ FIXED
+**Resolution (2026-08-16):** Both `/maandhan` and `/rajya-yojana` now emit `CollectionPage` + `ItemList` + `BreadcrumbList` JSON-LD built from their article data sources.
+
 `/maandhan` and `/rajya-yojana` are the only 2 of 135 pages with **no structured data**. Both are section hubs with 14–15 child articles each — ideal candidates for `CollectionPage` + `ItemList` (and `BreadcrumbList`) schema.
 
-### M2. Loading-placeholder text baked into SSR HTML
+### M2. Loading-placeholder text baked into SSR HTML — ✅ FIXED
+**Resolution (2026-08-16):** "Kripya thoda intezar…" text removed from `app/page.tsx` (HomeLoading) and `app/loading.tsx`; replaced with a spinner + `aria-label`/`role="status"` so the message stays for screen readers but out of crawlable HTML.
+
 "Kripya thoda intezar karein, page/content load ho raha hai..." appears **6 times in the server-rendered homepage HTML** (`app/page.tsx:101`, `app/loading.tsx`, `components/HomeContent.tsx`). Crawlers index this text as page content, and it signals client-side-rendered sections whose real content may not be in the initial HTML. Check which homepage sections hydrate client-side and server-render them (or at minimum keep placeholder text out of the crawlable HTML).
 
-### M3. Sitemap `<lastmod>` bulk-stamping
+### M3. Sitemap `<lastmod>` bulk-stamping — ✅ PARTIALLY FIXED
+**Resolution (2026-08-16):** `/rajya-yojana` hub now derives `lastmod` from the freshest child article (`RAJYA_YOJANA_UPDATED`) instead of build-time `now`. Remaining build-time stamps: `/` and `/articles` only (intentional — they change every deploy, `changeFrequency: daily`). All article/category/hub pages already use real content dates.
+
 Many URLs share the identical build-time timestamp down to the millisecond (e.g. `2026-08-16T22:52:37.896Z` on 6+ URLs). When most `lastmod` values equal "last deploy time," Google learns to ignore the field entirely — losing you the recrawl-priority benefit on pages that genuinely changed. The repo already has `scripts/update-article-dates.js` deriving real git dates; feed those same dates into the sitemap generator instead of `new Date()` at build.
 
-### M4. Two meta descriptions under ~110 chars
+### M4. Two meta descriptions under ~110 chars — ✅ FIXED
+**Resolution (2026-08-16):** Both extended to ~150 chars with keyword + CTA (`/articles/hi/category/loan` in `app/articles/hi/category/[category]/page.tsx`, `PmfbyCropInsurance2026` in `lib/core-articles-data.ts`).
+
 - `/articles/hi/category/loan` (100 chars)
 - `/articles/PmfbyCropInsurance2026` (102 chars)
 
@@ -81,7 +91,9 @@ Not wrong, just leaving SERP real estate unused. Extend to ~140–160 chars with
 ### L1. Bot-blocking behaviour may catch legitimate tools
 Requests with certain UA strings get **403** at the edge (observed live: a plain scripted UA was blocked; `python-requests`, browsers, and Googlebot pass). Verify the WAF/bot rules (Vercel firewall) aren't blocking tools you rely on — e.g. site-audit crawlers, uptime monitors, or social-preview fetchers. Ahrefs/Semrush note: `robots.txt` already blocks `SemrushBot`, `MJ12bot`, `DotBot`, `BLEXBot` — intentional, but remember it means those tools can't audit the site (AhrefsBot/AhrefsSiteAudit are allowed ✅).
 
-### L2. `data.gov.in` public sample key hardcoded in `app/api/mandi/route.ts`
+### L2. `data.gov.in` public sample key hardcoded in `app/api/mandi/route.ts` — ✅ CODE FIXED (env action still yours)
+**Resolution (2026-08-16):** The `NEXT_PUBLIC_MANDI_API_KEY` fallback was removed — only server-side `MANDI_API_KEY` is read now. **Action for you:** set `MANDI_API_KEY` in Vercel so farmers see full mandi records.
+
 `PUBLIC_SAMPLE_KEY = '579b464d…'` is data.gov.in's published sample key, so it's not a secret leak — but it's rate-limited to partial data. The env override exists; make sure `MANDI_API_KEY` is actually set in Vercel so farmers see full mandi records. Also avoid `NEXT_PUBLIC_MANDI_API_KEY` as a fallback — `NEXT_PUBLIC_*` values get bundled into client JS, so a real key placed there would leak.
 
 ### L3. Intermittent slow responses
@@ -108,11 +120,11 @@ Three URLs timed out (>25s) on first crawl attempt and returned 200 (0.1–0.4s)
 ## Suggested fix order
 
 1. ~~H1 hreflang~~ — already implemented (audit correction).
-2. **H2 enforce CSP** (quick config change after policy cleanup). ✅ Fixed in this commit.
-3. **M1 hub-page JSON-LD** + **M3 real sitemap lastmod** (one PR, both touch generation code).
-4. **H3 audit non-JSON-LD `dangerouslySetInnerHTML`** (refactor when touching those articles).
-5. **M2 placeholder text / SSR** + **M4 short descriptions** (quick wins).
-6. **M5/M6/L2** as ongoing conventions.
+2. ~~H2 enforce CSP~~ ✅ Fixed.
+3. ~~M1 hub-page JSON-LD + M3 sitemap lastmod~~ ✅ Fixed (PR: seo-audit-remaining-fixes).
+4. ~~H3 dangerouslySetInnerHTML~~ ✅ Fixed (1 real site refactored; 3 were JSON-LD false positives).
+5. ~~M2 placeholder text / M4 short descriptions~~ ✅ Fixed.
+6. ~~L2 code side~~ ✅ Fixed — **remaining manual items:** set `MANDI_API_KEY` in Vercel (L2), fill `ads.txt` on AdSense approval (M6), kebab-case convention for new slugs (M5 — case-insensitive 308 redirect already exists in `proxy.ts`).
 
 ---
 

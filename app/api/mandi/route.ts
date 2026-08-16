@@ -15,10 +15,9 @@ const MAX_STATE_LEN = 60;
 const PUBLIC_SAMPLE_KEY = '579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b';
 
 export async function GET(request: Request) {
-  const apiKey =
-    process.env.MANDI_API_KEY ||
-    process.env.NEXT_PUBLIC_MANDI_API_KEY ||
-    PUBLIC_SAMPLE_KEY;
+  // Server-only env var; never NEXT_PUBLIC_* — that would bundle a real key
+  // into client JS.
+  const apiKey = process.env.MANDI_API_KEY || PUBLIC_SAMPLE_KEY;
 
   const state = (new URL(request.url).searchParams.get('state') || '').trim();
   if (!state || state.length > MAX_STATE_LEN) {
