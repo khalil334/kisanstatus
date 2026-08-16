@@ -492,6 +492,27 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     component: 'BiharKisanRegistrationStatusHindi',
     ogImage: '/images/articles/rajya-yojna/bihar-kisan-registration-status-check-2026/hero.webp',
   },
+  {
+    slug: 'hi/parihara-payment-status',
+    titleHi: 'परिहार पेमेंट स्टेटस 2026 — फसल नुकसान मुआवजा कहां अटका, कैसे देखें?',
+    seoTitleHi: 'परिहार पेमेंट स्टेटस चेक 2026 — Karnataka Parihara',
+    desc: 'कर्नाटक में फसल नुकसान (bele hani) का मुआवजा — parihara.karnataka.gov.in पर आधार या गांव की सूची से स्टेटस, SDRF दरें, FRUITS ID और अटके पैसे का हर रास्ता।',
+    keywords: [
+      'परिहार पेमेंट स्टेटस',
+      'parihara payment status check',
+      'फसल नुकसान मुआवजा कर्नाटक',
+      'parihara karnataka gov in status',
+      'बेले हानी मुआवजा स्टेटस',
+      'FRUITS ID karnataka kisan',
+      'फसल मुआवजा village wise list',
+    ],
+    category: 'status-check',
+    publishedTime: '2026-08-16T22:30:00+05:30',
+    modifiedTime: '2026-08-16T22:30:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'PariharaPaymentStatusHindi',
+    ogImage: '/images/articles/rajya-yojna/parihara-payment-status-check-2026/hero.webp',
+  },
 ] as const;
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(
