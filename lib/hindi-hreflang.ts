@@ -15,6 +15,7 @@ export const HINDI_TO_HINGLISH: Readonly<Record<string, string>> = {
   'krishak-bandhu-status': '/rajya-yojana/krishak-bandhu-status-check-2026',
   'odisha-cm-kisan-status': '/rajya-yojana/odisha-cm-kisan-status-check-2026',
   'pati-patni-pm-kisan-rule': '/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega',
+  'state-kisan-yojana-list': '/rajya-yojana/state-kisan-yojana-list-all-states-2026',
 };
 
 export const HINGLISH_TO_HINDI: Readonly<Record<string, string>> = Object.freeze(

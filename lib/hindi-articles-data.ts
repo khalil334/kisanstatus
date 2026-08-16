@@ -408,6 +408,27 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     component: 'PatiPatniPmKisanRuleHindi',
     ogImage: '/images/articles/rajya-yojna/pm-kisan-pati-patni-dono-ko-milega/hero.webp',
   },
+  {
+    slug: 'hi/state-kisan-yojana-list',
+    titleHi: 'राज्य किसान योजना लिस्ट 2026 — किस राज्य में कितना पैसा मिलता है?',
+    seoTitleHi: 'राज्य किसान योजना लिस्ट 2026 — State Wise Amount',
+    desc: 'PM Kisan के ₹6,000 के ऊपर आपका राज्य कितना देता है? MP, राजस्थान, महाराष्ट्र, AP, तेलंगाना, बंगाल, ओडिशा, छत्तीसगढ़ — हर राज्य की योजना, रकम और स्टेटस लिंक एक जगह।',
+    keywords: [
+      'राज्य किसान योजना लिस्ट',
+      'state kisan yojana list 2026',
+      'किस राज्य में किसान को कितना पैसा मिलता है',
+      'pm kisan ke upar state yojana',
+      'मुख्यमंत्री किसान योजना सभी राज्य',
+      'kisan yojana state wise amount',
+      'राज्य सरकार किसान सहायता योजना',
+    ],
+    category: 'status-check',
+    publishedTime: '2026-08-17T13:30:00+05:30',
+    modifiedTime: '2026-08-17T13:30:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'StateKisanYojanaListHindi',
+    ogImage: '/images/articles/rajya-yojna/state-kisan-yojana-list-all-states-2026/hero.webp',
+  },
 ] as const;
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(
