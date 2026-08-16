@@ -24,6 +24,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: HindiArticle }>>
   KccLimitKaiseBadhaye3Se5Lakh: dynamic(() => import('@/components/articles/hindi-yojana/KccLimitKaiseBadhaye3Se5Lakh'), { ssr: true }),
   NamoShetkariYojanaMaharashtra: dynamic(() => import('@/components/articles/hindi-yojana/NamoShetkariYojanaMaharashtra'), { ssr: true }),
   GauMutraKharidYojanaHindi: dynamic(() => import('@/components/articles/hindi-yojana/GauMutraKharidYojanaHindi'), { ssr: true }),
+  NamoDroneDidiYojanaHindi: dynamic(() => import('@/components/articles/hindi-yojana/NamoDroneDidiYojanaHindi'), { ssr: true }),
 };
 
 export const revalidate = 86400;

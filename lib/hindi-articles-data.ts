@@ -255,6 +255,28 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     component: 'GauMutraKharidYojanaHindi',
     ogImage: '/images/gau-mutra-yojana-hindi-og.webp',
   },
+  {
+    slug: 'hi/namo-drone-didi-yojana',
+    titleHi: 'नमो ड्रोन दीदी योजना — कोई form नहीं, रास्ता SHG से जाता है',
+    seoTitleHi: 'नमो ड्रोन दीदी योजना — SHG चयन और ₹8 लाख की मदद',
+    desc: 'नमो ड्रोन दीदी में online form नहीं है — चयन SHG से होता है। 80% subsidy (₹8 लाख तक), 15 दिन की training और कमाई का सच्चा हिसाब — पूरा रास्ता यहां पढ़िए।',
+    keywords: [
+      'नमो ड्रोन दीदी योजना',
+      'namo drone didi yojana in hindi',
+      'ड्रोन दीदी योजना form',
+      'ड्रोन दीदी कैसे बने',
+      'महिला स्वयं सहायता समूह ड्रोन',
+      'drone didi training kitne din ki hai',
+      'ड्रोन से spray का rate per acre',
+      'namo drone didi subsidy 8 lakh',
+    ],
+    category: 'agri-business',
+    publishedTime: '2026-08-15T20:30:00+05:30',
+    modifiedTime: '2026-08-15T20:30:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'NamoDroneDidiYojanaHindi',
+    ogImage: '/images/articles/namo-drone-didi-yojana-shg-selection/drone-didi-spray-hero.webp',
+  },
 ] as const;
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(
