@@ -1,7 +1,7 @@
 # Hindi Articles TODO + Prompts — 57 Articles
 first of all only write the article when all articles complete then we will make lib data.ts and slug page for every folder 
-#jese hinglish articles Alag folder ma ha  is tarah Alag alag folder b banaya karo hindi articles ke lye jese kisan guide maandhan rajya-yojna aise he Hindi version ke b banaya kaeo catagory b banao phly articles complete karo har 5 article ke bad direct push karo GitHub py or ye file b update kardia karo
-Har article ke liye alag prompt. **Batch rule: 5 article likhne ke baad GitHub pe push karo** aur is file me us article ke aage ✅ laga do.
+#jese hinglish articles Alag folder ma ha  is tarah Alag alag folder b banaya karo hindi articles ke lye jese kisan guide maandhan rajya-yojna aise he Hindi version ke b banaya kaeo catagory b banao phly articles complete karo har 3 article ke bad direct push karo GitHub py or ye file b update kardia karo
+Har article ke liye alag prompt. **Batch rule: 3 article likhne ke baad GitHub pe push karo** aur is file me us article ke aage ✅ laga do.
 
 ## Common rules (har prompt ke saath lagu)
 
