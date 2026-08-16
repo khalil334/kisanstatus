@@ -158,7 +158,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'FTO Ka Full Form & FTO Generated Meaning',
     desc: 'FTO Generated dikha par paisa nahi aaya? Generated, Processed aur "will be generated" — teeno ka aasan matlab, aur delay par din 15 aur 30 ka action plan.',
     ogTitle: 'FTO Ka Full Form — FTO Generated/Processed Meaning',
-    seoTitle: 'FTO Generated Ka Matlab — PM Kisan Guide',
+    seoTitle: 'FTO Generated Matlab — PM Kisan Guide',
     keywords: [
       'FTO ka full form',
       'FTO full form in hindi',
