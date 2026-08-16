@@ -534,6 +534,27 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     component: 'UpKisanKarjRahatListHindi',
     ogImage: '/images/articles/rajya-yojna/up-kisan-karj-rahat-list-2026/hero.webp',
   },
+  {
+    slug: 'hi/ikhedut-portal-status',
+    titleHi: 'iKhedut पोर्टल स्टेटस चेक 2026 — अर्जी नंबर से सब्सिडी तक',
+    seoTitleHi: 'iKhedut पोर्टल अर्जी स्टेटस चेक 2026 — पूरा तरीका',
+    desc: 'iKhedut पोर्टल पर अर्जी का स्टेटस 2 मिनट में देखें — अर्जी नंबर खो गया तो कैसे निकालें, pending से payment तक हर स्थिति का मतलब और ट्रैक्टर सहाय का पूरा सफर।',
+    keywords: [
+      'ikhedut portal status',
+      'iKhedut अर्जी स्टेटस चेक',
+      'ikhedut arji status check',
+      'ikhedut gujarat gov in स्टेटस',
+      'ट्रैक्टर सहाय योजना गुजरात स्टेटस',
+      'ikhedut arji number kaise nikale',
+      'iKhedut योजना लिस्ट 2026',
+    ],
+    category: 'status-check',
+    publishedTime: '2026-08-17T01:20:00+05:30',
+    modifiedTime: '2026-08-17T01:20:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'IkhedutPortalStatusHindi',
+    ogImage: '/images/articles/rajya-yojna/ikhedut-portal-status-check-2026/hero.webp',
+  },
 ] as const;
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(
