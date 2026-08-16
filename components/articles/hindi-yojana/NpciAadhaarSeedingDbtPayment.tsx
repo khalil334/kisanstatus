@@ -118,7 +118,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         सुनने में एक समान लगते हैं, होते अलग हैं।
       </p>
       <p>
-        इस लेख में हम यही गांठ खोलेंगे — link और seeding का फर्क, अपना mapping status घर बैठे देखने के दो
+        इस लेख में हम यही गांठ खोलेंगे — link और NPCI mapping का फर्क, अपना mapping status घर बैठे देखने के दो
         तरीके (एक बिना internet वाला भी), बैंक में जाकर ठीक-ठीक क्या बोलना है, और वे गलतियां जिनकी वजह से
         form भरने के बाद भी status Inactive रह जाता है। पूरा पढ़ लेंगे तो बैंक के तीन चक्कर बचेंगे, यह हमारा
         अनुभव कहता है।
@@ -214,7 +214,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         </a>{' '}
         खोलें और login करें — आधार number + OTP; OTP आधार-registered mobile पर आएगा। अंदर{' '}
         <strong>Bank Seeding Status</strong> का विकल्प चुनें। Screen पर दिखेगा — कौन सा बैंक mapped है,
-        seeding active है या inactive, और किस तारीख से।
+        mapping active है या inactive, और किस तारीख से।
       </p>
       <p>
         <strong>दूसरा तरीका (बिना internet):</strong> आधार-registered mobile से <strong>*99*99*1#</strong>{' '}
@@ -222,7 +222,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
       </p>
       <p>
         Screen पर जो दिखे, उसे पढ़ने का तरीका सीधा है। बैंक का नाम <strong>उसी खाते का</strong> है जिसमें
-        पैसा चाहिए और status <strong>Active</strong> है — तो seeding की तरफ से रास्ता साफ है; किस्त फिर भी
+        पैसा चाहिए और status <strong>Active</strong> है — तो mapper की तरफ से रास्ता साफ है; किस्त फिर भी
         न आए तो वजह कहीं और है (eKYC, जमीन record, या राज्य की जांच)। बैंक का नाम <strong>दूसरा</strong> है
         — तो पैसा उसी दूसरे बैंक में जा रहा है, अपनी पुरानी passbook निकालकर देखिए। Status{' '}
         <strong>Inactive</strong> है या कोई record ही नहीं — तो नीचे Step 2 आपके लिए है।
@@ -289,11 +289,11 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
       <p>
         <strong>2. नाम का मिलान नहीं बैठा।</strong> आधार में नाम कुछ और, बैंक record में कुछ और — बीच में
         request अटक जाती है। इलाज — जो record गलत है उसे सुधरवाएं (बैंक में नाम सुधार आसान है, आधार में
-        सुधार Aadhaar Seva Kendra से), फिर seeding दोबारा करवाएं।
+        सुधार Aadhaar Seva Kendra से), फिर mapping दोबारा करवाएं।
       </p>
       <p>
         <strong>3. खाता ही सोया पड़ा है।</strong> लंबे समय से लेन-देन न हो तो खाता dormant/frozen हो जाता
-        है, और ऐसे खाते पर seeding टिकती नहीं। इलाज — पहले शाखा जाकर खाता re-activate करवाएं (KYC दस्तावेज
+        है, और ऐसे खाते पर mapping टिकती नहीं। इलाज — पहले शाखा जाकर खाता re-activate करवाएं (KYC दस्तावेज
         साथ रखें), फिर consent form भरें।
       </p>
       <p>
@@ -309,7 +309,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         घबराहट खत्म। <strong>&quot;Aadhaar not seeded in NPCI&quot;</strong> — यही इस पूरे लेख का विषय है;
         सीधे Step 2 पर जाइए। <strong>&quot;Account closed&quot;</strong> — seeded खाता बंद हो चुका है; किसी
         चालू खाते में नई seeding करानी होगी। <strong>&quot;Name mismatch&quot;</strong> — आधार और बैंक
-        record के नाम अलग हैं; पहले नाम सुधरवाइए, फिर seeding। और{' '}
+        record के नाम अलग हैं; पहले नाम सुधरवाइए, फिर यह प्रक्रिया। और{' '}
         <strong>&quot;Payment Initiated&quot;</strong> दिखे तो कुछ मत कीजिए — पैसा रास्ते में है, FTO
         process होने के बाद भी खाते तक पहुंचने में कुछ कार्यदिवस लगते हैं। 24-48 घंटे बाद status दोबारा
         देखना और बैंक/NPCI के SMS संभालकर रखना — दो आदतें जो शिकायत के वक्त सबूत बनती हैं।
@@ -328,7 +328,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         बैंक में मिल गए (कई ग्रामीण बैंकों का विलय इसका उदाहरण है), उनका IFSC और कभी-कभी खाता नंबर तक बदल
         जाता है। खाता न बदले तो भी mapper की entry पुराने बैंक code पर अटकी रह सकती है। आपके बैंक का merge
         हुआ हो, तो बिना इंतजार किए एक बार myAadhaar पर seeding status देख लें — नए बैंक का नाम दिखे तो सब
-        ठीक, पुराना दिखे तो नई शाखा में consent form भरकर ताजा seeding करा लें।
+        ठीक, पुराना दिखे तो नई शाखा में consent form भरकर ताजा mapping करा लें।
       </p>
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
@@ -379,7 +379,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         <Link href="/articles/hi/payment-stopped-by-state">उसकी guide यहां</Link> है।
       </p>
       <p>
-        अनुभव से निकला सबसे बड़ा सबक — seeding एक बार की चीज नहीं, एक <em>स्थिति</em> है। खाता बदला,
+        अनुभव से निकला सबसे बड़ा सबक — यह mapping एक बार की चीज नहीं, एक <em>स्थिति</em> है। खाता बदला,
         बैंक merge हुआ, खाता dormant हुआ — किसी भी घटना से mapping बदल या टूट सकती है। तो साल में दो बार,
         बुवाई और कटाई की तरह, myAadhaar खोलकर 2 मिनट का status-check कर लेने की आदत बना लीजिए। जितनी मेहनत
         खेत के दस्तावेज़ संभालने में लगाते हैं, उसका सौवां हिस्सा इस digital कागज पर भी लगा दें — किस्त अटकने की

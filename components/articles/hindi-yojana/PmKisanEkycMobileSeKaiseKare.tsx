@@ -153,7 +153,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
       </p>
 
       <Tip tone="ok">
-        याद रहे: बिना पूरी eKYC के किस्त का भुगतान रुक जाता है। यह नियम अब पक्का है — portal खुद होमपेज पर
+        याद रहे: बिना पूरे सत्यापन के किस्त का भुगतान रुक जाता है। यह नियम अब पक्का है — portal खुद होमपेज पर
         लिखता है कि eKYC सभी beneficiaries के लिए अनिवार्य है। इतना छोटा काम टालने लायक नहीं।
       </Tip>
 
@@ -208,7 +208,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
           उनके लिए सरकार ने चेहरे से पहचान वाला तरीका दिया है। Google Play Store से{' '}
           <strong>PM-KISAN GoI</strong> app (प्रकाशक: Government of India) डालिए, beneficiary की details से
           login कीजिए, और Face Auth का विकल्प चुनकर camera के सामने चेहरा scan करवाइए। App दूसरे किसानों की
-          eKYC कराने की सुविधा भी देता है — आपके phone से पड़ोस के 10 बुजुर्गों का काम भी निपट सकता है।
+          यह सत्यापन कराने की सुविधा भी देता है — आपके phone से पड़ोस के 10 बुजुर्गों का काम भी निपट सकता है।
           Screen-दर-screen विवरण के लिए{' '}
           <Link href="/articles/PmKisanFaceAuthenticationEkyc">Face Auth वाला लेख</Link> खोल लें।
         </p>
@@ -236,7 +236,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         <p>
           जब आधार में नंबर जुड़ा ही न हो, या बुजुर्ग का चेहरा app पहचान न पाए, तो यह रास्ता बचता है और
           भरोसेमंद भी बैठता है। नजदीकी CSC (Common Service Centre) पर आधार कार्ड ले जाइए; वहां fingerprint
-          scanner पर अंगूठा रखवाकर eKYC दर्ज कर दी जाती है। काम मिनटों का है, और इसमें OTP की जरूरत नहीं
+          scanner पर अंगूठा रखवाकर सत्यापन दर्ज कर दिया जाता है। काम मिनटों का है, और इसमें OTP की जरूरत नहीं
           पड़ती — जिनका पुराना नंबर बंद हो चुका है, उनके लिए यही तेज विकल्प है।
         </p>
         <p>
@@ -352,7 +352,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
       <Sec>और अगर आधार में mobile number linked ही नहीं है?</Sec>
       <p>
         तब phone वाले दोनों रास्ते बंद हैं — यह कड़वा सच पहले ही बता देना ठीक है। अब दो विकल्प बचते हैं।
-        पहला: नजदीकी CSC (Common Service Centre) जाकर fingerprint से biometric eKYC करवा लें — आधार card
+        पहला: नजदीकी CSC (Common Service Centre) जाकर fingerprint से biometric सत्यापन करवा लें — आधार card
         साथ ले जाएं, काम मिनटों में होता है। दूसरा, थोड़ा लंबा पर स्थायी इलाज: Aadhaar Seva Kendra में जाकर
         आधार में अपना चालू नंबर registered करवा लें (
         <a href="https://uidai.gov.in" target="_blank" rel="noopener noreferrer">uidai.gov.in</a> से
@@ -406,7 +406,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
       </p>
       <p>
         महिलाओं के मामले में आम अड़चन नाम की है — शादी के बाद आधार में नाम या पता बदला, पर बैंक खाते या जमीन
-        के record में पुराना ही चल रहा है। eKYC तो हो जाती है, पर मिलान आगे अटकता है। eKYC के साथ ही यह भी
+        के record में पुराना ही चल रहा है। सत्यापन तो हो जाता है, पर मिलान आगे अटकता है। eKYC के साथ ही यह भी
         देख लीजिए कि आधार, passbook और खतौनी — तीनों में नाम की spelling एक जैसी है या नहीं। फर्क मिले तो
         सुधार की प्रक्रिया शुरू कर दीजिए, वरना हर किस्त पर नया सवाल खड़ा होगा।
       </p>
@@ -437,7 +437,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
 
       <Sec>ठगी से बचने के लिए चार पक्की बातें</Sec>
       <p>
-        eKYC के नाम पर ठगी का धंधा चलता ही इस बात पर है कि लोग जल्दी में होते हैं और डरे हुए भी — "किस्त रुक
+        इस सत्यापन के नाम पर ठगी का धंधा चलता ही इस बात पर है कि लोग जल्दी में होते हैं और डरे हुए भी — "किस्त रुक
         जाएगी" वाला डर। ये चार बातें याद रख लीजिए, फिर कोई फंसा नहीं सकता:
       </p>
       <ol className="list-decimal pl-6 space-y-2 my-4 text-sm leading-relaxed">
@@ -467,7 +467,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
 
       <Sec>OTP, Face Auth, फीस — जो बार-बार पूछा जाता है</Sec>
       <p className="text-xs text-[var(--color-text-muted)] italic mb-3">
-        eKYC के रास्ते में आने वाली आम उलझनें — एक जगह।
+        इस काम के रास्ते में आने वाली आम उलझनें — एक जगह।
       </p>
       <div className="grid gap-3 sm:grid-cols-2 mb-8">
         {FAQS.map(({ q, a }) => (

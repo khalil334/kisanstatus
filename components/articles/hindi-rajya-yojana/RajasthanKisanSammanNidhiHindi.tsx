@@ -341,7 +341,7 @@ export default function RajasthanKisanSammanNidhiHindi({ article }: { article: H
           month: '2-digit',
           year: 'numeric',
         })}{' '}
-        तक जांची हुई है।)
+        तक के सरकारी स्रोतों से मिलान की गई है।)
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">

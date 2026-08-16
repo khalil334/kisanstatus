@@ -329,13 +329,13 @@ export default function AnnadataSukhibhavaStatusHindi({ article }: { article: Hi
         उपलब्ध कवरेज से; स्थिति देखने की प्रक्रिया, लाभार्थी सूची और हेल्पलाइन 155251 / 1902 आधिकारिक
         पोर्टल annadathasukhibhava.ap.gov.in से। पांच एकड़ की भूमि सीमा निजी स्रोतों में दर्ज है, इसलिए
         उसे सत्यापित तथ्य की तरह नहीं लिखा गया। अगली किस्त की कोई अनुमानित तारीख यहां नहीं दी गई है।
-        (जानकारी{' '}
+        (यह लेख{' '}
         {new Date(article.modifiedTime).toLocaleDateString('en-IN', {
           day: '2-digit',
           month: '2-digit',
           year: 'numeric',
         })}{' '}
-        तक जांची हुई है।)
+        की तारीख तक अपडेट किया गया है।)
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
