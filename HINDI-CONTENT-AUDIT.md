@@ -24,6 +24,9 @@
 - ✅ 🟠 #4 (variation pass): "पहले guide पढ़ी?" CTA line varied per-file (3 of 4 rephrased); "जांची हुई है" closing formula varied in `Annadata` + `Rajasthan`; "असली सवाल, सीधे जवाब" FAQ heading varied in 3 of 4 files. Full componentization (§3) intentionally NOT done — wording variation achieves the uniqueness goal without a refactor.
 - ✅ 🟡 #6 complete: synonym mixing — `NpciAadhaarSeeding` (seeding 43→33, mapper/mapping mixed in), `UpKarjRahat` (लोन 26→14, कर्ज/ऋण mixed), `EkycMobile` (eKYC 48→39, सत्यापन mixed).
 
+**Batch 4 — pushed 2026-08-16:**
+- ✅ 🔴 #1 complete: re-ran cross-article n-gram scan post-fixes — remaining word-for-word sentences broken: family-unit definition line (Namo↔PmKisan25vi), "पैसा उस खाते में जाता है जो आधार से..." (Rajasthan↔PmKisan25vi), Rajasthan eligibility bullet (↔Namo), Bihar↔MeriFasal shared शुल्क-disclaimer + Hinglish cross-link + payment-failed link phrasing, "योजना का पूरा हिसाब मास्टर गाइड" line (Parihara/UpKarjRahat), Annadata related-articles footer heading varied. Scan now shows only 1 pair ≥3 shared 8-grams (generic dormant-account phrasing) — total shared 8-grams across all 435 pairs: 17 (was 100s).
+
 **Remaining (optional/deferred):**
 - 🟠 #3 template-DNA (word/FAQ counts) — guidance for future articles, no retro-fix needed.
 - 🟠 #4 componentization of WhatsApp-scam warning + master-guide footer into shared components — optional refactor.
