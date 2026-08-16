@@ -10,7 +10,7 @@ Source: `lib/rajya-yojana-data.ts` vs `lib/hindi-hreflang.ts` + `lib/hindi-artic
 
 Ye rules HAR article par apply hoti hain — prompt ke saath copy karo:
 
-1. **Language**: Pure Hindi (Devanagari) mein likho, lekin technical words (status, portal, OTP, eKYC, list) English mein natural jagah pe aane do — jaise gaon ka padha-likha aadmi bolta hai.
+1. **Language — PURE HINDI (Devanagari)**: Poora article shuddh Hindi mein Devanagari lipi mein likho. Hinglish mix (Roman Hindi) BILKUL nahi — na headings mein, na paragraphs mein, na FAQs mein. English sentences ya aadhi-English lines mana hain. Sirf wo technical shabd jo Hindi mein hote hi nahi (OTP, eKYC, portal ke button/menu ke asli naam jaise "Know Your Status") waise hi rehne do — baaki sab Hindi: status → स्थिति, list → सूची, payment → भुगतान, amount → राशि. Aisa lage jaise Hindi akhbaar ka likhne wala likh raha hai, Google translate nahi.
 2. **Length**: 2000+ words. Lekin words ginne ke liye faltu padding mat karo — har section mein kaam ki baat ho.
 3. **Facts — real info with VERIFIED source (zaroori)**: Sirf real info. Likhne se pehle official portal khol ke verify karo (portal har prompt mein diya hai). Amount, dates, process steps — jo confirm na ho, wo mat likho. Andaza lagana mana hai. **Har major fact (amount, kist date, eligibility rule) ka source article ke text mein naturally mention karo** — jaise "official portal (fasal.haryana.gov.in) ke mutabik..." ya "sarkari notification mein saaf likha hai ki...". Bina source ke koi number nahi. Agar do sources mein alag figures milen to jo official portal kehta hai wahi likho.
 4. **Human style — sabse zaroori**:
