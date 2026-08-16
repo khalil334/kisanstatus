@@ -190,7 +190,7 @@ export default function UpKisanKarjRahatListHindi({ article }: { article: HindiA
 
       <p>
         अगर आपका case इस योजना में नहीं बनता, तो अटकिए मत। केंद्र की ₹6,000 सालाना
-        वाली योजना का पूरा हिसाब{' '}
+        वाली योजना की पूरी कहानी{' '}
         <Link href="/articles/PmKisanMasterGuide2026">पीएम किसान मास्टर गाइड</Link> में
         है, और उसका पैसा बैंक से लौट रहा हो तो{' '}
         <Link href="/articles/PmKisanPaymentFailedFix2026">

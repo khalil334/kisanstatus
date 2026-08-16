@@ -229,9 +229,9 @@ export default function PariharaPaymentStatusHindi({ article }: { article: Hindi
         <Link href="/rajya-yojana/parihara-payment-status-check-2026">
           हिंग्लिश वाले विस्तृत लेख
         </Link>{' '}
-        में है। और केंद्र की ₹6,000 वाली योजना का पूरा हिसाब{' '}
+        में है। केंद्र की ₹6,000 वाली योजना समझनी हो तो{' '}
         <Link href="/articles/PmKisanMasterGuide2026">पीएम किसान मास्टर गाइड</Link>{' '}
-        में।
+        से शुरू कीजिए।
       </p>
 
       <H2>उलझन वाले सवाल — साफ जवाब</H2>
