@@ -37,6 +37,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: HindiArticle }>>
   BiharKisanRegistrationStatusHindi: dynamic(() => import('@/components/articles/hindi-yojana/BiharKisanRegistrationStatusHindi'), { ssr: true }),
   PariharaPaymentStatusHindi: dynamic(() => import('@/components/articles/hindi-yojana/PariharaPaymentStatusHindi'), { ssr: true }),
   UpKisanKarjRahatListHindi: dynamic(() => import('@/components/articles/hindi-yojana/UpKisanKarjRahatListHindi'), { ssr: true }),
+  IkhedutPortalStatusHindi: dynamic(() => import('@/components/articles/hindi-yojana/IkhedutPortalStatusHindi'), { ssr: true }),
 };
 
 export const revalidate = 86400;

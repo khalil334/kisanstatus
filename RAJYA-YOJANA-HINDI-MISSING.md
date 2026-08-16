@@ -3,8 +3,8 @@
 Source: `lib/rajya-yojana-data.ts` vs `lib/hindi-hreflang.ts` + `lib/hindi-articles-data.ts`
 
 - Total rajya-yojana articles: 15 (sab live)
-- Hindi version maujood: 12 (MP Kisan Kalyan, Namo Shetkari, Rajasthan Kisan Samman Nidhi, Annadata Sukhibhava, Rythu Bharosa, Krishak Bandhu, Odisha CM Kisan, Pati-Patni PM Kisan Rule, State Yojana List, Krishak Unnati, Meri Fasal Mera Byora, Bihar DBT, Parihara, UP Karj Rahat)
-- Hindi version MISSING: 1 (neeche list + har ek ka alag writing prompt; DONE wale tick ho chuke hain)
+- Hindi version maujood: 15 — SAB HO GAYE ✅ (MP Kisan Kalyan, Namo Shetkari, Rajasthan Kisan Samman Nidhi, Annadata Sukhibhava, Rythu Bharosa, Krishak Bandhu, Odisha CM Kisan, Pati-Patni PM Kisan Rule, State Yojana List, Krishak Unnati, Meri Fasal Mera Byora, Bihar DBT, Parihara, UP Karj Rahat, iKhedut)
+- Hindi version MISSING: 0
 
 ## Common rules (har prompt ke saath lagu hongi)
 
@@ -124,7 +124,7 @@ Ye disaster-compensation (fasal nuksan muavza) article hai — tone thodi empath
 **Prompt:**
 Sabse pehle ek imandaar reality-check section: ye scheme (Rin Mochan) 2017 ki hai — 2026 mein naya karj maaf ho raha hai ya sirf purane cases nipat rahe hain? Ye verify karo aur jo sach hai wo likho, jhoothi umeed mat banao — YE IS ARTICLE KI JAAN HAI kyunki baaki websites clickbait karti hain. Phir: list mein naam kaise dekhein, shikayat (grievance) ka status kaise check karein, aur agar naam nahi hai to kya kar sakte hain. Eligibility ki asli shartein (₹1 lakh tak, 2016 se pehle ka loan — verify karo). Koi table zaroori nahi, ek eligibility checklist chalega (✓/✗ style). FAQs mein "naya karj mafi kab aayega" ka imandaar jawab. Internal links: `/articles/PmKisanMasterGuide2026`, `/articles/PmKisanPaymentFailedFix2026`, `/rajya-yojana/up-kisan-karj-rahat-list-2026`.
 
-## 13. iKhedut Portal Status Check 2026 (Gujarat)
+## 13. ~~iKhedut Portal Status Check 2026 (Gujarat)~~ ✅ DONE
 
 - Hinglish slug: `rajya-yojana/ikhedut-portal-status-check-2026` · State: Gujarat · Portal: ikhedut.gujarat.gov.in
 - Suggested Hindi slug: `hi/ikhedut-portal-status`
