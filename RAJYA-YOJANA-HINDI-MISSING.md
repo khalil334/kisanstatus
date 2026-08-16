@@ -3,8 +3,8 @@
 Source: `lib/rajya-yojana-data.ts` vs `lib/hindi-hreflang.ts` + `lib/hindi-articles-data.ts`
 
 - Total rajya-yojana articles: 15 (sab live)
-- Hindi version maujood: 12 (MP Kisan Kalyan, Namo Shetkari, Rajasthan Kisan Samman Nidhi, Annadata Sukhibhava, Rythu Bharosa, Krishak Bandhu, Odisha CM Kisan, Pati-Patni PM Kisan Rule, State Yojana List, Krishak Unnati, Meri Fasal Mera Byora, Bihar DBT)
-- Hindi version MISSING: 3 (neeche list + har ek ka alag writing prompt; DONE wale tick ho chuke hain)
+- Hindi version maujood: 12 (MP Kisan Kalyan, Namo Shetkari, Rajasthan Kisan Samman Nidhi, Annadata Sukhibhava, Rythu Bharosa, Krishak Bandhu, Odisha CM Kisan, Pati-Patni PM Kisan Rule, State Yojana List, Krishak Unnati, Meri Fasal Mera Byora, Bihar DBT, Parihara)
+- Hindi version MISSING: 2 (neeche list + har ek ka alag writing prompt; DONE wale tick ho chuke hain)
 
 ## Common rules (har prompt ke saath lagu hongi)
 
@@ -108,7 +108,7 @@ Ye registration-to-MSP-payment ka poora safar wala article hai — timeline stru
 **Prompt:**
 Bihar ka DBT portal ek chhata (umbrella) hai — registration ek, schemes kai (diesel anudan, krishi input anudan, beej anudan...). Article ka core: 13-digit kisan panjikaran sankhya — kaise nikale agar bhool gaye (mobile/aadhaar se), aur usse har scheme ka status kaise dekhe. Har major anudan ka apna chhota section: kya milta hai, kab apply hota hai, status kahan dikhega. Ye article FAQ-heavy banao — 7 FAQs tak chalega kyunki Bihar ke kisano ke sawal bahut specific hote hain ("CSC wale ne registration kiya tha, number nahi diya" type real situations). Table optional — agar anudan amounts confirm kar pao to hi banao. Internal links: `/articles/PmKisanMasterGuide2026`, `/articles/PmKisanPaymentFailedFix2026`, `/rajya-yojana/bihar-kisan-registration-status-check-2026`.
 
-## 11. Parihara Payment Status Check 2026 (Karnataka)
+## 11. ~~Parihara Payment Status Check 2026 (Karnataka)~~ ✅ DONE
 
 - Hinglish slug: `rajya-yojana/parihara-payment-status-check-2026` · State: Karnataka · Portal: parihara.karnataka.gov.in
 - Suggested Hindi slug: `hi/parihara-payment-status`
