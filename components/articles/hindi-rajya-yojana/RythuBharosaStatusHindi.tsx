@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HindiRelatedFooter from '@/components/HindiRelatedFooter';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
@@ -263,27 +264,16 @@ export default function RythuBharosaStatusHindi({ article }: { article: HindiArt
         ))}
       </div>
 
-      <div className="mt-8 p-4 bg-[var(--color-bg-alt)] rounded-xl text-sm">
-        <p className="font-bold mb-2">आगे पढ़ने लायक:</p>
-        <ul className="space-y-1 list-disc pl-5">
-          <li>
-            <Link href="/articles/PmKisanMasterGuide2026">पीएम किसान — पूरी मास्टर गाइड</Link>
-          </li>
-          <li>
-            <Link href="/articles/PmKisanBeneficiaryList2026">लाभार्थी सूची में नाम कैसे देखें</Link>
-          </li>
-          <li>
-            <Link href="/rajya-yojana/rythu-bharosa-status-check-2026">
-              Rythu Bharosa Status Check — Hinglish version
-            </Link>
-          </li>
-          <li>
-            <Link href="/articles/hi/annadata-sukhibhava-status">
-              अन्नदाता सुखीभव (आंध्र प्रदेश) — ₹20,000 का हिसाब
-            </Link>
-          </li>
-        </ul>
-      </div>
+      <HindiRelatedFooter
+        heading="आगे पढ़ने लायक:"
+        compact={true}
+        links={[
+        { href: '/articles/PmKisanMasterGuide2026', label: 'पीएम किसान — पूरी मास्टर गाइड' },
+        { href: '/articles/PmKisanBeneficiaryList2026', label: 'लाभार्थी सूची में नाम कैसे देखें' },
+        { href: '/rajya-yojana/rythu-bharosa-status-check-2026', label: 'Rythu Bharosa Status Check — Hinglish version' },
+        { href: '/articles/hi/annadata-sukhibhava-status', label: 'अन्नदाता सुखीभव (आंध्र प्रदेश) — ₹20,000 का हिसाब' },
+      ]}
+      />
     </>
   );
 }

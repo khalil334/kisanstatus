@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HindiRelatedFooter from '@/components/HindiRelatedFooter';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
@@ -229,27 +230,16 @@ export default function KrishakBandhuStatusHindi({ article }: { article: HindiAr
         ))}
       </div>
 
-      <div className="mt-8 p-4 bg-[var(--color-bg-alt)] rounded-xl text-sm">
-        <p className="font-bold mb-2">आगे पढ़ने लायक:</p>
-        <ul className="space-y-1 list-disc pl-5">
-          <li>
-            <Link href="/articles/PmKisanMasterGuide2026">पीएम किसान — पूरी मास्टर गाइड</Link>
-          </li>
-          <li>
-            <Link href="/articles/PmKisanCorrectionForm2026">पीएम किसान करेक्शन फॉर्म — गलती कैसे सुधारें</Link>
-          </li>
-          <li>
-            <Link href="/rajya-yojana/krishak-bandhu-status-check-2026">
-              Krishak Bandhu Status Check — Hinglish version
-            </Link>
-          </li>
-          <li>
-            <Link href="/articles/hi/rythu-bharosa-status">
-              रायथु भरोसा (तेलंगाना) — ₹12,000 प्रति एकड़ का हिसाब
-            </Link>
-          </li>
-        </ul>
-      </div>
+      <HindiRelatedFooter
+        heading="आगे पढ़ने लायक:"
+        compact={true}
+        links={[
+        { href: '/articles/PmKisanMasterGuide2026', label: 'पीएम किसान — पूरी मास्टर गाइड' },
+        { href: '/articles/PmKisanCorrectionForm2026', label: 'पीएम किसान करेक्शन फॉर्म — गलती कैसे सुधारें' },
+        { href: '/rajya-yojana/krishak-bandhu-status-check-2026', label: 'Krishak Bandhu Status Check — Hinglish version' },
+        { href: '/articles/hi/rythu-bharosa-status', label: 'रायथु भरोसा (तेलंगाना) — ₹12,000 प्रति एकड़ का हिसाब' },
+      ]}
+      />
     </>
   );
 }

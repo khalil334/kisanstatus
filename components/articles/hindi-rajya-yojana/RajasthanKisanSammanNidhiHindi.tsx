@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HindiRelatedFooter from '@/components/HindiRelatedFooter';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
@@ -344,25 +345,15 @@ export default function RajasthanKisanSammanNidhiHindi({ article }: { article: H
         तक के सरकारी स्रोतों से मिलान की गई है।)
       </p>
 
-      <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
-        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">इससे जुड़े बाकी लेख</h3>
-        <ul className="list-disc pl-5 space-y-1.5 text-sm">
-          <li>
-            <Link href="/articles/PmKisanMasterGuide2026">पीएम किसान — पूरी मास्टर गाइड</Link>
-          </li>
-          <li>
-            <Link href="/articles/PmKisan24viKist2026">पीएम किसान की अगली किस्त का हिसाब</Link>
-          </li>
-          <li>
-            <Link href="/rajya-yojana/rajasthan-kisan-samman-nidhi-9000">
-              Rajasthan Kisan Samman Nidhi — Hinglish version
-            </Link>
-          </li>
-          <li>
-            <Link href="/articles/hi/mp-kisan-kalyan-yojana">MP किसान कल्याण योजना — ₹12,000 का हिसाब</Link>
-          </li>
-        </ul>
-      </div>
+      <HindiRelatedFooter
+        heading="इससे जुड़े बाकी लेख"
+        links={[
+        { href: '/articles/PmKisanMasterGuide2026', label: 'पीएम किसान — पूरी मास्टर गाइड' },
+        { href: '/articles/PmKisan24viKist2026', label: 'पीएम किसान की अगली किस्त का हिसाब' },
+        { href: '/rajya-yojana/rajasthan-kisan-samman-nidhi-9000', label: 'Rajasthan Kisan Samman Nidhi — Hinglish version' },
+        { href: '/articles/hi/mp-kisan-kalyan-yojana', label: 'MP किसान कल्याण योजना — ₹12,000 का हिसाब' },
+      ]}
+      />
     </>
   );
 }
