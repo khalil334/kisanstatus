@@ -3,8 +3,8 @@
 Source: `lib/rajya-yojana-data.ts` vs `lib/hindi-hreflang.ts` + `lib/hindi-articles-data.ts`
 
 - Total rajya-yojana articles: 15 (sab live)
-- Hindi version maujood: 8 (MP Kisan Kalyan, Namo Shetkari, Rajasthan Kisan Samman Nidhi, Annadata Sukhibhava, Rythu Bharosa, Krishak Bandhu, Odisha CM Kisan, Pati-Patni PM Kisan Rule)
-- Hindi version MISSING: 7 (neeche list + har ek ka alag writing prompt; DONE wale tick ho chuke hain)
+- Hindi version maujood: 12 (MP Kisan Kalyan, Namo Shetkari, Rajasthan Kisan Samman Nidhi, Annadata Sukhibhava, Rythu Bharosa, Krishak Bandhu, Odisha CM Kisan, Pati-Patni PM Kisan Rule, State Yojana List, Krishak Unnati, Meri Fasal Mera Byora, Bihar DBT)
+- Hindi version MISSING: 3 (neeche list + har ek ka alag writing prompt; DONE wale tick ho chuke hain)
 
 ## Common rules (har prompt ke saath lagu hongi)
 
@@ -100,7 +100,7 @@ CG ke dhan (paddy) kisano ke liye likho — ye scheme dhan bechne se judi hai, i
 **Prompt:**
 Ye registration-to-MSP-payment ka poora safar wala article hai — timeline structure use karo (registration → verification → gate pass → e-kharid → payment), har stage ek section. Family ID (PPP) ka role clearly samjhao kyunki Haryana mein sab kuch usi se chalta hai. Last date miss hone par kya option bachta hai — ye section imandaari se likho (agar koi option nahi to saaf bolo). Gate pass ka process detail mein — mandi jaane se pehle kya-kya saath le jana hai. Table sirf important dates/deadlines ke liye (verify karo current season ki dates — galat date mat likhna, agar confirm na ho to "portal pe check karein" bolo). FAQs mein family ID mismatch aur payment delay wale sawal. Internal links: `/articles/PmKisanMasterGuide2026`, `/articles/PmKisanPaymentFailedFix2026`, `/rajya-yojana/meri-fasal-mera-byora-status-check-2026`.
 
-## 10. DBT Agriculture Bihar Status Check 2026
+## 10. ~~DBT Agriculture Bihar Status Check 2026~~ ✅ DONE
 
 - Hinglish slug: `rajya-yojana/bihar-kisan-registration-status-check-2026` · State: Bihar · Portal: dbtagriculture.bihar.gov.in
 - Suggested Hindi slug: `hi/bihar-kisan-registration-status`
