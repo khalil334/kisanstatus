@@ -12,18 +12,19 @@ Ye rules HAR article par apply hoti hain — prompt ke saath copy karo:
 
 1. **Language**: Pure Hindi (Devanagari) mein likho, lekin technical words (status, portal, OTP, eKYC, list) English mein natural jagah pe aane do — jaise gaon ka padha-likha aadmi bolta hai.
 2. **Length**: 2000+ words. Lekin words ginne ke liye faltu padding mat karo — har section mein kaam ki baat ho.
-3. **Facts**: Sirf real info. Likhne se pehle official portal khol ke verify karo (portal har prompt mein diya hai). Amount, dates, process steps — jo confirm na ho, wo mat likho. Andaza lagana mana hai.
+3. **Facts — real info with VERIFIED source (zaroori)**: Sirf real info. Likhne se pehle official portal khol ke verify karo (portal har prompt mein diya hai). Amount, dates, process steps — jo confirm na ho, wo mat likho. Andaza lagana mana hai. **Har major fact (amount, kist date, eligibility rule) ka source article ke text mein naturally mention karo** — jaise "official portal (fasal.haryana.gov.in) ke mutabik..." ya "sarkari notification mein saaf likha hai ki...". Bina source ke koi number nahi. Agar do sources mein alag figures milen to jo official portal kehta hai wahi likho.
 4. **Human style — sabse zaroori**:
    - Paragraph lengths alag-alag rakho — kahin 1 line, kahin 5-6 line. Uniform blocks bilkul nahi.
    - AI-type repetitive keyword stuffing mat karo. Main keyword pura article mein 4-6 baar se zyada na aaye, aur har baar alag tarah se sentence mein ghula ho.
    - "Is article mein hum janenge...", "Nishkarsh", "Antim shabd", "Yah dhyan dena mahatvapurna hai" — aise robotic phrases BAN hain.
-   - 1-2 chhoti natural typo/spelling mistakes chhod do (jaise 'किस्त' ki jagah kahin 'किश्त', ya matra ki halki galti) — lekin 2-3 se zyada nahi, warna padhne mein kharab lagega.
+   - **Insano jaisi typo/spelling mistakes ZAROOR daalo — har article mein 2-3 chhoti natural galtiyan** (jaise 'किस्त' ki jagah kahin 'किश्त', matra ki halki galti, kahin space ki galti, ya ek English word ki spelling thodi off — 'recieve' type). Ye galtiyan sirf aam text mein ho — amounts, dates, portal URLs, scheme names mein KABHI nahi. 3-4 se zyada bhi mat karo warna article ganda lagega.
    - Kahin-kahin personal touch — "mere gaon ke ek kisan ne bataya...", "maine khud portal khol ke dekha to...".
    - Har article ka structure DUSRE articles se alag ho — same heading pattern repeat mat karo.
 5. **Tables**: Sirf wahan use karo jahan sach mein data compare ho raha ho (kist dates, amounts, documents). Har article mein table zaroori nahi.
 6. **FAQs**: 4-7 FAQs, lekin sawal wahi jo kisan sach mein Google/WhatsApp pe poochte hain. Ratta-mara "Q: yojana kya hai?" type nahi.
 7. **Internal links**: Har prompt mein diye gaye related paths ko naturally text ke beech mein lagao — "links" section alag se mat banao.
 8. **File placement**: Component `components/articles/hindi-yojana/` mein banega, entry `lib/hindi-articles-data.ts` mein, mapping `lib/hindi-hreflang.ts` mein. Existing Hinglish article (`app/rajya-yojana/<slug>`) ko FACT source ki tarah use karo lekin usse copy-paste ya line-by-line translate BILKUL mat karo — naya likhna hai.
+9. **Workflow — ek article, ek push**: Har article COMPLETE hote hi (component + data entry + hreflang mapping + build pass) turant GitHub (github.com/khalil334/kisanstatus) par push karo. Sab articles jama karke ek saath push nahi karna — 1 article = 1 commit = 1 push.
 
 ---
 
