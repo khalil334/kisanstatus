@@ -429,6 +429,27 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     component: 'StateKisanYojanaListHindi',
     ogImage: '/images/articles/rajya-yojna/state-kisan-yojana-list-all-states-2026/hero.webp',
   },
+  {
+    slug: 'hi/krishak-unnati-yojana-status',
+    titleHi: 'कृषक उन्नति योजना स्टेटस 2026 — अंतर राशि कब और कितनी मिलेगी?',
+    seoTitleHi: 'कृषक उन्नति योजना स्टेटस — अंतर राशि 2026',
+    desc: 'छत्तीसगढ़ में धान बेचा है? ₹3,100 प्रति क्विंटल तक की अंतर राशि का पूरा हिसाब, एकमुश्त भुगतान का नया नियम, स्टेटस चेक और नया ₹15,000 प्रति एकड़ वाला फायदा — सब एक जगह।',
+    keywords: [
+      'कृषक उन्नति योजना',
+      'krishak unnati yojana status check',
+      'अंतर राशि कब आएगी 2026',
+      'dhan antar rashi chhattisgarh',
+      'धान खरीदी अंतर राशि स्टेटस',
+      'krishak unnati yojana 15000 per acre',
+      'छत्तीसगढ़ धान 3100 प्रति क्विंटल',
+    ],
+    category: 'status-check',
+    publishedTime: '2026-08-17T15:30:00+05:30',
+    modifiedTime: '2026-08-17T15:30:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'KrishakUnnatiYojanaStatusHindi',
+    ogImage: '/images/articles/rajya-yojna/krishak-unnati-yojana-status-check-2026/hero.webp',
+  },
 ] as const;
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(
