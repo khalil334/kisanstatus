@@ -20,6 +20,7 @@ export const HINDI_TO_HINGLISH: Readonly<Record<string, string>> = {
   'meri-fasal-mera-byora-status': '/rajya-yojana/meri-fasal-mera-byora-status-check-2026',
   'bihar-kisan-registration-status': '/rajya-yojana/bihar-kisan-registration-status-check-2026',
   'parihara-payment-status': '/rajya-yojana/parihara-payment-status-check-2026',
+  'up-kisan-karj-rahat-list': '/rajya-yojana/up-kisan-karj-rahat-list-2026',
 };
 
 export const HINGLISH_TO_HINDI: Readonly<Record<string, string>> = Object.freeze(

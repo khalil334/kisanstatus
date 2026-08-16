@@ -3,8 +3,8 @@
 Source: `lib/rajya-yojana-data.ts` vs `lib/hindi-hreflang.ts` + `lib/hindi-articles-data.ts`
 
 - Total rajya-yojana articles: 15 (sab live)
-- Hindi version maujood: 12 (MP Kisan Kalyan, Namo Shetkari, Rajasthan Kisan Samman Nidhi, Annadata Sukhibhava, Rythu Bharosa, Krishak Bandhu, Odisha CM Kisan, Pati-Patni PM Kisan Rule, State Yojana List, Krishak Unnati, Meri Fasal Mera Byora, Bihar DBT, Parihara)
-- Hindi version MISSING: 2 (neeche list + har ek ka alag writing prompt; DONE wale tick ho chuke hain)
+- Hindi version maujood: 12 (MP Kisan Kalyan, Namo Shetkari, Rajasthan Kisan Samman Nidhi, Annadata Sukhibhava, Rythu Bharosa, Krishak Bandhu, Odisha CM Kisan, Pati-Patni PM Kisan Rule, State Yojana List, Krishak Unnati, Meri Fasal Mera Byora, Bihar DBT, Parihara, UP Karj Rahat)
+- Hindi version MISSING: 1 (neeche list + har ek ka alag writing prompt; DONE wale tick ho chuke hain)
 
 ## Common rules (har prompt ke saath lagu hongi)
 
@@ -116,7 +116,7 @@ Bihar ka DBT portal ek chhata (umbrella) hai — registration ek, schemes kai (d
 **Prompt:**
 Ye disaster-compensation (fasal nuksan muavza) article hai — tone thodi empathetic rakho, ye kisan pareshan hoke search karta hai (sukha/baadh ke baad). Opening: "fasal kharab hui hai aur muavze ka status dekhna hai — 2 minute mein bata dete hain." Village-wise list aur aadhaar number — dono tareeke alag-alag sections mein. FRUITS ID kya hai aur kyun zaroori hai — Karnataka-specific cheez, isko achhe se samjhao. Kitna muavza milta hai (SDRF/NDRF rates — verify karo, ye rates official hain aur galat likhna serious hai). Table sirf rates ke liye. FAQs mein "list mein naam hai par paisa nahi aaya" aur "FRUITS ID nahi bana" wale sawal. Internal links: `/articles/PmKisanMasterGuide2026`, `/articles/PmKisanPaymentFailedFix2026`, `/rajya-yojana/parihara-payment-status-check-2026`.
 
-## 12. UP Kisan Karj Rahat List 2026
+## 12. ~~UP Kisan Karj Rahat List 2026~~ ✅ DONE
 
 - Hinglish slug: `rajya-yojana/up-kisan-karj-rahat-list-2026` · State: Uttar Pradesh · Portal: upkisankarjrahat.upsdc.gov.in
 - Suggested Hindi slug: `hi/up-kisan-karj-rahat-list`
