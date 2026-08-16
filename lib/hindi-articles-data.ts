@@ -450,6 +450,27 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     component: 'KrishakUnnatiYojanaStatusHindi',
     ogImage: '/images/articles/rajya-yojna/krishak-unnati-yojana-status-check-2026/hero.webp',
   },
+  {
+    slug: 'hi/meri-fasal-mera-byora-status',
+    titleHi: 'मेरी फसल मेरा ब्योरा स्टेटस 2026 — रजिस्ट्रेशन से MSP भुगतान तक',
+    seoTitleHi: 'मेरी फसल मेरा ब्योरा स्टेटस चेक 2026 — Gate Pass Tak',
+    desc: 'हरियाणा में fasal.haryana.gov.in पर स्टेटस चेक, पटवारी सत्यापन, गेट पास और MSP भुगतान अटकने की 4 वजहें — पांच पड़ावों में पूरा सफर, फैमिली ID की भूमिका समेत।',
+    keywords: [
+      'मेरी फसल मेरा ब्योरा',
+      'meri fasal mera byora status check',
+      'मेरी फसल मेरा ब्योरा स्टेटस',
+      'fasal haryana gov in रजिस्ट्रेशन',
+      'गेट पास हरियाणा मंडी',
+      'फैमिली आईडी से फसल रजिस्ट्रेशन',
+      'mfmb status check',
+    ],
+    category: 'status-check',
+    publishedTime: '2026-08-16T19:30:00+05:30',
+    modifiedTime: '2026-08-16T19:30:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'MeriFasalMeraByoraStatusHindi',
+    ogImage: '/images/articles/rajya-yojna/meri-fasal-mera-byora-status-check-2026/hero.webp',
+  },
 ] as const;
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(
