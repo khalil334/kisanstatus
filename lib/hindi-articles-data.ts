@@ -276,3 +276,7 @@ function hindiFreshnessTime(a: HindiArticle): number {
 export function getHindiArticlesByFreshness(): readonly HindiArticle[] {
   return [...HINDI_ARTICLES].sort((a, b) => hindiFreshnessTime(b) - hindiFreshnessTime(a));
 }
+
+export function getHindiArticlesByCategory(category: HindiArticle['category']): readonly HindiArticle[] {
+  return getHindiArticlesByFreshness().filter((a) => a.category === category);
+}

@@ -246,6 +246,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
+  const hindiCategoryPages: MetadataRoute.Sitemap = Object.keys(CATEGORIES)
+    .filter((category) => HINDI_ARTICLES.some((a) => a.category === category))
+    .map((category) => {
+      const categoryArticles = HINDI_ARTICLES.filter((a) => a.category === category);
+      const latest = [...categoryArticles].sort((a, b) =>
+        new Date(b.modifiedTime || b.publishedTime).getTime() -
+        new Date(a.modifiedTime || a.publishedTime).getTime()
+      )[0];
+
+      return {
+        url: `${SITE_URL}/articles/hi/category/${category}`,
+        lastModified: latest
+          ? clampToNow(new Date(latest.modifiedTime || latest.publishedTime))
+          : now,
+        changeFrequency: 'weekly' as const,
+        priority: 0.60,
+      };
+    });
+
   const articlePages: MetadataRoute.Sitemap = ALL_ARTICLES.map((article) => {
     const modified = article.modifiedTime || article.publishedTime;
     const modifiedDate = modified ? clampToNow(new Date(modified)) : now;
@@ -262,6 +281,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages,
     ...categoryPages,
+    ...hindiCategoryPages,
     ...articlePages,
   ];
 }
