@@ -321,6 +321,28 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     component: 'AnnadataSukhibhavaStatusHindi',
     ogImage: '/images/articles/rajya-yojna/annadata-sukhibhava-status-check-2026/hero.webp',
   },
+  {
+    slug: 'hi/rythu-bharosa-status',
+    titleHi: 'रायथु भरोसा स्थिति — बंधु से भरोसा तक, ₹12,000 प्रति एकड़ का हिसाब',
+    seoTitleHi: 'रायथु भरोसा स्थिति — ₹12,000 प्रति एकड़ का हिसाब',
+    desc: 'तेलंगाना की रायथु भरोसा से ₹6,000 प्रति एकड़ हर मौसम — रायथु बंधु से असली फर्क, चरणों में भुगतान का सिस्टम, आधार से स्थिति देखने का तरीका, और भू भारती रिकॉर्ड की रुकावटें।',
+    keywords: [
+      'रायथु भरोसा स्थिति',
+      'rythu bharosa status check',
+      'रायथु बंधु बनाम रायथु भरोसा',
+      'rythu bharosa 12000 per acre',
+      'rythu bharosa beneficiary list',
+      'रायथु भरोसा किस्त कब आएगी',
+      'rythu bharosa telangana kist',
+      'भू भारती जमीन रिकॉर्ड तेलंगाना',
+    ],
+    category: 'status-check',
+    publishedTime: '2026-08-16T23:45:00+05:30',
+    modifiedTime: '2026-08-16T23:45:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'RythuBharosaStatusHindi',
+    ogImage: '/images/articles/rajya-yojna/rythu-bharosa-status-check-2026/hero.webp',
+  },
 ] as const;
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(
