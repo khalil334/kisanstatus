@@ -3,8 +3,8 @@
 Source: `lib/rajya-yojana-data.ts` vs `lib/hindi-hreflang.ts` + `lib/hindi-articles-data.ts`
 
 - Total rajya-yojana articles: 15 (sab live)
-- Hindi version maujood: 2 (MP Kisan Kalyan Yojana → `hi/mp-kisan-kalyan-yojana`, Namo Shetkari → `hi/namo-shetkari-yojana`)
-- Hindi version MISSING: 13 (neeche list + har ek ka alag writing prompt)
+- Hindi version maujood: 7 (MP Kisan Kalyan, Namo Shetkari, Rajasthan Kisan Samman Nidhi, Annadata Sukhibhava, Rythu Bharosa, Krishak Bandhu, Odisha CM Kisan)
+- Hindi version MISSING: 8 (neeche list + har ek ka alag writing prompt; DONE wale tick ho chuke hain)
 
 ## Common rules (har prompt ke saath lagu hongi)
 
@@ -28,7 +28,7 @@ Ye rules HAR article par apply hoti hain — prompt ke saath copy karo:
 
 ---
 
-## 1. Rajasthan Kisan Samman Nidhi 2026
+## 1. ~~Rajasthan Kisan Samman Nidhi 2026~~ ✅ DONE
 
 - Hinglish slug: `rajya-yojana/rajasthan-kisan-samman-nidhi-9000` · State: Rajasthan · Portal: rajkisan.rajasthan.gov.in (verify karo)
 - Suggested Hindi slug: `hi/rajasthan-kisan-samman-nidhi`
@@ -36,7 +36,7 @@ Ye rules HAR article par apply hoti hain — prompt ke saath copy karo:
 **Prompt:**
 Ek Rajasthan ke kisan ki nazar se likho jo ye jaanna chahta hai ki uske ₹2000 wali PM Kisan kist ke UPAR Rajasthan sarkar kitna extra de rahi hai aur kab. Article ki shuruaat ek seedhe jawab se karo — kitna paisa, kab-kab — phir detail mein jao. Cover karo: badhi hui rashi ka break-up (PM Kisan + state top-up), kist ka schedule, status check karne ka tareeka (jan aadhaar se), aur wo 3-4 common wajah jinse Rajasthan ke kisano ka paisa atakta hai. Ek chhota table sirf amount break-up ke liye. FAQs mein "jan aadhaar link nahi hai to kya karein" jaise practical sawal. Internal links: `/articles/PmKisanMasterGuide2026`, `/articles/PmKisan24viKist2026`, aur Hinglish version `/rajya-yojana/rajasthan-kisan-samman-nidhi-9000`. Keywords naturally: rajasthan kisan samman nidhi, mukhyamantri kisan samman nidhi rajasthan.
 
-## 2. Annadata Sukhibhava Status Check 2026
+## 2. ~~Annadata Sukhibhava Status Check 2026~~ ✅ DONE
 
 - Hinglish slug: `rajya-yojana/annadata-sukhibhava-status-check-2026` · State: Andhra Pradesh · Portal: annadathasukhibhava.ap.gov.in
 - Suggested Hindi slug: `hi/annadata-sukhibhava-status`
@@ -44,7 +44,7 @@ Ek Rajasthan ke kisan ki nazar se likho jo ye jaanna chahta hai ki uske ₹2000 
 **Prompt:**
 Ye article un Hindi-bhashi kisano ke liye hai jo AP mein rehte hain ya jinke rishtedaar wahan zameen rakhte hain. Story-style opening lo — YSR Rythu Bharosa ka naam badal ke Annadata Sukhibhava kaise hua, aur isse aam kisan ko kya farak pada. Phir: CCRC card (tenant farmers) ka concept saaf-saaf samjhao kyunki ye is scheme ki sabse confusing cheez hai, status check ka step-by-step (screenshots-jaisi detail se, portal ke asli menu names use karo), payment kitne installments mein aata hai, aur eligibility. Table sirf installment schedule ke liye. FAQs mein tenant farmer wale sawal zaroor ho. Internal links: `/articles/PmKisanMasterGuide2026`, `/articles/PmKisanBeneficiaryList2026`, `/rajya-yojana/annadata-sukhibhava-status-check-2026`.
 
-## 3. Rythu Bharosa Status Check 2026 (Telangana)
+## 3. ~~Rythu Bharosa Status Check 2026 (Telangana)~~ ✅ DONE
 
 - Hinglish slug: `rajya-yojana/rythu-bharosa-status-check-2026` · State: Telangana · Portal: rythubharosa.telangana.gov.in (verify karo)
 - Suggested Hindi slug: `hi/rythu-bharosa-status`
@@ -52,7 +52,7 @@ Ye article un Hindi-bhashi kisano ke liye hai jo AP mein rehte hain ya jinke ris
 **Prompt:**
 Sabse pehla kaam: Rythu Bandhu vs Rythu Bharosa ka confusion khatam karo — ye article ka core hai kyunki log dono ko mila dete hain. Comparison ek chhote table mein. Phir per-acre amount (verify karo current rate), phase-wise payment kaise hota hai, status check ka tareeka, aur beneficiary list mein naam kaise dhundhein. Ek section un kisano ke liye jinka paisa aana band ho gaya — land records (Dharani portal) ka connection samjhao. Opening mein koi table ya list nahi — 2-3 line ka seedha, baat-cheet jaisa intro. FAQs 5 se zyada nahi. Internal links: `/articles/PmKisanMasterGuide2026`, `/articles/PmKisanBeneficiaryList2026`, `/rajya-yojana/rythu-bharosa-status-check-2026`.
 
-## 4. Krishak Bandhu Status Check 2026 (West Bengal)
+## 4. ~~Krishak Bandhu Status Check 2026 (West Bengal)~~ ✅ DONE
 
 - Hinglish slug: `rajya-yojana/krishak-bandhu-status-check-2026` · State: West Bengal · Portal: krishakbandhu.wb.gov.in
 - Suggested Hindi slug: `hi/krishak-bandhu-status`
@@ -60,7 +60,7 @@ Sabse pehla kaam: Rythu Bandhu vs Rythu Bharosa ka confusion khatam karo — ye 
 **Prompt:**
 Is article ki khaas baat: voter ID se status check — ye WB ka unique system hai, isko hero banao. Step-by-step process portal ke asli field names ke saath. Phir do alag benefits saaf-saaf alag karo: saalana paisa (Rabi/Kharif do kist) aur death benefit (₹2 lakh — verify karo). Death benefit wala section sensitively likho, ek chhoti kahani-nu ma andaz mein. Amounts ka ek table (zameen ke hisab se kitna milta hai). FAQs mein "voter card number se check nahi ho raha" aur "death benefit ka claim kaise karein" zaroor ho. Bangla word 'কৃষক বন্ধু' ek baar mention kar do search ke liye. Internal links: `/articles/PmKisanMasterGuide2026`, `/articles/PmKisanCorrectionForm2026`, `/rajya-yojana/krishak-bandhu-status-check-2026`.
 
-## 5. Odisha CM Kisan Status Check 2026
+## 5. ~~Odisha CM Kisan Status Check 2026~~ ✅ DONE
 
 - Hinglish slug: `rajya-yojana/odisha-cm-kisan-status-check-2026` · State: Odisha · Portal: cmkisan.odisha.gov.in
 - Suggested Hindi slug: `hi/odisha-cm-kisan-status`
