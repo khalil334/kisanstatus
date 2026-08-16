@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getHindiArticlesByFreshness, HINDI_ARTICLES } from '@/lib/hindi-articles-data';
+import type { CategorySlug } from '@/lib/categories';
 import { CATEGORIES } from '@/lib/articles-data';
 import {
   SITE_URL,
@@ -152,6 +153,19 @@ export default function HindiArticlesHubPage() {
             <p className="text-gray-600 dark:text-gray-400 mt-3 text-lg max-w-2xl">
               पीएम किसान, कर्ज माफी, सब्सिडी, KCC और मंडी भाव — सभी {articles.length} गाइड आसान हिंदी में, step-by-step।
             </p>
+            <div className="flex flex-wrap gap-3 mt-6">
+              {(Object.keys(CATEGORIES) as CategorySlug[])
+                .filter((c) => HINDI_ARTICLES.some((a) => a.category === c))
+                .map((c) => (
+                  <Link
+                    key={c}
+                    href={`/articles/hi/category/${c}`}
+                    className="inline-flex items-center gap-2 text-sm font-bold px-4 py-2 rounded-full bg-white dark:bg-gray-800 text-amber-800 dark:text-amber-300 border border-amber-200/60 dark:border-gray-700 hover:border-amber-400 dark:hover:border-amber-500 shadow-sm transition-colors"
+                  >
+                    {CATEGORIES[c].nameHi}
+                  </Link>
+                ))}
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -184,10 +198,13 @@ export default function HindiArticlesHubPage() {
                     </div>
                   </div>
                   <div className="p-6 flex flex-col flex-1">
-                    <span className="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/30 dark:to-orange-900/30 text-amber-700 dark:text-amber-300 w-fit mb-4 border border-amber-200/50 dark:border-amber-700/50">
+                    <Link
+                      href={`/articles/hi/category/${a.category}`}
+                      className="relative z-10 inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-900/30 dark:to-orange-900/30 text-amber-700 dark:text-amber-300 w-fit mb-4 border border-amber-200/50 dark:border-amber-700/50 hover:border-amber-400 dark:hover:border-amber-500 transition-colors"
+                    >
                       {emoji ? <span className="text-base" aria-hidden="true">{emoji}</span> : null}
                       <span>{categoryName}</span>
-                    </span>
+                    </Link>
                     <h2 className="font-bold text-gray-900 dark:text-white text-lg leading-snug group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors duration-300 mb-3 line-clamp-2">
                       {a.titleHi}
                     </h2>
