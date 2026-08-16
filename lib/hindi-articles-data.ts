@@ -513,6 +513,27 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     component: 'PariharaPaymentStatusHindi',
     ogImage: '/images/articles/rajya-yojna/parihara-payment-status-check-2026/hero.webp',
   },
+  {
+    slug: 'hi/up-kisan-karj-rahat-list',
+    titleHi: 'UP किसान कर्ज राहत लिस्ट 2026 — नई माफी का सच और नाम देखने का तरीका',
+    seoTitleHi: 'UP किसान कर्ज राहत लिस्ट 2026 — Rin Mochan Status',
+    desc: 'क्या 2026 में नई कर्ज माफी आई है? ईमानदार जवाब, साथ में upkisankarjrahat.upsdc.gov.in पर लिस्ट में नाम देखने, शिकायत और fake लिंक से बचने का पूरा रास्ता।',
+    keywords: [
+      'UP किसान कर्ज राहत लिस्ट',
+      'up kisan karj rahat list 2026',
+      'किसान रिण मोचन योजना स्टेटस',
+      'कर्ज माफी लिस्ट में नाम कैसे देखें',
+      'upkisankarjrahat upsdc gov in',
+      'यूपी कर्ज माफी नई लिस्ट',
+      'kisan karj mafi up shikayat status',
+    ],
+    category: 'status-check',
+    publishedTime: '2026-08-16T23:30:00+05:30',
+    modifiedTime: '2026-08-16T23:30:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'UpKisanKarjRahatListHindi',
+    ogImage: '/images/articles/rajya-yojna/up-kisan-karj-rahat-list-2026/hero.webp',
+  },
 ] as const;
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(
