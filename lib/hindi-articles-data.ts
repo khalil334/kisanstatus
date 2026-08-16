@@ -1,5 +1,8 @@
-import { AUTHOR_NAME } from '@/lib/site-config';
 import { HINDI_RAJYA_YOJANA_ARTICLES } from '@/lib/hindi-rajya-yojana-data';
+import { HINDI_YOJANA_ARTICLES } from '@/lib/hindi-yojana-data';
+import { HINDI_KISANGUIDES_ARTICLES } from '@/lib/hindi-kisanguides-data';
+import { HINDI_LOAN_MANDI_PASHUPALAN_ARTICLES } from '@/lib/hindi-loan-mandi-pashupalan-data';
+
 export interface HindiArticle {
   slug: string;
   titleHi: string;
@@ -14,254 +17,24 @@ export interface HindiArticle {
   ogImage: string;
 }
 
-export const HINDI_CORE_ARTICLES: readonly HindiArticle[] = [
-  ] = [
-  {
-    slug: 'hi/pm-kisan-25vi-kist',
-    titleHi: 'पीएम किसान 25वीं किस्त कब आएगी? Date और Latest Update',
-    seoTitleHi: 'पीएम किसान 25वीं किस्त कब आएगी — Date Update',
-    desc: 'किस्त की तारीख का इंतजार है? 25वीं किस्त की latest स्थिति, और वो तीन चीजें — eKYC, बैंक seeding, land seeding — जिनमें से एक भी अटकी हो तो पैसा रुक जाता है।',
-    keywords: [
-      'पीएम किसान 25वीं किस्त',
-      'pm kisan 25th installment date',
-      'पीएम किसान किस्त कब आएगी',
-      'pm kisan kist kab aayegi 2027',
-      'पीएम किसान किस्त नहीं आई क्या करें',
-      'pm kisan beneficiary list me naam nahi hai',
-      'pm kisan kist ka sms nahi aaya',
-      'पीएम किसान किस्त ₹2000 कब बढ़ेगी',
-      'pm kisan ekyc bank seeding land seeding check',
-    ],
-    category: 'status-check',
-    publishedTime: '2026-07-27T20:05:06+05:30',
-    modifiedTime: '2026-08-05T12:35:35+05:30',
-    author: AUTHOR_NAME,
-    component: 'PmKisan25viKistKabAayegi',
-    ogImage: '/images/articles/hindi-yojna/pm-kisan-25vi-kist/kisan-mobile-check.webp',
-  },
-  {
-    slug: 'hi/status-check-mobile-se',
-    titleHi: 'मोबाइल नंबर से पीएम किसान स्टेटस कैसे चेक करें? आसान तरीका',
-    seoTitleHi: 'मोबाइल नंबर से पीएम किसान स्टेटस चेक करें',
-    desc: 'पीएम किसान स्टेटस मोबाइल नंबर से 2 मिनट में चेक करें — रजिस्ट्रेशन नंबर भूल गए या OTP नहीं आ रहा? हर problem का आसान step-by-step solution यहां जानिए।',
-    keywords: [
-      'पीएम किसान स्टेटस चेक मोबाइल नंबर से',
-      'pm kisan status mobile number',
-      'pm kisan registration number kaise nikale',
-      'पीएम किसान रजिस्ट्रेशन नंबर भूल गया',
-      'pm kisan status otp nahi aa raha',
-      'know your status pm kisan',
-      'pm kisan ekyc status no',
-      'पीएम किसान लैंड सीडिंग no',
-      'aadhaar bank seeding no pm kisan',
-    ],
-    category: 'status-check',
-    publishedTime: '2026-07-24T09:35:32+05:30',
-    modifiedTime: '2026-08-07T14:31:10+05:30',
-    author: AUTHOR_NAME,
-    component: 'PmKisanStatusCheckMobileNumberSe',
-    ogImage: '/images/articles/hindi-yojna/status-check-mobile-se/phone-status-check.webp',
-  },
-  {
-    slug: 'hi/karj-mafi-list',
-    titleHi: 'किसान कर्ज माफी लिस्ट 2027 — राज्यवार List में नाम देखें',
-    desc: 'किसान कर्ज माफी लिस्ट 2027 में अपना नाम ऐसे चेक करें — UP, MP, महाराष्ट्र, राजस्थान और झारखंड की राज्यवार नई list, पात्रता और आवेदन की पूरी जानकारी यहां।',
-    keywords: ['किसान कर्ज माफी लिस्ट 2027', 'karj mafi list', 'kisan karj mafi 2027'],
-    category: 'loan',
-    publishedTime: '2026-07-29T21:52:43+05:30',
-    modifiedTime: '2026-08-01T16:46:46+05:30',
-    author: AUTHOR_NAME,
-    component: 'KisanKarjMafiList2027',
-    ogImage: '/images/articles/hindi-yojna/karj-mafi-list/karj-mafi-hero.webp',
-  },
-  {
-    slug: 'hi/helpline-shikayat',
-    titleHi: 'किस्त नहीं आई? पीएम किसान हेल्पलाइन नंबर और शिकायत का तरीका',
-    seoTitleHi: 'पीएम किसान हेल्पलाइन नंबर और शिकायत',
-    desc: 'पीएम किसान की किस्त नहीं आई तो घबराएं नहीं — helpline number 155261 पर call करें या online complaint दर्ज करें। शिकायत का पूरा process यहां step-by-step जानिए।',
-    keywords: ['पीएम किसान हेल्पलाइन नंबर', 'pm kisan complaint kaise kare'],
-    category: 'status-check',
-    publishedTime: '2026-04-08T14:18:51+05:30',
-    modifiedTime: '2026-04-17T15:26:44+05:30',
-    author: AUTHOR_NAME,
-    component: 'PmKisanHelplineNumberComplaint',
-    ogImage: '/images/articles/hindi-yojna/helpline-shikayat/farmer-on-call.webp',
-  },
-  {
-    slug: 'hi/nayi-registration',
-    titleHi: 'पीएम किसान नई रजिस्ट्रेशन 2027 — Farmer ID से ऐसे करें Apply',
-    seoTitleHi: 'पीएम किसान नई रजिस्ट्रेशन 2027 — Farmer ID',
-    desc: 'पीएम किसान नई रजिस्ट्रेशन 2027 अब Farmer ID से होगी — online apply का step-by-step तरीका, जरूरी documents और आवेदन के बाद status चेक करना भी यहां सीखें।',
-    keywords: ['पीएम किसान नई रजिस्ट्रेशन', 'pm kisan new registration 2027'],
-    category: 'status-check',
-    publishedTime: '2026-04-19T18:42:50+05:30',
-    modifiedTime: '2026-04-24T08:39:57+05:30',
-    author: AUTHOR_NAME,
-    component: 'PmKisanNewRegistration2027',
-    ogImage: '/images/articles/hindi-yojna/new-registration/docs-ready.webp',
-  },
-  {
-    slug: 'hi/farmer-id-kaise-banaye',
-    titleHi: 'फार्मर आईडी कैसे बनाएं? AgriStack की पूरी जानकारी यहां',
-    seoTitleHi: 'फार्मर आईडी कैसे बनाएं — कागज और पूरा Process',
-    desc: 'फार्मर आईडी कार्ड (AgriStack) घर बैठे मोबाइल से बनाएं — राज्यवार portal link, जरूरी documents और registration का आसान step-by-step process यहां देखें।',
-    keywords: ['फार्मर आईडी कार्ड कैसे बनाएं', 'farmer id registration 2027', 'agristack farmer id'],
-    category: 'farming',
-    publishedTime: '2026-06-07T21:01:19+05:30',
-    modifiedTime: '2026-06-21T13:03:34+05:30',
-    author: AUTHOR_NAME,
-    component: 'FarmerIdCardKaiseBanaye2027',
-    ogImage: '/images/articles/hindi-yojna/farmer-id-card/id-card-sample.webp',
-  },
-  {
-    slug: 'hi/tractor-subsidy',
-    titleHi: 'ट्रैक्टर सब्सिडी 2027 — किस राज्य में कितनी छूट? पूरी लिस्ट',
-    seoTitleHi: 'ट्रैक्टर सब्सिडी 2027 — राज्यवार लिस्ट',
-    desc: 'ट्रैक्टर सब्सिडी 2027 में 50% तक छूट पाएं — UP, बिहार, MP, राजस्थान और हरियाणा की राज्यवार subsidy list, पात्रता शर्तें और online आवेदन का पूरा तरीका जानिए।',
-    keywords: ['ट्रैक्टर सब्सिडी 2027', 'tractor subsidy state wise'],
-    category: 'agri-business',
-    publishedTime: '2026-03-31T08:31:21+05:30',
-    modifiedTime: '2026-04-14T19:32:34+05:30',
-    author: AUTHOR_NAME,
-    component: 'TractorSubsidy2027StateWiseList',
-    ogImage: '/images/articles/hindi-yojna/tractor-subsidy/tractor-kisan-khet.webp',
-  },
-  {
-    slug: 'hi/gehu-ka-rate-aaj',
-    titleHi: 'गेहूं का रेट आज क्या है? MSP vs मंडी भाव की तुलना देखें',
-    desc: 'गेहूं का आज का रेट और MSP 2027 की राज्यवार तुलना यहां देखें — आपकी मंडी में भाव MSP से ऊपर है या नीचे? Weekly update के साथ बेचने का सही समय भी जानिए।',
-    keywords: ['गेहूं का रेट आज', 'gehu ka bhav today', 'गेहूं MSP 2027'],
-    category: 'mandi',
-    publishedTime: '2026-07-22T07:56:40+05:30',
-    modifiedTime: '2026-07-27T14:49:21+05:30',
-    author: AUTHOR_NAME,
-    component: 'GehuKaRateAajMspVsMandiBhav',
-    ogImage: '/images/articles/hindi-yojna/gehu-ka-rate/mandi-wheat.webp',
-  },
-  {
-    slug: 'hi/ekyc-mobile-se',
-    titleHi: 'PM Kisan eKYC मोबाइल से कैसे करें? OTP और Face Auth तरीका',
-    seoTitleHi: 'PM Kisan eKYC मोबाइल से कैसे करें',
-    desc: 'PM Kisan eKYC मोबाइल से free में करें — OTP और Face Auth App दोनों के आसान steps यहां। OTP नहीं आ रहा या record not found error? हर problem का fix भी।',
-    keywords: [
-      'पीएम किसान eKYC मोबाइल से',
-      'pm kisan ekyc kaise kare',
-      'face auth ekyc',
-      'pm kisan ekyc otp nahi aa raha',
-      'आधार में मोबाइल नंबर लिंक नहीं है ekyc',
-      'pm kisan ekyc csc charges',
-      'record not found with given aadhaar pm kisan',
-      'ekyc already done matlab',
-      'बुजुर्ग की ekyc face auth से कैसे करें',
-    ],
-    category: 'status-check',
-    publishedTime: '2026-07-16T11:58:35+05:30',
-    modifiedTime: '2026-07-21T11:55:34+05:30',
-    author: AUTHOR_NAME,
-    component: 'PmKisanEkycMobileSeKaiseKare',
-    ogImage: '/images/articles/hindi-yojna/ekyc-mobile-se/otp-screen.webp',
-  },
-  {
-    slug: 'hi/npci-aadhaar-seeding',
-    titleHi: 'DBT पेमेंट रुका है? NPCI आधार सीडिंग Online ऐसे करें',
-    desc: 'NPCI आधार सीडिंग के बिना पीएम किसान की किस्त अटक सकती है — बैंक में aadhaar link status चेक करें और DBT enable करने का पूरा online process यहां जानिए।',
-    keywords: ['npci aadhaar seeding online', 'dbt enable kaise kare', 'आधार बैंक लिंक स्टेटस'],
-    category: 'status-check',
-    publishedTime: '2026-07-19T18:38:27+05:30',
-    modifiedTime: '2026-07-28T10:46:08+05:30',
-    author: AUTHOR_NAME,
-    component: 'NpciAadhaarSeedingDbtPayment',
-    ogImage: '/images/articles/hindi-yojna/npci-seeding/seeding-diagram.webp',
-  },
-  {
-    slug: 'hi/payment-stopped-by-state',
-    titleHi: '"Payment Stopped by State" का मतलब क्या है? जानिए आसान Fix',
-    seoTitleHi: 'Payment Stopped by State का मतलब और Fix',
-    desc: 'PM Kisan status में "Payment Stopped by State" दिख रहा है? जानिए यह error क्यों आता है, कौन से documents check होते हैं और इसे ठीक करने का पूरा तरीका।',
-    keywords: ['payment stopped by state pm kisan', 'pm kisan payment stopped fix'],
-    category: 'status-check',
-    publishedTime: '2026-05-02T08:41:15+05:30',
-    modifiedTime: '2026-05-11T06:07:07+05:30',
-    author: AUTHOR_NAME,
-    component: 'PmKisanPaymentStoppedByStateFix',
-    ogImage: '/images/articles/hindi-yojna/payment-stopped/stopped-status.webp',
-  },
-  {
-    slug: 'hi/recovery-notice',
-    titleHi: 'PM Kisan Recovery Notice आया? पैसा वापस करने का पूरा तरीका',
-    seoTitleHi: 'PM Kisan Recovery Notice — पैसा वापसी',
-    desc: 'PM Kisan recovery notice आया है तो घबराएं नहीं — जानिए किन किसानों को पैसा वापस करना होगा, online refund का पूरा process और notice गलत हो तो क्या करें।',
-    keywords: ['pm kisan recovery notice', 'pm kisan paisa wapas kaise kare'],
-    category: 'status-check',
-    publishedTime: '2026-04-26T14:26:28+05:30',
-    modifiedTime: '2026-06-07T08:33:34+05:30',
-    author: AUTHOR_NAME,
-    component: 'PmKisanRecoveryNoticePaisaWapas',
-    ogImage: '/images/articles/hindi-yojna/recovery-notice/notice-letter.webp',
-  },
-  {
-    slug: 'hi/kcc-limit-kaise-badhaye',
-    titleHi: 'KCC लिमिट ₹3 से ₹5 लाख कैसे बढ़ाएं? Renewal का पूरा तरीका',
-    seoTitleHi: 'KCC लिमिट ₹3 से ₹5 लाख कैसे बढ़ाएं',
-    desc: 'KCC लिमिट अब ₹3 लाख से बढ़कर ₹5 लाख हुई — Kisan Credit Card limit बढ़ाने का आसान तरीका, renewal process और ब्याज सब्सिडी का पूरा फायदा उठाना यहां सीखें।',
-    keywords: ['kcc limit kaise badhaye', 'kcc renewal process', 'kcc interest rate'],
-    category: 'loan',
-    publishedTime: '2026-07-14T10:37:32+05:30',
-    modifiedTime: '2026-08-04T21:13:34+05:30',
-    author: AUTHOR_NAME,
-    component: 'KccLimitKaiseBadhaye3Se5Lakh',
-    ogImage: '/images/articles/hindi-yojna/kcc-limit/kcc-card.webp',
-  },
-  {
-    slug: 'hi/gau-mutra-kharid-yojana',
-    titleHi: 'गाय के मूत्र की खरीद योजना — बुलंदशहर में 10 रुपये लीटर',
-    seoTitleHi: 'गौ मूत्र खरीद योजना UP — 10 रुपये प्रति लीटर',
-    desc: 'बुलंदशहर के नरसेना गांव से शुरू योजना — गौमूत्र 10 रूपये प्रति लीटर, FPO संग्रह केंद्र, महिलाओं को 2 रूपये कमीशन, जीवामृत बनाने का नुस्खा और ठगी से बचाव यहां।',
-    keywords: [
-      'गाय के मूत्र की खरीद योजना',
-      'गौ मूत्र 10 रुपये प्रति लीटर',
-      'बुलंदशहर पायलट प्रोजेक्ट गौ मूत्र',
-      'जीवामूत जैविक कीटनाशक',
-      'gau mutra kharid yojana up',
-      'narsena gaon fpo sangrah kendra',
-    ],
-    category: 'pashupalan',
-    publishedTime: '2026-08-13T18:30:00+05:30',
-    modifiedTime: '2026-08-14T05:45:00+05:30',
-    author: AUTHOR_NAME,
-    component: 'GauMutraKharidYojanaHindi',
-    ogImage: '/images/gau-mutra-yojana-hindi-og.webp',
-  },
-  {
-    slug: 'hi/namo-drone-didi-yojana',
-    titleHi: 'नमो ड्रोन दीदी योजना — कोई form नहीं, रास्ता SHG से जाता है',
-    seoTitleHi: 'नमो ड्रोन दीदी योजना — SHG चयन और ₹8 लाख की मदद',
-    desc: 'नमो ड्रोन दीदी में online form नहीं है — चयन SHG से होता है। 80% subsidy (₹8 लाख तक), 15 दिन की training और कमाई का सच्चा हिसाब — पूरा रास्ता यहां पढ़िए।',
-    keywords: [
-      'नमो ड्रोन दीदी योजना',
-      'namo drone didi yojana in hindi',
-      'ड्रोन दीदी योजना form',
-      'ड्रोन दीदी कैसे बने',
-      'महिला स्वयं सहायता समूह ड्रोन',
-      'drone didi training kitne din ki hai',
-      'ड्रोन से spray का rate per acre',
-      'namo drone didi subsidy 8 lakh',
-    ],
-    category: 'agri-business',
-    publishedTime: '2026-08-15T20:30:00+05:30',
-    modifiedTime: '2026-08-16T09:00:00+05:30',
-    author: AUTHOR_NAME,
-    component: 'NamoDroneDidiYojanaHindi',
-    ogImage: '/images/articles/namo-drone-didi-yojana-shg-selection/drone-didi-spray-hero.webp',
-  },
-] as const;
+// Section data files (mirrors the Hinglish split: core / kisanguides /
+// loan-mandi-pashupalan / rajya-yojana):
+//   lib/hindi-yojana-data.ts                → components/articles/hindi-yojana/
+//   lib/hindi-kisanguides-data.ts           → components/articles/hindi-kisanguides/
+//   lib/hindi-loan-mandi-pashupalan-data.ts → components/articles/hindi-loan-mandi-pashupalan/
+//   lib/hindi-rajya-yojana-data.ts          → components/articles/hindi-rajya-yojana/
+// URLs unchanged: every article stays at /articles/hi/<slug>.
 
-// Combined list — core (PM Kisan / loan / mandi) + rajya-yojana Hindi articles.
+// Back-compat alias — "core" = PM Kisan yojana articles.
+export const HINDI_CORE_ARTICLES: readonly HindiArticle[] = HINDI_YOJANA_ARTICLES;
+
+// Combined list — all Hindi articles across every section.
 export const HINDI_ARTICLES: readonly HindiArticle[] = [
-  ...HINDI_CORE_ARTICLES,
+  ...HINDI_YOJANA_ARTICLES,
+  ...HINDI_KISANGUIDES_ARTICLES,
+  ...HINDI_LOAN_MANDI_PASHUPALAN_ARTICLES,
   ...HINDI_RAJYA_YOJANA_ARTICLES,
 ];
-
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(
   HINDI_ARTICLES.map((a) => [a.slug, a]),
