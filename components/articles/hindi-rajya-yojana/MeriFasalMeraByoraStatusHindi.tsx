@@ -304,7 +304,7 @@ export default function MeriFasalMeraByoraStatusHindi({ article }: { article: Hi
         लीजिए — Google से उठाया पुराना नंबर अक्सर बंद मिलता है।
       </p>
 
-      <H2>किसान के असली सवाल, सीधे जवाब</H2>
+      <H2>जो सवाल बार-बार पूछे जाते हैं</H2>
 
       <div className="space-y-4 not-prose mb-8">
         {FAQS.map(({ q, a }) => (

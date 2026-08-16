@@ -19,9 +19,14 @@
 - ✅ 🔴 #2 complete: last three "परिचित" anecdotes rewritten impersonally — `StateKisanYojanaListHindi` (बिहार), `UpKisanKarjRahatListHindi` (सहकारी समिति), `AnnadataSukhibhava` intro (गुंटूर)। Zero fabricated anecdotes left.
 - ✅ 🔴 #1 continued: Namo↔Rajasthan/MP shared prose broken — NPCI/लौटकर-दोबारा FAQ answer rewritten in `NamoShetkari`, "Know Your Status" line varied in both `NamoShetkari` and `MukhyamantriKisanKalyanMp`; Bihar↔MeriFasal "जुबानी शिकायत हवा में" phrasing varied in `MeriFasal`.
 
-**Remaining (next batch):**
-- 🟠 #4/#5: low sentence-variance rhythm fixes in `KrishakBandhu`, `RythuBharosa`, `PatiPatni`; closing "मास्टर गाइड" / CTA boilerplate variation across 13 files.
-- 🟡 #6: keyword-density synonym mixing in `NpciAadhaarSeeding`, `UpKarjRahat`, `EkycMobile`.
+**Batch 3 — pushed 2026-08-16:**
+- ✅ 🟠 #5 complete: sentence-rhythm broken (short sentences mixed in) in `KrishakBandhu`, `RythuBharosa`, `PatiPatni`; unverifiable first-person claims ("मेरे गांव की तरफ एक परिवार...", "मैंने खुद पोर्टल खोल कर देखा") rewritten impersonally; "recieve" typo fixed.
+- ✅ 🟠 #4 (variation pass): "पहले guide पढ़ी?" CTA line varied per-file (3 of 4 rephrased); "जांची हुई है" closing formula varied in `Annadata` + `Rajasthan`; "असली सवाल, सीधे जवाब" FAQ heading varied in 3 of 4 files. Full componentization (§3) intentionally NOT done — wording variation achieves the uniqueness goal without a refactor.
+- ✅ 🟡 #6 complete: synonym mixing — `NpciAadhaarSeeding` (seeding 43→33, mapper/mapping mixed in), `UpKarjRahat` (लोन 26→14, कर्ज/ऋण mixed), `EkycMobile` (eKYC 48→39, सत्यापन mixed).
+
+**Remaining (optional/deferred):**
+- 🟠 #3 template-DNA (word/FAQ counts) — guidance for future articles, no retro-fix needed.
+- 🟠 #4 componentization of WhatsApp-scam warning + master-guide footer into shared components — optional refactor.
 
 ---
 

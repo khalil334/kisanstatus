@@ -270,7 +270,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
       <div className="my-5 border-2 border-[var(--color-border)] rounded-2xl overflow-hidden bg-[var(--color-card)] shadow-sm">
         <div className="bg-green-50 dark:bg-green-900/20 border-b border-[var(--color-border)] px-4 py-2.5">
           <span className="text-green-700 dark:text-green-300 text-xs font-bold">
-             पहले guide पढ़ी? अब official site पर जाएं:
+             पढ़ना हो गया? अगला कदम — official portal:
           </span>
         </div>
         <div className="p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">

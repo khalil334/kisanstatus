@@ -12,7 +12,7 @@ const FAQS = [
   },
   {
     q: 'लिस्ट में नाम देखने के लिए क्या-क्या चाहिए?',
-    a: 'सिर्फ जिला, बैंक, ब्रांच और अपने लोन खाते की जानकारी — जो KCC पासबुक या sanction letter पर लिखी है। आधार OTP या ATM कार्ड की जरूरत नहीं पड़ती। कोई पेज OTP या कार्ड नंबर मांगे तो वह सरकारी नहीं है — वहीं बंद कर दीजिए।',
+    a: 'सिर्फ जिला, बैंक, ब्रांच और अपने कर्ज खाते की जानकारी — जो KCC पासबुक या sanction letter पर लिखी है। आधार OTP या ATM कार्ड की जरूरत नहीं पड़ती। कोई पेज OTP या कार्ड नंबर मांगे तो वह सरकारी नहीं है — वहीं बंद कर दीजिए।',
   },
   {
     q: 'नाम लिस्ट में नहीं है, पर मैं शर्तें पूरी करता हूं — अब क्या?',
@@ -98,9 +98,9 @@ export default function UpKisanKarjRahatListHindi({ article }: { article: HindiA
           बैंक सही श्रेणी का है — scheduled commercial, सहकारी या क्षेत्रीय ग्रामीण
           बैंक
         </CheckItem>
-        <CheckItem ok={false}>2016 के बाद का नया लोन — दायरे से बाहर</CheckItem>
+        <CheckItem ok={false}>2016 के बाद का नया कर्ज — दायरे से बाहर</CheckItem>
         <CheckItem ok={false}>
-          ट्रैक्टर, गोल्ड, personal, dairy लोन या NBFC/microfinance का कर्जा — बाहर
+          ट्रैक्टर, गोल्ड, personal, dairy का कर्ज या NBFC/microfinance का कर्जा — बाहर
         </CheckItem>
         <CheckItem ok={false}>2 हेक्टेयर से ज्यादा जमीन — बाहर</CheckItem>
       </ul>
@@ -142,8 +142,8 @@ export default function UpKisanKarjRahatListHindi({ article }: { article: HindiA
       </ol>
 
       <p>
-        लोन खाता नंबर नहीं मिल रहा? तीन जगह देखिए — KCC पासबुक का पहला पन्ना,
-        sanction letter, या सहकारी लोन है तो समिति का खाता register। कुछ न मिले तो
+        कर्ज खाता नंबर नहीं मिल रहा? तीन जगह देखिए — KCC पासबुक का पहला पन्ना,
+        sanction letter, या सहकारी ऋण है तो समिति का खाता register। कुछ न मिले तो
         आधार लेकर बैंक ब्रांच जाइए, record से नंबर निकल जाता है। और नतीजे का
         स्क्रीनशॉट तारीख के साथ जरूर ले लीजिए — बाद में बैंक या समिति में बात करनी
         पड़े तो यही काम आता है।
@@ -157,7 +157,7 @@ export default function UpKisanKarjRahatListHindi({ article }: { article: HindiA
         दिखेगा। इसलिए: बैंक जाकर statement निकलवाइए और confirm कीजिए कि रकम लोन खाते
         में चढ़ी है; लोन पूरा cover हुआ हो तो <strong>No Dues Certificate</strong>{' '}
         मांगिए — यह आपका हक है, एहसान नहीं, और आगे नया KCC लेने में यही कागज काम आएगा;
-        और लोन बड़ा था तो बचे हिस्से का हिसाब लिखवा लीजिए।
+        और ऋण बड़ा था तो बचे हिस्से का हिसाब लिखवा लीजिए।
       </p>
 
       <H2>नाम नहीं है — शिकायत का रास्ता</H2>
@@ -182,7 +182,7 @@ export default function UpKisanKarjRahatListHindi({ article }: { article: HindiA
         इसलिए हफ्तों लगना आम बात है। महीने भर में कोई हरकत न दिखे तो receiving कॉपी
         लेकर जिला कृषि अधिकारी के दफ्तर खुद जाइए। नाम कटने की आम वजहें: लोन cut-off के
         बाद का निकला, जमीन का record 2 हेक्टेयर से ज्यादा दिखा (joint खाता भी गिनती
-        में आता है), आधार और लोन खाते के नाम की स्पेलिंग नहीं मिली, या एक से ज्यादा
+        में आता है), आधार और ऋण खाते के नाम की स्पेलिंग नहीं मिली, या एक से ज्यादा
         लोन खातों में सिर्फ पात्र वाला गिना गया।
       </p>
 
@@ -204,7 +204,7 @@ export default function UpKisanKarjRahatListHindi({ article }: { article: HindiA
         में है।
       </p>
 
-      <H2>किसानों के असली सवाल, सीधे जवाब</H2>
+      <H2>अक्सर अटकने वाले सवाल</H2>
 
       <div className="space-y-4 not-prose mb-8">
         {FAQS.map(({ q, a }) => (

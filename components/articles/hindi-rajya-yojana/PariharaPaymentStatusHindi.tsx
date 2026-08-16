@@ -234,7 +234,7 @@ export default function PariharaPaymentStatusHindi({ article }: { article: Hindi
         में।
       </p>
 
-      <H2>किसानों के असली सवाल, सीधे जवाब</H2>
+      <H2>उलझन वाले सवाल — साफ जवाब</H2>
 
       <div className="space-y-4 not-prose mb-8">
         {FAQS.map(({ q, a }) => (
