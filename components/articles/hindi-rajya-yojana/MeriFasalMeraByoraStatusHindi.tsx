@@ -221,9 +221,9 @@ export default function MeriFasalMeraByoraStatusHindi({ article }: { article: Hi
           </li>
         </ol>
         <p>
-          बैंक की तरफ के रिजेक्शन कोड और उनका इलाज हमने{' '}
-          <Link href="/articles/PmKisanPaymentFailedFix2026">भुगतान फेल होने की गाइड</Link>{' '}
-          में विस्तार से लिखा है — वहां हर कोड का मतलब दिया है।
+          बैंक किस कोड पर भुगतान लौटाता है और हर कोड का इलाज क्या है — इसका पूरा खाका{' '}
+          <Link href="/articles/PmKisanPaymentFailedFix2026">भुगतान फेल वाली गाइड</Link>{' '}
+          में दिया गया है।
         </p>
       </Stage>
 
@@ -276,11 +276,11 @@ export default function MeriFasalMeraByoraStatusHindi({ article }: { article: Hi
         केंद्र की ₹6,000 वाली किसान सम्मान निधि इस पोर्टल से अलग व्यवस्था है — उसकी
         पूरी जानकारी{' '}
         <Link href="/articles/PmKisanMasterGuide2026">पीएम किसान मास्टर गाइड</Link> में
-        है। और अगर आप यह गाइड रोमन हिंदी में पढ़ना चाहें तो{' '}
+        है। रोमन हिंदी पसंद है? इसी विषय का{' '}
         <Link href="/rajya-yojana/meri-fasal-mera-byora-status-check-2026">
-          हिंग्लिश वाला विस्तृत लेख
+          Hinglish संस्करण
         </Link>{' '}
-        भी मौजूद है, जिसमें स्क्रीनशॉट-स्तर की डिटेल दी गई है।
+        स्क्रीनशॉट-स्तर की डिटेल के साथ अलग से है।
       </p>
 
       <H2>शिकायत की सीढ़ी — किस स्तर पर किससे बात करें</H2>
@@ -316,8 +316,8 @@ export default function MeriFasalMeraByoraStatusHindi({ article }: { article: Hi
       </div>
 
       <Box>
-        <strong>जरूरी बात:</strong> रजिस्ट्रेशन, सत्यापन, स्थिति जांच और भुगतान — इस
-        पूरी चेन में कहीं कोई सरकारी शुल्क नहीं है। विंडो की तारीख और प्रोत्साहन की
+        <strong>जरूरी बात:</strong> रजिस्ट्रेशन से भुगतान तक किसी भी कदम पर सरकार
+        कोई फीस नहीं लेती। विंडो की तारीख और प्रोत्साहन की
         राशि हर सीजन बदल सकती है, इसलिए अंतिम फैसला लेने से पहले आधिकारिक पोर्टल से
         पुष्टि जरूर कर लें।
       </Box>
