@@ -343,6 +343,28 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
     component: 'RythuBharosaStatusHindi',
     ogImage: '/images/articles/rajya-yojna/rythu-bharosa-status-check-2026/hero.webp',
   },
+  {
+    slug: 'hi/krishak-bandhu-status',
+    titleHi: 'कृषक बंधु स्थिति — वोटर कार्ड से किस्त और ₹2 लाख का हिसाब',
+    seoTitleHi: 'कृषक बंधु स्थिति — वोटर कार्ड से किस्त, ₹2 लाख',
+    desc: 'पश्चिम बंगाल की कृषक बंधु में स्थिति वोटर कार्ड (EPIC) से खुलती है — खोजने का सही तरीका, ₹10,000 सालाना का स्लैब, भागचाषी की पात्रता और ₹2 लाख डेथ बेनिफिट के दावे का रास्ता।',
+    keywords: [
+      'कृषक बंधु स्थिति',
+      'krishak bandhu status check voter id',
+      'कृषक बंधु वोटर कार्ड से चेक',
+      'krishak bandhu 10000 per year',
+      'कृषक बंधु डेथ बेनिफिट 2 लाख',
+      'krishak bandhu beneficiary list',
+      'krishakbandhu wb gov in status',
+      'কৃষক বন্ধু status',
+    ],
+    category: 'status-check',
+    publishedTime: '2026-08-17T00:30:00+05:30',
+    modifiedTime: '2026-08-17T00:30:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'KrishakBandhuStatusHindi',
+    ogImage: '/images/articles/rajya-yojna/krishak-bandhu-status-check-2026/hero.webp',
+  },
 ] as const;
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(
