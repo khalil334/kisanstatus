@@ -220,6 +220,13 @@ export default function NamoDroneDidiYojanaHindi({ article }: { article: HindiAr
         साथ ये 25 kg तक के हो जाते हैं, इसलिए इनके लिए DGCA का certificate जरूरी है — छोटे खिलौना
         drone की तरह यूं ही नहीं उड़ा सकते।
       </p>
+
+      <Figure
+        src="/images/articles/namo-drone-didi-yojana-shg-selection/sprayer-uav-machine-closeup.webp"
+        alt="कृषि sprayer ड्रोन — tank, nozzle और भारी frame के साथ मशीन का नजदीक से दृश्य"
+        caption="ये खिलौना drone नहीं — 10 litre tank वाली भारी sprayer मशीन, जिसके लिए DGCA certificate जरूरी है"
+      />
+
       <p>
         पूरे package में ड्रोन के अलावा spray assembly, कई batteries का set, fast charger, generator या
         charging का इंतजाम, और एक साल का maintenance support आता है। कुछ जगहों पर साथ में transport के
@@ -613,6 +620,13 @@ export default function NamoDroneDidiYojanaHindi({ article }: { article: HindiAr
         <li>
           DGCA — Digital Sky platform: remote pilot certificate और drone rules की आधिकारिक जानकारी.{' '}
           <a href="https://digitalsky.dgca.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">digitalsky.dgca.gov.in</a>
+        </li>
+        <li>
+          Photo credits — Wikimedia Commons: drone spray photos by Christopher Hedreyd / PIA 4A CALABARZON (public domain); SHG group photo (CC0);{' '}
+          <a href="https://commons.wikimedia.org/wiki/File:Agricultural_drone_spraying_on_paddy_field.jpg" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">paddy field spray</a>{' '}
+          by Shreesha Sharma (CC BY-SA 4.0);{' '}
+          <a href="https://commons.wikimedia.org/wiki/File:An_Agriculture_Sprayer_UAV_displayed_at_Amaravati_Drone_Summit_by_Aries_Agro_Ltd._(02).jpg" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">sprayer UAV closeup</a>{' '}
+          by iMahesh (CC BY-SA 4.0). Images resized और watermarked.
         </li>
       </ul>
 
