@@ -88,6 +88,16 @@ const MAANDHAN_UPDATED = new Date(
   ),
 );
 
+const RAJYA_YOJANA_UPDATED = new Date(
+  Math.max(
+    ...LIVE_RAJYA_YOJANA_ARTICLES.map((a) => {
+      const t = new Date(a.modified || a.published).getTime();
+      return Number.isFinite(t) ? t : 0;
+    }),
+    0,
+  ),
+);
+
 // Kept in sync with the per-calculator `MODIFIED` consts in components/calculators/.
 const CALCULATORS_UPDATED = new Date('2026-05-20');
 
@@ -144,7 +154,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...(LIVE_RAJYA_YOJANA_ARTICLES.length > 0
       ? [{
           url: `${SITE_URL}/rajya-yojana`,
-          lastModified: now,
+          lastModified: clampToNow(RAJYA_YOJANA_UPDATED),
           changeFrequency: 'weekly' as const,
           priority: 0.90,
         }]

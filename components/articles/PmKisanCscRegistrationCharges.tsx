@@ -320,16 +320,16 @@ export default function PmKisanCscRegistrationCharges() {
                 </tr>
               </thead>
               <tbody>
-                {[
-                  ['CSC Submission', 'Turant', 'Receipt lo aur photo lo'],
-                  ['Server Sync', '2-4 ghante', 'PM Kisan portal par data update'],
-                  ['Verification', '24 ghante', 'SMS aayega "Successfully Registered"'],
-                  ['Status Active', '48-72 ghante', '<a href="/articles/PmKisanBeneficiaryList2026" class="underline">List mein naam</a> check karo'],
-                ].map(([stage, time, check], i) => (
+                {([
+                  { stage: 'CSC Submission', time: 'Turant', check: <>Receipt lo aur photo lo</> },
+                  { stage: 'Server Sync', time: '2-4 ghante', check: <>PM Kisan portal par data update</> },
+                  { stage: 'Verification', time: '24 ghante', check: <>SMS aayega &quot;Successfully Registered&quot;</> },
+                  { stage: 'Status Active', time: '48-72 ghante', check: <><Link href="/articles/PmKisanBeneficiaryList2026" className="underline">List mein naam</Link> check karo</> },
+                ] as const).map(({ stage, time, check }, i) => (
                   <tr key={stage} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{stage}</td>
                     <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{time}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]" dangerouslySetInnerHTML={{ __html: check }} />
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{check}</td>
                   </tr>
                 ))}
               </tbody>
