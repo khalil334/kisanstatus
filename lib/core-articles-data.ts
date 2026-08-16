@@ -566,7 +566,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan CSC Charges 2026: Sahi Fees',
     desc: 'CSC wala ₹500 maang raha hai? Sarkari rate sirf ₹25-30 hai. Sahi fees, free online method, aur fraud se bachne ka tarika.',
     ogTitle: 'PM Kisan CSC Charges — Sahi Fees, Sahi Tarika',
-    seoTitle: 'PM Kisan CSC Registration Charges — Sahi Fees, Sahi Tarika',
+    seoTitle: 'PM Kisan CSC Registration Charges — Sahi Fees',
     keywords: [
       'pm kisan csc registration fees',
       'pm kisan csc se kaise kare',
