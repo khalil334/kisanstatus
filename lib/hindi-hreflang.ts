@@ -9,6 +9,7 @@ export const HINDI_TO_HINGLISH: Readonly<Record<string, string>> = {
   'mp-kisan-kalyan-yojana': '/rajya-yojana/mp-kisan-kalyan-yojana-kist-status',
   'namo-shetkari-yojana': '/rajya-yojana/namo-shetkari-yojana-status-check-2026',
   'namo-drone-didi-yojana': '/articles/namo-drone-didi-yojana-shg-selection',
+  'rajasthan-kisan-samman-nidhi': '/rajya-yojana/rajasthan-kisan-samman-nidhi-9000',
 };
 
 export const HINGLISH_TO_HINDI: Readonly<Record<string, string>> = Object.freeze(
