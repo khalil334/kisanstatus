@@ -49,7 +49,7 @@ const RELATED_CARDS = [
   {
     href: '/maandhan/pmkmy-bank-account-change',
     title: 'Bank Account Update',
-    desc: 'Registered bank account change ya NACH mandate update karne ka complete step-by-step process.',
+    desc: 'Registered bank account change ya NACH mandate update karne ka poora tareeka.',
     emoji: '',
   },
 ];

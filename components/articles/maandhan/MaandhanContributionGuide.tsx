@@ -217,7 +217,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
             Contribution amount confirm karne ke baad agla kadam registration hai — CSC aur online app dono ke step-by-step screenshots wali guide alag se maujood hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Registration Ka Step-by-Step Process →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Registration Kaise Karein — Poora Tareeka →</Link>
           </div>
         </section>
 

@@ -14,7 +14,7 @@ const RELATED_CARDS = [
   {
     slug: 'pm-kisan-maandhan-registration-2026',
     title: 'Complete Registration Guide',
-    desc: 'Step-by-step process to apply online or at a CSC center.',
+    desc: 'Online ya CSC center se apply karne ka poora tareeka.',
   },
   {
     slug: 'pm-kisan-maandhan-eligibility-documents',
@@ -330,7 +330,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
         <section className="mb-8">
           <SH>Details Update Karni Hon To</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Contribution jis account se kat raha hai use badalna ho, ya registered mobile number update karna ho — dono ke step-by-step process alag guides mein hain:
+            Contribution jis account se kat raha hai use badalna ho, ya registered mobile number update karna ho — dono ke poore tareeke alag guides mein hain:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/maandhan/pmkmy-bank-account-change" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Bank Account Change Process →</Link>

@@ -177,7 +177,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
         </section>
 
         <section className="mb-8">
-          <SH>Online Ghar Baithe Kaise Nikalein — Pura Step-by-Step Process</SH>
+          <SH>Online Kaise Nikalein — Poora Tareeka</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Sarkari portal ka link aapko PM Kisan Maandhan Yojana ki official website par milega. Wahan "View Your Pension Details" ya "Print Pension Card" jaisa option hota hai. Ek chhoti si baat ka dhyan rakhein — kai baar website subah ke waqt bahut slow chalti hai ya server down rehta hai. Isliye koshish karein ki shaam 5 baje ke baad ya dopahar 1 se 3 baje ke beech try karein, jab traffic kam hota hai.
           </p>

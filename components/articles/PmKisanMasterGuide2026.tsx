@@ -120,7 +120,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
         <section className="mb-8">
           <SH>PM Kisan Registration Process Kaise Kare?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Do tarike hain - ya toh ghar baithe online kar lo, ya CSC center jaake karwao. Dono mein se jo aapko comfortable lage.
+            Do tarike hain - ya toh khud online kar lo, ya CSC center jaake karwao. Dono mein se jo aapko comfortable lage.
           </p>
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Tarika 1: Online (Ghar Baithe)</h3>
@@ -316,7 +316,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
         <section className="mb-8">
           <SH>PM Kisan Naam Correction Kaise Kare?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Registration mein typing mistake ho gayi? Koi baat nahi - ye common hai. Online theek ho jata hai, ghar baithe.
+            Registration mein typing mistake ho gayi? Koi baat nahi - ye common hai. Online theek ho jata hai, bina kahin jaaye.
           </p>
           <StepList>
             <SI n={1}>pmkisan.gov.in kholo - Farmers Corner mein jao</SI>

@@ -301,7 +301,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
             Application pending reh jaye ya koi technical dikkat aa jaye, toh ghabrane wali baat nahi. Har state ke liye sarkar ne alag grievance mechanism banaya hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Official PM Kisan portal par apne state ke nodal officer ki updated contact details mil jayengi. Complaint karte waqt Registration Number aur Application Date likh kar mention karein taaki resolution jaldi ho. PMKMY ke saare verified helpline numbers, official email addresses aur shikayat darj karne ka step-by-step process humne <Link href="/maandhan/pmkmy-grievance-complaint-helpline" className="underline text-green-700 dark:text-green-400">PMKMY helpline & grievance guide</Link> mein ek jagah rakha hai.
+            Official PM Kisan portal par apne state ke nodal officer ki updated contact details mil jayengi. Complaint karte waqt Registration Number aur Application Date likh kar mention karein taaki resolution jaldi ho. PMKMY ke saare verified helpline numbers, official email addresses aur shikayat darj karne ka poora tareeka humne <Link href="/maandhan/pmkmy-grievance-complaint-helpline" className="underline text-green-700 dark:text-green-400">PMKMY helpline & grievance guide</Link> mein ek jagah rakha hai.
           </p>
           <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
             <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-2">Official Grievance Links:</p>

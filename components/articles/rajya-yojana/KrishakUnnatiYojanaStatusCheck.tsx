@@ -51,7 +51,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Maine dhan society mein becha, token bhi kata — phir bhi paisa nahi aaya. Kahan atka?',
-    a: 'Sabse pehle apni samiti se kharidi ki entry confirm karein — aapke naam par kitne quintal darj hue. Entry sahi hai to mamla bank side ka hai: account band, dormant, ya Aadhaar se link na hona payment lautne ki sabse aam wajahein hain. Kharidi ki entry hi galat ya adhoori hai, to sudhaar samiti aur khadya vibhag ke record se hi hoga — bank ke chakkar se kuch nahi milega.',
+    a: 'Pehla kaam — apni samiti se kharidi ki entry confirm karein ki aapke naam par kitne quintal darj hue. Entry sahi hai to mamla bank side ka hai: account band, dormant, ya Aadhaar se link na hona payment lautne ki sabse aam wajahein hain. Kharidi ki entry hi galat ya adhoori hai, to sudhaar samiti aur khadya vibhag ke record se hi hoga — bank ke chakkar se kuch nahi milega.',
   },
   {
     q: 'Kya bataidar ya adhiya par kheti karne wale ko bhi antar rashi milti hai?',
@@ -191,7 +191,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
       <Fig
         src="kisan-documents.webp"
         alt="Mez par rakhe kisan ke kagzaat — zameen ka record, passbook aur notebook"
-        caption="Kisan code, taul parchi, passbook — teen kagaz jo har shikayat mein sabse pehle maange jaate hain"
+        caption="Kisan code, taul parchi, passbook — teen kagaz jo har shikayat mein sabse pahle maange jaate hain"
       />
 
       <ul>
@@ -361,7 +361,7 @@ export default function KrishakUnnatiYojanaStatusCheck({ article }: { article: R
 
       <InfoBox type="tip">
         Taul parchi aur token ki photo usi din phone mein utaar lein jis din dhan bechein.
-        Raqam mein farq dikhne par yahi do kagaz sabse pehle kaam aate hain — bina
+        Raqam mein farq dikhne par yahi do kagaz sabse zyada kaam aate hain — bina
         inke shikayat sirf zubaani reh jaati hai.
       </InfoBox>
 

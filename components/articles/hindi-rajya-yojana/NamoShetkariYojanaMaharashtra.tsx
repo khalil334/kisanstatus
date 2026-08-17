@@ -456,7 +456,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         links={[
         { href: '/articles/hi/mp-kisan-kalyan-yojana', label: 'MP किसान कल्याण योजना ₹12000' },
         { href: '/articles/PmKisanMasterGuide2026', label: 'PM Kisan की मुख्य guide' },
-        { href: '/articles/PmKisanEkycOnline2026', label: 'eKYC step-by-step process' },
+        { href: '/articles/PmKisanEkycOnline2026', label: 'eKYC ka poora tareeka' },
         { href: '/articles/hi/npci-aadhaar-seeding', label: 'NPCI seeding — पूरा process' },
       ]}
       />

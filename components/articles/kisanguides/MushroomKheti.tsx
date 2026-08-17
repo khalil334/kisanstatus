@@ -188,7 +188,7 @@ export default function MushroomKheti() {
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Step-by-Step Process: Oyster Mushroom Kaise Ugayein?
+        Oyster Mushroom Ugane Ka Tareeka
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Ek chhoti si laparwahi poori batch kharab kar sakti hai. In instructions ko dhyan se follow karein.

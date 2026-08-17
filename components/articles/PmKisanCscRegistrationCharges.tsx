@@ -121,7 +121,7 @@ export default function PmKisanCscRegistrationCharges() {
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Neeche saaf-saaf diya hai ki kaunsa kaam kitne ka hai, kaise free mein ghar baithe karein, aur agar koi zyada paise maange toh kaise complaint karein. End tak padho, paise bachenge aur kaam bhi banega.
+            Neeche saaf-saaf diya hai ki kaunsa kaam kitne ka hai, kaise free mein khud apne phone se karein, aur agar koi zyada paise maange toh kaise complaint karein. End tak padho, paise bachenge aur kaam bhi banega.
           </p>
         </section>
 
@@ -164,7 +164,7 @@ export default function PmKisanCscRegistrationCharges() {
         <section className="mb-8">
           <SH>Ghar Baithe FREE Mein Kaise Karein? (Bina CSC Gaye)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, CSC jane ki zaroorat hi kya hai agar aapke paas smartphone aur internet hai? Aap khud ye kaam ghar baithe, ek rupya kharch kiye bina kar sakte ho.
+            Bhai, CSC jane ki zaroorat hi kya hai agar aapke paas smartphone aur internet hai? Aap khud ye kaam apne mobile se, ek rupya kharch kiye bina kar sakte ho.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">Online process</Link> bahut simple hai. Bas ye steps follow karo:

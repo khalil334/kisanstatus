@@ -337,7 +337,7 @@ export default function PMatsyaSampada() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Step-by-Step Process: Traditional Pond Mein Machli Kaise Paalein?
+        Traditional Pond Mein Machli Kaise Paalein?
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">

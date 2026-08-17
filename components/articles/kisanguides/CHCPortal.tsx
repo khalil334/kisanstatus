@@ -231,7 +231,7 @@ export default function CHCPortal() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Apply Kaise Karein? (Step-by-Step Process)
+        Apply Kaise Karein?
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Yeh process thoda lamba hai, lekin agar documents sahi hain, toh approval milna aasan hai.

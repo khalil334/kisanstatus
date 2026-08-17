@@ -231,7 +231,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
         </section>
 
         <section className="mb-8">
-          <SH>Bank Account Change Ka Step-by-Step Process</SH>
+          <SH>Bank Account Change Kaise Hota Hai</SH>
 
           <StepList>
             <SI n={1}><strong>Naye Bank Me Active Account Ensure Karein:</strong> Sabse pehle confirm karein ki aapke naye bank account me ye sab hai: Aadhaar linking (mandatory hai), Mobile number linking, Active status aur transactions allow karta ho, aur Valid IFSC code.</SI>

@@ -64,7 +64,7 @@ const FAQS_DATA = [
   },
   {
     q: 'OTP based eKYC aur biometric eKYC mein kya farak hai?',
-    a: 'OTP based eKYC ghar baithe, phone se hota hai — bas Aadhaar se linked mobile chahiye. Biometric CSC jaakar fingerprint se hota hai, un logon ke liye jinka mobile number Aadhaar se link nahi hai ya unke paas smartphone nahi hai. Dono equally valid hain, result same hota hai.',
+    a: 'OTP based eKYC apne phone se hi ho jata hai — bas Aadhaar se linked mobile chahiye. Biometric CSC jaakar fingerprint se hota hai, un logon ke liye jinka mobile number Aadhaar se link nahi hai ya unke paas smartphone nahi hai. Dono equally valid hain, result same hota hai.',
   },
   {
     q: 'eKYC ek baar ho gayi, kya har saal dobara karni padegi?',
@@ -107,7 +107,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            <strong>Seedha Jawab:</strong> PM Kisan eKYC 2026 ab 100% mandatory hai. Ise aap ghar baithe <strong>pmkisan.gov.in</strong> par OTP based eKYC se, PM Kisan App par Face Authentication se, ya nazdeeki CSC centre par free biometric (fingerprint) se complete kar sakte hain. Bina iske aapka agla ₹2000 ka installment seedha block ho jayega.
+            <strong>Seedha Jawab:</strong> PM Kisan eKYC 2026 ab 100% mandatory hai. Ise aap khud <strong>pmkisan.gov.in</strong> par OTP based eKYC se, PM Kisan App par Face Authentication se, ya nazdeeki CSC centre par free biometric (fingerprint) se complete kar sakte hain. Bina iske aapka agla ₹2000 ka installment seedha block ho jayega.
           </p>
         </div>
 
@@ -133,7 +133,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             Suno bhai, yeh koi optional ya "baad mein kar lenge" wali cheez nahi hai. Government ne DBT (Direct Benefit Transfer) rules ke under 2023 se ise sakhti se compulsory kar diya hai. Ab system automatically un accounts ko filter kar deta hai jinki eKYC pending hai.
           </p>
           <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed">
-            Par ghabrane ki baat nahi hai. Process itna aasaan hai ki ghar baithe phone se 2 minute mein ho jata hai. Agar phone mein dikkat hai, toh nazdeeki CSC chale jao. Dono tarikon par sarkar ki taraf se koi charge nahi hai.
+            Par ghabrane ki baat nahi hai. Process itna aasaan hai ki phone se 2 minute mein ho jata hai, kahin jaana nahi padta. Agar phone mein dikkat hai, toh nazdeeki CSC chale jao. Dono tarikon par sarkar ki taraf se koi charge nahi hai.
           </p>
         </div>
 
@@ -174,7 +174,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         <section className="mb-8">
           <SH>Tarika 1: OTP Based eKYC (Sabse Fast aur Ghar Baithe)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Jab log <strong>"otp based ekyc"</strong> search karte hain, unka matlab yahi tarika hota hai — sirf Aadhaar-linked mobile se ghar baithe verification. Agar aapka mobile number Aadhaar card se pehle se linked hai, toh yeh sabse best, surakshit aur tezi se kaam karne wala option hai. Kahin jaane ki zaroorat nahi.
+            Jab log <strong>"otp based ekyc"</strong> search karte hain, unka matlab yahi tarika hota hai — sirf Aadhaar-linked mobile se verification, bina kahin jaaye. Agar aapka mobile number Aadhaar card se pehle se linked hai, toh yeh sabse best, surakshit aur tezi se kaam karne wala option hai. Kahin jaane ki zaroorat nahi.
           </p>
           <StepList>
             <SI n={1}>Apne phone ya computer par official portal <strong>pmkisan.gov.in</strong> kholo.</SI>

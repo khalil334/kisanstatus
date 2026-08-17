@@ -25,7 +25,7 @@ const FAQS_DATA = [
   { q: 'Status me "Rejected" ya "Returned by Bank" dikhe toh?', a: 'Iska matlab bank ne paisa wapas bhej diya, aksar galat IFSC, naam mismatch, ya band account ki wajah se. Ye apne aap theek nahi hota; portal ke correction option se galti sudhaar kar dobara process karwana padta hai.' },
   { q: 'OTP nahi aa raha, kya karoon?', a: 'Registered mobile number purana ya band ho gaya hoga. Nazdeeki CSC par jaakar number update karwa lo. Uske baad OTP naye number par aayega.' },
   { q: '24vi kist kab tak expect karein?', a: '23vi kist 20 June 2026 ko release hui thi. Scheme har 4 mahine me kist deti hai, is hisaab se agli kist October–November 2026 ke aas-paas aa sakti hai. Official date sirf pmkisan.gov.in ya PIB ke elaan se hi pakki hoti hai.' },
-  { q: 'Helpline par kya-kya ready rakhna chahiye?', a: 'Official helpline 155261 ya 011-24300606 par call karne se pehle Aadhaar number, registration number aur bank account details saamne rakh lo. Operator sabse pehle yahi poochta hai.' },
+  { q: 'Helpline par kya-kya ready rakhna chahiye?', a: 'Official helpline 155261 ya 011-24300606 par call karne se pehle Aadhaar number, registration number aur bank account details saamne rakh lo. Operator shuru mein yahi poochta hai.' },
 ];
 
 export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article: ArticleMeta }) {
@@ -380,7 +380,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           <div className="space-y-4">
             <div className="border-l-4 border-red-500 dark:border-red-700 pl-4 py-1">
               <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Aadhaar Seeding Check Karein</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">Sabse pehle bank jaakar counter par Aadhaar seeding ki jaankari poochein. Yahi sabse common reason hai jab paisa atak jata hai. "Not Seeded" nikle toh usi din karwa lein.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Pehla kaam — bank jaakar counter par Aadhaar seeding ki jaankari poochein. Yahi sabse common reason hai jab paisa atak jata hai. "Not Seeded" nikle toh usi din karwa lein.</p>
             </div>
             <div className="border-l-4 border-orange-500 dark:border-orange-700 pl-4 py-1">
               <h3 className="font-black text-[var(--color-text)] text-sm mb-1">NPCI Mapping</h3>

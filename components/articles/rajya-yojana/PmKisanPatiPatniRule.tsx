@@ -387,7 +387,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         />
 
         <p>
-          Iska poora step-by-step process, screenshot ke saath, humne alag likha hai —{' '}
+          Iska poora tareeka, screenshot ke saath, humne alag likha hai —{' '}
           <Link href="/articles/PmKisanVoluntarySurrenderGuide">
             voluntary surrender aur refund ki guide
           </Link>

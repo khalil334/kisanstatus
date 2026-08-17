@@ -265,7 +265,7 @@ export default function VerminCompost() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Step-by-Step Process: Vermi Compost Kaise Banayein?
+        Vermi Compost Kaise Banayein?
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">

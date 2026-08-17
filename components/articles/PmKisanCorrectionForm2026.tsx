@@ -28,7 +28,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Agar mera mobile number band ho gaya hai toh pm kisan mobile number update kaise karun?',
-    a: 'Agar purana number band hai toh tum OTP receive nahi kar paoge. Aise mein seedha najdiki CSC center jao. Wo biometric authentication se number update kar denge. Ghar baithe iska koi tarika nahi hai.',
+    a: 'Agar purana number band hai toh tum OTP receive nahi kar paoge. Aise mein seedha najdiki CSC center jao. Wo biometric authentication se number update kar denge. Phone se iska koi tarika nahi hai.',
   },
   {
     q: 'Application rejected reason PM Kisan mein kya ho sakta hai?',
@@ -39,7 +39,7 @@ const FAQS_DATA = [
     a: 'Dekho bhai, ye thoda lamba process hai. Pehle naye bank account mein Aadhaar seeding karwao (branch jaake "DBT enable" bolna). Phir pmkisan.gov.in par Farmers Corner > Edit Aadhaar Details mein jaake naya account number aur IFSC daalo. Purana account tab tak band mat karna jab tak naye account mein pehli kist na aa jaye. Agar NPCI mapping mein dikkat aaye toh bank manager se "Aadhaar seeding error fix" karne ko bolo, wo backend se NPCI mapper update kar denge.',
   },
   {
-    q: 'Gender/DOB correction aur land record mismatch ka solution ghar baithe pm kisan portal par ho jayega?',
+    q: 'Gender/DOB correction aur land record mismatch ka solution pm kisan portal par online ho jayega?',
     a: 'Gender aur DOB correction thoda tricky hai. Agar portal par edit option aa raha hai toh kar sakte ho, lekin aksar ye fields locked hoti hain. Aise mein CSC jana padta hai. Land record mismatch ka solution portal par nahi hota — iske liye tumhe apne district ke Agriculture Officer ya Patwari ke paas jaake land records (Khatauni) update karwane honge. Jab sarkari records mein naam aur zameen sahi ho jayegi, tabhi portal par reflect hogi.',
   },
 ];

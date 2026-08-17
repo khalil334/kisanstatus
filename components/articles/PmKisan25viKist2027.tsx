@@ -245,7 +245,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </StepList>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4 mb-3">
-            Ek practical salah — roz roz dekhne se kuch jaldi nahi aata. Jab news me baat chalne lage, tab hafte me ek bar dekh lena kafi hai. Pura step-by-step process screenshots ke sath <Link href="/articles/PmKisanMasterGuide2026" className="text-[var(--color-primary)] underline">master guide</Link> mein hai.
+            Ek practical salah — roz roz dekhne se kuch jaldi nahi aata. Jab news me baat chalne lage, tab hafte me ek bar dekh lena kafi hai. Poora tareeka screenshots ke sath <Link href="/articles/PmKisanMasterGuide2026" className="text-[var(--color-primary)] underline">master guide</Link> mein hai.
           </p>
 
           <DB>
