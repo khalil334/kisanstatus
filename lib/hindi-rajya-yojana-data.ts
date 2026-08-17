@@ -165,7 +165,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/state-kisan-yojana-list',
     titleHi: 'राज्य किसान योजना लिस्ट 2026 — किस राज्य में कितना पैसा मिलता है?',
-    seoTitleHi: 'राज्य किसान योजना लिस्ट 2026 State Wise',
+    seoTitleHi: 'राज्य किसान योजना लिस्ट 2026 — कितना पैसा',
     desc: 'PM Kisan के ₹6,000 के ऊपर आपका राज्य कितना देता है? MP, राजस्थान, महाराष्ट्र, AP, तेलंगाना, बंगाल, ओडिशा — हर राज्य की योजना, रकम और स्टेटस लिंक।',
     keywords: [
       'राज्य किसान योजना लिस्ट',

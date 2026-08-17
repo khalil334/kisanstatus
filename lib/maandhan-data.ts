@@ -46,7 +46,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   },
   {
     slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
-    title: 'PM Kisan Maandhan Withdrawal & Refund Rules',
+    title: 'Maandhan Exit: Refund & Family Pension Ka Sach',
     description: 'PM Kisan Maandhan se exit karne ke rules, pension ka paisa family ko kaise milega, aur contribution refund hone ki puri sachai.',
     category: 'pension-scheme',
     published: '2026-03-23T11:18:53+05:30',
@@ -101,7 +101,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   },
   {
     slug: 'pmkmy-bank-account-change',
-    title: 'PMKMY Bank Account Change Process',
+    title: 'PM Kisan Maandhan Bank Account Kaise Badlein',
     description: 'PM Kisan Maandhan Yojana me registered bank account kaise badlein ya update karein. Documents, application format, aur common problems ka hal.',
     category: 'pension-scheme',
     published: '2026-04-30T07:56:05+05:30',

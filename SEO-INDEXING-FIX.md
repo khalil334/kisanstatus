@@ -17,7 +17,7 @@
 | **2** | `/search` robots conflict + self-canonical | Fix 4 + Fix 7 | ✅ **done 2026-08-17** |
 | **3** | Honest sitemap `lastmod` (homepage, `/articles`, calculators) | Fix 5 | ✅ **done 2026-08-17** |
 | **4** | Severe titles batch A (5 pages, `seoTitle` in data files only): `KisanRinKahaSeLe2026`, `NanoDap500mlPriceInIndia2026`, `AgriStackKyaHai2026`, `msp-list-2026-27`, `gau-mutra-kharid-yojana-up-2026` | Fix 2 | ✅ **done 2026-08-17** |
-| **5** | Severe titles batch B (5 pages incl. `/about`, `/contact`) | Fix 2 | ⬜ |
+| **5** | Severe titles batch B (5 pages): `pm-kisan-maandhan-withdrawal-refund-rules`, `pmkmy-bank-account-change`, `hi/farmer-id-kaise-banaye`, `hi/state-kisan-yojana-list`, `/about` + `/contact` | Fix 2 | ✅ **done 2026-08-17** |
 | **6** | Trim 3 over-length titles | Fix 6 | ⬜ |
 | **7** | Moderate titles batch A (12 pages) | Fix 3 | ⬜ |
 | **8** | Moderate titles batch B (11 pages) | Fix 3 | ⬜ |

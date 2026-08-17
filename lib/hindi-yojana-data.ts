@@ -80,7 +80,7 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/farmer-id-kaise-banaye',
     titleHi: 'फार्मर आईडी कैसे बनाएं? AgriStack की पूरी जानकारी यहां',
-    seoTitleHi: 'फार्मर आईडी कैसे बनाएं — कागज और पूरा Process',
+    seoTitleHi: 'फार्मर आईडी कैसे बनाएं — AgriStack जानकारी',
     desc: 'फार्मर आईडी कार्ड (AgriStack) घर बैठे मोबाइल से बनाएं — राज्यवार portal link, जरूरी documents और registration का आसान step-by-step process यहां देखें।',
     keywords: ['फार्मर आईडी कार्ड कैसे बनाएं', 'farmer id registration 2027', 'agristack farmer id'],
     category: 'farming',

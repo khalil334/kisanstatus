@@ -5,7 +5,7 @@ import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, AUTHOR_IMAGE, AUTHOR_IMAG
 import { ARTICLES } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
-  title: 'About Us - PM Kisan Guidance',
+  title: 'About Us — PM Kisan Yojana Guides',
   description: `KisanStatus ek kisan ki banayi free site hai — PM Kisan status, eKYC, payment fix aur registration ki saral Hinglish guidance. Jaaniye kisne aur kyun banayi.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/about` },
