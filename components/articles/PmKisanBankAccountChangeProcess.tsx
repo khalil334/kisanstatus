@@ -1,9 +1,6 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import SafeImageBase from '@/components/SafeImage';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-28T12:49:15+05:30';
@@ -11,16 +8,8 @@ const MODIFIED = '2026-03-11T06:46:19+05:30';
 
 const FALLBACK_IMG = '/images/articles/pm-kisan-bank-account-change/bank-change-hero.webp';
 
-function SafeImage({ src, alt, ...rest }: React.ComponentProps<typeof Image>) {
-  const [currentSrc, setCurrentSrc] = useState(src);
-  return (
-    <Image
-      {...rest}
-      src={currentSrc}
-      alt={alt}
-      onError={() => setCurrentSrc(FALLBACK_IMG)}
-    />
-  );
+function SafeImage(props: Omit<React.ComponentProps<typeof SafeImageBase>, 'fallbackSrc'>) {
+  return <SafeImageBase {...props} fallbackSrc={FALLBACK_IMG} />;
 }
 
 const RELATED = [
