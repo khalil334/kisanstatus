@@ -69,6 +69,13 @@ const nextConfig = {
       { source: '/articles/pm-kisan-mobile-number-change-2026', destination: '/articles/PmKisanMobileNumberChangeUpdate', permanent: true },
       { source: '/pm-kisan-21vi-installment-status-check', destination: '/articles/PmKisan24viKist2026', permanent: true },
       { source: '/articles/pm-kisan-24vi-kist-2026', destination: '/articles/PmKisan24viKist2026', permanent: true },
+      // GSC fix (2026-08-17): old kebab-case URLs Google still ranks were 404ing — redirect to current slugs
+      { source: '/articles/pm-kisan-beneficiary-list-2026', destination: '/articles/PmKisanBeneficiaryList2026', permanent: true },
+      { source: '/articles/pm-kisan-beneficiary-list-village-wise-2026', destination: '/articles/PmKisanBeneficiaryList2026', permanent: true },
+      { source: '/articles/pm-kisan-complete-guide', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
+      { source: '/articles/pm-kisan-name-correction-online-2026', destination: '/articles/PmKisanCorrectionForm2026', permanent: true },
+      { source: '/articles/pmfby-crop-insurance-2026', destination: '/articles/PmfbyCropInsurance2026', permanent: true },
+      { source: '/articles/agristack-kya-hai', destination: '/articles/AgriStackKyaHai2026', permanent: true },
       { source: '/articles/agri-stack-kya-hai-2026', destination: '/articles/AgriStackKyaHai2026', permanent: true },
       { source: '/author', destination: '/about', permanent: true },
       { source: '/official-links', destination: '/contact', permanent: true },
