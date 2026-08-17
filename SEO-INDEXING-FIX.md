@@ -9,6 +9,29 @@
 
 ---
 
+## 0. Execution plan — small parts (each < 7 minutes, pushed straight to main)
+
+| Part | What | Maps to | Status |
+|---|---|---|---|
+| **1** | Extend `scripts/check-title-h1.js` to all 9 data files (incl. Hindi `seoTitleHi`/`titleHi` pairs — 108 pairs, was 40) + wire `check:titles` into `npm run build` | Fix 1 | ✅ **done 2026-08-17** |
+| **2** | `/search` robots conflict + self-canonical | Fix 4 + Fix 7 | ⬜ |
+| **3** | Honest sitemap `lastmod` (homepage, `/articles`, calculators) | Fix 5 | ⬜ |
+| **4** | Severe titles batch A (5 pages, `seoTitle` in data files only) | Fix 2 | ⬜ |
+| **5** | Severe titles batch B (5 pages incl. `/about`, `/contact`) | Fix 2 | ⬜ |
+| **6** | Trim 3 over-length titles | Fix 6 | ⬜ |
+| **7** | Moderate titles batch A (12 pages) | Fix 3 | ⬜ |
+| **8** | Moderate titles batch B (11 pages) | Fix 3 | ⬜ |
+| **9** | Homepage sections: Hindi articles, calculators, maandhan + rajya-yojana hub cards | Fix 0 / P0 | ⬜ |
+| **10** | Footer navigation: all hub + category pages | Fix 0 / P0 | ⬜ |
+| **11** | Related-articles block cross-section on every article template | Fix 0 / P0 | ⬜ |
+
+Part 1 note: with all 9 data files covered, the guard now checks **108** title/H1 pairs and
+currently exits 0 — its threshold flags only pairs sharing *zero* keywords in the first 6 words.
+The 33 crawl-detected mismatches are looser divergences the guard tolerates; they get fixed
+per-page in Parts 4–8. The guard's job is to stop total drift from ever returning.
+
+---
+
 ## 1. Executive summary
 
 Two separate things were reported: **pages not indexed in GSC**, and the Ahrefs Site Audit issue

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run update-dates && next build",
+    "build": "npm run check:titles && npm run update-dates && next build",
     "start": "next start",
     "lint": "eslint .",
     "update-dates": "node scripts/update-article-dates.js",

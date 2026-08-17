@@ -5,9 +5,14 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const DATA_FILES = [
   'lib/articles-data.ts',
+  'lib/core-articles-data.ts',
   'lib/maandhan-data.ts',
   'lib/rajya-yojana-data.ts',
   'lib/loan-mandi-pashupalan-data.ts',
+  'lib/hindi-yojana-data.ts',
+  'lib/hindi-kisanguides-data.ts',
+  'lib/hindi-loan-mandi-pashupalan-data.ts',
+  'lib/hindi-rajya-yojana-data.ts',
 ];
 const ROUTES = [
   'app/articles/[slug]/page.tsx',
@@ -110,9 +115,16 @@ function main() {
       };
       const slug = field('slug');
       if (!slug) continue;
-      const title = field('seoTitle') || field('ogTitle') || field('title');
+      // Hindi articles: the route template (app/articles/hi/[slug]/page.tsx)
+      // renders titleHi as the visible <h1>, and uses seoTitleHi ?? titleHi as
+      // the <title>. So the pair to compare is seoTitleHi vs titleHi directly —
+      // the Hindi components contain no <h1> of their own.
+      const isHindi = /hindi-/.test(file);
+      const title = isHindi
+        ? field('seoTitleHi') || field('titleHi')
+        : field('seoTitle') || field('ogTitle') || field('title');
       const compName = field('component') || (routeMaps[file] || {})[slug] || null;
-      const h1 = firstH1(resolve(compName));
+      const h1 = isHindi ? field('titleHi') : firstH1(resolve(compName));
 
       if (!h1) {
         unresolved.push(`${slug} (component: ${compName || 'unknown'})`);
