@@ -357,6 +357,8 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             Kuch sawal is topic se jude hote hain par unki apni poori kahani hai. Unke liye alag detailed guides likhi hain, wahan step-by-step sab milega:
           </p>
           <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2">
+            <li><strong>FTO ban gaya, ab paisa kab aayega?</strong> — 15-din rule aur delay checklist:{' '}
+              <Link href="/articles/fto-status-check-paisa-kab-aayega" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">FTO Status Check — Paisa Kab Aayega</Link></li>
             <li><strong>Land seeding "Not Seeded" dikha raha hai?</strong> — Form, documents aur process:{' '}
               <Link href="/articles/PmKisanLandSeedingForm" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">Land Seeding Form Guide</Link></li>
             <li><strong>Khud portal se registration kiya tha?</strong> — Status check ka alag tareeka:{' '}

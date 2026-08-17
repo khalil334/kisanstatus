@@ -179,6 +179,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   AgriStackKyaHai2026: dynamic(() => import('@/components/articles/AgriStackKyaHai2026'), { ssr: true }),
   PmKisanMasterGuide2026: dynamic(() => import('@/components/articles/PmKisanMasterGuide2026'), { ssr: true }),
   'pm-kisan-fto-generated-ka-matlab-kya-hai': dynamic(() => import('@/components/articles/pm-kisan-fto-generated-ka-matlab-kya-hai'), { ssr: true }),
+  FtoStatusCheckPaisaKabAayega: dynamic(() => import('@/components/articles/FtoStatusCheckPaisaKabAayega'), { ssr: true }),
   'soil-health-card-complete-guide-2026': dynamic(() => import('@/components/articles/soil-health-card-complete-guide-2026'), { ssr: true }),
   PmfbyCropInsurance2026: dynamic(() => import('@/components/articles/PmfbyCropInsurance2026'), { ssr: true }),
   'mandi-bhav-today': dynamic(() => import('@/components/articles/mandi-bhav-today'), { ssr: true }),
