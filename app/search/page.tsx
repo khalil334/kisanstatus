@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   creator: AUTHOR_NAME,
-  alternates: { canonical: SITE_URL },
+  alternates: { canonical: `${SITE_URL}/search` },
 };
 
 const POPULAR_SEARCHES = [

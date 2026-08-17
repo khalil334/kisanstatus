@@ -11,7 +11,9 @@ export default function robots(): MetadataRoute.Robots {
           '/api/',
           '/private/',
           '/admin/',
-          '/search?',
+          // '/search?' intentionally NOT disallowed: the page is noindex-ed
+          // (metadata + X-Robots-Tag). Blocking it in robots.txt would stop
+          // Google from ever reading that noindex. One signal only.
         ],
       },
       {
