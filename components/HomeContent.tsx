@@ -335,6 +335,52 @@ export default function HomeContent() {
         </div>
       </section>
 
+      <section className="py-16 bg-gray-50 dark:bg-gray-800/50" aria-labelledby="hubs-heading">
+        <div className="container-site mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 id="hubs-heading" className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-4 tracking-tight">
+              Sabhi Sections Ek Nazar Mein
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 text-base max-w-xl mx-auto">
+              Calculators, pension yojana, state schemes aur Hindi guides — seedha sahi jagah pahunchein
+            </p>
+          </div>
+          <nav aria-label="Site sections">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto mb-8">
+              {[
+                { href: '/calculator', title: 'Free Kisan Tools', desc: 'EMI, MSP, status — 7 free calculators' },
+                { href: '/maandhan', title: 'PM Kisan Maandhan', desc: '₹3000 pension — registration se exit tak har guide' },
+                { href: '/rajya-yojana', title: 'Rajya Yojana', desc: 'State-wise kisan schemes aur status check' },
+                { href: '/articles/hi', title: 'हिंदी गाइड', desc: 'पीएम किसान, कर्ज माफी और मंडी भाव — आसान हिंदी में' },
+              ].map((hub) => (
+                <Link key={hub.href} href={hub.href} className="group bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 rounded-2xl p-6 hover:border-green-400 dark:hover:border-green-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <h3 className="font-bold text-gray-900 dark:text-white text-base mb-2 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">{hub.title}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{hub.desc}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-green-600 dark:text-green-400">
+                    Dekho <IconArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+            <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto" aria-label="Calculators">
+              {[
+                { href: '/calculator/quick-status-check', label: 'PM Kisan Status Check' },
+                { href: '/calculator/installment-tracker', label: 'Kist Tracker' },
+                { href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator' },
+                { href: '/calculator/kcc-loan-emi', label: 'KCC Loan EMI' },
+                { href: '/calculator/msp-income', label: 'MSP Income' },
+                { href: '/calculator/crop-profit', label: 'Crop Profit' },
+                { href: '/calculator/pmfby-premium', label: 'PMFBY Premium' },
+              ].map((c) => (
+                <Link key={c.href} href={c.href} className="inline-flex items-center gap-1.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full px-4 py-2 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:border-green-400 hover:text-green-700 dark:hover:text-green-400 transition-colors">
+                  {c.label}
+                </Link>
+              ))}
+            </div>
+          </nav>
+        </div>
+      </section>
+
       <section className="py-20 bg-green-50 dark:bg-green-900/10" aria-labelledby="rates-heading">
         <div className="container-site mx-auto px-4">
           <div className="text-center mb-12">
