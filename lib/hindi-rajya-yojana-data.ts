@@ -249,7 +249,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/parihara-payment-status',
     titleHi: 'परिहार पेमेंट स्टेटस 2026 — फसल नुकसान मुआवजा कहां अटका, कैसे देखें?',
-    seoTitleHi: 'परिहार पेमेंट स्टेटस चेक 2026 Karnataka',
+    seoTitleHi: 'परिहार पेमेंट स्टेटस 2026 — फसल नुकसान मुआवजा',
     desc: 'कर्नाटक में फसल नुकसान (bele hani) का मुआवजा — parihara.karnataka.gov.in पर आधार या गांव की सूची से स्टेटस, SDRF दरें, FRUITS ID और अटके पैसे का हर रास्ता।',
     keywords: [
       'परिहार पेमेंट स्टेटस',

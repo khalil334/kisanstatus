@@ -13,7 +13,7 @@ export type MaandhanArticleMeta = {
 export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   {
     slug: 'pm-kisan-maandhan-registration-2026',
-    title: 'PM Kisan Maandhan Registration 2026',
+    title: 'PM Kisan Maandhan Registration: ₹3000 Pension',
     description: 'PM Kisan Maandhan Yojana mein online registration ka complete process, eligibility, aur zaroori documents ki jankari.',
     category: 'pension-scheme',
     published: '2026-03-15T08:06:28+05:30',
@@ -90,7 +90,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   },
   {
     slug: 'family-pension-rules',
-    title: 'PM Kisan Maandhan Family Pension Rules',
+    title: 'PMKMY Family Pension Rules 2026 — Kya Hoga?',
     description: 'PMKMY account holder ke dehant ke baad spouse ko pension kaise milegi, nomination rules, aur family pension claim karne ka pura process.',
     category: 'pension-scheme',
     published: '2026-04-22T17:52:14+05:30',
@@ -112,7 +112,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   },
   {
     slug: 'pmkmy-grievance-complaint-helpline',
-    title: 'PMKMY Grievance & Complaint Helpline',
+    title: 'PM Kisan Maandhan Helpline Number 2026',
     description: 'PM Kisan Maandhan Yojana me shikayat kaise karein? Helpline numbers, online grievance process, CSC complaint, aur common problems ka practical solution.',
     category: 'pension-scheme',
     published: '2026-05-11T20:55:01+05:30',

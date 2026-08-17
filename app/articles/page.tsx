@@ -63,7 +63,7 @@ const HINDI_LISTING_ARTICLES = HINDI_ARTICLES.map((a) => ({
 const ALL_ARTICLES: readonly ListingArticle[] = [...ARTICLES, ...MAANDHAN_ARTICLES, ...RAJYA_LISTING_ARTICLES, ...HINDI_LISTING_ARTICLES];
 
 export const metadata: Metadata = {
-  title: `Kisan Guides 2026 — ${ALL_ARTICLES.length}+ Resources`,
+  title: `PM Kisan aur Yojana Verified Guides 2026`,
   description: `${ALL_ARTICLES.length}+ verified guides on PM Kisan, farming subsidies, loans & crop insurance. Simple Hinglish explanations for Indian farmers.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: {

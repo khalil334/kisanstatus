@@ -6,13 +6,13 @@ const DOMAIN = 'https://kisanstatus.com';
 const PAGE_URL = `${DOMAIN}/calculator/quick-status-check`;
 
 export const metadata: Metadata = {
-  title: 'PM Kisan Status Check 2026 — Aadhaar/Mobile',
+  title: 'PM Kisan Status Check Karo — Aadhaar/Mobile',
   description: 'PM Kisan status check karein Aadhaar, mobile ya registration number se. Seedha official portal par redirect. Bilkul free, bina login ke.',
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   creator: AUTHOR_NAME,
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'PM Kisan Status Check 2026 — Aadhaar/Mobile',
+    title: 'PM Kisan Status Check Karo — Aadhaar/Mobile',
     description: 'PM Kisan status check karein Aadhaar, mobile ya registration number se. Seedha official portal par redirect. Bilkul free tool.',
     type: 'website',
     url: PAGE_URL,
