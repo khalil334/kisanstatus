@@ -8,6 +8,7 @@ export const HINDI_LOAN_MANDI_PASHUPALAN_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/karj-mafi-list',
     titleHi: 'किसान कर्ज माफी लिस्ट 2027 — राज्यवार नाम',
+    seoTitleHi: 'कर्ज माफी लिस्ट 2027 — राज्यवार नाम देखें',
     desc: 'किसान कर्ज माफी लिस्ट 2027 में अपना नाम ऐसे चेक करें — UP, MP, महाराष्ट्र, राजस्थान और झारखंड की राज्यवार नई list, पात्रता और आवेदन की पूरी जानकारी यहां।',
     keywords: ['किसान कर्ज माफी लिस्ट 2027', 'karj mafi list', 'kisan karj mafi 2027'],
     category: 'loan',

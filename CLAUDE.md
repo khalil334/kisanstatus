@@ -37,6 +37,21 @@
   on long titles — no code fix; left unchanged (karj-mafi-list,
   bihar-kisan-registration-status-check-2026, jansamarth-portal-loan-apply).
 
+## Ahrefs issue: Page and SERP titles do not match — round 2 (2026-08-17)
+- 7 pages re-flagged. 4 were pure false positives: SERP title == page title
+  with brand suffix stripped or "|"→"-" separator swap (fto-generated,
+  mp-kisan-kalyan-kist-status, jansamarth, bihar-dbt — bihar also had a
+  "— Kisan Guide" Google-appended tail; left unchanged).
+- 3 real fixes (align data-file title with Google's rewrite, keep ≤46 chars):
+  - hindi-rajya-yojana-data.ts mp-kisan-kalyan seoTitleHi → include "सालाना";
+    Google's full rewrite was 51 chars, so compressed with ":" + "पाएं".
+  - hindi-loan-mandi-pashupalan-data.ts karj-mafi-list: added seoTitleHi with
+    "देखें" action verb per Google's rewrite (dropped "किसान" to fit budget).
+  - core-articles-data.ts PmKisanCscRegistrationCharges seoTitle → match
+    ogTitle/H1 wording "CSC Charges — Sahi Fees, Sahi Tarika" (Google's pick).
+- Lesson: Google keeps preferring the H1/fuller wording; when writing seoTitle,
+  don't diverge from the on-page H1 phrasing just to save chars.
+
 ## Ahrefs issue: Meta description too long (c64d56c9, fixed 2026-08-16)
 - 7 Hindi article pages flagged (metaDescriptionLength > 160). All meta
   descriptions for /articles/hi/* come from the `desc` field in
