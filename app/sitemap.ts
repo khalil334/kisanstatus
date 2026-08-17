@@ -1,4 +1,6 @@
 import { MetadataRoute } from 'next';
+import fs from 'fs';
+import path from 'path';
 import { ARTICLES, CATEGORIES, type CategorySlug } from '@/lib/articles-data';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
 import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
@@ -59,6 +61,39 @@ const REFERENCE_DATE = new Date(
 
 const FALLBACK_DATE = REFERENCE_DATE;
 
+// The homepage and /articles are listing pages: they genuinely change when a
+// NEW article is published (it appears in their lists), but an edit to an old
+// article does not change them. Using publishedTime (not modifiedTime) keeps
+// their lastmod honest instead of bumping on every content tweak site-wide.
+const LATEST_PUBLISHED = new Date(
+  Math.max(
+    ...ALL_ARTICLES.map((a) => {
+      const t = new Date(a.publishedTime).getTime();
+      return Number.isFinite(t) ? t : 0;
+    }),
+  ),
+);
+
+// Each calculator component declares `const MODIFIED = '<ISO date>'` — read it
+// from the source at build time so a real edit moves the sitemap date and a
+// non-edit doesn't. Falls back to the given date if the const is missing.
+function calculatorModified(componentFile: string, fallback: string): Date {
+  try {
+    const src = fs.readFileSync(
+      path.join(process.cwd(), 'components', 'calculators', componentFile),
+      'utf8',
+    );
+    const m = src.match(/const MODIFIED = '([^']+)'/);
+    if (m) {
+      const d = new Date(m[1]);
+      if (Number.isFinite(d.getTime())) return d;
+    }
+  } catch {
+    // fall through to fallback
+  }
+  return new Date(fallback);
+}
+
 // Google ignores lastmod site-wide if it catches future timestamps — clamp
 // any content date that is still ahead of the build moment.
 function clampToNow(d: Date): Date {
@@ -98,8 +133,20 @@ const RAJYA_YOJANA_UPDATED = new Date(
   ),
 );
 
-// Kept in sync with the per-calculator `MODIFIED` consts in components/calculators/.
-const CALCULATORS_UPDATED = new Date('2026-05-20');
+const CALC_DATES = {
+  quickStatus: calculatorModified('QuickStatusChecker.tsx', '2026-05-10'),
+  installmentTracker: calculatorModified('InstallmentTrackerCalcPage.tsx', '2026-03-10'),
+  pmKisanBenefit: calculatorModified('PMKisanBenefitCalcPage.tsx', '2026-04-05'),
+  kccLoanEmi: calculatorModified('KCCLoanCalcPage.tsx', '2026-04-16'),
+  pmfbyPremium: calculatorModified('PMFBYCalcPage.tsx', '2026-04-24'),
+  mspIncome: calculatorModified('MSPIncomeCalcPage.tsx', '2026-05-20'),
+  cropProfit: calculatorModified('CropProfitCalcPage.tsx', '2026-04-28'),
+};
+
+// The /calculator hub lists all calculators — it changes when the freshest one does.
+const CALCULATORS_UPDATED = new Date(
+  Math.max(...Object.values(CALC_DATES).map((d) => d.getTime())),
+);
 
 const CORNERSTONE_SLUGS = new Set([
   'PmKisanMasterGuide2026',
@@ -127,7 +174,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: SITE_URL,
-      lastModified: now,
+      lastModified: clampToNow(LATEST_PUBLISHED),
       changeFrequency: 'daily',
       priority: 1.0,
       // No hreflang alternates: single-language site — a lone self-referencing
@@ -135,7 +182,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${SITE_URL}/articles`,
-      lastModified: now,
+      lastModified: clampToNow(LATEST_PUBLISHED),
       changeFrequency: 'daily',
       priority: 0.90,
     },
@@ -167,43 +214,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${SITE_URL}/calculator/quick-status-check`,
-      lastModified: new Date('2026-05-10'),
+      lastModified: CALC_DATES.quickStatus,
       changeFrequency: 'weekly',
       priority: 0.70,
     },
     {
       url: `${SITE_URL}/calculator/installment-tracker`,
-      lastModified: new Date('2026-03-10'),
+      lastModified: CALC_DATES.installmentTracker,
       changeFrequency: 'weekly',
       priority: 0.70,
     },
     {
       url: `${SITE_URL}/calculator/pm-kisan-benefit`,
-      lastModified: new Date('2026-04-05'),
+      lastModified: CALC_DATES.pmKisanBenefit,
       changeFrequency: 'weekly',
       priority: 0.70,
     },
     {
       url: `${SITE_URL}/calculator/kcc-loan-emi`,
-      lastModified: new Date('2026-04-16'),
+      lastModified: CALC_DATES.kccLoanEmi,
       changeFrequency: 'weekly',
       priority: 0.70,
     },
     {
       url: `${SITE_URL}/calculator/pmfby-premium`,
-      lastModified: new Date('2026-04-24'),
+      lastModified: CALC_DATES.pmfbyPremium,
       changeFrequency: 'weekly',
       priority: 0.70,
     },
     {
       url: `${SITE_URL}/calculator/msp-income`,
-      lastModified: new Date('2026-05-20'),
+      lastModified: CALC_DATES.mspIncome,
       changeFrequency: 'weekly',
       priority: 0.70,
     },
     {
       url: `${SITE_URL}/calculator/crop-profit`,
-      lastModified: new Date('2026-04-28'),
+      lastModified: CALC_DATES.cropProfit,
       changeFrequency: 'weekly',
       priority: 0.70,
     },
