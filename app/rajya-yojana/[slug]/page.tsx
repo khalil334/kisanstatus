@@ -21,6 +21,7 @@ import {
 } from '@/lib/site-config';
 import { hinglishAlternates } from '@/lib/hindi-hreflang';
 import { getAuthorBio } from '@/lib/author-bios';
+import { CrossSectionLinks } from '@/components/CrossSectionLinks';
 import RajasthanKisanSammanNidhi9000 from '@/components/articles/rajya-yojana/RajasthanKisanSammanNidhi9000';
 import AnnadataSukhibhavaStatusCheck from '@/components/articles/rajya-yojana/AnnadataSukhibhavaStatusCheck';
 import MpKisanKalyanYojanaKist from '@/components/articles/rajya-yojana/MpKisanKalyanYojanaKist';
@@ -323,6 +324,8 @@ export default async function RajyaYojanaArticlePage({
           </div>
         </section>
       )}
+
+      <CrossSectionLinks currentPath={`/rajya-yojana/${slug}`} section="rajya-yojana" />
     </>
   );
 }

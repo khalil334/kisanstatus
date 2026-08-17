@@ -14,6 +14,7 @@ import {
   LOGO_HEIGHT,
 } from '@/lib/site-config';
 import { getAuthorBio } from '@/lib/author-bios';
+import { CrossSectionLinks } from '@/components/CrossSectionLinks';
 
 import PmKisanMaandhanRegistration2026 from '@/components/articles/maandhan/PmKisanMaandhanRegistration2026';
 import PmKisanMaandhanEligibilityDocuments from '@/components/articles/maandhan/PmKisanMaandhanEligibilityDocuments';
@@ -190,6 +191,8 @@ export default async function MaandhanArticlePage({ params }: { params: Promise<
           </div>
         </div>
       </section>
+
+      <CrossSectionLinks currentPath={`/maandhan/${slug}`} section="maandhan" />
     </>
   );
 }

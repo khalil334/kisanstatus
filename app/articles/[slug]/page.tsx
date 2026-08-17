@@ -23,6 +23,7 @@ import {
   LOGO_HEIGHT,
 } from '@/lib/site-config';
 import { getAuthorBio } from '@/lib/author-bios';
+import { CrossSectionLinks } from '@/components/CrossSectionLinks';
 import { hinglishAlternates } from '@/lib/hindi-hreflang';
 
 function buildSchemas(article: ArticleMeta, url: string, ogImage: string) {
@@ -377,6 +378,8 @@ export default async function ArticlePage({
           </div>
         </section>
       )}
+
+      <CrossSectionLinks currentPath={`/articles/${slug}`} section="articles" />
     </article>
   );
 }

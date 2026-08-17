@@ -23,7 +23,30 @@
 | **8** | Moderate titles batch B (11 pages) | Fix 3 | ✅ **done 2026-08-17** — 7 edits (maandhan ×3, parihara, quick-status-check, pm-kisan-benefit, /articles); /contact + /disclaimer already fixed in Parts 5–6; installment-tracker + msp-income titles already contain their H1 verbatim |
 | **9** | Homepage sections: Hindi articles, calculators, maandhan + rajya-yojana hub cards | Fix 0 / P0 | ✅ **done 2026-08-17** — new "Sabhi Sections Ek Nazar Mein" nav on homepage: 4 hub cards (/calculator, /maandhan, /rajya-yojana, /articles/hi) + pill links to all 7 calculators |
 | **10** | Footer navigation: all hub + category pages | Fix 0 / P0 | ✅ **done 2026-08-17** — footer now links /maandhan + all 6 English and all 6 Hindi category pages (12 category URLs, 6 previously unindexed) |
-| **11** | Related-articles block cross-section on every article template | Fix 0 / P0 | ⬜ |
+| **11** | Related-articles block cross-section on every article template | Fix 0 / P0 | ✅ **done 2026-08-17** — new `lib/cross-links.ts` + `components/CrossSectionLinks.tsx`, rendered on all 4 article templates. Verified against the built HTML: **all 46 previously-unindexed URLs now have ≥3 inbound internal links** (median 18) |
+| **12** | Visible Hindi ↔ Hinglish cross-language link on paired pages (hreflang already existed, but no clickable link) | Fix 0 / P3 | ✅ **done 2026-08-17** — same component: `getLanguagePairLink()` renders the paired page as a highlighted link on all 22 hreflang pairs |
+| **13** | Content upgrade on the 2 "crawled — currently not indexed" PMKMY pages | P2 | ⬜ needs subject-matter input — not a template fix, and no facts to add without a source |
+
+### Part 11 — what shipped
+
+`lib/cross-links.ts` builds, for any page, a link set that deliberately points **out of that
+page's own section**. Pools: Hinglish articles, Hindi articles, all 7 calculators, all 13
+maandhan articles, all 15 rajya-yojana articles, all 12 category pages, 5 hub pages.
+Targets are picked by a deterministic FNV-1a hash of the source path (`pathSeed`) walked
+forward over each pool, so:
+
+- inbound links **spread evenly** instead of every page linking the same newest 5 articles;
+- output is **stable between builds** (no randomness → no static-HTML churn);
+- the current page is always filtered out of its own link list.
+
+`components/CrossSectionLinks.tsx` renders it (plus the language-pair link) and is wired into
+`app/articles/[slug]`, `app/articles/hi/[slug]`, `app/maandhan/[slug]`, `app/rajya-yojana/[slug]`.
+The existing same-category "Related Articles" blocks are untouched — this is additive.
+
+**Verification run on the production build** (`.next/server/app`, 142 HTML files): of the 46
+URLs listed as not indexed in §2B, **0 have zero inbound links**, **0 have 1–2**, minimum is
+**3**, median **18**. `npx tsc --noEmit`, `npx eslint`, `npm run check:titles` (108 pairs) and
+`next build` all pass.
 
 Part 1 note: with all 9 data files covered, the guard now checks **108** title/H1 pairs and
 currently exits 0 — its threshold flags only pairs sharing *zero* keywords in the first 6 words.
@@ -374,7 +397,7 @@ ka faisla kiya**. Ye quality/demand signal hai — technical problem nahi.
 | **P1** | Request Indexing on 5 hub pages | Manual, 10 min | crawl cascade |
 | **P1** | Fix 1 from §5 (title guard) — Ahrefs issue | Template, 1 line | 33 title mismatches |
 | **P2** | Content upgrade on 2 "crawled not indexed" PMKMY pages | Per-page | 2 pages |
-| **P3** | hreflang for Hindi/English pairs | Template | long-term |
+| **P3** | hreflang for Hindi/English pairs | Template | ✅ done in Part 12 (visible cross-language link added) |
 
 ### Verification (2–4 hafte baad)
 

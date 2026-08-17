@@ -6,6 +6,7 @@ import { HINDI_ARTICLES, HINDI_ARTICLES_MAP, type HindiArticle } from '@/lib/hin
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import { hindiAlternates } from '@/lib/hindi-hreflang';
 import { AuthorBox } from '@/components/ArticleShared';
+import { CrossSectionLinks } from '@/components/CrossSectionLinks';
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: HindiArticle }>> = {
   PmKisan25viKistKabAayegi: dynamic(() => import('@/components/articles/hindi-yojana/PmKisan25viKistKabAayegi'), { ssr: true }),
@@ -179,6 +180,11 @@ export default async function HindiArticlePage({
       </article>
       <AuthorBox modified={article.modifiedTime} bioKey={article.slug} />
       <RelatedHindiGuides currentSlug={article.slug} />
+      <CrossSectionLinks
+        currentPath={`/articles/hi/${slug}`}
+        section="hindi"
+        heading="साइट के दूसरे सेक्शन — ये भी देखें"
+      />
     </main>
   );
 }
