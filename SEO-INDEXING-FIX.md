@@ -22,7 +22,7 @@
 | **7** | Moderate titles batch A (12 articles in `lib/core-articles-data.ts`) | Fix 3 | ✅ **done 2026-08-17** |
 | **8** | Moderate titles batch B (11 pages) | Fix 3 | ✅ **done 2026-08-17** — 7 edits (maandhan ×3, parihara, quick-status-check, pm-kisan-benefit, /articles); /contact + /disclaimer already fixed in Parts 5–6; installment-tracker + msp-income titles already contain their H1 verbatim |
 | **9** | Homepage sections: Hindi articles, calculators, maandhan + rajya-yojana hub cards | Fix 0 / P0 | ✅ **done 2026-08-17** — new "Sabhi Sections Ek Nazar Mein" nav on homepage: 4 hub cards (/calculator, /maandhan, /rajya-yojana, /articles/hi) + pill links to all 7 calculators |
-| **10** | Footer navigation: all hub + category pages | Fix 0 / P0 | ⬜ |
+| **10** | Footer navigation: all hub + category pages | Fix 0 / P0 | ✅ **done 2026-08-17** — footer now links /maandhan + all 6 English and all 6 Hindi category pages (12 category URLs, 6 previously unindexed) |
 | **11** | Related-articles block cross-section on every article template | Fix 0 / P0 | ⬜ |
 
 Part 1 note: with all 9 data files covered, the guard now checks **108** title/H1 pairs and

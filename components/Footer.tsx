@@ -25,7 +25,7 @@ export default function Footer() {
       itemType="https://schema.org/Organization"
     >
       <div className="container-site">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           <div>
             <h4 className="font-semibold text-white text-base mb-4" itemProp="name">{SITE_NAME}</h4>
             <p className="text-sm text-gray-400 leading-relaxed mb-4" itemProp="description">
@@ -54,8 +54,59 @@ export default function Footer() {
                   { href: '/articles', label: 'All Articles' },
                   { href: '/articles/hi', label: 'हिंदी योजना गाइड' },
                   { href: '/rajya-yojana', label: 'Rajya Yojana' },
+                  { href: '/maandhan', label: 'PM Kisan Maandhan' },
                   { href: '/calculator', label: 'Calculators' },
                   { href: '/calculator/quick-status-check', label: 'Quick Status Check' },
+                ].map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-green-400 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 rounded inline-block py-0.5"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-white text-base mb-4">Categories</h4>
+            <nav aria-label="Article categories">
+              <ul className="space-y-2 text-sm" role="list">
+                {[
+                  { href: '/articles/category/status-check', label: 'Verification & Status' },
+                  { href: '/articles/category/loan', label: 'Credit & Loans' },
+                  { href: '/articles/category/farming', label: 'Farming & Schemes' },
+                  { href: '/articles/category/mandi', label: 'Market Rates' },
+                  { href: '/articles/category/pashupalan', label: 'Pashupalan & Matsya Palan' },
+                  { href: '/articles/category/agri-business', label: 'Agri Business & Subsidy' },
+                ].map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-green-400 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 rounded inline-block py-0.5"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-white text-base mb-4" lang="hi">हिंदी श्रेणियाँ</h4>
+            <nav aria-label="Hindi article categories" lang="hi">
+              <ul className="space-y-2 text-sm" role="list">
+                {[
+                  { href: '/articles/hi/category/status-check', label: 'सत्यापन और स्थिति' },
+                  { href: '/articles/hi/category/loan', label: 'ईण और क्रेडिट' },
+                  { href: '/articles/hi/category/farming', label: 'खेती और योजनाएं' },
+                  { href: '/articles/hi/category/mandi', label: 'बाजार दरें' },
+                  { href: '/articles/hi/category/pashupalan', label: 'पशुपालन और मत्स्य पालन' },
+                  { href: '/articles/hi/category/agri-business', label: 'कृषि व्यवसाय और सब्सिडी' },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link
