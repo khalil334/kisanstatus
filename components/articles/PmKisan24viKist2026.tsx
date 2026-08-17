@@ -18,7 +18,7 @@ const KIST = {
 };
 
 const PUBLISHED = '2026-01-01T10:21:39+05:30';
-const MODIFIED = '2026-08-14T12:00:00+05:30';
+const MODIFIED = '2026-08-17T09:30:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisan25viKist2027', title: '25vi Kist Date & Amount' },
@@ -51,6 +51,18 @@ const FAQS_DATA = [
     q: 'Meri purani 2-3 kistein bhi ruki hui hain — woh milengi?',
     a: 'Agar rukne ki wajah aapki taraf se thi — eKYC pending, land seeding adhuri, spelling mismatch — aur ab woh theek ho gayi hai, toh ruka hua pura amount arrears ke roop me ek saath aata hai. Ministry khud keh chuki hai ki mandatory requirements poori hote hi due installments nikal jaati hain. Alag se koi application nahi lagti.',
   },
+  {
+    q: 'Sirf Aadhaar card se status check ho sakta hai kya?',
+    a: 'Haan, bilkul. Registration number yaad nahi toh pmkisan.gov.in par "Know your registration no." me jaake Aadhaar number daalo — registration number saamne aa jayega. Phir usi se Know Your Status khol lo. Mobile number bhi chalta hai, bas woh record me registered hona chahiye. Kisi cyber cafe ko iske liye paise dene ki zaroorat nahi, phone se ho jata hai.',
+  },
+  {
+    q: '24vi kist ki beneficiary list kab aayegi?',
+    a: 'Village-wise list release ke aas-paas hi update hoti hai. Lekin ek baat samajh lo — list koi nayi nahi banti, wahi purani beneficiary list refresh hoti hai. Aap abhi bhi check kar sakte ho ki naam hai ya nahi. Naam abhi hai aur eKYC-seeding complete hai, toh 24vi me bhi milne ke pure chances hain. Naam abhi nahi hai toh release ka intezaar mat karo, wajah abhi dhundo.',
+  },
+  {
+    q: 'Holding limit ya zameen ki koi shart hai kya is baar?',
+    a: 'Nahi, zameen ke size ki koi limit nahi hai — 2019 se hi scheme sabhi landholding kisan parivaron ke liye hai, chhote-bade ka fark nahi. Shart bas ye hai ki zameen aapke naam registered ho aur aap exclusion list me na aate ho (income tax payer, government job, registered professional waghera). Baaki afwaah hai.',
+  },
 ];
 
 export default function PmKisan24viKist2026({ article }: { article: ArticleMeta }) {
@@ -77,7 +89,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(PUBLISHED)}</span>
             <span>Updated: {fmtDate(MODIFIED)}</span>
-            <span>12 min read</span>
+            <span>{article.readingTime} min read</span>
           </div>
         </div>
       </div>
@@ -140,6 +152,9 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           <SH>Seedhi Baat Pehle</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Date abhi announce nahi hui hai. Bas, itni si baat.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            <strong>Aaj tak ka update ({fmtDate(MODIFIED)}):</strong> pmkisan.gov.in par 24vi kist ko lekar koi naya notice nahi hai, na PIB se koi release aayi hai. Jaise hi kuch official aata hai, ye page usi din update hota hai — isliye bookmark karke rakhna kaam ka hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Lekin jo pata hai, woh kaafi kuch bata deta hai. Pichhla transfer 20/06/2026 ko hua tha — Tarakeswar (Hooghly, West Bengal) ke event se PM ne button dabaya aur 9.44 crore parivaron ko kul ₹18,880 crore gaye. Usse pehle wala 13 March ko Guwahati se. Beech ka fasla lagbhag sava teen mahine ka — isi hisaab se agla number <strong>October 2026 ke aas-paas</strong> banta hai.
@@ -310,6 +325,10 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             <SI n={4}>Captcha bhariye — OTP registered mobile par aayega, use daaliye</SI>
             <SI n={5}>Payment history, eKYC aur seeding — sab ek hi screen par dikh jayega</SI>
           </StepList>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4 mb-3">
+            Ek chhota sa kaam ka tareeka: ye sab mobile se bhi utna hi aasan hai jitna computer se — kisi CSC ya cyber cafe ko sirf status dekhne ke paise dene ki zaroorat nahi. Chrome me site kholo, wahi steps. Aur agar registration number kahin likha nahi hai, toh Aadhaar number se do minute me nikal aata hai — upar step 3 wala raasta.
+          </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4 mb-3">
             Screen par jo likha aaye, uska matlab ye hai:
