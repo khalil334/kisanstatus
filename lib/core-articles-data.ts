@@ -160,7 +160,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'FTO Ka Full Form & FTO Generated Meaning',
     desc: 'FTO Generated dikha par paisa nahi aaya? Generated, Processed aur "will be generated" — teeno ka aasan matlab, aur delay par din 15 aur 30 ka action plan.',
     ogTitle: 'FTO Ka Full Form — FTO Generated/Processed Meaning',
-    seoTitle: 'FTO Generated Matlab — PM Kisan Guide',
+    seoTitle: 'FTO Full Form क्या है? PM Kisan में FTO Generated का मतलब 2026',
     keywords: [
       'FTO ka full form',
       'FTO full form in hindi',
@@ -178,7 +178,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
     category: 'status-check',
     publishedTime: '2025-12-26T11:27:11+05:30',
-    modifiedTime: '2026-08-17T10:15:00+05:30',
+    modifiedTime: '2026-08-18T09:00:00+05:30',
     readingTime: 6,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('pm-kisan-fto-generated-ka-matlab-kya-hai'),

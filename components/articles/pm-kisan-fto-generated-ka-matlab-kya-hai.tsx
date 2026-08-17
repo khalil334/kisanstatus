@@ -15,6 +15,7 @@ const RELATED = [
 ];
 
 const FAQS_DATA = [
+  { q: 'FTO ka full form kya hai?', a: 'FTO ka full form hai Fund Transfer Order (फंड ट्रांसफर ऑर्डर). Ye sarkar ki taraf se bank ko diya gaya payment ka aadesh hai — kis kisan ke account me kitni rakam bhejni hai. PM Kisan status me "FTO is Generated" dikhne ka matlab hai ki aapki kist ka order ban chuka hai.' },
   { q: 'Status me Generated dikhne ke baad paisa kitne din me aata hai?', a: 'Iska koi official fixed timeline nahi hai, sarkar ne kabhi announce nahi kiya ki kitne din lagenge. Aam taur par order banne ke baad DBT se paisa kuch hi dino me aa jata hai. Haan, 15 din se upar ho jayein to phir wait karne ke bajay Aadhaar seeding aur account ki jaanch karwani chahiye.' },
   { q: 'Processed aur Generated me kya fark hai?', a: 'Generated: sarkar ne bank ko payment ka order bhej diya. Processed: bank ne us order par kaam shuru kar diya, yaani ek step aage. Processed dikhne ke baad credit ki umeed jaldi rakh sakte ho.' },
   { q: '"Will be generated" ka kya matlab hua?', a: 'Order abhi bana nahi, banna baki hai. Aap beneficiary list me ho, bas aapki batch ki bari nahi aayi. Kuch dino me ye khud hi "Generated" ho jata hai, aapko kuch nahi karna.' },
@@ -71,6 +72,10 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             Status Generated = Paisa Sanction Ho Chuka Hai
           </p>
         </div>
+
+        <p className="text-base leading-relaxed mb-4">
+          <strong>FTO ka full form hai “Fund Transfer Order” (फंड ट्रांसफर ऑर्डर)</strong> — sarkar ki taraf se bank ko diya gaya aadesh ki kis kisan ke account me kitni rakam dalni hai. PM Kisan status me “FTO is Generated” dikhe to matlab aapki kist ka payment order ban chuka hai.
+        </p>
 
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-500 dark:border-amber-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Status Dekh Ke Ghabra Gaye?</h2>
