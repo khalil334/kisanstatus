@@ -4,6 +4,7 @@
 **Property:** `sc-domain:kisanstatus.com` (verified owner)
 **Data sources:** Google Search Console API (sitemaps), live crawl of all 138 sitemap URLs, repo static analysis
 **Status:** Diagnosis complete — no code changes made yet
+**Revision 2:** adds §2A — GSC URL Inspection results, which correct the initial title-first conclusion
 
 ---
 
@@ -12,10 +13,17 @@
 Two separate things were reported: **pages not indexed in GSC**, and the Ahrefs Site Audit issue
 **"Page and SERP titles do not match"**. The crawl shows these are the *same underlying problem*.
 
-The site's technical crawlability is **clean**. What is weak is the **title layer**: on 33 of 138
-pages the `<title>` and the `<h1>` describe the page differently, so Google frequently rewrites the
-SERP title — and pages whose title Google doesn't trust are the same pages that sit in
-"Crawled – currently not indexed".
+The site's technical crawlability is **clean**. Two separate defects were found:
+
+1. **Title layer** — on 33 of 138 pages the `<title>` and the `<h1>` describe the page differently.
+   This is the Ahrefs issue, and it causes Google to rewrite SERP titles (a CTR problem).
+2. **Internal linking** — pages exist in the sitemap but almost nothing links to them. GSC URL
+   Inspection returned **zero internal referring URLs for 8 of 9 pages inspected**.
+
+**These are not the same problem, and #2 is the one blocking indexing.** GSC's own verdict on the 10
+worst title mismatches: **8 are indexed normally.** So fixing titles will close the Ahrefs issue and
+help click-through, but it will not by itself get the unindexed pages in. See §2A — it revises the
+priority order, and it is based on Google's data rather than inference.
 
 ### What was checked, and what came back
 
@@ -92,6 +100,89 @@ Reading the 33 mismatches, they are not random. Three repeating patterns:
 | 5 | 3 titles exceed 60 characters | `/disclaimer`, `/articles/category/pashupalan`, `/maandhan/pm-kisan-maandhan-withdrawal-refund-rules` | Truncated in SERP — another trigger for Google rewriting the title. |
 | 6 | 108 sitemap images, 0 reported indexed | GSC sitemaps API | Note: this GSC API field is deprecated and unreliable; verify in the GSC UI before acting. |
 | 7 | `/search` canonical points at the **homepage**, not itself | `app/search/page.tsx:13` — `alternates: { canonical: SITE_URL }` | A page canonicalising to an unrelated URL sends a conflicting signal alongside its `noindex`. Since the page is already `noindex`, make the canonical self-referencing (or drop it) — don't point it at `/`. |
+
+---
+
+## 2A. GSC URL Inspection on the 10 severe pages — what Google actually says
+
+The section above is based on a live crawl. This section is Google's own verdict, pulled per-URL
+from the GSC URL Inspection API. It changes the priority order, so read it before acting.
+
+| Page | Google's coverage state | Last crawled | In sitemap per Google |
+|---|---|---|---|
+| `/articles/hi/farmer-id-kaise-banaye` | Submitted and indexed | 2026-08-17 | yes |
+| `/maandhan/pm-kisan-maandhan-withdrawal-refund-rules` | Submitted and indexed | 2026-07-23 | yes |
+| `/articles/KisanRinKahaSeLe2026` | Submitted and indexed | 2026-07-05 | **no** |
+| `/articles/gau-mutra-kharid-yojana-up-2026` | Submitted and indexed | 2026-08-14 | yes |
+| `/articles/hi/state-kisan-yojana-list` | **URL is unknown to Google** | **never** | **no** |
+| `/articles/AgriStackKyaHai2026` | Submitted and indexed | 2026-08-14 | yes |
+| `/maandhan/pmkmy-bank-account-change` | **Crawled – currently not indexed** | 2026-07-28 | **no** |
+| `/articles/NanoDap500mlPriceInIndia2026` | Submitted and indexed | 2026-08-01 | yes |
+| `/articles/msp-list-2026-27` | Submitted and indexed | 2026-08-06 | yes |
+| `/about` | not inspected (brand page, low priority) | — | — |
+
+### What this tells us — and it corrects the assumption above
+
+**8 of the 10 severe title mismatches are indexed just fine.** So a title/H1 mismatch is *not*, on
+its own, keeping pages out of the index on this site. It remains a real Ahrefs issue and a real
+CTR/SERP-rewrite problem — but it must be **de-prioritised as an indexing fix**. Fixing 33 titles
+would close the Ahrefs issue and likely improve click-through, but it would not by itself pull the
+unindexed pages in.
+
+**The actual indexing blocker is discovery, not quality.** Note the last column:
+
+- `/articles/hi/state-kisan-yojana-list` — **Google has never seen this URL at all**
+  ("URL is unknown to Google", never crawled) even though it *is* present in `/sitemap.xml`,
+  which Google downloaded on 2026-08-17.
+- `/maandhan/pmkmy-bank-account-change` — crawled, but Google reports it as **not associated with
+  any sitemap**, and it is sitting in *Crawled – currently not indexed*.
+- `/articles/KisanRinKahaSeLe2026` — indexed, but also reported as **not in any sitemap**.
+
+All three **are** in the live sitemap (verified by fetching it). So Google downloaded the sitemap but
+has not attributed these URLs to it. Combined with the fact that internal links are thin — the
+inspection returned `referring_urls: []` for 8 of 9 pages, with only
+`/articles/hi/farmer-id-kaise-banaye` showing a single internal referrer
+(`/articles/AgriStackKyaHai2026`) — the picture is:
+
+> **These pages are orphans.** They exist in the sitemap but almost nothing on the site links to
+> them. A sitemap entry is a hint; internal links are the actual ranking-and-discovery signal. On a
+> low-authority domain, a page with zero internal links is the first thing Google declines to index.
+
+### One correction to Fix 5's premise, in Google's favour
+
+`/maandhan/pm-kisan-maandhan-withdrawal-refund-rules` reports `user_canonical:
+https://kisanstatus.com/` — i.e. at its last crawl (2026-07-23) Google saw this page canonicalising
+to the **homepage**. The live HTML today correctly self-canonicalises. So this was a real bug that has
+since been fixed in code, but Google's index still holds the stale value because it hasn't re-crawled
+in ~3.5 weeks. No code change needed — it needs a re-crawl request. Worth checking whether other
+pages carry the same stale canonical in Google's index.
+
+### Revised priority — internal linking first
+
+| New order | Fix | Why |
+|---|---|---|
+| **1** | **Internal linking audit + fix** (new — see Fix 0 below) | This is the actual indexing blocker. 8/9 inspected pages have zero internal referrers. |
+| 2 | Fix 1 — build-time title guard | Cheap, stops future drift, one line. |
+| 3 | Request re-indexing for the stale-canonical page | Fixes an index-state bug already fixed in code. |
+| 4 | Fix 4 / Fix 5 / Fix 7 — robots + lastmod + self-canonical | Template hygiene, helps re-crawl speed. |
+| 5 | Fix 2 / Fix 3 / Fix 6 — the 33 titles | Closes the Ahrefs issue + improves CTR. No longer expected to move indexing on its own. |
+
+### Fix 0 — Internal linking (new, highest priority)
+
+The site has 138 pages and a `getRelatedArticles()` helper (`lib/articles-data.ts`), but the severe
+pages show no inbound internal links. Recommended, in order:
+
+1. **Audit** — count inbound internal links per URL across all 138 pages; list every page with 0–2.
+2. **Hub pages** — `/articles`, `/articles/hi`, `/maandhan`, `/rajya-yojana` should each link to
+   *every* child page they own, not a truncated "latest N" list.
+3. **Contextual links** — the 10 severe pages need 2–3 links each from topically related,
+   already-indexed articles (e.g. `/maandhan/pmkmy-bank-account-change` should be linked from the
+   other 12 `maandhan/*` articles, which are indexed).
+4. **Verify** `getRelatedArticles()` actually renders on every article template and isn't returning
+   an empty list when a category has few members.
+
+This is a template-level fix (hub-page rendering + related-articles logic), not 138 hand-edits —
+which fits the "template over per-page" preference.
 
 ---
 
