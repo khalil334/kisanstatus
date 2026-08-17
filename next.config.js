@@ -45,6 +45,17 @@ const nextConfig = {
 
   async redirects() {
     return [
+      // Host normalisation MUST come first: www/preview traffic is moved to the
+      // canonical apex host in hop 1, so every slug redirect below then resolves
+      // on kisanstatus.com. Previously the www rule sat mid-list, so a www request
+      // for an early slug redirected www->www->apex, adding an avoidable hop and
+      // making Google see the slug redirect on the non-canonical host.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.kisanstatus.com' }],
+        destination: 'https://kisanstatus.com/:path*',
+        permanent: true,
+      },
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'kisanstatus.vercel.app' }],
@@ -86,12 +97,6 @@ const nextConfig = {
       { source: '/articles/farming/silage-making-business-guide', destination: '/articles/silage-making-business-guide', permanent: true },
       { source: '/articles/farming/vermi-compost-business-guide', destination: '/articles/vermi-compost-business-guide', permanent: true },
       { source: '/articles/pm-kisan-maandhan-status-check-online', destination: '/maandhan/pm-kisan-maandhan-status-check-online', permanent: true },
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'www.kisanstatus.com' }],
-        destination: 'https://kisanstatus.com/:path*',
-        permanent: true,
-      },
       { source: '/calculator/farming-profit', destination: '/calculator/crop-profit', permanent: true },
       { source: '/calculator/kisan-loan-emi', destination: '/calculator/kcc-loan-emi', permanent: true },
       { source: '/pm-kisan', destination: '/', permanent: true },
