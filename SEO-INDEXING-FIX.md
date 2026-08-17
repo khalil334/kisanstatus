@@ -5,6 +5,7 @@
 **Data sources:** Google Search Console API (sitemaps), live crawl of all 138 sitemap URLs, repo static analysis
 **Status:** Diagnosis complete — no code changes made yet
 **Revision 2:** adds §2A — GSC URL Inspection results, which correct the initial title-first conclusion
+**Revision 3 (2026-08-17):** adds §2B — full URL Inspection of ALL 138 sitemap URLs: 92 indexed / 46 not indexed, per-URL lists + fixes
 
 ---
 
@@ -183,6 +184,181 @@ pages show no inbound internal links. Recommended, in order:
 
 This is a template-level fix (hub-page rendering + related-articles logic), not 138 hand-edits —
 which fits the "template over per-page" preference.
+
+---
+
+---
+
+## 2B. REVISION 3 — Full GSC URL Inspection of all 138 sitemap URLs (2026-08-17)
+
+**Data source:** Google Search Console URL Inspection API, `sc-domain:kisanstatus.com`, every sitemap
+URL inspected individually on 2026-08-17. This supersedes the 10-page sample in §2A.
+
+### Headline numbers
+
+| Coverage state (Google's verdict) | Pages | Share |
+|---|---|---|
+| ✅ Submitted and indexed | **92** | 67% |
+| ❌ Discovered — currently not indexed | **34** | 25% |
+| ❌ URL is unknown to Google | **10** | 7% |
+| ❌ Crawled — currently not indexed | **2** | 1% |
+| **Total in sitemap** | **138** | |
+
+**46 pages (33%) are not in Google's index.** None of them are blocked, noindex-ed, or broken —
+all return 200, have self-referencing canonicals, and robots.txt allows them. The blocker is
+**crawl priority driven by internal linking**, exactly as §2A predicted from the 10-page sample.
+
+### Where the damage is concentrated
+
+| Section | In sitemap | Indexed | Not indexed |
+|---|---|---|---|
+| `/articles/hi/*` (Hindi articles + categories) | 37 | 15 | **22** |
+| `/calculator/*` | 8 | 2 | **6** |
+| `/maandhan*` | ~6 | 1 | **5** (incl. the `/maandhan` hub itself) |
+| `/rajya-yojana*` | 3 | 0 | **3** (incl. the `/rajya-yojana` hub itself) |
+| `/articles/*` (English/Roman) | rest | most | **7** |
+| Category pages (`/articles/category/*`, `/articles/hi/category/*`) | 12 | 6 | **6** |
+
+---
+
+### Error group 1 — "Discovered — currently not indexed" (34 pages)
+
+**Kya matlab:** Google ko URL sitemap se pata chal gaya, lekin usne **crawl karna hi zaroori nahi
+samjha**. `last_crawl_time` sab pe empty hai — Googlebot in pages pe kabhi gaya hi nahi.
+
+**Kyun hota hai:** internal linking bahut kamzor hai. Homepage se sirf ~5 article links hain;
+Hindi section (`/articles/hi/*`) sirf `/articles/hi` listing page se linked hai, calculators aur
+maandhan/rajya-yojana pages ko takreeban koi internal link nahi milta. Sitemap-only discovery
+low-authority nayi site pe crawl queue mein sabse peeche rehti hai.
+
+| # | URL | Last crawl |
+|---|---|---|
+| 1 | `/articles/KisanCreditCardOnlineApply2026` | — |
+| 2 | `/articles/PmKisanEkycOnline2026` | — |
+| 3 | `/articles/PmKisanMobileNumberChangeUpdate` | — |
+| 4 | `/articles/PmKisanVillageWiseListPdfDownload` | — |
+| 5 | `/articles/category/loan` | — |
+| 6 | `/articles/hi` | — |
+| 7 | `/articles/hi/annadata-sukhibhava-status` | — |
+| 8 | `/articles/hi/bihar-kisan-registration-status` | — |
+| 9 | `/articles/hi/category/loan` | — |
+| 10 | `/articles/hi/category/pashupalan` | — |
+| 11 | `/articles/hi/category/status-check` | — |
+| 12 | `/articles/hi/gau-mutra-kharid-yojana` | — |
+| 13 | `/articles/hi/ikhedut-portal-status` | — |
+| 14 | `/articles/hi/krishak-bandhu-status` | — |
+| 15 | `/articles/hi/krishak-unnati-yojana-status` | — |
+| 16 | `/articles/hi/meri-fasal-mera-byora-status` | — |
+| 17 | `/articles/hi/odisha-cm-kisan-status` | — |
+| 18 | `/articles/hi/parihara-payment-status` | — |
+| 19 | `/articles/hi/pati-patni-pm-kisan-rule` | — |
+| 20 | `/articles/hi/payment-stopped-by-state` | — |
+| 21 | `/articles/hi/rajasthan-kisan-samman-nidhi` | — |
+| 22 | `/articles/hi/rythu-bharosa-status` | — |
+| 23 | `/articles/hi/state-kisan-yojana-list` | — |
+| 24 | `/articles/hi/up-kisan-karj-rahat-list` | — |
+| 25 | `/calculator/crop-profit` | — |
+| 26 | `/calculator/msp-income` | — |
+| 27 | `/calculator/pm-kisan-benefit` | — |
+| 28 | `/calculator/pmfby-premium` | — |
+| 29 | `/maandhan/pm-kisan-maandhan-pension-card-download` | — |
+| 30 | `/maandhan/pm-kisan-maandhan-registration-2026` | — |
+| 31 | `/maandhan/pm-kisan-maandhan-status-check-online` | — |
+| 32 | `/rajya-yojana/meri-fasal-mera-byora-status-check-2026` | — |
+| 33 | `/rajya-yojana/up-kisan-karj-rahat-list-2026` | — |
+| 34 | `/terms-of-service` | — |
+
+
+**Fix (template-level, sab 34 pages ek saath):**
+1. **Homepage sections banao** — "Hindi mein padhein" (top 6 Hindi articles), "Calculators" (sab
+   6 calculator links), "PM Kisan Maandhan" aur "Rajya Yojana" hub cards. Homepage site ka sabse
+   zyada crawl hone wala page hai; wahan se direct link = crawl priority.
+2. **Related-articles block** har article ke neeche (4–6 contextual links, cross-section:
+   English article → related Hindi article → related calculator). Ye har page ko 5–15 internal
+   links deta hai ek template change se.
+3. **Footer navigation** mein sab hub pages: `/articles/hi`, `/calculator`, `/maandhan`,
+   `/rajya-yojana`, sab category pages.
+4. **Hindi ↔ English hreflang + cross-link**: jahan same topic dono language mein hai
+   (e.g. `up-kisan-karj-rahat-list`), dono pages ek doosre ko link karein + `hreflang` tags.
+5. Fixes ship hone ke baad GSC mein **top hub pages ke liye "Request Indexing"** manually karo
+   (homepage, `/articles/hi`, `/maandhan`, `/rajya-yojana`, `/calculator`) — baaki pages Google
+   khud crawl kar lega jab hubs re-crawl honge.
+
+---
+
+### Error group 2 — "URL is unknown to Google" (10 pages)
+
+**Kya matlab:** Google ko in URLs ka **wajood tak nahi pata** — na sitemap se process hua, na kisi
+link se mila. Ye sabse ajeeb group hai kyunki ye sitemap mein hain.
+
+**Kyun hota hai:** ye pages sitemap mein **haal hi mein add hue** hain (sitemap 2026-08-17 ko
+last submit hua) aur Google ne naya sitemap abhi partially hi process kiya hai. `/maandhan` aur
+`/rajya-yojana` hub pages ka khud unknown hona confirm karta hai ki ye sections naye hain aur
+inko koi internal link nahi milta.
+
+| # | URL | Last crawl |
+|---|---|---|
+| 1 | `/articles/category/agri-business` | — |
+| 2 | `/articles/category/pashupalan` | — |
+| 3 | `/articles/drip-sprinkler-irrigation-subsidy` | — |
+| 4 | `/articles/hi/category/agri-business` | — |
+| 5 | `/articles/hi/category/farming` | — |
+| 6 | `/articles/hi/category/mandi` | — |
+| 7 | `/calculator/installment-tracker` | — |
+| 8 | `/calculator/kcc-loan-emi` | — |
+| 9 | `/maandhan` | — |
+| 10 | `/rajya-yojana` | — |
+
+
+**Fix:**
+1. Error group 1 wale internal-linking fixes yahan bhi apply hote hain — ye pages bhi wahi
+   template changes se cover ho jayenge.
+2. Sitemap **dobara submit** karo GSC mein (Sitemaps → `sitemap.xml` → resubmit) taake naye URLs
+   ka fresh processing ho.
+3. In 10 mein se hub pages (`/maandhan`, `/rajya-yojana`) ke liye GSC mein manually
+   **URL Inspection → Request Indexing** karo.
+
+---
+
+### Error group 3 — "Crawled — currently not indexed" (2 pages)
+
+**Kya matlab:** Googlebot ne page crawl kiya (July 2026 mein), content dekha, aur **index na karne
+ka faisla kiya**. Ye quality/demand signal hai — technical problem nahi.
+
+| # | URL | Last crawl | Google canonical |
+|---|---|---|---|
+| 1 | `/maandhan/pmkmy-bank-account-change` | 2026-07-28 | self (sahi) |
+| 2 | `/maandhan/pmkmy-grievance-complaint-helpline` | 2026-07-29 | self (sahi) |
+
+**Fix:**
+1. Dono pages ka content **substantially improve** karo — unique value add karo jo PMKMY ke
+   official pages pe nahi hai (step-by-step screenshots, common errors table, state-wise helpline
+   numbers).
+2. In pages ko doosre maandhan articles se **contextually link** karo (sirf listing se nahi).
+3. Title/H1 alignment check karo (§3 ke pattern se) aur intro paragraph ko search intent se
+   match karo ("PMKMY bank account kaise change karein" type query).
+4. Improve karne ke baad **Request Indexing** karo. Agar 3-4 hafte mein bhi index na ho, in
+   dono ko ek comprehensive "PMKMY account & grievance guide" mein merge karne pe sochna.
+
+---
+
+### Priority order (Revision 3 — final)
+
+| Priority | Action | Type | Covers |
+|---|---|---|---|
+| **P0** | Related-articles block + homepage sections + footer nav | Template | 44 of 46 pages |
+| **P0** | Sitemap resubmit in GSC | 1 click | 10 "unknown" pages |
+| **P1** | Request Indexing on 5 hub pages | Manual, 10 min | crawl cascade |
+| **P1** | Fix 1 from §5 (title guard) — Ahrefs issue | Template, 1 line | 33 title mismatches |
+| **P2** | Content upgrade on 2 "crawled not indexed" PMKMY pages | Per-page | 2 pages |
+| **P3** | hreflang for Hindi/English pairs | Template | long-term |
+
+### Verification (2–4 hafte baad)
+
+1. GSC → Pages report: "Discovered - currently not indexed" count 34 se girna chahiye.
+2. Ye script dobara chalao (`kisanstatus/inspect_all.py` in workspace) ya GSC mein spot-check:
+   `/articles/hi/rythu-bharosa-status`, `/calculator/crop-profit`, `/maandhan`, `/rajya-yojana`.
+3. Naye indexed pages GSC Performance report mein impressions dikhana shuru karenge.
 
 ---
 
