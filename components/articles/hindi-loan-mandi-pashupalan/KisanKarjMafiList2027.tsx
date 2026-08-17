@@ -67,7 +67,7 @@ const karjMafiFaqs = [
   },
   {
     q: 'लिस्ट में नाम कैसे check करें?',
-    a: 'जिस राज्य की scheme है, उसी के official portal पर — आधार नंबर या loan account number से। Portal का link हमेशा राज्य सरकार की site से लें, WhatsApp के forward से नहीं। जब तक official list जारी नहीं होती, कोई भी "list" fake है।',
+    a: 'जिस राज्य की scheme है, उसी के official portal पर — आधार नंबर या loan account number से। Portal का link हमेशा राज्य सरकार की site से लें, WhatsApp के forward से नहीं। UP की ऋण मोचन list के लिए upkisankarjrahat.upsdc.gov.in ही असली portal है। जब तक official list जारी नहीं होती, कोई भी "list" fake है।',
   },
   {
     q: 'KCC का loan भी माफ होता है क्या?',
@@ -166,7 +166,10 @@ export default function KisanKarjMafiList2027({ article }: { article: HindiArtic
       <p>
         इन राज्यों में पिछले सालों में माफी योजनाएं चलीं — झारखंड की ऋण माफी योजना (₹50,000 तक), MP की जय
         किसान फसल ऋण माफी, UP की 2017 वाली माफी, राजस्थान की 2018-19 वाली। इनमें से ज्यादातर की lists जारी
-        होकर payments भी हो चुकी हैं। <strong>अभी इन राज्यों में कोई नई माफी की official घोषणा हमें verified
+        होकर payments भी हो चुकी हैं। UP वाले किसान हैं और 2017 की ऋण मोचन list में अपना नाम या शिकायत की
+        status देखनी है, तो उसका अलग detail page हमने बनाया है —{' '}
+        <Link href="/rajya-yojana/up-kisan-karj-rahat-list-2026">UP Kisan Karj Rahat List — नाम check और
+        शिकायत का तरीका</Link> — असली portal पहचानने से लेकर shikayat तक सब वहीं है। <strong>अभी इन राज्यों में कोई नई माफी की official घोषणा हमें verified
         नहीं मिली।</strong> अगर आपके राज्य में नई scheme की चर्चा है, तो उसका सच सिर्फ दो जगह मिलेगा — राज्य
         के budget documents और कृषि/सहकारिता विभाग की official site। News में &quot;जल्द होगी&quot; type की
         headlines को घोषणा मत समझिए।

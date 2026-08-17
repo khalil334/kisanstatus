@@ -191,7 +191,6 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
       'FTO full form in hindi',
       'FTO generated meaning',
       'FTO processed meaning',
-      'FTO will be generated',
       'MB FTO transaction meaning',
       'reason for failed transaction FTO',
       'fund transfer order status',
