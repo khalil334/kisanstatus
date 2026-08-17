@@ -59,7 +59,7 @@ const FAQ_SCHEMA = {
   })),
 };
 
-function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+function Figure({ src, alt, caption, priority = false }: { src: string; alt: string; caption: string; priority?: boolean }) {
   return (
     <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
       <Image
@@ -69,6 +69,9 @@ function Figure({ src, alt, caption }: { src: string; alt: string; caption: stri
         height={675}
         className="w-full object-cover"
         sizes="(max-width: 768px) 100vw, 768px"
+        priority={priority}
+        loading={priority ? undefined : 'lazy'}
+        fetchPriority={priority ? 'high' : undefined}
       />
       <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
         {caption}
@@ -141,6 +144,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
       </p>
 
       <Figure
+        priority
         src="/images/articles/hindi-yojna/farmer-id-card/id-card-sample.webp"
         alt="AgriStack के तहत बनने वाला Farmer ID card का नमूना"
         caption="Farmer ID — खेती की दुनिया का आधार, एक unique number में पहचान, जमीन और बैंक"

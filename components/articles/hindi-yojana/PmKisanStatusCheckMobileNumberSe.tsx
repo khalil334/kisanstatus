@@ -70,7 +70,7 @@ const FAQ_SCHEMA = {
   })),
 };
 
-function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+function Figure({ src, alt, caption, priority = false }: { src: string; alt: string; caption: string; priority?: boolean }) {
   return (
     <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
       <Image
@@ -80,6 +80,9 @@ function Figure({ src, alt, caption }: { src: string; alt: string; caption: stri
         height={675}
         className="w-full object-cover"
         sizes="(max-width: 768px) 100vw, 768px"
+        priority={priority}
+        loading={priority ? undefined : 'lazy'}
+        fetchPriority={priority ? 'high' : undefined}
       />
       <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
         {caption}
@@ -148,6 +151,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       </div>
 
       <Figure
+        priority
         src="/images/articles/hindi-yojna/status-check-mobile-se/phone-status-check.webp"
         alt="मोबाइल पर PM Kisan status check करता किसान"
         caption="पूरा काम phone से ही हो जाता है — CSC जाने की जरूरत नहीं"

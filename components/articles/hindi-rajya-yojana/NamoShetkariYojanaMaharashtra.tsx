@@ -60,7 +60,7 @@ const FAQ_SCHEMA = {
   })),
 };
 
-function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+function Figure({ src, alt, caption, priority = false }: { src: string; alt: string; caption: string; priority?: boolean }) {
   return (
     <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
       <Image
@@ -70,6 +70,9 @@ function Figure({ src, alt, caption }: { src: string; alt: string; caption: stri
         height={675}
         className="w-full object-cover"
         sizes="(max-width: 768px) 100vw, 768px"
+        priority={priority}
+        loading={priority ? undefined : 'lazy'}
+        fetchPriority={priority ? 'high' : undefined}
       />
       <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
         {caption}
@@ -153,6 +156,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
       </Note>
 
       <Figure
+        priority
         src="/images/articles/hindi-yojna/namo-shetkari/shetkari-field.webp"
         alt="महाराष्ट्र का किसान अपने खेत में"
         caption="नमो शेतकरी — महाराष्ट्र के किसान को PM Kisan के ऊपर ₹6,000 और"

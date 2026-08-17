@@ -66,7 +66,7 @@ const FAQ_SCHEMA = {
   })),
 };
 
-function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+function Figure({ src, alt, caption, priority = false }: { src: string; alt: string; caption: string; priority?: boolean }) {
   return (
     <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
       <Image
@@ -76,6 +76,9 @@ function Figure({ src, alt, caption }: { src: string; alt: string; caption: stri
         height={675}
         className="w-full object-cover"
         sizes="(max-width: 768px) 100vw, 768px"
+        priority={priority}
+        loading={priority ? undefined : 'lazy'}
+        fetchPriority={priority ? 'high' : undefined}
       />
       <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
         {caption}
@@ -135,6 +138,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
       </p>
 
       <Figure
+        priority
         src="/images/articles/hindi-yojna/pm-kisan-25vi-kist/kisan-mobile-check.webp"
         alt="मोबाइल पर PM Kisan किस्त की जानकारी देखता किसान"
         caption="तारीख का इंतज़ार सबको है — पर असली काम record पूरा रखना है"

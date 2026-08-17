@@ -63,7 +63,7 @@ const FAQ_SCHEMA = {
   })),
 };
 
-function Figure({ src, alt, caption }: { src: string; alt: string; caption: string }) {
+function Figure({ src, alt, caption, priority = false }: { src: string; alt: string; caption: string; priority?: boolean }) {
   return (
     <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
       <Image
@@ -73,6 +73,9 @@ function Figure({ src, alt, caption }: { src: string; alt: string; caption: stri
         height={675}
         className="w-full object-cover"
         sizes="(max-width: 768px) 100vw, 768px"
+        priority={priority}
+        loading={priority ? undefined : 'lazy'}
+        fetchPriority={priority ? 'high' : undefined}
       />
       <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
         {caption}
@@ -158,6 +161,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
       </Tip>
 
       <Figure
+        priority
         src="/images/articles/hindi-yojna/ekyc-mobile-se/otp-screen.webp"
         alt="Mobile पर PM Kisan eKYC का OTP verification screen"
         caption="OTP वाला रास्ता — घर बैठे, बिल्कुल मुफ्त"
