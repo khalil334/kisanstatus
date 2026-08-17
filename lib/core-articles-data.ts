@@ -56,7 +56,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisanBeneficiaryList2026',
     title: 'PM Kisan Beneficiary List 2026: Check',
-    desc: 'Beneficiary list mein naam check karo, gaon ki poori village wise list dekho, PDF download karo. 7 rejection reasons + fix bhi.',
+    desc: 'State verification pending aam taur par 2-4 hafte me clear hota hai — nahi hua to Block Agriculture Officer se milein. Beneficiary list me naam, village wise list aur 7 rejection fixes yahan.',
     ogTitle: 'PM Kisan Beneficiary List 2026 Guide',
     keywords: [
       'pm kisan beneficiary list 2026',
@@ -189,8 +189,8 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'NanoDap500mlPriceInIndia2026',
     title: 'Nano DAP 500ml Price 2026: IFFCO Rate',
-    seoTitle: 'Nano DAP 500ml Price 2026 — Rate, Dosage Chart',
-    desc: 'IFFCO Nano DAP 500ml bottle ₹280-320 mein milti hai — par ye normal DAP ki jagah nahi leti. State-wise rate, per acre dosage aur 6 aam galtiyan.',
+    seoTitle: 'Nano DAP 500ml Price 2026 — ₹280–350 (IFFCO Rate), Dose & Subsidy',
+    desc: 'Nano DAP 500ml price: ₹280–350 MRP, subsidy ke saath ₹200–280. IFFCO rate, state-wise price table, per acre dose (500ml/acre) aur 6 aam galtiyan yahan dekhein.',
     ogTitle: 'Nano DAP 500ml Price 2026 India',
     keywords: [
       'Nano DAP 500ml price India 2026',
@@ -704,7 +704,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'bakri-palan-yojana-nlm-subsidy',
     title: 'Bakri Palan Yojana 2026: NLM Subsidy',
-    desc: 'National Livestock Mission se 50% subsidy, 20 bakri farm ka complete budget, 5-year profit projection, aur real risks jo koi nahi batata.',
+    desc: 'NLM bakri palan: 50% subsidy milti hai — pashupalan karne wale kisan, SHG, FPO sab eligible. 20 bakri farm ka budget, apply process aur 5-year profit projection yahan.',
     ogTitle: 'Bakri Palan Yojana 2026 Guide',
     keywords: [
       'bakri palan yojana 2026',
@@ -728,7 +728,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'mushroom-kheti-nhb-subsidy',
     title: 'Mushroom Kheti 2026: NHB Subsidy Guide',
-    desc: 'Oyster mushroom farming se mahine ka ₹40,000+ kamayein. 100-bag unit ka complete budget, NHB subsidy, aur step-by-step cultivation process.',
+    desc: 'NHB mushroom subsidy: general category ko ~40% back-ended capital subsidy milti hai. Apply process, 100-bag unit ka budget aur mahine ka ₹40,000+ profit plan yahan.',
     ogTitle: 'Mushroom Kheti 2026 — Profit Guide',
     keywords: [
       'mushroom kheti 2026',

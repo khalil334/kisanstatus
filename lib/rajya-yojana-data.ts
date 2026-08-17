@@ -139,7 +139,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     ],
     title: 'Rythu Bharosa Status Check 2026',
     description:
-      'Telangana Rythu Bharosa ka status check, per-acre raqam, phase-wise payment ka system aur Rythu Bandhu se farak.',
+      'Rythu Bharosa: ₹12,000 per acre per saal (₹6,000 Kharif + ₹6,000 Rabi) — Telangana kisano ko DBT se. Status check steps, phase-wise payment aur Rythu Bandhu se farak yahan.',
     ogTitle: 'Rythu Bharosa Status Check — Telangana Kisan Yojana',
     component: 'RythuBharosaStatusCheck',
     state: 'Telangana',
