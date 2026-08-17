@@ -48,6 +48,10 @@ export default function RajasthanKisanSammanNidhi9000() {
       a: 'Officially koi date announce nahi hui hai. Kisi bhi tareekh ka andaaza lagana bekaar hai — WhatsApp par ghoom rahi dates par bharosa na karein. Sahi jaankari ek hi jagah milegi: apna Aadhaar number Jan Soochna portal par daal kar khud status dekh lein.',
     },
     {
+      q: 'CM Kisan Samman Nidhi Rajasthan 7vi kist kab aayegi 2026?',
+      a: '7vi kist ka number 6vi ke baad lagega — aur 6vi abhi pending hai. Koi official date announce nahi hui. WhatsApp ya YouTube wali tareekhon par bharosa na karein; sahi update sirf Jan Soochna portal aur Rajasthan sarkar ki official ghoshna se milega.',
+    },
+    {
       q: 'Registration alag se karna padega kya?',
       a: 'Nahi. Ye scheme ka sabse acha part hai — PM Kisan mein naam hai to yahan bhi automatically aa jaate ho. Kuch extra bharne ki zaroorat nahi.',
     },
@@ -113,6 +117,16 @@ export default function RajasthanKisanSammanNidhi9000() {
             <strong>Yaad rakho:</strong> Rajasthan wali kist PM Kisan ki kist se bilkul alag time par aati hai — dono ka koi connection nahi. PM Kisan aa gaya aur state wala nahi, to chinta chhodo, ye normal hi hai.
           </p>
         </div>
+
+        <h2>7vi Kist Kab Aayegi — CM Kisan Samman Nidhi Rajasthan</h2>
+
+        <p>
+          Bahut log seedha “7vi kist kab aayegi” search kar rahe hain — to saaf baat: <strong>7vi kist ka number 6vi ke baad lagega</strong>, aur 6vi abhi pending hai. Jab tak 6vi release nahi hoti, 7vi ki kisi bhi “confirm date” wali khabar ka koi matlab nahi. Internet ya WhatsApp par ghoom rahi tareekhein sirf andaaza hain — official date sirf Rajasthan sarkar ki ghoshna ya Jan Soochna portal se hi milegi. Jaise hi koi official update aayega, ye page usi din update hoga.
+        </p>
+
+        <p>
+          Tab tak sabse kaam ki cheez ye hai: apna status check karke dekh lo ki aapka record clear hai — e-KYC, bank seeding aur Jan Aadhaar linking. Record atka hoga to 6vi ho ya 7vi, koi bhi kist nahi aayegi.
+        </p>
 
         <h2>Status Kaise Check Karein</h2>
 

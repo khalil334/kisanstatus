@@ -23,14 +23,16 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     slug: 'rajasthan-kisan-samman-nidhi-9000',
     mainKeyword: 'rajasthan kisan samman nidhi 9000',
     secondaryKeywords: [
+      'cm kisan samman nidhi rajasthan 7 kist kab aayegi 2026',
       'rajasthan kisan samman nidhi status check',
+      'rajasthan kisan samman nidhi kist kab aayegi',
       'rajasthan kisan nidhi badhi',
       'rajasthan kisan samman nidhi kist',
       'mukhyamantri kisan samman nidhi rajasthan',
     ],
-    title: 'Rajasthan Kisan Samman Nidhi 2026',
+    title: 'Rajasthan Kisan Samman Nidhi — Kist Kab Aayegi 2026',
     description:
-      'Rajasthan Kisan Samman Nidhi ki badhi hui raqam, eligibility, status check ka process aur kist ki jaankari — official notification ke saath.',
+      'Rajasthan Kisan Samman Nidhi: 6vi kist pending hai, 7vi kist uske baad aayegi — official date abhi announce nahi. Jan Soochna se status check, eligibility aur badhi raqam ka sach yahan.',
     ogTitle: 'Rajasthan Kisan Samman Nidhi — Nayi Raqam Aur Status',
     component: 'RajasthanKisanSammanNidhi9000',
     state: 'Rajasthan',
