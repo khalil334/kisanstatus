@@ -289,7 +289,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            To agar aapke state me ye ban rahi hai aur aapne abi tak nahi banwai — banwa lo. CSC centre ya krishi vibhag ke camp me ban jati hai, free hai. Aage jake kaam ayegi, sirf is scheme me nahi, dusri jagah bhi.
+            To agar aapke state me ye ban rahi hai aur aapne abi tak nahi banwai — banwa lo. CSC centre ya krishi vibhag ke camp me ban jati hai, free hai. Aage jake kaam ayegi, sirf is scheme me nahi, dusri jagah bhi. Aur agar aap Odisha se hain to state wali yojana ka status bhi dekh lo — <Link href="/rajya-yojana/odisha-cm-kisan-status-check-2026" className="text-[var(--color-primary)] underline">CM Kisan Odisha Status Check</Link> wali guide me pura process hai.
           </p>
 
           <DB>

@@ -350,6 +350,7 @@ export default function HomeContent() {
               {[
                 { href: '/calculator', title: 'Free Kisan Tools', desc: 'EMI, MSP, status — 7 free calculators' },
                 { href: '/maandhan', title: 'PM Kisan Maandhan', desc: '₹3000 pension — registration se exit tak har guide' },
+                { href: '/rajya-yojana/odisha-cm-kisan-status-check-2026', title: 'CM Kisan Odisha Status Check', desc: 'Odisha CM Kisan status, village wise list aur e-KYC guide' },
                 { href: '/rajya-yojana', title: 'Rajya Yojana', desc: 'State-wise kisan schemes aur status check' },
                 { href: '/articles/hi', title: 'हिंदी गाइड', desc: 'पीएम किसान, कर्ज माफी और मंडी भाव — आसान हिंदी में' },
               ].map((hub) => (

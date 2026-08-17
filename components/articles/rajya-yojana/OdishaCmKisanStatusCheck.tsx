@@ -95,7 +95,7 @@ export default function OdishaCmKisanStatusCheck({
 
         <p>
           Odisha ke gaon mein aaj bhi log &ldquo;KALIA ka paisa&rdquo; kehte hain. Portal
-          kuch aur kehta hai — form, bank ka message, sab CM Kisan likh kar aata hai.
+          kuch aur kehta hai — form, bank ka message, sab CM Kisan (ସିଏମ କିଷାନ) likh kar aata hai.
         </p>
 
         <p>
@@ -385,7 +385,7 @@ export default function OdishaCmKisanStatusCheck({
           label="CM Kisan portal par apna status dekhein"
         />
 
-        <h2>Beneficiary List Mein Naam Dhoondhna (Village Wise List 2026)</h2>
+        <h2>CM Kisan Odisha List Village Wise — Naam Kaise Dhoondhein (2026)</h2>
 
         <p>
           Agar status search khaali aata hai, to district aur panchayat wise suchi dekhna
