@@ -1,11 +1,8 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
-import CountdownModal from '@/components/CountdownModal';
+import OfficialLinkButton from '@/components/OfficialLinkButton';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-22T13:03:46+05:30';
@@ -66,29 +63,9 @@ const FAQS_DATA = [
 ];
 
 export default function PmKisanMobileNumberChangeUpdate({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{
-    title: string;
-    message: string;
-    url: string;
-  } | null>(null);
-
-  const handleOfficialLink = (title: string, message: string, url: string) => {
-    setModal({ title, message, url });
-  };
 
   return (
     <>
-      {modal && (
-        <CountdownModal
-          title={modal.title}
-          message={modal.message}
-          redirectUrl={modal.url}
-          onClose={() => setModal(null)}
-          countdownNote="seconds mein redirect hoga..."
-          infoNote="Kripya dhairya rakhein. Aapko official sarkari portal par le jaaya ja raha hai."
-          cancelLabel="Cancel / Raho Yahi"
-        />
-      )}
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
@@ -180,16 +157,15 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
             <p className="text-xs text-amber-800 dark:text-amber-300 mb-3">
               Bahut sare YouTube videos mein bataya jata hai ki "Ghar baithe mobile number change karo". Bhai, wo videos tab kaam karti hain jab purana SIM aapke hath mein ho. Agar SIM dead hai, toh wo videos dekh kar time waste mat karo. Seedha CSC ya BAO jao.
             </p>
-            <button
-              onClick={() => handleOfficialLink(
-                'PM Kisan Self Edit Portal',
-                'Agar aapke paas purana SIM active hai toh yahan se mobile number update kar sakte hain. 10 second baad official portal khulega...',
-                'https://pmkisan.gov.in/EditAadhaarDetails.aspx'
-              )}
+            <OfficialLinkButton
+              title="PM Kisan Self Edit Portal"
+              message="Agar aapke paas purana SIM active hai toh yahan se mobile number update kar sakte hain. 10 second baad official portal khulega..."
+              url="https://pmkisan.gov.in/EditAadhaarDetails.aspx"
+              infoNote="Kripya dhairya rakhein. Aapko official sarkari portal par le jaaya ja raha hai."
               className="w-full px-4 py-3 bg-amber-600 hover:bg-amber-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
                Yahan Click Karo → Agar Purana SIM Active Hai To Mobile Update Hoga
-            </button>
+            </OfficialLinkButton>
           </div>
           <Image
             src="/images/articles/pm-kisan-mobile-number-change-update/self-service-portal-trap.webp"
@@ -248,16 +224,15 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Official CSC portal par jakar apne area ka nearest center dhundh sakte hain.
             </p>
-            <button
-              onClick={() => handleOfficialLink(
-                'CSC Center Locator',
-                'Aapke area ka nazdiki CSC center dhundhne ke liye official portal par redirect ho raha hai. 10 second baad khulega...',
-                'https://www.csc.gov.in/register'
-              )}
+            <OfficialLinkButton
+              title="CSC Center Locator"
+              message="Aapke area ka nazdiki CSC center dhundhne ke liye official portal par redirect ho raha hai. 10 second baad khulega..."
+              url="https://www.csc.gov.in/register"
+              infoNote="Kripya dhairya rakhein. Aapko official sarkari portal par le jaaya ja raha hai."
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
               Yahan Click Karo → Nazdiki CSC Center Ka Address Milega
-            </button>
+            </OfficialLinkButton>
           </div>
         </section>
 
@@ -299,16 +274,15 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
             <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
               Agar BAO office se bhi kaam na bane ya wo form lene se mana karein, toh apne state ke Nodal Officer se direct contact kar sakte hain.
             </p>
-            <button
-              onClick={() => handleOfficialLink(
-                'State Nodal Officers List',
-                'PM Kisan state nodal officers ki official list par redirect ho raha hai. 10 second baad khulega...',
-                'https://pmkisan.gov.in/NodalOfficers.aspx'
-              )}
+            <OfficialLinkButton
+              title="State Nodal Officers List"
+              message="PM Kisan state nodal officers ki official list par redirect ho raha hai. 10 second baad khulega..."
+              url="https://pmkisan.gov.in/NodalOfficers.aspx"
+              infoNote="Kripya dhairya rakhein. Aapko official sarkari portal par le jaaya ja raha hai."
               className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
                Yahan Click Karo → Apne State Ke Nodal Officer Ka Number Milega
-            </button>
+            </OfficialLinkButton>
           </div>
         </section>
 
@@ -481,16 +455,15 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Official portal par apna status check karne ke liye niche button par click karein.
             </p>
-            <button
-              onClick={() => handleOfficialLink(
-                'PM Kisan Beneficiary Status',
-                'PM Kisan beneficiary status check portal par redirect ho raha hai. 10 second baad khulega...',
-                'https://pmkisan.gov.in/BeneficiaryStatus.aspx'
-              )}
+            <OfficialLinkButton
+              title="PM Kisan Beneficiary Status"
+              message="PM Kisan beneficiary status check portal par redirect ho raha hai. 10 second baad khulega..."
+              url="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
+              infoNote="Kripya dhairya rakhein. Aapko official sarkari portal par le jaaya ja raha hai."
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
                Yahan Click Karo → Apna Naam List Mein Check Kar Sakte Hain
-            </button>
+            </OfficialLinkButton>
           </div>
         </section>
 

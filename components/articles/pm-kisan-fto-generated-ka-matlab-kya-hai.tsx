@@ -1,10 +1,7 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
-import CountdownModal from '@/components/CountdownModal';
+import OfficialLinkButton from '@/components/OfficialLinkButton';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
@@ -31,27 +28,9 @@ const FAQS_DATA = [
 ];
 
 export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{
-    title: string;
-    message: string;
-    url: string;
-  } | null>(null);
-
-  const handleOfficialLink = (title: string, message: string, url: string) => {
-    setModal({ title, message, url });
-  };
 
   return (
     <>
-      {modal && (
-        <CountdownModal
-          title={modal.title}
-          message={modal.message}
-          redirectUrl={modal.url}
-          onClose={() => setModal(null)}
-          infoNote="Seedha pmkisan.gov.in par ja rahe ho, thoda sabr."
-        />
-      )}
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
@@ -351,16 +330,15 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Official portal par jaakar apna payment status check karein. Neeche ke button se 10 second mein portal khulta hai.
             </p>
-            <button
-              onClick={() => handleOfficialLink(
-                'PM Kisan Beneficiary Status',
-                'pmkisan.gov.in khul raha hai, ruk jao thoda...',
-                'https://pmkisan.gov.in/BeneficiaryStatus.aspx'
-              )}
+            <OfficialLinkButton
+              title="PM Kisan Beneficiary Status"
+              message="pmkisan.gov.in khul raha hai, ruk jao thoda..."
+              url="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
+              infoNote="Seedha pmkisan.gov.in par ja rahe ho, thoda sabr."
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
               Status Dekhne Ke Liye Yahan Dabayein
-            </button>
+            </OfficialLinkButton>
           </div>
 
           <WB>
@@ -480,16 +458,15 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
             Payment status, land seeding, ya beneficiary list — teeno ki jaankari isi ek portal par mil jayegi. 10 second baad khulega.
           </p>
-          <button
-            onClick={() => handleOfficialLink(
-              'PM Kisan Official Portal',
-              'pmkisan.gov.in khul raha hai, ruk jao thoda...',
-              'https://pmkisan.gov.in/BeneficiaryStatus.aspx'
-            )}
+          <OfficialLinkButton
+            title="PM Kisan Official Portal"
+            message="pmkisan.gov.in khul raha hai, ruk jao thoda..."
+            url="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
+            infoNote="Seedha pmkisan.gov.in par ja rahe ho, thoda sabr."
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
           >
             PM Kisan Portal Kholein →
-          </button>
+          </OfficialLinkButton>
         </div>
 
         <CalcBanner

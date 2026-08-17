@@ -1,10 +1,7 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, WB, DB, SH, GovLink, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
-import CountdownModal from '@/components/CountdownModal';
+import OfficialLinkButton from '@/components/OfficialLinkButton';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
@@ -74,27 +71,9 @@ const FAQS_DATA = [
 ];
 
 export default function PmKisanStateNodalOfficerList({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{
-    title: string;
-    message: string;
-    url: string;
-  } | null>(null);
-
-  const handleOfficialLink = (title: string, message: string, url: string) => {
-    setModal({ title, message, url });
-  };
 
   return (
     <>
-      {modal && (
-        <CountdownModal
-          title={modal.title}
-          message={modal.message}
-          redirectUrl={modal.url}
-          onClose={() => setModal(null)}
-          infoNote="Thoda wait karo. Official PM Kisan portal khulne wala hai."
-        />
-      )}
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
@@ -231,16 +210,15 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Sabhi states ke updated names, direct email IDs, aur phone numbers ke liye official PM Kisan portal par jaayein.
             </p>
-            <button
-              onClick={() => handleOfficialLink(
-                'PM Kisan Nodal Officers List',
-                'Official list khulne wali hai. Thoda wait karo...',
-                'https://pmkisan.gov.in/NodalOfficers.aspx'
-              )}
+            <OfficialLinkButton
+              title="PM Kisan Nodal Officers List"
+              message="Official list khulne wali hai. Thoda wait karo..."
+              url="https://pmkisan.gov.in/NodalOfficers.aspx"
+              infoNote="Thoda wait karo. Official PM Kisan portal khulne wala hai."
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
                Yahan Click Karo → Official List Dekhein
-            </button>
+            </OfficialLinkButton>
           </div>
         </section>
 

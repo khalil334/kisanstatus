@@ -1,10 +1,7 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
-import CountdownModal from '@/components/CountdownModal';
+import OfficialLinkButton from '@/components/OfficialLinkButton';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
@@ -53,27 +50,9 @@ const FAQS_DATA = [
 ];
 
 export default function PmKisanMasterGuide2026({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{
-    title: string;
-    message: string;
-    url: string;
-  } | null>(null);
-
-  const handleOfficialLink = (title: string, message: string, url: string) => {
-    setModal({ title, message, url });
-  };
 
   return (
     <>
-      {modal && (
-        <CountdownModal
-          title={modal.title}
-          message={modal.message}
-          redirectUrl={modal.url}
-          onClose={() => setModal(null)}
-          infoNote="Thoda wait karo. Official PM Kisan portal khulne wala hai."
-        />
-      )}
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
@@ -163,16 +142,15 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Official PM Kisan portal par jakar apna <strong>pm kisan online registration</strong> karo — redirect 10 second ka hai.
             </p>
-            <button
-              onClick={() => handleOfficialLink(
-                'PM Kisan Registration Portal',
-                'PM Kisan portal khulne wala hai. Thoda wait karo...',
-                'https://pmkisan.gov.in'
-              )}
+            <OfficialLinkButton
+              title="PM Kisan Registration Portal"
+              message="PM Kisan portal khulne wala hai. Thoda wait karo..."
+              url="https://pmkisan.gov.in"
+              infoNote="Thoda wait karo. Official PM Kisan portal khulne wala hai."
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
                Yahan Click Karo → PM Kisan Portal Khulega
-            </button>
+            </OfficialLinkButton>
           </div>
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Tarika 2: CSC Center</h3>
@@ -264,16 +242,15 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
               Official portal par jakar apna <strong>pm kisan payment status check</strong> karo (portal 10 second mein khul jaata hai).
             </p>
-            <button
-              onClick={() => handleOfficialLink(
-                'PM Kisan Status Check',
-                'PM Kisan portal khulne wala hai. Thoda wait karo...',
-                'https://pmkisan.gov.in/BeneficiaryStatus.aspx'
-              )}
+            <OfficialLinkButton
+              title="PM Kisan Status Check"
+              message="PM Kisan portal khulne wala hai. Thoda wait karo..."
+              url="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
+              infoNote="Thoda wait karo. Official PM Kisan portal khulne wala hai."
               className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
                Yahan Click Karo → Status Check Hoga
-            </button>
+            </OfficialLinkButton>
           </div>
 
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -538,16 +515,15 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
             <strong>PM Kisan registration</strong>, <strong>eKYC</strong>, <strong>payment status check</strong>, ya koi bhi kaam ke liye official portal par jaayein — countdown ke baad aap seedhe pmkisan.gov.in par honge.
           </p>
-          <button
-            onClick={() => handleOfficialLink(
-              'PM Kisan Official Portal',
-              'PM Kisan portal khulne wala hai. Thoda wait karo...',
-              'https://pmkisan.gov.in'
-            )}
+          <OfficialLinkButton
+            title="PM Kisan Official Portal"
+            message="PM Kisan portal khulne wala hai. Thoda wait karo..."
+            url="https://pmkisan.gov.in"
+            infoNote="Thoda wait karo. Official PM Kisan portal khulne wala hai."
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
           >
              Yahan Click Karo → PM Kisan Portal Khulega
-          </button>
+          </OfficialLinkButton>
         </div>
 
         <CalcBanner

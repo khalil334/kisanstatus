@@ -7,7 +7,9 @@ import {
   SI, StepList, IB, WB, SH, GovLink, RelatedArticles,
   AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate
 } from '@/components/ArticleShared';
-import CountdownModal from '@/components/CountdownModal';
+import { lazy, Suspense } from 'react';
+
+const CountdownModal = lazy(() => import('@/components/CountdownModal'));
 import type { ArticleMeta } from '@/lib/articles-data';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
@@ -130,7 +132,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
     <>
 
       {modal && (
-        <CountdownModal
+        <Suspense fallback={null}><CountdownModal
           title={modal.title}
           message={modal.message}
           redirectUrl={modal.url}
@@ -157,7 +159,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
               </p>
             </>
           }
-        />
+        /></Suspense>
       )}
 
       <div className="bg-[var(--color-primary)] py-8">
