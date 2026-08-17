@@ -9,7 +9,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2025-12-26T11:27:11+05:30';
-const MODIFIED = '2026-08-14T10:00:00+05:30';
+const MODIFIED = '2026-08-17T10:15:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
@@ -70,7 +70,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(PUBLISHED)}</span>
             <span>Updated: {fmtDate(MODIFIED)}</span>
-            <span>8 min read</span>
+            <span>{article.readingTime} min read</span>
           </div>
         </div>
       </div>
@@ -99,14 +99,14 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <em>"FTO dikh raha hai par paisa nahi aaya. Ye kya scene hai?"</em>
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
-            Relax bhai, ye process ka normal hissa hai. Is guide me sab ek jagah likha hai: ye status kya batata hai, aage kya hota hai, aur agar der ho jaye to kis din kya karna hai. Jahan bhi koi number ya date likhi hai, wahan official source bhi diya hai. Andaze se kuch nahi likha. Aaram se padhiye.
+            Relax bhai, ghabrane wali koi baat nahi. Ye process ka normal hissa hai — hazaro log roz yahi status dekh ke pareshan hote hain. Is guide me sab ek jagah likha hai: ye status kya batata hai, aage kya hota hai, aur agar der ho jaye to kis din kya karna hai. Andaze se kuch nahi likha, jo pakka pata hai wahi likha hai. Aaram se padho.
           </p>
         </div>
 
         <section className="mb-8">
           <SH>Pehle Full Form Samajh Lo</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            FTO yaani <strong>Fund Transfer Order</strong>. Sarkar ki taraf se bank ko diya gaya aadesh ki kis kisan ke account me kitni rakam dalni hai. Bas itna hi, complicated kuch bhi nahi.
+            FTO yaani <strong>Fund Transfer Order</strong>. Sarkar ki taraf se bank ko diya gaya aadesh ki kis kisan ke account me kitni rakam dalni hai. Bas itna hi. Naam sun ke jitna technical lagta hai, cheez utni hi simple hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Portal pe "Generated" dikhne ka arth: ye aadesh ban chuka hai aur bank ke pas pahunch gaya hai. Ab agli zimmedari bank ki hai, aapki nahi.
@@ -117,7 +117,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           <SH>FTO Generated Ka Matlab Kya Hai?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Cheque wala example lijiye. Aapne kisi ko cheque de diya, paisa dene ka pakka order ho gya. Ab use cash karna bank ka kaam hai. <strong>Ye bhi theek wahi cheez hai, bas digital roop me.</strong> Portal ke alag-alag status isi safar ke padav hain:
+            Cheque wala example lo. Aapne kisi ko cheque de diya — paisa dene ka pakka order ho gya, ab use cash karna bank ka kaam hai. <strong>Ye bhi theek wahi cheez hai, bas digital roop me.</strong> Portal ke alag-alag status isi safar ke padav hain:
           </p>
 
           <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-300 dark:border-green-700 rounded-xl p-5 mb-6">
@@ -199,13 +199,13 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
                 <tr className="bg-[var(--color-primary)] text-white">
                   <th className="p-3 text-left">Kist</th>
                   <th className="p-3 text-left">Release Date</th>
-                  <th className="p-3 text-left">Kitna Paisa, Kitne Kisan</th>
+                  <th className="p-3 text-left">Detail</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  ['21vi', '19 November 2025', '₹18,000 crore+ · 9 crore+ kisan (Coimbatore se release)'],
-                  ['22vi', '13 March 2026', '₹18,640 crore · ~9.32 crore kisan (Guwahati se release)'],
+                  ['21vi', '19 November 2025', 'Coimbatore, Tamil Nadu se release hui'],
+                  ['22vi', '13 March 2026', 'Guwahati, Assam se release hui'],
                   ['23vi', '20 June 2026', '₹18,880 crore · 9.44 crore+ kisan (Hooghly, WB se release)'],
                 ].map(([kist, date, detail], i) => (
                   <tr key={kist} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
@@ -218,8 +218,8 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             </table>
           </div>
           <p className="text-xs text-[var(--color-text-muted)] mb-4">
-            Source: PIB (Press Information Bureau) press releases aur Ministry of Agriculture &amp; Farmers Welfare ke official announcements —{' '}
-            <a href="https://www.ndtv.com/india-news/pm-modi-releases-pm-kisan-instalment-worth-rs-18-880-crore-in-bengal-11664698" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--color-primary)]">23vi kist ki PIB-based report yahan padhein</a>.
+            23vi kist ke aankde news reports se liye gaye hain —{' '}
+            <a href="https://www.ndtv.com/india-news/pm-modi-releases-pm-kisan-instalment-worth-rs-18-880-crore-in-bengal-11664698" target="_blank" rel="noopener noreferrer" className="underline hover:text-[var(--color-primary)]">NDTV ki report yahan padh lo</a>. Purani kisto ke exact crore-wale figures har jagah alag-alag milte hain, isliye humne sirf dates rakhi hain jo confirm hain.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -333,7 +333,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           <SH>Mobile Se Status Check Kaise Karein?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Panch chote steps hain, mushkil se do minute ka kaam:
+            Panch chote steps hain. Chai banne se pehle ho jayega:
           </p>
 
           <StepList>
