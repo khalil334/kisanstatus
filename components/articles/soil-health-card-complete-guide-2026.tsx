@@ -1,10 +1,7 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
-import CountdownModal from '@/components/CountdownModal';
+import OfficialLinkButton from '@/components/OfficialLinkButton';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
@@ -49,27 +46,9 @@ const FAQS_DATA = [
 ];
 
 export default function SoilHealthCardCompleteGuide2026({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{
-    title: string;
-    message: string;
-    url: string;
-  } | null>(null);
-
-  const handleOfficialLink = (title: string, message: string, url: string) => {
-    setModal({ title, message, url });
-  };
 
   return (
     <>
-      {modal && (
-        <CountdownModal
-          title={modal.title}
-          message={modal.message}
-          redirectUrl={modal.url}
-          onClose={() => setModal(null)}
-          infoNote="Thoda wait karo. Official portal khulne wala hai."
-        />
-      )}
 
       <div className="bg-amber-700 py-8">
         <div className="container-site max-w-3xl">
@@ -156,16 +135,15 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Official portal par jakar <strong>online apply</strong> karo — 10 second ruko, portal khud khulega.
             </p>
-            <button
-              onClick={() => handleOfficialLink(
-                'Soil Health Card Portal',
-                'Official portal khulne wala hai. Thoda wait karo...',
-                'https://soilhealth.dac.gov.in/'
-              )}
+            <OfficialLinkButton
+              title="Soil Health Card Portal"
+              message="Official portal khulne wala hai. Thoda wait karo..."
+              url="https://soilhealth.dac.gov.in/"
+              infoNote="Thoda wait karo. Official portal khulne wala hai."
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
                Yahan Click Karo → Official Portal Khulega
-            </button>
+            </OfficialLinkButton>
           </div>
         </section>
 
@@ -287,16 +265,15 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
               Official portal par jakar apna <strong>status</strong> dekho (redirect timer 10 second ka hai).
             </p>
-            <button
-              onClick={() => handleOfficialLink(
-                'Soil Health Status Check',
-                'Official portal khulne wala hai. Thoda wait karo...',
-                'https://soilhealth.dac.gov.in/'
-              )}
+            <OfficialLinkButton
+              title="Soil Health Status Check"
+              message="Official portal khulne wala hai. Thoda wait karo..."
+              url="https://soilhealth.dac.gov.in/"
+              infoNote="Thoda wait karo. Official portal khulne wala hai."
               className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
                Yahan Click Karo → Status Check Hoga
-            </button>
+            </OfficialLinkButton>
           </div>
         </section>
 
@@ -355,16 +332,15 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
             Card <strong>download</strong> karne ke liye, <strong>status check</strong> karne ke liye, ya state wise information ke liye official portal par jaayein. Countdown khatam hote hi soilhealth site khul jaayegi.
           </p>
-          <button
-            onClick={() => handleOfficialLink(
-              'National Soil Health Dashboard',
-              'Official portal khulne wala hai. Thoda wait karo...',
-              'https://soilhealth.dac.gov.in/'
-            )}
+          <OfficialLinkButton
+            title="National Soil Health Dashboard"
+            message="Official portal khulne wala hai. Thoda wait karo..."
+            url="https://soilhealth.dac.gov.in/"
+            infoNote="Thoda wait karo. Official portal khulne wala hai."
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
           >
              Yahan Click Karo → Official Portal Khulega
-          </button>
+          </OfficialLinkButton>
         </div>
 
         <RelatedArticles articles={RELATED} />

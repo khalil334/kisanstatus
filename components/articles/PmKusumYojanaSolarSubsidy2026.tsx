@@ -1,10 +1,7 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
-import CountdownModal from '@/components/CountdownModal';
+import OfficialLinkButton from '@/components/OfficialLinkButton';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
@@ -53,27 +50,9 @@ const FAQS_DATA = [
 ];
 
 export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{
-    title: string;
-    message: string;
-    url: string;
-  } | null>(null);
-
-  const handleOfficialLink = (title: string, message: string, url: string) => {
-    setModal({ title, message, url });
-  };
 
   return (
     <>
-      {modal && (
-        <CountdownModal
-          title={modal.title}
-          message={modal.message}
-          redirectUrl={modal.url}
-          onClose={() => setModal(null)}
-          infoNote="Thoda wait karo. Official PM Kusum portal khulne wala hai."
-        />
-      )}
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
@@ -314,16 +293,15 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Official portal par jakar apna <strong>registration form</strong> bharo — 10 second ke countdown ke baad aap pmkusum portal par pahunch jaoge.
             </p>
-            <button
-              onClick={() => handleOfficialLink(
-                'PM Kusum Official Portal',
-                'PM Kusum portal khulne wala hai. Thoda wait karo...',
-                'https://pmkusum.mnre.gov.in'
-              )}
+            <OfficialLinkButton
+              title="PM Kusum Official Portal"
+              message="PM Kusum portal khulne wala hai. Thoda wait karo..."
+              url="https://pmkusum.mnre.gov.in"
+              infoNote="Thoda wait karo. Official PM Kusum portal khulne wala hai."
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
                Yahan Click Karo → PM Kusum Portal Khulega
-            </button>
+            </OfficialLinkButton>
           </div>
 
           <IB>
@@ -376,16 +354,15 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
               Official portal par jakar apna <strong>application status</strong> dekho. Redirect mein 10 second lagte hain.
             </p>
-            <button
-              onClick={() => handleOfficialLink(
-                'PM Kusum Status Check',
-                'PM Kusum portal khulne wala hai. Thoda wait karo...',
-                'https://pmkusum.mnre.gov.in'
-              )}
+            <OfficialLinkButton
+              title="PM Kusum Status Check"
+              message="PM Kusum portal khulne wala hai. Thoda wait karo..."
+              url="https://pmkusum.mnre.gov.in"
+              infoNote="Thoda wait karo. Official PM Kusum portal khulne wala hai."
               className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
                Yahan Click Karo → Status Check Hoga
-            </button>
+            </OfficialLinkButton>
           </div>
         </section>
 
@@ -526,16 +503,15 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
             <strong>Apply online</strong> karne ke liye, <strong>status check</strong> karne ke liye, ya helpline number ke liye official portal par jaayein; button ke baad portal apne aap khulta hai.
           </p>
-          <button
-            onClick={() => handleOfficialLink(
-              'PM Kusum Official Portal',
-              'PM Kusum portal khulne wala hai. Thoda wait karo...',
-              'https://pmkusum.mnre.gov.in'
-            )}
+          <OfficialLinkButton
+            title="PM Kusum Official Portal"
+            message="PM Kusum portal khulne wala hai. Thoda wait karo..."
+            url="https://pmkusum.mnre.gov.in"
+            infoNote="Thoda wait karo. Official PM Kusum portal khulne wala hai."
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
           >
              Yahan Click Karo → PM Kusum Portal Khulega
-          </button>
+          </OfficialLinkButton>
         </div>
 
         <CalcBanner

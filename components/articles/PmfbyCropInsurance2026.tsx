@@ -1,10 +1,8 @@
-'use client';
-
-import { useState, type ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
-import CountdownModal from '@/components/CountdownModal';
+import OfficialLinkButton from '@/components/OfficialLinkButton';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
@@ -79,27 +77,9 @@ const FAQS_DATA = [
 ];
 
 export default function PmfbyCropInsurance2026({ article }: { article: ArticleMeta }) {
-  const [modal, setModal] = useState<{
-    title: string;
-    message: string;
-    url: string;
-  } | null>(null);
-
-  const handleOfficialLink = (title: string, message: string, url: string) => {
-    setModal({ title, message, url });
-  };
 
   return (
     <>
-      {modal && (
-        <CountdownModal
-          title={modal.title}
-          message={modal.message}
-          redirectUrl={modal.url}
-          onClose={() => setModal(null)}
-          infoNote="Thoda wait karo. Official PMFBY portal khulne wala hai."
-        />
-      )}
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
@@ -253,16 +233,15 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Button dabate hi 10-second countdown ke baad official portal khul jaayega.
             </p>
-            <button
-              onClick={() => handleOfficialLink(
-                'PMFBY Official Portal',
-                'PMFBY portal khulne wala hai. Thoda wait karo...',
-                'https://pmfby.gov.in'
-              )}
+            <OfficialLinkButton
+              title="PMFBY Official Portal"
+              message="PMFBY portal khulne wala hai. Thoda wait karo..."
+              url="https://pmfby.gov.in"
+              infoNote="Thoda wait karo. Official PMFBY portal khulne wala hai."
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
               Yahan Click Karo → PMFBY Portal Khulega
-            </button>
+            </OfficialLinkButton>
           </div>
 
           <DB>
@@ -534,16 +513,15 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
             Enrollment, status check aur claim — teeno kaam isi ek portal se. 10 second baad khulega.
           </p>
-          <button
-            onClick={() => handleOfficialLink(
-              'PMFBY Official Portal',
-              'PMFBY portal khulne wala hai. Thoda wait karo...',
-              'https://pmfby.gov.in'
-            )}
+          <OfficialLinkButton
+            title="PMFBY Official Portal"
+            message="PMFBY portal khulne wala hai. Thoda wait karo..."
+            url="https://pmfby.gov.in"
+            infoNote="Thoda wait karo. Official PMFBY portal khulne wala hai."
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
           >
             Yahan Click Karo → PMFBY Portal Khulega
-          </button>
+          </OfficialLinkButton>
         </div>
 
         <section className="my-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl">

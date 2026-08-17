@@ -1,10 +1,7 @@
-'use client';
-
-import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
-import CountdownModal from '@/components/CountdownModal';
+import OfficialLinkButton from '@/components/OfficialLinkButton';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-19T07:49:49+05:30';
@@ -52,27 +49,9 @@ const FAQS_DATA = [
 ];
 
 export default function PmKisanRejectedStatusReApplyGuide() {
-  const [modal, setModal] = useState<{
-    title: string;
-    message: string;
-    url: string;
-  } | null>(null);
-
-  const handleOfficialLink = (title: string, message: string, url: string) => {
-    setModal({ title, message, url });
-  };
 
   return (
     <>
-      {modal && (
-        <CountdownModal
-          title={modal.title}
-          message={modal.message}
-          redirectUrl={modal.url}
-          onClose={() => setModal(null)}
-          infoNote="Bas kuch pal — official portal abhi khulega."
-        />
-      )}
 
       <div className="bg-[var(--color-primary)] py-8">
         <div className="container-site max-w-3xl">
@@ -242,16 +221,15 @@ export default function PmKisanRejectedStatusReApplyGuide() {
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
               Official PM Kisan portal par jakar apna <strong>pm kisan status check</strong> karo; 10-second timer ke baad site khulegi.
             </p>
-            <button
-              onClick={() => handleOfficialLink(
-                'PM Kisan Official Portal',
-                'Official portal load ho raha hai, bas kuch second...',
-                'https://pmkisan.gov.in/BeneficiaryStatus.aspx'
-              )}
+            <OfficialLinkButton
+              title="PM Kisan Official Portal"
+              message="Official portal load ho raha hai, bas kuch second..."
+              url="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
+              infoNote="Bas kuch pal — official portal abhi khulega."
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
                Yahan Click Karo → PM Kisan Portal Khulega
-            </button>
+            </OfficialLinkButton>
           </div>
 
           <Image
@@ -420,16 +398,15 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
             <strong>PM Kisan status check</strong>, <strong>PM Kisan grievance</strong>, ya koi bhi kaam ke liye official portal par jaayein. Button dabao, thoda ruk jao — portal khud khul jaayega.
           </p>
-          <button
-            onClick={() => handleOfficialLink(
-              'PM Kisan Official Portal',
-              'Official portal load ho raha hai, bas kuch second...',
-              'https://pmkisan.gov.in'
-            )}
+          <OfficialLinkButton
+            title="PM Kisan Official Portal"
+            message="Official portal load ho raha hai, bas kuch second..."
+            url="https://pmkisan.gov.in"
+            infoNote="Bas kuch pal — official portal abhi khulega."
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
           >
              Yahan Click Karo → PM Kisan Portal Khulega
-          </button>
+          </OfficialLinkButton>
         </div>
 
         <RelatedArticles articles={RELATED} />
