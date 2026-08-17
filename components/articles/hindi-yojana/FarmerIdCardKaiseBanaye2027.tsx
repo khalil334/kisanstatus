@@ -184,7 +184,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         <Link href="/articles/AgriStackKyaHai2026">अलग लेख में विस्तार से पढ़ सकते हैं</Link>।
       </p>
 
-      <Sec>पहले यह 5 चीजें तैयार रखिए</Sec>
+      <Sec>Farmer ID बनाने के लिए जरूरी Documents</Sec>
       <p>List लंबी नहीं है, पर हर चीज का अपना काम है:</p>
       <Figure
         src="/images/articles/hindi-yojna/farmer-id-card/documents-ready.webp"
