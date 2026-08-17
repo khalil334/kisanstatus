@@ -322,7 +322,7 @@ const CATEGORY_DATA: Record<CategorySlug, {
     keywords: ['mandi bhav today', 'sabzi bhav', 'fruit rates 2026', 'wholesale prices', 'aaj ka bhav'],
   },
   'pashupalan': {
-    title: 'Pashupalan & Matsya Palan Subsidy Guides 2026',
+    title: 'Pashupalan & Matsya Palan Subsidy 2026',
     description: 'Bakri palan, madhumakhi palan, machli palan aur silage ki subsidy, loan aur profit ki puri jankari. NLM, KVIC aur PM Matsya Sampada Yojana ki guides.',
     emoji: '',
     keywords: ['bakri palan yojana', 'madhumakhi palan subsidy', 'machli palan loan', 'PM Matsya Sampada Yojana', 'silage business'],

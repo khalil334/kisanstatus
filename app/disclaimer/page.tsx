@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: `Legal Notice & Disclaimer – Unofficial Portal`,
+  title: `Legal Notice & Disclaimer`,
   description: `${SITE_NAME} meri apni banayi hui site hai — sarkar se iska koi rishta nahi. Asli kaam ke liye hamesha pmkisan.gov.in par hi jaayein.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/disclaimer` },
