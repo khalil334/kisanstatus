@@ -238,6 +238,11 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
+        <SH>Bihar Pashupalan Loan Yojana 2026 Last Date & Apply Link</SH>
+        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+          2026 ki application window ki official last date abhi announce nahi hui hai — pichhli (2025) window mein last date <strong>25 July</strong> thi. Apply sirf official portal <a href="https://dairy.bihar.gov.in" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] underline">dairy.bihar.gov.in</a> par online hota hai, bilkul free. Notification aate hi yahan date update ho jayegi.
+        </p>
+
         <SH>Apply Kaise Karein — Kadam Se Kadam</SH>
         <StepList>
           <SI n={1}><strong>Notification ka wait karo</strong> — application window saal bhar nahi khuli rehti; 2025 mein last date 25 July thi. dairy.bihar.gov.in aur akhbaar ke vigyapan par nazar rakho. Window aam taur par kuch hafton ki hoti hai.</SI>

@@ -103,7 +103,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'msp-list-2026-27',
     title: 'MSP List 2026-27: Rabi & Kharif',
-    seoTitle: 'MSP List 2026-27 — Rabi & Kharif Poori Table',
+    seoTitle: 'MSP List 2026-27 — Kharif & Rabi सभी फसलों के रेट (सरकारी सूची)',
     desc: 'Rabi aur Kharif — dono ki poori MSP table ek jagah: gehu ₹2,585, dhan ₹2,441, chana ₹5,875 aur baaki faslein, pichhle saal se kitna badha uske saath.',
     ogTitle: 'MSP List 2026-27 — Rabi & Kharif Puri List',
     ogImage: '/images/articles/loan-mandi-pashupalan/msp-list-2026-27/kharid-kendra.webp',
@@ -112,6 +112,8 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
       'gehu msp 2026',
       'dhan msp rate',
       'msp kya hai',
+      'msp 2026-27 list kharif',
+      'msp 2026-27 list rabi',
       'kharif msp 2026 27',
       'rabi msp 2026 27',
     ],
@@ -212,13 +214,14 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'bihar-pashupalan-loan-yojana',
-    seoTitle: 'Bihar Pashupalan Loan 2026 — Apply Date',
+    seoTitle: 'Bihar Pashupalan Loan Yojana 2026 — Last Date & Apply Link',
     ogImage: '/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/kisan-bhains.webp',
     title: 'Bihar Pashupalan Loan Yojana 2026',
     desc: 'SC/ST ko 75%, General ko 50% tak subsidy — par window saal bhar khuli nahi rehti (pichhli baar last date 25 July). Documents, unit size aur apply ka process.',
     ogTitle: 'Bihar Pashupalan Loan Yojana 2026 — 50-75% Subsidy',
     keywords: [
       'bihar pashupalan loan yojana 2026',
+      'bihar pashupalan loan yojana 2026 last date',
       'samagra gavya vikas yojana',
       'dairy.bihar.gov.in apply',
     ],

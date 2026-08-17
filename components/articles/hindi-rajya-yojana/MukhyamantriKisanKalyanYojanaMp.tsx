@@ -160,7 +160,9 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
         <strong>एक line में:</strong> PM Kisan के verified beneficiary को MP सरकार अपनी तरफ से ₹6,000/साल और
         देती है — अलग आवेदन की जरूरत नहीं, अलग किस्तों में आता है, status{' '}
         <a href="https://saara.mp.gov.in" target="_blank" rel="noopener noreferrer">saara.mp.gov.in</a> पर
-        दिखता है।
+        दिखता है। SAARA पर status देखने का step-by-step तरीका हमारी{' '}
+        <Link href="/rajya-yojana/mp-kisan-kalyan-yojana-kist-status">MP Kisan Kalyan Kist Status गाइड</Link>{' '}
+        में है।
       </Tip>
 
       <Figure

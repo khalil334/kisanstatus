@@ -160,7 +160,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           wagairah). Isliye ek hi &quot;2026-27 list&quot; mein dono announcements ke numbers aate hain.
         </IB>
 
-        <SH>Rabi MSP 2026-27 — Gehu, Chana, Sarson</SH>
+        <SH>Rabi MSP List 2026-27 — Gehu, Chana, Sarson</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Rabi ki bo-ai October-December mein hoti hai aur katai March-April mein. Is season ki khaas baat:
           gehu ka margin 109% nikla — matlab MSP production cost se do guna se bhi upar hai. Safflower mein
@@ -209,7 +209,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           loading="lazy"
         />
 
-        <SH>Kharif MSP 2026-27 — Dhan, Kapas, Dalhan, Tilhan</SH>
+        <SH>Kharif MSP List 2026-27 — Dhan, Kapas, Dalhan, Tilhan</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Kharif ki bo-ai monsoon ke saath June-July mein hoti hai. 14 faslon ke rate declare hote hain, lekin
           dhan, jowar aur kapas ki do-do grades hone ki wajah se table mein 17 entries banti hain.
