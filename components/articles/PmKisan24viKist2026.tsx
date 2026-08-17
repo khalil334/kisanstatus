@@ -149,7 +149,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         </div>
 
         <section className="mb-8">
-          <SH>Seedhi Baat Pehle</SH>
+          <SH>Sabse Pehle Woh Jawab, Jiske Liye Aap Aaye Hain</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Date abhi announce nahi hui hai. Bas, itni si baat.
           </p>
@@ -446,7 +446,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Kisano Ke Asli Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="Seedhe sawal, seedhe jawab" />
+          <FAQBlock faqs={FAQS_DATA} caption="Jo comments me sabse zyada pooche gaye" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
