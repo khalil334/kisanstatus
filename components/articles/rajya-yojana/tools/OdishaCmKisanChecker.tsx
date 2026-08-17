@@ -260,8 +260,9 @@ export default function OdishaCmKisanChecker() {
         >
           {!submitted ? (
             <p className="text-sm text-gray-600 dark:text-gray-400 m-0">
-              Bayein taraf detail bhar kar button dabaiye. Aapko track, annual raqam, ek
-              tranche ki raqam, aur aapke case ke document list mil jaayegi.
+              Apne ghar ki detail upar bharo, phir button dabao — turant pata chal
+              jaayega ki aap kis track mein aate ho, saal ka kitna banta hai aur kaun se
+              kagaz chahiye honge.
             </p>
           ) : (
             <div className="space-y-4">
@@ -319,7 +320,7 @@ export default function OdishaCmKisanChecker() {
 
               <div>
                 <p className="text-xs font-black text-gray-700 dark:text-gray-300 mb-2">
-                  Aapke case ke liye document list
+                  In kagazon ka intezaam kar lo
                 </p>
                 <ul className="text-xs text-gray-700 dark:text-gray-300 space-y-1.5 m-0 pl-4 list-disc">
                   {docs.map((d) => (
