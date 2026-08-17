@@ -184,6 +184,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   'mandi-bhav-today': dynamic(() => import('@/components/articles/mandi-bhav-today'), { ssr: true }),
   PmKisanPaymentFailedFix2026: dynamic(() => import('@/components/articles/PmKisanPaymentFailedFix2026'), { ssr: true }),
   PmKisan25viKist2027: dynamic(() => import('@/components/articles/PmKisan25viKist2027'), { ssr: true }),
+  PmKisan26viKist: dynamic(() => import('@/components/articles/PmKisan26viKist'), { ssr: true }),
   PmKisanSelfRegisteredStatusCheck: dynamic(() => import('@/components/articles/PmKisanSelfRegisteredStatusCheck'), { ssr: true }),
   PmKisanCorrectionForm2026: dynamic(() => import('@/components/articles/PmKisanCorrectionForm2026'), { ssr: true }),
   PmKusumYojanaSolarSubsidy2026: dynamic(() => import('@/components/articles/PmKusumYojanaSolarSubsidy2026'), { ssr: true }),

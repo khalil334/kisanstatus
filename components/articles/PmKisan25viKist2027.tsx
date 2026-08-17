@@ -86,6 +86,10 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           Hum seedhi baat karenge. Sach ye hai ki 25vi wali abhi kisi ko nahi pata — na humein, na un YouTube channelo ko, na un websites ko. Sarkar mahino pehle kabhi kuch announce nahi karti. Zyadatar to release se ek-do hafte pehle hi khabar aati hai, aur kai bar to PM ke kisi event ke sath hi transfer ho jata hai.
         </p>
 
+        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+          Aage ki soch rahe ho? <Link href="/articles/PmKisan26viKist" className="text-[var(--color-primary)] underline font-medium">26vi kist kab aayegi</Link> — uska alag page bhi taiyar hai, wahan date aur list ke update milte rahenge.
+        </p>
+
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
           Aur ek zaruri baat — <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline font-medium">24vi kist</Link> khud abi tak nahi aayi. Jab usi ka intezaar chal raha hai, toh agli ki &quot;confirm tareekh&quot; batane wale khud soch lo kitne serious hain.
         </p>
