@@ -103,7 +103,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'msp-list-2026-27',
     title: 'MSP List 2026-27: Rabi & Kharif',
-    seoTitle: 'MSP List 2026-27 — Gehu ₹2,585, Dhan ₹2,441',
+    seoTitle: 'MSP List 2026-27 — Rabi & Kharif Poori Table',
     desc: 'Rabi aur Kharif — dono ki poori MSP table ek jagah: gehu ₹2,585, dhan ₹2,441, chana ₹5,875 aur baaki faslein, pichhle saal se kitna badha uske saath.',
     ogTitle: 'MSP List 2026-27 — Rabi & Kharif Puri List',
     ogImage: '/images/articles/loan-mandi-pashupalan/msp-list-2026-27/kharid-kendra.webp',
@@ -259,6 +259,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'gau-mutra-kharid-yojana-up-2026',
     title: 'Gau Mutra Kharid Yojana UP 2026: ₹10/Litre',
     desc: 'Bulandshahr ke Narsena gaon mein UP sarkaar ka pilot — gaay ke mutra ka rate ₹10 prati litre, FPO ke sangrah kendra, mahilaon ko +₹2 commission. Poori jankari.',
+    seoTitle: 'Gaay Ke Mutra Se Kamai — UP ₹10 Prati Litre',
     ogTitle: 'Gau Mutra Kharid Yojana UP — ₹10 Prati Litre',
     keywords: [
       'gau mutra kharid yojana up 2026',

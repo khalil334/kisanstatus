@@ -16,7 +16,7 @@
 | **1** | Extend `scripts/check-title-h1.js` to all 9 data files (incl. Hindi `seoTitleHi`/`titleHi` pairs — 108 pairs, was 40) + wire `check:titles` into `npm run build` | Fix 1 | ✅ **done 2026-08-17** |
 | **2** | `/search` robots conflict + self-canonical | Fix 4 + Fix 7 | ✅ **done 2026-08-17** |
 | **3** | Honest sitemap `lastmod` (homepage, `/articles`, calculators) | Fix 5 | ✅ **done 2026-08-17** |
-| **4** | Severe titles batch A (5 pages, `seoTitle` in data files only) | Fix 2 | ⬜ |
+| **4** | Severe titles batch A (5 pages, `seoTitle` in data files only): `KisanRinKahaSeLe2026`, `NanoDap500mlPriceInIndia2026`, `AgriStackKyaHai2026`, `msp-list-2026-27`, `gau-mutra-kharid-yojana-up-2026` | Fix 2 | ✅ **done 2026-08-17** |
 | **5** | Severe titles batch B (5 pages incl. `/about`, `/contact`) | Fix 2 | ⬜ |
 | **6** | Trim 3 over-length titles | Fix 6 | ⬜ |
 | **7** | Moderate titles batch A (12 pages) | Fix 3 | ⬜ |

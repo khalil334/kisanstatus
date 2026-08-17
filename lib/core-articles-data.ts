@@ -7,6 +7,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     slug: 'KisanRinKahaSeLe2026',
     title: 'Kisan Loan 2026: KCC, Bank, CSC Guide',
     desc: 'Loan chahiye to confusion hota hai — SBI, cooperative, CSC, har jagah process alag. Is guide mein sab kuch hai.',
+    seoTitle: 'Kisan Rin Kaha Se Le 2026 — KCC, Bank, CSC',
     ogTitle: 'Kisan Loan Guide 2026 — Hindi Jankari',
     keywords: [
       'kisan loan kahan se milega 2026',
@@ -187,7 +188,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'NanoDap500mlPriceInIndia2026',
     title: 'Nano DAP 500ml Price 2026: IFFCO Rate',
-    seoTitle: 'Nano DAP 500 ml Price — ₹280-320 Ka Sach',
+    seoTitle: 'Nano DAP 500ml Price 2026 — Rate, Dosage Chart',
     desc: 'IFFCO Nano DAP 500ml bottle ₹280-320 mein milti hai — par ye normal DAP ki jagah nahi leti. State-wise rate, per acre dosage aur 6 aam galtiyan.',
     ogTitle: 'Nano DAP 500ml Price 2026 India',
     keywords: [
@@ -241,7 +242,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'AgriStackKyaHai2026',
     title: 'AgriStack 2026: Digital Kisan ID Guide',
-    seoTitle: 'AgriStack ID Kaise Banaye — Kisan ID Process',
+    seoTitle: 'AgriStack Kya Hai? Kisan ID Banwane Ka Tarika',
     desc: 'AgriStack wali kisan ID do tareeke se banti hai — CSC/camp se ya khud ghar baithe. Dono ka step, documents ki list, aur ID banne ke baad kya badalta hai.',
     ogTitle: 'AgriStack Kya Hai — Kisan ID Guide',
     keywords: [
