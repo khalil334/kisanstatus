@@ -79,6 +79,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisanEkycOnline2026',
     title: 'PM Kisan eKYC 2026: 2 Min Mein Karein',
+    seoTitle: 'PM Kisan eKYC 2026 — OTP, Biometric, Face Auth',
     desc: 'eKYC mandatory hai — bina iske PM Kisan kist nahi milegi. OTP ya CSC biometric se free mein 2 minute mein eKYC karne ka step-by-step tarika.',
     ogTitle: 'PM Kisan eKYC Online 2026 Guide',
     keywords: [
@@ -215,7 +216,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan 24vi Kist 2026: Date & Status',
     desc: '23vi kist 20 June ko aa chuki hai, ab 24vi ka intezaar. Pattern ke hisaab se October 2026 expected — date ka sach, status check aur taiyari ki puri jankari.',
     ogTitle: 'PM Kisan 24vi Kist — Kab Aayegi?',
-    seoTitle: 'PM Kisan 24vi Kist Kab Aayegi? Oct 2026',
+    seoTitle: 'PM Kisan 24vi Kist Kab Aayegi — Date Ka Sach',
     keywords: [
       'pm kisan 24vi kist 2026',
       'pm kisan 24vi kist kab aayegi',
@@ -265,6 +266,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisanMasterGuide2026',
     title: 'PM Kisan Complete Guide 2026: All Fixes',
+    seoTitle: 'PM Kisan Complete Guide 2026 — Har Solution',
     desc: 'PM Kisan ka har problem ek jagah — status verify, eKYC process, payment fail fix aur beneficiary list check karne ka complete step-by-step guide.',
     ogTitle: 'PM Kisan Complete Guide — Sab Fix',
     keywords: [
@@ -286,6 +288,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'soil-health-card-complete-guide-2026',
     title: 'Soil Health Card 2026: Mitti Test Guide',
+    seoTitle: 'Soil Health Card 2026 — Mitti Test Free Apply',
     desc: 'Mitti test karwao aur sahi khaad chuno — CSC se form lo, sample do aur 15 din mein report pao. Soil Health Card banwane ka complete guide yahan.',
     ogTitle: 'Soil Health Card 2026 — Puri Jankari',
     keywords: [
@@ -307,6 +310,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'mandi-bhav-today',
     title: 'Aaj Ka Mandi Bhav: Daily Sabzi Rates',
+    seoTitle: 'UP Mandi Bhav Aaj Ka Rate — Sabzi Phal Mausam',
     desc: 'Aaj ka mandi bhav — aloo ₹20-24, pyaaz ₹26-30, tamatar ₹38-45. Sabzi aur anaj ke daily updated rates apne sheher ke hisaab se yahan dekhein.',
     ogTitle: 'Aaj Ka Mandi Bhav — Live Rates',
     keywords: [
@@ -451,7 +455,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan Land Seeding Form 2026: Poora Sach',
     desc: 'Land seeding form kahan se milta hai, kaise bharein, kaunse documents chahiye — state wise Bhulekh portal links aur khasra-khatauni ke saath complete guide.',
     ogTitle: 'PM Kisan Land Seeding Form 2026: Kahan Se Milega, Kaise Bharein',
-    seoTitle: 'PM Kisan Land Seeding Form PDF Download',
+    seoTitle: 'PM Kisan Land Seeding Form — Kaise Bharein',
     keywords: [
       'pm kisan land seeding form',
       'pm kisan land seeding form pdf download',
@@ -477,6 +481,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisanFaceAuthenticationEkyc',
     title: 'PM Kisan Face Auth eKYC: Bina OTP',
+    seoTitle: 'PM Kisan Face Authentication eKYC — Bina OTP',
     desc: 'OTP nahi aa raha? PM Kisan app se face authentication karke bina OTP ke eKYC complete karo. Step-by-step guide + common errors fix.',
     ogTitle: 'PM Kisan Face Auth eKYC Guide',
     keywords: [
@@ -501,6 +506,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisanVoluntarySurrenderGuide',
     title: 'PM Kisan Surrender Guide: Kaise Hatte?',
+    seoTitle: 'PM Kisan Voluntary Surrender — Kaise Hatte?',
     desc: 'Government employee ya income tax filer ho? Galti se PM Kisan mein register ho gaye toh voluntary surrender kaise karein. Online + offline process.',
     ogTitle: 'PM Kisan Voluntary Surrender Guide',
     keywords: [
@@ -598,6 +604,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisanMaandhanYojanaPension',
     title: 'PM Kisan Maandhan 2026: ₹3000 Pension',
+    seoTitle: 'PM Kisan Maandhan Yojana — ₹3000 Pension',
     desc: 'Chhote kisanon ke liye pension scheme. 18-40 saal ki umar mein join karo, 60 ke baad ₹3000 har mahine pao. Contribution table + apply process.',
     ogTitle: 'PM Kisan Maandhan Yojana Guide',
     keywords: [
@@ -624,6 +631,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisanRejectedStatusReApplyGuide',
     title: 'PM Kisan Rejected Status 2026: Reapply',
+    seoTitle: 'PM Kisan Rejected Status — Dobara Apply Kaise',
     desc: 'Status rejected dikh raha hai? 7 main reasons + step-by-step re-application guide. CSC correction form + arrears claim process.',
     ogTitle: 'PM Kisan Rejected Status Fix Guide',
     keywords: [
@@ -794,6 +802,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'silage-making-business-guide',
     title: 'Silage Business 2026: SMAM Subsidy',
+    seoTitle: 'Silage Business 2026 — Makka Se Kamai Ka Plan',
     desc: 'Silage business se mahine ka ₹50,000+ kamayein. 100-bag unit ka complete budget, SMAM subsidy, aur real profit calculation.',
     ogTitle: 'Silage Making Business 2026 Guide',
     keywords: [
@@ -915,6 +924,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'namo-drone-didi-yojana-shg-selection',
     title: 'Namo Drone Didi 2026: SHG Selection Sach',
+    seoTitle: 'Namo Drone Didi Yojana 2026 — SHG Se Selection',
     desc: 'Koi online form nahi hai — selection DAY-NRLM ke SHG network se hota hai. 80% madad ₹8 lakh tak, 15 din training ka structure aur kamai ka realistic ganit.',
     ogTitle: 'Namo Drone Didi 2026 — Selection Ka Asli Rasta',
     keywords: [

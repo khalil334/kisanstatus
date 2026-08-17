@@ -19,7 +19,7 @@
 | **4** | Severe titles batch A (5 pages, `seoTitle` in data files only): `KisanRinKahaSeLe2026`, `NanoDap500mlPriceInIndia2026`, `AgriStackKyaHai2026`, `msp-list-2026-27`, `gau-mutra-kharid-yojana-up-2026` | Fix 2 | ✅ **done 2026-08-17** |
 | **5** | Severe titles batch B (5 pages): `pm-kisan-maandhan-withdrawal-refund-rules`, `pmkmy-bank-account-change`, `hi/farmer-id-kaise-banaye`, `hi/state-kisan-yojana-list`, `/about` + `/contact` | Fix 2 | ✅ **done 2026-08-17** |
 | **6** | Trim 3 over-length titles (`/disclaimer`, pashupalan category, maandhan withdrawal — last one already done in Part 5) | Fix 6 | ✅ **done 2026-08-17** |
-| **7** | Moderate titles batch A (12 pages) | Fix 3 | ⬜ |
+| **7** | Moderate titles batch A (12 articles in `lib/core-articles-data.ts`) | Fix 3 | ✅ **done 2026-08-17** |
 | **8** | Moderate titles batch B (11 pages) | Fix 3 | ⬜ |
 | **9** | Homepage sections: Hindi articles, calculators, maandhan + rajya-yojana hub cards | Fix 0 / P0 | ⬜ |
 | **10** | Footer navigation: all hub + category pages | Fix 0 / P0 | ⬜ |
