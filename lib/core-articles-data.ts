@@ -729,10 +729,14 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'bakri-palan-yojana-nlm-subsidy',
     title: 'Bakri Palan Yojana 2026: NLM Subsidy',
+    seoTitle: 'NLM Bakri Palan Yojana 2026 — 50% Subsidy, Online Apply Process',
     desc: 'NLM bakri palan: 50% subsidy milti hai — pashupalan karne wale kisan, SHG, FPO sab eligible. 20 bakri farm ka budget, apply process aur 5-year profit projection yahan.',
     ogTitle: 'Bakri Palan Yojana 2026 Guide',
     keywords: [
+      'nlm bakri palan yojana',
+      'nlm bakri palan',
       'bakri palan yojana 2026',
+      'nlm bakri palan online apply',
       'nlm subsidy goat farming',
       'bakri palan subsidy kaise milegi',
       'bakri palan profit kitna hota hai',
