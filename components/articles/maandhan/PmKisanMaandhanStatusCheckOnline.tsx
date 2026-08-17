@@ -376,7 +376,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-        CSC center jaane ka ek aur faida — agar aapka KPAN card download nahi ho raha tha, toh CSC wala aapko print kar ke de dega. Kuch CSC centers mein print ke charges alag se lagte hain, poochh lein. Saath hi agar aapko koi correction karni hai — jaise mobile number change, bank account update, ya nominee change — toh woh bhi CSC pe hi hoti hai.
+        CSC center jaane ka ek aur faida — agar aapka KPAN card download nahi ho raha tha, toh CSC wala aapko print kar ke de dega. Kuch CSC centers mein print ke charges alag se lagte hain, poochh lein. Saath hi agar aapko koi correction karni hai — jaise mobile number change, <Link href="/maandhan/pmkmy-bank-account-change" className="text-blue-600 hover:underline dark:text-blue-400">bank account update</Link>, ya nominee change — toh woh bhi CSC pe hi hoti hai.
       </p>
 
       <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-lg mb-8 border border-blue-200 dark:border-blue-800 not-prose">
@@ -406,7 +406,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Har step par ek cheez common hai: <strong>proof sambhal kar rakhein</strong> — payment receipt, SMS, screenshot. Bina proof ke complaint sirf zubaani reh jati hai; proof ke saath usko track karna aur resolve karwana dono aasan ho jata hai.
+        Har step par ek cheez common hai: <strong>proof sambhal kar rakhein</strong> — payment receipt, SMS, screenshot. Bina proof ke complaint sirf zubaani reh jati hai; proof ke saath usko track karna aur resolve karwana dono aasan ho jata hai. Verified helpline numbers, email addresses aur email-complaint ka ready format ek jagah chahiye toh <Link href="/maandhan/pmkmy-grievance-complaint-helpline" className="text-blue-600 hover:underline dark:text-blue-400">PMKMY helpline & grievance guide</Link> dekhein.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">

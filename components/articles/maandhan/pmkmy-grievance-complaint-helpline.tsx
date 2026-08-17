@@ -161,12 +161,12 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               </thead>
               <tbody>
                 <tr className="bg-[var(--color-card)]">
-                  <td className="p-3 border-b border-[var(--color-border)] font-medium">Enrollment error (galat naam/DOB/mobile)</td>
+                  <td className="p-3 border-b border-[var(--color-border)] font-medium">Enrollment error (galat naam/DOB/mobile) ya <Link href="/maandhan/pmkmy-bank-account-change" className="underline">bank account change</Link></td>
                   <td className="p-3 border-b border-[var(--color-border)]">CSC Center (jahan enrollment hui thi)</td>
                   <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">Bank branch ya scpms@licindia.com</td>
                 </tr>
                 <tr className="bg-green-50/40 dark:bg-green-900/10">
-                  <td className="p-3 border-b border-[var(--color-border)] font-medium">Auto-debit fail / NACH issue</td>
+                  <td className="p-3 border-b border-[var(--color-border)] font-medium">Auto-debit fail / NACH issue (<Link href="/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein" className="underline">regularization guide</Link>)</td>
                   <td className="p-3 border-b border-[var(--color-border)]">Apni Bank Branch</td>
                   <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">PMKMY portal par grievance</td>
                 </tr>
@@ -470,6 +470,9 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
             Toh seedi aise chadhein: pehle portal par grievance darj karein aur reference number note karein; 7–10 din mein jawab na aaye toh 18002676888 par call karke wahi number batayein; phir bhi hal na nikle toh scpms@licindia.com par email mein number, KPAN aur poori timeline likhein. Har step ka record agle step ki taakat hai.
+          </p>
+          <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mt-3">
+            Aur agar in teeno steps ke baad bhi samadhan na mile, toh aakhri rasta hai Government of India ka centralized grievance portal <a href="https://pgportal.gov.in" target="_blank" rel="noopener noreferrer nofollow" className="underline">pgportal.gov.in (CPGRAMS)</a> — wahan Ministry of Labour &amp; Employment select karke complaint darj karein aur pichhle sab reference numbers saath attach karein.
           </p>
         </div>
 

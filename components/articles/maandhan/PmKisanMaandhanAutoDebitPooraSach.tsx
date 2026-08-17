@@ -229,7 +229,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
           </div>
 
           <WB>
-            <strong>Default hone se bachne ke liye:</strong> Har hafte apne bank account ka balance check karein. Agar debit fail ho, toh us hafte hi CSC center jakar manual payment karein. 3 mahine se zyada gap mat dein. Agar kisi mahine PM Kisan ki kist late aayi, toh manual payment ka option use karein.
+            <strong>Default hone se bachne ke liye:</strong> Har hafte apne bank account ka balance check karein. Agar debit fail ho, toh us hafte hi CSC center jakar manual payment karein. 3 mahine se zyada gap mat dein. Agar kisi mahine PM Kisan ki kist late aayi, toh manual payment ka option use karein. Aur agar aap bank hi badalna chahte hain — branch band ho gayi ho ya doosre bank mein shift ho rahe hon — toh <Link href="/maandhan/pmkmy-bank-account-change" className="underline text-green-700 dark:text-green-400">PMKMY bank account change ka poora process</Link> pehle padh lein, kyunki change ke 15-30 din tak debit purane account se hi hota hai.
           </WB>
         </section>
 

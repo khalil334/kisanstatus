@@ -268,7 +268,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
               <p className="text-xs text-[var(--color-text-muted)]">
                 Wahi bank account jo registration ke waqt Aadhaar/NPCI se link kiya gaya tha. Agar wo account band ho
                 chuka hai ya number change ho gaya hai, toh pehle CSC center jaakar bank details update karwana zaroori
-                hai, warna refund atak sakta hai.
+                hai (<Link href="/maandhan/pmkmy-bank-account-change" className="underline text-green-700 dark:text-green-400">poora process yahan</Link>), warna refund atak sakta hai.
               </p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
