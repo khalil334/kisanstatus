@@ -62,6 +62,34 @@
 - Note: Hindi matras/combining marks count as chars in Python len() the same
   way Ahrefs counts them — lengths verified to match the crawl exactly.
 
+## Ahrefs issue: Meta description too long — round 2 (c64d56c9, fixed 2026-08-18)
+- 11 pages flagged (161-192 chars). NOT the same set as round 1: this round hit
+  Hinglish articles + rajya-yojana, not /articles/hi/*.
+- Descriptions are per-article data, never template-generated: `desc` in
+  lib/core-articles-data.ts (6) / lib/hindi-yojana-data.ts (1), `description` in
+  lib/rajya-yojana-data.ts (3), and inline CATEGORY_DATA in
+  app/articles/hi/category/[category]/page.tsx (1). Route templates just pass the
+  field to generateMetadata — so a "template fix" never exists for this issue;
+  the fix is always copy. Grep the crawled string to find its data file.
+- Overflow causes, in frequency order: (1) filler tail — "… yahan",
+  "… ki poori guide" after the value is already delivered; (2) restated hook —
+  same fact twice ("free hai — ek bhi paisa nahi"); (3) title duplication;
+  (4) one benefit clause too many. Trim in that order and 160 is easy to hit.
+- ALWAYS check GSC ranking keywords before trimming (ahrefs_gsc.top_keywords,
+  scope={project_id}, period={all_time:true} — the per-`page` filter arg returns
+  0 rows, so pull site-wide and group by url client-side). Two trims here had to
+  be revised: PmfbyCropInsurance2026 ranks pos 6 for "crop insurance" and
+  PmKisanBeneficiaryList2026 pos 51/53 for "beneficiary list" — both phrases were
+  about to be cut as "title duplication". Only ~40 URLs have any GSC impressions,
+  so most flagged pages carry no ranking risk.
+- Known over-160 but NOT flagged by the crawl (left alone; likely non-indexable
+  or not yet crawled): lib/yojana-2026-data.ts:37 (164) and :61 (195),
+  lib/hindi-yojana-2026-data.ts:34 (170),
+  app/articles/pm-kisan-land-seeding-form/download/layout.tsx:6 (176).
+- Connector gotchas: ahrefs_site_audit.export_many rejects `sort` (schema wants
+  'desc', upstream wants 'Desc' — omit it and sort client-side).
+  ahrefs_gsc.top_keywords nests args under `scope`/`period` objects.
+
 ## Ahrefs warnings batch 2 (fixed 2026-08-16)
 - Meta description too short: /articles/hi/category/* descriptions live inline
   in CATEGORY_DATA in app/articles/hi/category/[category]/page.tsx, not in a
