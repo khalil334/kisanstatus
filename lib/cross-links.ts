@@ -4,6 +4,7 @@ import { HINDI_ARTICLES } from '@/lib/hindi-articles-data';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
 import { RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
 import { HINGLISH_TO_HINDI, HINDI_TO_HINGLISH } from '@/lib/hindi-hreflang';
+import { LIVE_YOJANA_2026_ARTICLES } from '@/lib/yojana-2026-data';
 
 /**
  * Cross-section internal linking (SEO-INDEXING-FIX.md — Fix 0 / Part 11).
@@ -56,11 +57,18 @@ const MAANDHAN_LINKS: readonly CrossLink[] = MAANDHAN_ARTICLES.map((a) => ({
   section: 'Maandhan Pension',
 }));
 
-const RAJYA_LINKS: readonly CrossLink[] = RAJYA_YOJANA_ARTICLES.filter((a) => a.status === 'live').map((a) => ({
-  href: `/rajya-yojana/${a.slug}`,
-  label: a.title,
-  section: 'Rajya Yojana',
-}));
+const RAJYA_LINKS: readonly CrossLink[] = [
+  ...RAJYA_YOJANA_ARTICLES.filter((a) => a.status === 'live').map((a) => ({
+    href: `/rajya-yojana/${a.slug}`,
+    label: a.title,
+    section: 'Rajya Yojana',
+  })),
+  ...LIVE_YOJANA_2026_ARTICLES.map((a) => ({
+    href: `/yojana/${a.slug}`,
+    label: a.title,
+    section: 'Yojana',
+  })),
+];
 
 const CATEGORY_LINKS: readonly CrossLink[] = Object.entries(CATEGORIES).flatMap(([slug, cat]) => [
   { href: `/articles/category/${slug}`, label: `${cat.name} — sabhi guides`, section: 'Category' },

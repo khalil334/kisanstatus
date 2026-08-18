@@ -502,7 +502,10 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
             Premium bhar dena aadha kaam hai. Zyadatar claim isliye atakte hain ki nuksan ki soochna 72 ghante
             ke andar nahi di gayi — der hone par survey tak khet ki haalat badal jaati hai aur saboot kamzor
             pad jaata hai. Isliye premium receipt, 14447 aur Crop Insurance app — teeno pehle se phone mein
-            rakhein, taaki barbaadi wale din dhoondhna na pade.
+            rakhein, taaki barbaadi wale din dhoondhna na pade. Claim already file ho chuka hai aur paisa
+            atka hai? Uske liye alag guide hai —{' '}
+            <Link href="/yojana/fasal-bima-claim-status-check" className="underline font-bold">claim status
+            check aur complaint ka poora rasta</Link>.
           </p>
         </div>
 

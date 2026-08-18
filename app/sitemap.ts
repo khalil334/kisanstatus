@@ -4,6 +4,7 @@ import path from 'path';
 import { ARTICLES, CATEGORIES, type CategorySlug } from '@/lib/articles-data';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
 import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
+import { LIVE_YOJANA_2026_ARTICLES } from '@/lib/yojana-2026-data';
 import { HINDI_ARTICLES } from '@/lib/hindi-articles-data';
 import { SITE_URL } from '@/lib/site-config';
 
@@ -37,6 +38,16 @@ const ALL_ARTICLES = [
     modifiedTime: a.modified,
     ogImage: a.ogImage,
     path: `/rajya-yojana/${a.slug}`,
+  })),
+  ...LIVE_YOJANA_2026_ARTICLES.map((a) => ({
+    slug: a.slug,
+    title: a.title,
+    desc: a.description,
+    category: 'farming',
+    publishedTime: a.published,
+    modifiedTime: a.modified,
+    ogImage: a.ogImage,
+    path: `/yojana/${a.slug}`,
   })),
   ...HINDI_ARTICLES.map((a) => ({
     slug: a.slug,
@@ -133,6 +144,16 @@ const RAJYA_YOJANA_UPDATED = new Date(
   ),
 );
 
+const YOJANA_2026_UPDATED = new Date(
+  Math.max(
+    ...LIVE_YOJANA_2026_ARTICLES.map((a) => {
+      const t = new Date(a.modified || a.published).getTime();
+      return Number.isFinite(t) ? t : 0;
+    }),
+    0,
+  ),
+);
+
 const CALC_DATES = {
   quickStatus: calculatorModified('QuickStatusChecker.tsx', '2026-05-10'),
   installmentTracker: calculatorModified('InstallmentTrackerCalcPage.tsx', '2026-03-10'),
@@ -202,6 +223,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ? [{
           url: `${SITE_URL}/rajya-yojana`,
           lastModified: clampToNow(RAJYA_YOJANA_UPDATED),
+          changeFrequency: 'weekly' as const,
+          priority: 0.90,
+        }]
+      : []),
+    ...(LIVE_YOJANA_2026_ARTICLES.length > 0
+      ? [{
+          url: `${SITE_URL}/yojana`,
+          lastModified: clampToNow(YOJANA_2026_UPDATED),
           changeFrequency: 'weekly' as const,
           priority: 0.90,
         }]

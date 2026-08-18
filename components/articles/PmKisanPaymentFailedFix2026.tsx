@@ -131,7 +131,9 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             Portal khola, "Approved" bhi likha hai, lekin bank khaali. Ye situation har kist mein hazaron kisano ke saath hoti hai. Wajah almost hamesha ek hi hoti hai — bank account DBT (Direct Benefit Transfer) system se sahi tarike se juda nahi hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Sarkar PFMS (Public Financial Management System) ke zariye paisa bhejti hai. PFMS ko teen cheezein bilkul 100% sahi chahiye — valid bank account number, sahi IFSC code, aur Aadhaar link (NPCI seeding). Ek bhi cheez galat hui nahi ki transaction wahin ruk jaata hai, aur status mein "failed" ya "rejected" jaisa message aa jaata hai.
+            Sarkar PFMS (Public Financial Management System) ke zariye paisa bhejti hai. PFMS ko teen cheezein bilkul 100% sahi chahiye — valid bank account number, sahi IFSC code, aur Aadhaar link (NPCI seeding). Ek bhi cheez galat hui nahi ki transaction wahin ruk jaata hai, aur status mein "failed" ya "rejected" jaisa message aa jaata hai. Waise ye seeding wali dikkat sirf PM Kisan ki nahi hai —{' '}
+            <Link href="/yojana/fasal-bima-claim-status-check" className="underline font-bold">fasal bima ka claim</Link>{' '}
+            bhi isi wajah se atakta hai, kyunki wahan bhi paisa DBT se hi aata hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             <strong>Low-Competition Tip:</strong> Bahut se log sirf "pm kisan payment failed" search karte hain, lekin asli solution <strong>"pfms kisan payment status check"</strong> karne mein chhupa hai. Hum aage iska tarika bhi batayenge.

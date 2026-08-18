@@ -2,6 +2,7 @@ import { HINDI_RAJYA_YOJANA_ARTICLES } from '@/lib/hindi-rajya-yojana-data';
 import { HINDI_YOJANA_ARTICLES } from '@/lib/hindi-yojana-data';
 import { HINDI_KISANGUIDES_ARTICLES } from '@/lib/hindi-kisanguides-data';
 import { HINDI_LOAN_MANDI_PASHUPALAN_ARTICLES } from '@/lib/hindi-loan-mandi-pashupalan-data';
+import { HINDI_YOJANA_2026_ARTICLES } from '@/lib/hindi-yojana-2026-data';
 
 export interface HindiArticle {
   slug: string;
@@ -34,6 +35,7 @@ export const HINDI_ARTICLES: readonly HindiArticle[] = [
   ...HINDI_KISANGUIDES_ARTICLES,
   ...HINDI_LOAN_MANDI_PASHUPALAN_ARTICLES,
   ...HINDI_RAJYA_YOJANA_ARTICLES,
+  ...HINDI_YOJANA_2026_ARTICLES,
 ];
 
 export const HINDI_ARTICLES_MAP: Record<string, HindiArticle> = Object.fromEntries(
