@@ -86,3 +86,13 @@
 - "HTTP to HTTPS redirect" / "Redirect chain" notices: same intentional
   http/www→https 308 canonical-host redirects; chain is www+http→https(www)→apex,
   2 hops only on the never-linked http://www origin. Acceptable, do not fix.
+
+## Writing style (owner preference, 2026-08-18)
+- Content must read like a real person talking to a farmer, not AI/robotic.
+- Natural conversational Hinglish/Hindi: short sentences, direct address
+  ("bhai", "aap"), real-life examples (kist ka paisa, CSC center, aadhaar link).
+- Kill robotic filler: "step-by-step process", "in this article", "comprehensive
+  guide", symmetric bullet lists everywhere.
+- NO deliberate typos/spelling mistakes — owner suggested them for human feel,
+  but they hurt trust + SERP titles (the exact issue we keep fixing). Human feel
+  comes from voice and specifics, not errors. Titles/meta must stay clean.
