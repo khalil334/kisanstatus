@@ -56,7 +56,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisanBeneficiaryList2026',
     title: 'PM Kisan Beneficiary List 2026: Check',
-    desc: 'State verification pending aam taur par 2-4 hafte me clear hota hai — nahi hua to Block Agriculture Officer se milein. Beneficiary list me naam, village wise list aur 7 rejection fixes yahan.',
+    desc: 'State verification aam taur par 2-4 hafte me clear hota hai — nahi hua to Block Agriculture Officer se milein. Beneficiary list me naam aur 7 fixes yahan.',
     ogTitle: 'PM Kisan Beneficiary List 2026 Guide',
     keywords: [
       'pm kisan beneficiary list 2026',
@@ -103,7 +103,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmfbyCropInsurance2026',
     title: 'PMFBY Crop Insurance 2026: 2% Premium',
-    desc: 'Fasal kharab ho toh compensation milega. Kharif 2%, Rabi 1.5% premium. Eligibility, claim process aur enrollment deadline — PMFBY crop insurance 2026 ki poori guide.',
+    desc: 'Fasal kharab ho toh compensation milega. Kharif 2%, Rabi 1.5% premium. Eligibility, claim process aur enrollment deadline — PMFBY crop insurance 2026.',
     ogTitle: 'PMFBY Crop Insurance 2026 Guide',
     keywords: [
       'pmfby crop insurance 2026',
@@ -159,7 +159,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     slug: 'fto-status-check-paisa-kab-aayega',
     title: 'FTO Status Check: Paisa Kab Aayega?',
     seoTitle: 'FTO Status Check 2026 — FTO Generated के बाद पैसा कब आता है',
-    desc: 'FTO generate hone ke baad paisa aam taur par kuch dino mein aata hai — official timeline nahi hai. 15-din rule, will be generated vs is generated ka fark, aur delay par 4-step checklist yahan.',
+    desc: 'FTO generate hone ke baad paisa kuch dino mein aata hai — official timeline nahi hai. 15-din rule, will be vs is generated ka fark aur delay ki checklist.',
     ogTitle: 'FTO Status Check — Paisa Kab Aayega 2026',
     keywords: [
       'fto status check',
@@ -382,7 +382,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     slug: 'PmKisan26viKist',
     title: '26vi Kist Kab Aayegi: Date & List',
     seoTitle: '26vi Kist Kab Aayegi 2026 — Date, Beneficiary List, Status',
-    desc: '26vi kist ki official date abhi nahi aayi — pehle 24vi aur 25vi ka cycle poora hoga. ₹2,000 hi milega. eKYC, NPCI seeding aur list mein naam — taiyari abhi karo.',
+    desc: '26vi kist ki official date abhi nahi aayi — pehle 24vi aur 25vi ka cycle poora hoga. ₹2,000 hi milega. eKYC, NPCI seeding aur list mein naam check karo.',
     ogTitle: '26vi Kist Kab Aayegi — Date, List, Status',
     keywords: [
       '26vi kist kab aayegi',
@@ -756,7 +756,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     slug: 'bakri-palan-yojana-nlm-subsidy',
     title: 'Bakri Palan Yojana 2026: NLM Subsidy',
     seoTitle: 'NLM Bakri Palan Yojana 2026 — 50% Subsidy, Online Apply Process',
-    desc: 'NLM bakri palan: 50% subsidy milti hai — pashupalan karne wale kisan, SHG, FPO sab eligible. 20 bakri farm ka budget, apply process aur 5-year profit projection yahan.',
+    desc: 'NLM bakri palan: 50% subsidy — kisan, SHG aur FPO sab eligible. 20 bakri farm ka budget, apply process aur 5-saal ka profit projection yahan.',
     ogTitle: 'Bakri Palan Yojana 2026 Guide',
     keywords: [
       'nlm bakri palan yojana',
@@ -783,7 +783,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'mushroom-kheti-nhb-subsidy',
     title: 'Mushroom Kheti 2026: NHB Subsidy Guide',
-    desc: 'NHB mushroom subsidy: general category ko ~40% back-ended capital subsidy milti hai. Apply process, 100-bag unit ka budget aur mahine ka ₹40,000+ profit plan yahan.',
+    desc: 'NHB mushroom subsidy: general category ko ~40% back-ended capital subsidy. Apply process, 100-bag unit ka budget aur ₹40,000+ mahina profit plan.',
     ogTitle: 'Mushroom Kheti 2026 — Profit Guide',
     keywords: [
       'mushroom kheti 2026',

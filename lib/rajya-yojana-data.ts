@@ -32,7 +32,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     ],
     title: 'Rajasthan Kisan Samman Nidhi — Kist Kab Aayegi 2026',
     description:
-      'Rajasthan Kisan Samman Nidhi: 6vi kist pending hai, 7vi kist uske baad aayegi — official date abhi announce nahi. Jan Soochna se status check, eligibility aur badhi raqam ka sach yahan.',
+      'Rajasthan Kisan Samman Nidhi: 6vi kist pending, 7vi uske baad — official date abhi nahi. Jan Soochna se status check, eligibility aur badhi raqam ka sach.',
     ogTitle: 'Rajasthan Kisan Samman Nidhi — Nayi Raqam Aur Status',
     component: 'RajasthanKisanSammanNidhi9000',
     state: 'Rajasthan',
@@ -87,7 +87,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     ],
     title: 'MP Kisan Kalyan Yojana Kist Status 2026 — SAARA Portal Check',
     description:
-      'Saal ke ₹12,000 mein se aapki kist kahan atki hai — SAARA portal (saara.mp.gov.in) par payment status kholne ka step, list mein naam dhoondhna, aur late hone par kya karna hai.',
+      'Saal ke ₹12,000 mein se aapki kist kahan atki hai — SAARA portal par payment status kholne ka step, list mein naam dhoondhna aur late hone par kya karein.',
     ogTitle: 'MP Kisan Kalyan Yojana — Kist Aur Status Check',
     component: 'MpKisanKalyanYojanaKist',
     state: 'Madhya Pradesh',
@@ -141,7 +141,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     ],
     title: 'Rythu Bharosa Status Check 2026',
     description:
-      'Rythu Bharosa: ₹12,000 per acre per saal (₹6,000 Kharif + ₹6,000 Rabi) — Telangana kisano ko DBT se. Status check steps, phase-wise payment aur Rythu Bandhu se farak yahan.',
+      'Rythu Bharosa: ₹12,000 per acre saalana (₹6,000 Kharif + ₹6,000 Rabi) DBT se. Status check steps, phase-wise payment aur Rythu Bandhu se farak.',
     ogTitle: 'Rythu Bharosa Status Check — Telangana Kisan Yojana',
     component: 'RythuBharosaStatusCheck',
     state: 'Telangana',
