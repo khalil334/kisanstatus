@@ -326,7 +326,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Aloo ka aaj ka rate kya chal raha hai?',
-    a: 'Base rate ₹22-28/kg ke aas-paas hai, lekin state badalte hi number bhi badal jaata hai — Kerala jaisi jagah jahan transport lamba hai, wahan yeh thoda upar chala jaata hai. Upar state selector se check kar lo.',
+    a: 'Aaj ka number is page ke upar wale live card mein hi dekho — aloo ka rate har din badalta hai, isliye yahan koi fixed figure likhna galat hoga. Card mein apna state select karo, rate usi hisaab se adjust ho jaata hai. Jahan aloo local ugta hai (jaise UP, Bengal) wahan rate kam rehta hai; Kerala jaisi jagah jahan transport lamba hai, wahan upar chala jaata hai.',
   },
   {
     q: 'Pyaaz mehnga kyun ho raha hai?',
@@ -894,7 +894,7 @@ export default function MandiBhavToday() {
             labour ghata kar tulna karein. Agar bacha hua farak dhulai se kam nikle, toh apni mandi hi theek hai.
           </p>
           <p className="text-xs text-green-700 italic mt-2">
-            Base data sarkari agmarknet feed se aata hai. Mandi floor par thodi negotiation ho sakti hai, isliye final deal rate mein ₹1-2 ka farak sambhav hai.
+            Base data sarkari agmarknet feed se aata hai. Header mein &quot;Live&quot; dikh raha ho to rate aaj ke feed ka hai; &quot;Updated&quot; dikhe to feed us waqt reply nahi kar raha tha aur card indicative reference range dikha raha hai — aisi soorat mein bechne se pehle apni mandi se rate confirm kar lo. Mandi floor par negotiation bhi hoti hai, isliye final deal rate mein farak sambhav hai.
           </p>
         </div>
 

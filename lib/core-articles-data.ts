@@ -337,7 +337,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     slug: 'mandi-bhav-today',
     title: 'Aaj Ka Mandi Bhav: Daily Sabzi Rates',
     seoTitle: 'UP Mandi Bhav Aaj Ka Rate — Sabzi Phal Mausam',
-    desc: 'Aaj ka mandi bhav — aloo ₹20-24, pyaaz ₹26-30, tamatar ₹38-45. Sabzi aur anaj ke daily updated rates apne sheher ke hisaab se yahan dekhein.',
+    desc: 'Aaj ka mandi bhav — sabzi aur phal ke daily rates apne state ke hisaab se dekhein, saath mein 7 din ka mausam. Base data sarkari agmarknet feed se.',
     ogTitle: 'Aaj Ka Mandi Bhav — Live Rates',
     keywords: [
       'aaj ka mandi bhav',
@@ -347,7 +347,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'mandi-bhav-today',
     category: 'mandi',
     publishedTime: '2026-01-22T19:35:38+05:30',
-    modifiedTime: '2026-01-31T09:57:43+05:30',
+    modifiedTime: '2026-08-18T19:30:00+05:30',
     readingTime: 5,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('mandi-bhav-today'),
