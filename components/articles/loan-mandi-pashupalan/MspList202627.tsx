@@ -139,7 +139,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 05/08/2026</strong>
+          <strong>Last Updated: 18/08/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -159,6 +159,54 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           kiye (gehu, chana, sarson wagairah). Kharif 2026-27 ke rate 13/05/2026 ko aaye (dhan, kapas, soybean
           wagairah). Isliye ek hi &quot;2026-27 list&quot; mein dono announcements ke numbers aate hain.
         </IB>
+
+        <SH>Kharif MSP List 2026-27 — Dhan, Kapas, Dalhan, Tilhan</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Abhi Kharif ka season chal raha hai, isliye yahi table sabse pehle. Bo-ai monsoon ke saath June-July
+          mein hoti hai aur katai October-November mein — rate pehle se pata ho toh mandi mein baat karna
+          aasaan rehta hai. 14 faslon ke rate declare hote hain, lekin dhan, jowar aur kapas ki do-do grades
+          hone ki wajah se table mein 17 entries banti hain.
+        </p>
+
+        <div className="overflow-x-auto my-4">
+          <table className="w-full text-sm border-collapse">
+            <caption className="sr-only">Kharif crops MSP 2026-27 with previous year comparison and margin over cost</caption>
+            <thead>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Fasal</th>
+                <th className="border border-[var(--color-border)] p-3 text-right font-black">MSP 2026-27</th>
+                <th className="border border-[var(--color-border)] p-3 text-right font-black">2025-26</th>
+                <th className="border border-[var(--color-border)] p-3 text-right font-black">Badhotri</th>
+                <th className="border border-[var(--color-border)] p-3 text-right font-black">Margin</th>
+              </tr>
+            </thead>
+            <tbody>
+              {KHARIF_ROWS.map((r, i) => (
+                <tr key={r.crop} className={i % 2 === 1 ? 'bg-[var(--color-bg-alt)]' : ''}>
+                  <td className="border border-[var(--color-border)] p-3 font-semibold">{r.crop}</td>
+                  <td className="border border-[var(--color-border)] p-3 text-right font-bold text-green-700 dark:text-green-400">₹{r.msp}</td>
+                  <td className="border border-[var(--color-border)] p-3 text-right text-[var(--color-text-muted)]">₹{r.prev}</td>
+                  <td className="border border-[var(--color-border)] p-3 text-right">{r.inc}</td>
+                  <td className="border border-[var(--color-border)] p-3 text-right font-semibold">{r.margin}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="text-xs text-[var(--color-text-muted)] mt-2 italic">
+            Sabhi rate ₹ per quintal. Source: CCEA decision, 13/05/2026 — PIB press release.
+            Kharif 2026-27 ke liye anumanit payout ₹2.60 lakh crore aur procurement target 824.41 lakh metric tonne.
+          </p>
+        </div>
+
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/dhan-katai.webp"
+          alt="Kharif season mein dhan ki katai karte kisan"
+          width={1200}
+          height={670}
+          className="w-full h-auto rounded-xl my-5"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
 
         <SH>Rabi MSP List 2026-27 — Gehu, Chana, Sarson</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
@@ -204,52 +252,6 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           alt="Katai ke waqt gehu ki pakki baali kisan ke haath mein"
           width={1000}
           height={558}
-          className="w-full h-auto rounded-xl my-5"
-          sizes="(max-width: 768px) 100vw, 768px"
-          loading="lazy"
-        />
-
-        <SH>Kharif MSP List 2026-27 — Dhan, Kapas, Dalhan, Tilhan</SH>
-        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Kharif ki bo-ai monsoon ke saath June-July mein hoti hai. 14 faslon ke rate declare hote hain, lekin
-          dhan, jowar aur kapas ki do-do grades hone ki wajah se table mein 17 entries banti hain.
-        </p>
-
-        <div className="overflow-x-auto my-4">
-          <table className="w-full text-sm border-collapse">
-            <caption className="sr-only">Kharif crops MSP 2026-27 with previous year comparison and margin over cost</caption>
-            <thead>
-              <tr className="bg-[var(--color-bg-alt)]">
-                <th className="border border-[var(--color-border)] p-3 text-left font-black">Fasal</th>
-                <th className="border border-[var(--color-border)] p-3 text-right font-black">MSP 2026-27</th>
-                <th className="border border-[var(--color-border)] p-3 text-right font-black">2025-26</th>
-                <th className="border border-[var(--color-border)] p-3 text-right font-black">Badhotri</th>
-                <th className="border border-[var(--color-border)] p-3 text-right font-black">Margin</th>
-              </tr>
-            </thead>
-            <tbody>
-              {KHARIF_ROWS.map((r, i) => (
-                <tr key={r.crop} className={i % 2 === 1 ? 'bg-[var(--color-bg-alt)]' : ''}>
-                  <td className="border border-[var(--color-border)] p-3 font-semibold">{r.crop}</td>
-                  <td className="border border-[var(--color-border)] p-3 text-right font-bold text-green-700 dark:text-green-400">₹{r.msp}</td>
-                  <td className="border border-[var(--color-border)] p-3 text-right text-[var(--color-text-muted)]">₹{r.prev}</td>
-                  <td className="border border-[var(--color-border)] p-3 text-right">{r.inc}</td>
-                  <td className="border border-[var(--color-border)] p-3 text-right font-semibold">{r.margin}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <p className="text-xs text-[var(--color-text-muted)] mt-2 italic">
-            Sabhi rate ₹ per quintal. Source: CCEA decision, 13/05/2026 — PIB press release.
-            Kharif 2026-27 ke liye anumanit payout ₹2.60 lakh crore aur procurement target 824.41 lakh metric tonne.
-          </p>
-        </div>
-
-        <Image
-          src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/dhan-katai.webp"
-          alt="Kharif season mein dhan ki katai karte kisan"
-          width={1200}
-          height={670}
           className="w-full h-auto rounded-xl my-5"
           sizes="(max-width: 768px) 100vw, 768px"
           loading="lazy"

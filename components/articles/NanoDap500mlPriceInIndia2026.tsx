@@ -15,6 +15,7 @@ const RELATED = [
 
 const FAQS_DATA = [
   { q: 'Nano DAP 500ml price India mein 2026 kya hai?', a: 'Lagbhag ₹250-350 ke beech. Subsidy mil jaaye toh ₹200-280 tak bhi aa sakta hai. Exact price ke liye authorized dealer ya IFFCO website confirm karna behtar rahega — state aur season se rate badalta hai.' },
+  { q: 'Normal DAP (50kg bori) ka rate kitna hai?', a: 'Subsidized rate lagbhag ₹1,350 per bori chal raha hai — yahi rate POS machine se kharidne par milta hai. Dealer isse zyada maange to wo overcharging hai; receipt maango aur zila krishi adhikari se shikayat kar sakte ho. Bina subsidy DAP ki asli laagat ₹3,000+ hai, farak sarkar deti hai.' },
   { q: 'IFFCO liquid DAP ki 500ml bottle ka price kitna hai?', a: 'Authorized dealers ₹280-320 charge kar rahe hain. Kuch states mein subsidized rate ₹220-270 tak mil jaata hai. Rate roz nahi badalta, par season shuru hote hi update lena samajhdari hai.' },
   { q: '1 acre ke liye foliar spray ka dosage kitna hota hai?', a: 'Label ke mutabik 500ml per acre — 100-150 litre paani mein ghol kar 2-3 baar spray. Crop ke hisaab se KVK dosage thoda change bhi karwa sakta hai.' },
   { q: 'Traditional DAP se ye kaise alag hai?', a: 'Liquid DAP ek foliar spray hai — nano particles seedhe pattiyon se absorb hote hain. Traditional DAP zameen mein daala jaata hai. Dono ko ek doosre ka replacement nahi, saathi samjhein — kai experts inka combination hi suggest karte hain.' },
@@ -133,6 +134,9 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           <WB>
             <strong>Note:</strong> Ye 2026 ki estimated values hain. Actual price state, dealer, subsidy policy aur season ke hisaab se ghatta-badhta rehta hai.
           </WB>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
+            Bahut kisan yahan sirf <strong>normal DAP bori ka rate</strong> dekhne aate hain, isliye wo baat alag se saaf kar dein — IFFCO ki 50kg granular DAP bori ka subsidized rate lagbhag <strong>₹1,350</strong> chal raha hai (bina subsidy iski asli laagat ₹3,000+ baithti hai, farak sarkar bharti hai). Dukaan par isse zyada maange to receipt zaroor lein — subsidized khaad ka rate poore desh me lagbhag ek jaisa hota hai. POS machine se hi kharidein, tabhi subsidy wala rate milta hai.
+          </p>
         </section>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">

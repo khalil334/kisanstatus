@@ -120,7 +120,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     component: 'MspList202627',
     category: 'mandi',
     publishedTime: '2026-05-30T15:19:53+05:30',
-    modifiedTime: '2026-06-08T17:37:18+05:30',
+    modifiedTime: '2026-08-18T07:30:00+05:30',
     readingTime: 11,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('msp-list-2026-27'),

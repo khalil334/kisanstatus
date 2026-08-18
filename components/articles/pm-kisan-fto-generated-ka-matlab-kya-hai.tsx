@@ -16,6 +16,7 @@ const RELATED = [
 
 const FAQS_DATA = [
   { q: 'FTO ka full form kya hai?', a: 'FTO ka full form hai Fund Transfer Order (फंड ट्रांसफर ऑर्डर). Ye sarkar ki taraf se bank ko diya gaya payment ka aadesh hai — kis kisan ke account me kitni rakam bhejni hai. PM Kisan status me "FTO is Generated" dikhne ka matlab hai ki aapki kist ka order ban chuka hai.' },
+  { q: 'Status me "Reason for Failed Transaction / FTO" likha aa raha hai — iska matlab?', a: 'Ye ek heading hai jo batati hai ki aapki payment kyun fail hui. Asli jawab uske aage/neeche likhi entry me hota hai — jaise Aadhaar not seeded, account closed, ya name mismatch. Wahi entry padho aur usi hisaab se sudhaar karao. Column khaali hai to payment fail nahi hui, sirf format aise dikhta hai.' },
   { q: 'Status me Generated dikhne ke baad paisa kitne din me aata hai?', a: 'Iska koi official fixed timeline nahi hai, sarkar ne kabhi announce nahi kiya ki kitne din lagenge. Aam taur par order banne ke baad DBT se paisa kuch hi dino me aa jata hai. Haan, 15 din se upar ho jayein to phir wait karne ke bajay Aadhaar seeding aur account ki jaanch karwani chahiye.' },
   { q: 'Processed aur Generated me kya fark hai?', a: 'Generated: sarkar ne bank ko payment ka order bhej diya. Processed: bank ne us order par kaam shuru kar diya, yaani ek step aage. Processed dikhne ke baad credit ki umeed jaldi rakh sakte ho.' },
   { q: '"Will be generated" ka kya matlab hua?', a: 'Order abhi bana nahi, banna baki hai. Aap beneficiary list me ho, bas aapki batch ki bari nahi aayi. Kuch dino me ye khud hi "Generated" ho jata hai, aapko kuch nahi karna.' },
@@ -241,6 +242,37 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <li>IFSC code galat register ho gaya tha</li>
             <li>Account lambe samay se istemaal nahi hua aur inoperative ho gaya</li>
           </ul>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Status page par ye ek khaas line bhi dikh sakti hai — <strong>&ldquo;Reason for Failed Transaction / FTO&rdquo;</strong>. Iske aage jo likha hai, wahi aapki asli problem hai. Aam entries aur unka matlab:
+          </p>
+          <div className="my-4 overflow-x-auto">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr>
+                  <th className="border border-[var(--color-border)] px-3 py-2 text-left bg-[var(--color-bg-alt)]">Reason column me likha</th>
+                  <th className="border border-[var(--color-border)] px-3 py-2 text-left bg-[var(--color-bg-alt)]">Matlab + ilaaj</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Aadhaar not seeded / NPCI inactive</td>
+                  <td className="border border-[var(--color-border)] px-3 py-2">Bank shakha me NPCI seeding form bharo — poora tareeka <Link href="/articles/hi/npci-aadhaar-seeding" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">is guide me</Link></td>
+                </tr>
+                <tr>
+                  <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Account closed / inactive</td>
+                  <td className="border border-[var(--color-border)] px-3 py-2">Chalu account me seeding karwao; band account apne aap dobara nahi khulta</td>
+                </tr>
+                <tr>
+                  <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Name mismatch</td>
+                  <td className="border border-[var(--color-border)] px-3 py-2">Aadhaar aur bank record me naam ki spelling alag hai — jo galat hai use pehle sudhrwao</td>
+                </tr>
+                <tr>
+                  <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Rejected / Returned by bank</td>
+                  <td className="border border-[var(--color-border)] px-3 py-2">Bank ne paisa wapas bhej diya — correction ke baad agle cycle me dobara process hota hai</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Bank jakar seeding aur naam ki spelling, dono ek sath verify karwa lo. Zyadatar cases wahi sulajh jate hain. Har failure reason ka step-by-step ilaaj alag article me likha hai:{' '}
             <Link href="/articles/PmKisanPaymentFailedFix2026" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">Payment Failed — 7 Fixes</Link>.
