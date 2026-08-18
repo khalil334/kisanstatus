@@ -6,7 +6,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-02T15:44:39+05:30';
-const MODIFIED = '2026-02-16T10:13:52+05:30';
+const MODIFIED = '2026-08-18T19:00:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
@@ -45,7 +45,7 @@ const FAQS_DATA = [
   },
   {
     q: '24vi kist kab tak aayegi mere account mein?',
-    a: 'October 2026 mein aani chahiye. Agar aapki eKYC complete hai aur bank account active hai, toh automatic credit ho jayegi - aapko kuch nahi karna. Bas status check karte raho portal par. Agar 15 October tak nahi aayi, toh helpline 155261 par call karo ya CSC center jao.'
+    a: 'News mein October 2026 chal raha hai, par official tareekh abhi notify nahi hui - 23vi 20 June 2026 ko aayi thi aur usse pehle ka gap 3-4 mahine ka raha hai. Agar aapki eKYC complete hai aur bank account active hai, toh credit automatic ho jayegi - aapko kuch nahi karna. Release ki khabar aane lage tab hafte mein ek baar status dekh lena kaafi hai. Aa jaye aur aapka paisa na aaye, tab helpline 155261 par call karo ya CSC center jao.'
   },
 ];
 
@@ -386,28 +386,48 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             <table className="w-full text-sm">
               <thead>
                 <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3">Installment</th>
-                  <th className="p-3">Amount</th>
-                  <th className="p-3">Status</th>
-                  <th className="p-3">Date</th>
+                  <th className="p-3 text-left">Installment</th>
+                  <th className="p-3 text-left">Amount</th>
+                  <th className="p-3 text-left">Status</th>
+                  <th className="p-3 text-left">Date</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="bg-green-50 dark:bg-green-900/20">
+                  <td className="p-3">21vi Kist</td>
+                  <td className="p-3">₹2,000</td>
+                  <td className="p-3 text-green-700">Paid</td>
+                  <td className="p-3">19 November 2025</td>
+                </tr>
+                <tr className="bg-green-50 dark:bg-green-900/20">
+                  <td className="p-3">22vi Kist</td>
+                  <td className="p-3">₹2,000</td>
+                  <td className="p-3 text-green-700">Paid</td>
+                  <td className="p-3">13 March 2026</td>
+                </tr>
+                <tr className="bg-green-50 dark:bg-green-900/20">
                   <td className="p-3">23vi Kist</td>
                   <td className="p-3">₹2,000</td>
                   <td className="p-3 text-green-700">Paid</td>
-                  <td className="p-3">June 2026</td>
+                  <td className="p-3">20 June 2026</td>
                 </tr>
                 <tr className="bg-gray-50 dark:bg-gray-800">
                   <td className="p-3">24vi Kist</td>
                   <td className="p-3">₹2,000</td>
-                  <td className="p-3 text-amber-700">Pending</td>
-                  <td className="p-3">October 2026</td>
+                  <td className="p-3 text-amber-700">Expected</td>
+                  <td className="p-3">October 2026 (official date nahi)</td>
                 </tr>
               </tbody>
             </table>
           </div>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4 mb-3">
+            Table mein gap dekho — November se March char mahine, March se June teen. Rule saal mein teen kist ka hai, par zameen par timing aage-peeche hoti rehti hai. 24vi ke liye news mein October chal raha hai, lekin pmkisan.gov.in ya PIB par koi tareekh notify nahi hui — isliye humne &quot;Expected&quot; likha hai, &quot;confirm&quot; nahi. Live update <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline font-medium">24vi kist page</Link> par rehta hai.
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Table mein apni koi kist &quot;Paid&quot; dikh rahi hai par account mein paisa nahi aaya — to wajah teen jagah se ek hoti hai: <Link href="/articles/PmKisanPaymentFailedFix2026" className="text-[var(--color-primary)] underline">payment failed</Link> (bank/NPCI ka issue), <Link href="/articles/PmKisanEkycOnline2026" className="text-[var(--color-primary)] underline">eKYC pending</Link>, ya <Link href="/articles/PmKisanLandSeedingForm" className="text-[var(--color-primary)] underline">land seeding</Link> atka hua. Teeno ka poora fix apne page par hai.
+          </p>
         </section>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
