@@ -157,3 +157,14 @@
   correct canonical setup, never a defect.
 - Notices left alone: IndexNow custom issue (monitoring), SERP-title
   mismatch (handled rounds 1-2), HTTP→HTTPS / redirect-chain notices.
+
+## Ahrefs issue: Page and SERP titles do not match — round 3 (2026-08-18)
+- 8 flagged; 5 real fixes, 3 false positives (brand-suffix/separator class:
+  karj-mafi-list, bihar-dbt "— Kisan Guide" Google tail, jansamarth "|"→"-").
+- Fixes all followed Google's rewrite: mp-kisan-kalyan seoTitleHi (Hindi),
+  fto-generated ("FTO Generated Matlab — PM Kisan Guide"), land-seeding-form
+  ("PDF Download" wording), csc-charges ("Registration" added back),
+  mp-kisan-kalyan-kist (dropped "— SAARA Portal Check" tail).
+- Pattern is now stable across 3 rounds: Google prefers H1-adjacent or
+  intent-keyword wording and strips decorative tails. Write seoTitle to the
+  head query, ≤46 chars, no tails.
