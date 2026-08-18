@@ -234,17 +234,17 @@ Ye pehle se decide ho chuka hai (`CLAUDE.md`), dobara "fix" karne ki koshish mat
 
 ## 8. Suggested order of work
 
-**Week 1 (P0 — factual accuracy):**
-1. `PmKisan26viKist` → noindex
-2. `PmKisanMasterGuide2026` kist table refresh
-3. `PmKisanBeneficiaryList2026` refresh + expand
-4. `mandi-bhav-today` hardcoded rates hatao
-5. 24vi page par October-readiness checklist + release-day protocol document karo
+**Week 1 (P0 — factual accuracy):** ✅ DONE (2026-08-18)
+1. ✅ `PmKisan26viKist` → noindex
+2. ✅ `PmKisanMasterGuide2026` kist table refresh
+3. ✅ `PmKisanBeneficiaryList2026` refresh + expand
+4. ✅ `mandi-bhav-today` hardcoded rates hataye
+5. ✅ 24vi checklist page me thi hi; release-day protocol CLAUDE.md me documented
 
-**Week 2 (P1 — duplicates):**
-6. Helpline merge: `hi/helpline-shikayat` → `hi/pm-kisan-helpline-155261` (301)
-7. Karj mafi merge: `hi/karj-mafi-list` → `hi/kisan-karj-mafi-list` (301)
-8. Dono canonical helpline pages 2,000+ tak expand
+**Week 2 (P1 — duplicates):** ✅ DONE (2026-08-18)
+6. ✅ Helpline merge: `hi/helpline-shikayat` → `hi/pm-kisan-helpline-155261` (301, best content merged, 965 → ~1,900 w)
+7. ✅ Karj mafi merge: `hi/karj-mafi-list` → `hi/kisan-karj-mafi-list` (301, Phule timeline + biometric section + 3 FAQs merged, 2,086 → ~2,600 w)
+8. ✅ `/yojana/pm-kisan-helpline-155261` expand 1,357 → ~2,000 w (email format, 4 galtiyan, CPGRAMS, IVRS)
 
 **Week 3-4 (P1 — stale refresh):** §3 ki table, sabse purana pehle
 (KisanRinKahaSeLe → KisanCreditCard → eKYC → PMFBY → AgriStack → Tractor Loan)
