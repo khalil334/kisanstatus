@@ -5,7 +5,7 @@ import { EXTERNAL_LINK_PROPS, AUTHOR_NAME } from '@/lib/site-config';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2025-12-29T10:12:36+05:30';
-const MODIFIED = '2026-01-12T21:49:17+05:30';
+const MODIFIED = '2026-08-18T20:00:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -28,7 +28,7 @@ const RELATED_CARDS = [
 const FAQS_DATA = [
   {
     q: 'PM Kisan eKYC bina mobile number ke kaise karein?',
-    a: 'Agar Aadhaar mein mobile number link nahi hai, toh online OTP wala tarika kaam nahi karega. Aapko apne nazdeeki CSC (Common Service Centre) jaana hoga. Wahan fingerprint (biometric) scan karke eKYC ho jayegi. Yeh process free mein hoti hai.',
+    a: 'Agar Aadhaar mein mobile number link nahi hai, toh online OTP wala tarika kaam nahi karega. Aapko apne nazdeeki CSC (Common Service Centre) jaana hoga. Wahan fingerprint (biometric) scan karke eKYC ho jayegi. Iska government-fixed charge ₹15 hai — usse zyada koi maange toh galat hai.',
   },
   {
     q: 'Face Authentication kya hai aur PM Kisan mein kaise karein?',
@@ -36,7 +36,7 @@ const FAQS_DATA = [
   },
   {
     q: 'CSC par PM Kisan eKYC ke liye kitna paisa dena chahiye?',
-    a: 'Bilkul ZERO. Government ne ise free service declare kiya hai. Agar koi operator ₹10, ₹20 ya ₹50 maangta hai, toh woh galat hai. Usi waqt 1800-1214-060 par complaint karein.',
+    a: 'Portal/app se OTP ya Face Auth wali eKYC bilkul free hai. CSC par biometric eKYC ka government-fixed charge ₹15 hai — bas itna hi. Operator ₹50-100 ya zyada maange toh fraud hai; usi waqt 155261 par ya CSC ke district manager se complaint karein.',
   },
   {
     q: 'Aadhaar mein "Sunita Devi" aur PM Kisan mein "Sunita" — kya eKYC hogi?',
@@ -107,7 +107,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            <strong>Seedha Jawab:</strong> PM Kisan eKYC 2026 ab 100% mandatory hai. Ise aap khud <strong>pmkisan.gov.in</strong> par OTP based eKYC se, PM Kisan App par Face Authentication se, ya nazdeeki CSC centre par free biometric (fingerprint) se complete kar sakte hain. Bina iske aapka agla ₹2000 ka installment seedha block ho jayega.
+            <strong>Seedha Jawab:</strong> PM Kisan eKYC 2026 ab 100% mandatory hai. Ise aap khud <strong>pmkisan.gov.in</strong> par OTP based eKYC se, PM Kisan App par Face Authentication se, ya nazdeeki CSC centre par biometric (fingerprint, ₹15 fixed charge) se complete kar sakte hain. Bina iske aapka agla ₹2000 ka installment seedha block ho jayega.
           </p>
         </div>
 
