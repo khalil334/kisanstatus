@@ -1,65 +1,60 @@
-# KisanStatus.com — 15 New Keywords + Rank #1 Plan
+# KisanStatus.com — 15 Fresh Keywords (Site pe NAHI hain, Big Sites Cover NAHI karti)
 
-> Niche: PM Kisan Samman Nidhi (India) · Hinglish audience · Updated: Aug 2026
-> Site pe already ~83 articles hain (core 40, loan/mandi 12, maandhan 14, rajya 17). Ye 15 keywords GAPS hain — abhi cover nahi hue, competition low hai, search real hai.
+> Re-analyzed: Aug 2026 · Saare 110 existing slugs (English + hi/) check karke banaya —
+> **koi bhi keyword niche existing article se overlap nahi karta.**
+> Selection rule: (a) Google pe high search, (b) bari sites (news portals, banks, sarkari sites)
+> in par detail article nahi likhti — sirf weak chhote blogs rank kar rahe hain = easy #1.
 
 ---
 
-## 15 New Article Keywords (low competition, high search)
+## 15 Keywords
 
-| # | Keyword (primary) | Intent | Kyun jeet sakte hain | Suggested slug |
+| # | Keyword | Search demand | Kyun big sites nahi likhti / kyun easy | Suggested slug |
 |---|---|---|---|---|
-| 1 | pm kisan status check by mobile number (without registration number) | Status | Bahut common pain point — "registration number bhool gaya, mobile se check karo". Ranking pages generic hain. | `pm-kisan-status-check-mobile-number` |
-| 2 | pm kisan registration number kaise nikale / know your registration number | Status | Keyword #1 ka sibling — dono me internal link, dono easy. | `pm-kisan-registration-number-kaise-nikale` |
-| 3 | pm kisan helpline number 155261 state wise | Support | Thin-content SERPs; ek solid table page kaafi hai. (StateNodalOfficerList se alag intent — ye toll-free/complaint hai.) | `pm-kisan-helpline-number-155261` |
-| 4 | pm kisan aadhaar bank seeding status check (NPCI/DBT) | Fix | "Aadhaar not seeded" sab se bara payment-fail reason; log NPCI status check dhundte hain. | `pm-kisan-aadhaar-npci-seeding-status` |
-| 5 | pm kisan ekyc status kaise check kare (eKYC yes/no ka matlab) | Fix | eKYC *karne* ke guides sab ke paas hain; *status check + meaning* ka dedicated page kam hai. | `pm-kisan-ekyc-status-check` |
-| 6 | pm kisan installment history / payment history kaise dekhe (saari kist ka record) | Status | "Kitni kist mili ab tak" — evergreen, low KD. | `pm-kisan-payment-history-dekhe` |
-| 7 | pm kisan stop payment reason list (payment stopped kyu hua) | Fix | PaymentFailedFix se alag angle — "stop payment by state" status ka matlab. | `pm-kisan-stop-payment-reason` |
-| 8 | pm kisan name correction as per aadhaar (name mismatch fix) | Fix | CorrectionForm article generic hai; name-mismatch-specific query ka apna volume hai. | `pm-kisan-name-mismatch-aadhaar-fix` |
-| 9 | pm kisan status "waiting for approval by state" ka matlab | Fix | Exact-phrase status query — searcher portal se copy kar ke search karta hai. Almost zero strong pages. | `pm-kisan-waiting-for-approval-by-state` |
-| 10 | pm kisan mobile app (PM Kisan GoI app) kaise use kare — status, eKYC, face auth | Navigational | App-focused hub page; FaceAuth article ko spoke bana do. | `pm-kisan-goi-app-guide` |
-| 11 | pm kisan ka paisa kis bank account me aayega / account change hone par | Fix | BankAccountChangeProcess ka sibling — "IPPB account trick" angle bhi cover karo. | `pm-kisan-paisa-kis-account-me-aayega` |
-| 12 | kisan id card download (AgriStack farmer ID download) | New topic | AgriStackKyaHai hai, par "kisan ID download kaise kare" action query alag hai — naya topic, early mover. | `kisan-id-card-download` |
-| 13 | pm kisan new farmer registration status (self registered / CSC status) | Status | self-registered-status article hai — par "new registration approve hone me kitna time" FAQ-angle missing; ya us article ko expand karo. | `pm-kisan-new-registration-kitna-time` |
-| 14 | pm kisan refund kaise kare (ineligible / income tax payer refund) | Fix | VoluntarySurrender hai — par "refund online kaise kare + kitna dena hoga" transactional angle thin SERP hai. | `pm-kisan-paisa-wapas-refund-process` |
-| 15 | pm kisan list me naam kaise jode (naam nahi hai to kya kare) | Apply | Beneficiary-list ka reverse intent — "list me naam nahi aaya". High rural search, weak SERPs. | `pm-kisan-list-me-naam-kaise-jode` |
-
-**Kist/date keywords (24vi/25vi/26vi kist) already covered hain — inhe har release cycle pe update karna hi #1 ka shortcut hai.**
+| 1 | **PM Kisan Khad Yojana ₹11,000 — sach kya hai** | Viral, bahut high | Rumor-type scheme; news sites avoid karti hain, sirf clickbait blogs hain. Ek honest "sach/fake" explainer snippet le lega. | `pm-kisan-khad-yojana-11000-sach` |
+| 2 | **PM Kisan Tractor Yojana 50% subsidy — real ya fake** | Viral, high | Same — rumor query. Tumhara TractorLoan article loan hai, ye *subsidy yojana* query alag hai. Debunk + real alternatives (SMAM). | `pm-kisan-tractor-yojana-subsidy-sach` |
+| 3 | **MGNREGA Pashu Shed Yojana 2026 (₹1.6 lakh shed)** | High, evergreen | Rural viral topic; big sites ke paas rural DBT beat hi nahi. Weak blogs rank kar rahe hain. | `mgnrega-pashu-shed-yojana` |
+| 4 | **Pashu Kisan Credit Card Haryana — ₹3 lakh loan** | High (Haryana + national) | Banks KCC pe likhti hain, *Pashu* KCC pe nahi. Tumhare paas KCC + pashupalan dono clusters hain — perfect fit. | `pashu-kisan-credit-card-apply` |
+| 5 | **PM FPO Yojana — ₹15 lakh (Kisan Samuh)** | High, viral | "15 lakh milenge" viral angle; news sites one-para news dete hain, koi step-by-step Hinglish guide nahi. | `pm-fpo-yojana-15-lakh` |
+| 6 | **PMFBY claim status check / fasal bima payment list** | Very high seasonal | Tumhara PMFBY article *apply* pe hai; *claim status/payment kab milega* alag high-intent query hai. Insurance sites sirf sales pages banati hain. | `fasal-bima-claim-status-check` |
+| 7 | **Kisan Karj Mafi 2026 — all-state list (KCC loan mafi)** | Very high | Site pe sirf UP (`up-kisan-karj-rahat`) + hi/ hai. All-India hub missing. News sites rumor se bachti hain — honest state-wise status page jeetega. | `kisan-karj-mafi-list-all-states` |
+| 8 | **Bhavantar Bharpai Yojana — Haryana/MP registration & payment** | High seasonal | State-scheme long-tail; big sites ignore. Tumhare mandi-bhav cluster se perfect internal links. | `bhavantar-bharpai-yojana` |
+| 9 | **Bihar Niji Nalkup Yojana — boring/tubewell subsidy** | High (Bihar) | State long-tail; sirf 2-3 weak Bihar blogs. Tumhara bihar cluster (2 articles) already hai. | `bihar-niji-nalkup-boring-subsidy` |
+| 10 | **UP Krishi Yantra Subsidy — token kaise nikale (agridarshan)** | Very high seasonal (token days) | Token window ke dino me search explode hoti hai; big sites late hoti hain. Seasonal update = repeat traffic. | `up-krishi-yantra-token-subsidy` |
+| 11 | **Rajasthan Tarbandi Yojana — 60% subsidy online apply** | High | SERP verify kiya — top results me relevant strong page hi nahi hai. Easy win. | `rajasthan-tarbandi-yojana-apply` |
+| 12 | **Free Spray Pump / Battery Sprayer Subsidy 2026** | High, viral | "Free machine" queries pe sirf clickbait; honest state-wise sach page featured snippet lega. | `free-spray-pump-subsidy-sach` |
+| 13 | **Kisan Drone Subsidy 40–50% (individual kisan ke liye)** | Growing, high | Tumhara Namo Drone Didi SHG-specific hai; individual farmer drone subsidy + pilot training alag query hai. Naya topic = early mover. | `kisan-drone-subsidy-apply` |
+| 14 | **PM Kisan Helpline 155261 — state-wise complaint numbers** | Steady high | Ab tak site pe nahi. Thin SERPs; ek solid table page kaafi. (NodalOfficerList emails hai, ye toll-free/complaint intent hai.) | `pm-kisan-helpline-155261` |
+| 15 | **NABARD Dairy Farming Yojana 2026 — 25–33% subsidy** | High | Tumhare dairy articles *bank loan* pe hain; NABARD *subsidy scheme* query alag hai. Banks apni scheme pages nahi banati is angle pe. | `nabard-dairy-yojana-subsidy` |
 
 ---
 
-## Rank #1 Plan
+## Pattern jo jeet raha hai (kyun ye 15 kaam karenge)
 
-### 1. Freshness engine (sab se bara factor is niche me)
-- Har kist release / portal change pe same-day update: kist articles + homepage + dates.
-- `dateModified` schema + visible "Last updated" har article pe.
-- IndexNow script (already in repo) har update ke baad chalao.
+1. **Rumor/viral yojana queries (#1, 2, 5, 7, 12)** — crores log search karte hain, bari
+   sites credibility risk ki wajah se nahi likhti. Ek *imaandaar* "sach kya hai + real
+   alternative scheme" page trust + snippet dono leta hai. Site ka existing style
+   ("Poora Sach" articles) isi pe fit hai.
+2. **State long-tail (#8, 9, 10, 11)** — national news sites state schemes deep cover
+   nahi karti; competition sirf weak blogs. Rajya-yojana cluster already 17 articles ka
+   hai — ye 4 usko aur strong karenge.
+3. **Intent-splitting (#4, 6, 13, 15)** — existing article ka *sibling intent* jo abhi
+   khali hai (apply vs claim-status, loan vs subsidy, SHG vs individual). Cannibalization
+   zero, internal links ready.
 
-### 2. Content standards (har naya article)
-- 1200–1800 words Hinglish, H1 = exact keyword.
-- Top pe "2-minute answer" box (steps/table) — featured snippet target.
-- FAQPage JSON-LD (ArticleShared renderer already hai) + HowTo jahan steps hain.
-- Har article me 3+ internal links: 1 status/homepage hub + 2 related spokes.
+## Publish order
+- **Week 1–2:** #6, #7, #1 (highest volume) + #14 (quick win, 1 din ka kaam)
+- **Week 3–4:** #3, #4, #10 (seasonal — token window se pehle)
+- **Week 5–6:** #2, #5, #11, #12
+- **Week 7–8:** #8, #9, #13, #15
 
-### 3. Hub-and-spoke tightening
-- Status hub: PmKisanMasterGuide → spokes: #1, #2, #5, #6, #9.
-- Payment-fail hub: PmKisanPaymentFailedFix → spokes: #4, #7, #11.
-- App hub: #10 → FaceAuth, eKYC, status articles.
-- De-cannibalization discipline continue rakho (jaise recent commits me kiya).
+## Har article ke rules
+- 1200–1800 words Hinglish, H1 = exact keyword, top pe 2-minute answer table.
+- FAQPage JSON-LD (ArticleShared renderer) + "Last updated" date.
+- 3+ internal links (hub + 2 siblings) + cross-links.ts entry.
+- Rumor articles me clearly likhna: "ye official scheme nahi hai" — trust = ranking.
+- Publish ke baad IndexNow script + GSC Request Indexing.
 
-### 4. Authority
-- Google Search Console: har naye article pe "Request Indexing" + monthly query mining (naye keywords GSC se niklenge).
-- YouTube shorts/videos top-5 status queries pe, description me article link.
-- Quora/Telegram kisan groups me genuine answers + link.
-- Google Discover: 1200px+ images, news-style kist updates.
-
-### 5. Publish order (priority)
-Week 1–2: #1, #2, #9, #5 (status cluster — highest intent)
-Week 3–4: #4, #7, #11 (payment-fail cluster)
-Week 5–6: #3, #6, #10, #12
-Week 7–8: #8, #13, #14, #15
-
-### 6. Measure
-- GSC weekly: impressions/position for the 15 slugs.
-- Target: 8 hafte me 10/15 keywords top-10; 4–6 mahine me 8/15 top-3.
+## Measure
+- GSC weekly: in 15 slugs ki impressions/position.
+- Target: 8 hafte me 10/15 top-10; 4–6 mahine me 8/15 top-3.
