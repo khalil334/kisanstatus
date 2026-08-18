@@ -185,7 +185,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'FTO Ka Full Form & FTO Generated Meaning',
     desc: 'FTO Generated dikha par paisa nahi aaya? Generated, Processed aur "will be generated" — teeno ka aasan matlab, aur delay par din 15 aur 30 ka action plan.',
     ogTitle: 'FTO Ka Full Form — FTO Generated/Processed Meaning',
-    seoTitle: 'FTO Full Form क्या है? PM Kisan में FTO Generated का मतलब 2026',
+    seoTitle: 'FTO Generated Matlab — PM Kisan Guide',
     keywords: [
       'FTO ka full form',
       'FTO full form in hindi',
@@ -506,7 +506,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan Land Seeding Form 2026: Poora Sach',
     desc: 'Land seeding form kahan se milta hai, kaise bharein, kaunse documents chahiye — state wise Bhulekh portal links aur khasra-khatauni ke saath complete guide.',
     ogTitle: 'PM Kisan Land Seeding Form 2026: Kahan Se Milega, Kaise Bharein',
-    seoTitle: 'PM Kisan Land Seeding Form — Kaise Bharein',
+    seoTitle: 'PM Kisan Land Seeding Form PDF Download',
     keywords: [
       'pm kisan land seeding form',
       'pm kisan land seeding form pdf download',
@@ -632,7 +632,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan CSC Charges 2026: Sahi Fees',
     desc: 'CSC wala ₹500 maang raha hai? Sarkari rate sirf ₹25-30 hai. Sahi fees, free online method, aur fraud se bachne ka tarika.',
     ogTitle: 'PM Kisan CSC Charges — Sahi Fees, Sahi Tarika',
-    seoTitle: 'PM Kisan CSC Charges — Sahi Fees, Sahi Tarika',
+    seoTitle: 'PM Kisan CSC Registration Charges — Sahi Fees',
     keywords: [
       'pm kisan csc registration fees',
       'pm kisan csc se kaise kare',

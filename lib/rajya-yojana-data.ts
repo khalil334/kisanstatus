@@ -85,7 +85,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'kisan kalyan yojana beneficiary list mp',
       'mp kisan kalyan yojana amount',
     ],
-    title: 'MP Kisan Kalyan Yojana Kist Status 2026 — SAARA Portal Check',
+    title: 'MP Kisan Kalyan Yojana Kist Status 2026',
     description:
       'Saal ke ₹12,000 mein se aapki kist kahan atki hai — SAARA portal par payment status kholne ka step, list mein naam dhoondhna aur late hone par kya karein.',
     ogTitle: 'MP Kisan Kalyan Yojana — Kist Aur Status Check',
