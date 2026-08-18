@@ -5,12 +5,15 @@
 > cover nahi karti — sirf weak blogs rank karte hain.
 
 ---
-
+Jo articles phly se ha website py unko dubara ni likho or website se keywords reactive b ni karo sab kch research ke through likho 
+har 1 article ke dono version likhny ke bad direct GitHub.com/khalil334/kisanstatus py directly push kardia karo or ye file b update kardia karo 
+strictly avoid from repeative keywords ai uniform ai words ai line length paragraph robotic section table FAQs intrnal links 
+sab kch real helpful info ho or unique ho 
 ## Architecture (in 15 articles ke liye ALAG structure)
 
-- **Naya data file:** `lib/yojana-2026-data.ts` (existing data files ko touch nahi karna)
-- **Naya components folder:** `components/articles/yojana-2026/` — har article ka apna `.tsx`
-- **Naya route:** `app/yojana/[slug]/page.tsx` (ya existing pattern follow karo, par slugs neeche wale hi use karna)
+- **Naya data file:** `lib/apny Marzi ka name rakho data.ts` (existing data files ko touch nahi karna)
+- **Naya components folder:** `components/articles/wahi name rakhna Jo data.ts ka rakhogy/` — har article ka apna `.tsx`
+- **Naya route:** `app/articles/name same as data.ts[slug]/page.tsx` (ya existing pattern follow karo, par slugs neeche wale hi use karna)
 - **Do versions har article ki:**
   - Hinglish (main) — `/yojana/<slug>`
   - Pure Hindi (Devanagari) — `hi/` variant, `lib/hindi-yojana-2026-data.ts` + hreflang pair
