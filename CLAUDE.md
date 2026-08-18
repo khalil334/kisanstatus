@@ -168,3 +168,15 @@
 - Pattern is now stable across 3 rounds: Google prefers H1-adjacent or
   intent-keyword wording and strips decorative tails. Write seoTitle to the
   head query, ≤46 chars, no tails.
+
+## 24vi Kist release-day protocol (content-audit P0-5, documented 2026-08-18)
+Jis din 24vi kist officially release ho (expected Oct 2026), 24 ghante ke andar:
+1. `components/articles/PmKisan24viKist2026.tsx` → `KIST.status: 'Released'`,
+   `confirmedDate` set karo, actual ₹ crore / parivar figures daalo (PIB se verify).
+2. Title update: "PM Kisan 24vi Kist Aa Gayi — Date & Status" pattern.
+3. `MODIFIED` timestamp update.
+4. MasterGuide kist table me 24vi row → Paid + actual date; 25vi row → next expected.
+5. Homepage hero → 24vi released banner.
+6. `npm run indexnow:submit` + GSC me inspect-URL request.
+Ye din saal ka sabse bada traffic day hai — pattern warning: agli kist (25vi) ka
+dedicated page release se 1-2 mahine pehle se zyada jaldi index mat karo.
