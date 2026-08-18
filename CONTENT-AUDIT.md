@@ -257,7 +257,17 @@ Ye pehle se decide ho chuka hai (`CLAUDE.md`), dobara "fix" karne ki koshish mat
 16. ✅ `soil-health-card-complete-guide-2026` refresh + expand — "2026 mein scheme ka haal" (25.89 cr cards, 12 params, biennial cycle, RKVY merge, Khet Bachao Abhiyan), 2 naye FAQs; ~1,950 w
 17. ✅ `PmKisanVoluntarySurrenderGuide` refresh + expand — "2026 sakhti ke asli numbers" (₹416 cr recovery, Bihar 13 lakh ineligible, March-2026 land-ownership rule), 2 naye FAQs; ~1,800 w
 
-**Week 5+ (P2):** thin Hindi twins ki word-count parity, maandhan merge (GSC data ke baad)
+**Week 5+ (P2):** ✅ DONE (2026-08-18) — sirf maandhan merge bacha (GSC data ke baad)
+18. ✅ `hi/pm-kisan-khad-yojana-sach` expand 1,058 → ~1,636 w (W5-1)
+19. ✅ `hi/fasal-bima-claim-status` expand 1,420 → ~1,785 w (W5-2)
+20. ✅ `hi/up-kisan-karj-rahat-list` expand 1,463 → ~1,940 w (W5-3)
+21. ✅ `hi/krishak-bandhu-status` expand 1,533 → ~2,400 w — treasury-delay, paisa-rukne-ki-5-wajahein, dikkat→daftar table, naya-registration (W5-4)
+22. ✅ `fto-status-check-paisa-kab-aayega` expand 1,004 → ~1,900 w — 5-padaav pipeline, bina-bank-jaye 4 tarike, batch-logic; FTO-matlab page se overlap nahi, 'paisa kab' intent par hi raha (W5-5)
+23. ✅ `bakri-palan-yojana-nlm-subsidy` expand 1,554 → ~2,050 w — do-kisht disbursement, chhote-kisan alternatives (W5-6)
+
+**Bacha hua (sirf NEEDS DATA items):** maandhan contribution-chart + regularization merge (§2d),
+`hi/status-check-mobile-se` vs `hi/ekyc-mobile-se` (§2c), FTO pages merge-ya-rakho — sab GSC
+connect hone ke baad hi decide honge (§9).
 
 **Har change ke baad:** IndexNow submit (`npm run indexnow:submit`) + `modifiedTime` update
 + GSC me position monitor.
