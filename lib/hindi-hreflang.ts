@@ -23,6 +23,7 @@ export const HINDI_TO_HINGLISH: Readonly<Record<string, string>> = {
   'up-kisan-karj-rahat-list': '/rajya-yojana/up-kisan-karj-rahat-list-2026',
   'ikhedut-portal-status': '/rajya-yojana/ikhedut-portal-status-check-2026',
   'fasal-bima-claim-status': '/yojana/fasal-bima-claim-status-check',
+  'kisan-karj-mafi-list': '/yojana/kisan-karj-mafi-list-all-states',
 };
 
 export const HINGLISH_TO_HINDI: Readonly<Record<string, string>> = Object.freeze(

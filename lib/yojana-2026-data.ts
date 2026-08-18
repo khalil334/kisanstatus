@@ -44,6 +44,34 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     readTime: '12 min read',
     relatedPaths: ['/articles/PmfbyCropInsurance2026', '/calculator/pmfby-premium'],
   },
+  {
+    slug: 'kisan-karj-mafi-list-all-states',
+    mainKeyword: 'kisan karj mafi 2026',
+    secondaryKeywords: [
+      'karj mafi 2026 all state list',
+      'kisan karj mafi list kaise dekhe',
+      'maharashtra karjmafi yojana 2026',
+      'up kisan rin mochan yojana',
+      'telangana rythu runa mafi status',
+      'karj mafi yojana sach ya jhooth',
+      'kcc loan maaf kaise hota hai',
+      'karj mafi fake list website',
+    ],
+    title: 'Kisan Karj Mafi 2026 — Kis State Me Chalu',
+    description:
+      'Koi national karj mafi scheme nahi hai. Maharashtra, Telangana, UP aur Tamil Nadu ki asli sthiti, official portal, fake list wali sites ka pattern, aur scheme na hone par OTS jaise 4 asli raaste.',
+    ogTitle: 'Kisan Karj Mafi 2026 — Kis State Me Sach Me Chal Rahi Hai',
+    component: 'KisanKarjMafiAllStates',
+    officialPortal: 'https://mjpsky.maharashtra.gov.in',
+    published: '2026-08-18T18:30:00+05:30',
+    modified: '2026-08-18T18:30:00+05:30',
+    readTime: '13 min read',
+    relatedPaths: [
+      '/rajya-yojana/up-kisan-karj-rahat-list-2026',
+      '/articles/KisanCreditCardOnlineApply2026',
+      '/articles/KisanRinKahaSeLe2026',
+    ],
+  },
 ];
 
 export const LIVE_YOJANA_2026_ARTICLES = YOJANA_2026_ARTICLES;

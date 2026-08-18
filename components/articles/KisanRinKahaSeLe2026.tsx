@@ -97,7 +97,9 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
             Kai kisano ke saath yeh dekha gaya hai — beej ke season mein ₹50,000 udhaar chahiye hota hai aur sahukar 3% monthly byaj maangta hai, saal ka 36%. Bank se 4% saalana mil sakta hai lekin yeh baat aksar pata nahi hoti.
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
-            <strong>"Bank wale humein loan thodi dete hain"</strong> — yeh soch bahut common hai aur isi wajah se kai kisan sahukar par dependent reh jaate hain.
+            <strong>"Bank wale humein loan thodi dete hain"</strong> — yeh soch bahut common hai aur isi wajah se kai kisan sahukar par dependent reh jaate hain. Ek doosri soch bhi utni hi mehngi padti hai — ki karz maaf ho jaayega, isliye kist rok do; kaunse state me waiver asal me chal raha hai wo{' '}
+            <Link href="/yojana/kisan-karj-mafi-list-all-states" className="underline font-bold">karj mafi ki asli sthiti</Link>{' '}
+            wale page par dekh lo.
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
             Banks dete hain. Process pata hona chahiye. Yeh guide usi gap ko fill karti hai.

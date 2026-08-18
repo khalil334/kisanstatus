@@ -20,9 +20,11 @@ import { hinglishAlternates } from '@/lib/hindi-hreflang';
 import { getAuthorBio } from '@/lib/author-bios';
 import { CrossSectionLinks } from '@/components/CrossSectionLinks';
 import FasalBimaClaimStatusCheck from '@/components/articles/yojana-2026/FasalBimaClaimStatusCheck';
+import KisanKarjMafiAllStates from '@/components/articles/yojana-2026/KisanKarjMafiAllStates';
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: Yojana2026ArticleMeta }>> = {
   FasalBimaClaimStatusCheck,
+  KisanKarjMafiAllStates,
 };
 
 function buildSchemas(

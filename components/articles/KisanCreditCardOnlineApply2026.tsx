@@ -256,7 +256,8 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
           <ol className="space-y-2 mb-4 text-sm text-[var(--color-text-muted)] list-decimal list-inside">
             <li><strong>Active default</strong> kisi bhi loan par — system auto-flag karega, manager ka manual override chahiye hoga.</li>
-            <li><strong>Written-off ya settled account</strong> purane record mein — no-dues certificate ke bina aage badhna mushkil.</li>
+            <li><strong>Written-off ya settled account</strong> purane record mein — no-dues certificate ke bina aage badhna mushkil. Karj mafi ya OTS se khata settle hua ho to ye baat khaas taur par lagu hoti hai, aur uska poora hisaab{' '}
+              <Link href="/yojana/kisan-karj-mafi-list-all-states" className="underline">karj mafi wale page</Link> par hai.</li>
             <li><strong>₹2 lakh se badi limit</strong> — yahan credit history ka weight badh jaata hai.</li>
           </ol>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
