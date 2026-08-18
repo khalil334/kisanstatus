@@ -25,6 +25,14 @@ const FAQS = [
     a: 'PM Kisan की तरह ही ₹2,000 की तीन किस्तों का ढांचा है, पर release की तारीखें राज्य सरकार तय करती है — कई बार PM Kisan की किस्त के आसपास, कई बार अलग से। Exact date की सिर्फ official घोषणा मानें, WhatsApp forward नहीं।',
   },
   {
+    q: 'नमो शेतकरी के पैसे कब आएंगे?',
+    a: 'तारीख राज्य सरकार तय करती है और हर किस्त की अलग घोषणा होती है — कोई fixed महीना नहीं। भरोसे लायक तरीका यही है: nsmny.mahait.org पर अपना Beneficiary Status देखते रहें और official घोषणा का इंतजार करें। WhatsApp पर घूमती "इस तारीख को पैसा आएगा" वाली post का कोई आधार नहीं होता।',
+  },
+  {
+    q: 'नमो शेतकरी की beneficiary list PDF कहां से download करें?',
+    a: 'योजना की अलग list नहीं बनती — यह PM Kisan के database पर चलती है। pmkisan.gov.in के Farmers Corner में Beneficiary List option से राज्य-जिला-तालुका-गांव चुनकर पूरे गांव की list निकल जाती है। उसी में नाम है तो नमो शेतकरी के लिए भी वही record गिना जाता है।',
+  },
+  {
     q: 'क्या यह योजना मराठी में ही है? हिंदी वाले किसान का क्या?',
     a: 'Portal मराठी और अंग्रेजी में है, पर process हर भाषा में एक जैसी है — आधार, mobile OTP, status check। भाषा से हक पर फर्क नहीं पड़ता; महाराष्ट्र का PM Kisan beneficiary होना ही शर्त है।',
   },
@@ -305,6 +313,33 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
           </a>
         </div>
       </div>
+
+      <Hd>Beneficiary list PDF कहां मिलेगी? — सीधी बात</Hd>
+      <p>
+        बहुत किसान गांव-वार list की PDF ढूंढते रहते हैं — पहले यह समझ लीजिए कि नमो शेतकरी की कोई
+        अलग beneficiary list बनती ही नहीं। योजना PM Kisan के verified database पर चलती है, इसलिए
+        जो नाम PM Kisan की list में है, वही नाम राज्य की किस्त के लिए भी गिना जाता है। अपने गांव की
+        list देखनी हो तो रास्ता यह है:
+      </p>
+      <ol className="my-4 space-y-2 pl-5 list-decimal text-sm leading-relaxed">
+        <li>
+          <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> खोलें
+          — Farmers Corner में <strong>Beneficiary List</strong> option चुनें।
+        </li>
+        <li>राज्य (Maharashtra), जिला, तालुका और गांव चुनकर <strong>Get Report</strong> दबाएं।</li>
+        <li>पूरे गांव की list screen पर आ जाती है — यहीं से print या save कर सकते हैं।</li>
+        <li>
+          नाम list में है, तो आप नमो शेतकरी के दायरे में भी हैं — अपनी राज्य वाली किस्तों का हाल{' '}
+          <a href="https://nsmny.mahait.org" target="_blank" rel="noopener noreferrer">nsmny.mahait.org</a>{' '}
+          के Beneficiary Status से देखें।
+        </li>
+      </ol>
+      <p>
+        एक बात और — portal का पता खोजते समय लोग कई नाम टाइप करते हैं (nsmny.mahaonline.gov.in वगैरह)।
+        भ्रम से बचने का आसान तरीका: Google में जो भी मिले, page पर Government of Maharashtra का
+        official ठप्पा और Beneficiary Status वाला option देखकर ही आधार/mobile number डालें। किसी
+        भी private site पर OTP मत डालिए।
+      </p>
 
       <Hd>किस्त नहीं आई? यह checklist चलाइए</Hd>
       <p>

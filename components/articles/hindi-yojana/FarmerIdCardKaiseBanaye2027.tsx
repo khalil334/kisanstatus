@@ -48,6 +48,14 @@ const FAQS = [
     a: 'हां, बन जाती है — इसके लिए कोई app नहीं चाहिए, फोन का Chrome ही काफी है। एक ही शर्त है: आधार से आपका mobile number जुड़ा हो, वरना OTP कहां आएगा। बाकी बस अपने राज्य की Farmer Registry खोलिए और Create New User Account से शुरू कीजिए। हां, एक काम पहले कर लें — खसरा नंबर और बैंक passbook सामने रख लें। फिर दस मिनट में निपट जाएगा; बीच में कागज ढूंढने उठे तो portal का session टूटने का डर रहता है।',
   },
   {
+    q: 'AgriStack ID, Farmer ID, किसान आईडी, FR ID — क्या ये सब अलग-अलग चीजें हैं?',
+    a: 'नहीं, चारों एक ही चीज के नाम हैं। कोई AgriStack ID कहता है, कोई किसान पहचान पत्र, और कुछ portal पर short में FR ID (Farmer Registry ID) लिखा मिलता है। घबराइए मत — आपको एक ही आईडी बनवानी है, और वह हर जगह चलेगी। अलग-अलग नाम सुनकर दोबारा apply मत कर दीजिएगा।',
+  },
+  {
+    q: 'AgriStack ID कैसे बनाएं — क्या उसका तरीका अलग है?',
+    a: 'नहीं — AgriStack ID बनाने का तरीका वही है जो इस guide में ऊपर लिखा है, क्योंकि Farmer ID बनती ही AgriStack की Farmer Registry से है। अपने राज्य का Farmer Registry portal खोलिए, आधार + OTP से account बनाइए, जमीन और बैंक की details भरिए — approve होते ही आपकी AgriStack Farmer ID तैयार।',
+  },
+  {
     q: 'AgriStack और AgriSnet — क्या दोनों एक ही चीज हैं?',
     a: 'नहीं, दोनों अलग हैं और यहीं बहुत लोग भटक जाते हैं। AgriStack केंद्र सरकार का Digital Agriculture Mission है — हर राज्य की Farmer Registry इसी के तहत बनती है और Farmer ID वहीं से निकलती है। AgriSnet कुछ राज्यों का पुराना कृषि portal है, जहां योजनाओं की जानकारी और दूसरी सेवाएं मिलती हैं। AgriSnet पर घंटों ढूंढने के बाद आईडी न मिले तो अपने आप को कोसने की जरूरत नहीं — वह उसका काम ही नहीं है। सीधे AgriStack वाली Farmer Registry पर जाइए।',
   },

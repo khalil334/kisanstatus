@@ -48,6 +48,18 @@ const FAQS = [
     a: 'DBT के लिए बेहतर यही है कि खाता आपके अपने नाम का हो और उसी में आपका आधार seeded हो। Joint खाते में seeding को लेकर बैंकों का व्यवहार अलग-अलग है — अपनी शाखा से पूछकर ही तय करें। उलझन से बचना हो तो single account ही seed करवाएं।',
   },
   {
+    q: 'De-seeded का मतलब क्या होता है?',
+    a: 'मतलब आपका आधार पहले किसी बैंक से NPCI mapper में जुड़ा था, अब हटा दिया गया है। आम वजहें: खाता बंद/inoperative हो गया, KYC पूरी नहीं, या आपने किसी दूसरे बैंक में seeding करा ली (active seeding एक वक्त में एक ही खाते में रहती है)। जिस चालू खाते में पैसा चाहिए उसी शाखा में seeding form भर दें — कुछ कार्यदिवस में फिर Active हो जाता है।',
+  },
+  {
+    q: '"NPCI pending" या "scheme pending" दिख रहा है — इसका मतलब?',
+    a: 'इसका मतलब आपकी सीडिंग/वेरिफिकेशन की request अभी प्रक्रिया में है — न approve हुई है, न reject। बैंक से NPCI तक request पहुंचने में कुछ कार्यदिवस लगते हैं। हफ्ते भर बाद status दोबारा देखें; उसके बाद भी pending रहे तो acknowledgement number लेकर शाखा से पूछें कि request NPCI तक गई भी या नहीं।',
+  },
+  {
+    q: 'Gas subsidy (Indane/HP/Bharat) में भी "aadhaar not seeded" आ रहा है — क्या वह अलग चीज है?',
+    a: 'नहीं — सब सरकारी DBT एक ही NPCI mapper से चलती है, चाहे PM Kisan हो, gas subsidy या scholarship। एक बार बैंक में seeding Active हो गई तो सब जगह का पैसा उसी खाते में आने लगता है — अलग-अलग योजना के लिए अलग seeding नहीं करानी पड़ती।',
+  },
+  {
     q: 'आधार में mobile number registered नहीं है — myAadhaar का OTP कैसे आएगा?',
     a: 'नहीं आएगा — OTP सिर्फ आधार-registered mobile पर जाता है। पहले नजदीकी Aadhaar Seva Kendra जाकर आधार में mobile number update करवाएं, फिर myAadhaar से status देख पाएंगे। तब तक बैंक शाखा से पूछकर भी seeding की स्थिति पता की जा सकती है।',
   },
@@ -317,6 +329,50 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         <strong>&quot;Payment Initiated&quot;</strong> दिखे तो कुछ मत कीजिए — पैसा रास्ते में है, FTO
         process होने के बाद भी खाते तक पहुंचने में कुछ कार्यदिवस लगते हैं। 24-48 घंटे बाद status दोबारा
         देखना और बैंक/NPCI के SMS संभालकर रखना — दो आदतें जो शिकायत के वक्त सबूत बनती हैं।
+      </p>
+
+      <T2>Seeded, De-seeded, Active, Pending — हर शब्द का मतलब एक table में</T2>
+      <p>
+        ये अंग्रेजी शब्द अलग-अलग screen पर अलग-अलग अंदाज में दिखते हैं, इसलिए एक जगह समझ लीजिए —
+        फिर चाहे PM Kisan का status हो, gas subsidy का या scholarship का, भाषा यही रहती है:
+      </p>
+      <div className="my-4 overflow-x-auto">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr>
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left bg-[var(--color-bg-alt)]">Screen पर लिखा</th>
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left bg-[var(--color-bg-alt)]">सीधा मतलब</th>
+              <th className="border border-[var(--color-border)] px-3 py-2 text-left bg-[var(--color-bg-alt)]">आपको क्या करना है</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Seeded / Active</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">आधार NPCI mapper में इस बैंक से जुड़ा है — DBT का पैसा इसी खाते में आएगा</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">कुछ नहीं — बस बैंक का नाम देख लें कि वही है जिसमें पैसा चाहिए</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Not seeded</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">आधार किसी भी बैंक से mapper में नहीं जुड़ा — DBT का पैसा कहीं जा ही नहीं सकता</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">अपनी बैंक शाखा में seeding form भरें (Step 2 ऊपर)</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">De-seeded / Inactive</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">पहले जुड़ा था, अब हट गया — अक्सर खाता बंद होने, KYC अटकने या दूसरे बैंक में नई seeding से</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">जिस चालू खाते में पैसा चाहिए, उसी शाखा में नया seeding form दें</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Pending</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">आपकी seeding request बैंक से NPCI तक पहुंचने की राह में है</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">हफ्ते भर इंतजार करें; फिर भी वहीं अटका रहे तो acknowledgement लेकर शाखा जाएं</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        एक बात और — gas booking पर <em>&quot;your aadhaar number is not seeded&quot;</em> दिखे या PM Kisan पर,
+        जड़ एक ही है — NPCI mapper में आपके आधार के सामने कोई चालू बैंक दर्ज नहीं। इलाज भी एक ही है:
+        बैंक शाखा में seeding form। अलग-अलग योजनाओं के लिए अलग-अलग seeding नहीं होती।
       </p>
 
       <T2>किस्त के मौसम से पहले की 3-मिनट जांच</T2>
