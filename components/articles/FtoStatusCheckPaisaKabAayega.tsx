@@ -4,7 +4,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-08-18T11:00:00+05:30';
-const MODIFIED = '2026-08-18T11:00:00+05:30';
+const MODIFIED = '2026-08-19T00:15:00+05:30';
 
 const RELATED = [
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Ka Full Form & Matlab' },
@@ -32,6 +32,14 @@ const FAQS_DATA = [
   {
     q: 'FTO status kahan check karein?',
     a: 'Sirf pmkisan.gov.in ke Know Your Status page par — registration number ya Aadhaar se OTP verify karke. Koi bhi app ya website jo FTO status ke naam par paise mange, wo fraud hai.',
+  },
+  {
+    q: 'Paisa aa gaya ya nahi — bina bank jaye kaise pata karein?',
+    a: 'Char tarike hain: (1) bank ka SMS — lekin SMS aana guaranteed nahi hai, mobile number bank record mein purana ho to SMS kahin aur jayega; (2) bank ke missed-call balance number par call karke; (3) UPI app (PhonePe/Google Pay/BHIM) mein balance check karke; (4) gaon ke CSC ya banking correspondent ke paas AePS se — angutha lagakar balance nikal aata hai. Bank ki line mein lagna aakhri option rakho.',
+  },
+  {
+    q: 'Kya FTO cancel bhi ho sakta hai?',
+    a: 'FTO khud cancel nahi hota, lekin usme shaamil individual payment fail ho sakti hai — account band, NPCI mapping missing, ya naam mismatch par. Fail hui payment ka status "Payment Failed" dikhta hai aur wajah theek karne ke baad wo agli batch ke FTO mein dobara chali jaati hai. Aapko naya form nahi bharna padta.',
   },
 ];
 
@@ -122,6 +130,32 @@ export default function FtoStatusCheckPaisaKabAayega({ article }: { article: Art
         </section>
 
         <section className="mb-8">
+          <SH>Kist Release Se Credit Tak — Poora Safar Ek Nazar Mein</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Paisa aapke khaate tak 5 padaav se hokar aata hai. Ye samajh lo to har status line ka
+            matlab khud samajh aa jata hai:
+          </p>
+          <StepList>
+            <SI n={1}><strong>Release announcement:</strong> sarkar kist release karti hai — ye din
+            news mein aata hai. Lekin iska matlab ye nahi ki usi din sabke khaate mein paisa gir
+            gaya.</SI>
+            <SI n={2}><strong>Beneficiary validation:</strong> aapka record check hota hai — eKYC done?
+            Land seeding done? NPCI mapping active? Teeno clear to aap batch mein shaamil ho.</SI>
+            <SI n={3}><strong>FTO generation:</strong> state/district-wise batch mein Fund Transfer
+            Order banta hai — yahi wo status hai jo aap dekh rahe ho.</SI>
+            <SI n={4}><strong>Bank processing:</strong> FTO ke against paisa NPCI ke raste aapke
+            Aadhaar-mapped account mein bheja jata hai. Har bank apni raftar se — yahi wo hissa hai
+            jahan din-do-din ka fark aata hai.</SI>
+            <SI n={5}><strong>Credit + SMS:</strong> paisa account mein girta hai; SMS tabhi aata hai
+            jab bank ke paas aapka chalu number ho.</SI>
+          </StepList>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
+            Dhyan do — aap padaav 2 tak ka kaam khud kar sakte ho (eKYC, seeding, NPCI). Padaav 3
+            se 5 tak sirf system chalta hai; wahan aapke kuch karne se raftar nahi badalti.
+          </p>
+        </section>
+
+        <section className="mb-8">
           <SH>15 Din Baad Bhi Paisa Nahi Aaya — Ye 4 Kaam Karo</SH>
           <StepList>
             <SI n={1}><strong>Payment status dekho:</strong> pmkisan.gov.in → Know Your Status. &quot;Payment Failed&quot; likha hai to wajah bhi wahi dikhegi — <Link href="/articles/PmKisanPaymentFailedFix2026" className="text-[var(--color-primary)] underline">7 common wajah aur fix yahan</Link>.</SI>
@@ -131,6 +165,46 @@ export default function FtoStatusCheckPaisaKabAayega({ article }: { article: Art
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
             Wajah theek hone ke baad fail hui payment agli batch mein dobara process hoti hai — alag se kuch apply nahi karna padta. 30 din se zyada ho gaye to escalation ka poora rasta <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="text-[var(--color-primary)] underline">FTO guide ke escalation section</Link> mein hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Credit Aaya Ya Nahi — Bina Bank Jaye 4 Tarike</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Sabse mehngi galti hai roz bank ki line mein lagna. Kist ke season mein branch waale bhi
+            pareshan hote hain aur aap bhi — kiraya aur dihaadi dono jaati hai. Pehle ye 4 tarike
+            aazmao:
+          </p>
+          <StepList>
+            <SI n={1}><strong>Bank ka missed-call balance number:</strong> har bade bank ka ek missed-call
+            number hota hai (SBI, PNB, BOB sabka) — registered mobile se call karo, SMS mein balance
+            aa jata hai. Bilkul free.</SI>
+            <SI n={2}><strong>UPI app se balance:</strong> PhonePe / Google Pay / BHIM mein account linked
+            hai to balance wahi dikh jata hai — ₹2,000 ka fark turant pakad mein aata hai.</SI>
+            <SI n={3}><strong>CSC / banking correspondent par AePS:</strong> gaon ke CSC par angutha
+            lagakar Aadhaar-enabled balance enquiry ho jaati hai. Balance enquiry free honi chahiye —
+            koi iske paise mange to galat hai.</SI>
+            <SI n={4}><strong>SMS ka intezaar — par bharosa mat karo:</strong> credit ka SMS tabhi aata
+            hai jab bank record mein aapka chalu number ho. SMS na aana paisa na aane ka saboot nahi
+            hai. Number purana hai to branch mein update karwao — aage ki har kist ke liye kaam
+            aayega.</SI>
+          </StepList>
+        </section>
+
+        <section className="mb-8">
+          <SH>Padosi Ko Aa Gaya, Mujhe Nahi — Batch Ka Logic</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Kist release hone par paisa ek saath sabko nahi jata. FTO state aur district ke hisaab se
+            <strong> batches</strong> mein banta hai, aur har batch alag din process hoti hai. Uske baad
+            har bank apni raftar se credit karta hai. Matlab ek hi gaon mein — ek hi din registration
+            karwaye do bhai — alag-alag din paisa dekh sakte hain. Ye na system ki galti hai, na aapke
+            record ki.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Chinta ki baat sirf tab hai jab aapke status mein koi verification pending dikhe — eKYC,
+            land seeding ya NPCI. Wo teeno clear hain aur FTO Generated likha hai, to aapka paisa
+            pipeline mein hai; batch ka number aane par credit ho jayega. Teeno mein se koi pending hai
+            to <Link href="/articles/PmKisanMasterGuide2026" className="text-[var(--color-primary)] underline">Master Guide ka checklist</Link> pakdo — wahi pehle theek karna hoga.
           </p>
         </section>
 
