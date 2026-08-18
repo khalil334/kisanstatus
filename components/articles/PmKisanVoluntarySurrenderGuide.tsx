@@ -4,7 +4,7 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-20T17:46:17+05:30';
-const MODIFIED = '2026-01-29T19:09:12+05:30';
+const MODIFIED = '2026-08-18T19:30:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
@@ -13,6 +13,14 @@ const RELATED = [
 ];
 
 const FAQS_DATA = [
+  {
+    q: 'Sarkar sach mein pakadti hai kya? Ya bas dar dikhaya jata hai?',
+    a: 'Sach mein pakadti hai. Ab tak ineligible logon se ₹416 crore se zyada ki recovery ho chuki hai. Bihar jaise state me 13 lakh se zyada log ineligible mile — zyadatar Aadhaar-ration card matching se pakde gaye, jisme ek hi parivar ke kai log paisa le rahe the. System ab data se cross-check karta hai, toh chupne ka scope pehle jaisa nahi raha.',
+  },
+  {
+    q: 'Zameen dada/pita ke naam hai, kheti main karta hoon — mujhe surrender karna padega?',
+    a: 'Surrender ka nahi, mutation (dakhil-kharij) ka case hai. March 2026 se niyam sakht hue hain — benefit sirf usko milega jiske apne naam zameen ke kagaz aur lagaan rasid ho. Agar zameen abhi bhi purkhon ke naam hai, toh pehle mutation karwao. Jab tak kagaz aapke naam nahi, aap technically eligible nahi ho, aur payment ruk sakti hai.',
+  },
   {
     q: 'Kaun logon ko surrender karna chahiye?',
     a: 'Government employees, income tax filers, pensioners, aur wo log jo scheme ke liye eligible nahi hain par galti se register ho gaye hain.',
@@ -317,6 +325,25 @@ export default function PmKisanVoluntarySurrenderGuide() {
               </p>
             </div>
           </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>2026 Mein Sakhti Kitni Badh Gayi Hai — Asli Numbers</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            "Koi nahi dekh raha, chalne do" waali soch ab 2026 me kaam nahi karegi. Verified aankde dekho:
+          </p>
+          <ul className="space-y-2 mb-4 text-sm text-[var(--color-text-muted)]">
+            <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>₹416 crore+ ki recovery</strong> ho chuki hai ineligible beneficiaries se — yeh dhamki nahi, ho chuka kaam hai.</li>
+            <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>Bihar me 13 lakh+ log ineligible</strong> paye gaye (~₹780 crore galat haath me gaya) — Aadhaar-ration card matching se pakde gaye, jisme ek parivar ke kai members paisa le rahe the.</li>
+            <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>2026 ke audit me 1.13 crore+ naam</strong> beneficiary list se hataye gaye — eKYC, land record aur taxpayer cross-check se.</li>
+            <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>March 2026 se land-ownership rule:</strong> zameen ke kagaz apne naam hone zaroori hain. Purkhon ke naam waali zameen pe bina mutation ke benefit band ho sakta hai.</li>
+          </ul>
+          <IB>
+            <strong>Seedha matlab:</strong> agar aap jaante ho ki eligible nahi ho (taxpayer ho, pension ₹10,000+ hai,
+            parivar me pehle se koi le raha hai), toh khud surrender karna sabse sasta rasta hai — recovery notice aane
+            ke baad wahi kaam byaj samet mehnga padta hai. Notice aa chuka hai toh{' '}
+            <Link href="/articles/hi/recovery-notice" className="underline font-semibold">recovery notice waala guide</Link> padho.
+          </IB>
         </section>
 
         <section className="mb-8">
