@@ -178,7 +178,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     authorBio: getAuthorBio('FtoStatusCheckPaisaKabAayega'),
     schemes: ['pm-kisan'],
     ogImage: '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp',
-    relatedSlugs: ['pm-kisan-fto-generated-ka-matlab-kya-hai', 'PmKisanPaymentFailedFix2026', 'PmKisanBeneficiaryList2026', 'PmKisan26viKist', 'PmKisanMasterGuide2026'],
+    relatedSlugs: ['pm-kisan-fto-generated-ka-matlab-kya-hai', 'PmKisanPaymentFailedFix2026', 'PmKisanBeneficiaryList2026', 'PmKisan25viKist2027', 'PmKisanMasterGuide2026'],
   },
   {
     slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
@@ -400,6 +400,11 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisan26viKist'),
     schemes: ['pm-kisan'],
+    // 26vi kist ~Jun 2027 hai — abhi is topic ki search demand zero hai aur page
+    // site ke 2,000-word standard se neeche hai. Content live rehta hai (25vi page
+    // se merged summary bhi hai), par Google se bahar — 25vi release ke baad
+    // ye flag hata dena.
+    noindex: true,
     ogImage: '/images/articles/pm-kisan-25vi-kist-2027/hero-25vi-kist.webp',
     relatedSlugs: ['PmKisan25viKist2027', 'PmKisan24viKist2026', 'PmKisanMasterGuide2026', 'PmKisanEkycOnline2026', 'PmKisanBeneficiaryList2026'],
   },
@@ -419,7 +424,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisan25viKist2027',
     category: 'status-check',
     publishedTime: '2026-02-09T08:58:39+05:30',
-    modifiedTime: '2026-08-14T18:51:32+05:30',
+    modifiedTime: '2026-08-18T18:30:00+05:30',
     readingTime: 8,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisan25viKist2027'),

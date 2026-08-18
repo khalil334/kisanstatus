@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-09T08:58:39+05:30';
-const MODIFIED = '2026-08-15T00:20:00+05:30';
+const MODIFIED = '2026-08-18T18:30:00+05:30';
 
 const RELATED = [
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Ka Matlab' },
@@ -84,10 +84,6 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Hum seedhi baat karenge. Sach ye hai ki 25vi wali abhi kisi ko nahi pata — na humein, na un YouTube channelo ko, na un websites ko. Sarkar mahino pehle kabhi kuch announce nahi karti. Zyadatar to release se ek-do hafte pehle hi khabar aati hai, aur kai bar to PM ke kisi event ke sath hi transfer ho jata hai.
-        </p>
-
-        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Aage ki soch rahe ho? <Link href="/articles/PmKisan26viKist" className="text-[var(--color-primary)] underline font-medium">26vi kist kab aayegi</Link> — uska alag page bhi taiyar hai, wahan date aur list ke update milte rahenge.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
@@ -314,6 +310,22 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Hum bhi yahi rule follow karte hain. Isliye is article me aapko &quot;confirm date&quot; nahi milegi — kyunki wo abi kahin exist nahi karti. Jis din karegi, us din ye page update ho jayega.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Uske baad kya — 26vi kist ka hisaab</SH>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Bohot log 25vi ke saath hi 26vi ka bhi puchte hain, isliye seedha likh dete hain: 26vi ka number 25vi ke baad lagega, aur cycle ka pattern dekhein to wo 2027 ke beech ya doosre half ke aas-paas banta hai. Ye hisaab hai, tareekh nahi. Jo website aaj 26vi ki &quot;confirm date&quot; likh rahi hai, wo bana kar likh rahi hai.
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Amount ka jawab bhi wahi hai — ₹2,000. 2019 se ek rupya nahi badha, aur badhne ki afwah har budget se pehle udti hai. Aur kaam bhi wahi hai: eKYC &quot;YES&quot;, bank ki NPCI Aadhaar seeding, land record verified, aur beneficiary list mein naam. Jo aadmi 25vi ke liye ye chaar cheezein theek kar leta hai, uske liye 26vi mein alag se kuch karne ko bachta hi nahi.
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Matlab 26vi ke liye alag se koi taiyari ki list nahi hai — upar wali checklist hi kaafi hai. Jaise hi 25vi release hoti hai aur 26vi ka cycle asli mein paas aata hai, uska poora update yahin milega.
           </p>
         </section>
 

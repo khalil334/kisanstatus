@@ -161,7 +161,7 @@ export default function FtoStatusCheckPaisaKabAayega({ article }: { article: Art
         <BottomNav extraLinks={[
           { href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', l: 'FTO Ka Matlab' },
           { href: '/articles/PmKisanPaymentFailedFix2026', l: 'Payment Failed Fix' },
-          { href: '/articles/PmKisan26viKist', l: '26vi Kist Guide' },
+          { href: '/articles/PmKisan25viKist2027', l: '25vi Kist Guide' },
         ]} />
         <Disclaimer k="FtoStatusCheckPaisaKabAayega" />
       </div>

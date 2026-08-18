@@ -71,4 +71,12 @@ export interface ArticleMeta {
   schemes?: readonly string[];
   ogImage?: string;
   relatedSlugs?: readonly string[];
+  /**
+   * Set true for pages that are published but deliberately kept out of Google:
+   * premature/thin future-topic pages with no search demand yet.
+   * Effect: generateMetadata emits robots noindex,follow AND app/sitemap.ts
+   * drops the URL. Flip back to false (or delete the field) once the topic is
+   * actually in demand — content stays live either way.
+   */
+  noindex?: boolean;
 }

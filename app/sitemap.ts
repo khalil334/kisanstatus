@@ -18,6 +18,7 @@ const ALL_ARTICLES = [
     modifiedTime: a.modifiedTime,
     ogImage: a.ogImage,
     path: `/articles/${a.slug}`,
+    noindex: a.noindex === true,
   })),
   ...MAANDHAN_ARTICLES.map((a) => ({
     slug: a.slug,
@@ -28,6 +29,7 @@ const ALL_ARTICLES = [
     modifiedTime: a.modified,
     ogImage: a.ogImage || a.image,
     path: `/maandhan/${a.slug}`,
+    noindex: false,
   })),
   ...LIVE_RAJYA_YOJANA_ARTICLES.map((a) => ({
     slug: a.slug,
@@ -38,6 +40,7 @@ const ALL_ARTICLES = [
     modifiedTime: a.modified,
     ogImage: a.ogImage,
     path: `/rajya-yojana/${a.slug}`,
+    noindex: false,
   })),
   ...LIVE_YOJANA_2026_ARTICLES.map((a) => ({
     slug: a.slug,
@@ -48,6 +51,7 @@ const ALL_ARTICLES = [
     modifiedTime: a.modified,
     ogImage: a.ogImage,
     path: `/yojana/${a.slug}`,
+    noindex: false,
   })),
   ...HINDI_ARTICLES.map((a) => ({
     slug: a.slug,
@@ -58,6 +62,7 @@ const ALL_ARTICLES = [
     modifiedTime: a.modifiedTime,
     ogImage: a.ogImage as string | undefined,
     path: `/articles/${a.slug}`,
+    noindex: false,
   })),
 ];
 
@@ -351,7 +356,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       };
     });
 
-  const articlePages: MetadataRoute.Sitemap = ALL_ARTICLES.map((article) => {
+  // noindex pages (premature future-topic pages, see ArticleMeta.noindex) are
+  // deliberately excluded — a sitemap entry for a noindex URL is a mixed signal.
+  const articlePages: MetadataRoute.Sitemap = ALL_ARTICLES.filter((a) => !a.noindex).map((article) => {
     const modified = article.modifiedTime || article.publishedTime;
     const modifiedDate = modified ? clampToNow(new Date(modified)) : now;
 
