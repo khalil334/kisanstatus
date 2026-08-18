@@ -44,7 +44,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'KisanTractorLoan2026',
     category: 'loan',
     publishedTime: '2025-12-19T13:12:12+05:30',
-    modifiedTime: '2026-01-18T07:59:28+05:30',
+    modifiedTime: '2026-08-18T18:45:00+05:30',
     readingTime: 10,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('KisanTractorLoan2026'),

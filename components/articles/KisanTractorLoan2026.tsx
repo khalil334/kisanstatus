@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2025-12-19T13:12:12+05:30';
-const MODIFIED = '2026-01-18T07:59:28+05:30';
+const MODIFIED = '2026-08-18T18:45:00+05:30';
 
 const RELATED = [
   { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le' },
@@ -160,10 +160,47 @@ return (
            <p className="text-xs text-[var(--color-text-muted)]">Tenure</p>
          </div>
          <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-center">
-           <p className="font-black text-amber-800 dark:text-amber-300 text-xl mb-1">8.5-14%</p>
+           <p className="font-black text-amber-800 dark:text-amber-300 text-xl mb-1">9-14%</p>
            <p className="text-xs text-[var(--color-text-muted)]">Interest p.a.</p>
          </div>
        </div>
+
+       <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">2026 Mein Rate Ka Scene — Lender Type Se Samjho</h3>
+       <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+         "Kitna interest lagega" ka jawab is baat pe hai ki aap kis type ke lender ke paas ja rahe ho.
+         2026 ke published rate bands kuch aise chal rahe hain:
+       </p>
+       <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+         <table className="w-full text-sm border-collapse">
+           <thead>
+             <tr className="bg-[var(--color-primary)] text-white">
+               <th className="p-3 text-left">Lender Type</th>
+               <th className="p-3 text-left">Rate Band (p.a.)</th>
+               <th className="p-3 text-left">Kab Sahi Hai</th>
+             </tr>
+           </thead>
+           <tbody>
+             {[
+               ['Cooperative banks', '9-10.5%', 'Sabse sasta, par process dheema'],
+               ['Public sector banks (SBI/PNB/BOB)', '9.5-11.5%', 'KCC holder + achha CIBIL'],
+               ['Private banks', '10-12.5%', 'Jaldi chahiye + CIBIL 700+'],
+               ['NBFC (Mahindra/TATA Capital/Shriram)', '11-14%', 'Kam documents, jaldi approval'],
+             ].map(([type, band, when], i) => (
+               <tr key={type} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
+                 <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{type}</td>
+                 <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text-muted)]">{band}</td>
+                 <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text-muted)]">{when}</td>
+               </tr>
+             ))}
+           </tbody>
+         </table>
+       </div>
+       <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+         Do baatein aur. Pehli — tractor loan <strong>priority sector lending</strong> me aata hai, isliye banks
+         ise normal consumer loan se sasta dete hain; yeh line bank manager ke saamne bolo, kaam aati hai.
+         Doosri — 2026 me RBI ke rate hike ke aasaar ban rahe hain (mehngai badhi hai), matlab aage rates
+         upar ja sakte hain. Agar loan lena tay hai, toh rate lock karne me der karna is saal mehnga pad sakta hai.
+       </p>
 
        <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">EMI Reality Check</h3>
        <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
