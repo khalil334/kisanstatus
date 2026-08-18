@@ -551,7 +551,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanFaceAuthenticationEkyc',
     category: 'status-check',
     publishedTime: '2026-01-17T07:41:23+05:30',
-    modifiedTime: '2026-01-22T12:01:39+05:30',
+    modifiedTime: '2026-08-18T19:00:00+05:30',
     readingTime: 10,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisanFaceAuthenticationEkyc'),

@@ -4,7 +4,7 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-17T07:41:23+05:30';
-const MODIFIED = '2026-01-22T12:01:39+05:30';
+const MODIFIED = '2026-08-18T19:00:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
@@ -13,6 +13,14 @@ const RELATED = [
 ];
 
 const FAQS_DATA = [
+  {
+    q: 'eKYC ek baar kar li thi — phir se karni padegi kya?',
+    a: 'Haan, ab eKYC har saal karni hai. 2026 se sarkar ne saaf kar diya hai ki beneficiaries ko saalana biometric ya face eKYC karni hogi — pichle saal ki eKYC agli kist ke liye kaafi nahi hai. 2026 ke audit me 1.13 crore se zyada naam list se hataye gaye the, jisme adhoora eKYC bada kaaran tha. Toh har kist se pehle ek baar status check kar lo.',
+  },
+  {
+    q: '24vi kist (October 2026) se pehle eKYC zaroori hai?',
+    a: 'Bilkul zaroori hai. 24vi kist October 2026 me expected hai, aur bina current eKYC ke paisa nahi aayega. Abhi August hai — yahi sahi time hai. October me CSC pe line lagti hai aur portal slow chalta hai; pehle se karwa loge toh release ke din tension nahi rahegi.',
+  },
   {
     q: 'Face authentication ke liye kaunsa app use karein?',
     a: 'Sirf official PMKisan app, aur uske saath AadhaarFaceRD app (dono Play Store par sarkari publisher se). Play Store par milte-julte naam ki koi third-party app dikhe toh usse door raho — wo aapka data chura sakti hain.',
@@ -301,6 +309,27 @@ export default function PmKisanFaceAuthenticationEkyc() {
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
             Ek aur cheez jo log miss karte hain: app ka version. Purani version mein bugs the jo ab fix ho chuke hain — Play Store kholkar update check kar lo, cache clear kar lo (Settings &gt; Apps &gt; PMKisan &gt; Storage &gt; Clear Cache). Aur agar kuch bhi kaam na kare, toh helpline <strong>155261</strong> ya apne <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">state nodal officer</Link> se baat karo. Poori process ki detail ke liye <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">Master Guide</Link> bhi hai.
           </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>2026 Ka Naya Niyam — eKYC Ab Har Saal, Aur Deadline Ka Hisaab</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Pehle log samajhte the ki eKYC ek baar ka kaam hai. Ab aisa nahi hai. 2026 se sarkar ne{' '}
+            <strong>saalana eKYC</strong> ki baat saaf kar di hai — har saal biometric ya face authentication
+            se apni pehchaan dobara verify karni hogi, warna agli kist atak sakti hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ye niyam kitna serious hai, iska andaza is baat se lagao: 2026 ke audit me{' '}
+            <strong>1.13 crore se zyada naam</strong> beneficiary list se hataye gaye — adhoora eKYC, land record
+            mismatch aur ineligibility ke chakkar me. Matlab jo log "ho jayega baad me" bol ke taalte rahe,
+            unme se lakhon ki kist ruk gayi.
+          </p>
+          <IB>
+            <strong>Timing ka funda:</strong> Agli (24vi) kist <Link href="/articles/PmKisan24viKist2026" className="underline font-semibold">October 2026 me expected</Link> hai.
+            eKYC abhi karwa lo — August-September me CSC khali milte hain, October me release ke aas-paas
+            har center pe bheed hoti hai aur portal bhi slow chalta hai. 10 minute ka kaam hai, kist ke
+            ₹2,000 daav pe mat lagao.
+          </IB>
         </section>
 
         <section className="mb-8">
