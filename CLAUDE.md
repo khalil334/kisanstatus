@@ -139,3 +139,21 @@
 - Pattern for future Slow page flags: compare crawl TTFB vs live TTFB first;
   a single marginal (~1s) depth-0 page usually means cold-cache ISR regen,
   not a systemic server problem.
+
+## Ahrefs triage round 2026-08-18 (remaining warnings)
+- Broken link (3 Criticals: "404 page", "4XX page", "Page has links to broken
+  page" — all one root cause): pmkmy-bank-account-change.tsx linked
+  /maandhan/pm-kisan-maandhan-YOJANA-auto-debit-poora-sach; real slug has no
+  "-yojana" (lib/maandhan-data.ts). Fixed the href; target verified HTTP 200.
+- "Meta description too long" (11 pages): STALE CRAWL — all 11 flagged strings
+  already gone from repo (fixed in 90b7ecf, round-2 section above). Verified
+  current desc lengths all 133-154 chars. No action; clears on re-crawl.
+- "Title too long" (8 pages): all overflow only via the " | KisanStatus"
+  suffix (base titles 58-65 chars). Deliberately NOT trimmed — the
+  title-mismatch rounds proved Google prefers the fuller H1 wording and
+  strips the brand suffix itself on long titles. Treat as accepted/known;
+  don't "fix" without explicit user ask.
+- "3XX redirect" (3 pages): www→apex + http→https normalisation hops —
+  correct canonical setup, never a defect.
+- Notices left alone: IndexNow custom issue (monitoring), SERP-title
+  mismatch (handled rounds 1-2), HTTP→HTTPS / redirect-chain notices.
