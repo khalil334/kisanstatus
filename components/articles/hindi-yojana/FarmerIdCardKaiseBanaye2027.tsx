@@ -44,6 +44,22 @@ const FAQS = [
     a: 'खतौनी में जितने नाम दर्ज हैं, हर हिस्सेदार अपने हिस्से के साथ अपनी अलग Farmer ID बनवा सकता है। Registration के समय portal खसरे में आपका नाम और हिस्सा मिलाता है। दिक्कत तब आती है जब विरासत के बाद नाम record में चढ़े ही नहीं — पहले नामांतरण कराएं।',
   },
   {
+    q: 'क्या मोबाइल से खुद Farmer ID बना सकते हैं?',
+    a: 'हां — पूरा registration mobile browser से हो जाता है, कोई app download करने की जरूरत नहीं। शर्त एक ही है: आधार से आपका mobile number linked हो, क्योंकि verification OTP उसी पर आता है। Chrome में अपने राज्य की Farmer Registry खोलें, Create New User Account से खाता बनाएं और आगे बढ़ें। खसरा नंबर और बैंक passbook सामने रख लें तो 10 मिनट का काम है।',
+  },
+  {
+    q: 'AgriStack और AgriSnet — क्या दोनों एक ही चीज हैं?',
+    a: 'नहीं। AgriStack केंद्र सरकार का Digital Agriculture Mission है, जिसके तहत हर राज्य की Farmer Registry बनती है और Farmer ID वहीं से निकलती है। AgriSnet कुछ राज्यों का पुराना कृषि service portal है — वहां योजनाओं की जानकारी और कुछ सेवाएं मिलती हैं, लेकिन Farmer ID का registration AgriStack की Farmer Registry पर ही होता है। AgriSnet पर आईडी न मिले तो घबराएं नहीं, सही जगह AgriStack है।',
+  },
+  {
+    q: 'Form में DVC name क्या भरना है?',
+    a: 'DVC वाला खाना पूछता है कि आपके कागजों की जांच कौन करेगा — पटवारी/लेखपाल, कृषि सहायक या ग्राम पंचायत। यह drop-down से चुनना होता है और राज्य के हिसाब से options बदलते हैं। अंदाजे से कुछ भी चुनने के बजाय अपने पटवारी या CSC वाले से पूछकर सही विकल्प भरें — गलत DVC चुनने पर file गलत टेबल पर चली जाती है और verification बेवजह अटकता है।',
+  },
+  {
+    q: 'Farmer ID खो गई या number भूल गए तो?',
+    a: 'चिंता की बात नहीं — ID दोबारा बनवाने की जरूरत नहीं पड़ती। अपने राज्य की Farmer Registry पर आधार-linked mobile से login करें, profile में आपकी Farmer ID वैसी ही दर्ज मिलेगी और card फिर से PDF में download हो जाएगा। Login का password भूल गए हैं तो Forgot Password से OTP के जरिए reset कर लें।',
+  },
+  {
     q: 'Registration reject हो गई — दोबारा कब apply कर सकता हूं?',
     a: 'Reject होने पर कारण status में दिखता है — ज्यादातर मामलों में नाम-मिलान या land record का फर्क। पहले वह गड़बड़ी ठीक कराएं (आधार update या तहसील से record सुधार), फिर दोबारा apply करें — कोई सीमा नहीं है। बिना कारण सुधारे बार-बार apply करने पर reject दोहराता रहेगा।',
   },
@@ -134,13 +150,15 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
 
       <p>
         देश के करोड़ों किसानों का data अब एक digital registry में जुड़ रहा है — और उसकी चाबी है एक unique
-        number, जिसे सरकार <strong>Farmer ID</strong> या किसान पहचान पत्र कह रही है। आधार की तरह ही समझिए,
+        number, जिसे सरकार <strong>Farmer ID</strong> यानी <strong>किसान आईडी</strong> (किसान पहचान पत्र) कह रही है। आधार की तरह ही समझिए,
         बस खेती के लिए। जिस किसान की यह आईडी बन गई, उसका नाम, जमीन का record और बैंक — तीनों एक जगह verified
         हैं। और जिसकी नहीं बनी? आने वाले समय में scheme-दर-scheme दिक्कत बढ़ती जाएगी।
       </p>
       <p>
-        यह guide उसी सवाल का जवाब है जो आजकल हर गांव में पूछा जा रहा है — <em>फार्मर आईडी कैसे बनाएं, कहां
-        बनाएं, और क्या-क्या लगेगा?</em> बिना घुमाए, seedha process।
+        यह guide उसी सवाल का जवाब है जो आजकल हर गांव में पूछा जा रहा है — <em>किसान आईडी कैसे बनाएं, कहां
+        बनाएं, और क्या-क्या लगेगा?</em> बिना घुमाए, seedha process। और एक बात पहले ही साफ कर दें — यह आईडी
+        बनवाना <strong>पूरी तरह free</strong> है, और आधार से mobile लिंक हो तो <strong>मोबाइल से 10 मिनट</strong>{' '}
+        में खुद बन जाती है।
       </p>
 
       <Figure
@@ -150,7 +168,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         caption="Farmer ID — खेती की दुनिया का आधार, एक unique number में पहचान, जमीन और बैंक"
       />
 
-      <Sec>यह आईडी है क्या चीज?</Sec>
+      <Sec>किसान आईडी (Farmer ID) है क्या चीज?</Sec>
       <p>
         केंद्र सरकार के <strong>AgriStack</strong> (Digital Agriculture Mission) के तहत हर राज्य अपनी{' '}
         <strong>Farmer Registry</strong> बना रहा है। इसमें आपकी तीन चीजें आपस में जुड़ती हैं — आधार वाली
@@ -160,7 +178,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         <Link href="/articles/AgriStackKyaHai2026">अलग लेख में विस्तार से पढ़ सकते हैं</Link>।
       </p>
 
-      <Sec>Farmer ID बनाने के लिए जरूरी Documents</Sec>
+      <Sec>किसान आईडी बनाने के लिए जरूरी Documents — क्या-क्या चाहिए</Sec>
       <p>List लंबी नहीं है, पर हर चीज का अपना काम है:</p>
       <Figure
         src="/images/articles/hindi-yojna/farmer-id-card/documents-ready.webp"
@@ -203,12 +221,14 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         अटक गया। Registration से पहले दोनों record मिला लें; फर्क हो तो पहले तहसील से ठीक कराएं।
       </Note>
 
-      <Sec>Online registration — घर बैठे, step-by-step</Sec>
+      <Sec>मोबाइल से Online registration — घर बैठे, step-by-step</Sec>
       <p>
         हर राज्य का अपना portal है, लेकिन ढांचा एक — main portal{' '}
         <a href="https://agristack.gov.in" target="_blank" rel="noopener noreferrer">agristack.gov.in</a> से
         अपने राज्य की Farmer Registry चुनिए (UP के लिए upfr.agristack.gov.in, महाराष्ट्र के लिए
-        mhfr.agristack.gov.in)। आगे का process इस table में:
+        mhfr.agristack.gov.in)। कुछ राज्यों में यही काम उनके पुराने कृषि portal से जुड़ा हुआ है — जैसे
+        पूर्वोत्तर और कुछ दक्षिणी राज्यों में <strong>AgriSnet</strong> पर कृषि सेवाएं मिलती हैं, लेकिन
+        Farmer ID का असली registration AgriStack की Farmer Registry पर ही होता है। आगे का process इस table में:
       </p>
       <Figure
         src="/images/articles/hindi-yojna/farmer-id-card/agristack-portal.webp"
@@ -252,7 +272,10 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
             <Td strong>5</Td>
             <Td>
               <strong>Land details</strong> डालें — जिला, तहसील, गांव, खसरा नंबर। Portal land record से मिलान
-              करेगा।
+              करेगा। यहीं कुछ राज्यों के form में <strong>DVC name</strong> का खाना दिखता है — यह
+              &ldquo;Document VerifyingCeremony/Authority&rdquo; वाला field है, यानी आपके कागज की जांच कौन
+              करेगा: पटवारी/लेखपाल, कृषि सहायक या ग्राम पंचायत। List में से अपने क्षेत्र वाला विकल्प चुन
+              लें — पता न हो तो खाली छोड़ने के बजाय पटवारी से पूछ लें, गलत चुनाव से verification अटकता है।
             </Td>
           </tr>
           <tr>
@@ -330,12 +353,45 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         बीमा है — पांच मिनट का काम, और हफ्तों का अटकाव बच जाता है।
       </p>
 
+      <Sec>किसान आईडी कैसी दिखती है और उसे डाउनलोड कहां से करें?</Sec>
+      <p>
+        बहुत किसान यह सोचकर परेशान रहते हैं कि आधार जैसा कोई plastic card डाक से घर आएगा। ऐसा नहीं है।{' '}
+        <strong>Farmer ID असल में एक 11-अंकों वाली unique संख्या है</strong> जो आपके नाम, जमीन और बैंक से
+        जुड़ी रहती है — कागज का card उसका बस एक print है, असली चीज वह number और portal पर दर्ज आपकी profile है।
+      </p>
+      <p>
+        Card में ऊपर राज्य और Farmer Registry का नाम, फिर आपका नाम, पिता/पति का नाम, गांव-तहसील-जिला,
+        आपकी Farmer ID संख्या और एक QR code होता है। QR scan करने पर verification वाली वही जानकारी
+        खुलती है — इसीलिए scheme के काउंटर पर अक्सर card scan करके ही काम आगे बढ़ा दिया जाता है।
+      </p>
+      <p>
+        <strong>डाउनलोड का तरीका:</strong> अपने राज्य की Farmer Registry पर उसी mobile/username से login
+        करें जिससे registration किया था → profile या Dashboard में <strong>Farmer ID</strong> दिख जाएगी →
+        वहीं <strong>Download</strong> या <strong>Print Farmer Card</strong> वाले option से PDF मिल जाता है।
+        एक बार डाउनलोड करके PDF को WhatsApp पर खुद को भेज दें या print करा लें — camp और बैंक दोनों जगह
+        मांगने पर तुरंत निकल आती है।
+      </p>
+      <Note tone="warn">
+        Registration approve होने से पहले download का option नहीं आता — status अगर pending है तो card भी
+        नहीं बनेगा। और किसी third-party app या website पर पैसे देकर &ldquo;Farmer ID card download&rdquo;
+        कराने की जरूरत नहीं — यह सरकारी portal से खुद, बिना शुल्क निकलती है।
+      </Note>
+
       <Sec>Status कैसे check करें?</Sec>
       <p>
         अपने राज्य के portal पर <strong>Check Enrollment Status</strong> का option होता है — आधार नंबर या
         registered mobile डालिए, OTP verify कीजिए, स्थिति सामने। Status अगर लंबे समय तक pending दिखे तो
         अपने क्षेत्र के कृषि अधिकारी या पटवारी से मिलिए — अटकने की वजह लगभग हमेशा land record का मिलान होती
         है।
+      </p>
+      <p>
+        <strong>कितने दिन में बन जाती है?</strong> साफ जवाब — आधार वाला OTP verification तो उसी वक्त हो
+        जाता है, पर <strong>land record की जांच में कुछ दिन से कुछ हफ्ते</strong> लग जाते हैं। जिन किसानों
+        के खतौनी में नाम आधार से हूबहू मिलता है, उनकी ID अक्सर <strong>3–7 दिन</strong> में approve हो जाती
+        है। नाम में फर्क, विरासत के बाद नामांतरण बाकी, या joint खाते का मामला हो तो{' '}
+        <strong>2–4 हफ्ते</strong> या उससे ज्यादा भी लग सकते हैं — क्योंकि तब file पटवारी के स्तर पर रुकती
+        है। यानी देरी का कारण portal नहीं, आपके कागज का मिलान होता है — इसीलिए apply करने से पहले खतौनी
+        निकालकर नाम मिला लेना सबसे काम की सलाह है।
       </p>
 
       <Sec>Registration अटकने की 4 आम वजहें — और हर एक का इलाज</Sec>
