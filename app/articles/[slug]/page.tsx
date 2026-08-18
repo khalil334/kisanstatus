@@ -209,7 +209,6 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   VerminCompost: dynamic(() => import('@/components/articles/kisanguides/VerminCompost'), { ssr: true }),
   DripSprinkler: dynamic(() => import('@/components/articles/kisanguides/DripSprinkler'), { ssr: true }),
   NamoDroneDidiYojana: dynamic(() => import('@/components/articles/kisanguides/NamoDroneDidiYojana'), { ssr: true }),
-  ArticleStub: dynamic(() => import('@/components/articles/ArticleStub'), { ssr: true }),
   EnamRegistrationKaiseKare: dynamic(() => import('@/components/articles/loan-mandi-pashupalan/EnamRegistrationKaiseKare'), { ssr: true }),
   DairyFarmLoanWithoutCollateral: dynamic(() => import('@/components/articles/loan-mandi-pashupalan/DairyFarmLoanWithoutCollateral'), { ssr: true }),
   SbiDairyLoanInterestRate: dynamic(() => import('@/components/articles/loan-mandi-pashupalan/SbiDairyLoanInterestRate'), { ssr: true }),
