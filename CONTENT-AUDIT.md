@@ -246,8 +246,16 @@ Ye pehle se decide ho chuka hai (`CLAUDE.md`), dobara "fix" karne ki koshish mat
 7. ✅ Karj mafi merge: `hi/karj-mafi-list` → `hi/kisan-karj-mafi-list` (301, Phule timeline + biometric section + 3 FAQs merged, 2,086 → ~2,600 w)
 8. ✅ `/yojana/pm-kisan-helpline-155261` expand 1,357 → ~2,000 w (email format, 4 galtiyan, CPGRAMS, IVRS)
 
-**Week 3-4 (P1 — stale refresh):** §3 ki table, sabse purana pehle
-(KisanRinKahaSeLe → KisanCreditCard → eKYC → PMFBY → AgriStack → Tractor Loan)
+**Week 3-4 (P1 — stale refresh):** ✅ DONE (2026-08-18)
+9. ✅ `KisanRinKahaSeLe2026` refresh + expand
+10. ✅ `KisanCreditCardOnlineApply2026` refresh (rates + ₹5 lakh limit re-verified)
+11. ✅ `PmKisanEkycOnline2026` refresh
+12. ✅ `PmfbyCropInsurance2026` data-file modifiedTime sync (body Aug-14 fresh; title/meta untouched)
+13. ✅ `AgriStackKyaHai2026` refresh + expand — naya "2026 mein kya badla" section (14-state mandatory Farmer ID, PM-Kisan 5-yr extension ₹3.15L cr, PMFBY Farmer-ID requirement, annual eKYC), 2 naye FAQs; 1,851 → 2,255 w
+14. ✅ `KisanTractorLoan2026` refresh + expand — 2026 lender-type rate table (coop 9-10.5% / PSB 9.5-11.5% / private 10-12.5% / NBFC 11-14%), priority-sector + rate-hike note; ~2,250 w
+15. ✅ `PmKisanFaceAuthenticationEkyc` refresh + expand — annual-eKYC rule section (1.13 cr naam hataye), 24vi Oct-2026 deadline timing, 2 naye FAQs; ~2,200 w
+16. ✅ `soil-health-card-complete-guide-2026` refresh + expand — "2026 mein scheme ka haal" (25.89 cr cards, 12 params, biennial cycle, RKVY merge, Khet Bachao Abhiyan), 2 naye FAQs; ~1,950 w
+17. ✅ `PmKisanVoluntarySurrenderGuide` refresh + expand — "2026 sakhti ke asli numbers" (₹416 cr recovery, Bihar 13 lakh ineligible, March-2026 land-ownership rule), 2 naye FAQs; ~1,800 w
 
 **Week 5+ (P2):** thin Hindi twins ki word-count parity, maandhan merge (GSC data ke baad)
 
