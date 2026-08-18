@@ -11,7 +11,7 @@ function fmtDate(dateString: string): string {
 }
 
 const PUBLISHED = '2026-01-08T22:33:23+05:30';
-const MODIFIED = '2026-01-17T19:59:30+05:30';
+const MODIFIED = '2026-08-18T18:30:00+05:30';
 
 const FAQS_DATA = [
   {
@@ -29,6 +29,14 @@ const FAQS_DATA = [
   {
     q: 'CSC waale ne paise maange — dena chahiye?',
     a: 'Farmer Registry ka registration sarkar ne free rakha hai. Haan, CSC operator apni service ka mamuli charge le sakta hai, yeh alag baat hai. Par agar koi bada amount maange ya "fees" bol ke daraye, toh mana kar do. PM-Kisan se judi shikayat ke liye helpline 155261 ya 011-24300606 pe call karo, aur Kisan Call Centre 1800-180-1551 bhi hai.',
+  },
+  {
+    q: 'Farmer ID ban gayi, ab kya eKYC ki zaroorat nahi?',
+    a: 'Zaroorat hai bhai. Farmer ID aur eKYC do alag cheezein hain. eKYC ab har saal karni padti hai — 2026 se sarkar ne yeh saaf kar diya hai ki bina current eKYC ke agli kisht ruk sakti hai, chahe Farmer ID bani ho. Toh dono updated rakho: Farmer ID ek baar, eKYC har saal.',
+  },
+  {
+    q: 'Meri Farmer ID nahi bani toh kya PM-Kisan ki kisht ruk jayegi?',
+    a: 'Kai states me haan. 2026 tak UP samet 14 states me PM-Kisan ke liye Farmer ID zaroori kar di gayi hai. Matlab jinke record me Farmer ID nahi hai, unki kisht process me atak sakti hai. Apne state ka niyam CSC ya krishi vibhag se confirm karo, aur agar aapke state me mandatory hai toh der mat karo.',
   },
   {
     q: 'AgriStack, Farmer Registry aur Kisan ID — teeno alag cheezein hain kya?',
@@ -143,6 +151,36 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Aur haan, registration <strong>bilkul free</strong> hai. Na koi form fees, na koi charge sarkar ki taraf se.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>2026 Mein Kya Badla Hai — 4 Nayi Baatein</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Jab yeh article pehli baar likha tha (January 2026), tab Farmer ID "aage zaroori hogi" waali baat thi.
+            Ab August 2026 hai, aur kaafi kuch badal chuka hai. Jo naya hai, wo yeh raha:
+          </p>
+          <div className="space-y-3 mb-4">
+            <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <p className="font-black text-[var(--color-text)] text-sm mb-1">1. Ab 14 states me Farmer ID mandatory hai</p>
+              <p className="text-xs text-[var(--color-text-muted)]">UP samet 14 states me PM-Kisan ki kisht ke liye Farmer Registry zaroori ho chuki hai. "Baad mein karwa lenge" waala time nikal gaya — agar aapke state me mandatory hai aur registry nahi hui, toh kisht atakne ka seedha risk hai.</p>
+            </div>
+            <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <p className="font-black text-[var(--color-text)] text-sm mb-1">2. PM-Kisan 5 saal aur chalegi — matlab registry ka faida lamba hai</p>
+              <p className="text-xs text-[var(--color-text-muted)]">August 2026 me Cabinet ne PM-Kisan ko 2026-27 se 2030-31 tak, ₹3.15 lakh crore ke saath aage badhaya hai. Scheme kahin nahi ja rahi — toh registry karwana ek baar ka kaam hai jiska faida agle 5 saal milega.</p>
+            </div>
+            <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <p className="font-black text-[var(--color-text)] text-sm mb-1">3. Fasal bima me bhi Farmer ID maangi ja rahi hai</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Kharif 2026 se kai states me <Link href="/articles/PmfbyCropInsurance2026" className="underline font-bold">PMFBY enrollment</Link> ke liye AgriStack registration number mandatory kiya gaya hai. Matlab bima karwana hai toh bhi yahi ID kaam aayegi.</p>
+            </div>
+            <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <p className="font-black text-[var(--color-text)] text-sm mb-1">4. eKYC ab har saal — Farmer ID iska substitute nahi hai</p>
+              <p className="text-xs text-[var(--color-text-muted)]">2026 ke niyam ke hisaab se PM-Kisan ki <Link href="/articles/PmKisanEkycOnline2026" className="underline font-bold">eKYC har saal</Link> karni hai — biometric CSC pe ya Face Auth app se. Farmer ID banne ke baad bhi yeh saalana kaam chalta rahega.</p>
+            </div>
+          </div>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Chhota sa hisaab laga lo: registry me lagta hai aadha ghanta, aur na karwane pe daav pe hai saal ke ₹6,000 ki
+            samman nidhi + bima + KCC ki aasani. Sauda saaf hai.
           </p>
         </section>
 

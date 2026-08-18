@@ -281,7 +281,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'AgriStackKyaHai2026',
     category: 'farming',
     publishedTime: '2026-01-08T22:33:23+05:30',
-    modifiedTime: '2026-01-17T19:59:30+05:30',
+    modifiedTime: '2026-08-18T18:30:00+05:30',
     readingTime: 10,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('AgriStackKyaHai2026'),
