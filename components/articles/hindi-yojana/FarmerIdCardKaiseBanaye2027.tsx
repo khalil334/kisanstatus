@@ -153,34 +153,10 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
       <Sec>यह आईडी है क्या चीज?</Sec>
       <p>
         केंद्र सरकार के <strong>AgriStack</strong> (Digital Agriculture Mission) के तहत हर राज्य अपनी{' '}
-        <strong>Farmer Registry</strong> बना रहा है। इसमें किसान की तीन चीजें आपस में जोड़ी जाती हैं:
-      </p>
-      <Tbl>
-        <thead>
-          <tr>
-            <Th>क्या जुड़ता है</Th>
-            <Th>कहां से आता है</Th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <Td strong>पहचान</Td>
-            <Td>आधार से verified नाम और details</Td>
-          </tr>
-          <tr>
-            <Td strong>जमीन</Td>
-            <Td>खसरा/खतौनी वाला land record</Td>
-          </tr>
-          <tr>
-            <Td strong>बैंक</Td>
-            <Td>DBT के लिए account details</Td>
-          </tr>
-        </tbody>
-      </Tbl>
-      <p>
-        इन तीनों के मिलान के बाद एक unique <strong>Farmer ID</strong> generate होती है। फायदा साफ है — बार-बार
-        कागज जमा करने का झंझट खत्म। Subsidy, बीमा (PMFBY), KCC loan, PM Kisan — हर जगह यही एक आईडी काम
-        करेगी। AgriStack आखिर है क्या बला — यह अलग से{' '}
+        <strong>Farmer Registry</strong> बना रहा है। इसमें आपकी तीन चीजें आपस में जुड़ती हैं — आधार वाली
+        पहचान, खसरा-खतौनी वाली जमीन, और DBT वाला बैंक खाता। तीनों का मिलान हुआ, तो एक unique{' '}
+        <strong>Farmer ID</strong> निकल आती है। फायदा साफ है — बार-बार कागज जमा करने का झंझट खत्म।
+        Subsidy, बीमा (PMFBY), KCC loan, PM Kisan — हर जगह यही एक आईडी काम करेगी। AgriStack आखिर है क्या बला — यह अलग से{' '}
         <Link href="/articles/AgriStackKyaHai2026">अलग लेख में विस्तार से पढ़ सकते हैं</Link>।
       </p>
 
@@ -340,38 +316,13 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
       <Sec>खसरा, खतौनी, registry — तीनों का फर्क दो मिनट में</Sec>
       <p>
         Registration में जमीन के कागज मांगे जाते हैं तो बहुत किसान उलझ जाते हैं कि कौन सा लेकर जाएं।
-        सीधी भाषा में — <strong>खसरा नंबर</strong> आपके खेत के टुकड़े का पता है — घर के plot नंबर की तरह।
+        सीधी भाषा में — <strong>खसरा नंबर</strong> आपके खेत के टुकड़े का पता है — घर के plot नंबर की तरह;
+        form के Land details वाले खाने में यही भरना होता है।
         <strong> खतौनी</strong> वह रजिस्टर है जिसमें लिखा है कि किस खसरे पर किस-किसका नाम और कितना
-        हिस्सा दर्ज है — registration में इसी की जरूरत बार-बार पड़ती है। और <strong>registry (बैनामा)</strong>
+        हिस्सा दर्ज है — असली काम की चीज यही है, verification इसी से मिलता है। और <strong>registry (बैनामा)</strong>
         खरीद-बिक्री का दस्तावेज है — यह अकेला काफी नहीं, क्योंकि जब तक बैनामे के बाद नामांतरण
         कराकर खतौनी में नाम नहीं चढ़ा, सरकारी record की नजर में जमीन पुराने मालिक की है।
       </p>
-      <Tbl>
-        <thead>
-          <tr>
-            <Th>कागज</Th>
-            <Th>यह क्या बताता है</Th>
-            <Th>Registration में काम</Th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <Td strong>खसरा नंबर</Td>
-            <Td>खेत के टुकड़े का पता — घर के plot नंबर की तरह</Td>
-            <Td>Land details वाले खाने में यही भरना है</Td>
-          </tr>
-          <tr>
-            <Td strong>खतौनी</Td>
-            <Td>किस खसरे पर किसका नाम और कितना हिस्सा दर्ज है</Td>
-            <Td>काम की चीज यही है — verification इसी से मिलता है</Td>
-          </tr>
-          <tr>
-            <Td strong>रजिस्ट्री (बैनामा)</Td>
-            <Td>खरीद-बिक्री का दस्तावेज</Td>
-            <Td>अकेला काफी नहीं — नामांतरण के बाद खतौनी में नाम चढ़ना जरूरी</Td>
-          </tr>
-        </tbody>
-      </Tbl>
       <p>
         ताजा खतौनी निकालने के लिए अब तहसील जाना जरूरी नहीं — ज्यादातर राज्यों के bhulekh portal
         (UP का upbhulekh.gov.in, MP का mpbhulekh.gov.in वगैरह) पर खसरा नंबर या नाम से online नकल
@@ -471,7 +422,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
       </p>
       <p>
         आपके काम की बात इसमें यह है — जब राज्य इस तरह की deadline लेकर चलते हैं, तो आखिरी हफ्तों
-        में camps पर भीड़ और server दोनों का बोझ चरम पर होता है। जिन किसानों ने पहले हफ्तों में
+        में camp की लाइनें लंबी और website धीमी पड़ जाती है। जिन किसानों ने पहले हफ्तों में
         कागज तैयार रखकर निपटा लिया, उनका काम मिनटों में हुआ; जो आखिरी दिन पहुंचे, वे घंटों लाइन में
         खड़े रहे। आपके राज्य में भी ऐसी drive आए तो पहले हफ्ते वाले बनिए, आखिरी दिन वाले नहीं।
       </p>
@@ -489,8 +440,8 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         आगे यह पूरे DBT system की रीढ़ बनने वाली है। तात्पर्य — जो किसान PM Kisan की{' '}
         <Link href="/articles/PmKisanMasterGuide2026">किस्त लेते हैं</Link> या{' '}
         <Link href="/articles/KisanCreditCardOnlineApply2026">KCC</Link> बनवाना चाहते हैं, उनके लिए यह आईडी
-        आज नहीं तो कल जरूरी होगी ही। जल्दी बनवा लेने में ही फायदा है — बाद में भीड़ और server, दोनों का बोझ
-        बढ़ेगा।
+        आज नहीं तो कल जरूरी होगी ही। जितनी जल्दी बनवा लें, उतना आराम — आखिरी वक्त पर सबको एक साथ याद
+        आती है और काम हफ्तों खिंचता है।
       </p>
 
       <Sec>राज्य-दर-राज्य हाल — कहां क्या चल रहा है</Sec>
@@ -550,33 +501,12 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
       </ol>
 
       <Sec>आगे का रास्ता — तीन काम, इसी हफ्ते</Sec>
-      <Tbl>
-        <thead>
-          <tr>
-            <Th>#</Th>
-            <Th>काम</Th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <Td strong>1</Td>
-            <Td>
-              आज शाम आधार और खतौनी निकालकर नाम की spelling मिला लें — फर्क है तो पहले वह सुधार शुरू करें।
-            </Td>
-          </tr>
-          <tr>
-            <Td strong>2</Td>
-            <Td>
-              सब मिलता है तो अपने राज्य के portal पर account बनाकर registration जमा करें — या अगले camp/CSC
-              का दिन पता करें।
-            </Td>
-          </tr>
-          <tr>
-            <Td strong>3</Td>
-            <Td>Status पर नजर रखें — approve होते ही card download करके print और mobile दोनों में संभाल लें।</Td>
-          </tr>
-        </tbody>
-      </Tbl>
+      <p>
+        सबसे पहले आज शाम आधार और खतौनी निकालकर नाम की spelling मिला लीजिए — फर्क निकले तो पहले
+        वही सुधार शुरू करें, बाकी सब बाद में। नाम मिल गया? तो अपने राज्य के portal पर account बनाकर form
+        जमा कर दीजिए — या अगले camp/CSC का दिन पता कर लीजिए। उसके बाद बस status पर नजर — approve होते
+        ही card download करके print और mobile दोनों में संभाल लें।
+      </p>
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
         जानकारी का स्रोत: पूरी प्रक्रिया{' '}
