@@ -213,7 +213,7 @@ export default function BakriPalanYojana() {
           DPR banana rocket science nahi hai. Bas numbers phule-phule nahi hone chahiye, warna officer ko shak ho jata hai. Teen cheez clear honi chahiye:
         </p>
         <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
-          <li><strong>Capital Cost:</strong> shed, feeding trough, water tank, chaff cutter — actual quotation ke saath.</li>
+          <li><strong>Capital Cost:</strong> shed, feeding trough, water tank, chaff cutter — actual quotation ke saath. Agar job card hai aur scale chhota hai, to shed ka kharcha MGNREGA se bhi nikal sakta hai — <Link href="/yojana/mgnrega-pashu-shed-yojana" className="underline font-semibold">pashu shed wali guide</Link> mein gram panchayat ka poora rasta likha hai.</li>
           <li><strong>Recurring Cost:</strong> pehle 6 mahine ka chara, feed, mineral mixture, labor.</li>
           <li><strong>Income Projection:</strong> conservative rakho. 15-20% mortality dikhao, warna plan unrealistic lagega.</li>
         </ul>

@@ -126,6 +126,33 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
       '/articles/PmKisanStateNodalOfficerList',
     ],
   },
+  {
+    slug: 'mgnrega-pashu-shed-yojana',
+    mainKeyword: 'mgnrega pashu shed yojana',
+    secondaryKeywords: [
+      'pashu shed yojana online apply',
+      'pashu shed yojana 1.60 lakh',
+      'mgnrega cattle shed scheme',
+      'pashu shed yojana gram panchayat',
+      'nrega pashu shed kaise banwaye',
+      'pashu shed yojana job card',
+      'gaay bhains shed subsidy',
+    ],
+    title: 'MGNREGA Pashu Shed Yojana — ₹1.6L Tak',
+    description:
+      'Pashu shed ka koi online form nahi hota — kaam gram panchayat ke through hota hai. Job card, 2-3 pashu ka rule, asli amount ka sach, application ka poora rasta aur file atke to BDO tak complaint.',
+    ogTitle: 'MGNREGA Pashu Shed Yojana — ₹1.6 Lakh Tak, Asli Process',
+    component: 'MgnregaPashuShedYojana',
+    officialPortal: 'https://nrega.nic.in',
+    published: '2026-08-18T19:30:00+05:30',
+    modified: '2026-08-18T19:30:00+05:30',
+    readTime: '11 min read',
+    relatedPaths: [
+      '/articles/bakri-palan-yojana-nlm-subsidy',
+      '/articles/murgi-palan-loan-nlm-subsidy',
+      '/articles/dairy-farm-loan-without-collateral',
+    ],
+  },
 ];
 
 export const LIVE_YOJANA_2026_ARTICLES = YOJANA_2026_ARTICLES;

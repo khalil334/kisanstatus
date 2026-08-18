@@ -302,6 +302,12 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           pehle shed ki poori safai-disinfection aur kam se kam ek hafte ka gap (downtime) — yeh aadat hi
           purane aur naye farmer ka fark hai.
         </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Waise chhote backyard-scale par shuru karna ho aur job card ho, to poultry shelter MGNREGA ke
+          individual works se bhi ban jaata hai — bina loan ke.{' '}
+          <Link href="/yojana/mgnrega-pashu-shed-yojana" className="underline font-semibold">MGNREGA pashu
+          shed guide</Link> mein gram panchayat wala poora process hai.
+        </p>
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/shed-nirman.webp"
