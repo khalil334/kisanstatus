@@ -18,6 +18,14 @@ const FAQS = [
     q: 'फिर किसान को सीधा पैसा किस scheme से मिलता है?',
     a: 'दो पक्के रास्ते: PM किसान सम्मान निधि — साल के ₹6,000 तीन किस्तों में सीधे खाते में, और PMFBY — फसल खराब होने पर बीमा claim। दोनों के official portal हैं और दोनों में बिना agent के खुद apply/check हो जाता है।',
   },
+  {
+    q: 'दुकानदार MRP से ज्यादा मांगे तो क्या करूं?',
+    a: 'MRP से ज्यादा लेना गैर-कानूनी है। पहले PoS पर्ची मांगिए — उसमें सही दाम छपा होता है। फिर भी न माने तो Kisan Call Centre 1800-180-1551 पर शिकायत करिए या जिले के कृषि अधिकारी को बताइए। खरीद के बाद SMS न आए तो भी समझिए सौदे में गड़बड़ है।',
+  },
+  {
+    q: 'यह अफवाह हर साल वापस क्यों आ जाती है?',
+    a: 'क्योंकि यह clicks कमाती है। 2021 से वही articles चल रहे हैं, बस heading में साल बदल जाता है — 2024, 2025, अब 2026। PM किसान की असली किस्त का season आते ही इनकी traffic बढ़ जाती है, क्योंकि किसान वैसे ही पैसा search कर रहा होता है। इसलिए साल बदलने से अफवाह सच नहीं हो जाती।',
+  },
 ];
 
 const FAQ_SCHEMA = {
@@ -89,6 +97,38 @@ export default function PmKisanKhadYojanaSachHindi({ article }: { article: Hindi
         Kisan Call Centre का नंबर 1800-180-1551 है।
       </p>
 
+      <Head2>दुकान पर असल में क्या होता है — अंगूठा, पर्ची, SMS</Head2>
+      <p>
+        जो किसान पहली बार सुन रहा है कि subsidy PoS machine से जुड़ी है, उसके लिए पूरा scene: आप
+        licensed dealer के पास जाते हैं, आधार नंबर बताते हैं, machine पर अंगूठा लगाते हैं। बिक्री आधार से
+        verify होती है, तभी subsidized rate लगता है। Machine से पर्ची निकलती है जिसमें बोरी की quantity,
+        आपका दिया दाम और सरकार की subsidy — तीनों लिखे होते हैं।
+      </p>
+      <p>
+        खरीद के बाद registered mobile पर SMS आता है — invoice नंबर, dealer का नाम, quantity और subsidy
+        amount के साथ। SMS आना मतलब बिक्री सरकारी record में गई। SMS न आए और dealer पर्ची भी न दे,
+        तो समझ लीजिए कुछ गड़बड़ है।
+      </p>
+      <p>
+        इससे एक बात और साफ हो जाती है, जो अफवाह को जड़ से काट देती है: खाद subsidy का पूरा system बोरी
+        की <em>बिक्री</em> से जुड़ा है, किसान के bank खाते से नहीं। जब system में खाते में पैसा भेजने का
+        इंतजाम ही नहीं है, तो ₹11,000 खाते में आएंगे कहां से? कहीं से नहीं।
+      </p>
+
+      <Head2>यह अफवाह हर साल नई क्यों हो जाती है</Head2>
+      <p>
+        &ldquo;खाद योजना&rdquo; वाले articles 2021 से चले आ रहे हैं। हर साल वही content, बस heading में साल
+        बदल जाता है — 2024, 2025, अब 2026। PM किसान की असली किस्त का season आते ही इन articles की
+        traffic बढ़ जाती है, क्योंकि किसान वैसे ही पैसा search कर रहा होता है।
+      </p>
+      <p>
+        YouTube पर यह और तेज चलता है। Thumbnail पर बड़ा सा &ldquo;₹11,000 आ गए — list में नाम
+        देखो&rdquo; और video के अंदर वही PM किसान beneficiary status check करने का process, जो ₹6,000
+        वाली असली scheme का है। देखने वाले को लगता है scheme confirm हो गई, क्योंकि video में सरकारी
+        portal दिख रहा है। Portal असली, scheme का नाम नकली — यही trick है। इसलिए video में portal
+        दिखना काफी नहीं; यह देखिए कि उस portal पर <em>उस नाम की scheme</em> लिखी है या नहीं।
+      </p>
+
       <Head2>&ldquo;खाद योजना registration&rdquo; वाला form दिखे तो?</Head2>
       <p>
         जो चीज मौजूद नहीं, उसका registration form किसी के पास कैसे हो सकता है? फिर भी कई sites
@@ -120,6 +160,21 @@ export default function PmKisanKhadYojanaSachHindi({ article }: { article: Hindi
       <p>
         एक छोटा test याद रखिए: scheme असली है या नहीं, यह जानने के लिए उसका नाम + site:gov.in लिखकर search
         कीजिए। सरकारी portal पर मिला तो असली। सिर्फ blogs पर मिला तो समझिए content है, scheme नहीं।
+      </p>
+
+      <Head2>आज के आज करने लायक 3 काम</Head2>
+      <p>
+        अफवाह पढ़कर खाली हाथ लौटने से अच्छा, तीन काम कर लीजिए जिनसे असली पैसा पक्का होता है:
+      </p>
+      <p>
+        <strong>1. PM किसान का status देखिए</strong> — pmkisan.gov.in पर &ldquo;Know Your Status&rdquo; में
+        eKYC, land seeding और bank seeding तीनों हरे हैं या नहीं। अगली (24वीं) किस्त October 2026 में
+        expected है — कमी अभी ठीक करेंगे तो किस्त नहीं अटकेगी।{' '}
+        <strong>2. खाद खरीद पर पर्ची और SMS check करिए</strong> — यही आपका सबूत है कि आपको सही
+        subsidized दाम लगा।{' '}
+        <strong>3. परिवार के WhatsApp group में यह बात आगे भेजिए</strong> — खासकर घर के बड़े-बुजुर्गों
+        तक, जो OTP fraud का सबसे आसान निशाना होते हैं। किसी के ₹2,000 बच गए तो यह पूरा article
+        सफल है।
       </p>
 
       <Head2>अक्सर पूछे जाने वाले सवाल</Head2>
