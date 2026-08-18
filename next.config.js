@@ -130,6 +130,8 @@ const nextConfig = {
       { source: '/articles/pm-kisan-24vi-kist', destination: '/articles/PmKisan24viKist2026', permanent: true },
       { source: '/articles/pm-kisan-ekyc-kaise-karein', destination: '/articles/PmKisanEkycOnline2026', permanent: true },
       { source: '/articles/pm-kisan-status-check-2026', destination: '/articles/PmKisan24viKist2026', permanent: true },
+      // content-audit W2a: old Hindi helpline page merged into canonical hi twin
+      { source: '/articles/hi/helpline-shikayat', destination: '/articles/hi/pm-kisan-helpline-155261', permanent: true },
     ];
   },
 

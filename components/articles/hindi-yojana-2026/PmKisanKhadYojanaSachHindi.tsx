@@ -107,7 +107,7 @@ export default function PmKisanKhadYojanaSachHindi({ article }: { article: Hindi
       <p>
         <strong>PM किसान सम्मान निधि</strong> — साल के ₹6,000, तीन किस्तें, सीधे आधार-linked खाते में। यही
         वह scheme है जिसके नाम का सहारा लेकर खाद वाली अफवाह बनी। किस्त अटकी हो तो{' '}
-        <Link href="/articles/hi/helpline-shikayat" className="underline font-bold">हेल्पलाइन और शिकायत
+        <Link href="/articles/hi/pm-kisan-helpline-155261" className="underline font-bold">हेल्पलाइन और शिकायत
         गाइड</Link> देखिए, और NPCI seeding की दिक्कत हो तो{' '}
         <Link href="/articles/hi/npci-aadhaar-seeding" className="underline">NPCI आधार सीडिंग गाइड</Link>।
       </p>

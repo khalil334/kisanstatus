@@ -465,7 +465,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
       <p>
         और अगर किसी ने पहले से पैसे ले लिए हैं या OTP लेकर गड़बड़ की है, तो चुप न रहिए — शिकायत कैसे और कहां
         दर्ज होती है, यह{' '}
-        <Link href="/articles/hi/helpline-shikayat">हेल्पलाइन वाले page पर खुलेगा</Link>। जितनी जल्दी
+        <Link href="/articles/hi/pm-kisan-helpline-155261">हेल्पलाइन वाले page पर खुलेगा</Link>। जितनी जल्दी
         दर्ज होगी, उतनी गुंजाइश बनेगी।
       </p>
 

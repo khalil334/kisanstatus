@@ -26,6 +26,18 @@ const FAQS = [
     q: 'राज्य-स्तर की problem हो तो Delhi वाली हेल्पलाइन क्या करेगी?',
     a: 'सच यह है कि land seeding, state approval जैसी problems राज्य के पास अटकी होती हैं और central helpline सिर्फ forward कर सकती है। ऐसे में जिला कृषि अधिकारी या राज्य के nodal officer से सीधा संपर्क ज्यादा तेज होता है।',
   },
+  {
+    q: 'क्या शिकायत करने के पैसे लगते हैं?',
+    a: 'बिल्कुल नहीं। न phone शिकायत के, न online के। अगर कोई आपसे शिकायत दर्ज कराने के पैसे मांगे — या बोले "अंदर से काम करा देंगे" — तो समझ जाइए वो fraud है। सरकारी शिकायत हर step पर free है।',
+  },
+  {
+    q: 'खुद online करना मुश्किल है — CSC से शिकायत हो जाएगी?',
+    a: 'हां, नजदीकी CSC (जन सेवा केंद्र) से Help Desk query डलवा सकते हैं। बस ticket/reference number अपने पास लिखवाकर जरूर रखें, ताकि status खुद track कर सकें। गांव में network न हो तो block के कृषि विभाग office में लिखित शिकायत भी एक रास्ता है।',
+  },
+  {
+    q: 'एक साथ कितनी शिकायतें डाल सकते हैं?',
+    a: 'एक problem की एक ही query डालें। एक ही बात की कई queries डालने से record उलझता है और जवाब देर से आता है। हां, दो अलग-अलग दिक्कतें हैं — eKYC भी और payment भी — तो दोनों की अलग query ठीक है।',
+  },
 ];
 
 const FAQ_SCHEMA = {
@@ -105,6 +117,25 @@ export default function PmKisanHelpline155261Hindi({ article }: { article: Hindi
         जवाब न मिले तो वही बात pmkisan-ict@gov.in पर email कर दीजिए — record बन जाता है।
       </p>
 
+      <Head2>ईमेल से शिकायत — format ऐसा रखिए</Head2>
+      <p>
+        Email (<strong>pmkisan-ict@gov.in</strong>) उन cases के लिए सही है जहां documents attach करने हों —
+        पासबुक की photo, rejection का screenshot। Format कुछ ऐसा:
+      </p>
+      <div className="my-4 p-4 bg-green-50 border-l-4 border-green-600 rounded-r-xl text-sm leading-relaxed">
+        <strong>Subject:</strong> PM Kisan — किस्त नहीं मिली — [आधार के आखिरी 4 अंक]<br /><br />
+        महोदय,<br />
+        मेरा नाम [नाम], गांव [गांव], जिला [जिला], राज्य [राज्य]।<br />
+        Registration mobile number: [नंबर]<br />
+        समस्या: [कौन सी किस्त, कब से, status में क्या दिख रहा है]<br />
+        कृपया समाधान करें।<br />
+        धन्यवाद।
+      </div>
+      <p>
+        पूरा आधार नंबर email में मत लिखिए — आखिरी 4 अंक काफी हैं। और एक ही शिकायत बार-बार अलग-अलग email
+        से मत भेजिए — process तेज नहीं होता, records उलझ जाते हैं।
+      </p>
+
       <Head2>Online शिकायत — जो phone से ज्यादा पक्की है</Head2>
       <p>
         pmkisan.gov.in पर <strong>Help Desk / Query Form</strong> का section है। आधार, account या mobile
@@ -117,12 +148,74 @@ export default function PmKisanHelpline155261Hindi({ article }: { article: Hindi
         &ldquo;processing fee&rdquo; मांगता है। ऐसी call आए तो fraud है — काट दीजिए।
       </p>
 
-      <Head2>बात न बने तो ऊपर कैसे जाएं</Head2>
+      <Head2>बात न बने तो ऊपर कैसे जाएं — पूरी सीढ़ी</Head2>
       <p>
         District level पर कृषि अधिकारी (DAO) के office में लिखित application दीजिए — साथ में status का
-        printout और ticket number। उससे ऊपर हर राज्य का nodal officer होता है; किस्त न आने की हर स्थिति की
-        पूरी guide <Link href="/articles/hi/helpline-shikayat" className="underline font-bold">शिकायत वाले
-        हिंदी article</Link> में भी है। लिखित शिकायत की copy अपने पास रखिए — अगली बार वही काम आती है।
+        printout और ticket number। लिखित शिकायत की copy अपने पास रखिए — अगली बार वही काम आती है।
+      </p>
+      <p>
+        उससे ऊपर हर राज्य का <strong>Nodal Officer</strong> होता है जो योजना का in-charge है। PM Kisan
+        central scheme जरूर है, पर verification और record correction का बड़ा हिस्सा राज्य के पास होता है।
+        Online query डाले महीना हो गया, helpline बोलती है &ldquo;process में है&rdquo; — ऐसे में सीधे अपने
+        राज्य के Nodal Officer के office से संपर्क अक्सर काम कर जाता है, क्योंकि record दरअसल उसी दफ्तर में
+        अटका होता है। राज्यवार list{' '}
+        <Link href="/articles/PmKisanStateNodalOfficerList" className="underline font-bold">इस page पर</Link> है।
+      </p>
+      <p>
+        आखिरी हथियार — <strong>CPGRAMS</strong>, केंद्र सरकार का अपना grievance portal (pgportal.gov.in)।
+        यहां दर्ज शिकायत सीधे कृषि मंत्रालय तक जाती है और registration number से track होती है। इसे पहला
+        नहीं, आखिरी रास्ता समझिए — पहले Help Desk और Nodal Officer आजमाइए। पर जब महीनों बाद भी बात न बने,
+        तब CPGRAMS पर पुरानी query का reference देते हुए शिकायत डालिए। मंत्रालय स्तर से आई query पर नीचे
+        के office अक्सर तेजी से हिलते हैं — यह जमीनी सच है।
+      </p>
+
+      <Head2>शिकायत लिखते समय ये 4 गलतियां मत कीजिए</Head2>
+      <p>
+        Help Desk पर हजारों queries रोज आती हैं। साफ लिखी शिकायत का record जल्दी ढूंढा जाता है, उलझी हुई
+        पीछे छूट जाती है। चार गलतियां जो बार-बार दिखती हैं:
+      </p>
+      <p>
+        <strong>गुस्से वाली लंबी कहानी।</strong> पढ़ने वाले को आपबीती नहीं, तीन चीजें चाहिए — कौन सी किस्त,
+        कब से रुकी, status में क्या लिखा है। तीन लाइन काफी हैं।
+      </p>
+      <p>
+        <strong>गलत category।</strong> Payment की दिक्कत eKYC category में डाल दी, तो query गलत desk पर
+        जाएगी और लौटने में हफ्ते लगेंगे। Category दो बार पढ़कर चुनिए।
+      </p>
+      <p>
+        <strong>Details बिना confirm किए।</strong> आधार के अंक गलत लिखे तो record मिलेगा ही नहीं। Submit
+        से पहले एक बार सब मिला लीजिए।
+      </p>
+      <p>
+        <strong>Status में जो दिख रहा है, वो न बताना।</strong> &ldquo;पैसा नहीं आया&rdquo; अधूरी बात है।
+        &ldquo;Status में FTO generated लिखा है लेकिन 3 हफ्ते से payment नहीं&rdquo; — यह पूरी बात है, और
+        इसका जवाब भी सटीक आता है।
+      </p>
+
+      <Head2>आपकी शिकायत ऊपर तक पहुंचती भी है — एक सबूत</Head2>
+      <p>
+        &ldquo;शिकायत डालने से क्या होगा, कोई पढ़ता थोड़े है&rdquo; — यह निराशा आम है, पर पूरी सच नहीं।
+        अक्टूबर 2025 में केंद्रीय कृषि मंत्री ने कृषि भवन में किसानों की शिकायतों की समीक्षा बैठक की — जिसमें
+        PM-Kisan portal की शिकायतें अलग category थीं। साफ निर्देश निकला: <strong>जब तक किसान खुद संतुष्ट न
+        हो, शिकायत बंद न की जाए</strong>, और धीमी कार्रवाई वाले राज्यों की अलग से पहचान हो।
+      </p>
+      <p>
+        आपके लिए निकलने वाली बात: system निगरानी में है, और <strong>record में दर्ज शिकायत ही</strong> इस
+        निगरानी में गिनी जाती है। Phone पर हुई बात किसी आंकड़े में नहीं जाती — इसीलिए यह page बार-बार लिखित
+        query पर जोर देता है।
+      </p>
+
+      <Head2>रात में या phone के अलावा — नए रास्ते</Head2>
+      <p>
+        NIC के मुताबिक PM-Kisan system में अब <strong>24×7 IVRS आधारित helpline</strong> और chatbot भी है —
+        रात में भी basic status-पूछताछ recorded system से हो सकती है, भले staff से बात कामकाजी घंटों में ही
+        हो। UMANG app के Kisan Suvidha से भी योजना की सेवाएं जुड़ी हैं। पहचान वाली सावधानी हर जगह एक ही है:
+        OTP या bank password कोई भी सरकारी चैनल कभी नहीं मांगता।
+      </p>
+      <p>
+        एक आखिरी practical आदत — हर call/query की एक पर्ची रखिए: तारीख, किससे बात हुई, क्या कहा गया,
+        ticket number। तीन-चार entries के बाद यही पर्ची आपकी सबसे मजबूत दलील बन जाती है, क्योंकि तब आप
+        अंदाज़े से नहीं, record से बात करते हैं।
       </p>
 
       <Head2>अक्सर पूछे जाने वाले सवाल</Head2>

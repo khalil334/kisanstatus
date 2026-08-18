@@ -336,7 +336,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         भारी नुकसान यहीं होता है — कोई फोन करके कहता है कि "किस्त निकलवा देंगे, थोड़ा खर्चा लगेगा"।
         योजना में किसी बिचौलिये की जरूरत ही नहीं है। न किस्त जल्दी निकलवाई जा सकती है, न किसी शुल्क से रुका
         भुगतान चालू होता है। जो OTP, आधार नंबर या बैंक details मांगे — बात उसी पल खत्म कर दीजिए, और शिकायत
-        का रास्ता <Link href="/articles/hi/helpline-shikayat">हेल्पलाइन guide</Link> से चुनिए।
+        का रास्ता <Link href="/articles/hi/pm-kisan-helpline-155261">हेल्पलाइन guide</Link> से चुनिए।
       </Note>
 
       <H3>बैंक का SMS नहीं आया — तो खुद कैसे पक्का करें</H3>
@@ -366,7 +366,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         अपात्रता (income tax भरने वाले, सरकारी कर्मचारी, संस्थागत जमीन): यहां कोई शिकायत काम नहीं करेगी,
         नियम ही यही है। तीसरी — राज्य स्तर पर verification में अटका आवेदन: इसके लिए helpline 155261 या
         अपने कृषि अधिकारी से बात करें। शिकायत दर्ज करने का पूरा तरीका{' '}
-        <Link href="/articles/hi/helpline-shikayat">हेल्पलाइन guide</Link> में है।
+        <Link href="/articles/hi/pm-kisan-helpline-155261">हेल्पलाइन guide</Link> में है।
       </p>
 
       <H3>नया आवेदन करने वालों के लिए</H3>

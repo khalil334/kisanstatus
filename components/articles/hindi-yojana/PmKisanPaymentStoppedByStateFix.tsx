@@ -297,7 +297,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         Farmers Corner में Help Desk/Grievance का विकल्प है, आधार number से query register होती है। जो
         query number मिले, उसे कागज पर लिखकर रखिए — आगे की हर बातचीत में यही आपकी पहचान है। साथ
         में helpline <strong>155261</strong> पर भी बात कर लें। पूरा तरीका{' '}
-        <Link href="/articles/hi/helpline-shikayat">शिकायत guide</Link> में लिखा है।
+        <Link href="/articles/hi/pm-kisan-helpline-155261">शिकायत guide</Link> में लिखा है।
       </Rx>
       <Rx step="3" title="ब्लॉक/तहसील — अक्सर निर्णायक">
         रोक <em>राज्य</em> ने लगाई है, तो ताला भी वहां से ही खुलेगा। अपने ब्लॉक के कृषि अधिकारी या तहसील में
@@ -482,7 +482,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">इस विषय से जुड़े और page</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li><Link href="/articles/PmKisanCorrectionForm2026">Correction Form Guide</Link></li>
-          <li><Link href="/articles/hi/helpline-shikayat">हेल्पलाइन और शिकायत</Link></li>
+          <li><Link href="/articles/hi/pm-kisan-helpline-155261">हेल्पलाइन और शिकायत</Link></li>
           <li><Link href="/articles/hi/npci-aadhaar-seeding">बैंक में आधार सीडिंग कैसे कराएं</Link></li>
           <li><Link href="/articles/PmKisanStateNodalOfficerList">State Nodal Officer List</Link></li>
         </ul>

@@ -480,7 +480,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         बताइए — न phone पर, न किसी लिंक में। योजना का कोई अधिकारी status दिखाने के लिए OTP नहीं मांगता, और
         किस्त &quot;जल्दी दिलाने&quot; के नाम पर पैसे मांगने वाला हर व्यक्ति ठग है। शिकायत का सही रास्ता
         portal की grievance और हेल्पलाइन <strong>155261</strong> है — शिकायत दर्ज करने की पूरी प्रक्रिया{' '}
-        <Link href="/articles/hi/helpline-shikayat">इस page पर समझाई</Link> है।
+        <Link href="/articles/hi/pm-kisan-helpline-155261">इस page पर समझाई</Link> है।
       </div>
 
       <SH>Status देखने के तीन रास्ते — कौन कब चुनें</SH>
