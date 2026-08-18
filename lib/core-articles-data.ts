@@ -146,7 +146,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'KisanCreditCardOnlineApply2026',
     category: 'loan',
     publishedTime: '2025-12-24T10:29:44+05:30',
-    modifiedTime: '2025-12-29T08:11:53+05:30',
+    modifiedTime: '2026-08-18T19:45:00+05:30',
     readingTime: 14,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('KisanCreditCardOnlineApply2026'),

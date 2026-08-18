@@ -4,7 +4,7 @@ import { SI, StepList, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 const PUBLISHED = '2025-12-24T10:29:44+05:30';
-const MODIFIED = '2025-12-29T08:11:53+05:30';
+const MODIFIED = '2026-08-18T19:45:00+05:30';
 
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
@@ -49,7 +49,7 @@ const FAQS_DATA = [
   },
   {
     q: '₹2 lakh se zyada limit chahiye lekin collateral (zameen) nahi hai — kya karein?',
-    a: 'Do options hain. Pehla: CGTMSE scheme ke under ₹5 lakh tak collateral-free loan maangein (bank officer se specifically puchhein). Doosra: Joint Liability Group (JLG) banakar apply karein, jisme 3-5 farmers milkar cross-guarantee dete hain.',
+    a: 'Do options hain. Pehla: Joint Liability Group (JLG) banakar apply karein, jisme 3-5 farmers milkar cross-guarantee dete hain — group guarantee collateral ki jagah kaam karti hai. Doosra: pehle ₹2 lakh ki collateral-free limit lekar 2 season clean repayment banao — review me enhancement ke waqt bank ka bharosa wahi history hai. Zameen ke bina ₹2L se upar seedha jump mushkil hai, ye sach pehle jaan lo.',
   },
   {
     q: 'Dairy farming ya poultry ke liye Kisan Credit Card mil sakta hai?',
