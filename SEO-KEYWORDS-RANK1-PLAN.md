@@ -37,7 +37,9 @@ sab kch real helpful info ho or unique ho
 
 ## Article Prompts
 
-### 1. PM Kisan Khad Yojana ₹11,000 — Sach Kya Hai
+### 1. PM Kisan Khad Yojana ₹11,000 — Sach Kya Hai ✅ PUBLISHED 2026-08-18
+- **Live:** `/yojana/pm-kisan-khad-yojana-11000-sach` (Hinglish) + `/articles/hi/pm-kisan-khad-yojana-sach` (Hindi) · hreflang paired · sitemap + cross-links auto · contextual link added in PmKisanMasterGuide2026.
+- **Verified is article me:** urea 45 kg bag MRP ₹242 (neem-coating/tax alag) vs asli laagat ₹2,200–2,600 (FE Dec 2025: production cost ₹2,600+); DAP 50 kg ~₹1,350 multi-year stable (NBS); fertilizer DBT = 100% subsidy company ko PoS Aadhaar-authenticated sale ke baad, kisan ko cash nahi; DoF SMS receipt system (invoice no. + subsidy amount); Kisan Call Centre 1800-180-1551; koi "Khad Yojana" pmkisan.gov.in/fert.nic.in par exist nahi karti — rumor 2021 se blogs par chal raha hai, har saal naya year-stamp.
 - **Slug:** `pm-kisan-khad-yojana-11000-sach` · **Verify:** pmkisan.gov.in + fert.nic.in + PIB Fact Check
 - **Prompt:** Likho ek myth-buster article. Opening me seedha sawaal ka jawab do: "₹11,000 wali koi alag Khad Yojana officially exist nahi karti" — pehli 3 lines me. Phir explain karo ye rumor kahan se aaya (DBT fertilizer subsidy + PM Kisan ke ₹6000 ko jodkar blogs ne ₹11,000 bana diya). Ek section: asli fertilizer subsidy kaise milti hai (subsidy company ko jati hai, kisan ko sasta khad milta hai — urea ka asli vs subsidized rate table). Ek section: agar kisi site pe "Khad Yojana registration" form dikhe to kya karein (fraud warning, OTP kisi ko na dein). End me: kisan ke liye jo REAL paisa hai wo kaun si schemes hain (PM Kisan, PMFBY) — wahan internal links. FAQ sirf 4 — sab rumor-related. Table of contents mat lagao is article me.
 
@@ -94,7 +96,9 @@ sab kch real helpful info ho or unique ho
 - **Slug:** `kisan-drone-subsidy-apply` · **Verify:** agrimachinery.nic.in + SMAM drone guidelines + DGCA (pilot license)
 - **Prompt:** Naya topic, early-mover. Namo Drone Didi (SHG) se clearly differentiate karo pehle section me hi — wo alag hai, ye individual/custom-hiring wali subsidy hai. Cover: kitni % kisko (category-wise SMAM rates — verify; agriculture graduates/CHC ko zyada), drone ki asli keemat (10L capacity agri-drone ~6-10 lakh range), DGCA pilot certificate ka chakkar (kahan se, kitne din, kitna kharcha — verify), kya ye business ban sakta hai (custom hiring per-acre spray rate ka math). Imaandaar section: kis kisan ko drone NAHI lena chahiye (chhoti jot, ROI ka hisaab). namo-drone-didi article + custom-hiring-centre link karo. FAQ 7. Is article me ek ROI mini-calculation table rakho — ye iska unique element hai.
 
-### 14. PM Kisan Helpline 155261 — Complaint Kaise Aur Kahan
+### 14. PM Kisan Helpline 155261 — Complaint Kaise Aur Kahan ✅ PUBLISHED 2026-08-18
+- **Live:** `/yojana/pm-kisan-helpline-155261` (Hinglish) + `/articles/hi/pm-kisan-helpline-155261` (Hindi) · hreflang paired · sitemap + cross-links auto · contextual link added in PmKisanPaymentFailedFix2026.
+- **Verified is article me:** 155261 + 011-24300606 + pmkisan-ict@gov.in (pmkisan.gov.in Contact Us); hours ~9-6 Mon-Sat; helpline se naya registration/correction NahI hota; problem→solution matrix core element (eKYC→CSC, land seeding→lekhpal/tehsil, payment failed→bank NPCI seeding, state hold→DAO/nodal officer); Help Desk Query Form ticket system portal par.
 - **Slug:** `pm-kisan-helpline-155261` · **Verify:** pmkisan.gov.in contact page
 - **Prompt:** Utility page — sabse chhota prompt, par 2000 words banane ke liye har complaint-type ka mini-guide banao. Numbers: 155261 / 011-24300606, email pmkisan-ict@gov.in — verify karo current hain. Sections: kis problem ke liye kahan (kist nahi aayi → pehle status khud check karo [status articles link], eKYC issue → CSC, land seeding → lekhpal/tehsil, bank wapas gaya → NPCI seeding [hi/npci link]). Call karne se pehle kya ready rakho (registration no., Aadhaar). Helpline pe kya NAHI hota (naya registration, correction — wo portal pe hota hai). Query escalate kaise kare (grievance portal / nodal officer — PmKisanStateNodalOfficerList link). FAQ 6 — "phone nahi lagta to?", "kitne din me jawab?". Structure: problem→solution matrix table iska core hai, upar rakho.
 

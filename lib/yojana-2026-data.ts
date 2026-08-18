@@ -72,6 +72,60 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
       '/articles/KisanRinKahaSeLe2026',
     ],
   },
+  {
+    slug: 'pm-kisan-khad-yojana-11000-sach',
+    mainKeyword: 'pm kisan khad yojana',
+    secondaryKeywords: [
+      'pm kisan khad yojana 11000',
+      'khad yojana registration sach ya jhooth',
+      'fertilizer subsidy kaise milti hai',
+      'urea subsidy per bag',
+      'pm kisan khad yojana apply online fake',
+      'khad yojana form fraud',
+      'fertilizer dbt kya hai',
+    ],
+    title: 'PM Kisan Khad Yojana ₹11,000 — Sach Kya Hai',
+    description:
+      '₹11,000 wali koi alag Khad Yojana officially exist nahi karti. Rumor kahan se aaya, khad par sarkar asal me kya deti hai (urea ₹242 vs asli laagat ₹2,200+), aur fake registration forms se kaise bacho.',
+    ogTitle: 'PM Kisan Khad Yojana ₹11,000 — Sach Kya Hai',
+    component: 'PmKisanKhadYojanaSach',
+    officialPortal: 'https://pmkisan.gov.in',
+    published: '2026-08-18T11:30:00+05:30',
+    modified: '2026-08-18T11:30:00+05:30',
+    readTime: '11 min read',
+    relatedPaths: [
+      '/articles/PmKisanMasterGuide2026',
+      '/articles/PmfbyCropInsurance2026',
+      '/articles/PmKisanBeneficiaryList2026',
+    ],
+  },
+  {
+    slug: 'pm-kisan-helpline-155261',
+    mainKeyword: 'pm kisan helpline number',
+    secondaryKeywords: [
+      'pm kisan helpline 155261',
+      'pm kisan complaint number',
+      'pm kisan toll free number',
+      'pm kisan kist nahi aayi complaint',
+      'pmkisan-ict@gov.in email',
+      'pm kisan grievance kaise kare',
+      'pm kisan helpdesk query form',
+    ],
+    title: 'PM Kisan Helpline 155261 — Complaint Guide',
+    description:
+      'Kist atki hai? 155261 aur 011-24300606 par kab call karein, kaunsi problem kahan hal hogi — eKYC CSC par, land seeding tehsil me, NPCI bank me — aur complaint escalate karne ka poora rasta.',
+    ogTitle: 'PM Kisan Helpline 155261 — Complaint Kaise Aur Kahan Karein',
+    component: 'PmKisanHelpline155261',
+    officialPortal: 'https://pmkisan.gov.in',
+    published: '2026-08-18T11:45:00+05:30',
+    modified: '2026-08-18T11:45:00+05:30',
+    readTime: '10 min read',
+    relatedPaths: [
+      '/articles/PmKisanPaymentFailedFix2026',
+      '/articles/PmKisanEkycOnline2026',
+      '/articles/PmKisanStateNodalOfficerList',
+    ],
+  },
 ];
 
 export const LIVE_YOJANA_2026_ARTICLES = YOJANA_2026_ARTICLES;

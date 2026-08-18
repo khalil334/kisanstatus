@@ -330,7 +330,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             <SI n={2}>Bank jaao — seeding, account active status, aur IFSC teeno ek hi visit mein check karwao.</SI>
             <SI n={3}>Portal par bhi verify kar lo — naam, Aadhaar, bank details sab dobara padh lo.</SI>
             <SI n={4}>3-7 din intezaar karo, seeding ko time lagta hai process hone mein.</SI>
-            <SI n={5}>Fir se status check karo — abhi bhi fail hai to 155261 par call ya email karo.</SI>
+            <SI n={5}>Fir se status check karo — abhi bhi fail hai to 155261 par call ya email karo. Kaunsi problem helpline par hal hoti hai aur kaunsi CSC/tehsil/bank par — iska poora naksha <Link href="/yojana/pm-kisan-helpline-155261" className="underline font-bold">helpline complaint guide</Link> me hai.</SI>
             <SI n={6}>Kuch na bane to CSC jaake written grievance darj karwa do.</SI>
           </StepList>
         </section>

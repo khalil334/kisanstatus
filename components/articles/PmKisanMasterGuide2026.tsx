@@ -207,7 +207,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             CSC center jaao. Wahan fingerprint scan hoga. ₹20-30 charge lag sakta hai. 24 ghante mein complete ho jata hai.
           </p>
           <DB>
-            <strong>Khatre Ki Ghanti:</strong> eKYC free hai - ye government ne bola hai. Koi ₹100+ maange toh fraud hai. 155261 par usi din complaint karo.
+            <strong>Khatre Ki Ghanti:</strong> eKYC free hai - ye government ne bola hai. Koi ₹100+ maange toh fraud hai. 155261 par usi din complaint karo. Waise, PM Kisan ke naam par chalne wali fake schemes bhi bahut hain — jaise <Link href="/yojana/pm-kisan-khad-yojana-11000-sach" className="underline font-bold">₹11,000 wali &ldquo;Khad Yojana&rdquo;</Link>, jo officially exist hi nahi karti.
           </DB>
         </section>
 

@@ -21,10 +21,14 @@ import { getAuthorBio } from '@/lib/author-bios';
 import { CrossSectionLinks } from '@/components/CrossSectionLinks';
 import FasalBimaClaimStatusCheck from '@/components/articles/yojana-2026/FasalBimaClaimStatusCheck';
 import KisanKarjMafiAllStates from '@/components/articles/yojana-2026/KisanKarjMafiAllStates';
+import PmKisanKhadYojanaSach from '@/components/articles/yojana-2026/PmKisanKhadYojanaSach';
+import PmKisanHelpline155261 from '@/components/articles/yojana-2026/PmKisanHelpline155261';
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: Yojana2026ArticleMeta }>> = {
   FasalBimaClaimStatusCheck,
   KisanKarjMafiAllStates,
+  PmKisanKhadYojanaSach,
+  PmKisanHelpline155261,
 };
 
 function buildSchemas(
