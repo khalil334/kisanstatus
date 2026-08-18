@@ -43,6 +43,14 @@ export default function BakriPalanYojana() {
       a: 'Kar sakte hain, aksar log karte bhi hain. Portal reason bata deta hai, wo fix karo aur fir se bhej do.',
     },
     {
+      q: 'Subsidy ka paisa ek saath milta hai ya kisht mein?',
+      a: 'Kisht mein. Aam pattern do kisht ka hai — pehli kisht project approve hone aur bank loan disburse hone ke baad, doosri kisht physical verification ke baad jab unit chalti hui dikhe. Matlab poori subsidy pehle din nahi milti — isliye working capital ka intezaam subsidy ke bharose mat chhodo.',
+    },
+    {
+      q: 'NLM ke 100+5 wale bar tak nahi pahunch sakta — chhote setup ke liye kya option hai?',
+      a: 'Apne state ki pashupalan schemes dekho — Rajasthan, UP, Bihar, MP sabki apni goat-unit schemes hain jinme 10-20 bakri ka unit bhi chal jata hai. Bihar ki scheme ka poora process humne alag guide mein likha hai. Doosra rasta: KCC ke pashupalan component se working capital lo aur dheere-dheere herd badhao, phir NLM ke liye apply karo.',
+    },
+    {
       q: 'Bakri Palan Yojana 2026 ki last date kya hai?',
       a: 'Fixed last date nahi hai. Portal saal bhar applications leta hai, financial year ke budget khatam hone tak. Apne state ke Pashu Palan office se current status ek baar confirm kar lena.',
     },
@@ -300,6 +308,48 @@ export default function BakriPalanYojana() {
             <li>Original documents farm pe nahi milte, ghar pe rakh diye hote hain.</li>
           </ul>
         </div>
+
+        <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+          Approval Ke Baad — Paisa Kaise Aur Kab Milta Hai
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+          Yahi wo hissa hai jo portal pe kahin saaf nahi likha, aur isi liye sabse zyada log yahin
+          confuse hote hain. Subsidy ka paisa ek saath nahi aata — do kisht ka pattern chalta hai:
+        </p>
+        <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
+          <li><strong>Pehli kisht:</strong> project approval + bank loan disbursement ke baad. Bank
+          ke through hi aati hai — seedha aapke haath mein nahi.</li>
+          <li><strong>Doosri kisht:</strong> physical verification ke baad — officer dekh kar jaata
+          hai ki unit asal mein chal rahi hai: bakriyan ginti mein poori, shed quotation jaisa,
+          vaccination record maujood.</li>
+        </ul>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+          Iska seedha matlab: <strong>subsidy working capital nahi hai.</strong> Chara, labor aur
+          pehle 6 mahine ka kharcha apne paise ya loan se chalana hoga. Jo log subsidy ko cash-flow
+          maan kar plan banate hain, unka unit doosri kisht aane se pehle hi haanf jata hai.
+          Bank-end pe deri aam hai — branch se follow-up karte raho aur har visit ka naam-date
+          likh kar rakho, escalation mein yahi kaam aata hai.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+          100+5 Bahut Bada Hai? — Chhote Kisan Ke Liye Raasta
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+          NLM ka bar (100 female + 5 male) commercial farming ke liye bana hai. Ghar ke peeche
+          10-20 bakriyan paalne wale ke liye ye scheme hai hi nahi — aur ye koi kami nahi,
+          bas alag audience hai. Chhote setup ke liye teen raaste hain:
+        </p>
+        <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
+          <li><strong>State pashupalan schemes:</strong> har state ki apni goat-unit scheme hoti
+          hai jisme 10-20 ka unit chalta hai aur subsidy percent bhi aksar achha hota hai —
+          <Link href="/articles/bihar-pashupalan-loan-yojana" className="text-blue-600 hover:underline dark:text-blue-400 font-medium"> Bihar wali scheme ki poori guide yahan hai</Link>.</li>
+          <li><strong>KCC pashupalan limit:</strong> Kisan Credit Card mein pashupalan ka
+          working-capital component hai — chara aur dawai ke kharche ke liye sasta paisa.
+          <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium"> KCC apply guide dekho</Link>.</li>
+          <li><strong>Pehle badhao, phir apply karo:</strong> 2-3 saal mein herd 50-60 tak le jao,
+          records rakho (kharid ke bill, vaccination card) — phir NLM application mein yahi
+          track record aapka sabse bada plus point banta hai.</li>
+        </ul>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
           FAQs

@@ -777,7 +777,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'BakriPalanYojana',
     category: 'pashupalan',
     publishedTime: '2026-02-27T08:09:25+05:30',
-    modifiedTime: '2026-04-10T09:02:12+05:30',
+    modifiedTime: '2026-08-19T00:40:00+05:30',
     readingTime: 18,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('bakri-palan-yojana-nlm-subsidy'),
