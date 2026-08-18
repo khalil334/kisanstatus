@@ -450,7 +450,7 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
         { href: '/articles/KisanCreditCardOnlineApply2026', label: 'KCC Online Apply Guide' },
         { href: '/articles/KisanRinKahaSeLe2026', label: 'Kisan Rin — कहां से लें' },
         { href: '/articles/KisanTractorLoan2026', label: 'Tractor के लिए loan guide' },
-        { href: '/articles/hi/karj-mafi-list', label: 'कर्ज माफी लिस्ट 2027' },
+        { href: '/articles/hi/kisan-karj-mafi-list', label: 'कर्ज माफी लिस्ट — राज्यवार सच' },
       ]}
       />
     </>

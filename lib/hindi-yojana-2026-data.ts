@@ -44,7 +44,7 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
     ],
     category: 'farming',
     publishedTime: '2026-08-18T07:42:14+05:30',
-    modifiedTime: '2026-08-18T07:42:14+05:30',
+    modifiedTime: '2026-08-18T18:45:00+05:30',
     author: AUTHOR_NAME,
     component: 'KisanKarjMafiAllStatesHindi',
     ogImage: '/og-image.webp',

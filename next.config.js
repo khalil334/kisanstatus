@@ -132,6 +132,8 @@ const nextConfig = {
       { source: '/articles/pm-kisan-status-check-2026', destination: '/articles/PmKisan24viKist2026', permanent: true },
       // content-audit W2a: old Hindi helpline page merged into canonical hi twin
       { source: '/articles/hi/helpline-shikayat', destination: '/articles/hi/pm-kisan-helpline-155261', permanent: true },
+      // content-audit W2b: old 2027-stamped Hindi karj-mafi page merged into hreflang-paired twin
+      { source: '/articles/hi/karj-mafi-list', destination: '/articles/hi/kisan-karj-mafi-list', permanent: true },
     ];
   },
 
