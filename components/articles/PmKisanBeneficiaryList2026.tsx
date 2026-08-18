@@ -14,7 +14,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 const PUBLISHED = '2025-12-22T20:13:22+05:30';
-const MODIFIED = '2025-12-31T07:46:21+05:30';
+const MODIFIED = '2026-08-18T20:00:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanVillageWiseListPdfDownload', title: 'Village Wise List PDF' },
@@ -54,6 +54,14 @@ const FAQS_DATA = [
   {
     q: 'Beneficiary list mein caste ka mention hota hai kya?',
     a: 'Nahi, list mein sirf naam, father name, mobile number, aur bank details hote hain. Caste ka column nahi hota.',
+  },
+  {
+    q: 'Naam list mein hai par paisa nahi aaya — kya karun?',
+    a: 'List sirf ye batati hai ki aap registered aur active ho. Paisa uske aage rukta hai, aur wajah portal ke status message mein likhi hoti hai. "FTO is Generated" ho to payment approve hai, 3-7 din mein aa jayega. "Payment Failed" ho to bank/NPCI ka matter hai — account band, IFSC change ya galat account par mapping. "Payment Stopped by State" ho to land record ya duplicate entry ka matter hai, block krishi office jaana padega. Pehle message padho, phir usi ka fix karo.',
+  },
+  {
+    q: 'Ruki hui kist baad mein milti hai ya maaf ho jaati hai?',
+    a: 'Maaf nahi hoti. Wajah theek karne ke baad pending amount arrears ke roop mein baad mein credit ho jaata hai, agar us period mein aap eligible the. Isliye "ab to nikal gayi" sochkar chhodna nuksan hai.',
   },
   {
     q: 'Beneficiary list mein naam nahi mila — pehle eKYC dekhun ya land seeding?',
@@ -350,6 +358,52 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
               </tbody>
             </table>
           </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>Naam List Mein Hai Par Paisa Nahi Aaya — Asli Sawaal Yahi Hai</SH>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            List mein naam dekh lena aadha kaam hai. Har kist ke baad sabse zyada yahi sawaal aata hai — &quot;bhai naam to list mein hai, phir paisa kahan gaya?&quot; Ye normal hai, aur iski wajah list mein nahi hoti. List sirf itna batati hai ki aap scheme mein registered aur active ho. Paisa uske aage char cheezon par rukta hai: eKYC, bank ki Aadhaar-NPCI linking, land record, aur FTO.
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Portal par apna status kholo aur wahan jo message likha hai wahi asli jawab hai. Neeche wo teen message hain jo is case mein sabse zyada dikhte hain:
+          </p>
+
+          <StepList>
+            <SI n={1}><strong>&quot;FTO is Generated&quot; dikh raha hai:</strong> aapka payment approve ho chuka hai, bank tak order chala gaya hai. Yahan par kuch karne ki zaroorat nahi — 3-7 din mein credit ho jata hai. Iska poora matlab <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="text-[var(--color-primary)] underline">FTO guide</Link> mein hai.</SI>
+            <SI n={2}><strong>&quot;Payment Failed&quot; ya &quot;Rft Signed but Payment Failed&quot;:</strong> paisa nikla tha par bank ne wapas kar diya. Aksar account band ho gaya ho, IFSC badal gaya ho (bank merger ke baad ye bohot hua hai), ya NPCI mapping purane account par ho. Fix karne ka poora tarika <Link href="/articles/PmKisanPaymentFailedFix2026" className="text-[var(--color-primary)] underline">payment failed guide</Link> mein step-wise hai.</SI>
+            <SI n={3}><strong>&quot;Payment Stopped by State&quot;:</strong> ye bank ka issue nahi, state ke verification ka hai — zyadatar land record ya duplicate entry ka matter hota hai. Iske liye seedha block krishi office jana padta hai, phone par ye theek nahi hota. <Link href="/articles/PmKisanLandSeedingForm" className="text-[var(--color-primary)] underline">Land seeding form</Link> wala page saath rakho, wahan form aur process dono hai.</SI>
+          </StepList>
+
+          <IB>
+            <strong>Ek line ka rule:</strong> naam list mein hai matlab aap eligible ho — paisa rukne ki wajah hamesha status message mein likhi hoti hai. Pehle message padho, phir usi ka fix karo. Randomly eKYC dobara karne se kuch nahi hota.
+          </IB>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4 mb-3">
+            Ek cheez jo log miss karte hain: <strong>ruki hui kist maaf nahi hoti</strong>. Wajah theek karne ke baad pending amount arrears ke roop mein baad mein ek saath aa jati hai, agar aap us period mein eligible the. Isliye &quot;ab to nikal gayi, chhodo&quot; sochkar baithna nuksan hai — fix karo, paisa aata hai.
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Aur agar status ekdum &quot;Active&quot; dikh raha hai, koi failure message nahi hai, phir bhi paisa nahi aaya — to release ki date dekho. Ho sakta hai us kist ka transfer aapke state mein abhi chal raha ho; sabhi ka paisa ek hi din mein credit nahi hota, batch-wise hota hai. Do-teen din ruk kar dekho, phir 155261 par call karo — call se pehle registration number aur portal ka exact message note kar lena, warna baat aage nahi badhti.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Gaon Ki Poori List PDF Mein — Kab Kaam Aati Hai</SH>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Apna naam check karna ek baat hai, aur poore gaon ki list nikalna doosri. Gaon ki list tab kaam aati hai jab shak ho ki kisi ka naam galat entry se juda hai, ya jab panchayat/CSC par ek saath kai logon ka status batana ho. Dashboard se list screen par khulti hai, aur usi ko PDF mein save karke rakh lena behtar hai — baad mein compare karne ke liye.
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Do practical baatein. Ek — list mein naam wahi spelling mein dikhega jo Aadhaar/registration ke time bhara gaya tha, isliye Ctrl+F karte waqt poora naam mat likho, sirf 4-5 akshar likho warna match nahi hoga. Do — list bade gaon mein kai page ki hoti hai, PDF save karte waqt browser &quot;all pages&quot; select karna zaroori hai.
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Step-by-step screenshots ke saath poora tarika alag page par hai: <Link href="/articles/PmKisanVillageWiseListPdfDownload" className="text-[var(--color-primary)] underline font-medium">village wise list PDF download guide</Link>. Naam list mein nahi mila to <Link href="/articles/PmKisanRejectedStatusReApplyGuide" className="text-[var(--color-primary)] underline">rejected status wala page</Link> dekho — wahan reason ke hisaab se fix likha hai.
+          </p>
         </section>
 
         <section className="mb-8">

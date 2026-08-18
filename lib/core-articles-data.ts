@@ -68,7 +68,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanBeneficiaryList2026',
     category: 'status-check',
     publishedTime: '2025-12-22T20:13:22+05:30',
-    modifiedTime: '2025-12-31T07:46:21+05:30',
+    modifiedTime: '2026-08-18T20:00:00+05:30',
     readingTime: 15,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisanBeneficiaryList2026'),
