@@ -34,6 +34,18 @@ const FAQS_DATA = [
     q: 'State-level problem ho to Delhi wali helpline kya karegi?',
     a: 'Sach ye hai ki kai problems — land seeding, state approval, record verification — state ke paas atki hoti hain, aur central helpline sirf forward kar sakti hai. Aise case me apne state ke nodal officer ya district krishi adhikari se seedha sampark zyada tez hota hai. Nodal officers ki poori list hamare paas alag article me hai.',
   },
+  {
+    q: 'Complaint karne ke paise lagte hain kya?',
+    a: 'Bilkul nahi. Na phone complaint ke, na online ke, na CSC se query dalwane ke (CSC apna mamuli service charge le sakta hai, par sarkari fee zero hai). Koi "agent" bole ki paise deke andar se kaam karwa dega — wo fraud hai. Complaint har step par free hai.',
+  },
+  {
+    q: 'Khud online karna mushkil hai — CSC se ho jaayega?',
+    a: 'Haan. Nazdeeki CSC (Jan Seva Kendra) se Help Desk query dalwa sakte ho. Bas ticket/reference number likhwa kar zaroor rakho, taaki status khud track kar sako. Gaon me network na ho to block ke krishi vibhag office me likhit shikayat bhi ek rasta hai.',
+  },
+  {
+    q: 'Ek saath kitni complaints daal sakte hain?',
+    a: 'Ek problem ki ek hi query daalo. Ek hi baat ki kai queries dalne se record uljhta hai aur jawab der se aata hai. Haan, do alag-alag dikkatein hain — eKYC bhi aur payment bhi — to dono ki alag query theek hai.',
+  },
 ];
 
 export default function PmKisanHelpline155261({ article }: { article: Yojana2026ArticleMeta }) {
@@ -167,6 +179,48 @@ export default function PmKisanHelpline155261({ article }: { article: Yojana2026
           Helpline par aap call karte ho; kist dilwane ke liye koi aapko call nahi karta.
         </WB>
 
+        <SH>Email Se Complaint — Format Aisa Rakho</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Email (<strong>pmkisan-ict@gov.in</strong>) un cases ke liye sahi hai jahan documents attach
+          karne hon — passbook ki photo, rejection ka screenshot. Format kuch aisa:
+        </p>
+        <div className="my-4 p-4 bg-green-50 dark:bg-green-900/20 border-l-4 border-green-600 dark:border-green-500 rounded-r-xl text-sm leading-relaxed text-[var(--color-text)]">
+          <strong>Subject:</strong> PM Kisan — Kist nahi mili — [Aadhaar ke aakhri 4 ank]<br /><br />
+          Mahoday,<br />
+          Mera naam [naam], gaon [gaon], zila [zila], rajya [rajya].<br />
+          Registration mobile number: [number]<br />
+          Samasya: [kaunsi kist, kab se, status me kya dikh raha hai]<br />
+          Kripya samadhan karein.<br />
+          Dhanyavaad.
+        </div>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Poora Aadhaar number email me mat likho — aakhri 4 ank kaafi hain. Aur ek hi complaint baar-baar
+          alag-alag email se mat bhejo — process tez nahi hota, records ulajh jaate hain.
+        </p>
+
+        <SH>Complaint Likhte Waqt Ye 4 Galtiyan Mat Karo</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Help Desk par hazaron queries roz aati hain. Jinki complaint saaf likhi hoti hai, unka record
+          jaldi dhundha jaata hai. Chaar galtiyan jo baar-baar dikhti hain:
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-3">
+          <strong>Gusse wali lambi kahani.</strong> Padhne wale ko aapki poori aapbeeti nahi, teen cheezein
+          chahiye — kaunsi kist, kab se ruki, status me kya likha aa raha hai. Teen line kaafi hain.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-3">
+          <strong>Galat category.</strong> Payment ki dikkat eKYC category me daal di, to query galat desk
+          par jaayegi aur wahan se lautne me hafte lagenge. Category do baar padh kar chuno.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-3">
+          <strong>Details bina confirm kiye.</strong> Aadhaar ke ank galat likh diye to record milega hi
+          nahi. Submit se pehle ek baar sab mila lo.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          <strong>Status me jo dikh raha hai, wo na batana.</strong> &ldquo;Paisa nahi aaya&rdquo; adhoori
+          baat hai. &ldquo;Status me FTO generated likha hai lekin 3 hafte se payment nahi&rdquo; — ye poori
+          baat hai, aur iska jawab bhi sateek aata hai.
+        </p>
+
         <SH>Baat Na Bane To Upar Kaise Jaayein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Helpline se kaam na bane, online query ka jawab bhi santosh-janak na ho — to seedhi upar ki
@@ -177,10 +231,31 @@ export default function PmKisanHelpline155261({ article }: { article: Yojana2026
           officer list</Link> me diye hain. Likhit shikayat ki copy apne paas rakho; agli baar &ldquo;pehle
           bhi likha tha&rdquo; kehne ke liye wahi kaam aati hai.
         </p>
-        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-6">
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Aakhri hathiyar — <strong>CPGRAMS</strong> (pgportal.gov.in), kendra sarkar ka apna grievance
+          portal. Yahan darj shikayat seedhe krishi mantralaya tak jaati hai aur registration number se
+          track hoti hai. Ise pehla nahi, aakhri rasta samjho — pehle Help Desk aur nodal officer aazmao.
+          Par jab mahino baad bhi baat na bane, tab CPGRAMS par purani query ka reference dete hue shikayat
+          daalo. Mantralaya level se aayi query par neeche ke office aksar tezi se hilte hain.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Aur ek baat — problem eKYC ki nikli ho to{' '}
           <Link href="/articles/PmKisanEkycOnline2026" className="underline">eKYC guide</Link> me OTP wala
           tareeka ghar se hi ho jaata hai, CSC ke chakkar ke bina. Wahi pehle try kar lo.
+        </p>
+
+        <SH>Raat Me Ya Phone Ke Alawa — Naye Raste</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          NIC ke mutabik PM-Kisan system me ab <strong>24×7 IVRS aadharit helpline</strong> aur chatbot bhi
+          hai — raat me bhi basic status-poochtaachh recorded system se ho sakti hai, bhale staff se baat
+          kaamkaji ghanton me hi ho. UMANG app ke Kisan Suvidha se bhi yojana ki sewayein judi hain.
+          Pehchaan wali saavdhani har jagah ek hi hai: OTP ya bank password koi bhi sarkari channel kabhi
+          nahi maangta.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-6">
+          Ek aakhri practical aadat — har call/query ki ek parchi rakho: tareekh, kisse baat hui, kya kaha
+          gaya, ticket number. Teen-chaar entries ke baad yahi parchi aapki sabse mazboot daleel ban jaati
+          hai, kyunki tab aap andaaze se nahi, record se baat karte ho.
         </p>
 
         <FAQBlock faqs={FAQS_DATA} />
