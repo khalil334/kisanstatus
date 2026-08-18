@@ -325,7 +325,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'soil-health-card-complete-guide-2026',
     category: 'farming',
     publishedTime: '2026-01-11T14:57:53+05:30',
-    modifiedTime: '2026-01-25T13:34:27+05:30',
+    modifiedTime: '2026-08-18T19:15:00+05:30',
     readingTime: 8,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('soil-health-card-complete-guide-2026'),

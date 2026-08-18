@@ -6,7 +6,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-11T14:57:53+05:30';
-const MODIFIED = '2026-01-25T13:34:27+05:30';
+const MODIFIED = '2026-08-18T19:15:00+05:30';
 
 const RELATED = [
   { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price & Rate' },
@@ -15,6 +15,14 @@ const RELATED = [
 ];
 
 const FAQS_DATA = [
+  {
+    q: 'Card kitni bhasha mein milta hai? Hindi mein samajh aayega?',
+    a: 'Haan. Soil Health Card ab 22 bhashaon aur 5 boliyon (dialects) mein milta hai — Hindi samet. Portal se download karte waqt apni bhasha chun sakte ho. Report ka format bhi ab pehle se saral hai, har nutrient ke aage Low/Medium/High aur sifarish likhi hoti hai.',
+  },
+  {
+    q: 'Scheme abhi chal bhi rahi hai ya band ho gayi?',
+    a: 'Poori tarah chal rahi hai. 2022-23 se yeh scheme Rashtriya Krishi Vikas Yojana (RKVY) ke "Soil Health & Fertility" component ke andar aa gayi hai — naam ka technical badlav hai, kisan ke liye process wahi hai aur test ab bhi free hai. July 2026 tak desh mein 25.89 crore se zyada cards issue ho chuke hain. June 2026 mein sarkar ne "Khet Bachao Abhiyan" bhi chalaya tha jisme soil testing par hi zor tha.',
+  },
   {
     q: 'Soil health card bilkul free hai ya kharcha aata hai?',
     a: 'Bilkul free hai bhai. Government poora test aur card banate hain. Sirf travel kharcha ho sakta hai agar aap lekar aaye to lab mein.',
@@ -278,6 +286,30 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
         </section>
 
         <section className="mb-8">
+          <SH>2026 Mein Scheme Ka Haal — Kya Naya Hai</SH>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Yeh scheme 2015 se chal rahi hai aur abhi bhi puri raftaar mein hai. 2026 ke verified aankde
+            aur badlav yeh hain:
+          </p>
+          <div className="space-y-3 mb-6">
+            <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <p className="font-black text-sm mb-1 text-[var(--color-text)]">25.89 crore se zyada cards issue (July 2026 tak)</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">Matlab yeh koi kagzi scheme nahi hai — desh ke zyadatar kisano tak card pahunch chuka hai. Agar aapke paas nahi hai, toh aap piche reh gaye ho, scheme nahi.</p>
+            </div>
+            <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <p className="font-black text-sm mb-1 text-[var(--color-text)]">Ab 12 parameters test hote hain</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">N, P, K (macro) + Sulphur + Zinc, Iron, Copper, Manganese, Boron (micro) + pH, EC, Organic Carbon. Har parameter ke aage Low/Medium/High aur uski sifarish.</p>
+            </div>
+            <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <p className="font-black text-sm mb-1 text-[var(--color-text)]">Card har 2 saal mein naya banta hai</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">Biennial cycle hai — matlab 2024 ka card ab purana ho raha hai. 2026 mein naya sample dene ka time aa gaya hai. Khaad ka hisaab purani report se mat chalao.</p>
+            </div>
+            <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+              <p className="font-black text-sm mb-1 text-[var(--color-text)]">June 2026: Khet Bachao Abhiyan</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">Krishi mantri ne nationwide abhiyan chalaya — soil testing, santulit khaad aur natural farming par. KVK aur agriculture department ke through gaon-gaon training ho rahi hai; apne block ke KVK se free training ka pata karo.</p>
+            </div>
+          </div>
+
           <SH>Soil Health Card Ka Fayda — Actual Numbers</SH>
 
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
