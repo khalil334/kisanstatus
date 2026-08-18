@@ -240,7 +240,8 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             <li><strong>Sirf allied activity wale KCC par</strong> subvention wali working-capital limit crop KCC se alag treat hoti hai — dono activities hain toh combined card banwao, alag-alag nahi.</li>
           </ul>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Branch par "KCC-AH" (Animal Husbandry) bolke baat shuru karein — kai baar counter staff ko lagta hai KCC matlab sirf kheti, aur woh galat form thama dete hain. Scheme details{' '}
+            Branch par "KCC-AH" (Animal Husbandry) bolke baat shuru karein — kai baar counter staff ko lagta hai KCC matlab sirf kheti, aur woh galat form thama dete hain. Per-pashu limit kitni banti hai (bhains ₹60,249, gaay ₹40,783 wala hisaab) aur bank me exact kya bolna hai — iska poora breakdown{' '}
+            <Link href="/yojana/pashu-kisan-credit-card-apply" className="text-green-700 dark:text-green-400 underline font-medium">Pashu Kisan Credit Card wali guide</Link> me alag se likha hai. Scheme details{' '}
             <a href="https://dahd.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline font-medium">Department of Animal Husbandry (dahd.gov.in)</a> par verified hain. Dairy loan ke deeper comparison ke liye hamari{' '}
             <Link href="/articles/sbi-dairy-loan-interest-rate" className="text-green-700 dark:text-green-400 underline font-medium">SBI dairy loan guide</Link> padhein.
           </p>

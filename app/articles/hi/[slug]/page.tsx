@@ -42,6 +42,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: HindiArticle }>>
   PmKisanKhadYojanaSachHindi: dynamic(() => import('@/components/articles/hindi-yojana-2026/PmKisanKhadYojanaSachHindi'), { ssr: true }),
   PmKisanHelpline155261Hindi: dynamic(() => import('@/components/articles/hindi-yojana-2026/PmKisanHelpline155261Hindi'), { ssr: true }),
   MgnregaPashuShedYojanaHindi: dynamic(() => import('@/components/articles/hindi-yojana-2026/MgnregaPashuShedYojanaHindi'), { ssr: true }),
+  PashuKisanCreditCardHindi: dynamic(() => import('@/components/articles/hindi-yojana-2026/PashuKisanCreditCardHindi'), { ssr: true }),
 };
 
 export const revalidate = 86400;

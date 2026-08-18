@@ -153,6 +153,34 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
       '/articles/dairy-farm-loan-without-collateral',
     ],
   },
+  {
+    slug: 'pashu-kisan-credit-card-apply',
+    mainKeyword: 'pashu kisan credit card',
+    secondaryKeywords: [
+      'pashu kisan credit card apply',
+      'pashu kcc loan kitna milta hai',
+      'pashu kisan credit card haryana',
+      'kcc for animal husbandry',
+      'bhains par loan kitna milta hai',
+      'pashu loan bina zameen ke',
+      'pashu kcc interest rate 4 percent',
+      'pashu kisan credit card documents',
+    ],
+    title: 'Pashu Kisan Credit Card — ₹3 Lakh Tak',
+    description:
+      'Pashu KCC alag scheme nahi — KCC ka hi animal husbandry roop hai. Bhains ₹60,249, gaay ₹40,783 per pashu, ₹2 lakh tak bina guarantee, 4% interest ka poora math.',
+    ogTitle: 'Pashu Kisan Credit Card — ₹3 Lakh Tak Loan, Bina Zameen Ke Bhi',
+    component: 'PashuKisanCreditCard',
+    officialPortal: 'https://pashudhanharyana.gov.in',
+    published: '2026-08-18T21:00:00+05:30',
+    modified: '2026-08-18T21:00:00+05:30',
+    readTime: '12 min read',
+    relatedPaths: [
+      '/articles/KisanCreditCardOnlineApply2026',
+      '/articles/dairy-farm-loan-without-collateral',
+      '/articles/sbi-dairy-loan-interest-rate',
+    ],
+  },
 ];
 
 export const LIVE_YOJANA_2026_ARTICLES = YOJANA_2026_ARTICLES;

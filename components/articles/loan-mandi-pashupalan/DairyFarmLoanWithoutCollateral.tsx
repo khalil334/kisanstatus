@@ -556,7 +556,8 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
             ₹20 lakh se bada project hai aur bank normal term loan de raha hai → <strong>CGTMSE</strong> cover ki baat
             karo. SC/ST ya mahila ho aur greenfield project hai → <strong>Stand-Up India</strong> bhi puchho. Working
             capital ke liye alag se <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC</Link> le lena
-            sabse samajhdaari ka kaam hai.
+            sabse samajhdaari ka kaam hai — pashu ke hisaab se limit kaise banti hai aur ₹2 lakh tak bina guarantee
+            wala rasta <Link href="/yojana/pashu-kisan-credit-card-apply" className="underline font-bold">Pashu KCC wali guide</Link> me hai.
           </p>
         </div>
 

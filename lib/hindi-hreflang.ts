@@ -27,6 +27,7 @@ export const HINDI_TO_HINGLISH: Readonly<Record<string, string>> = {
   'pm-kisan-khad-yojana-sach': '/yojana/pm-kisan-khad-yojana-11000-sach',
   'pm-kisan-helpline-155261': '/yojana/pm-kisan-helpline-155261',
   'mgnrega-pashu-shed-yojana': '/yojana/mgnrega-pashu-shed-yojana',
+  'pashu-kisan-credit-card': '/yojana/pashu-kisan-credit-card-apply',
 };
 
 export const HINGLISH_TO_HINDI: Readonly<Record<string, string>> = Object.freeze(
