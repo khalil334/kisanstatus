@@ -124,3 +124,18 @@
 - NO deliberate typos/spelling mistakes — owner suggested them for human feel,
   but they hurt trust + SERP titles (the exact issue we keep fixing). Human feel
   comes from voice and specifics, not errors. Titles/meta must stay clean.
+
+## Ahrefs issue: Slow page (c64d7cbc, fixed 2026-08-18)
+- 1 page flagged: /articles — TTFB 1034ms of 1038ms load in crawl; live checks
+  showed 100-150ms on edge HIT, so the slow sample was a cache-MISS blocking on
+  ISR regeneration (revalidate=3600, region bom1).
+- Root cause of expensive regeneration + heavy HTML: the CollectionPage
+  ItemList in app/articles/page.tsx embedded a FULL Article object per article
+  (author, publisher+logo, image, dates, description) — ~120KB JSON-LD, ~25%
+  of the 471KB page. Reduced ListItems to position+url+name (Google's summary
+  page pattern); full Article schema stays on each article page.
+- Cache headers for /articles were already correct (s-maxage=86400 +
+  stale-while-revalidate=86400) — do not "fix" those again.
+- Pattern for future Slow page flags: compare crawl TTFB vs live TTFB first;
+  a single marginal (~1s) depth-0 page usually means cold-cache ISR regen,
+  not a systemic server problem.

@@ -9,10 +9,7 @@ import {
   AUTHOR_NAME,
   AUTHOR_URL,
   DEFAULT_OG_IMAGE,
-  SITE_DESCRIPTION,
-  LOGO_URL,
-  LOGO_WIDTH,
-  LOGO_HEIGHT
+  SITE_DESCRIPTION
 } from '@/lib/site-config';
 import ArticlesClient from './ArticlesClient';
 
@@ -98,56 +95,23 @@ export const metadata: Metadata = {
 };
 
 export default function ArticlesPage() {
-  const orgPublisher = {
-    '@type': 'Organization',
-    name: SITE_NAME,
-    url: SITE_URL,
-    logo: {
-      '@type': 'ImageObject',
-      url: LOGO_URL,
-      width: LOGO_WIDTH,
-      height: LOGO_HEIGHT,
-    },
-  };
-
-  const toAbsolute = (img?: string) =>
-    !img ? DEFAULT_OG_IMAGE : img.startsWith('http') ? img : `${SITE_URL}${img}`;
-
+  // Ahrefs "Slow page" fix (2026-08-18): the ItemList previously embedded a
+  // full Article object (author, publisher+logo, image, dates, description)
+  // per article — ~120 KB of JSON-LD, ~25% of the page HTML — regenerated on
+  // every ISR revalidation. Google's summary-page guidance for list pages is
+  // minimal ListItems (url only is required); the full Article schema already
+  // lives on each article page. Keeping position + url + name only.
   const schemaArticles = ALL_ARTICLES.map((article, i) => {
     const isMaandhan = article.category === 'pension-scheme' || article.slug.includes('maandhan');
     const articlePath =
       article.href ?? (isMaandhan ? `/maandhan/${article.slug}` : `/articles/${article.slug}`);
     const articleUrl = `${SITE_URL}${articlePath}`;
 
-    const published = article.publishedTime || article.published;
-    const modified = article.modifiedTime || article.modified || published;
-    const authorName = article.author || AUTHOR_NAME;
-
     return {
       '@type': 'ListItem',
       position: i + 1,
-      item: {
-        '@type': 'Article',
-        '@id': articleUrl,
-        url: articleUrl,
-        name: article.title,
-        headline: article.title,
-        description: article.desc || article.description || 'KisanStatus verified guide',
-        image: toAbsolute(article.ogImage || article.image),
-        inLanguage: 'hi-IN',
-        ...(published ? { datePublished: published } : {}),
-        ...(modified ? { dateModified: modified } : {}),
-        author: {
-          '@type': 'Person',
-          name: authorName,
-          url: AUTHOR_URL,
-        },
-        publisher: orgPublisher,
-        mainEntityOfPage: {
-          '@type': 'WebPage',
-          '@id': articleUrl,
-        },
-      },
+      url: articleUrl,
+      name: article.title,
     };
   });
 
