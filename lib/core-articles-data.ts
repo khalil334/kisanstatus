@@ -118,7 +118,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmfbyCropInsurance2026',
     category: 'farming',
     publishedTime: '2026-01-05T09:36:58+05:30',
-    modifiedTime: '2026-01-14T18:35:26+05:30',
+    modifiedTime: '2026-08-14T21:10:00+05:30',
     readingTime: 10,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmfbyCropInsurance2026'),
