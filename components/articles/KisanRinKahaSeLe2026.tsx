@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2025-12-16T12:07:52+05:30';
-const MODIFIED = '2025-12-25T16:17:12+05:30';
+const MODIFIED = '2026-08-18T19:30:00+05:30';
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
   return date.toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' });
@@ -170,7 +170,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
               <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-1">₹2 Lakh Collateral-Free</p>
-              <p className="text-xs text-[var(--color-text-muted)]">CGTMSE se ₹5 lakh tak possible</p>
+              <p className="text-xs text-[var(--color-text-muted)]">RBI ne Jan 2025 se limit ₹1.6L → ₹2L ki hai</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
               <p className="font-black text-amber-800 dark:text-amber-300 text-sm mb-1">ATM Card Included</p>
@@ -181,6 +181,25 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
               <p className="text-xs text-[var(--color-text-muted)]">Free insurance bundled with card</p>
             </div>
           </div>
+
+          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">2025-26 Me Kya Badla — Do Kaam Ki Baatein</h3>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            <strong>Pehli:</strong> Budget 2025-26 ne interest subvention ki ceiling <strong>₹3 lakh se badhakar
+            ₹5 lakh</strong> kar di. Matlab ab ₹5 lakh tak ke short-term crop loan par bhi 4% wala effective
+            rate mil sakta hai — pehle ye fayda ₹3 lakh par ruk jaata tha. 7.75 crore se zyada active KCC
+            holders is daayre me aate hain.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            <strong>Doosri:</strong> RBI ne January 2025 se collateral-free agriculture loan ki limit
+            <strong> ₹1.6 lakh se badhakar ₹2 lakh</strong> kar di — allied activities (dairy, poultry) ke
+            loan bhi shamil. Iska seedha matlab: ₹2 lakh tak ke loan par bank zameen girvi ya margin nahi
+            maang sakta. Branch me koi collateral maange to RBI ke is circular ka hawala do.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ek aur raasta — <Link href="/articles/jansamarth-portal-loan-apply" className="underline">JanSamarth
+            portal</Link> se KCC samet kai sarkari loan schemes ka online apply ek hi jagah se hota hai;
+            branch jaane se pehle wahan eligibility check kar sakte ho.
+          </p>
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Apply Kaise Karein</h3>
           <StepList>
