@@ -150,6 +150,9 @@ content AI-generated dikha, to fix ulta padega. Isliye ye rules **non-negotiable
 
 ### A. Human likhne ka tareeqa (AI-pattern se bachna)
 
+0. **Har article 2,000+ words ka ho** — par sirf real, helpful, unique content se. Padding
+   karke 2,000 tak pahunchna allowed nahi (rule 5 dekho). Agar topic me 2,000 words ki depth
+   nahi banti, to Fix 3 ke options use karo (merge ya noindex), thin article publish mat karo.
 1. **Banned words/phrases** — ye AI ke fingerprint hain, kabhi use mat karo:
    "delve", "moreover", "furthermore", "in today's world", "it's important to note",
    "comprehensive guide", "seamless", "landscape", "navigate the process", "unlock",
@@ -161,13 +164,24 @@ content AI-generated dikha, to fix ulta padega. Isliye ye rules **non-negotiable
 3. **Har claim me asli specifics.** Yojana ka naam, amount (₹6,000, ₹2,000 ki kist), date,
    helpline number, portal ka naam (pmkisan.gov.in). "Sarkar kai yojanayein chalati hai" type
    ka generic sentence = delete. Jo cheez verify nahi kar sakte, wo likhni hi nahi (guess mat karo).
-4. **Har intro alag structure ka ho.** 12 category descriptions likhni hain — agar sab
+   **Fake ya unverified claim = zero tolerance.** Koi bhi amount, date, eligibility rule jo
+   official source (gov.in portal, press release) se confirm nahi — article me nahi jayega.
+   Galat info kisan ko nuksan degi aur Google trust bhi todegi.
+4. **Zero copy-paste.** Kisi bhi website (news sites, dusre yojana blogs, sarkari portal ka
+   text) se paragraph utha kar mat daalo — na as-is, na halka reword karke. Facts wahi se lo,
+   par likhna 100% apne words me hai. Har article unique hona chahiye — apni site ke dusre
+   articles se bhi overlap nahi (do articles me same paragraphs = duplicate content problem).
+5. **Filler/invaluable content mat likho.** Word count badhane ke liye padding paragraphs,
+   obvious baatein ("internet aaj bahut zaroori hai"), ya repeated info mat daalo. Har section
+   kisan ko kuch naya aur kaam ka bataye — warna wo section delete karo. 2,000 words padding
+   se behtar 1,800 solid words hain... par target phir bhi 2,000+ REAL content ka hai.
+6. **Har intro alag structure ka ho.** 12 category descriptions likhni hain — agar sab
    "Is category me aapko X milega..." se shuru huin to Google ke liye wo 12 near-duplicates hain.
    Kisi me sawaal se shuru karo, kisi me kisan ki asli situation se, kisi me seedha fact se.
-5. **Lists/tables tabhi jab data ho.** AI har cheez bullet bana deta hai. Table sirf comparison
+7. **Lists/tables tabhi jab data ho.** AI har cheez bullet bana deta hai. Table sirf comparison
    ya numbers ke liye; warna normal paragraph me likho. Har section me heading + 3 bullets ka
    pattern repeat mat karo.
-6. **First-person aur direct address theek hai.** "Humne dekha hai ki...", "Aap agar 13vi kist
+8. **First-person aur direct address theek hai.** "Humne dekha hai ki...", "Aap agar 13vi kist
    ka wait kar rahe hain to..." — ye human signal hai. Robotic neutral tone se behtar.
 
 ### B. On-page limits (AEO/SEO ranges — har page pe check karo)
@@ -179,7 +193,7 @@ content AI-generated dikha, to fix ulta padega. Isliye ye rules **non-negotiable
 | Primary keyword | 1–2 per page | |
 | Secondary keywords | 3–5 max | |
 | Keyword density | 0.5%–1.5% max | Zabardasti keyword thoosna = spam signal |
-| Content length | 800–2,500 words | Category intros 300–500 (Fix 1); articles site-standard 2,000+ |
+| Content length | Articles: 2,000+ words (mandatory) | Category intros 300–500 (Fix 1); padding se nahi, real content se |
 | H1 | 1 per page | |
 | H2 | 3–8 per page | |
 | H3 | 5–15 per page | Zaroorat ho tabhi |
@@ -200,6 +214,10 @@ content AI-generated dikha, to fix ulta padega. Isliye ye rules **non-negotiable
 
 ### D. Commit se pehle self-check
 
+- [ ] Article 2,000+ words ka hai (bina padding ke)?
+- [ ] Har claim/amount/date official source se verified hai (koi fake/unverified claim nahi)?
+- [ ] Kahin se copy-paste ya reword nahi kiya — 100% apne words, site ke dusre articles se bhi unique?
+- [ ] Har section kisan ke liye genuinely helpful hai (filler sections delete kiye)?
 - [ ] Banned words zero hain?
 - [ ] Paragraph lengths mixed hain (sab 3-line nahi)?
 - [ ] Kam se kam 3 verifiable specifics (amount/date/portal) hain?
