@@ -30,7 +30,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'rajasthan kisan samman nidhi kist',
       'mukhyamantri kisan samman nidhi rajasthan',
     ],
-    title: 'Rajasthan Kisan Samman Nidhi — Kist Kab Aayegi 2026',
+    title: 'Rajasthan Kisan Samman Nidhi — Kist Kab Aayegi',
     description:
       'Rajasthan Kisan Samman Nidhi: 6vi kist pending, 7vi uske baad — official date abhi nahi. Jan Soochna se status check, eligibility aur badhi raqam ka sach.',
     ogTitle: 'Rajasthan Kisan Samman Nidhi — Nayi Raqam Aur Status',

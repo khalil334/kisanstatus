@@ -28,6 +28,12 @@ const BRAND_ROUTES = [
 ];
 const MIN_WORD_LEN = 3;
 const WINDOW = 6;
+// app/layout.tsx title template appends ' - KisanStatus' (14 chars) to every
+// per-page title. Google's practical desktop limit is ~60 chars, so each
+// seoTitle must fit in 60 - 14 = 46 chars — longer titles get truncated or
+// rewritten in the SERP (Ahrefs "Page and SERP titles do not match").
+const TITLE_SUFFIX_LEN = 14; // ' - KisanStatus'
+const RENDERED_TITLE_BUDGET = 60;
 
 const read = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
 const exists = (p) => fs.existsSync(path.join(ROOT, p));
@@ -102,6 +108,7 @@ function main() {
   };
 
   const violations = [];
+  const overlength = [];
   const unresolved = [];
   let checked = 0;
 
@@ -125,6 +132,27 @@ function main() {
         : field('seoTitle') || field('ogTitle') || field('title');
       const compName = field('component') || (routeMaps[file] || {})[slug] || null;
       const h1 = isHindi ? field('titleHi') : firstH1(resolve(compName));
+
+      // Measure the string each route actually renders into <title>:
+      //   app/articles/[slug]      → seoTitle || ogTitle || title
+      //   app/articles/hi/[slug]   → seoTitleHi ?? titleHi
+      //   app/maandhan/[slug], app/rajya-yojana/[slug] → title
+      // noindex pages have no SERP, so their length doesn't matter.
+      const usesPlainTitle = /maandhan-data|rajya-yojana-data/.test(file);
+      const renderedTitle = isHindi
+        ? field('seoTitleHi') || field('titleHi')
+        : usesPlainTitle
+          ? field('title')
+          : field('seoTitle') || field('ogTitle') || field('title');
+      const isNoindex = /\bnoindex:\s*true\b/.test(chunk);
+      if (renderedTitle && !isNoindex) {
+        const rendered = renderedTitle.length + TITLE_SUFFIX_LEN;
+        if (rendered > RENDERED_TITLE_BUDGET) {
+          overlength.push(
+            `${slug}\n      title (${renderedTitle.length} chars, renders as ${rendered}): ${renderedTitle}`
+          );
+        }
+      }
 
       if (!h1) {
         unresolved.push(`${slug} (component: ${compName || 'unknown'})`);
@@ -164,11 +192,17 @@ function main() {
     console.log(`\n${violations.length} title/H1 pair(s) share no keyword in the first ${WINDOW} words:`);
     for (const v of violations) console.log('  -', v);
   }
-  if (violations.length || branded.length) {
+  if (overlength.length) {
+    console.log(
+      `\n${overlength.length} title(s) over budget (max ${RENDERED_TITLE_BUDGET - TITLE_SUFFIX_LEN} chars; layout appends ${TITLE_SUFFIX_LEN}-char ' - KisanStatus'):`
+    );
+    for (const o of overlength) console.log('  -', o);
+  }
+  if (violations.length || branded.length || overlength.length) {
     console.log('\nFix by aligning the data file\'s seoTitle with the component\'s <h1>.');
     process.exit(1);
   }
-  console.log('\n✓ all titles aligned with their H1, no double-branding');
+  console.log('\n✓ all titles aligned with their H1, within budget, no double-branding');
 }
 
 main();

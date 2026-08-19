@@ -103,7 +103,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'msp-list-2026-27',
     title: 'MSP List 2026-27: Rabi & Kharif',
-    seoTitle: 'MSP List 2026-27 — Kharif & Rabi सभी फसलों के रेट (सरकारी सूची)',
+    seoTitle: 'MSP List 2026-27 — Kharif & Rabi Rate',
     desc: 'Rabi aur Kharif — dono ki poori MSP table ek jagah: gehu ₹2,585, dhan ₹2,441, chana ₹5,875 aur baaki faslein, pichhle saal se kitna badha uske saath.',
     ogTitle: 'MSP List 2026-27 — Rabi & Kharif Puri List',
     ogImage: '/images/articles/loan-mandi-pashupalan/msp-list-2026-27/kharid-kendra.webp',
@@ -214,7 +214,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'bihar-pashupalan-loan-yojana',
-    seoTitle: 'Bihar Pashupalan Loan Yojana 2026 — Last Date & Apply Link',
+    seoTitle: 'Bihar Pashupalan Loan Yojana 2026 — Date',
     ogImage: '/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/kisan-bhains.webp',
     title: 'Bihar Pashupalan Loan Yojana 2026',
     desc: 'SC/ST ko 75%, General ko 50% tak subsidy — par window saal bhar khuli nahi rehti (pichhli baar last date 25 July). Documents, unit size aur apply ka process.',

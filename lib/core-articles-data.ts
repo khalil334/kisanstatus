@@ -158,7 +158,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'fto-status-check-paisa-kab-aayega',
     title: 'FTO Status Check: Paisa Kab Aayega?',
-    seoTitle: 'FTO Status Check 2026 — FTO Generated के बाद पैसा कब आता है',
+    seoTitle: 'FTO Status Check 2026 — पैसा कब आता है',
     desc: 'FTO generate hone ke baad paisa kuch dino mein aata hai — official timeline nahi hai. 15-din rule, will be vs is generated ka fark aur delay ki checklist.',
     ogTitle: 'FTO Status Check — Paisa Kab Aayega 2026',
     keywords: [
@@ -213,7 +213,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'NanoDap500mlPriceInIndia2026',
     title: 'Nano DAP 500ml Price 2026: IFFCO Rate',
-    seoTitle: 'Nano DAP 500ml Price 2026 — ₹280–350 (IFFCO Rate), Dose & Subsidy',
+    seoTitle: 'Nano DAP 500ml Price 2026 — ₹280–350 IFFCO',
     desc: 'Nano DAP 500ml price: ₹280–350 MRP, subsidy ke saath ₹200–280. IFFCO rate, state-wise price table, per acre dose (500ml/acre) aur 6 aam galtiyan yahan dekhein.',
     ogTitle: 'Nano DAP 500ml Price 2026 India',
     keywords: [
@@ -637,7 +637,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan CSC Charges 2026: Sahi Fees',
     desc: 'CSC wala ₹500 maang raha hai? Sarkari rate sirf ₹25-30 hai. Sahi fees, free online method, aur fraud se bachne ka tarika.',
     ogTitle: 'PM Kisan CSC Charges — Sahi Fees, Sahi Tarika',
-    seoTitle: 'PM Kisan CSC Registration Charges — Sahi Fees, Sahi Tarika',
+    seoTitle: 'PM Kisan CSC Registration Charges — Sahi Fees',
     keywords: [
       'pm kisan csc registration fees',
       'pm kisan csc se kaise kare',
@@ -760,7 +760,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'bakri-palan-yojana-nlm-subsidy',
     title: 'Bakri Palan Yojana 2026: NLM Subsidy',
-    seoTitle: 'NLM Bakri Palan Yojana 2026 — 50% Subsidy, Online Apply Process',
+    seoTitle: 'NLM Bakri Palan Yojana 2026 — 50% Subsidy',
     desc: 'NLM bakri palan: 50% subsidy — kisan, SHG aur FPO sab eligible. 20 bakri farm ka budget, apply process aur 5-saal ka profit projection yahan.',
     ogTitle: 'Bakri Palan Yojana 2026 Guide',
     keywords: [
