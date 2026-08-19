@@ -7,7 +7,7 @@ export type Yojana2026ArticleMeta = {
   slug: string;
   mainKeyword: string;
   readonly secondaryKeywords: readonly string[];
-  title: string; // ≤46 chars — root layout appends " | KisanStatus" (14 chars, 60 budget)
+  title: string; // ≤46 chars — root layout appends " - KisanStatus" (14 chars, 60 budget)
   description: string;
   ogTitle: string;
   component: string;
