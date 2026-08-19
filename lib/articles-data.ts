@@ -60,18 +60,25 @@ export function getRelatedArticles(slug: string, limit: number = 3): readonly Ar
   if (!current) return [];
 
   if (current.relatedSlugs && current.relatedSlugs.length > 0) {
+    // Never surface noindex articles as related links — they are deliberately out of
+    // Google's index, and internal links to them waste crawl budget (GSC Aug 2026 fix).
     const explicit = current.relatedSlugs
       .map((s) => ARTICLES_MAP[s])
-      .filter(Boolean) as ArticleMeta[];
+      .filter(Boolean)
+      .filter((a) => !(a as ArticleMeta).noindex) as ArticleMeta[];
     if (explicit.length >= limit) return explicit.slice(0, limit);
 
     const remaining = ARTICLES.filter(
-      (a) => a.slug !== slug && a.category === current.category && !current.relatedSlugs?.includes(a.slug)
+      (a) =>
+        a.slug !== slug &&
+        !a.noindex &&
+        a.category === current.category &&
+        !current.relatedSlugs?.includes(a.slug)
     );
     return [...explicit, ...remaining].slice(0, limit);
   }
 
-  return ARTICLES.filter((a) => a.slug !== slug && a.category === current.category).slice(0, limit);
+  return ARTICLES.filter((a) => a.slug !== slug && !a.noindex && a.category === current.category).slice(0, limit);
 }
 
 export function getReadingTime(slug: string): string {

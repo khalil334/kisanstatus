@@ -45,7 +45,9 @@ const HINDI_LINKS: readonly CrossLink[] = HINDI_ARTICLES.map((a) => ({
   section: 'हिंदी गाइड',
 }));
 
-const HINGLISH_LINKS: readonly CrossLink[] = ARTICLES.map((a) => ({
+// noindex articles are deliberately out of Google's index (see core-articles-data.ts) —
+// linking to them wastes crawl budget and sends a mixed signal, so filter them here.
+const HINGLISH_LINKS: readonly CrossLink[] = ARTICLES.filter((a) => !a.noindex).map((a) => ({
   href: `/articles/${a.slug}`,
   label: a.title,
   section: 'Guide',
