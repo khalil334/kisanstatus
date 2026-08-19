@@ -79,9 +79,16 @@ liye ye near-duplicate pages hain — index karne ki koi wajah nahi.
 - Ek chhota FAQ block (2–3 sawaal) — schema.org FAQPage markup ke saath
 
 **Kaam:** ~12 descriptions likhna + 2 template files. Ek baar template badla, sab categories cover.
+Har description **Section 2.5 ke writing rules** follow kare — warna thin-content fix karte karte
+AI-pattern content ka naya problem khada ho jayega.
 
 **Blast radius:** `lib/categories.ts`, `app/articles/category/[category]/page.tsx`,
 `app/articles/hi/category/[category]/page.tsx`
+
+### Fix 1.5 nahi — pehle ye padho
+
+Fix 1 aur Fix 3 dono me naya content likhna hai. Wo content kaisa ho, uske rules Section 2.5 me
+hain. Content pehle rules ke against check karo, phir commit karo.
 
 ### Fix 2 — Internal linking: hub pages se deep pages tak (HIGH, template-level)
 
@@ -135,13 +142,81 @@ Jaise title-length guard bana (`check-title-h1.js`), waise ek `check-content-len
 
 ---
 
+## 2.5. Content likhne ke rules — har naye/updated article aur category intro pe lagu
+
+Google ke recent updates (Helpful Content, spam updates) scaled/AI-pattern content ko target
+karte hain. Humne pages ko crawl-worthy banane ke liye content add karna hai — par agar wo
+content AI-generated dikha, to fix ulta padega. Isliye ye rules **non-negotiable** hain.
+
+### A. Human likhne ka tareeqa (AI-pattern se bachna)
+
+1. **Banned words/phrases** — ye AI ke fingerprint hain, kabhi use mat karo:
+   "delve", "moreover", "furthermore", "in today's world", "it's important to note",
+   "comprehensive guide", "seamless", "landscape", "navigate the process", "unlock",
+   "empower", "game-changer", "in conclusion". Hindi me bhi: har paragraph "iske alawa" ya
+   "is prakar" se shuru nahi hoga.
+2. **Paragraph aur sentence length UNIFORM nahi hogi.** AI har paragraph 3-4 line ka aur har
+   sentence ek jaisi length ka banata hai. Real writing me kahin 1 line ka paragraph hota hai,
+   kahin 4 ka. Kahin 5-word ka sentence. Kahin lamba. Mix karo — jaan-boojh kar.
+3. **Har claim me asli specifics.** Yojana ka naam, amount (₹6,000, ₹2,000 ki kist), date,
+   helpline number, portal ka naam (pmkisan.gov.in). "Sarkar kai yojanayein chalati hai" type
+   ka generic sentence = delete. Jo cheez verify nahi kar sakte, wo likhni hi nahi (guess mat karo).
+4. **Har intro alag structure ka ho.** 12 category descriptions likhni hain — agar sab
+   "Is category me aapko X milega..." se shuru huin to Google ke liye wo 12 near-duplicates hain.
+   Kisi me sawaal se shuru karo, kisi me kisan ki asli situation se, kisi me seedha fact se.
+5. **Lists/tables tabhi jab data ho.** AI har cheez bullet bana deta hai. Table sirf comparison
+   ya numbers ke liye; warna normal paragraph me likho. Har section me heading + 3 bullets ka
+   pattern repeat mat karo.
+6. **First-person aur direct address theek hai.** "Humne dekha hai ki...", "Aap agar 13vi kist
+   ka wait kar rahe hain to..." — ye human signal hai. Robotic neutral tone se behtar.
+
+### B. On-page limits (AEO/SEO ranges — har page pe check karo)
+
+| Cheez | Limit | Note |
+|---|---|---|
+| Title tag | 50–60 chars | `check-title-h1.js` guard already hai |
+| Meta description | 120–155 chars | |
+| Primary keyword | 1–2 per page | |
+| Secondary keywords | 3–5 max | |
+| Keyword density | 0.5%–1.5% max | Zabardasti keyword thoosna = spam signal |
+| Content length | 800–2,500 words | Category intros 300–500 (Fix 1); articles site-standard 2,000+ |
+| H1 | 1 per page | |
+| H2 | 3–8 per page | |
+| H3 | 5–15 per page | Zaroorat ho tabhi |
+| Paragraph | 2–4 lines max | Par length VARY karo (rule A.2) |
+| Sentence | 8–16 words | Average — kuch chhote, kuch lambe |
+| Internal links | 3–10 per page | Context ke saath, "yahan click karein" nahi |
+| External links | 2–5 | Sirf high-authority (gov.in portals, RBI, etc.) |
+| FAQ schema | Max 8 questions | Answer 40–60 words, seedha jawab pehli line me |
+| Structured data | 1–3 schema types per page | FAQPage + Article kaafi hai, stuffing nahi |
+| Content update | Har 30–90 din | Kist dates, amounts fresh rakho |
+
+### C. FAQ blocks kaise likhne
+
+- Sawaal wahi jo kisan sach me poochte hain (GSC queries se uthao, invent mat karo)
+- Jawab 40–60 words, pehli hi line me seedha answer, phir 1 line context
+- Har category ke FAQ alag hon — same 3 sawaal reword karke 12 jagah mat daalo
+- FAQPage schema tabhi jab FAQ visible content me bhi ho
+
+### D. Commit se pehle self-check
+
+- [ ] Banned words zero hain?
+- [ ] Paragraph lengths mixed hain (sab 3-line nahi)?
+- [ ] Kam se kam 3 verifiable specifics (amount/date/portal) hain?
+- [ ] Ye intro baqi 11 se structurally alag lagta hai?
+- [ ] Internal links 3–10, sab contextual?
+- [ ] Title 50–60 chars, meta 120–155?
+
+---
+
 ## 3. Kya NAHI karna
 
 - **"Request Indexing" spam mat karo** — 39 pages pe manually request karna kaam nahi karta jab
   root cause quality/linking hai. Pehle Fix 1–2 deploy karo, phir sirf top 5–10 pages pe request karo.
 - **AI se bulk content mat bharwao** — Google ka "discovered not indexed" aksar scaled/thin content
   ka hi symptom hai; 300 words ka generic AI paragraph daalne se page aur zyada pattern-match hoga.
-  Har category description me asli specifics chahiye (yojana names, amounts, dates).
+  Har category description me asli specifics chahiye (yojana names, amounts, dates) —
+  full rules Section 2.5 me.
 - **95 pages jo 2,000+ words pe hain unhe mat chhedo** — wo already standard pe hain.
 - **`Discovered` row pe Validate Fix ka wait mat karo** — ye row kabhi turant clear nahi hoti;
   Google apni raftaar se crawl karega. Success metric = indexed count (143) ka badhna, is row ka
