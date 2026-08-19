@@ -133,12 +133,30 @@ Har decision se pehle GSC Search Analytics me us URL ki impressions check karo.
 `/calculator` aur `/yojana` hubs ko Fix 1 jaisa intro-content treatment do — ye noindex NAHI
 karne, ye conversion pages hain.
 
-### Fix 5 — Content quality guard build me (LOW, future-proofing)
+### Fix 5 — Content quality guard build me ✅ DONE (2026-08-20)
 
-Jaise title-length guard bana (`check-title-h1.js`), waise ek `check-content-length.js`:
-- Har article ka body word-count nikale (data files se)
-- Naya article < 1,500 words → build warning (fail nahi, warning — kyunki kuch topics chhote hote hain)
-- Isse future me thin pages merge hone se pehle pakde jayenge
+`scripts/check-content-length.js` ban gaya, `npm run check:content` se chalta hai aur
+`npm run build` me `check:titles` ke baad wired hai.
+
+- Data files (`articles-data`, `core-articles-data`, `hindi-yojana-data`, `hindi-kisanguides-data`,
+  `loan-mandi-pashupalan-data`, `hindi-loan-mandi-pashupalan-data`) se har article ka component
+  resolve karta hai aur JSX se prose word-count nikalta hai.
+- `< 1,500` = THIN (indexing risk, Fix 3 triage), `< 2,000` = below site standard.
+- `noindex: true` pages skip hote hain (Fix 3/Fix 4 ka intentional noindex).
+- Rajya-yojana / maandhan tool pages check me nahi hain — wo checker hain, article nahi.
+- **Warning only, build kabhi fail nahi karta** — warna log bypass karne lagenge.
+
+**Pehla run (64 articles checked) — 21 below standard mile, doc ki list se dugne:**
+sirf ye 2 THIN (<1,500) hain — `PmKisanVoluntarySurrenderGuide` (1,469) aur
+`PmKisanCscRegistrationCharges` (1,469). Baqi 19 1,510–1,965 ke beech hain, jinme
+7 naye hain jo pehle kisi list me nahi the (`KisanRinKahaSeLe2026` 1,510,
+`soil-health-card-complete-guide-2026` 1,582, `custom-hiring-centre-chc-portal` 1,620,
+`madhumakhi-palan-kvic-subsidy` 1,650, `KisanTractorLoan2026` 1,693,
+`PmKusumYojanaSolarSubsidy2026` 1,720, `PmKisanBankAccountChangeProcess` 1,752).
+
+**Counting note:** ye script JSX source padhti hai, rendered HTML nahi — iske numbers
+live-page measurement se ~5-7% neeche aate hain. Relative signal ke liye use karo;
+absolute figure ke liye Reference section ka curl audit chalao.
 
 ---
 
@@ -247,18 +265,41 @@ content AI-generated dikha, to fix ulta padega. Isliye ye rules **non-negotiable
 Thin articles ko 2,000+ words tak le jaana hai — Section 2.5 ke rules ke saath (real info,
 no padding, no AI patterns). Har part = 2 articles fix + is file me status update + direct push.
 
-| Part | Articles | Words (pehle → baad) | Status |
-|---|---|---|---|
-| **1** | `/articles/hi/mgnrega-pashu-shed-yojana` | 1,526 → **2,200+** | ✅ Done (2026-08-20) |
-| | `/articles/hi/pashu-kisan-credit-card` | 1,597 → **2,300+** | ✅ Done (2026-08-20) |
-| **2** | `/articles/PmKisanVoluntarySurrenderGuide` | 1,634 → 2,000+ | ⏳ Pending |
-| | `/articles/PmKisanCscRegistrationCharges` | 1,663 → 2,000+ | ⏳ Pending |
-| **3** | `/articles/hi/pm-kisan-khad-yojana-sach` | 1,720 → 2,000+ | ⏳ Pending |
-| | `/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026` | ~1,750 → 2,000+ | ⏳ Pending |
-| **4** | `/articles/fto-status-check-paisa-kab-aayega` | ~1,800 → 2,000+ | ⏳ Pending |
-| | `/articles/hi/parihara-payment-status` (PariharaPaymentStatusHindi) | ~1,800 → 2,000+ | ⏳ Pending |
-| **5** | `/articles/PmKisanVillageWiseListPdfDownload` | ~1,830 → 2,000+ | ⏳ Pending |
-| | `/articles/hi/rythu-bharosa-status` (RythuBharosaStatusHindi) | ~1,840 → 2,000+ | ⏳ Pending |
+**Live re-measure (2026-08-20, doc ke Reference script se — boilerplate excluded).**
+Doc ke purane numbers optimistic the: har page actual me ~60–170 words kam nikla, aur
+Part 1 ke dono pages 2,000 cross kar chuke hain par claimed 2,200/2,300 se ~150 neeche hain.
+Aage ke parts me `Actual` column pe bharosa karo, purane estimate pe nahi.
+
+| Part | Articles | Doc ne kaha | **Actual (live)** | Gap | Status |
+|---|---|---:|---:|---:|---|
+| **1** | `/articles/hi/mgnrega-pashu-shed-yojana` | 2,200+ | **2,065** | — | ✅ Done (2026-08-20) |
+| | `/articles/hi/pashu-kisan-credit-card` | 2,300+ | **2,078** | — | ✅ Done (2026-08-20) |
+| **2** | `/articles/PmKisanVoluntarySurrenderGuide` | 1,634 | **1,572** | +428 | ⏳ Pending |
+| | `/articles/PmKisanCscRegistrationCharges` | 1,663 | **1,568** | +432 | ⏳ Pending |
+| **3** | `/articles/hi/pm-kisan-khad-yojana-sach` | 1,720 | **1,632** | +368 | ⏳ Pending |
+| | `/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026` | ~1,750 | **1,648** | +352 | ⏳ Pending |
+| **4** | `/articles/fto-status-check-paisa-kab-aayega` | ~1,800 | **1,718** | +282 | ⏳ Pending |
+| | `/articles/hi/parihara-payment-status` (PariharaPaymentStatusHindi) | ~1,800 | **1,665** | +335 | ⏳ Pending |
+| **5** | `/articles/PmKisanVillageWiseListPdfDownload` | ~1,830 | **1,901** | +99 | ⏳ Pending |
+| | `/articles/hi/rythu-bharosa-status` (RythuBharosaStatusHindi) | ~1,840 | **1,676** | +324 | ⏳ Pending |
+
+**Total remaining: ~2,620 real words** (doc ke numbers se ~1,400 lagta tha).
+
+### ⚠️ Parts 2–5 blocked — official source chahiye
+
+Section 2.5 rule A.3 ("jo verify nahi kar sakte wo likhni hi nahi — fake ya unverified
+claim = zero tolerance") aur A.4 (zero copy-paste) ke wajah se ye parts abhi likhe nahi
+ja sakte. Jo naya content chahiye wo amounts / dates / eligibility rules ka hai, aur:
+
+- `pmkisan.gov.in` aur `nrega.nic.in` sandbox se **DNS resolve nahi hote** (firewall
+  allowlist ka issue nahi — host hi resolve nahi hota). Ahrefs HTML-snapshot fallback bhi
+  unavailable (Ahrefs connected nahi hai).
+- Web search se sirf third-party yojana blogs milte hain — unse amounts/dates uthana
+  seedha A.3 + A.4 ka violation hai, aur galat benefit info kisan ko nuksan degi.
+
+**Unblock karne ke teen raaste:** (a) official figures paste/upload karo, ya
+(b) sirf repo me already-verified facts se expand karo (naya amount/date invent na karke —
+process depth aur structure se), ya (c) gov portals ko is environment se reachable banao.
 
 **Part 1 me kya add hua (2026-08-20):**
 - *MGNREGA pashu shed*: job card banwane ka process (15 din rule), bakri/murgi shelter section
@@ -284,7 +325,7 @@ no padding, no AI patterns). Har part = 2 articles fix + is file me status updat
 | 2 | Homepage naye-articles section + cross-link weighting | `app/page.tsx`, `lib/cross-links.ts` | `SEO: strengthen internal links to deep pages` |
 | 3 | Bottom-5 articles triage (expand/merge/noindex) | per-page | `SEO: thin article triage batch 1` |
 | 4 | Utility pages decision | small | `SEO: utility page indexing policy` |
-| 5 | Content-length build guard | `scripts/` | `SEO: content length check in build` |
+| 5 | Content-length build guard | `scripts/` | ✅ Done (2026-08-20) — `check-content-length.js` + build wiring |
 
 Har step alag commit. Step 1–2 pehle — wahi 80% impact denge, aur template-level hain (per-page
 kaam nahi).
