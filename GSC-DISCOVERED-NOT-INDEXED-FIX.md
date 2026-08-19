@@ -102,7 +102,29 @@ internal link nahi. Homepage se sirf ~20 pages directly linked hain; baqi 130 pa
    article ki publish date se weight karo — naya = zyada baar linked
 3. Category pages (Fix 1 ke baad) khud strong hub ban jayenge
 
-**Blast radius:** `app/page.tsx`, `lib/cross-links.ts`
+**Blast radius:** `components/HomeContent.tsx` (not `app/page.tsx` — homepage markup lives in
+the component), `lib/cross-links.ts`
+
+**✅ DONE (2026-08-20).** Do cheezein mili/hui:
+1. Homepage pe "Naye PM Kisan Articles" section **pehle se maujood tha** — banane ki zaroorat
+   nahi thi, par `TOP_ARTICLES_LIMIT` sirf **3** tha. 3 → **6** kiya (doc 6–8 maangta hai).
+   Ye limit Hinglish aur Hindi dono sections pe lagti hai, to homepage se ab 6 extra deep
+   pages directly linked hain. Grid lg pe 3-up hai, to 6 do saaf rows bharta hai.
+2. `lib/cross-links.ts` me freshness weighting add hui. Pehle rotation purely path-hash thi
+   (even spread). Ab har article link pe `freshness` (published/modified ka max) hai, aur
+   `weight()` naye pages ko rotation pool me zyada slots deta hai:
+   `<=45 din = 3 slots`, `<=120 din = 2`, uske baad `1` — yaani weighting khud decay ho jati
+   hai, manual cleanup nahi chahiye. Tools/hubs/categories undated hain, wo unweighted rehte
+   hain (evergreen targets).
+
+**Deliberately mild (3x, 10x nahi):** aggressive multiplier purane pages ko starve kar deta,
+aur wahi pages abhi section ki rankings carry karte hain.
+
+**Verified (standalone simulation, 40 targets / 150 source pages):** fresh pages ko old se
+**2.9x** inbound links milte hain, **0 of 40 targets orphan** (koi page zero links pe nahi),
+ek page pe duplicate href nahi, aur output **deterministic** hai — to static build reproducible
+rehta hai. `rotate()` me dupe-skip add karna pada, warna weighted pool ek hi href do baar de
+sakta tha.
 
 ### Fix 3 — 1,500-word se neeche wale articles ki triage (MEDIUM, per-page)
 
@@ -322,7 +344,7 @@ process depth aur structure se), ya (c) gov portals ko is environment se reachab
 | Step | Fix | Blast radius | Commit |
 |---|---|---|---|
 | 1 | Category intro content (12 descriptions + template) | `lib/categories.ts` + 2 templates | `SEO: unique intro content on category pages` |
-| 2 | Homepage naye-articles section + cross-link weighting | `app/page.tsx`, `lib/cross-links.ts` | `SEO: strengthen internal links to deep pages` |
+| 2 | Homepage naye-articles section + cross-link weighting | `components/HomeContent.tsx`, `lib/cross-links.ts` | ✅ Done (2026-08-20) |
 | 3 | Bottom-5 articles triage (expand/merge/noindex) | per-page | `SEO: thin article triage batch 1` |
 | 4 | Utility pages decision | small | `SEO: utility page indexing policy` |
 | 5 | Content-length build guard | `scripts/` | ✅ Done (2026-08-20) — `check-content-length.js` + build wiring |

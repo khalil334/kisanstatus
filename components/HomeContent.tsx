@@ -8,7 +8,13 @@ import FaqItem from './FaqItem';
 
 import { TOOLS, FAQS, IconArrowRight, IconBookOpen, IconCheck } from './home-data';
 
-const TOP_ARTICLES_LIMIT = 3;
+// GSC-DISCOVERED-NOT-INDEXED-FIX.md Fix 2: the homepage linked only ~20 pages
+// directly, leaving deep pages reachable from the sitemap alone — the classic
+// "Discovered - currently not indexed" cause. Raised 3 → 6 (doc asks for 6-8)
+// so each language section passes twice the link equity down, and the set keeps
+// rotating on its own as articles are published/updated (sorted by freshness).
+// The grid is already 3-up on lg, so 6 fills two clean rows.
+const TOP_ARTICLES_LIMIT = 6;
 
 function IconWhatsApp({ className }: { className?: string }) {
   return (
