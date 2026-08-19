@@ -243,6 +243,18 @@ kaam ka duplicate na kare:
 
 ---
 
+## STATUS — 2026-08-19: teeno issues FIXED, sab commits main pe pushed
+
+| Issue | Commit | Kya hua |
+|---|---|---|
+| 1 — 9 ranked-but-404 redirects + land-seeding retarget | `a8bf8773` | Live-verified: sample URLs 308 single-hop se sahi target pe (land-seeding → `PmKisanLandSeedingForm` confirm) |
+| 2 — noindex internal links | `75aa592f` | **Root cause correction:** links `relatedSlugs` se NAHI aa rahe the — `lib/cross-links.ts` ke `HINGLISH_LINKS` pool (CrossSectionLinks rotation) se aa rahe the. Fix: us pool me `!a.noindex` filter + `getRelatedArticles()` ke teeno paths me bhi noindex filter (future-proof) |
+| 3 — over-length titles | `9b61752e` | Doc ke 6 titles trim + naya length guard ne **2 aur** over-budget titles pakde jo audit me miss hue the: `rajasthan-kisan-samman-nidhi-9000` (65) aur `hi/mp-kisan-kalyan-yojana` (65) — dono bhi trim. Guard ab route-specific field maapta hai (`seoTitle` / `seoTitleHi` / `title`) aur noindex pages skip karta hai. `check-title-h1.js` clean pass: 108 pairs |
+
+**Baqi kaam (manual, deploy green hone ke baad):** GSC → Page indexing → har reason row → **Validate Fix**; affected URLs pe URL Inspection → Request Indexing. Neeche "Deploy ke baad" section dekho.
+
+---
+
 ## Execution order
 
 | Step | Fix | Blast radius | Commit |
