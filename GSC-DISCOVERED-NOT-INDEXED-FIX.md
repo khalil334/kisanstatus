@@ -242,6 +242,40 @@ content AI-generated dikha, to fix ulta padega. Isliye ye rules **non-negotiable
 
 ---
 
+## 3.5. Article expansion — parts tracker (2 articles per part, har part ke baad push)
+
+Thin articles ko 2,000+ words tak le jaana hai — Section 2.5 ke rules ke saath (real info,
+no padding, no AI patterns). Har part = 2 articles fix + is file me status update + direct push.
+
+| Part | Articles | Words (pehle → baad) | Status |
+|---|---|---|---|
+| **1** | `/articles/hi/mgnrega-pashu-shed-yojana` | 1,526 → **2,200+** | ✅ Done (2026-08-20) |
+| | `/articles/hi/pashu-kisan-credit-card` | 1,597 → **2,300+** | ✅ Done (2026-08-20) |
+| **2** | `/articles/PmKisanVoluntarySurrenderGuide` | 1,634 → 2,000+ | ⏳ Pending |
+| | `/articles/PmKisanCscRegistrationCharges` | 1,663 → 2,000+ | ⏳ Pending |
+| **3** | `/articles/hi/pm-kisan-khad-yojana-sach` | 1,720 → 2,000+ | ⏳ Pending |
+| | `/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026` | ~1,750 → 2,000+ | ⏳ Pending |
+| **4** | `/articles/fto-status-check-paisa-kab-aayega` | ~1,800 → 2,000+ | ⏳ Pending |
+| | `/articles/hi/parihara-payment-status` (PariharaPaymentStatusHindi) | ~1,800 → 2,000+ | ⏳ Pending |
+| **5** | `/articles/PmKisanVillageWiseListPdfDownload` | ~1,830 → 2,000+ | ⏳ Pending |
+| | `/articles/hi/rythu-bharosa-status` (RythuBharosaStatusHindi) | ~1,840 → 2,000+ | ⏳ Pending |
+
+**Part 1 me kya add hua (2026-08-20):**
+- *MGNREGA pashu shed*: job card banwane ka process (15 din rule), bakri/murgi shelter section
+  (NLM cross-link), majdoori payment timeline (15-din rule + delay compensation), nrega.nic.in
+  MIS se khud status check karne ka tareeqa, social audit / recovery warning.
+- *Pashu KCC*: RRB/cooperative bank + dairy society camp ka rasta, card ke baad revolving limit
+  sahi chalane ke rules (byaj bachane ka math), fraud section (no portal / no fee / no list,
+  1930 helpline), ek-line summary.
+- Dono me sirf verifiable info — koi naya amount/date invent nahi kiya. `modifiedTime` update.
+
+**Baaki notes:**
+- `PmKisan26viKist` (1,022 words) status-check page hai — pehle GSC impressions dekho, ranked
+  ho to expand, warna Fix 3 triage.
+- Rajya-yojana tools (checkers) content articles nahi hain — word count unpe apply nahi hota.
+
+---
+
 ## 4. Execution order
 
 | Step | Fix | Blast radius | Commit |

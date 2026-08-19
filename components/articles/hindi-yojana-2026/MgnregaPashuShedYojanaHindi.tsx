@@ -132,6 +132,74 @@ export default function MgnregaPashuShedYojanaHindi({ article }: { article: Hind
         <li><strong>काम के दौरान</strong> — muster roll में नाम, measurement book में entry, geo-tagged photo। आप खुद मजदूरी करें तो wage सीधे बैंक खाते में।</li>
       </ol>
 
+      <Head2>Job card नहीं है? पहले यह काम करिए</Head2>
+      <p>
+        बिना job card के आगे की कोई बात शुरू ही नहीं होती, इसलिए इसे सबसे पहले निपटाइए। अच्छी
+        बात यह है कि job card बनवाना आसान है और पूरी तरह <strong>free</strong> — कोई fee मांगे तो समझ
+        जाइए गलत हो रहा है।
+      </p>
+      <ol className="list-decimal pl-6 space-y-2 my-4 text-sm leading-relaxed">
+        <li>ग्राम पंचायत में सादा कागज पर आवेदन — परिवार के सभी वयस्क सदस्यों के नाम, उम्र, आधार और photo के साथ</li>
+        <li>Act के हिसाब से पंचायत को <strong>15 दिन के अंदर</strong> card issue करना होता है — verification के बाद</li>
+        <li>Card मिलने पर check कर लीजिए कि सब सदस्यों के नाम सही छपे हैं और बैंक खाता/आधार link है — पैसा इसी से आएगा</li>
+      </ol>
+      <p>
+        कई राज्यों में job card का आवेदन UMANG app या राज्य के portal से online भी हो सकता है, पर
+        गांव में सबसे भरोसेमंद रास्ता अभी भी पंचायत का ही है — वहीं receiving मिलती है और वहीं से
+        card बनकर आता है।
+      </p>
+
+      <Head2>बकरी और मुर्गी वालों के लिए क्या है</Head2>
+      <p>
+        यह सिर्फ गाय-भैंस तक सीमित नहीं है। MGNREGA की इसी works list में{' '}
+        <strong>goat shelter</strong> और <strong>poultry shelter</strong> भी आते हैं — ये cattle shed
+        से अलग work categories हैं, इनके estimate भी अलग बनते हैं और छोटे होते हैं। आवेदन का रास्ता
+        बिलकुल वही है — लिखित आवेदन, ग्राम सभा, sanction।
+      </p>
+      <p>
+        एक बात ध्यान रखिए: अगर आप बकरी पालन को business की तरह बढ़ाना चाहते हैं — यानी shed के
+        साथ पशु भी खरीदने हैं — तो MGNREGA अकेला काफी नहीं। MGNREGA सिर्फ shed बनवाता है; पशु
+        खरीदने के लिए NLM (National Livestock Mission) की subsidy और bank loan का अलग रास्ता है।
+        दोनों को जोड़कर चलना समझदारी है — shed MGNREGA से, पशु NLM/loan से। NLM वाला पूरा हिसाब{' '}
+        <Link href="/articles/bakri-palan-yojana-nlm-subsidy">बकरी पालन NLM subsidy वाली guide</Link> में
+        लिखा है।
+      </p>
+
+      <Head2>मजदूरी का पैसा कब और कैसे आता है</Head2>
+      <p>
+        Sanction के बाद काम शुरू होता है तो हर मजदूर का नाम muster roll में चढ़ता है — आप खुद भी।
+        मजदूरी आपके राज्य की notified NREGA wage rate से बनती है (यह rate हर साल 1 अप्रैल से राज्य-दर-राज्य
+        अलग notify होता है — अपने राज्य का current rate ग्राम रोजगार सेवक से या nrega.nic.in पर देखिए)।
+        Act के हिसाब से मजदूरी का भुगतान muster roll बंद होने के <strong>15 दिन के अंदर</strong> सीधे बैंक
+        खाते में आना चाहिए। देर हो तो delay compensation का प्रावधान भी Act में है — यह बात कम लोग जानते हैं।
+      </p>
+      <p>
+        Material (cement, सरिया, चादर) का payment आपके हाथ में नहीं आता — वह vendor के bill के against
+        जाता है। इसीलिए कोई कहे कि “material का पैसा cash दिलवा देंगे, कुछ कमीशन लगेगा” — तो समझ
+        जाइए गड़बड़ है।
+      </p>
+
+      <Head2>अपनी file का status खुद online कैसे देखें</Head2>
+      <p>
+        आवेदन का कोई online form नहीं है, पर sanction होने के बाद आपका work और payment record{' '}
+        <a href="https://nrega.nic.in" target="_blank" rel="noopener noreferrer">nrega.nic.in</a> के MIS में
+        दिखता है — बिलकुल free, बिना login। रास्ता: state → district → block → panchayat चुनिए, फिर job
+        card list में अपना job card नंबर खोलिए। वहां दिखेगा कि कौन सा work आपके नाम sanction है, muster
+        roll में कितने दिन चढ़े, और payment किस तारीख को गया।
+      </p>
+      <p>
+        इसका बड़ा फायदा यह है कि पंचायत में कोई कुछ भी बोले, record आप खुद verify कर सकते हैं। “आपका
+        payment चला गया” सुनकर बैठने की जरूरत नहीं — MIS में entry नहीं है तो payment हुआ ही नहीं।
+      </p>
+
+      <Head2>Shed बनने के बाद की जिम्मेदारी</Head2>
+      <p>
+        काम पूरा होने पर asset की geo-tagged photo record में जाती है और shed आपकी संपत्ति बन जाता है।
+        ध्यान रहे — MGNREGA के works का social audit होता है। मतलब shed कागज में बना और जमीन पर नहीं,
+        या बना कुछ और estimate कुछ और — तो बाद में recovery आप पर भी आ सकती है। जैसा estimate में है
+        वैसा बनवाइए, और हर stage की photo अपने phone में भी रखिए।
+      </p>
+
       <Head2>कागज क्या लगेंगे</Head2>
       <p>
         Job card की copy, आधार, बैंक passbook, जमीन का कागज (खतौनी/खसरा या जमाबंदी), और पशुओं का विवरण। कुछ

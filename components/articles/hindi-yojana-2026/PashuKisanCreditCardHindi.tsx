@@ -166,6 +166,42 @@ export default function PashuKisanCreditCardHindi({ article }: { article: HindiA
         <Link href="/articles/KisanCreditCardOnlineApply2026">KCC online apply वाली guide</Link> में है।
       </p>
 
+      <Head2>किस bank में जाएं — और camp का रास्ता</Head2>
+      <p>
+        यह सुविधा सिर्फ बड़े commercial banks तक सीमित नहीं है। <strong>Regional Rural Bank (ग्रामीण
+        bank)</strong> और <strong>district cooperative bank</strong> भी KCC-AH बनाते हैं — और गांव के
+        पशुपालक के लिए अक्सर वही आसान पड़ते हैं, क्योंकि वहां स्टाफ इस product को रोज handle करता
+        है। जिस bank में आपका खाता पहले से चल रहा है और transaction record साफ है, वहां file सबसे
+        तेज़ बढ़ती है।
+      </p>
+      <p>
+        दूसरा रास्ता: सरकार समय-समय पर <strong>KCC saturation camp</strong> चलाती है — खासकर dairy
+        cooperative से जुड़े पशुपालकों के लिए। आप दूध society/समिति में दूध डालते हैं तो सचिव से
+        पूछिए — camp की date आती है तो form वहीं भर जाता है और society का दूध record खुद income proof
+        का काम कर देता है। जिनका दूध payment society के जरिए bank खाते में आता है, उनकी approval
+        आमतौर पर आसान होती है — bank को आमदनी का सबूत record में दिख जाता है।
+      </p>
+
+      <Head2>Card मिलने के बाद — इसे चलाने का सही तरीका</Head2>
+      <p>
+        KCC एक revolving limit है, एकमुश्त loan नहीं। मतलब: जितना चाहिए उतना निकालिए, जब दूध का
+        payment आए तो वापस डाल दीजिए — ब्याज सिर्फ उतने दिन और उतनी राशि पर लगता है जितनी आपने
+        सच में use की। पूरी limit निकालकर घर में cash रखना सबसे बड़ी गलती है — ब्याज पूरी राशि पर
+        चढ़ता रहेगा।
+      </p>
+      <ul className="list-disc pl-6 space-y-1.5 my-4 text-sm leading-relaxed">
+        <li>चारा-दाना जैसे बड़े खर्च के लिए ही limit से निकालिए; छोटे रोजमर्रा खर्च दूध की आमदनी से चलाइए</li>
+        <li>दूध का payment आते ही पहले KCC में डालिए — ब्याज के दिन घटेंगे</li>
+        <li>साल में एक बार account को पूरा settle करके renew करवाइए — यही record enhancement के समय काम आता है</li>
+        <li>KCC का पैसा शादी, मकान, mobile में मत लगाइए — diversion पकड़ा गया तो subvention भी जाएगा और अगली limit भी</li>
+      </ul>
+      <p>
+        एक प्रैक्टिकल हिसाब समझिए। दो भैंस वाले परिवार का महीने का चारा-दाना खर्च मोटा-मोटी
+        ₹8,000-₹12,000 बैठता है। पहले यह खर्च दुकान की उधारी पर चलता था — जहां भाव भी ज्यादा
+        और ऊपर से एहसान अलग। KCC से वही खरीद cash में सीधे mandi/dealer से होती है — भाव में ही
+        5-7% का फर्क आ जाता है, ब्याज की बचत अलग।
+      </p>
+
       <Head2>Application क्यों अटकती या reject होती है</Head2>
       <ol className="list-decimal pl-6 space-y-2 my-4 text-sm leading-relaxed">
         <li><strong>CIBIL / पुराना default</strong> — कोई loan NPA है या settlement किया है तो file वहीं रुक जाती है।</li>
@@ -180,6 +216,22 @@ export default function PashuKisanCreditCardHindi({ article }: { article: HindiA
         मिलना reject होना नहीं है — 6 महीने का अच्छा record बनाइए, enhancement मांगिए।
       </p>
 
+      <Head2>Fraud से बचिए — यह चीजें इस card में होती ही नहीं</Head2>
+      <p>
+        “पशु किसान क्रेडिट कार्ड” सर्च करने पर जो sites और YouTube videos मिलते हैं, उनमें से कई
+        गुमराह करते हैं। तीन चीजें पक्की याद रखिए:
+      </p>
+      <ul className="list-disc pl-6 space-y-1.5 my-4 text-sm leading-relaxed">
+        <li><strong>कोई online application portal नहीं है।</strong> जो site “पशु KCC online form” भरवाकर आधार और OTP मांगे, वह आपका data ले रही है। Application सिर्फ bank branch या सरकारी camp में होती है।</li>
+        <li><strong>कोई processing fee नहीं है।</strong> ₹3 लाख तक के KCC पर banks processing/documentation charges आमतौर पर waive करते हैं। कोई agent “file आगे बढ़वाने” के ₹2,000-₹5,000 मांगे तो सीधे branch manager से बात कीजिए।</li>
+        <li><strong>कोई “list में नाम check” नहीं होता।</strong> यह loan product है, लाभार्थी सूची वाली योजना नहीं। “पशु KCC लिस्ट 2026” जैसी कोई चीज exist नहीं करती।</li>
+      </ul>
+      <p>
+        अगर किसी call या message में “आपका पशु KCC approve हो गया, OTP बताइए” आए — काट दीजिए।
+        Bank कभी OTP नहीं मांगता। ऐसी घटना हो जाए तो 1930 (cyber crime helpline) पर तुरंत report
+        कीजिए — पहले घंटे में report होने पर पैसा रुकने के chances सबसे ज्यादा होते हैं।
+      </p>
+
       <Head2>KCC पहले से है — तो यह पढ़िए</Head2>
       <p>
         दूसरा card नहीं मिलेगा, और इसकी जरूरत भी नहीं। Rule यह है: crop KCC वाले किसान को animal husbandry के
@@ -192,6 +244,14 @@ export default function PashuKisanCreditCardHindi({ article }: { article: HindiA
         में detail से लिखा है। और पशु खरीदने के लिए बड़ा पैसा चाहिए (working capital नहीं, investment) तो{' '}
         <Link href="/articles/dairy-farm-loan-without-collateral">बिना collateral dairy loan वाली guide</Link>{' '}
         का रास्ता देखिए।
+      </p>
+
+      <Head2>एक line में पूरी बात</Head2>
+      <p>
+        पशु हैं, tagged हैं, और आप समय पर चुका सकते हैं — तो यह गांव में मिलने वाला सबसे सस्ता
+        working capital है। 4% का रास्ता सिर्फ समय पर repayment से खुलता है, और सबसे बड़ा फायदा
+        उन्हें है जिनके पास जमीन नहीं — क्योंकि यहां limit का आधार पशु है। Bank जाने से पहले पशुओं
+        की tagging और अपना KYC दुरुस्त कर लीजिए — आधी files इन्हीं दो चीजों पर अटकती हैं।
       </p>
 
       <p className="text-xs text-[var(--color-text-muted)] italic mt-6">
