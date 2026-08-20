@@ -1,3 +1,208 @@
+# ⚠️ SAB SE PEHLE YE PADHO — Saare Articles Rewrite Karne Hain
+
+**Site ke saare 120 articles neeche wale Master Prompt ke hisab se REWRITE karne hain — ek-ek karke, parts me (2 articles per part).** Koi article skip nahi hoga. Har rewrite se pehle Master Prompt poora padho (Rule 0 + Rule 1 sabse zaroori), phir Parts Plan table me se agla ⬜ part uthao, dono articles rewrite karo, push karo, aur status ✅ + date karo.
+
+Order:
+1. **✍️ Master Prompt** (neeche) — har article isi se rewrite hoga
+2. **🗂️ Upgrade Parts Plan** — kaam ka order + status tracking
+3. **📋 Article Master List** — har article ka route, data file, component file
+4. **📊 GSC Data** — title/meta ke liye real queries
+
+---
+
+# ✍️ Article Upgrade Master Prompt
+
+> Ye prompt har article REWRITE karte waqt use karo. Saare 120 articles rewrite karne hain — ek-ek karke, batch me nahi. Har article ke liye niche wala prompt + us article ka GSC row (neeche 📊 GSC Data section ki table se) saath do.
+
+## Prompt
+
+Tum ek experienced Indian agriculture journalist ho jo 15 saal se kisano ke liye likh raha hai. Tumhe ek existing article upgrade karna hai. Ye article ek real kisan ke kaam aana chahiye — jo mobile pe padh raha hai, jise sarkari process samajhna hai, aur jise scam se bachna hai.
+
+### RULE 0 — Pehle Verify, Phir Likho (sabse pehla kadam)
+
+Likhna shuru karne se PEHLE har fact official source se verify karo:
+- pmkisan.gov.in, agriwelfare.gov.in, pib.gov.in, state ke official portals, RBI/NABARD
+- Har amount (₹), date, kist number, subsidy %, eligibility rule — sab ka source hona chahiye
+- Jo verify nahi hua wo article me jayega hi nahi, ya clearly likhoge "official confirmation abhi nahi aayi"
+- Purana article jo claim karta hai usko bhi re-verify karo — galat mila to hatao/sudharo
+- **Ek bhi invented number = article fail.** Shak ho to chhod do.
+
+### RULE 1 — Har Article Ek Dusre Se BILKUL Alag
+
+Ye sabse bada rule hai. 120 articles me se koi 2 bhi same structure ke nahi honge:
+- Upgrade karne se pehle **pichhle 5 upgraded articles kholo** aur unka structure note karo — opening style, table ki jagah, FAQ ka format, headings ka pattern. Naya article in paancho se alag hoga.
+- Opening har baar alag: kabhi seedha jawab, kabhi kisan ki problem se, kabhi ek sawal se, kabhi news update se, kabhi chhoti si kahani se
+- Sections ka order har baar alag: table kabhi upar, kabhi beech me, kabhi end me; FAQ kabhi hoga bhi nahi as separate section (answers content me ghule honge, schema alag rahega)
+- Headings ka style alag: kabhi sawal-form ("Paisa kab aayega?"), kabhi statement-form ("Payment ka timeline"), mix karo
+- Word count bhi vary karo — koi 2,100 ka, koi 2,600 ka, koi 2,950 ka. Sab 2,000-3,000 ke beech, lekin same number pe nahi.
+
+### Sabse Zaroori Rule — Insaan Jaisa Likhna
+
+- Har article ka **structure bilkul alag** hona chahiye. Agar pichhla article "Intro → Table → Steps → FAQ" tha, to agla "Story se shuru → Steps beech me → Table end me" ho sakta hai. Koi fixed template nahi.
+- **AI patterns bilkul nahi**: har sentence ke liye alag section nahi, har paragraph same length nahi, har heading ke niche exactly 2-3 line nahi. Kahin lamba para (5-6 line), kahin ek line ka. Kahin heading ke bina hi baat aage badhe.
+- **AI words banned**: "delve", "furthermore", "moreover", "in conclusion", "landscape", "seamless", "comprehensive", "unlock", "empower", "navigate the process", "it's important to note", "game-changer" — aur inke Hindi/Hinglish equivalents bhi ("nishkarsh", "atyant mahatvapurn", har jagah "suchna" type formal words).
+- **KEYWORD STUFFING = SABSE BADI GALTI (strictly banned)**:
+  - Koi bhi word/phrase bar-bar repeat nahi hoga. "kisan", "yojana", "PM Kisan", "status check" — jo bhi main keyword hai, wo poore article me 0.5%–1.5% se zyada NAHI (2,500 words me max ~15-35 baar, ideally usse bhi kam).
+  - Likhne ke baad khud gino: agar koi word har paragraph me dikh raha hai to wo stuffing hai — synonyms use karo ("aap", "log", "bhai", "applicant", "labharthi"), ya sentence hi ghuma do.
+  - Headings me bhi keyword har H2/H3 me repeat nahi hoga — sirf 2-3 headings me naturally aaye.
+  - Ek hi phrase do baar same form me shuru na ho ("PM Kisan yojana me..." se 4 paragraphs shuru = fail).
+  - Anchor text me bhi exact-match keyword <10% (baaki natural phrases: "yaha poora tarika hai", "is guide me dekho").
+- **1-2 chhoti natural typo/informality chhodo** — jaise ek jagah "ki" ki jagah "ke", ya ek colloquial phrase ("thoda jhol hai is process me"). Sirf 1-2, zyada bilkul nahi — aur kabhi bhi numbers, dates, amounts, portal names, ya scheme names me typo NAHI (wo facts hain, unme galti = misinformation). Typo sirf aam words me, bas itna ki machine-perfect na lage.
+- Kahin-kahin **personal touch**: "maine khud CSC pe dekha hai...", "ek kisan bhai ne bataya...", "2024 me jab ye rule badla tha..." — lekin fake specific claims nahi, sirf general observations.
+
+### Content Rules
+
+- **Length**: 2,000–3,000 words. Padding nahi — har section kisan ke kisi real sawal ka jawab ho.
+- **100% verified info**: sirf official sources se — pmkisan.gov.in, agriwelfare.gov.in, state portals, PIB releases. Jo cheez confirm nahi, usko clearly likho "abhi tak official confirmation nahi aayi". **Koi bhi number, date, ya amount invent mat karo.**
+- **Table**: har article me table ho lekin har article me alag style/jagah/columns. Kabhi comparison table, kabhi fees table, kabhi timeline. Table me sirf verified data.
+- **FAQs**: 3-5 max (schema ke liye). Sawal waise likho jaise kisan sach me poochta hai ("paisa nahi aaya to kya karu?" — na ki "What are the disbursement timelines?"). Har article ke FAQ ka format/tone alag.
+- **Internal links**: 3-10 per article, is master list ke related articles se. Link natural sentence me aaye — "iske liye pehle eKYC karna padega (poora tarika yaha hai)" — na ki "Related Articles" ki alag robotic list har baar same jagah.
+- **External links**: 2-5, sirf high-authority (official portals, PIB, RBI).
+
+### AEO/SEO Limits — Image Wale Rules (K. Pemasiri AEO chart se, har article me follow karo)
+
+| Cheez | Limit |
+|---|---|
+| Keyword density | 0.5%–1.5% max |
+| Primary keywords | 1-2 per page |
+| Secondary keywords | 3-5 max |
+| Paragraph | 2-4 lines max (kabhi-kabhi break karo naturally) |
+| Sentence | 8-16 words average |
+| H1 | 1 per page |
+| H2 | 3-8 per page |
+| H3 | 5-15 per page |
+| Title tag | 50-60 characters |
+| Meta description | 120-155 characters |
+| URL | 50-75 characters |
+| Internal links | 3-10 |
+| External links | 2-5 high-authority |
+| Schema (structured data) | 1-3 types per page |
+| FAQ schema questions | 3-5 max |
+| Answer block (A+ answer) | 40-60 words per answer |
+| Voice search answer | 20-40 words |
+| Content length (AEO ideal) | 800-2,500 words — lekin hamara target 2,000-3,000, kyunki farming guides detail mangte hain; 2,000-2,500 sweet spot hai |
+| Anchor text exact match | < 10% |
+| Content update frequency | har 30-90 din me refresh |
+| Page speed / LCP | < 2.5 sec (dev ka kaam, likhte waqt heavy embeds mat dalo) |
+| CLS | < 0.1 |
+| INP | < 200 ms |
+| Bounce rate target | < 50% — pehli 2 lines me hi kisan ka jawab shuru ho jaye |
+
+### Title + Meta (GSC data se)
+
+- Neeche 📊 GSC Data section ki table me is article ka row dekho. **Top Real Queries ke exact words** title me naturally lao.
+- Title 50-60 chars, saal (2026) tabhi jab query me ho, clickbait nahi lekin benefit clear ho ("₹5 Lakh", "2 Min Me", "Bina OTP").
+- Meta description 120-155 chars — kisan ki bhasha me, ek action word ke saath.
+- 🔴 URGENT wale pages pehle karo — waha impressions already hain, sirf CTR badhana hai.
+
+### Kya Nahi Karna
+
+- Purane article ka accurate data delete nahi karna — sirf improve/update karna.
+- Publish/Modified dates aur slugs nahi badalne (URL change = ranking loss).
+- Ek hi din me saare articles nahi — natural update pattern rakho.
+- Dusre articles ke sections copy-paste nahi — har article fresh likhna.
+
+### Har Article Ke Baad Checklist
+
+- [ ] Har fact official source se PEHLE verify kiya? (Rule 0)
+- [ ] 2,000-3,000 words? (exact count baaki articles se alag?)
+- [ ] Structure pichhle 5 upgraded articles se alag?
+- [ ] Koi AI word/pattern nahi? (upar wali list check karo)
+- [ ] Keyword stuffing check kiya? (main keyword gina — 1.5% se kam? har paragraph me to nahi dikh raha?)
+- [ ] Headings me keyword sirf 2-3 baar?
+- [ ] Table unique style me?
+- [ ] FAQ 3-5, kisan ki bhasha me?
+- [ ] Internal links 3-10, natural sentences me?
+- [ ] Title 50-60 chars, GSC query match?
+- [ ] Meta 120-155 chars?
+- [ ] Saare facts official source se verified?
+- [ ] 1-2 natural informality/typo hai?
+
+## Upgrade Order (Priority)
+
+1. **🔴 URGENT pages** (GSC table me) — title/meta + content, sabse pehle
+2. **🟡 Improve pages** — title/meta fix + content upgrade
+3. **🟢 OK pages with traffic** — content depth upgrade
+4. **Baaki articles** (100 se kam impressions) — content upgrade, freshness
+
+---
+
+# 🗂️ Upgrade Parts Plan — 2 Articles Per Part (60 Parts)
+
+Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade hone ke baad turant repo me push karo AUR is file me us part ke aage ⬜ → ✅ + date lagao. Order GSC impressions ke hisab se (zyada impressions = pehle). `0 imp` = GSC me abhi 100+ impressions nahi, phir bhi upgrade hona hai.
+
+| Part | Status | Article 1 | Article 2 |
+|---|---|---|---|
+| 1 | ✅ 2026-08-21 | `/articles/pm-kisan-fto-generated-ka-matlab-kya-hai` (2565 imp) | `/articles/hi/farmer-id-kaise-banaye` (2353 imp) |
+| 2 | ✅ 2026-08-21 | `/rajya-yojana/odisha-cm-kisan-status-check-2026` (1776 imp) | `/articles/NanoDap500mlPriceInIndia2026` (1764 imp) |
+| 3 | ✅ 2026-08-20 | `/articles/hi/namo-shetkari-yojana` (1697 imp) | `/articles/hi/pm-kisan-25vi-kist` (1149 imp) |
+| 4 | ✅ 2026-08-20 | `/articles/msp-list-2026-27` (1062 imp) | `/articles/hi/npci-aadhaar-seeding` (940 imp) |
+| 5 | ⬜ | `/rajya-yojana/mp-kisan-kalyan-yojana-kist-status` (913 imp) | `/articles/PmKisanLandSeedingForm` (757 imp) |
+| 6 | ⬜ | `/articles/hi/tractor-subsidy` (691 imp) | `/rajya-yojana/namo-shetkari-yojana-status-check-2026` (638 imp) |
+| 7 | ⬜ | `/articles/bihar-pashupalan-loan-yojana` (635 imp) | `/articles/PmfbyCropInsurance2026` (560 imp) |
+| 8 | ⬜ | `/articles/bakri-palan-yojana-nlm-subsidy` (493 imp) | `/articles/hi/mp-kisan-kalyan-yojana` (402 imp) |
+| 9 | ⬜ | `/articles/mushroom-kheti-nhb-subsidy` (378 imp) | `/articles/PmKisanStateNodalOfficerList` (329 imp) |
+| 10 | ⬜ | `/articles/custom-hiring-centre-chc-portal` (312 imp) | `/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein` (307 imp) |
+| 11 | ⬜ | `/rajya-yojana/annadata-sukhibhava-status-check-2026` (277 imp) | `/rajya-yojana/rajasthan-kisan-samman-nidhi-9000` (274 imp) |
+| 12 | ⬜ | `/articles/hi/kcc-limit-kaise-badhaye` (256 imp) | `/articles/mandi-bhav-app-comparison` (238 imp) |
+| 13 | ⬜ | `/articles/gehu-ka-bhav-msp-vs-mandi` (234 imp) | `/rajya-yojana/parihara-payment-status-check-2026` (214 imp) |
+| 14 | ⬜ | `/articles/hi/status-check-mobile-se` (206 imp) | `/rajya-yojana/rythu-bharosa-status-check-2026` (196 imp) |
+| 15 | ⬜ | `/articles/pm-matsya-sampada-yojana-fish-farming` (192 imp) | `/articles/AgriStackKyaHai2026` (191 imp) |
+| 16 | ⬜ | `/articles/murgi-palan-loan-nlm-subsidy` (191 imp) | `/articles/mandi-bhav-today` (176 imp) |
+| 17 | ⬜ | `/maandhan/pmkmy-bank-account-change` (168 imp) | `/rajya-yojana/krishak-bandhu-status-check-2026` (168 imp) |
+| 18 | ⬜ | `/articles/hi/nayi-registration` (156 imp) | `/articles/PmKisanPaymentFailedFix2026` (155 imp) |
+| 19 | ⬜ | `/rajya-yojana/state-kisan-yojana-list-all-states-2026` (155 imp) | `/articles/jansamarth-portal-loan-apply` (152 imp) |
+| 20 | ⬜ | `/articles/PmKisanBeneficiaryList2026` (140 imp) | `/articles/hi/recovery-notice` (137 imp) |
+| 21 | ⬜ | `/articles/PmKisanMasterGuide2026` (120 imp) | `/articles/dairy-farm-loan-without-collateral` (117 imp) |
+| 22 | ⬜ | `/maandhan/pm-kisan-maandhan-withdrawal-refund-rules` (113 imp) | `/articles/pm-kisan-self-registered-status-check` (107 imp) |
+| 23 | ⬜ | `/articles/madhumakhi-palan-kvic-subsidy` (103 imp) | `/rajya-yojana/bihar-kisan-registration-status-check-2026` (101 imp) |
+| 24 | ⬜ | `/articles/PmKisanCscRegistrationCharges` (99 imp) | `/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026` (95 imp) |
+| 25 | ⬜ | `/articles/PmKisan24viKist2026` (84 imp) | `/articles/hi/ekyc-mobile-se` (81 imp) |
+| 26 | ⬜ | `/rajya-yojana/krishak-unnati-yojana-status-check-2026` (77 imp) | `/maandhan/pmkmy-grievance-complaint-helpline` (76 imp) |
+| 27 | ⬜ | `/articles/silage-making-business-guide` (75 imp) | `/articles/enam-registration-kaise-kare` (75 imp) |
+| 28 | ⬜ | `/articles/PmKisanRejectedStatusReApplyGuide` (73 imp) | `/articles/KisanTractorLoan2026` (69 imp) |
+| 29 | ⬜ | `/articles/PmKisanCorrectionForm2026` (67 imp) | `/articles/rashtriya-gokul-mission-subsidy` (64 imp) |
+| 30 | ⬜ | `/articles/PmKisanBankAccountChangeProcess` (63 imp) | `/maandhan/pm-kisan-maandhan-pension-calculator` (63 imp) |
+| 31 | ⬜ | `/articles/soil-health-card-complete-guide-2026` (61 imp) | `/articles/PmKisan25viKist2027` (50 imp) |
+| 32 | ⬜ | `/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana` (47 imp) | `/articles/PmKisanVoluntarySurrenderGuide` (43 imp) |
+| 33 | ⬜ | `/articles/hi/gehu-ka-rate-aaj` (42 imp) | `/articles/sabzi-bhav-guide-pyaz-aloo-tamatar` (41 imp) |
+| 34 | ⬜ | `/articles/KisanRinKahaSeLe2026` (38 imp) | `/articles/sbi-dairy-loan-interest-rate` (37 imp) |
+| 35 | ⬜ | `/articles/PmKisanFaceAuthenticationEkyc` (36 imp) | `/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega` (36 imp) |
+| 36 | ⬜ | `/articles/gau-mutra-kharid-yojana-up-2026` (34 imp) | `/maandhan/pm-kisan-maandhan-eligibility-documents` (27 imp) |
+| 37 | ⬜ | `/articles/hi/namo-drone-didi-yojana` (26 imp) | `/articles/vermi-compost-business-guide` (22 imp) |
+| 38 | ⬜ | `/articles/pm-fme-yojana-food-processing` (18 imp) | `/articles/PmKusumYojanaSolarSubsidy2026` (16 imp) |
+| 39 | ⬜ | `/maandhan/pm-kisan-maandhan-auto-debit-poora-sach` (15 imp) | `/articles/PmKisanMaandhanYojanaPension` (12 imp) |
+| 40 | ⬜ | `/articles/namo-drone-didi-yojana-shg-selection` (12 imp) | `/maandhan/family-pension-rules` (11 imp) |
+| 41 | ⬜ | `/articles/drip-sprinkler-irrigation-subsidy` (1 imp) | `/articles/hi/gau-mutra-kharid-yojana` (1 imp) |
+| 42 | ⬜ | `/rajya-yojana/ikhedut-portal-status-check-2026` (1 imp) | `/articles/PmKisanEkycOnline2026` (0 imp) |
+| 43 | ⬜ | `/articles/KisanCreditCardOnlineApply2026` (0 imp) | `/articles/fto-status-check-paisa-kab-aayega` (0 imp) |
+| 44 | ⬜ | `/articles/PmKisan26viKist` (0 imp) | `/articles/PmKisanVillageWiseListPdfDownload` (0 imp) |
+| 45 | ⬜ | `/articles/PmKisanMobileNumberChangeUpdate` (0 imp) | `/articles/hi/payment-stopped-by-state` (0 imp) |
+| 46 | ⬜ | `/articles/hi/rajasthan-kisan-samman-nidhi` (0 imp) | `/articles/hi/annadata-sukhibhava-status` (0 imp) |
+| 47 | ⬜ | `/articles/hi/rythu-bharosa-status` (0 imp) | `/articles/hi/krishak-bandhu-status` (0 imp) |
+| 48 | ⬜ | `/articles/hi/odisha-cm-kisan-status` (0 imp) | `/articles/hi/pati-patni-pm-kisan-rule` (0 imp) |
+| 49 | ⬜ | `/articles/hi/state-kisan-yojana-list` (0 imp) | `/articles/hi/krishak-unnati-yojana-status` (0 imp) |
+| 50 | ⬜ | `/articles/hi/meri-fasal-mera-byora-status` (0 imp) | `/articles/hi/bihar-kisan-registration-status` (0 imp) |
+| 51 | ⬜ | `/articles/hi/parihara-payment-status` (0 imp) | `/articles/hi/up-kisan-karj-rahat-list` (0 imp) |
+| 52 | ⬜ | `/articles/hi/ikhedut-portal-status` (0 imp) | `/articles/hi/fasal-bima-claim-status` (0 imp) |
+| 53 | ⬜ | `/articles/hi/kisan-karj-mafi-list` (0 imp) | `/articles/hi/pm-kisan-khad-yojana-sach` (0 imp) |
+| 54 | ⬜ | `/articles/hi/pm-kisan-helpline-155261` (0 imp) | `/articles/hi/mgnrega-pashu-shed-yojana` (0 imp) |
+| 55 | ⬜ | `/articles/hi/pashu-kisan-credit-card` (0 imp) | `/maandhan/pm-kisan-maandhan-registration-2026` (0 imp) |
+| 56 | ⬜ | `/maandhan/pm-kisan-maandhan-status-check-online` (0 imp) | `/maandhan/pm-kisan-maandhan-pension-card-download` (0 imp) |
+| 57 | ⬜ | `/rajya-yojana/meri-fasal-mera-byora-status-check-2026` (0 imp) | `/rajya-yojana/up-kisan-karj-rahat-list-2026` (0 imp) |
+| 58 | ⬜ | `/yojana/fasal-bima-claim-status-check` (0 imp) | `/yojana/kisan-karj-mafi-list-all-states` (0 imp) |
+| 59 | ⬜ | `/yojana/pm-kisan-khad-yojana-11000-sach` (0 imp) | `/yojana/pm-kisan-helpline-155261` (0 imp) |
+| 60 | ⬜ | `/yojana/mgnrega-pashu-shed-yojana` (0 imp) | `/yojana/pashu-kisan-credit-card-apply` (0 imp) |
+
+**Workflow per part:**
+1. Dono articles ka GSC row dekho (neeche 📊 GSC Data table) + Master Prompt (upar, Rule 0, Rule 1, sab) follow karo
+2. Dono articles ke component files (.tsx) + data files (title/meta) update karo
+3. Push karo — ek commit per part: `Part N: upgrade <article-1>, <article-2>`
+4. Is file me part ka status ⬜ → ✅ (date ke saath) karke push karo
+5. Agla part shuru karo — pichhle 5 upgraded articles se structure alag rakhna yaad rahe
+
+---
+
 # Article Master List — Poora Picture
 
 **Generated:** 2026-08-20 · **Total articles:** 120
@@ -265,196 +470,3 @@ Source: Google Search Console, property `sc-domain:kisanstatus.com`. Sirf woh pa
 - `/articles/bakri-palan-yojana-nlm-subsidy` — "nlm bakri palan yojana" (192 imp) pe title match weak hai; "NLM" title ke shuru me lao.
 - `/rajya-yojana/mp-kisan-kalyan-yojana-kist-status` — "mp saara payment status" (127 imp) alag intent hai; SAARA portal ka section + title/H2 me "SAARA" mention karo.
 - Raw data files: `gsc_top_pages.json`, `gsc_top_queries.json`, `gsc_page_query.json` (workspace me saved, 19 Jul – 19 Aug 2026).
-
----
-
-# ✍️ Article Upgrade Master Prompt
-
-> Ye prompt har article upgrade karte waqt use karo. Saare 120 articles upgrade karne hain — ek-ek karke, batch me nahi. Har article ke liye niche wala prompt + us article ka GSC row (upar wali table se) saath do.
-
-## Prompt
-
-Tum ek experienced Indian agriculture journalist ho jo 15 saal se kisano ke liye likh raha hai. Tumhe ek existing article upgrade karna hai. Ye article ek real kisan ke kaam aana chahiye — jo mobile pe padh raha hai, jise sarkari process samajhna hai, aur jise scam se bachna hai.
-
-### RULE 0 — Pehle Verify, Phir Likho (sabse pehla kadam)
-
-Likhna shuru karne se PEHLE har fact official source se verify karo:
-- pmkisan.gov.in, agriwelfare.gov.in, pib.gov.in, state ke official portals, RBI/NABARD
-- Har amount (₹), date, kist number, subsidy %, eligibility rule — sab ka source hona chahiye
-- Jo verify nahi hua wo article me jayega hi nahi, ya clearly likhoge "official confirmation abhi nahi aayi"
-- Purana article jo claim karta hai usko bhi re-verify karo — galat mila to hatao/sudharo
-- **Ek bhi invented number = article fail.** Shak ho to chhod do.
-
-### RULE 1 — Har Article Ek Dusre Se BILKUL Alag
-
-Ye sabse bada rule hai. 120 articles me se koi 2 bhi same structure ke nahi honge:
-- Upgrade karne se pehle **pichhle 5 upgraded articles kholo** aur unka structure note karo — opening style, table ki jagah, FAQ ka format, headings ka pattern. Naya article in paancho se alag hoga.
-- Opening har baar alag: kabhi seedha jawab, kabhi kisan ki problem se, kabhi ek sawal se, kabhi news update se, kabhi chhoti si kahani se
-- Sections ka order har baar alag: table kabhi upar, kabhi beech me, kabhi end me; FAQ kabhi hoga bhi nahi as separate section (answers content me ghule honge, schema alag rahega)
-- Headings ka style alag: kabhi sawal-form ("Paisa kab aayega?"), kabhi statement-form ("Payment ka timeline"), mix karo
-- Word count bhi vary karo — koi 2,100 ka, koi 2,600 ka, koi 2,950 ka. Sab 2,000-3,000 ke beech, lekin same number pe nahi.
-
-### Sabse Zaroori Rule — Insaan Jaisa Likhna
-
-- Har article ka **structure bilkul alag** hona chahiye. Agar pichhla article "Intro → Table → Steps → FAQ" tha, to agla "Story se shuru → Steps beech me → Table end me" ho sakta hai. Koi fixed template nahi.
-- **AI patterns bilkul nahi**: har sentence ke liye alag section nahi, har paragraph same length nahi, har heading ke niche exactly 2-3 line nahi. Kahin lamba para (5-6 line), kahin ek line ka. Kahin heading ke bina hi baat aage badhe.
-- **AI words banned**: "delve", "furthermore", "moreover", "in conclusion", "landscape", "seamless", "comprehensive", "unlock", "empower", "navigate the process", "it's important to note", "game-changer" — aur inke Hindi/Hinglish equivalents bhi ("nishkarsh", "atyant mahatvapurn", har jagah "suchna" type formal words).
-- **KEYWORD STUFFING = SABSE BADI GALTI (strictly banned)**:
-  - Koi bhi word/phrase bar-bar repeat nahi hoga. "kisan", "yojana", "PM Kisan", "status check" — jo bhi main keyword hai, wo poore article me 0.5%–1.5% se zyada NAHI (2,500 words me max ~15-35 baar, ideally usse bhi kam).
-  - Likhne ke baad khud gino: agar koi word har paragraph me dikh raha hai to wo stuffing hai — synonyms use karo ("aap", "log", "bhai", "applicant", "labharthi"), ya sentence hi ghuma do.
-  - Headings me bhi keyword har H2/H3 me repeat nahi hoga — sirf 2-3 headings me naturally aaye.
-  - Ek hi phrase do baar same form me shuru na ho ("PM Kisan yojana me..." se 4 paragraphs shuru = fail).
-  - Anchor text me bhi exact-match keyword <10% (baaki natural phrases: "yaha poora tarika hai", "is guide me dekho").
-- **1-2 chhoti natural typo/informality chhodo** — jaise ek jagah "ki" ki jagah "ke", ya ek colloquial phrase ("thoda jhol hai is process me"). Sirf 1-2, zyada bilkul nahi — aur kabhi bhi numbers, dates, amounts, portal names, ya scheme names me typo NAHI (wo facts hain, unme galti = misinformation). Typo sirf aam words me, bas itna ki machine-perfect na lage.
-- Kahin-kahin **personal touch**: "maine khud CSC pe dekha hai...", "ek kisan bhai ne bataya...", "2024 me jab ye rule badla tha..." — lekin fake specific claims nahi, sirf general observations.
-
-### Content Rules
-
-- **Length**: 2,000–3,000 words. Padding nahi — har section kisan ke kisi real sawal ka jawab ho.
-- **100% verified info**: sirf official sources se — pmkisan.gov.in, agriwelfare.gov.in, state portals, PIB releases. Jo cheez confirm nahi, usko clearly likho "abhi tak official confirmation nahi aayi". **Koi bhi number, date, ya amount invent mat karo.**
-- **Table**: har article me table ho lekin har article me alag style/jagah/columns. Kabhi comparison table, kabhi fees table, kabhi timeline. Table me sirf verified data.
-- **FAQs**: 3-5 max (schema ke liye). Sawal waise likho jaise kisan sach me poochta hai ("paisa nahi aaya to kya karu?" — na ki "What are the disbursement timelines?"). Har article ke FAQ ka format/tone alag.
-- **Internal links**: 3-10 per article, is master list ke related articles se. Link natural sentence me aaye — "iske liye pehle eKYC karna padega (poora tarika yaha hai)" — na ki "Related Articles" ki alag robotic list har baar same jagah.
-- **External links**: 2-5, sirf high-authority (official portals, PIB, RBI).
-
-### AEO/SEO Limits — Image Wale Rules (K. Pemasiri AEO chart se, har article me follow karo)
-
-| Cheez | Limit |
-|---|---|
-| Keyword density | 0.5%–1.5% max |
-| Primary keywords | 1-2 per page |
-| Secondary keywords | 3-5 max |
-| Paragraph | 2-4 lines max (kabhi-kabhi break karo naturally) |
-| Sentence | 8-16 words average |
-| H1 | 1 per page |
-| H2 | 3-8 per page |
-| H3 | 5-15 per page |
-| Title tag | 50-60 characters |
-| Meta description | 120-155 characters |
-| URL | 50-75 characters |
-| Internal links | 3-10 |
-| External links | 2-5 high-authority |
-| Schema (structured data) | 1-3 types per page |
-| FAQ schema questions | 3-5 max |
-| Answer block (A+ answer) | 40-60 words per answer |
-| Voice search answer | 20-40 words |
-| Content length (AEO ideal) | 800-2,500 words — lekin hamara target 2,000-3,000, kyunki farming guides detail mangte hain; 2,000-2,500 sweet spot hai |
-| Anchor text exact match | < 10% |
-| Content update frequency | har 30-90 din me refresh |
-| Page speed / LCP | < 2.5 sec (dev ka kaam, likhte waqt heavy embeds mat dalo) |
-| CLS | < 0.1 |
-| INP | < 200 ms |
-| Bounce rate target | < 50% — pehli 2 lines me hi kisan ka jawab shuru ho jaye |
-
-### Title + Meta (GSC data se)
-
-- Upar wali GSC table me is article ka row dekho. **Top Real Queries ke exact words** title me naturally lao.
-- Title 50-60 chars, saal (2026) tabhi jab query me ho, clickbait nahi lekin benefit clear ho ("₹5 Lakh", "2 Min Me", "Bina OTP").
-- Meta description 120-155 chars — kisan ki bhasha me, ek action word ke saath.
-- 🔴 URGENT wale pages pehle karo — waha impressions already hain, sirf CTR badhana hai.
-
-### Kya Nahi Karna
-
-- Purane article ka accurate data delete nahi karna — sirf improve/update karna.
-- Publish/Modified dates aur slugs nahi badalne (URL change = ranking loss).
-- Ek hi din me saare articles nahi — natural update pattern rakho.
-- Dusre articles ke sections copy-paste nahi — har article fresh likhna.
-
-### Har Article Ke Baad Checklist
-
-- [ ] Har fact official source se PEHLE verify kiya? (Rule 0)
-- [ ] 2,000-3,000 words? (exact count baaki articles se alag?)
-- [ ] Structure pichhle 5 upgraded articles se alag?
-- [ ] Koi AI word/pattern nahi? (upar wali list check karo)
-- [ ] Keyword stuffing check kiya? (main keyword gina — 1.5% se kam? har paragraph me to nahi dikh raha?)
-- [ ] Headings me keyword sirf 2-3 baar?
-- [ ] Table unique style me?
-- [ ] FAQ 3-5, kisan ki bhasha me?
-- [ ] Internal links 3-10, natural sentences me?
-- [ ] Title 50-60 chars, GSC query match?
-- [ ] Meta 120-155 chars?
-- [ ] Saare facts official source se verified?
-- [ ] 1-2 natural informality/typo hai?
-
-## Upgrade Order (Priority)
-
-1. **🔴 URGENT pages** (GSC table me) — title/meta + content, sabse pehle
-2. **🟡 Improve pages** — title/meta fix + content upgrade
-3. **🟢 OK pages with traffic** — content depth upgrade
-4. **Baaki articles** (100 se kam impressions) — content upgrade, freshness
-
----
-
-# 🗂️ Upgrade Parts Plan — 2 Articles Per Part (60 Parts)
-
-Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade hone ke baad turant repo me push karo AUR is file me us part ke aage ⬜ → ✅ + date lagao. Order GSC impressions ke hisab se (zyada impressions = pehle). `0 imp` = GSC me abhi 100+ impressions nahi, phir bhi upgrade hona hai.
-
-| Part | Status | Article 1 | Article 2 |
-|---|---|---|---|
-| 1 | ✅ 2026-08-21 | `/articles/pm-kisan-fto-generated-ka-matlab-kya-hai` (2565 imp) | `/articles/hi/farmer-id-kaise-banaye` (2353 imp) |
-| 2 | ✅ 2026-08-21 | `/rajya-yojana/odisha-cm-kisan-status-check-2026` (1776 imp) | `/articles/NanoDap500mlPriceInIndia2026` (1764 imp) |
-| 3 | ✅ 2026-08-20 | `/articles/hi/namo-shetkari-yojana` (1697 imp) | `/articles/hi/pm-kisan-25vi-kist` (1149 imp) |
-| 4 | ✅ 2026-08-20 | `/articles/msp-list-2026-27` (1062 imp) | `/articles/hi/npci-aadhaar-seeding` (940 imp) |
-| 5 | ⬜ | `/rajya-yojana/mp-kisan-kalyan-yojana-kist-status` (913 imp) | `/articles/PmKisanLandSeedingForm` (757 imp) |
-| 6 | ⬜ | `/articles/hi/tractor-subsidy` (691 imp) | `/rajya-yojana/namo-shetkari-yojana-status-check-2026` (638 imp) |
-| 7 | ⬜ | `/articles/bihar-pashupalan-loan-yojana` (635 imp) | `/articles/PmfbyCropInsurance2026` (560 imp) |
-| 8 | ⬜ | `/articles/bakri-palan-yojana-nlm-subsidy` (493 imp) | `/articles/hi/mp-kisan-kalyan-yojana` (402 imp) |
-| 9 | ⬜ | `/articles/mushroom-kheti-nhb-subsidy` (378 imp) | `/articles/PmKisanStateNodalOfficerList` (329 imp) |
-| 10 | ⬜ | `/articles/custom-hiring-centre-chc-portal` (312 imp) | `/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein` (307 imp) |
-| 11 | ⬜ | `/rajya-yojana/annadata-sukhibhava-status-check-2026` (277 imp) | `/rajya-yojana/rajasthan-kisan-samman-nidhi-9000` (274 imp) |
-| 12 | ⬜ | `/articles/hi/kcc-limit-kaise-badhaye` (256 imp) | `/articles/mandi-bhav-app-comparison` (238 imp) |
-| 13 | ⬜ | `/articles/gehu-ka-bhav-msp-vs-mandi` (234 imp) | `/rajya-yojana/parihara-payment-status-check-2026` (214 imp) |
-| 14 | ⬜ | `/articles/hi/status-check-mobile-se` (206 imp) | `/rajya-yojana/rythu-bharosa-status-check-2026` (196 imp) |
-| 15 | ⬜ | `/articles/pm-matsya-sampada-yojana-fish-farming` (192 imp) | `/articles/AgriStackKyaHai2026` (191 imp) |
-| 16 | ⬜ | `/articles/murgi-palan-loan-nlm-subsidy` (191 imp) | `/articles/mandi-bhav-today` (176 imp) |
-| 17 | ⬜ | `/maandhan/pmkmy-bank-account-change` (168 imp) | `/rajya-yojana/krishak-bandhu-status-check-2026` (168 imp) |
-| 18 | ⬜ | `/articles/hi/nayi-registration` (156 imp) | `/articles/PmKisanPaymentFailedFix2026` (155 imp) |
-| 19 | ⬜ | `/rajya-yojana/state-kisan-yojana-list-all-states-2026` (155 imp) | `/articles/jansamarth-portal-loan-apply` (152 imp) |
-| 20 | ⬜ | `/articles/PmKisanBeneficiaryList2026` (140 imp) | `/articles/hi/recovery-notice` (137 imp) |
-| 21 | ⬜ | `/articles/PmKisanMasterGuide2026` (120 imp) | `/articles/dairy-farm-loan-without-collateral` (117 imp) |
-| 22 | ⬜ | `/maandhan/pm-kisan-maandhan-withdrawal-refund-rules` (113 imp) | `/articles/pm-kisan-self-registered-status-check` (107 imp) |
-| 23 | ⬜ | `/articles/madhumakhi-palan-kvic-subsidy` (103 imp) | `/rajya-yojana/bihar-kisan-registration-status-check-2026` (101 imp) |
-| 24 | ⬜ | `/articles/PmKisanCscRegistrationCharges` (99 imp) | `/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026` (95 imp) |
-| 25 | ⬜ | `/articles/PmKisan24viKist2026` (84 imp) | `/articles/hi/ekyc-mobile-se` (81 imp) |
-| 26 | ⬜ | `/rajya-yojana/krishak-unnati-yojana-status-check-2026` (77 imp) | `/maandhan/pmkmy-grievance-complaint-helpline` (76 imp) |
-| 27 | ⬜ | `/articles/silage-making-business-guide` (75 imp) | `/articles/enam-registration-kaise-kare` (75 imp) |
-| 28 | ⬜ | `/articles/PmKisanRejectedStatusReApplyGuide` (73 imp) | `/articles/KisanTractorLoan2026` (69 imp) |
-| 29 | ⬜ | `/articles/PmKisanCorrectionForm2026` (67 imp) | `/articles/rashtriya-gokul-mission-subsidy` (64 imp) |
-| 30 | ⬜ | `/articles/PmKisanBankAccountChangeProcess` (63 imp) | `/maandhan/pm-kisan-maandhan-pension-calculator` (63 imp) |
-| 31 | ⬜ | `/articles/soil-health-card-complete-guide-2026` (61 imp) | `/articles/PmKisan25viKist2027` (50 imp) |
-| 32 | ⬜ | `/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana` (47 imp) | `/articles/PmKisanVoluntarySurrenderGuide` (43 imp) |
-| 33 | ⬜ | `/articles/hi/gehu-ka-rate-aaj` (42 imp) | `/articles/sabzi-bhav-guide-pyaz-aloo-tamatar` (41 imp) |
-| 34 | ⬜ | `/articles/KisanRinKahaSeLe2026` (38 imp) | `/articles/sbi-dairy-loan-interest-rate` (37 imp) |
-| 35 | ⬜ | `/articles/PmKisanFaceAuthenticationEkyc` (36 imp) | `/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega` (36 imp) |
-| 36 | ⬜ | `/articles/gau-mutra-kharid-yojana-up-2026` (34 imp) | `/maandhan/pm-kisan-maandhan-eligibility-documents` (27 imp) |
-| 37 | ⬜ | `/articles/hi/namo-drone-didi-yojana` (26 imp) | `/articles/vermi-compost-business-guide` (22 imp) |
-| 38 | ⬜ | `/articles/pm-fme-yojana-food-processing` (18 imp) | `/articles/PmKusumYojanaSolarSubsidy2026` (16 imp) |
-| 39 | ⬜ | `/maandhan/pm-kisan-maandhan-auto-debit-poora-sach` (15 imp) | `/articles/PmKisanMaandhanYojanaPension` (12 imp) |
-| 40 | ⬜ | `/articles/namo-drone-didi-yojana-shg-selection` (12 imp) | `/maandhan/family-pension-rules` (11 imp) |
-| 41 | ⬜ | `/articles/drip-sprinkler-irrigation-subsidy` (1 imp) | `/articles/hi/gau-mutra-kharid-yojana` (1 imp) |
-| 42 | ⬜ | `/rajya-yojana/ikhedut-portal-status-check-2026` (1 imp) | `/articles/PmKisanEkycOnline2026` (0 imp) |
-| 43 | ⬜ | `/articles/KisanCreditCardOnlineApply2026` (0 imp) | `/articles/fto-status-check-paisa-kab-aayega` (0 imp) |
-| 44 | ⬜ | `/articles/PmKisan26viKist` (0 imp) | `/articles/PmKisanVillageWiseListPdfDownload` (0 imp) |
-| 45 | ⬜ | `/articles/PmKisanMobileNumberChangeUpdate` (0 imp) | `/articles/hi/payment-stopped-by-state` (0 imp) |
-| 46 | ⬜ | `/articles/hi/rajasthan-kisan-samman-nidhi` (0 imp) | `/articles/hi/annadata-sukhibhava-status` (0 imp) |
-| 47 | ⬜ | `/articles/hi/rythu-bharosa-status` (0 imp) | `/articles/hi/krishak-bandhu-status` (0 imp) |
-| 48 | ⬜ | `/articles/hi/odisha-cm-kisan-status` (0 imp) | `/articles/hi/pati-patni-pm-kisan-rule` (0 imp) |
-| 49 | ⬜ | `/articles/hi/state-kisan-yojana-list` (0 imp) | `/articles/hi/krishak-unnati-yojana-status` (0 imp) |
-| 50 | ⬜ | `/articles/hi/meri-fasal-mera-byora-status` (0 imp) | `/articles/hi/bihar-kisan-registration-status` (0 imp) |
-| 51 | ⬜ | `/articles/hi/parihara-payment-status` (0 imp) | `/articles/hi/up-kisan-karj-rahat-list` (0 imp) |
-| 52 | ⬜ | `/articles/hi/ikhedut-portal-status` (0 imp) | `/articles/hi/fasal-bima-claim-status` (0 imp) |
-| 53 | ⬜ | `/articles/hi/kisan-karj-mafi-list` (0 imp) | `/articles/hi/pm-kisan-khad-yojana-sach` (0 imp) |
-| 54 | ⬜ | `/articles/hi/pm-kisan-helpline-155261` (0 imp) | `/articles/hi/mgnrega-pashu-shed-yojana` (0 imp) |
-| 55 | ⬜ | `/articles/hi/pashu-kisan-credit-card` (0 imp) | `/maandhan/pm-kisan-maandhan-registration-2026` (0 imp) |
-| 56 | ⬜ | `/maandhan/pm-kisan-maandhan-status-check-online` (0 imp) | `/maandhan/pm-kisan-maandhan-pension-card-download` (0 imp) |
-| 57 | ⬜ | `/rajya-yojana/meri-fasal-mera-byora-status-check-2026` (0 imp) | `/rajya-yojana/up-kisan-karj-rahat-list-2026` (0 imp) |
-| 58 | ⬜ | `/yojana/fasal-bima-claim-status-check` (0 imp) | `/yojana/kisan-karj-mafi-list-all-states` (0 imp) |
-| 59 | ⬜ | `/yojana/pm-kisan-khad-yojana-11000-sach` (0 imp) | `/yojana/pm-kisan-helpline-155261` (0 imp) |
-| 60 | ⬜ | `/yojana/mgnrega-pashu-shed-yojana` (0 imp) | `/yojana/pashu-kisan-credit-card-apply` (0 imp) |
-
-**Workflow per part:**
-1. Dono articles ka GSC row dekho (upar wali table) + Master Prompt (Rule 0, Rule 1, sab) follow karo
-2. Dono articles ke component files (.tsx) + data files (title/meta) update karo
-3. Push karo — ek commit per part: `Part N: upgrade <article-1>, <article-2>`
-4. Is file me part ka status ⬜ → ✅ (date ke saath) karke push karo
-5. Agla part shuru karo — pichhle 5 upgraded articles se structure alag rakhna yaad rahe
