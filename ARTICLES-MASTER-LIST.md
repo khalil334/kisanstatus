@@ -299,8 +299,13 @@ Ye sabse bada rule hai. 120 articles me se koi 2 bhi same structure ke nahi hong
 - Har article ka **structure bilkul alag** hona chahiye. Agar pichhla article "Intro → Table → Steps → FAQ" tha, to agla "Story se shuru → Steps beech me → Table end me" ho sakta hai. Koi fixed template nahi.
 - **AI patterns bilkul nahi**: har sentence ke liye alag section nahi, har paragraph same length nahi, har heading ke niche exactly 2-3 line nahi. Kahin lamba para (5-6 line), kahin ek line ka. Kahin heading ke bina hi baat aage badhe.
 - **AI words banned**: "delve", "furthermore", "moreover", "in conclusion", "landscape", "seamless", "comprehensive", "unlock", "empower", "navigate the process", "it's important to note", "game-changer" — aur inke Hindi/Hinglish equivalents bhi ("nishkarsh", "atyant mahatvapurn", har jagah "suchna" type formal words).
-- **Repetition nahi**: agar "kisan" word bar-bar aa raha hai to "aap", "log", "bhai", "applicant", ya sentence ghuma ke likho. Same keyword ki stuffing bilkul nahi (density 0.5%–1.5% max).
-- **1-2 chhoti natural typo/informality chhodo** — jaise ek jagah "ki" ki jagah "ke", ya ek colloquial phrase ("thoda jhol hai is process me"). Zyada nahi — bas itna ki machine-perfect na lage.
+- **KEYWORD STUFFING = SABSE BADI GALTI (strictly banned)**:
+  - Koi bhi word/phrase bar-bar repeat nahi hoga. "kisan", "yojana", "PM Kisan", "status check" — jo bhi main keyword hai, wo poore article me 0.5%–1.5% se zyada NAHI (2,500 words me max ~15-35 baar, ideally usse bhi kam).
+  - Likhne ke baad khud gino: agar koi word har paragraph me dikh raha hai to wo stuffing hai — synonyms use karo ("aap", "log", "bhai", "applicant", "labharthi"), ya sentence hi ghuma do.
+  - Headings me bhi keyword har H2/H3 me repeat nahi hoga — sirf 2-3 headings me naturally aaye.
+  - Ek hi phrase do baar same form me shuru na ho ("PM Kisan yojana me..." se 4 paragraphs shuru = fail).
+  - Anchor text me bhi exact-match keyword <10% (baaki natural phrases: "yaha poora tarika hai", "is guide me dekho").
+- **1-2 chhoti natural typo/informality chhodo** — jaise ek jagah "ki" ki jagah "ke", ya ek colloquial phrase ("thoda jhol hai is process me"). Sirf 1-2, zyada bilkul nahi — aur kabhi bhi numbers, dates, amounts, portal names, ya scheme names me typo NAHI (wo facts hain, unme galti = misinformation). Typo sirf aam words me, bas itna ki machine-perfect na lage.
 - Kahin-kahin **personal touch**: "maine khud CSC pe dekha hai...", "ek kisan bhai ne bataya...", "2024 me jab ye rule badla tha..." — lekin fake specific claims nahi, sirf general observations.
 
 ### Content Rules
@@ -361,7 +366,8 @@ Ye sabse bada rule hai. 120 articles me se koi 2 bhi same structure ke nahi hong
 - [ ] 2,000-3,000 words? (exact count baaki articles se alag?)
 - [ ] Structure pichhle 5 upgraded articles se alag?
 - [ ] Koi AI word/pattern nahi? (upar wali list check karo)
-- [ ] Keyword repeat 1.5% se kam?
+- [ ] Keyword stuffing check kiya? (main keyword gina — 1.5% se kam? har paragraph me to nahi dikh raha?)
+- [ ] Headings me keyword sirf 2-3 baar?
 - [ ] Table unique style me?
 - [ ] FAQ 3-5, kisan ki bhasha me?
 - [ ] Internal links 3-10, natural sentences me?
