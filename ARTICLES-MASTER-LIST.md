@@ -1,0 +1,193 @@
+# Article Master List — Poora Picture
+
+**Generated:** 2026-08-20 · **Total articles:** 120
+
+Har article ka: URL route, data file (jaha slug/meta hai), component file (jaha content hai), language, category, dates, noindex status.
+
+| # | Language | Count |
+|---|---|---:|
+| 1 | Hinglish | 86 |
+| 2 | Hindi (Devanagari) | 34 |
+
+---
+
+## `lib/core-articles-data.ts` — 40 articles
+
+| URL Route | Title | Language | Category | Component File | Published | Modified | Flags |
+|---|---|---|---|---|---|---|---|
+| `/articles/KisanRinKahaSeLe2026` | Kisan Loan 2026: KCC, Bank, CSC Guide | Hinglish | loan | `components/articles/KisanRinKahaSeLe2026.tsx` | 2026-06-20 | 2026-08-18 | — |
+| `/articles/KisanTractorLoan2026` | Tractor Loan 2026: Bina Down Payment? | Hinglish | loan | `components/articles/KisanTractorLoan2026.tsx` | 2026-06-20 | 2026-08-20 | — |
+| `/articles/PmKisanBeneficiaryList2026` | PM Kisan Beneficiary List 2026: Check | Hinglish | status-check | `components/articles/PmKisanBeneficiaryList2026.tsx` | 2026-06-20 | 2026-08-18 | — |
+| `/articles/PmKisanEkycOnline2026` | PM Kisan eKYC 2026: 2 Min Mein Karein | Hinglish | status-check | `components/articles/PmKisanEkycOnline2026.tsx` | 2026-06-20 | 2026-08-18 | — |
+| `/articles/PmfbyCropInsurance2026` | PMFBY Crop Insurance 2026: 2% Premium | Hinglish | farming | `components/articles/PmfbyCropInsurance2026.tsx` | 2026-06-20 | 2026-08-14 | — |
+| `/articles/KisanCreditCardOnlineApply2026` | Kisan Credit Card 2026: ₹5 Lakh Loan | Hinglish | loan | `components/articles/KisanCreditCardOnlineApply2026.tsx` | 2026-06-21 | 2026-08-18 | — |
+| `/articles/fto-status-check-paisa-kab-aayega` | FTO Status Check: Paisa Kab Aayega? | Hinglish | status-check | `components/articles/FtoStatusCheckPaisaKabAayega.tsx` | 2026-08-18 | 2026-08-20 | — |
+| `/articles/pm-kisan-fto-generated-ka-matlab-kya-hai` | FTO Ka Full Form & FTO Generated Meaning | Hinglish | status-check | `components/articles/pm-kisan-fto-generated-ka-matlab-kya-hai.tsx` | 2026-06-23 | 2026-08-18 | — |
+| `/articles/NanoDap500mlPriceInIndia2026` | Nano DAP 500ml Price 2026: IFFCO Rate | Hinglish | farming | `components/articles/NanoDap500mlPriceInIndia2026.tsx` | 2026-06-24 | 2026-08-20 | — |
+| `/articles/PmKisan24viKist2026` | PM Kisan 24vi Kist 2026: Date & Status | Hinglish | status-check | `components/articles/PmKisan24viKist2026.tsx` | 2026-06-24 | 2026-08-17 | — |
+| `/articles/AgriStackKyaHai2026` | AgriStack 2026: Digital Kisan ID Guide | Hinglish | farming | `components/articles/AgriStackKyaHai2026.tsx` | 2026-06-24 | 2026-08-20 | — |
+| `/articles/PmKisanMasterGuide2026` | PM Kisan Complete Guide 2026: All Fixes | Hinglish | status-check | `components/articles/PmKisanMasterGuide2026.tsx` | 2026-07-05 | 2026-08-18 | — |
+| `/articles/soil-health-card-complete-guide-2026` | Soil Health Card 2026: Mitti Test Guide | Hinglish | farming | `components/articles/soil-health-card-complete-guide-2026.tsx` | 2026-06-27 | 2026-08-18 | — |
+| `/articles/mandi-bhav-today` | Aaj Ka Mandi Bhav: Daily Sabzi Rates | Hinglish | mandi | `components/articles/mandi-bhav-today.tsx` | 2026-06-30 | 2026-08-18 | — |
+| `/articles/PmKisanPaymentFailedFix2026` | PM Kisan Payment Failed 2026: 7 Fixes | Hinglish | status-check | `components/articles/PmKisanPaymentFailedFix2026.tsx` | 2026-07-06 | 2026-08-18 | — |
+| `/articles/PmKisan26viKist` | 26vi Kist Kab Aayegi: Date & List | Hinglish | status-check | `components/articles/PmKisan26viKist.tsx` | 2026-08-18 | 2026-08-18 | **noindex** |
+| `/articles/PmKisan25viKist2027` | PM Kisan 25vi Kist 2027: Date & Amount | Hinglish | status-check | `components/articles/PmKisan25viKist2027.tsx` | 2026-07-06 | 2026-08-18 | — |
+| `/articles/pm-kisan-self-registered-status-check` | PM Kisan Self Reg Status 2026: Check | Hinglish | status-check | `components/articles/PmKisanSelfRegisteredStatusCheck.tsx` | 2026-07-07 | 2026-08-20 | — |
+| `/articles/PmKisanCorrectionForm2026` | PM Kisan Correction Form 2026: Fix Guide | Hinglish | status-check | `components/articles/PmKisanCorrectionForm2026.tsx` | 2026-07-08 | 2026-08-20 | — |
+| `/articles/PmKusumYojanaSolarSubsidy2026` | PM Kusum Solar Pump 2026: 60% Subsidy | Hinglish | farming | `components/articles/PmKusumYojanaSolarSubsidy2026.tsx` | 2026-07-08 | 2026-08-20 | — |
+| `/articles/PmKisanLandSeedingForm` | PM Kisan Land Seeding Form 2026: Poora Sach | Hinglish | status-check | `components/articles/PmKisanLandSeedingForm.tsx` | 2026-07-09 | 2026-08-17 | — |
+| `/articles/PmKisanFaceAuthenticationEkyc` | PM Kisan Face Auth eKYC: Bina OTP | Hinglish | status-check | `components/articles/PmKisanFaceAuthenticationEkyc.tsx` | 2026-07-09 | 2026-08-20 | — |
+| `/articles/PmKisanVoluntarySurrenderGuide` | PM Kisan Surrender Guide: Kaise Hatte? | Hinglish | status-check | `components/articles/PmKisanVoluntarySurrenderGuide.tsx` | 2026-07-09 | 2026-08-18 | — |
+| `/articles/PmKisanStateNodalOfficerList` | PM Kisan Nodal Officer List: Contacts | Hinglish | status-check | `components/articles/PmKisanStateNodalOfficerList.tsx` | 2026-07-09 | 2026-08-20 | — |
+| `/articles/PmKisanBankAccountChangeProcess` | PM Kisan Bank Change 2026: Naya Account | Hinglish | status-check | `components/articles/PmKisanBankAccountChangeProcess.tsx` | 2026-07-09 | 2026-08-20 | — |
+| `/articles/PmKisanCscRegistrationCharges` | PM Kisan CSC Charges 2026: Sahi Fees | Hinglish | status-check | `components/articles/PmKisanCscRegistrationCharges.tsx` | 2026-07-09 | 2026-08-18 | — |
+| `/articles/PmKisanMaandhanYojanaPension` | PM Kisan Maandhan 2026: ₹3000 Pension | Hinglish | farming | `components/articles/PmKisanMaandhanYojanaPension.tsx` | 2026-07-09 | 2026-08-20 | — |
+| `/articles/PmKisanRejectedStatusReApplyGuide` | PM Kisan Rejected Status 2026: Reapply | Hinglish | status-check | `components/articles/PmKisanRejectedStatusReApplyGuide.tsx` | 2026-07-09 | 2026-08-20 | — |
+| `/articles/PmKisanVillageWiseListPdfDownload` | PM Kisan Village List 2026: PDF Download | Hinglish | status-check | `components/articles/PmKisanVillageWiseListPdfDownload.tsx` | 2026-07-09 | 2026-08-20 | — |
+| `/articles/PmKisanMobileNumberChangeUpdate` | PM Kisan Mobile Change 2026: Naya SIM | Hinglish | status-check | `components/articles/PmKisanMobileNumberChangeUpdate.tsx` | 2026-07-09 | 2026-08-17 | — |
+| `/articles/bakri-palan-yojana-nlm-subsidy` | Bakri Palan Yojana 2026: NLM Subsidy | Hinglish | pashupalan | `components/articles/kisanguides/BakriPalanYojana.tsx` | 2026-07-12 | 2026-08-20 | — |
+| `/articles/mushroom-kheti-nhb-subsidy` | Mushroom Kheti 2026: NHB Subsidy Guide | Hinglish | agri-business | `components/articles/kisanguides/MushroomKheti.tsx` | 2026-07-12 | 2026-08-20 | — |
+| `/articles/madhumakhi-palan-kvic-subsidy` | Madhumakhi Palan 2026: KVIC Subsidy | Hinglish | pashupalan | `components/articles/kisanguides/MadhumakhiPalan.tsx` | 2026-07-12 | 2026-08-20 | — |
+| `/articles/pm-matsya-sampada-yojana-fish-farming` | PM Matsya Yojana 2026: 60% Subsidy | Hinglish | pashupalan | `components/articles/kisanguides/PMatsyaSampada.tsx` | 2026-07-12 | 2026-08-18 | — |
+| `/articles/silage-making-business-guide` | Silage Business 2026: SMAM Subsidy | Hinglish | pashupalan | `components/articles/kisanguides/SilageMaking.tsx` | 2026-07-12 | 2026-08-13 | — |
+| `/articles/pm-fme-yojana-food-processing` | PM FME Yojana 2026: 35% Subsidy | Hinglish | agri-business | `components/articles/kisanguides/PMFMEYojana.tsx` | 2026-07-12 | 2026-08-13 | — |
+| `/articles/custom-hiring-centre-chc-portal` | Custom Hiring Centre 2026: SMAM Guide | Hinglish | agri-business | `components/articles/kisanguides/CHCPortal.tsx` | 2026-07-12 | 2026-08-20 | — |
+| `/articles/vermi-compost-business-guide` | Vermi Compost Business 2026: PKVY Guide | Hinglish | agri-business | `components/articles/kisanguides/VerminCompost.tsx` | 2026-07-12 | 2026-08-18 | — |
+| `/articles/drip-sprinkler-irrigation-subsidy` | Drip Sprinkler Subsidy: PDMC ke 55% / 45% Niyam | Hinglish | agri-business | `components/articles/kisanguides/DripSprinkler.tsx` | 2026-07-12 | 2026-08-17 | — |
+| `/articles/namo-drone-didi-yojana-shg-selection` | Namo Drone Didi 2026: SHG Selection Sach | Hinglish | agri-business | `components/articles/kisanguides/NamoDroneDidiYojana.tsx` | 2026-08-15 | 2026-08-16 | — |
+
+## `lib/loan-mandi-pashupalan-data.ts` — 12 articles
+
+| URL Route | Title | Language | Category | Component File | Published | Modified | Flags |
+|---|---|---|---|---|---|---|---|
+| `/articles/dairy-farm-loan-without-collateral` | Dairy Farm Loan Bina Collateral 2026 | Hinglish | loan | `components/articles/loan-mandi-pashupalan/DairyFarmLoanWithoutCollateral.tsx` | 2026-07-11 | 2026-08-01 | — |
+| `/articles/sbi-dairy-loan-interest-rate` | SBI Dairy Loan Interest Rate 2026 | Hinglish | loan | `components/articles/loan-mandi-pashupalan/SbiDairyLoanInterestRate.tsx` | 2026-03-12 | 2026-03-21 | — |
+| `/articles/jansamarth-portal-loan-apply` | JanSamarth Portal 2026: Loan Apply | Hinglish | loan | `components/articles/loan-mandi-pashupalan/JansamarthPortalLoanApply.tsx` | 2026-06-29 | 2026-07-04 | — |
+| `/articles/enam-registration-kaise-kare` | eNAM Registration 2026: Kaise Karein | Hinglish | mandi | `components/articles/loan-mandi-pashupalan/EnamRegistrationKaiseKare.tsx` | 2026-07-02 | 2026-07-16 | — |
+| `/articles/msp-list-2026-27` | MSP List 2026-27: Rabi & Kharif | Hinglish | mandi | `components/articles/loan-mandi-pashupalan/MspList202627.tsx` | 2026-05-30 | 2026-08-18 | — |
+| `/articles/mandi-bhav-app-comparison` | Best Mandi Bhav Apps 2026: Top 7 | Hinglish | mandi | `components/articles/loan-mandi-pashupalan/MandiBhavAppComparison.tsx` | 2026-03-07 | 2026-03-12 | — |
+| `/articles/gehu-ka-bhav-msp-vs-mandi` | Gehu Ka Bhav 2026: MSP vs Mandi Rate | Hinglish | mandi | `components/articles/loan-mandi-pashupalan/GehuKaBhavMspVsMandi.tsx` | 2026-05-26 | 2026-07-07 | — |
+| `/articles/sabzi-bhav-guide-pyaz-aloo-tamatar` | Pyaz-Aloo-Tamatar Bhav Guide 2026 | Hinglish | mandi | `components/articles/loan-mandi-pashupalan/SabziBhavGuidePyazAlooTamatar.tsx` | 2026-03-28 | 2026-04-02 | — |
+| `/articles/murgi-palan-loan-nlm-subsidy` | Murgi Palan Loan 2026: NLM 50% Subsidy | Hinglish | pashupalan | `components/articles/loan-mandi-pashupalan/MurgiPalanLoanNlmSubsidy.tsx` | 2026-05-08 | 2026-05-29 | — |
+| `/articles/bihar-pashupalan-loan-yojana` | Bihar Pashupalan Loan Yojana 2026 | Hinglish | pashupalan | `components/articles/loan-mandi-pashupalan/BiharPashupalanLoanYojana.tsx` | 2026-05-20 | 2026-05-29 | — |
+| `/articles/rashtriya-gokul-mission-subsidy` | Rashtriya Gokul Mission 2026: Subsidy | Hinglish | pashupalan | `components/articles/loan-mandi-pashupalan/RashtriyaGokulMissionSubsidy.tsx` | 2026-05-18 | 2026-05-23 | — |
+| `/articles/gau-mutra-kharid-yojana-up-2026` | Gau Mutra Kharid Yojana UP 2026: ₹10/Litre | Hinglish | pashupalan | `components/articles/GauMutraKharidYojanaUp2026.tsx` | 2026-08-13 | 2026-08-14 | — |
+
+## `lib/hindi-yojana-data.ts` — 8 articles
+
+| URL Route | Title | Language | Category | Component File | Published | Modified | Flags |
+|---|---|---|---|---|---|---|---|
+| `/articles/hi/pm-kisan-25vi-kist` | पीएम किसान 25वीं किस्त कब आएगी? Date और Latest Update | Hindi (Devanagari) | status-check | `components/articles/hindi-yojana/PmKisan25viKistKabAayegi.tsx` | 2026-07-27 | 2026-08-05 | — |
+| `/articles/hi/status-check-mobile-se` | मोबाइल नंबर से पीएम किसान स्टेटस कैसे चेक करें? आसान तरीका | Hindi (Devanagari) | status-check | `components/articles/hindi-yojana/PmKisanStatusCheckMobileNumberSe.tsx` | 2026-07-24 | 2026-08-07 | — |
+| `/articles/hi/nayi-registration` | पीएम किसान नई रजिस्ट्रेशन 2027 — Farmer ID से ऐसे करें Apply | Hindi (Devanagari) | status-check | `components/articles/hindi-yojana/PmKisanNewRegistration2027.tsx` | 2026-04-19 | 2026-04-24 | — |
+| `/articles/hi/farmer-id-kaise-banaye` | किसान आईडी कैसे बनाएं 2027? Free, मोबाइल से 10 मिनट में | Hindi (Devanagari) | farming | `components/articles/hindi-yojana/FarmerIdCardKaiseBanaye2027.tsx` | 2026-06-07 | 2026-08-18 | — |
+| `/articles/hi/ekyc-mobile-se` | PM Kisan eKYC मोबाइल से कैसे करें? OTP और Face Auth तरीका | Hindi (Devanagari) | status-check | `components/articles/hindi-yojana/PmKisanEkycMobileSeKaiseKare.tsx` | 2026-07-16 | 2026-07-21 | — |
+| `/articles/hi/npci-aadhaar-seeding` | NPCI आधार सीडिंग Online — DBT पेमेंट फिक्स | Hindi (Devanagari) | status-check | `components/articles/hindi-yojana/NpciAadhaarSeedingDbtPayment.tsx` | 2026-07-19 | 2026-08-18 | — |
+| `/articles/hi/payment-stopped-by-state` | "Payment Stopped by State" का मतलब क्या है? जानिए आसान Fix | Hindi (Devanagari) | status-check | `components/articles/hindi-yojana/PmKisanPaymentStoppedByStateFix.tsx` | 2026-05-02 | 2026-05-11 | — |
+| `/articles/hi/recovery-notice` | PM Kisan Recovery Notice आया? पैसा वापस करने का पूरा तरीका | Hindi (Devanagari) | status-check | `components/articles/hindi-yojana/PmKisanRecoveryNoticePaisaWapas.tsx` | 2026-04-26 | 2026-06-07 | — |
+
+## `lib/hindi-kisanguides-data.ts` — 2 articles
+
+| URL Route | Title | Language | Category | Component File | Published | Modified | Flags |
+|---|---|---|---|---|---|---|---|
+| `/articles/hi/tractor-subsidy` | ट्रैक्टर सब्सिडी 2027 — किस राज्य में कितनी छूट? पूरी लिस्ट | Hindi (Devanagari) | agri-business | `components/articles/hindi-kisanguides/TractorSubsidy2027StateWiseList.tsx` | 2026-03-31 | 2026-04-14 | — |
+| `/articles/hi/namo-drone-didi-yojana` | नमो ड्रोन दीदी योजना — कोई form नहीं, रास्ता SHG से जाता है | Hindi (Devanagari) | agri-business | `components/articles/hindi-kisanguides/NamoDroneDidiYojanaHindi.tsx` | 2026-08-15 | 2026-08-16 | — |
+
+## `lib/hindi-loan-mandi-pashupalan-data.ts` — 3 articles
+
+| URL Route | Title | Language | Category | Component File | Published | Modified | Flags |
+|---|---|---|---|---|---|---|---|
+| `/articles/hi/gehu-ka-rate-aaj` | गेहूं का रेट आज — MSP vs मंडी भाव तुलना | Hindi (Devanagari) | mandi | `components/articles/hindi-loan-mandi-pashupalan/GehuKaRateAajMspVsMandiBhav.tsx` | 2026-07-22 | 2026-07-27 | — |
+| `/articles/hi/kcc-limit-kaise-badhaye` | KCC लिमिट ₹3 से ₹5 लाख कैसे बढ़ाएं? Renewal का पूरा तरीका | Hindi (Devanagari) | loan | `components/articles/hindi-loan-mandi-pashupalan/KccLimitKaiseBadhaye3Se5Lakh.tsx` | 2026-07-14 | 2026-08-04 | — |
+| `/articles/hi/gau-mutra-kharid-yojana` | गाय के मूत्र की खरीद योजना — बुलंदशहर में 10 रुपये लीटर | Hindi (Devanagari) | pashupalan | `components/articles/hindi-loan-mandi-pashupalan/GauMutraKharidYojanaHindi.tsx` | 2026-08-13 | 2026-08-14 | — |
+
+## `lib/hindi-rajya-yojana-data.ts` — 15 articles
+
+| URL Route | Title | Language | Category | Component File | Published | Modified | Flags |
+|---|---|---|---|---|---|---|---|
+| `/articles/hi/mp-kisan-kalyan-yojana` | MP किसान कल्याण योजना — ₹12000 सालाना कैसे मिलेंगे? जानिए | Hindi (Devanagari) | farming | `components/articles/hindi-rajya-yojana/MukhyamantriKisanKalyanYojanaMp.tsx` | 2026-04-17 | 2026-04-22 | — |
+| `/articles/hi/namo-shetkari-yojana` | नमो शेतकरी योजना — ₹12000 की किस्त कब और कैसे मिलेगी? जानिए | Hindi (Devanagari) | farming | `components/articles/hindi-rajya-yojana/NamoShetkariYojanaMaharashtra.tsx` | 2026-07-05 | 2026-08-18 | — |
+| `/articles/hi/rajasthan-kisan-samman-nidhi` | राजस्थान किसान सम्मान निधि — ₹9,000 का हिसाब और किस्त की स्थिति | Hindi (Devanagari) | farming | `components/articles/hindi-rajya-yojana/RajasthanKisanSammanNidhiHindi.tsx` | 2026-08-16 | 2026-08-16 | — |
+| `/articles/hi/annadata-sukhibhava-status` | अन्नदाता सुखीभव स्थिति — ₹20,000 और CCRC का पूरा हिसाब | Hindi (Devanagari) | status-check | `components/articles/hindi-rajya-yojana/AnnadataSukhibhavaStatusHindi.tsx` | 2026-08-16 | 2026-08-16 | — |
+| `/articles/hi/rythu-bharosa-status` | रायथु भरोसा स्थिति — बंधु से भरोसा तक, ₹12,000 प्रति एकड़ का हिसाब | Hindi (Devanagari) | status-check | `components/articles/hindi-rajya-yojana/RythuBharosaStatusHindi.tsx` | 2026-08-16 | 2026-08-20 | — |
+| `/articles/hi/krishak-bandhu-status` | कृषक बंधु स्थिति — वोटर कार्ड से किस्त और ₹2 लाख का हिसाब | Hindi (Devanagari) | status-check | `components/articles/hindi-rajya-yojana/KrishakBandhuStatusHindi.tsx` | 2026-08-17 | 2026-08-18 | — |
+| `/articles/hi/odisha-cm-kisan-status` | ओडिशा CM Kisan स्थिति — भूमिहीन को भी ₹12,500 का रास्ता | Hindi (Devanagari) | status-check | `components/articles/hindi-rajya-yojana/OdishaCmKisanStatusHindi.tsx` | 2026-08-17 | 2026-08-17 | — |
+| `/articles/hi/pati-patni-pm-kisan-rule` | पति-पत्नी दोनों को PM Kisan मिलेगा? नियम का सीधा जवाब | Hindi (Devanagari) | status-check | `components/articles/hindi-rajya-yojana/PatiPatniPmKisanRuleHindi.tsx` | 2026-08-17 | 2026-08-17 | — |
+| `/articles/hi/state-kisan-yojana-list` | राज्य किसान योजना लिस्ट 2026 — किस राज्य में कितना पैसा मिलता है? | Hindi (Devanagari) | status-check | `components/articles/hindi-rajya-yojana/StateKisanYojanaListHindi.tsx` | 2026-08-17 | 2026-08-17 | — |
+| `/articles/hi/krishak-unnati-yojana-status` | कृषक उन्नति योजना स्टेटस 2026 — अंतर राशि कब और कितनी मिलेगी? | Hindi (Devanagari) | status-check | `components/articles/hindi-rajya-yojana/KrishakUnnatiYojanaStatusHindi.tsx` | 2026-08-17 | 2026-08-17 | — |
+| `/articles/hi/meri-fasal-mera-byora-status` | मेरी फसल मेरा ब्योरा स्टेटस 2026 — रजिस्ट्रेशन से MSP भुगतान तक | Hindi (Devanagari) | status-check | `components/articles/hindi-rajya-yojana/MeriFasalMeraByoraStatusHindi.tsx` | 2026-08-16 | 2026-08-16 | — |
+| `/articles/hi/bihar-kisan-registration-status` | बिहार किसान पंजीकरण स्टेटस 2026 — 13 अंकों का नंबर, सारी योजनाओं का दरवाजा | Hindi (Devanagari) | status-check | `components/articles/hindi-rajya-yojana/BiharKisanRegistrationStatusHindi.tsx` | 2026-08-16 | 2026-08-16 | — |
+| `/articles/hi/parihara-payment-status` | परिहार पेमेंट स्टेटस 2026 — फसल नुकसान मुआवजा कहां अटका, कैसे देखें? | Hindi (Devanagari) | status-check | `components/articles/hindi-rajya-yojana/PariharaPaymentStatusHindi.tsx` | 2026-08-16 | 2026-08-20 | — |
+| `/articles/hi/up-kisan-karj-rahat-list` | UP किसान कर्ज राहत लिस्ट 2026 — नई माफी का सच और नाम देखने का तरीका | Hindi (Devanagari) | status-check | `components/articles/hindi-rajya-yojana/UpKisanKarjRahatListHindi.tsx` | 2026-08-16 | 2026-08-18 | — |
+| `/articles/hi/ikhedut-portal-status` | iKhedut पोर्टल स्टेटस चेक 2026 — अर्जी नंबर से सब्सिडी तक | Hindi (Devanagari) | status-check | `components/articles/hindi-rajya-yojana/IkhedutPortalStatusHindi.tsx` | 2026-08-17 | 2026-08-17 | — |
+
+## `lib/hindi-yojana-2026-data.ts` — 6 articles
+
+| URL Route | Title | Language | Category | Component File | Published | Modified | Flags |
+|---|---|---|---|---|---|---|---|
+| `/articles/hi/fasal-bima-claim-status` | फसल बीमा क्लेम स्टेटस — पैसा कब और कैसे मिलेगा | Hindi (Devanagari) | farming | `components/articles/hindi-yojana-2026/FasalBimaClaimStatusHindi.tsx` | 2026-08-18 | 2026-08-18 | — |
+| `/articles/hi/kisan-karj-mafi-list` | किसान कर्ज माफी 2026 — किस राज्य में सच में चल रही है | Hindi (Devanagari) | farming | `components/articles/hindi-yojana-2026/KisanKarjMafiAllStatesHindi.tsx` | 2026-08-18 | 2026-08-18 | — |
+| `/articles/hi/pm-kisan-khad-yojana-sach` | PM किसान खाद योजना ₹11,000 — सच क्या है | Hindi (Devanagari) | farming | `components/articles/hindi-yojana-2026/PmKisanKhadYojanaSachHindi.tsx` | 2026-08-18 | 2026-08-20 | — |
+| `/articles/hi/pm-kisan-helpline-155261` | PM किसान हेल्पलाइन 155261 — शिकायत कैसे और कहां करें | Hindi (Devanagari) | status-check | `components/articles/hindi-yojana-2026/PmKisanHelpline155261Hindi.tsx` | 2026-08-18 | 2026-08-18 | — |
+| `/articles/hi/mgnrega-pashu-shed-yojana` | मनरेगा पशु शेड योजना — ₹1.6 लाख तक, असली प्रोसेस | Hindi (Devanagari) | farming | `components/articles/hindi-yojana-2026/MgnregaPashuShedYojanaHindi.tsx` | 2026-08-18 | 2026-08-20 | — |
+| `/articles/hi/pashu-kisan-credit-card` | पशु किसान क्रेडिट कार्ड — ₹3 लाख तक लोन, बिना जमीन के भी | Hindi (Devanagari) | farming | `components/articles/hindi-yojana-2026/PashuKisanCreditCardHindi.tsx` | 2026-08-18 | 2026-08-20 | — |
+
+## `lib/maandhan-data.ts` — 13 articles
+
+| URL Route | Title | Language | Category | Component File | Published | Modified | Flags |
+|---|---|---|---|---|---|---|---|
+| `/maandhan/pm-kisan-maandhan-registration-2026` | PM Kisan Maandhan Registration: ₹3000 Pension | Hinglish | pension-scheme | `components/articles/maandhan/PmKisanMaandhanRegistration2026.tsx` | 2026-03-15 | 2026-03-24 | — |
+| `/maandhan/pm-kisan-maandhan-eligibility-documents` | PM Kisan Maandhan Eligibility & Documents | Hinglish | pension-scheme | `components/articles/maandhan/PmKisanMaandhanEligibilityDocuments.tsx` | 2026-03-18 | 2026-04-08 | — |
+| `/maandhan/pm-kisan-maandhan-pension-calculator` | PM Kisan Maandhan Pension Calculator 2026 | Hinglish | pension-scheme | `components/articles/maandhan/PmKisanMaandhanPensionCalculator.tsx` | 2026-03-20 | 2026-04-03 | — |
+| `/maandhan/pm-kisan-maandhan-withdrawal-refund-rules` | Maandhan Exit: Refund & Family Pension Ka Sach | Hinglish | pension-scheme | `components/articles/maandhan/PmKisanMaandhanWithdrawalRefund.tsx` | 2026-03-23 | 2026-04-06 | — |
+| `/maandhan/pm-kisan-maandhan-auto-debit-poora-sach` | PM Kisan Maandhan Auto-Debit: Poora Sach | Hinglish | pension-scheme | `components/articles/maandhan/PmKisanMaandhanAutoDebitPooraSach.tsx` | 2026-04-02 | 2026-05-02 | — |
+| `/maandhan/pm-kisan-maandhan-status-check-online` | PM Kisan Maandhan Status Check Online | Hinglish | pension-scheme | `components/articles/maandhan/PmKisanMaandhanStatusCheckOnline.tsx` | 2026-04-05 | 2026-04-19 | — |
+| `/maandhan/pm-kisan-maandhan-pension-card-download` | PM Kisan Maandhan Pension Card Download | Hinglish | pension-scheme | `components/articles/maandhan/kisan-pension-card-download.tsx` | 2026-04-14 | 2026-04-23 | — |
+| `/maandhan/family-pension-rules` | PMKMY Family Pension Rules 2026 — Kya Hoga? | Hinglish | pension-scheme | `components/articles/maandhan/family-pension-rules.tsx` | 2026-04-22 | 2026-05-22 | — |
+| `/maandhan/pmkmy-bank-account-change` | PM Kisan Maandhan Bank Account Kaise Badlein | Hinglish | pension-scheme | `components/articles/maandhan/pmkmy-bank-account-change.tsx` | 2026-04-30 | 2026-05-30 | — |
+| `/maandhan/pmkmy-grievance-complaint-helpline` | PM Kisan Maandhan Helpline Number 2026 | Hinglish | pension-scheme | `components/articles/maandhan/pmkmy-grievance-complaint-helpline.tsx` | 2026-05-11 | 2026-05-25 | — |
+| `/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein` | Auto Debit Fail Regularization Kaise Karein | Hinglish | pension-scheme | `components/articles/maandhan/AutoDebitFailRegularization.tsx` | 2026-05-13 | 2026-05-18 | — |
+| `/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026` | PM Kisan Maandhan Contribution Chart 2026 | Hinglish | pension-scheme | `components/articles/maandhan/MaandhanContributionGuide.tsx` | 2026-05-22 | 2026-08-20 | — |
+| `/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana` | PM Kisan Maandhan vs Atal Pension Yojana 2026 | Hinglish | pension-scheme | `components/articles/maandhan/PmkmyVsApyComparison2026.tsx` | 2026-05-24 | 2026-06-02 | — |
+
+## `lib/rajya-yojana-data.ts` — 15 articles
+
+| URL Route | Title | Language | Category | Component File | Published | Modified | Flags |
+|---|---|---|---|---|---|---|---|
+| `/rajya-yojana/rajasthan-kisan-samman-nidhi-9000` | Rajasthan Kisan Samman Nidhi — Kist Kab Aayegi | Hinglish | Rajasthan | `components/articles/rajya-yojana/RajasthanKisanSammanNidhi9000.tsx` | 2026-06-09 | 2026-06-18 | — |
+| `/rajya-yojana/annadata-sukhibhava-status-check-2026` | Annadata Sukhibhava Status Check 2026 | Hinglish | Andhra Pradesh | `components/articles/rajya-yojana/AnnadataSukhibhavaStatusCheck.tsx` | 2026-06-11 | 2026-07-23 | — |
+| `/rajya-yojana/mp-kisan-kalyan-yojana-kist-status` | MP Kisan Kalyan Yojana Kist Status 2026 | Hinglish | Madhya Pradesh | `components/articles/rajya-yojana/MpKisanKalyanYojanaKist.tsx` | 2026-06-13 | 2026-07-04 | — |
+| `/rajya-yojana/namo-shetkari-yojana-status-check-2026` | Namo Shetkari Status 2026 — Beneficiary List | Hinglish | Maharashtra | `components/articles/rajya-yojana/NamoShetkariYojanaStatus.tsx` | 2026-06-15 | 2026-06-24 | — |
+| `/rajya-yojana/rythu-bharosa-status-check-2026` | Rythu Bharosa Status Check 2026 | Hinglish | Telangana | `components/articles/rajya-yojana/RythuBharosaStatusCheck.tsx` | 2026-06-17 | 2026-07-17 | — |
+| `/rajya-yojana/krishak-bandhu-status-check-2026` | Krishak Bandhu Status Check 2026 | Hinglish | West Bengal | `components/articles/rajya-yojana/KrishakBandhuStatusCheck.tsx` | 2026-06-20 | 2026-08-01 | — |
+| `/rajya-yojana/odisha-cm-kisan-status-check-2026` | Odisha CM Kisan Status Check 2026 | Hinglish | Odisha | `components/articles/rajya-yojana/OdishaCmKisanStatusCheck.tsx` | 2026-06-23 | 2026-07-02 | — |
+| `/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega` | Pati Patni Dono Ko PM Kisan Milega? | Hinglish | ALL | `components/articles/rajya-yojana/PmKisanPatiPatniRule.tsx` | 2026-06-25 | 2026-06-30 | — |
+| `/rajya-yojana/state-kisan-yojana-list-all-states-2026` | State Kisan Yojana List 2026 — Sabhi Rajya | Hinglish | ALL | `components/articles/rajya-yojana/StateKisanYojanaHub.tsx` | 2026-06-27 | 2026-08-08 | — |
+| `/rajya-yojana/krishak-unnati-yojana-status-check-2026` | Krishak Unnati Yojana Status Check 2026 | Hinglish | Chhattisgarh | `components/articles/rajya-yojana/KrishakUnnatiYojanaStatusCheck.tsx` | 2026-07-07 | 2026-07-16 | — |
+| `/rajya-yojana/meri-fasal-mera-byora-status-check-2026` | Meri Fasal Mera Byora Status Check 2026 | Hinglish | Haryana | `components/articles/rajya-yojana/MeriFasalMeraByoraStatusCheck2026.tsx` | 2026-07-31 | 2026-08-06 | — |
+| `/rajya-yojana/bihar-kisan-registration-status-check-2026` | DBT Agriculture Bihar Status Check 2026 | Hinglish | Bihar | `components/articles/rajya-yojana/BiharKisanRegistrationStatusCheck2026.tsx` | 2026-08-09 | 2026-08-11 | — |
+| `/rajya-yojana/parihara-payment-status-check-2026` | Parihara Payment Status 2026 Village Wise | Hinglish | Karnataka | `components/articles/rajya-yojana/PariharaPaymentStatusCheck2026.tsx` | 2026-08-06 | 2026-08-08 | — |
+| `/rajya-yojana/up-kisan-karj-rahat-list-2026` | UP Kisan Karj Rahat List 2026 — Status | Hinglish | Uttar Pradesh | `components/articles/rajya-yojana/UpKisanKarjRahatList2026.tsx` | 2026-08-02 | 2026-08-06 | — |
+| `/rajya-yojana/ikhedut-portal-status-check-2026` | iKhedut Portal Status Check 2026 — Arji Status | Hinglish | Gujarat | `components/articles/rajya-yojana/IkhedutPortalStatusCheck2026.tsx` | 2026-08-11 | 2026-08-11 | — |
+
+## `lib/yojana-2026-data.ts` — 6 articles
+
+| URL Route | Title | Language | Category | Component File | Published | Modified | Flags |
+|---|---|---|---|---|---|---|---|
+| `/yojana/fasal-bima-claim-status-check` | Fasal Bima Claim Status — Paisa Kab Milega | Hinglish | — | `components/articles/yojana-2026/FasalBimaClaimStatusCheck.tsx` | 2026-08-18 | 2026-08-18 | — |
+| `/yojana/kisan-karj-mafi-list-all-states` | Kisan Karj Mafi 2026 — Kis State Me Chalu | Hinglish | — | `components/articles/yojana-2026/KisanKarjMafiAllStates.tsx` | 2026-08-18 | 2026-08-18 | — |
+| `/yojana/pm-kisan-khad-yojana-11000-sach` | PM Kisan Khad Yojana ₹11,000 — Sach Kya Hai | Hinglish | — | `components/articles/yojana-2026/PmKisanKhadYojanaSach.tsx` | 2026-08-18 | 2026-08-18 | — |
+| `/yojana/pm-kisan-helpline-155261` | PM Kisan Helpline 155261 — Complaint Guide | Hinglish | — | `components/articles/yojana-2026/PmKisanHelpline155261.tsx` | 2026-08-18 | 2026-08-18 | — |
+| `/yojana/mgnrega-pashu-shed-yojana` | MGNREGA Pashu Shed Yojana — ₹1.6L Tak | Hinglish | — | `components/articles/yojana-2026/MgnregaPashuShedYojana.tsx` | 2026-08-18 | 2026-08-18 | — |
+| `/yojana/pashu-kisan-credit-card-apply` | Pashu Kisan Credit Card — ₹3 Lakh Tak | Hinglish | — | `components/articles/yojana-2026/PashuKisanCreditCard.tsx` | 2026-08-18 | 2026-08-18 | — |
+
+---
+
+## Notes
+
+- **Language detection:** title me Devanagari script = Hindi; warna Hinglish (Roman script).
+- **Data file** = jaha article ka slug, title, SEO meta, dates define hain.
+- **Component file** = jaha article ka actual JSX content hai.
+- **noindex** articles sitemap se excluded hain aur Google index nahi karta (dekho `lib/categories.ts` ArticleMeta.noindex).
+- Rajya-yojana data me `status` field hai (`live`/`planned`) — is waqt sab 15 `live` hain. `planned` wale table me flag ke saath dikhen ge.
+- Ye list repo ke data files se script-generated hai — data files badle to list bhi update karo.
