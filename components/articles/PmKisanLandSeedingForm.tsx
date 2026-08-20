@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-01-15T16:32:11+05:30';
-const MODIFIED = '2026-02-05T18:12:48+05:30';
+const PUBLISHED = '2026-07-09T05:39:09+05:30';
+const MODIFIED = '2026-08-17T11:44:57+05:30';
 
 const RELATED = [
   { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
@@ -394,8 +394,18 @@ export default function PmKisanLandSeedingFormPdf2026() {
               </tbody>
             </table>
           </div>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Baaki rajyon ke liye upar wali portal list mein se apna link kholein — record nikaalne ka tarika sab jagah lagbhag ek jaisa hai: district → tehsil → gaon → khasra ya naam se khoj.
+          </p>
+          <Image
+            src="/images/articles/pm-kisan-land-seeding-form/up-land-seeding-form-sample.webp"
+            alt="UP mein chalne wale aavedan ka namuna — Lekhpal ke verification wala hissa neeche hota hai"
+            width={800}
+            height={600}
+            className="w-full rounded-xl mt-2"
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] mt-2">
+            UP mein chalne wala ek namuna — aapke block ka format thoda alag ho sakta hai, ghabrayein nahi
           </p>
         </section>
 

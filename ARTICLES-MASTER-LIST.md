@@ -156,7 +156,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 | 2 | ✅ 2026-08-21 | `/rajya-yojana/odisha-cm-kisan-status-check-2026` (1776 imp) | `/articles/NanoDap500mlPriceInIndia2026` (1764 imp) |
 | 3 | ✅ 2026-08-20 | `/articles/hi/namo-shetkari-yojana` (1697 imp) | `/articles/hi/pm-kisan-25vi-kist` (1149 imp) |
 | 4 | ✅ 2026-08-20 | `/articles/msp-list-2026-27` (1062 imp) | `/articles/hi/npci-aadhaar-seeding` (940 imp) |
-| 5 | ⬜ | `/rajya-yojana/mp-kisan-kalyan-yojana-kist-status` (913 imp) | `/articles/PmKisanLandSeedingForm` (757 imp) |
+| 5 | ✅ 2026-08-20 | `/rajya-yojana/mp-kisan-kalyan-yojana-kist-status` (913 imp) | `/articles/PmKisanLandSeedingForm` (757 imp) |
 | 6 | ⬜ | `/articles/hi/tractor-subsidy` (691 imp) | `/rajya-yojana/namo-shetkari-yojana-status-check-2026` (638 imp) |
 | 7 | ⬜ | `/articles/bihar-pashupalan-loan-yojana` (635 imp) | `/articles/PmfbyCropInsurance2026` (560 imp) |
 | 8 | ⬜ | `/articles/bakri-palan-yojana-nlm-subsidy` (493 imp) | `/articles/hi/mp-kisan-kalyan-yojana` (402 imp) |
