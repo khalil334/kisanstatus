@@ -1,6 +1,6 @@
 # ⚠️ SAB SE PEHLE YE PADHO — Saare Articles Rewrite Karne Hain
 
-**Site ke saare 120 articles neeche wale Master Prompt ke hisab se REWRITE karne hain — ek-ek karke, parts me (2 articles per part).** Koi article skip nahi hoga. Har rewrite se pehle Master Prompt poora padho (Rule 0 + Rule 1 sabse zaroori), phir Parts Plan table me se agla ⬜ part uthao, dono articles rewrite karo, push karo, aur status ✅ + date karo.
+**Site ke saare 120 articles neeche wale Master Prompt ke hisab se REWRITE karne hain — ek-ek karke, parts me (2 articles per part).** Koi article skip nahi hoga. Har article me: (1) **images ke path fix** karne hain — sirf wahi images use karo jo `public/images/` me sach me maujood hain, broken/galat path bilkul nahi; (2) **koi repetitive keyword nahi** — poori website bilkul saaf, aisi lage jaise real insaan ne likha hai; (3) har article **100% helpful** ho — kisan ko Kya hai, Kyu hai, Kaise hoga — sab kuch clear aur asaan bhasha me mile. Har rewrite se pehle Master Prompt poora padho (Rule 0 + Rule 1 sabse zaroori), phir Parts Plan table me se agla ⬜ part uthao, dono articles rewrite karo, push karo, aur status ✅ + date karo.
 
 Order:
 1. **✍️ Master Prompt** (neeche) — har article isi se rewrite hoga
@@ -59,6 +59,23 @@ Ye sabse bada rule hai. 120 articles me se koi 2 bhi same structure ke nahi hong
 - **Internal links**: 3-10 per article, is master list ke related articles se. Link natural sentence me aaye — "iske liye pehle eKYC karna padega (poora tarika yaha hai)" — na ki "Related Articles" ki alag robotic list har baar same jagah.
 - **External links**: 2-5, sirf high-authority (official portals, PIB, RBI).
 
+### Images — Har Article Me Path Fix Karo (zaroori)
+
+- Har article ki **saari images check karo**: jo path component (.tsx) me likha hai wo `public/images/` ya `public/images/articles/<folder>/` me **sach me exist karta ho**. Nahi karta to path theek karo ya us article ke folder ki sahi image lagao. **Broken image = article fail.**
+- Galat article ki image doosre article me mat lagao — image content se match kare (KCC article me KCC wali image, gau mutra article me wahi).
+- Har image me **alt text** ho — kisan ki bhasha me, descriptive, keyword-stuffed nahi ("CSC center pe eKYC karta kisan" ✅, "pm kisan ekyc status check 2026 online" ❌).
+- Hero/OG image ka path data file (lib/*.ts) me bhi verify karo.
+- Nayi image chahiye lekin available nahi? To image hata do — broken path chhodne se behtar hai.
+
+### 100% Helpful — Kya, Kyu, Kaise (har article ka test)
+
+Har article padhne ke baad kisan ko ye teeno cheezein bilkul clear honi chahiye:
+- **Kya hai** — yojana/process/cheez kya hai, seedhe shabdon me, pehli 2-3 lines me hi
+- **Kyu hai / kyu zaroori hai** — kisan ko isse kya milega (paisa, subsidy, bachav), kise milega, kise nahi
+- **Kaise hoga** — exact steps: kaha jana hai (portal/CSC/bank), kya documents, kitna paisa/fees, kitna time lagega, problem aaye to kya karna
+
+Agar koi bhi ek missing hai to article adhoora hai. Sab kuch **clear aur asaan** — 8vi pass kisan bhi mobile pe padh ke khud kaam kar sake. Ye hi 100% helpful ka matlab hai.
+
 ### AEO/SEO Limits — Image Wale Rules (K. Pemasiri AEO chart se, har article me follow karo)
 
 | Cheez | Limit |
@@ -108,7 +125,9 @@ Ye sabse bada rule hai. 120 articles me se koi 2 bhi same structure ke nahi hong
 - [ ] 2,000-3,000 words? (exact count baaki articles se alag?)
 - [ ] Structure pichhle 5 upgraded articles se alag?
 - [ ] Koi AI word/pattern nahi? (upar wali list check karo)
-- [ ] Keyword stuffing check kiya? (main keyword gina — 1.5% se kam? har paragraph me to nahi dikh raha?)
+- [ ] Keyword stuffing check kiya? (main keyword gina — 1.5% se kam? har paragraph me to nahi dikh raha? Poore article me KOI word/phrase repetitive nahi — real insaan jaisa padhe?)
+- [ ] Saari images ka path verify kiya? (file `public/images/` me exist karti hai, image content se match karti hai, alt text natural hai)
+- [ ] Kya-Kyu-Kaise teeno clear hain? (kisan bina kisi aur page pe gaye khud kaam kar sake)
 - [ ] Headings me keyword sirf 2-3 baar?
 - [ ] Table unique style me?
 - [ ] FAQ 3-5, kisan ki bhasha me?
