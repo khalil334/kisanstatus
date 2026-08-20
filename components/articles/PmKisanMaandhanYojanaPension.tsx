@@ -5,7 +5,7 @@ import CountdownRedirectButton from '@/components/CountdownRedirectButton';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-13T17:44:35+05:30';
-const MODIFIED = '2026-02-18T06:27:23+05:30';
+const MODIFIED = '2026-08-20T20:15:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
@@ -45,6 +45,14 @@ const FAQS_DATA = [
   {
     q: 'Kya government bhi paisa deti hai?',
     a: 'Haan, jitna paisa aap dalte ho utna hi sarkar bhi dal ti hai. Matlab aap ₹100 dalo, sarkar ₹100 dalegi — total ₹200 jama hoga.',
+  },
+  {
+    q: 'CSC wala enrollment ke liye alag "processing fee" maang raha hai — dun?',
+    a: 'Nahi. Enrollment bilkul free hai — dena sirf pehla monthly contribution hota hai (umar ke slab ke hisaab se ₹55 se ₹200). Alag se ₹100-200 ki "processing fee" maangna galat hai. Aisa ho toh wahin mana karo aur helpline 1800-3000-3468 par shikayat karo.',
+  },
+  {
+    q: 'Paisa jama kahan hota hai — kaun sambhaalta hai?',
+    a: 'Pension fund LIC of India manage karti hai; auto-debit ka mandate NPCI system se chalta hai aur IDBI Bank sponsor bank hai. Passbook mein har kist par "NACH Debit" ya "LIC-PMKMY" jaisa description dikhta hai — yahi pehchan hai ki paisa sahi jagah gaya.',
   },
 ];
 
@@ -516,6 +524,55 @@ export default function PmKisanMaandhanYojanaPension() {
               <strong>Correction Charges:</strong> Naam, DOB, ya bank details mein correction karne par ₹20-50 lagte hain. Isliye enrollment ke waqt details sahi check karo.
             </p>
           </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>Har Mahine Ka Paisa Katta Kaise Hai — Auto-Debit Ka Sach</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Enrollment ke waqt aap ek NACH auto-debit mandate sign karte ho. Iska matlab: har mahine aapka
+            share aapke bank account se apne aap kat kar pension fund mein chala jaata hai — fund LIC of India
+            manage karti hai, aur IDBI Bank sponsor bank ke taur par NPCI ke through ye debit chalata hai.
+            Passbook mein <strong>"NACH Debit"</strong> ya <strong>"LIC-PMKMY"</strong> jaisi entry dikhe toh
+            samajh jao system theek chal raha hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Account mein balance nahi tha aur debit fail ho gaya? Ghabrao mat — LIC agle payment cycle mein
+            demand dobara raise karti hai. Payment cycles har mahine <strong>1, 11 aur 21 tareekh</strong> ko
+            hote hain (holiday ho toh agla working day). Haan, lagatar miss hone par account default mein jaata
+            hai aur baad mein penalty ke saath regularize karna padta hai — isliye kist wale hafte account mein
+            balance rakho. Auto-debit ka poora mechanism{' '}
+            <Link href="/maandhan/pm-kisan-maandhan-auto-debit-poora-sach" className="underline text-green-700 dark:text-green-400">alag guide</Link>{' '}
+            mein detail se likha hai.
+          </p>
+          <WB>
+            <strong>Enrollment Free Hai — Fee Fraud Se Bacho:</strong> Kuch CSC operators "processing fee" ya
+            "service charge" ke naam par ₹100–200 extra maang lete hain. Enrollment bilkul free hai — dena sirf
+            pehla monthly contribution hota hai (₹55–₹200, umar ke hisaab se). Alag fee maange toh wahin mana
+            karo aur helpline <strong>1800-3000-3468</strong> (Mon–Sat, 9:30 AM–6 PM) par shikayat karo.
+          </WB>
+        </section>
+
+        <section className="mb-8">
+          <SH>Nominee Ka Naam — 15 Minute Ka Kaam, Saalon Ki Bachat</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Upar family pension ke rules padhe — par wo sab kaagaz par tabhi smooth chalta hai jab nomination
+            updated ho. Jinke nominee ka naam register tha, unke parivar ka settlement 1–2 mahine mein ho jaata
+            hai; jinke record mein nominee tha hi nahi ya galat tha, wahi case 6–12 mahine tak ghisatta hai —
+            court se legal heir certificate tak baat pahunch jaati hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Isliye aaj hi check karo: CSC par jaakar apni PMKMY nomination dekho. Shaadi hui, nominee guzar
+            gaye, ya naam ki spelling galat hai — to update karwao, ye free hai aur 15 minute ka kaam hai.
+            Surviving spouse ke ₹1,500 monthly family pension ka process bhi automatic nahi hota — claim karna
+            padta hai. Poore rules{' '}
+            <Link href="/maandhan/family-pension-rules" className="underline text-green-700 dark:text-green-400">family pension guide</Link>{' '}
+            mein hain.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Aur ek baat jo bahut kam log jaante hain: 60 se pehle scheme chhodne par sirf <em>aapka</em> jama
+            hissa byaj ke saath wapas milta hai — sarkar ka daala hua barabar ka hissa wapas nahi milta. Isliye
+            "kuch saal chala kar chhod denge" wali soch mein asli nuksan aapka hi hai.
+          </p>
         </section>
 
         <section className="mb-8">

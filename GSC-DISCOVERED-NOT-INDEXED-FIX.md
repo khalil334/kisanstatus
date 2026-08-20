@@ -342,8 +342,7 @@ Aage ke parts me `Actual` column pe bharosa karo, purane estimate pe nahi.
 nikale jo 2,000 se neeche hain — wahi ab Part 6 se aage ka kaam hai. Guard ki list hi authoritative
 queue hai (`npm run check:content`), doc ki purani list nahi.
 
-**Remaining queue (guard se, Part 8 ke baad 11 bache):**
-`PmKisanBankAccountChangeProcess` (1,752) · `PmKisanMaandhanYojanaPension` (1,800) ·
+**Remaining queue (guard se, Part 9 ke baad 9 bache):**
 `NanoDap500mlPriceInIndia2026` (1,811) · `PmKisanStateNodalOfficerList` (1,816) ·
 `pm-kisan-self-registered-status-check` (1,833) · `PmKisanFaceAuthenticationEkyc` (1,853) ·
 `bakri-palan-yojana-nlm-subsidy` (1,872) · `PmKisanCorrectionForm2026` (1,883) ·
@@ -355,6 +354,27 @@ queue hai (`npm run check:content`), doc ki purani list nahi.
 
 | **8** | `/articles/KisanTractorLoan2026` | — | **1,693 → 2,096** | — | ✅ Done (2026-08-20) |
 | | `/articles/PmKusumYojanaSolarSubsidy2026` | — | **1,720 → 2,151** | — | ✅ Done (2026-08-20) |
+| **9** | `/articles/PmKisanBankAccountChangeProcess` | — | **1,752 → 2,207** | — | ✅ Done (2026-08-20) |
+| | `/articles/PmKisanMaandhanYojanaPension` | — | **1,800 → 2,288** | — | ✅ Done (2026-08-20) |
+
+**Part 9 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
+- *PmKisanBankAccountChangeProcess*: (1) "Khaate Ke Maalik Ka Dehant Ho Gaya" section — Succession
+  Transfer CSC se (death certificate + Khatauni + Aadhaar — VillageWiseListPdf ke verified FAQ se),
+  mutation-pehle-record-baad ki chain, recovery-notice warning. (2) "Update Ke Baad Bhi Paisa Nahi
+  Aaya" escalation — 155261 / 011-24300606 (call se pehle kya ready rakhna), pmkisan.gov.in Help Desk
+  ticket, State Nodal Officer email (sab FTO article ke verified chain se), phone-OTP fraud warning
+  (1930 / cybercrime.gov.in). +2 FAQ (succession, OTP fraud). Internal count 1,752 → **2,207**.
+- *PmKisanMaandhanYojanaPension*: (1) "Auto-Debit Ka Sach" section — NACH mandate, LIC fund
+  management + IDBI sponsor bank + NPCI, passbook me "NACH Debit/LIC-PMKMY" pehchan, fail hone par
+  1/11/21 tareekh ke retry cycles (sab AutoDebitPooraSach se), CSC "processing fee" fraud warning +
+  1800-3000-3468 (Registration2026/ContributionGuide se), auto-debit guide ka link. (2) "Nominee Ka
+  Naam" section — nominee-registered 1–2 mahine vs bina-nominee 6–12 mahine settlement ka farak
+  (family-pension-rules ke verified FAQ se), ₹1,500 family pension claim automatic nahi hota,
+  premature exit me sarkar ka hissa wapas nahi (WithdrawalRefund se), family-pension guide ka link.
+  +2 FAQ (CSC fee fraud, LIC/NPCI mechanism). Internal count 1,800 → **2,288**.
+- Dono ke `modifiedTime` update (`lib/core-articles-data.ts`). Koi naya amount/date invent nahi.
+- Verification: `tsc --noEmit` clean, `check:titles` (108 pairs) + `check:content` pass — dono guard
+  ki list se bahar.
 
 **Part 8 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
 - *KisanTractorLoan2026*: (1) "EMI kahan se aayegi" section — tractor ko kiraye par dena, peak-month
