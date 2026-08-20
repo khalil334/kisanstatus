@@ -6,7 +6,7 @@ import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-05-22T17:41:10+05:30';
-const MODIFIED = '2026-05-31T07:51:01+05:30';
+const MODIFIED = '2026-08-20T21:30:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -319,6 +319,30 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/maandhan/pm-kisan-maandhan-status-check-online" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Status Check Karne Ka Tarika →</Link>
           </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>Paisa Jama Kahan Hota Hai — Aur Premature Exit Par Kiska Kya</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Table dekh kar ek waajib sawal uthta hai: har mahine jo ₹55 ya ₹200 kat rahe hain, woh jaate kahan hain? Poora fund <strong>LIC (Life Insurance Corporation)</strong> manage karti hai. Aur ek baareeki jo aksar koi nahi batata — aapka share aur sarkar ka matching share LIC ke paas <strong>alag-alag track</strong> hote hain. Iska practical matlab tab samajh aata hai jab koi beech mein scheme chhodta hai: premature exit par sirf <em>aapka</em> jama paisa + interest wapas milta hai; sarkar ka matching share kabhi aapke haath nahi aata, woh pension fund mein wapas chala jata hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Isliye upar wali table ka "Total Fund" column padhte waqt yeh dhyan rakhein — ₹110 ya ₹400 mahina fund mein zaroor ja raha hai, lekin woh poora amount tabhi aapke kaam aata hai jab aap 60 tak scheme mein tike rahen. Aadha raste se utarne par hisaab sirf aapke aadhe hisse ka hota hai. Jitni der se yeh baat samajh aati hai, utna mehnga padta hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Registration ki baat karein toh ek aur kharcha jo <strong>hona hi nahi chahiye</strong>: kuch CSC operators "processing fee" ya "service charge" ke naam par ₹100–200 extra maang lete hain. Enrollment bilkul free hai — dena sirf pehla monthly contribution hota hai (aapki umar ke slab ke hisaab se ₹55–₹200). Koi alag fee maange toh wahin mana kar dijiye aur helpline <strong>1800-3000-3468</strong> par shikayat kar dijiye.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Aapke Baad Parivar Ka Kya — Contribution Ke Nazariye Se</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Yeh sawal contribution chart se seedha juda hai, kyunki jawab is par depend karta hai ki dehant kab hota hai. <strong>60 se pehle</strong> (pension shuru hone se pehle): spouse ke paas do raste hain — bacha hua contribution khud dekar scheme continue karein aur 60 par poori ₹3,000 pension lein, ya jama paisa interest ke saath lekar exit kar jayein. <strong>60 ke baad</strong> (pension chalu ho chuki thi): spouse ko ₹3,000 ka aadha — <strong>₹1,500 har mahine</strong> — puri zindagi milta hai. Yeh family pension sirf legally wedded spouse ke liye hai, bachon ke liye nahi.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Enrollment ke waqt ek 2-minute ka kaam is poore process ko aasan bana deta hai: <strong>nominee ka naam sahi bharwana</strong>. Nominee registered ho toh claim settlement 1–2 mahine mein ho jata hai; nominee na ho toh spouse ko tehsil se Legal Heir Certificate lena padta hai aur wahi kaam 6–12 mahine kheench jata hai. Scenario-wise poore rules —{' '}
+            <Link href="/maandhan/family-pension-rules" className="underline font-bold">family pension rules guide</Link> mein hain.
+          </p>
         </section>
 
         <section className="mb-8">

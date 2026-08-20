@@ -328,14 +328,32 @@ Aage ke parts me `Actual` column pe bharosa karo, purane estimate pe nahi.
 | | `/articles/hi/pashu-kisan-credit-card` | 2,300+ | **2,078** | — | ✅ Done (2026-08-20) |
 | **2** | `/articles/PmKisanVoluntarySurrenderGuide` | 1,634 | **1,572** | — | ✅ Done (2026-08-20) |
 | | `/articles/PmKisanCscRegistrationCharges` | 1,663 | **1,568** | — | ✅ Done (2026-08-20) |
-| **3** | `/articles/hi/pm-kisan-khad-yojana-sach` | 1,720 | **1,632** | +368 | ⏳ Pending |
-| | `/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026` | ~1,750 | **1,648** | +352 | ⏳ Pending |
+| **3** | `/articles/hi/pm-kisan-khad-yojana-sach` | 1,720 | **1,632 → ~2,040** | — | ✅ Done (2026-08-20) |
+| | `/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026` | ~1,750 | **1,648 → ~2,090** | — | ✅ Done (2026-08-20) |
 | **4** | `/articles/fto-status-check-paisa-kab-aayega` | ~1,800 | **1,718** | +282 | ⏳ Pending |
 | | `/articles/hi/parihara-payment-status` (PariharaPaymentStatusHindi) | ~1,800 | **1,665** | +335 | ⏳ Pending |
 | **5** | `/articles/PmKisanVillageWiseListPdfDownload` | ~1,830 | **1,901** | +99 | ⏳ Pending |
 | | `/articles/hi/rythu-bharosa-status` (RythuBharosaStatusHindi) | ~1,840 | **1,676** | +324 | ⏳ Pending |
 
-**Total remaining: ~1,760 real words** (Parts 3–5).
+**Total remaining: ~1,040 real words** (Parts 4–5).
+
+**Part 3 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts, koi naya amount/date invent nahi):
+- *Khad Yojana Sach*: (1) "Khad par asli bachat ka raasta" section — Soil Health Card (free test,
+  soilhealth.dac.gov.in, repo ke soil-health guide se) + Nano DAP option (₹250–350 / 500ml vs ₹1,350
+  granular bori — repo ke NanoDap article se), dono contextual internal links ke saath. (2) "OTP de
+  diya aur paisa kat gaya" recovery section — 1930 helpline, cybercrime.gov.in, bank ko turant
+  batana (repo ke FTO/Parihara articles ke verified facts). +1 FAQ (OTP fraud recovery).
+  `check:content` internal count 1,549 → **1,934** (live ~2,040).
+- *Maandhan Contribution Chart*: (1) "Paisa jama kahan hota hai" section — LIC fund management,
+  aapka-share-vs-govt-share alag tracking, premature exit me govt share wapas nahi (repo ke
+  AutoDebitPooraSach se), CSC "processing fee" fraud warning + 1800-3000-3468 (Registration2026 se).
+  (2) "Aapke baad parivar ka kya" section — 60-se-pehle do options / 60-ke-baad ₹1,500 family
+  pension, nominee-registration ka 1–2 mahine vs 6–12 mahine settlement farak (family-pension-rules
+  se), us guide ka contextual link. `check:content` internal count 1,396 → **1,779** (live ~2,090).
+- Dono me `MODIFIED`/`modifiedTime` update. Internal link slugs data files se verify kiye
+  (soil-health, NanoDap, family-pension-rules — sab OK).
+- Verification: `tsc --noEmit` clean, `check:titles` (108 pairs) + `check:content` pass. Full
+  `next build` is sandbox me Google Fonts fetch (firewall) pe rukta hai — code errors zero.
 
 ### ⚠️ Parts 3–5 blocked — official source chahiye
 

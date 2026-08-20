@@ -64,7 +64,7 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
     ],
     category: 'farming',
     publishedTime: '2026-08-18T11:30:00+05:30',
-    modifiedTime: '2026-08-18T19:45:00+05:30',
+    modifiedTime: '2026-08-20T21:30:00+05:30',
     author: AUTHOR_NAME,
     component: 'PmKisanKhadYojanaSachHindi',
     ogImage: '/og-image.webp',

@@ -23,6 +23,10 @@ const FAQS = [
     a: 'MRP से ज्यादा लेना गैर-कानूनी है। पहले PoS पर्ची मांगिए — उसमें सही दाम छपा होता है। फिर भी न माने तो Kisan Call Centre 1800-180-1551 पर शिकायत करिए या जिले के कृषि अधिकारी को बताइए। खरीद के बाद SMS न आए तो भी समझिए सौदे में गड़बड़ है।',
   },
   {
+    q: 'OTP देने के बाद खाते से पैसा कट गया — अब क्या करूं?',
+    a: 'सबसे पहले cyber crime helpline 1930 पर call कीजिए — जितनी जल्दी report होगी, पैसा रुकने की उम्मीद उतनी ज्यादा। साथ ही cybercrime.gov.in पर शिकायत दर्ज कीजिए और अपने बैंक को तुरंत बताइए ताकि खाते से आगे की transaction रोकी जा सके।',
+  },
+  {
     q: 'यह अफवाह हर साल वापस क्यों आ जाती है?',
     a: 'क्योंकि यह clicks कमाती है। 2021 से वही articles चल रहे हैं, बस heading में साल बदल जाता है — 2024, 2025, अब 2026। PM किसान की असली किस्त का season आते ही इनकी traffic बढ़ जाती है, क्योंकि किसान वैसे ही पैसा search कर रहा होता है। इसलिए साल बदलने से अफवाह सच नहीं हो जाती।',
   },
@@ -141,6 +145,45 @@ export default function PmKisanKhadYojanaSachHindi({ article }: { article: Hindi
         <strong>nic.in</strong> पर खत्म होता है। असली scheme की जानकारी में हमेशा official portal, helpline
         और notification होता है; fake articles में सिर्फ &ldquo;जल्द आवेदन करें&rdquo; की जल्दी। शक हो तो
         PIB Fact Check (@PIBFactCheck) पर scheme का नाम search कर लीजिए।
+      </p>
+
+      <Head2>खाद पर असली बचत का रास्ता — जो कोई blog नहीं बताता</Head2>
+      <p>
+        ₹11,000 वाली अफवाह के पीछे भागने से जो नहीं मिलेगा, वह खाद के <em>सही इस्तेमाल</em> से मिल सकता
+        है। ज्यादातर खेतों में खाद जरूरत से ज्यादा डलती है — अंदाजे से। जितनी बोरी बच गई, उतना पैसा जेब
+        में रहा। और यह अंदाजा हटाने का सरकारी इंतजाम पहले से मौजूद है, बिल्कुल मुफ्त।
+      </p>
+      <p>
+        <strong>Soil Health Card</strong> — मिट्टी का free test, जिसकी report बताती है कि आपके खेत में
+        nitrogen, phosphorus कितना है और कौन सी खाद कितनी चाहिए। Test और card दोनों पर किसान का कोई
+        खर्च नहीं; portal soilhealth.dac.gov.in है और sample block के कृषि office से भी जमा हो जाता है।
+        कैसे बनवाएं और report कैसे पढ़ें — पूरा तरीका{' '}
+        <Link href="/articles/soil-health-card-complete-guide-2026" className="underline font-bold">soil
+        health card गाइड</Link> में है। Report के हिसाब से खाद डालने पर अक्सर बोरी कम लगती है — यानी असली,
+        गिनने लायक बचत।
+      </p>
+      <p>
+        दूसरा रास्ता <strong>Nano DAP</strong> है — IFFCO की 500 ml की बोतल, दाम करीब ₹250–350, जो कई
+        कामों में 50 kg की ₹1,350 वाली granular DAP बोरी की जगह ले लेती है। कहां यह फायदे का सौदा है और
+        कहां पुरानी बोरी ही सही — यह हिसाब{' '}
+        <Link href="/articles/NanoDap500mlPriceInIndia2026" className="underline">Nano DAP price गाइड</Link>{' '}
+        में किया है। नीयत यह समझने की है: सरकार से खाद का पैसा खाते में नहीं आता, पर खाद पर आपका अपना
+        खर्च कम जरूर हो सकता है — बिना किसी fake registration के।
+      </p>
+
+      <Head2>OTP दे दिया और पैसा कट गया — तुरंत ये करिए</Head2>
+      <p>
+        अगर यह article पढ़ने से पहले ही किसी &ldquo;खाद योजना registration&rdquo; में OTP दे बैठे हैं और
+        खाते से पैसा कट गया, तो घबराकर बैठिए मत — पहले घंटे में की गई शिकायत का वजन सबसे ज्यादा होता है।
+        तीन काम, इसी क्रम में:
+      </p>
+      <p>
+        पहला — <strong>1930</strong> पर call कीजिए। यह cyber crime की national helpline है; जल्दी report
+        होने पर बैंक transaction रोकने या पैसा freeze कराने की कोशिश करते हैं। दूसरा —{' '}
+        <strong>cybercrime.gov.in</strong> पर online शिकायत दर्ज कीजिए और complaint number संभालकर रखिए।
+        तीसरा — अपनी bank branch को उसी दिन बताइए, ताकि खाते पर आगे की transaction block हो। और घर में
+        जो बड़े-बुजुर्ग PM किसान के beneficiary हैं, उन्हें यह जरूर समझा दीजिए कि सरकारी योजना का पैसा लेने
+        के लिए <em>कभी</em> OTP नहीं बताना पड़ता — fraud का सबसे ज्यादा शिकार वही होते हैं।
       </p>
 
       <Head2>असली पैसा कहां है — ये दो schemes पक्की हैं</Head2>
