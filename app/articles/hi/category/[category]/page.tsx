@@ -15,6 +15,228 @@ import {
   LOGO_HEIGHT,
 } from '@/lib/site-config';
 
+// Fix 1 (GSC-DISCOVERED-NOT-INDEXED-FIX.md) — Hindi category pages were 114–199
+// words of pure template boilerplate. Each intro below is unique, structurally
+// different from the others (and from the Hinglish /articles/category intros),
+// and only states facts already verified in this repo's articles.
+function CategoryIntroHi({ category }: { category: CategorySlug }) {
+  if (category === 'status-check') {
+    return (
+      <section className="max-w-3xl mb-12">
+        <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+          किस्त अटकी है? पहले वजह पहचानिए
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 mb-3">
+          स्टेटस चेक करने वाले ज्यादातर किसान एक ही सवाल लेकर आते हैं — पैसा क्यों नहीं आया।
+          जवाब हर बार अलग होता है, इसलिए गाइड भी अलग-अलग हैं:
+        </p>
+        <ul className="space-y-2 text-gray-700 dark:text-gray-300 mb-3">
+          <li>
+            <strong>किस्त की तारीख जाननी है:</strong>{' '}
+            <Link href="/articles/hi/pm-kisan-25vi-kist" className="text-amber-800 dark:text-amber-300 underline font-semibold">25वीं किस्त कब आएगी</Link>{' '}
+            वाली गाइड में लेटेस्ट अपडेट है।
+          </li>
+          <li>
+            <strong>eKYC पेंडिंग दिख रहा है:</strong> सबसे आम रुकावट यही है —{' '}
+            <Link href="/articles/hi/ekyc-mobile-se" className="text-amber-800 dark:text-amber-300 underline font-semibold">मोबाइल से eKYC</Link>{' '}
+            OTP या Face Auth दोनों तरीकों से हो जाती है।
+          </li>
+          <li>
+            <strong>eKYC हो चुकी, फिर भी पैसा नहीं:</strong> अक्सर बैंक खाता आधार से DBT के लिए लिंक नहीं होता —{' '}
+            <Link href="/articles/hi/npci-aadhaar-seeding" className="text-amber-800 dark:text-amber-300 underline font-semibold">NPCI आधार सीडिंग</Link>{' '}
+            की गाइड देखिए।
+          </li>
+          <li>
+            <strong>स्टेटस में अजीब मैसेज:</strong>{' '}
+            <Link href="/articles/hi/payment-stopped-by-state" className="text-amber-800 dark:text-amber-300 underline font-semibold">Payment Stopped by State</Link>{' '}
+            और{' '}
+            <Link href="/articles/hi/recovery-notice" className="text-amber-800 dark:text-amber-300 underline font-semibold">Recovery Notice</Link>{' '}
+            — दोनों का मतलब और इलाज अलग है।
+          </li>
+        </ul>
+        <p className="text-gray-700 dark:text-gray-300 mb-3">
+          सिर्फ PM Kisan ही नहीं — राज्य योजनाओं (रायथु भरोसा, कृषक बंधु, अन्नदाता सुखीभव,
+          ओडिशा CM Kisan) के स्टेटस की गाइड भी नीचे मिलेंगी। किस राज्य में कितना पैसा मिलता है,
+          इसकी तुलना{' '}
+          <Link href="/articles/hi/state-kisan-yojana-list" className="text-amber-800 dark:text-amber-300 underline">राज्य किसान योजना लिस्ट</Link>{' '}
+          में एक जगह है।
+        </p>
+        <p className="text-gray-600 dark:text-gray-400 text-sm">
+          कहीं भी बात न बने तो PM Kisan की सरकारी हेल्पलाइन <strong>155261</strong> है — शिकायत
+          कैसे दर्ज करें, ये{' '}
+          <Link href="/articles/hi/pm-kisan-helpline-155261" className="text-amber-800 dark:text-amber-300 underline">हेल्पलाइन गाइड</Link>{' '}
+          में बताया है।
+        </p>
+      </section>
+    );
+  }
+
+  if (category === 'loan') {
+    return (
+      <section className="max-w-3xl mb-12">
+        <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+          KCC पहले से है — तो अगला कदम लिमिट बढ़ाना है
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 mb-3">
+          किसान क्रेडिट कार्ड बन जाना आधा काम है। असली फायदा तब है जब लिमिट आपकी खेती के
+          खर्च के हिसाब से हो और renewal समय पर होता रहे — वरना ब्याज छूट (interest subvention)
+          हाथ से निकल जाती है।{' '}
+          <Link href="/articles/hi/kcc-limit-kaise-badhaye" className="text-amber-800 dark:text-amber-300 underline font-semibold">KCC लिमिट ₹3 से ₹5 लाख कैसे बढ़ाएं</Link>{' '}
+          वाली गाइड में renewal का पूरा तरीका है — कौन से कागज लगेंगे और बैंक किस आधार पर
+          लिमिट तय करता है।
+        </p>
+        <p className="text-gray-700 dark:text-gray-300 mb-3">
+          अभी KCC बना ही नहीं है? आवेदन की step-by-step गाइड{' '}
+          <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-amber-800 dark:text-amber-300 underline">KCC online apply</Link>{' '}
+          में है। ट्रैक्टर या मशीनरी के लिए लोन अलग रास्ता है — वो{' '}
+          <Link href="/articles/KisanTractorLoan2026" className="text-amber-800 dark:text-amber-300 underline">ट्रैक्टर लोन गाइड</Link>{' '}
+          में समझाया है। और अगर उलझन ये है कि कर्ज लें तो कहां से — बैंक, सहकारी समिति या
+          Jansamarth पोर्टल — तो पहले{' '}
+          <Link href="/articles/KisanRinKahaSeLe2026" className="text-amber-800 dark:text-amber-300 underline">किसान ऋण कहां से लें</Link>{' '}
+          वाली तुलना पढ़ लीजिए।
+        </p>
+        <p className="text-gray-600 dark:text-gray-400 text-sm">
+          कर्ज माफी की खबरों पर भरोसा करने से पहले{' '}
+          <Link href="/articles/hi/kisan-karj-mafi-list" className="text-amber-800 dark:text-amber-300 underline">कर्ज माफी की असलियत</Link>{' '}
+          देख लें — हर वायरल लिस्ट सच नहीं होती।
+        </p>
+      </section>
+    );
+  }
+
+  if (category === 'farming') {
+    return (
+      <section className="max-w-3xl mb-12">
+        <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+          खेती की योजनाएं — केंद्र की एक, राज्यों की अपनी-अपनी
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 mb-3">
+          PM Kisan के ₹6,000 सालाना के ऊपर कई राज्य अपनी रकम अलग से देते हैं — MP और महाराष्ट्र
+          (नमो शेतकरी) में ₹12,000 तक सालाना, राजस्थान में ₹9,000। आपके राज्य में क्या चल रहा है,
+          ये नीचे की गाइड्स में राज्य-वार देखिए:{' '}
+          <Link href="/articles/hi/mp-kisan-kalyan-yojana" className="text-amber-800 dark:text-amber-300 underline">MP किसान कल्याण</Link>,{' '}
+          <Link href="/articles/hi/namo-shetkari-yojana" className="text-amber-800 dark:text-amber-300 underline">नमो शेतकरी</Link>,{' '}
+          <Link href="/articles/hi/rajasthan-kisan-samman-nidhi" className="text-amber-800 dark:text-amber-300 underline">राजस्थान किसान सम्मान निधि</Link>।
+        </p>
+        <p className="text-gray-700 dark:text-gray-300 mb-3">
+          इन सब योजनाओं का दरवाजा अब एक ही चीज से खुलता है — <strong>Farmer ID</strong>। अगर अभी
+          तक नहीं बनी, तो{' '}
+          <Link href="/articles/hi/farmer-id-kaise-banaye" className="text-amber-800 dark:text-amber-300 underline font-semibold">किसान आईडी कैसे बनाएं</Link>{' '}
+          से शुरू कीजिए — मोबाइल से, मुफ्त में बन जाती है।
+        </p>
+        <p className="text-gray-700 dark:text-gray-300 mb-3">
+          फसल खराब हुई है तो दो अलग रास्ते हैं: बीमा वाला क्लेम{' '}
+          <Link href="/articles/hi/fasal-bima-claim-status" className="text-amber-800 dark:text-amber-300 underline">फसल बीमा क्लेम स्टेटस</Link>{' '}
+          में ट्रैक होता है, और सरकारी मुआवजे की प्रक्रिया अलग होती है। वायरल खबरों से सावधान —{' '}
+          <Link href="/articles/hi/pm-kisan-khad-yojana-sach" className="text-amber-800 dark:text-amber-300 underline">₹11,000 की खाद योजना</Link>{' '}
+          जैसे दावों की पड़ताल भी यहीं मिलेगी।
+        </p>
+        <p className="text-gray-600 dark:text-gray-400 text-sm">
+          पशु पालने वालों के लिए{' '}
+          <Link href="/articles/hi/mgnrega-pashu-shed-yojana" className="text-amber-800 dark:text-amber-300 underline">मनरेगा पशु शेड (₹1.6 लाख तक)</Link>{' '}
+          और{' '}
+          <Link href="/articles/hi/pashu-kisan-credit-card" className="text-amber-800 dark:text-amber-300 underline">पशु KCC (₹3 लाख तक)</Link>{' '}
+          की गाइड भी इसी सेक्शन में हैं।
+        </p>
+      </section>
+    );
+  }
+
+  if (category === 'mandi') {
+    return (
+      <section className="max-w-3xl mb-12">
+        <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+          फसल बेचने से पहले दो रेट मिलाइए — मंडी का और MSP का
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 mb-3">
+          सिर्फ अपनी मंडी का भाव देखकर बेच देना अक्सर घाटे का सौदा होता है। गेहूं बेचने वाले
+          किसान के लिए असली सवाल ये है — आज का मंडी भाव MSP से ऊपर है या नीचे?{' '}
+          <Link href="/articles/hi/gehu-ka-rate-aaj" className="text-amber-800 dark:text-amber-300 underline font-semibold">गेहूं का रेट आज — MSP vs मंडी भाव</Link>{' '}
+          वाली गाइड यही तुलना करना सिखाती है।
+        </p>
+        <p className="text-gray-700 dark:text-gray-300 mb-3">
+          बाकी फसलों और सब्जियों के लिए भी यही तरीका काम करता है — रोज का भाव{' '}
+          <Link href="/articles/mandi-bhav-today" className="text-amber-800 dark:text-amber-300 underline">daily mandi bhav</Link>{' '}
+          पर, सभी फसलों की सरकारी MSP{' '}
+          <Link href="/articles/msp-list-2026-27" className="text-amber-800 dark:text-amber-300 underline">MSP लिस्ट 2026-27</Link>{' '}
+          में। और अगर आपकी लोकल मंडी में दाम नहीं मिल रहा, तो{' '}
+          <Link href="/articles/enam-registration-kaise-kare" className="text-amber-800 dark:text-amber-300 underline">eNAM रजिस्ट्रेशन</Link>{' '}
+          से दूसरी मंडियों में online बोली का रास्ता खुलता है।
+        </p>
+        <p className="text-gray-600 dark:text-gray-400 text-sm">
+          एक दिन का रेट देखकर फैसला मत कीजिए — बेचने से पहले 2-3 दिन का रुझान देखना हमेशा
+          बेहतर रहता है।
+        </p>
+      </section>
+    );
+  }
+
+  if (category === 'pashupalan') {
+    return (
+      <section className="max-w-3xl mb-12">
+        <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+          पशुपालन में पैसा तीन जगह से आता है — बिक्री, सब्सिडी और लोन
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 mb-3">
+          गाय-भैंस से सिर्फ दूध ही आमदनी नहीं है। बुलंदशहर जैसी जगहों पर{' '}
+          <Link href="/articles/hi/gau-mutra-kharid-yojana" className="text-amber-800 dark:text-amber-300 underline font-semibold">गौ मूत्र की खरीद ₹10 प्रति लीटर</Link>{' '}
+          तक हो रही है — किन शर्तों पर और कहां, ये गाइड में है।
+        </p>
+        <p className="text-gray-700 dark:text-gray-300 mb-3">
+          खर्च की तरफ देखें तो दो बड़े सहारे हैं। शेड बनाने का पैसा{' '}
+          <Link href="/articles/hi/mgnrega-pashu-shed-yojana" className="text-amber-800 dark:text-amber-300 underline">मनरेगा पशु शेड योजना</Link>{' '}
+          से ₹1.6 लाख तक मिल सकता है, और चारे-दवा जैसे चालू खर्च के लिए{' '}
+          <Link href="/articles/hi/pashu-kisan-credit-card" className="text-amber-800 dark:text-amber-300 underline">पशु किसान क्रेडिट कार्ड</Link>{' '}
+          से ₹3 लाख तक का लोन — बिना जमीन गिरवी रखे भी रास्ता है।
+        </p>
+        <p className="text-gray-700 dark:text-gray-300 mb-3">
+          नया business शुरू करना चाहते हैं? बकरी पालन (NLM सब्सिडी), मधुमक्खी पालन (KVIC) और
+          मछली पालन (PMMSY) की विस्तृत गाइड Hinglish सेक्शन में हैं —{' '}
+          <Link href="/articles/bakri-palan-yojana-nlm-subsidy" className="text-amber-800 dark:text-amber-300 underline">बकरी पालन</Link>,{' '}
+          <Link href="/articles/madhumakhi-palan-kvic-subsidy" className="text-amber-800 dark:text-amber-300 underline">मधुमक्खी पालन</Link>,{' '}
+          <Link href="/articles/pm-matsya-sampada-yojana-fish-farming" className="text-amber-800 dark:text-amber-300 underline">मछली पालन</Link>।
+        </p>
+        <p className="text-gray-600 dark:text-gray-400 text-sm">
+          सब्सिडी की दरें योजना और राज्य के हिसाब से बदलती हैं — हर गाइड में आंकड़े official
+          source के साथ दिए गए हैं, अंदाजे के नंबरों पर योजना मत बनाइए।
+        </p>
+      </section>
+    );
+  }
+
+  if (category === 'agri-business') {
+    return (
+      <section className="max-w-3xl mb-12">
+        <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+          सब्सिडी से business — पर हर स्कीम का रास्ता अलग है
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 mb-3">
+          इस सेक्शन की दो गाइड दो बिल्कुल अलग तरह की स्कीमें दिखाती हैं।{' '}
+          <Link href="/articles/hi/tractor-subsidy" className="text-amber-800 dark:text-amber-300 underline font-semibold">ट्रैक्टर सब्सिडी</Link>{' '}
+          राज्य-वार चलती है — किस राज्य में कितनी छूट है, इसकी पूरी लिस्ट गाइड में है। वहीं{' '}
+          <Link href="/articles/hi/namo-drone-didi-yojana" className="text-amber-800 dark:text-amber-300 underline font-semibold">नमो ड्रोन दीदी योजना</Link>{' '}
+          में कोई सीधा आवेदन form ही नहीं है — रास्ता SHG (स्वयं सहायता समूह) से जाता है। यही
+          फर्क समझना जरूरी है, वरना गलत खिड़की पर लाइन लगती रहती है।
+        </p>
+        <p className="text-gray-700 dark:text-gray-300 mb-3">
+          production या processing वाला business सोच रहे हैं तो Hinglish सेक्शन में और गाइड हैं:{' '}
+          <Link href="/articles/mushroom-kheti-nhb-subsidy" className="text-amber-800 dark:text-amber-300 underline">mushroom kheti (NHB)</Link>,{' '}
+          <Link href="/articles/vermi-compost-business-guide" className="text-amber-800 dark:text-amber-300 underline">vermi compost</Link>,{' '}
+          <Link href="/articles/pm-fme-yojana-food-processing" className="text-amber-800 dark:text-amber-300 underline">PM-FME food processing</Link>{' '}
+          और मशीनरी किराए पर देने वाला{' '}
+          <Link href="/articles/custom-hiring-centre-chc-portal" className="text-amber-800 dark:text-amber-300 underline">Custom Hiring Centre</Link>।
+        </p>
+        <p className="text-gray-600 dark:text-gray-400 text-sm">
+          किसी भी स्कीम में पैसा लगाने से पहले उसका official portal जरूर देखें — सब्सिडी के
+          प्रतिशत और पात्रता हर गाइड में source के साथ दिए हैं।
+        </p>
+      </section>
+    );
+  }
+
+  return null;
+}
+
 const CATEGORY_DATA: Record<CategorySlug, {
   title: string;
   description: string;
@@ -227,6 +449,8 @@ export default async function HindiCategoryPage({
               {categoryInfo.descriptionHi} — {articles.length} गाइड आसान हिंदी में।
             </p>
           </div>
+
+          <CategoryIntroHi category={category as CategorySlug} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((a) => (

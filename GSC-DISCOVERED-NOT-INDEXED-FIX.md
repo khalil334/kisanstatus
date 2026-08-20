@@ -85,6 +85,28 @@ AI-pattern content ka naya problem khada ho jayega.
 **Blast radius:** `lib/categories.ts`, `app/articles/category/[category]/page.tsx`,
 `app/articles/hi/category/[category]/page.tsx`
 
+**✅ DONE (2026-08-20).** Do halves the:
+1. **English half pehle se done tha** — `app/articles/category/[category]/page.tsx` me
+   `CategoryIntro` sab 6 categories cover karta hai (PR #304 + baad ke commits).
+   `longDescription` field wala approach use nahi hua — intros seedha template me
+   JSX sections hain (internal links ke saath, jo data-field me nahi ho sakte).
+2. **Hindi half ab kiya** — `app/articles/hi/category/[category]/page.tsx` me
+   `CategoryIntroHi` add hua, sab 6 categories ke liye unique Hindi intros
+   (~150–260 words har ek). Ye pages pehle 114–199 words pe the.
+   - Har intro ka structure alag hai (rule 2.5 A.6): status-check sawaal-driven
+     triage hai, loan "agla kadam" angle se, farming kendra-vs-rajya comparison se,
+     mandi do-rate mila ke dekhne ki salah se, pashupalan income-sources se,
+     agri-business do-schemes-do-raaste contrast se.
+   - Sab 34 internal links repo ke asli slugs se verify kiye (script check — zero missing).
+   - Sab amounts repo ke already-verified articles se hi liye (₹1.6 lakh shed cap,
+     ₹3 lakh pashu KCC, ₹12,000 MP/Namo Shetkari, ₹9,000 Rajasthan, ₹10/L gau mutra,
+     155261 helpline) — koi naya claim invent nahi.
+   - FAQ blocks nahi dale — GSC query data ke bina sawaal invent karna rule 2.5 C ke
+     against hai. Jab GSC export mile, FAQ alag pass me add ho sakte hain.
+
+**Verification:** `tsc --noEmit` clean, `next build --webpack` pass (sandbox me Turbopack
+crash hota hai — webpack se verify kiya), `check:titles` + `check:content` pass.
+
 ### Fix 1.5 nahi — pehle ye padho
 
 Fix 1 aur Fix 3 dono me naya content likhna hai. Wo content kaisa ho, uske rules Section 2.5 me
@@ -343,7 +365,7 @@ process depth aur structure se), ya (c) gov portals ko is environment se reachab
 
 | Step | Fix | Blast radius | Commit |
 |---|---|---|---|
-| 1 | Category intro content (12 descriptions + template) | `lib/categories.ts` + 2 templates | `SEO: unique intro content on category pages` |
+| 1 | Category intro content (12 descriptions + template) | 2 templates | ✅ Done (2026-08-20) — EN pehle se tha, HI ab `CategoryIntroHi` se |
 | 2 | Homepage naye-articles section + cross-link weighting | `components/HomeContent.tsx`, `lib/cross-links.ts` | ✅ Done (2026-08-20) |
 | 3 | Bottom-5 articles triage (expand/merge/noindex) | per-page | `SEO: thin article triage batch 1` |
 | 4 | Utility pages decision | small | `SEO: utility page indexing policy` |
