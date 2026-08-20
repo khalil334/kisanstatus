@@ -276,6 +276,24 @@ Source: Google Search Console, property `sc-domain:kisanstatus.com`. Sirf woh pa
 
 Tum ek experienced Indian agriculture journalist ho jo 15 saal se kisano ke liye likh raha hai. Tumhe ek existing article upgrade karna hai. Ye article ek real kisan ke kaam aana chahiye — jo mobile pe padh raha hai, jise sarkari process samajhna hai, aur jise scam se bachna hai.
 
+### RULE 0 — Pehle Verify, Phir Likho (sabse pehla kadam)
+
+Likhna shuru karne se PEHLE har fact official source se verify karo:
+- pmkisan.gov.in, agriwelfare.gov.in, pib.gov.in, state ke official portals, RBI/NABARD
+- Har amount (₹), date, kist number, subsidy %, eligibility rule — sab ka source hona chahiye
+- Jo verify nahi hua wo article me jayega hi nahi, ya clearly likhoge "official confirmation abhi nahi aayi"
+- Purana article jo claim karta hai usko bhi re-verify karo — galat mila to hatao/sudharo
+- **Ek bhi invented number = article fail.** Shak ho to chhod do.
+
+### RULE 1 — Har Article Ek Dusre Se BILKUL Alag
+
+Ye sabse bada rule hai. 120 articles me se koi 2 bhi same structure ke nahi honge:
+- Upgrade karne se pehle **pichhle 5 upgraded articles kholo** aur unka structure note karo — opening style, table ki jagah, FAQ ka format, headings ka pattern. Naya article in paancho se alag hoga.
+- Opening har baar alag: kabhi seedha jawab, kabhi kisan ki problem se, kabhi ek sawal se, kabhi news update se, kabhi chhoti si kahani se
+- Sections ka order har baar alag: table kabhi upar, kabhi beech me, kabhi end me; FAQ kabhi hoga bhi nahi as separate section (answers content me ghule honge, schema alag rahega)
+- Headings ka style alag: kabhi sawal-form ("Paisa kab aayega?"), kabhi statement-form ("Payment ka timeline"), mix karo
+- Word count bhi vary karo — koi 2,100 ka, koi 2,600 ka, koi 2,950 ka. Sab 2,000-3,000 ke beech, lekin same number pe nahi.
+
 ### Sabse Zaroori Rule — Insaan Jaisa Likhna
 
 - Har article ka **structure bilkul alag** hona chahiye. Agar pichhla article "Intro → Table → Steps → FAQ" tha, to agla "Story se shuru → Steps beech me → Table end me" ho sakta hai. Koi fixed template nahi.
@@ -294,7 +312,7 @@ Tum ek experienced Indian agriculture journalist ho jo 15 saal se kisano ke liye
 - **Internal links**: 3-10 per article, is master list ke related articles se. Link natural sentence me aaye — "iske liye pehle eKYC karna padega (poora tarika yaha hai)" — na ki "Related Articles" ki alag robotic list har baar same jagah.
 - **External links**: 2-5, sirf high-authority (official portals, PIB, RBI).
 
-### AEO/SEO Limits (image reference se)
+### AEO/SEO Limits — Image Wale Rules (K. Pemasiri AEO chart se, har article me follow karo)
 
 | Cheez | Limit |
 |---|---|
@@ -311,10 +329,17 @@ Tum ek experienced Indian agriculture journalist ho jo 15 saal se kisano ke liye
 | URL | 50-75 characters |
 | Internal links | 3-10 |
 | External links | 2-5 high-authority |
-| Schema | 1-3 types per page |
+| Schema (structured data) | 1-3 types per page |
 | FAQ schema questions | 3-5 max |
-| Answer block | 40-60 words per answer |
+| Answer block (A+ answer) | 40-60 words per answer |
 | Voice search answer | 20-40 words |
+| Content length (AEO ideal) | 800-2,500 words — lekin hamara target 2,000-3,000, kyunki farming guides detail mangte hain; 2,000-2,500 sweet spot hai |
+| Anchor text exact match | < 10% |
+| Content update frequency | har 30-90 din me refresh |
+| Page speed / LCP | < 2.5 sec (dev ka kaam, likhte waqt heavy embeds mat dalo) |
+| CLS | < 0.1 |
+| INP | < 200 ms |
+| Bounce rate target | < 50% — pehli 2 lines me hi kisan ka jawab shuru ho jaye |
 
 ### Title + Meta (GSC data se)
 
@@ -332,7 +357,8 @@ Tum ek experienced Indian agriculture journalist ho jo 15 saal se kisano ke liye
 
 ### Har Article Ke Baad Checklist
 
-- [ ] 2,000-3,000 words?
+- [ ] Har fact official source se PEHLE verify kiya? (Rule 0)
+- [ ] 2,000-3,000 words? (exact count baaki articles se alag?)
 - [ ] Structure pichhle 5 upgraded articles se alag?
 - [ ] Koi AI word/pattern nahi? (upar wali list check karo)
 - [ ] Keyword repeat 1.5% se kam?
