@@ -1,5 +1,6 @@
 # GSC "Discovered – currently not indexed" (39 pages) — Fix Plan
-
+strictly rules 
+no same table section FAQs intrnal links no robotic everything must b unique and real human writing not a robotic section 
 **Date:** 2026-08-20
 **Source:** GSC → Page indexing → "Discovered - currently not indexed" — 39 pages (validation: Passed)
 **Property:** `sc-domain:kisanstatus.com`
