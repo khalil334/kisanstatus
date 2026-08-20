@@ -6,7 +6,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-15T21:25:25+05:30';
-const MODIFIED = '2026-02-24T14:27:25+05:30';
+const MODIFIED = '2026-08-20T23:30:00+05:30';
 
 const RELATED = [
   { slug: 'drip-sprinkler-irrigation-subsidy', title: 'Drip & Sprinkler Subsidy' },
@@ -44,6 +44,14 @@ const FAQS_DATA = [
     a: 'Govt empanelled vendors ki list portal par hoti hai. Usme se apna pasand ka vendor select kar sakte ho. Bahar se koi private vendor nahi chalega.',
   },
   {
+    q: 'Apna 40% hissa nahi hai — loan mil sakta hai?',
+    a: 'Haan. Solar pump irrigation ke andar aata hai, isliye bank iske liye term loan deta hai, aur PM-KUSUM ke tahat NABARD refinance wale route par rate 4-6% ke aas-paas rehta hai — personal loan ke 12-18% se bahut kam. Do cheezein dhyan me rakho: loan ki file me subsidy sanction ka reference lagao (bank tabhi sirf aapke hisse par loan banata hai), aur approval aane se pehle vendor ko advance mat do.',
+  },
+  {
+    q: 'Pump lag gaya — uske baad ka kya kaam hai?',
+    a: 'Teen kagaz apne paas rakho: 5 saal ki warranty ka document, vendor ka service contact, aur commissioning report ki copy. Panel ki safai mahine me ek-do baar (dhool se output girta hai), aur baarish se pehle wiring aur earthing check karwao. Warranty period me har fault vendor ka kaam hai — apni jeb se mistri bulaane ki zaroorat nahi, par shikayat likhit me jani chahiye.',
+  },
+  {
     q: 'application ke baad survey kab hota hai?',
     a: 'Aam taur par 15-30 din mein agriculture officer ya vendor site visit karta hai. Kabhi kabhi delay hota hai — helpline par follow up karo.',
   },
@@ -71,7 +79,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(PUBLISHED)}</span>
             <span>Updated: {fmtDate(MODIFIED)}</span>
-            <span>12 min read</span>
+            <span>15 min read</span>
           </div>
         </div>
       </div>
@@ -441,6 +449,67 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             <strong>Purana diesel pump se solar pump mein badlaw kaise kare:</strong> Portal par apply karte waqt "Replacement of Existing Pump" select karo. Purane pump ka photo/bill upload karo. Replacement cases ko approval mein priority milti hai.
           </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Apna 40% Hissa Kahan Se Aayega</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Subsidy 60% ki hai — theek. Par 3HP pump me bhi ₹40,000–55,000 aapke apne dene hote hain. Wahi rakam
+            zyadatar logon ko rok deti hai, jabki iska bhi rasta hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Solar pump irrigation ke andar aata hai, isliye bank iske liye <strong>term loan</strong> deta hai — KCC nahi,
+            kyunki KCC seasonal kharche ke liye hai aur ye ek baar ka investment hai. PM-KUSUM ke tahat NABARD refinance
+            wale route par rate 4–6% ke aas-paas rehta hai. Isi rakam par private dealer se personal loan lete to
+            12–18% padta — yahi asli farak hai, aur isi liye scheme ke andar rehna faydemand hai.
+          </p>
+          <StepList>
+            <SI n={1}>Pehle portal par application aur field survey nipta lo — <strong>subsidy sanction ka kagaz</strong> aapki loan file ka sabse zaroori document hai</SI>
+            <SI n={2}>Bank ko sanction letter dikhao, taaki loan sirf aapke hisse par bane, poori project cost par nahi</SI>
+            <SI n={3}>Vendor ka quotation empanelled list se ho — bahar wale vendor ka invoice na subsidy me chalta hai na file me</SI>
+            <SI n={4}>Approval aane ke baad hi paisa do; disbursement aur DBT dono ka record apne paas rakho</SI>
+          </StepList>
+          <WB>
+            <strong>Approval se pehle kharidari sabse mehnga shortcut hai.</strong> Vendor kahega &ldquo;aap le lo,
+            subsidy baad me aa jaayegi&rdquo; — bina approval ki purchase aksar reject hoti hai, aur wo nuksan poora
+            aapka hota hai. Sahi tareeka wahi hai: application → survey aur technical estimation (yahin aapki asli
+            subsidy figure banti hai, use likhit me lo) → approval → kharidari → installation ke baad verification → DBT.
+          </WB>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ek baat paani ke hisaab ki bhi. Pump lag jaane se paani ka kharcha khatam nahi hota — sirf diesel ka hota hai.
+            Solar pump ke saath drip ya sprinkler lagane par wahi paani zyada rakbe me chalta hai, aur uske liye alag
+            subsidy hai (PDMC me small/marginal kisan ko 55%, baqi ko 45%). Dono ek saath planning karne se dohra fayda
+            milta hai — poora niyam{' '}
+            <Link href="/articles/drip-sprinkler-irrigation-subsidy" className="underline font-bold">drip aur sprinkler
+            subsidy wale page</Link> par hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Pump Lag Gaya — Ab 25 Saal Chalane Ka Kaam</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Diesel pump ki umar 8–10 saal hai, solar ki 25. Par ye 25 saal apne aap nahi aate.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Installation ke din teen cheezein vendor se lo aur file me rakho: <strong>5 saal ki warranty</strong> ka
+            document (scheme me ye compulsory hai), vendor ka service number, aur commissioning report ki copy. Warranty
+            ke andar koi fault aaye to wo vendor ka kaam hai — apni jeb se local mistri bulaane ki zaroorat nahi. Par
+            shikayat zubani mat karo; likhit ya portal par darj karo, warna baad me &ldquo;humein bataya hi nahi&rdquo;
+            wala jawab milta hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Rakhrakhav ka kharcha saal ka ₹500–1,000 hai — diesel wale ₹5,000–8,000 ke saamne kuch bhi nahi. Us paise
+            me kaam sirf itna hai: panel ki safai mahine me ek-do baar (dhool jamne se output seedha girta hai, khaaskar
+            garmiyon aur gehun ki mudai ke baad), panel par kisi ped ya nayi deewar ki chhaya na aaye ye dekhna, aur
+            baarish se pehle wiring aur earthing check karwana. Cloudy dino me output 30–40% kam hota hai — wo kharabi
+            nahi hai, mausam hai; paani wale kaam subah 10 se dopahar 3 ke beech rakho.
+          </p>
+          <DB>
+            <strong>Chori aur nuksan ka intezaam pehle din karo.</strong> Panel khet me khule me lagta hai, isliye
+            structure ko theek se bolt karwao aur module ka serial number apne paas likh kar rakho — kisi bhi claim ya
+            police report me wahi kaam aata hai. Vendor se poochho ki insurance ka koi option scheme ke saath aa raha hai
+            ya nahi, aur jo bhi jawab mile wo likhit me lo.
+          </DB>
         </section>
 
         <section className="mb-8">
