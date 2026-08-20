@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { SI, StepList, IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
+import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2025-12-16T12:07:52+05:30';
-const MODIFIED = '2026-08-18T19:30:00+05:30';
+const MODIFIED = '2026-08-20T21:10:00+05:30';
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
   return date.toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' });
@@ -43,6 +43,14 @@ const FAQS_DATA = [
     a: 'Zaroori nahi hai lekin helpful bahut hai. Banks prefer karte hain ki borrower ka 1 saal ka repayment track record ho. KCC lekar time par repay karo, phir term loan easily approve hota hai. Direct term loan bhi possible hai agar income proof strong ho.',
   },
   {
+    q: 'Bataidar hoon, zameen kisi aur ke naam hai — rin milega?',
+    a: 'Haan. KCC bataidar, mokhik pattedar aur SHG/JLG samooh ke liye bhi khula hai — dikkat kagaz ki hoti hai, patrata ki nahi. Aapke rajya me batai ka jo proof maanya hai (likhit karar, swa-ghoshna, gram-star pramanan) wo bank ko chahiye. Jitna pakka kagaz, utni aasan approval.',
+  },
+  {
+    q: 'Bank ne mana kar diya aur reason bhi nahi bataya — ab kahan jaun?',
+    a: 'Pehle likhit me rejection reason maango, wo dena bank ki zimmedari hai. Na mile to usi bank ke grievance cell me shikayat karo. Wahan se bhi hal na nikle to RBI ka Banking Ombudsman (cms.rbi.org.in) ka rasta khula hai. Har step par receiving lo — tareekh ka saboot aapka sabse bada hathiyar hai.',
+  },
+  {
     q: 'Loan reject hua — CIBIL aur documents mein pehle kya theek karun?',
     a: 'Pehle rejection reason samjho. Name mismatch tha toh fix karke usi hafte reapply karo. CIBIL issue tha toh 3-6 mahine wait karo score improve hone tak. Documents incomplete the toh complete set lekar jao. Bank se written rejection letter maango — specific reason likha hota hai.',
   },
@@ -68,7 +76,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(PUBLISHED)}</span>
             <span>Updated: {fmtDate(MODIFIED)}</span>
-            <span>12 min read</span>
+            <span>15 min read</span>
           </div>
         </div>
       </div>
@@ -266,6 +274,89 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Member banna padta hai pehle. Thoda paperwork hai lekin ek baar member ban gaye toh credit access smooth. Rate competitive — 8-12%.
           </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Zameen Apne Naam Nahi Hai — Tab Rin Kahan Se Aayega</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ye sawaal sabse zyada poocha jaata hai, aur iska jawab wahi hai jo upar likha — patrata nahi, kagaz atakta hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            KCC bataidar, mokhik pattedar aur SHG/JLG samoohon ke liye bhi khula hai. Bank ko zameen ka <em>malikana</em> nahi,
+            uspe aapke <em>kaam ka saboot</em> chahiye hota hai. Har rajya me ye proof alag maana jaata hai — kahin registered
+            batai karar, kahin swa-ghoshna, kahin gram-star ka pramanan. Branch jaane se pehle wahi ek cheez pata karo: is district
+            me batai ka kaunsa kagaz chalta hai. Baqi documents wahi hain jo malik kisan ke lagte hain.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Kirae ki jagah par kuch banwana hai — shed, godown, pump — to ek chhoti si galti mehngi padti hai. Lease agreement
+            loan ki avadhi se <strong>chhota</strong> hua to objection pakka aayega. Bank ka logic seedha hai: loan 7 saal chalega
+            aur jagah ka karar 3 saal ka hai, to baqi 4 saal kya? Agreement banwate waqt hi tenure lamba rakhwa lo, baad me
+            registry dobara karwana kharcha aur waqt dono maangta hai.
+          </p>
+
+          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Doodh, Murgi, Machli — Yahan Zameen Ka Sawaal Hi Nahi</h3>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Agar kaam pashupalan ya allied activity ka hai to ek poora alag darwaza khulta hai. Mudra Yojana me collateral maangna
+            bank ke bas me hi nahi hai — kisi bhi slab par nahi. Budget 2024-25 se <strong>Tarun Plus</strong> slab jud gaya, jisne
+            upar ki limit ₹10 lakh se ₹20 lakh kar di. Par dhyan raho: Tarun Plus pehli baar wale applicant ke liye nahi hai, wo un
+            logon ke liye hai jinhone pehle Tarun ka loan lekar poora chukaya. Pehli file daal rahe ho to aapki practical ceiling
+            ₹10 lakh hai — project report usi hisaab se banwao.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            PMEGP wala rasta thoda lamba hai par usme margin money subsidy hai — project cost ka 15 se 35 pratishat, jo wapas nahi
+            karni padti. Ek gaon me rehne wali mahila applicant ka ₹8 lakh ka dairy project maan lo: 35% yaani ₹2.8 lakh subsidy,
+            5% yaani ₹40,000 apni jeb se, EMI sirf bache ₹4.8 lakh par banegi. Wahi project shahar ke general category applicant ka
+            hota to subsidy sirf ₹1.2 lakh milti. Category aur area, dono milkar aapki kist tay karte hain.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Poora comparison — Mudra, PMEGP aur CGTMSE me se kaunsa kab — <Link href="/articles/dairy-farm-loan-without-collateral" className="underline font-bold">bina
+            collateral dairy loan wali guide</Link> me hai. Aur teeno me se koi bhi route chuno, online eligibility ek hi jagah se
+            check ho jaati hai <Link href="/articles/jansamarth-portal-loan-apply" className="underline">JanSamarth portal</Link> se.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Bank Ne Mana Kar Diya — Chup Mat Baitho</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Yahi wo mod hai jahan zyadatar kisan sahukar ke paas laut jaate hain. Zaroorat nahi hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Pehla kadam ek hi hai — <strong>likhit me rejection ka reason maango</strong>. Ye ehsaan nahi, bank ki zimmedari hai.
+            Zubani &ldquo;file nahi banegi&rdquo; se aap kuch nahi kar sakte; likha hua reason do me se ek cheez batata hai — ya
+            galti sudharne layak hai (naam mismatch, purani khatauni, adhoore kagaz), ya waqt maangti hai (chalu default, CIBIL).
+            Pehli soorat me usi hafte dobara file lag sakti hai.
+          </p>
+          <StepList>
+            <SI n={1}>Application aur saare documents ki ek copy apne paas rakho, aur jama karte waqt <strong>receiving muhar</strong> lagwao — tareekh ka saboot yahi hai</SI>
+            <SI n={2}>Reason likhit me maango; na mile to usi baat ko application me likh kar dobara jama karo</SI>
+            <SI n={3}>Baat na bane to usi bank ke <strong>grievance cell</strong> me shikayat karo — branch se upar zonal level par file dekhi jaati hai</SI>
+            <SI n={4}>Wahan se bhi hal na nikle to <strong>RBI Banking Ombudsman</strong> — cms.rbi.org.in par online shikayat, koi fees nahi</SI>
+          </StepList>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ek baat samajh lo: agriculture RBI ke priority sector me aata hai, isliye branch ko eligible kisan ko bina valid reason
+            mana karne ka haq nahi hai. Par ye baat kaam sirf tab karti hai jab aapke paas kagaz ka record ho. Isliye receiving
+            wali aadat sabse sasti insurance hai.
+          </p>
+
+          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Purana Loan Bigda Hua Hai To Pehle Wahi Sudhro</h3>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Naya rin isliye nahi mil raha ki pichla khata overdue chal raha hai — to nayi application daalne se kuch nahi hoga.
+            Do cheezein branch se poochho: <strong>One Time Settlement (OTS)</strong>, jisme NPA khate ka bacha amount ek baar me
+            kam karke settle hota hai, aur <strong>restructuring</strong>, jisme kist ki avadhi lambi ho jaati hai ya moratorium
+            milta hai — khaaskar jab fasal kharab hui ho aur district me annawari/girdawari declare hui ho. Dono ka faisla branch
+            aur zonal level par hota hai, isliye application likhit me do.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            OTS ke baad <strong>No Dues Certificate</strong> lena mat bhoolo. Wahi kagaz agli baar file kholne me kaam aata hai,
+            aur wahi CIBIL me &ldquo;closed&rdquo; status ka saboot hai.
+          </p>
+          <DB>
+            <strong>Karz maafi ka intezaar sabse kharab option hai.</strong> Kist rok kar waiver ka wait karne se khata NPA me chala
+            jaata hai — aur baad me scheme aayi bhi to default ka record apni jagah reh jaata hai. Kaunse state me waiver asal me chal
+            raha hai aur kahan sirf bayaan hai, wo{' '}
+            <Link href="/yojana/kisan-karj-mafi-list-all-states" className="underline font-bold">karj mafi ki asli sthiti</Link>{' '}
+            wale page par saaf likha hai.
+          </DB>
         </section>
 
         <section className="mb-8">

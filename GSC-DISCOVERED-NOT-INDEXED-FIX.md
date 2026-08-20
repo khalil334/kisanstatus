@@ -335,7 +335,44 @@ Aage ke parts me `Actual` column pe bharosa karo, purane estimate pe nahi.
 | **5** | `/articles/PmKisanVillageWiseListPdfDownload` | ~1,830 | **1,901 → ~2,150** | — | ✅ Done (2026-08-20) |
 | | `/articles/hi/rythu-bharosa-status` (RythuBharosaStatusHindi) | ~1,840 | **1,676 → ~2,070** | — | ✅ Done (2026-08-20) |
 
-**Total remaining: 0 — sab parts done.** ✅ (Parts 1–5 complete, 2026-08-20)
+| **6** | `/articles/KisanRinKahaSeLe2026` | — | **1,510 → 2,003** | — | ✅ Done (2026-08-20) |
+| | `/articles/soil-health-card-complete-guide-2026` | — | **1,582 → 2,012** | — | ✅ Done (2026-08-20) |
+
+**Doc ki original list (Parts 1–5) poori ho gayi.** Par `check:content` guard ne 17 aur articles
+nikale jo 2,000 se neeche hain — wahi ab Part 6 se aage ka kaam hai. Guard ki list hi authoritative
+queue hai (`npm run check:content`), doc ki purani list nahi.
+
+**Remaining queue (guard se, 2026-08-20 ke baad 15 bache):**
+`custom-hiring-centre-chc-portal` (1,620) · `madhumakhi-palan-kvic-subsidy` (1,650) ·
+`KisanTractorLoan2026` (1,693) · `PmKusumYojanaSolarSubsidy2026` (1,720) ·
+`PmKisanBankAccountChangeProcess` (1,752) · `PmKisanMaandhanYojanaPension` (1,800) ·
+`NanoDap500mlPriceInIndia2026` (1,811) · `PmKisanStateNodalOfficerList` (1,816) ·
+`pm-kisan-self-registered-status-check` (1,833) · `PmKisanFaceAuthenticationEkyc` (1,853) ·
+`bakri-palan-yojana-nlm-subsidy` (1,872) · `PmKisanCorrectionForm2026` (1,883) ·
+`mushroom-kheti-nhb-subsidy` (1,891) · `AgriStackKyaHai2026` (1,954) ·
+`PmKisanRejectedStatusReApplyGuide` (1,965)
+
+**Part 6 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
+- *KisanRinKahaSeLe2026*: (1) "Zameen apne naam nahi hai" section — KCC bataidar/mokhik
+  pattedar/SHG-JLG ke liye khula hona aur rajya-wise batai proof ka farak (repo ke Hindi
+  `kcc-limit-kaise-badhaye` article se), lease-tenure loan se chhota hone par objection
+  (DairyFarmLoan ke verified FAQ se), Mudra Tarun Plus ₹20 lakh + pehli-baar wali ₹10 lakh
+  practical ceiling, PMEGP 15–35% margin money ka ₹8 lakh wala example — dono
+  `dairy-farm-loan-without-collateral` se; contextual links dairy-loan + JanSamarth par.
+  (2) "Bank ne mana kar diya" section — likhit rejection reason, receiving muhar, grievance
+  cell, RBI Banking Ombudsman (cms.rbi.org.in), aur OTS/restructuring + No Dues Certificate
+  (KisanKarjMafi article ke verified FAQ se) karj-mafi ke intezaar ki warning ke saath.
+  +2 FAQ (bataidar, rejection escalation). Internal count 1,510 → **2,003**.
+- *soil-health-card-complete-guide-2026*: (1) "Sample hi galat chala gaya" section — 8–10
+  jagah se mila-kar sample kyun (article ke apne step se expand), khaad ke dher / haal me
+  khaad daali jagah / med / ped ke neeche se sample na lena, sahi waqt = fasal katne ke baad,
+  label par survey number. (2) "Sifarish ka paisa kahan bachta hai" section — urea 45kg
+  ₹242 aur DAP 50kg ₹1,350 subsidized rate + bina-subsidy ₹3,000+ laagat (repo ke NanoDap +
+  KhadYojanaSach articles se), POS machine aur receipt ki shart, zila krishi adhikari ko
+  shikayat, nano DAP ₹250–350/500ml saathi-not-replacement, aur ₹11,000 khad-yojana fraud ki
+  warning + link. +2 FAQ (galat sample, paisa maangne wala). Internal count 1,582 → **2,012**.
+- Dono me `MODIFIED` update aur read-time 12 → 15 min. Koi naya amount/date invent nahi.
+- Verification: `check:titles` (108 pairs) + `check:content` pass — dono ab guard ki list se bahar.
 
 **Part 5 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
 - *VillageWiseListPdf*: (1) "Ghar ke bade-buzurg ka naam list me hai — unke baad kya" section —
