@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: `KisanStatus se sampark karein. Website feedback, content correction, ya kisi bhi sawaal ke liye humein email karein. Hum 24-48 ghante mein reply karte hain.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/contact` },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
   openGraph: {
     title: `Contact Us — ${SITE_NAME} | Sampark Karein`,
     description: `KisanStatus se sampark karein. Website feedback, content correction, ya kisi bhi sawaal ke liye humein email karein.`,

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: `KisanStatus.com ki Terms of Service. Hamari website use karne se pehle yeh shartein, privacy policy aur legal notice zaroor padhein.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/terms-of-service` },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
   openGraph: {
     title: `Terms of Service – ${SITE_NAME} | Upyog Ki Shartein`,
     description: `Hamari website use karne se pehle yeh shartein, privacy policy aur legal notice zaroor padhein.`,
