@@ -102,8 +102,8 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/npci-aadhaar-seeding',
-    titleHi: 'NPCI आधार सीडिंग Online — DBT पेमेंट फिक्स',
-    desc: 'NPCI आधार सीडिंग के बिना पीएम किसान की किस्त अटक सकती है — बैंक में aadhaar link status चेक करें और DBT enable करने का पूरा online process यहां जानिए।',
+    titleHi: 'Aadhaar Not Seeded? NPCI सीडिंग से DBT फिक्स',
+    desc: 'आपका aadhaar not seeded दिख रहा है? चाहे PM Kisan हो या gas subsidy — बैंक में NPCI आधार सीडिंग कराकर DBT चालू करने का पूरा तरीका यहां step-by-step जानिए।',
     keywords: ['npci aadhaar seeding online', 'dbt enable kaise kare', 'आधार बैंक लिंक स्टेटस', 'de seeded meaning in hindi', 'aadhaar not seeded', 'bank seeding status active means'],
     category: 'status-check',
     publishedTime: '2026-07-19T18:38:27+05:30',
