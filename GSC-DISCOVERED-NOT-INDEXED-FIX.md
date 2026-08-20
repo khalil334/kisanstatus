@@ -342,8 +342,7 @@ Aage ke parts me `Actual` column pe bharosa karo, purane estimate pe nahi.
 nikale jo 2,000 se neeche hain — wahi ab Part 6 se aage ka kaam hai. Guard ki list hi authoritative
 queue hai (`npm run check:content`), doc ki purani list nahi.
 
-**Remaining queue (guard se, 2026-08-20 ke baad 15 bache):**
-`custom-hiring-centre-chc-portal` (1,620) · `madhumakhi-palan-kvic-subsidy` (1,650) ·
+**Remaining queue (guard se, Part 7 ke baad 13 bache):**
 `KisanTractorLoan2026` (1,693) · `PmKusumYojanaSolarSubsidy2026` (1,720) ·
 `PmKisanBankAccountChangeProcess` (1,752) · `PmKisanMaandhanYojanaPension` (1,800) ·
 `NanoDap500mlPriceInIndia2026` (1,811) · `PmKisanStateNodalOfficerList` (1,816) ·
@@ -351,6 +350,30 @@ queue hai (`npm run check:content`), doc ki purani list nahi.
 `bakri-palan-yojana-nlm-subsidy` (1,872) · `PmKisanCorrectionForm2026` (1,883) ·
 `mushroom-kheti-nhb-subsidy` (1,891) · `AgriStackKyaHai2026` (1,954) ·
 `PmKisanRejectedStatusReApplyGuide` (1,965)
+
+| **7** | `/articles/custom-hiring-centre-chc-portal` | — | **1,620 → 2,047** | — | ✅ Done (2026-08-20) |
+| | `/articles/madhumakhi-palan-kvic-subsidy` | — | **1,650 → 2,062** | — | ✅ Done (2026-08-20) |
+
+**Part 7 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
+- *CHCPortal*: (1) "Tractor ka paisa kahan se aayega" section — article khud kehta hai SMAM subsidy
+  tractor par nahi hai, to us gap ko bhara: term loan vs KCC ka farak, on-road hidden costs
+  (processing 0.5–1% + ₹500–2,000, RTO hypothecation ₹2,000–5,000, insurance bundle
+  ₹15,000–25,000/saal, pre-closure 2–4%, EMI bounce ₹500–1,000 — sab repo ke KisanTractorLoan2026
+  se), KCC ka 4% effective + ₹5 lakh subvention ceiling (KisanRinKahaSeLe2026 se). (2) "DPR aur
+  verification" section — empaneled dealer quotation, believable numbers, category proof ka 10%
+  farak (article ke apne subsidy table se), approval-se-pehle-kharidna mat, receiving muhar.
+  +2 FAQ. Internal count 1,620 → **2,047**.
+- *MadhumakhiPalan*: (1) "Setup ka paisa — subsidy ke intezaar ke bina" section — Mudra (collateral
+  bank ke bas me nahi, Tarun Plus ₹20 lakh par pehli-baar ceiling ₹10 lakh, 9–12% sarkari vs 18%
+  NBFC), PMEGP margin money 15–35% + 3 saal lock-in wala structure (dono DairyFarmLoan se), KCC
+  allied-activity ke liye. Article ki apni "subsidy ka intezaar mat karo" salaah ko actionable
+  banaya. (2) "Pollination ka kiraya" section — article ke apne apple-belt 30–40% pollination fact
+  aur uske calendar (sarson/litchi Jan–March, sunflower/ber Oct–Dec) se doosri kamai ka rasta,
+  deal se pehle ki 4 sharten (pesticide clause sabse zaroori), rate ke liye KVK se poochna (koi
+  figure invent nahi kiya), 15–30 din quarantine rule ka reminder. +2 FAQ.
+  Internal count 1,650 → **2,062**.
+- Dono ke `modifiedTime` update (`lib/core-articles-data.ts`), CHC ka footer "Last updated" bhi.
+- Verification: `check:titles` (108 pairs) + `check:content` pass — dono guard ki list se bahar.
 
 **Part 6 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
 - *KisanRinKahaSeLe2026*: (1) "Zameen apne naam nahi hai" section — KCC bataidar/mokhik
