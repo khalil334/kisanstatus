@@ -182,8 +182,36 @@ karne, ye conversion pages hain.
 intro (rumor-vs-real angle, 6 deep links, sirf repo-verified facts: ₹1.6L shed range,
 ₹3L pashu KCC, 155261 helpline). `/calculator` pe "Kaunsa tool kab kaam aata hai?" section
 (use-case angle — kab kaunsa tool, 6 links: 4 tools + 2 guides). Dono ke structure Fix 1
-ke intros se alag hain. `/contact` ka decision abhi PENDING — expand vs noindex user se
-poochna hai.
+ke intros se alag hain.
+
+**✅ `/contact` DONE (2026-08-20) — expand kiya, noindex nahi.** Wajah: is page par aane wala
+kisan aksar "paisa nahi aaya" leke aata hai. Us intent ko sahi jagah bhejna khud ek useful
+page hai — noindex karne se wo traffic kahin nahi jata, bas guides tak nahi pahunchta.
+
+Chaar naye section (263 → **~600 words**), sab repo ke already-verified facts se — koi naya
+amount/date/rule invent nahi:
+1. *"Email likhne se pehle"* — main paisa nahi bhej sakta, par case ka type bata sakta hoon;
+   teen cheezein chahiye (exact status text, kaunsi kist, ab tak kya try kiya), aur
+   Aadhaar/account/OTP email me na bhejne ki guzarish (screenshot me account number dhak dein).
+2. *"Aam sawaal — jawab pehle se likha hai"* — 5 intents ko unke guides par route kiya:
+   Payment Failed/Rejected (NPCI seeding + IFSC + dormant khaata — PaymentFailedFix se),
+   FTO generated par paisa nahi (batch processing, 15-din rule — FTO article se),
+   eKYC pending (OTP route + Face Auth free alternative — Ekyc + FaceAuth articles se),
+   naam/bank correction (CorrectionForm + BankAccountChange), gaon ki list (BeneficiaryList).
+3. *"Helpline se kaam na bane to aage ka rasta"* — 155261 ki call-prep (registration number,
+   Aadhaar, correction date), 011-24300606, Help Desk ticket + ticket number sambhalna,
+   pmkisan-ict@gov.in me ticket quote karna, phir state nodal officer (NodalOfficerList se).
+4. *Fraud warning* — koi OTP/fee nahi maangta, .com sites aur WhatsApp "helpline" ka jaal,
+   1930 / cybercrime.gov.in + usi din bank ko batana, bade-buzurg ko samjhana.
+
+Structure jaan-boojh kar Fix 1 ke category intros se alag: yahan intent-routing list hai,
+comparison ya rumor-vs-real angle nahi. Meta description bhi update (144 chars, helpline
+angle ke saath). FAQ schema nahi dala — rule 2.5 C (GSC query data ke bina sawaal invent nahi).
+
+**Verification:** 8 internal link slugs data files se verify kiye (sab OK), `check:titles`
+(108 pairs) + `check:content` pass, JSX tag/brace balance script se check kiya. Sandbox me
+`npm install` firewall se blocked hai, to `tsc`/`next build` nahi chala — edits pure JSX text
+sections hain, maujooda patterns ke andar (koi naya import ya prop nahi).
 
 ### Fix 5 — Content quality guard build me ✅ DONE (2026-08-20)
 
@@ -624,7 +652,7 @@ process depth aur structure se), ya (c) gov portals ko is environment se reachab
 | 1 | Category intro content (12 descriptions + template) | 2 templates | ✅ Done (2026-08-20) — EN pehle se tha, HI ab `CategoryIntroHi` se |
 | 2 | Homepage naye-articles section + cross-link weighting | `components/HomeContent.tsx`, `lib/cross-links.ts` | ✅ Done (2026-08-20) |
 | 3 | Bottom-5 articles triage (expand/merge/noindex) | per-page | `SEO: thin article triage batch 1` |
-| 4 | Utility pages decision | small | ✅ Hubs done (2026-08-20); `/contact` pending user decision |
+| 4 | Utility pages decision | small | ✅ Done (2026-08-20) — hubs + `/contact` expand (noindex nahi) |
 | 5 | Content-length build guard | `scripts/` | ✅ Done (2026-08-20) — `check-content-length.js` + build wiring |
 
 Har step alag commit. Step 1–2 pehle — wahi 80% impact denge, aur template-level hain (per-page

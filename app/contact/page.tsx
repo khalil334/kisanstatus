@@ -4,7 +4,7 @@ import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL, DEFAULT_OG_IMAGE } from '
 
 export const metadata: Metadata = {
   title: `Contact & Support`,
-  description: `KisanStatus se sampark karein. Website feedback, content correction, ya kisi bhi sawaal ke liye humein email karein. Hum 24-48 ghante mein reply karte hain.`,
+  description: `KisanStatus se sampark karein — feedback ya content correction ke liye email, aur PM Kisan helpline 155261 se shikayat darj karne ka sahi rasta.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/contact` },
   robots: { index: true, follow: true },
@@ -150,6 +150,146 @@ export default function ContactPage() {
               </a>
             ))}
           </div>
+        </section>
+
+        {/* Fix 4 (GSC-DISCOVERED-NOT-INDEXED-FIX.md): page ~263 words par tha — pure
+            utility. Expand kiya, noindex nahi: sahi jagah pe bhejne wala page kisan
+            ke liye asli kaam ka hai. Har fact repo ke already-verified articles se. */}
+        <section className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6 mb-8">
+          <h2 className="text-lg font-black text-[var(--color-text)] mb-4">
+            Email Likhne Se Pehle — Kaam Ki Baat
+          </h2>
+          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
+            Roz aisi email aati hai: “mera paisa nahi aaya, kuch karo.” Sach ye hai ki main aapka
+            paisa nahi bhej sakta — wo PM Kisan ke apne system se hi aata hai. Par main ye bata sakta
+            hoon ki aapka case kis tarah ka hai, aur us tarah ke case ka rasta kahan se nikalta hai.
+            Uske liye mujhe teen cheezein chahiye hoti hain.
+          </p>
+          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
+            Pehli — portal par aapka status <em>exactly</em> kya likha hai. “Paisa nahi aaya” aur
+            “Payment Failed” aur “FTO is Generated” teen bilkul alag halaat hain, aur teeno ka ilaaj
+            alag hai. Doosri — kist kaunsi chhooti hai. Teesri — aapne ab tak kya try kiya (branch
+            gaye? CSC gaye? 155261 par baat hui?). Itna likha ho to jawab kaam ka hota hai; warna main
+            bhi sirf general baat hi likh paunga.
+          </p>
+          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
+            Aur ek guzarish: Aadhaar number, bank account number ya OTP email me mat bhejein. Mujhe
+            zaroorat nahi, aur email surakshit jagah nahi hai. Status ka screenshot bhejna ho to usme
+            se account number wala hissa dhak dein.
+          </p>
+        </section>
+
+        <section className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6 mb-8">
+          <h2 className="text-lg font-black text-[var(--color-text)] mb-4">
+            Aam Sawaal — Jawab Pehle Se Likha Hai
+          </h2>
+          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-4">
+            Jo sawaal sabse zyada aate hain, unke poore guides site par maujood hain. Email ke jawab
+            ka intezaar karne se behtar hai seedha wahin se shuru karein:
+          </p>
+          <ul className="space-y-3 text-sm text-[var(--color-text-muted)] leading-relaxed">
+            <li>
+              <strong className="text-[var(--color-text)]">Status “Payment Failed” ya “Rejected” dikha raha hai.</strong>{' '}
+              Zyadatar cases me wajah Aadhaar ki NPCI seeding na hona, galat IFSC, ya dormant khaata
+              hoti hai — paisa release ho chuka hota hai, bank tak pahunchne se pehle atak jata hai.
+              Kya karna hai, step by step:{' '}
+              <Link href="/articles/PmKisanPaymentFailedFix2026" className="text-[var(--color-primary)] font-bold underline">
+                payment failed fix guide
+              </Link>.
+            </li>
+            <li>
+              <strong className="text-[var(--color-text)]">“FTO is Generated” likha hai, par khaate me kuch nahi aaya.</strong>{' '}
+              Ye achhi khabar hai — aapki payment batch me chali gayi hai. Bank ki processing me kuch
+              din lagte hain, isliye ek hi gaon me kisi ko pehle aur kisi ko baad me aana normal hai.
+              15 din tak intezaar karein, phir hi shikayat karein:{' '}
+              <Link href="/articles/fto-status-check-paisa-kab-aayega" className="text-[var(--color-primary)] font-bold underline">
+                FTO status guide
+              </Link>.
+            </li>
+            <li>
+              <strong className="text-[var(--color-text)]">eKYC pending hai.</strong> eKYC atki ho to
+              aage ka kuch nahi chalega. Aadhaar se linked mobile ho to OTP se ghar baithe ho jati hai;
+              OTP na aa raha ho to Face Authentication ka rasta hai — PMKisan app aur AadhaarFaceRD,
+              dono free.{' '}
+              <Link href="/articles/PmKisanEkycOnline2026" className="text-[var(--color-primary)] font-bold underline">
+                eKYC guide
+              </Link>{' '}
+              aur{' '}
+              <Link href="/articles/PmKisanFaceAuthenticationEkyc" className="text-[var(--color-primary)] font-bold underline">
+                face authentication guide
+              </Link>.
+            </li>
+            <li>
+              <strong className="text-[var(--color-text)]">Naam, pita ka naam ya bank badalna hai.</strong>{' '}
+              Kuch cheezein portal par khud ho jati hain, kuch ke liye CSC ya krishi adhikari ke paas
+              jana padta hai — aur bank badalne ka process alag hai.{' '}
+              <Link href="/articles/PmKisanCorrectionForm2026" className="text-[var(--color-primary)] font-bold underline">
+                correction form guide
+              </Link>{' '}
+              aur{' '}
+              <Link href="/articles/PmKisanBankAccountChangeProcess" className="text-[var(--color-primary)] font-bold underline">
+                bank account change guide
+              </Link>.
+            </li>
+            <li>
+              <strong className="text-[var(--color-text)]">Gaon ki list me naam hai ya nahi.</strong>{' '}
+              Village-wise list portal se khud nikal sakte hain — naya form bharne se pehle yahi dekhna
+              chahiye:{' '}
+              <Link href="/articles/PmKisanBeneficiaryList2026" className="text-[var(--color-primary)] font-bold underline">
+                beneficiary list guide
+              </Link>.
+            </li>
+          </ul>
+        </section>
+
+        <section className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6 mb-8">
+          <h2 className="text-lg font-black text-[var(--color-text)] mb-4">
+            Helpline Se Kaam Na Bane To Aage Ka Rasta
+          </h2>
+          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
+            <strong>155261</strong> par call lagne se pehle registration number, Aadhaar aur agar
+            correction karwaya hai to uski tareekh likh kar saamne rakh lein. Operator yahi poochhta
+            hai, aur na batane par call bekaar jaati hai. Doosra number <strong>011-24300606</strong>{' '}
+            hai.
+          </p>
+          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
+            Call se baat na bane to pmkisan.gov.in ke Help Desk se online shikayat darj karein — wahan
+            se <strong>ticket number</strong> milta hai. Us number ko sambhaal kar rakhein: agli baar
+            call karne par seedha usi ticket ka status poochh sakte hain, warna har baar shuru se
+            kahani sunani padti hai. Ticket ban jaye to <strong>pmkisan-ict@gov.in</strong> par email
+            me wahi ticket number quote karein.
+          </p>
+          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
+            Uske baad bhi hafte nikal jaayein to state nodal officer wala rasta bachta hai — har rajya
+            ka apna officer, email aur address hai, aur email me kya likhna chahiye wo bhi{' '}
+            <Link href="/articles/PmKisanStateNodalOfficerList" className="text-[var(--color-primary)] font-bold underline">
+              nodal officer list
+            </Link>{' '}
+            me diya hai. Shikayat ka poora silsila{' '}
+            <Link href="/yojana/pm-kisan-helpline-155261" className="text-[var(--color-primary)] font-bold underline">
+              helpline guide
+            </Link>{' '}
+            me step-by-step hai.
+          </p>
+        </section>
+
+        <section className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-2xl p-6 mb-8">
+          <h2 className="text-lg font-black text-[var(--color-text)] mb-3">
+            Ek Baat Jo Har Kisan Ko Yaad Rehni Chahiye
+          </h2>
+          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
+            PM Kisan ki taraf se koi phone karke OTP nahi maangta. Koi “file charge” ya “correction
+            fee” online transfer nahi karwata. Google par milne wali .com sites aur WhatsApp par
+            ghoomte “helpline numbers” isi bharose ka fayda uthate hain. Asli kaam sirf
+            pmkisan.gov.in, CSC, bank branch ya krishi adhikari ke through hota hai.
+          </p>
+          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
+            Galti ho gayi ho — OTP de diya, paisa kat gaya — to der mat karein. Cyber crime helpline{' '}
+            <strong>1930</strong> par call karein, <strong>cybercrime.gov.in</strong> par shikayat
+            darj karein, aur usi din apne bank ko batayein. Jitni jaldi report hoti hai, paisa wapas
+            aane ke chances utne behtar hote hain. Ghar ke bade-buzurg beneficiary hon to ye baat unhe
+            zaroor samjha dein — fraud ka sabse zyada shikaar wahi hote hain.
+          </p>
         </section>
 
         <section className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
