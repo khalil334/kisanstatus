@@ -332,6 +332,25 @@ export default function BakriPalanYojana() {
         </p>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+          Chara-Dawai Ka Rozana Kharcha — Pashu KCC Wala Raasta
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+          Upar clear ho gaya ki subsidy working capital nahi hai. Toh chara, feed aur dawai ka mahine ka
+          kharcha kahan se aayega jab tak unit apna paisa banana shuru nahi karti? Iske liye sahi tool hai{' '}
+          <strong>Pashu Kisan Credit Card</strong> — KCC ka pashupalan wala roop. Ye revolving limit hoti hai:
+          jitna use karo utne par byaj, chukao toh limit wapas khul jaati hai. Bakri palan jaise kaam ke liye
+          animal husbandry limit ₹3 lakh tak hai, aur isi ke andar interest subvention bhi milta hai —
+          samay par chukane wale ko paisa 4% jitna sasta pad jaata hai.
+        </p>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+          Ek aur kaam ki baat: collateral-free limit ab <strong>₹2 lakh</strong> ho gayi hai (pehle ₹1.6 lakh
+          thi — purane blogs abhi bhi wahi likh rahe hain). Matlab ₹2 lakh tak na zameen girvi, na guarantor.
+          NLM ka term loan shed aur bakriyon ke liye, Pashu KCC rozana kharche ke liye — dono ka kaam alag hai,
+          ek doosre ka substitute nahi. Poora process, documents aur banks ki list{' '}
+          <Link href="/yojana/pashu-kisan-credit-card-apply" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Pashu KCC apply guide</Link> mein hai.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
           100+5 Bahut Bada Hai? — Chhote Kisan Ke Liye Raasta
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">

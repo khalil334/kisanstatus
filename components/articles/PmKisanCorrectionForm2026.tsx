@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-25T21:37:17+05:30';
-const MODIFIED = '2026-03-18T14:49:39+05:30';
+const MODIFIED = '2026-08-20T13:00:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change' },
@@ -265,6 +265,22 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
               <p className="text-xs text-[var(--color-text-muted)]">Agar status "Inactive" dikh raha hai toh samjho koi detail galat hai. Iski asli wajah jaanne ke liye helpline 155261 par call karo ya CSC se check karwao. Ise ignore mat karo.</p>
             </div>
           </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>15 Din Baad Bhi Update Nahi Hua — Shikayat Ki Poori Chain</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Correction submit ki, 15 din nikal gaye, portal par wahi purani detail. Ab andaze se dobara-dobara form mat bharo — ek fixed chain pakdo, kadam-dar-kadam:
+          </p>
+          <StepList>
+            <SI n={1}><strong>155261 par call karo</strong> — aur busy aaye toh doosra number <strong>011-24300606</strong> bhi hai. Call se pehle registration number, Aadhaar aur correction ki date ek kagaz par likh lo. Operator se complaint ka reference number zaroor maango.</SI>
+            <SI n={2}><strong>pmkisan.gov.in ke Help Desk se online ticket banao</strong> — registration number daalo, problem chuno, submit. Jo ticket number mile use sambhal kar rakho — agli call par seedha usi ka status poochh sakte ho, kahani dobara sunane ki zaroorat nahi.</SI>
+            <SI n={3}><strong>Email karo:</strong> <strong>pmkisan-ict@gov.in</strong> par — subject mein registration number, body mein 2-3 line problem, aur ticket number quote karo. Status ka screenshot attach kar do.</SI>
+            <SI n={4}>Phir bhi kuch na ho toh <strong>state nodal officer tak escalate karo</strong> — kis officer ko, kaise likhna hai, ye sab <Link href="/articles/PmKisanStateNodalOfficerList" className="underline font-bold text-green-700 dark:text-green-400">nodal officer guide</Link> mein template ke saath diya hai.</SI>
+          </StepList>
+          <WB>
+            <strong>Fraud Alert:</strong> Correction ke chakkar mein Google par milne wali .com sites ya WhatsApp wale “helpline numbers” se door raho. Koi bhi asli sarkari process mein aapse <strong>OTP nahi poochha jaata</strong> aur na hi “correction fee” online transfer karwai jaati hai. OTP de diya aur paisa kat gaya toh turant <strong>1930</strong> par call karo ya <strong>cybercrime.gov.in</strong> par shikayat darj karo — aur apne bank ko usi din batao.
+          </WB>
         </section>
 
         <section className="mb-8">
