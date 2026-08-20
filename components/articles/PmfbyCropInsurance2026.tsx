@@ -6,7 +6,7 @@ import OfficialLinkButton from '@/components/OfficialLinkButton';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-01-05T09:36:58+05:30';
+const PUBLISHED = '2026-06-20T06:39:52+05:30';
 const MODIFIED = '2026-08-14T21:10:00+05:30';
 
 // Inline source citation link (E-E-A-T / transparency)

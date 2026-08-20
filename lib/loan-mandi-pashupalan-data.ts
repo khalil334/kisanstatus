@@ -214,10 +214,10 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'bihar-pashupalan-loan-yojana',
-    seoTitle: 'Bihar Pashupalan Loan Yojana 2026 — Date',
+    seoTitle: 'Bihar Pashupalan Loan Yojana 2026: Last Date, Apply',
     ogImage: '/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/kisan-bhains.webp',
     title: 'Bihar Pashupalan Loan Yojana 2026',
-    desc: 'SC/ST ko 75%, General ko 50% tak subsidy — par window saal bhar khuli nahi rehti (pichhli baar last date 25 July). Documents, unit size aur apply ka process.',
+    desc: 'SC/ST ko 75%, General ko 50% tak subsidy — par window saal bhar nahi khulti (pichhli baar last date 25 July). Documents, unit size aur apply ka process.',
     ogTitle: 'Bihar Pashupalan Loan Yojana 2026 — 50-75% Subsidy',
     keywords: [
       'bihar pashupalan loan yojana 2026',
