@@ -361,6 +361,30 @@ export default function MushroomKheti() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Setup Ka Paisa Kahan Se — Jab Tak Subsidy Nahi Aati
+      </h2>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        NHB back-ended hai — pehle poora kharcha aapka, paisa baad mein. Toh shuru ka ₹40,000-60,000
+        (ya bade setup ka lakh-do-lakh) kahan se aaye? Do practical raaste hain, dono ka mizaaj alag:
+      </p>
+      <ul className="list-disc pl-5 space-y-3 text-gray-700 dark:text-gray-300 mb-4">
+        <li><strong>Mudra loan:</strong> mushroom unit ek non-farm micro-business ki tarah bhi chal jaata hai.
+        Mudra mein bank collateral nahi maang sakta, aur Shishu se Tarun Plus tak categories ₹20 lakh tak
+        jaati hain — 100-bag unit ke liye toh Shishu/Kishor hi kaafi hai. Process aur documents ka poora
+        hisaab <Link href="/articles/dairy-farm-loan-without-collateral" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">bina collateral loan wali guide</Link> mein hai — wahan dairy ka example hai, par Mudra ka rasta same hai.</li>
+        <li><strong>PM FME (agar processing bhi karni hai):</strong> dried mushroom ya pickle banane ka plan hai
+        toh PM FME mein 35% credit-linked subsidy hai, ₹10 lakh per unit tak. "Credit-linked" ka matlab —
+        pehle bank loan approve hota hai, subsidy uske principal mein adjust hoti hai, haath mein cash nahi
+        aata. Details <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME guide</Link> mein.</li>
+      </ul>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        Ek hi kaam ke liye do sarkari funding ek saath nahi milti — NHB subsidy claim karni hai toh usi unit par
+        PM FME ka claim nahi banega. Pehle decide karo: sirf ugana hai (NHB + Mudra ka combination) ya ugana +
+        process karna hai (PM FME ka rasta). Ye decision district Horticulture Officer se baat karke lo, kyunki
+        state-wise guidelines ka farak yahan sabse zyada padta hai.
+      </p>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Related Guides on KisanStatus
       </h2>
       <div className="grid md:grid-cols-3 gap-4 mb-10 not-prose">

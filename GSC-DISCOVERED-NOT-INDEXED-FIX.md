@@ -342,8 +342,7 @@ Aage ke parts me `Actual` column pe bharosa karo, purane estimate pe nahi.
 nikale jo 2,000 se neeche hain — wahi ab Part 6 se aage ka kaam hai. Guard ki list hi authoritative
 queue hai (`npm run check:content`), doc ki purani list nahi.
 
-**Remaining queue (guard se, Part 12 ke baad 3 bache):**
-`mushroom-kheti-nhb-subsidy` (1,891) · `AgriStackKyaHai2026` (1,954) ·
+**Remaining queue (guard se, Part 13 ke baad 1 bacha):**
 `PmKisanRejectedStatusReApplyGuide` (1,965)
 
 | **7** | `/articles/custom-hiring-centre-chc-portal` | — | **1,620 → 2,047** | — | ✅ Done (2026-08-20) |
@@ -359,6 +358,20 @@ queue hai (`npm run check:content`), doc ki purani list nahi.
 | | `/articles/PmKisanFaceAuthenticationEkyc` | — | **1,853 → 2,060** | — | ✅ Done (2026-08-20) |
 | **12** | `/articles/bakri-palan-yojana-nlm-subsidy` | — | **1,872 → 2,044** | — | ✅ Done (2026-08-20) |
 | | `/articles/PmKisanCorrectionForm2026` | — | **1,883 → 2,106** | — | ✅ Done (2026-08-20) |
+| **13** | `/articles/mushroom-kheti-nhb-subsidy` | — | **1,891 → 2,111** | — | ✅ Done (2026-08-20) |
+| | `/articles/AgriStackKyaHai2026` | — | **1,954 → 2,068** | — | ✅ Done (2026-08-20) |
+
+**Part 13 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
+- *mushroom-kheti-nhb-subsidy*: "Setup Ka Paisa Kahan Se — Jab Tak Subsidy Nahi Aati" section —
+  NHB back-ended hone ka gap bhara: Mudra collateral-free + Shishu-se-Tarun-Plus ₹20 lakh categories
+  (DairyFarmLoanWithoutCollateral ke verified facts se, guide ka link), PM FME 35% credit-linked /
+  ₹10 lakh per unit + principal-adjust mechanism (PMFMEYojana article se, link), ek-kaam-do-funding
+  nahi wala rule, HO se decide karne ki salah. Internal count 1,891 → **2,111**.
+- *AgriStackKyaHai2026*: "Registry Ke Naam Par Paise Maangne Wale" warning section — Farmer ID free
+  hai (article ke apne verified facts), agent "file charge" fraud, phone-par-OTP-nahi rule, 1930 /
+  cybercrime.gov.in recovery. Internal count 1,954 → **2,068**.
+- Dono ke `modifiedTime` update; AgriStack ka `MODIFIED` bhi. Koi naya amount/date invent nahi.
+- Verification: `check:titles` (108 pairs) + `check:content` pass — dono guard ki list se bahar.
 
 **Part 12 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
 - *bakri-palan-yojana-nlm-subsidy*: "Chara-Dawai Ka Rozana Kharcha — Pashu KCC" section — article ki
