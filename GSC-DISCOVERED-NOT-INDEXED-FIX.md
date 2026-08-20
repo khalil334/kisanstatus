@@ -330,12 +330,29 @@ Aage ke parts me `Actual` column pe bharosa karo, purane estimate pe nahi.
 | | `/articles/PmKisanCscRegistrationCharges` | 1,663 | **1,568** | — | ✅ Done (2026-08-20) |
 | **3** | `/articles/hi/pm-kisan-khad-yojana-sach` | 1,720 | **1,632 → ~2,040** | — | ✅ Done (2026-08-20) |
 | | `/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026` | ~1,750 | **1,648 → ~2,090** | — | ✅ Done (2026-08-20) |
-| **4** | `/articles/fto-status-check-paisa-kab-aayega` | ~1,800 | **1,718** | +282 | ⏳ Pending |
-| | `/articles/hi/parihara-payment-status` (PariharaPaymentStatusHindi) | ~1,800 | **1,665** | +335 | ⏳ Pending |
+| **4** | `/articles/fto-status-check-paisa-kab-aayega` | ~1,800 | **1,718 → ~2,150** | — | ✅ Done (2026-08-20) |
+| | `/articles/hi/parihara-payment-status` (PariharaPaymentStatusHindi) | ~1,800 | **1,665 → ~2,050** | — | ✅ Done (2026-08-20) |
 | **5** | `/articles/PmKisanVillageWiseListPdfDownload` | ~1,830 | **1,901** | +99 | ⏳ Pending |
 | | `/articles/hi/rythu-bharosa-status` (RythuBharosaStatusHindi) | ~1,840 | **1,676** | +324 | ⏳ Pending |
 
-**Total remaining: ~1,040 real words** (Parts 4–5).
+**Total remaining: ~420 real words** (Part 5).
+
+**Part 4 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
+- *FTO Status Check*: (1) "eKYC pending hai to FTO banega hi nahi" section — Face Authentication
+  se ghar baithe eKYC (PMKisan + AadhaarFaceRD, UIDAI publisher — repo ke FaceAuth article se),
+  contextual link. (2) "30 din se zyada — shikayat ka seedha rasta" — 155261 / 011-24300606
+  (call se pehle kya ready rakhna), pmkisan.gov.in Help Desk ticket, complaint-number sambhalne
+  ki salah (sab repo ke FTO-matlab article se), aur kist-cycle context (23vi kist 20 June 2026,
+  24vi October 2026 expected/not-notified — repo ke 24viKist article se). +2 FAQ (eKYC pending,
+  helpline prep). Internal count 1,534 → **2,004** (live ~2,150).
+- *Parihara Hindi*: (1) "Teen portal" section — status Parihara par / record Bhoomi par,
+  private .com sites warning, RTC cross-check (survey number + rakba + naam) — sab Hinglish
+  sibling article ke verified content se, naye words me. (2) "Bhugtan ki chain" section —
+  survey→taluk→treasury→bank, 2–4 hafte taluk-wise farak, 2–3 mahine pending = chhupi rejection,
+  Entry ID + receiving copy + screenshot ki aadat. Internal count 1,550 → **1,905** (live ~2,050).
+- Dono me `modifiedTime` update. Naya koi amount/date invent nahi — har fact repo ke maujooda
+  verified articles se.
+- Verification: `tsc --noEmit` clean, `check:titles` + `check:content` pass.
 
 **Part 3 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts, koi naya amount/date invent nahi):
 - *Khad Yojana Sach*: (1) "Khad par asli bachat ka raasta" section — Soil Health Card (free test,

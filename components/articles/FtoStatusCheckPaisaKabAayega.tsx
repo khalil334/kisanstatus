@@ -4,7 +4,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-08-18T11:00:00+05:30';
-const MODIFIED = '2026-08-19T00:15:00+05:30';
+const MODIFIED = '2026-08-20T22:00:00+05:30';
 
 const RELATED = [
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Ka Full Form & Matlab' },
@@ -36,6 +36,14 @@ const FAQS_DATA = [
   {
     q: 'Paisa aa gaya ya nahi — bina bank jaye kaise pata karein?',
     a: 'Char tarike hain: (1) bank ka SMS — lekin SMS aana guaranteed nahi hai, mobile number bank record mein purana ho to SMS kahin aur jayega; (2) bank ke missed-call balance number par call karke; (3) UPI app (PhonePe/Google Pay/BHIM) mein balance check karke; (4) gaon ke CSC ya banking correspondent ke paas AePS se — angutha lagakar balance nikal aata hai. Bank ki line mein lagna aakhri option rakho.',
+  },
+  {
+    q: 'Status me eKYC pending dikh raha hai — FTO banega ya nahi?',
+    a: 'Nahi banega, jab tak eKYC complete na ho. Achhi baat ye hai ki iske liye CSC jana zaroori nahi — official PMKisan app me Face Authentication se ghar baithe eKYC ho jati hai, bina OTP ke. Do app chahiye: PMKisan aur AadhaarFaceRD (dono Play Store par sarkari publisher se). eKYC hote hi aap agli batch ke liye eligible ho jate ho.',
+  },
+  {
+    q: 'Helpline par call karne se pehle kya taiyar rakhein?',
+    a: 'Teen cheezein saamne rakh lo: Aadhaar number, PM Kisan registration number aur bank account details — operator shuru me yahi poochta hai. Official numbers 155261 aur 011-24300606 hain. In par call free hai; koi aur number jo paise mange, wo fraud hai.',
   },
   {
     q: 'Kya FTO cancel bhi ho sakta hai?',
@@ -205,6 +213,53 @@ export default function FtoStatusCheckPaisaKabAayega({ article }: { article: Art
             land seeding ya NPCI. Wo teeno clear hain aur FTO Generated likha hai, to aapka paisa
             pipeline mein hai; batch ka number aane par credit ho jayega. Teeno mein se koi pending hai
             to <Link href="/articles/PmKisanMasterGuide2026" className="text-[var(--color-primary)] underline">Master Guide ka checklist</Link> pakdo — wahi pehle theek karna hoga.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>eKYC Pending Hai To FTO Banega Hi Nahi — Ghar Baithe Fix</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ek galatfehmi bahut aam hai: log FTO ka wait karte rehte hain jabki unke status me eKYC
+            pending likha hota hai. Saaf baat — <strong>jab tak eKYC complete nahi, aapka naam batch
+            me jayega hi nahi</strong>, aur FTO kabhi generate nahi hoga. Wait karna yahan time barbaad
+            karna hai; pehle eKYC nipta lo.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Aur iske liye CSC ki line me lagna zaroori nahi. Official <strong>PMKisan app</strong> me
+            Face Authentication ka option hai — chehra scan karke eKYC ho jati hai, OTP ki zaroorat
+            bhi nahi (un buzurgon ke liye sabse kaam ki cheez jinke Aadhaar me mobile number link
+            nahi hai). Do app chahiye hoti hain: PMKisan aur <strong>AadhaarFaceRD</strong> (publisher
+            UIDAI) — dono Play Store se. AadhaarFaceRD install karke kholni nahi hoti, wo background
+            me chalti hai. Poora step-by-step process aur common errors ka ilaaj{' '}
+            <Link href="/articles/PmKisanFaceAuthenticationEkyc" className="text-[var(--color-primary)] underline">Face Authentication eKYC guide</Link> me hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>30 Din Se Zyada Ho Gaye — Shikayat Ka Seedha Rasta</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Upar wala 4-kaam checklist kar liya, sab clear hai, phir bhi mahina nikal gaya? Ab
+            shikayat register karne ka waqt hai — aur iske do free raste hain:
+          </p>
+          <StepList>
+            <SI n={1}><strong>Helpline 155261 ya 011-24300606:</strong> call se pehle Aadhaar number,
+            registration number aur bank details saamne rakh lo — operator shuru me yahi poochta
+            hai. Problem note karwa kar complaint number zaroor maango.</SI>
+            <SI n={2}><strong>pmkisan.gov.in ka Help Desk:</strong> portal ke Help Desk / Grievance
+            section me registration number aur problem likh kar submit karo. Badle me ticket number
+            milta hai jise baad me track kar sakte ho — phone par baat bhoolne ka jhanjhat nahi.</SI>
+          </StepList>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
+            Complaint number ya ticket number mile to use kahin likh kar rakho — agli baar call
+            karne par wahi number batane se puri kahani dobara sunani nahi padti, aur follow-up
+            usi reference par aage badhta hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
+            Timing ka context bhi samajh lo: 23vi kist 20 June 2026 ko aayi thi, aur 24vi ke liye news
+            me October 2026 chal raha hai — official date abhi notify nahi hui. Matlab do kisto ke
+            beech 3–4 mahine ka gap normal hai. Agar aapki pichhli kist aa chuki hai aur agli ka
+            intezaar hai, to wo FTO ka issue nahi, release cycle ka hissa hai — shikayat ki zaroorat
+            sirf tab hai jab release ho chuki kist aapke account tak na pahunchi ho.
           </p>
         </section>
 
