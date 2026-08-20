@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-03T08:52:27+05:30';
-const MODIFIED = '2026-01-12T09:57:33+05:30';
+const MODIFIED = '2026-08-20T11:30:00+05:30';
 
 const RELATED = [
   { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card Guide' },
@@ -22,6 +22,7 @@ const FAQS_DATA = [
   { q: 'Urea ya pesticide ke saath mix karna theek hai?', a: 'Pehle compatibility test kar lena zaroori hai — chhote patch par try karke dekhein. Kisi bhi mix se pehle KVK ya IFFCO guideline padh lena safe rahega, warna crop damage ka risk rehta hai.' },
   { q: 'Result kitne din mein dikhna shuru hota hai?', a: '7-10 din mein kuch farak nazar aa sakta hai. Do-teen sprays ke baad tasveer clearer hoti hai. Soil, mausam aur crop type par bhi kaafi kuch depend karta hai, isliye fixed timeline nahi de sakte.' },
   { q: 'Online kahan se kharidna safe hai?', a: 'IFFCO ki official website sabse reliable option hai. Amazon-Flipkart par sirf verified seller se lein. Local Krishi Kendra mein subsidy milne ke chances bhi rehte hain — original packaging ka QR code scan kar ke check karein.' },
+  { q: 'Kya kharidne se pehle soil test karwana zaroori hai?', a: 'Zaroori nahi, par samajhdari hai. Soil Health Card ka test free hai (soilhealth.dac.gov.in) aur usse pata chalta hai ki mitti ko phosphorus chahiye bhi ya nahi. Card ke hisaab se khaad lene par nano DAP aur granular dono ka kharcha kam ho sakta hai.' },
 ];
 
 const howToSchema = {
@@ -442,6 +443,31 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
               </div>
             ))}
           </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>Bottle Kharidne Se Pehle Mitti Ka Hisaab Kar Lo</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ek sawaal jo bahut kam kisan poochte hain: mere khet ko phosphorus chahiye bhi ya nahi? DAP ka &lsquo;P&rsquo; phosphorus hi hai — aur agar mitti mein wo pehle se kaafi hai, to ₹300 ki bottle ho ya ₹1,350 ki bori, dono ka paisa aadha barbaad ja raha hai. Ye andaaze se nahi, test se pata chalta hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Aur test <strong>free hai</strong>. Soil Health Card scheme ke under sarkar aapki mitti ke 12 parameters test karti hai — N, P, K sab isme aate hain — aur 3-4 hafte mein card ban jaata hai jisme likha hota hai ki kis khaad ki kitni zaroorat hai. Portal <strong>soilhealth.dac.gov.in</strong> hai, aur July 2026 tak desh mein 25.89 crore se zyada cards ban chuke hain — matlab ye koi nayi-navéli cheez nahi, system chal raha hai. Sample kaise dena hai aur card ka report kaise padhna hai, iska poora tarika humne{' '}
+            <Link href="/articles/soil-health-card-complete-guide-2026" className="underline font-bold text-green-700 dark:text-green-400">Soil Health Card guide</Link> mein likha hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Seedha faayda samjho: card ke hisaab se khaad daaloge to ho sakta hai nano DAP ki 2 bottle ki jagah 1 hi kaafi ho, ya granular DAP ki matra kam ho jaye. Test free, bachat asli. Pehle card, phir kharidari — ye order ulta mat karo.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>&ldquo;Khad Yojana Ka Paisa&rdquo; Wale Message Se Bach Ke</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Khaad ke rate search karne wale kisano ko WhatsApp par ek aur cheez milti hai — &ldquo;PM Kisan Khad Yojana ke ₹11,000 aapke khaate me aane wale hain, link par click karke OTP daalo.&rdquo; Saaf baat: <strong>is naam ki koi alag scheme hai hi nahi.</strong> Ye figure blogs ne PM Kisan ke ₹6,000 aur ek kalpanik fertilizer subsidy ko jod kar bana diya. Khaad par subsidy asli hai, par wo aapke khaate me nahi aati — wo dukaan ke rate me hi ghuli hoti hai. Isliye DAP ki bori ₹1,350 me milti hai jabki uski asli laagat ₹3,000+ hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Aur OTP? Kisi bhi sarkari subsidy ke liye kisi ko OTP batane ki zaroorat kabhi nahi padti. OTP diya to khaate se paisa gaya. Agar galti ho chuki hai to der mat karo — <strong>1930</strong> par call karo ya <strong>cybercrime.gov.in</strong> par shikayat darj karo, aur apne bank ko turant batao. Is poore ₹11,000 wale jhooth ki tafseel humne{' '}
+            <Link href="/yojana/pm-kisan-khad-yojana-11000-sach" className="underline font-bold text-green-700 dark:text-green-400">alag article</Link> mein kholi hai — ghar me koi PM Kisan wala ho to unhe bhi padhwa dena.
+          </p>
         </section>
 
         <section className="mb-8">

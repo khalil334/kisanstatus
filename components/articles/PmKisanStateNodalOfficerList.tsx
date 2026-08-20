@@ -6,7 +6,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-25T13:09:31+05:30';
-const MODIFIED = '2026-02-15T14:31:22+05:30';
+const MODIFIED = '2026-08-20T11:45:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -372,6 +372,30 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
               </div>
             ))}
           </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>Phone Aur Email Ke Alawa Teesra Raasta: Help Desk Ticket</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Bahut kisan ye option jaante hi nahi. pmkisan.gov.in par ek <strong>Help Desk / Grievance</strong> section hai jahan aap khud online shikayat darj kar sakte ho — na call ka wait, na email ka. Registration number daalo, problem chuno, submit karo. Badle mein ek <strong>ticket number</strong> milta hai — use kahin likh kar rakho, kyunki agli baar 155261 par call karoge to operator se seedha usi ticket ka status poochh sakte ho. Bina number ke har call zero se shuru hoti hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Waise 155261 ke alawa ek aur number bhi hai — <strong>011-24300606</strong>. Ek busy ho to doosra try karo, dono PM Kisan ke hi hain. Aur email ka central pata <strong>pmkisan-ict@gov.in</strong> hai — state officer ka direct email na mile to yahi likho, subject me apna registration number daal kar.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Sabse strong combination? Ticket + email dono. Pehle Help Desk par ticket banao, phir email me wahi ticket number quote karo. Ab aapki shikayat do jagah record me hai aur officer ke paas &ldquo;humein mili hi nahi&rdquo; kehne ki gunjaish nahi bachti.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>&ldquo;Nodal Officer Bol Raha Hoon&rdquo; — Aisi Call Aaye To Kya Karein</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ek kadwi sachai: jaise hi kisan shikayat darj karte hain, kuch dino baad fraud calls shuru ho jaati hain. Koi khud ko adhikari batayega, kahega &ldquo;aapki payment release karni hai, OTP batao&rdquo; ya &ldquo;processing fee bhejo.&rdquo; Yaad rakho — <strong>koi bhi asli sarkari adhikari na OTP maangta hai, na fee.</strong> Payment release karne ke liye unhe aapse kuch nahi chahiye; system PFMS se seedha bank me bhejta hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            OTP de diya aur paisa kat gaya? Turant <strong>1930</strong> par call karo ya <strong>cybercrime.gov.in</strong> par shikayat darj karo, aur apne bank ko usi din batao — jitni jaldi report, utne recovery ke chances. Bank account se judi galti ke liye humara{' '}
+            <Link href="/articles/PmKisanBankAccountChangeProcess" className="underline font-bold text-green-700 dark:text-green-400">bank account change guide</Link> bhi kaam aayega.
+          </p>
         </section>
 
         <section className="mb-8">
