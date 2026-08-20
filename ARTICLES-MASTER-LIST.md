@@ -82,7 +82,7 @@ Har article ka: URL route, data file (jaha slug/meta hai), component file (jaha 
 | `/articles/hi/nayi-registration` | पीएम किसान नई रजिस्ट्रेशन 2027 — Farmer ID से ऐसे करें Apply | Hindi (Devanagari) | status-check | `components/articles/hindi-yojana/PmKisanNewRegistration2027.tsx` | 2026-04-19 | 2026-04-24 | — |
 | `/articles/hi/farmer-id-kaise-banaye` | किसान आईडी कैसे बनाएं 2027? Free, मोबाइल से 10 मिनट में | Hindi (Devanagari) | farming | `components/articles/hindi-yojana/FarmerIdCardKaiseBanaye2027.tsx` | 2026-06-07 | 2026-08-18 | — |
 | `/articles/hi/ekyc-mobile-se` | PM Kisan eKYC मोबाइल से कैसे करें? OTP और Face Auth तरीका | Hindi (Devanagari) | status-check | `components/articles/hindi-yojana/PmKisanEkycMobileSeKaiseKare.tsx` | 2026-07-16 | 2026-07-21 | — |
-| `/articles/hi/npci-aadhaar-seeding` | NPCI आधार सीडिंग Online — DBT पेमेंट फिक्स | Hindi (Devanagari) | status-check | `components/articles/hindi-yojana/NpciAadhaarSeedingDbtPayment.tsx` | 2026-07-19 | 2026-08-18 | — |
+| `/articles/hi/npci-aadhaar-seeding` | Aadhaar Not Seeded? NPCI सीडिंग से DBT फिक्स | Hindi (Devanagari) | status-check | `components/articles/hindi-yojana/NpciAadhaarSeedingDbtPayment.tsx` | 2026-07-19 | 2026-08-18 | — |
 | `/articles/hi/payment-stopped-by-state` | "Payment Stopped by State" का मतलब क्या है? जानिए आसान Fix | Hindi (Devanagari) | status-check | `components/articles/hindi-yojana/PmKisanPaymentStoppedByStateFix.tsx` | 2026-05-02 | 2026-05-11 | — |
 | `/articles/hi/recovery-notice` | PM Kisan Recovery Notice आया? पैसा वापस करने का पूरा तरीका | Hindi (Devanagari) | status-check | `components/articles/hindi-yojana/PmKisanRecoveryNoticePaisaWapas.tsx` | 2026-04-26 | 2026-06-07 | — |
 
@@ -394,7 +394,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 | 1 | ✅ 2026-08-21 | `/articles/pm-kisan-fto-generated-ka-matlab-kya-hai` (2565 imp) | `/articles/hi/farmer-id-kaise-banaye` (2353 imp) |
 | 2 | ✅ 2026-08-21 | `/rajya-yojana/odisha-cm-kisan-status-check-2026` (1776 imp) | `/articles/NanoDap500mlPriceInIndia2026` (1764 imp) |
 | 3 | ✅ 2026-08-20 | `/articles/hi/namo-shetkari-yojana` (1697 imp) | `/articles/hi/pm-kisan-25vi-kist` (1149 imp) |
-| 4 | ⬜ | `/articles/msp-list-2026-27` (1062 imp) | `/articles/hi/npci-aadhaar-seeding` (940 imp) |
+| 4 | ✅ 2026-08-20 | `/articles/msp-list-2026-27` (1062 imp) | `/articles/hi/npci-aadhaar-seeding` (940 imp) |
 | 5 | ⬜ | `/rajya-yojana/mp-kisan-kalyan-yojana-kist-status` (913 imp) | `/articles/PmKisanLandSeedingForm` (757 imp) |
 | 6 | ⬜ | `/articles/hi/tractor-subsidy` (691 imp) | `/rajya-yojana/namo-shetkari-yojana-status-check-2026` (638 imp) |
 | 7 | ⬜ | `/articles/bihar-pashupalan-loan-yojana` (635 imp) | `/articles/PmfbyCropInsurance2026` (560 imp) |
