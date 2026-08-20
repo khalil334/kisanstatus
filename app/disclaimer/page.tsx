@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: `${SITE_NAME} meri apni banayi hui site hai — sarkar se iska koi rishta nahi. Asli kaam ke liye hamesha pmkisan.gov.in par hi jaayein.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/disclaimer` },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
   openGraph: {
     title: `Legal Disclaimer – ${SITE_NAME} | Unofficial Portal`,
     description: `${SITE_NAME} meri apni banayi hui site hai — sarkar se iska koi rishta nahi. Asli kaam ke liye hamesha pmkisan.gov.in par hi jaayein.`,

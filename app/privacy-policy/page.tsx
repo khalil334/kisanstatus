@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: `${SITE_NAME} ki Privacy Policy — seedhi bhasha mein. Kaunsa data collect hota hai, kaunsa nahi, aur ads/analytics kaise kaam karte hain — sab kuch saaf-saaf.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   alternates: { canonical: `${SITE_URL}/privacy-policy` },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
   openGraph: {
     title: `Privacy Policy – ${SITE_NAME} | Data Protection Notice`,
     description: `Kaunsa data collect hota hai, kaunsa nahi — seedhi bhasha mein poori baat.`,

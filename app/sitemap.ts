@@ -288,36 +288,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.70,
     },
-    {
-      url: `${SITE_URL}/about`,
-      lastModified: new Date('2026-06-15'),
-      changeFrequency: 'monthly',
-      priority: 0.50,
-    },
-    {
-      url: `${SITE_URL}/contact`,
-      lastModified: new Date('2026-06-15'),
-      changeFrequency: 'monthly',
-      priority: 0.50,
-    },
-    {
-      url: `${SITE_URL}/privacy-policy`,
-      lastModified: new Date('2026-06-01'),
-      changeFrequency: 'yearly',
-      priority: 0.30,
-    },
-    {
-      url: `${SITE_URL}/disclaimer`,
-      lastModified: new Date('2026-06-01'),
-      changeFrequency: 'yearly',
-      priority: 0.30,
-    },
-    {
-      url: `${SITE_URL}/terms-of-service`,
-      lastModified: new Date('2026-06-01'),
-      changeFrequency: 'yearly',
-      priority: 0.30,
-    },
+    // /about, /contact, /privacy-policy, /disclaimer, /terms-of-service are
+    // noindexed utility/compliance pages (AdSense requirement pages) — kept live
+    // and crawlable via footer links, but excluded from the sitemap: a sitemap
+    // entry for a noindex URL is a mixed signal.
   ];
 
   const categoryPages: MetadataRoute.Sitemap = Object.keys(CATEGORIES).map((category) => {

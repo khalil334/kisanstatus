@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'About Us — PM Kisan Yojana Guides',
   description: `KisanStatus ek kisan ki banayi free site hai — PM Kisan status, eKYC, payment fix aur registration ki saral Hinglish guidance. Jaaniye kisne aur kyun banayi.`,
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
+  robots: { index: false, follow: true },
   alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
     title: `About Us - ${SITE_NAME} | PM Kisan Guidance`,
