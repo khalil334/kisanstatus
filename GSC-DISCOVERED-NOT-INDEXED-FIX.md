@@ -182,8 +182,11 @@ karne, ye conversion pages hain.
 intro (rumor-vs-real angle, 6 deep links, sirf repo-verified facts: ₹1.6L shed range,
 ₹3L pashu KCC, 155261 helpline). `/calculator` pe "Kaunsa tool kab kaam aata hai?" section
 (use-case angle — kab kaunsa tool, 6 links: 4 tools + 2 guides). Dono ke structure Fix 1
-ke intros se alag hain. `/contact` ka decision abhi PENDING — expand vs noindex user se
-poochna hai.
+ke intros se alag hain. `/contact` ka decision ho gaya — **noindex** (2026-08-20):
+user ne decide kiya ke sab AdSense-compliance pages (`/about`, `/contact`,
+`/privacy-policy`, `/disclaimer`, `/terms-of-service`) `robots: index:false, follow:true`
+pe jayenge aur sitemap se drop honge. Pages live hain (footer links se crawlable),
+sirf index nahi honge.
 
 ### Fix 5 — Content quality guard build me ✅ DONE (2026-08-20)
 
@@ -624,7 +627,7 @@ process depth aur structure se), ya (c) gov portals ko is environment se reachab
 | 1 | Category intro content (12 descriptions + template) | 2 templates | ✅ Done (2026-08-20) — EN pehle se tha, HI ab `CategoryIntroHi` se |
 | 2 | Homepage naye-articles section + cross-link weighting | `components/HomeContent.tsx`, `lib/cross-links.ts` | ✅ Done (2026-08-20) |
 | 3 | Bottom-5 articles triage (expand/merge/noindex) | per-page | `SEO: thin article triage batch 1` |
-| 4 | Utility pages decision | small | ✅ Hubs done (2026-08-20); `/contact` pending user decision |
+| 4 | Utility pages decision | small | ✅ Done (2026-08-20) — hubs intro'd; compliance pages (about/contact/privacy/disclaimer/terms) noindexed + sitemap se dropped |
 | 5 | Content-length build guard | `scripts/` | ✅ Done (2026-08-20) — `check-content-length.js` + build wiring |
 
 Har step alag commit. Step 1–2 pehle — wahi 80% impact denge, aur template-level hain (per-page
