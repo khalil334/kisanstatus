@@ -4,7 +4,7 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-17T07:41:23+05:30';
-const MODIFIED = '2026-08-18T19:00:00+05:30';
+const MODIFIED = '2026-08-20T12:30:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
@@ -330,6 +330,26 @@ export default function PmKisanFaceAuthenticationEkyc() {
             har center pe bheed hoti hai aur portal bhi slow chalta hai. 10 minute ka kaam hai, kist ke
             ₹2,000 daav pe mat lagao.
           </IB>
+        </section>
+
+        <section className="mb-8">
+          <SH>eKYC Ho Gayi, Phir Bhi Paisa Nahi Aaya — Baaki Do Taale</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Green tick dekh kar log samajhte hain ki ab kist pakki. Sach ye hai ki eKYC teen taalon me se sirf ek taala kholti hai. Baaki do bhi khule hone chahiye, tabhi paisa aata hai:
+          </p>
+          <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4">
+            <li>
+              <strong>Bank account ki Aadhaar seeding (NPCI).</strong> Paisa DBT se us khaate me jata hai jo NPCI system me Aadhaar se linked hai. Khaata chalu hai par Aadhaar se seeded nahi — to eKYC ke baad bhi transfer fail. Apni branch ja kar ek line poochho: &ldquo;Mera account NPCI me Aadhaar se seeded hai?&rdquo; Nahi hai to wahi form bhar do.
+            </li>
+            <li>
+              <strong>Land seeding.</strong> Aapka khasra number portal ke record me dikhna chahiye. Ye wala kaam patwari/revenue office ke through hota hai — app ya CSC se nahi. Status page par land seeding &ldquo;No&rdquo; dikhe to wahi pakdo, eKYC dobara karne se kuch nahi hoga.
+            </li>
+          </ul>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Teeno cheezein (eKYC + bank seeding + land seeding) green hone ke baad bhi paisa batch se aata hai — FTO bante hi kuch dino me credit hota hai, ek-ek karke nahi. Wo poora hisaab{' '}
+            <Link href="/articles/fto-status-check-paisa-kab-aayega" className="underline text-green-700 dark:text-green-400">FTO status guide</Link> me hai. Aur agar 30 din se sab green hai par credit nahi — to{' '}
+            <Link href="/articles/PmKisanPaymentFailedFix2026" className="underline text-green-700 dark:text-green-400">payment failed fix guide</Link> kholo, wahan reason-wise rasta likha hai.
+          </p>
         </section>
 
         <section className="mb-8">

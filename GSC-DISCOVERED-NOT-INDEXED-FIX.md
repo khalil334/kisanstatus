@@ -342,8 +342,7 @@ Aage ke parts me `Actual` column pe bharosa karo, purane estimate pe nahi.
 nikale jo 2,000 se neeche hain — wahi ab Part 6 se aage ka kaam hai. Guard ki list hi authoritative
 queue hai (`npm run check:content`), doc ki purani list nahi.
 
-**Remaining queue (guard se, Part 10 ke baad 7 bache):**
-`pm-kisan-self-registered-status-check` (1,833) · `PmKisanFaceAuthenticationEkyc` (1,853) ·
+**Remaining queue (guard se, Part 11 ke baad 5 bache):**
 `bakri-palan-yojana-nlm-subsidy` (1,872) · `PmKisanCorrectionForm2026` (1,883) ·
 `mushroom-kheti-nhb-subsidy` (1,891) · `AgriStackKyaHai2026` (1,954) ·
 `PmKisanRejectedStatusReApplyGuide` (1,965)
@@ -357,6 +356,23 @@ queue hai (`npm run check:content`), doc ki purani list nahi.
 | | `/articles/PmKisanMaandhanYojanaPension` | — | **1,800 → 2,288** | — | ✅ Done (2026-08-20) |
 | **10** | `/articles/NanoDap500mlPriceInIndia2026` | — | **1,811 → 2,240** | — | ✅ Done (2026-08-20) |
 | | `/articles/PmKisanStateNodalOfficerList` | — | **1,816 → 2,117** | — | ✅ Done (2026-08-20) |
+| **11** | `/articles/pm-kisan-self-registered-status-check` | — | **1,833 → 2,129** | — | ✅ Done (2026-08-20) |
+| | `/articles/PmKisanFaceAuthenticationEkyc` | — | **1,853 → 2,060** | — | ✅ Done (2026-08-20) |
+
+**Part 11 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
+- *pm-kisan-self-registered-status-check*: (1) "Active Ho Gaya — Paisa Kab Aayega (FTO)" section —
+  FTO batch-processing ka concept, DBT credit timeline, gaon-wale-ka-aaya-mera-nahi wala case (sab
+  repo ke FTO articles ke verified facts se), FTO guide ka contextual link. (2) "Fake status
+  websites" section — asli check me OTP lagta hi nahi, gov.in/nic.in rule (KhadYojanaSach se),
+  OTP fraud recovery 1930 / cybercrime.gov.in. Internal count 1,833 → **2,129**.
+- *PmKisanFaceAuthenticationEkyc*: "Baaki Do Taale" section — eKYC ke baad bhi paisa na aane ke
+  do bache kaaran: NPCI bank-Aadhaar seeding (branch me kya poochhna) aur land seeding (patwari
+  route, app se nahi hota) — dono article ke sibling SelfRegistered/PaymentFailed pages ke verified
+  facts se; FTO batch ka reminder + FTO guide aur PaymentFailedFix ke contextual links.
+  Internal count 1,853 → **2,060**.
+- Dono ke `MODIFIED` + `lib/core-articles-data.ts` ke `modifiedTime` update. Koi naya amount/date
+  invent nahi.
+- Verification: `check:titles` (108 pairs) + `check:content` pass — dono guard ki list se bahar.
 
 **Part 10 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
 - *NanoDap500mlPriceInIndia2026*: (1) "Bottle Kharidne Se Pehle Mitti Ka Hisaab" section — free soil

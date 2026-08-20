@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-11T18:34:34+05:30';
-const MODIFIED = '2026-03-04T16:41:58+05:30';
+const MODIFIED = '2026-08-20T12:15:00+05:30';
 
 const IMG_BASE = '/images/articles/pm-kisan-self-registered-status-check';
 
@@ -356,6 +356,27 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
               <p className="text-xs text-[var(--color-text-muted)]">Har 7-10 din mein check karo. Koi problem hai toh shuru mein hi pata chal jaayega.</p>
             </div>
           </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>Active Ho Gaya — Ab Paisa Kab Aayega? (FTO Ka Chakkar)</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Status Active dikhne ka matlab ye nahi ki kal paisa aa jayega. Active hone ke baad ek aur station hai — <strong>FTO</strong>, yaani Fund Transfer Order. Ye ek tarah ka payment order hai jo batch mein banta hai — aapke state/district ke verified kisano ki list ek saath process hoti hai, ek-ek karke nahi. FTO ban gaya to uske kuch hi dino mein DBT (Direct Benefit Transfer) se paisa seedha bank khaate me credit hota hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Isliye agar aapke gaon ke kisi aur ka paisa aa gaya aur aapka nahi, to ghabrao mat — ho sakta hai aapka FTO agle batch me ho. Status page par hi FTO ka status bhi dikhta hai. Uska poora matlab, har stage ka timeline aur 30 din se zyada atakne par kya karna hai — sab humne{' '}
+            <Link href="/articles/fto-status-check-paisa-kab-aayega" className="underline font-bold text-green-700 dark:text-green-400">FTO status guide</Link> mein detail se likha hai. Naye self-registered kisano ke liye yahi agla page hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Status Check Ke Naam Par Chalne Wali Fake Websites</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Google par &ldquo;pm kisan status&rdquo; type karo to upar kai .com aur .in websites dikhengi jo sarkari jaisi lagti hain. Inme se kuch sirf ads dikhati hain — wo jhelne layak hain — par kuch aapka Aadhaar number aur mobile maang kar <strong>OTP</strong> tak poochhne lagti hain. Yaad rakho: asli status check me <strong>OTP ki zaroorat hi nahi padti</strong> — sirf Aadhaar aur captcha. Aur central sarkar ki har asli scheme ka portal <strong>gov.in ya nic.in</strong> par hota hai — pmkisan.gov.in ke alawa kisi site par apni details mat daalo.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Agar kisi call ya website par OTP de diya aur khaate se paisa kat gaya, to der mat karo — <strong>1930</strong> par call karo ya <strong>cybercrime.gov.in</strong> par shikayat darj karo, aur apne bank ko turant batao. Jitni jaldi report hogi, paisa wapas milne ke chances utne behtar.
+          </p>
         </section>
 
         <section className="mb-8">
