@@ -6,7 +6,7 @@ import { SI, StepList, IB, WB, SH, RelatedArticles, AuthorBox, BottomNav, Discla
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-17T09:13:27+05:30';
-const MODIFIED = '2026-03-19T22:46:55+05:30';
+const MODIFIED = '2026-08-20T22:45:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
@@ -323,6 +323,52 @@ export default function PmKisanVillageWiseListPdfDownload() {
               </div>
             ))}
           </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>Ghar Ke Bade-Buzurg Ka Naam List Mein Hai — Unke Baad Kya?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ye sawal list check karte waqt sabse zyada takleef ke saath aata hai: pitaji ka naam
+            list mein chal raha hai, unka dehant ho gaya — ab kist ka kya hoga? Seedha jawab:
+            paisa apne aap bete ke naam transfer <strong>nahi</strong> hota. Iske liye CSC par
+            jakar <strong>Succession Transfer</strong> karwana padta hai — death certificate,
+            Khatauni (jisme zameen ab aapke naam ho) aur aapka Aadhaar lekar. Jab tak ye nahi
+            hota, purana account effectively freeze rehta hai aur kist rukti hai. Transfer poora hone
+            ke baad agli list update mein naya naam khud dikhne lagta hai — alag se koi naya
+            registration nahi karna padta.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Yahan ek galti bahut mehngi padti hai — dehant ke baad bhi purane naam par kist lete
+            rehna. Har kist se pehle list ka verification hota hai, ineligible naam hataye jaate
+            hain, aur galat li hui kist ki recovery bhi hoti hai. Isliye zameen ka mutation
+            (naam-transfer) pehle karwao, phir PM Kisan ka record — dono ek hi chain ke kaam hain.
+            Bank account badalna ho toh uska process{' '}
+            <Link href="/articles/PmKisanBankAccountChangeProcess" className="underline text-blue-600 dark:text-blue-400 font-medium">bank account change guide</Link> mein hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>List Se Shikayat Tak — Gaon Ke Level Par Escalation Ka Rasta</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Village list ka asli power tab dikhta hai jab usse shikayat judti hai. Maan lo list
+            nikaali aur dikha ki aapke gaon ke 200 mein se 40 logon ka naam pichhli list se gayab
+            hai — ye individual problem nahi, block-level data ki problem hai. Aise case mein
+            akele helpline par call karne se zyada asar hota hai jab Gram Pradhan ke through
+            block agriculture office mein likhit shikayat jaye, saath mein list ki PDF ka print.
+            Kagaz ka saboot hamesha zubaani shikayat se bhari padta hai. Aur haan — shikayat se
+            pehle ek baar taaza list dobara nikaal lena; kai baar naam agli update mein khud wapas
+            aa jata hai, aur tab bina wajah ka chakkar bach jata hai. List har kist cycle se pehle
+            refresh hoti hai, isliye mahine-do-mahine purani PDF ko aakhri sach mat maano.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Apni individual problem ke liye seedhi chain ye hai: pehle <strong>155261</strong>{' '}
+            (national helpline) par call — Aadhaar, registration number aur bank details saamne
+            rakh kar. Wahan se hal na nikle toh pmkisan.gov.in ke Help Desk par ticket, aur uske
+            baad apne state ke <strong>Nodal Officer</strong> ko email — unke paas district
+            administration ko order dene ki power hoti hai. Har state ke nodal officer ka contact{' '}
+            <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-blue-600 dark:text-blue-400 font-medium">nodal officer list</Link> mein hai. List ki PDF, status ka screenshot aur complaint
+            number — teeno sambhal kar rakho, har agla step inhi par chalta hai.
+          </p>
         </section>
 
         <section className="mb-8">
