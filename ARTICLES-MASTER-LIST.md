@@ -160,7 +160,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 | 6 | ✅ 2026-08-20 | `/articles/hi/tractor-subsidy` (691 imp) | `/rajya-yojana/namo-shetkari-yojana-status-check-2026` (638 imp) |
 | 7 | ✅ 2026-08-20 | `/articles/bihar-pashupalan-loan-yojana` (635 imp) | `/articles/PmfbyCropInsurance2026` (560 imp) |
 | 8 | ✅ 2026-08-20 | `/articles/bakri-palan-yojana-nlm-subsidy` (493 imp) | `/articles/hi/mp-kisan-kalyan-yojana` (402 imp) |
-| 9 | ⬜ | `/articles/mushroom-kheti-nhb-subsidy` (378 imp) | `/articles/PmKisanStateNodalOfficerList` (329 imp) |
+| 9 | ✅ 2026-08-20 | `/articles/mushroom-kheti-nhb-subsidy` (378 imp) | `/articles/PmKisanStateNodalOfficerList` (329 imp) |
 | 10 | ⬜ | `/articles/custom-hiring-centre-chc-portal` (312 imp) | `/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein` (307 imp) |
 | 11 | ⬜ | `/rajya-yojana/annadata-sukhibhava-status-check-2026` (277 imp) | `/rajya-yojana/rajasthan-kisan-samman-nidhi-9000` (274 imp) |
 | 12 | ⬜ | `/articles/hi/kcc-limit-kaise-badhaye` (256 imp) | `/articles/mandi-bhav-app-comparison` (238 imp) |

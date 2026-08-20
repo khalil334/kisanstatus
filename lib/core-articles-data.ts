@@ -788,6 +788,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'mushroom-kheti-nhb-subsidy',
     title: 'Mushroom Kheti 2026: NHB Subsidy Guide',
+    seoTitle: 'NHB Mushroom Subsidy 2026: Kheti Ka Poora Hisaab',
     desc: 'NHB mushroom subsidy: general category ko ~40% back-ended capital subsidy. Apply process, 100-bag unit ka budget aur ₹40,000+ mahina profit plan.',
     ogTitle: 'Mushroom Kheti 2026 — Profit Guide',
     keywords: [

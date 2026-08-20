@@ -5,7 +5,7 @@ import OfficialLinkButton from '@/components/OfficialLinkButton';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-01-25T13:09:31+05:30';
+const PUBLISHED = '2026-07-09T06:05:43+05:30';
 const MODIFIED = '2026-08-20T11:45:00+05:30';
 
 const RELATED_CARDS = [
