@@ -6,7 +6,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-11T14:57:53+05:30';
-const MODIFIED = '2026-08-18T19:15:00+05:30';
+const MODIFIED = '2026-08-20T21:40:00+05:30';
 
 const RELATED = [
   { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price & Rate' },
@@ -48,6 +48,14 @@ const FAQS_DATA = [
     a: 'Direct benefit nahi hai, lekin agar aapka eKYC pending hai aur soil issues hain to ye proof de sakte ho. Plus, better crop yield = zyada income, jo indirectly sab kuch improve karta hai.',
   },
   {
+    q: 'Sample galat le liya to report par kya asar padta hai?',
+    a: 'Poori report bekaar ho jaati hai — aur pata bhi nahi chalta. Sample khet ke 8-10 alag jagahon se lekar mila kar banta hai, isliye ek hi kone se ya khaad ke dher ke paas se uthai mitti aapke khet ka aausat nahi dikhati. Lab wahi test karegi jo aapne diya. Sample dete waqt khud maujood raho aur khet ka survey number label par likhwao.',
+  },
+  {
+    q: 'Koi bhai paisa maang raha hai soil test ke liye — sahi hai?',
+    a: 'Nahi. Government scheme me test aur card dono free hain, kharcha sirf aane-jaane ka hai. Private lab apni fees le sakti hai, par usko “sarkari card” bata kar paisa maangna galat hai. Aisi koi website jo soil card ke naam par registration fees ya OTP maange — usse door raho; official rasta soilhealth.dac.gov.in aur aapka block agriculture office hai.',
+  },
+  {
     q: 'Agronomy ki knowledge hi nahi hai — soil report samjhu kaise?',
     a: 'Agriculture office ke officer ya CSC waale bhai ko dikha do. Wo 10 minute mein simplify kar dengi. Ya locally ke kisan groups mein poocho — mostly log same test karate hain aur same confusion hota hai.',
   },
@@ -75,7 +83,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(PUBLISHED)}</span>
             <span>Updated: {fmtDate(MODIFIED)}</span>
-            <span>12 min read</span>
+            <span>15 min read</span>
           </div>
         </div>
       </div>
@@ -252,6 +260,40 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
         </section>
 
         <section className="mb-8">
+          <SH>Sample Hi Galat Chala Gaya To Report Bhi Galat Aayegi</SH>
+
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Ye wo hissa hai jise sab jaldi me nipta dete hain. Aur yahi poore test ka sabse zaroori hissa hai.
+          </p>
+
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Sample khet ke <strong>8-10 alag-alag jagahon</strong> se thoda-thoda mitti lekar, sab mila kar banta hai. Wajah
+            seedhi hai — ek hi kone ki mitti aapke poore khet ka aausat nahi hoti. Dhaal wali jagah, paani rukne wali jagah,
+            aur oonchi jagah, teeno ka nutrient level alag hota hai. Ek hi jagah se uthai mitti par bani report aapko poore khet
+            ke liye galat sifarish de degi, aur ye galti report me kahin dikhegi bhi nahi.
+          </p>
+
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Do jagahon se sample bilkul nahi — khaad ya gobar ke dher ke aas-paas se, aur us hisse se jahan abhi kuch din pehle
+            khaad daali gayi ho. Wahan ki reading poore khet se kaafi upar aayegi, aur report kah degi ki nutrient theek hai
+            jabki asal me kami hai. Isi tarah med (khet ki boundary), raste ke kinare aur ped ke neeche ki mitti bhi chhod do.
+          </p>
+
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Sample dene ka sahi waqt bhi hai — <strong>fasal katne ke baad aur agli khaad daalne se pehle</strong>. Beech season
+            me, khaad daal kar sample dene ka matlab hai ki aap apni daali hui khaad ko naap rahe ho, apni mitti ko nahi.
+          </p>
+
+          <div className="mt-4 p-4 bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-r-xl">
+            <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
+              Sample collection ke waqt khet par khud maujood raho, aur label par apni zameen ka <strong>survey/khasra number</strong>
+              likhwao. Kai baar card aata hai par usme kisi doosre khet ka data hota hai — phir dobara process shuru se chalti hai.
+              Do minute ka kaam, mahine ki bachat.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-8">
           <SH>Soil Health Card Status Check Kaise Karein?</SH>
 
           <p className="text-sm text-gray-700 leading-relaxed mb-4">
@@ -333,6 +375,49 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
               <p className="font-black text-purple-800 text-sm mb-2">Record</p>
               <p className="text-xs text-gray-700">Card future mein proof ke kaam aata hai — loan application mein</p>
             </div>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>Card Ki Sifarish Ka Paisa Kahan Bachta Hai — Ginti Karke Dekho</SH>
+
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Report ke peeche likhi sifarish sirf salaah nahi hai, wo aapki khaad ki parchi hai. Rate jaante ho to bachat khud
+            dikh jaati hai.
+          </p>
+
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Subsidized rate par urea ki 45 kg bori lagbhag <strong>₹242</strong> (neem-coating aur tax alag) me milti hai, aur DAP
+            ki 50 kg bori ka subsidized rate lagbhag <strong>₹1,350</strong> chal raha hai. Bina subsidy inki asli laagat kai guna
+            hai — DAP ₹3,000 se upar. Yaani jo bori aap le rahe ho, uska bada hissa sarkar bhar rahi hai. Isiliye khaad andaze se
+            daalne ka nuksan dohra hai: aapka paisa bhi jaata hai, aur us subsidy ka bhi.
+          </p>
+
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Do cheezein har kharidari par pakki karo. Ek — <strong>POS machine se hi kharido</strong>, tabhi subsidized rate milta
+            hai. Do — <strong>receipt lo</strong>. Dealer likhe rate se zyada maange to wo overcharging hai, aur uski shikayat zila
+            krishi adhikari ke paas karni chahiye; receipt ke bina shikayat ka koi weight nahi banta.
+          </p>
+
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">
+            Agar report me phosphorus kam nikla hai to ek aur option dekh sakte ho — IFFCO ki liquid/nano DAP, jiski 500ml bottle
+            ₹250-350 ke beech milti hai aur ek acre ke liye kaafi hoti hai. Ye granular DAP ka <em>replacement nahi, saathi</em> hai;
+            IFFCO khud combination hi recommend karti hai. Poora rate breakup, state-wise range aur spray ka tareeka{' '}
+            <Link href="/articles/NanoDap500mlPriceInIndia2026" className="underline font-bold">Nano DAP price wali guide</Link> me hai.
+          </p>
+
+          <div className="mt-4 p-4 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded-r-xl">
+            <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed mb-2">
+              <strong>Ek aur baat, kyunki khaad ke naam par fraud bahut chalta hai.</strong> Sarkar khaad ki subsidy kisan ke khaate
+              me cash nahi bhejti — wo fertilizer company ko jaati hai, aur aapko fayda sasti bori ke roop me milta hai. Isliye
+              &ldquo;khad yojana ke ₹11,000 khaate me aayenge&rdquo; type ka koi message ya thumbnail dikhe to samajh jao ki wo
+              registration ke naam par data ya paisa maangne wala jaal hai.
+            </p>
+            <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed">
+              Poora sach{' '}
+              <Link href="/yojana/pm-kisan-khad-yojana-11000-sach" className="underline font-bold">khad yojana ₹11,000 wale page</Link>{' '}
+              par likha hai — padh lo, aur gaon me kisi ko is jhanse me phansta dekho to link bhej do.
+            </p>
           </div>
         </section>
 
