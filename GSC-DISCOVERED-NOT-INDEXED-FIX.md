@@ -342,8 +342,7 @@ Aage ke parts me `Actual` column pe bharosa karo, purane estimate pe nahi.
 nikale jo 2,000 se neeche hain — wahi ab Part 6 se aage ka kaam hai. Guard ki list hi authoritative
 queue hai (`npm run check:content`), doc ki purani list nahi.
 
-**Remaining queue (guard se, Part 9 ke baad 9 bache):**
-`NanoDap500mlPriceInIndia2026` (1,811) · `PmKisanStateNodalOfficerList` (1,816) ·
+**Remaining queue (guard se, Part 10 ke baad 7 bache):**
 `pm-kisan-self-registered-status-check` (1,833) · `PmKisanFaceAuthenticationEkyc` (1,853) ·
 `bakri-palan-yojana-nlm-subsidy` (1,872) · `PmKisanCorrectionForm2026` (1,883) ·
 `mushroom-kheti-nhb-subsidy` (1,891) · `AgriStackKyaHai2026` (1,954) ·
@@ -356,6 +355,29 @@ queue hai (`npm run check:content`), doc ki purani list nahi.
 | | `/articles/PmKusumYojanaSolarSubsidy2026` | — | **1,720 → 2,151** | — | ✅ Done (2026-08-20) |
 | **9** | `/articles/PmKisanBankAccountChangeProcess` | — | **1,752 → 2,207** | — | ✅ Done (2026-08-20) |
 | | `/articles/PmKisanMaandhanYojanaPension` | — | **1,800 → 2,288** | — | ✅ Done (2026-08-20) |
+| **10** | `/articles/NanoDap500mlPriceInIndia2026` | — | **1,811 → 2,240** | — | ✅ Done (2026-08-20) |
+| | `/articles/PmKisanStateNodalOfficerList` | — | **1,816 → 2,117** | — | ✅ Done (2026-08-20) |
+
+**Part 10 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
+- *NanoDap500mlPriceInIndia2026*: (1) "Bottle Kharidne Se Pehle Mitti Ka Hisaab" section — free soil
+  test ka angle (12 parameters, soilhealth.dac.gov.in, 25.89 crore cards July 2026 tak, 3-4 hafte
+  processing — sab repo ke soil-health guide se), phosphorus-chahiye-bhi-ya-nahi wali soch, soil guide
+  ka contextual link. (2) "₹11,000 Khad Yojana" fraud section — scheme exist hi nahi karti, figure
+  ₹6,000 + kalpanik subsidy se bana (KhadYojanaSach article se), subsidy dukaan ke rate me hoti hai
+  khaate me nahi (₹1,350 vs ₹3,000+ asli laagat — article ke apne verified facts), OTP fraud +
+  1930 / cybercrime.gov.in recovery. +1 FAQ (soil test pehle). Internal count 1,811 → **2,240**.
+- *PmKisanStateNodalOfficerList*: (1) "Teesra Raasta: Help Desk Ticket" section — pmkisan.gov.in
+  Help Desk / Grievance online ticket + ticket number sambhalna (FTO article ke verified chain se),
+  011-24300606 doosra number, pmkisan-ict@gov.in central email (dono article me pehle se verified),
+  ticket+email combination ki salah. (2) "Nodal Officer bol raha hoon" fraud-call section — shikayat
+  ke baad aane wali fake officer calls, no-OTP-no-fee rule, PFMS seedha bank me bhejta hai, 1930 /
+  cybercrime.gov.in recovery (BankAccountChange article se), us guide ka link. Internal count
+  1,816 → **2,117**.
+- Dono ke `MODIFIED` + `lib/core-articles-data.ts` ke `modifiedTime` update. Koi naya amount/date
+  invent nahi — har fact repo ke already-verified articles se.
+- Verification: `check:titles` (108 pairs) + `check:content` pass — dono guard ki list se bahar.
+  (`tsc --noEmit` sandbox npm-install ke baad chalega — edits pure JSX text sections hain,
+  maujooda patterns ke andar.)
 
 **Part 9 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
 - *PmKisanBankAccountChangeProcess*: (1) "Khaate Ke Maalik Ka Dehant Ho Gaya" section — Succession
