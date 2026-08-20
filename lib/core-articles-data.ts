@@ -701,7 +701,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanRejectedStatusReApplyGuide',
     category: 'status-check',
     publishedTime: '2026-07-09T06:50:50+05:30',
-    modifiedTime: '2026-08-17T09:37:11+05:30',
+    modifiedTime: '2026-08-20T13:45:00+05:30',
     readingTime: 17,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisanRejectedStatusReApplyGuide'),

@@ -342,8 +342,8 @@ Aage ke parts me `Actual` column pe bharosa karo, purane estimate pe nahi.
 nikale jo 2,000 se neeche hain — wahi ab Part 6 se aage ka kaam hai. Guard ki list hi authoritative
 queue hai (`npm run check:content`), doc ki purani list nahi.
 
-**Remaining queue (guard se, Part 13 ke baad 1 bacha):**
-`PmKisanRejectedStatusReApplyGuide` (1,965)
+**✅ QUEUE KHATAM (2026-08-20, Part 14 ke baad):** `npm run check:content` ab kehta hai
+"all checked articles are at or above the 2000-word standard" — 64/64 articles pass.
 
 | **7** | `/articles/custom-hiring-centre-chc-portal` | — | **1,620 → 2,047** | — | ✅ Done (2026-08-20) |
 | | `/articles/madhumakhi-palan-kvic-subsidy` | — | **1,650 → 2,062** | — | ✅ Done (2026-08-20) |
@@ -360,6 +360,16 @@ queue hai (`npm run check:content`), doc ki purani list nahi.
 | | `/articles/PmKisanCorrectionForm2026` | — | **1,883 → 2,106** | — | ✅ Done (2026-08-20) |
 | **13** | `/articles/mushroom-kheti-nhb-subsidy` | — | **1,891 → 2,111** | — | ✅ Done (2026-08-20) |
 | | `/articles/AgriStackKyaHai2026` | — | **1,954 → 2,068** | — | ✅ Done (2026-08-20) |
+| **14** | `/articles/PmKisanRejectedStatusReApplyGuide` | — | **1,965 → 2,011** | — | ✅ Done (2026-08-20) — queue khatam |
+
+**Part 14 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
+- *PmKisanRejectedStatusReApplyGuide*: 30-din-baad-bhi-inactive wale paragraph ko poori escalation
+  chain banaya — 155261 / 011-24300606 (call-prep: registration number, Aadhaar, correction date
+  likh kar rakhna), complaint reference number lena aur nodal-officer email me wahi quote karna
+  (sab FTO/NodalOfficer articles ke verified chain se). Internal count 1,965 → **2,011**.
+- `MODIFIED` + `modifiedTime` update. Koi naya amount/date invent nahi.
+- Verification: `check:titles` (108 pairs) pass, `check:content` — **"all checked articles are at
+  or above the 2000-word standard"** — poori queue clear.
 
 **Part 13 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
 - *mushroom-kheti-nhb-subsidy*: "Setup Ka Paisa Kahan Se — Jab Tak Subsidy Nahi Aati" section —
