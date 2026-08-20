@@ -11,7 +11,7 @@ function fmtDate(dateString: string): string {
 }
 
 const PUBLISHED = '2026-01-08T22:33:23+05:30';
-const MODIFIED = '2026-08-18T18:30:00+05:30';
+const MODIFIED = '2026-08-20T13:30:00+05:30';
 
 const FAQS_DATA = [
   {
@@ -358,6 +358,13 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             Camp Mein Jo Sawal Sabse Zyada Puchhe Gaye
           </h2>
           <FAQBlock faqs={FAQS_DATA} variant="cards" caption="Yeh sawal asli kisano ne puchhe the — jawab seedhe rakhe hain." />
+        </section>
+
+        <section className="mb-8">
+          <SH>Ek Warning — Registry Ke Naam Par Paise Maangne Wale</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Jahan bhi naya sarkari registration shuru hota hai, wahan “agent” bhi paida ho jaate hain. Saaf baat: Farmer ID banwana <strong>bilkul free hai</strong> — camp mein bhi, portal par khud bhi. Koi “registration fee” ya “file charge” maange toh mana kar do. Aur sabse zaroori: aapka OTP sirf aapke apne registration ke waqt, aapke apne haath se portal mein daalne ke liye hota hai — <strong>phone par kisi ko OTP batana kabhi process ka hissa nahi hai.</strong> OTP diya to khaate se paisa ja sakta hai. Aisi galti ho jaye toh turant <strong>1930</strong> par call karo ya <strong>cybercrime.gov.in</strong> par shikayat darj karo, aur bank ko usi din batao.
+          </p>
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
