@@ -391,7 +391,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 
 | Part | Status | Article 1 | Article 2 |
 |---|---|---|---|
-| 1 | ⬜ | `/articles/pm-kisan-fto-generated-ka-matlab-kya-hai` (2565 imp) | `/articles/hi/farmer-id-kaise-banaye` (2353 imp) |
+| 1 | ✅ 2026-08-21 | `/articles/pm-kisan-fto-generated-ka-matlab-kya-hai` (2565 imp) | `/articles/hi/farmer-id-kaise-banaye` (2353 imp) |
 | 2 | ⬜ | `/rajya-yojana/odisha-cm-kisan-status-check-2026` (1776 imp) | `/articles/NanoDap500mlPriceInIndia2026` (1764 imp) |
 | 3 | ⬜ | `/articles/hi/namo-shetkari-yojana` (1697 imp) | `/articles/hi/pm-kisan-25vi-kist` (1149 imp) |
 | 4 | ⬜ | `/articles/msp-list-2026-27` (1062 imp) | `/articles/hi/npci-aadhaar-seeding` (940 imp) |
