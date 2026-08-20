@@ -162,7 +162,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 | 8 | ✅ 2026-08-20 | `/articles/bakri-palan-yojana-nlm-subsidy` (493 imp) | `/articles/hi/mp-kisan-kalyan-yojana` (402 imp) |
 | 9 | ✅ 2026-08-20 | `/articles/mushroom-kheti-nhb-subsidy` (378 imp) | `/articles/PmKisanStateNodalOfficerList` (329 imp) |
 | 10 | ✅ 2026-08-21 | `/articles/custom-hiring-centre-chc-portal` (312 imp) | `/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein` (307 imp) |
-| 11 | ⬜ | `/rajya-yojana/annadata-sukhibhava-status-check-2026` (277 imp) | `/rajya-yojana/rajasthan-kisan-samman-nidhi-9000` (274 imp) |
+| 11 | ✅ 2026-08-21 | `/rajya-yojana/annadata-sukhibhava-status-check-2026` (277 imp) | `/rajya-yojana/rajasthan-kisan-samman-nidhi-9000` (274 imp) |
 | 12 | ⬜ | `/articles/hi/kcc-limit-kaise-badhaye` (256 imp) | `/articles/mandi-bhav-app-comparison` (238 imp) |
 | 13 | ⬜ | `/articles/gehu-ka-bhav-msp-vs-mandi` (234 imp) | `/rajya-yojana/parihara-payment-status-check-2026` (214 imp) |
 | 14 | ⬜ | `/articles/hi/status-check-mobile-se` (206 imp) | `/rajya-yojana/rythu-bharosa-status-check-2026` (196 imp) |

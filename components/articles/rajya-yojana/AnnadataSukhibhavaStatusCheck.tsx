@@ -79,7 +79,9 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <p>
         Sun, is scheme ki khaas baat toh aage aati hai. Yahan bataidar (tenant farmer) ko bhi jagah mili hai, jo PM Kisan mein
-        nahi aate. Pehle eligibility aur paise ka hisaab, phir status dekhne ka tareeka, aur phir wahi fark.
+        nahi aate — shart sirf ek: valid <strong>CCRC</strong> (Crop Cultivator Rights Card) hona chahiye. Land wali shart
+        bhi dhyan mein rakho: 5 acre se kam kheti wali zameen. Pehle eligibility aur paise ka hisaab, phir status dekhne ka
+        tareeka, aur phir wahi fark.
       </p>
 
       <Fig
@@ -409,7 +411,12 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       </SchemeTable>
 
       <p>
-        Haal hi mein, 20/06/2026 ko CM N. Chandrababu Naidu ne 2026-27 ke pehle installment ke roop mein ₹3,125 crore jaari kiye, jisme har beneficiary ko ₹7,000 (₹5,000 State + ₹2,000 Central) mile.
+        Haal hi mein, 20/06/2026 ko CM N. Chandrababu Naidu ne 2026-27 ke pehle installment ke roop mein ₹3,125.47 crore
+        jaari kiye — karib <strong>46.85 lakh kisan parivaar</strong> is release mein the, aur har beneficiary ko ₹7,000
+        (₹5,000 State + ₹2,000 Central) mile. Pichhli baar March 2026 (Ugadi ke aas-paas) ki release mein ₹6,000 aaye
+        the — ₹4,000 state ka aur ₹2,000 PM Kisan ka. Yaani har kist mein raqam ek jaisi nahi hoti; season aur state ke
+        hisse ke hisaab se badalti hai. Isi wajah se "padosi ko zyada aaya, mujhe kam" wali baat aksar galat nikalti hai —
+        dono ki kist ek hi phase ki nahi hoti.
       </p>
 
       <h2>Rythu Bharosa Se Annadata Sukhibhava Tak — Naam Kyun Badla</h2>

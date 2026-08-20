@@ -112,6 +112,32 @@ export default function RajasthanKisanSammanNidhi9000() {
           banti — Jan Soochna portal check karte rahein. Aur bas, yehi tha is kist ka scene.
         </p>
 
+        <p>
+          Paimaana samajhna zaroori hai. Media reports ke mutabik is phase mein karib{' '}
+          <strong>66.56 lakh kisan</strong> aur <strong>₹665 crore se zyada</strong> ki raashi shaamil hai — itni badi
+          list mein Aadhaar, bank aur land record ka milaan hone mein waqt lagta hai, aur ek bhi field na mile to wo
+          record pending mein chala jaata hai. April 2026 mein jo tareekh log maan kar baithe the wo bhi administrative
+          wajah se aage khisak gayi thi. Isliye tareekh ka anumaan lagane se behtar hai ki apna record clear karwa lo.
+        </p>
+
+        <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
+          <h3 className="font-bold text-amber-800 dark:text-amber-300 mb-2 text-sm">Farmer ID — ye naya pech hai, dhyan do</h3>
+          <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
+            Ab state ki list Farmer ID (digital kisan pehchaan) se judne lagi hai — isme e-KYC, land seeding aur DBT
+            wala bank khaata, teeno ek jagah bandhe rehte hain. Jinki Farmer ID nahi bani, unka naam list mein{' '}
+            <em>pending</em> ki taraf chala jaata hai aur kist ruk jaati hai.
+          </p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            Ye kaam e-Mitra par ya Jan Aadhaar ke through ho jaata hai, aur zyadatar kisano ka 15-20 minute ka kaam hai.
+            Banwane ka poora tarika{' '}
+            <Link href="/articles/hi/farmer-id-kaise-banaye" className="text-green-700 dark:text-green-400 underline font-medium">
+              farmer ID kaise banaye
+            </Link>{' '}
+            wali guide mein step-by-step likha hai. E-KYC aur Aadhaar-bank linking dono ab compulsory hain — inme se ek
+            bhi adhoora hai to 6vi ho ya 7vi, paisa nahi aayega.
+          </p>
+        </div>
+
         <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-5 my-6 not-prose">
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
             <strong>Yaad rakho:</strong> Rajasthan wali kist PM Kisan ki kist se bilkul alag time par aati hai — dono ka koi connection nahi. PM Kisan aa gaya aur state wala nahi, to chinta chhodo, ye normal hi hai.
