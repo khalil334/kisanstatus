@@ -109,8 +109,8 @@ const MICRO_FAQS: { error: string; matlab: string; fix: string }[] = [
   },
   {
     error: 'Amount expected se kam dikh raha hai',
-    matlab: 'Relief rakbe ke hisaab se hisse me aata hai, aur kai baar pehli kist hi pehle chadhti hai.',
-    fix: 'Apne survey number ka darj rakba RTC se milao. Rakba hi kam darj hai to VA ke paas objection ka raasta hai.',
+    matlab: 'Relief rakbe ke hisaab se hisse me aata hai, 2 hectare ki seema lagti hai, aur kai baar pehli kist hi pehle chadhti hai.',
+    fix: 'Apne survey number ka darj rakba RTC se milao aur upar wali rate table se apna bracket dekho. Rakba hi kam darj hai to VA ke paas objection ka raasta hai.',
   },
   {
     error: 'Village dropdown me apna gaon hi nahi mil raha',
@@ -174,7 +174,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Amount ummeed se kam dikh raha hai, aisa kyun?',
-    a: 'Relief rakbe ke hisaab se hisse me aata hai aur kai baar pehli kist hi pehle chadhti hai. Apne survey number ka darj rakba RTC se milao — rakba hi kam darj hai to VA ke paas objection ka raasta hai.',
+    a: 'Teen wajah aam hain. Ek — relief 2 hectare tak hi milta hai, badi jot par bhi usse zyada nahi. Do — ye input subsidy hai, agli buwai ki madad, poore nuksan ka muawza nahi: rainfed ke liye ₹8,500–₹17,000, irrigated ₹17,000–₹25,500 aur bagaan ₹22,500–₹31,000 per hectare ka bracket chalta hai. Teen — SDRF ka hissa aur rajya ka top-up alag-alag credit ho sakte hain. Phir bhi kam lage to RTC se apna darj rakba milao; rakba hi kam darj hai to VA ke paas objection ka raasta hai.',
   },
   {
     q: 'FRUITS ID (FID) ka relief se kya lena-dena hai?',
@@ -259,6 +259,63 @@ export default function PariharaPaymentStatusCheck2026({
         </Ext>{' '}
         — Supreme Court tak baat pahunchne ke baad. Itna bada system hai, to entries idhar-udhar
         atakna bhi aam hai. Isliye check karna aana chahiye.
+      </p>
+
+      <h2>Kitna Paisa Milta Hai — Rakbe Ke Hisaab Se</h2>
+
+      <p>
+        Amount ka sawaal sabse pehle aata hai, aur jawaab ek number nahi hai — fasal ka type aur
+        rakba, dono se banta hai. Karnataka ne November 2025 me apne input subsidy ke rate badhaye
+        the; SDRF ke base rate ke upar rajya ka top-up jodne ke baad aaj ye bracket chalte hain:
+      </p>
+
+      <div className="overflow-x-auto not-prose my-6">
+        <table className="w-full text-sm border-collapse">
+          <thead>
+            <tr className="bg-[var(--color-bg-alt)]">
+              <th className="border border-[var(--color-border)] p-3 text-left font-bold">Fasal ka type</th>
+              <th className="border border-[var(--color-border)] p-3 text-left font-bold">Per hectare relief</th>
+              <th className="border border-[var(--color-border)] p-3 text-left font-bold">Kaun aata hai isme</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-[var(--color-border)] p-3 font-semibold">Rainfed (barani)</td>
+              <td className="border border-[var(--color-border)] p-3">₹8,500 – ₹17,000</td>
+              <td className="border border-[var(--color-border)] p-3">Baarish par nirbhar khet — tur, ragi, jowar jaisi fasal</td>
+            </tr>
+            <tr className="bg-[var(--color-bg-alt)]">
+              <td className="border border-[var(--color-border)] p-3 font-semibold">Irrigated (neeravari)</td>
+              <td className="border border-[var(--color-border)] p-3">₹17,000 – ₹25,500</td>
+              <td className="border border-[var(--color-border)] p-3">Nahar, borewell ya pump se paani wali fasal</td>
+            </tr>
+            <tr>
+              <td className="border border-[var(--color-border)] p-3 font-semibold">Perennial (bahuvarshik)</td>
+              <td className="border border-[var(--color-border)] p-3">₹22,500 – ₹31,000</td>
+              <td className="border border-[var(--color-border)] p-3">Adike, naariyal, aam, angoor — kai saal chalne wale bagaan</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Teen sharten jo har case me lagti hain: relief <strong>maximum 2 hectare</strong> tak hi
+        milta hai (2 hectare se badi jot ho to bhi 2 ka hi paisa banega); nuksan <strong>50% se
+        zyada</strong> hona chahiye, kam nuksan par entry banti hi nahi; aur ye <strong>input
+        subsidy</strong> hai — agli buwai ke liye madad, poore nuksan ka muawza nahi. Isi wajah se
+        &ldquo;mera nuksan ₹1 lakh ka tha, aaya sirf ₹17 hazaar&rdquo; — ye galti nahi, scheme ka
+        design hai.
+      </p>
+
+      <p>
+        Paimane ka andaza: 2025 ke monsoon me Karnataka me 14.58 lakh hectare se zyada fasal kharab
+        hui, aur rajya ne 14.24 lakh kisano ko SDRF ke ₹1,218 crore ke saath{' '}
+        <Ext href="https://www.mangalorean.com/ktaka-releases-rs-1033-60cr-top-up-input-subsidy-to-farmers-after-monsoon-crop-loss/">
+          ₹1,033.60 crore ka extra top-up
+        </Ext>{' '}
+        bhi diya — kul milakar karib ₹2,251 crore seedha khaton me. Matlab kist do hisso me bhi aa
+        sakti hai: pehle SDRF wala hissa, baad me rajya ka top-up. Passbook me kam raqam dikhe to
+        seedha &ldquo;kaat liya&rdquo; maan lena jaldi hoga.
       </p>
 
       <h2>Ab Sahi Portal Pakdo — Teen Naam, Teen Alag Kaam</h2>

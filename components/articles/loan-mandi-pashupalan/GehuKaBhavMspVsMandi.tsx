@@ -67,16 +67,16 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
             <span>/</span>
             <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
             <span>/</span>
-            <span className="text-white font-bold">Gehu Ka Bhav: MSP vs Mandi</span>
+            <span className="text-white font-bold">Gehu Ka Rate: MSP vs Mandi</span>
           </nav>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            Gehu Ka Bhav 2026: MSP Par Bechein Ya Mandi Mein — Faisla Kaise Karein, Kab Bechein, Kab Rokein
+            Gehu Ka Rate 2026: MSP Par Bechein Ya Mandi Mein — Ek Bori Ka Hisaab, Kab Bechein, Kab Rokein
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
-            <span>Last Updated: 05/08/2026</span>
-            <span>10 min read</span>
+            <span>Last Updated: 21/08/2026</span>
+            <span>11 min read</span>
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 05/08/2026</strong>
+          <strong>Last Updated: 21/08/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -132,6 +132,34 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           us jaal ke neeche girne se rokta hai. Lekin market chadhta hai toh MSP aapka haath nahi pakadta — achhi
           quality ka gehu open market mein MSP se upar bikta hai, khaas kar sharbati/lokwan jaisi premium varieties.
           Isliye &ldquo;MSP hi best hai&rdquo; aur &ldquo;mandi hi best hai&rdquo; — dono andhe niyam hain.
+        </p>
+
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Ek baat jo sabse zyada poochi jaati hai — <strong>bori ka hisaab</strong>. Rate hamesha quintal
+          (100 kg) mein bola jaata hai, lekin trolley mein boriyan chadhti hain. MSP par gina lo:
+        </p>
+        <div className="overflow-x-auto my-4">
+          <table className="w-full text-sm border-collapse">
+            <tbody>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">1 quintal (100 kg)</td>
+                <td className="border border-[var(--color-border)] p-3">₹2,585 — MSP ka official unit</td>
+              </tr>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <td className="border border-[var(--color-border)] p-3 font-semibold">50 kg ki bori</td>
+                <td className="border border-[var(--color-border)] p-3">₹1,292.50 (aadha quintal)</td>
+              </tr>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">10 quintal (1 tonne)</td>
+                <td className="border border-[var(--color-border)] p-3">₹25,850</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-4">
+          Bori ka wazan har jagah ek jaisa nahi hota — kahin 50 kg, kahin 40, kahin bhari 100 ki. Isliye
+          sauda karte waqt rate quintal mein hi tay karo aur taul par nazar rakho; boriyon mein baat hone se
+          hi zyada hisaab bigadta hai.
         </p>
 
         <IB>
@@ -220,6 +248,12 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           Ek seedha example (numbers apne bharo): agar 6 mahine rokne ka total kharcha + loss ₹150 per quintal baith
           raha hai, toh rok kar bechna tabhi jeet hai jab rate ₹150 se zyada badhe. Isse kam ki badhat par aap mehnat
           karke bhi wahi ke wahi ho.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Aur ek cheez jise log ganit mein bhoolte hain — <strong>kist ka waqt</strong>. Agar aapko May mein
+          bacchon ki fees ya shaadi ka kharcha nikaalna hai, toh October ka behtar rate kagaz par to sundar hai,
+          jeb mein nahi aata. Us haalat mein sasta udhaar lekar maal rokna aksar ghata de jaata hai. Rokna un logon
+          ka hathiyaar hai jinke paas 3-4 mahine ka sabr aur sookha godaam dono ho.
         </p>
 
         <Image
