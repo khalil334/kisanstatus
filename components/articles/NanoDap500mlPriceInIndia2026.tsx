@@ -14,14 +14,14 @@ const RELATED = [
 ];
 
 const FAQS_DATA = [
-  { q: 'Nano DAP 500ml price India mein 2026 kya hai?', a: 'Lagbhag ₹250-350 ke beech. Subsidy mil jaaye toh ₹200-280 tak bhi aa sakta hai. Exact price ke liye authorized dealer ya IFFCO website confirm karna behtar rahega — state aur season se rate badalta hai.' },
+  { q: 'Nano DAP 500ml price India mein 2026 kya hai?', a: 'IFFCO ka official rate ₹600 per 500ml bottle hai — yahi MRP IFFCO ne khud release ki hai aur cooperative societies se bhi bottle isi rate par milti hai. Isse sasta bechne wale online seller aksar unauthorized hote hain, IFFCO unke khilaf legal action bhi le chuka hai. Authorized dealer se hi lein.' },
   { q: 'Normal DAP (50kg bori) ka rate kitna hai?', a: 'Subsidized rate lagbhag ₹1,350 per bori chal raha hai — yahi rate POS machine se kharidne par milta hai. Dealer isse zyada maange to wo overcharging hai; receipt maango aur zila krishi adhikari se shikayat kar sakte ho. Bina subsidy DAP ki asli laagat ₹3,000+ hai, farak sarkar deti hai.' },
-  { q: 'IFFCO liquid DAP ki 500ml bottle ka price kitna hai?', a: 'Authorized dealers ₹280-320 charge kar rahe hain. Kuch states mein subsidized rate ₹220-270 tak mil jaata hai. Rate roz nahi badalta, par season shuru hote hi update lena samajhdari hai.' },
+  { q: 'IFFCO liquid DAP ki 500ml bottle ka dealer price kitna hai?', a: 'IFFCO ke official price ke mutabik dealer price ₹547.50 aur kisan ke liye maximum retail price ₹600 per 500ml bottle hai. Dealer ₹600 se zyada maange to wo overcharging hai — receipt maango. Nano DAP par bori wali DAP jaisi alag sarkari subsidy nahi hoti, isliye rate poore desh me ek hi hai.' },
   { q: '1 acre ke liye foliar spray ka dosage kitna hota hai?', a: 'Label ke mutabik 500ml per acre — 100-150 litre paani mein ghol kar 2-3 baar spray. Crop ke hisaab se KVK dosage thoda change bhi karwa sakta hai.' },
   { q: 'Traditional DAP se ye kaise alag hai?', a: 'Liquid DAP ek foliar spray hai — nano particles seedhe pattiyon se absorb hote hain. Traditional DAP zameen mein daala jaata hai. Dono ko ek doosre ka replacement nahi, saathi samjhein — kai experts inka combination hi suggest karte hain.' },
   { q: 'Urea ya pesticide ke saath mix karna theek hai?', a: 'Pehle compatibility test kar lena zaroori hai — chhote patch par try karke dekhein. Kisi bhi mix se pehle KVK ya IFFCO guideline padh lena safe rahega, warna crop damage ka risk rehta hai.' },
   { q: 'Result kitne din mein dikhna shuru hota hai?', a: '7-10 din mein kuch farak nazar aa sakta hai. Do-teen sprays ke baad tasveer clearer hoti hai. Soil, mausam aur crop type par bhi kaafi kuch depend karta hai, isliye fixed timeline nahi de sakte.' },
-  { q: 'Online kahan se kharidna safe hai?', a: 'IFFCO ki official website sabse reliable option hai. Amazon-Flipkart par sirf verified seller se lein. Local Krishi Kendra mein subsidy milne ke chances bhi rehte hain — original packaging ka QR code scan kar ke check karein.' },
+  { q: 'Online kahan se kharidna safe hai?', a: 'IFFCO ki official website sabse reliable option hai. Amazon-Flipkart par sirf verified seller se lein aur rate ₹600 ke aas-paas hi hona chahiye — kaafi sasta offer unauthorized seller ki nishani hai. Original packaging ka QR code scan kar ke check karein.' },
   { q: 'Kya kharidne se pehle soil test karwana zaroori hai?', a: 'Zaroori nahi, par samajhdari hai. Soil Health Card ka test free hai (soilhealth.dac.gov.in) aur usse pata chalta hai ki mitti ko phosphorus chahiye bhi ya nahi. Card ke hisaab se khaad lene par nano DAP aur granular dono ka kharcha kam ho sakta hai.' },
 ];
 
@@ -88,7 +88,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
         <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-xl">
           <h2 className="text-base font-black text-green-800 dark:text-green-300 mb-2">Quick Answer</h2>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            <strong>Nano DAP 500 ml price:</strong> ₹250-350 (subsidy ke saath ₹200-280) — dukaan par lein ya online, rate isi range mein milega. <strong>Dosage:</strong> 500ml per acre, 100-150L paani mein, 2-3 sprays. Exact price aur dosage authorized dealer ya KVK se hi confirm karein — yahan diye figures ek estimated reference hain.
+            <strong>Nano DAP 500 ml price: ₹600 (IFFCO ka official MRP)</strong> — dealer price ₹547.50. Rate poore desh me ek hi hai; isse kaafi sasta offer dikhe to shak karo, unauthorized seller ho sakta hai. <strong>Dosage:</strong> 500ml per acre, 100-150L paani mein, 2-3 sprays. Dosage apne crop ke hisaab se KVK se confirm karein.
           </p>
         </div>
 
@@ -118,10 +118,10 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
               </thead>
               <tbody>
                 {[
-                  ['IFFCO (MRP)', '₹280-350', '500ml'],
-                  ['IFFCO (Subsidized)', '₹200-280', '500ml'],
-                  ['1 Litre Bottle', '₹500-650', '1L'],
-                  ['Traditional DAP (Granular)', '₹1,350-1,650', '50kg bag'],
+                  ['IFFCO Nano DAP (MRP)', '₹600', '500ml'],
+                  ['IFFCO Nano DAP (Dealer price)', '₹547.50', '500ml'],
+                  ['IFFCO Nano Urea (comparison)', '₹225 MRP', '500ml'],
+                  ['Traditional DAP (Granular, subsidized)', '₹1,350', '50kg bag'],
                 ].map(([source, price, qty], i) => (
                   <tr key={source} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{source}</td>
@@ -133,7 +133,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
             </table>
           </div>
           <WB>
-            <strong>Note:</strong> Ye 2026 ki estimated values hain. Actual price state, dealer, subsidy policy aur season ke hisaab se ghatta-badhta rehta hai.
+            <strong>Note:</strong> Ye IFFCO ke official released prices hain — Nano DAP ka rate state ke hisaab se nahi badalta. ₹600 se zyada maange to overcharging hai; kaafi sasta mile to unauthorized seller ka shak karo, IFFCO aise sellers ke khilaf legal action le chuka hai.
           </WB>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
             Bahut kisan yahan sirf <strong>normal DAP bori ka rate</strong> dekhne aate hain, isliye wo baat alag se saaf kar dein — IFFCO ki 50kg granular DAP bori ka subsidized rate lagbhag <strong>₹1,350</strong> chal raha hai (bina subsidy iski asli laagat ₹3,000+ baithti hai, farak sarkar bharti hai). Dukaan par isse zyada maange to receipt zaroor lein — subsidized khaad ka rate poore desh me lagbhag ek jaisa hota hai. POS machine se hi kharidein, tabhi subsidy wala rate milta hai.
@@ -156,45 +156,13 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
         </div>
 
         <section className="mb-8">
-          <SH>State-wise Price Reference</SH>
+          <SH>Kya State Ke Hisaab Se Rate Alag Hota Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Haryana, Punjab, UP, Maharashtra aur Gujarat mein demand zyada hai, isliye availability bhi wahan behtar rehti hai. Eastern states mein supply chain thoda dheera chalta hai, toh rate aur stock dono mein farak dikh sakta hai.
+            Nahi — aur ye baat saaf samajh lo, kyunki internet par state-wise price ki fancy tables ghoomti hain jo kisi official source se nahi aati. <strong>Nano DAP ka MRP poore desh me ek hi hai: ₹600 per 500ml bottle.</strong> Bori wali DAP ki tarah iska rate subsidy se ghata-badha nahi hota, kyunki nano fertilizers par wo wali subsidy lagti hi nahi.
           </p>
-          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left">State</th>
-                  <th className="p-3 text-left">MRP Range</th>
-                  <th className="p-3 text-left">Subsidized</th>
-                  <th className="p-3 text-left">Availability</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ['UP', '₹260-330', '₹210-260', 'High'],
-                  ['Punjab', '₹270-340', '₹220-270', 'High'],
-                  ['Haryana', '₹270-340', '₹220-270', 'High'],
-                  ['Maharashtra', '₹280-350', '₹230-280', 'High'],
-                  ['Gujarat', '₹270-340', '₹220-270', 'High'],
-                  ['Rajasthan', '₹280-350', '₹230-280', 'Medium'],
-                  ['MP', '₹260-330', '₹210-260', 'Medium'],
-                  ['Bihar', '₹260-330', '₹210-260', 'Medium'],
-                  ['West Bengal', '₹280-350', '₹230-280', 'Medium'],
-                  ['Karnataka', '₹290-360', '₹240-290', 'Medium'],
-                  ['TN / Telangana / AP', '₹280-360', '₹230-290', 'Medium'],
-                  ['Odisha / Assam', '₹270-360', '₹220-290', 'Low'],
-                ].map(([state, mrp, sub, avail], i) => (
-                  <tr key={state} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
-                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{state}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text-muted)]">{mrp}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-green-700 dark:text-green-400">{sub}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text-muted)]">{avail}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Haan, <strong>availability</strong> state-dar-state alag hai — Haryana, Punjab, UP, Maharashtra, Gujarat me demand zyada hai to stock bhi behtar milta hai; kuch eastern states me supply chain dheemi hai. Chhattisgarh jaise states ne to kharif season ke liye lakhon bottles pehle se cooperative societies me stock karwa di hain — wahan bhi rate wahi ₹600 hai. Bottle kahin bhi lo, receipt par ₹600 se zyada nahi hona chahiye.
+          </p>
         </section>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
@@ -213,14 +181,14 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
         </div>
 
         <section className="mb-8">
-          <SH>Price Kyun Badalti Rehti Hai?</SH>
+          <SH>Receipt Par Rate Alag Kyun Dikh Sakta Hai?</SH>
           <div className="space-y-3">
             {[
-              { title: 'State Subsidies', desc: 'Har state ka apna structure hai — kuch seedha subsidy dete hain, kuch nahi.' },
-              { title: 'Dealer Commission', desc: 'Retailer apna margin jodta hai, isliye wholesale rate hamesha sasta padta hai.' },
-              { title: 'Season Demand', desc: 'Sowing season shuru hote hi demand ek dum badh jaati hai aur rate bhi.' },
-              { title: 'Online vs Offline', desc: 'E-commerce par kabhi kabhi discount mil jaata hai, local dukaan par usually fixed rate.' },
-              { title: 'Original vs Duplicate', desc: 'IFFCO ka asli product thoda mehnga padta hai, par quality guaranteed hai. Bohot sasta mila toh saavdhan rahein.' },
+              { title: 'Official MRP Fixed Hai', desc: '₹600 per bottle — IFFCO ne khud release kiya hai. Isse upar ka har rupaya overcharging hai.' },
+              { title: 'Dealer Overcharging', desc: 'Season me demand badhne par kuch dealer upar se paisa maang lete hain — receipt maango, shikayat zila krishi adhikari se karo.' },
+              { title: 'Unauthorized Online Sellers', desc: 'MRP se kaafi sasta offer = red flag. IFFCO bina ‘O’ certificate wale sellers ke khilaf legal action le chuka hai.' },
+              { title: 'State Schemes Alag Cheez Hain', desc: 'Kuch states apni scheme se kisano ko alag rahat dete hain — wo bottle ke MRP ka hissa nahi, alag benefit hai.' },
+              { title: 'Original vs Duplicate', desc: 'QR code scan karke asli product verify karo. Bohot sasta mila toh saavdhan rahein.' },
             ].map(({ title, desc }) => (
               <div key={title} className="border-l-4 border-green-400 dark:border-green-600 pl-4 py-1">
                 <p className="font-bold text-[var(--color-text)] text-sm">{title}</p>
@@ -241,7 +209,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
               { title: 'Tezi Se Absorption', desc: 'Nano particles hone ki wajah se foliar spray jaldi absorb hoti hai.' },
               { title: 'Yield Mein Sambhavit Sudhar', desc: 'Kuch kisanon ne improvement report ki hai, par ye guaranteed nahi hai.' },
               { title: 'Soil Health Par Kam Asar', desc: 'Chhoti quantity ka matlab soil pH par kam farak padta hai.' },
-              { title: 'Cost Effective Ho Sakta Hai', desc: '₹300 ki bottle vs ₹1,500 ka DAP bag — per acre comparison mein.' },
+              { title: 'Cost Effective Ho Sakta Hai', desc: '₹600 ki bottle vs ₹1,350 ka DAP bag — per acre kharcha kam baith sakta hai.' },
               { title: 'Lower Environmental Risk', desc: 'Kam quantity use hone se groundwater runoff ka risk bhi dusron ke muqable kam rehta hai.' },
             ].map(({ title, desc }) => (
               <div key={title} className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
@@ -350,7 +318,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
                 {[
                   ['Form', 'Liquid spray', 'Granular dana'],
                   ['Per Acre Qty', '500ml', '50kg bag'],
-                  ['Cost/Acre', '₹250-350', '₹1,350-1,650'],
+                  ['Cost/Acre', '₹600 (1 bottle)', '₹1,350 (1 bag, subsidized)'],
                   ['Application', 'Foliar spray', 'Soil broadcast'],
                   ['Absorption Speed', 'Comparatively fast', 'Slower (needs water)'],
                   ['Transport Cost', 'Low', 'High (heavy bags)'],
@@ -394,7 +362,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
             {[
               { src: 'IFFCO Official Website', note: 'Sabse trustworthy source — original product ki guarantee milti hai.' },
               { src: 'Amazon / Flipkart', note: 'Sirf official seller se lein, ratings padh kar order karein.' },
-              { src: 'Krishi Kendra / State Portals', note: 'Government authorized hai, subsidy milne ke chances rehte hain.' },
+              { src: 'Krishi Kendra / Cooperative Society', note: 'Government authorized hai — rate wahi ₹600, aur original product ki guarantee.' },
               { src: 'Local Authorized Dealer', note: 'Zyadatar kisan offline lena prefer karte hain — receipt maang kar le lein.' },
             ].map(({ src, note }) => (
               <div key={src} className="flex gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
@@ -448,7 +416,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
         <section className="mb-8">
           <SH>Bottle Kharidne Se Pehle Mitti Ka Hisaab Kar Lo</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ek sawaal jo bahut kam kisan poochte hain: mere khet ko phosphorus chahiye bhi ya nahi? DAP ka &lsquo;P&rsquo; phosphorus hi hai — aur agar mitti mein wo pehle se kaafi hai, to ₹300 ki bottle ho ya ₹1,350 ki bori, dono ka paisa aadha barbaad ja raha hai. Ye andaaze se nahi, test se pata chalta hai.
+            Ek sawaal jo bahut kam kisan poochte hain: mere khet ko phosphorus chahiye bhi ya nahi? DAP ka &lsquo;P&rsquo; phosphorus hi hai — aur agar mitti mein wo pehle se kaafi hai, to ₹600 ki bottle ho ya ₹1,350 ki bori, dono ka paisa aadha barbaad ja raha hai. Ye andaaze se nahi, test se pata chalta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Aur test <strong>free hai</strong>. Soil Health Card scheme ke under sarkar aapki mitti ke 12 parameters test karti hai — N, P, K sab isme aate hain — aur 3-4 hafte mein card ban jaata hai jisme likha hota hai ki kis khaad ki kitni zaroorat hai. Portal <strong>soilhealth.dac.gov.in</strong> hai, aur July 2026 tak desh mein 25.89 crore se zyada cards ban chuke hain — matlab ye koi nayi-navéli cheez nahi, system chal raha hai. Sample kaise dena hai aur card ka report kaise padhna hai, iska poora tarika humne{' '}
