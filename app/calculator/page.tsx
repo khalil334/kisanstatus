@@ -220,6 +220,39 @@ export default function CalculatorIndexPage() {
           })}
         </div>
 
+        {/* Fix 4 (GSC-DISCOVERED-NOT-INDEXED-FIX.md): hub was ~361 words — prose
+            context on when each tool actually helps, with deep links. */}
+        <section className="mt-10">
+          <h2 className="font-black text-[var(--color-text)] text-lg mb-3">
+            Kaunsa tool kab kaam aata hai?
+          </h2>
+          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
+            Bank ya CSC jaane se pehle 5 minute ka hisaab aapko galat decision se bacha sakta
+            hai. KCC loan lene ja rahe hain? Pehle{' '}
+            <Link href="/calculator/kcc-loan-emi" className="text-green-700 underline font-semibold">EMI calculator</Link>{' '}
+            par dekhein ki monthly kitna banega — 7% wala standard rate aur government subsidy
+            dono ka hisaab isme hai. Loan ke options samajhne ke liye{' '}
+            <Link href="/articles/KisanRinKahaSeLe2026" className="text-green-700 underline">kisan rin guide</Link>{' '}
+            saath me padh lein.
+          </p>
+          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
+            Fasal bechne ka time ho to{' '}
+            <Link href="/calculator/msp-income" className="text-green-700 underline font-semibold">MSP income calculator</Link>{' '}
+            se pata karein ki sarkari rate par aapki total upaj ki kitni value banti hai — phir
+            mandi ke bhav se compare karein. Aur poore season ka lekha-jokha{' '}
+            <Link href="/calculator/crop-profit" className="text-green-700 underline">kheti ka munafa tool</Link>{' '}
+            me: beej, khad, mazdoori, sinchai — sab kharcha daalo, net profit ya loss samne.
+          </p>
+          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
+            PM Kisan wale teen tools (status check, kist tracker, benefit calculator) ka kaam
+            alag hai — wo aapka data kahin store nahi karte, seedha official portal ki taraf
+            le jaate hain. Kist atki ho to tracker 4 sawaalon me reason nikaalta hai; uske baad
+            ka fix{' '}
+            <Link href="/articles/PmKisanPaymentFailedFix2026" className="text-green-700 underline">payment failed guide</Link>{' '}
+            me milega.
+          </p>
+        </section>
+
         <div className="mt-10 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6 shadow-sm">
           <h2 className="font-black text-[var(--color-text)] text-lg mb-4">In Tools Ka Sahi Upyog</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-[var(--color-text-muted)]">

@@ -83,6 +83,55 @@ export default function YojanaHubPage() {
       </div>
 
       <div className="container-site max-w-3xl py-8">
+        {/* Fix 4 (GSC-DISCOVERED-NOT-INDEXED-FIX.md): hub was ~376 words — intro
+            content with contextual deep links makes it a real hub page. */}
+        <section className="mb-10">
+          <h2 className="text-xl font-black text-[var(--color-text)] mb-3">
+            Yojana ka naam suna hai — par sach kitna hai?
+          </h2>
+          <p className="text-[var(--color-text)] text-sm leading-relaxed mb-3">
+            WhatsApp par har hafte koi nayi “yojana” ghoomti hai. Kuch asli hoti hain, kuch
+            aadhi-asli (rakam badha-chadha kar), aur kuch poori tarah fake. Is section ka kaam
+            teeno ko alag karna hai. Misal ke taur par: “PM Kisan ke saath ₹11,000 ki khad
+            yojana” wala message lakhon logon tak pahuncha — uska poora sach{' '}
+            <Link href="/yojana/pm-kisan-khad-yojana-11000-sach" className="text-green-700 underline font-semibold">
+              khad yojana guide
+            </Link>{' '}
+            me hai. Waise hi karj mafi ki khabrein har chunaav ke aas-paas ugti hain — kis
+            state me scheme sach me chal rahi hai, ye{' '}
+            <Link href="/yojana/kisan-karj-mafi-list-all-states" className="text-green-700 underline font-semibold">
+              karj mafi list
+            </Link>{' '}
+            me state-wise verify kiya gaya hai.
+          </p>
+          <p className="text-[var(--color-text)] text-sm leading-relaxed mb-3">
+            Jo yojanayein asli hain, unme guides application ke asli process par focus karti
+            hain — kaunsa form, kaunsa office, kitna paisa. Pashu rakhne walon ke liye do
+            bade raaste covered hain:{' '}
+            <Link href="/yojana/mgnrega-pashu-shed-yojana" className="text-green-700 underline">
+              MGNREGA pashu shed
+            </Link>{' '}
+            (shed banane ka paisa, ₹1.6 lakh tak ki upper range) aur{' '}
+            <Link href="/yojana/pashu-kisan-credit-card-apply" className="text-green-700 underline">
+              pashu KCC
+            </Link>{' '}
+            (chalu kharch ke liye ₹3 lakh tak working capital). Fasal kharab hui ho to{' '}
+            <Link href="/yojana/fasal-bima-claim-status-check" className="text-green-700 underline">
+              bima claim status
+            </Link>{' '}
+            track karne ka tareeqa alag guide me hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Kahin phans jayein to PM Kisan ki sarkari helpline <strong>155261</strong> hai —
+            complaint darj karne ka process{' '}
+            <Link href="/yojana/pm-kisan-helpline-155261" className="text-green-700 underline">
+              helpline guide
+            </Link>{' '}
+            me step-by-step diya hai. Aur har guide ke andar official portal ka link hai —
+            paisa ya document dene se pehle wahi ek jagah hai jahan bharosa karna chahiye.
+          </p>
+        </section>
+
         <ul className="grid gap-4">
           {LIVE_YOJANA_2026_ARTICLES.map((a) => (
             <li key={a.slug}>
