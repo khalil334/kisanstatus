@@ -262,7 +262,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     ],
     category: 'status-check',
     publishedTime: '2026-08-16T22:46:07+05:30',
-    modifiedTime: '2026-08-16T22:46:07+05:30',
+    modifiedTime: '2026-08-20T22:15:00+05:30',
     author: AUTHOR_NAME,
     component: 'PariharaPaymentStatusHindi',
     ogImage: '/images/articles/rajya-yojna/parihara-payment-status-check-2026/hero.webp',

@@ -172,7 +172,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'FtoStatusCheckPaisaKabAayega',
     category: 'status-check',
     publishedTime: '2026-08-18T07:07:40+05:30',
-    modifiedTime: '2026-08-19T00:15:00+05:30',
+    modifiedTime: '2026-08-20T22:00:00+05:30',
     readingTime: 7,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('FtoStatusCheckPaisaKabAayega'),
