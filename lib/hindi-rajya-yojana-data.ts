@@ -92,7 +92,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     ],
     category: 'status-check',
     publishedTime: '2026-08-16T23:45:00+05:30',
-    modifiedTime: '2026-08-16T23:45:00+05:30',
+    modifiedTime: '2026-08-20T23:00:00+05:30',
     author: AUTHOR_NAME,
     component: 'RythuBharosaStatusHindi',
     ogImage: '/images/articles/rajya-yojna/rythu-bharosa-status-check-2026/hero.webp',

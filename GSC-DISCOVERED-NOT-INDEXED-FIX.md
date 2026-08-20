@@ -332,10 +332,27 @@ Aage ke parts me `Actual` column pe bharosa karo, purane estimate pe nahi.
 | | `/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026` | ~1,750 | **1,648 → ~2,090** | — | ✅ Done (2026-08-20) |
 | **4** | `/articles/fto-status-check-paisa-kab-aayega` | ~1,800 | **1,718 → ~2,150** | — | ✅ Done (2026-08-20) |
 | | `/articles/hi/parihara-payment-status` (PariharaPaymentStatusHindi) | ~1,800 | **1,665 → ~2,050** | — | ✅ Done (2026-08-20) |
-| **5** | `/articles/PmKisanVillageWiseListPdfDownload` | ~1,830 | **1,901** | +99 | ⏳ Pending |
-| | `/articles/hi/rythu-bharosa-status` (RythuBharosaStatusHindi) | ~1,840 | **1,676** | +324 | ⏳ Pending |
+| **5** | `/articles/PmKisanVillageWiseListPdfDownload` | ~1,830 | **1,901 → ~2,150** | — | ✅ Done (2026-08-20) |
+| | `/articles/hi/rythu-bharosa-status` (RythuBharosaStatusHindi) | ~1,840 | **1,676 → ~2,070** | — | ✅ Done (2026-08-20) |
 
-**Total remaining: ~420 real words** (Part 5).
+**Total remaining: 0 — sab parts done.** ✅ (Parts 1–5 complete, 2026-08-20)
+
+**Part 5 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
+- *VillageWiseListPdf*: (1) "Ghar ke bade-buzurg ka naam list me hai — unke baad kya" section —
+  Succession Transfer (CSC, death certificate + Khatauni + Aadhaar — article ke apne verified FAQ
+  ka expansion), mutation-pehle-record-baad ki chain, recovery warning, bank-account-change guide
+  link. (2) "List se shikayat tak" escalation section — gaon-level collective complaint (list PDF
+  as evidence, block office ke through), individual chain 155261 → Help Desk ticket → State Nodal
+  Officer (repo ke NodalOfficerList article se), taaza list re-check ki salah. Internal count
+  1,593 → **2,050** (live ~2,150).
+- *RythuBharosaStatusHindi*: (1) "Ekad-gunta ka ganit" section — 40 guntas = 1 acre, 2.5 acre ×
+  ₹6,000 = ₹15,000 example, disputed/prohibited zameen ka hissa cut, multi-village khaton ke alag
+  credits (sab Hinglish sibling RythuBharosaStatusCheck ke verified content se, naye Hindi words
+  me). (2) "PM Kisan aur Rythu Bharosa dono ek saath" section — dono alag systems, fixed ₹6,000
+  vs per-acre, passbook entry pehchan (RYTHU/treasury vs PMKISAN). Internal count 1,564 → **1,878**
+  (live ~2,070).
+- Dono me `modifiedTime`/`MODIFIED` update. Koi naya amount/date invent nahi.
+- Verification: `tsc --noEmit` clean, `check:titles` + `check:content` pass (dono ab list se bahar).
 
 **Part 4 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
 - *FTO Status Check*: (1) "eKYC pending hai to FTO banega hi nahi" section — Face Authentication

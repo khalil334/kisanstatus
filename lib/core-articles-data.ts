@@ -725,7 +725,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanVillageWiseListPdfDownload',
     category: 'status-check',
     publishedTime: '2026-07-09T06:54:59+05:30',
-    modifiedTime: '2026-08-17T11:44:57+05:30',
+    modifiedTime: '2026-08-20T22:45:00+05:30',
     readingTime: 15,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisanVillageWiseListPdfDownload'),
