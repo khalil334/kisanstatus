@@ -342,8 +342,7 @@ Aage ke parts me `Actual` column pe bharosa karo, purane estimate pe nahi.
 nikale jo 2,000 se neeche hain — wahi ab Part 6 se aage ka kaam hai. Guard ki list hi authoritative
 queue hai (`npm run check:content`), doc ki purani list nahi.
 
-**Remaining queue (guard se, Part 11 ke baad 5 bache):**
-`bakri-palan-yojana-nlm-subsidy` (1,872) · `PmKisanCorrectionForm2026` (1,883) ·
+**Remaining queue (guard se, Part 12 ke baad 3 bache):**
 `mushroom-kheti-nhb-subsidy` (1,891) · `AgriStackKyaHai2026` (1,954) ·
 `PmKisanRejectedStatusReApplyGuide` (1,965)
 
@@ -358,6 +357,24 @@ queue hai (`npm run check:content`), doc ki purani list nahi.
 | | `/articles/PmKisanStateNodalOfficerList` | — | **1,816 → 2,117** | — | ✅ Done (2026-08-20) |
 | **11** | `/articles/pm-kisan-self-registered-status-check` | — | **1,833 → 2,129** | — | ✅ Done (2026-08-20) |
 | | `/articles/PmKisanFaceAuthenticationEkyc` | — | **1,853 → 2,060** | — | ✅ Done (2026-08-20) |
+| **12** | `/articles/bakri-palan-yojana-nlm-subsidy` | — | **1,872 → 2,044** | — | ✅ Done (2026-08-20) |
+| | `/articles/PmKisanCorrectionForm2026` | — | **1,883 → 2,106** | — | ✅ Done (2026-08-20) |
+
+**Part 12 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
+- *bakri-palan-yojana-nlm-subsidy*: "Chara-Dawai Ka Rozana Kharcha — Pashu KCC" section — article ki
+  apni "subsidy working capital nahi hai" baat ko actionable banaya: Pashu KCC revolving limit ka
+  mechanism, AH limit ₹3 lakh ke andar subvention + timely repayment par ~4% effective, collateral-free
+  limit ₹1.6 → ₹2 lakh update (purane blogs ka warning) — sab repo ke PashuKisanCreditCard article ke
+  verified facts se; Pashu KCC apply guide ka contextual link. NLM-term-loan vs KCC-working-capital ka
+  farak bhi. Internal count 1,872 → **2,044**.
+- *PmKisanCorrectionForm2026*: (1) "15 Din Baad Bhi Update Nahi — Shikayat Ki Chain" section —
+  155261 / 011-24300606 (call-prep), pmkisan.gov.in Help Desk ticket + ticket number sambhalna,
+  pmkisan-ict@gov.in email format, state nodal officer escalation + guide link (sab FTO/NodalOfficer
+  articles ke verified chain se). (2) Fraud alert — fake .com sites / WhatsApp helplines, no-OTP-no-fee
+  rule, 1930 / cybercrime.gov.in recovery. Internal count 1,883 → **2,106**.
+- Dono ke `modifiedTime` update (`lib/core-articles-data.ts`); CorrectionForm ka `MODIFIED` bhi.
+  Koi naya amount/date invent nahi.
+- Verification: `check:titles` (108 pairs) + `check:content` pass — dono guard ki list se bahar.
 
 **Part 11 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
 - *pm-kisan-self-registered-status-check*: (1) "Active Ho Gaya — Paisa Kab Aayega (FTO)" section —
