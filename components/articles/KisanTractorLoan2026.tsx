@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2025-12-19T13:12:12+05:30';
-const MODIFIED = '2026-08-18T18:45:00+05:30';
+const MODIFIED = '2026-08-20T23:00:00+05:30';
 
 const RELATED = [
   { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le' },
@@ -39,6 +39,14 @@ const FAQS_DATA = [
  a: 'Haan. Refinancing possible hai. Existing loan pre-close karo (2-4% foreclosure charges), bank se naya loan lo lower rate par. Ek cultivator ne Mahindra Finance 12.5% se SBI 8.9% par shift karke ₹22,400 bachaye 3 saal mein. RC transfer process 15-20 din leta hai.',
 },
 {
+ q: 'EMI nikalne ke liye tractor kiraye par dena samajhdari hai?',
+ a: 'Haan, aur yahi cheez pehle 2-3 saal EMI sambhalti hai. Ek tractor peak season me lagbhag 120 ghante chalta hai to gross ₹1 lakh ke aas-paas ban jaata hai; diesel, driver salary aur maintenance kaat kar bhi EMI nikal aati hai. Par lean season ka hisaab pehle se karo — garmiyon me agricultural demand 60-70% gir jaati hai, isliye us waqt goods transport jaisa koi plan chahiye. Naye customers se 50% advance lo, gaon me udhaari phailne se cash flow ruk jaata hai.',
+},
+{
+ q: 'Loan poora chuka diya — RC se bank ka naam hatana zaroori hai?',
+ a: 'Bilkul zaroori hai. Loan chalu hone par RC par lender ki hypothecation entry chadh jaati hai; wo hatane tak kagaz par tractor poora aapka nahi hota — bechne, exchange karne ya nayi file lagane me wahi entry atakti hai. Aakhri EMI ke baad bank se NOC aur loan closure statement lo, phir RTO me hypothecation hatane ki application do. Do-teen hafte ka kaam hai, par saalon baad karne se purani branch dhoondhne me zyada pareshani hoti hai.',
+},
+{
  q: 'Electric tractor par loan milta hai?',
  a: 'Haan. Mahindra, Sonalika, Swaraj ne electric models launch kiye hain. Banks 2026 se flat 7.5% interest offer kar rahe hain electric tractors par. Running cost diesel se 70% kam. Battery warranty 5 saal = loan tenure bhi 5 saal tak.',
 },
@@ -64,7 +72,7 @@ return (
          <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
          <span>{fmtDate(PUBLISHED)}</span>
          <span>Updated: {fmtDate(MODIFIED)}</span>
-         <span>14 min read</span>
+         <span>17 min read</span>
        </div>
      </div>
    </div>
@@ -472,6 +480,92 @@ return (
            </div>
          ))}
        </div>
+     </section>
+
+     <section className="mb-8">
+       <SH>EMI Kahan Se Aayegi — Tractor Ko Kamane Par Lagao</SH>
+       <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+         Loan mil gaya, tractor aa gaya. Ab asli sawaal shuru hota hai — EMI kahan se aayegi. Sirf apne khet se nahi.
+       </p>
+       <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+         Desh me 85% se zyada kisaanon ke paas 2 hectare se kam zameen hai — unke liye apna tractor lena mumkin nahi hai,
+         par kiraye par lena zaroori hai. Yahi aapka customer base hai, aur wo aapke gaon me pehle se maujood hai.
+         Kiraya ghante ya acre ke hisaab se chalta hai, aur implement badalne se rate badalta hai — rotavator wala kaam
+         alag rate par jaata hai, laser leveler wala alag.
+       </p>
+       <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+         <table className="w-full text-sm border-collapse">
+           <thead>
+             <tr className="bg-[var(--color-primary)] text-white">
+               <th className="p-3 text-left">Peak season ka mahina</th>
+               <th className="p-3 text-left">Kitna</th>
+             </tr>
+           </thead>
+           <tbody>
+             {[
+               ['Tractor — lagbhag 120 ghante ka kaam', '₹1,08,000 gross'],
+               ['Diesel + lubricants', '₹50,000–70,000'],
+               ['Driver salary', '₹25,000–35,000'],
+               ['Repair + maintenance', '₹10,000–15,000'],
+             ].map(([k, v], i) => (
+               <tr key={k} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
+                 <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text)]">{k}</td>
+                 <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text-muted)] font-medium">{v}</td>
+               </tr>
+             ))}
+           </tbody>
+         </table>
+       </div>
+       <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+         Ginti saaf hai — peak season me kharche kaat kar bhi EMI nikal aati hai, aur upar kuch bachta hai. Par yahi
+         table lean season me ulta ho jaata hai: garmiyon me agricultural demand 60–70% gir jaati hai, kaam nahi rehta,
+         aur EMI apni tareekh par aati hai. Isliye do cheezein pehle se socho — off-season me tractor ka doosra kaam
+         (goods transport sabse aam hai), aur EMI ka size aisa ki lean mahine me bhi bhar sake.
+       </p>
+       <WB>
+         <strong>Udhaari ka chakkar sabse bada risk hai.</strong> Gaon me &ldquo;fasal bikte hi de dunga&rdquo; wali baat
+         se cash flow ruk jaata hai, aur diesel ka paisa aapki jeb se lagta rehta hai. Naye customers se hamesha 50%
+         advance lo. Aur peak season me belts, blades aur nuts-bolts ka stock rakho — ek din ka breakdown bhi aapki
+         booking doosre ke paas bhej deta hai.
+       </WB>
+       <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+         Ye kaam thoda systematic karna ho to iska poora structure banaya jaa sakta hai — SMAM ke tahat implements par
+         40–50% subsidy milti hai, aur Custom Hiring Centre (group ya FPO) ke roop me wahi percentage ₹10 lakh tak ki
+         limit par jaata hai, jabki individual kisan ke case me ₹5 lakh par rukta hai. Poora budget, rental rate aur DPR
+         wala hisaab{' '}
+         <Link href="/articles/custom-hiring-centre-chc-portal" className="underline font-bold">CHC guide</Link> me hai.
+       </p>
+       <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+         Aur mahine ke chalte-firte kharche — diesel, driver, spare parts — ke liye term loan mat todo. Uske liye KCC
+         hai: jitna nikala utne din ka byaj, aur time par chukane par effective rate 4% ke aas-paas.{' '}
+         <Link href="/articles/KisanRinKahaSeLe2026" className="underline">Rin kahan se le</Link> wale page par dono ka
+         farak table me hai.
+       </p>
+     </section>
+
+     <section className="mb-8">
+       <SH>Aakhri EMI Ke Baad Ka Kaam — RC Se Bank Ka Naam Hatao</SH>
+       <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+         Loan khatam hone par log sabse zyada yahi galti karte hain — mithai baant kar kagaz bhool jaate hain.
+       </p>
+       <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+         Loan chalu hote waqt aapki RC par lender ki <strong>hypothecation</strong> entry chadhti hai — isi ke liye
+         shuru me ₹2,000–5,000 lagte hain, aur iske bina disbursement hi nahi hota. Matlab kagaz par tractor par bank ka
+         bhi haq darj hai. Aakhri EMI ke baad ye entry khud se nahi hatti; hatane tak tractor bechna, exchange karna, ya
+         usi tractor par nayi file lagana — sab me dikkat aati hai.
+       </p>
+       <StepList>
+         <SI n={1}>Aakhri EMI ke baad bank se <strong>NOC</strong> aur loan closure statement lo — zubani &ldquo;ho gaya&rdquo; kaafi nahi hai</SI>
+         <SI n={2}>Original documents (jo bank ke paas jama the) wapas lo aur list se milaao</SI>
+         <SI n={3}>RTO me hypothecation hatane ki application do — NOC, RC aur insurance copy ke saath</SI>
+         <SI n={4}>Nayi RC aane par check karo ki lender ka naam hat gaya hai; usi ke baad insurance me bhi update karwao</SI>
+       </StepList>
+       <DB>
+         <strong>Der karne ka nuksan asli hai.</strong> Kuch saal baad wahi branch manager nahi rehta, file archive me
+         chali jaati hai, aur NOC nikalwane me hafte lag jaate hain — jabki loan closure ke waqt wahi kaam ek visit ka
+         hota hai. Aur ek baat: pre-closure karne ja rahe ho to pehle penalty pooch lo — 12 mahine ke andar poora chukane
+         par 2–4% tak lag sakti hai.
+       </DB>
      </section>
 
      <section className="mb-8">

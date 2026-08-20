@@ -342,8 +342,7 @@ Aage ke parts me `Actual` column pe bharosa karo, purane estimate pe nahi.
 nikale jo 2,000 se neeche hain — wahi ab Part 6 se aage ka kaam hai. Guard ki list hi authoritative
 queue hai (`npm run check:content`), doc ki purani list nahi.
 
-**Remaining queue (guard se, Part 7 ke baad 13 bache):**
-`KisanTractorLoan2026` (1,693) · `PmKusumYojanaSolarSubsidy2026` (1,720) ·
+**Remaining queue (guard se, Part 8 ke baad 11 bache):**
 `PmKisanBankAccountChangeProcess` (1,752) · `PmKisanMaandhanYojanaPension` (1,800) ·
 `NanoDap500mlPriceInIndia2026` (1,811) · `PmKisanStateNodalOfficerList` (1,816) ·
 `pm-kisan-self-registered-status-check` (1,833) · `PmKisanFaceAuthenticationEkyc` (1,853) ·
@@ -353,6 +352,29 @@ queue hai (`npm run check:content`), doc ki purani list nahi.
 
 | **7** | `/articles/custom-hiring-centre-chc-portal` | — | **1,620 → 2,047** | — | ✅ Done (2026-08-20) |
 | | `/articles/madhumakhi-palan-kvic-subsidy` | — | **1,650 → 2,062** | — | ✅ Done (2026-08-20) |
+
+| **8** | `/articles/KisanTractorLoan2026` | — | **1,693 → 2,096** | — | ✅ Done (2026-08-20) |
+| | `/articles/PmKusumYojanaSolarSubsidy2026` | — | **1,720 → 2,151** | — | ✅ Done (2026-08-20) |
+
+**Part 8 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
+- *KisanTractorLoan2026*: (1) "EMI kahan se aayegi" section — tractor ko kiraye par dena, peak-month
+  ka table (120 ghante ≈ ₹1,08,000 gross; diesel ₹50–70k, driver ₹25–35k, maintenance ₹10–15k — sab
+  repo ke CHCPortal se), lean season me 60–70% demand girna, 50% advance aur spare-parts stock ki
+  salah, SMAM implements 40–50% + CHC ₹10 lakh vs individual ₹5 lakh limit, KCC vs term loan ka
+  farak. (2) "Aakhri EMI ke baad" section — RC par hypothecation entry (article ke apne ₹2,000–5,000
+  hidden-cost se), NOC + closure statement, RTO application, pre-closure 2–4% penalty ka reminder.
+  +2 FAQ. Internal count 1,693 → **2,096**.
+- *PmKusumYojanaSolarSubsidy2026*: (1) "Apna 40% hissa kahan se aayega" section — term loan (KCC
+  nahi, kyunki ye ek-baar ka investment hai), NABARD route 4–6% vs private personal loan 12–18%
+  (dono article ke apne comparison box se), sanction-letter-pehle-loan wali sequence, empanelled
+  vendor ki shart, approval-se-pehle-purchase reject hone ka rule + sahi sequence (DripSprinkler
+  article ke verified FAQ se), aur PDMC 55%/45% ke saath drip planning ka cross-link.
+  (2) "Ab 25 saal chalane ka kaam" section — 5 saal warranty compulsory + service contact +
+  commissioning report, ₹500–1,000 saalana maintenance vs diesel ₹5,000–8,000, panel safai/chhaya/
+  earthing, cloudy din 30–40% output (sab article ke apne table aur FAQ se), serial number aur
+  structure ka intezaam. +2 FAQ. Internal count 1,720 → **2,151**.
+- Dono me `MODIFIED` aur `lib/core-articles-data.ts` ka `modifiedTime` update, read-time bhi.
+- Verification: `check:titles` (108 pairs) + `check:content` pass — dono guard ki list se bahar.
 
 **Part 7 me kya add hua (2026-08-20)** — Option B (sirf repo-verified facts):
 - *CHCPortal*: (1) "Tractor ka paisa kahan se aayega" section — article khud kehta hai SMAM subsidy
