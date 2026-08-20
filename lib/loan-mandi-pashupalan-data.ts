@@ -130,7 +130,8 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'mandi-bhav-app-comparison',
     ogImage: '/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/phone-bhav.webp',
     title: 'Best Mandi Bhav Apps 2026: Top 7',
-    desc: 'eNAM, AgMarknet, Kisan Suvidha ya private apps — kaunsa mandi bhav app sahi rate deta hai? Sarkari vs private comparison aur modal price ka matlab.',
+    seoTitle: 'Aaj Ka Mandi Bhav App — Kaunsa Sahi Hai',
+    desc: 'Aaj ka mandi rate kaunsa app sach batata hai? eNAM, AgMarknet aur private apps ka comparison, modal price ka matlab aur 30 second ka faisla table.',
     ogTitle: 'Best Mandi Bhav Apps 2026 — Top 7 Comparison',
     keywords: [
       'mandi bhav app 2026',
@@ -141,7 +142,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     component: 'MandiBhavAppComparison',
     category: 'mandi',
     publishedTime: '2026-03-07T07:06:57+05:30',
-    modifiedTime: '2026-03-12T06:16:58+05:30',
+    modifiedTime: '2026-08-21T12:40:00+05:30',
     readingTime: 10,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('mandi-bhav-app-comparison'),

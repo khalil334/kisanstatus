@@ -25,7 +25,7 @@ export const HINDI_LOAN_MANDI_PASHUPALAN_ARTICLES: readonly HindiArticle[] = [
     keywords: ['kcc limit kaise badhaye', 'kcc renewal process', 'kcc interest rate'],
     category: 'loan',
     publishedTime: '2026-07-14T10:37:32+05:30',
-    modifiedTime: '2026-08-04T21:13:34+05:30',
+    modifiedTime: '2026-08-21T12:40:00+05:30',
     author: AUTHOR_NAME,
     component: 'KccLimitKaiseBadhaye3Se5Lakh',
     ogImage: '/images/articles/hindi-yojna/kcc-limit/kcc-card.webp',

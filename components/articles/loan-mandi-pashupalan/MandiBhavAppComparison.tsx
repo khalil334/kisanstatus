@@ -71,7 +71,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
-            <span>Last Updated: 05/08/2026</span>
+            <span>Last Updated: 21/08/2026</span>
             <span>10 min read</span>
           </div>
         </div>
@@ -102,7 +102,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 05/08/2026</strong>
+          <strong>Last Updated: 21/08/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -282,6 +282,49 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           <SI n={4}><strong>Unverified APK install karna:</strong> Play Store ke bahar se "mandi bhav" app download karna phone aur bank dono ke liye khatra hai. Sirf official store se, aur bewajah contacts/SMS permission maangne wale apps se door raho.</SI>
           <SI n={5}><strong>Das apps rakh kar kisi ka bhi trend na dekhna:</strong> notifications ka shor data nahi hota. Ek source roz dekhna das sources kabhi-kabhi dekhne se hamesha behtar hai.</SI>
         </StepList>
+
+        <SH>Aapke Liye Kaunsa — 30 Second Ka Faisla</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Poora article padhne ka waqt nahi? Apni haalat is table mein dhundho, wahi aapka jawab hai.
+        </p>
+        <div className="overflow-x-auto my-4">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Aapki Haalat</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Kya Rakho</th>
+                <th className="border border-[var(--color-border)] p-3 text-left font-black">Kyun</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3">Mandi eNAM se judi hai, bechna bhi hai</td>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">eNAM app</td>
+                <td className="border border-[var(--color-border)] p-3">Bhav ke saath online bidding bhi — doosre district ke buyer bhi boli lagate hain</td>
+              </tr>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <td className="border border-[var(--color-border)] p-3">Sirf rate ka trend dekhna hai, bechna mandi mein hi hai</td>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">AgMarknet portal</td>
+                <td className="border border-[var(--color-border)] p-3">Desh bhar ki mandiyon ka reported record — 7-10 din ka trend yahin saaf dikhta hai</td>
+              </tr>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3">Keypad phone hai ya data mehnga padta hai</td>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Kisan Call Centre + mKisan SMS</td>
+                <td className="border border-[var(--color-border)] p-3">1800-180-1551 free hai, SMS par data kharcha zero</td>
+              </tr>
+              <tr className="bg-[var(--color-bg-alt)]">
+                <td className="border border-[var(--color-border)] p-3">Chhoti mandi hai, sarkari app mein naam hi nahi aata</td>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Nazdeeki badi mandi ka rate + aadhati ka phone</td>
+                <td className="border border-[var(--color-border)] p-3">Local rate usi bade rate ke aas-paas banta hai; farak transport ka</td>
+              </tr>
+              <tr>
+                <td className="border border-[var(--color-border)] p-3">Rate ek number par pahunchte hi khabar chahiye</td>
+                <td className="border border-[var(--color-border)] p-3 font-semibold">Ek private app (alert wala) + sarkari source</td>
+                <td className="border border-[var(--color-border)] p-3">Alert sahulat ke liye, confirm karne ke liye sarkari record</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <SH>Toh Karna Kya Hai — Seedha Jawab</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">

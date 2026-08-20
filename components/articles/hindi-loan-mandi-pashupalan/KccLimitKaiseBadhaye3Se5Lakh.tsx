@@ -379,6 +379,12 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
 
       <Head2>पशुपालन जोड़ना — limit बढ़ाने का अनदेखा रास्ता</Head2>
       <p>
+        एक आंकड़ा इस रास्ते की गुंजाइश बता देता है — मार्च 2024 तक पशुपालन गतिविधियों के लिए करीब{' '}
+        <strong>44.40 लाख</strong> KCC जारी हुए थे और मत्स्य-पालन के लिए <strong>1.24 लाख</strong>। कुल 7.75 करोड़
+        operative KCC खातों के मुकाबले यह हिस्सा बहुत छोटा है — मतलब यह दरवाजा खुला है पर इससे गुजरने वाले
+        कम हैं। जिनके घर पशु हैं और limit सिर्फ फसल पर बनी है, उनके लिए यह सबसे कम-मेहनत वाला enhancement है।
+      </p>
+      <p>
         जिन किसानों के घर दुधारू पशु, मुर्गीपालन या तालाब है, वे अक्सर सिर्फ फसली limit पर अटके रहते हैं,
         जबकि allied activity का working capital भी KCC के दायरे में आता है। दूध का चारा-दाना, मुर्गी
         का feed, तालाब का seed-खाद — इनका सालाना खर्च जोड़कर बताइए तो कुल assessment ऊपर जाता
@@ -439,7 +445,7 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
         card holders का आंकड़ा सरकारी release पर आधारित coverage से; और KCC योजना का ढांचा RBI/नाबार्ड के
         दिशा-निर्देशों व{' '}
         <a href="https://www.myscheme.gov.in" target="_blank" rel="noopener noreferrer">myscheme.gov.in</a>{' '}
-        से। दरें और collateral-free सीमा बैंक-दर-बैंक बदल सकती हैं, अंतिम पुष्टि अपनी branch से
+        से; पशुपालन (44.40 लाख) व मत्स्य-पालन (1.24 लाख) KCC और कुल 7.75 करोड़ operative खातों के आंकड़े 31 मार्च 2024 की स्थिति पर आधारित रिपोर्टिंग से। दरें और collateral-free सीमा बैंक-दर-बैंक बदल सकती हैं, अंतिम पुष्टि अपनी branch से
         करें। साहूकारी दरों का जिक्र सामान्य ग्रामीण अनुभव पर है, कोई सरकारी आंकड़ा नहीं। (जानकारी
         {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })} तक जांची हुई है।)
       </p>
