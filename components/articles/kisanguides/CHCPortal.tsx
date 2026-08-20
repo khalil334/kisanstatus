@@ -6,8 +6,8 @@ import { AuthorBox, FAQBlock } from '@/components/ArticleShared';
 import { AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: 'Custom Hiring Centre (CHC) 2026: Tractor Rental Business Guide',
-  description: 'CHC portal guide. Janein tractor aur farm implements kiraye par dekar paisa kaise kamayein, SMAM subsidy, aur real profit calculation.',
+  title: 'Custom Hiring Centre 2026: SMAM Subsidy aur Kamai Ka Hisaab',
+  description: 'CHC kaise khole: SMAM subsidy ka sach, 1 tractor + 7 implements ka ₹18-25 lakh budget, mahine ki kamai-kharche ka hisaab aur DPR me hone wali galtiyan.',
   keywords: ['custom hiring centre', 'CHC portal', 'tractor rental business', 'SMAM subsidy', 'farm machinery rental', 'agricultural equipment'],
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
@@ -43,7 +43,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Group ya FPO ke naam par apply karne se kya fayda hota hai?',
-    a: 'Limit dugni ho jati hai. Individual kisan ke case mein implements par 40-50% subsidy ₹5 lakh tak rukti hai, jabki Custom Hiring Centre (group ya FPO) ke roop mein wahi 40-50% ₹10 lakh tak ja sakti hai. Percentage lagbhag wahi rehta hai — badalta sirf maximum ceiling hai.',
+    a: 'Project ki size badh jati hai. Individual kisan implement-wise limit me bandha rehta hai, jabki group, cooperative, FPO ya SHG poore Custom Hiring Centre ka project file kar sakte hain — SMAM guideline me aise project par 40% tak assistance ka provision hai aur project ₹10 lakh se upar ka ho sakta hai. Gaon level ki Farm Machinery Bank category isse alag hai: pratishat zyada (80% tak) par project ki ceiling chhoti. Exact figure har saal state guideline se aata hai, isliye DAO se likhit me confirm karo.',
   },
   {
     q: 'Chhote aur seemant kisan ko 50% kaise milta hai, 40% kise?',
@@ -103,7 +103,7 @@ export default function CHCPortal() {
         SMAM Subsidy: Sach aur Jhooth
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Sub-Mission on Agricultural Mechanization (SMAM) ke tahat sarkar CHC kholne ke liye 40% se 50% tak subsidy deti hai. Lekin yahan ek bahut bada confusion hai jo naye entrepreneurs ko aksar phasa leta hai.
+        Sub-Mission on Agricultural Mechanization (SMAM) ke tahat sarkar CHC kholne ke liye 40% se 50% tak subsidy deti hai — scheme 2014-15 me shuru hui thi aur abhi Rashtriya Krishi Vikas Yojana ke component ke roop me states ke through chalti hai. Lekin yahan ek bahut bada confusion hai jo naye entrepreneurs ko aksar phasa leta hai.
       </p>
 
       <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-5 mb-6 not-prose">
@@ -137,12 +137,36 @@ export default function CHCPortal() {
               <td className="py-3 px-4">₹5 Lakh tak</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700">
-              <td className="py-3 px-4">Custom Hiring Centre (Group/FPO)</td>
-              <td className="py-3 px-4 font-semibold">40% - 50%</td>
-              <td className="py-3 px-4">₹10 Lakh tak</td>
+              <td className="py-3 px-4">Custom Hiring Centre (Group/FPO/SHG)</td>
+              <td className="py-3 px-4 font-semibold">40% (project par)</td>
+              <td className="py-3 px-4">Project size par — neeche padho</td>
             </tr>
           </tbody>
         </table>
+      </div>
+
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Ab CHC wali line thoda khol kar samajhni padegi, kyunki yahin par sabse zyada galat jankari chalti hai. Group,
+        cooperative, FPO ya SHG jab <strong>Custom Hiring Centre</strong> ke roop me project file karte hain, to SMAM
+        guideline me project cost ka <strong>40% tak</strong> assistance ka provision hai, aur project ki size state ke
+        target ke hisaab se ₹10 lakh se shuru hoti hai. Gaon level par chhoti <strong>Farm Machinery Bank</strong> wali
+        category alag hai — waha assistance ka pratishat zyada (80% tak) rehta hai lekin project ki upper limit chhoti
+        (₹30 lakh ke aas-paas) hoti hai.
+      </p>
+      <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
+          <strong>Ek baat saaf rakho:</strong> pratishat aur ceiling dono state ke annual guideline aur us saal ke target
+          par tay hote hain — kisi bhi blog ka number final nahi hota, aapke district ka circular final hota hai. Apply
+          karne se pehle <a href="https://agrimachinery.nic.in" className="text-blue-600 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">agrimachinery.nic.in</a>{' '}
+          par current year ka machine-wise limit aur apne DAO se likhit confirmation — dono le lo.
+        </p>
+        <p className="text-sm text-gray-700 dark:text-gray-300">
+          Ye scheme kitni badi hai, isse andaza lagao: 2014-15 se ab tak SMAM ke tahat <strong>₹9,404.47 crore</strong>{' '}
+          central assistance ke saath karib <strong>21.61 lakh</strong> machines kisano tak pahunchi hain, aur desh me{' '}
+          <strong>27,554 Custom Hiring Centre</strong> aur <strong>25,608 Farm Machinery Bank</strong> khade ho chuke hain
+          (Ministry of Agriculture ka July 2026 ka aankda). Yaani aapke ilake me pehle se koi CHC hoga hi — market
+          saturated hai ya nahi, ye dekhna aapki pehli jimmedari hai, subsidy ka form bharne se bhi pehle.
+        </p>
       </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -248,7 +272,7 @@ export default function CHCPortal() {
         <li>District Agriculture Office (DAO) ya Krishi Vibhag visit karein aur current financial year ki priority list check karein.</li>
         <li>Application form lein aur 3 alag-alag authorized dealers se rate quotation mangayein.</li>
         <li>Ek solid DPR (Detailed Project Report) banayein. Iske liye kisi registered agri-consultant ki madad lein, isse approval ke chances badh jate hain.</li>
-        <li>State agriculture portal ya <a href="https://agrimachinery.nic.in" className="text-blue-600 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">agrimachinery.nic.in</a> par register karein.</li>
+        <li>State agriculture portal ya <a href="https://agrimachinery.nic.in" className="text-blue-600 hover:underline dark:text-blue-400" target="_blank" rel="noopener noreferrer">agrimachinery.nic.in</a> (Central DBT farm machinery portal) par register karein — Aadhaar-linked bank account hona zaroori hai, subsidy DBT se usi khaate me aati hai.</li>
         <li>Saare documents (Aadhaar, Land records, Bank details, Quotations) scan karke upload karein.</li>
         <li>Physical verification ka wait karein. Officer aapki zameen aur storage facility dekhne aayega.</li>
         <li>Approval aane par hi machinery khareedein aur bills submit karein.</li>

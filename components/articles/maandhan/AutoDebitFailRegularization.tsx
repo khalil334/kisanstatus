@@ -4,12 +4,16 @@ import { SI, StepList, IB, WB, SH, AuthorBox, BottomNav, Disclaimer, FAQBlock, f
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-05-13T14:48:09+05:30';
-const MODIFIED = '2026-05-18T07:04:01+05:30';
+const MODIFIED = '2026-08-21T10:15:00+05:30';
 
 const FAQS_DATA = [
   {
     q: "Auto debit fail hone par sabse pehle kya karna chahiye?",
     a: "Ye aam dikkat hai, roz hazaron logo ke saath hota hai. Bas account mein paisa daalo aur UPI ya net banking se khud payment kar do. Baad mein bank ko bata dena taaki agli baar mandate se hi chal jaye.",
+  },
+  {
+    q: "PM Kisan Maandhan ki kist kat nahi rahi to bounce charge lagega?",
+    a: "Nahi. Maandhan pension scheme hai, loan nahi — isme bank wala bounce charge aur CIBIL ka asar dono nahi hota. Bas us mahine sarkar ka matching hissa bhi fund me nahi aata, isliye nuksaan aapka apna hai. Khaate me balance rakho aur apne CSC pe Kisan Pension Account Number le jaao; PM-Kisan labharthi ho to contribution seedha PM-Kisan benefit me se katwa lo, phir balance ki tension hi khatam.",
   },
   {
     q: "Kya EMI bounce hone se CIBIL score par bura asar padta hai?",
@@ -96,7 +100,7 @@ export default function AutoDebitFailRegularization() {
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Verified banking process — Last updated: July 2026
+            Verified banking process — Last updated: August 2026
           </p>
         </div>
 
@@ -115,6 +119,56 @@ export default function AutoDebitFailRegularization() {
             <p>6. <strong>Charge Maaf Karwane Ki Koshish Karo:</strong> Bounce charge laga ho toh politely bol ke dekho, kaafi baar maaf ho jaata hai.</p>
           </div>
         </div>
+
+        <section className="mb-8">
+          <SH>Maandhan Ki Kist Fail Hui Hai? Ye Wala Case Alag Hai</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Pehle ek zaroori farak. Neeche jo poora tarika likha hai wo bank ki EMI aur mutual fund SIP dono par lagta
+            hai. Lekin agar aap <strong>PM Kisan Maandhan (PM-KMY)</strong> ke subscriber hain aur pension ki mahine wali
+            kist kat nahi rahi, to ek raahat ki baat hai: yahan koi bounce charge ya CIBIL ka lafda nahi hai. Ye pension
+            scheme hai, loan nahi.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Maandhan me aapki umar ke hisaab se ₹55 se ₹200 tak mahina jaata hai, aur utna hi sarkar apni taraf se pension
+            fund me daalti hai — 60 saal ke baad ₹3,000 mahina isi 50:50 ke hisaab se banta hai. Fund LIC sambhalta hai.
+            Kist ruk gayi to sarkar ka matching hissa bhi us mahine nahi aata; isliye jaldi regularize karna aapke hi
+            fayde ka kaam hai, kisi penalty ke dar se nahi.
+          </p>
+          <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 rounded-xl">
+            <h3 className="font-black text-green-800 dark:text-green-300 mb-3">Maandhan Ki Ruki Kist Ke Liye 3 Raste</h3>
+            <div className="space-y-3 text-sm text-[var(--color-text-muted)]">
+              <p>
+                <strong>1. Khaate me balance rakho, phir CSC jao.</strong> Enrollment jis CSC se hua tha wahin apna Kisan
+                Pension Account Number le kar jao — pending contribution ka status wahi operator dekh kar bata dega.
+              </p>
+              <p>
+                <strong>2. PM-Kisan wala option chuno.</strong> Agar aap PM-Kisan ke labharthi bhi hain, to Maandhan ka
+                contribution seedha PM-Kisan ke benefit me se kata ja sakta hai. Jeb se dena hi nahi padega, aur balance
+                kam hone ki wajah se kist rukne ka jhanjhat khatam.
+              </p>
+              <p>
+                <strong>3. Bank details badli hain to pehle wo theek karao.</strong> Naya account, naya IFSC ya band
+                khaata — in teeno case me kist wapas chalu karne se pehle account update karana padta hai; poora tarika{' '}
+                <Link href="/maandhan/pmkmy-bank-account-change" className="text-green-700 dark:text-green-400 underline font-semibold">
+                  bank account change wali guide
+                </Link>{' '}
+                me hai.
+              </p>
+            </div>
+          </div>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Aur agar aapka mann scheme se nikalne ka hai — 60 saal se pehle chhodne par jama kiya hua paisa byaj ke saath
+            wapas milta hai; ye rule{' '}
+            <Link href="/maandhan/pm-kisan-maandhan-withdrawal-refund-rules" className="text-green-700 dark:text-green-400 underline">
+              exit aur refund wali guide
+            </Link>{' '}
+            me detail me likha hai. Umar ke hisaab se kitna kaatega, wo{' '}
+            <Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="text-green-700 dark:text-green-400 underline">
+              contribution chart
+            </Link>{' '}
+            me dekh lo. Ab aage bank EMI aur SIP wala poora process.
+          </p>
+        </section>
 
         <section className="mb-8">
           <SH>Auto-Debit Fail Kyun Hota Hai — 5 Wajahein Jo Aksar Dikhti Hain</SH>
@@ -296,7 +350,7 @@ export default function AutoDebitFailRegularization() {
                   </tr>
                   <tr>
                     <td className="py-2 pr-4">NBFCs (Bajaj, Tata Capital)</td>
-                    <td className="py-2 pr-4">500 – ₹1,000</td>
+                    <td className="py-2 pr-4">₹500 – ₹1,000</td>
                     <td className="py-2">₹300 – ₹700</td>
                   </tr>
                 </tbody>

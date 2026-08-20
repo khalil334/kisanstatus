@@ -124,10 +124,10 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   {
     slug: 'auto-debit-fail-hone-par-regularization-kaise-karein',
     title: 'Auto Debit Fail Regularization Kaise Karein',
-    description: 'EMI ya SIP auto-debit fail ho gaya? Janiye ise turant regularize karne ka aasan tarika, bank charges bachane ke upay aur CIBIL score safe rakhne ke tips.',
+    description: 'EMI, SIP ya Maandhan ki kist auto-debit se kat nahi rahi? Turant regularize karne ka tarika, bounce charge maaf karwana aur CIBIL bachane ka poora hisaab.',
     category: 'pension-scheme',
     published: '2026-05-13T14:48:09+05:30',
-    modified: '2026-05-18T07:04:01+05:30',
+    modified: '2026-08-21T10:15:00+05:30',
     readTime: '10 min read',
     image: '/images/articles/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein/kisan-emi-tension.webp',
     ogImage: '/images/articles/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein/kisan-emi-tension.webp',

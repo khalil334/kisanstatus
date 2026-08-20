@@ -85,7 +85,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'kisan kalyan yojana beneficiary list mp',
       'mp kisan kalyan yojana amount',
     ],
-    title: 'MP Kisan Kalyan Yojana Kist Status 2026: SAARA Portal',
+    title: 'MP Kisan Kalyan Kist Status — SAARA Portal',
     description:
       'Saal ke ₹12,000 mein se aapki kist kahan atki hai — SAARA portal par payment status kholne ka step, list mein naam dhoondhna aur late hone par kya karein.',
     ogTitle: 'MP Kisan Kalyan Yojana — Kist Aur Status Check',
@@ -113,7 +113,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'pm kisan aaya namo shetkari nahi aaya',
       'नमो शेतकरी महासन्मान निधी',
     ],
-    title: 'Namo Shetkari Beneficiary List 2026 PDF: Status Check',
+    title: 'Namo Shetkari Beneficiary List 2026 PDF',
     description:
       'PM Kisan aa gaya par Namo Shetkari ka hapta nahi? Maharashtra ki beneficiary list PDF mein naam check karein aur dono ke alag aane ki wajah samjhein.',
     ogTitle: 'Namo Shetkari Yojana — Status Aur Hapta Check',

@@ -511,7 +511,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan Land Seeding Form 2026: Poora Sach',
     desc: 'Land seeding form kahan se milta hai, kaise bharein, kaunse documents chahiye — state wise Bhulekh portal links aur khasra-khatauni ke saath poori guide.',
     ogTitle: 'PM Kisan Land Seeding Form 2026: Kahan Se Milega, Kaise Bharein',
-    seoTitle: 'PM Kisan Land Seeding Form: PDF Download Ka Poora Sach',
+    seoTitle: 'PM Kisan Land Seeding Form — PDF Ka Sach',
     keywords: [
       'pm kisan land seeding form',
       'pm kisan land seeding form pdf download',
@@ -788,7 +788,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'mushroom-kheti-nhb-subsidy',
     title: 'Mushroom Kheti 2026: NHB Subsidy Guide',
-    seoTitle: 'NHB Mushroom Subsidy 2026: Kheti Ka Poora Hisaab',
+    seoTitle: 'NHB Mushroom Subsidy 2026 — Kheti Ka Hisaab',
     desc: 'NHB mushroom subsidy: general category ko ~40% back-ended capital subsidy. Apply process, 100-bag unit ka budget aur ₹40,000+ mahina profit plan.',
     ogTitle: 'Mushroom Kheti 2026 — Profit Guide',
     keywords: [
@@ -912,7 +912,8 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'custom-hiring-centre-chc-portal',
     title: 'Custom Hiring Centre 2026: SMAM Guide',
-    desc: 'CHC khol kar machinery rent se kamayein. SMAM subsidy 40-50%, 8 implements ka complete budget, aur real profit calculation.',
+    seoTitle: 'Custom Hiring Centre 2026 — SMAM Subsidy Sach',
+    desc: 'CHC khol kar machinery rent se kamayein. SMAM subsidy ka sach (tractor par nahi milti), 1 tractor + 7 implements ka budget aur mahine ka profit hisaab.',
     ogTitle: 'Custom Hiring Centre 2026 Guide',
     keywords: [
       'custom hiring centre 2026',
@@ -925,7 +926,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'CHCPortal',
     category: 'agri-business',
     publishedTime: '2026-07-12T05:32:56+05:30',
-    modifiedTime: '2026-08-20T22:10:00+05:30',
+    modifiedTime: '2026-08-21T10:15:00+05:30',
     readingTime: 17,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('custom-hiring-centre-chc-portal'),
