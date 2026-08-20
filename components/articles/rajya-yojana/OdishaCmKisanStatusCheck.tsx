@@ -475,6 +475,19 @@ export default function OdishaCmKisanStatusCheck({
           pakda jaata hai aur dono ki file ruk jaati hai jab tak ek withdraw na ho.
         </p>
 
+        <h2>Aakhri Kist Kab Aayi Thi — Aur Agli Kab Aayegi?</h2>
+
+        <p>
+          Sabse taaza record: <strong>chauthi kist 20 April 2026 ko Akshaya Tritiya
+          (Krushak Divas)</strong> par release hui — Cuttack ke CRRI mein hue state-level
+          function se <strong>₹838 crore se zyada, 41.68 lakh</strong> beneficiaries ke
+          khaate mein ₹2,000 karke gaye. Inme 41,049 landless aur 3,292 tribal kisan
+          shamil the. Scheme ke pattern ke hisaab se agli kist{' '}
+          <strong>Nuakhai (August–September 2026)</strong> ke aas-paas expect ki ja sakti
+          hai — pichhle saal Nuakhai wali kist 27 August ko aayi thi. Pakki date sirf
+          state sarkar ke elaan se aati hai; portal par status check karte rahein.
+        </p>
+
         <h2>Kist Aayi Par Kam Lagi — Hisaab Kaise Milaayein</h2>
 
         <p>
