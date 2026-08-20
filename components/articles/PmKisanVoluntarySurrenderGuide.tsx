@@ -4,7 +4,7 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-20T17:46:17+05:30';
-const MODIFIED = '2026-08-18T19:30:00+05:30';
+const MODIFIED = '2026-08-20T18:30:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
@@ -36,6 +36,10 @@ const FAQS_DATA = [
   {
     q: 'Agar surrender kar liya toh wapas register kar sakte hain?',
     a: 'Surrender karne ke baad usi Aadhaar ya zameen par dobara register karna mushkil ho sakta hai aur portal par restriction lag sakti hai. Isliye soch samajh kar decision lein.',
+  },
+  {
+    q: 'Surrender aur refund me kya fark hai?',
+    a: 'Surrender aage ki kistein rokta hai, refund pichli li hui kistein wapas karta hai. Agar aap ineligible the aur pehle paisa le chuke ho, toh sirf surrender kaafi nahi — recovery ka sawaal phir bhi khada rahega. Aise case me refund ka rasta bhi portal se hi hai, aur jitni kistein chunoge utni hi lautti hain.',
   },
   {
     q: 'Surrender ke baad list se naam kab hatta hai?',
@@ -143,6 +147,10 @@ export default function PmKisanVoluntarySurrenderGuide() {
           <IB>
             <strong>Sabse Zaroori:</strong> Agar aap inme se kisi category mein aate hain, toh khud aage badh kar surrender kar do. Baad mein problem ho sakti hai.
           </IB>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
+            Ek aur case jo bahut aam hai: <strong>pati aur patni dono</strong> registered hain. Scheme me beneficiary "family" hai — pati, patni aur naabaalig bachche milkar ek unit, aur ek unit ko saal me ek hi grant milta hai. Zameen alag-alag khaton me ho tab bhi. Aise me ek ko surrender karna hoga, warna verification me duplicate pakda jata hai aur extra paisa recover hota hai. Poora niyam{' '}
+            <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega" className="underline text-green-700 dark:text-green-400">pati-patni rule article</Link> me hai.
+          </p>
         </section>
 
         <section className="mb-8">
@@ -367,6 +375,41 @@ export default function PmKisanVoluntarySurrenderGuide() {
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
             Isliye agar eligible nahi ho toh apni marzi se surrender kar do. <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">Master Guide 2026 wala article</Link> mein eligibility criteria check karo.
           </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Surrender, Refund Ya Aapatti — Teeno Alag Raaste Hain</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Log in teeno ko mila dete hain, aur wahi sabse badi galti hai. Teeno ka kaam alag hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            <strong>Surrender</strong> aage ki kistein rokta hai. Bas. Jo paisa pehle aa chuka hai, us par surrender ka koi asar nahi. <strong>Refund</strong> ulta kaam karta hai — pichli li hui kistein sarkar ko wapas karta hai. Aur <strong>aapatti (objection)</strong> tab hai jab aapko lagta hai ki aap eligible ho hi, aur notice ya entry galat hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ineligible aadmi ke liye poora safai ka rasta dono se milkar banta hai: surrender + refund. Sirf surrender karke baithe rahe toh pichle paise ka hisaab khula rehta hai, aur recovery notice baad me bhi aa sakta hai. Refund bhi portal se hi hota hai — jitni kistein chunoge utni hi lautti hain, yaani hisson me lautana technically possible hai. District recovery wale mamlon me shartein local prashasan tay karta hai; unse likhit me pooch lena sahi rehta hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ek aur baat jo kam log jaante hain: zyadatar mamle — galat entry ki aapatti, refund, record sudhaar — krishi vibhag ya tehsil ke level par hi nipat jaate hain, aur inki koi fees nahi lagti. Vakil ki zaroorat tabhi padti hai jab mamla bhu-rajasva vasooli ki kanooni karrawai tak pahunch jaye. Wahan tak jaane hi kyon dena?
+          </p>
+          <IB>
+            <strong>Dobara judne ka rasta band nahi hota:</strong> agar ineligibility ki wajah baad me khatam ho jaye — naukri chhoot gayi, ya record ki galti sudhar gayi — toh naye sire se aavedan ka rasta khula hai. Purana refund isme baadha nahi banta; saaf record ulta madad karta hai. Poori detail{' '}
+            <Link href="/articles/hi/recovery-notice" className="underline font-semibold">recovery notice guide</Link> me hai.
+          </IB>
+        </section>
+
+        <section className="mb-8">
+          <SH>Surrender Me Dikkat Aaye Toh Kahan Poochein?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Portal par Self Surrender ka page nahi khul raha? Aadhaar daalne par record nahi mil raha? Ya submit ke 30 din baad bhi list se naam nahi hata? Teen raaste hain, teeno official:
+          </p>
+          <ul className="space-y-2 mb-4 text-sm text-[var(--color-text-muted)]">
+            <li className="flex gap-2"><span className="text-green-700 shrink-0 font-bold" aria-hidden="true">1.</span> <span><strong>Helpline 155261</strong> — busy ho toh landline <strong>011-24300606</strong>. Timing aam taur par subah 9 se shaam 6, somvar se shanivar. Kist release wale hafte lines sabse zyada busy hoti hain — subah 9-10 baje ke beech lagao, load kam hota hai.</span></li>
+            <li className="flex gap-2"><span className="text-green-700 shrink-0 font-bold" aria-hidden="true">2.</span> <span><strong>Email</strong> — <strong>pmkisan-ict@gov.in</strong> par apna Aadhaar-linked registration number aur problem ek line me likh kar bhejo.</span></li>
+            <li className="flex gap-2"><span className="text-green-700 shrink-0 font-bold" aria-hidden="true">3.</span> <span><strong>Help Desk Query Form</strong> — pmkisan.gov.in ke Help Desk me online complaint daalo. Iska ticket number milta hai, jo phone call se zyada kaam ka hai — follow-up me yahi number kaam aata hai. Poori guide{' '}<Link href="/yojana/pm-kisan-helpline-155261" className="underline text-green-700 dark:text-green-400">helpline 155261 article</Link> me hai.</span></li>
+          </ul>
+          <WB>
+            <strong>Ek warning saaf-saaf:</strong> 155261 ya kisi bhi sarkari number se call karke koi OTP nahi poochta, bank detail confirm nahi karwata. "Surrender cancel karna hai toh OTP batao" type ka call aaye toh wo fraud hai — kaat do. Surrender ke naam par bhi thagi chalti hai.
+          </WB>
         </section>
 
         <section className="mb-8">

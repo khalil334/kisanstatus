@@ -4,7 +4,7 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-31T20:57:54+05:30';
-const MODIFIED = '2026-02-21T16:05:48+05:30';
+const MODIFIED = '2026-08-20T18:30:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
@@ -44,6 +44,10 @@ const FAQS_DATA = [
   {
     q: 'Agar CSC wale ne galat data daal diya toh?',
     a: 'Usi waqt screen par check karo, counter chhodne se pehle. Agar galti ho gayi hai, toh <Link href="/articles/PmKisanCorrectionForm2026" class="underline">correction form</Link> se fix karo ya naye center par dobara try karo.',
+  },
+  {
+    q: 'OTP nahi aa raha, phir bhi CSC jaana zaroori hai?',
+    a: 'Nahi. OTP na aane par bhi ek free rasta hai — PMKisan app ka Face Authentication. Official PMKisan app aur AadhaarFaceRD app (dono Play Store par sarkari publisher se) install karo, chehre se eKYC ho jati hai, na OTP chahiye na fingerprint. Ye bilkul free hai. CSC tab jao jab smartphone hi na ho.',
   },
   {
     q: 'Sarkari office mein PM Kisan ka kaam free hota hai?',
@@ -353,6 +357,45 @@ export default function PmKisanCscRegistrationCharges() {
               <strong> Free Ka Jugaad:</strong> Apne block ke Krishi Vigyan Kendra (KVK) ya Agriculture Office par puch lo ki koi free camp chal raha hai ya nahi. Gaon ke pradhan ko bhi pata hota hai.
             </p>
           </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>OTP Nahi Aa Raha? CSC Se Pehle Ye Free Rasta Try Karo</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Zyadatar log CSC isliye jaate hain kyunki Aadhaar wale number par OTP nahi aata — number band ho gaya, SIM kho gayi, ya Aadhaar me koi purana number juda hai. Par 2026 me iske liye paise kharch karna zaroori nahi. Sarkar ne <strong>Face Authentication eKYC</strong> ka rasta khol diya hai — chehre se verification, na OTP chahiye na fingerprint. Aur ye bilkul free hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Do apps chahiye, dono sarkari:
+          </p>
+          <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4">
+            <li><strong>PMKisan app</strong> — Play Store se, publisher "Government of India" check karke. Play Store par na mile toh pmkisan.gov.in se APK milta hai.</li>
+            <li><strong>AadhaarFaceRD</strong> — Play Store par isi naam se, publisher UIDAI. Install karke bhool jao — kholne ki zaroorat nahi, ye background service ki tarah kaam karti hai.</li>
+          </ul>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            PMKisan app kholo, home screen par "Face Authentication" ka option milega. Option na dikhe toh app update karo — purane version me ye feature nahi tha. Milte-julte naam ki third-party apps se door raho, wo data churati hain. Poori step-by-step guide aur error-fixing{' '}
+            <Link href="/articles/PmKisanFaceAuthenticationEkyc" className="underline text-green-700 dark:text-green-400">Face Auth eKYC article</Link> me hai.
+          </p>
+          <IB>
+            <strong>Seedha hisaab:</strong> smartphone hai + chehra hai = eKYC free. CSC ka ₹15-20 tabhi banta hai jab phone hi button wala ho, ya biometric fingerprint hi ekmatra rasta bacha ho.
+          </IB>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
+            Buzurg maa-baap ka eKYC karwana hai? Unke liye bhi pehle ghar par face auth try karo — aapke phone se ho jata hai, unka apna smartphone hona zaroori nahi. 60-65 saal ke kisan ke liye app-permission-scan ka jhanjhat aap sambhal lo, paise CSC ko dene ki naubat hi nahi aayegi. Face match na ho (photo bahut purani ho Aadhaar me) tabhi biometric fingerprint wala CSC rasta bachta hai — aur wahan bhi rate wahi ₹15-20 hai, ek rupya zyada nahi.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>CSC Ne Kaam Bigaad Diya? Complaint Ke Teen Official Raaste</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Upar csc.gov.in ke grievance form ka process diya hai — wo CSC operator ke against hai. Par agar problem PM Kisan record ki hai (CSC se karwaya kaam portal par dikh nahi raha, status atka hai), toh complaint PM Kisan ke channel par karni hai, CSC ke nahi. Teen raaste:
+          </p>
+          <ul className="space-y-2 mb-4 text-sm text-[var(--color-text-muted)]">
+            <li className="flex gap-2"><span className="text-green-700 shrink-0 font-bold" aria-hidden="true">1.</span> <span><strong>Helpline 155261</strong> — busy ho toh landline <strong>011-24300606</strong>. Timing aam taur par subah 9 se shaam 6, somvar se shanivar. Kist release wale hafte lines busy rehti hain, subah 9-10 baje try karo. Call se pehle transaction ID haath me rakho — wahi pehla sawaal hoga.</span></li>
+            <li className="flex gap-2"><span className="text-green-700 shrink-0 font-bold" aria-hidden="true">2.</span> <span><strong>Email</strong> — <strong>pmkisan-ict@gov.in</strong> par transaction ID, Aadhaar-linked registration number aur problem ek line me likho. Email ka fayda: sab kuch likhit me rehta hai, baad me "aapne bataya hi nahi" wala bahana nahi chalta.</span></li>
+            <li className="flex gap-2"><span className="text-green-700 shrink-0 font-bold" aria-hidden="true">3.</span> <span><strong>Help Desk Query Form</strong> — pmkisan.gov.in ke Help Desk me online query daalo. Ticket number milta hai jo phone call se zyada kaam ka hai. Detail{' '}<Link href="/yojana/pm-kisan-helpline-155261" className="underline text-green-700 dark:text-green-400">helpline guide</Link> me.</span></li>
+          </ul>
+          <WB>
+            <strong>Ek baat yaad rakho:</strong> 155261 ya kisi bhi sarkari number se call karke koi OTP nahi poochta, bank detail confirm nahi karwata. "CSC wale kaam ka refund chahiye toh OTP batao" — aisa call fraud hai, kaat do.
+          </WB>
         </section>
 
         <section className="mb-8">
