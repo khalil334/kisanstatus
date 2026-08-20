@@ -20,9 +20,9 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/namo-shetkari-yojana',
-    titleHi: 'नमो शेतकरी योजना — ₹12000 की किस्त कब और कैसे मिलेगी? जानिए',
-    seoTitleHi: 'नमो शेतकरी योजना — ₹12000 किस्त कब मिलेगी',
-    desc: 'नमो शेतकरी महासन्मान निधि से Maharashtra के किसानों को ₹12000 सालाना — namo shetkari yojana status check, पात्रता और किस्त न आए तो solution यहां देखें।',
+    titleHi: 'नमो शेतकरी किस्त कब आएगी? पैसे का पूरा हिसाब जानिए',
+    seoTitleHi: 'नमो शेतकरी किस्त कब आएगी — पैसे कब मिलेंगे',
+    desc: 'नमो शेतकरी के पैसे कब आएंगे? किस्त का schedule PM Kisan से अलग है — nsmny.mahait.org पर status देखने का तरीका और पैसा अटके तो 4 fix यहां जानिए।',
     keywords: ['नमो शेतकरी योजना', 'namo shetkari yojana status', 'namo shetkari mahasanman nidhi', 'नमो शेतकरी महासन्मान निधी', 'namo shetkari yojana beneficiary list', 'namo shetkari ke paise kab aayenge'],
     category: 'farming',
     publishedTime: '2026-07-05T18:35:14+05:30',

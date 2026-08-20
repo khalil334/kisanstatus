@@ -106,7 +106,7 @@ Har article ka: URL route, data file (jaha slug/meta hai), component file (jaha 
 | URL Route | Title | Language | Category | Component File | Published | Modified | Flags |
 |---|---|---|---|---|---|---|---|
 | `/articles/hi/mp-kisan-kalyan-yojana` | MP किसान कल्याण योजना — ₹12000 सालाना कैसे मिलेंगे? जानिए | Hindi (Devanagari) | farming | `components/articles/hindi-rajya-yojana/MukhyamantriKisanKalyanYojanaMp.tsx` | 2026-04-17 | 2026-04-22 | — |
-| `/articles/hi/namo-shetkari-yojana` | नमो शेतकरी योजना — ₹12000 की किस्त कब और कैसे मिलेगी? जानिए | Hindi (Devanagari) | farming | `components/articles/hindi-rajya-yojana/NamoShetkariYojanaMaharashtra.tsx` | 2026-07-05 | 2026-08-18 | — |
+| `/articles/hi/namo-shetkari-yojana` | नमो शेतकरी किस्त कब आएगी? पैसे का पूरा हिसाब जानिए | Hindi (Devanagari) | farming | `components/articles/hindi-rajya-yojana/NamoShetkariYojanaMaharashtra.tsx` | 2026-07-05 | 2026-08-18 | — |
 | `/articles/hi/rajasthan-kisan-samman-nidhi` | राजस्थान किसान सम्मान निधि — ₹9,000 का हिसाब और किस्त की स्थिति | Hindi (Devanagari) | farming | `components/articles/hindi-rajya-yojana/RajasthanKisanSammanNidhiHindi.tsx` | 2026-08-16 | 2026-08-16 | — |
 | `/articles/hi/annadata-sukhibhava-status` | अन्नदाता सुखीभव स्थिति — ₹20,000 और CCRC का पूरा हिसाब | Hindi (Devanagari) | status-check | `components/articles/hindi-rajya-yojana/AnnadataSukhibhavaStatusHindi.tsx` | 2026-08-16 | 2026-08-16 | — |
 | `/articles/hi/rythu-bharosa-status` | रायथु भरोसा स्थिति — बंधु से भरोसा तक, ₹12,000 प्रति एकड़ का हिसाब | Hindi (Devanagari) | status-check | `components/articles/hindi-rajya-yojana/RythuBharosaStatusHindi.tsx` | 2026-08-16 | 2026-08-20 | — |
@@ -393,7 +393,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 |---|---|---|---|
 | 1 | ✅ 2026-08-21 | `/articles/pm-kisan-fto-generated-ka-matlab-kya-hai` (2565 imp) | `/articles/hi/farmer-id-kaise-banaye` (2353 imp) |
 | 2 | ✅ 2026-08-21 | `/rajya-yojana/odisha-cm-kisan-status-check-2026` (1776 imp) | `/articles/NanoDap500mlPriceInIndia2026` (1764 imp) |
-| 3 | ⬜ | `/articles/hi/namo-shetkari-yojana` (1697 imp) | `/articles/hi/pm-kisan-25vi-kist` (1149 imp) |
+| 3 | ✅ 2026-08-20 | `/articles/hi/namo-shetkari-yojana` (1697 imp) | `/articles/hi/pm-kisan-25vi-kist` (1149 imp) |
 | 4 | ⬜ | `/articles/msp-list-2026-27` (1062 imp) | `/articles/hi/npci-aadhaar-seeding` (940 imp) |
 | 5 | ⬜ | `/rajya-yojana/mp-kisan-kalyan-yojana-kist-status` (913 imp) | `/articles/PmKisanLandSeedingForm` (757 imp) |
 | 6 | ⬜ | `/articles/hi/tractor-subsidy` (691 imp) | `/rajya-yojana/namo-shetkari-yojana-status-check-2026` (638 imp) |
