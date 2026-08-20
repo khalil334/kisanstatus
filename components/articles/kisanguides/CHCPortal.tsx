@@ -30,6 +30,14 @@ export const metadata: Metadata = {
 
 const FAQS_DATA = [
   {
+    q: 'Approval aane se pehle machine kharid lu to subsidy mil jayegi?',
+    a: 'Aam taur par nahi. Process ye hai ki pehle application aur verification hoti hai, approval aata hai, phir machinery khareed kar bill submit karte hain. Approval se pehle khareedi hui machine ka bill zyadatar states me claim nahi hota — aur tab poora paisa aapki jeb se jaata hai. Apne DAO se likhit me confirm karke hi order do.',
+  },
+  {
+    q: 'Tractor ke liye loan lu ya working capital ke liye KCC — dono me kya farak hai?',
+    a: 'Tractor ke liye term loan chahiye — bada amount, 3–7 saal ka tenure, ₹2 lakh se upar collateral bhi maanga jaa sakta hai. Diesel, driver salary aur spare parts jaise mahine ke kharche ke liye KCC sahi hai, kyunki wo revolving credit hai — jitna nikala utne din ka byaj, aur time par chukane par effective rate 4% ke aas-paas. CHC ke pehle saal me dono ka combination hi chalta hai.',
+  },
+  {
     q: 'Tractor par bhi subsidy milti hai ya sirf implements par?',
     a: 'Sirf implements par. Rotavator, Happy Seeder, Laser Leveler jaise tractor ke peeche lagne wale saaman par SMAM subsidy milti hai — tractor khud aapko apne paise ya bank loan se lena padta hai. Isi ek line ka fayda utha kar agent "paisa do, free tractor dilwa denge" wala jaal bichhate hain.',
   },
@@ -339,6 +347,79 @@ export default function CHCPortal() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Tractor Ka Paisa Kahan Se Aayega
+      </h2>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        SMAM ki subsidy implements par hai, tractor par nahi — ye baat upar likhi hai. To asli sawaal yahi bachta hai:
+        tractor ka ₹7.5–9 lakh kahan se aayega. Do rastey hain, aur dono ka apna hisaab hai.
+      </p>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Bank ka tractor loan lambi avadhi ka term loan hota hai — amount bada, tenure 3–7 saal, aur ₹2 lakh se upar
+        collateral maanga jaa sakta hai. Sarkari bank aur NBFC ke rate me acha khaasa farak hota hai, isliye do-teen
+        jagah se likhit rate lekar compare karo. CHC ke case me ek baat aapke paksh me hai: aapke paas kiraye ki
+        regular income ka plan hai, aur bank repayment capacity wahi dekhta hai. Rental rate wali table (upar) aur
+        monthly income-expense ka hisaab DPR me daalo — file ka weight badhta hai.
+      </p>
+      <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
+        <h3 className="font-bold text-red-800 dark:text-red-300 mb-2 text-sm">On-road cost — jo project cost me chhoot jaata hai</h3>
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
+          Dealer se hamesha <strong>on-road cost ka breakup</strong> likhit me lo. Ex-showroom ke upar ye kharche aate hain:
+          processing + stamp duty (loan ka 0.5–1% + ₹500–2,000 flat), RTO hypothecation ₹2,000–5,000, aur compulsory
+          insurance bundle ₹15,000–25,000 saalana. Inko loan amount me include karwane ki jaldi mat karo — warna byaj
+          par byaj bharoge.
+        </p>
+        <p className="text-sm text-gray-700 dark:text-gray-300">
+          Aur ek baat: 12 mahine ke andar poora chukane par 2–4% pre-closure penalty lag sakti hai, aur har EMI bounce
+          par ₹500–1,000. CHC ka cash flow lean season me girta hai, isliye EMI utni hi rakho jitni off-season me bhi
+          nikal jaaye. Poora rate aur hidden-cost breakup{' '}
+          <Link href="/articles/KisanTractorLoan2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">tractor
+          loan wali guide</Link> me hai.
+        </p>
+      </div>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        Doosra rasta — working capital ke liye <strong>KCC</strong>. Diesel, driver ki salary aur spare parts wale mahine
+        ke kharche ke liye term loan lena bekaar hai; KCC revolving credit hai, jitna nikala utne din ka byaj. Time par
+        chukane par effective rate 4% ke aas-paas rehta hai, aur Budget 2025-26 se interest subvention ki ceiling ₹3 lakh
+        se ₹5 lakh ho gayi hai. CHC ke pehle saal me yahi cheez sabse zyada kaam aati hai:{' '}
+        <Link href="/articles/KisanRinKahaSeLe2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">rin
+        kahan se le — poora comparison</Link>.
+      </p>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        DPR Aur Verification — Yahan File Girti Hai
+      </h2>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Application reject hone ki wajah aksar patrata nahi, kagaz hoti hai. Teen jagah sabse zyada galti hoti hai.
+      </p>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        <strong>Ek — quotation.</strong> Teen authorized dealers se rate quotation maanga jaata hai, aur dealer ka
+        <em> empaneled</em> hona zaroori hai. Non-empaneled dealer ka invoice file me lagane ka matlab hai poori
+        application dobara. Portal par dealer ka status pehle check karo, phir quotation lo.
+      </p>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        <strong>Do — DPR ke numbers believable hone chahiye.</strong> Officer roz aisi files dekhta hai. Rental rate
+        apne ilake ka likho, na ki internet se uthaya best-case; peak aur lean dono season ka hisaab dikhao; aur diesel,
+        driver salary aur maintenance ka kharcha kam mat dikhao. Kam kharcha dikhane se profit acha lagta hai par file
+        par bharosa nahi banta — yahi cheez sabse zyada reject karwati hai.
+      </p>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        <strong>Teen — category ka proof.</strong> Chhote/seemant kisan ko 50% aur usse bade ko 40% milta hai; ye 10% ka
+        farak sirf us kagaz par tay hota hai. Land record aur category certificate file ke saath hi lagao, baad me
+        maangne par mahine nikal jaate hain.
+      </p>
+      <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
+          <strong>Approval se pehle machinery mat kharido.</strong> Physical verification me officer aapki zameen aur
+          storage dekhne aata hai; usse pehle khareedi hui machine ka bill zyadatar states me claim nahi hota. Jaldi me
+          kharid liya to subsidy nahi, poora paisa aapka.
+        </p>
+        <p className="text-sm text-gray-700 dark:text-gray-300">
+          Har application, quotation aur letter ki copy apne paas rakho aur jama karte waqt <strong>receiving muhar</strong>
+          lagwao. DAC meeting me file aage badhi ya ruki — poochhne ka haq tabhi banta hai jab tareekh ka saboot ho.
+        </p>
+      </div>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Dheere-Dheere Scale Kaise Karein?
       </h2>
       <ul className="list-none space-y-4 mb-8 not-prose">
@@ -397,7 +478,7 @@ export default function CHCPortal() {
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Zaroori Suchna:</strong>
-          Yeh article sirf jankari aur guidance ke liye hai. Machinery ke daam, subsidy ke pratishat, aur sarkari rules samay-samay par badal sakte hain. Koi bhi paisa invest karne se pehle qualified professionals ya apne local Krishi Vibhag se consult karein. Last updated: July 2026.
+          Yeh article sirf jankari aur guidance ke liye hai. Machinery ke daam, subsidy ke pratishat, aur sarkari rules samay-samay par badal sakte hain. Koi bhi paisa invest karne se pehle qualified professionals ya apne local Krishi Vibhag se consult karein. Last updated: August 2026.
         </p>
       </div>
     </article>
