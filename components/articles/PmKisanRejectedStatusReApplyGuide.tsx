@@ -5,7 +5,7 @@ import OfficialLinkButton from '@/components/OfficialLinkButton';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-19T07:49:49+05:30';
-const MODIFIED = '2026-02-28T08:36:31+05:30';
+const MODIFIED = '2026-08-20T13:45:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
@@ -365,7 +365,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
             <SI n={4}>Agar sab sahi hai, toh status "Active" dikhne lagega.</SI>
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Agar 30 din baad bhi status active na ho, toh samajh jao file kahin atki hai. Ab time aa gaya hai ki aap <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">apne state ke nodal officer</Link> ko email karo ya physical complaint do.
+            Agar 30 din baad bhi status active na ho, toh samajh jao file kahin atki hai. Pehla kadam: helpline <strong>155261</strong> (busy ho toh <strong>011-24300606</strong>) par call karo — call se pehle registration number, Aadhaar aur correction ki date ek kagaz par likh lo, aur operator se complaint ka reference number zaroor le lo. Wahan se baat na bane toh <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">apne state ke nodal officer</Link> ko email karo ya physical complaint do — email mein wahi reference number quote karna, file wahi se track hoti hai.
           </p>
         </section>
 
