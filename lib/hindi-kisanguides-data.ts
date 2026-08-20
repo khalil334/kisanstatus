@@ -9,7 +9,7 @@ export const HINDI_KISANGUIDES_ARTICLES: readonly HindiArticle[] = [
     slug: 'hi/tractor-subsidy',
     titleHi: 'ट्रैक्टर सब्सिडी 2027 — किस राज्य में कितनी छूट? पूरी लिस्ट',
     seoTitleHi: 'ट्रैक्टर सब्सिडी 2027 — राज्यवार लिस्ट',
-    desc: 'ट्रैक्टर सब्सिडी 2027 में 50% तक छूट पाएं — UP, बिहार, MP, राजस्थान और हरियाणा की राज्यवार subsidy list, पात्रता शर्तें और online आवेदन का पूरा तरीका जानिए।',
+    desc: 'ट्रैक्टर सब्सिडी 2027 में 50% तक छूट — UP, बिहार, MP, राजस्थान और हरियाणा की राज्यवार subsidy list, पात्रता शर्तें और online आवेदन का पूरा तरीका जानिए।',
     keywords: ['ट्रैक्टर सब्सिडी 2027', 'tractor subsidy state wise'],
     category: 'agri-business',
     publishedTime: '2026-03-31T08:31:21+05:30',

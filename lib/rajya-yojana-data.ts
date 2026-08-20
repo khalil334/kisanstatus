@@ -113,9 +113,9 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'pm kisan aaya namo shetkari nahi aaya',
       'नमो शेतकरी महासन्मान निधी',
     ],
-    title: 'Namo Shetkari Status 2026 — Beneficiary List',
+    title: 'Namo Shetkari Beneficiary List 2026 PDF: Status Check',
     description:
-      'PM Kisan ka paisa aa gaya par Namo Shetkari ka hapta nahi? Maharashtra ki beneficiary list mein naam check karein, aur ye samjhein ki dono alag kyun aate hain.',
+      'PM Kisan aa gaya par Namo Shetkari ka hapta nahi? Maharashtra ki beneficiary list PDF mein naam check karein aur dono ke alag aane ki wajah samjhein.',
     ogTitle: 'Namo Shetkari Yojana — Status Aur Hapta Check',
     component: 'NamoShetkariYojanaStatus',
     state: 'Maharashtra',
