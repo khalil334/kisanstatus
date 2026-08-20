@@ -89,7 +89,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         <strong>CM Kisan Kalyan Yojana kist kab aayegi</strong> — MP ke kisan yahi poochhte
         hain. Aur jawab dene wali aadhi websites? Afwaah chhaap deti hain. Amount par bhi
         wahi haal: kahin purana ₹4,000 likha hai, kahin ₹2,000 ki ek kist ko hi saal ka
-        total bata diya jaata hai. Pareshan kisan aur confuse ho jaata hai.
+        total bata diya jaata hai. Padhne wala aur confuse ho jaata hai.
       </p>
 
       <p>
@@ -134,7 +134,7 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
 
       <p>
         Seedha hisaab ye hai: PM Kisan ke ₹6,000 ke upar state ka{' '}
-        <strong>₹6,000 saalana</strong>, teen kiston mein. Yaani MP ke eligible kisan ko
+        <strong>₹6,000 saalana</strong>, teen kiston mein. Yaani MP ke eligible labharthi ko
         milaakar <strong>₹12,000 saalana</strong>. Aapke apne account ka sach jaanna ho toh
         passbook aur SAARA dashboard, bas yahi do jagah dekhein.
       </p>
