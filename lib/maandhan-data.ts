@@ -138,7 +138,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     description: 'PM-KMY mein 18–40 saal har umar ka exact monthly contribution, government co-contribution aur pension rules — official sources se verified.',
     category: 'pension-scheme',
     published: '2026-05-22T17:41:10+05:30',
-    modified: '2026-05-31T07:51:01+05:30',
+    modified: '2026-08-20T21:30:00+05:30',
     readTime: '12 min read',
     image: '/images/articles/maandhan/MaandhanContributionGuide/hero.webp',
     ogImage: '/images/articles/maandhan/MaandhanContributionGuide/hero.webp',
