@@ -202,7 +202,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
     category: 'status-check',
     publishedTime: '2026-06-23T02:40:59+05:30',
-    modifiedTime: '2026-08-21T09:20:00+05:30',
+    modifiedTime: '2026-08-18T07:58:15+05:30',
     readingTime: 6,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('pm-kisan-fto-generated-ka-matlab-kya-hai'),
