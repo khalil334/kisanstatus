@@ -4,7 +4,7 @@ import SafeImageBase from '@/components/SafeImage';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-28T12:49:15+05:30';
-const MODIFIED = '2026-03-11T06:46:19+05:30';
+const MODIFIED = '2026-08-20T20:15:00+05:30';
 
 const FALLBACK_IMG = '/images/articles/pm-kisan-bank-account-change/bank-change-hero.webp';
 
@@ -50,6 +50,14 @@ const FAQS_DATA = [
   {
     q: 'Bank account change ke baad status kaise check karein?',
     a: '15 din baad pmkisan.gov.in par jaakar "Beneficiary Status" mein check karo. Wahan naya account number dikhna chahiye. Purana hi dikh raha ho toh matlab abhi update nahi hua.',
+  },
+  {
+    q: 'Pita ji guzar gaye, unka account link tha — ab kya karein?',
+    a: 'Sirf account change se kaam nahi banega — pehle CSC jaakar Succession Transfer karwana padta hai. Death certificate, Khatauni aur apna Aadhaar le jao. Transfer ke bina record purane naam par hi rahega aur account freeze rehta hai.',
+  },
+  {
+    q: 'Account update ke liye koi call par OTP maange toh?',
+    a: 'Kabhi mat dena. PM Kisan ki taraf se koi phone karke OTP ya account detail nahi maangta — bank detail update sirf CSC, bank branch ya BAO ke through hota hai. Aisi call aaye toh cyber crime helpline 1930 par report karo ya cybercrime.gov.in par shikayat darj karo.',
   },
 ];
 
@@ -366,6 +374,45 @@ export default function PmKisanBankAccountChangeProcess() {
               Matlab CSC wale ne update nahi kiya ya server par record chadha hi nahi. Dobara CSC jaao aur receipt dikhao. Ya <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">nodal officer</Link> ko email kar do.
             </p>
           </WB>
+        </section>
+
+        <section className="mb-8">
+          <SH>Khaate Ke Maalik Ka Dehant Ho Gaya — Ye Alag Rasta Hai</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ek situation aisi hai jahan upar ke teeno methods kaam nahi karte. Ghar ke bade-buzurg ke naam par
+            registration tha, unka dehant ho gaya — aur ab parivar sochta hai ki bas naya account daal denge.
+            Aisa nahi hota.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            PM Kisan ka paisa sirf usi ke account mein jaata hai jiska naam registration mein hai — aur guzre hue
+            vyakti ke record par kisi aur ka account chadhaya hi nahi ja sakta. Iske liye pehle CSC jaakar
+            <strong> Succession Transfer</strong> karwana padta hai: death certificate, Khatauni (jisme zameen ab
+            waris ke naam ho) aur waris ka Aadhaar. Zameen ka mutation pehle, PM Kisan ka record baad mein — ye
+            order ulta kiya toh file atkegi. Transfer poora hone ke baad hi naye beneficiary ka apna account link
+            hoga — tab wahi upar wala CSC process lagega.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Jab tak transfer nahi hota, purane record par aayi kist ko haath mat lagana — guzre hue beneficiary
+            ke naam par paisa lene par baad mein recovery notice aa sakta hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Update Ke Baad Bhi Paisa Nahi Aaya — Shikayat Kahan Karein?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Naya account portal par dikh raha hai, NPCI seeding bhi ho gayi, phir bhi do cycle nikal gaye?
+            Ab chakkar kaatne ki jagah shikayat ka seedha rasta pakdo:
+          </p>
+          <StepList>
+            <SI n={1}><strong>Helpline 155261 ya 011-24300606:</strong> call se pehle Aadhaar number, registration number aur naye account ki details saamne rakh lo — operator shuru mein yahi poochta hai. In par call free hai; koi aur number jo paise maange, wo fraud hai.</SI>
+            <SI n={2}><strong>pmkisan.gov.in ka Help Desk:</strong> portal ke Help Desk/Grievance section mein online ticket daal do. Complaint number likh kar rakho — agli baar isi se follow-up hoga.</SI>
+            <SI n={3}><strong>State Nodal Officer:</strong> helpline aur ticket dono se baat na bane toh apne rajya ke <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">nodal officer</Link> ko email karo — usme complaint number, tareekhein aur receipt ka zikr karo.</SI>
+          </StepList>
+          <DB>
+            <strong>Fraud Alert:</strong> Account update ke naam par koi phone karke OTP ya passbook detail
+            maange toh samajh jao fraud hai — ye kaam sirf CSC, bank branch ya BAO mein hota hai, phone par kabhi
+            nahi. Aisi call par cyber crime helpline <strong>1930</strong> ya cybercrime.gov.in par shikayat karo.
+          </DB>
         </section>
 
         <section className="mb-8">
