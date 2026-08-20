@@ -382,3 +382,79 @@ Ye sabse bada rule hai. 120 articles me se koi 2 bhi same structure ke nahi hong
 2. **🟡 Improve pages** — title/meta fix + content upgrade
 3. **🟢 OK pages with traffic** — content depth upgrade
 4. **Baaki articles** (100 se kam impressions) — content upgrade, freshness
+
+---
+
+# 🗂️ Upgrade Parts Plan — 2 Articles Per Part (60 Parts)
+
+Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade hone ke baad turant repo me push karo AUR is file me us part ke aage ⬜ → ✅ + date lagao. Order GSC impressions ke hisab se (zyada impressions = pehle). `0 imp` = GSC me abhi 100+ impressions nahi, phir bhi upgrade hona hai.
+
+| Part | Status | Article 1 | Article 2 |
+|---|---|---|---|
+| 1 | ⬜ | `/articles/pm-kisan-fto-generated-ka-matlab-kya-hai` (2565 imp) | `/articles/hi/farmer-id-kaise-banaye` (2353 imp) |
+| 2 | ⬜ | `/rajya-yojana/odisha-cm-kisan-status-check-2026` (1776 imp) | `/articles/NanoDap500mlPriceInIndia2026` (1764 imp) |
+| 3 | ⬜ | `/articles/hi/namo-shetkari-yojana` (1697 imp) | `/articles/hi/pm-kisan-25vi-kist` (1149 imp) |
+| 4 | ⬜ | `/articles/msp-list-2026-27` (1062 imp) | `/articles/hi/npci-aadhaar-seeding` (940 imp) |
+| 5 | ⬜ | `/rajya-yojana/mp-kisan-kalyan-yojana-kist-status` (913 imp) | `/articles/PmKisanLandSeedingForm` (757 imp) |
+| 6 | ⬜ | `/articles/hi/tractor-subsidy` (691 imp) | `/rajya-yojana/namo-shetkari-yojana-status-check-2026` (638 imp) |
+| 7 | ⬜ | `/articles/bihar-pashupalan-loan-yojana` (635 imp) | `/articles/PmfbyCropInsurance2026` (560 imp) |
+| 8 | ⬜ | `/articles/bakri-palan-yojana-nlm-subsidy` (493 imp) | `/articles/hi/mp-kisan-kalyan-yojana` (402 imp) |
+| 9 | ⬜ | `/articles/mushroom-kheti-nhb-subsidy` (378 imp) | `/articles/PmKisanStateNodalOfficerList` (329 imp) |
+| 10 | ⬜ | `/articles/custom-hiring-centre-chc-portal` (312 imp) | `/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein` (307 imp) |
+| 11 | ⬜ | `/rajya-yojana/annadata-sukhibhava-status-check-2026` (277 imp) | `/rajya-yojana/rajasthan-kisan-samman-nidhi-9000` (274 imp) |
+| 12 | ⬜ | `/articles/hi/kcc-limit-kaise-badhaye` (256 imp) | `/articles/mandi-bhav-app-comparison` (238 imp) |
+| 13 | ⬜ | `/articles/gehu-ka-bhav-msp-vs-mandi` (234 imp) | `/rajya-yojana/parihara-payment-status-check-2026` (214 imp) |
+| 14 | ⬜ | `/articles/hi/status-check-mobile-se` (206 imp) | `/rajya-yojana/rythu-bharosa-status-check-2026` (196 imp) |
+| 15 | ⬜ | `/articles/pm-matsya-sampada-yojana-fish-farming` (192 imp) | `/articles/AgriStackKyaHai2026` (191 imp) |
+| 16 | ⬜ | `/articles/murgi-palan-loan-nlm-subsidy` (191 imp) | `/articles/mandi-bhav-today` (176 imp) |
+| 17 | ⬜ | `/maandhan/pmkmy-bank-account-change` (168 imp) | `/rajya-yojana/krishak-bandhu-status-check-2026` (168 imp) |
+| 18 | ⬜ | `/articles/hi/nayi-registration` (156 imp) | `/articles/PmKisanPaymentFailedFix2026` (155 imp) |
+| 19 | ⬜ | `/rajya-yojana/state-kisan-yojana-list-all-states-2026` (155 imp) | `/articles/jansamarth-portal-loan-apply` (152 imp) |
+| 20 | ⬜ | `/articles/PmKisanBeneficiaryList2026` (140 imp) | `/articles/hi/recovery-notice` (137 imp) |
+| 21 | ⬜ | `/articles/PmKisanMasterGuide2026` (120 imp) | `/articles/dairy-farm-loan-without-collateral` (117 imp) |
+| 22 | ⬜ | `/maandhan/pm-kisan-maandhan-withdrawal-refund-rules` (113 imp) | `/articles/pm-kisan-self-registered-status-check` (107 imp) |
+| 23 | ⬜ | `/articles/madhumakhi-palan-kvic-subsidy` (103 imp) | `/rajya-yojana/bihar-kisan-registration-status-check-2026` (101 imp) |
+| 24 | ⬜ | `/articles/PmKisanCscRegistrationCharges` (99 imp) | `/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026` (95 imp) |
+| 25 | ⬜ | `/articles/PmKisan24viKist2026` (84 imp) | `/articles/hi/ekyc-mobile-se` (81 imp) |
+| 26 | ⬜ | `/rajya-yojana/krishak-unnati-yojana-status-check-2026` (77 imp) | `/maandhan/pmkmy-grievance-complaint-helpline` (76 imp) |
+| 27 | ⬜ | `/articles/silage-making-business-guide` (75 imp) | `/articles/enam-registration-kaise-kare` (75 imp) |
+| 28 | ⬜ | `/articles/PmKisanRejectedStatusReApplyGuide` (73 imp) | `/articles/KisanTractorLoan2026` (69 imp) |
+| 29 | ⬜ | `/articles/PmKisanCorrectionForm2026` (67 imp) | `/articles/rashtriya-gokul-mission-subsidy` (64 imp) |
+| 30 | ⬜ | `/articles/PmKisanBankAccountChangeProcess` (63 imp) | `/maandhan/pm-kisan-maandhan-pension-calculator` (63 imp) |
+| 31 | ⬜ | `/articles/soil-health-card-complete-guide-2026` (61 imp) | `/articles/PmKisan25viKist2027` (50 imp) |
+| 32 | ⬜ | `/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana` (47 imp) | `/articles/PmKisanVoluntarySurrenderGuide` (43 imp) |
+| 33 | ⬜ | `/articles/hi/gehu-ka-rate-aaj` (42 imp) | `/articles/sabzi-bhav-guide-pyaz-aloo-tamatar` (41 imp) |
+| 34 | ⬜ | `/articles/KisanRinKahaSeLe2026` (38 imp) | `/articles/sbi-dairy-loan-interest-rate` (37 imp) |
+| 35 | ⬜ | `/articles/PmKisanFaceAuthenticationEkyc` (36 imp) | `/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega` (36 imp) |
+| 36 | ⬜ | `/articles/gau-mutra-kharid-yojana-up-2026` (34 imp) | `/maandhan/pm-kisan-maandhan-eligibility-documents` (27 imp) |
+| 37 | ⬜ | `/articles/hi/namo-drone-didi-yojana` (26 imp) | `/articles/vermi-compost-business-guide` (22 imp) |
+| 38 | ⬜ | `/articles/pm-fme-yojana-food-processing` (18 imp) | `/articles/PmKusumYojanaSolarSubsidy2026` (16 imp) |
+| 39 | ⬜ | `/maandhan/pm-kisan-maandhan-auto-debit-poora-sach` (15 imp) | `/articles/PmKisanMaandhanYojanaPension` (12 imp) |
+| 40 | ⬜ | `/articles/namo-drone-didi-yojana-shg-selection` (12 imp) | `/maandhan/family-pension-rules` (11 imp) |
+| 41 | ⬜ | `/articles/drip-sprinkler-irrigation-subsidy` (1 imp) | `/articles/hi/gau-mutra-kharid-yojana` (1 imp) |
+| 42 | ⬜ | `/rajya-yojana/ikhedut-portal-status-check-2026` (1 imp) | `/articles/PmKisanEkycOnline2026` (0 imp) |
+| 43 | ⬜ | `/articles/KisanCreditCardOnlineApply2026` (0 imp) | `/articles/fto-status-check-paisa-kab-aayega` (0 imp) |
+| 44 | ⬜ | `/articles/PmKisan26viKist` (0 imp) | `/articles/PmKisanVillageWiseListPdfDownload` (0 imp) |
+| 45 | ⬜ | `/articles/PmKisanMobileNumberChangeUpdate` (0 imp) | `/articles/hi/payment-stopped-by-state` (0 imp) |
+| 46 | ⬜ | `/articles/hi/rajasthan-kisan-samman-nidhi` (0 imp) | `/articles/hi/annadata-sukhibhava-status` (0 imp) |
+| 47 | ⬜ | `/articles/hi/rythu-bharosa-status` (0 imp) | `/articles/hi/krishak-bandhu-status` (0 imp) |
+| 48 | ⬜ | `/articles/hi/odisha-cm-kisan-status` (0 imp) | `/articles/hi/pati-patni-pm-kisan-rule` (0 imp) |
+| 49 | ⬜ | `/articles/hi/state-kisan-yojana-list` (0 imp) | `/articles/hi/krishak-unnati-yojana-status` (0 imp) |
+| 50 | ⬜ | `/articles/hi/meri-fasal-mera-byora-status` (0 imp) | `/articles/hi/bihar-kisan-registration-status` (0 imp) |
+| 51 | ⬜ | `/articles/hi/parihara-payment-status` (0 imp) | `/articles/hi/up-kisan-karj-rahat-list` (0 imp) |
+| 52 | ⬜ | `/articles/hi/ikhedut-portal-status` (0 imp) | `/articles/hi/fasal-bima-claim-status` (0 imp) |
+| 53 | ⬜ | `/articles/hi/kisan-karj-mafi-list` (0 imp) | `/articles/hi/pm-kisan-khad-yojana-sach` (0 imp) |
+| 54 | ⬜ | `/articles/hi/pm-kisan-helpline-155261` (0 imp) | `/articles/hi/mgnrega-pashu-shed-yojana` (0 imp) |
+| 55 | ⬜ | `/articles/hi/pashu-kisan-credit-card` (0 imp) | `/maandhan/pm-kisan-maandhan-registration-2026` (0 imp) |
+| 56 | ⬜ | `/maandhan/pm-kisan-maandhan-status-check-online` (0 imp) | `/maandhan/pm-kisan-maandhan-pension-card-download` (0 imp) |
+| 57 | ⬜ | `/rajya-yojana/meri-fasal-mera-byora-status-check-2026` (0 imp) | `/rajya-yojana/up-kisan-karj-rahat-list-2026` (0 imp) |
+| 58 | ⬜ | `/yojana/fasal-bima-claim-status-check` (0 imp) | `/yojana/kisan-karj-mafi-list-all-states` (0 imp) |
+| 59 | ⬜ | `/yojana/pm-kisan-khad-yojana-11000-sach` (0 imp) | `/yojana/pm-kisan-helpline-155261` (0 imp) |
+| 60 | ⬜ | `/yojana/mgnrega-pashu-shed-yojana` (0 imp) | `/yojana/pashu-kisan-credit-card-apply` (0 imp) |
+
+**Workflow per part:**
+1. Dono articles ka GSC row dekho (upar wali table) + Master Prompt (Rule 0, Rule 1, sab) follow karo
+2. Dono articles ke component files (.tsx) + data files (title/meta) update karo
+3. Push karo — ek commit per part: `Part N: upgrade <article-1>, <article-2>`
+4. Is file me part ka status ⬜ → ✅ (date ke saath) karke push karo
+5. Agla part shuru karo — pichhle 5 upgraded articles se structure alag rakhna yaad rahe
