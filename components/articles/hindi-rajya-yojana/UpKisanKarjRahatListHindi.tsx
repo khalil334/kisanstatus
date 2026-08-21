@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
@@ -19,20 +20,8 @@ const FAQS = [
     a: 'पोर्टल पर शिकायत दर्ज करने का अलग हिस्सा है — "शिकायत दर्ज करें" से format भरकर collectorate के helpdesk या जिला कृषि अधिकारी के यहां जमा कीजिए और receiving कॉपी लीजिए। स्थिति "शिकायत की स्थिति जानें" से देखते रहिए। जांच बैंक और जिला समिति दोनों स्तर पर होती है, इसलिए हफ्तों का समय लगना आम बात है।',
   },
   {
-    q: 'माफी की रकम मेरे बचत खाते में कब आएगी?',
-    a: 'बचत खाते में कभी नहीं आएगी — यही सबसे बड़ी गलतफहमी है। सरकार रकम सीधे आपके लोन खाते में डालती है, यानी बैंक का बकाया उतना कम हो जाता है। हाथ में पैसा नहीं आता। लोन पूरा cover हो जाए तो बैंक से No Dues Certificate जरूर ले लीजिए।',
-  },
-  {
-    q: 'ट्रैक्टर लोन और गोल्ड लोन भी माफ होंगे क्या?',
-    a: 'नहीं। योजना सिर्फ फसली ऋण (crop loan) के लिए है — commercial बैंक, सहकारी बैंक या क्षेत्रीय ग्रामीण बैंक से लिया हुआ। ट्रैक्टर लोन, गोल्ड लोन, personal लोन, dairy लोन और microfinance/NBFC का कर्जा — सब दायरे से बाहर हैं।',
-  },
-  {
     q: 'नाम पहले लिस्ट में था, अब कट गया — ऐसा क्यों?',
     a: 'आम वजहें: लोन cut-off तारीख के बाद का निकला या renewal से नया खाता बन गया; जमीन का record 2 हेक्टेयर से ज्यादा दिखा (joint खाता भी गिनती में आता है); आधार और लोन खाते के नाम की स्पेलिंग नहीं मिली; या बैंक ने data गलत upload किया। आखिरी वाली गलती सिर्फ लिखित शिकायत से ठीक होती है — receiving कॉपी लेना मत भूलिए।',
-  },
-  {
-    q: 'क्या कर्ज माफी से PM-किसान की किस्त पर असर पड़ेगा?',
-    a: 'नहीं। कर्ज राहत UP सरकार की योजना है और PM-किसान केंद्र की — दोनों अलग-अलग चलती हैं। कर्ज माफ होने से किस्त न रुकती है न बढ़ती है। हां, नया KCC लेते समय बैंक NOC/No Dues Certificate मांगेगा — वह कागज संभालकर रखिए।',
   },
 ];
 
@@ -88,6 +77,21 @@ export default function UpKisanKarjRahatListHindi({ article }: { article: HindiA
         कि इस योजना के बारे में पूछने वालों में बड़ी संख्या उनकी है जिनका case शर्तों के
         हिसाब से बनता ही नहीं। वही कड़वा सच पहले।
       </p>
+
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/rajya-yojna/up-kisan-karj-rahat-list-2026/hero.webp"
+          alt="उत्तर प्रदेश का किसान KCC पासबुक के साथ लिस्ट देखता हुआ"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          ऋण मोचन योजना — 2017 की योजना, पुराने पात्र मामलों का निपटारा
+        </figcaption>
+      </figure>
 
       <H2>पहले खुद जांचिए — आपका case बनता है या नहीं</H2>
 
@@ -149,14 +153,6 @@ export default function UpKisanKarjRahatListHindi({ article }: { article: HindiA
         </li>
       </ol>
 
-      <p>
-        कर्ज खाता नंबर नहीं मिल रहा? तीन जगह देखिए — KCC पासबुक का पहला पन्ना,
-        sanction letter, या सहकारी ऋण है तो समिति का खाता register। कुछ न मिले तो
-        आधार लेकर बैंक ब्रांच जाइए, record से नंबर निकल जाता है। और नतीजे का
-        स्क्रीनशॉट तारीख के साथ जरूर ले लीजिए — बाद में बैंक या समिति में बात करनी
-        पड़े तो यही काम आता है।
-      </p>
-
       <H2>लोन खाता नंबर कहां से मिलेगा</H2>
 
       <p>
@@ -164,7 +160,8 @@ export default function UpKisanKarjRahatListHindi({ article }: { article: HindiA
         (KCC passbook के पहले पन्ने पर account number होता है), <strong>sanction letter</strong>{' '}
         (लोन pass होते समय बैंक ने दिया था), या <strong>समिति का खाता register</strong> (सहकारी
         लोन है तो)। कुछ न मिले तो आधार लेकर बैंक branch जाइए — वहां record से नंबर निकाल देते
-        हैं।
+        हैं। और नतीजे का स्क्रीनशॉट तारीख के साथ जरूर ले लीजिए — बाद में बैंक या समिति
+        में बात करनी पड़े तो यही काम आता है।
       </p>
 
       <H2>नाम है — तो ये तीन काम बाकी हैं</H2>
@@ -214,6 +211,21 @@ export default function UpKisanKarjRahatListHindi({ article }: { article: HindiA
         उसी समय <strong>1930 (cyber crime helpline)</strong> पर call कीजिए और अपने बैंक को भी
         खबर कीजिए — पहले घंटे में पैसा रुकने के chance सबसे ज्यादा होते हैं।
       </p>
+
+      <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+        <Image
+          src="/images/articles/rajya-yojna/up-kisan-karj-rahat-list-2026/fake-link-warning.webp"
+          alt="मोबाइल पर fake लिंक से सावधान रहने की चेतावनी"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          .gov.in नहीं तो सरकारी नहीं — इतना याद रखिए
+        </figcaption>
+      </figure>
 
       <H2>PM-किसान और KCC पर इसका क्या असर पड़ता है</H2>
 

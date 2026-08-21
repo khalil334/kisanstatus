@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
@@ -13,10 +14,6 @@ const FAQS = [
   {
     q: 'पोर्टल पर "No records found" आ रहा है — मेरी फसल तो सच में बर्बाद हुई थी।',
     a: 'इसका मतलब अक्सर यह है कि आपके खेत का नुकसान survey में दर्ज ही नहीं हुआ। village accountant (VA) से पूछिए कि आपके survey number की bele hani एंट्री बनी थी या नहीं। छूट गई हो तो VA के जरिए लिखित objection दीजिए और तहसीलदार कार्यालय से receiving कॉपी लीजिए — objection उसी सीजन के राउंड में उठाना होता है, साल भर बाद नहीं।',
-  },
-  {
-    q: 'स्टेटस "Released" दिखा रहा है पर दो हफ्ते से खाते में कुछ नहीं आया।',
-    a: 'DBT का पैसा खाता नंबर पर नहीं, आधार पर जाता है। आधार एक से ज्यादा खातों से जुड़ा हो तो पैसा वहां जाता है जहां NPCI मैपिंग सबसे आखिर में हुई — अक्सर वह कोई पुराना खाता निकलता है। बैंक से पूछिए कि DBT के लिए आपका आधार किस खाते से map है, और उस दूसरे खाते की पासबुक अपडेट करवाकर देखिए — पैसा वहीं मिलेगा।',
   },
   {
     q: 'रकम उम्मीद से कम आई है — बाकी कब आएगा?',
@@ -80,6 +77,21 @@ export default function PariharaPaymentStatusHindi({ article }: { article: Hindi
         चलता है। इसीलिए जब पैसा न आए, तो झगड़ा पोर्टल से नहीं, रिकॉर्ड से होता है।
       </p>
 
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/rajya-yojna/parihara-payment-status-check-2026/hero.webp"
+          alt="कर्नाटक का किसान खराब फसल के खेत में मोबाइल देखता हुआ"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          Parihara — आपदा घोषित होने के बाद survey से चलने वाला मुआवजा
+        </figcaption>
+      </figure>
+
       <H2>तरीका 1 — आधार नंबर से, सीधे मोबाइल पर</H2>
 
       <ol>
@@ -114,6 +126,21 @@ export default function PariharaPaymentStatusHindi({ article }: { article: Hindi
         ढूंढना आसान रहता है। मैंने खुद एक बार रिपोर्ट निकालकर देखी तो नाम की कन्नड़
         स्पेलिंग इतनी अलग थी कि survey number ही काम आया।
       </p>
+
+      <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+        <Image
+          src="/images/articles/rajya-yojna/parihara-payment-status-check-2026/village-wise-list.webp"
+          alt="गांव की Parihara सूची में अपना नाम ढूंढते किसान"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          village-wise रिपोर्ट — पूरे गांव का हिसाब एक साथ
+        </figcaption>
+      </figure>
 
       <H2>तीन पोर्टल घूमते हैं — किसका क्या काम है</H2>
 
