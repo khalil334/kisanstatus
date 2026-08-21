@@ -325,32 +325,8 @@ const FAQS_DATA = [
     a: 'Live feed subah 9 se shaam 6 ke beech chalta hai, kyunki zyadatar mandiyon mein arrival isi window mein record hoti hai. Subah 10-11 baje ka rate sabse reliable maana jaata hai — us waqt tak din ki pehli trading ho chuki hoti hai.',
   },
   {
-    q: 'Aloo ka aaj ka rate kya chal raha hai?',
-    a: 'Aaj ka number is page ke upar wale live card mein hi dekho — aloo ka rate har din badalta hai, isliye yahan koi fixed figure likhna galat hoga. Card mein apna state select karo, rate usi hisaab se adjust ho jaata hai. Jahan aloo local ugta hai (jaise UP, Bengal) wahan rate kam rehta hai; Kerala jaisi jagah jahan transport lamba hai, wahan upar chala jaata hai.',
-  },
-  {
-    q: 'Pyaaz mehnga kyun ho raha hai?',
-    a: 'Zyadatar do wajah hoti hain: pichli fasal kam hui ho, ya baarish ki wajah se stored pyaaz kharab ho gaya ho. Nashik jaisi supply-heavy mandiyon mein farak jaldi dikhta hai, chhote shehron tak pahunchte-pahunchte 1-2 hafte lag jaate hain.',
-  },
-  {
-    q: 'Tamatar sasta kab hoga?',
-    a: 'Garmi ke mahino mein crop kam hoti hai isliye rate upar rehta hai. September-October ke aas-paas naya stock aana shuru hota hai aur dhire-dhire rate niche aata hai — ekdum se drop nahi hota.',
-  },
-  {
-    q: 'State wise rate mein itna farak kyun hota hai?',
-    a: 'Transport cost, local demand aur us state mein us sabzi ki apni production — teeno mil kar rate tay karte hain. Jahan sabzi wahin ugti hai (jaise UP mein aloo), wahan rate kam rehta hai; jahan bahar se mangwani padti hai, wahan thoda zyada.',
-  },
-  {
     q: 'Yeh rate wholesale hai ya retail?',
     a: 'Wholesale — seedha mandi ka rate. Local sabzi wale ya rehdi tak pahunchte-pahunchte isme aam taur par 20-30% add ho jaata hai, kyunki unka transport aur margin bhi isi mein aata hai.',
-  },
-  {
-    q: 'Live wala green dot kab dikhta hai?',
-    a: 'Jab data.gov.in ki mandi API se fresh response mil jaata hai, tab green "Live" tag dikhta hai. Agar server slow ho ya koi row match na kare, page automatically last-known fallback rate dikhata hai — number gayab kabhi nahi hote.',
-  },
-  {
-    q: 'Mausam ka mandi bhav par kitna asar padta hai?',
-    a: 'Kaafi zyada. Barish se raste band ho sakte hain aur transport ruk jaata hai, jiski wajah se supply kam ho kar rate badha deti hai. Bahut garmi mein pattedar sabzi (palak, methi) jaldi kharab hoti hai, isliye unka rate bhi upar-neeche hota rehta hai.',
   },
   {
     q: 'Fasal bechne ka sahi time kaise tay karein?',
@@ -359,10 +335,6 @@ const FAQS_DATA = [
   {
     q: 'Data kahan se aata hai — bharosemand hai kya?',
     a: 'Source agmarknet.gov.in hai, jo Ministry of Agriculture ka apna portal hai. Har mandi apna arrival aur price data isi system mein daily feed karti hai, isliye base data sarkari hi hai.',
-  },
-  {
-    q: 'Kya displayed rate hamesha exact hota hai?',
-    a: 'Zyadatar cases mein haan, lekin mandi floor par thodi negotiation hoti hi hai, toh actual deal rate ₹1-2 idhar-udhar ho sakta hai. Ise ek reliable reference point samjho, final invoice nahi.',
   },
 ];
 

@@ -196,6 +196,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'murgi-palan-loan-nlm-subsidy',
     ogImage: '/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/murgi-farm.webp',
     title: 'Murgi Palan Loan 2026: NLM 50% Subsidy',
+    seoTitle: 'Murgi Palan Loan 2026: NLM Se 50% Subsidy',
     desc: 'NLM se poultry farm par 50% subsidy, ₹25 lakh tak — back-ended subsidy ka sach, layer vs broiler aur udyamimitra portal se apply ka process.',
     ogTitle: 'Murgi Palan Loan 2026 — NLM se 50% Subsidy',
     keywords: [
@@ -207,7 +208,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     component: 'MurgiPalanLoanNlmSubsidy',
     category: 'pashupalan',
     publishedTime: '2026-05-08T13:43:22+05:30',
-    modifiedTime: '2026-05-29T15:56:37+05:30',
+    modifiedTime: '2026-08-21T09:45:00+05:30',
     readingTime: 11,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('murgi-palan-loan-nlm-subsidy'),

@@ -336,7 +336,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'mandi-bhav-today',
     title: 'Aaj Ka Mandi Bhav: Daily Sabzi Rates',
-    seoTitle: 'Aaj Ka Mandi Bhav — Sabzi, Phal Ka Thok Rate',
+    seoTitle: 'Aaj Ka Mandi Bhav 2026 — Sabzi, Phal Thok Rate',
     desc: 'Aaj ka mandi bhav dekhein — apna state chunkar sabzi aur phal ka thok rate, saath 7 din ka mausam. Bechne se pehle rate check kar lein.',
     ogTitle: 'Aaj Ka Mandi Bhav — Live Rates',
     keywords: [
@@ -347,7 +347,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'mandi-bhav-today',
     category: 'mandi',
     publishedTime: '2026-06-30T04:10:46+05:30',
-    modifiedTime: '2026-08-18T19:30:00+05:30',
+    modifiedTime: '2026-08-21T09:45:00+05:30',
     readingTime: 5,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('mandi-bhav-today'),

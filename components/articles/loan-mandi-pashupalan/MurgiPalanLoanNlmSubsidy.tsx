@@ -24,28 +24,8 @@ const FAQS_DATA = [
     a: 'Individual (kisan ya berozgar yuva), SHG, FPO, FCO, JLG aur Section 8 companies — sab eligible hain. Shart yeh hai ki aapke paas training/anubhav ho (ya trained staff ho), project ke liye zameen ho (khud ki ya lease par), aur bank se loan sanction ho ya self-finance mein bank guarantee de sako.',
   },
   {
-    q: 'Kya desi murgi (backyard poultry) par bhi scheme hai?',
-    a: 'NLM-EDP ka focus rural poultry entrepreneurship par hai — hatchery, parent farm, brooder cum mother unit jaise structured projects. Chhote backyard units ke liye states ki apni schemes bhi hoti hain. Agar aap 100-200 murgi se shuru karna chahte ho, toh apne district ke pashupalan vibhag se state scheme puchho, aur bade unit ka plan ho toh NLM ka rasta lo.',
-  },
-  {
-    q: 'Layer aur broiler mein kya fark hai — kaunsa chunein?',
-    a: 'Layer farming ande ke liye hoti hai — income regular (roz ande bikte hain) lekin unit lagne ke baad production shuru hone mein time lagta hai. Broiler meat ke liye hota hai — cycle chhota (5-7 hafte), paisa jaldi ghoomta hai, lekin rate ka utar-chadhav zyada hai. Naye logon ke liye broiler se shuruaat aam taur par aasan maani jaati hai, par local demand dekh kar faisla karo.',
-  },
-  {
     q: 'Apply kahan hota hai?',
     a: 'NLM ke entrepreneurship projects ka application online hota hai — nlm.udyamimitra.in portal par. Wahan registration karke project details, documents aur bank ki jaankari bharni hoti hai. Application State Implementing Agency (SIA) ke through process hoti hai aur approval ke baad SIDBI ke through subsidy release hoti hai.',
-  },
-  {
-    q: 'Loan zaroori hai ya apne paise se bhi project laga sakte hain?',
-    a: 'Dono options hain. Bank/NCDC se sanctioned loan wala rasta aam hai. Self-finance karna ho toh scheduled bank se bank guarantee deni hoti hai. Kisi bhi case mein project ka non-subsidy hissa aapko hi arrange karna hai — subsidy baad mein aati hai.',
-  },
-  {
-    q: 'NLM subsidy ki installment kab-kab release hoti hai?',
-    a: 'Timeline project aur state par depend karti hai. Application approval, loan release aur SIA verification ke baad subsidy installments mein aati hai — pehli installment loan ki pehli release/project shuru hone par, baaki project poora hone ke verification par. Mahino ka process maan kar chalo aur beech ka cash flow apne plan mein rakho.',
-  },
-  {
-    q: 'Training certificate kahan se milega?',
-    a: 'Poultry training sarkari institutes (Central Poultry Development Organisations, KVK — Krishi Vigyan Kendra, state animal husbandry training centres) se hoti hai. Training sirf kagaz ke liye mat karo — bimari, feed ratio aur mortality control ki samajh hi is dhande mein bachne ki asli cheez hai.',
   },
   {
     q: 'Murgi farm mein sabse bada risk kya hai?',
@@ -71,7 +51,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
-            <span>Last Updated: 05/08/2026</span>
+            <span>Last Updated: 21/08/2026</span>
             <span>11 min read</span>
           </div>
         </div>
@@ -102,7 +82,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 05/08/2026</strong>
+          <strong>Last Updated: 21/08/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
