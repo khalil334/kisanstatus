@@ -120,7 +120,7 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
     keywords: ['payment stopped by state pm kisan', 'pm kisan payment stopped fix'],
     category: 'status-check',
     publishedTime: '2026-05-02T08:41:15+05:30',
-    modifiedTime: '2026-05-11T06:07:07+05:30',
+    modifiedTime: '2026-08-22T00:45:00+05:30',
     author: AUTHOR_NAME,
     component: 'PmKisanPaymentStoppedByStateFix',
     ogImage: '/images/articles/hindi-yojna/payment-stopped/stopped-status.webp',

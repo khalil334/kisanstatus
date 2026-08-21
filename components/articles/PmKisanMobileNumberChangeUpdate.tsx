@@ -6,7 +6,7 @@ import OfficialLinkButton from '@/components/OfficialLinkButton';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-22T13:03:46+05:30';
-const MODIFIED = '2026-03-03T10:37:18+05:30';
+const MODIFIED = '2026-08-22T00:30:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -37,27 +37,15 @@ const FAQS_DATA = [
     a: 'Haan, lekin sirf tab jab aapke paas purana SIM card active ho aur usme balance ho. System OTP purane number par hi bhejta hai. Agar SIM dead hai, toh ye "self-edit" option bilkul kaam nahi karega.',
   },
   {
-    q: 'Mobile update ka CSC rate card kahan laga hota hai?',
-    a: 'Fixed rakam batana galat hoga kyunki charge service aur state ke hisaab se alag hota hai — sahi jawab center par laga rate card hai, jo display karna CSC rules me zaroori hai. Kaam se pehle rate card dekho, kaam ke baad receipt lo (amount us par likha hota hai). Operator rate card se zyada maange to CSC ID note karke digitalseva portal par grievance daal do.',
-  },
-  {
     q: 'Mobile number change karne ke baad OTP aane mein kitna time lagta hai?',
     a: 'Iska koi official fixed time publish nahi hai. Database sync mein kuch din lag sakte hain — usi din check karne par purana number hi dikh sakta hai. Din-do-din ruk kar test karo; agar hafta nikal jaye aur naya number reflect na ho, to usi CSC par receipt leke wapas jao ya PM Kisan helpline par transaction ID ke saath baat karo.',
-  },
-  {
-    q: 'Registered mobile change karne se meri pm kisan kist rukegi?',
-    a: 'Bilkul nahi. Kist aapke linked bank account mein hi aayegi. Mobile number ka use sirf OTP receive karne aur SMS updates ke liye hota hai, paisa transfer karne ke liye nahi.',
-  },
-  {
-    q: 'Bank account ka mobile number aur PM Kisan ka mobile number ek hi hona zaroori hai?',
-    a: 'Nahi, dono alag-alag ho sakte hain. Lekin best practice yahi hai ki dono mein ek hi active number rakhein, taaki DBT (Direct Benefit Transfer) ya eKYC ke time koi confusion na ho.',
   },
   {
     q: 'Agar CSC wala galat number daal de toh kya hoga?',
     a: 'Submit hone se pehle screen par number khud padho — ye sabse sasta bachav hai. Receipt par bhi number check karo. Galti pakad mein aa jaye to usi visit mein correction karwao; baad mein pakdi to wahi correction process dobara karna padega aur tab tak OTP galat number par jaata rahega.',
   },
   {
-    q: 'Bhai, bete ya patni ka mobile number link ho sakta hai?',
+    q: 'Bete ya patni ka mobile number link ho sakta hai?',
     a: 'Haan, koi zaroorat nahi ki number aapke hi naam par ho. Bas wo number active hona chahiye, aapke paas hona chahiye, aur OTP receive kar sake. Beneficiary ka naam aur Aadhaar match hona chahiye, number ka nahi.',
   },
 ];
@@ -117,13 +105,13 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
         <section className="mb-8">
           <SH>Purana SIM Band, OTP Nahi Aa Raha — Ab Kya Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, ye kahani aaj kal har dusre kisan ki zubaan par hai. Pichle saal jo SIM card PM Kisan mein register kiya tha, wo ab band ho chuka hai, balance khatam ho gaya hai, ya phir SIM kho gaya. Ab naya number le liya hai, lekin PM Kisan portal par login karte hi OTP purane number par ja raha hai.
+            Ye kahani aaj kal har dusre kisan ki zubaan par hai. Pichle saal jo SIM card PM Kisan mein register kiya tha, wo ab band ho chuka hai, balance khatam ho gaya hai, ya phir SIM kho gaya. Ab naya number le liya hai, lekin PM Kisan portal par login karte hi OTP purane number par ja raha hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Bina OTP ke na <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">eKYC</Link> ho rahi hai, na status check ho raha hai, aur na hi koi update. Aisa lagta hai jaise sarkari daftar ke chakkar lagane padenge. Lekin ruko, bade chakkar nahi lagane padenge.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Neeche pura tarika likha hai ki <strong>pm kisan registered mobile number update</strong> kaise hota hai — online trap se kaise bachein, CSC par charge kaise confirm karein, aur update ke baad khud kaise check karein ki naya number sach mein system me chadh gaya.
+            Neeche pura tarika likha hai ki registered number update kaise hota hai — online trap se kaise bachein, CSC par charge kaise confirm karein, aur update ke baad khud kaise check karein ki naya number sach mein system me chadh gaya.
           </p>
 
           <Image
@@ -145,17 +133,17 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
         <section className="mb-8">
           <SH>Online Edit Option Kyun Kaam Nahi Kar Raha? (The Trap)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, sabse pehle ye baat dimaag mein baitha lo ki PM Kisan portal par "Edit Mobile Number" ka option toh hai. Lekin wo option ek hi shart par kaam karta hai — aapke paas wo <strong>purana SIM card physically aapke haath mein hona chahiye</strong> aur usme network aana chahiye.
+            Sabse pehle ye baat dimaag mein baitha lo ki portal par "Edit Mobile Number" ka option toh hai. Lekin wo option ek hi shart par kaam karta hai — aapke paas wo <strong>purana SIM card physically aapke haath mein hona chahiye</strong> aur usme network aana chahiye.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Jab aap portal par <strong>pm kisan mobile number change without old sim</strong> karne ki koshish karte ho, toh system OTP bhejta hai. Wo OTP kahan jata hai? Aapke purane registered number par. Agar wo SIM dead hai, toh OTP aayega kahan? Kahin nahi. Isliye online method fail ho jata hai aur aap time waste kar lete ho.
+            Jab aap portal par bina purane SIM ke number badalne ki koshish karte ho, toh system OTP bhejta hai. Wo OTP kahan jata hai? Aapke purane registered number par. Agar wo SIM dead hai, toh OTP aayega kahan? Kahin nahi. Isliye online method fail ho jata hai aur aap time waste kar lete ho.
           </p>
           <div className="bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-500 dark:border-amber-700 rounded-xl p-5 mb-6">
             <p className="text-sm font-black text-amber-800 dark:text-amber-300 mb-2">
                Self Service Portal Trap:
             </p>
             <p className="text-xs text-amber-800 dark:text-amber-300 mb-3">
-              Bahut sare YouTube videos mein bataya jata hai ki "Ghar baithe mobile number change karo". Bhai, wo videos tab kaam karti hain jab purana SIM aapke hath mein ho. Agar SIM dead hai, toh wo videos dekh kar time waste mat karo. Seedha CSC ya BAO jao.
+              Bahut sare YouTube videos mein bataya jata hai ki "Ghar baithe mobile number change karo". Wo videos tab kaam karti hain jab purana SIM aapke hath mein ho. Agar SIM dead hai, toh wo videos dekh kar time waste mat karo. Seedha CSC ya BAO jao.
             </p>
             <OfficialLinkButton
               title="PM Kisan Self Edit Portal"
@@ -179,7 +167,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
         <section className="mb-8">
           <SH>Method 1: CSC Center Se Karo (Sabse Fast Aur Aasan)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bhai, 90% logon ka kaam CSC (Common Service Center) se hi ban jata hai. Ye sabse fast aur reliable tarika hai. Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">Common Service Center (CSC)</Link> par chale jao.
+            Zyadatar logon ka kaam CSC (Common Service Center) se hi ban jata hai. Ye sabse fast aur reliable tarika hai. Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">Common Service Center (CSC)</Link> par chale jao.
           </p>
           <StepList>
             <SI n={1}>
@@ -417,7 +405,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
         <section className="mb-8">
           <SH>Update Hui Ya Nahi? Aise Check Karo</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, CSC se kaam karwane ke baad andhere mein teer mat chalao. Check karo ki number update hua ya nahi.
+            CSC se kaam karwane ke baad andhere mein teer mat chalao. Check karo ki number update hua ya nahi.
           </p>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
@@ -470,7 +458,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
         <section className="mb-8">
           <SH>Kya Mobile Number Change Karne Se Kist Rukegi?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ye sawal bahut logon ke mann mein aata hai. Bhai, ek baat clear kar lo — PM Kisan ka paisa mobile number par nahi aata. Paisa seedha aapke <strong>bank account</strong> mein aata hai.
+            Ye sawal bahut logon ke mann mein aata hai. Ek baat clear kar lo — paisa mobile number par nahi aata. Paisa seedha aapke <strong>bank account</strong> mein aata hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Mobile number sirf 2 kaam ke liye use hota hai:

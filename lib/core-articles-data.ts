@@ -749,7 +749,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanMobileNumberChangeUpdate',
     category: 'status-check',
     publishedTime: '2026-07-09T06:59:32+05:30',
-    modifiedTime: '2026-08-17T09:37:11+05:30',
+    modifiedTime: '2026-08-22T00:30:00+05:30',
     readingTime: 15,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisanMobileNumberChangeUpdate'),
