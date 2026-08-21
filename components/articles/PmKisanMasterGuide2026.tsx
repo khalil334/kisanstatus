@@ -6,7 +6,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-02T15:44:39+05:30';
-const MODIFIED = '2026-08-18T19:00:00+05:30';
+const MODIFIED = '2026-08-21T18:00:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
@@ -20,10 +20,6 @@ const RELATED = [
 
 const FAQS_DATA = [
   {
-    q: 'Mobile se PM Kisan mein registration kaise kar sakte hain?',
-    a: 'Dekho bhai, pehle pmkisan.gov.in kholo apne phone mein. Phir "New Farmer Registration" dhundo. Apna Aadhaar number daalo, OTP aayega usi number par - verify kar do. Ab personal details bharo - naam, mobile, gaon ka address. Zameen ki details mein Khasra number, kitna area hai, kaunsa gaon - ye sab type karo. Bank account number aur IFSC code daalna mat bhoolna. Documents upload karo - Aadhaar, Khatauni, Passbook ki photo. Submit karo aur reference number ka screenshot le lo. CSC center par bhi ho jata hai agar online mein dikkat aaye.'
-  },
-  {
     q: 'eKYC nahi karwai toh kya hoga mere saath?',
     a: 'Payment atak jayegi. 2023 se ye compulsory ho gaya hai. Agar aapne abhi tak nahi ki, toh jaldi karo. pmkisan.gov.in par jao, eKYC section mein, OTP verify karo. Bas 2 minute ka kaam hai. Agar mobile Aadhaar se linked nahi hai, toh CSC center jao - fingerprint scan hoga. Free hai ye process, koi paisa nahi lagta.'
   },
@@ -34,10 +30,6 @@ const FAQS_DATA = [
   {
     q: 'Naam correction karne ke baad payment kab aayegi?',
     a: 'Dekho, naam sudharne ke baad thoda time lagta hai - kareeb 15-20 din. System update hone mein itna time leta hai. Uske baad jo bhi installments pending hain, wo arrears ke roop mein ek saath mil jayenge. Reference number save rakhna - baad mein tracking ke kaam aata hai.'
-  },
-  {
-    q: 'Rejected list mein naam aa gaya, ab kya karu?',
-    a: 'Ghabrao mat. Pehle portal par reason dekho - kyun reject hua. Land record mein kuch dikkat hai? Khatauni update karwao. eKYC pending hai? Pehle wahi complete karo. Documents clear nahi the? Dobara clear scan upload karo. Fix karne ke baad dobara apply kar do. CSC center par jaake help le sakte ho - wo log manually check karke bata denge ki exactly kya problem hai.'
   },
   {
     q: 'Mobile number update karana free hai ya paisa lagta hai?',
@@ -65,7 +57,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Master Guide 2026</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan Complete Guide 2026: Registration Se Lekar Payment Tak — Har Problem Ka Solution Ek Jagah
+            PM Kisan Guide 2026: Registration, eKYC, Status Aur Payment Fix — Sab Ek Jagah
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
@@ -115,6 +107,34 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           <IB>
             <strong>Gaur Karein:</strong> Ye loan nahi hai bhai. Wapas nahi karna padega. Pure tarah free hai. Government ka gift hai kisanon ke liye.
           </IB>
+        </section>
+
+        <section className="mb-8">
+          <SH>Kaun Eligible NAHI Hai — Pehle Ye Dekh Lo</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Bahut log apply kar dete hain aur baad mein recovery notice aata hai. Scheme ke official guidelines mein ek exclusion list hai — in categories mein aate ho toh paisa milega hi nahi, aur galti se mil gaya toh wapas dena padega:
+          </p>
+          <ul className="space-y-2 mb-4">
+            {[
+              'Income tax bharne wale — pichhle assessment year mein tax file kiya hai toh out',
+              'Serving ya retired government employee (Group D / Class IV chhod kar)',
+              '\u20B910,000 ya usse zyada monthly pension pane wale retired log',
+              'Doctor, engineer, vakil, CA, architect — jo practice kar rahe hain',
+              'Constitutional post wale — current ya former MP, MLA, minister, mayor waghera',
+              'Institutional landholder — zameen kisi trust/company/sanstha ke naam ho',
+            ].map((item, i) => (
+              <li key={i} className="flex gap-2 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-xs text-[var(--color-text-muted)]">
+                <span className="text-red-600 dark:text-red-400 font-bold shrink-0">✗</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ek aur baat jo log miss karte hain — benefit <strong>parivar</strong> ke hisaab se milta hai, vyakti ke hisaab se nahi. Parivar matlab pati, patni aur nabalig bachche. Dono ke naam zameen hai tab bhi ghar mein ek hi member ko ₹6,000 milenge. Poora rule <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega" className="text-[var(--color-primary)] underline">pati-patni wale page</Link> par samjhaya hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Agar aap exclusion list mein aate ho aur kist aa chuki hai, toh khud se surrender karna sabse safe rasta hai — process <Link href="/articles/PmKisanVoluntarySurrenderGuide" className="text-[var(--color-primary)] underline">voluntary surrender guide</Link> mein hai. Notice aa jaye uske baad ka tarika <Link href="/articles/hi/recovery-notice" className="text-[var(--color-primary)] underline">recovery notice article</Link> mein alag se likha hai.
+          </p>
         </section>
 
         <section className="mb-8">

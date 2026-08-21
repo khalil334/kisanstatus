@@ -22,7 +22,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     component: 'DairyFarmLoanWithoutCollateral',
     category: 'loan',
     publishedTime: '2026-07-11T19:21:24+05:30',
-    modifiedTime: '2026-08-01T08:27:01+05:30',
+    modifiedTime: '2026-08-21T18:30:00+05:30',
     readingTime: 11,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('dairy-farm-loan-without-collateral'),

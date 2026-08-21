@@ -291,8 +291,8 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanMasterGuide2026',
-    title: 'PM Kisan Complete Guide 2026: All Fixes',
-    seoTitle: 'PM Kisan Complete Guide 2026 — Har Solution',
+    title: 'PM Kisan Guide 2026: Har Problem Ka Fix',
+    seoTitle: 'PM Kisan Guide 2026: eKYC, Status, Fix',
     desc: 'PM Kisan ka har problem ek jagah — status verify, eKYC process, payment fail fix aur beneficiary list check karne ka complete step-by-step guide.',
     ogTitle: 'PM Kisan Complete Guide — Sab Fix',
     keywords: [
@@ -303,7 +303,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanMasterGuide2026',
     category: 'status-check',
     publishedTime: '2026-07-05T02:01:06+05:30',
-    modifiedTime: '2026-08-18T19:00:00+05:30',
+    modifiedTime: '2026-08-21T18:00:00+05:30',
     readingTime: 15,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisanMasterGuide2026'),

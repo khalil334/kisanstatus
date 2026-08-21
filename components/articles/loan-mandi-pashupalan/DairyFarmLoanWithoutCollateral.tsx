@@ -24,32 +24,12 @@ const FAQS_DATA = [
     a: 'Government scheme mein koi official cut-off likha nahi hai, par branch practice mein 700 ke aas-paas ka score aasani se nikal jata hai. Asli dikkat score kam hone se zyada active default se hoti hai — purana loan NPA chal raha ho, ya kisi ka guarantor bane ho jiska loan bigad gaya ho, toh file wahin ruk jati hai. Apply se pehle free CIBIL report nikaal kar purane settled loans ka "closed" status check kar lena.',
   },
   {
-    q: 'Mudra, PMEGP aur CGTMSE — teeno ek saath le sakta hoon?',
-    a: 'Nahi. Ek hi project par Mudra aur PMEGP dono nahi milte, kyunki dono ka funding source alag hai aur double subsidy allowed nahi. CGTMSE alag cheez hai — woh loan nahi, guarantee hai, jo bank aapke normal term loan ke peeche laga deta hai. Practical combination: PMEGP (subsidy ke liye) ya Mudra (speed ke liye) + CGTMSE cover, aur uske saath working capital ke liye KCC.',
-  },
-  {
     q: 'Subsidy paisa kab aur kaise milta hai?',
     a: 'Zyada tar dairy subsidy back-ended hoti hai — pehle poora loan sanction hota hai, kharch hota hai, unit chalu hoti hai, phir subsidy ka amount aata hai. PMEGP mein margin money 3 saal ke lock-in ke saath ek alag account mein rakha jata hai; unit theek chali toh loan mein adjust ho jata hai. Matlab: subsidy se EMI kam hoti hai, upfront cash hath mein nahi aata.',
   },
   {
-    q: '2 gaay ke chhote unit ke liye kaunsa route sahi hai?',
-    a: 'Mudra Shishu ya Kishore. ₹50,000 tak Shishu, uske upar Kishore — dono mein documentation halka hai aur DPR bhi 2-3 page ka chal jata hai. Itne chhote unit ke liye PMEGP file banwana time waste hai, kyunki us process mein DPR, EDP training aur committee approval sab lagta hai.',
-  },
-  {
     q: 'NABARD DEDS band ho gayi hai kya?',
     a: 'DEDS ka structure abhi bhi documented hai — 25% general, 33.33% SC/ST back-ended subsidy — par iski funding saal-dar-saal intermittent rahi hai, aur kai branch officers batate hain ki naye application par subsidy sanction available nahi tha. Isliye DEDS ko plan ka base na banao. Apni district ke NABARD office ya financing bank se likhit confirm karo ki is saal window khuli hai ya nahi, phir aage badho.',
-  },
-  {
-    q: 'Loan ke liye kitni gaay ka project banwana chahiye?',
-    a: 'Woh aapke doodh bechne ke intezaam par depend karta hai, gaay ki ginti par nahi. Agar gaon mein cooperative ya dairy collection centre hai jo roz uthata hai, toh 8-10 pashu ka unit sambhal jata hai. Sirf local grahak par depend ho toh 4-5 se shuru karo — warna doodh bachega, khali paisa chara mein jayega. Bank bhi yahi dekhta hai ki milk kahan bikega.',
-  },
-  {
-    q: 'Dairy loan file reject hui — usi branch mein dobara lagana theek hai?',
-    a: 'Koi fixed waiting period nahi hai, lekin usi branch mein wahi file dobara daalna bekar hai. Pehle likhit reason lo — bank ko rejection ka reason batana padta hai. Aam wajahein: DPR mein doodh ka rate zyada dikha diya, chara ka kharcha kam dikha diya, ya repayment capacity match nahi hui. Numbers theek karke 1-2 mahine baad dobara file karo, chahe usi bank mein ya doosri branch mein.',
-  },
-  {
-    q: 'Interest subvention aur subsidy — dono ek hi cheez hai?',
-    a: 'Nahi. Subsidy project cost ka ek hissa maaf karti hai (jaise PMEGP margin money). Interest subvention loan ka amount kam nahi karti, sirf byaj ka bojh ghatati hai — AHIDF mein 3% tak interest subvention milta hai bade dairy processing projects par. Chhote farm ke liye subsidy zyada matter karti hai, bade processing unit ke liye subvention.',
   },
 ];
 
@@ -124,7 +104,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
-            <span>Last Updated: 05/08/2026</span>
+            <span>Last Updated: 21/08/2026</span>
             <span>11 min read</span>
           </div>
         </div>
@@ -154,7 +134,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 05/08/2026</strong>
+          <strong>Last Updated: 21/08/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -362,6 +342,12 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
 
         <SH>Paanch Pashu Ki Unit — DPR Mein Kya-Kya Jayega</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Pehle ek sawal khud se poocho — doodh bikega kahan? Unit ka size gaay ki ginti se nahi, bechne ke
+          intezaam se tay hota hai. Gaon mein cooperative ya collection centre roz uthata hai toh 8-10 pashu
+          ka unit sambhal jata hai; sirf local grahak ke bharose ho toh 4-5 se shuru karna samajhdari hai,
+          warna doodh bachega aur paisa chara mein jata rahega. Bank bhi DPR mein sabse pehle yahi dekhta hai.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Neeche jo structure hai woh samajhne ke liye hai, copy karne ke liye nahi — asli rate aapke ilaake,
           breed aur mistri ke bhav se tay honge. Maqsad itna hai ki pata rahe bank DPR kholte hi kin cheezon par
           nazar daalta hai.
@@ -543,6 +529,13 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           loan bigad gaya — dono cases file rok dete hain. Chauthi: subsidy ka galat samajh. Kai log yeh sochkar aate
           hain ki subsidy pehle cash milegi aur usse apna hissa bharenge. Aisa nahi hota, aur baat khul jane par
           margin money hi arrange nahi hoti.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Isi confusion ka ek bhai-bandh hai subvention. Subsidy project cost ka hissa maaf karti hai (jaise PMEGP
+          ki margin money), jabki interest subvention sirf byaj ka bojh ghatati hai — loan ka amount waisa hi
+          rehta hai. AHIDF jaise bade dairy processing projects mein 3% tak subvention milta hai, par chhote farm
+          ke liye subsidy hi asli farak dalti hai. Branch mein dono shabd sun kar ek samajh lena file ki planning
+          bigaad deta hai.
         </p>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
