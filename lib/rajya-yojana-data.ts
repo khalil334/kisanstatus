@@ -272,7 +272,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     officialPortal: 'https://khadya.cg.nic.in',
     status: 'live',
     published: '2026-07-07T14:52:37+05:30',
-    modified: '2026-07-16T14:14:52+05:30',
+    modified: '2026-08-21T20:35:00+05:30',
     readTime: '11 min read',
     ogImage: '/images/articles/rajya-yojna/krishak-unnati-yojana-status-check-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisan24viKist2026'],

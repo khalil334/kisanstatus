@@ -54,16 +54,8 @@ const FAQS_DATA = [
     a: 'Pehla kaam — apni samiti se kharidi ki entry confirm karein ki aapke naam par kitne quintal darj hue. Entry sahi hai to mamla bank side ka hai: account band, dormant, ya Aadhaar se link na hona payment lautne ki sabse aam wajahein hain. Kharidi ki entry hi galat ya adhoori hai, to sudhaar samiti aur khadya vibhag ke record se hi hoga — bank ke chakkar se kuch nahi milega.',
   },
   {
-    q: 'Kya bataidar ya adhiya par kheti karne wale ko bhi antar rashi milti hai?',
-    a: 'Payment usi kisan ko jaati hai jiske naam par dhan ki kharidi samiti mein darj hui hai. Registration zameen ke record se juda hota hai, isliye vyavhaar mein raqam usi ke khaate mein aati hai jiska naam kisan panjiyan mein hai. Adhiya ka aapsi hisaab kisan aur bataidar ke beech ka mamla rehta hai — scheme usme dakhal nahi deti.',
-  },
-  {
     q: 'Naye ₹15,000 prati acre wale faayde ka status alag se kahan dikhega?',
     a: 'Wo alag component hai — Kharif 2026 se dhan chhodkar doosri fasal (dalhan, tilhan, makka, kodo, kutki, ragi, kapas) lene par input sahayata milegi. Iska hisaab AgriStack registration aur digital crop survey se chalega, isliye pehla kadam apna farmer registration aur girdawari-jaisi fasal entry sahi karwana hai. Bina digital survey mein fasal darj hue claim banta hi nahi.',
-  },
-  {
-    q: 'Antar rashi par koi tax ya katauti hoti hai kya?',
-    a: 'Scheme ki taraf se koi katauti nahi hoti — jitni raqam banti hai utni hi DBT se khaate mein aati hai. Agar khaate mein kam raqam dikhe to wajah bank side ki ho sakti hai: minimum balance charge, loan ki EMI ka auto-debit, ya KCC ki vasooli. Passbook ki entry dhyan se padhein — scheme ka credit alag line mein dikhta hai.',
   },
   {
     q: 'Samiti wale kehte hain "record bhej diya", bank kehta hai "kuch nahi aaya" — kis par bharosa karein?',

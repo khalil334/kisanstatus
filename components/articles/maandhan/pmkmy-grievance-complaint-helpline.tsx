@@ -5,7 +5,7 @@ import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-05-11T20:55:01+05:30';
-const MODIFIED = '2026-05-25T09:56:39+05:30';
+const MODIFIED = '2026-08-21T20:40:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -42,20 +42,8 @@ const FAQS_DATA = [
     a: 'Official guidelines ke mutabiq, standard grievance ka resolution 15 se 30 working days ke andar hona chahiye. Simple queries (jaise status check) 3-7 din mein resolve ho jati hain, lekin payment issues ya account correction mein 15-20 din lag sakte hain.',
   },
   {
-    q: 'CSC operator ne galat details daal di hain, ab correction kaise karein?',
-    a: 'Sabse pehle usi CSC center par sampark karein jahan se enrollment karwayi thi. Agar wo cooperate nahi karte, to nazdeeki bank branch (jahan se auto-debit hota hai) mein likhit shikayat dein. Last option hai district nodal officer ko email karna.',
-  },
-  {
     q: 'Mere account se paisa kat raha hai lekin portal par "Inactive" kyun dikh raha hai?',
     a: 'Ye technical glitch ya NACH file mismatch ki wajah se hota hai. Bank se transaction proof (statement screenshot) lekar PMKMY portal par grievance file karein aur scpms@licindia.com par email karein. 7-10 working days mein update ho jayega.',
-  },
-  {
-    q: 'Call connect hi nahi ho rahi — shikayat ka doosra rasta kya hai?',
-    a: 'Call volume high hone ki wajah se kabhi-kabhi lines busy rehti hain. Subah 10:30 se 11:30 baje ke beech call karne ka try karein (jab lines kam busy hoti hain). Agar fir bhi na lage, to online grievance portal sabse behtar option hai.',
-  },
-  {
-    q: 'Complaint reference number kaise track karun?',
-    a: 'PMKMY portal par "Track Grievance" ya "Status Check" option mein apna Complaint Reference Number daalein. Real-time status dikh jayega — "Under Process", "Resolved", ya "Pending".',
   },
   {
     q: 'Auto-debit har mahine fail ho raha hai, permanent solution kya hai?',

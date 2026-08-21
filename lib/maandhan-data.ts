@@ -116,7 +116,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     description: 'PM Kisan Maandhan Yojana me shikayat kaise karein? Helpline numbers, online grievance process, CSC complaint, aur common problems ka practical solution.',
     category: 'pension-scheme',
     published: '2026-05-11T20:55:01+05:30',
-    modified: '2026-05-25T09:56:39+05:30',
+    modified: '2026-08-21T20:40:00+05:30',
     readTime: '12 min read',
     image: '/images/articles/maandhan/pmkmy-grievance-complaint-helpline/pmkmy-grievance-complaint-helpline-hero.webp',
     ogImage: '/images/articles/maandhan/pmkmy-grievance-complaint-helpline/pmkmy-grievance-complaint-helpline-hero.webp',
