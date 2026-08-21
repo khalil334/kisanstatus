@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
@@ -21,10 +22,6 @@ const FAQS = [
   {
     q: 'पत्नी विधवा है और जमीन उसके नाम है — क्या उसे अपना पीएम किसान मिलेगा?',
     a: 'हां। पति के न रहने पर वह अपने आप में एक परिवार इकाई है। जमीन का म्यूटेशन उसके नाम हो जाए, तो वह नई पंजीकरण करा सकती है। ध्यान रहे — दिवंगत पति के पुराने पंजीकरण पर पैसा लेते रहना गलत है; पहले वारिस के नाम रिकॉर्ड, फिर उसी नाम से नया आवेदन।',
-  },
-  {
-    q: 'रिकवरी नोटिस आ गया है — पैसा वापस कैसे करना होता है?',
-    a: 'पोर्टल पर रिफंड का अलग रास्ता है और राज्य का कृषि विभाग भी चालान/खाते का ब्यौरा देता है। नोटिस में लिखी रकम और तरीका पढ़िए, ब्लॉक कृषि कार्यालय में जाकर पावती के साथ जमा कीजिए। नोटिस को अनदेखा करना सबसे खराब विकल्प है — आगे की किस्तें तो रुकती ही हैं, वसूली की कार्रवाई अलग चलती है।',
   },
 ];
 
@@ -95,6 +92,21 @@ export default function PatiPatniPmKisanRuleHindi({ article }: { article: HindiA
         फॉर्म भर भी दिए। शुरू में दोनों खातों में दो-दो हजार आता भी रहा। पर पैसा आना
         पात्रता का सबूत नहीं। यह बात जितनी जल्दी समझ आ जाए, उतना नुकसान कम।
       </p>
+
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/rajya-yojna/pm-kisan-pati-patni-dono-ko-milega/hero.webp"
+          alt="किसान दंपति खेत में — पीएम किसान का एक-परिवार-एक-लाभ नियम"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          एक परिवार, एक लाभार्थी — यही योजना का लिखा हुआ नियम है
+        </figcaption>
+      </figure>
 
       <H2>नियम कहां लिखा है — अंदाजा नहीं, गाइडलाइन</H2>
 
@@ -178,6 +190,21 @@ export default function PatiPatniPmKisanRuleHindi({ article }: { article: HindiA
         इन चारों में फर्क सिर्फ दो चीजों का है — राजस्व रिकॉर्ड और परिवार की परिभाषा।
         बाकी सब (राशन कार्ड, अलग घर, कौन खेती करता है) योजना की नजर में शोर है।
       </p>
+
+      <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+        <Image
+          src="/images/articles/rajya-yojna/pm-kisan-pati-patni-dono-ko-milega/aadhaar-ekyc-couple.webp"
+          alt="आधार e-KYC — पति-पत्नी के रिकॉर्ड अब आपस में जुड़े हैं"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          आधार, बैंक और जमीन का रिकॉर्ड जुड़ते ही दोहरे दावे अपने-आप पकड़ में आते हैं
+        </figcaption>
+      </figure>
 
       <H2>पकड़ कैसे होती है — अब सब कुछ आपस में जुड़ा है</H2>
 

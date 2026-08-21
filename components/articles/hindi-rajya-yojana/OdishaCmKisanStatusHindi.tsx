@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
@@ -9,10 +10,6 @@ const FAQS = [
   {
     q: 'KALIA का मेरा पुराना रजिस्ट्रेशन था — पैसा अब भी मिलेगा या दोबारा फॉर्म भरना पड़ेगा?',
     a: 'पुराना रजिस्ट्रेशन बेकार नहीं हुआ। KALIA की जगह आई CM Kisan में लाभार्थी आधार दोबारा सत्यापित हुआ है — इसलिए कुछ पुराने नाम हटे और कुछ नए जुड़े। सबसे पहले cmkisan.odisha.gov.in पर आधार नंबर से अपनी स्थिति देखिए। नाम दिखे तो कुछ नहीं करना; न दिखे तो ब्लॉक कृषि कार्यालय में जाकर अपनी फाइल का रिमार्क पूछिए — वजह वहीं दर्ज होती है।',
-  },
-  {
-    q: 'KALIA के जमाने का कोई बकाया पैसा अटका था — वह अब मिलेगा?',
-    a: 'पुरानी योजना के लंबित मामले अपने-आप नई योजना में नहीं चलते। अगर आपका कोई सत्यापित बकाया था, तो उसकी लिखित शिकायत ब्लॉक कृषि कार्यालय में दीजिए और पावती लीजिए। नई किस्तें CM Kisan के नियमों से ही बनेंगी — पोर्टल पर आपकी वर्तमान स्थिति जो कहती है, वही आगे का आधार है।',
   },
   {
     q: 'PM Kisan मिल रहा है — क्या CM Kisan उसके ऊपर अलग से आएगा?',
@@ -86,6 +83,21 @@ export default function OdishaCmKisanStatusHindi({ article }: { article: HindiAr
         e-KYC। तीनों हरी हैं तो आपका काम खत्म; कोई एक अटकी है तो नीचे उसका इलाज लिखा है।
       </Note>
 
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/rajya-yojna/odisha-cm-kisan-status-check-2026/hero.webp"
+          alt="ओडिशा का किसान खेत में — CM Kisan योजना"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          CM Kisan — जमीन वाले को ₹4,000, भूमिहीन परिवार को ₹12,500 का अलग रास्ता
+        </figcaption>
+      </figure>
+
       <Hd>KALIA से CM Kisan — तीन लाइन में पूरा किस्सा</Hd>
 
       <p>
@@ -95,6 +107,21 @@ export default function OdishaCmKisanStatusHindi({ article }: { article: HindiAr
         सरकारी घोषणा का है)। पुराना रजिस्ट्रेशन बेकार नहीं हुआ, बस पोर्टल नया है और
         लाभार्थी सूची दोबारा जांची गई है। बस, इतना ही किस्सा है — आगे बढ़ते हैं।
       </p>
+
+      <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+        <Image
+          src="/images/articles/rajya-yojna/odisha-cm-kisan-status-check-2026/landless-family-odisha.webp"
+          alt="ओडिशा का भूमिहीन कृषि परिवार — बकरी पालन जैसे काम से जुड़ा"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          जमीन नहीं, फिर भी हक — भूमिहीन ट्रैक की तीन किस्तें
+        </figcaption>
+      </figure>
 
       <Hd>इस योजना की सबसे अलग बात — भूमिहीन को भी पैसा</Hd>
 
