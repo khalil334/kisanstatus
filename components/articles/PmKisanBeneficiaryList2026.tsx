@@ -14,7 +14,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
 const PUBLISHED = '2025-12-22T20:13:22+05:30';
-const MODIFIED = '2026-08-18T20:00:00+05:30';
+const MODIFIED = '2026-08-21T23:05:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanVillageWiseListPdfDownload', title: 'Village Wise List PDF' },
@@ -28,40 +28,12 @@ const FAQS_DATA = [
     a: 'Seedha pmkisan.gov.in par jao. Farmers Corner mein "Beneficiary Status" hoga. Wahan Aadhaar ki jagah apna registered mobile number daal do. OTP aayega, verify karo, aur status dikh jayega.',
   },
   {
-    q: 'Gaon ki poori list kaise dekhen?',
-    a: 'Dashboard option use karo portal par. State, District, Block, aur phir Village select kar lo. Poori list khul jayegi jise aap PDF mein save kar sakte hain.',
-  },
-  {
-    q: 'PDF mein PM Kisan list kaise download karein?',
-    a: 'Official portal par village list kholne ke baad browser ka Print option use karo (Ctrl+P) aur "Save as PDF" select karo. Ya neeche diye gaye state buttons par click karo.',
-  },
-  {
-    q: 'PM Kisan list mein naam nahi aaya — ab kya karun?',
-    a: 'Pehle check karo ki eKYC hui hai ya nahi. 60% cases mein yahi dikkat hoti hai. Agar eKYC done hai, toh land seeding pending ho sakta hai. Patwari se baat karo. 15-30 din mein naam aa jayega.',
-  },
-  {
     q: 'Registration ke baad list mein naam kitne din mein aata hai?',
     a: 'Registration aur verification complete hone ke baad aamtaur par 15 se 30 din lagte hain.',
   },
   {
-    q: 'Apne district ki beneficiary list download ho sakti hai?',
-    a: 'Haan bilkul! Har state/district/block/village ki list publicly available hai. Neeche diye gaye state buttons par click karo — 10 second baad official portal par PDF download ka option aa jayega.',
-  },
-  {
-    q: 'Village wise PM Kisan list 2026 kaise check karein?',
-    a: 'pmkisan.gov.in → Dashboard → State select karo → District → Block → Village. Poori list khul jayegi. Browser se PDF save kar sakte ho.',
-  },
-  {
     q: 'Beneficiary list mein caste ka mention hota hai kya?',
     a: 'Nahi, list mein sirf naam, father name, mobile number, aur bank details hote hain. Caste ka column nahi hota.',
-  },
-  {
-    q: 'Naam list mein hai par paisa nahi aaya — kya karun?',
-    a: 'List sirf ye batati hai ki aap registered aur active ho. Paisa uske aage rukta hai, aur wajah portal ke status message mein likhi hoti hai. "FTO is Generated" ho to payment approve hai, 3-7 din mein aa jayega. "Payment Failed" ho to bank/NPCI ka matter hai — account band, IFSC change ya galat account par mapping. "Payment Stopped by State" ho to land record ya duplicate entry ka matter hai, block krishi office jaana padega. Pehle message padho, phir usi ka fix karo.',
-  },
-  {
-    q: 'Ruki hui kist baad mein milti hai ya maaf ho jaati hai?',
-    a: 'Maaf nahi hoti. Wajah theek karne ke baad pending amount arrears ke roop mein baad mein credit ho jaata hai, agar us period mein aap eligible the. Isliye "ab to nikal gayi" sochkar chhodna nuksan hai.',
   },
   {
     q: 'Beneficiary list mein naam nahi mila — pehle eKYC dekhun ya land seeding?',
@@ -403,6 +375,59 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Step-by-step screenshots ke saath poora tarika alag page par hai: <Link href="/articles/PmKisanVillageWiseListPdfDownload" className="text-[var(--color-primary)] underline font-medium">village wise list PDF download guide</Link>. Naam list mein nahi mila to <Link href="/articles/PmKisanRejectedStatusReApplyGuide" className="text-[var(--color-primary)] underline">rejected status wala page</Link> dekho — wahan reason ke hisaab se fix likha hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Beneficiary List vs Know Your Status — Dono Ka Farak Samjho</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Portal par do alag cheezein hain aur log inhe mila dete hain. <strong>Beneficiary List</strong> gaon ke
+            hisaab se banti hai — usme sirf naam, registration number aur status dikhta hai. <strong>Know Your
+            Status</strong> aapka apna personal page hai — usme eKYC ka status, land seeding, Aadhaar bank seeding,
+            aur ab tak aayi har kist ki entry alag-alag dikhti hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Kaam ka rule ye hai: naam dhoondhna hai to list kholo, problem dhoondhni hai to Know Your Status kholo.
+            Kist ruki hai aur wajah nahi samajh aa rahi, to list mein sau baar naam dekhne se kuch nahi milega —
+            Know Your Status ke teen indicator (eKYC / land seeding / bank seeding) dekho, jo bhi “No” dikhe wahi
+            aapka kaam hai. Know Your Status ke liye registration number chahiye — nahi pata to usi page par
+            “Know Your Registration Number” se mobile/Aadhaar se nikal jata hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Naam Pehle Tha, Ab Kat Gaya — Deactivate Kyun Hota Hai</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ye case alag hai aur iska ilaaj bhi alag. Naya aavedan reject hona ek baat hai; chalta hua naam list se
+            hat jaana doosri. Naam deactivate hone ki teen badi wajah dekhi jaati hain — pehli, eKYC ya bank seeding
+            lambi time se pending thi aur state ne safai abhiyan mein naam rok diya. Doosri, land record ke naye
+            verification (AgriStack se milaan) mein zameen ka record match nahi hua. Teesri, income tax ya sarkari
+            naukri wala flag lag gaya — iske baad recovery notice bhi aa sakta hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Pehli wajah aapke haath mein hai — eKYC aur seeding poori karo, agli release mein naam wapas aa jata
+            hai. Doosri ke liye patwari/tehsil se record ka milaan karwana padega. Teesri galat lagi hai (aap tax
+            payer nahi ho, naam ka koi aur hai) to block krishi office mein documents ke saath appeal karo — phone
+            se ye kaam nahi hota, likhit mein do aur receiving lo.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Smartphone Nahi Hai? Teen Aur Raaste</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ghar mein internet nahi chalti to bhi naam check ho sakta hai. Pehla raasta — nazdeeki <strong>CSC
+            centre</strong>: operator Aadhaar number se status nikal dega, chhoti si fee lagti hai. Doosra —{' '}
+            <strong>helpline 155261</strong>: registration number ya Aadhaar batao, wahi se status bata dete hain
+            (line busy mile to subah 10 baje se pehle try karo). Teesra — gaon ke <strong>patwari ya krishi
+            sahayak</strong> ke paas bhi block-level list hoti hai, kist release ke time unse poochna sabse aasaan
+            hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Jis se bhi check karwao, ek cheez khud sambhal ke rakho — apna <strong>registration number</strong>.
+            Ye number ek baar mil gaya to aage har kaam (status, complaint, correction) usi se chalta hai, aur
+            kisi par nirbhar nahi rehna padta. Ek kagaz par number likh kar Aadhaar ke saath rakh lo, aur ghar ke
+            kisi padhe-likhe sadasya ke phone mein bhi note karwa do — kist ke time yahi chhoti si taiyari sabse
+            zyada kaam aati hai.
           </p>
         </section>
 

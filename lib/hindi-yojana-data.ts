@@ -133,7 +133,7 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
     keywords: ['pm kisan recovery notice', 'pm kisan paisa wapas kaise kare'],
     category: 'status-check',
     publishedTime: '2026-04-26T14:26:28+05:30',
-    modifiedTime: '2026-06-07T08:33:34+05:30',
+    modifiedTime: '2026-08-21T23:05:00+05:30',
     author: AUTHOR_NAME,
     component: 'PmKisanRecoveryNoticePaisaWapas',
     ogImage: '/images/articles/hindi-yojna/recovery-notice/notice-letter.webp',
