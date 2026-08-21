@@ -6,7 +6,7 @@ import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-05-22T17:41:10+05:30';
-const MODIFIED = '2026-08-20T21:30:00+05:30';
+const MODIFIED = '2026-08-21T19:45:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -49,10 +49,6 @@ const FAQS_DATA = [
   {
     q: 'Kaun log is scheme mein join nahi kar sakte?',
     a: '2 hectare se zyada zameen wale, jo pehle se NPS/EPFO/ESIC mein hain, income tax pay karne wale, sarkari naukri wale, PM-SYM/PM-LVM beneficiaries, aur registered professionals (doctor, engineer, CA, lawyer, architect) eligible nahi hain.',
-  },
-  {
-    q: 'KPAN card download kaise karte hain?',
-    a: 'pmkmy.gov.in par login karein, registered mobile number aur OTP daaliye. Dashboard par KPAN download ka option mil jayega. Enrollment ke 7-10 din baad SMS bhi aa jata hai KPAN ke saath.',
   },
 ];
 

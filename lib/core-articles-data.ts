@@ -649,7 +649,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanCscRegistrationCharges',
     category: 'status-check',
     publishedTime: '2026-07-09T06:41:01+05:30',
-    modifiedTime: '2026-08-18T05:24:41+05:30',
+    modifiedTime: '2026-08-21T19:40:00+05:30',
     readingTime: 14,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisanCscRegistrationCharges'),
