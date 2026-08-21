@@ -198,7 +198,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 | 44 | ✅ 2026-08-21 | `/articles/PmKisan26viKist` (0 imp) | `/articles/PmKisanVillageWiseListPdfDownload` (0 imp) |
 | 45 | ✅ 2026-08-21 | `/articles/PmKisanMobileNumberChangeUpdate` (0 imp) | `/articles/hi/payment-stopped-by-state` (0 imp) |
 | 46 | ✅ 2026-08-21 | `/articles/hi/rajasthan-kisan-samman-nidhi` (0 imp) | `/articles/hi/annadata-sukhibhava-status` (0 imp) |
-| 47 | ⬜ | `/articles/hi/rythu-bharosa-status` (0 imp) | `/articles/hi/krishak-bandhu-status` (0 imp) |
+| 47 | ✅ 2026-08-21 | `/articles/hi/rythu-bharosa-status` (0 imp) | `/articles/hi/krishak-bandhu-status` (0 imp) |
 | 48 | ⬜ | `/articles/hi/odisha-cm-kisan-status` (0 imp) | `/articles/hi/pati-patni-pm-kisan-rule` (0 imp) |
 | 49 | ⬜ | `/articles/hi/state-kisan-yojana-list` (0 imp) | `/articles/hi/krishak-unnati-yojana-status` (0 imp) |
 | 50 | ⬜ | `/articles/hi/meri-fasal-mera-byora-status` (0 imp) | `/articles/hi/bihar-kisan-registration-status` (0 imp) |

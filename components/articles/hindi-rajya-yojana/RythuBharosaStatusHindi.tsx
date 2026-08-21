@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import HindiRelatedFooter from '@/components/HindiRelatedFooter';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
@@ -77,6 +78,21 @@ export default function RythuBharosaStatusHindi({ article }: { article: HindiArt
         &ldquo;भाई, रायथु बंधु और रायथु भरोसा एक ही चीज है क्या?&rdquo; नहीं। बिल्कुल नहीं। और जब तक यह
         फर्क साफ न हो, स्थिति देखना भी उलझन ही बढ़ाता है। तो पहले यह गांठ खुलेगी। फिर पैसा। फिर पोर्टल।
       </p>
+
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/rajya-yojna/rythu-bharosa-status-check-2026/hero.webp"
+          alt="तेलंगाना का किसान खेत में — रायथु भरोसा योजना"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          बंधु से भरोसा तक — रकम बढ़ी, शर्तें भी बदलीं
+        </figcaption>
+      </figure>
 
       <Hd>रायथु बंधु बनाम रायथु भरोसा — असली फर्क</Hd>
       <p>
@@ -205,6 +221,21 @@ export default function RythuBharosaStatusHindi({ article }: { article: HindiArt
         <Link href="/articles/PmKisanBeneficiaryList2026">पीएम किसान की लाभार्थी सूची वाली गाइड</Link>{' '}
         में तस्वीरों के साथ समझाया है — ढांचा वहां का भी लगभग यही है।
       </p>
+
+      <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+        <Image
+          src="/images/articles/rajya-yojna/rythu-bharosa-status-check-2026/dharani-land-record.webp"
+          alt="भू भारती (पुराना धरणी) पोर्टल पर जमीन का रिकॉर्ड"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          भुगतान की सूची सीधे राजस्व रिकॉर्ड से बनती है — नामांतरण अटका तो पैसा भी अटका
+        </figcaption>
+      </figure>
 
       <Hd>चरण निकल गया, फिर भी खाता खाली — अब असली जांच</Hd>
       <p>यहां से मामला &ldquo;रुकिए&rdquo; से आगे बढ़कर &ldquo;कुछ ठीक कराइए&rdquo; पर आ जाता है।</p>

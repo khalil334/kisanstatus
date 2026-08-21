@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import HindiRelatedFooter from '@/components/HindiRelatedFooter';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
@@ -18,18 +19,6 @@ const FAQS = [
   {
     q: 'पोर्टल पर "Account Valid" लिखा है — मतलब पैसा आ गया?',
     a: 'नहीं। यह सबसे बड़ी गलतफहमी है। Account Valid का मतलब सिर्फ इतना है कि बैंक ने आपका नाम और खाता नंबर सही मान लिया है — पैसा अभी नहीं भेजा गया। पैसा जाने पर स्थिति "Amount Sent" या "Disbursed" दिखती है। Account Valid दिखे तो बैंक के चक्कर मत काटिए, अगली रिलीज का इंतजार कीजिए।',
-  },
-  {
-    q: 'बटाईदार (भागचाषी) हूं, जमीन मेरे नाम नहीं — रजिस्ट्रेशन हो सकता है?',
-    a: 'हो सकता है। पश्चिम बंगाल की इस योजना में भागचाषी भी शामिल हैं — उन्हें न्यूनतम ₹4,000 सालाना दो किस्तों में मिलता है। रजिस्ट्रेशन के लिए ब्लॉक कृषि कार्यालय या दुआरे सरकार शिविर में खेती के कब्जे से जुड़े कागज के साथ आवेदन करना होता है। सत्यापन गांव के स्तर पर होता है, इसलिए स्थानीय रिकॉर्ड में खेती दर्ज होना जरूरी है।',
-  },
-  {
-    q: 'गांव में सबके खाते में पैसा आ गया, मेरे में नहीं — क्या मेरा नाम कट गया?',
-    a: 'जरूरी नहीं। कृषक बंधु का पैसा पीएम किसान की तरह एक केंद्रीय स्विच से नहीं, जिला ट्रेजरी के रास्ते जाता है — राज्य रिलीज का आदेश देता है, फिर हर जिले की ट्रेजरी अपनी रफ्तार से फाइल निकालती है। इसीलिए एक जिले में आज पैसा दिखता है और पड़ोसी जिले में तीन दिन बाद। रिलीज की खबर के बाद पहले हफ्ते धैर्य रखिए; हफ्ता निकल जाए तो पोर्टल पर स्थिति देखिए — Amount Sent दिखे और खाते में न आए, तभी बैंक जाइए।',
-  },
-  {
-    q: 'जमीन खरीदी/विरासत में मिली है पर किस्त नहीं आ रही — क्या करूं?',
-    a: 'सबसे आम वजह यही है — खतियान में नामांतरण (mutation) नहीं हुआ। जमीन का कब्जा आपके पास हो, पर रिकॉर्ड में नाम पुराने मालिक का हो, तो योजना की नजर में मालिक आप नहीं हैं। यह पोर्टल पर कुछ भरने से ठीक नहीं होता — BL&LRO (भूमि रिकॉर्ड) कार्यालय में जाकर नामांतरण कराइए। रिकॉर्ड दुरुस्त होते ही अगले सत्यापन चक्र में नाम अपने आप लौट आता है।',
   },
   {
     q: 'किस्त कब-कब आती है?',
@@ -87,6 +76,21 @@ export default function KrishakBandhuStatusHindi({ article }: { article: HindiAr
         <strong>वोटर कार्ड</strong>, यानी EPIC नंबर। यही इस योजना की सबसे अलग बात है, और स्थिति देखते
         समय सबसे ज्यादा अटकने की जगह भी यही है। तो सीधे वहीं से शुरू करते हैं।
       </p>
+
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/rajya-yojna/krishak-bandhu-status-check-2026/hero.webp"
+          alt="पश्चिम बंगाल का किसान — कृषक बंधु योजना"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          कृषक बंधु — पहचान की चाबी वोटर कार्ड है, आधार नहीं
+        </figcaption>
+      </figure>
 
       <Hd>वोटर कार्ड से स्थिति — पांच कदम</Hd>
       <ol className="my-4 space-y-2 list-decimal pl-5 text-sm leading-relaxed">
@@ -180,6 +184,21 @@ export default function KrishakBandhuStatusHindi({ article }: { article: HindiAr
         acknowledgement), वारिस का पहचान पत्र और बैंक पासबुक। आवेदन ब्लॉक कृषि कार्यालय (ADA) में होता
         है और सत्यापन के बाद रकम सीधे वारिस के खाते में आती है।
       </Note>
+
+      <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+        <Image
+          src="/images/articles/rajya-yojna/krishak-bandhu-status-check-2026/epic-status-check-phone.webp"
+          alt="मोबाइल पर EPIC नंबर से कृषक बंधु की स्थिति देखता किसान"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          वोटर कार्ड सामने रखकर ही EPIC नंबर भरिए — O और 0 की गलती सबसे आम है
+        </figcaption>
+      </figure>
 
       <Hd>गांव की सूची में नाम — दो मिनट का टेस्ट</Hd>
       <p>
