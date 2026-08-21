@@ -370,7 +370,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanPaymentFailedFix2026',
     category: 'status-check',
     publishedTime: '2026-07-06T00:28:21+05:30',
-    modifiedTime: '2026-08-18T11:23:19+05:30',
+    modifiedTime: '2026-08-21T22:15:00+05:30',
     readingTime: 9,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisanPaymentFailedFix2026'),

@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-06T09:16:09+05:30';
-const MODIFIED = '2026-02-20T21:22:12+05:30';
+const MODIFIED = '2026-08-21T22:15:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -31,16 +31,8 @@ const FAQS_DATA = [
     a: 'Approved ka matlab sirf itna hai ki government ne aapka naam clear kar diya aur paisa release kar diya. Aage ka kaam bank ka hai. Zyadatar cases mein Aadhaar NPCI seeding missing hoti hai. Branch jao, "DBT seeding" karwao, 3-7 din wait karo.',
   },
   {
-    q: '"FTO Generated" likha hai status mein, iska matlab kya hai?',
-    a: 'FTO matlab Fund Transfer Order. Sarkar ne paisa bhejne ka order PFMS ke through bank ko de diya hai. Ye payment aane se pehle wali stage hai, abhi paisa credit nahi hua. 2-3 din mein "Payment Credited" dikhne lagega.',
-  },
-  {
     q: 'Kitne din mein payment fix hoti hai bank jaane ke baad?',
     a: 'Seeding jaisi chhoti cheez 3-7 din mein ho jaati hai. NPCI remapping ya name correction mein 10-15 din lag sakte hain. 20 din se zyada ho jaye toh PM Kisan helpline 155261 par call karein.',
-  },
-  {
-    q: 'Ruki hui kist ka paisa wapas milega ya gaya?',
-    a: 'Bilkul milega. PM Kisan scheme mein installment kabhi expire nahi hoti. Jis din problem fix hogi, saari pending arrears ek saath ya alag-alag transactions mein aa jaayengi.',
   },
   {
     q: 'IFSC code galat daal diya — ab pm kisan bank account change online kaise karein?',
@@ -53,14 +45,6 @@ const FAQS_DATA = [
   {
     q: 'Joint account mein payment fail ho rahi hai — kyun?',
     a: 'Scheme ka rule saaf hai — sirf "Individual Savings Account" accept hota hai. Joint, Current, ya Business account mein paisa nahi jaata. Naya individual account khulwa kar portal update karein.',
-  },
-  {
-    q: 'Status mein "Rejected by Bank" likha hai, ab kya karein?',
-    a: 'Bank ne transaction wapas bhej diya hai. Iski 3 mukhya wajah ho sakti hain: seeding missing, account dormant, ya account type galat. Branch jaakar "Rejection Reason" pooch kar aayein, unke system mein exact code dikhta hai.',
-  },
-  {
-    q: 'Helpline 155261 par baat nahi ho rahi — kya karun?',
-    a: 'Line busy milna aam baat hai. Agar phone se kaam na bane, toh email karein: pmkisan-ict@gov.in. Sabse zyada kaam likhit complaint (CSC ya CPGRAMS portal) se banta hai kyunki uska official trackable record ban jaata hai.',
   },
 ];
 
@@ -128,7 +112,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         <section className="mb-8">
           <SH>PM Kisan Payment Not Credited Kyun Hoti Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Portal khola, "Approved" bhi likha hai, lekin bank khaali. Ye situation har kist mein hazaron kisano ke saath hoti hai. Wajah almost hamesha ek hi hoti hai — bank account DBT (Direct Benefit Transfer) system se sahi tarike se juda nahi hai.
+            Portal khola, "Approved" bhi likha hai, lekin bank khaali. Ye situation har kist mein hazaron logon ke saath hoti hai. Wajah almost hamesha ek hi hoti hai — bank account DBT (Direct Benefit Transfer) system se sahi tarike se juda nahi hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Sarkar PFMS (Public Financial Management System) ke zariye paisa bhejti hai. PFMS ko teen cheezein bilkul 100% sahi chahiye — valid bank account number, sahi IFSC code, aur Aadhaar link (NPCI seeding). Ek bhi cheez galat hui nahi ki transaction wahin ruk jaata hai, aur status mein "failed" ya "rejected" jaisa message aa jaata hai. Waise ye seeding wali dikkat sirf PM Kisan ki nahi hai —{' '}
@@ -136,7 +120,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             bhi isi wajah se atakta hai, kyunki wahan bhi paisa DBT se hi aata hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            <strong>Low-Competition Tip:</strong> Bahut se log sirf "pm kisan payment failed" search karte hain, lekin asli solution <strong>"pfms kisan payment status check"</strong> karne mein chhupa hai. Hum aage iska tarika bhi batayenge.
+            Ek kaam ki baat — jab portal par kuch samajh na aaye, toh seedha PFMS par dekhna sabse bharosemand tarika hai ki paisa bank tak pahuncha ya nahi. Iska tarika aage detail mein diya hai.
           </p>
         </section>
 
@@ -190,9 +174,9 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         </section>
 
         <section className="mb-8">
-          <SH>Reason #1: Aadhaar Seeding Nahi Hui (Sabse Bada KARAN)</SH>
+          <SH>Reason #1: Aadhaar Seeding Nahi Hui (Sabse Aam Wajah)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Sabse zyada cases isi wajah se atakte hain. Yaad rakhna — Aadhaar link hona aur Aadhaar seed hona do alag cheezein hain. Bahut se kisan yehi confuse ho jaate hain.
+            Sabse zyada cases isi wajah se atakte hain. Yaad rakhna — Aadhaar link hona aur Aadhaar seed hona do alag cheezein hain. Bahut se kisan bhai yehi confuse ho jaate hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             "Link" ka matlab bas itna hai ki UIDAI ke database mein connection ban gaya. Lekin "Seeding" — wo hoti hai NPCI (National Payments Corporation of India) ke mapper mein, jahan aapka Aadhaar us particular bank account se pakka jud jaata hai payment ke liye. Bank waale kabhi kabhi bol dete hain "ho gaya link" par asal mein DBT seeding nahi karte. Isliye jab branch jao, saaf-saaf bolo — <strong>"DBT ke liye Aadhaar NPCI seeding karni hai."</strong>
@@ -358,6 +342,19 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Maan lo teen kistein fail hui thi — toh fix hone ke baad teeno ka paisa ek saath aa sakta hai, ya kabhi kabhi alag-alag transaction mein bhi aata hai. Agar ek kist aayi aur baaki nahi aayi, ghabrao mat, kuch din aur ruk jaao.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Passbook Mein Arrears Kaise Dikhte Hain — Pehchanna Seekho</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Problem fix hone ke baad jab atki hui rakam aati hai, toh passbook entry dekh kar log phir confuse ho jaate hain. Do baatein yaad rakho. Pehli — arrears ki entry bhi wahi “PMKISAN” ya DBT credit ke naam se aati hai, koi alag label nahi hota. Doosri — do kist ek saath aayi toh kabhi ₹4,000 ki ek entry dikhegi, kabhi ₹2,000 ki do alag entries alag tarikhon par. Dono normal hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ek galti se bachna — SMS ka intezaar mat karo. Bahut baar paisa aa jaata hai aur SMS aata hi nahi, kyunki bank ka SMS alert band hai ya number purana hai. Mahine mein ek baar passbook update karwa lo ya bank ke app mein statement dekh lo. Jinke paas smartphone nahi, wo missed-call banking (har bank ka apna number, passbook par likha hota hai) se balance jaan sakte hain.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Aur haan — gaon mein koi kahe ki “arrears nikalwane ke liye form bharna padta hai aur uski fees lagti hai”, toh saaf mana kar do. Atki rakam apne aap release hoti hai, iske liye na koi alag application hai, na koi charge. Jo aisa bole wo aapki jeb ka raasta dhundh raha hai.
           </p>
         </section>
 

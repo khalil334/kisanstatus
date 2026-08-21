@@ -59,7 +59,7 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
     keywords: ['पीएम किसान नई रजिस्ट्रेशन', 'pm kisan new registration 2027'],
     category: 'status-check',
     publishedTime: '2026-04-19T18:42:50+05:30',
-    modifiedTime: '2026-04-24T08:39:57+05:30',
+    modifiedTime: '2026-08-21T22:15:00+05:30',
     author: AUTHOR_NAME,
     component: 'PmKisanNewRegistration2027',
     ogImage: '/images/articles/hindi-yojna/new-registration/docs-ready.webp',
