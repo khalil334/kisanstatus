@@ -82,7 +82,8 @@ const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   inLanguage: 'hi-IN',
-  mainEntity: MYTHS.map(({ myth, sach }) => ({
+  // FAQ schema capped at 5 questions (site AEO standard); body still shows every myth.
+  mainEntity: MYTHS.slice(0, 5).map(({ myth, sach }) => ({
     '@type': 'Question',
     name: `Kya ye sach hai — ${myth}`,
     acceptedAnswer: { '@type': 'Answer', text: sach },

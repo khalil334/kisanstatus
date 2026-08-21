@@ -174,7 +174,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 | 20 | ✅ 2026-08-21 | `/articles/PmKisanBeneficiaryList2026` (140 imp) | `/articles/hi/recovery-notice` (137 imp) |
 | 21 | ✅ 2026-08-21 | `/articles/PmKisanMasterGuide2026` (120 imp) | `/articles/dairy-farm-loan-without-collateral` (117 imp) |
 | 22 | ✅ 2026-08-21 | `/maandhan/pm-kisan-maandhan-withdrawal-refund-rules` (113 imp) | `/articles/pm-kisan-self-registered-status-check` (107 imp) |
-| 23 | ⬜ | `/articles/madhumakhi-palan-kvic-subsidy` (103 imp) | `/rajya-yojana/bihar-kisan-registration-status-check-2026` (101 imp) |
+| 23 | ✅ 2026-08-21 | `/articles/madhumakhi-palan-kvic-subsidy` (103 imp) | `/rajya-yojana/bihar-kisan-registration-status-check-2026` (101 imp) |
 | 24 | ⬜ | `/articles/PmKisanCscRegistrationCharges` (99 imp) | `/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026` (95 imp) |
 | 25 | ⬜ | `/articles/PmKisan24viKist2026` (84 imp) | `/articles/hi/ekyc-mobile-se` (81 imp) |
 | 26 | ⬜ | `/rajya-yojana/krishak-unnati-yojana-status-check-2026` (77 imp) | `/maandhan/pmkmy-grievance-complaint-helpline` (76 imp) |

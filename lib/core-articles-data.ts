@@ -828,7 +828,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'MadhumakhiPalan',
     category: 'pashupalan',
     publishedTime: '2026-07-12T05:10:43+05:30',
-    modifiedTime: '2026-08-20T22:30:00+05:30',
+    modifiedTime: '2026-08-21T19:20:00+05:30',
     readingTime: 17,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('madhumakhi-palan-kvic-subsidy'),

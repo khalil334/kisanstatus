@@ -46,10 +46,6 @@ const madhumakhiPalanFaqs = [
       'Us waqt upay mushkil hai, lekin agar advance mein pata chal jaye, toh hive ke entrance ko temporary mesh se band karke 2-3 din ke liye dark, cool jagah par shift kar dena chahiye. Long-term mein organic farming zones ke paas hi apiary setup karna safe hai.',
   },
   {
-    q: 'Terrace par bee box rakhna safe hai?',
-    a: 'Technically possible hai, lekin practical nahi. Bees ko paas mein paani ka source aur ample flora chahiye hota hai. Terrace par paani ki kami aur padosiyon ki shikayat ka risk hamesha rehta hai.',
-  },
-  {
     q: 'Setup ka paisa subsidy aane se pehle kahan se laun?',
     a: 'Mudra sabse seedha rasta hai — beekeeping iske andar finance hoti hai aur kisi bhi slab par bank collateral nahi maang sakta; pehli baar apply karne walon ki practical ceiling ₹10 lakh hai, jo 50-box unit ke liye kaafi hai. PMEGP me 15–35% margin money milti hai par wo 3 saal lock-in wale alag account me rehti hai, cash hath me nahi aata. Roz ke kharche (feed, mite treatment, transport) ke liye KCC sahi rehta hai, kyunki beekeeping allied activity me aati hai.',
   },

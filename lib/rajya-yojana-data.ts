@@ -322,7 +322,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     officialPortal: 'https://dbtagriculture.bihar.gov.in',
     status: 'live',
     published: '2026-08-09T13:16:17+05:30',
-    modified: '2026-08-11T12:36:56+05:30',
+    modified: '2026-08-21T19:20:00+05:30',
     readTime: '13 min read',
     ogImage: '/images/articles/rajya-yojna/bihar-kisan-registration-status-check-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanPaymentFailedFix2026'],
