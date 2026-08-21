@@ -11,7 +11,7 @@ function fmtDate(dateString: string): string {
 }
 
 const PUBLISHED = '2026-01-08T22:33:23+05:30';
-const MODIFIED = '2026-08-20T13:30:00+05:30';
+const MODIFIED = '2026-08-21T06:00:00+05:30';
 
 const FAQS_DATA = [
   {
@@ -36,7 +36,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Meri Farmer ID nahi bani toh kya PM-Kisan ki kisht ruk jayegi?',
-    a: 'Kai states me haan. 2026 tak UP samet 14 states me PM-Kisan ke liye Farmer ID zaroori kar di gayi hai. Matlab jinke record me Farmer ID nahi hai, unki kisht process me atak sakti hai. Apne state ka niyam CSC ya krishi vibhag se confirm karo, aur agar aapke state me mandatory hai toh der mat karo.',
+    a: 'Kai states me haan. 14 states me PM-Kisan ke liye Farmer ID zaroori ki gayi hai: Andhra Pradesh, Assam, Bihar, Chhattisgarh, Gujarat, Karnataka, Kerala, Madhya Pradesh, Maharashtra, Odisha, Rajasthan, Tamil Nadu, Telangana aur Uttar Pradesh. Sakhti khaas kar naye registration par hai, lekin purane labharthiyon ko bhi ID banwa lene ki salah di ja rahi hai. Aapka rajya list me na ho toh bhi der mat karo — baaki rajya bhi isi taraf badh rahe hain.',
   },
   {
     q: 'AgriStack, Farmer Registry aur Kisan ID — teeno alag cheezein hain kya?',
@@ -181,6 +181,40 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Chhota sa hisaab laga lo: registry me lagta hai aadha ghanta, aur na karwane pe daav pe hai saal ke ₹6,000 ki
             samman nidhi + bima + KCC ki aasani. Sauda saaf hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Wo 14 States Kaun Hain — Naam Se Dekh Lo</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            &ldquo;14 states me mandatory hai&rdquo; — ye line har jagah likhi milti hai, par naam kahin nahi milte,
+            aur asli sawal to yahi hai ki <em>mera</em> rajya usme hai ya nahi. To seedhi list:
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4 text-xs">
+            {['Andhra Pradesh', 'Assam', 'Bihar', 'Chhattisgarh', 'Gujarat', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Odisha', 'Rajasthan', 'Tamil Nadu', 'Telangana', 'Uttar Pradesh'].map((s) => (
+              <div key={s} className="px-3 py-2 bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg font-semibold text-[var(--color-text)]">
+                {s}
+              </div>
+            ))}
+          </div>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Aapka rajya is list me hai — to registry ko optional maan kar baithe rehna sabse mehnga faisla hai.
+            List me nahi hai — to bhi sirf waqt mila hai, chhoot nahi: Farmer ID kendra ka plan hai aur baaki
+            rajya bhi isi taraf badh rahe hain. Aur ek baat jo aksar chhoot jaati hai — ye niyam khaas kar
+            <strong> naye registration</strong> par sakhti se lagta hai; purane labharthi ko turant dikkat na aaye,
+            phir bhi ID banwa lena hi samajhdari hai.
+          </p>
+          <IB>
+            Paimana dekh lo, to andaza ho jaayega ki ye kitni tezi se aage badh raha hai: Farmer Registry
+            ke tahat karib <strong>11 crore Farmer ID</strong> ban chuki hain, aur registries 17 rajyon,
+            takreeban 492 zilon aur karib 4.2 lakh gaon tak plot level par pahunch chuki hain. Sabse aage
+            UP hai (1.99 crore se zyada IDs), uske baad Maharashtra aur Madhya Pradesh. Ye ab pilot nahi,
+            system hai.
+          </IB>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Ek reference bhi note kar lo: 23vi kisht 20 June 2026 ko aayi thi — karib ₹18,880 crore, 9.44
+            crore kisano tak. Jinki ID aur eKYC saaf thi, unka paisa usi din chala; jinke record adhoore the,
+            wo aaj bhi chakkar laga rahe hain. Farak sirf itna hi hota hai.
           </p>
         </section>
 

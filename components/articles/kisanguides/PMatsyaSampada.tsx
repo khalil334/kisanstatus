@@ -48,6 +48,10 @@ export const metadata: Metadata = {
 
 const pMatsyaSampadaFaqs = [
   {
+    q: 'PMMSY 2026 mein chalu hai ya band ho gayi — apply kar sakte hain?',
+    a: 'PMMSY ka approved implementation period FY 2020-21 se FY 2024-25 tha, jise FY 2025-26 tak extend kiya gaya. Iske baad ki extension ki official confirmation abhi nahi aayi hai, isliye is waqt "window khuli hai" maan kar consultant ko DPR ke paise dena jaldi hogi. Jo hissa FY 2026-27 tak approved hai wo PM-MKSSY hai (₹6,000 crore, NFDP ke zariye). Sahi kadam: pehle NFDP par register karo, phir District Fisheries Officer se poochho ki aapke zile mein aaj kaun si component chalu hai. Kuch states apni alag Matsya Sampada scheme bhi chalate hain — wo bhi wahin se pata chalegi.',
+  },
+  {
     q: 'Kya kiraye ki zameen par fish farming karne par subsidy milti hai?',
     a: 'Haan, lekin rent agreement kam se kam 7-10 saal ka hona chahiye. Subsidy ke liye aapka pond construction ya setup apni ownership mein hona chahiye. Rent par sirf operational costs cover hote hain.',
   },
@@ -229,8 +233,29 @@ export default function PMatsyaSampada() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        PMMSY 2020 mein launch hui thi, jiska budget ₹20,000+ crore hai. Yeh scheme fisheries sector ko transform karne ke liye design ki gayi hai.
+        PMMSY 10 September 2020 ko launch hui thi, ₹20,050 crore ke outlay ke saath. Yeh scheme fisheries sector ko transform karne ke liye design ki gayi hai.
       </p>
+
+      <div className="mb-8 p-5 bg-amber-50 dark:bg-amber-900/20 rounded-xl border-l-4 border-amber-500 not-prose shadow-sm">
+        <p className="text-sm text-gray-800 dark:text-gray-200 mb-2">
+          <strong>Apply karne se pehle ye timing samajh lein — 2026 mein sabse zaroori baat yahi hai.</strong>
+        </p>
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
+          PMMSY ka original period FY 2020-21 se FY 2024-25 tha, jise baad mein{' '}
+          <strong>FY 2025-26 tak extend kiya gaya</strong>. Iske aage ki extension ki koi official
+          confirmation abhi humein nahi mili — isliye &ldquo;abhi window khuli hai&rdquo; maan kar DPR par
+          paisa kharch karna galat kadam ho sakta hai. Neeche di gayi subsidy rates PMMSY guidelines ki
+          hain aur reference ke liye hain; aapke zile mein is waqt kaun si component chalu hai, ye sirf
+          District Fisheries Officer bata sakta hai. Pehla phone wahi karo, portal baad mein.
+        </p>
+        <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
+          Jo hissa 2026-27 tak chalne ka approved hai wo hai <strong>PM-MKSSY</strong> (Pradhan Mantri
+          Matsya Kisan Samridhi Sah-Yojana) — ₹6,000 crore ka central sector sub-scheme, FY 2023-24 se
+          FY 2026-27 tak, jo National Fisheries Digital Platform (NFDP) ke zariye chhote fish farmers aur
+          micro-enterprises ko formal pehchaan aur benefits deta hai. Matlab: aaj ka pehla kaam DPR nahi,
+          NFDP par apna registration hai.
+        </p>
+      </div>
 
       <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 mb-8 not-prose">
         <ul className="space-y-4 text-sm text-gray-800 dark:text-gray-200">
@@ -319,7 +344,17 @@ export default function PMatsyaSampada() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Agar aap PMMSY ke under apply karna chahte hain, toh neeche diya gaya button aapko official portal par le jayega:
+        Ek cheez jo pehle nipta lein: <strong>NFDP par registration</strong>. Ye National Fisheries
+        Digital Platform (11 September 2024 se chalu) fish farmer aur fish worker ko ek work-based
+        digital pehchaan deta hai, aur PM-MKSSY ke faayde isi registration se jude hue hain — PM-MKSSY
+        ka lakshya hi 40 lakh chhote/micro enterprises ko formal system mein laana hai. DPR banwane se
+        pehle ye 10 minute ka kaam kar lein; kal ki kisi bhi component ke liye yahi aapki entry banegi.
+      </p>
+
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+        Neeche diya gaya button PMMSY ke official portal par le jayega — wahan current component,
+        guidelines aur apne state ka contact dekh lein (aur haan, jo bhi dikhe, uski pushti District
+        Fisheries Office se karwa lein):
       </p>
 
       <ExternalLinkButton
