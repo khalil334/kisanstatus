@@ -1,11 +1,8 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
-  {
-    q: 'पशु शेड योजना का online form कहां भरें?',
-    a: 'कहीं नहीं — यही इस योजना की सबसे बड़ी गलतफहमी है। MGNREGA के individual beneficiary works का कोई online form नहीं होता। काम ग्राम पंचायत के जरिए होता है: लिखित आवेदन पंचायत में, ग्राम सभा से नाम approve, फिर work sanction। जो site "पशु शेड registration" का form दिखाए, वहां आधार या OTP बिल्कुल मत डालिए।',
-  },
   {
     q: 'कितने पशु होने पर शेड मिलेगा?',
     a: 'ज्यादातर राज्यों में कम से कम 2-3 पशु (गाय/भैंस) पर cattle shed का work sanction होता है। बकरी और मुर्गी के shelter के अपने अलग नियम हैं। Exact requirement राज्य की MGNREGA guidelines में होती है — अपने ग्राम रोजगार सेवक से अपने राज्य का नियम पूछिए।',
@@ -13,10 +10,6 @@ const FAQS = [
   {
     q: '₹1.6 लाख सबको मिलता है क्या?',
     a: 'नहीं। ₹1.6 लाख कोई fixed राष्ट्रीय राशि नहीं है — यह ऊपर की range है जो 4 से ज्यादा पशु होने पर कुछ राज्यों में बनती है। कम पशु पर estimate ₹75,000-₹80,000 के आस-पास रहता है। असली राशि आपके work के technical estimate से तय होती है।',
-  },
-  {
-    q: 'पैसा सीधा खाते में आता है क्या?',
-    a: 'पूरी राशि एक साथ नहीं। मजदूरी NREGA wage rate से muster roll के हिसाब से आती है (आप खुद अपने शेड पर काम करके मजदूरी ले सकते हैं), और material का भुगतान vendor के against होता है। यह construction work है, cash transfer योजना नहीं।',
   },
   {
     q: 'Job card नहीं है तो क्या करें?',
@@ -65,6 +58,21 @@ export default function MgnregaPashuShedYojanaHindi({ article }: { article: Hind
         category है जो ग्राम पंचायत के जरिए sanction होती है। जो site आपसे form भरवा रही है, वह या तो
         ad-clicks के लिए है या आपका data लेने के लिए।
       </p>
+
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/pashu-shed.webp"
+          alt="गांव में पक्का पशु शेड — गाय-भैंस के लिए हवादार छत और नांद"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          MGNREGA का cattle shed — निजी जमीन पर, पंचायत के जरिए sanction
+        </figcaption>
+      </figure>
 
       <Head2>यह योजना असल में है क्या</Head2>
       <p>

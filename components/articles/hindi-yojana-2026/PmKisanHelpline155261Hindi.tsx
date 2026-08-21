@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
@@ -13,22 +14,6 @@ const FAQS = [
   {
     q: 'क्या हेल्पलाइन से नया registration हो जाएगा?',
     a: 'नहीं। हेल्पलाइन सिर्फ जानकारी और शिकायत के लिए है। नया registration pmkisan.gov.in के Farmers Corner से, CSC से या कृषि विभाग से होता है। Correction (नाम, bank, आधार) भी portal या CSC पर होता है, phone पर नहीं।',
-  },
-  {
-    q: 'Call पर क्या-क्या ready रखना चाहिए?',
-    a: 'Registration number (न हो तो आधार number), आधार card, और अपनी problem एक line में। Beneficiary status का screenshot हो तो और अच्छा — उसमें जो error लिखा है वही बताना सबसे तेज काम करता है।',
-  },
-  {
-    q: 'Email बेहतर है या phone?',
-    a: 'दोनों से बेहतर portal का Help Desk form है — शिकायत system में register होती है और status track होता है। Email (pmkisan-ict@gov.in) तब काम आता है जब documents attach करने हों। Email में registration number और problem साफ लिखिए।',
-  },
-  {
-    q: 'राज्य-स्तर की problem हो तो Delhi वाली हेल्पलाइन क्या करेगी?',
-    a: 'सच यह है कि land seeding, state approval जैसी problems राज्य के पास अटकी होती हैं और central helpline सिर्फ forward कर सकती है। ऐसे में जिला कृषि अधिकारी या राज्य के nodal officer से सीधा संपर्क ज्यादा तेज होता है।',
-  },
-  {
-    q: 'क्या शिकायत करने के पैसे लगते हैं?',
-    a: 'बिल्कुल नहीं। न phone शिकायत के, न online के। अगर कोई आपसे शिकायत दर्ज कराने के पैसे मांगे — या बोले "अंदर से काम करा देंगे" — तो समझ जाइए वो fraud है। सरकारी शिकायत हर step पर free है।',
   },
   {
     q: 'खुद online करना मुश्किल है — CSC से शिकायत हो जाएगी?',
@@ -73,6 +58,21 @@ export default function PmKisanHelpline155261Hindi({ article }: { article: Hindi
         जाइए&rdquo; या &ldquo;तहसील में पता करो&rdquo;। इसलिए पहले यह तय कीजिए कि आपकी problem का सही
         दरवाजा कौन सा है।
       </p>
+
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/hindi-yojna/helpline-shikayat/farmer-on-call.webp"
+          alt="किसान मोबाइल से PM किसान हेल्पलाइन पर बात करता हुआ"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          155261 — पर call से पहले सही दरवाजा पहचान लीजिए
+        </figcaption>
+      </figure>
 
       <Head2>कौन सी problem, कौन सा दरवाजा</Head2>
       <div className="overflow-x-auto mb-4">
@@ -168,6 +168,21 @@ export default function PmKisanHelpline155261Hindi({ article }: { article: Hindi
         तब CPGRAMS पर पुरानी query का reference देते हुए शिकायत डालिए। मंत्रालय स्तर से आई query पर नीचे
         के office अक्सर तेजी से हिलते हैं — यह जमीनी सच है।
       </p>
+
+      <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+        <Image
+          src="/images/articles/hindi-yojna/helpline-shikayat/complaint-ladder.webp"
+          alt="शिकायत की सीढ़ी — हेल्पलाइन से CPGRAMS तक के चार पायदान"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          Help Desk → DAO → Nodal Officer → CPGRAMS — क्रम यही रखिए
+        </figcaption>
+      </figure>
 
       <Head2>शिकायत लिखते समय ये 4 गलतियां मत कीजिए</Head2>
       <p>
