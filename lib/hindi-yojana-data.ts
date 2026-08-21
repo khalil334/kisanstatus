@@ -46,7 +46,7 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
     ],
     category: 'status-check',
     publishedTime: '2026-07-24T09:35:32+05:30',
-    modifiedTime: '2026-08-07T14:31:10+05:30',
+    modifiedTime: '2026-08-21T05:45:00+05:30',
     author: AUTHOR_NAME,
     component: 'PmKisanStatusCheckMobileNumberSe',
     ogImage: '/images/articles/hindi-yojna/status-check-mobile-se/phone-status-check.webp',

@@ -53,8 +53,12 @@ const FAQS_DATA = [
     a: '"Sanctioned" ka matlab hai sarkar ne paisa manzoor kar liya, lekin bank tak dispatch nahi hua. 3-5 kaam ke din intezaar karein. Phir bhi na aaye toh bank se NPCI seeding check karwayein.',
   },
   {
+    q: 'Poora rakbe ka paisa nahi aaya, sirf ek acre ka — kya kaat diya gaya?',
+    a: 'Nahi. Rabi 2025-26 ke release se pehle phase mein har eligible kisan ko sirf pehle ek acre ka ₹6,000 diya jaata hai, chahe rakba kitna bhi ho; baaki hissa aage ke phases mein aata hai. 4 acre wale ko bhi pehle ₹6,000 hi dikhega. Season ke aakhir tak passbook ka kul jod dekho — phir bhi kam lage to Dharani mein darj extent apni passbook se milao.',
+  },
+  {
     q: 'Kya tenant farmers (bataidar) ko Rythu Bharosa milta hai?',
-    a: 'Filhal nahi. Ye scheme zameen ke malikon aur Podu (tribal) rights holders ke liye hai. Bataidar kisanon ke liye sarkar alag se kuch credit guarantee schemes chalati hai.',
+    a: 'Purana Rythu Bandhu sirf pattadar ke liye tha. Ab scheme details mein registered tenant farmers ko bhi shaamil bataya jaata hai, aur bhoomiheen khet-mazdoor pariwaron ke liye alag Indiramma Atmiya Bharosa hai jisme saal ke ₹12,000 milte hain. Lekin amal mein payment Dharani/Bhu Bharati ke record se banti hai, isliye bataidar ho to lease ka kagaz lekar MRO office mein apna case likhit mein confirm karao — zubaani jaankari par mat jao.',
   },
   {
     q: 'Agar maine zameen bech di hai, toh kya mujhe paisa milega?',
@@ -70,10 +74,11 @@ export default function RythuBharosaStatusCheck2026() {
   return (
     <article className="prose prose-lg max-w-4xl mx-auto">
 
-      <InfoBox type="update" date="04/08/2026">
-        <strong>Latest Update:</strong> Nayi kist ki prakriya shuru ho chuki hai. Release phase-wise aur
-        acreage ke hisaab se ho raha hai. Isliye padosi ko paisa mil jaana aur aapko na milna abhi
-        normal hai. Status dekhne ka tareeka neeche hai.
+      <InfoBox type="update" date="21/08/2026">
+        <strong>Latest Update:</strong> Kharif 2026-27 ka release 30 June se 10 July 2026 ke beech nau
+        tranches mein hua — 73 lakh se zyada kisano ko karib ₹9,000 crore. Release phase-wise hota hai
+        aur pehla phase sab ko sirf ek acre ka deta hai, isliye padosi ka paisa pehle aana ya khud ka
+        adhoora dikhna normal hai. Status dekhne ka tareeka neeche hai.
       </InfoBox>
 
       <h1>Rythu Bharosa Status Check 2026: Payment, Per Acre Amount aur Phase-Wise List Guide</h1>
@@ -214,6 +219,24 @@ export default function RythuBharosaStatusCheck2026() {
       <p>
         Matlab "Processing" dikhne ka arth paisa atak jaana nahi hai. Aapke mandal ka
         phase aana baaki hai, bas itna, toh fikar chhodo aur thoda ruk jao. Haan, toh wahi — phase ka khel hai.
+      </p>
+
+      <h3>Poora Paisa Nahi, Sirf Ek Acre Ka Aaya — Ye Bhi Phase Hi Hai</h3>
+
+      <p>
+        Is baat par sabse zyada gussa aata hai, aur jawaab log galat jagah dhoondhte hain. Rabi
+        (Yasangi) 2025-26 ke release mein Telangana ne tareeka badla: pehle phase mein{' '}
+        <strong>har eligible kisan ko sirf pehle ek acre ka ₹6,000</strong> credit hua — chahe uske
+        paas 1 acre ho ya 10. Baaki rakbe ka paisa aage ke phases mein aaya. 22/03/2026 se shuru
+        hue is release mein karib ₹9,000 crore teen phases mein, takreeban 70 lakh kisano ke liye
+        rakha gaya tha.
+      </p>
+
+      <p>
+        Matlab 4 acre wale ke khaate mein ₹6,000 dikhna &ldquo;rakba kaat diya&rdquo; nahi hai —
+        pehla phase hai. Kul jod season ke aakhir tak dekho, beech mein nahi. Kharif 2026-27 mein
+        bhi yahi chala: 30 June se 10 July 2026 tak nau tranches mein karib ₹9,000 crore, 73 lakh se
+        zyada kisano tak. Phase system ab exception nahi, tareeka hai.
       </p>
 
       <h2>Phase Aa Gaya Par Paisa Nahi — Chaar Wajahein</h2>
