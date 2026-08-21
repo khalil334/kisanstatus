@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-08-18T09:30:00+05:30';
-const MODIFIED = '2026-08-18T09:30:00+05:30';
+const MODIFIED = '2026-08-21T23:55:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisan25viKist2027', title: '25vi Kist Kab Aayegi' },
@@ -79,8 +79,47 @@ export default function PmKisan26viKist({ article }: { article: ArticleMeta }) {
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Scheme ka rule saaf hai — saal mein teen kist, har chaar mahine mein ek: April–July, August–November, December–March. Ab ginti karo: 24vi aur 25vi ke do cycle poore hone ke baad 26vi aayegi. Har cycle 3-4 mahine ka hota hai, isliye 26vi ka realistic window 2027 ke beech se aage banta hai. Exact din? Wo release se ek-do hafte pehle hi pata chalta hai, kabhi mahino pehle nahi.
           </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Sarkar aksar kist release PM ke kisi event ke saath karti hai — pichhli kai kists aise hi aayi hain. Isliye news mein jab &quot;PM Kisan Samman Sammelan&quot; jaisa koi event dikhne lage, tab samajh jao ki release paas hai.
+          </p>
+          <div className="overflow-x-auto my-4">
+            <table className="w-full text-xs border border-[var(--color-border)] rounded-xl overflow-hidden">
+              <caption className="text-xs text-[var(--color-text-muted)] py-2 caption-top text-left">Kist ka order — kahan tak pahuncha hisaab (₹2,000 har kist)</caption>
+              <thead>
+                <tr className="bg-[var(--color-bg-alt)] text-left">
+                  <th className="p-3 font-black text-[var(--color-text)]">Kist</th>
+                  <th className="p-3 font-black text-[var(--color-text)]">Kya pata hai</th>
+                </tr>
+              </thead>
+              <tbody className="text-[var(--color-text-muted)]">
+                <tr className="border-t border-[var(--color-border)]">
+                  <td className="p-3 font-bold">23vi</td>
+                  <td className="p-3">20 June 2026 ko release hui — mil chuki hai</td>
+                </tr>
+                <tr className="border-t border-[var(--color-border)]">
+                  <td className="p-3 font-bold">24vi</td>
+                  <td className="p-3">Iska intezaar chal raha hai — official date ka wait</td>
+                </tr>
+                <tr className="border-t border-[var(--color-border)]">
+                  <td className="p-3 font-bold">25vi</td>
+                  <td className="p-3">24vi ke 3-4 mahine baad ka cycle</td>
+                </tr>
+                <tr className="border-t border-[var(--color-border)]">
+                  <td className="p-3 font-bold">26vi</td>
+                  <td className="p-3">Uske agle cycle mein — realistic window 2027 ke beech se aage</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>Naye Kisan Ho? 26vi Tak Ka Time Aapke Kaam Ka Hai</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Agar aapne abhi tak registration hi nahi kiya, to ye lamba gap aapke liye asal mein achhi khabar hai. Naye registration ke baad verification mein time lagta hai — patwari ka land verification, eKYC, bank seeding — aur jab tak ye chain poori nahi hoti, koi kist nahi aati. Aaj apply karoge to 26vi aane tak aaram se sab clear ho sakta hai. Poora tarika <Link href="/articles/hi/nayi-registration" className="text-[var(--color-primary)] underline">nayi registration guide</Link> mein hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Aur jinka form pehle reject ho chuka hai — wajah jaane bina dobara apply mat karna, wahi galti dohraogi. Rejection ki wajah aur sahi re-apply ka process <Link href="/articles/PmKisanRejectedStatusReApplyGuide" className="text-[var(--color-primary)] underline">rejected status guide</Link> mein step-by-step diya hai.
           </p>
         </section>
 

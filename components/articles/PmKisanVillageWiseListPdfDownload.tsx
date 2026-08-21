@@ -6,7 +6,7 @@ import { SI, StepList, IB, WB, SH, RelatedArticles, AuthorBox, BottomNav, Discla
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-17T09:13:27+05:30';
-const MODIFIED = '2026-08-20T22:45:00+05:30';
+const MODIFIED = '2026-08-22T00:10:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
@@ -15,14 +15,6 @@ const RELATED = [
 ];
 
 const FAQS_DATA = [
-  {
-    q: 'Mere gaon mein karib 500 kisan hain, sabka data download karne mein kitna time lagega?',
-    a: 'Server load par depend karta hai. Dopahar 12-2 baje avoid karein. Subah 9-10 baje ya shaam 7 ke baad try karein. Bade gaon ka data load hone mein server ki speed ke hisaab se kuch seconds se lekar minute bhi lag sakte hain.',
-  },
-  {
-    q: 'File save ho gayi par phone mein open nahi ho rahi, kya karun?',
-    a: 'Koi bhi free PDF reader app (jaise Adobe Acrobat) install karein. Ek simple jugaad: File ko WhatsApp par kisi ko forward kar dein, wahan easily khul jayegi.',
-  },
   {
     q: 'Sabke naam dikh rahe hain par mera nahi. Paisa milega ya nahi?',
     a: 'Pehle individual status check karein pmkisan.gov.in par. Zyadatar cases mein eKYC pending hoti hai, ya Patwari ne land verification nahi kiya. CSC jakar jaldi eKYC karwa lein.',
@@ -36,19 +28,11 @@ const FAQS_DATA = [
     a: 'Nahi. Central website se hi latest list nikalna best hai, kyunki naye naam regularly add hote rehte hain aur purane galat naam hataaye jaate hain.',
   },
   {
-    q: 'Mere padosi ke khet ka number same hai par uska naam list mein hai mera nahi, aisa kaise?',
-    a: 'Zameen ka record alag-alag naam par (jaise pitaji ke naam) ho sakta hai. Apna Khasra number Bhulekh par check karein. Agar record same hai, toh Patwari se milkar record update karwayein.',
-  },
-  {
-    q: 'Document download kar li, ab isme se apna naam kaise dhoondhun?',
-    a: 'File khol kar upar right corner mein search () icon par tap karein aur apna naam type karein. Suggestions type karte hi dikhne lagenge.',
-  },
-  {
     q: 'List mein sirf 10-12 naam hain, mere gaon mein toh 200 se zyada log hain?',
     a: 'Galat gaon select kar liya hoga. Dobara check karein: State, District, Block, aur Gaon ka naam exactly match hona chahiye. Kabhi-kabhi "Rampur Khurd" aur "Rampur Kalan" mein confusion ho jati hai.',
   },
   {
-    q: 'Apne marne wale pitaji ki jagah apna naam is list mein dekh sakta hoon?',
+    q: 'Pitaji ka dehant ho gaya — unki jagah apna naam list mein aa sakta hai?',
     a: 'Haan, lekin sirf tab jab aapne CSC jakar "Succession Transfer" karwa liya ho. Death certificate, Khatauni, aur Aadhaar ke sath transfer karwayein, warna account freeze rehta hai.',
   },
 ];
@@ -256,7 +240,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
           <WB>
             <strong>Online Tools:</strong>
             <p className="text-xs text-[var(--color-text-muted)] mt-2">
-              Agar manual copy-paste mein dikkat aa rahi hai, toh ilovepdf.com par "PDF to Excel" tool use karein. Note: If the PDF is scanned instead of text-based, OCR may be required before converting it into Excel. Dhyan rahe ki PDF mein personal data (jaise poora Aadhaar number) na ho.
+              Agar manual copy-paste mein dikkat aa rahi hai, toh ilovepdf.com par "PDF to Excel" tool use karein. Ek baat dhyan rahe: agar PDF scan ki hui image hai (text select nahi ho raha), to pehle OCR karna padega, tabhi Excel banega. Aur file kisi ko bhejne se pehle dekh lo ki usme personal data (jaise poora Aadhaar number) na ho.
             </p>
           </WB>
         </section>
@@ -378,7 +362,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
               <strong>Fraud Se Bacho:</strong>
             </p>
             <p className="text-xs text-red-700 dark:text-red-400">
-              Some beneficiary information such as name and partially masked account details may be visible depending on the official portal. Koi bhi unknown link par click mat karein jo kahe ki "Yahan se complete data download karo". Hamesha sirf <strong>pmkisan.gov.in</strong> ka use karein.
+              Official list mein naam aur partially masked account details dikh sakti hain — itna hi data public hota hai. Koi bhi unknown link par click mat karein jo kahe ki "Yahan se complete data download karo" — poora Aadhaar ya account number dikhane ka dawa karne wali har site fraud hai. Hamesha sirf <strong>pmkisan.gov.in</strong> ka use karein.
             </p>
           </div>
         </section>
