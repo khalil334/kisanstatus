@@ -5,7 +5,7 @@ import OfficialLinkButton from '@/components/OfficialLinkButton';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-19T07:49:49+05:30';
-const MODIFIED = '2026-08-20T13:45:00+05:30';
+const MODIFIED = '2026-08-21T18:10:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
@@ -16,11 +16,11 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Rejected status ka matlab kya hota hai?',
-    a: 'Dekho bhai, iska matlab hai ki sarkar ne aapki application check ki aur kisi wajah se aap eligible nahi paaye gaye. Naam list se hat gaya hai. Par ghabrao mat - zyadatar cases mein ye temporary hota hai aur theek ho jata hai.',
+    a: 'Iska matlab hai ki sarkar ne aapki application check ki aur kisi wajah se aap eligible nahi paaye gaye. Naam list se hat gaya hai. Par ghabrao mat - zyadatar cases mein ye temporary hota hai aur theek ho jata hai.',
   },
   {
     q: 'Kya rejected hone ke baad dobara apply kar sakte hain?',
-    a: 'Haan bilkul bhai! Agar aapne galti sudhaar li hai - jaise bank account fix kiya, land record update karwaya, ya eKYC complete ki - toh aap dobara apply kar sakte hain. CSC center jakar correction form bharna padega.',
+    a: 'Haan bilkul! Agar aapne galti sudhaar li hai - jaise bank account fix kiya, land record update karwaya, ya eKYC complete ki - toh aap dobara apply kar sakte hain. CSC center jakar correction form bharna padega.',
   },
   {
     q: 'Ruke hue paise (arrears) milenge ya nahi?',
@@ -28,7 +28,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Dobara apply karne ke baad status "Active" kab hota hai?',
-    a: 'Bhai, form submit karne ke baad verification mein 15 se 30 din lagte hain. Uske baad status "Active" ho jata hai. Agar 30 din se zyada ho jaye toh nodal officer ko email karna padega.',
+    a: 'Form submit karne ke baad verification mein aam taur par 15 se 30 din lagte hain. Uske baad status "Active" ho jata hai. Agar 30 din se zyada ho jaye toh nodal officer ko email karna padega.',
   },
   {
     q: 'Agar dobara apply karne par bhi reject ho jaye toh?',
@@ -36,15 +36,15 @@ const FAQS_DATA = [
   },
   {
     q: 'Income tax filer hoon, kya main dobara apply karun?',
-    a: 'Nahi bhai, agar aap income tax return file karte hain toh aap is scheme ke eligible hi nahi hain. Dobara apply karne ka koi fayda nahi - phir se reject ho jayega.',
+    a: 'Nahi. Agar aapne pichhle assessment year mein income tax bhara hai toh aap is scheme ke eligible hi nahi hain. Dobara apply karne ka koi fayda nahi - phir se reject ho jayega.',
   },
   {
     q: 'CSC wala dobara apply karne ke kitne paise lega?',
-    a: 'Sarkari rate ₹25-₹30 hai bhai. Usse zyada mat dena. Aur haan, correction form ke liye alag se charge nahi banta - ye ek hi process hai.',
+    a: 'CSC par PM Kisan ke kaam ka rate mamuli hota hai - registration/correction ka charge aam taur par ₹25-₹30 ke aas-paas. Usse bahut zyada koi maange toh doosre CSC par pooch lo. Correction form ke liye alag se charge nahi banta - ye ek hi process hai.',
   },
   {
     q: 'Dobara apply ghar baithe online ho jayega?',
-    a: 'Nahi bhai. Jab ek baar status reject ho jata hai, toh portal par "Edit" ka option band ho jata hai. Aapko CSC ya BAO office hi jana padega. Online nahi ho sakta.',
+    a: 'Nahi. Jab ek baar status reject ho jata hai, toh portal par "Edit" ka option band ho jata hai. Aapko CSC ya BAO office hi jana padega. Online nahi ho sakta.',
   },
 ];
 
@@ -110,9 +110,9 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           />
 
           <DB>
-            <strong>Ek Kisan Ki Aap Beeti:</strong>
+            <strong>Aam Taur Par Aisa Hota Hai:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
-              Jaipur ke Bhanwar Lal ji ka status achanak reject ho gaya. Wo pareshan ho gaye. Patwari ke paas gaye, BAO ke paas gaye. Pata chala ki unki zameen ka record digital nahi tha aur bank account mein IFSC code purana tha. Dono cheezein theek karke CSC se dobara form bhara. 25 din baad status active ho gaya aur pichli ruki hui kist bhi mil gayi.
+              Sabse common pattern jo CSC par dikhtha hai: status achanak reject, kisan pareshan. Check karne par nikalta hai ki ya toh zameen ka record digital nahi tha, ya bank account mein IFSC code purana tha (branch merge ki wajah se). Dono cheezein theek karke CSC se dobara form bharne par 3-4 hafte mein status wapas active ho jata hai.
             </p>
           </DB>
 
@@ -169,7 +169,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
               },
               {
                 reason: 'Aap Eligible Hi Nahi Ho',
-                desc: 'Aap income tax filer nikle, ya aapke parivar mein koi government servant nikal gaya. Ya zameen 2 hectare se zyada nikal aayi.'
+                desc: 'Aap income tax filer nikle, aapke parivar mein koi government servant nikal gaya, ya aap doctor/engineer/vakil jaise practicing professional ho. (Dhyan rahe: zameen ke size ki koi limit ab nahi hai - 2019 se scheme sabhi landholding kisan parivaron ke liye hai.)'
               },
               {
                 reason: 'eKYC Adhuri Hai Ya Fail Hui',
@@ -301,6 +301,14 @@ export default function PmKisanRejectedStatusReApplyGuide() {
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Har state ka land record system alag hai. Isliye rejection ke reasons bhi thode alag hote hain:
           </p>
+          <Image
+            src="/images/articles/pm-kisan-rejected-status-re-apply-guide/state-issues.webp"
+            alt="Alag-alag states ke land record portals par kisan apna record check karta hua"
+            width={800}
+            height={450}
+            className="w-full rounded-xl my-4"
+            loading="lazy"
+          />
           <div className="space-y-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
               <p className="font-black text-sm text-green-800 dark:text-green-300 mb-2">Uttar Pradesh & Bihar</p>

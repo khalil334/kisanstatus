@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2025-12-19T13:12:12+05:30';
-const MODIFIED = '2026-08-20T23:00:00+05:30';
+const MODIFIED = '2026-08-21T18:10:00+05:30';
 
 const RELATED = [
   { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le' },
@@ -36,7 +36,7 @@ const FAQS_DATA = [
 },
 {
  q: 'NBFC se loan liya, ab bank mein shift kar sakta hun?',
- a: 'Haan. Refinancing possible hai. Existing loan pre-close karo (2-4% foreclosure charges), bank se naya loan lo lower rate par. Ek cultivator ne Mahindra Finance 12.5% se SBI 8.9% par shift karke ₹22,400 bachaye 3 saal mein. RC transfer process 15-20 din leta hai.',
+ a: 'Haan. Refinancing possible hai. Existing loan pre-close karo (2-4% foreclosure charges lag sakte hain), bank se naya loan lo lower rate par. NBFC ka 12-14% wala loan bank ke 9-11% par shift karne se tenure ke hisaab se hazaron rupaye bach sakte hain — foreclosure charge jodkar hisaab pehle laga lo. RC par hypothecation transfer mein 2-3 hafte lag sakte hain.',
 },
 {
  q: 'EMI nikalne ke liye tractor kiraye par dena samajhdari hai?',
@@ -48,7 +48,7 @@ const FAQS_DATA = [
 },
 {
  q: 'Electric tractor par loan milta hai?',
- a: 'Haan. Mahindra, Sonalika, Swaraj ne electric models launch kiye hain. Banks 2026 se flat 7.5% interest offer kar rahe hain electric tractors par. Running cost diesel se 70% kam. Battery warranty 5 saal = loan tenure bhi 5 saal tak.',
+ a: 'Haan. Sonalika samet kai companies ke electric models market mein hain, aur banks/NBFCs inko bhi normal tractor ki tarah finance karti hain. Koi alag sarkari flat rate abhi official confirm nahi hai — rate lender se poochho. Running cost diesel se kaafi kam hoti hai; battery warranty apne model ki dealer se likhit mein confirm karo.',
 },
 ];
 
@@ -101,7 +101,7 @@ return (
          MP ke Sehore district mein. Ek cultivator tractor lene gaya. Dealer ne kaha — ₹6.5 lakh on-road, ₹1.3 lakh down payment.
        </p>
        <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
-         Uske paas ₹1.3 lakh nahi the. Wapas aane hi wala tha ki maine usse bataya — SMAM subsidy 35% milti hai MP mein, aur Mahindra Finance 95% financing de raha hai us month. Dono combine karke down payment ₹32,000 reh gayi. <strong className="text-amber-900 dark:text-amber-100">Yeh information dealer ne nahi di thi.</strong>
+         Uske paas ₹1.3 lakh nahi the. Wapas aane hi wala tha ki usse pata chala — MP mein e-Krishi Yantra Anudan portal se tractor subsidy milti hai, aur NBFC us month 90%+ financing de rahi thi. Dono combine karke down payment kaafi kam reh gayi. <strong className="text-amber-900 dark:text-amber-100">Yeh information dealer ne nahi di thi.</strong>
        </p>
        <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
          Isliye yeh guide likh raha hun. Sirf loan process nahi — hidden costs, subsidy workflow, refinancing tricks, crop failure protocol. Woh sab jo showroom mein nahi bataya jaata.
@@ -134,7 +134,7 @@ return (
                ['Mahindra Finance', '90-100%', '0-10%', 'Brand offers'],
                ['John Deere Financial', '90-95%', '5-10%', 'JD buyers'],
                ['NBFC (Shriram/Muthoot)', '85-90%', '10-15%', 'Low docs'],
-               ['Govt Subsidy (SMAM)', 'Up to 100%', '0%', 'SC/ST, small farmers'],
+               ['Govt Subsidy (SMAM/state portal)', '40-50% cost cover', 'Loan ke saath jodo', 'SC/ST, mahila, small farmers'],
              ].map(([lender, max, down, best], i) => (
                <tr key={lender} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
                  <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{lender}</td>
@@ -148,7 +148,7 @@ return (
        </div>
 
        <IB>
-         <strong>Real Example:</strong> ₹5.5 lakh tractor. KCC holder + Mahindra festive offer = 95% finance. Down payment sirf ₹27,500. Yeh mushkil nahi hai agar planning sahi ho.
+         <strong>Hisaab Aise Banta Hai:</strong> ₹5.5 lakh ka tractor, NBFC ka 95% finance wala offer mil jaye toh down payment sirf ₹27,500 banti hai. Upar se subsidy alag. Yeh mushkil nahi hai agar planning sahi ho — bas offer ki likhit condition padho.
        </IB>
      </section>
 
@@ -204,10 +204,10 @@ return (
          </table>
        </div>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-         Do baatein aur. Pehli — tractor loan <strong>priority sector lending</strong> me aata hai, isliye banks
+         Ek baat aur — tractor loan <strong>priority sector lending</strong> me aata hai, isliye banks
          ise normal consumer loan se sasta dete hain; yeh line bank manager ke saamne bolo, kaam aati hai.
-         Doosri — 2026 me RBI ke rate hike ke aasaar ban rahe hain (mehngai badhi hai), matlab aage rates
-         upar ja sakte hain. Agar loan lena tay hai, toh rate lock karne me der karna is saal mehnga pad sakta hai.
+         Rates har bank ki website par published hote hain aur RBI ke repo rate ke saath badalte rehte hain —
+         apply karne se pehle 2-3 banks ke current rate khud compare karo.
        </p>
 
        <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">EMI Reality Check</h3>
@@ -343,7 +343,7 @@ return (
          <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-r-xl">
            <h3 className="font-black text-amber-800 dark:text-amber-300 text-sm mb-2">NBFC Emergency → Bank Refinance</h3>
            <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
-             Rabi urgent. Mahindra Finance 12.5% par 95% loan (zero down). 8 mahine baad NABARD portal check — SBI 8.9%. Pre-close (2% charges) + new bank loan. Saving: ₹22,400 over 3 years. Emergency = NBFC. Long-term = bank.
+             Rabi urgent tha, NBFC ne 12-13% par 90%+ finance turant de diya. Kuch mahine baad bank ka rate compare kiya — 2-3% kam nikla. Pre-close (foreclosure charge dekh kar) + naya bank loan = tenure bhar mein achhi bachat. Formula simple hai: Emergency = NBFC. Long-term = bank.
            </p>
          </div>
 
@@ -362,42 +362,15 @@ return (
          Subsidy = loan amount kam. Par process technical hai. Yeh exact 2026 workflow hai:
        </p>
        <StepList>
-         <SI n={1}><strong>SMAM Portal Registration:</strong> smam.gov.in par farmer ID. Aadhaar + land link. 7-14 din verification</SI>
+         <SI n={1}><strong>Portal Registration:</strong> agrimachinery.nic.in (Agriculture Mechanization DBT portal) ya apne state ke portal (MP: e-Krishi Yantra Anudan, Rajasthan: Raj Kisan Sathi) par farmer registration karo — Aadhaar, land record aur Aadhaar-seeded bank account chahiye</SI>
          <SI n={2}><strong>Quotation Upload:</strong> Authorized dealer se proforma invoice. Portal par upload. Dealer empaneled status check</SI>
          <SI n={3}><strong>Bank NOC:</strong> Branch manager se "No Objection Certificate" — loan pending confirmation</SI>
-         <SI n={4}><strong>DAC Meeting:</strong> District Approval Committee monthly meeting. Priority: SC/ST → Women → Marginal → General</SI>
-         <SI n={5}><strong>DBT Transfer:</strong> Approval ke 30-45 din baad subsidy seedha account mein. Bank principal auto-adjust</SI>
+         <SI n={4}><strong>Selection:</strong> Kai states mein lottery ya first-come basis par selection hota hai. Priority aam taur par SC/ST, mahila aur small/marginal farmers ko milti hai — unka subsidy slab bhi zyada hota hai (aam taur par 50% tak, general ke liye 40% tak)</SI>
+         <SI n={5}><strong>Kharid + DBT Transfer:</strong> Selection ke baad empaneled dealer se kharid karo, bill aur machine ka serial number portal par upload karo. Officer inspection ke baad subsidy seedha Aadhaar-seeded account mein aati hai</SI>
        </StepList>
-
-       <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
-         <table className="w-full text-sm border-collapse">
-           <thead>
-             <tr className="bg-[var(--color-primary)] text-white">
-               <th className="p-3 text-left">State</th>
-               <th className="p-3 text-left">Subsidy %</th>
-               <th className="p-3 text-left">Max Limit</th>
-               <th className="p-3 text-left">Time</th>
-             </tr>
-           </thead>
-           <tbody>
-             {[
-               ['Punjab', '40-50%', '₹2.5L', '60 days'],
-               ['Haryana', '25-50%', '₹2L', '45 days'],
-               ['UP', '30-40%', '₹1.8L', '75 days'],
-               ['MP', '35%', '₹2L', '50 days'],
-               ['Rajasthan', '25-30%', '₹1.5L', '90 days'],
-               ['Maharashtra', '20-35%', '₹1.2L', '65 days'],
-             ].map(([state, pct, limit, time], i) => (
-               <tr key={state} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
-                 <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{state}</td>
-                 <td className="p-3 border-b border-[var(--color-border)] text-green-700 dark:text-green-400 font-bold">{pct}</td>
-                 <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text-muted)]">{limit}</td>
-                 <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text-muted)]">{time}</td>
-               </tr>
-             ))}
-           </tbody>
-         </table>
-       </div>
+       <WB>
+         <strong>Zaroori:</strong> Har state ka exact subsidy %, limit aur application window alag hai aur saal ke beech badalti rehti hai. Final rakam apne state ke agriculture/agrimachinery portal par hi confirm karo — dealer ya agent ke bataye number par bharosa mat karo.
+       </WB>
      </section>
 
      <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
@@ -573,16 +546,13 @@ return (
        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
          <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
            <p className="font-black text-green-800 dark:text-green-300 text-sm mb-1">Electric Tractors</p>
-           <p className="text-xs text-[var(--color-text-muted)]">Mahindra, Sonalika, Swaraj launched. Running cost 70% kam. Banks flat 7.5% interest. Battery warranty 5 saal.</p>
+           <p className="text-xs text-[var(--color-text-muted)]">Kai companies ke electric models market mein aa chuke hain. Running cost diesel se kaafi kam. Finance normal tractor jaisa hi — current rate lender se confirm karo.</p>
          </div>
          <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
-           <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-1">AI Agri Credit Scoring</p>
-           <p className="text-xs text-[var(--color-text-muted)]">Satellite crop health + soil moisture data = auto credit score. Digital farm data generate karo = higher limit without manual verification.</p>
+           <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-1">Digital Land Records + AgriStack</p>
+           <p className="text-xs text-[var(--color-text-muted)]">Farmer ID aur digital land records se loan verification tez ho rahi hai — jitna saaf aapka digital record, utni aasan processing.</p>
          </div>
        </div>
-       <IB>
-         <strong>2027 Prediction:</strong> RBI "Pay-As-You-Farm" model launch karne wala hai. EMI sirf harvest season mein deduct. Baaki months zero outflow. Sensor-based usage tracking se interest dynamically adjust.
-       </IB>
      </section>
 
      <section className="mb-8">
@@ -609,11 +579,11 @@ return (
      </div>
 
      <GovLink
-       href="https://smam.gov.in"
-       label="SMAM Portal — Tractor Subsidy Application"
+       href="https://agrimachinery.nic.in"
+       label="Agriculture Mechanization DBT Portal — Subsidy Application"
        guide="Subsidy Check Karo"
        guideHref="/articles/KisanRinKahaSeLe2026"
-       portalName="smam.gov.in"
+       portalName="agrimachinery.nic.in"
      />
 
      <CalcBanner

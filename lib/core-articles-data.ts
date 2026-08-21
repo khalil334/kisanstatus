@@ -33,7 +33,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'KisanTractorLoan2026',
     title: 'Tractor Loan 2026: Bina Down Payment?',
-    desc: 'Bina down payment ke tractor loan possible hai? Mahindra Finance, TATA Capital aur state banks ki schemes, eligibility aur apply process — sab yahan.',
+    desc: 'Bina down payment ke tractor loan possible hai? Bank vs NBFC rates, subsidy workflow, hidden costs aur EMI ka pura hisaab — sab yahan.',
     ogTitle: 'Tractor Loan Bina Down Payment 2026',
     keywords: [
       'tractor loan 2026',
@@ -44,7 +44,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'KisanTractorLoan2026',
     category: 'loan',
     publishedTime: '2026-06-20T06:39:52+05:30',
-    modifiedTime: '2026-08-20T23:00:00+05:30',
+    modifiedTime: '2026-08-21T18:10:00+05:30',
     readingTime: 10,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('KisanTractorLoan2026'),
@@ -688,7 +688,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     slug: 'PmKisanRejectedStatusReApplyGuide',
     title: 'PM Kisan Rejected Status 2026: Reapply',
     seoTitle: 'PM Kisan Rejected Status — Dobara Apply Kaise',
-    desc: 'Status rejected dikh raha hai? 7 main reasons + step-by-step re-application guide. CSC correction form + arrears claim process.',
+    desc: 'Status rejected dikh raha hai? 7 asli reasons, CSC correction form ka step-by-step tarika aur arrears claim ka niyam — sab ek jagah.',
     ogTitle: 'PM Kisan Rejected Status Fix Guide',
     keywords: [
       'pm kisan rejected status fix',
@@ -701,7 +701,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanRejectedStatusReApplyGuide',
     category: 'status-check',
     publishedTime: '2026-07-09T06:50:50+05:30',
-    modifiedTime: '2026-08-20T13:45:00+05:30',
+    modifiedTime: '2026-08-21T18:10:00+05:30',
     readingTime: 17,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisanRejectedStatusReApplyGuide'),
