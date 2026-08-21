@@ -90,7 +90,7 @@ export default function PMFMEYojana() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        PM FME (PM Formalisation of Micro food processing Enterprises) Yojana ka maqsad bilkul yahi hai. Yeh scheme specifically un logon ke liye design ki gayi hai jo pehle se chhote level par kaam kar rahe hain, lekin ab apne business ko ek proper brand mein badalna chahte hain. Isme 35% tak ki credit-linked subsidy milti hai, jo ek chhote entrepreneur ke liye game-changer sabit ho sakti hai.
+        PM FME (PM Formalisation of Micro food processing Enterprises) Yojana ka maqsad bilkul yahi hai. Yeh scheme specifically un logon ke liye design ki gayi hai jo pehle se chhote level par kaam kar rahe hain, lekin ab apne business ko ek proper brand mein badalna chahte hain. Isme 35% tak ki credit-linked subsidy milti hai, jo chhote entrepreneur ke liye poora hisaab badal deti hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">

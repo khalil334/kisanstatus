@@ -330,7 +330,7 @@ export default function MadhumakhiPalan() {
         Honey Marketing: Bulk Trader vs. D2C Brand
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Sirf production kaafi nahi hai, sahi daam par bechna hi asli game-changer hai. Naye beekeepers aksar yeh galti karte hain ki wo apna saara shahad local traders ko bulk mein saste daam (₹250-300/kg) par bech dete hain, jabki market price uska dugna hota hai.
+        Sirf production kaafi nahi hai, asli kamai sahi daam par bechne se hoti hai. Naye beekeepers aksar yeh galti karte hain ki wo apna saara shahad local traders ko bulk mein saste daam (₹250-300/kg) par bech dete hain, jabki market price uska dugna hota hai.
       </p>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Mera suggestion yeh hoga ki shuru ke 6 mahine local D2C (WhatsApp groups, local societies, farmer markets) par focus karein. Wahan aap aaram se ₹400-600/kg ka rate le sakte hain. "Chunk honey" ya "Honey with Comb" ko glass jars mein pack karke premium price par becha ja sakta hai, kyunki consumers ise 100% pure maante hain.
