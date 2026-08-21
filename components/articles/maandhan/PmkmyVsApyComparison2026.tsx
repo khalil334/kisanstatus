@@ -5,7 +5,7 @@ import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-05-24T20:56:18+05:30';
-const MODIFIED = '2026-06-02T15:23:46+05:30';
+const MODIFIED = '2026-08-21T19:45:00+05:30';
 
 const FAQS_DATA = [
   {
@@ -14,7 +14,7 @@ const FAQS_DATA = [
   },
   {
     q: '40 saal ke baad apy ya pmkmy konsa join karein?',
-    a: 'Dekhiye, 40 saal ki umar mein PMKMY join karne par aapko ₹3000 pension ke liye mahine ka sirf ₹200 dena hoga, aur sarkar bhi utna hi match karegi. Uske mukable, APY mein same pension ke liye aapko ₹420-₹430 mahina apni jeb se nikalne honge, bina kisi sarkari madad ke. Toh agar aap eligible kisan hain, toh 40 saal par bhi PMKMY hi zyada samajhdari wala faisla hai.',
+    a: 'Dekhiye, 40 saal ki umar mein PMKMY join karne par aapko ₹3000 pension ke liye mahine ka sirf ₹200 dena hoga, aur sarkar bhi utna hi match karegi. Uske mukable, APY mein same ₹3000 pension ke liye 40 saal ki entry par official PFRDA chart ke mutabik ₹873 mahina apni jeb se dena hota hai, bina kisi sarkari madad ke. Toh agar aap eligible kisan hain, toh 40 saal par bhi PMKMY hi zyada samajhdari wala faisla hai.',
   },
   {
     q: 'kisan ke liye best pension scheme kaunsi hai?',
@@ -142,7 +142,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
                 <tr className="border-t border-[var(--color-border)]"><td className="p-3 font-bold">Target Audience</td><td className="p-3">Sirf chhote/seemant kisan (≤ 2 hectare)</td><td className="p-3">Koi bhi unorganized worker (kisan bhi)</td></tr>
                 <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-3 font-bold">Max Pension</td><td className="p-3">Fixed ₹3000/month</td><td className="p-3">₹1000 se ₹5000/month (choice ke hisaab se)</td></tr>
                 <tr className="border-t border-[var(--color-border)]"><td className="p-3 font-bold">Govt Co-contribution</td><td className="p-3 font-bold text-green-700">1:1 match (poore tenure tak)</td><td className="p-3">Sirf 5 saal tak (aur woh bhi specific purane subscribers ko)</td></tr>
-                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-3 font-bold">Contribution (at age 25)</td><td className="p-3 font-bold text-green-700">~₹80/month</td><td className="p-3">~₹210/month (for ₹3000 pension)</td></tr>
+                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-3 font-bold">Contribution (at age 25)</td><td className="p-3 font-bold text-green-700">~₹80/month</td><td className="p-3">₹226/month (for ₹3000 pension)</td></tr>
                 <tr className="border-t border-[var(--color-border)]"><td className="p-3 font-bold">Exit Rules</td><td className="p-3">Strict. Voluntary exit par sirf apna hissa + interest wapas.</td><td className="p-3">Thoda flexible, lekin premature exit par bhi rules strict hain.</td></tr>
                 <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-3 font-bold">Management</td><td className="p-3">LIC (Life Insurance Corporation)</td><td className="p-3">PFRDA / NPS Architecture</td></tr>
               </tbody>
@@ -168,13 +168,13 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
 
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
               <h4 className="font-black text-blue-800 dark:text-blue-300 mb-2">Suresh (APY choose kiya)</h4>
-              <p className="text-xs text-[var(--color-text-muted)] mb-2">Suresh ne APY mein ₹3000 pension ka slab chuna. 25 saal ki umar mein uska monthly contribution lagbhag <strong>₹210</strong> hai. Government ka koi match nahi milega. 35 saal tak yeh amount uski jeb se jayega.</p>
+              <p className="text-xs text-[var(--color-text-muted)] mb-2">Suresh ne APY mein ₹3000 pension ka slab chuna. 25 saal ki umar mein uska monthly contribution PFRDA chart ke hisab se <strong>₹226</strong> hai. Government ka koi match nahi milega. 35 saal tak yeh amount uski jeb se jayega.</p>
               <p className="text-xs font-bold text-blue-800 dark:text-blue-300">Result: Zyada monthly bojh uthakar same ₹3000/month pension, bina kisi extra help ke.</p>
             </div>
           </div>
 
           <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-            Meri raay: Agar aap eligible kisan hain, toh PMKMY hi behtar option hai. 25 saal ki umar mein ₹80 vs ₹210 ka farak shuru mein chhota lag sakta hai, lekin 35 saal mein yeh hazaron rupaye ka farak ban jata hai, woh bhi bina government help ke. Pension scheme choose karte waqt yeh long-term math hamesha dhyan mein rakhein.
+            Meri raay: Agar aap eligible kisan hain, toh PMKMY hi behtar option hai. 25 saal ki umar mein ₹80 vs ₹226 ka farak shuru mein chhota lag sakta hai, lekin 35 saal mein yeh hazaron rupaye ka farak ban jata hai, woh bhi bina government help ke. Pension scheme choose karte waqt yeh long-term math hamesha dhyan mein rakhein.
           </p>
         </section>
 
@@ -212,7 +212,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
             Bahut se kisan 38-40 saal ki umar mein aakar sochte hain ki ab shuru karein ya nahi. Yeh ek common confusion hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Aaiye numbers dekhte hain. 40 saal ki umar mein PMKMY join karne par aapko ₹3000 pension ke liye mahine ka sirf ₹200 dena hoga (aur sarkar bhi ₹200 degi). Wahin, APY mein 40 saal ki umar mein ₹3000 pension ke liye aapko lagbhag ₹420 se ₹430 mahina dena padega, aur sarkar ka koi match nahi milega.
+            Aaiye numbers dekhte hain. 40 saal ki umar mein PMKMY join karne par aapko ₹3000 pension ke liye mahine ka sirf ₹200 dena hoga (aur sarkar bhi ₹200 degi). Wahin, APY mein 40 saal ki umar mein ₹3000 pension ke liye official chart ka rate ₹873 mahina hai, aur sarkar ka koi match nahi milega.
           </p>
           <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
             Isliye, agar aap eligible kisan hain, toh 40 saal par bhi PMKMY hi zyada behtar option hai. Der aaye, durust aaye. 20 saal tak ₹200 mahina dena, 60 ke baad ₹3000 paane ke mukable bahut chhota sacrifice hai.
@@ -274,7 +274,7 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Faisla Ek Number Par Tikta Hai: 1:1 Match</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Poori comparison ko ek number mein nichoda ja sakta hai: PMKMY mein sarkar aapke har rupaye ke saamne apna rupaya rakhti hai, APY mein nahi. 40 saal ki umar par ₹3000 pension ke liye PMKMY ₹200/mahina maangti hai, APY ₹420–430 — same pension, dogune se zyada daam.
+            Poori comparison ko ek number mein nichoda ja sakta hai: PMKMY mein sarkar aapke har rupaye ke saamne apna rupaya rakhti hai, APY mein nahi. 40 saal ki umar par ₹3000 pension ke liye PMKMY ₹200/mahina maangti hai, APY ₹873 — same pension, chaar guna se zyada daam.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
             APY sirf do surat mein aage hai: aapke paas 2 hectare wali kisan eligibility nahi hai, ya aapko ₹3000 se bade slab (₹5000 tak) ki zaroorat hai. In dono mein se koi lagoo nahi hota toh comparison yahin khatam ho jaata hai — eligible kisan ke liye 1:1 match ko haraane wala product filhaal market mein nahi hai.

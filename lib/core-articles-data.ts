@@ -576,7 +576,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanVoluntarySurrenderGuide',
     category: 'status-check',
     publishedTime: '2026-07-09T06:01:36+05:30',
-    modifiedTime: '2026-08-18T19:30:00+05:30',
+    modifiedTime: '2026-08-21T19:45:00+05:30',
     readingTime: 12,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisanVoluntarySurrenderGuide'),
