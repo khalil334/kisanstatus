@@ -95,7 +95,7 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
     ],
     category: 'status-check',
     publishedTime: '2026-07-16T11:58:35+05:30',
-    modifiedTime: '2026-07-21T11:55:34+05:30',
+    modifiedTime: '2026-08-21T20:15:00+05:30',
     author: AUTHOR_NAME,
     component: 'PmKisanEkycMobileSeKaiseKare',
     ogImage: '/images/articles/hindi-yojna/ekyc-mobile-se/otp-screen.webp',

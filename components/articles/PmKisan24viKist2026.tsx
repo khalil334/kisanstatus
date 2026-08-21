@@ -18,7 +18,7 @@ const KIST = {
 };
 
 const PUBLISHED = '2026-01-01T10:21:39+05:30';
-const MODIFIED = '2026-08-17T09:30:00+05:30';
+const MODIFIED = '2026-08-21T20:10:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisan25viKist2027', title: '25vi Kist Date & Amount' },
@@ -44,24 +44,8 @@ const FAQS_DATA = [
     a: 'Do din ruk jaiye — FTO process hone ke baad credit me 24 se 48 ghante lag jate hain, gramin banks me kabhi thoda jyada. Passbook ya mini statement se bhi dekh lijiye, SMS har baar nahi aata. pfms.nic.in par bhi track ho jata hai. Teen din baad bhi kuch na dikhe toh 155261 par call kijiye, registration number saath rakhiye.',
   },
   {
-    q: 'Naya registration abhi karun toh is baar mil jayega?',
-    a: 'Mil sakta hai, par pakka nahi. Form ke baad state verification hoti hai, phir eKYC aur bank seeding — poora process aksar 1 se 3 mahine kha jata hai. Jitni jaldi shuru karoge, chances utne behtar. Aur agar ye round chhut bhi gaya, toh ghabrao mat — eligible ho toh chhuta hua paisa agli baar jud kar aa jata hai.',
-  },
-  {
     q: 'Meri purani 2-3 kistein bhi ruki hui hain — woh milengi?',
     a: 'Agar rukne ki wajah aapki taraf se thi — eKYC pending, land seeding adhuri, spelling mismatch — aur ab woh theek ho gayi hai, toh ruka hua pura amount arrears ke roop me ek saath aata hai. Ministry khud keh chuki hai ki mandatory requirements poori hote hi due installments nikal jaati hain. Alag se koi application nahi lagti.',
-  },
-  {
-    q: 'Sirf Aadhaar card se status check ho sakta hai kya?',
-    a: 'Haan, bilkul. Registration number yaad nahi toh pmkisan.gov.in par "Know your registration no." me jaake Aadhaar number daalo — registration number saamne aa jayega. Phir usi se Know Your Status khol lo. Mobile number bhi chalta hai, bas woh record me registered hona chahiye. Kisi cyber cafe ko iske liye paise dene ki zaroorat nahi, phone se ho jata hai.',
-  },
-  {
-    q: '24vi kist ki beneficiary list kab aayegi?',
-    a: 'Village-wise list release ke aas-paas hi update hoti hai. Lekin ek baat samajh lo — list koi nayi nahi banti, wahi purani beneficiary list refresh hoti hai. Aap abhi bhi check kar sakte ho ki naam hai ya nahi. Naam abhi hai aur eKYC-seeding complete hai, toh 24vi me bhi milne ke pure chances hain. Naam abhi nahi hai toh release ka intezaar mat karo, wajah abhi dhundo.',
-  },
-  {
-    q: 'Holding limit ya zameen ki koi shart hai kya is baar?',
-    a: 'Nahi, zameen ke size ki koi limit nahi hai — 2019 se hi scheme sabhi landholding kisan parivaron ke liye hai, chhote-bade ka fark nahi. Shart bas ye hai ki zameen aapke naam registered ho aur aap exclusion list me na aate ho (income tax payer, government job, registered professional waghera). Baaki afwaah hai.',
   },
 ];
 
