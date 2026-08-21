@@ -141,6 +141,49 @@ export default function FasalBimaClaimStatusCheck({ article }: { article: Yojana
           ho. Nuksan dikhte hi report karo, saboot (photo, video, akhbaar ki kating) baad me jodte raho.
         </WB>
 
+        <SH>Status Screen Par Kya-Kya Likha Aata Hai — Matlab Samjho</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Portal ya app par status ek line me dikhta hai, par us line ka matlab samajhna zaroori hai —
+          warna har hafte check karke bhi kuch haath nahi aata:
+        </p>
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-sm border border-[var(--color-border)] rounded-xl overflow-hidden">
+            <thead>
+              <tr className="bg-[var(--color-bg-alt)] text-left">
+                <th className="p-3 font-black text-[var(--color-text)]">Status</th>
+                <th className="p-3 font-black text-[var(--color-text)]">Iska matlab + aapka kadam</th>
+              </tr>
+            </thead>
+            <tbody className="text-[var(--color-text-muted)]">
+              <tr className="border-t border-[var(--color-border)]">
+                <td className="p-3 font-semibold">Under Processing</td>
+                <td className="p-3">Application system me hai, abhi assessment baaki. Widespread case me CCE data ka intezaar chal raha hota hai — yahan sabr ke alawa kuch nahi karna.</td>
+              </tr>
+              <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]">
+                <td className="p-3 font-semibold">Survey Pending</td>
+                <td className="p-3">Localized intimation register ho gayi, surveyor aana baaki hai. 10 din se zyada ho jayein to 14447 par reference number ke saath poochho.</td>
+              </tr>
+              <tr className="border-t border-[var(--color-border)]">
+                <td className="p-3 font-semibold">Claim Approved</td>
+                <td className="p-3">Raqam tay ho gayi. Ab paisa DBT se aana hai — apne khaate ki NPCI seeding aaj hi check kar lo, wahi aakhri atkav hota hai.</td>
+              </tr>
+              <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]">
+                <td className="p-3 font-semibold">Payment Initiated / Credited</td>
+                <td className="p-3">Transfer chal gaya. 4-5 din me khaate me na dikhe to passbook update karwa kar bank se UTR number poochho.</td>
+              </tr>
+              <tr className="border-t border-[var(--color-border)]">
+                <td className="p-3 font-semibold">Rejected</td>
+                <td className="p-3">Wajah likhit me maango — ye aapka haq hai. Neeche wali rejection list se milao aur complaint ke raste par badho.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Ek aadat bana lo — jab bhi status dekho, <strong>screenshot le lo tareekh ke saath</strong>.
+          Status badalta hai, aur pichhla screenshot hi saboot hota hai ki approval kab dikha tha. Complaint
+          ke waqt yahi kaagaz sabse pehle kaam aata hai.
+        </p>
+
         <SH>Claim Reject Kyun Hota Hai — 5 Asli Wajah</SH>
         <StepList>
           <SI n={1}><strong>Late intimation</strong> — localized nuksan me 72 ghante ki window miss. Rejection ki wajah number ek.</SI>
@@ -189,6 +232,22 @@ export default function FasalBimaClaimStatusCheck({ article }: { article: Yojana
           charge hai, na complaint ka. Jo site ya aadmi &ldquo;fasal bima list me naam dekho, ₹99 do&rdquo;
           bole — wo fraud hai. Official raaste sirf pmfby.gov.in, Crop Insurance app aur 14447 hain.
         </DB>
+
+        <SH>Loanee Aur Non-Loanee — Status Me Farak Yahan Padta Hai</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          <strong>Loanee kisan</strong> — jinka KCC ya crop loan chal raha hai — unka bima aksar bank
+          ne khud kiya hota hai, premium loan account se kat kar. Aise kisano ke paas na receipt hoti hai
+          na policy number, isliye status check ka pehla kadam hi bank branch hai: passbook me premium
+          katne ki entry dikhao aur application number likhwa lo. Ye number mil gaya to aage sab kuch
+          portal se ghar baithe hota hai.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          <strong>Non-loanee kisan</strong> — jinhone CSC ya portal se khud enrollment kiya — unke paas
+          receipt/SMS pehle din se hota hai, unka status check seedha hai. Par unki ek alag dikkat hoti
+          hai: enrollment ke waqt khasra number ya fasal galat bhar gayi to claim ke waqt hi pata chalta
+          hai. Isliye season ke shuru me hi portal par apni policy kholkar fasal, rakba aur khasra ek baar
+          milaa lo — galti abhi dikhegi to insurance company se sudhrwai ja sakti hai, katai ke baad nahi.
+        </p>
 
         <SH>WBCIS Wala Note — Agar Aapka Bima Mausam-Aadharit Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">

@@ -270,6 +270,21 @@ export default function KisanKarjMafiAllStates({ article }: { article: Yojana202
           aapke haath me hona chahiye.
         </IB>
 
+        <SH>Bank Se Baat Karne Ka Sahi Tareeka — Chahe Scheme Ho Ya Na Ho</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Karj mafi ki khabar sun kar branch jaane wale zyada tar log ek hi galti karte hain — counter
+          par jaakar poochhte hain &ldquo;mera karj maaf hua ki nahi?&rdquo; Iska jawab hamesha gol-mol
+          milta hai. Sahi tareeka ye hai: pehle apne <strong>loan account ka statement</strong> nikalwao
+          aur teen cheezein likh kar lao — outstanding raqam, loan ki sanction date, aur loan ka type
+          (crop loan hai ya kuch aur). In teen ke bina koi bhi scheme me aapki patrata bata hi nahi sakta.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Statement haath me ho to baat seedhi hoti hai: &ldquo;mera crop loan is tareekh ka hai, itna
+          outstanding hai — scheme ke criteria me aata hai ya nahi?&rdquo; Jawab likhit me lena best
+          hai, par branch aksat likhit dene se katrati hai — tab kam se kam adhikari ka naam aur
+          tareekh apni diary me likh lo. Baad me shikayat karni padi to yahi kaam aayega.
+        </p>
+
         <SH>Agar Aapke State Ki Scheme Ghoshit Ho Jaaye To Pehle Ye Karo</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Ghoshna aur amal ke beech aksar kai mahine hote hain. Us beech me teen kaam kar lo. Pehla — apni

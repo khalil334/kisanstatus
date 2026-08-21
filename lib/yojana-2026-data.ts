@@ -40,7 +40,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     component: 'FasalBimaClaimStatusCheck',
     officialPortal: 'https://pmfby.gov.in',
     published: '2026-08-18T07:49:14+05:30',
-    modified: '2026-08-18T07:49:14+05:30',
+    modified: '2026-08-21T22:15:00+05:30',
     readTime: '12 min read',
     relatedPaths: ['/articles/PmfbyCropInsurance2026', '/calculator/pmfby-premium'],
   },
@@ -64,7 +64,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     component: 'KisanKarjMafiAllStates',
     officialPortal: 'https://mjpsky.maharashtra.gov.in',
     published: '2026-08-18T07:42:14+05:30',
-    modified: '2026-08-18T07:42:14+05:30',
+    modified: '2026-08-21T22:15:00+05:30',
     readTime: '13 min read',
     relatedPaths: [
       '/rajya-yojana/up-kisan-karj-rahat-list-2026',
