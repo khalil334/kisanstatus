@@ -186,7 +186,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     component: 'SabziBhavGuidePyazAlooTamatar',
     category: 'mandi',
     publishedTime: '2026-03-28T16:58:58+05:30',
-    modifiedTime: '2026-04-02T19:01:54+05:30',
+    modifiedTime: '2026-08-21T20:00:00+05:30',
     readingTime: 11,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('sabzi-bhav-guide-pyaz-aloo-tamatar'),

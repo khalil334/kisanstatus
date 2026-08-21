@@ -184,7 +184,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 | 30 | ✅ 2026-08-21 | `/articles/PmKisanBankAccountChangeProcess` (63 imp) | `/maandhan/pm-kisan-maandhan-pension-calculator` (63 imp) |
 | 31 | ✅ 2026-08-21 | `/articles/soil-health-card-complete-guide-2026` (61 imp) | `/articles/PmKisan25viKist2027` (50 imp) |
 | 32 | ✅ 2026-08-21 | `/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana` (47 imp) | `/articles/PmKisanVoluntarySurrenderGuide` (43 imp) |
-| 33 | ⬜ | `/articles/hi/gehu-ka-rate-aaj` (42 imp) | `/articles/sabzi-bhav-guide-pyaz-aloo-tamatar` (41 imp) |
+| 33 | ✅ 2026-08-21 | `/articles/hi/gehu-ka-rate-aaj` (42 imp) | `/articles/sabzi-bhav-guide-pyaz-aloo-tamatar` (41 imp) |
 | 34 | ⬜ | `/articles/KisanRinKahaSeLe2026` (38 imp) | `/articles/sbi-dairy-loan-interest-rate` (37 imp) |
 | 35 | ⬜ | `/articles/PmKisanFaceAuthenticationEkyc` (36 imp) | `/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega` (36 imp) |
 | 36 | ⬜ | `/articles/gau-mutra-kharid-yojana-up-2026` (34 imp) | `/maandhan/pm-kisan-maandhan-eligibility-documents` (27 imp) |
