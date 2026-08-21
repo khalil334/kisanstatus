@@ -878,7 +878,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'SilageMaking',
     category: 'pashupalan',
     publishedTime: '2026-07-12T05:24:38+05:30',
-    modifiedTime: '2026-08-13T07:03:42+05:30',
+    modifiedTime: '2026-08-21T21:05:00+05:30',
     readingTime: 16,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('silage-making-business-guide'),

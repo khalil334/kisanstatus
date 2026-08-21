@@ -93,7 +93,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     component: 'EnamRegistrationKaiseKare',
     category: 'mandi',
     publishedTime: '2026-07-02T20:36:46+05:30',
-    modifiedTime: '2026-07-16T16:28:23+05:30',
+    modifiedTime: '2026-08-21T21:10:00+05:30',
     readingTime: 11,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('enam-registration-kaise-kare'),

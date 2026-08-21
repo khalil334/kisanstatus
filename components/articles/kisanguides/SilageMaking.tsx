@@ -56,24 +56,12 @@ const silageMakingFaqs = [
     a: 'Packet khulne ke 3-4 din ke andar use kar lena chahiye. Uske baad hawa lagne se fermentation reverse ho jata hai aur fungus lag sakta hai. Rozana thoda-thoda kaat kar nikalna sahi tarika hai.',
   },
   {
-    q: 'Kya yeh preserved fodder sirf gaay/bhains ke liye hai ya bakri/bhed bhi kha sakti hain?',
-    a: 'Bakri, bhed aur ghode bhi khila sakte hain. Bas quantity alag hogi — chhote janwaron ke liye 1-2 kg rozana kaafi hai, bhains ko 8-10 kg tak chahiye.',
-  },
-  {
-    q: 'Off-season (garmiyon) mein machinery aur staff ka kya karein?',
-    a: 'Garmiyon mein demand girti hai kyunki hari ghaas khud hi available ho jaati hai. Ye time machinery servicing ke liye use karo. Staff ko hay making ya mineral mixture blending jaisa kaam do, taaki fixed cost nikalta rahe.',
-  },
-  {
     q: 'Kya packaged fodder banane ke liye koi special training ya license chahiye?',
     a: 'Udyam Registration aur GST basic zaroorat hai. Branded feed bechna ho toh FSSAI license lagega. NDDB ya KVK ke short-term courses se fermentation aur quality control ka practical gyaan mil jata hai.',
   },
   {
     q: 'Silage business shuru karne ke liye kam se kam kitni zameen chahiye?',
     a: 'Apni zameen par makka ugana ho toh 2-3 acre se bhi shuruaat ho sakti hai, par 5 acre se upar hone par per-unit cost kam padta hai. Zameen bilkul na ho toh sirf processing unit laga kar kisaanon se makka khareed sakte ho.',
-  },
-  {
-    q: 'Silage aur hay (sukha chara) mein kya farak hai?',
-    a: 'Hay dhoop mein sukhaya jata hai aur ismein moisture 15% se kam reh jaati hai. Silage geeli hi rehti hai (moisture 60-70%) aur fermentation se preserve hoti hai, isliye poshan aur palatability dono hay se better mani jaati hai.',
   },
   {
     q: 'Ek chota silage unit kitne mahino mein apna paisa wapas kama leta hai?',
