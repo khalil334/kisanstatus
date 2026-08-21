@@ -485,7 +485,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKusumYojanaSolarSubsidy2026',
     title: 'PM Kusum Solar Pump 2026: 60% Subsidy',
-    desc: 'Solar pump par 60% subsidy, zero bijli bill, 25 saal free paani. Eligibility, online apply aur state-wise process simple bhasha mein.',
+    desc: 'Solar pump par 60% subsidy ka sahi hisaab — Centre 30% + State 30%, jeb se 10%. Eligibility, documents aur official portal se apply ka tarika.',
     ogTitle: 'PM Kusum Solar Subsidy 2026 Guide',
     keywords: [
       'pm kusum yojana solar pump subsidy',
@@ -498,7 +498,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKusumYojanaSolarSubsidy2026',
     category: 'farming',
     publishedTime: '2026-07-08T03:06:14+05:30',
-    modifiedTime: '2026-08-20T23:30:00+05:30',
+    modifiedTime: '2026-08-21T23:55:00+05:30',
     readingTime: 12,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKusumYojanaSolarSubsidy2026'),
@@ -888,8 +888,8 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'pm-fme-yojana-food-processing',
-    title: 'PM FME Yojana 2026: 35% Subsidy',
-    desc: 'PM FME se 35% subsidy (max ₹10 lakh). Achar, papad, bakery units ke liye. ODOP benefits, application process, aur documents checklist.',
+    title: 'PM FME Yojana 2026: 35% Subsidy, ₹10 Lakh Tak',
+    desc: 'Achar, papad ya bakery unit? PM FME me 35% credit-linked subsidy, max ₹10 lakh. Eligibility, ODOP, documents aur apply ka poora process yahan.',
     ogTitle: 'PM FME Yojana 2026 Food Subsidy',
     keywords: [
       'pm fme yojana 2026',
@@ -902,7 +902,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PMFMEYojana',
     category: 'agri-business',
     publishedTime: '2026-07-12T05:28:29+05:30',
-    modifiedTime: '2026-08-13T23:23:53+05:30',
+    modifiedTime: '2026-08-21T23:55:00+05:30',
     readingTime: 15,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('pm-fme-yojana-food-processing'),

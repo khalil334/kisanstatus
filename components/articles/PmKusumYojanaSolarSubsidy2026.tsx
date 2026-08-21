@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import { SI, StepList, IB, WB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import OfficialLinkButton from '@/components/OfficialLinkButton';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-15T21:25:25+05:30';
-const MODIFIED = '2026-08-20T23:30:00+05:30';
+const MODIFIED = '2026-08-21T23:55:00+05:30';
 
 const RELATED = [
   { slug: 'drip-sprinkler-irrigation-subsidy', title: 'Drip & Sprinkler Subsidy' },
@@ -16,577 +16,407 @@ const RELATED = [
 
 const FAQS_DATA = [
   {
-    q: 'solar pump subsidy ka paisa seedha account mein aata hai ya vendor ko?',
-    a: 'Seedha tumhare bank account mein. Vendor ko sirf tumhara hissa dena hota hai.',
+    q: 'Subsidy ka paisa seedha account mein aata hai ya vendor ko?',
+    a: 'Aapko cash nahi milta. Subsidy state implementing agency ke through system me adjust hoti hai — aap sirf apna hissa dete ho aur pump lag jata hai.',
   },
   {
-    q: 'kya bina zameen ke solar pump mil sakta hai?',
-    a: 'Nahi bhai. Kam se kam 0.5 acre zameen chahiye jisme tumhara naam ho.',
+    q: 'Kya bina zameen ke solar pump mil sakta hai?',
+    a: 'Nahi. Zameen aapke naam par honi chahiye aur land record (Khatauni/Khasra/7-12) updated hona chahiye. Lease wali zameen par states ke apne niyam hain — apni state agency se poochho.',
   },
   {
-    q: 'pm kusum yojana helpline number kya hai?',
-    a: 'National: 1800-180-3333 (toll free). Har state ka alag number bhi hota hai portal par.',
-  },
-  {
-    q: 'ek kisan kitne solar pump le sakta hai?',
-    a: 'Ek beneficiary ek hi pump ka eligible hai same survey number par. Alag plot hai toh dobara apply kar sakte ho.',
-  },
-  {
-    q: 'solar pump lagwane ke baad bijli bill aayega kya?',
-    a: 'Component B (standalone) mein bilkul nahi. Component C (grid-connected) mein extra bijli bechoge toh ulta paisa milega.',
-  },
-  {
-    q: 'barish na ho toh solar pump chalega kya?',
-    a: 'Cloudy din mein output 30-40% kam hota hai lekin band nahi hota. Battery backup option bhi available hai kuch states mein.',
-  },
-  {
-    q: 'vendor khud choose kar sakte hain ya govt assign karti hai?',
-    a: 'Govt empanelled vendors ki list portal par hoti hai. Usme se apna pasand ka vendor select kar sakte ho. Bahar se koi private vendor nahi chalega.',
+    q: 'PM Kusum helpline number kya hai?',
+    a: 'National toll-free: 1800-180-3333. State nodal agency ka alag contact bhi pmkusum.mnre.gov.in par milta hai.',
   },
   {
     q: 'Apna 40% hissa nahi hai — loan mil sakta hai?',
-    a: 'Haan. Solar pump irrigation ke andar aata hai, isliye bank iske liye term loan deta hai, aur PM-KUSUM ke tahat NABARD refinance wale route par rate 4-6% ke aas-paas rehta hai — personal loan ke 12-18% se bahut kam. Do cheezein dhyan me rakho: loan ki file me subsidy sanction ka reference lagao (bank tabhi sirf aapke hisse par loan banata hai), aur approval aane se pehle vendor ko advance mat do.',
+    a: 'Haan. Scheme ke design me hi hai ki farmer ke hisse ka 30% tak bank loan ho sakta hai — matlab shuru me sirf 10% apni jeb se. Loan file me subsidy sanction ka reference zaroor lagao.',
   },
   {
-    q: 'Pump lag gaya — uske baad ka kya kaam hai?',
-    a: 'Teen kagaz apne paas rakho: 5 saal ki warranty ka document, vendor ka service contact, aur commissioning report ki copy. Panel ki safai mahine me ek-do baar (dhool se output girta hai), aur baarish se pehle wiring aur earthing check karwao. Warranty period me har fault vendor ka kaam hai — apni jeb se mistri bulaane ki zaroorat nahi, par shikayat likhit me jani chahiye.',
+    q: 'Cloudy din ya barish me pump chalega kya?',
+    a: 'Chalega, par kam. Badal wale din output ghat jata hai kyunki panel ko kam dhoop milti hai. Isliye pump ki sizing apne paani ki zaroorat se thoda upar rakhna samajhdari hai.',
   },
   {
-    q: 'application ke baad survey kab hota hai?',
-    a: 'Aam taur par 15-30 din mein agriculture officer ya vendor site visit karta hai. Kabhi kabhi delay hota hai — helpline par follow up karo.',
+    q: 'Vendor khud choose kar sakte hain ya sarkar assign karti hai?',
+    a: 'State agency ke empanelled vendors ki list me se hi choose karna hota hai. Bahar ka private vendor lagwaya to subsidy nahi milegi.',
+  },
+  {
+    q: 'Pump lagne ke baad kaun sa kagaz sambhal ke rakhein?',
+    a: 'Teen cheezein: warranty/AMC document (5 saal ka maintenance vendor ki zimmedari hota hai), commissioning report ki copy, aur vendor ka service contact. Warranty period me har fault vendor ka kaam hai — likhit shikayat karo.',
+  },
+  {
+    q: 'Application ke baad survey kab hota hai?',
+    a: 'Aam taur par kuch hafton me site verification hota hai, par state ke quota aur staff par depend karta hai. 30 din se zyada kuch na ho to helpline par follow-up karo.',
   },
 ];
 
 export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: ArticleMeta }) {
-
   return (
     <>
-
-      <div className="bg-[var(--color-primary)] py-8">
-        <div className="container-site max-w-3xl">
-          <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
-            <Link href="/" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Home</Link>
+      <div className="bg-gradient-to-b from-[var(--color-bg-alt)] to-[var(--color-bg)] border-b border-[var(--color-border)]">
+        <div className="max-w-3xl mx-auto px-4 py-8">
+          <nav className="flex items-center gap-2 text-xs text-[var(--color-text-muted)] mb-4">
+            <Link href="/" className="hover:text-[var(--color-primary)]">Home</Link>
             <span>/</span>
-            <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
+            <Link href="/articles" className="hover:text-[var(--color-primary)]">Articles</Link>
             <span>/</span>
-            <span className="text-white font-bold">Solar Pump Subsidy</span>
+            <span className="text-[var(--color-text)]">Solar Pump Subsidy</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">PM Kusum Yojana 2026</span>
-          <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kusum Yojana Solar Pump Subsidy 2026: 60% Subsidy Kaise Milegi, Apply Karne Ka Sahi Tarika
+          <span className="inline-block px-3 py-1 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 text-xs font-bold rounded-full mb-3">PM Kusum Yojana 2026</span>
+          <h1 className="text-2xl md:text-3xl font-black text-[var(--color-text)] leading-tight mb-4">
+            PM Kusum Solar Pump: 60% Subsidy Ka Sahi Hisaab Aur Apply Ka Tarika
           </h1>
-          <div className="flex flex-wrap gap-3 text-xs text-green-200">
-            <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-[var(--color-text-muted)]">
+            <span><Link href="/about" className="hover:text-[var(--color-primary)]">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(PUBLISHED)}</span>
             <span>Updated: {fmtDate(MODIFIED)}</span>
-            <span>15 min read</span>
+            <span>14 min read</span>
           </div>
         </div>
       </div>
 
-      <div className="container-site max-w-3xl py-8">
+      <div className="max-w-3xl mx-auto px-4 py-8">
+        <p className="text-[var(--color-text)] leading-relaxed mb-4">
+          Pehli baat jo koi nahi batata: is scheme me koi ek &quot;last date&quot; nahi hoti.
+          Har state ko pumps ka quota milta hai, aur application window usi hisaab se
+          khulti-band hoti hai. Isliye jo sabse pehle karna hai wo form bharna nahi —
+          apne state ki current window ka status dekhna hai. Window band hai to accha
+          se accha form bhi waitlist me hi baithega.
+        </p>
+        <p className="text-[var(--color-text)] leading-relaxed mb-4">
+          Ab scheme ki baat. PM-KUSUM (poora naam — Pradhan Mantri Kisan Urja Suraksha
+          evam Utthaan Mahabhiyan) MNRE yani Ministry of New and Renewable Energy ki
+          scheme hai, 2019 se chal rahi hai. Iska jo hissa aam kisan ke kaam ka hai —
+          Component B — usme khet me standalone solar pump lagta hai aur lagbhag 60%
+          kharcha sarkar uthati hai. Diesel pump wale ilaqo ko priority milti hai.
+        </p>
+        <p className="text-[var(--color-text)] leading-relaxed mb-6">
+          Neeche paise ka poora hisaab, eligibility, documents, apply ka process aur
+          rejection se bachne ke tarike hain — sab official structure ke hisaab se,
+          hawa me kuch nahi.
+        </p>
 
-        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-          Bhai, sach bataun? Diesel pump chalane wale kisan ka haal dekh ke dil dukhta hai.
-        </p>
-        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-5">
-          Har mahine ₹4,000-6,000 tel mein phoonk dete hain. Kabhi kabhi diesel mehnga ho jata hai, kabhi pump kharab. Bijli walo ka bhi yahi haal — bill aata hai toh paseena chhoot jata hai. Aur load shedding alag tension.
-        </p>
-        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-          Solar pump lagwane ke baad diesel ka kharcha khatam ho jaata hai — yahi is scheme ka asli faayda hai. Kitni bachat hogi, wo aapke pump size aur pehle ke diesel kharche par depend karta hai.
-        </p>
-        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Neeche eligibility, real cost, state-wise process aur rejection se bachne ke tarike diye hain.
-        </p>
-
-        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <div className="mb-8">
           <Image
             src={article.ogImage || '/images/articles/pm-kusum-yojana-solar-subsidy-2026/solar-pump-hero.webp'}
-            alt="Indian farmer standing proudly next to installed solar water pump in lush green field with panels tilted at angle"
+            alt="Khet me lage solar panel aur pump ke paas khada kisan"
             width={1200}
             height={630}
-            className="w-full object-cover"
+            className="rounded-2xl w-full h-auto object-cover"
             style={{ maxHeight: '420px', objectPosition: 'center' }}
             priority
             sizes="(max-width: 768px) 100vw, 768px"
           />
-          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Solar Pump = Free Paani, Zero Tension
+          <p className="text-xs text-[var(--color-text-muted)] text-center mt-2">
+            Diesel ka kharcha hatane ka sabse seedha rasta
           </p>
         </div>
 
         <section className="mb-8">
-          <SH>PM Kusum Yojana Kya Hai? Seedhi Bhasha Mein</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Naam bada hai — Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan. Par kaam simple: <strong>kisan ko free bijli do, diesel hatayo.</strong>
+          <SH>Paise Ka Hisaab Pehle — 60% Aata Kahan Se Hai</SH>
+          <p className="text-[var(--color-text)] leading-relaxed mb-4">
+            Ye official formula hai, MNRE ke guidelines wala:
           </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Isme 3 hisse hain. Tumhe bas dusra wala chahiye:
-          </p>
-
-          <div className="space-y-3 mb-4">
-            <div className="p-4 bg-gray-50 dark:bg-gray-800/50 border border-[var(--color-border)] rounded-xl opacity-70">
-              <p className="font-black text-[var(--color-text-muted)] text-sm mb-1">Component A — Bade Solar Plants</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Banjar zameen par mega projects. Individual kisan se lena-dena nahi.</p>
-            </div>
-
-            <div className="p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-600 rounded-xl relative">
-              <span className="absolute -top-3 right-4 bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">TUMHARA YE HAI</span>
-              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-1">Component B — Standalone Solar Pump</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Apne khet mein akela solar pump lagao. 60% tak subsidy. Diesel/grid replace karne walon ko priority milti hai. <strong>Kusum yojana component b standalone solar pump</strong> yahi hai jiske liye tum yahan aaye ho.</p>
-            </div>
-
-            <div className="p-4 bg-gray-50 dark:bg-gray-800/50 border border-[var(--color-border)] rounded-xl opacity-70">
-              <p className="font-black text-[var(--color-text-muted)] text-sm mb-1">Component C — Grid Connected</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Pehle se bijli connection hai? Usko solarize karo. Extra power becho DISCOM ko. Kamai bhi.</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-8">
-          <SH>Kaun Le Sakta Hai? (Aur Kaun Nahi)</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Sabse pehle ye check kar lo ki tum eligible ho ya nahi. Baad mein reject hone se behtar hai abhi pata chal jaye.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-            <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4">
-              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-3">Haan, Apply Kar Sakte Ho</p>
-              <ul className="text-xs text-[var(--color-text-muted)] space-y-1.5">
-                <li>✓ Indian citizen ho</li>
-                <li>✓ Zameen tumhare naam par registered hai</li>
-                <li>✓ Min 0.5 acre (2HP ke liye), 2+ acre (5HP ke liye)</li>
-                <li>✓ Khatauni/Khasra updated hai</li>
-                <li>✓ Bank account Aadhaar se juda hai</li>
-                <li>✓ SC/ST ho toh extra subsidy milegi</li>
-              </ul>
-            </div>
-            <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-3">Sorry, Eligible Nahi Ho</p>
-              <ul className="text-xs text-[var(--color-text-muted)] space-y-1.5">
-                <li>✗ Zameen kiraye/lease par hai (owner consent nahi)</li>
-                <li>✗ Land record mein naam galat/purana hai</li>
-                <li>✗ Same plot par pehle solar pump laga hua hai</li>
-                <li>✗ Income tax payer (kuch states mein bar hai)</li>
-                <li>✗ Government employee ho</li>
-              </ul>
-            </div>
-          </div>
-
-          <WB>
-            <strong>Sabse Badi Galti Jo Log Karte Hain:</strong> Apply kar dete hain bina <strong>land record verification</strong> kiye. Phir 2 mahine baad rejection letter aata hai. Pehle Patwari/Tehsildar se Khatauni update karwao, naam match karwao Aadhaar se, tabhi form bharo.
-          </WB>
-        </section>
-
-        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
-          <Image
-            src="/images/articles/pm-kusum-yojana-solar-subsidy-2026/diesel-vs-solar-comparison.webp"
-            alt="Split image showing rusty old diesel pump on left side vs shiny new solar pump with panels on right side in same farm setting"
-            width={1200}
-            height={630}
-            className="w-full object-cover"
-            loading="lazy"
-            sizes="(max-width: 768px) 100vw, 768px"
-          />
-          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Purana Diesel vs Naya Solar — Fark Khud Dekho
-          </p>
-        </div>
-
-        <section className="mb-8">
-          <SH>Kitna Paisa Bachega? Real Numbers Dekho</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Chalo ab asli baat — <strong>solar pump subsidy scheme for farmers 2026</strong> mein kitna milta hai?
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Formula simple: Centre 30% + State 30% = Total 60%. Tumhari jeb se sirf 40%. SC/ST kisanon ko kuch states mein <strong>90 percent subsidy solar pump</strong> bhi milti hai.
-          </p>
-
-          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
-            <table className="w-full text-sm border-collapse">
+          <div className="overflow-x-auto mb-4">
+            <table className="w-full text-sm border border-[var(--color-border)] rounded-lg">
               <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left">State</th>
-                  <th className="p-3 text-left">Subsidy %</th>
-                  <th className="p-3 text-left">3HP Ki Kimat (Tumhari Jeb Se)</th>
-                  <th className="p-3 text-left">Special Note</th>
+                <tr className="bg-[var(--color-bg-alt)]">
+                  <th className="p-3 text-left font-bold">Kaun deta hai</th>
+                  <th className="p-3 text-left font-bold">Kitna</th>
                 </tr>
               </thead>
               <tbody>
-                {[
-                  { state: 'Rajasthan', sub: '60-70%', price: '₹35K-45K', note: 'SC/ST ko 75%' },
-                  { state: 'UP', sub: '60%', price: '₹40K-55K', note: 'CSC apply option' },
-                  { state: 'MP', sub: '60%', price: '₹38K-50K', note: 'Fast approval' },
-                  { state: 'Maharashtra', sub: '60-65%', price: '₹42K-58K', note: 'Grid option popular' },
-                  { state: 'Bihar', sub: '60%', price: '₹40K-52K', note: 'Diesel replace priority' },
-                  { state: 'Haryana', sub: '60-75%', price: '₹30K-40K', note: 'Best subsidy rate' },
-                  { state: 'Gujarat', sub: '60%', price: '₹38K-48K', note: 'SKY scheme merge' },
-                ].map((r) => (
-                  <tr key={r.state} className="bg-[var(--color-card)] hover:bg-[var(--color-bg-alt)] transition-colors">
-                    <td className="p-3 border-b border-[var(--color-border)] font-semibold text-xs">{r.state}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-green-700 dark:text-green-400 font-bold">{r.sub}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs">{r.price}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-[10px] text-[var(--color-text-muted)]">{r.note}</td>
-                  </tr>
-                ))}
+                <tr className="border-t border-[var(--color-border)]">
+                  <td className="p-3">Centre (CFA)</td>
+                  <td className="p-3">30% — benchmark ya tender cost, jo kam ho</td>
+                </tr>
+                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]">
+                  <td className="p-3">State sarkar</td>
+                  <td className="p-3">Kam se kam 30% (kuch states isse zyada dete hain)</td>
+                </tr>
+                <tr className="border-t border-[var(--color-border)]">
+                  <td className="p-3">Aap</td>
+                  <td className="p-3">Baaki ~40% — isme se 30% tak bank loan ho sakta hai, jeb se sirf 10%</td>
+                </tr>
+                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]">
+                  <td className="p-3">Special states*</td>
+                  <td className="p-3">Centre 50% deta hai — kisan ka hissa 20% tak reh jata hai</td>
+                </tr>
               </tbody>
             </table>
           </div>
-
-          <DB>
-            <strong>Real Example:</strong> Jaipur ke Mohan Lal ji ne 3HP solar pump lagwaya 2025 mein. Total cost ₹1,40,000 thi. Subsidy mili ₹84,000. Unhone sirf ₹56,000 diye. Pehle diesel pe saal ka ₹50,000 jaata tha. Matlab <strong>ek saal mein hi investment recover</strong>. Agla 24 saal pure profit.
-          </DB>
+          <p className="text-xs text-[var(--color-text-muted)] mb-4">
+            *North-East, J&amp;K, Ladakh, Himachal, Uttarakhand, Lakshadweep, Andaman &amp; Nicobar.
+          </p>
+          <p className="text-[var(--color-text)] leading-relaxed mb-4">
+            Do baatein isme chhupi hain jo log miss karte hain. Ek — subsidy ka percentage
+            &quot;benchmark cost&quot; par lagta hai, market price par nahi. Matlab agar vendor ka
+            rate benchmark se upar hai, to upar ka antar aapka. Do — kuch states apni
+            taraf se 30% se zyada milate hain, isliye asli hissa har state me alag hota
+            hai. Exact rakam wahi manna jo aapke state portal ke sanction letter me likhi ho.
+          </p>
+          <WB>
+            <strong>Savdhaan:</strong> &quot;90% subsidy&quot; ka wada karne wali private websites aur
+            agents se door raho. Registration sirf official state portal se hota hai, aur
+            koi bhi advance vendor ko tabhi do jab sanction aapke haath me ho.
+          </WB>
         </section>
 
         <section className="mb-8">
-          <SH>Kaagaz Ready Rakho — Ye Chahiye</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Form bharne baithe toh beech mein rukna mat pade. Ye sab pehle se phone/PDF mein rako:
+          <SH>Teen Components — Aapka Kaun Sa Hai</SH>
+          <p className="text-[var(--color-text)] leading-relaxed mb-4">
+            Scheme ke teen hisse hain, aur zyada tar kisano ka kaam dusre wale se chalta hai:
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
-            {[
-              'Aadhaar Card (clear photo)',
-              'Bank Passbook front page',
-              'Khatauni / Khasra / 7-12 Utara',
-              'Passport size photo (white bg)',
-              'Mobile number (Aadhaar linked)',
-              'Caste certificate (SC/ST only)',
-              'Old pump bill/photo (if replacing)',
-              'Electricity bill (Component C only)',
-            ].map((d) => (
-              <div key={d} className="flex items-center gap-2 p-2.5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-lg">
-                <span className="text-green-600 dark:text-green-400 font-bold text-sm shrink-0">✓</span>
-                <span className="text-xs text-[var(--color-text)]">{d}</span>
-              </div>
-            ))}
+          <div className="space-y-3 mb-4">
+            <div className="p-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-alt)]">
+              <p className="font-bold text-[var(--color-text)] mb-1">Component A — Solar plant lagakar bijli bechna</p>
+              <p className="text-sm text-[var(--color-text-muted)]">Banjar/kheti ki zameen par 500 kW se 2 MW ka plant, bijli DISCOM ko bikti hai. Zameen zyada ho to income ka rasta hai, pump se lena-dena nahi.</p>
+            </div>
+            <div className="p-4 rounded-xl border-2 border-amber-400 dark:border-amber-600 bg-amber-50 dark:bg-amber-900/20 relative">
+              <span className="absolute -top-2.5 right-4 px-2 py-0.5 bg-amber-500 text-white text-[10px] font-black rounded">ZYADATAR KISANO KA YAHI</span>
+              <p className="font-bold text-[var(--color-text)] mb-1">Component B — Standalone solar pump</p>
+              <p className="text-sm text-[var(--color-text-muted)]">Jahan grid connection nahi hai ya diesel pump chal raha hai, wahan naya solar pump. 7.5 HP tak ke pump par central assistance milti hai. Yehi wo 60% subsidy wala hissa hai.</p>
+            </div>
+            <div className="p-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-alt)]">
+              <p className="font-bold text-[var(--color-text)] mb-1">Component C — Purane grid pump ka solarisation</p>
+              <p className="text-sm text-[var(--color-text-muted)]">Bijli wala pump already hai to us par solar panel lagta hai. Din me free sinchai, bachi bijli DISCOM ko bech kar kamai bhi.</p>
+            </div>
           </div>
-          <p className="text-xs text-[var(--color-text-muted)] italic">
-             Blur photo upload mat karna bhai. Reject hone ka #1 reason yahi hai. Clear scan ya acche phone se click karo.
-          </p>
         </section>
 
-        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <section className="mb-8">
+          <SH>Eligibility — Form Bharne Se Pehle Ye Check Karo</SH>
+          <div className="grid md:grid-cols-2 gap-4 mb-4">
+            <div className="p-4 rounded-xl border border-green-300 dark:border-green-800 bg-green-50 dark:bg-green-900/20">
+              <p className="font-bold text-green-800 dark:text-green-300 mb-2">Apply kar sakte ho agar:</p>
+              <ul className="text-sm text-[var(--color-text)] space-y-1.5">
+                <li>✓ Zameen aapke naam registered hai</li>
+                <li>✓ Khatauni/Khasra/7-12 me naam Aadhaar se match karta hai</li>
+                <li>✓ Bank account Aadhaar se linked hai</li>
+                <li>✓ Us khet me paani ka source hai (boring/kuan/talab)</li>
+              </ul>
+            </div>
+            <div className="p-4 rounded-xl border border-red-300 dark:border-red-800 bg-red-50 dark:bg-red-900/20">
+              <p className="font-bold text-red-800 dark:text-red-300 mb-2">Dikkat aayegi agar:</p>
+              <ul className="text-sm text-[var(--color-text)] space-y-1.5">
+                <li>✗ Land record me naam purana/galat hai</li>
+                <li>✗ Same khet par pehle se solar pump laga hai</li>
+                <li>✗ Zameen lease par hai aur owner ka consent nahi</li>
+                <li>✗ State ke apne extra criteria me fit nahi baithte</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-[var(--color-text)] leading-relaxed mb-4">
+            Pump size kitna milega, ye aapki zameen aur paani ki zaroorat par state agency
+            tay karti hai — chhoti joth par bada pump maangoge to application wahi atkegi.
+            SC/ST kisano ke liye kai states me alag quota aur zyada state share hai; apne
+            state portal par category-wise detail dekh lo.
+          </p>
+          <WB>
+            <strong>Sabse badi galti:</strong> bina land record check kiye apply karna. Naam ki
+            spelling, pita ka naam, khasra number — sab Aadhaar aur Khatauni me same hona
+            chahiye. Pehle Patwari se record durust karwao, phir form bharo. Mahine-do-mahine
+            baad rejection letter se accha hai ek din Patwari ke yahan lagana.
+          </WB>
+        </section>
+
+        <div className="mb-8">
           <Image
-            src="/images/articles/pm-kusum-yojana-solar-subsidy-2026/application-form-screenshot.webp"
-            alt="Screenshot of PM Kusum online registration form showing Aadhaar field, land details and pump selection dropdown"
+            src="/images/articles/pm-kusum-yojana-solar-subsidy-2026/diesel-vs-solar-comparison.webp"
+            alt="Ek taraf purana diesel pump, dusri taraf naya solar pump — dono ka farq"
             width={1200}
             height={630}
-            className="w-full object-cover"
+            className="rounded-2xl w-full h-auto object-cover"
             loading="lazy"
             sizes="(max-width: 768px) 100vw, 768px"
           />
-          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Portal Par Form Bharna Simple Hai — Bas Sahi Details Daalo
+          <p className="text-xs text-[var(--color-text-muted)] text-center mt-2">
+            Diesel ka mahina-mahina kharcha vs ek baar ka investment
           </p>
         </div>
 
         <section className="mb-8">
-          <SH>Ghar Baithe Apply Kaise Karein (Portal Se)</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Online apply kaise kare 2026</strong> — bahut simple hai. Agent ko ₹500 dene ki zaroorat nahi:
+          <SH>Diesel Se Kitna Sasta Padega?</SH>
+          <p className="text-[var(--color-text)] leading-relaxed mb-4">
+            Exact bachat aapke pump ke size, diesel ke bhav aur sinchai ke ghanton par
+            depend karti hai, isliye main koi jaadui number nahi dunga. Hisaab khud aise
+            lagao: apna pichhle saal ka diesel kharcha nikaalo (mahine ka kharcha × jitne
+            mahine pump chalta hai). Solar pump lagne ke baad ye kharcha lagbhag zero ho
+            jata hai — dhoop ka koi bill nahi aata. Ab apna 10% upfront + loan ki EMI us
+            bachat ke saamne rakho. Zyada tar diesel-heavy kheto me ye hisaab kuch saal
+            me barabar ho jata hai, aur panel ki umar 25 saal tak manee jati hai.
+          </p>
+          <p className="text-[var(--color-text)] leading-relaxed mb-4">
+            Haan, ek imaandaar baat — jahan bijli lagbhag free hai (kuch states me agriculture
+            connection par bill na ke barabar aata hai), wahan standalone solar ka financial
+            case kamzor hota hai. Wahan Component C (solarisation) zyada sense banata hai,
+            kyunki bachi bijli bech kar kamai hoti hai.
+          </p>
+          <IB>
+            <strong>Loan wali tip:</strong> Apna hissa dene ke liye bank loan lena ho to file me
+            subsidy sanction ka reference lagao — tab bank sirf aapke hisse par loan banata
+            hai, poori cost par nahi. Kisan loan ke saare raste{' '}
+            <Link href="/articles/KisanRinKahaSeLe2026" className="text-blue-600 dark:text-blue-400 hover:underline">is guide me</Link> alag
+            se samjhaye hain.
+          </IB>
+        </section>
+
+        <section className="mb-8">
+          <SH>Documents — Pehle Se Phone Me Rakho</SH>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+            {[
+              'Aadhaar card (clear photo)',
+              'Bank passbook ka front page',
+              'Khatauni / Khasra / 7-12 Utara (updated)',
+              'Passport size photo',
+              'Aadhaar-linked mobile number',
+              'Caste certificate (agar SC/ST quota me apply kar rahe ho)',
+              'Purane diesel pump ka bill/photo (replace kar rahe ho to)',
+              'Bijli ka bill (sirf Component C ke liye)',
+            ].map((d) => (
+              <div key={d} className="flex items-start gap-2 p-2.5 rounded-lg bg-[var(--color-bg-alt)] border border-[var(--color-border)]">
+                <span className="text-green-600 font-bold">✓</span>
+                <span className="text-sm text-[var(--color-text)]">{d}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-sm text-[var(--color-text-muted)]">
+            Blur photo upload rejection ki sabse aam wajah hai. Achhi roshni me saaf scan lo.
+          </p>
+        </section>
+
+        <div className="mb-8">
+          <Image
+            src="/images/articles/pm-kusum-yojana-solar-subsidy-2026/application-form-screenshot.webp"
+            alt="PM Kusum online registration form ka screenshot — Aadhaar, zameen details aur pump selection"
+            width={1200}
+            height={630}
+            className="rounded-2xl w-full h-auto object-cover"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+          <p className="text-xs text-[var(--color-text-muted)] text-center mt-2">
+            Form seedha hai — bas details Khatauni se hu-ba-hu bharo
+          </p>
+        </div>
+
+        <section className="mb-8">
+          <SH>Apply Kaise Karein — Kadam Dar Kadam</SH>
+          <p className="text-[var(--color-text)] leading-relaxed mb-4">
+            Application state ki nodal agency ke through hoti hai — jaise Rajasthan me
+            RRECL, UP me UPNEDA, Maharashtra me MahaUrja, Gujarat me GEDA. National portal{' '}
+            <a href="https://pmkusum.mnre.gov.in" className="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">pmkusum.mnre.gov.in</a>{' '}
+            se apne state ka sahi link milta hai — wahi se jao, Google par mile
+            milte-julte naam wali site se nahi, kyunki MNRE khud fake KUSUM websites ke
+            baare me warning nikaal chuka hai.
           </p>
           <StepList>
-            <SI n={1}>Apne state ka PM Kusum portal kholo (links neeche hain)</SI>
-            <SI n={2}>"New Registration" ya "Beneficiary Apply" click karo</SI>
-            <SI n={3}>Aadhaar number daalo → OTP aayega → Verify karo</SI>
-            <SI n={4}>Form bharna shuru: naam, pata, zameen ka survey number, pump size</SI>
-            <SI n={5}>Documents upload karo (jo upar list mein bataye)</SI>
-            <SI n={6}>Submit dabao → Reference Number milega → Screenshot le lo</SI>
+            <SI n={1}>pmkusum.mnre.gov.in kholo aur apne state ka official link chuno</SI>
+            <SI n={2}>&quot;New Registration&quot; / &quot;Beneficiary Apply&quot; par jao, Aadhaar-OTP se verify karo</SI>
+            <SI n={3}>Form bharo — naam, pata, khasra/survey number bilkul Khatauni jaisa</SI>
+            <SI n={4}>Documents upload karo, pump capacity apni zameen ke hisaab se chuno</SI>
+            <SI n={5}>Submit karke reference number ka screenshot le lo</SI>
+            <SI n={6}>Status portal par track karo — Pending → Approved → Vendor Assigned → Installed</SI>
           </StepList>
-
-          <div className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
-            <p className="text-sm font-bold text-green-800 dark:text-green-300 mb-2">
-               Abhi Apply Karo
-            </p>
-            <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official portal par jakar apna <strong>registration form</strong> bharo — 10 second ke countdown ke baad aap pmkusum portal par pahunch jaoge.
+          <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
+            <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
+              Apply karne, status dekhne ya state agency ka contact lene ke liye official
+              portal yahan se khulega:
             </p>
             <OfficialLinkButton
               title="PM Kusum Official Portal"
               message="PM Kusum portal khulne wala hai. Thoda wait karo..."
               url="https://pmkusum.mnre.gov.in"
               infoNote="Thoda wait karo. Official PM Kusum portal khulne wala hai."
-              className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
+              className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg"
             >
-               Yahan Click Karo → PM Kusum Portal Khulega
+              Yahan Click Karo → PM Kusum Portal Khulega
             </OfficialLinkButton>
           </div>
-
-          <IB>
-            <strong>Zaruri Tip:</strong> <strong>Registration form bharte waqt</strong> sabse important field hai "Survey/Khasra Number." Ise Khatauni se exactly copy karo. Ek digit bhi galat = rejection.
-          </IB>
+          <p className="text-[var(--color-text)] leading-relaxed mb-4">
+            Approval ke baad empanelled vendors ki list me se vendor chunna hota hai.
+            Installation ke baad 5 saal ki warranty/AMC vendor ki zimmedari hoti hai —
+            ye kagaz sambhal ke rakhna, panel ki safai ke alawa aapko kuch nahi karna.
+          </p>
         </section>
 
         <section className="mb-8">
-          <SH>State Wise Direct Links & Process</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Har state ka apna portal hai. National portal se redirect hota hai lekin direct link zyada fast kaam karta hai:
+          <SH>Pump Kitne HP Ka Lein — Aur Lagne Ke Baad Kya Karna Hai</SH>
+          <p className="text-[var(--color-text)] leading-relaxed mb-4">
+            HP ka lalach mat karo. Pump ki sahi size aapke paani ke source ki gehrai
+            (water table), khet ke rakbe aur fasal par depend karti hai — boring gehri
+            hai to wahi paani kheenchne me zyada taakat lagti hai. Vendor se survey ke
+            waqt ye teeno cheezein khul kar batao, aur garmi ke mahino ka water level
+            batana mat bhoolo, kyunki tab hi level sabse neeche jata hai. Galat sizing
+            hi baad me &quot;pump chal raha hai par paani kam de raha hai&quot; wali shikayat ki
+            jad hoti hai.
           </p>
+          <p className="text-[var(--color-text)] leading-relaxed mb-4">
+            Lagne ke baad kaam bas itna hai: panel ki safai mahine me ek-do baar (dhool
+            jam gayi to output girta hai), baarish ke season se pehle wiring aur earthing
+            ek nazar check, aur panel ke aas-paas chhaya karne wale ped ki tehniyan
+            chhatwana. Warranty ke 5 saal me technical kharabi vendor ki zimmedari hai —
+            apni jeb se mistri bulane ki zaroorat nahi, bas shikayat likhit me karo aur
+            uski copy rakho.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Reject Kyun Hota Hai — Panch Aam Wajahen</SH>
           <div className="space-y-3">
             {[
-              { name: 'Rajasthan', portal: 'rajkusum.in', note: '70% subsidy | District officer verify karta hai | 30-45 din approval', tag: 'Best Subsidy' },
-              { name: 'Uttar Pradesh', portal: 'upkusum.in', note: '60% subsidy | CSC centers par bhi apply | Khatauni mandatory', tag: '' },
-              { name: 'Madhya Pradesh', portal: 'mpkusum.mp.gov.in', note: '60% subsidy | Fastest processing | Online + offline dono', tag: 'Fast Approval' },
-              { name: 'Maharashtra', portal: 'pmkusum.mahadiscom.in', note: '60-65% subsidy | MahaDISCOM handles | Grid-connected popular', tag: '' },
-              { name: 'Bihar', portal: 'breb.bihar.gov.in/kusum', note: '60% subsidy | BREB implements | Diesel replacement priority', tag: '' },
-              { name: 'Haryana', portal: 'haryanakusum.in', note: '60-75% subsidy | Highest for SC/ST | Online tracking easy', tag: 'Top Choice' },
-            ].map((s) => (
-              <div key={s.name} className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors">
-                <div className="flex items-center justify-between mb-1">
-                  <p className="font-black text-[var(--color-primary)] text-sm">{s.name}</p>
-                  {s.tag && <span className="text-[9px] font-bold bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 px-2 py-0.5 rounded-full">{s.tag}</span>}
-                </div>
-                <p className="text-xs text-blue-600 dark:text-blue-400 font-mono mb-1">{s.portal}</p>
-                <p className="text-xs text-[var(--color-text-muted)]">{s.note}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-8">
-          <SH>Application Ka Status Kaise Dekhein</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Form bhar diya. Ab wait mat karte raho — khud track karo.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            State portal par "Track Application" ya "Check Status" option hota hai. Reference number ya Aadhaar daalo. Status dikhega: <em>Pending Verification → Approved → Vendor Assigned → Installed → Subsidy Released.</em>
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Status online check</strong> karne par agar 30 din se zyada "Pending" dikhe toh helpline par call karo. Kabhi kabhi file atak jaati hai — follow up zaroori hai.
-          </p>
-
-          <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl">
-            <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-2">
-               Status Check Karo
-            </p>
-            <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-              Official portal par jakar apna <strong>application status</strong> dekho. Redirect mein 10 second lagte hain.
-            </p>
-            <OfficialLinkButton
-              title="PM Kusum Status Check"
-              message="PM Kusum portal khulne wala hai. Thoda wait karo..."
-              url="https://pmkusum.mnre.gov.in"
-              infoNote="Thoda wait karo. Official PM Kusum portal khulne wala hai."
-              className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
-            >
-               Yahan Click Karo → Status Check Hoga
-            </OfficialLinkButton>
-          </div>
-        </section>
-
-        <section className="mb-8">
-          <SH>Reject Kyu Hoti Hai? Ye 5 Galtiyan Mat Karna</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Application reject hone ki wajahein</strong> jaan lo pehle se. 90% rejections inhi wajah se hote hain:
-          </p>
-          <div className="space-y-2">
-            {[
-              { err: 'Naam Mismatch (Khatauni ≠ Aadhaar)', fix: 'Patwari se pehle correct karwao. Spelling, father name, surname — sab match hona chahiye.' },
-              { err: 'Duplicate Application', fix: 'Ek baar hi apply karo. Do baar submit kiya toh dono reject. System pakad leta hai.' },
-              { err: 'Blur/Incomplete Documents', fix: 'Fresh clear photos use karo. Aadhaar ka corner kata hua ya dhundhla = instant reject.' },
-              { err: 'Galat Pump Size vs Land Area', fix: '0.5 acre par 5HP maangoge toh nahi milega. Rule: 2HP=min 0.5 acre, 3HP=1 acre, 5HP=2+ acre.' },
-              { err: 'Already Beneficiary on Same Plot', fix: 'Same survey number par dobara eligible nahi. Alag plot hai toh nayi Khatauni ke saath apply karo.' },
+              { err: 'Naam mismatch (Khatauni ≠ Aadhaar)', fix: 'Patwari se pehle record theek karwao. Spelling tak match honi chahiye.' },
+              { err: 'Duplicate application', fix: 'Ek hi baar apply karo. Do form dala to system dono pakad leta hai.' },
+              { err: 'Blur ya adhoore documents', fix: 'Saaf scan, poora document. Kata-fata Aadhaar seedha reject.' },
+              { err: 'Zameen ke hisaab se zyada bada pump', fix: 'Pump capacity state agency ke norms se chuno — chhoti joth par bada pump nahi milta.' },
+              { err: 'Same khet par pehle se beneficiary', fix: 'Ek survey number par dobara nahi. Alag plot hai to us plot ki Khatauni ke saath apply karo.' },
             ].map(({ err, fix }) => (
-              <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden">
-                <div className="bg-red-50 dark:bg-red-900/20 px-4 py-2">
-                  <p className="font-black text-red-800 dark:text-red-300 text-xs">{err}</p>
-                </div>
-                <div className="p-3 bg-green-50 dark:bg-green-900/10">
-                  <p className="text-xs text-green-800 dark:text-green-300"><span className="font-bold">FIX:</span> {fix}</p>
-                </div>
+              <div key={err} className="p-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-alt)]">
+                <p className="text-sm font-bold text-red-700 dark:text-red-400 mb-1">{err}</p>
+                <p className="text-sm text-[var(--color-text)]"><span className="font-bold text-green-700 dark:text-green-400">FIX:</span> {fix}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <div className="mb-8">
           <Image
             src="/images/articles/pm-kusum-yojana-solar-subsidy-2026/state-portal-screenshot.webp"
-            alt="PM Kusum state portal dashboard showing application status tracker with green approved badge"
+            alt="State portal par application status tracker ka screenshot"
             width={1200}
             height={630}
-            className="w-full object-cover"
+            className="rounded-2xl w-full h-auto object-cover"
             loading="lazy"
             sizes="(max-width: 768px) 100vw, 768px"
           />
-          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Portal Par Status Track Karna Aasaan Hai
+          <p className="text-xs text-[var(--color-text-muted)] text-center mt-2">
+            Reference number se status track hota hai — 30 din se zyada pending ho to helpline
           </p>
         </div>
 
         <section className="mb-8">
-          <SH>Diesel vs Solar — Hisaab Kitab Dekho</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Numbers jhooth nahi bolte. <strong>Solar pump vs diesel pump cost comparison</strong> dekho:
-          </p>
-          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-[var(--color-primary)] text-white">
-                  <th className="p-3 text-left">Cheez</th>
-                  <th className="p-3 text-left">Diesel Pump</th>
-                  <th className="p-3 text-left">Solar Pump</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { item: 'Khareedne Ka Kharcha', d: '₹25K-35K', s: '₹40K-55K (subsidy baad)' },
-                  { item: 'Saal Ka Fuel/Bijli', d: '₹40K-60K', s: '₹0 FREE' },
-                  { item: 'Maintenance/Saal', d: '₹5K-8K', s: '₹500-1K' },
-                  { item: 'Umar', d: '8-10 saal', s: '25 saal' },
-                  { item: '5 Saal Total Kharcha', d: '₹2.5 Lakh+', s: '₹45K-60K' },
-                  { item: 'Pareshani', d: 'Fuel lao, repair karao', s: 'Lagao aur bhool jao' },
-                ].map((r) => (
-                  <tr key={r.item} className="bg-[var(--color-card)]">
-                    <td className="p-3 border-b border-[var(--color-border)] font-semibold text-xs">{r.item}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-red-700 dark:text-red-400">{r.d}</td>
-                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-green-700 dark:text-green-400 font-bold">{r.s}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            <strong>Purana diesel pump se solar pump mein badlaw kaise kare:</strong> Portal par apply karte waqt "Replacement of Existing Pump" select karo. Purane pump ka photo/bill upload karo. Replacement cases ko approval mein priority milti hai.
-          </p>
-        </section>
-
-        <section className="mb-8">
-          <SH>Apna 40% Hissa Kahan Se Aayega</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Subsidy 60% ki hai — theek. Par 3HP pump me bhi ₹40,000–55,000 aapke apne dene hote hain. Wahi rakam
-            zyadatar logon ko rok deti hai, jabki iska bhi rasta hai.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Solar pump irrigation ke andar aata hai, isliye bank iske liye <strong>term loan</strong> deta hai — KCC nahi,
-            kyunki KCC seasonal kharche ke liye hai aur ye ek baar ka investment hai. PM-KUSUM ke tahat NABARD refinance
-            wale route par rate 4–6% ke aas-paas rehta hai. Isi rakam par private dealer se personal loan lete to
-            12–18% padta — yahi asli farak hai, aur isi liye scheme ke andar rehna faydemand hai.
-          </p>
-          <StepList>
-            <SI n={1}>Pehle portal par application aur field survey nipta lo — <strong>subsidy sanction ka kagaz</strong> aapki loan file ka sabse zaroori document hai</SI>
-            <SI n={2}>Bank ko sanction letter dikhao, taaki loan sirf aapke hisse par bane, poori project cost par nahi</SI>
-            <SI n={3}>Vendor ka quotation empanelled list se ho — bahar wale vendor ka invoice na subsidy me chalta hai na file me</SI>
-            <SI n={4}>Approval aane ke baad hi paisa do; disbursement aur DBT dono ka record apne paas rakho</SI>
-          </StepList>
-          <WB>
-            <strong>Approval se pehle kharidari sabse mehnga shortcut hai.</strong> Vendor kahega &ldquo;aap le lo,
-            subsidy baad me aa jaayegi&rdquo; — bina approval ki purchase aksar reject hoti hai, aur wo nuksan poora
-            aapka hota hai. Sahi tareeka wahi hai: application → survey aur technical estimation (yahin aapki asli
-            subsidy figure banti hai, use likhit me lo) → approval → kharidari → installation ke baad verification → DBT.
-          </WB>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ek baat paani ke hisaab ki bhi. Pump lag jaane se paani ka kharcha khatam nahi hota — sirf diesel ka hota hai.
-            Solar pump ke saath drip ya sprinkler lagane par wahi paani zyada rakbe me chalta hai, aur uske liye alag
-            subsidy hai (PDMC me small/marginal kisan ko 55%, baqi ko 45%). Dono ek saath planning karne se dohra fayda
-            milta hai — poora niyam{' '}
-            <Link href="/articles/drip-sprinkler-irrigation-subsidy" className="underline font-bold">drip aur sprinkler
-            subsidy wale page</Link> par hai.
-          </p>
-        </section>
-
-        <section className="mb-8">
-          <SH>Pump Lag Gaya — Ab 25 Saal Chalane Ka Kaam</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Diesel pump ki umar 8–10 saal hai, solar ki 25. Par ye 25 saal apne aap nahi aate.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Installation ke din teen cheezein vendor se lo aur file me rakho: <strong>5 saal ki warranty</strong> ka
-            document (scheme me ye compulsory hai), vendor ka service number, aur commissioning report ki copy. Warranty
-            ke andar koi fault aaye to wo vendor ka kaam hai — apni jeb se local mistri bulaane ki zaroorat nahi. Par
-            shikayat zubani mat karo; likhit ya portal par darj karo, warna baad me &ldquo;humein bataya hi nahi&rdquo;
-            wala jawab milta hai.
-          </p>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Rakhrakhav ka kharcha saal ka ₹500–1,000 hai — diesel wale ₹5,000–8,000 ke saamne kuch bhi nahi. Us paise
-            me kaam sirf itna hai: panel ki safai mahine me ek-do baar (dhool jamne se output seedha girta hai, khaaskar
-            garmiyon aur gehun ki mudai ke baad), panel par kisi ped ya nayi deewar ki chhaya na aaye ye dekhna, aur
-            baarish se pehle wiring aur earthing check karwana. Cloudy dino me output 30–40% kam hota hai — wo kharabi
-            nahi hai, mausam hai; paani wale kaam subah 10 se dopahar 3 ke beech rakho.
-          </p>
-          <DB>
-            <strong>Chori aur nuksan ka intezaam pehle din karo.</strong> Panel khet me khule me lagta hai, isliye
-            structure ko theek se bolt karwao aur module ka serial number apne paas likh kar rakho — kisi bhi claim ya
-            police report me wahi kaam aata hai. Vendor se poochho ki insurance ka koi option scheme ke saath aa raha hai
-            ya nahi, aur jo bhi jawab mile wo likhit me lo.
-          </DB>
-        </section>
-
-        <section className="mb-8">
-          <SH>Private Company Se Mat Lagwana!</SH>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Kuch dealers bolenge "hum sasta laga denge." Suno mat. <strong>Sarkari scheme vs private solar company</strong> ka farq samjho:
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
-            <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-4">
-              <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">PM Kusum</p>
-              <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
-                <li>• 60-90% subsidy</li>
-                <li>• Govt approved vendor</li>
-                <li>• 5 saal warranty compulsory</li>
-                <li>• NABARD loan 4-6%</li>
-                <li>• Service guarantee</li>
-              </ul>
-            </div>
-            <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
-              <p className="font-black text-red-800 dark:text-red-300 text-sm mb-2">Private Dealer</p>
-              <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
-                <li>• Full price (no subsidy)</li>
-                <li>• Quality uncertain</li>
-                <li>• Warranty dealer mood par</li>
-                <li>• Personal loan 12-18%</li>
-                <li>• Complaint sunne wala koi nahi</li>
-              </ul>
-            </div>
-          </div>
-          <p className="text-xs text-[var(--color-text-muted)] italic">
-            Jab sarkaar 60% de rahi hai toh private wale ko full price kyun dena? Samajhdari wali baat nahi hai bhai.
-          </p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Jo Sawal Har Kisan Puchta Hai
-          </h2>
+          <SH>Jo Sawal Har Kisan Puchta Hai</SH>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kusum Solar Pump FAQ 2026" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Yeh Scheme Deadline Par Nahi, Quota Par Band Hoti Hai</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Aakhri Baat — Quota Ka Khel Samjho</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            PM-KUSUM mein aam galatfehmi yeh hai ki koi ek last date hai. Hota ulta hai — state ko pumps ka quota
-            milta hai, aur applications usi hisaab se lete hain. Quota bhar gaya toh portal aapka form le lega par
-            number agli window mein lagega, chahe aapke documents poore hon.
+            Ye scheme deadline par nahi, quota par band hoti hai. State ka quota bhar gaya
+            to portal form to le lega, par number agli window me lagega. Isliye jis din
+            window khuli ho usi hafte apply karna sabse bada faayda hai — documents pehle
+            se taiyaar rakho, land record pehle se durust karwao.
           </p>
-          <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Isliye is page ka kaam ki cheez woh 60% subsidy nahi, apne state ki current window ka status hai.
-            Portal par jaake pehle yeh dekhein ki Component B ke liye registration khula hai ya waitlist chal rahi
-            hai — phir hi pump ki capacity aur apna hissa tay karein.
+          <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
+            Aur scheme ki taaza window/extension ki jaankari hamesha official portal ya
+            1800-180-3333 se confirm karo — schemes ke saal-dar-saal extension hote rehte
+            hain, par bharosa sirf official notification ka karo.
           </p>
-        </div>
-
-        <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 border-l-[6px] rounded-xl">
-          <h3 className="text-base font-black text-blue-800 dark:text-blue-300 mb-2">
-             PM Kusum Official Portal
-          </h3>
-          <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            <strong>Apply online</strong> karne ke liye, <strong>status check</strong> karne ke liye, ya helpline number ke liye official portal par jaayein; button ke baad portal apne aap khulta hai.
-          </p>
-          <OfficialLinkButton
-            title="PM Kusum Official Portal"
-            message="PM Kusum portal khulne wala hai. Thoda wait karo..."
-            url="https://pmkusum.mnre.gov.in"
-            infoNote="Thoda wait karo. Official PM Kusum portal khulne wala hai."
-            className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
-          >
-             Yahan Click Karo → PM Kusum Portal Khulega
-          </OfficialLinkButton>
         </div>
 
         <CalcBanner
           icon=""
           title="Kitna Bachoge? Calculate Karo"
-          desc="Diesel vs Solar — 5 saal ka total saving jaano"
+          desc="Diesel vs Solar — apne kharche se hisaab lagao"
           primaryCta={{ href: '/calculator/crop-profit', label: 'Profit Calc →' }}
           secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calc' }}
         />
