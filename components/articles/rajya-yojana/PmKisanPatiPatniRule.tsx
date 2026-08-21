@@ -20,28 +20,12 @@ const FAQS_DATA = [
     a: 'PM Kisan portal ke "Voluntary Surrender of PM-KISAN Benefit" option se registration khud hataayein, aur portal par bane refund challan se paisa jama karein. Notice ka intezaar karne se recovery bank account se bhi ho sakti hai.',
   },
   {
-    q: 'Patni ki apni zameen hai, phir bhi nahi milega?',
-    a: 'Nahi milega — dono ke khate juda hone se bhi parivaar do nahi ho jaata. Shaadi ke baad pati-patni scheme ki definition mein ek unit hain, chahe zameen kisi bhi khate mein ho. Ek hi registration chunna hoga.',
-  },
-  {
-    q: 'Talaq ho gaya hai, to kya dono ka alag ban jaayega?',
-    a: 'Kaanooni taur par judai ho jaane ke baad dono apne apne family unit hain, aur agar dono ki apni-apni zameen record mein darj hai to dono ka claim ban sakta hai. Yahan zaroori ye hai ki record saaf ho — kachcha samjhauta kaafi nahi hota.',
-  },
-  {
-    q: 'Patni ki kist aa rahi thi, wo guzar gayi. Ab?',
-    a: 'Wo registration aage nahi chalega. Sahi raasta ye hai ki pehle zameen ka mutation waaris tak pahunchaya jaaye, uske baad usi vyakti ka naya registration ho. Purani entry par aaya paisa lene ki koshish recovery ka case banati hai.',
-  },
-  {
-    q: 'Naabaalig bete ki apni zameen hai, uska alag ban sakta hai?',
-    a: 'Nahi. 18 saal se kam umar ke bachche usi parivaar mein ginte hain, chahe record mein zameen unki ho. Baalig hone aur batwaara hone — dono ke baad hi baat aage badhti hai.',
-  },
-  {
     q: 'Do registration par paisa aa raha hai aur kuch nahi hua, to shayad theek hai?',
     a: 'Kist aana verification poori hone ka proof nahi hai. Kai case mein duplicate do-teen saal baad pakda gaya aur poora amount ek saath recover hua. Jitni der ruk kar theek karenge, refund utna bada banega.',
   },
   {
     q: 'Batai (tenant) par kheti karte hain, milta hai?',
-    a: 'PM Kisan landholding par aadharit hai, is liye batai par kheti karne wale is scheme mein nahi aate. Kuch rajya apni scheme mein tenant farmer ko shamil karte hain — jaise Andhra Pradesh ka CCRC-based system. Apne rajya ki scheme /rajya-yojana par di gayi rajya kisan yojana list mein dekh lein.',
+    a: 'PM Kisan landholding par aadharit hai, is liye batai par kheti karne wale is scheme mein nahi aate. Kuch rajya apni scheme mein tenant farmer ko shamil karte hain. Apne rajya ki scheme rajya kisan yojana list mein dekh lein.',
   },
 ];
 
@@ -261,6 +245,14 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           Kisan nahi le sakta — chahe form kisi aur ne bhara ho.
         </p>
 
+        <p className="text-sm">
+          (Poori list scheme ki official operational guidelines mein hai —{' '}
+          <a href="https://pmkisan.gov.in" rel="nofollow noopener" target="_blank">
+            pmkisan.gov.in
+          </a>{' '}
+          ke documents section mein yahi categories likhi hain.)
+        </p>
+
         <ul>
           <li>Pichle assessment year mein kisi sadasya ne income tax bhara ho.</li>
           <li>
@@ -319,6 +311,13 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           kagaz se kuch nahi hota, tehsil ka mutation hi batwaara hai. Mutation ke baad har
           naya khatedar apna registration alag se karega; purana registration apne aap
           update nahi hota.
+        </p>
+
+        <p>
+          <strong>Talaq:</strong> kaanooni taur par judai ho jaane ke baad dono apne-apne
+          family unit hain. Agar dono ki apni-apni zameen record mein darj hai to dono ka
+          claim ban sakta hai — lekin yahan bhi kasauti record hi hai; kachcha samjhauta
+          kaafi nahi hota.
         </p>
 
         <h2>Kaise Pakda Jaata Hai — Data Ab Aapas Mein Juda Hua Hai</h2>

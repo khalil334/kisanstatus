@@ -537,8 +537,8 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisanFaceAuthenticationEkyc',
     title: 'PM Kisan Face Auth eKYC: Bina OTP',
-    seoTitle: 'PM Kisan Face Authentication eKYC — Bina OTP',
-    desc: 'OTP nahi aa raha? PM Kisan app se face authentication karke bina OTP ke eKYC complete karo. Step-by-step guide + common errors fix.',
+    seoTitle: 'PM Kisan Face Authentication eKYC: Bina OTP Ke Tarika',
+    desc: 'OTP nahi aa raha? PMKisan app se face authentication karke bina OTP ke eKYC karo — 5 minute ka tarika, errors ke fix aur CSC ka sahi rate.',
     ogTitle: 'PM Kisan Face Auth eKYC Guide',
     keywords: [
       'pm kisan face authentication kyc',
@@ -551,7 +551,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanFaceAuthenticationEkyc',
     category: 'status-check',
     publishedTime: '2026-07-09T05:57:50+05:30',
-    modifiedTime: '2026-08-20T12:30:00+05:30',
+    modifiedTime: '2026-08-21T18:05:00+05:30',
     readingTime: 10,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisanFaceAuthenticationEkyc'),

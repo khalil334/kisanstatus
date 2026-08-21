@@ -4,7 +4,7 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-17T07:41:23+05:30';
-const MODIFIED = '2026-08-20T12:30:00+05:30';
+const MODIFIED = '2026-08-21T18:05:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
@@ -18,32 +18,20 @@ const FAQS_DATA = [
     a: 'Haan, ab eKYC har saal karni hai. 2026 se sarkar ne saaf kar diya hai ki beneficiaries ko saalana biometric ya face eKYC karni hogi — pichle saal ki eKYC agli kist ke liye kaafi nahi hai. 2026 ke audit me 1.13 crore se zyada naam list se hataye gaye the, jisme adhoora eKYC bada kaaran tha. Toh har kist se pehle ek baar status check kar lo.',
   },
   {
-    q: '24vi kist (October 2026) se pehle eKYC zaroori hai?',
-    a: 'Bilkul zaroori hai. 24vi kist October 2026 me expected hai, aur bina current eKYC ke paisa nahi aayega. Abhi August hai — yahi sahi time hai. October me CSC pe line lagti hai aur portal slow chalta hai; pehle se karwa loge toh release ke din tension nahi rahegi.',
-  },
-  {
-    q: 'Face authentication ke liye kaunsa app use karein?',
-    a: 'Sirf official PMKisan app, aur uske saath AadhaarFaceRD app (dono Play Store par sarkari publisher se). Play Store par milte-julte naam ki koi third-party app dikhe toh usse door raho — wo aapka data chura sakti hain.',
-  },
-  {
-    q: 'Bina OTP ke eKYC ho sakti hai?',
-    a: 'Haan. Chehre wale tarike mein OTP ki koi zaroorat nahi. Camera ke samne aana hai, screen par jo instructions aayein (palak jhapkana waghera) wo follow karni hain — bas.',
+    q: 'Bina OTP ke eKYC sach mein ho jaati hai?',
+    a: 'Haan. Chehre wale tarike mein OTP ki koi zaroorat nahi. PMKisan app ke saath AadhaarFaceRD app (dono Play Store par sarkari publisher se) install karo, camera ke samne aao, screen ki instructions (palak jhapkana waghera) follow karo — bas.',
   },
   {
     q: 'Face scan fail ho raha hai, kya karein?',
-    a: '90% cases mein roshni ki kami hoti hai. Khidki ke paas jakar try karo, chashma utaar do, aur background mein koi aur insaan na ho. Net bhi stable hona chahiye.',
+    a: 'Zyadatar cases mein roshni ki kami hoti hai. Khidki ke paas jakar try karo, chashma utaar do, background mein koi aur insaan na ho, net stable rakho. Photo bahut purani hai to pehle Aadhaar Seva Kendra se biometric/photo update karwao, phir try karo.',
   },
   {
     q: 'Kya CSC jakar bhi karwa sakte hain?',
-    a: 'Haan, nazdiki CSC center par biometric device se yahi kaam ho jata hai. ₹20 se ₹30 lag sakte hain. 5 minute mein ho jata hai.',
+    a: 'Haan, nazdiki CSC center par biometric device se yahi kaam ho jata hai. Rate ₹15-20 hai — receipt zaroor lena. 5 minute ka kaam hai.',
   },
   {
     q: 'Chehra verify hone ke baad kya karein?',
-    a: '2-3 din wait karo taaki database update ho. Phir beneficiary list mein apna naam check karo. Wahan eKYC status "YES" ya "Active" dikhna chahiye.',
-  },
-  {
-    q: 'Agar Aadhaar mein photo bahut purani hai toh?',
-    a: 'Aise mein chehra match nahi ho pata. Pehle nazdiki Aadhaar center jakar photo update karwao, uske baad hi dobara try karna.',
+    a: '2-3 din wait karo taaki database update ho. Phir beneficiary list mein apna naam check karo. Wahan eKYC status "YES" ya "Active" dikhna chahiye. Ek hafte tak na dikhe to helpline 155261 par baat karo.',
   },
 ];
 
@@ -107,7 +95,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
                 {[
                   ['Mobile number Aadhaar se link hai, OTP aa jata hai', 'OTP wali eKYC', 'pmkisan.gov.in par khud, free'],
                   ['Number link nahi / OTP nahi aa raha, smartphone hai', 'Chehre se verification', 'PMKisan app se khud, free'],
-                  ['Smartphone nahi hai ya camera kharab hai', 'Biometric (fingerprint)', 'CSC center, ₹20-30'],
+                  ['Smartphone nahi hai ya camera kharab hai', 'Biometric (fingerprint)', 'CSC center, ₹15-20'],
                   ['Aadhaar ki photo 10+ saal purani hai', 'Pehle Aadhaar photo update, phir koi bhi tarika', 'Aadhaar Seva Kendra'],
                 ].map(([sit, best, where], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
@@ -132,9 +120,9 @@ export default function PmKisanFaceAuthenticationEkyc() {
           />
 
           <DB>
-            <strong>Ek Jeeta Jaagta Case:</strong>
+            <strong>Sabse Aam Case:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
-              Patna ke Rajesh Kumar ji ka experience: "Mera mobile number 5 saal pehle band ho gaya tha. Naya number liya lekin Aadhaar se link nahi karaya. Jab PM Kisan ke liye apply kiya toh OTP nahi aaya. Chehre wale tarike se 5 minute mein eKYC ho gayi. Ab har 4 mahine mein paisa aa raha hai."
+              Purana SIM band ho gaya, naya number le liya lekin Aadhaar se link nahi karaya — ab OTP kahin nahi aata. Aise kisano ke messages har hafte aate hain. Inke liye number link karane ka intezaar karne ki zaroorat nahi: chehre wale tarike se 5 minute mein kaam ho jata hai, aur number link karane ka kaam baad me aaram se karo.
             </p>
           </DB>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
@@ -243,7 +231,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
               <strong>Ghar ke kisi jawaan ka smartphone use karo.</strong> App mein login aapke Aadhaar se hota hai, phone kiska hai isse fark nahi padta. Beta/beti/pota — kisi ka bhi phone, 5 minute ka kaam. Kai gharon mein ek hi phone se dada, dadi, chacha sabki eKYC hui hai — ye bilkul allowed hai.
             </li>
             <li>
-              <strong>Ya seedha <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC seva kendra</Link> jao.</strong> Aadhaar card original le jao. Operator biometric device se fingerprint ya chehra scan karega. ₹20-30 lagenge, receipt lekar hi uthna. 5 minute mein kaam hota hai — line ka time alag.
+              <strong>Ya seedha <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC seva kendra</Link> jao.</strong> Aadhaar card original le jao. Operator biometric device se fingerprint ya chehra scan karega. ₹15-20 lagenge (poora rate chart usi guide me hai), receipt lekar hi uthna. 5 minute mein kaam hota hai — line ka time alag.
             </li>
           </ul>
           <Image
@@ -274,7 +262,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
             {[
               {
                 error: 'Aadhaar ki photo bahut purani hai',
-                fix: 'Ye sabse bada kaaran hai. 10-15 saal purani photo se aaj ka chehra system match nahi kar pata — umar, daadhi, chashma, sab badal jata hai. Iska ek hi ilaaj: Aadhaar Seva Kendra jakar photo update karwao (₹50 ki official fees), 2-4 din mein update hota hai, phir scan karo.',
+                fix: 'Ye sabse bada kaaran hai. 10-15 saal purani photo se aaj ka chehra system match nahi kar pata — umar, daadhi, chashma, sab badal jata hai. Iska ek hi ilaaj: Aadhaar Seva Kendra jakar photo (biometric) update karwao — UIDAI ki official fees ₹125 hai (uidai.gov.in par rate list hai). Update hone ke baad dobara scan karo.',
               },
               {
                 error: 'Face not detected — chehra pakad hi nahi raha',
@@ -306,6 +294,11 @@ export default function PmKisanFaceAuthenticationEkyc() {
             height={450}
             className="w-full rounded-xl my-4"
           />
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
+            Nazdiki Aadhaar Seva Kendra dhoondhne aur update fees confirm karne ke liye{' '}
+            <a href="https://uidai.gov.in" target="_blank" rel="nofollow noopener" className="underline text-green-700 dark:text-green-400">uidai.gov.in</a>{' '}
+            sahi jagah hai — wahan appointment bhi book ho jaati hai.
+          </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
             Ek aur cheez jo log miss karte hain: app ka version. Purani version mein bugs the jo ab fix ho chuke hain — Play Store kholkar update check kar lo, cache clear kar lo (Settings &gt; Apps &gt; PMKisan &gt; Storage &gt; Clear Cache). Aur agar kuch bhi kaam na kare, toh helpline <strong>155261</strong> ya apne <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">state nodal officer</Link> se baat karo. Poori process ki detail ke liye <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">Master Guide</Link> bhi hai.
           </p>
