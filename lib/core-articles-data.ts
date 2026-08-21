@@ -336,8 +336,8 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'mandi-bhav-today',
     title: 'Aaj Ka Mandi Bhav: Daily Sabzi Rates',
-    seoTitle: 'UP Mandi Bhav Aaj Ka Rate — Sabzi Phal Mausam',
-    desc: 'Aaj ka mandi bhav — sabzi aur phal ke daily rates apne state ke hisaab se dekhein, saath mein 7 din ka mausam. Base data sarkari agmarknet feed se.',
+    seoTitle: 'Aaj Ka Mandi Bhav — Sabzi, Phal Ka Thok Rate',
+    desc: 'Aaj ka mandi bhav dekhein — apna state chunkar sabzi aur phal ka thok rate, saath 7 din ka mausam. Bechne se pehle rate check kar lein.',
     ogTitle: 'Aaj Ka Mandi Bhav — Live Rates',
     keywords: [
       'aaj ka mandi bhav',
