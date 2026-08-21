@@ -5,7 +5,7 @@ import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-04-14T18:42:23+05:30';
-const MODIFIED = '2026-04-23T10:28:53+05:30';
+const MODIFIED = '2026-08-21T21:45:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -332,6 +332,19 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
               <p className="text-xs text-[var(--color-text-muted)]">Bahut se log screen ka photo le lete hain, lekin screenshot official document nahi maana jaata. Hamesha PDF hi rakhiye jisme scheme ka official logo, watermark, aur aapka account number clearly dikh raha ho.</p>
             </div>
           </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>Card Aur Status — Dono Alag Kaam Hain, Dono Karte Rahiye</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Card ek baar download hota hai, lekin account ki sehat har kuch mahine dekhni chahiye. Card haath mein hone ka matlab ye nahi ki contribution sahi ja raha hai — auto-debit fail hua ho to card wahi purana dikhega, par account default ki taraf badh raha hoga. Isliye card nikalne ke baad ek aadat banaiye: har 3 mahine mein contribution history khol kar dekh lijiye ki saari entries Success hain. Poora tareeka <Link href="/maandhan/pm-kisan-maandhan-status-check-online" className="underline text-green-700 dark:text-green-400">status check wali guide</Link> mein hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Aur agar history mein Failed entries dikhein, to der kiye bina bakaya jama karwa kar account regularize karwaiye — <Link href="/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein" className="underline text-green-700 dark:text-green-400">regularization ka process yahan step-by-step likha hai</Link>. Jitna time nikalta jata hai, interest ke saath bojh utna badhta jata hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ek suraksha wali baat bhi: card ya KPAN number kisi anjaan ko phone par kabhi mat batayein. KPAN khud koi paisa nahi nikal sakta, lekin fraud karne wale isko starting point banate hain — "aapka pension account block ho gaya, OTP batayein" type calls. OTP kisi ko nahi dena hai, chahe wo khud ko LIC, bank ya sarkar ka aadmi bataye. Aisi call aaye to 1930 par cyber crime report karein.
+          </p>
         </section>
 
         <section className="mb-8">

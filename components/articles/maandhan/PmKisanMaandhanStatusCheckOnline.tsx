@@ -5,7 +5,7 @@ import { AuthorBox, FAQBlock, fmtDate } from "@/components/ArticleShared";
 import { AUTHOR_NAME } from "@/lib/site-config";
 
 const PUBLISHED = "2026-07-24";
-const MODIFIED = "2026-08-08";
+const MODIFIED = "2026-08-21";
 
 const FAQS_DATA = [
   {
@@ -27,6 +27,10 @@ const FAQS_DATA = [
   {
     q: "Portal nahi khul raha toh kya karein?",
     a: "Peak hours mein server slow hota hai. Raat ya subah try karein. Agar 2-3 din se nahi khul raha, toh apne nazdeeki CSC center jakar status verify karwayein. CSC operator ke paas special access hota hai jo directly LIC system se connected hai.",
+  },
+  {
+    q: "Status mein Default likha aa raha hai — pension gayi kya?",
+    a: "Nahi, Default ka matlab hai kuch contributions outstanding hain — scheme khatam nahi hui. Bakaya rakam interest ke saath jama karke account regularize ho jata hai. Jitni jaldi karwayenge, utna kam bojh. Tareeka auto-debit regularization wali guide mein hai.",
   },
 ];
 
@@ -384,6 +388,22 @@ export default function PmKisanMaandhanStatusCheckOnline() {
           <strong>Salah:</strong> Har 3 mahine mein ek baar apna status dekh lein — chahe online ho ya CSC center ja kar. Isse pata chalta rahega ke aapka account active hai ya nahi. Aur contribution history ko screenshot le kar apne phone mein save kar lein. Future mein koi dispute ho toh proof kaam ayega.
         </p>
       </div>
+
+      <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
+        Ek Kaam Jo Status Check Ke Saath Hi Kar Lein — Apni Details Milaana
+      </h2>
+
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Dashboard khula hai toh sirf contribution mat dekhiye — apni personal details bhi ek baar Aadhaar se milaa lijiye: naam ki spelling, date of birth, aur bank account number. Date of birth is scheme mein sabse important field hai, kyunki pension 60 saal poore hone par shuru hoti hai — DOB galat register hui toh pension ya toh der se shuru hogi ya claim ke waqt atkegi.
+      </p>
+
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Koi mismatch dikhe toh abhi correction karwaiye, 60 saal ka intezaar mat kijiye. Correction CSC center ya us bank branch se hoti hai jahan se auto-debit chalta hai — Aadhaar copy ke saath written request dein aur receiving lein. Bank account hi badalna ho (purana account band ho gaya, ya doosre bank mein shift hona hai) toh uska alag process hai — <Link href="/maandhan/pmkmy-bank-account-change" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">bank account change guide</Link> mein step-by-step likha hai.
+      </p>
+
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+        Aur haan — status check karte waqt kabhi bhi kisi ko OTP share mat kijiye. Status dekhne ke liye OTP sirf aap khud portal par daalte hain. Koi phone karke bole ki "aapka Maandhan account verify karna hai, OTP batayein" — wo fraud hai, kyunki sarkari system phone par OTP kabhi nahi maangta. Aisa call aaye toh 1930 (cyber crime helpline) par report karein.
+      </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
         Complaint Kahan Karein? (Escalation Ka Sahi Order)
