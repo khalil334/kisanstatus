@@ -478,6 +478,15 @@ export default function MeriFasalMeraByoraStatusCheck2026({
       </p>
 
       <p>
+        Shikayat se pehle ek 2-minute ka self-check bhi kar lo — aadhe mamle inhi me
+        suljh jaate hain: (1) login wahi mobile number se kar rahe ho jo registration me
+        diya tha? (2) sahi season chuna hai — rabi ki entry kharif me dhundhoge to khaali
+        hi milegi; (3) Family ID me naam ki spelling wahi hai jo bank khate me hai? In
+        teeno ka jawab haan hai aur phir bhi entry gayab ya atki hai — tab patwari se
+        shuru karo.
+      </p>
+
+      <p>
         Ek aur kaam ki baat — agar aapke gaon-rishtedaari me koi doosre rajya ka hai, to
         har rajya ki aisi hi yojana ka status check ka tareeka{' '}
         <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">

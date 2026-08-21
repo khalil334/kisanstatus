@@ -349,6 +349,25 @@ export default function UpKisanKarjRahatList2026({
         ke bank wale steps yahan bhi kaam aayenge.
       </p>
 
+      <h2>Cyber Cafe Ya CSC Se Karwana Ho To Kya Dhyan Rakhein</h2>
+
+      <p>
+        Ghar par smartphone ya net nahi hai to nazdeeki CSC ya cyber cafe se ye kaam ho
+        jaata hai — bas teen baatein yaad rakhiye. Pehli: screen apne saamne rakhwaiye
+        aur dekhiye ki operator wahi official portal khol raha hai, koi doosri site nahi.
+        Doosri: apna Aadhaar ya OTP operator ke phone par kabhi mat aane dijiye — list
+        check me OTP lagta hi nahi, to maangne ka sawaal hi nahi. Teesri: result ka print
+        ya photo le lijiye, aur jitna charge de rahe hain uski parchi bhi. CSC par aise
+        chhote kaam ka rate deewar par laga hota hai — usse zyada maange to doosre
+        center chale jaiye.
+      </p>
+
+      <p>
+        Ek aur chhoti salaah — apne saath loan passbook le kar jaiye. Aadhi der to account
+        number phone par dhundhne me hoti hai. Passbook saamne ho to poora kaam 5 minute
+        ka hai.
+      </p>
+
       <h2>Naam Kat Jaane Ki Aam Wajahein</h2>
 
       <ul>
