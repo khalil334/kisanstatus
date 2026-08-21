@@ -195,11 +195,11 @@ export default function IkhedutPortalStatusCheck2026({
       </ul>
 
       <p>
-        Sarkar ka focus kitna bada hai, ye budget se samajh aata hai. Gujarat ke 2026-27
-        budget me Krushi ane Khedut Kalyan Vibhag ke liye{' '}
-        <Ext href="https://www.nationpress.com/national/gujarats-budget-2026-27-for-agriculture">
-          ₹24,022 crore rakhe gaye, jisme mechanization par ₹1,500 crore se zyada aur akele
-          tractor sahay par ₹800 crore
+        Sarkar ka focus kitna bada hai, ye budget se samajh aata hai. Krushi mantri ne
+        February 2026 me vidhansabha me bataya ki 2026-27 ke liye{' '}
+        <Ext href="https://thehawk.in/news/india/tractor-subsidies-of-rs-800-crore-allocated-over-two-lakh-farmers-benefited-gujarat-minister">
+          akele tractor sahay ke liye ₹800 crore ka provision rakha gaya hai — ab tak ka
+          sabse bada
         </Ext>
         . Matlab paisa hai — bas arji sahi waqt par, sahi tareeke se jaani chahiye.
       </p>
@@ -224,11 +224,8 @@ export default function IkhedutPortalStatusCheck2026({
         portal khol lijiye — 2 minute ka kaam hai. Kheti ke saadhan ki windows aam taur par
         naye vittiya varsh ke baad khulti hain, par har ghatak ka apna schedule hota hai. Aur
         haan, koi bhi fixed date yaad mat rakhiye — pichle saal ki tareekh is saal chalegi
-        iski koi guarantee nahi. Jaise tractor sahay ki ek window{' '}
-        <Ext href="https://www.jkupdates.co.in/2026/03/ikhedut-portal-2026-gujarat-farmer.html">
-          27 March se 25 May tak khuli thi
-        </Ext>{' '}
-        — is saal wahi tareekh dobara aayegi, aisa maan lena galti hai.
+        iski koi guarantee nahi. Har ghatak ke page par likhi <em>arji karva ni taarikh</em>
+        hi ekmatra bharosemand jagah hai.
       </p>
 
       <InfoBox type="tip">
@@ -418,7 +415,8 @@ export default function IkhedutPortalStatusCheck2026({
 
       <h3>Tractor sahay (AGR-50) — Kheti vibhag</h3>
       <p>
-        Sabse zyada search hone wala ghatak. Rate ki misaal:{' '}
+        Sabse zyada search hone wala ghatak. Rate ki misaal (guideline se badal sakti hai,
+        apne ghatak ka page zaroor dekhein):{' '}
         <Ext href="https://ikhedut.co.in/tractor-sahay-yojana/">
           20 se 60 PTO HP tak ke sarkar-manya model par kharch ka 25% ya adhiktam ₹1,00,000
           — jo kam ho, khaate dinth ek

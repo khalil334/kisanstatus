@@ -5,7 +5,7 @@ import { EXTERNAL_LINK_PROPS, AUTHOR_NAME } from '@/lib/site-config';
 import type { ArticleMeta } from '@/lib/articles-data';
 
 const PUBLISHED = '2025-12-29T10:12:36+05:30';
-const MODIFIED = '2026-08-18T20:00:00+05:30';
+const MODIFIED = '2026-08-21T23:05:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -31,48 +31,20 @@ const FAQS_DATA = [
     a: 'Agar Aadhaar mein mobile number link nahi hai, toh online OTP wala tarika kaam nahi karega. Aapko apne nazdeeki CSC (Common Service Centre) jaana hoga. Wahan fingerprint (biometric) scan karke eKYC ho jayegi. Iska government-fixed charge ₹15 hai — usse zyada koi maange toh galat hai.',
   },
   {
-    q: 'Face Authentication kya hai aur PM Kisan mein kaise karein?',
-    a: 'Yeh UIDAI ka naya surakshit tarika hai. PM Kisan mobile app download karein, "Face Auth" option chunein, aur camera ke saamne apna chehra scan karein. Yeh tab kaam karta hai jab aapka mobile number Aadhaar se linked ho.',
-  },
-  {
     q: 'CSC par PM Kisan eKYC ke liye kitna paisa dena chahiye?',
-    a: 'Portal/app se OTP ya Face Auth wali eKYC bilkul free hai. CSC par biometric eKYC ka government-fixed charge ₹15 hai — bas itna hi. Operator ₹50-100 ya zyada maange toh fraud hai; usi waqt 155261 par ya CSC ke district manager se complaint karein.',
+    a: 'Portal/app se OTP ya Face Auth wala verification bilkul free hai. CSC par biometric ka government-fixed charge ₹15 hai — bas itna hi. Operator ₹50-100 ya zyada maange toh fraud hai; usi waqt 155261 par ya CSC ke district manager se complaint karein.',
   },
   {
     q: 'Aadhaar mein "Sunita Devi" aur PM Kisan mein "Sunita" — kya eKYC hogi?',
     a: 'Nahi. System exact string match karta hai. "Devi" likha hai ya nahi, ek space ka farak bhi "Demographic Mismatch" error de dega. Pehle PM Kisan portal par ya Aadhaar mein naam correction karwayein, phir eKYC karein.',
   },
   {
-    q: 'Kisan bedridden (bimaar) hai, ghar par eKYC kaise hogi?',
-    a: 'Aise cases mein, bank ya CSC operator "Doorstep Banking" ya "Home Visit" service provide kar sakta hai. Aapko apne nazdeeki bank branch ya CSC ko call karke special request karni hogi. Family member ke through online nahi ho sakta.',
-  },
-  {
-    q: 'eKYC karne ke baad bhi "eKYC: NO" dikh raha hai, kya karein?',
-    a: 'Server sync mein time lag sakta hai — kuch din wait karein. Uske baad bhi "NO" dikhe toh CSC par dobara verify karwayein aur receipt sambhal kar rakhein. Dhyan rahe: eKYC aur bank ki NPCI seeding do alag cheezein hain — eKYC YES hone ke baad bhi paisa tabhi aata hai jab NPCI seeding bhi ho.',
-  },
-  {
     q: 'eKYC aur NPCI (Aadhaar seeding) mein kya farak hai?',
     a: 'eKYC aapki pehchaan verify karti hai — ki aap wahi kisan hain. NPCI seeding aapke bank account ko Aadhaar se DBT ke liye jodti hai — ki paisa kis account mein jayega. Dono alag jagah hote hain: eKYC PM Kisan portal/CSC par, NPCI seeding aapke bank branch par. Kist ke liye DONO complete hone chahiye.',
   },
   {
-    q: 'Error Code 104 ya 108 aa raha hai, iska matlab kya hai?',
-    a: 'Error 104 ka matlab hai "Invalid Aadhaar Number" (dobara check karein). Error 108 ka matlab hai "Mobile Number Not Linked with Aadhaar". Iska ek hi hal hai: CSC jaakar biometric se karein.',
-  },
-  {
-    q: 'Pitaji ki eKYC unke phone se main kar doon?',
-    a: 'Haan, agar unka mobile number unke Aadhaar se linked hai, toh aap unke phone par OTP mangwa kar eKYC complete kar sakte hain. Lekin bank account beneficiary ke naam par hi hona chahiye.',
-  },
-  {
-    q: 'OTP based eKYC aur biometric eKYC mein kya farak hai?',
-    a: 'OTP based eKYC apne phone se hi ho jata hai — bas Aadhaar se linked mobile chahiye. Biometric CSC jaakar fingerprint se hota hai, un logon ke liye jinka mobile number Aadhaar se link nahi hai ya unke paas smartphone nahi hai. Dono equally valid hain, result same hota hai.',
-  },
-  {
     q: 'eKYC ek baar ho gayi, kya har saal dobara karni padegi?',
     a: 'Nahi, ek baar successful ho gayi toh normally dobara nahi karni padti. System sirf tab dobara maangta hai jab aapne mobile number, naam, ya bank account mein koi badlaav kiya ho — routine mein har saal repeat karne ki zaroorat nahi.',
-  },
-  {
-    q: 'CSC par eKYC ke liye internet ya smartphone chahiye kya?',
-    a: 'Nahi, ye CSC operator ki responsibility hai. Aapko sirf Aadhaar card le jaana hai — operator apne system aur biometric machine se kaam kar dega. Aapke paas smartphone ya internet na ho, tab bhi ho jaayegi.',
   },
 ];
 
@@ -130,10 +102,10 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         <div className="my-6 p-5 bg-red-50 dark:bg-red-900/20 border-2 border-red-400 dark:border-red-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-red-800 dark:text-red-300 mb-2">Bina eKYC Ke Kist Ruk Jayegi (Ground Reality)</h2>
           <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed mb-3">
-            Suno bhai, yeh koi optional ya "baad mein kar lenge" wali cheez nahi hai. Government ne DBT (Direct Benefit Transfer) rules ke under 2023 se ise sakhti se compulsory kar diya hai. Ab system automatically un accounts ko filter kar deta hai jinki eKYC pending hai.
+            Suno bhai, yeh koi optional ya "baad mein kar lenge" wali cheez nahi hai. Sarkar ne DBT (Direct Benefit Transfer) rules ke under ise compulsory kar diya hai. Ab system automatically un accounts ko filter kar deta hai jinka verification pending hai.
           </p>
           <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed">
-            Par ghabrane ki baat nahi hai. Process itna aasaan hai ki phone se 2 minute mein ho jata hai, kahin jaana nahi padta. Agar phone mein dikkat hai, toh nazdeeki CSC chale jao. Dono tarikon par sarkar ki taraf se koi charge nahi hai.
+            Par ghabrane ki baat nahi hai. Process itna aasaan hai ki phone se 2 minute mein ho jata hai, kahin jaana nahi padta — portal ya app se karne par koi charge nahi. Agar phone mein dikkat hai, toh nazdeeki CSC chale jao; wahan biometric ka government-fixed charge sirf ₹15 hai, usse zyada ek rupaya bhi nahi.
           </p>
         </div>
 
@@ -151,7 +123,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         </section>
 
         <section className="mb-8">
-          <SH>eKYC Shuru Karne Se Pehle Yeh 3 Cheezein Zaroor Check Karein</SH>
+          <SH>Shuru Karne Se Pehle Yeh 3 Cheezein Zaroor Check Karein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Bina taiyari ke form bharne se sirf "Error" aata hai aur time waste hota hai. Jaane se pehle in 3 cheezon ki guarantee kar lein:
           </p>
@@ -211,12 +183,12 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           <StepList>
             <SI n={1}>Apne gaon ya shehar ke nazdeeki CSC centre jao.</SI>
             <SI n={2}>Aadhaar card ki original ya ek clear photocopy saath le jao.</SI>
-            <SI n={3}>Operator ko saaf shabdon mein bolo — "Mujhe PM Kisan eKYC karna hai".</SI>
+            <SI n={3}>Operator ko saaf shabdon mein bolo — "PM Kisan wala verification karna hai".</SI>
             <SI n={4}>Woh aapse machine par apna fingerprint (anguthe ya ungli ka nishaan) scan karne ko kahenge.</SI>
             <SI n={5}>Scan successful hote hi confirmation message aayega. Transaction ki chhoti si receipt sambhal kar le lo.</SI>
           </StepList>
           <DB>
-            <strong>Chetawani (Warning):</strong> Yeh service sarkar ki taraf se bilkul FREE (shulk mukt) hai. Koi bhi operator ₹10, ₹20 ya ₹50 maange, toh woh galat hai. Seedha 1800-1214-060 (CSC Helpline) par call karke us operator ki complaint karo. Complaint karte waqt CSC centre ka naam/location aur date batayein — tabhi action possible hota hai.
+            <strong>Chetawani (Warning):</strong> CSC par biometric eKYC ka charge Government of India ne <strong>₹15 fixed</strong> kiya hai — bas itna hi dena hai. Operator ₹50, ₹100 ya "file charge" ke naam par zyada maange toh woh fraud hai. Usi waqt PM Kisan helpline <strong>155261</strong> par ya CSC ke district manager se complaint karo. Complaint karte waqt CSC centre ka naam/location aur date batayein — tabhi action possible hota hai.
           </DB>
         </section>
 
@@ -333,7 +305,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         </section>
 
         <section className="mb-8">
-          <SH>Top 5 eKYC Error Codes aur Unka Pakka Ilaj (Fix)</SH>
+          <SH>Top 5 Error Codes aur Unka Pakka Ilaj (Fix)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Jab bhi system kuch galat paata hai, woh ek error code deta hai. In codes ka matlab samajhna hi samasya ka aadha hal hai.
           </p>

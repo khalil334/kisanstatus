@@ -397,7 +397,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     officialPortal: 'https://ikhedut.gujarat.gov.in',
     status: 'live',
     published: '2026-08-11T10:23:13+05:30',
-    modified: '2026-08-11T16:32:56+05:30',
+    modified: '2026-08-21T23:05:00+05:30',
     readTime: '14 min read',
     ogImage: '/images/articles/rajya-yojna/ikhedut-portal-status-check-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanPaymentFailedFix2026'],
