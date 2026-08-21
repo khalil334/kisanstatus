@@ -204,7 +204,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 | 50 | ✅ 2026-08-21 | `/articles/hi/meri-fasal-mera-byora-status` (0 imp) | `/articles/hi/bihar-kisan-registration-status` (0 imp) |
 | 51 | ✅ 2026-08-21 | `/articles/hi/parihara-payment-status` (0 imp) | `/articles/hi/up-kisan-karj-rahat-list` (0 imp) |
 | 52 | ✅ 2026-08-21 | `/articles/hi/ikhedut-portal-status` (0 imp) | `/articles/hi/fasal-bima-claim-status` (0 imp) |
-| 53 | ⬜ | `/articles/hi/kisan-karj-mafi-list` (0 imp) | `/articles/hi/pm-kisan-khad-yojana-sach` (0 imp) |
+| 53 | ✅ 2026-08-21 | `/articles/hi/kisan-karj-mafi-list` (0 imp) | `/articles/hi/pm-kisan-khad-yojana-sach` (0 imp) |
 | 54 | ⬜ | `/articles/hi/pm-kisan-helpline-155261` (0 imp) | `/articles/hi/mgnrega-pashu-shed-yojana` (0 imp) |
 | 55 | ⬜ | `/articles/hi/pashu-kisan-credit-card` (0 imp) | `/maandhan/pm-kisan-maandhan-registration-2026` (0 imp) |
 | 56 | ⬜ | `/maandhan/pm-kisan-maandhan-status-check-online` (0 imp) | `/maandhan/pm-kisan-maandhan-pension-card-download` (0 imp) |

@@ -1,14 +1,11 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
   {
     q: 'क्या 2026 में कोई राष्ट्रीय किसान कर्ज माफी योजना चल रही है?',
     a: 'नहीं। खेती का कर्ज माफ करना राज्यों का काम है, केंद्र का नहीं। पूरे देश के लिए आखिरी बार 2008 में waiver आया था, उससे पहले 1990 में। उसके बाद जो भी कर्ज माफी हुई, किसी एक राज्य ने अपने बजट से की। इसलिए जब कोई साइट "PM Kisan Karj Mafi Yojana form" दिखाए, तो समझ जाइए कि नाम ही गलत है।',
-  },
-  {
-    q: 'कर्ज माफी लिस्ट में अपना नाम कहां देखें?',
-    a: 'सिर्फ अपने राज्य के official portal पर, और वह भी तब जब उस राज्य की योजना असल में चल रही हो। महाराष्ट्र के लिए mjpsky.maharashtra.gov.in, UP के लिए upkisankarjrahat.upsdc.gov.in, तेलंगाना के लिए clw.telangana.gov.in। इनके अलावा जो भी "लिस्ट चेक करें" वाली साइट मिले, वह सरकारी नहीं है। लिस्ट देखने का कोई शुल्क नहीं होता और OTP कभी नहीं मांगा जाता।',
   },
   {
     q: 'मेरे राज्य में योजना नहीं है, KCC default हो गया है — अब क्या रास्ता है?',
@@ -25,10 +22,6 @@ const FAQS = [
   {
     q: 'मेरा loan दो बैंकों में है — दोनों माफ होंगे?',
     a: 'Scheme की शर्तों पर निर्भर है — ज्यादातर में प्रति किसान/परिवार एक सीमा (जैसे ₹2 लाख तक) तय होती है, चाहे खाते कितने भी हों। दोनों खातों का मिलाकर बकाया सीमा से ज्यादा है तो बचा हिस्सा आपको खुद चुकाना होगा। GR में family-unit की परिभाषा ध्यान से पढ़ें।',
-  },
-  {
-    q: 'नाम list में आ गया — अब मुझे क्या करना होगा?',
-    a: 'ज्यादातर schemes में आधार से biometric सत्यापन कराना पड़ता है — पिछली फुले कर्जमुक्ती में यह CSC/बैंक पर होता था। सत्यापन के बाद रकम सीधे loan account में जमा होती है। आपके हाथ में cash नहीं आता — जो कहे “माफी का पैसा निकालने में मदद करूंगा”, वह ठग है।',
   },
 ];
 
@@ -78,6 +71,21 @@ export default function KisanKarjMafiAllStatesHindi({ article }: { article: Hind
         वे राज्य हैं जिनके लिए official notification, GR या पोर्टल मिल गया। जहां सिर्फ बयान है, वहां साफ
         लिखा है कि बयान है।
       </p>
+
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/hindi-yojna/karj-mafi-list/karj-mafi-hero.webp"
+          alt="किसान बैंक की पासबुक और कर्ज के कागज देखता हुआ"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          कर्ज माफी राज्य का फैसला है — कोई राष्ट्रीय योजना नहीं
+        </figcaption>
+      </figure>
 
       <Head2>राज्यवार स्थिति — क्या चालू, क्या बंद, क्या सिर्फ बयान</Head2>
       <div className="my-5 overflow-x-auto border-2 border-gray-200 dark:border-gray-700 rounded-2xl">
@@ -238,6 +246,21 @@ export default function KisanKarjMafiAllStatesHindi({ article }: { article: Hind
         बुजुर्ग किसानों में अंगूठे की लकीरें घिसने से biometric fail होना आम है। ऐसे में iris scan का विकल्प
         मांगिए, या आधार केंद्र जाकर biometric update कराइए।
       </p>
+
+      <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+        <Image
+          src="/images/articles/hindi-yojna/karj-mafi-list/biometric-verify.webp"
+          alt="CSC पर आधार से biometric सत्यापन कराता किसान"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          सत्यापन के दिन — unique ID, आधार और अपना loan statement साथ रखिए
+        </figcaption>
+      </figure>
 
       <Head2>फर्जी लिस्ट वाली साइटें — pattern पहचानिए</Head2>
       <p>

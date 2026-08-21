@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
@@ -21,14 +22,6 @@ const FAQS = [
   {
     q: 'दुकानदार MRP से ज्यादा मांगे तो क्या करूं?',
     a: 'MRP से ज्यादा लेना गैर-कानूनी है। पहले PoS पर्ची मांगिए — उसमें सही दाम छपा होता है। फिर भी न माने तो Kisan Call Centre 1800-180-1551 पर शिकायत करिए या जिले के कृषि अधिकारी को बताइए। खरीद के बाद SMS न आए तो भी समझिए सौदे में गड़बड़ है।',
-  },
-  {
-    q: 'OTP देने के बाद खाते से पैसा कट गया — अब क्या करूं?',
-    a: 'सबसे पहले cyber crime helpline 1930 पर call कीजिए — जितनी जल्दी report होगी, पैसा रुकने की उम्मीद उतनी ज्यादा। साथ ही cybercrime.gov.in पर शिकायत दर्ज कीजिए और अपने बैंक को तुरंत बताइए ताकि खाते से आगे की transaction रोकी जा सके।',
-  },
-  {
-    q: 'यह अफवाह हर साल वापस क्यों आ जाती है?',
-    a: 'क्योंकि यह clicks कमाती है। 2021 से वही articles चल रहे हैं, बस heading में साल बदल जाता है — 2024, 2025, अब 2026। PM किसान की असली किस्त का season आते ही इनकी traffic बढ़ जाती है, क्योंकि किसान वैसे ही पैसा search कर रहा होता है। इसलिए साल बदलने से अफवाह सच नहीं हो जाती।',
   },
 ];
 
@@ -65,6 +58,21 @@ export default function PmKisanKhadYojanaSachHindi({ article }: { article: Hindi
         योजना को असली बताकर registration का तरीका भी समझा देते हैं — जिस चीज का कोई portal ही नहीं, उसका
         तरीका। चलिए पूरी कहानी समझते हैं।
       </p>
+
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/nano-dap-buy-online-fertilizer.webp"
+          alt="खाद की दुकान पर बोरी खरीदता किसान"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          खाद की subsidy बोरी के दाम में मिलती है — खाते में cash से नहीं
+        </figcaption>
+      </figure>
 
       <Head2>₹11,000 का हिसाब किसने बनाया?</Head2>
       <p>
@@ -162,6 +170,21 @@ export default function PmKisanKhadYojanaSachHindi({ article }: { article: Hindi
         health card गाइड</Link> में है। Report के हिसाब से खाद डालने पर अक्सर बोरी कम लगती है — यानी असली,
         गिनने लायक बचत।
       </p>
+
+      <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+        <Image
+          src="/images/articles/soil-health-card-complete-guide-2026/hero.webp"
+          alt="Soil Health Card की report के साथ खेत में किसान"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          मिट्टी का free test — खाद की असली बचत यहीं से शुरू होती है
+        </figcaption>
+      </figure>
       <p>
         दूसरा रास्ता <strong>Nano DAP</strong> है — IFFCO की 500 ml की बोतल, दाम करीब ₹250–350, जो कई
         कामों में 50 kg की ₹1,350 वाली granular DAP बोरी की जगह ले लेती है। कहां यह फायदे का सौदा है और
