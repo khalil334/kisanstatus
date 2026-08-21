@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
@@ -9,10 +10,6 @@ const FAQS = [
   {
     q: 'फसल बिक गई, J-फॉर्म भी कट गया — पैसा कितने दिन में आता है?',
     a: 'ई-खरीद में तौल और J-फॉर्म के बाद भुगतान आमतौर पर कुछ ही कार्य-दिवसों में खाते में आ जाता है। हफ्ता निकल जाए तो पहले बैंक जाकर देखिए — खाता dormant होना, KYC अधूरी होना या बैंक विलय के बाद IFSC बदल जाना ही सबसे आम वजहें हैं। इन तीनों में गलती योजना की नहीं, खाते की तरफ की होती है।',
-  },
-  {
-    q: 'रजिस्ट्रेशन किसी और के मोबाइल नंबर से हो गया था, अब स्थिति कैसे देखूं?',
-    a: 'फैमिली ID से लॉगिन कीजिए — OTP भले उसी पुराने नंबर पर जाए, पर एंट्री दिख जाएगी। स्थायी इलाज यही है कि CSC जाकर अपनी प्रोफाइल में अपना चालू नंबर दर्ज करवा लें, क्योंकि गेट पास और भुगतान के SMS उसी नंबर पर आते हैं। अगले सीजन से रजिस्ट्रेशन हमेशा अपने ही नंबर से कराइए।',
   },
   {
     q: 'रकबा असल से कम दर्ज हो गया — पूरी फसल MSP पर बिकेगी या नहीं?',
@@ -92,6 +89,21 @@ export default function MeriFasalMeraByoraStatusHindi({ article }: { article: Hi
         खाते में पैसा आने तक। हर पड़ाव पर यह भी लिखा है कि गाड़ी अटके तो धक्का कहां से
         लगाना है।
       </p>
+
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/rajya-yojna/meri-fasal-mera-byora-status-check-2026/hero.webp"
+          alt="हरियाणा का किसान मंडी में गेहूं की ट्रॉली के साथ"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          रजिस्ट्रेशन से भुगतान तक — पांच पड़ावों का सफर
+        </figcaption>
+      </figure>
 
       <Stage num="1" title="रजिस्ट्रेशन — हर सीजन नया, कोई अपवाद नहीं">
         <p>
@@ -198,6 +210,20 @@ export default function MeriFasalMeraByoraStatusHindi({ article }: { article: Hi
           पर कुछ कार्य-दिवस लगते हैं। हफ्ता निकल जाए और पासबुक खाली रहे, तो जांच इस
           क्रम में कीजिए:
         </p>
+        <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+          <Image
+            src="/images/articles/rajya-yojna/meri-fasal-mera-byora-status-check-2026/bank-passbook.webp"
+            alt="बैंक पासबुक में MSP भुगतान की एंट्री देखता किसान"
+            width={1200}
+            height={675}
+            className="w-full object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            loading="lazy"
+          />
+          <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+            पैसा अटके तो पहली जांच पासबुक और खाते की — योजना की नहीं
+          </figcaption>
+        </figure>
         <ol>
           <li>
             <strong>खाता चालू है या dormant?</strong> साल में दो बार चलने वाले खाते

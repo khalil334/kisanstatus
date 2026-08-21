@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
@@ -17,14 +18,6 @@ const FAQS = [
   {
     q: 'आधार वाला पुराना मोबाइल नंबर बंद हो गया है, OTP नहीं आ रहा — क्या करूं?',
     a: 'यह दिक्कत पोर्टल से नहीं सुलझेगी, क्योंकि OTP उसी नंबर पर जाता है जो आधार से जुड़ा है। पहले नजदीकी आधार केंद्र जाकर मोबाइल नंबर अपडेट कराइए (यह काम ऑनलाइन नहीं होता, केंद्र जाना ही पड़ता है), फिर पोर्टल पर आगे बढ़िए। नंबर अपडेट होने में आमतौर पर कुछ दिन लगते हैं।',
-  },
-  {
-    q: 'स्क्रीन पर "Aadhaar authentication failed" आ रहा है — नाम तो सही लिख रहा हूं।',
-    a: 'सिस्टम नाम अक्षर-अक्षर मिलाता है, "सही" से काम नहीं चलता — आधार में जैसा छपा है ठीक वैसा ही चाहिए। आधार में "Md. Salim" है और आप "Mohammad Salim" लिख रहे हैं तो फेल होगा। आधार कार्ड सामने रखकर हूबहू वही स्पेलिंग उतारिए, बीच के डॉट और Kumar/Devi जैसे शब्द समेत।',
-  },
-  {
-    q: 'पीएम किसान की किस्त का स्टेटस भी क्या इसी DBT पोर्टल पर दिखेगा?',
-    a: 'नहीं — यही सबसे आम भूल है। बिहार में पीएम किसान की नई अर्जी का रास्ता DBT पंजीकरण से होकर जरूर जाता है, पर किस्त का पैसा और उसकी स्थिति केंद्र के पोर्टल pmkisan.gov.in के Know Your Status में दिखती है। दोनों पोर्टल अलग हैं, दोनों की स्थिति अलग जगह देखनी होती है।',
   },
   {
     q: 'कृषि इनपुट अनुदान सबको मिलता है या सिर्फ कुछ पंचायतों को?',
@@ -88,6 +81,21 @@ export default function BiharKisanRegistrationStatusHindi({ article }: { article
         आने तक, हर मोड़ का रास्ता लिखा है।
       </p>
 
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/rajya-yojna/bihar-kisan-registration-status-check-2026/hero.webp"
+          alt="बिहार का किसान DBT पोर्टल पर पंजीकरण स्टेटस देखता हुआ"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          13 अंकों की पंजीकरण संख्या — हर योजना का पहला दरवाजा
+        </figcaption>
+      </figure>
+
       <H2>पहले यह समझिए — DBT पोर्टल एक छाता है, योजना नहीं</H2>
 
       <p>
@@ -129,6 +137,21 @@ export default function BiharKisanRegistrationStatusHindi({ article }: { article
           एंट्री का रिकॉर्ड रहता है — आधार लेकर जाइए, नंबर निकलवा लीजिए।
         </li>
       </ol>
+
+      <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+        <Image
+          src="/images/articles/rajya-yojna/bihar-kisan-registration-status-check-2026/kisan-salahkar-panchayat.webp"
+          alt="पंचायत में किसान सलाहकार से पंजीकरण नंबर निकलवाता किसान"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          नंबर खो जाए तो पहली सीढ़ी — पंचायत का किसान सलाहकार
+        </figcaption>
+      </figure>
 
       <Note>
         पंजीकरण से लेकर भुगतान तक इस पूरी चेन में कहीं कोई सरकारी शुल्क नहीं है। CSC
