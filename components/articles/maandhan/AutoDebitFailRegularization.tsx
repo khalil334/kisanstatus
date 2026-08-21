@@ -4,7 +4,7 @@ import { SI, StepList, IB, WB, SH, AuthorBox, BottomNav, Disclaimer, FAQBlock, f
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-05-13T14:48:09+05:30';
-const MODIFIED = '2026-08-21T10:15:00+05:30';
+const MODIFIED = '2026-08-20T17:44:16+05:30';
 
 const FAQS_DATA = [
   {

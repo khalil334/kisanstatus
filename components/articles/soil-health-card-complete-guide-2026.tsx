@@ -5,8 +5,8 @@ import OfficialLinkButton from '@/components/OfficialLinkButton';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-01-11T14:57:53+05:30';
-const MODIFIED = '2026-08-21T19:25:00+05:30';
+const PUBLISHED = '2026-06-27T01:43:26+05:30';
+const MODIFIED = '2026-08-13T12:33:27+05:30';
 
 const RELATED = [
   { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price & Rate' },

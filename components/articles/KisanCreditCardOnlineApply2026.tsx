@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { SI, StepList, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
-const PUBLISHED = '2025-12-24T10:29:44+05:30';
-const MODIFIED = '2026-08-21T23:40:00+05:30';
+const PUBLISHED = '2026-06-21T07:43:48+05:30';
+const MODIFIED = '2026-08-13T19:14:34+05:30';
 
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);

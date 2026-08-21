@@ -5,8 +5,8 @@ import StatePortalFinder from '@/components/StatePortalFinder';
 import { SI, StepList, IB, WB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-02-17T09:13:27+05:30';
-const MODIFIED = '2026-08-22T00:10:00+05:30';
+const PUBLISHED = '2026-07-09T06:54:59+05:30';
+const MODIFIED = '2026-08-12T17:59:16+05:30';
 
 const RELATED = [
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },

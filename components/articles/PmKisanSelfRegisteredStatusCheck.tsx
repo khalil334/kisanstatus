@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-11T18:34:34+05:30';
-const MODIFIED = '2026-08-21T19:00:00+05:30';
+const MODIFIED = '2026-08-19T19:34:36+05:30';
 
 const IMG_BASE = '/images/articles/pm-kisan-self-registered-status-check';
 

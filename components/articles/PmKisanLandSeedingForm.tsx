@@ -4,7 +4,7 @@ import { SI, StepList, IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNa
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-07-09T05:39:09+05:30';
-const MODIFIED = '2026-08-17T11:44:57+05:30';
+const MODIFIED = '2026-08-09T17:42:21+05:30';
 
 const RELATED = [
   { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },

@@ -10,8 +10,8 @@ function fmtDate(dateString: string): string {
   return date.toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' });
 }
 
-const PUBLISHED = '2026-01-08T22:33:23+05:30';
-const MODIFIED = '2026-08-21T06:00:00+05:30';
+const PUBLISHED = '2026-06-24T07:05:14+05:30';
+const MODIFIED = '2026-07-14T22:08:58+05:30';
 
 const FAQS_DATA = [
   {

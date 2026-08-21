@@ -4,8 +4,8 @@ import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Di
 import CountdownRedirectButton from '@/components/CountdownRedirectButton';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-02-13T17:44:35+05:30';
-const MODIFIED = '2026-08-22T00:20:00+05:30';
+const PUBLISHED = '2026-07-09T06:45:51+05:30';
+const MODIFIED = '2026-07-26T16:22:34+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },

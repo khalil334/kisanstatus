@@ -4,8 +4,8 @@ import { SI, StepList, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Discla
 import OfficialLinkButton from '@/components/OfficialLinkButton';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-02-19T07:49:49+05:30';
-const MODIFIED = '2026-08-21T18:10:00+05:30';
+const PUBLISHED = '2026-07-09T06:50:50+05:30';
+const MODIFIED = '2026-08-09T23:21:36+05:30';
 
 const RELATED = [
   { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },

@@ -3,8 +3,8 @@ import { SI, StepList, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNa
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-08-18T11:00:00+05:30';
-const MODIFIED = '2026-08-21T23:40:00+05:30';
+const PUBLISHED = '2026-08-18T15:05:50+05:30';
+const MODIFIED = '2026-08-20T10:53:58+05:30';
 
 const RELATED = [
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Ka Full Form & Matlab' },

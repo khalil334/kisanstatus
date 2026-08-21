@@ -6,8 +6,8 @@ import OfficialLinkButton from '@/components/OfficialLinkButton';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-06-20T06:39:52+05:30';
-const MODIFIED = '2026-08-14T21:10:00+05:30';
+const PUBLISHED = '2026-06-20T21:34:06+05:30';
+const MODIFIED = '2026-07-27T07:14:25+05:30';
 
 // Inline source citation link (E-E-A-T / transparency)
 function Src({ href, children }: { href: string; children: ReactNode }) {

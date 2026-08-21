@@ -6,7 +6,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-07-09T06:05:43+05:30';
-const MODIFIED = '2026-08-20T11:45:00+05:30';
+const MODIFIED = '2026-08-14T10:31:11+05:30';
 
 const RELATED_CARDS = [
   {

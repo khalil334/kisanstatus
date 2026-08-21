@@ -4,8 +4,8 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-02-25T21:37:17+05:30';
-const MODIFIED = '2026-08-21T18:40:00+05:30';
+const PUBLISHED = '2026-07-08T01:55:25+05:30';
+const MODIFIED = '2026-08-08T23:14:36+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change' },

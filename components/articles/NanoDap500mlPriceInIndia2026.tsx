@@ -4,8 +4,8 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-01-03T08:52:27+05:30';
-const MODIFIED = '2026-08-20T11:30:00+05:30';
+const PUBLISHED = '2026-06-24T04:22:58+05:30';
+const MODIFIED = '2026-07-31T19:12:48+05:30';
 
 const RELATED = [
   { slug: 'soil-health-card-complete-guide-2026', title: 'Soil Health Card Guide' },

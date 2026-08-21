@@ -17,8 +17,8 @@ const KIST = {
   recipients: '9.4 Crore+',
 };
 
-const PUBLISHED = '2026-01-01T10:21:39+05:30';
-const MODIFIED = '2026-08-21T20:10:00+05:30';
+const PUBLISHED = '2026-06-24T16:27:03+05:30';
+const MODIFIED = '2026-08-02T11:00:42+05:30';
 
 const RELATED = [
   { slug: 'PmKisan25viKist2027', title: '25vi Kist Date & Amount' },

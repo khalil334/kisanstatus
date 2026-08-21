@@ -4,8 +4,8 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-02-09T08:58:39+05:30';
-const MODIFIED = '2026-08-21T19:25:00+05:30';
+const PUBLISHED = '2026-07-06T00:30:35+05:30';
+const MODIFIED = '2026-08-18T19:25:51+05:30';
 
 const RELATED = [
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Ka Matlab' },

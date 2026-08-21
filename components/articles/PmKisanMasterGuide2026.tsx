@@ -5,8 +5,8 @@ import OfficialLinkButton from '@/components/OfficialLinkButton';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-02-02T15:44:39+05:30';
-const MODIFIED = '2026-08-21T18:00:00+05:30';
+const PUBLISHED = '2026-07-05T02:01:06+05:30';
+const MODIFIED = '2026-08-11T13:56:37+05:30';
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },

@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-01-20T17:46:17+05:30';
-const MODIFIED = '2026-08-21T19:45:00+05:30';
+const PUBLISHED = '2026-07-09T06:01:36+05:30';
+const MODIFIED = '2026-07-28T14:26:44+05:30';
 
 const RELATED = [
   { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },

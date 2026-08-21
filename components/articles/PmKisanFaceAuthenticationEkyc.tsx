@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-01-17T07:41:23+05:30';
-const MODIFIED = '2026-08-21T18:05:00+05:30';
+const PUBLISHED = '2026-07-09T05:57:50+05:30';
+const MODIFIED = '2026-08-18T20:00:37+05:30';
 
 const RELATED = [
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },

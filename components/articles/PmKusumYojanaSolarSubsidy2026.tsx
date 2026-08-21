@@ -5,8 +5,8 @@ import OfficialLinkButton from '@/components/OfficialLinkButton';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-02-15T21:25:25+05:30';
-const MODIFIED = '2026-08-21T23:55:00+05:30';
+const PUBLISHED = '2026-07-08T03:06:14+05:30';
+const MODIFIED = '2026-07-25T23:15:52+05:30';
 
 const RELATED = [
   { slug: 'drip-sprinkler-irrigation-subsidy', title: 'Drip & Sprinkler Subsidy' },

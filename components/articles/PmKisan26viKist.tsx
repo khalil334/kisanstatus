@@ -4,8 +4,8 @@ import { SI, StepList, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNa
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-08-18T09:30:00+05:30';
-const MODIFIED = '2026-08-21T23:55:00+05:30';
+const PUBLISHED = '2026-08-18T07:43:40+05:30';
+const MODIFIED = '2026-08-20T17:51:41+05:30';
 
 const RELATED = [
   { slug: 'PmKisan25viKist2027', title: '25vi Kist Kab Aayegi' },

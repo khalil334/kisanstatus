@@ -4,8 +4,8 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2025-12-16T12:07:52+05:30';
-const MODIFIED = '2026-08-21T20:15:00+05:30';
+const PUBLISHED = '2026-06-20T17:07:02+05:30';
+const MODIFIED = '2026-08-06T21:23:29+05:30';
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
   return date.toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' });

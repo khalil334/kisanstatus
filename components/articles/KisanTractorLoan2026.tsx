@@ -4,8 +4,8 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2025-12-19T13:12:12+05:30';
-const MODIFIED = '2026-08-21T18:10:00+05:30';
+const PUBLISHED = '2026-06-20T18:17:16+05:30';
+const MODIFIED = '2026-07-23T17:31:13+05:30';
 
 const RELATED = [
   { slug: 'KisanRinKahaSeLe2026', title: 'Kisan Loan Kahan Se Le' },

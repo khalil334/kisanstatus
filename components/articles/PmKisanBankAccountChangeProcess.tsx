@@ -3,8 +3,8 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import SafeImageBase from '@/components/SafeImage';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-01-28T12:49:15+05:30';
-const MODIFIED = '2026-08-21T19:05:00+05:30';
+const PUBLISHED = '2026-07-09T10:32:39+05:30';
+const MODIFIED = '2026-08-13T14:20:19+05:30';
 
 const FALLBACK_IMG = '/images/articles/pm-kisan-bank-account-change/bank-change-hero.webp';
 

@@ -5,8 +5,8 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import OfficialLinkButton from '@/components/OfficialLinkButton';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
-const PUBLISHED = '2026-02-22T13:03:46+05:30';
-const MODIFIED = '2026-08-22T00:30:00+05:30';
+const PUBLISHED = '2026-07-09T06:59:32+05:30';
+const MODIFIED = '2026-08-09T16:20:13+05:30';
 
 const RELATED_CARDS = [
   {

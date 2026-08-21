@@ -13,8 +13,8 @@ const CountdownModal = lazy(() => import('@/components/CountdownModal'));
 import type { ArticleMeta } from '@/lib/articles-data';
 import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 
-const PUBLISHED = '2025-12-22T20:13:22+05:30';
-const MODIFIED = '2026-08-21T23:05:00+05:30';
+const PUBLISHED = '2026-06-20T10:08:48+05:30';
+const MODIFIED = '2026-07-14T15:47:23+05:30';
 
 const RELATED = [
   { slug: 'PmKisanVillageWiseListPdfDownload', title: 'Village Wise List PDF' },
