@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import HindiRelatedFooter from '@/components/HindiRelatedFooter';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
@@ -18,10 +19,6 @@ const FAQS = [
   {
     q: 'दूसरे राज्य में रहकर राजस्थान की यह राशि ले सकते हैं?',
     a: 'नहीं। मूल निवासी होना और राजस्थान में अपने नाम खेती की जमीन का रिकॉर्ड होना — दोनों शर्तें हैं। जमीन राजस्थान में है पर आप काम के सिलसिले में बाहर रहते हैं, तो रिकॉर्ड और जन आधार राजस्थान का ही होना चाहिए, वरना नाम सूची से बाहर हो जाता है।',
-  },
-  {
-    q: 'खाते में कितना पैसा एक साथ आता है — ₹2,000 या ₹3,000?',
-    a: 'दोनों पैसे अलग-अलग आते हैं, एक साथ नहीं। केंद्र की ₹2,000 की किस्त एक एंट्री में, राज्य का हिस्सा दूसरी एंट्री में। बैंक स्टेटमेंट में दो अलग लाइनें दिखेंगी और दोनों की तारीख भी अलग होगी — इसी वजह से गांव में लोग समझते हैं कि पैसा कम आया।',
   },
   {
     q: 'पोर्टल पर भुगतान सफल दिख रहा है पर खाते में पैसा नहीं है — अब क्या?',
@@ -83,6 +80,21 @@ export default function RajasthanKisanSammanNidhiHindi({ article }: { article: H
         </a>{' '}
         (जन सूचना पोर्टल), जहां जन आधार या आधार नंबर से भुगतान की पूरी लाइन दिख जाती है।
       </Note>
+
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/rajya-yojna/rajasthan-kisan-samman-nidhi-9000/hero.webp"
+          alt="राजस्थान का किसान खेत में — किसान सम्मान निधि की जानकारी"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          केंद्र के ₹6,000 + राज्य के ₹3,000 — दो अलग भुगतान, एक ही परिवार
+        </figcaption>
+      </figure>
 
       <p>
         जोधपुर के एक किसान ने पिछले महीने मुझे लिखा — &ldquo;भाईसाहब, पड़ोसी के खाते में ₹1,000 आ गए,
@@ -178,6 +190,21 @@ export default function RajasthanKisanSammanNidhiHindi({ article }: { article: H
         राजस्थान में हर कल्याणकारी योजना का रास्ता जन आधार से होकर जाता है, और यह योजना भी उसी से जुड़ी
         है। स्थिति देखने में दो मिनट लगते हैं और एक भी रुपया खर्च नहीं होता।
       </p>
+      <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+        <Image
+          src="/images/articles/rajya-yojna/rajasthan-kisan-samman-nidhi-9000/status-check-phone.webp"
+          alt="मोबाइल पर जन सूचना पोर्टल से किस्त की स्थिति देखता किसान"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          जन आधार या आधार नंबर — दो मिनट में स्थिति सामने
+        </figcaption>
+      </figure>
+
       <Sub>जन सूचना पोर्टल से</Sub>
       <ol className="my-4 space-y-2 pl-5 list-decimal text-sm leading-relaxed">
         <li>

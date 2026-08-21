@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import HindiRelatedFooter from '@/components/HindiRelatedFooter';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
@@ -14,14 +15,6 @@ const FAQS = [
   {
     q: 'जमीन का मालिक भी ले रहा है और मैं बटाईदार भी — दोनों को मिलेगा?',
     a: 'यह उलझन का असली मुद्दा है। पीएम किसान वाला ₹6,000 का हिस्सा जमीन के रिकॉर्ड पर चलता है, इसलिए वह मालिक के खाते में जाता है। राज्य की योजना में CCRC वाले जोतने वाले को शामिल किया गया है। इसका मतलब दोनों का दर्जा एक जैसा नहीं होता — अपने मामले में क्या बनता है, यह RSK में अपना CCRC और सर्वे नंबर दिखाकर लिखित में पूछ लेना सबसे सुरक्षित तरीका है।',
-  },
-  {
-    q: 'मैं हिंदीभाषी हूं, तेलुगु नहीं पढ़ पाता — पोर्टल कैसे चलाऊं?',
-    a: 'पोर्टल पर स्थिति देखने के लिए पढ़ने की जरूरत ही कम है — आधार नंबर और कैप्चा भरना है, बाकी नतीजा नंबर और तारीख के रूप में दिखता है। ब्राउजर का अनुवाद विकल्प चालू कर लें तो मेनू भी हिंदी में पढ़ा जा सकता है। RSK में बात करने के लिए गांव का कोई तेलुगु जानने वाला साथ ले जाना बेहतर रहता है।',
-  },
-  {
-    q: 'रिश्तेदार की जमीन आंध्र में है पर वे रहते बाहर हैं — क्या नाम कट जाएगा?',
-    a: 'जमीन आंध्र प्रदेश में है और रिकॉर्ड उनके नाम है तो पात्रता खत्म नहीं होती, लेकिन तीन चीजें चालू हालत में होनी चाहिए — पीएम किसान की ई-केवाईसी, आधार से जुड़ा सक्रिय बैंक खाता, और जमीन के रिकॉर्ड का सत्यापन। बाहर रहने की वजह से अक्सर ई-केवाईसी अटकी रहती है और पैसा वहीं रुक जाता है।',
   },
   {
     q: 'पोर्टल पर नाम है, फिर भी खाते में पैसा नहीं आया — कहां शिकायत करें?',
@@ -76,6 +69,21 @@ export default function AnnadataSukhibhavaStatusHindi({ article }: { article: Hi
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
       />
+
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/rajya-yojna/annadata-sukhibhava-status-check-2026/hero.webp"
+          alt="आंध्र प्रदेश का किसान खेत में — अन्नदाता सुखीभव योजना"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          रायथु भरोसा से अन्नदाता सुखीभव — नाम बदला, रकम बढ़ी
+        </figcaption>
+      </figure>
 
       <p>
         योजना का नाम बदला, तो सबसे पहला सवाल यही उठा — पुराना रिकॉर्ड चलेगा या नहीं? घबराहट
@@ -164,6 +172,21 @@ export default function AnnadataSukhibhavaStatusHindi({ article }: { article: Hi
         45,69,817 जमीन-मालिक किसान परिवार थे और 1,16,021 परिवार वन अधिकार (RoFR) पट्टे वाले। यानी वन भूमि
         पर मान्यता प्राप्त खेती करने वाले भी इस दायरे में आते हैं।
       </p>
+
+      <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+        <Image
+          src="/images/articles/rajya-yojna/annadata-sukhibhava-status-check-2026/tenant-farmer-ccrc.webp"
+          alt="बटाईदार किसान CCRC कार्ड के साथ"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          जमीन अपने नाम नहीं? CCRC ही आपका रास्ता है
+        </figcaption>
+      </figure>
 
       <Hd>CCRC — इस योजना की सबसे उलझी हुई चीज</Hd>
       <p>
