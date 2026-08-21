@@ -6,7 +6,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-11T14:57:53+05:30';
-const MODIFIED = '2026-08-20T21:40:00+05:30';
+const MODIFIED = '2026-08-21T19:25:00+05:30';
 
 const RELATED = [
   { slug: 'NanoDap500mlPriceInIndia2026', title: 'Nano DAP Price & Rate' },
@@ -106,7 +106,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
         <div className="my-6 p-5 bg-amber-50 border-2 border-amber-400 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-amber-900 mb-2">Jaldi Padho</h2>
           <p className="text-sm text-amber-950 leading-relaxed mb-2">
-            Soil health card ek government report hota jo batata hai — aapki zameen mein nutrients kaun se hain, kaun se kam hain. Test ka ek rupaya nahi lagta. Har state ka apna process hai, lekin sabme ek jaise steps follow hote hain. Report ke base par sahi fertilizer lagao to production 30-40% tak badh jaata hai.
+            Soil health card ek government report hota jo batata hai — aapki zameen mein nutrients kaun se hain, kaun se kam hain. Test ka ek rupaya nahi lagta. Har state ka apna process hai, lekin sabme ek jaise steps follow hote hain. Report ke base par sahi fertilizer lagao to khaad ka kharcha ghat-ta hai aur paidawar badhti hai — sarkari studies mein fertilizer use 8-10% tak kam aur yield 5-6% tak zyada dekhi gayi hai.
           </p>
           <p className="text-sm text-amber-950 leading-relaxed">
             Ye guide mein har state ka seedha tareeka likha hai — link, offline process, sab kuch.
@@ -308,6 +308,18 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             <SI n={5}>Ready ho gaya to download kar lo ya agriculture office se collect karo</SI>
           </StepList>
 
+          <div className="my-5 rounded-xl overflow-hidden border border-[var(--color-border)]">
+            <Image
+              src="/images/articles/soil-health-card-complete-guide-2026/dashboard-2.webp"
+              alt="Soil health card portal ka dashboard — application status yahan track hota hai"
+              width={1200}
+              height={630}
+              className="w-full object-cover"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+          </div>
+
           <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-500 dark:border-blue-700 rounded-xl">
             <p className="text-sm font-bold text-blue-800 dark:text-blue-300 mb-2">
                Status Check Karo
@@ -361,7 +373,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div className="bg-green-50 rounded-xl p-4 border border-green-300">
               <p className="font-black text-green-800 text-sm mb-2">Production Badha</p>
-              <p className="text-xs text-gray-700">Sahi fertilizer se 25-40% tak production badh jaata hai</p>
+              <p className="text-xs text-gray-700">Sahi fertilizer se paidawar badhti hai — sarkari study mein 5-6% tak yield gain</p>
             </div>
             <div className="bg-blue-50 rounded-xl p-4 border border-blue-300">
               <p className="font-black text-blue-800 text-sm mb-2">Cost Kam Hota</p>
