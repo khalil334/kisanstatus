@@ -8,20 +8,20 @@ import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
-  title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
-  description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',
+  title: 'Vermi Compost Business 2026: Subsidy & Profit Guide',
+  description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, subsidy ke raste, unit cost aur real profit calculation ke baare mein sab kuch.',
   keywords: [
     'vermi compost business',
     'organic fertilizer business',
-    'PKVY subsidy',
+    'vermi compost subsidy',
     'vermi compost profit',
     'earthworm farming',
     'gobar se khaad banana'
   ],
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
-    title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
-    description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',
+    title: 'Vermi Compost Business 2026: Subsidy & Profit Guide',
+    description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, subsidy ke raste, unit cost aur real profit calculation ke baare mein sab kuch.',
     type: 'article',
     locale: 'hi_IN',
     siteName: 'KisanStatus.com',
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vermi Compost Business 2026: PKVY Subsidy & Profit Guide',
-    description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, PKVY subsidy, machinery cost aur real profit calculation ke baare mein sab kuch.',
+    title: 'Vermi Compost Business 2026: Subsidy & Profit Guide',
+    description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, subsidy ke raste, unit cost aur real profit calculation ke baare mein sab kuch.',
     images: ['https://kisanstatus.com/images/kisanguides/vermi-compost-hero.webp'],
   },
   alternates: {
@@ -202,7 +202,7 @@ export default function VerminCompost() {
           </li>
           <li className="flex justify-between">
             <span>Licenses, Misc:</span>
-            <span className="font-semibold">5,000 - ₹10,000</span>
+            <span className="font-semibold">₹5,000 - ₹10,000</span>
           </li>
           <li className="flex justify-between border-t border-gray-300 dark:border-gray-600 pt-3 font-bold text-base text-gray-900 dark:text-gray-100">
             <span>Total Investment Range:</span>
@@ -236,17 +236,17 @@ export default function VerminCompost() {
         <ul className="space-y-4 text-sm text-gray-800 dark:text-gray-200">
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">1. Paramparagat Krishi Vikas Yojana (PKVY):</strong>
-            Yeh scheme organic farming ko promote karti hai. In units par 50-75% subsidy milti hai. Maximum subsidy ₹50,000 - ₹1 lakh per unit. FPOs aur SHGs ko priority milti hai.
+            Cluster-based organic farming ki scheme hai — isme kisan ko ₹50,000 per hectare (3 saal ke liye) ki assistance milti hai, jisme se ₹31,000 seedha organic inputs (khaad, bio-fertilizer waghera) ke liye hota hai. Yeh compost unit banane ki subsidy nahi hai, lekin agar aap khud organic kheti karte hain toh aapke inputs ka kharcha isse cover ho sakta hai — aur PKVY clusters ke kisan aapke pakke customers bhi bante hain.
           </li>
 
           <li>
-            <strong className="text-blue-900 dark:text-blue-200 block mb-1">2. Mission Organic Value Chain Development (MOVCDNER):</strong>
-            North-East states ke liye special scheme. Compost units par 75-90% subsidy milti hai. Maximum subsidy ₹2 lakh tak.
+            <strong className="text-blue-900 dark:text-blue-200 block mb-1">2. Soil Health Management (CISS):</strong>
+            Iske under Capital Investment Subsidy Scheme mein individuals/private agencies ko mechanized agro-waste compost unit lagane par cost ka 33% tak (maximum ₹63 lakh per unit) capital subsidy milti hai. Yeh bade mechanized units (3000 tonne/saal capacity tak) ke liye hai — chhoti pit-wali unit ke liye nahi, lekin scale badhane ki soch ho toh yehi rasta hai.
           </li>
 
           <li>
-            <strong className="text-blue-900 dark:text-blue-200 block mb-1">3. Soil Health Management Scheme:</strong>
-            Organic matter badhane ke liye yeh scheme hai. Isme units par 50% subsidy milti hai. Maximum subsidy ₹25,000 - ₹50,000.
+            <strong className="text-blue-900 dark:text-blue-200 block mb-1">3. State-Level Schemes:</strong>
+            Kai states apne horticulture/agriculture mission ke under chhoti vermi compost units (pit/bed) par alag se subsidy dete hain — rate aur limit har state mein alag hai. Apne district ke Agriculture ya Horticulture Department office se apne state ka current norm poochhein.
           </li>
 
           <li>
@@ -349,7 +349,7 @@ export default function VerminCompost() {
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700">
               <td className="py-3 px-4">Labor (pit preparation, maintenance, harvesting):</td>
-              <td className="py-3 px-4">2 - ₹3</td>
+              <td className="py-3 px-4">₹2 - ₹3</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
               <td className="py-3 px-4">Water, Electricity, Misc:</td>
@@ -365,11 +365,11 @@ export default function VerminCompost() {
             </tr>
             <tr className="bg-red-50 dark:bg-red-900/20">
               <td className="py-3 px-4 font-bold">Total Cost:</td>
-              <td className="py-3 px-4 font-bold text-red-700 dark:text-red-400">7 - ₹12</td>
+              <td className="py-3 px-4 font-bold text-red-700 dark:text-red-400">₹7 - ₹12</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700">
               <td className="py-3 px-4">Selling Price:</td>
-              <td className="py-3 px-4">15 - ₹25</td>
+              <td className="py-3 px-4">₹15 - ₹25</td>
             </tr>
             <tr className="bg-green-50 dark:bg-green-900/20">
               <td className="py-3 px-4 font-bold text-green-800 dark:text-green-300">Net Profit per Kg:</td>
@@ -528,7 +528,7 @@ export default function VerminCompost() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Organic farming schemes mein 50-75% tak subsidy hai, aur uska form bharna banta hai — par pits ka kharch usi mahine aata hai jab aap unhe banate hain, aur subsidy ka paisa aksar 3-6 mahine baad. Is business mein yeh gap aur chubhta hai kyunki pehla batch hi 60-90 din leta hai, yani do taraf se paisa ruka rehta hai. Isliye pits ka budget apni jeb ya KCC se planning karein aur subsidy ko baad mein aane wali rakam maanein, shuruaati punji nahi.
+        Subsidy jo bhi mile — state scheme ki ho ya PM FME ki — uska form bharna banta hai, par pits ka kharch usi mahine aata hai jab aap unhe banate hain, aur subsidy ka paisa aksar 3-6 mahine baad. Is business mein yeh gap aur chubhta hai kyunki pehla batch hi 60-90 din leta hai, yani do taraf se paisa ruka rehta hai. Isliye pits ka budget apni jeb ya KCC se planning karein aur subsidy ko baad mein aane wali rakam maanein, shuruaati punji nahi.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
