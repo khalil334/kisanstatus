@@ -40,7 +40,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     component: 'FasalBimaClaimStatusCheck',
     officialPortal: 'https://pmfby.gov.in',
     published: '2026-08-18T07:33:52+05:30',
-    modified: '2026-08-21T16:32:20+05:30',
+    modified: '2026-08-20T19:02:04+05:30',
     readTime: '12 min read',
     relatedPaths: ['/articles/PmfbyCropInsurance2026', '/calculator/pmfby-premium'],
   },
@@ -64,7 +64,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     component: 'KisanKarjMafiAllStates',
     officialPortal: 'https://mjpsky.maharashtra.gov.in',
     published: '2026-08-18T15:43:47+05:30',
-    modified: '2026-08-21T19:44:19+05:30',
+    modified: '2026-08-21T22:35:18+05:30',
     readTime: '13 min read',
     relatedPaths: [
       '/rajya-yojana/up-kisan-karj-rahat-list-2026',
@@ -91,7 +91,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     component: 'PmKisanKhadYojanaSach',
     officialPortal: 'https://pmkisan.gov.in',
     published: '2026-08-18T18:47:43+05:30',
-    modified: '2026-08-21T20:42:25+05:30',
+    modified: '2026-08-19T13:49:36+05:30',
     readTime: '11 min read',
     relatedPaths: [
       '/articles/PmKisanMasterGuide2026',
@@ -118,7 +118,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     component: 'PmKisanHelpline155261',
     officialPortal: 'https://pmkisan.gov.in',
     published: '2026-08-18T10:23:28+05:30',
-    modified: '2026-08-21T12:39:37+05:30',
+    modified: '2026-08-21T22:59:24+05:30',
     readTime: '10 min read',
     relatedPaths: [
       '/articles/PmKisanPaymentFailedFix2026',
@@ -145,7 +145,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     component: 'MgnregaPashuShedYojana',
     officialPortal: 'https://nrega.nic.in',
     published: '2026-08-18T08:42:59+05:30',
-    modified: '2026-08-20T07:19:19+05:30',
+    modified: '2026-08-19T14:29:34+05:30',
     readTime: '11 min read',
     relatedPaths: [
       '/articles/bakri-palan-yojana-nlm-subsidy',
@@ -173,7 +173,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     component: 'PashuKisanCreditCard',
     officialPortal: 'https://pashudhanharyana.gov.in',
     published: '2026-08-18T12:39:21+05:30',
-    modified: '2026-08-20T17:29:29+05:30',
+    modified: '2026-08-21T08:07:18+05:30',
     readTime: '12 min read',
     relatedPaths: [
       '/articles/KisanCreditCardOnlineApply2026',
