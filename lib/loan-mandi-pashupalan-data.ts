@@ -280,7 +280,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     ogImage: '/images/gau-mutra-kharid-yojana-og.webp',
     category: 'pashupalan',
     publishedTime: '2026-08-13T18:55:46+05:30',
-    modifiedTime: '2026-08-14T09:15:00+05:30',
+    modifiedTime: '2026-08-21T19:05:00+05:30',
     readingTime: 13,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('gau-mutra-kharid-yojana-up-2026'),

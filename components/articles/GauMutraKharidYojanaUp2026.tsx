@@ -104,7 +104,7 @@ const collectSteps = [
   {
     n: '5',
     h: 'Paani milane ki galti kabhi na karein',
-    p: `Matra badhane ka lalach aata hai, mai janta hu. Par kendra pe har can ki jaanch hoti hai, aur ek bar milawat pakdi gyi to pure gaon ka bharosa chala jata hai — kai jagah aage lena hi band kar dete hain. Ye apni kamai ka rasta khud band karne wali baat hai.`,
+    p: `Matra badhane ka lalach aata hai, mai janta hu. Par kendra pe har can ki jaanch hoti hai, aur ek bar milawat pakdi gyi to pure gaon ka bharosa chala jata hai — kai jagah aage lena hi band kar dete hain. Ye apni kamai ka rasta khud band karne wali baat hai. Aur do batein isi me jod lo: gaay bimar ho ya antibiotic ki dawa chal rhi ho to us dauran ka mutra jama mat karo — pashu chikitsak se puch lo kitne din rukna hai. Aur bhains ka chalega ya nahi, ye har kendra ki apni policy hai; paramparik nuskhe desi gaay — Sahiwal, Gir, Hariana — ki baat karte hain, isliye gadi bhar ke le jane se pehle phone pe hi puch lena.`,
   },
 ] as const;
 
@@ -172,18 +172,6 @@ const faqs = [
   {
     q: 'Paisa kab aur kaise milta hai?',
     a: 'Pilot me usi din bhugtan ki baat hai — nakad ya khate me, kharidne wale pe nirbhar. Bas parchi zaroor lo, aur bina tolai ke sauda kabhi mat karo.',
-  },
-  {
-    q: 'Bhains ka bhi chalega ya sirf gaay ka?',
-    a: 'Prakritik kheti ke paramparik nuskhe desi gaay ki baat karte hain — Sahiwal, Gir, Hariana jaisi naslein. Bhains pe har kendra ki apni policy hai. Gadi bhar ke le jane se pehle phone pe hi puch lo.',
-  },
-  {
-    q: 'Gaay bimar ho ya dawa chal rahi ho to?',
-    a: 'Tab jama mat karo. Antibiotic ya koi ilaj chal rha ho to pashu chikitsak se puch lo ki kitne din rukna hai — ye maal khaad aur keetnashak me jata hai, isliye ye savdhani zaroori hai.',
-  },
-  {
-    q: 'Kharidar hi na mile to jama karna bekar gaya?',
-    a: 'Bilkul nahi. Jeevamrit khud bana lo — ek drum karib ek ekad ke liye kafi mana jata hai, aur khaad ki dukan ka bill seedha ghat jata hai. Upar pura tarika diya hai. Kai ghar aadha bechte hain, aadha apne khet me dalte hain.',
   },
 ] as const;
 
@@ -776,6 +764,10 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
                 <p className="mt-1.5 text-[14px] leading-7 text-[#D8C9DE]">{f.a}</p>
               </div>
             ))}
+            <p className="text-[13px] leading-6 text-[#9C86A6]">
+              Ek sawal aur aata hai — kharidar hi na mile to? Uska jawab upar jeevamrit wale hisse
+              me pura diya hai: khud khaad banao, bill ghatao. Jama kiya hua kabhi bekar nahi jata.
+            </p>
           </div>
         </div>
 

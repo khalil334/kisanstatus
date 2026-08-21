@@ -25,10 +25,10 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   {
     slug: 'pm-kisan-maandhan-eligibility-documents',
     title: 'PM Kisan Maandhan Eligibility & Documents',
-    description: 'Janie kaun se kisan is pension scheme ke liye eligible hain aur registration ke waqt kaun se documents zaroori hain.',
+    description: 'Umar 18-40, zameen 2 hectare tak — Maandhan pension ki asli shartein, excluded categories aur CSC le jaane wale 5 documents ki poori list.',
     category: 'pension-scheme',
     published: '2026-03-18T19:44:07+05:30',
-    modified: '2026-04-08T11:52:48+05:30',
+    modified: '2026-08-21T19:05:00+05:30',
     readTime: '10 min read',
     image: '/images/articles/maandhan/eligibility-check-farmer-documents.webp',
     ogImage: '/images/articles/maandhan/eligibility-check-farmer-documents.webp',

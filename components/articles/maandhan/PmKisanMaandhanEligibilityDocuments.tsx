@@ -5,7 +5,7 @@ import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-03-18T19:44:07+05:30';
-const MODIFIED = '2026-04-08T11:52:48+05:30';
+const MODIFIED = '2026-08-21T19:05:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -31,11 +31,11 @@ const RELATED_CARDS = [
 const FAQS_DATA = [
   {
     q: '2.5 hectare zameen wala Maandhan mein apply kar sakta hai?',
-    a: 'Nahi hoga. Scheme ki seema 2 hectare (karib 5 acre) tak hi hai. Isse ek inch bhi zyada hui toh system mein hi entry nahi kar payega, kyunki ye check land record ke saath automatically ho jata hai.',
+    a: 'Nahi hoga. Scheme ki seema 2 hectare (karib 5 acre) tak hi hai — state ke land records ke hisaab se. Isse zyada landholding hui toh aap small/marginal farmer ki category mein hi nahi aate, aur verification mein application ruk jaayegi.',
   },
   {
     q: '6000 wali PM Kisan yojana aur ye Maandhan wali pension yojana same hai kya?',
-    a: 'Bilkul alag hain, log aksar confuse ho jate hain. PM Kisan Samman Nidhi mein saal ke 6000 rupaye milte hain, jabki Maandhan ek pension scheme hai jisme aap khud paisa jama karte hain aur 60 saal ke baad 3000 rupaye mahina milta hai. Maandhan ke liye eligible hone ka pehla step hi PM Kisan list mein hona hai.',
+    a: 'Bilkul alag hain, log aksar confuse ho jate hain. PM Kisan Samman Nidhi mein saal ke 6000 rupaye milte hain, jabki Maandhan ek pension scheme hai jisme aap khud paisa jama karte hain aur 60 saal ke baad 3000 rupaye mahina milta hai. PM Kisan mein hona Maandhan ke liye zaroori nahi — haan, agar aap beneficiary hain toh apna monthly contribution PM Kisan ki kist se hi katwane ka option mil jaata hai, alag se paisa nahi dena padta.',
   },
   {
     q: 'Maine 4-5 saal pehle ek baar ITR file kiya tha, ab nahi karta — kya ab bhi exclude rahoonga?',
@@ -46,16 +46,8 @@ const FAQS_DATA = [
     a: 'Sirf maukhik samjhauta verification process nahi maanega, kyunki documentary proof chahiye. Patwari ya tehsil office se ek share certificate banwana padega jisme aapke hisse ki zameen likhi ho — ye process aam taur par ek-do hafte le leta hai, isliye registration se pehle hi shuru kar dein.',
   },
   {
-    q: 'Bank mein seeding request de di hai, status update hone mein kitna time lagta hai?',
-    a: 'Har bank alag hota hai, lekin aam taur par branch mein request dene ke ek hafte ke andar NPCI status update ho jaata hai. CSC jaane se pehle ek baar myaadhaar.uidai.gov.in par dobara check kar lein, kyunki kabhi-kabhi update hone mein isse zyada bhi lag jaata hai.',
-  },
-  {
     q: 'Maine pehle Shram Yogi Maandhan (PM-SYM) join kar liya tha, ab kheti hi karta hoon — switch kar sakta hoon?',
     a: 'Ek waqt mein sirf ek scheme active reh sakti hai — PM-SYM enrolled rehte hue Kisan Maandhan mein register nahi hoga. Pehle PM-SYM se exit karna hoga, uske baad hi Kisan Maandhan ke liye apply karein. Exit process ke exact steps CSC ya Maandhan application se hi confirm karein, kyunki ye case-by-case thoda alag ho sakta hai.',
-  },
-  {
-    q: 'Group D ya MTS post par government job karta hoon, exclude hounga kya?',
-    a: 'Nahi, yahan chhoot hai — Group D aur Multi Tasking Staff (MTS) employees is exclusion se bahar hain. CSC par apna latest salary slip ya service certificate dikhayein jisme post/grade saaf likha ho, taaki aapko galti se "government employee" category mein na daal diya jaaye.',
   },
 ];
 
@@ -82,7 +74,7 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(PUBLISHED)}</span>
             <span>Updated: {fmtDate(MODIFIED)}</span>
-            <span>15 min read</span>
+            <span>10 min read</span>
           </div>
         </div>
       </div>
@@ -107,14 +99,14 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            Jaldi mein hain toh itna samajh lijiye: umar 18-40 saal, khud ya family ke naam 2 hectare tak cultivable zameen, aur PM Kisan Samman Nidhi ki list mein naam pehle se darj — teeno saath honge tabhi Pradhan Mantri Kisan Maandhan Yojana (PM-KMY) ka form aage badhega. Neeche is baat ki tafseel hai ki har shart ka matlab practically kya hai, aur Common Service Centre (CSC) par log kahan atakte hain.
+            Jaldi mein hain toh itna samajh lijiye: umar 18-40 saal, land record mein naam ke saath 2 hectare tak cultivable zameen, aur neeche di gayi excluded categories mein se koi lagoo na ho — bas yehi Pradhan Mantri Kisan Maandhan Yojana (PM-KMY) ki asli shartein hain. PM Kisan Samman Nidhi mein hona zaroori nahi hai; wo sirf contribution katwane ka ek aasan raasta deta hai. Neeche har shart ka practical matlab hai, aur Common Service Centre (CSC) par log kahan atakte hain.
           </p>
         </div>
 
         <section className="mb-8">
           <SH>Documents Le Jaane Se Pehle Ek Baar Ruk Kar Sochein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Gaon ke CSC par roz aise log aate hain jo pehle form bhar dete hain, tab pata chalta hai ki wo fit hi nahi baithte. Official PM-KMY guidelines (pmkisan.gov.in) mein ye bhi likha hai ki galti se benefit mil jaaye toh sarkar wo raashi wapas recover kar sakti hai — yahan risk sirf time zaya hone ka nahi hai.
+            Gaon ke CSC par roz aise log aate hain jo pehle form bhar dete hain, tab pata chalta hai ki wo fit hi nahi baithte. Scheme ka official portal maandhan.in hai — wahan eligibility ki shartein saaf likhi hain, aur galat jankari dekar enrolled hone par benefit wapas recover ho sakta hai. Yahan risk sirf time zaya hone ka nahi hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Neeche teen sharton ki tafseel hai. Tino ka ek saath poora hona zaroori hai — sirf zameen kam hone se ya sirf umar sahi hone se kaam nahi chalta.
@@ -131,7 +123,6 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
               </div>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl flex gap-3">
-              <span className="text-2xl"></span>
               <div>
                 <p className="font-black text-sm text-blue-800 dark:text-blue-300 mb-1">Doosri Shart — Zameen Ka Size</p>
                 <p className="text-xs text-[var(--color-text-muted)]">Kul milakar 2 hectare (lagbhag 5 acre) tak hi cultivable landholding honi chahiye — chahe ek jagah ho ya alag khaton mein bikhri ho, jod isi seema ke andar aana chahiye. Official guidelines ke mutabik scheme ka focus chhote aur seemant kisano par hai, isliye zameen ka total size dekha jaata hai, sirf ek khata nahi.</p>
@@ -139,8 +130,8 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl flex gap-3">
               <div>
-                <p className="font-black text-sm text-amber-800 dark:text-amber-300 mb-1">Teesri Shart — PM Kisan Ka Beneficiary Hona</p>
-                <p className="text-xs text-[var(--color-text-muted)]">Aapka naam <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-blue-600 dark:text-blue-400 font-medium">PM Kisan Samman Nidhi</Link> ki active list mein pehle se hona chahiye. Wajah simple hai — Maandhan wahi zameen aur bank verification dobara istemal karta hai jo PM Kisan mein already ho chuki hoti hai, isliye naam list mein na hone par application entry hi nahi lene deta.</p>
+                <p className="font-black text-sm text-amber-800 dark:text-amber-300 mb-1">Teesri Shart — Excluded Category Mein Na Hona</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Umar aur zameen sahi hone ke baad bhi kuch log scheme se bahar rakhe gaye hain — income tax bharne wale, sarkari karmchari, doosri Maandhan/pension schemes (NPS, ESIC, EPFO) wale, waghera. Poori list neeche alag section mein di hai. Ek aam galatfehmi yahin door kar dein: <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-blue-600 dark:text-blue-400 font-medium">PM Kisan Samman Nidhi</Link> ki list mein hona Maandhan ke liye shart NAHI hai. PM Kisan beneficiary ko bas ye suvidha extra milti hai ki wo apna monthly contribution seedha PM Kisan ki kist se katwa sakta hai.</p>
               </div>
             </div>
           </div>
@@ -311,10 +302,10 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
                 solution: 'Verification process aksar sirf computerised/digitally-verified record accept karti hai, purani haath se likhi copy reject ho jaati hai. State ke land record application se digital printout nikalwa kar le jayein.',
               },
               {
-                reason: 'PM Kisan List Mein Naam Nahi Mila',
+                reason: 'Doosri Pension Scheme Pehle Se Chal Rahi Hai',
                 solution: (
                   <>
-                    Pehle <Link href="/articles/PmKisanMasterGuide2026" className="underline text-blue-600 dark:text-blue-400 font-medium">PM Kisan mein registration</Link> karwana zaroori hai, uske baad hi Maandhan ke liye eligible banenge.
+                    NPS, ESIC ya EPFO mein already covered hain toh application aage nahi badhegi — ye check enrollment ke waqt hi ho jaata hai. Agar aap salaried job chhod kar kheti mein aaye hain toh pehle purani scheme ka status clear karwayein. PM Kisan wale confusion ke liye <Link href="/articles/PmKisanMasterGuide2026" className="underline text-blue-600 dark:text-blue-400 font-medium">Master Guide</Link> dekh lein — wo scheme alag hai, uska Maandhan ki eligibility se lena-dena nahi.
                   </>
                 ),
               },
@@ -339,18 +330,18 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">CSC Jaane Se Ek Din Pehle: Teen Documents, Teen Naam</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">CSC Jaane Se Ek Din Pehle: Teen Kagaz, Ek Hi Naam</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
             Reject hone wale applications mein sabse aam wajah documents ka aapas mein na milna hai — Aadhaar par ek naam, bank passbook par doosri spelling, khatauni par teesri. CSC jaane se ek din pehle teeno kagaz saath rakh kar naam, spelling aur date of birth khud milaa lein; jo bhi alag ho, pehle use theek karwayein, phir enrollment karwayein. Confusion ho toh apply karne se pehle hamari <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="underline text-blue-600 dark:text-blue-400 font-medium">Registration Guide</Link> ek baar padh lein.
           </p>
         </div>
 
         <GovLink
-          href="https://pmkisan.gov.in"
-          label="PM Kisan Official Portal"
-          guide="Check Eligibility & Status"
-          guideHref="/articles/PmKisanMasterGuide2026"
-          portalName="pmkisan.gov.in"
+          href="https://maandhan.in"
+          label="PM Kisan Maandhan Official Portal"
+          guide="Self Enrollment / Status"
+          guideHref="/maandhan/pm-kisan-maandhan-registration-2026"
+          portalName="maandhan.in"
         />
 
         <section className="my-10">
