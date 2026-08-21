@@ -1002,7 +1002,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'NamoDroneDidiYojana',
     category: 'agri-business',
     publishedTime: '2026-08-15T18:40:12+05:30',
-    modifiedTime: '2026-08-16T07:05:00+05:30',
+    modifiedTime: '2026-08-21T14:35:00+05:30',
     readingTime: 15,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('namo-drone-didi-yojana-shg-selection'),

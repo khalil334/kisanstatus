@@ -20,44 +20,16 @@ const FAQS_DATA = [
     a: 'Nahi — aur yahi baat zyada tar websites galat batati hain. Isme individual online application ka koi form nahi hai. Selection DAY-NRLM ke under registered women SHG clusters mein se hota hai, jo State Rural Livelihood Mission, agriculture department aur Lead Fertilizer Companies milkar karte hain. Aapka pehla kadam hai apne block ke NRLM/JEEViKA-type mission office ya CSC se apne SHG ke through baat karna.',
   },
   {
-    q: 'Drone udane ki training kaun deta hai aur kitne din ki hoti hai?',
-    a: 'Kul 15 din ka programme hai — 5 din DGCA-approved Remote Pilot Training Organisation mein pilot training (jisme Remote Pilot Certificate milta hai) aur 10 din agriculture application ki training, jaise nutrient spray, pesticide ki sahi matra, flight planning. SHG ki ek aur member ya uske parivar ke kisi sadasya ko drone assistant/technician ke roop mein alag training milti hai.',
-  },
-  {
     q: 'Drone Didi ki kamai kitni ho sakti hai?',
     a: 'Sarkar ka target hai ki har participating SHG ko kam se kam ₹1 lakh saalana extra income ho. Zameen par kamai spray ke rate aur kaam ke din par depend karti hai — kai jagah ₹300-500 per acre ka service rate chal raha hai. Ek drone 7-8 minute mein ek acre cover kar leta hai, toh season mein din ke 20-25 acre tak ka kaam possible hai. Lekin yeh seasonal kaam hai — kharif-rabi ke spray windows mein hi demand peak hoti hai.',
-  },
-  {
-    q: 'Kya iske liye zameen ya khud kisan hona zaroori hai?',
-    a: 'Nahi. Yeh scheme service provider banane ki hai, kheti karne ki nahi. Aapke SHG ke paas zameen ho ya na ho, farq nahi padta — drone kiraye par doosre kisano ke kheton mein spray ke liye jayega. Haan, SHG aise cluster mein honi chahiye jahan aas-paas kheti ka rakba bada ho, warna kaam hi nahi milega.',
-  },
-  {
-    q: 'Ab tak kitne drones baante gaye hain?',
-    a: 'March 2026 mein Lok Sabha mein diye gaye jawab ke mutabik ab tak 1,094 drones distribute ho chuke hain. Trained pilots ke maamle mein Karnataka sabse aage hai. Target 14,500-15,000 SHGs ka hai, matlab abhi bahut jagah baaki hai — isliye apne block mein pata karna banta hai.',
   },
   {
     q: 'Remote Pilot Certificate ke liye kya padhai-likhai chahiye?',
     a: 'DGCA ke niyam ke mutabik remote pilot certificate ke liye 10th pass hona aur age 18 se upar (65 tak) honi chahiye. Training ke waqt medical fitness ka self-declaration bhi hota hai. Yaani graduate hona zaroori nahi — 10vi pass mahila bhi drone pilot ban sakti hai.',
   },
   {
-    q: 'Drone kharab ho jaye toh kaun theek karega?',
-    a: 'Isi liye package mein ek drone assistant ki training bhi hai — chhoti-moti repair aur maintenance wahi sambhalti hai. Bade issue ke liye drone company ki warranty aur service network kaam aata hai. Lead Fertilizer Companies bhi implementation mein saath hain, toh field support ka ek structure bana hua hai.',
-  },
-  {
-    q: 'Kya yeh scheme sirf spray ke liye hai?',
-    a: 'Filhaal main kaam nano urea, nano DAP aur pesticide ka spray hai — kyunki Department of Fertilizers aur fertilizer companies isme partner hain. Lekin trained pilot ke liye aage ke raste khulte hain: crop monitoring, survey ka kaam, private agri-companies ke contracts. Budget 2026-27 mein sarkar ne ise service provider se "enterprise owner" model ki taraf badhane ki baat bhi ki hai.',
-  },
-  {
     q: 'SHG mein nahi hoon, phir bhi drone pilot ban sakti hoon kya?',
     a: 'Is scheme ka paisa sirf DAY-NRLM wale women SHG ko milta hai, individual ko nahi. Do raste hain — apne gaon ke existing SHG se judna (ya naya SHG banwana, block mission office madad karta hai), ya phir apne kharche par DGCA-approved RPTO se training lekar private drone operator ke yahan kaam karna. Pehla rasta sasta aur subsidy wala hai, bas time lagta hai.',
-  },
-  {
-    q: 'Kisan ko drone spray karwane ke liye kya taiyari karni chahiye?',
-    a: 'Teen cheezein: pehla, khet ke upar ya bagal mein bijli ke taar aur ped ka dhyan rakho — operator ko pehle bata do, warna woh mauke pe mana kar dega. Doosra, dawai apni pasand ki le lo lekin dilution operator ke bataye tareeke se banega, zid mat karo. Teesra, spray ke din khet mein jaanwar aur bachhe na hon. Bas itna hi — baaki flight ka kaam operator ka hai.',
-  },
-  {
-    q: 'Barish ke season mein drone spray ho sakta hai kya?',
-    a: 'Halki boond mein bhi spray nahi hota — dawai dhul jati hai aur drone ke electronics ke liye bhi theek nahi. Tez hawa (lagbhag 10-12 km/ghanta se upar) mein bhi operator mana karega kyunki spray bagal ke khet mein udd jata hai, jise drift kehte hain. Isliye monsoon mein spray ki window chhoti hoti hai — operator se 2-3 din pehle baat karke mausam dekh kar slot rakho.',
   },
 ];
 
@@ -79,7 +51,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
-            <span>Last Updated: 16/08/2026</span>
+            <span>Last Updated: 21/08/2026</span>
             <span>15 min read</span>
           </div>
         </div>
@@ -98,7 +70,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 16/08/2026</strong>
+          <strong>Last Updated: 21/08/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -142,6 +114,12 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           drone ka poora package do — machine, training, support — aur woh apne ilaake ke kisano ko kiraye par
           spray service dein. Kisan ka fayda: haath se spray karne ke mukable tez, kam paani, kam dawai ki
           barbadi. Mahila ka fayda: ek naya, izzat wala aur technical rozgar.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Ek baat pehle hi saaf kar dein — iske liye SHG ke paas apni zameen ya member ka khud kisan hona
+          zaroori nahi hai. Yeh scheme service provider banane ki hai, kheti karne ki nahi. Drone kiraye
+          par doosre kisano ke kheton mein jayega. Haan, cluster aisa hona chahiye jahan aas-paas kheti ka
+          rakba bada ho — demand ke bina machine sirf khadi rahegi.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Yeh Lakhpati Didi initiative ka hissa hai — wahi mission jiska maqsad 2 crore gramin mahilaon ki
@@ -268,6 +246,13 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           agriculture hissa hi sabse bada imtihaan hai. Jo didiyan spray chemistry ko seriously leti hain, unka kaam
           repeat customers se hi chal padta hai.
         </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Maintenance ki chinta bhi training ke structure mein hi cover hai — drone assistant wali member
+          chhoti-moti repair sambhalti hai, bade issue company ki warranty aur LFC ke field support se
+          nipatte hain. Aur yeh kaam sirf spray tak ruka nahi rahega: trained pilot ke liye aage crop
+          monitoring, survey aur private agri-companies ke contracts ke raste khulte hain — Budget 2026-27
+          mein sarkar ne ise “enter enterprise owner” model ki taraf badhane ki baat bhi ki hai.
+        </p>
 
         <Image
           src="/images/articles/namo-drone-didi-yojana-shg-selection/drone-spray-paddy-field.webp"
@@ -326,6 +311,13 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           Yaani per-acre rate lagbhag barabar hai, lekin paani, dawai aur waqt teeno bachte hain — aur sabse
           badi cheez, pesticide se seedha contact khatam. Jo kisan lagatar spray khud karte hain, unke liye yeh
           sehat wali baat mazdoori se badi hai, bas koi ise ginta nahi.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Spray karwane se pehle teen chhoti taiyariyaan kisan ki taraf se: khet ke upar ya bagal ke bijli
+          ke taar aur ped operator ko pehle bata do (warna woh mauke pe mana karega), dawai ka dilution
+          operator ke bataye tareeke se banne do, aur spray ke din khet mein jaanwar-bachhe na hon. Mausam
+          ka bhi dhyan — boondabaandi ya tez hawa (10-12 km/ghanta se upar) mein spray nahi hota, dawai
+          bagal ke khet mein drift ho jati hai. Isliye slot 2-3 din pehle baat karke rakho.
         </p>
         <StepList>
           <SI n={1}><strong>Booking kaise karein:</strong> apne block ke agriculture office, KVK ya gaon ke CSC se pucho ki nazdeeki Drone Didi ya drone service provider kaun hai. Kai jagah fertilizer dealer (IFFCO/kisan seva kendra) bhi booking karwa dete hain kyunki nano urea spray unka hi kaam hai.</SI>
