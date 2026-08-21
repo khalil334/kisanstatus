@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-11T18:34:34+05:30';
-const MODIFIED = '2026-08-20T12:15:00+05:30';
+const MODIFIED = '2026-08-21T19:00:00+05:30';
 
 const IMG_BASE = '/images/articles/pm-kisan-self-registered-status-check';
 
@@ -16,10 +16,6 @@ const RELATED = [
 ];
 
 const FAQS_DATA = [
-  {
-    q: 'Maine khud registration kiya tha — ab status kaise check karun?',
-    a: 'Seedha pmkisan.gov.in par jao, Farmers Corner mein "Beneficiary Status" dhundo. Aadhaar number daalo, Get Data dabao. Agar aapne khud registration kiya hai toh bhi wahi dikhega — koi farak nahi padta. CSC se karwaya ho ya khud kiya ho, dono ka status same jagah check hota hai.',
-  },
   {
     q: 'Self-registration mein kitna time lagta hai approval mein?',
     a: 'Normally ek-do hafte lagte hain verification mein. Lekin kabhi-kabhi 30-45 din bhi ho jaate hain agar land records match nahi hote ya eKYC pending hai. Status check karte raho — "Pending" dikh raha hai toh wait karo, "Rejected" dikhe toh reason dekho aur fix karo.',
@@ -39,10 +35,6 @@ const FAQS_DATA = [
   {
     q: 'Registration ke baad mobile number change kar sakte hain?',
     a: 'Haan bilkul. pmkisan.gov.in par "Edit Aadhaar Details" option hai. Wahan se mobile number update kar sakte ho. OTP verify karna padega purane number par. Agar purana number band ho gaya hai toh CSC jaake karwana padega — operator help kar dega.',
-  },
-  {
-    q: 'Do baar registration ho gaya galti se — kya karein?',
-    a: 'Ghabrao mat. Duplicate entries automatically filter ho jaati hain system mein. Lekin agar dono alag-alag dikha rahe hain toh helpline 155261 par call karo. Woh log ek entry merge kar denge ya duplicate hata denge. Paisa kisi ko nahi milega jab tak duplicate hai.',
   },
 ];
 
@@ -297,7 +289,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         </div>
 
         <section className="mb-8">
-          <SH>5 Common Problems + Solutions</SH>
+          <SH>6 Common Problems + Solutions</SH>
           <div className="space-y-3">
             {[
               {
@@ -315,6 +307,10 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
               {
                 problem: 'Bank account number wrong hai',
                 solution: 'Yeh serious hai — payment galat account mein jaayegi. Bina der correct karo. Branch se IFSC code bhi verify karo — ek digit galat hone se bhi transfer fail ho jaata hai.',
+              },
+              {
+                problem: 'Do baar registration ho gaya galti se',
+                solution: 'Ghabrao mat — system Aadhaar se duplicate pakad leta hai aur zyada tar entries khud filter ho jaati hain. Lekin agar dono alag-alag dikh rahi hain toh helpline 155261 par call karo; wo ek entry hata denge. Dhyan rahe: jab tak duplicate bana rehta hai, payment kisi bhi entry par release nahi hoti.',
               },
               {
                 problem: 'Pending dikh raha hai 30 din se zyada',

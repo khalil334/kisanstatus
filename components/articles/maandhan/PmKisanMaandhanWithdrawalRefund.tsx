@@ -5,7 +5,7 @@ import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-03-23T11:18:53+05:30';
-const MODIFIED = '2026-04-06T10:23:34+05:30';
+const MODIFIED = '2026-08-21T18:45:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -44,10 +44,6 @@ const FAQS_DATA = [
   {
     q: 'Family pension mein ₹1,500 hamesha ke liye milte rahenge ya kuch saal ke baad band ho jayenge?',
     a: 'Ye pension spouse ki poori zindagi tak chalti rahegi, koi fixed time-limit nahi hai. Agar spouse ki bhi mrityu ho jaye, tab ye pension aage kisi aur family member ko transfer nahi hoti — scheme wahin close ho jati hai.',
-  },
-  {
-    q: 'Galti se do jagah registration ho gaya — dono account chalenge ya ek cancel hoga?',
-    a: 'System mein Aadhaar se duplicate check hota hai, aur pakde jaane par ek account band kar diya jata hai. Us band hue account ka sirf farmer-wala hissa + interest wapas milta hai; dusra account normal chalta rehta hai. Isliye registration se pehle CSC operator se confirm kar lein ki pehle se koi entry to nahi hai.',
   },
   {
     q: 'Refund process mein kitna time lagta hai aur paisa kaise pata karein aaya ya nahi?',
@@ -184,6 +180,22 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
         </section>
 
         <section className="mb-8">
+          <SH>10 Saal Ka Farak — Interest Ka Hisaab Badal Jata Hai</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ek baareek baat jo scheme ke rules mein likhi hai par kam log jaante hain — exit ka waqt interest ka
+            calculation badal deta hai. 10 saal poore hone se <strong>pehle</strong> nikle toh aapke jama paise par
+            sirf savings-bank rate ka byaj milta hai. 10 saal ya usse zyada scheme mein rehne ke baad (par 60 se
+            pehle) exit karein, toh pension fund ne aapke paise par jo asli kamai ki hai wo milti hai — ya
+            savings-bank rate, dono mein se jo zyada ho.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Matlab seedha sa hai: agar aap 8-9 saal scheme mein reh chuke hain aur exit ka mann bana rahe hain,
+            toh 10 poore hone tak rukna aksar behtar sauda hai. Sarkari hissa toh dono surat mein nahi milega,
+            lekin byaj ka farak kai hazaar rupaye tak ja sakta hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
           <SH>Halaat 2 — 60 Saal Se Pehle Kisan Ki Mrityu Ho Jaye</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ye sabse mushkil waqt hota hai, aur yahin scheme ka spouse-protection wala hissa kaam aata hai. Marne wale
@@ -283,6 +295,26 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
         </section>
 
         <section className="mb-8">
+          <SH>Exit Karna Hi Hai Toh Kaise Karein — Step By Step</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Sab soch-samajh kar bhi faisla exit ka hi hai? Theek hai — process lamba nahi hai, bas sahi jagah aur
+            sahi kagaz ke saath jaana hai. Online khud se exit ka koi self-service option portal par nahi hai;
+            ye kaam CSC center ya LIC branch se hi hota hai.
+          </p>
+          <StepList>
+            <SI n={1}>Apna Aadhaar card, Maandhan ka pension card ya KPAN number, aur bank passbook saath lein</SI>
+            <SI n={2}>Nazdiki CSC center jayein — operator ko voluntary exit ka bolein; wo system mein request daal dega</SI>
+            <SI n={3}>Jo receipt ya acknowledgement mile, uski photo phone mein save kar lein</SI>
+            <SI n={4}>30-45 din ke andar aapka jama hissa + interest NPCI-linked bank account mein aa jana chahiye</SI>
+            <SI n={5}>Paisa na aaye toh pehle CSC se status poochein; wahan se baat na bane toh pgportal.gov.in par shikayat karein</SI>
+          </StepList>
+          <WB>
+            Exit request daalne se pehle apna bank account check kar lein — wahi account active hona chahiye jo
+            registration ke waqt link hua tha. Band account par refund atakne ki shikayat sabse aam hai.
+          </WB>
+        </section>
+
+        <section className="mb-8">
           <SH>Ek Nazar Mein: Kaunsi Sthiti Mein Kya Milega</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
@@ -311,6 +343,24 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
               </tbody>
             </table>
           </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>Refund Ka Paisa Track Kaise Karein</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Exit request daalne ke baad ka intezaar sabse zyada pareshan karta hai. Roz bank jaane ki zaroorat
+            nahi — teen aasan raste hain. Pehla: pmkisanmaandhan.in par apna registration/KPAN number daal kar
+            status dekh lein. Doosra: bank passbook update karwa lein ya SMS alert on rakhein — credit LIC ki
+            taraf se aata hai, entry mein PMKMY ya LIC ka zikr hota hai. Teesra: 30-45 din nikal jayein aur paisa
+            na dikhe, toh usi CSC center par jaakar request ka acknowledgement number de kar status nikalwayein.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            45 din ke baad bhi kuch pata na chale toh maandhan helpline ya{' '}
+            <Link href="/maandhan/pmkmy-grievance-complaint-helpline" className="underline text-blue-600 dark:text-blue-400">
+              grievance process
+            </Link>{' '}
+            ka rasta pakdein — wahan complaint number milta hai jisse aage ki tracking aasan ho jati hai.
+          </p>
         </section>
 
         <section className="mb-8">

@@ -450,7 +450,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanSelfRegisteredStatusCheck',
     category: 'status-check',
     publishedTime: '2026-07-07T05:39:03+05:30',
-    modifiedTime: '2026-08-20T12:15:00+05:30',
+    modifiedTime: '2026-08-21T19:00:00+05:30',
     readingTime: 10,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('pm-kisan-self-registered-status-check'),

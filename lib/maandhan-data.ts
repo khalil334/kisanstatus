@@ -50,7 +50,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     description: 'PM Kisan Maandhan se exit karne ke rules, pension ka paisa family ko kaise milega, aur contribution refund hone ki puri sachai.',
     category: 'pension-scheme',
     published: '2026-03-23T11:18:53+05:30',
-    modified: '2026-04-06T10:23:34+05:30',
+    modified: '2026-08-21T18:45:00+05:30',
     readTime: '9 min read',
     image: '/images/articles/maandhan/withdrawal-decision-hero.webp',
     ogImage: '/images/articles/maandhan/withdrawal-decision-hero.webp',
