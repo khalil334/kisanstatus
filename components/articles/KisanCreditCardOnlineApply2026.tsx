@@ -4,7 +4,7 @@ import { SI, StepList, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 const PUBLISHED = '2025-12-24T10:29:44+05:30';
-const MODIFIED = '2026-08-18T19:45:00+05:30';
+const MODIFIED = '2026-08-21T23:40:00+05:30';
 
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
@@ -32,10 +32,6 @@ const RELATED_CARDS = [
 
 const FAQS_DATA = [
   {
-    q: 'Aadhaar mein "Rajesh Kumar Singh" aur bank passbook mein "R. K. Singh" — kya application reject hogi?',
-    a: 'Haan, yeh sabse common rejection reason hai. Bank ka verification system exact string match karta hai. Apply karne se pehle bank branch jaakar Aadhaar copy ke saath naam update karwayein. Isme 7-10 din lagte hain, uske baad hi form bharein.',
-  },
-  {
     q: 'Tenant farmer hoon, zameen malik NOC nahi de raha — kya option hai?',
     a: 'Kuch states (jaise Bihar aur UP) mein Gram Pradhan ya Patwari ka certificate NOC ki jagah acceptable hota hai. Apne Block Agriculture Officer (BAO) se puchkar written confirmation lein, sirf verbal assurance par depend na karein.',
   },
@@ -44,20 +40,12 @@ const FAQS_DATA = [
     a: '4% effective rate sirf tab milta hai jab aap due date se pehle poora amount repay karte hain. Prompt Repayment Incentive (3% subvention) repayment ke baad account mein credit hota hai, upfront nahi. Ek bhi installment late hui toh us cycle ka full 7% byaj lagega.',
   },
   {
-    q: 'KCC ke liye cooperative bank ya SBI/PNB — kahan approval jaldi milti hai?',
-    a: 'Interest rate dono jagah same hai (7% base, 4% effective). Lekin cooperative banks mein approval faster hota hai (5-7 din) kyunki woh local land records se familiar hote hain. Agar aapko advanced digital services chahiye, toh SBI/PNB behtar hai.',
-  },
-  {
     q: '₹2 lakh se zyada limit chahiye lekin collateral (zameen) nahi hai — kya karein?',
     a: 'Do options hain. Pehla: Joint Liability Group (JLG) banakar apply karein, jisme 3-5 farmers milkar cross-guarantee dete hain — group guarantee collateral ki jagah kaam karti hai. Doosra: pehle ₹2 lakh ki collateral-free limit lekar 2 season clean repayment banao — review me enhancement ke waqt bank ka bharosa wahi history hai. Zameen ke bina ₹2L se upar seedha jump mushkil hai, ye sach pehle jaan lo.',
   },
   {
     q: 'Dairy farming ya poultry ke liye Kisan Credit Card mil sakta hai?',
-    a: 'Haan, bilkul. KCC ab allied activities ko cover karta hai — dairy, poultry, fisheries, aur mushroom cultivation sab included hain. Limit alag calculate hoti hai based on unit size aur animal count.',
-  },
-  {
-    q: 'KCC 5 saal ke liye milta hai — beech mein limit badhwa sakte hain kya?',
-    a: 'Haan. Card 5 saal valid hota hai lekin har saal annual review hota hai. Clean repayment history par bank khud 10% ke aaspaas enhancement de deta hai. Agar aapne nayi zameen li hai ya crop pattern change kiya hai, toh review ke time updated land record lekar jaao — limit re-assess hoti hai.',
+    a: 'Haan, bilkul. Ye card ab allied activities ko cover karta hai — dairy, poultry, fisheries, aur mushroom cultivation sab included hain. Limit alag calculate hoti hai based on unit size aur animal count.',
   },
   {
     q: 'Jansamarth portal se KCC apply karna better hai ya seedha bank jaana?',

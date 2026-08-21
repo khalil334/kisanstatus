@@ -4,7 +4,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-08-18T11:00:00+05:30';
-const MODIFIED = '2026-08-20T22:00:00+05:30';
+const MODIFIED = '2026-08-21T23:40:00+05:30';
 
 const RELATED = [
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Ka Full Form & Matlab' },
@@ -18,32 +18,12 @@ const FAQS_DATA = [
     a: 'Koi official timeline nahi hai — lekin zyadatar kisano ko FTO banne ke baad kuch hi dino mein DBT se credit mil jata hai. Har bank apni internal processing apni raftar se karta hai, isliye ek hi gaon mein kisi ko pehle aur kisi ko baad mein aana normal hai. Practical rule: 15 din tak intezaar karo, uske baad hi kuch karne ki zaroorat hai.',
   },
   {
-    q: 'FTO will be generated ka matlab kya hai?',
-    a: 'Matlab aapka record verify ho chuka hai aur payment order banne ki queue mein hai — abhi bana nahi hai. Ye positive status hai: eKYC, land seeding aur bank linking sab clear hai. Bas batch process hone ka wait hai, aam taur par kuch din se kuch hafte.',
-  },
-  {
     q: 'FTO generate ho gaya lekin 15 din baad bhi paisa nahi aaya, ab kya karein?',
     a: 'Pehle bank jakar do cheezein verify karao: account active hai aur NPCI Aadhaar seeding hui hai. Phir pmkisan.gov.in par payment status dekho — "Payment Failed" dikhe to wajah wahi likhi hogi. Fail hui payment wajah theek karne ke baad agli batch mein dobara process hoti hai.',
   },
   {
-    q: 'Kya FTO har kisan ka alag banta hai?',
-    a: 'FTO batch mein banta hai — state/district ke verified beneficiaries ka ek saath. Isliye aapke padosi ka FTO ban gaya aur aapka nahi, to iska matlab sirf itna hai ki aap alag batch mein ho ya aapke record mein koi verification pending hai.',
-  },
-  {
-    q: 'FTO status kahan check karein?',
-    a: 'Sirf pmkisan.gov.in ke Know Your Status page par — registration number ya Aadhaar se OTP verify karke. Koi bhi app ya website jo FTO status ke naam par paise mange, wo fraud hai.',
-  },
-  {
     q: 'Paisa aa gaya ya nahi — bina bank jaye kaise pata karein?',
     a: 'Char tarike hain: (1) bank ka SMS — lekin SMS aana guaranteed nahi hai, mobile number bank record mein purana ho to SMS kahin aur jayega; (2) bank ke missed-call balance number par call karke; (3) UPI app (PhonePe/Google Pay/BHIM) mein balance check karke; (4) gaon ke CSC ya banking correspondent ke paas AePS se — angutha lagakar balance nikal aata hai. Bank ki line mein lagna aakhri option rakho.',
-  },
-  {
-    q: 'Status me eKYC pending dikh raha hai — FTO banega ya nahi?',
-    a: 'Nahi banega, jab tak eKYC complete na ho. Achhi baat ye hai ki iske liye CSC jana zaroori nahi — official PMKisan app me Face Authentication se ghar baithe eKYC ho jati hai, bina OTP ke. Do app chahiye: PMKisan aur AadhaarFaceRD (dono Play Store par sarkari publisher se). eKYC hote hi aap agli batch ke liye eligible ho jate ho.',
-  },
-  {
-    q: 'Helpline par call karne se pehle kya taiyar rakhein?',
-    a: 'Teen cheezein saamne rakh lo: Aadhaar number, PM Kisan registration number aur bank account details — operator shuru me yahi poochta hai. Official numbers 155261 aur 011-24300606 hain. In par call free hai; koi aur number jo paise mange, wo fraud hai.',
   },
   {
     q: 'Kya FTO cancel bhi ho sakta hai?',
@@ -164,6 +144,30 @@ export default function FtoStatusCheckPaisaKabAayega({ article }: { article: Art
         </section>
 
         <section className="mb-8">
+          <SH>Status Dekhne Ka Sahi Tarika — Sirf Official Portal Se</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ye status sirf ek hi jagah dikhta hai — <strong>pmkisan.gov.in</strong> ke &quot;Know
+            Your Status&quot; page par. Registration number daalo, OTP se verify karo, aur poora
+            record khul jata hai: eKYC, land seeding, bank linking aur payment ka har status ek
+            saath. Registration number yaad nahi? Usi page par &quot;Know your Registration
+            Number&quot; ka link hai — mobile number ya Aadhaar se nikal aata hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Do warnings, dono zaroori. Pehli: koi bhi doosri website ya app jo ye status dikhane
+            ke naam par paise maange, OTP maange, ya &quot;processing fees&quot; ki baat kare — wo
+            fraud hai. Sarkari portal par status check hamesha free hai. Doosri: YouTube ya WhatsApp
+            par chalne wale &quot;aaj raat 12 baje sabke khaate me paisa&quot; wale video ka status
+            page se koi lena-dena nahi — bharosa sirf portal ki apni screen par karo.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Ek aur kaam ki baat: status page ka screenshot le kar rakh lo, khaas kar jab usme
+            koi problem dikhe. Baad me helpline ya bank se baat karte waqt wahi screenshot aapki
+            baat ka saboot ban jata hai — &quot;status me aisa likha tha&quot; kehne se zyada
+            asar dikhane se hota hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
           <SH>15 Din Baad Bhi Paisa Nahi Aaya — Ye 4 Kaam Karo</SH>
           <StepList>
             <SI n={1}><strong>Payment status dekho:</strong> pmkisan.gov.in → Know Your Status. &quot;Payment Failed&quot; likha hai to wajah bhi wahi dikhegi — <Link href="/articles/PmKisanPaymentFailedFix2026" className="text-[var(--color-primary)] underline">7 common wajah aur fix yahan</Link>.</SI>
@@ -252,7 +256,11 @@ export default function FtoStatusCheckPaisaKabAayega({ article }: { article: Art
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
             Complaint number ya ticket number mile to use kahin likh kar rakho — agli baar call
             karne par wahi number batane se puri kahani dobara sunani nahi padti, aur follow-up
-            usi reference par aage badhta hai.
+            usi reference par aage badhta hai. Aur agar helpline se bhi hafton tak kuch na nikle,
+            to teesra rasta bacha hai: apne state ke nodal officer ko likhna. Har state ka apna
+            nodal officer hota hai jo PM Kisan ke atke cases dekhta hai — kis state me kaun hai
+            aur kaise contact karna hai, iski poori list{' '}
+            <Link href="/articles/PmKisanStateNodalOfficerList" className="text-[var(--color-primary)] underline">Nodal Officer guide</Link> me di hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
             Timing ka context bhi samajh lo: 23vi kist 20 June 2026 ko aayi thi, aur 24vi ke liye news

@@ -194,7 +194,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 | 40 | ✅ 2026-08-21 | `/articles/namo-drone-didi-yojana-shg-selection` (12 imp) | `/maandhan/family-pension-rules` (11 imp) |
 | 41 | ✅ 2026-08-21 | `/articles/drip-sprinkler-irrigation-subsidy` (1 imp) | `/articles/hi/gau-mutra-kharid-yojana` (1 imp) |
 | 42 | ✅ 2026-08-21 | `/rajya-yojana/ikhedut-portal-status-check-2026` (1 imp) | `/articles/PmKisanEkycOnline2026` (0 imp) |
-| 43 | ⬜ | `/articles/KisanCreditCardOnlineApply2026` (0 imp) | `/articles/fto-status-check-paisa-kab-aayega` (0 imp) |
+| 43 | ✅ 2026-08-21 | `/articles/KisanCreditCardOnlineApply2026` (0 imp) | `/articles/fto-status-check-paisa-kab-aayega` (0 imp) |
 | 44 | ⬜ | `/articles/PmKisan26viKist` (0 imp) | `/articles/PmKisanVillageWiseListPdfDownload` (0 imp) |
 | 45 | ⬜ | `/articles/PmKisanMobileNumberChangeUpdate` (0 imp) | `/articles/hi/payment-stopped-by-state` (0 imp) |
 | 46 | ⬜ | `/articles/hi/rajasthan-kisan-samman-nidhi` (0 imp) | `/articles/hi/annadata-sukhibhava-status` (0 imp) |
