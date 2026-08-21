@@ -624,7 +624,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanBankAccountChangeProcess',
     category: 'status-check',
     publishedTime: '2026-07-09T07:30:00+05:30',
-    modifiedTime: '2026-08-20T20:15:00+05:30',
+    modifiedTime: '2026-08-21T19:05:00+05:30',
     readingTime: 16,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisanBankAccountChangeProcess'),

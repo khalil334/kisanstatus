@@ -8,7 +8,7 @@ import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-03-20T10:58:55+05:30';
-const MODIFIED = '2026-04-03T18:06:25+05:30';
+const MODIFIED = '2026-08-21T19:05:00+05:30';
 
 const RELATED_CARDS = [
   {

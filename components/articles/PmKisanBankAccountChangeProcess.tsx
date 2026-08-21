@@ -4,7 +4,7 @@ import SafeImageBase from '@/components/SafeImage';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-01-28T12:49:15+05:30';
-const MODIFIED = '2026-08-20T20:15:00+05:30';
+const MODIFIED = '2026-08-21T19:05:00+05:30';
 
 const FALLBACK_IMG = '/images/articles/pm-kisan-bank-account-change/bank-change-hero.webp';
 
@@ -37,7 +37,7 @@ const FAQS_DATA = [
   },
   {
     q: 'CSC wala kitne paise lega?',
-    a: 'Sarkari rate ₹15 se ₹30 ke beech hai. Kuch operators ₹50 ya ₹100 bhi maang lete hain — mol-bhav karo, zyada mat dena.',
+    a: 'CSC par is kaam ka charge aam taur par ₹15 se ₹30 ke beech hota hai. Kuch operators ₹50 ya ₹100 bhi maang lete hain — mol-bhav karo, zyada mat dena.',
   },
   {
     q: 'Paisa kisi aur ke bank account mein mangwa sakta hoon?',
@@ -189,7 +189,7 @@ export default function PmKisanBankAccountChangeProcess() {
           <WB>
             <strong>CSC Wale Se Pehle Puch Li jiye:</strong>
             <ul className="list-disc list-inside mt-2 space-y-1 text-xs">
-              <li>"Bhaiya, iske kitne charge lagenge?" (Sarkari rate ₹15 se ₹30 ke beech hai. ₹50 se zyada kisi haalat mein mat dena).</li>
+              <li>"Bhaiya, iske kitne charge lagenge?" (Aam charge ₹15 se ₹30 ke beech hota hai. ₹50 se zyada kisi haalat mein mat dena).</li>
               <li>"Kya aap NPCI seeding bhi kar doge?" (Ye step bahut zaroori hai, iske baare mein niche detail mein bataya hai).</li>
               <li>"Receipt mein naya account number saaf likh kar dena."</li>
             </ul>
