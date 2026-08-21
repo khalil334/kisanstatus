@@ -229,6 +229,24 @@ export default function PmKisanKhadYojanaSach({ article }: { article: Yojana2026
           mila to samjho content hai, scheme nahi.
         </IB>
 
+        <SH>Detail Fake Site Par Chali Gayi? Ab Ye Karo</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Bahut se log ye article tab padhte hain jab form bhar chuke hote hain. Ghabrao mat, par
+          seedha dekho kya-kya diya tha. Sirf naam-gaon-mobile diya hai to bada nuksan nahi — haan,
+          ab aapke number par &ldquo;yojana ka paisa release karne&rdquo; wali fraud calls aa sakti
+          hain. Aisi har call par ek hi niyam: OTP, ATM PIN, ya khaate ki detail kisi ko nahi. Call
+          karne wala khud ko krishi vibhag ka adhikari bataye, tab bhi nahi.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Agar OTP de diya ya khaate se paisa kat gaya — ab minute ginti ke hain. Sabse pehle apne
+          bank ke customer care ko call karke card/UPI block karwao. Uske turant baad{' '}
+          <strong>1930</strong> par call karo — ye cyber fraud ki national helpline hai — ya{' '}
+          <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">cybercrime.gov.in</a>{' '}
+          par shikayat darj karo. Jitni jaldi report hogi, paisa freeze hone ke chances utne zyada.
+          Transaction ka SMS, site ka naam, jo bhi yaad hai — sab complaint me likho. Aur us din ke
+          baad wo site kisi rishtedaar ko bhi forward mat karna; chain wahin todo.
+        </p>
+
         <FAQBlock faqs={FAQS_DATA} />
 
         <SH>Sources</SH>

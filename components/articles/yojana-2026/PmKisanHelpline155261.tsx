@@ -252,6 +252,13 @@ export default function PmKisanHelpline155261({ article }: { article: Yojana2026
           Pehchaan wali saavdhani har jagah ek hi hai: OTP ya bank password koi bhi sarkari channel kabhi
           nahi maangta.
         </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Ek update jo 2026 me aayi: krishi mantralaya ne June 2026 me elaan kiya ki{' '}
+          <strong>155261 ab Bharat Vistar platform ka bhi helpline number hai</strong> — yani isi number
+          se ab sirf PM Kisan hi nahi, kheti-baadi ke doosre sawaalon ke jawab bhi milne lage hain. Aapke
+          liye matlab itna: number wahi hai, par IVR me PM Kisan wala option dhyan se chunna — galat
+          option chuna to query kisi aur desk par jaayegi.
+        </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-6">
           Ek aakhri practical aadat — har call/query ki ek parchi rakho: tareekh, kisse baat hui, kya kaha
           gaya, ticket number. Teen-chaar entries ke baad yahi parchi aapki sabse mazboot daleel ban jaati

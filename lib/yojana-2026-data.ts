@@ -91,7 +91,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     component: 'PmKisanKhadYojanaSach',
     officialPortal: 'https://pmkisan.gov.in',
     published: '2026-08-18T11:30:00+05:30',
-    modified: '2026-08-18T11:30:00+05:30',
+    modified: '2026-08-21T23:30:00+05:30',
     readTime: '11 min read',
     relatedPaths: [
       '/articles/PmKisanMasterGuide2026',
@@ -118,7 +118,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     component: 'PmKisanHelpline155261',
     officialPortal: 'https://pmkisan.gov.in',
     published: '2026-08-18T11:45:00+05:30',
-    modified: '2026-08-18T19:00:00+05:30',
+    modified: '2026-08-21T23:30:00+05:30',
     readTime: '10 min read',
     relatedPaths: [
       '/articles/PmKisanPaymentFailedFix2026',
