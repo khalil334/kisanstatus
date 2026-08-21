@@ -105,7 +105,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     description: 'PM Kisan Maandhan Yojana me registered bank account kaise badlein ya update karein. Documents, application format, aur common problems ka hal.',
     category: 'pension-scheme',
     published: '2026-04-30T07:56:05+05:30',
-    modified: '2026-05-30T09:35:47+05:30',
+    modified: '2026-08-21T10:15:00+05:30',
     readTime: '11 min read',
     image: '/images/articles/maandhan/bank-account-change/hero.webp',
     ogImage: '/images/articles/maandhan/bank-account-change/hero.webp',

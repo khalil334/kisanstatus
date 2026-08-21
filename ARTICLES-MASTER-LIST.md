@@ -168,7 +168,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 | 14 | ✅ 2026-08-21 | `/articles/hi/status-check-mobile-se` (206 imp) | `/rajya-yojana/rythu-bharosa-status-check-2026` (196 imp) |
 | 15 | ✅ 2026-08-21 | `/articles/pm-matsya-sampada-yojana-fish-farming` (192 imp) | `/articles/AgriStackKyaHai2026` (191 imp) |
 | 16 | ✅ 2026-08-21 | `/articles/murgi-palan-loan-nlm-subsidy` (191 imp) | `/articles/mandi-bhav-today` (176 imp) |
-| 17 | ⬜ | `/maandhan/pmkmy-bank-account-change` (168 imp) | `/rajya-yojana/krishak-bandhu-status-check-2026` (168 imp) |
+| 17 | ✅ 2026-08-21 | `/maandhan/pmkmy-bank-account-change` (168 imp) | `/rajya-yojana/krishak-bandhu-status-check-2026` (168 imp) |
 | 18 | ⬜ | `/articles/hi/nayi-registration` (156 imp) | `/articles/PmKisanPaymentFailedFix2026` (155 imp) |
 | 19 | ⬜ | `/rajya-yojana/state-kisan-yojana-list-all-states-2026` (155 imp) | `/articles/jansamarth-portal-loan-apply` (152 imp) |
 | 20 | ⬜ | `/articles/PmKisanBeneficiaryList2026` (140 imp) | `/articles/hi/recovery-notice` (137 imp) |

@@ -5,7 +5,7 @@ import type { MaandhanArticleMeta } from '@/lib/maandhan-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-04-30T07:56:05+05:30';
-const MODIFIED = '2026-05-30T09:35:47+05:30';
+const MODIFIED = '2026-08-21T10:15:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -31,7 +31,7 @@ const RELATED_CARDS = [
 const FAQS_DATA = [
   {
     q: 'Ek se zyada bank account PMKMY me register hote hain?',
-    a: 'Nahi, PM Kisan Maandhan Yojana me ek samay me sirf ek hi bank account register ho sakta hai. Agar aap account change karna chahte hain, to pehle purana account hatakar naya account add karna padega.',
+    a: 'Nahi, PM Kisan Maandhan Yojana me ek samay me sirf ek hi bank account register ho sakta hai. Change karna ho to pehle purana hatakar naya khata add karna padega.',
   },
   {
     q: 'Account details update karne ka koi charge hai?',
@@ -46,20 +46,8 @@ const FAQS_DATA = [
     a: 'Nahi, bilkul nahi. Aapko phir se enrollment karne ki zaroorat nahi hai. Sirf bank account details update karni hain. Aapka purana contribution record, age, aur sab kuch same rahega.',
   },
   {
-    q: 'Kitne din me naya khata link ho jata hai?',
-    a: 'Usually 15-20 working days lagte hain. Minimum 7 din aur maximum 30 din tak ka samay lag sakta hai. Confirmation SMS aapke registered mobile par aayega. Samay state aur bank ke hisab se thoda alag ho sakta hai.',
-  },
-  {
-    q: 'Ye kaam online ghar baithe ho jayega?',
-    a: 'Kuch states me online facility available hai, lekin zyadatar cases me physical verification zaroori hoti hai. Isliye CSC ya bank branch me jaakar application dena behtar hai.',
-  },
-  {
-    q: 'Naya khata judne ke baad purane account se paisa katna kab band hoga?',
-    a: 'Jab update confirm ho jayega, to usi mahine se naye account se paisa katna shuru ho jayega. Purane account se auto-debit automatically band ho jayega.',
-  },
-  {
     q: 'Kya joint account PMKMY me use kar sakta hoon?',
-    a: 'Haan, joint account use kar sakte hain, lekin account holder ka naam PMKMY enrollment se match hona chahiye. Preferably individual account use karna behtar hai future complications se bachne ke liye.',
+    a: 'Haan, joint account chal jaata hai, lekin holder ka naam PMKMY enrollment se match hona chahiye. Behtar yahi hai ki individual khata use karein — aage complications se bachte hain.',
   },
 ];
 
@@ -329,7 +317,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             <div className="border border-red-200 dark:border-red-800 rounded-lg p-5 bg-red-50 dark:bg-red-900/20">
               <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Problem 1: Purane Bank Me Paisa Atak Gaya</h3>
               <p className="text-sm text-[var(--color-text-muted)] mb-2"><strong>Scenario:</strong> Aapne bank change kar diya, lekin purane account se last contribution kat gaya.</p>
-              <p className="text-sm text-[var(--color-text-muted)]"><strong>Solution:</strong> Ghabraiye mat — ye paisa waste nahi hoga. Jab account change complete hoga, to system automatically naye account se link ho jayega. Purane account ka balance aur contributions transfer ho jayenge. Bas confirmation ka wait karein.</p>
+              <p className="text-sm text-[var(--color-text-muted)]"><strong>Solution:</strong> Ghabraiye mat — ye paisa waste nahi hoga. Change complete hote hi system naye khate se link ho jayega, aur purane wale ka balance aur contributions transfer ho jayenge. Bas confirmation ka wait karein.</p>
             </div>
 
             <div className="border border-orange-200 dark:border-orange-800 rounded-lg p-5 bg-orange-50 dark:bg-orange-900/20">
@@ -477,7 +465,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Purana Account Kab Band Karein — Iska Jawab Pehla Debit Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Is process ki ek hi galti mehengi padti hai: confirmation aane se pehle purana account band kar dena. Sahi sequence yeh hai — change application ke waqt purane account mein 3 mahine ka contribution balance rakhein, naye account ka Aadhaar-link aur IFSC do baar milaayein, aur jab tak pehla contribution naye account se kat-ta hua na dikhe, purana account chalu rakhein. Wahi pehla debit is transfer ka asli "completion certificate" hai; acknowledgement slip uske record ke saath sambhaal kar rakh lein.
+            Is process ki ek hi galti mehengi padti hai: confirmation aane se pehle purana khata band kar dena. Sahi sequence yeh hai — change application ke waqt purane wale mein 3 mahine ka contribution balance rakhein, naye ka Aadhaar-link aur IFSC do baar milaayein, aur jab tak pehla contribution naye khate se kat-ta hua na dikhe, purana chalu rakhein. Wahi pehla debit is transfer ka asli "completion certificate" hai; acknowledgement slip uske record ke saath sambhaal kar rakh lein.
           </p>
         </div>
 

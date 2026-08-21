@@ -51,10 +51,6 @@ const FAQS_DATA = [
     a: 'Is status ka matlab itna hi hai ki bank ne aapki details verify kar di hain — credit hona abhi baaki hai. File ab treasury ki qataar mein hai, is stage par branch jaane se kuch nahi badlega. Release ki khabar ke baad hafta bhar ruk kar passbook entry karwa lein.',
   },
   {
-    q: 'Padosi ko paisa mil gaya, mujhe nahi — kya mera naam kat gaya?',
-    a: 'Zaroori nahi. Yahan disbursal zila-war hota hai: state aadesh jaari karta hai aur phir har district treasury apni file apni raftaar se nikaalti hai. Isliye padosi gaon (ya padosi zile) mein credit pehle dikhna bilkul aam baat hai. Aapka naam list mein hai to bas kuch din ka farq hai, katne wali baat nahi.',
-  },
-  {
     q: 'Ek acre se kam zameen hai, kya kuch milega?',
     a: 'Haan, milega. Chhoti jot par raqam pro-rata ghatti hai, lekin ek minimum ke neeche kabhi nahi jaati — scheme ka jhukav chhote kisan ki taraf hi hai. Isi tarah bahut badi jot par bhi ek upper cap laga hai. To aapke aur kisi aur ke amount mein farq dikhe to ghabraane ki zaroorat nahi.',
   },
@@ -65,10 +61,6 @@ const FAQS_DATA = [
   {
     q: 'Death benefit kis-kis ko milta hai?',
     a: 'Ye raqam registered kisan ke legal heir ya nominee ko milti hai, aur sirf ek baar. Shart umar ki hai — mrityu ke waqt kisan 18 se 60 ke beech ho; zameen kitni thi, is component mein iska koi role nahi. Claim der se karne par time-barred hone ka khatra rehta hai, to jitne kagaz haath mein hain unhi ke saath block office mein form daal dein.',
-  },
-  {
-    q: 'Naam list mein hai lekin paisa nahi aaya — kahan jaana chahiye?',
-    a: 'List aapko sahi darwaaza batati hai. Naam maujood hai magar credit nahi aaya — mamla bank ya treasury ka hai, branch mein poochhein. Naam sire se gayab hai — mamla eligibility ya khatian ka hai, block agriculture office ya BL&LRO jaayein. Rejection ka asli kaaran sirf block office ki file ke remark mein likha milta hai.',
   },
 ];
 

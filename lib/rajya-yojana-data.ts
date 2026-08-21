@@ -164,7 +164,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'krishak bandhu payment date',
       'কৃষক বন্ধু status',
     ],
-    title: 'Krishak Bandhu Status Check 2026',
+    title: 'Krishak Bandhu Status Check 2026 — Voter ID Se',
     description:
       'West Bengal Krishak Bandhu ka status Voter ID se kaise check karein, verification list, death benefit aur payment ki jaankari.',
     ogTitle: 'Krishak Bandhu Status Check — Voter ID Se',
@@ -173,7 +173,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     officialPortal: 'https://krishakbandhu.wb.gov.in',
     status: 'live',
     published: '2026-06-20T10:03:34+05:30',
-    modified: '2026-08-01T10:16:33+05:30',
+    modified: '2026-08-21T10:15:00+05:30',
     readTime: '10 min read',
     ogImage: '/images/articles/rajya-yojna/krishak-bandhu-status-check-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanCorrectionForm2026'],
