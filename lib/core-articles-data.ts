@@ -21,7 +21,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'KisanRinKahaSeLe2026',
     category: 'loan',
     publishedTime: '2026-06-20T06:39:52+05:30',
-    modifiedTime: '2026-08-18T19:30:00+05:30',
+    modifiedTime: '2026-08-21T20:15:00+05:30',
     readingTime: 8,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('KisanRinKahaSeLe2026'),
