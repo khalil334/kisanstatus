@@ -145,7 +145,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     component: 'MgnregaPashuShedYojana',
     officialPortal: 'https://nrega.nic.in',
     published: '2026-08-18T19:30:00+05:30',
-    modified: '2026-08-18T19:30:00+05:30',
+    modified: '2026-08-22T00:10:00+05:30',
     readTime: '11 min read',
     relatedPaths: [
       '/articles/bakri-palan-yojana-nlm-subsidy',
@@ -173,7 +173,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     component: 'PashuKisanCreditCard',
     officialPortal: 'https://pashudhanharyana.gov.in',
     published: '2026-08-18T21:00:00+05:30',
-    modified: '2026-08-18T21:00:00+05:30',
+    modified: '2026-08-22T00:10:00+05:30',
     readTime: '12 min read',
     relatedPaths: [
       '/articles/KisanCreditCardOnlineApply2026',

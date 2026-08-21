@@ -211,7 +211,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 | 57 | ✅ 2026-08-21 | `/rajya-yojana/meri-fasal-mera-byora-status-check-2026` (0 imp) | `/rajya-yojana/up-kisan-karj-rahat-list-2026` (0 imp) |
 | 58 | ✅ 2026-08-21 | `/yojana/fasal-bima-claim-status-check` (0 imp) | `/yojana/kisan-karj-mafi-list-all-states` (0 imp) |
 | 59 | ✅ 2026-08-21 | `/yojana/pm-kisan-khad-yojana-11000-sach` (0 imp) | `/yojana/pm-kisan-helpline-155261` (0 imp) |
-| 60 | ⬜ | `/yojana/mgnrega-pashu-shed-yojana` (0 imp) | `/yojana/pashu-kisan-credit-card-apply` (0 imp) |
+| 60 | ✅ 2026-08-21 | `/yojana/mgnrega-pashu-shed-yojana` (0 imp) | `/yojana/pashu-kisan-credit-card-apply` (0 imp) |
 
 **Workflow per part:**
 1. Dono articles ka GSC row dekho (neeche 📊 GSC Data table) + Master Prompt (upar, Rule 0, Rule 1, sab) follow karo

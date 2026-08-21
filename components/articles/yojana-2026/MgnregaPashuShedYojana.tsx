@@ -197,6 +197,20 @@ export default function MgnregaPashuShedYojana({ article }: { article: Yojana202
           gram panchayat ke record me hota hai — aur wo record dekhna free hai.
         </DB>
 
+        <SH>Apni File Khud Track Karo — nrega.nic.in Par Sab Public Hai</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          MGNREGA ki ek khoobi jo kam log jante hain: iska poora record public hai. nrega.nic.in par
+          apna state → district → block → panchayat chunte jao — wahan panchayat ke saare sanctioned
+          works, muster rolls, aur payment ka byora khula pada hai. Aapka shed sanction hua hai to us
+          list me dikhega, work code ke saath. Job card number se apni wage entries bhi dekh sakte ho.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Iska fayda seedha hai: panchayat kuch bhi kahe, aap khud check kar sakte ho ki file kagaz
+          me kahan tak pahunchi. &ldquo;Sanction ho gaya hai&rdquo; suna aur portal par work dikh nahi
+          raha — to sanction hua nahi hai, sirf baat hui hai. Yahi farq samajhne me kai log mahine
+          gawa dete hain.
+        </p>
+
         <SH>Shed Ke Baad Aage Kya</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Shed pashupalan ka pehla kadam hai, aakhri nahi. Agar bakri palan bade scale par sochna hai to{' '}
