@@ -304,7 +304,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     ],
     category: 'status-check',
     publishedTime: '2026-08-17T01:20:00+05:30',
-    modifiedTime: '2026-08-17T01:20:00+05:30',
+    modifiedTime: '2026-08-21T21:45:00+05:30',
     author: AUTHOR_NAME,
     component: 'IkhedutPortalStatusHindi',
     ogImage: '/images/articles/rajya-yojna/ikhedut-portal-status-check-2026/hero.webp',

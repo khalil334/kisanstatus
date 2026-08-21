@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
@@ -9,10 +10,6 @@ const FAQS = [
   {
     q: 'अर्जी नंबर खो गया — अब स्टेटस कैसे देखूं?',
     a: 'तीन रास्ते हैं। पुराना प्रिंट देखिए, उस पर नंबर छपा होता है। जिस ग्राम सेवक, VCE या साइबर कैफे से फॉर्म भरा था, वहां रिकॉर्ड होता है। और तीसरा — आधार और 7/12 लेकर तालुका के विस्तरण अधिकारी के दफ्तर जाइए, वे रिकॉर्ड से निकाल देंगे। नया आवेदन भर देना सबसे बुरा उपाय है, क्योंकि एक ही जमीन पर दो अर्जियां दोनों को अटका देती हैं।',
-  },
-  {
-    q: 'ऑनलाइन फॉर्म भर दिया, प्रिंट जमा नहीं किया — अर्जी चलेगी?',
-    a: 'ज्यादातर घटकों में नहीं। ऑनलाइन जमा करना आधा काम है — हस्ताक्षर किया हुआ प्रिंट और दस्तावेज तय समय में तालुका कार्यालय में जमा करने होते हैं, तभी फाइल आगे बढ़ती है। जमा करते समय पावती जरूर मांग लीजिए — बाद में "फाइल मिली ही नहीं" वाली बात आए तो वही कागज आपका सबूत है।',
   },
   {
     q: 'मंजूरी से पहले ट्रैक्टर खरीद लिया — सब्सिडी मिलेगी?',
@@ -99,6 +96,21 @@ export default function IkhedutPortalStatusHindi({ article }: { article: HindiAr
         किसान और मजदूर परिवार पहली बार इस पोर्टल से पाला पड़ने पर उलझ जाते हैं।
       </p>
 
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/rajya-yojna/ikhedut-portal-status-check-2026/hero.webp"
+          alt="गुजरात का किसान iKhedut पोर्टल पर अर्जी की स्थिति देखता हुआ"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          iKhedut — सौ से ज्यादा घटकों का एक ही दरवाजा
+        </figcaption>
+      </figure>
+
       <p>
         मैंने खुद पोर्टल खोलकर देखा तो पहली चीज जो समझ आई — यहां योजनाएं साल भर खुली
         नहीं रहतीं। हर घटक (योजना के हिस्से को पोर्टल पर &quot;घटक&quot; कहते हैं) की
@@ -146,6 +158,21 @@ export default function IkhedutPortalStatusHindi({ article }: { article: HindiAr
         देखने के लिए किसी ऐप या एजेंट की जरुरत नहीं — यह काम मोबाइल के ब्राउज़र से खेत
         में खड़े-खड़े हो जाता है।
       </p>
+
+      <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+        <Image
+          src="/images/articles/rajya-yojna/ikhedut-portal-status-check-2026/status-check-mobile.webp"
+          alt="मोबाइल पर iKhedut अर्जी स्टेटस की जांच"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          अर्जी नंबर + कैप्चा — बस इतने से स्थिति सामने
+        </figcaption>
+      </figure>
 
       <H2>स्टेटस में जो शब्द दिखते हैं, उनका असल मतलब</H2>
 

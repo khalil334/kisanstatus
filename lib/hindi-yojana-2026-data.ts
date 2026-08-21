@@ -22,10 +22,10 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
     ],
     category: 'farming',
     publishedTime: '2026-08-18T07:49:14+05:30',
-    modifiedTime: '2026-08-18T20:00:00+05:30',
+    modifiedTime: '2026-08-21T21:45:00+05:30',
     author: AUTHOR_NAME,
     component: 'FasalBimaClaimStatusHindi',
-    ogImage: '/og-image.webp',
+    ogImage: '/images/articles/pmfby-crop-insurance-2026/hero-image.webp',
   },
   {
     slug: 'hi/kisan-karj-mafi-list',

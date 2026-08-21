@@ -1,11 +1,8 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
-  {
-    q: 'फसल बीमा का पैसा कितने दिन में आता है?',
-    a: 'नियम कहते हैं कि सीजन का yield data final होने के बाद क्लेम लगभग 2 महीने में settle होना चाहिए। खरीफ 2024 से देरी पर बीमा कंपनी या राज्य पर 12% penalty का प्रावधान भी है। हकीकत में कई बार 3 से 6 महीने लग जाते हैं — सबसे बड़ी वजह राज्य से crop cutting data की देरी। 2 महीने से ज्यादा हो जाए तो शिकायत जरूर करें।',
-  },
   {
     q: 'स्टेटस चेक करने के लिए क्या चाहिए?',
     a: 'Receipt number या policy number — जो enrollment के समय मिला था। KCC से बीमा हुआ हो और रसीद न मिली हो, तो बैंक branch से policy की copy मांग लें, उसमें application number लिखा होता है।',
@@ -13,10 +10,6 @@ const FAQS = [
   {
     q: 'स्टेटस में approved दिख रहा है पर पैसा नहीं आया — क्यों?',
     a: 'अक्सर वजह बैंक-आधार seeding होती है। क्लेम का पैसा DBT से आधार-linked खाते में जाता है; NPCI seeding active न हो तो transfer वापस लौट जाता है। पहले अपने खाते की seeding चेक करें, फिर बैंक और बीमा कंपनी दोनों को application number के साथ सूचित करें।',
-  },
-  {
-    q: '72 घंटे का नियम किस नुकसान पर लागू होता है?',
-    a: 'Localized नुकसान पर — ओलावृष्टि, जल-भराव, landslide, या कटाई के बाद 14 दिन के अंदर बेमौसम बारिश से हुआ नुकसान। ऐसे में आपको खुद 72 घंटे के अंदर सूचना देनी होती है। सूखा या बाढ़ जैसे बड़े इलाके के नुकसान में अलग से report जरूरी नहीं — वहां पूरे क्षेत्र का assessment CCE से होता है।',
   },
   {
     q: '72 घंटे निकल गए, अब क्लेम मिलेगा या नहीं?',
@@ -29,14 +22,6 @@ const FAQS = [
   {
     q: 'Premium कटा था पर policy ही नहीं दिख रही?',
     a: 'तुरंत बैंक जाएं, passbook की premium कटने वाली entry दिखाएं और लिखित में policy number पूछें। बैंक की गलती से policy न बनी हो, तो नियमों के हिसाब से नुकसान की भरपाई बैंक को करनी पड़ती है।',
-  },
-  {
-    q: 'मेरा बीमा WBCIS (मौसम-आधारित) है — क्या प्रोसेस वही है?',
-    a: 'स्टेटस उसी National Crop Insurance Portal पर दिखता है, पर क्लेम का हिसाब अलग है — weather station के data से। बारिश कम हुई या तापमान सीमा से बाहर गया, तो formula से payout अपने आप बनता है — न survey, न 72 घंटे की भाग-दौड़। आपकी policy कौनसी है, यह policy document के ऊपर ही लिखा होता है।',
-  },
-  {
-    q: 'क्या मोबाइल app से स्टेटस देख सकते हैं?',
-    a: 'हां। कृषि मंत्रालय का official Crop Insurance app Play Store पर free है — registered mobile से login करके policy details और claim status दोनों दिख जाते हैं। App सिर्फ official ही लें — publisher में Ministry of Agriculture लिखा हो।',
   },
 ];
 
@@ -68,6 +53,21 @@ export default function FasalBimaClaimStatusHindi({ article }: { article: HindiA
         डालिए, captcha भरिए और <strong>Check Status</strong> दबाइए। Screen पर दिख जाएगा — application किस
         stage पर है: under processing, survey pending, claim approved या amount credited.
       </p>
+
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/pmfby-crop-insurance-2026/status-check.webp"
+          alt="किसान मोबाइल पर फसल बीमा क्लेम का स्टेटस देखता हुआ"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          Receipt number हाथ में हो तो स्टेटस दो मिनट का काम है
+        </figcaption>
+      </figure>
       <p>
         Receipt number वही है जो बीमा कराते समय मिला था — CSC से कराया था तो पर्ची पर, खुद portal से किया था
         तो SMS और email में। नंबर खो गया है? KCC वाले किसान अपनी बैंक branch से policy की copy मांग सकते हैं।
@@ -135,6 +135,21 @@ export default function FasalBimaClaimStatusHindi({ article }: { article: HindiA
         <strong>कटाई के 2 महीने बाद भी पैसा न आए तो चुप मत बैठिए</strong> — नीचे वाली शिकायत की
         सीढ़ियां चढ़िए।
       </p>
+
+      <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+        <Image
+          src="/images/articles/pmfby-crop-insurance-2026/payment-received.webp"
+          alt="बैंक खाते में फसल बीमा क्लेम की रकम आने की पुष्टि"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          Settlement की मियाद — yield data final होने के बाद करीब 2 महीने
+        </figcaption>
+      </figure>
 
       <Head2>WBCIS वाला नोट — अगर आपका बीमा मौसम-आधारित है</Head2>
       <p>
