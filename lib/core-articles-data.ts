@@ -537,7 +537,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisanFaceAuthenticationEkyc',
     title: 'PM Kisan Face Auth eKYC: Bina OTP',
-    seoTitle: 'PM Kisan Face Authentication eKYC: Bina OTP Ke Tarika',
+    seoTitle: 'PM Kisan Face Authentication eKYC: Bina OTP',
     desc: 'OTP nahi aa raha? PMKisan app se face authentication karke bina OTP ke eKYC karo — 5 minute ka tarika, errors ke fix aur CSC ka sahi rate.',
     ogTitle: 'PM Kisan Face Auth eKYC Guide',
     keywords: [

@@ -214,7 +214,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'pm kisan kaun eligible nahi hai',
       'pm kisan galat paisa wapas kaise karein',
     ],
-    title: 'Pati Patni Dono Ko PM Kisan Milega Ya Nahi? Family Rule',
+    title: 'Pati Patni Dono Ko PM Kisan Milega Ya Nahi',
     description:
       'Pati-patni dono ko PM Kisan milega ya nahi — ek parivaar ka rule, exclusion list, aur galat aaya paisa surrender karne ka poora tarika.',
     ogTitle: 'Pati Patni Dono Ko PM Kisan? — Family Rule',
