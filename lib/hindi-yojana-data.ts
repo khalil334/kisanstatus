@@ -9,7 +9,7 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
     slug: 'hi/pm-kisan-25vi-kist',
     titleHi: 'पीएम किसान 25वीं किस्त कब आएगी? Date और Latest Update',
     seoTitleHi: 'पीएम किसान 25वीं किस्त कब आएगी — Date Update',
-    desc: 'किस्त की तारीख का इंतजार है? 25वीं किस्त की latest स्थिति, और वो तीन चीजें — eKYC, बैंक seeding, land seeding — जिनमें से एक भी अटकी हो तो पैसा रुक जाता है।',
+    desc: 'किस्त की तारीख का इंतजार है? 25वीं किस्त की latest स्थिति, और वो तीन चीजें — eKYC, बैंक seeding, land seeding — जिनमें एक अटकी तो पैसा रुकेगा।',
     keywords: [
       'पीएम किसान 25वीं किस्त',
       'pm kisan 25th installment date',
@@ -68,7 +68,7 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
     slug: 'hi/farmer-id-kaise-banaye',
     titleHi: 'किसान आईडी कैसे बनाएं? AgriStack ID Free, मोबाइल से 10 मिनट में',
     seoTitleHi: 'किसान आईडी कैसे बनाएं? AgriStack Free गाइड',
-    desc: 'किसान आईडी मोबाइल से 10 मिनट में free बनाएं — आधार OTP से AgriStack registration के आसान steps, documents की list, अपने राज्य का portal और status check यहां देखें।',
+    desc: 'किसान आईडी मोबाइल से 10 मिनट में free बनाएं — आधार OTP से AgriStack registration के steps, documents की list और अपने राज्य का portal यहां।',
     keywords: ['किसान आईडी कैसे बनाएं', 'farmer id kaise banaye', 'agristack id kaise banaye', 'farmer id banane ke liye documents', 'किसान आईडी कार्ड', 'agristack farmer id', 'farmer id banane me kitna time lagta hai', 'agristack id kya hai', 'मोबाइल से farmer id कैसे बनाएं', 'farmer id kaisi dikhti hai', 'agrisnet farmer id', 'farmer id me dvc name kya hota hai', 'किसान आईडी डाउनलोड'],
     category: 'farming',
     publishedTime: '2026-06-07T21:01:19+05:30',

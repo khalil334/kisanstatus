@@ -31,7 +31,7 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
     slug: 'hi/kisan-karj-mafi-list',
     titleHi: 'किसान कर्ज माफी 2026 — किस राज्य में सच में चल रही है',
     seoTitleHi: 'किसान कर्ज माफी 2026 — किस राज्य में चालू',
-    desc: 'कोई राष्ट्रीय कर्ज माफी योजना नहीं है। महाराष्ट्र, तेलंगाना, UP और तमिलनाडु की असली स्थिति, official पोर्टल, फर्जी लिस्ट वाली साइटों का pattern और OTS जैसे 4 असली रास्ते।',
+    desc: 'कोई राष्ट्रीय कर्ज माफी योजना नहीं है। महाराष्ट्र, तेलंगाना, UP और तमिलनाडु की असली स्थिति, official पोर्टल और फर्जी लिस्ट का pattern।',
     keywords: [
       'किसान कर्ज माफी 2026',
       'कर्ज माफी लिस्ट कैसे देखें',
@@ -53,7 +53,7 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
     slug: 'hi/pm-kisan-khad-yojana-sach',
     titleHi: 'PM किसान खाद योजना ₹11,000 — सच क्या है',
     seoTitleHi: 'PM किसान खाद योजना ₹11,000 का सच',
-    desc: '₹11,000 वाली कोई अलग खाद योजना officially मौजूद नहीं है। अफवाह कहां से आई, खाद पर सरकार असल में क्या देती है और fake registration forms से कैसे बचें — पूरा सच यहां।',
+    desc: '₹11,000 वाली कोई अलग खाद योजना officially मौजूद नहीं है। अफवाह कहां से आई, खाद पर सरकार असल में क्या देती है और fake forms से कैसे बचें।',
     keywords: [
       'PM किसान खाद योजना',
       'pm kisan khad yojana 11000',
@@ -73,7 +73,7 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
     slug: 'hi/pm-kisan-helpline-155261',
     titleHi: 'PM किसान हेल्पलाइन 155261 — शिकायत कैसे और कहां करें',
     seoTitleHi: 'PM किसान हेल्पलाइन 155261 — शिकायत',
-    desc: 'किस्त अटकी है? 155261 और 011-24300606 पर कब call करें, कौन सी problem कहां हल होगी — eKYC CSC पर, land seeding तहसील में — और शिकायत escalate का पूरा रास्ता।',
+    desc: 'किस्त अटकी है? 155261 और 011-24300606 पर कब call करें, कौन सी problem कहां हल होगी — eKYC CSC पर, land seeding तहसील में।',
     keywords: [
       'PM किसान हेल्पलाइन नंबर',
       'pm kisan helpline 155261',
@@ -93,7 +93,7 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
     slug: 'hi/mgnrega-pashu-shed-yojana',
     titleHi: 'मनरेगा पशु शेड योजना — ₹1.6 लाख तक, असली प्रोसेस',
     seoTitleHi: 'मनरेगा पशु शेड योजना — ₹1.6 लाख तक',
-    desc: 'पशु शेड का कोई online form नहीं होता — काम ग्राम पंचायत के जरिए होता है। Job card, 2-3 पशु का नियम, असली राशि का सच, आवेदन का पूरा रास्ता और file अटके तो BDO तक शिकायत।',
+    desc: 'पशु शेड का कोई online form नहीं होता — काम ग्राम पंचायत के जरिए होता है। Job card, 2-3 पशु का नियम, असली राशि का सच और आवेदन का रास्ता।',
     keywords: [
       'मनरेगा पशु शेड योजना',
       'pashu shed yojana',

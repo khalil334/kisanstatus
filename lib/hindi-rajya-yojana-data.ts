@@ -35,7 +35,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     slug: 'hi/rajasthan-kisan-samman-nidhi',
     titleHi: 'राजस्थान किसान सम्मान निधि — ₹9,000 का हिसाब और किस्त की स्थिति',
     seoTitleHi: 'राजस्थान किसान सम्मान निधि — ₹9,000 किस्त',
-    desc: 'राजस्थान के किसान को पीएम किसान के ₹6,000 के ऊपर राज्य से ₹3,000 — कुल ₹9,000। जन आधार से किस्त की स्थिति देखने का तरीका और पैसा अटकने की चार असली वजहें यहां।',
+    desc: 'राजस्थान के किसान को पीएम किसान के ₹6,000 के ऊपर राज्य से ₹3,000 — कुल ₹9,000। जन आधार से किस्त देखने का तरीका और पैसा अटकने की वजहें।',
     keywords: [
       'राजस्थान किसान सम्मान निधि',
       'rajasthan kisan samman nidhi',
@@ -208,7 +208,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     slug: 'hi/meri-fasal-mera-byora-status',
     titleHi: 'मेरी फसल मेरा ब्योरा स्टेटस 2026 — रजिस्ट्रेशन से MSP भुगतान तक',
     seoTitleHi: 'मेरी फसल मेरा ब्योरा स्टेटस चेक 2026',
-    desc: 'हरियाणा में fasal.haryana.gov.in पर स्टेटस चेक, पटवारी सत्यापन, गेट पास और MSP भुगतान अटकने की 4 वजहें — पांच पड़ावों में पूरा सफर, फैमिली ID की भूमिका समेत।',
+    desc: 'हरियाणा में fasal.haryana.gov.in पर स्टेटस चेक, पटवारी सत्यापन, गेट पास और MSP भुगतान अटकने की 4 वजहें — पांच पड़ावों में पूरा सफर।',
     keywords: [
       'मेरी फसल मेरा ब्योरा',
       'meri fasal mera byora status check',
@@ -292,7 +292,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     slug: 'hi/ikhedut-portal-status',
     titleHi: 'iKhedut पोर्टल स्टेटस चेक 2026 — अर्जी नंबर से सब्सिडी तक',
     seoTitleHi: 'iKhedut पोर्टल अर्जी स्टेटस चेक 2026',
-    desc: 'iKhedut पोर्टल पर अर्जी का स्टेटस 2 मिनट में देखें — अर्जी नंबर खो गया तो कैसे निकालें, pending से payment तक हर स्थिति का मतलब और ट्रैक्टर सहाय का पूरा सफर।',
+    desc: 'iKhedut पोर्टल पर अर्जी का स्टेटस 2 मिनट में देखें — अर्जी नंबर खो जाए तो कैसे निकालें, pending से payment तक हर स्थिति का मतलब।',
     keywords: [
       'ikhedut portal status',
       'iKhedut अर्जी स्टेटस चेक',

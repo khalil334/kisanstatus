@@ -6,7 +6,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'KisanRinKahaSeLe2026',
     title: 'Kisan Loan 2026: KCC, Bank, CSC Guide',
-    desc: 'Loan chahiye to confusion hota hai — SBI, cooperative, CSC, har jagah process alag. Is guide mein sab kuch hai.',
+    desc: 'Loan chahiye to confusion hota hai — SBI, cooperative bank, CSC, har jagah process alag hai. Kaun sa rasta aapke liye theek hai, poora hisaab yahan.',
     seoTitle: 'Kisan Rin Kaha Se Le 2026 — KCC, Bank, CSC',
     ogTitle: 'Kisan Loan Guide 2026 — Hindi Jankari',
     keywords: [
@@ -214,7 +214,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     slug: 'NanoDap500mlPriceInIndia2026',
     title: 'Nano DAP 500ml Price 2026: IFFCO Rate',
     seoTitle: 'Nano DAP 500ml Price 2026 — ₹600 IFFCO Rate',
-    desc: 'Nano DAP 500ml price ₹600 hai — IFFCO ka official MRP, poore desh me ek. Dealer price ₹547.50, per acre dose (500ml) aur overcharging se bachne ka tarika yahan dekhein.',
+    desc: 'Nano DAP 500ml price ₹600 hai — IFFCO ka official MRP, poore desh me ek. Dealer price ₹547.50, per acre dose aur overcharging se bachne ka tarika.',
     ogTitle: 'Nano DAP 500ml Price 2026 India',
     keywords: [
       'Nano DAP 500ml price India 2026',
@@ -240,7 +240,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisan24viKist2026',
     title: 'PM Kisan 24vi Kist 2026: Date & Status',
-    desc: '23vi kist 20 June ko aa chuki hai, ab 24vi ka intezaar. Pattern ke hisaab se October 2026 expected — date ka sach, status check aur taiyari ki puri jankari.',
+    desc: '23vi kist 20 June ko aa chuki hai, ab 24vi ka intezaar. Pattern ke hisaab se October 2026 expected — date ka sach, status check aur taiyari.',
     ogTitle: 'PM Kisan 24vi Kist — Kab Aayegi?',
     seoTitle: 'PM Kisan 24vi Kist Kab Aayegi — Date Ka Sach',
     keywords: [
@@ -411,7 +411,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisan25viKist2027',
     title: 'PM Kisan 25vi Kist 2027: Date & Amount',
-    desc: '25vi kist ki koi official date nahi hai abhi — 24vi ke baad 3-4 mahine ka gap normal hai. ₹2,000 hi milega. Abhi se eKYC, bank seeding, land records theek karo.',
+    desc: '25vi kist ki koi official date nahi hai abhi — 24vi ke baad 3-4 mahine ka gap normal hai. ₹2,000 hi milega. Abhi se eKYC aur bank seeding theek karo.',
     ogTitle: 'PM Kisan 25vi Kist 2027 Guide',
     keywords: [
       'pm kisan 25vi kist 2027',
@@ -962,7 +962,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'drip-sprinkler-irrigation-subsidy',
     title: 'Drip Sprinkler Subsidy: PDMC ke 55% / 45% Niyam',
-    desc: 'PDMC micro-irrigation subsidy ka asli structure — small/marginal kisan ko 55%, baaki ko 45% assistance, unit cost norms, state top-up aur application process.',
+    desc: 'PDMC micro-irrigation subsidy ka asli structure — small/marginal kisan ko 55%, baaki ko 45%, unit cost norms, state top-up aur application process.',
     ogTitle: 'Drip Sprinkler Subsidy: Asli PDMC Rates',
     keywords: [
       'drip irrigation subsidy',

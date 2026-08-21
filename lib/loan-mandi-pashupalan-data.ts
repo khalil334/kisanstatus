@@ -60,7 +60,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'jansamarth-portal-loan-apply',
     ogImage: '/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/form-bharna.webp',
     title: 'JanSamarth Portal 2026: Loan Apply',
-    desc: 'Ek portal par sabhi sarkari loan — KCC, Mudra, education, agri-infra. Eligibility check se application track tak, jansamarth.in ka poora step-by-step process.',
+    desc: 'Ek portal par sabhi sarkari loan — KCC, Mudra, education, agri-infra. Eligibility check se application track tak, jansamarth.in ka step-by-step process.',
     ogTitle: 'JanSamarth Portal Loan Apply 2026 Guide',
     keywords: [
       'jansamarth portal loan apply 2026',
@@ -104,7 +104,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'msp-list-2026-27',
     title: 'MSP List 2026-27: Rabi & Kharif',
     seoTitle: 'MSP 2026-27 List: Kharif & Rabi Ke Rate',
-    desc: 'MSP 2026-27 list Kharif aur Rabi dono ki ek jagah — gehu ₹2,585, dhan ₹2,441, chana ₹5,875. Har fasal ka naya rate aur pichhle saal se badhotri table mein dekho.',
+    desc: 'MSP 2026-27 list Kharif aur Rabi dono ek jagah — gehu ₹2,585, dhan ₹2,441, chana ₹5,875. Har fasal ka naya rate aur pichhle saal se badhotri table mein.',
     ogTitle: 'MSP 2026-27 List — Rabi & Kharif Puri List',
     ogImage: '/images/articles/loan-mandi-pashupalan/msp-list-2026-27/kharid-kendra.webp',
     keywords: [
@@ -263,7 +263,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'gau-mutra-kharid-yojana-up-2026',
     title: 'Gau Mutra Kharid Yojana UP 2026: ₹10/Litre',
-    desc: 'Bulandshahr ke Narsena gaon mein UP sarkaar ka pilot — gaay ke mutra ka rate ₹10 prati litre, FPO ke sangrah kendra, mahilaon ko +₹2 commission. Poori jankari.',
+    desc: 'Bulandshahr ke Narsena gaon mein UP sarkaar ka pilot — gaay ke mutra ka rate ₹10 prati litre, FPO sangrah kendra, mahilaon ko +₹2 commission.',
     seoTitle: 'Gaay Ke Mutra Se Kamai — UP ₹10 Prati Litre',
     ogTitle: 'Gau Mutra Kharid Yojana UP — ₹10 Prati Litre',
     keywords: [
