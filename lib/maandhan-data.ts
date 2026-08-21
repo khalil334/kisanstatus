@@ -17,7 +17,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
     description: 'PM Kisan Maandhan Yojana mein online registration ka complete process, eligibility, aur zaroori documents ki jankari.',
     category: 'pension-scheme',
     published: '2026-03-15T08:06:28+05:30',
-    modified: '2026-03-24T07:35:29+05:30',
+    modified: '2026-08-21T21:30:00+05:30',
     readTime: '12 min read',
     image: '/images/articles/maandhan/registration-hero.webp',
     ogImage: '/images/articles/maandhan/registration-hero.webp',

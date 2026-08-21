@@ -202,6 +202,30 @@ export default function PashuKisanCreditCardHindi({ article }: { article: HindiA
         5-7% का फर्क आ जाता है, ब्याज की बचत अलग।
       </p>
 
+      <Head2>Tagging कैसे होती है — जिस पर आधी files अटकती हैं</Head2>
+      <p>
+        Tagging का मतलब है पशु के कान में 12-digit नंबर वाला पीला tag — यही नंबर सरकारी
+        database में पशु की पहचान है, आधार जैसा समझ लीजिए। यह काम सरकारी पशु चिकित्सालय या
+        गांव आने वाले पशुधन सहायक / पशु सखी के जरिए होता है — आमतौर पर free या मामूली खर्च में।
+        टीकाकरण (vaccination) camp के दिन करवा लें तो एक ही चक्कर में दोनों काम हो जाते हैं।
+      </p>
+      <p>
+        Bank जाने से पहले tag का नंबर किसी कागज पर लिख लीजिए और पशु के साथ एक photo भी रख
+        लीजिए जिसमें tag दिखे। Field officer के आने से पहले ये दो चीजें तैयार हों तो verification
+        उसी दिन निपट जाता है — वरना दूसरा चक्कर लगता है और file एक-दो हफ्ते और खिंच जाती है।
+        बिना tag वाला पशु bank के record में गिना ही नहीं जाता — चाहे आपके पास दस भैंसें खड़ी हों।
+      </p>
+
+      <Head2>कितना time लगता है — ईमानदार जवाब</Head2>
+      <p>
+        कागज पूरे हों, पशु tagged हों और KYC साफ हो — तो काम आमतौर पर 2-4 हफ्ते में हो जाता है:
+        application, field visit, बीमा, फिर limit sanction। किसी भी स्टेप पर महीना भर से ज्यादा
+        रुके तो चुप मत बैठिए — acknowledgement लेकर branch manager से लिखित में वजह पूछिए। RBI के
+        निर्देश हैं कि KCC applications तय समय में निपटाई जाएं — लिखित सवाल का लिखित जवाब देना
+        bank की जिम्मेदारी बन जाती है। उससे भी बात न बने तो bank की customer grievance और फिर
+        RBI Ombudsman (cms.rbi.org.in) का रास्ता खुला है — यह free है, कोई वकील नहीं चाहिए।
+      </p>
+
       <Head2>Application क्यों अटकती या reject होती है</Head2>
       <ol className="list-decimal pl-6 space-y-2 my-4 text-sm leading-relaxed">
         <li><strong>CIBIL / पुराना default</strong> — कोई loan NPA है या settlement किया है तो file वहीं रुक जाती है।</li>

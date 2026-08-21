@@ -169,7 +169,11 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
             <SI n={4}>Umar ke hisaab se monthly contribution batayega — jaise 18 saal ke liye ₹55, 30 saal ke liye ₹100.</SI>
             <SI n={5}>Pehla contribution UPI ya cash se pay karein aur receipt sambhal kar rakhein.</SI>
             <SI n={6}>Mobile par confirmation SMS aayega — screenshot lekar save kar lein, yahi aapka proof hai.</SI>
+            <SI n={7}>Registration ke saath Kisan Pension Account Number (KPAN) generate hota hai aur pension card banta hai — operator se print maang lein ya baad mein khud download karein. Card kho jaye toh bhi ghabrayein nahi, KPAN se dobara nikal aata hai.</SI>
           </StepList>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4 mt-4">
+            Card download aur enrollment status dekhne ka poora tareeka alag pages par hai: <Link href="/maandhan/pm-kisan-maandhan-pension-card-download" className="underline text-blue-600 dark:text-blue-400 font-medium">pension card download guide</Link> aur <Link href="/maandhan/pm-kisan-maandhan-status-check-online" className="underline text-blue-600 dark:text-blue-400 font-medium">status check ka tareeka</Link>.
+          </p>
 
           <WB>
             <strong>Zara Savdhan Rahein:</strong> Kuch operators "service charge" ya "processing fee" bata kar ₹100-200 extra maang lete hain. Registration free hai — sirf pehla monthly contribution dena hota hai, koi alag fee nahi. Koi zyada maange toh CSC helpline 1800-300-8380 par complaint karein.
@@ -286,6 +290,19 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
         </section>
 
         <section className="mb-8">
+          <SH>Register Hone Ke Baad Pehle 3 Mahine — Kya Dekhte Rehna Hai</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Zyada log yahi galti karte hain: enroll karke bhool jaate hain. Pehle 2-3 mahine bank passbook ya SMS mein ye confirm karte rahein ki contribution har mahine sach mein kat raha hai. Auto-debit kabhi-kabhi pehli baar mein set nahi hota — mandate pending reh jata hai ya account mein us din balance nahi hota. Contribution miss hua toh scheme turant band nahi hoti, lekin bakaya interest ke saath regularize karna padta hai — jitna late, utna bojh.
+          </p>
+          <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] leading-relaxed mb-4 space-y-2">
+            <li>Har mahine debit ka SMS check karein — na aaye toh passbook update karwa kar dekhein</li>
+            <li>Account mein contribution ki date ke aas-paas balance rakhein (₹55–₹200 hi toh hai)</li>
+            <li>Debit fail ho jaye toh turant CSC ya bank jaakar mandate dobara set karwayein — <Link href="/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein" className="underline text-blue-600 dark:text-blue-400">regularization ka poora tareeka yahan hai</Link></li>
+            <li>KPAN number aur pehli receipt ek jagah sambhal kar rakhein — aage har kaam isi se hoga</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
           <SH>Register Karne Se Pehle Ek Aakhri Sawal</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Agar aap soch rahe hain ki Maandhan lein ya Atal Pension Yojana — register karne se PEHLE comparison padh lein, kyunki ek waqt mein ek hi pension scheme active reh sakti hai:
@@ -299,6 +316,9 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
           <SH>Registration Mein Dikkat Aaye Toh Kahan Karein Complaint?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Application pending reh jaye ya koi technical dikkat aa jaye, toh ghabrane wali baat nahi. Har state ke liye sarkar ne alag grievance mechanism banaya hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Sabse seedha rasta: scheme ki apni helpline <strong>1800-267-6888</strong> (maandhan.in par listed) — subah call karein, dopahar mein line aksar busy milti hai. CSC operator se judi dikkat ho (extra paisa manga, galat details bhari) toh CSC toll-free 1800-3000-3468 alag number hai, dono ko mix mat kijiye.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Official PM Kisan portal par apne state ke nodal officer ki updated contact details mil jayengi. Complaint karte waqt Registration Number aur Application Date likh kar mention karein taaki resolution jaldi ho. PMKMY ke saare verified helpline numbers, official email addresses aur shikayat darj karne ka poora tareeka humne <Link href="/maandhan/pmkmy-grievance-complaint-helpline" className="underline text-green-700 dark:text-green-400">PMKMY helpline & grievance guide</Link> mein ek jagah rakha hai.

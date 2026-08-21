@@ -124,7 +124,7 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
     ],
     category: 'farming',
     publishedTime: '2026-08-18T21:00:00+05:30',
-    modifiedTime: '2026-08-20T14:00:00+05:30',
+    modifiedTime: '2026-08-21T21:30:00+05:30',
     author: AUTHOR_NAME,
     component: 'PashuKisanCreditCardHindi',
     ogImage: '/og-image.webp',
