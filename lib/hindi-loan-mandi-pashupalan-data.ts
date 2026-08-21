@@ -45,7 +45,7 @@ export const HINDI_LOAN_MANDI_PASHUPALAN_ARTICLES: readonly HindiArticle[] = [
     ],
     category: 'pashupalan',
     publishedTime: '2026-08-13T18:55:46+05:30',
-    modifiedTime: '2026-08-14T05:45:00+05:30',
+    modifiedTime: '2026-08-21T15:10:00+05:30',
     author: AUTHOR_NAME,
     component: 'GauMutraKharidYojanaHindi',
     ogImage: '/images/gau-mutra-yojana-hindi-og.webp',

@@ -42,32 +42,12 @@ const FAQS_DATA = [
     a: 'Fasal ki qataar clear hai — ganna, cotton, sabziyan, bagwani — to drip. Gehu, makka, dalhan, tilhan jaisi ghani fasal, ya sandy aur uneven zameen — to sprinkler. Bagwani mein drip ka fertigation fayda sabse zyada dikhta hai, kyunki khaad bhi paani ke saath jad tak jaati hai.',
   },
   {
-    q: 'Subsidy ka hisaab kaise nikaalein — per acre kitna rupaya banta hai?',
-    a: 'Per-acre rupee figure is page par jaan-boojh kar nahi diya gaya, kyunki unit cost state aur system ke hisaab se badalta hai. Formula ye hai: apne area ke liye state ki notified indicative unit cost nikaalein, apni category (55% ya 45%) tay karein, subsidy = unit cost × rate, aur state top-up sirf tab jodein jab wo state order mein likha ho. Aapka kharcha = vendor ka final bill − subsidy.',
-  },
-  {
     q: 'Ek hi zameen par dobara subsidy kab milegi?',
     a: 'Assistance ek beneficiary ko 5 hectare tak ke area par milti hai, aur usi zameen par dobara subsidy 7 saal baad hi milti hai. Isi wajah se pehli baar system lagwate waqt hi crop plan theek se soch lena zaroori hai. Release DBT route se hota hai, isliye Aadhaar-linked bank account chahiye.',
   },
   {
-    q: 'Quotation notified unit cost se zyada ho gaya to kya hota hai?',
-    a: 'Poora extra hissa aapki jeb se jaata hai — ye sabse aam surprise hai. Subsidy notified cost par nikalti hai, vendor ke bill par nahi. Baaki hissa cash mein na de sakein to KCC ke through credit ek raasta hai; byaaj aur eligibility apne bank se confirm karein.',
-  },
-  {
     q: 'Approval se pehle material khareed lein to claim ka kya hota hai?',
     a: 'Bina approval ki purchase aksar reject hoti hai aur wo nuksan poora aapka hota hai. Sahi sequence hai: state portal par application, field survey aur technical estimation (yahin aapki actual subsidy figure banti hai — ise likhit mein lein), empanelled vendor se quotation, approval, phir kharidari; installation ke baad dobara verification, phir DBT release.',
-  },
-  {
-    q: 'System ke kis component par paisa bachana sabse mehenga padta hai?',
-    a: 'Filtration unit par. Sabse zyada kanjoosi wahin hoti hai aur sabse zyada nuksan bhi — filter chhota pad gaya to emitters ka choke hona tay hai. Khaare ya retiley paani mein filtration ke saath flushing ka schedule lazmi hai, aur chemical treatment ka interval apne system ke manufacturer manual se lein, andaze se nahi.',
-  },
-  {
-    q: 'Apne state ka asli rate aur cost norms kahan se pata karein?',
-    a: 'Apne state ke agriculture ya horticulture department portal par "micro irrigation" ya "PDMC" section kholein aur teen cheezein download karein — current financial year ki cost norms list, top-up percentage wala order, aur empanelled vendor list. Jo baat in PDFs mein nahi hai wo aapke case mein applicable nahi maani jaayegi, chahe vendor kuch bhi kahe.',
-  },
-  {
-    q: 'Solar pump bhi isi ke saath jod sakte hain?',
-    a: 'Haan — PM-KUSUM Component B ke tahat standalone solar agriculture pump par central financial assistance 30% hoti hai (special category areas jaise NE states, J&K, Himachal, Uttarakhand mein 50%), aur state ka hissa aam taur par kam se kam 30%, jisse kisan ka share 10–40% ke beech aata hai. Subsidy benchmark ya tender cost — jo kam ho — us par milti hai. Apne state nodal agency se current split confirm karein.',
   },
 ];
 

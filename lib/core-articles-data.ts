@@ -976,7 +976,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'DripSprinkler',
     category: 'agri-business',
     publishedTime: '2026-07-12T05:41:02+05:30',
-    modifiedTime: '2026-08-17T04:17:55+05:30',
+    modifiedTime: '2026-08-21T15:10:00+05:30',
     readingTime: 15,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('drip-sprinkler-irrigation-subsidy'),
