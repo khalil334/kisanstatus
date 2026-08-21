@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
@@ -21,10 +22,6 @@ const FAQS = [
   {
     q: 'धान छोड़कर दूसरी फसल लगाऊं तो ₹15,000 प्रति एकड़ वाला फायदा कैसे मिलेगा?',
     a: 'खरीफ 2026 से यह नया कम्पोनेंट शुरू हुआ है — धान की जगह दलहन, तिलहन, मक्का, कोदो-कुटकी, रागी या कपास लेने पर प्रति एकड़ इनपुट सहायता। इसका हिसाब AgriStack पंजीयन और डिजिटल फसल सर्वे से चलेगा, इसलिए पहला कदम अपना farmer registration और फसल की डिजिटल एंट्री सही करवाना है। सर्वे में फसल दर्ज नहीं तो claim बनता ही नहीं।',
-  },
-  {
-    q: 'खाते में हिसाब से कम रकम आई — कहां शिकायत करूं?',
-    a: 'पहले पासबुक की debit एंट्री देखिए — minimum balance charge, loan की EMI का auto-debit या KCC की वसूली से रकम कम दिख सकती है; योजना की तरफ से कोई कटौती नहीं होती। रकम सच में कम बनी है तो समिति से खरीदी की मात्रा मिलाइए। दोनों जगह सही होने पर अपने क्षेत्र के खाद्य विभाग कार्यालय में खरीदी ID के साथ लिखित शिकायत दीजिए और पावती लीजिए।',
   },
 ];
 
@@ -78,6 +75,21 @@ export default function KrishakUnnatiYojanaStatusHindi({ article }: { article: H
         तो पूछें किससे। कृषक उन्नति योजना का पूरा खेल इसी &lsquo;अंतर राशि&rsquo; का है,
         और यह लेख उसी का पूरा हिसाब है — मंडी की तौल से लेकर पासबुक के क्रेडिट तक।
       </p>
+
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/rajya-yojna/krishak-unnati-yojana-status-check-2026/hero.webp"
+          alt="छत्तीसगढ़ का धान किसान — कृषक उन्नति योजना"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          धान का समर्थन मूल्य + अंतर राशि — छत्तीसगढ़ का अपना ढांचा
+        </figcaption>
+      </figure>
 
       <Hd>अंतर राशि — सीधी भाषा में क्या है?</Hd>
 
@@ -164,6 +176,21 @@ export default function KrishakUnnatiYojanaStatusHindi({ article }: { article: H
         रहता है। फिर भी पुराने पैटर्न की आदत से &ldquo;दूसरी किश्त कब आएगी&rdquo; पूछने वाले बहुत हैं,
         इसलिए साफ लिख देते हैं: अब दूसरी किस्त होती ही नहीं।
       </p>
+
+      <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+        <Image
+          src="/images/articles/rajya-yojna/krishak-unnati-yojana-status-check-2026/payment-status-phone.webp"
+          alt="मोबाइल पर कृषक उन्नति योजना की भुगतान स्थिति"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          टोकन, समिति और बैंक — तीनों का रिकॉर्ड मिलाकर ही तस्वीर पूरी होती है
+        </figcaption>
+      </figure>
 
       <Hd>स्टेटस चेक — कहां और कैसे देखें</Hd>
 

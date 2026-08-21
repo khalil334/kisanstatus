@@ -200,7 +200,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 | 46 | ✅ 2026-08-21 | `/articles/hi/rajasthan-kisan-samman-nidhi` (0 imp) | `/articles/hi/annadata-sukhibhava-status` (0 imp) |
 | 47 | ✅ 2026-08-21 | `/articles/hi/rythu-bharosa-status` (0 imp) | `/articles/hi/krishak-bandhu-status` (0 imp) |
 | 48 | ✅ 2026-08-21 | `/articles/hi/odisha-cm-kisan-status` (0 imp) | `/articles/hi/pati-patni-pm-kisan-rule` (0 imp) |
-| 49 | ⬜ | `/articles/hi/state-kisan-yojana-list` (0 imp) | `/articles/hi/krishak-unnati-yojana-status` (0 imp) |
+| 49 | ✅ 2026-08-21 | `/articles/hi/state-kisan-yojana-list` (0 imp) | `/articles/hi/krishak-unnati-yojana-status` (0 imp) |
 | 50 | ⬜ | `/articles/hi/meri-fasal-mera-byora-status` (0 imp) | `/articles/hi/bihar-kisan-registration-status` (0 imp) |
 | 51 | ⬜ | `/articles/hi/parihara-payment-status` (0 imp) | `/articles/hi/up-kisan-karj-rahat-list` (0 imp) |
 | 52 | ⬜ | `/articles/hi/ikhedut-portal-status` (0 imp) | `/articles/hi/fasal-bima-claim-status` (0 imp) |

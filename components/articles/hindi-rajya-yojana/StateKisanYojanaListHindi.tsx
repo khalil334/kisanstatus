@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
 const FAQS = [
@@ -13,10 +14,6 @@ const FAQS = [
   {
     q: 'मेरा राज्य (UP/बिहार/हरियाणा/पंजाब) इस सूची में क्यों नहीं है?',
     a: 'क्योंकि वहां PM Kisan जैसी अलग सालाना नकद-सहायता योजना अभी नहीं चल रही। इसका मतलब यह नहीं कि कुछ नहीं मिलता — बिहार में डीजल अनुदान और कृषि इनपुट अनुदान हैं, हरियाणा में MSP खरीद का मेरी फसल मेरा ब्योरा सिस्टम है, UP में पुरानी कर्ज राहत के मामले निपट रहे हैं, गुजरात में iKhedut से सब्सिडी मिलती है। मदद का रास्ता अलग है, बंद नहीं है।',
-  },
-  {
-    q: 'राज्य बदलकर दूसरी जगह बस गया हूं — पुरानी किस्त मिलती रहेगी?',
-    a: 'नहीं। हर राज्य की योजना में वहां का निवासी होना और वहीं जमीन होना जरूरी शर्त है। शिफ्ट होते ही पुरानी जगह की पात्रता खत्म हो जाती है। नए राज्य में वहां के नियम से दोबारा पंजीकरण करना पड़ता है। PM Kisan पर इस बदलाव का असर नहीं पड़ता — वह पूरे देश की योजना है, बस रिकॉर्ड में पता अपडेट करवा लीजिए।',
   },
   {
     q: 'बटाईदार (किराए पर खेती करने वाले) को भी राज्य की योजना का पैसा मिलता है?',
@@ -150,6 +147,21 @@ export default function StateKisanYojanaListHindi({ article }: { article: HindiA
         नंबर WhatsApp फॉरवर्ड से नहीं लिया गया।
       </p>
 
+      <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+        <Image
+          src="/images/articles/rajya-yojna/state-kisan-yojana-list-all-states-2026/hero.webp"
+          alt="भारत के अलग-अलग राज्यों के खेत — राज्यवार किसान योजनाएं"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          हर राज्य का अपना जोड़ — केंद्र के ₹6,000 के ऊपर
+        </figcaption>
+      </figure>
+
       <Hd>पूरी तस्वीर एक टेबल में — राज्य, योजना, रकम</Hd>
 
       <p>
@@ -270,6 +282,21 @@ export default function StateKisanYojanaListHindi({ article }: { article: HindiA
         <Link href="/rajya-yojana/krishak-unnati-yojana-status-check-2026">कृषक उन्नति गाइड</Link>{' '}
         में है।
       </p>
+
+      <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
+        <Image
+          src="/images/articles/rajya-yojna/state-kisan-yojana-list-all-states-2026/india-farm-fields.webp"
+          alt="खेतों का दृश्य — जिन राज्यों में सीधी नकद योजना नहीं"
+          width={1200}
+          height={675}
+          className="w-full object-cover"
+          sizes="(max-width: 768px) 100vw, 768px"
+          loading="lazy"
+        />
+        <figcaption className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
+          नकद योजना न होने का मतलब मदद न होना नहीं — रूप अलग है
+        </figcaption>
+      </figure>
 
       <Hd>जिन राज्यों में सीधी नकद योजना नहीं — वहां क्या है?</Hd>
 
