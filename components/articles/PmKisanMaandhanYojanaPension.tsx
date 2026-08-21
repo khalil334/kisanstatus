@@ -5,7 +5,7 @@ import CountdownRedirectButton from '@/components/CountdownRedirectButton';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-13T17:44:35+05:30';
-const MODIFIED = '2026-08-20T20:15:00+05:30';
+const MODIFIED = '2026-08-22T00:20:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
@@ -28,7 +28,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Agar beech mein paisa dena band kar dein toh?',
-    a: 'Pension cancel nahi hoti. Aap jab chahein dobara shuru kar sakte hain. Jo paisa jama hua wo safe rehta hai.',
+    a: 'Account default mein chala jata hai. Pehle mahine koi late fee nahi; uske baad savings-bank rate jitna byaj lagta hai, aur 6 mahine baad account dormant ho jata hai. Achhi baat ye ki 3 saal tak poora bakaya + byaj dekar account dobara regular ho sakta hai — jama paisa doobta nahi.',
   },
   {
     q: 'Ye scheme PM Kisan Samman Nidhi ke sath le sakte hain?',
@@ -36,7 +36,7 @@ const FAQS_DATA = [
   },
   {
     q: '60 saal se pehle maut ho gayi toh?',
-    a: 'Patni ko 50% pension milti hai. Agar patni bhi nahi hai, toh jama kiya hua paisa nominee ko wapas mil jata hai with interest.',
+    a: 'Do raste hain: jeevansathi (spouse) chahe to bacha hua contribution bhar kar account chalu rakh sakta hai aur 60 par poori pension le sakta hai; ya exit karke kisan ka jama hissa byaj ke saath wapas le sakta hai. 50% wali family pension (₹1500) tab lagti hai jab maut pension shuru hone ke BAAD ho.',
   },
   {
     q: 'Kaise apply karein?',
@@ -413,16 +413,12 @@ export default function PmKisanMaandhanYojanaPension() {
                 solution: 'Bank account mein sufficient balance rakho. Agar account band ho gaya toh naya account link karo.'
               },
               {
-                problem: 'Pension nahi aa rahi 60 ke baad',
-                solution: 'LIC pension office mein contact karo. Apna enrollment number aur Aadhaar le jao.'
-              },
-              {
                 problem: 'Naam ya details galat daal diye',
-                solution: 'CSC center par jakar correction form bharein. ₹20-30 lagenge.'
+                solution: 'CSC center par jakar correction karwao. Enrollment ke waqt hi Aadhaar se milaan kar lena sabse sasta bachav hai.'
               },
               {
                 problem: '2-3 mahine contribution miss ho gaya',
-                solution: 'Koi baat nahi. Jab bhi ho sake, missed amount jama kar do. Pension cancel nahi hoti.'
+                solution: 'Jitni jaldi ho sake bakaya jama karo. Pehla mahina bina fee ke regularize hota hai; uske baad savings-bank rate jitna byaj lagta hai. 6 mahine se zyada kheenchne par account dormant ho jata hai.'
               },
               {
                 problem: 'State change ho gaya (ek state se dusre)',
@@ -475,27 +471,14 @@ export default function PmKisanMaandhanYojanaPension() {
         </section>
 
         <section className="mb-8">
-          <SH>State Wise Implementation</SH>
+          <SH>Ye Scheme Kahan Lagu Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ye scheme pure India mein lagu hai. Lekin kuch states mein iski popularity zyada hai:
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {[
-              { state: 'Uttar Pradesh', note: 'Sabse zyada enrollments. Har block mein CSC hai.' },
-              { state: 'Bihar', note: 'Bahut popular hai. Free camps lagte hain.' },
-              { state: 'Madhya Pradesh', note: 'Mukhyamantri Kisan Kalyan ke saath combine benefit.' },
-              { state: 'Rajasthan', note: 'Desert areas mein bahut kaam aa raha hai.' },
-              { state: 'Maharashtra', note: 'Vidarbha ke cotton farmers join kar rahe hain.' },
-              { state: 'Punjab/Haryana', note: 'Chhote farmers ke liye best option.' },
-            ].map(({ state, note }) => (
-              <div key={state} className="p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-                <p className="font-black text-sm text-[var(--color-text)] mb-1">{state}</p>
-                <p className="text-xs text-[var(--color-text-muted)]">{note}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Apne state ke baare mein aur janne ke liye <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">state-wise page</Link> par jao. Wahan local CSC centers ki list milti hai.
+            Poore desh mein — ye Central Sector Scheme hai, isliye niyam, contribution
+            aur pension har state mein same hain. Enrollment ka rasta bhi har jagah wahi
+            hai: nazdeeki CSC center ya maandhan.in portal. Farq bas itna padta hai ki
+            aapke ilake mein CSC kitna paas hai aur operator ko is scheme ka process
+            kitna aata hai. Agar pehla CSC mana kar de ya confuse ho, doosre center par
+            try karo — ye aam experience hai, scheme ki kami nahi.
           </p>
         </section>
 
@@ -521,7 +504,7 @@ export default function PmKisanMaandhanYojanaPension() {
           </div>
           <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl">
             <p className="text-sm text-amber-800 dark:text-amber-300">
-              <strong>Correction Charges:</strong> Naam, DOB, ya bank details mein correction karne par ₹20-50 lagte hain. Isliye enrollment ke waqt details sahi check karo.
+              <strong>Details Ki Galti Mehngi Padti Hai:</strong> Naam, DOB ya bank details galat chali gayi to correction ke liye CSC ke chakkar lagte hain. Enrollment ke waqt hi Aadhaar se har detail milaan kar lo — yahi sabse sasta bachav hai.
             </p>
           </div>
         </section>

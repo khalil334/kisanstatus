@@ -190,7 +190,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 | 36 | ✅ 2026-08-21 | `/articles/gau-mutra-kharid-yojana-up-2026` (34 imp) | `/maandhan/pm-kisan-maandhan-eligibility-documents` (27 imp) |
 | 37 | ✅ 2026-08-21 | `/articles/hi/namo-drone-didi-yojana` (26 imp) | `/articles/vermi-compost-business-guide` (22 imp) |
 | 38 | ✅ 2026-08-21 | `/articles/pm-fme-yojana-food-processing` (18 imp) | `/articles/PmKusumYojanaSolarSubsidy2026` (16 imp) |
-| 39 | ⬜ | `/maandhan/pm-kisan-maandhan-auto-debit-poora-sach` (15 imp) | `/articles/PmKisanMaandhanYojanaPension` (12 imp) |
+| 39 | ✅ 2026-08-21 | `/maandhan/pm-kisan-maandhan-auto-debit-poora-sach` (15 imp) | `/articles/PmKisanMaandhanYojanaPension` (12 imp) |
 | 40 | ⬜ | `/articles/namo-drone-didi-yojana-shg-selection` (12 imp) | `/maandhan/family-pension-rules` (11 imp) |
 | 41 | ⬜ | `/articles/drip-sprinkler-irrigation-subsidy` (1 imp) | `/articles/hi/gau-mutra-kharid-yojana` (1 imp) |
 | 42 | ⬜ | `/rajya-yojana/ikhedut-portal-status-check-2026` (1 imp) | `/articles/PmKisanEkycOnline2026` (0 imp) |

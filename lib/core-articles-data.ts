@@ -660,8 +660,8 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisanMaandhanYojanaPension',
     title: 'PM Kisan Maandhan 2026: ₹3000 Pension',
-    seoTitle: 'PM Kisan Maandhan Yojana — ₹3000 Pension',
-    desc: 'Chhote kisanon ke liye pension scheme. 18-40 saal ki umar mein join karo, 60 ke baad ₹3000 har mahine pao. Contribution table + apply process.',
+    seoTitle: 'PM Kisan Maandhan Yojana — ₹3000 Pension Kaise',
+    desc: 'Kisan pension yojana: 18-40 umar mein join karo, ₹55-200 mahina do, 60 ke baad ₹3000 pension lo. Eligibility, mandhan chart aur CSC se apply ka tarika.',
     ogTitle: 'PM Kisan Maandhan Yojana Guide',
     keywords: [
       'pm kisan maandhan yojana',
@@ -676,7 +676,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisanMaandhanYojanaPension',
     category: 'farming',
     publishedTime: '2026-07-09T06:45:51+05:30',
-    modifiedTime: '2026-08-20T20:15:00+05:30',
+    modifiedTime: '2026-08-22T00:20:00+05:30',
     readingTime: 16,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisanMaandhanYojanaPension'),
