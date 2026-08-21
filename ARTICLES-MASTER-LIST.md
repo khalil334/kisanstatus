@@ -180,7 +180,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 | 26 | ✅ 2026-08-21 | `/rajya-yojana/krishak-unnati-yojana-status-check-2026` (77 imp) | `/maandhan/pmkmy-grievance-complaint-helpline` (76 imp) |
 | 27 | ✅ 2026-08-21 | `/articles/silage-making-business-guide` (75 imp) | `/articles/enam-registration-kaise-kare` (75 imp) |
 | 28 | ✅ 2026-08-21 | `/articles/PmKisanRejectedStatusReApplyGuide` (73 imp) | `/articles/KisanTractorLoan2026` (69 imp) |
-| 29 | ⬜ | `/articles/PmKisanCorrectionForm2026` (67 imp) | `/articles/rashtriya-gokul-mission-subsidy` (64 imp) |
+| 29 | ✅ 2026-08-21 | `/articles/PmKisanCorrectionForm2026` (67 imp) | `/articles/rashtriya-gokul-mission-subsidy` (64 imp) |
 | 30 | ⬜ | `/articles/PmKisanBankAccountChangeProcess` (63 imp) | `/maandhan/pm-kisan-maandhan-pension-calculator` (63 imp) |
 | 31 | ⬜ | `/articles/soil-health-card-complete-guide-2026` (61 imp) | `/articles/PmKisan25viKist2027` (50 imp) |
 | 32 | ⬜ | `/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana` (47 imp) | `/articles/PmKisanVoluntarySurrenderGuide` (43 imp) |

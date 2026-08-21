@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-25T21:37:17+05:30';
-const MODIFIED = '2026-08-20T13:00:00+05:30';
+const MODIFIED = '2026-08-21T18:40:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change' },
@@ -20,7 +20,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya correction ke baad ruki hui kist mil jayegi?',
-    a: 'Haan bhai, 100% milegi. Jab details fix ho jayengi, toh pichhli saari pending kistein ek saath aa jayengi.',
+    a: 'Zyadatar cases mein haan. Agar aap eligible the aur sirf details (naam/bank/IFSC) ki wajah se payment ruki thi, toh details fix hone ke baad pending kistein release ho jaati hain. Lekin agar aap us period mein eligible hi nahi the (jaise income tax filer), toh ruka paisa nahi milta.',
   },
   {
     q: 'Naam correction online karne ke liye PM Kisan mein kaunse documents chahiye?',
@@ -72,7 +72,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
       <div className="container-site max-w-3xl py-8">
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Dekho bhai, PM Kisan ki baat ho rahi hai toh sabse pehli problem jo har kisan ko aati hai — <strong>galat details</strong>.
+          PM Kisan ki baat ho rahi hai toh sabse pehli problem jo har kisan ko aati hai — <strong>galat details</strong>.
         </p>
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Haan, bilkul wahi. Naam mein spelling mistake, bank account number galat, IFSC code mismatch, Aadhaar seeding error... ye sab chhoti chhoti cheezein lagti hain lekin inki wajah se <strong>poori kist ruk jaati hai</strong>.
@@ -108,7 +108,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
           <div className="space-y-3 mb-4">
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
               <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">Naam Spelling Mismatch</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Portal par ek spelling, bank mein dusri, Aadhaar par teesri. PFMS ko exact match chahiye. "Kumar" aur "Kumaar" mein bhi fark padta hai bhai.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Portal par ek spelling, bank mein dusri, Aadhaar par teesri. PFMS ko exact match chahiye. "Kumar" aur "Kumaar" mein bhi fark padta hai.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
               <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">Wrong IFSC Code / Bank Account Issue</p>
@@ -116,7 +116,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
               <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">Aadhaar Seeding Nahi Hui</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Aadhaar link toh hai lekin NPCI mapper mein seeding nahi hui. Ye alag cheez hai bhai. Aksar log sochte hain ki Aadhaar link hone ke baad bhi payment kyun fail hua — yahi wajah hoti hai.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Aadhaar link toh hai lekin NPCI mapper mein seeding nahi hui — ye do alag cheezein hain. Aksar log sochte hain ki Aadhaar link hone ke baad bhi payment kyun fail hua; yahi wajah hoti hai. Poora tarika <Link href="/articles/hi/npci-aadhaar-seeding" className="underline">NPCI seeding guide</Link> mein hai.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
               <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">Gender/DOB ya Mobile Number Galat</p>
@@ -176,7 +176,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
             Wo apna system khol ke edit details wale section mein jaayega. Tumhara Aadhaar number aur mobile number maangega. Biometric (fingerprint) se verify karega aur details update kar dega.
           </p>
           <WB>
-            <strong>Kitna Kharcha?</strong> CSC wale ₹20 se ₹30 lete hain is kaam ke liye. Ye official charge hai. Agar koi ₹100-200 maang raha hai toh usko mat do, dusre center par chale jao. Kuch log form ka PDF khud download karke offline bharne ki koshish karte hain, lekin online submission ke liye CSC ya portal hi zaroori hai.
+            <strong>Kitna Kharcha?</strong> CSC par is kaam ka charge aam taur par ₹20 se ₹30 ke aas-paas hota hai. Agar koi ₹100-200 maang raha hai toh usko mat do, dusre center par chale jao. Kuch log form ka PDF khud download karke offline bharne ki koshish karte hain, lekin online submission ke liye CSC ya portal hi zaroori hai.
           </WB>
           <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
             <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">Self Correction vs CSC Correction — Kaunsa Behtar?</p>
@@ -189,7 +189,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
         <section className="mb-8">
           <SH>Bank Account Correction Alag Se Kaise Kare (Bank Branch Visit)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ek baat samajh lo bhai — bank account update karna portal se alag process hai. Portal par tum naya number daal sakte ho, lekin agar bank ke system mein Aadhaar seeding nahi hai toh paisa aayega nahi.
+            Ek baat samajh lo — bank account update karna portal se alag process hai. Portal par tum naya number daal sakte ho, lekin agar bank ke system mein Aadhaar seeding nahi hai toh paisa aayega nahi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Isliye pehle bank jao. Branch manager se milo aur bolo: <em>"Mera PM Kisan ka paisa nahi aa raha, please Aadhaar seeding kar do aur NPCI mapping check kar lo."</em>
@@ -232,7 +232,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
             Sabse bada sawal — correction ke baad kitne din mein paisa aayega? Jab details verify ho jayengi, agli scheduled kist mein paisa aa jayega. Agar beech mein kist release hui thi aur tumhari miss ho gayi thi, toh arrears ke roop mein 15-30 din mein extra amount credit hoga.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Aur ruki hui kist ka kya? Jab details fix ho jayengi, toh pichhli saari pending kistein ek saath aa jayengi. Koi paisa nahi dooba.
+            Aur ruki hui kist ka kya? Agar aap eligible the aur sirf details ki galti se payment ruki thi, toh fix hone ke baad pending kistein release ho jaati hain. Haan, agar us period mein aap eligible hi nahi the, toh woh paisa nahi milta — iska niyam alag hai.
           </p>
         </section>
 

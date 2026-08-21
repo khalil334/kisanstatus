@@ -254,7 +254,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     component: 'RashtriyaGokulMissionSubsidy',
     category: 'pashupalan',
     publishedTime: '2026-05-18T09:22:20+05:30',
-    modifiedTime: '2026-05-23T16:51:28+05:30',
+    modifiedTime: '2026-08-21T18:40:00+05:30',
     readingTime: 11,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('rashtriya-gokul-mission-subsidy'),
