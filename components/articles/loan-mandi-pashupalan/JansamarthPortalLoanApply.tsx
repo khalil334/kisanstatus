@@ -12,18 +12,6 @@ const RELATED = [
 
 const FAQS_DATA = [
   {
-    q: 'JanSamarth portal kya hai — bank hai ya sarkari website?',
-    a: 'JanSamarth (jansamarth.in) Bharat sarkar ka online platform hai jo credit-linked sarkari schemes ko ek jagah le aata hai. Yeh khud loan nahi deta — yeh aapki eligibility check karke aapki application platform se jude banks tak pahunchata hai. Sanction aur disbursement aapke chune hue bank se hi hota hai.',
-  },
-  {
-    q: 'Portal par kaunse loan milte hain?',
-    a: 'Chaar badi categories hain — agriculture/agri-infrastructure loan (KCC samet), business loan (Mudra, PM SVANidhi jaise), livelihood loan aur education loan. Har category ke neeche alag-alag sarkari schemes judi hain. Kisan ke liye sabse kaam ki cheez KCC/crop loan aur agri-infra wali category hai.',
-  },
-  {
-    q: 'JanSamarth se KCC apply karne ke liye kya chahiye?',
-    a: 'Aadhaar (mobile number linked hona zaroori — OTP isi par aata hai), AgriStack wali Farmer ID, bank account details aur PAN. Zameen aapke naam par honi chahiye, kyunki abhi ka digital flow zameen ke record se hi eligibility nikalta hai.',
-  },
-  {
     q: 'Kya JanSamarth par apply karna free hai?',
     a: 'Bilkul free. Na registration ki fee hai, na application ki. Agar koi cyber cafe ya agent "portal ki fee" ke naam par paisa maange toh woh sirf apni service fee le raha hai — portal ka usse koi lena-dena nahi. Form khud bharna sabse safe hai.',
   },
@@ -32,20 +20,8 @@ const FAQS_DATA = [
     a: 'Portal par shuruati eligibility check aapke basic details aur scheme rules par hota hai. Haan, jab aap aage badh kar formal application karte ho toh bank apna credit check karta hai — yeh normal process hai, har loan mein hota hai. Sirf eligibility dekhne se ghabrane ki zaroorat nahi.',
   },
   {
-    q: 'Application submit karne ke baad kitne din mein jawab aata hai?',
-    a: 'Digital flow mein initial approval kaafi tez milta hai — kai cases mein usi baithak mein offer dikh jata hai. Lekin final sanction aur disbursement bank ke process par depend karta hai, jisme verification bhi shamil hai. Application ka status portal par real-time track hota hai, wahi dekhte raho.',
-  },
-  {
     q: 'Mujhe portal par "not eligible" dikha raha hai, ab kya karoon?',
     a: 'Pehle wajah samjho — aksar Farmer ID ka na hona, Aadhaar-mobile link na hona, ya zameen ka record match na karna hota hai. Yeh teeno cheezein theek karke dobara try karo. Agar phir bhi issue hai toh seedha apni branch mein jaakar offline apply kar sakte ho — portal ek raasta hai, ekmatra raasta nahi.',
-  },
-  {
-    q: 'Kya JanSamarth se private bank ka loan bhi milta hai?',
-    a: 'Platform se sarkari banks, private banks aur doosri financial institutions judi hain — application ke waqt aapko available lenders ke offers dikhte hain. Offer compare karke apni pasand ka lender chun sakte ho. Rate aur terms har lender ke apne hote hain, isliye compare karna mat bhoolna.',
-  },
-  {
-    q: 'JanSamarth aur bank ki apni website — kahan se apply karna behtar hai?',
-    a: 'Dono sahi raaste hain. JanSamarth ka fayda yeh hai ki ek hi jagah kai schemes ki eligibility dikh jaati hai aur subsidy-linked schemes ka process bhi wahi se hota hai. Agar aapko pata hai ki kaunsa bank aur kaunsa product chahiye, toh bank ki website ya branch bhi utni hi theek hai.',
   },
   {
     q: 'Password bhool gaya / OTP nahi aa raha — kya karoon?',
@@ -71,7 +47,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
-            <span>Last Updated: 05/08/2026</span>
+            <span>Last Updated: 21/08/2026</span>
             <span>10 min read</span>
           </div>
         </div>
@@ -101,7 +77,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 05/08/2026</strong>
+          <strong>Last Updated: 21/08/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -247,6 +223,22 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           portalName="jansamarth.in"
         />
 
+        <SH>Mudra Loan Bhi Isi Portal Se — Kaam-Dhandhe Walon Ke Liye</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Kheti ke saath-saath jo parivar doodh ka kaam, kirana, silai, ya koi chhota dhandha chalate hain, unke liye
+          isi portal ki Business category mein <strong>Mudra (PMMY)</strong> ka raasta hai — bina collateral ke.
+          Mudra ke teen level hain: <strong>Shishu</strong> (₹50,000 tak, bilkul naya kaam shuru karne walon ke
+          liye), <strong>Kishor</strong> (₹50,000 se ₹5 lakh tak, chalta hua kaam badhane ke liye) aur{' '}
+          <strong>Tarun</strong> (₹5 se ₹10 lakh tak). Budget 2024 mein ek naya level bhi juda — jo log Tarun ka
+          loan lekar time par chuka chuke hain, unke liye limit ₹20 lakh tak (Tarun Plus) kar di gayi.
+        </p>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Gaon ke liye iska matlab seedha hai — bhains kharidni hai, atta chakki lagani hai, ya kiraye ki dukaan
+          shuru karni hai, toh KCC ke alawa yeh doosra darwaza hai. Process wahi hai jo upar steps mein likha:
+          eligibility check, phir lender chun kar apply. Dhyan itna rakhna ki Mudra dhandhe ke liye hai, kheti ki
+          fasal ke kharche ke liye nahi — fasal ke liye KCC hi sahi jagah hai.
+        </p>
+
         <SH>Kitna Time Lagta Hai — Sach Bataein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Portal ka digital hissa tez hai — eligibility minutes mein, aur kai cases mein initial approval bhi screen par hi
@@ -279,6 +271,23 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           cheezein har baat-cheet mein saath rakho; follow-up wahi kisan jeet-ta hai jiske paas record hota hai.
         </p>
 
+        <SH>Documents Ki Poori List — Ek Nazar Mein</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-3">
+          Category koi bhi ho, core documents wahi chaar-paanch hain. Farak bas itna hai ki kis kaam ke liye kya
+          extra lagta hai:
+        </p>
+        <ul className="list-disc pl-5 space-y-1.5 text-sm text-[var(--color-text)] mb-4">
+          <li><strong>Har application ke liye:</strong> Aadhaar (mobile linked), PAN, bank account details, passport-size photo.</li>
+          <li><strong>KCC/crop loan:</strong> upar ke saath Farmer ID aur zameen ka record (khasra/khatauni) — digital flow mein yeh Farmer ID se khud aa jata hai.</li>
+          <li><strong>Mudra/business:</strong> dhandhe ka thoda sa hisaab — kya kaam hai, kitna kharcha, kitni kamai ka andaza. Bada project report nahi chahiye, par saaf jawab chahiye.</li>
+          <li><strong>Education loan:</strong> admission letter aur course ki fee structure.</li>
+        </ul>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Ek chhoti si tip — in sab ki photo apne phone mein ek alag folder bana kar rakh lo. Portal par upload
+          karte waqt idhar-udhar dhoondhne mein hi aadha ghanta nikal jata hai, aur session timeout ho jaye toh
+          dobara shuru karna padta hai.
+        </p>
+
         <SH>In Galtiyon Se Bacho</SH>
         <StepList>
           <SI n={1}><strong>Agent ke bharose sab chhod dena</strong> — OTP aur login aapka hai, kisi ko mat do. Fraud ka sabse bada raasta yahi hai.</SI>
@@ -296,6 +305,17 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           className="w-full h-auto rounded-xl my-5"
           sizes="(max-width: 768px) 100vw, 768px"
         />
+
+        <SH>CSC Se Bhi Ho Sakta Hai — Jinke Paas Smartphone Nahi</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          Ghar mein smartphone ya computer nahi hai toh nazdeeki CSC (Common Service Centre) se bhi yahi process karwa
+          sakte ho — operator aapke saamne portal par form bharega. Do baatein wahan bhi apne haath mein rakhna. Pehli,
+          OTP aapke phone par aayega, operator ko sirf padh kar batao, phone haath mein mat do. Doosri, submit se pehle
+          operator se kaho ki bhara hua form ek baar poora padh kar sunaye — khaas kar naam ki spelling, account
+          number aur zameen ka khasra. CSC ki apni chhoti si tay service fee hoti hai, wo portal ki fee nahi hai —
+          receipt zaroor lena. Application number ki parchi ya screenshot ghar aakar sambhal kar rakho, aage har
+          baat isi number se hogi.
+        </p>
 
         <SH>KCC Ke Liye JanSamarth vs Branch — Kya Chunein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">

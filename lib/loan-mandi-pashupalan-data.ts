@@ -70,7 +70,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     component: 'JansamarthPortalLoanApply',
     category: 'loan',
     publishedTime: '2026-06-29T16:53:38+05:30',
-    modifiedTime: '2026-07-04T08:32:11+05:30',
+    modifiedTime: '2026-08-21T22:40:00+05:30',
     readingTime: 10,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('jansamarth-portal-loan-apply'),

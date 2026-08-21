@@ -249,7 +249,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     officialPortal: '',
     status: 'live',
     published: '2026-06-27T21:55:32+05:30',
-    modified: '2026-08-08T11:42:33+05:30',
+    modified: '2026-08-21T22:40:00+05:30',
     readTime: '12 min read',
     ogImage: '/images/articles/rajya-yojna/state-kisan-yojana-list-all-states-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026'],

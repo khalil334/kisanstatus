@@ -170,7 +170,7 @@ Kaam parts me hoga: **har part = 2 articles**. Ek part ke dono articles upgrade 
 | 16 | ✅ 2026-08-21 | `/articles/murgi-palan-loan-nlm-subsidy` (191 imp) | `/articles/mandi-bhav-today` (176 imp) |
 | 17 | ✅ 2026-08-21 | `/maandhan/pmkmy-bank-account-change` (168 imp) | `/rajya-yojana/krishak-bandhu-status-check-2026` (168 imp) |
 | 18 | ✅ 2026-08-21 | `/articles/hi/nayi-registration` (156 imp) | `/articles/PmKisanPaymentFailedFix2026` (155 imp) |
-| 19 | ⬜ | `/rajya-yojana/state-kisan-yojana-list-all-states-2026` (155 imp) | `/articles/jansamarth-portal-loan-apply` (152 imp) |
+| 19 | ✅ 2026-08-21 | `/rajya-yojana/state-kisan-yojana-list-all-states-2026` (155 imp) | `/articles/jansamarth-portal-loan-apply` (152 imp) |
 | 20 | ⬜ | `/articles/PmKisanBeneficiaryList2026` (140 imp) | `/articles/hi/recovery-notice` (137 imp) |
 | 21 | ⬜ | `/articles/PmKisanMasterGuide2026` (120 imp) | `/articles/dairy-farm-loan-without-collateral` (117 imp) |
 | 22 | ⬜ | `/maandhan/pm-kisan-maandhan-withdrawal-refund-rules` (113 imp) | `/articles/pm-kisan-self-registered-status-check` (107 imp) |

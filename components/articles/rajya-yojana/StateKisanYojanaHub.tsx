@@ -40,24 +40,12 @@ function Fig({
 
 const FAQS_DATA = [
   {
-    q: 'State ki yojana aur PM Kisan dono ek saath milti hain?',
-    a: 'Haan, zyadatar rajyon mein dono milti hain. Kendra sarkar apna ₹6,000 deti hai aur pradesh ki yojana us ke upar judti hai. Dono ke portal judaa hain, kiston ki dates bhi judaa hain, aur ek ka status doosre par asar nahi daalta. Sirf itna dhyan rakhein ki kai jagah beneficiary list kendriya data se hi banti hai, isliye wo record active rehna zaroori hai.',
-  },
-  {
     q: 'Kis state mein kisan ko sabse zyada paisa milta hai?',
     a: 'Fixed amount wali schemes mein Andhra Pradesh ki Annadata Sukhibhava sabse aage hai, jahan kendriya hissa milakar saal ka ₹20,000 tak banta hai. Lekin Telangana ka hisaab per acre chalta hai, isliye zyada zameen wale khetihar ko wahan isse bhi upar mil sakta hai. Seedha comparison mushkil hai kyunki har jagah ka model apna-apna hai.',
   },
   {
     q: 'Main ek state se doosre state shift ho gaya hoon, kya purani state ki kist milti rahegi?',
     a: 'Nahi. Har rajya ki yojana mein wahan ka nivasi hona zaroori shart hai. Shift hone par purani jagah ki eligibility khatam ho jaati hai. Naye pradesh mein wahan ke niyam ke hisaab se dobara register hona padta hai, aur zameen bhi wahin honi chahiye.',
-  },
-  {
-    q: 'Mere state ki koi kisan yojana kyun nahi hai?',
-    a: 'Har sarkar apna budget dekh kar faisla karti hai. Kai jagah cash transfer ki jagah bijli subsidy, karz maafi ya fasal bonus jaise doosre raaste chune gaye hain. Apne yahan ka naam is list mein na ho to iska matlab ye nahi ki koi madad nahi milti, bas seedha income-support model nahi hai. Apne krishi vibhag ki website par current schemes khud dekh lein.',
-  },
-  {
-    q: 'Rajya ki yojana ke liye kya alag se application deni padti hai?',
-    a: 'Ye apne yahan ke model par depend karta hai. MP aur Maharashtra kendriya data se khud hi list bana lete hain, wahan kuch nahi karna padta. West Bengal aur Odisha mein apna judaa panjikaran hai. Neeche har block mein ye baat saaf likhi hai.',
   },
   {
     q: 'Rajya ki kist nahi aayi lekin PM Kisan aata hai, kya karein?',
@@ -136,7 +124,7 @@ export default function StateKisanYojanaHub() {
   return (
     <article className="prose prose-lg max-w-4xl mx-auto">
 
-      <InfoBox type="update" date="06/08/2026">
+      <InfoBox type="update" date="21/08/2026">
         <strong>Latest Update:</strong> Neeche diye amounts har rajya ki official website aur
         hamare rajya-war guides se milaye gaye hain. Jahan current raqam confirm nahi ho paayi,
         wahan saaf likha hai ki site par khud dekh lein. Koi bhi figure WhatsApp forward se
