@@ -381,7 +381,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisan26viKist',
     title: '26vi Kist Kab Aayegi: Date & List',
-    seoTitle: '26vi Kist Kab Aayegi 2026 — Date, Beneficiary List, Status',
+    seoTitle: '26vi Kist Kab Aayegi 2026 — Date & Beneficiary List',
     desc: '26vi kist ki official date abhi nahi aayi — pehle 24vi aur 25vi ka cycle poora hoga. ₹2,000 hi milega. eKYC, NPCI seeding aur list mein naam check karo.',
     ogTitle: '26vi Kist Kab Aayegi — Date, List, Status',
     keywords: [
