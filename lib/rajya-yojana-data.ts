@@ -57,7 +57,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'ccrc cards ap gov in login',
       'ccrc card status check',
     ],
-    title: 'Annadata Sukhibhava — Status Aur Naam List Dono Aise Dekho',
+    title: 'Annadata Sukhibhava Status Aise Dekho',
     description:
       'AP me kist aayi ya nahi: Annadata Sukhibhava status check, beneficiary list me naam dhoondhna, CCRC wale bataidar ke rules aur paisa na aane ki wajah.',
     ogTitle: 'Annadata Sukhibhava Status Check — AP Kisan Yojana',
@@ -139,7 +139,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'rythu bharosa phase wise payment',
       'rythu bandhu vs rythu bharosa',
     ],
-    title: 'Rythu Bharosa Ka Paisa Aaya Ya Nahi — Check Karo',
+    title: 'Rythu Bharosa Ka Paisa Aaya Ya Nahi',
     description:
       'Rythu Bharosa status Aadhaar se check karein: ₹12,000 per acre ka hisaab, phase-wise payment (pehle phase mein sirf ek acre) aur paisa na aane par sahi fix.',
     ogTitle: 'Rythu Bharosa Status Check — Telangana Kisan Yojana',
@@ -164,7 +164,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'krishak bandhu payment date',
       'কৃষক বন্ধু status',
     ],
-    title: 'Krishak Bandhu Status — Voter ID Se 2 Minute Me',
+    title: 'Krishak Bandhu Status — Voter ID Se',
     description:
       'West Bengal Krishak Bandhu ka status Voter ID se kaise check karein, verification list, death benefit aur payment ki jaankari.',
     ogTitle: 'Krishak Bandhu Status Check — Voter ID Se',
@@ -263,7 +263,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'cg dhan bonus 3100 status',
       'krishak unnati yojana 15000 per acre',
     ],
-    title: 'Krishak Unnati Yojana — Status Check Ka Seedha Rasta',
+    title: 'Krishak Unnati Status Ka Seedha Rasta',
     description:
       'Chhattisgarh Krishak Unnati Yojana antar rashi ka status, ₹3,100 prati quintal ka hisaab, ekmusht payment aur Kharif 2026 se naya ₹15,000 prati acre component.',
     ogTitle: 'Krishak Unnati Yojana — Antar Rashi Aur Naya ₹15,000 Component',
@@ -288,7 +288,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'mfmb status check family id',
       'meri fasal mera byora payment status',
     ],
-    title: 'Meri Fasal Mera Byora — Registration Status Kaise Dekhe',
+    title: 'Meri Fasal Mera Byora Status Kaise Dekhe',
     description:
       'Meri Fasal Mera Byora status 5 minute me check karein — mobile, family ID ya CSC se. Rejected entry ka fix aur MSP payment atakne ke 4 karan bhi.',
     ogTitle: 'Meri Fasal Mera Byora Status — Registration Se MSP Tak',
@@ -313,7 +313,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'krishi input anudan status',
       'bihar kisan registration number kaise nikale',
     ],
-    title: 'DBT Agriculture Bihar — Paise Ka Status Yahan Dikhta Hai',
+    title: 'DBT Agriculture Bihar — Status Yahan Dikhega',
     description:
       'DBT Agriculture Bihar par registration number se anudan status check karein — diesel, krishi input, beej anudan aur kho gaya number nikalne ka poora raasta.',
     ogTitle: 'DBT Agriculture Bihar — Registration Aur Anudan Status',
@@ -363,7 +363,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'kisan karj rahat shikayat status',
       'up kisan karj mafi eligibility',
     ],
-    title: 'UP Karj Rahat List Me Naam Hai Ya Nahi — Aise Pata Karo',
+    title: 'UP Karj Rahat List Me Naam Aise Dekho',
     description:
       'UP Kisan Karj Rahat list me apna naam check karein, asli portal pehchaniye aur naam na hone par shikayat darj karne ka poora process jaaniye.',
     ogTitle: 'UP Kisan Karj Rahat List — Naam Check Aur Shikayat',
@@ -388,7 +388,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
       'ikhedut subsidy status check',
       'ikhedut arji number kaise nikale',
     ],
-    title: 'iKhedut Par Arji Ka Status — Gujarat Kisano Ke Liye',
+    title: 'iKhedut Par Arji Ka Status Aise Dekho',
     description:
       'iKhedut portal par arji status check karein, yojana list ki window dekhein aur reject hone ke 6 karan samjhein — subsidy ka stage-wise poora hisaab.',
     ogTitle: 'iKhedut Portal Status Check — Arji Se Subsidy Tak',

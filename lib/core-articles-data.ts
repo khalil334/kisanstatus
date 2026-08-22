@@ -537,7 +537,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisanFaceAuthenticationEkyc',
     title: 'Face Authentication: OTP Ke Bina Verify',
-    seoTitle: 'PM Kisan Face Authentication — OTP Ke Bina App Se Verify',
+    seoTitle: 'Face Authentication — OTP Ke Bina Verify',
     desc: 'OTP nahi aa raha? PMKisan app se face authentication karke bina OTP ke verification karo — 5 minute ka tarika, errors ke fix aur CSC ka sahi rate.',
     ogTitle: 'Face Authentication — OTP Ke Bina Verify Karne Ka Tarika',
     keywords: [
@@ -660,7 +660,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisanMaandhanYojanaPension',
     title: 'PM Kisan Maandhan Yojana Kya Hai — Puri ABCD',
-    seoTitle: 'PM Kisan Maandhan Yojana Kya Hai — Eligibility, Chart, Apply',
+    seoTitle: 'PM Kisan Maandhan Yojana Kya Hai — Puri ABCD',
     desc: 'Kisan pension yojana: 18-40 umar mein join karo, ₹55-200 mahina do, 60 ke baad ₹3000 pension lo. Eligibility, mandhan chart aur CSC se apply ka tarika.',
     ogTitle: 'PM Kisan Maandhan Yojana Guide',
     keywords: [
@@ -788,7 +788,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'mushroom-kheti-nhb-subsidy',
     title: 'Mushroom Kheti Shuru Karni Hai? NHB Subsidy Se Sasta',
-    seoTitle: 'NHB Mushroom Subsidy 2026 — Kheti Ka Hisaab',
+    seoTitle: 'Pehli Batch Kharab Kyun — Mushroom NHB Help',
     desc: 'NHB mushroom subsidy: general category ko ~40% back-ended capital subsidy. Apply process, 100-bag unit ka budget aur ₹40,000+ mahina profit plan.',
     ogTitle: 'Mushroom Kheti 2026 — Profit Guide',
     keywords: [
@@ -890,7 +890,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     slug: 'pm-fme-yojana-food-processing',
     title: 'PM FME Se ₹10 Lakh Tak — 35% Subsidy Ka Poora Math',
     desc: 'Achar, papad ya bakery unit? PM FME me 35% credit-linked subsidy, max ₹10 lakh. Eligibility, ODOP, documents aur apply ka poora process yahan.',
-    ogTitle: 'PM FME Yojana 2026 Food Subsidy',
+    ogTitle: 'Achar Papad Unit Ke Liye PM FME Subsidy',
     keywords: [
       'pm fme yojana 2026',
       'pm fme subsidy 35 percent',
@@ -939,7 +939,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     slug: 'vermi-compost-business-guide',
     title: 'Vermi Compost Me Kitna Profit — Poora Hisaab',
     desc: 'Vermi compost banakar bechne ka poora hisaab — 10-pit unit ka budget, per-kg profit, subsidy ke asli raste aur chhupe hue risks.',
-    ogTitle: 'Vermi Compost Business 2026 Guide',
+    ogTitle: 'Gobar Se Khaad Ka Business — Vermi Compost',
     keywords: [
       'vermi compost business 2026',
       'vermi compost kaise banayein',

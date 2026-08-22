@@ -112,7 +112,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   },
   {
     slug: 'pmkmy-grievance-complaint-helpline',
-    title: 'Maandhan Pension (PMKMY) Ki Shikayat Kahan Karein',
+    title: 'Maandhan (PMKMY) Ki Shikayat Kahan Karein',
     description: 'Maandhan pension yojana (PMKMY) me shikayat kaise karein — 155261 wali PM Kisan helpline se alag rasta hai. Helpline numbers, online grievance process, CSC complaint, aur common problems ka practical solution.',
     category: 'pension-scheme',
     published: '2026-05-11T20:55:01+05:30',
