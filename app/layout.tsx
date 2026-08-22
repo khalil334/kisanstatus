@@ -25,7 +25,12 @@ import {
 
 const poppins = Poppins({
   subsets: ['latin', 'devanagari'],
-  weight: ['400', '600', '700'],
+  // Perf: dropped the 600 weight — with only 400/700 loaded, CSS font-weight
+  // 600 resolves to 700 (nearest available), visually near-identical. This
+  // removes 2 preloaded woff2 files (~47KB latin+devanagari) from the critical
+  // path, which competes with the LCP hero text render.
+  weight: ['400', '700'],
+  adjustFontFallback: true,
   display: 'swap',
   variable: '--font-poppins',
   fallback: ['system-ui', 'sans-serif'],

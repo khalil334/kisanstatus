@@ -29,7 +29,10 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
-    optimizePackageImports: ['lucide-react', 'recharts', 'date-fns', 'framer-motion', 'react-icons', '@heroicons/react'],
+    // Trimmed to packages actually in package.json — the previous list
+    // (lucide-react, recharts, framer-motion, …) referenced deps that were
+    // never installed; dead config.
+    optimizePackageImports: [],
   },
 
   compiler: {
@@ -37,11 +40,6 @@ const nextConfig = {
     reactRemoveProperties: true,
   },
 
-  transpilePackages: [
-    '@radix-ui/react-dialog',
-    '@radix-ui/react-dropdown-menu',
-    '@radix-ui/react-popover',
-  ],
 
   async redirects() {
     return [
