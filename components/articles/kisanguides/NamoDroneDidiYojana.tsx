@@ -58,16 +58,6 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
       </div>
 
       <div className="container-site max-w-3xl py-8">
-        <DB>
-          <strong>Ek Nazar Mein — kaam ki baatein:</strong>
-          <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li>Mahila SHG ko drone package par <strong>80% madad, ₹8 lakh tak</strong> — baaki 20% ke liye AIF loan (3% interest subvention).</li>
-            <li><strong>Koi online form nahi hai.</strong> Selection DAY-NRLM ke SHG network se hota hai — block mission office pehla stop hai.</li>
-            <li>Training <strong>15 din</strong>: 5 din DGCA pilot training + 10 din kheti mein spray ka practical. 10th pass, 18+ age chahiye.</li>
-            <li>Target income <strong>₹1 lakh+ saalana</strong> per SHG — spray service ₹300-500 per acre ke aas-paas chalti hai.</li>
-            <li>March 2026 tak <strong>1,094 drones</strong> baant diye gaye; target 14,500-15,000 SHG ka hai — jagah abhi bhi hai.</li>
-          </ul>
-        </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
           <strong>Last Updated: 21/08/2026</strong>
@@ -105,6 +95,17 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           sizes="(max-width: 768px) 100vw, 800px"
           className="rounded-xl shadow-md mb-8 w-full object-cover not-prose"
         />
+
+        <DB>
+          <strong>Ek Nazar Mein — kaam ki baatein:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>Mahila SHG ko drone package par <strong>80% madad, ₹8 lakh tak</strong> — baaki 20% ke liye AIF loan (3% interest subvention).</li>
+            <li><strong>Koi online form nahi hai.</strong> Selection DAY-NRLM ke SHG network se hota hai — block mission office pehla stop hai.</li>
+            <li>Training <strong>15 din</strong>: 5 din DGCA pilot training + 10 din kheti mein spray ka practical. 10th pass, 18+ age chahiye.</li>
+            <li>Target income <strong>₹1 lakh+ saalana</strong> per SHG — spray service ₹300-500 per acre ke aas-paas chalti hai.</li>
+            <li>March 2026 tak <strong>1,094 drones</strong> baant diye gaye; target 14,500-15,000 SHG ka hai — jagah abhi bhi hai.</li>
+          </ul>
+        </DB>
 
         <SH>Yeh Scheme Hai Kya — Aasan Bhasha Mein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">

@@ -91,16 +91,6 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           />
         </div>
 
-        <DB>
-          <strong>TL;DR — kisan ke kaam ki 4 baatein:</strong>
-          <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li><strong>Muft AI</strong> darwaze par (NAIP) — koi form nahi, MAITRI technician ya pashu chikitsalay se sampark.</li>
-            <li><strong>IVF pregnancy par ₹5,000</strong> subsidy + HGM IVF bachhiya ke loan par <strong>3% interest subvention</strong> (March 2025 revision).</li>
-            <li><strong>Sex-sorted semen par 50% tak subsidy</strong> — 90%+ chance bachhiya ka.</li>
-            <li>Bada plan? <strong>Breed Multiplication Farm par 50%, ₹2 crore tak</strong> — apply eoi.nddb.coop par.</li>
-            <li><strong>Abhi check karo:</strong> dahd.gov.in par scheme page aur apne district pashupalan office ka number.</li>
-          </ul>
-        </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
           <strong>Last Updated: 21/08/2026</strong>
@@ -120,6 +110,17 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           paisa kaise aur kahan se milta hai, 2025 mein kya naya juda, aur woh galatfehmiyan jo logon ka time
           barbaad karti hain.
         </p>
+
+        <DB>
+          <strong>TL;DR — kisan ke kaam ki 4 baatein:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li><strong>Muft AI</strong> darwaze par (NAIP) — koi form nahi, MAITRI technician ya pashu chikitsalay se sampark.</li>
+            <li><strong>IVF pregnancy par ₹5,000</strong> subsidy + HGM IVF bachhiya ke loan par <strong>3% interest subvention</strong> (March 2025 revision).</li>
+            <li><strong>Sex-sorted semen par 50% tak subsidy</strong> — 90%+ chance bachhiya ka.</li>
+            <li>Bada plan? <strong>Breed Multiplication Farm par 50%, ₹2 crore tak</strong> — apply eoi.nddb.coop par.</li>
+            <li><strong>Abhi check karo:</strong> dahd.gov.in par scheme page aur apne district pashupalan office ka number.</li>
+          </ul>
+        </DB>
 
         <SH>RGM Hai Kya — Ek Line Mein Samjho</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">

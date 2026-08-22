@@ -8,7 +8,7 @@ import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
-  title: 'Vermi Compost Business 2026: Subsidy & Profit Guide',
+  title: 'Vermi Compost Me Kitna Profit — Poora Hisaab',
   description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, subsidy ke raste, unit cost aur real profit calculation ke baare mein sab kuch.',
   keywords: [
     'vermi compost business',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
-    title: 'Vermi Compost Business 2026: Subsidy & Profit Guide',
+    title: 'Vermi Compost Me Kitna Profit — Poora Hisaab',
     description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, subsidy ke raste, unit cost aur real profit calculation ke baare mein sab kuch.',
     type: 'article',
     locale: 'hi_IN',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vermi Compost Business 2026: Subsidy & Profit Guide',
+    title: 'Vermi Compost Me Kitna Profit — Poora Hisaab',
     description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, subsidy ke raste, unit cost aur real profit calculation ke baare mein sab kuch.',
     images: ['https://kisanstatus.com/images/kisanguides/vermi-compost-hero.webp'],
   },

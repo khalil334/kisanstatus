@@ -66,15 +66,6 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           />
         </div>
 
-        <DB>
-          <strong>Short Mein — apply karne se pehle:</strong>
-          <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li>JanSamarth (jansamarth.in) sarkar ka <strong>free</strong> portal hai — KCC, Mudra, education/livelihood schemes ki eligibility ek jagah check hoti hai; loan bank hi deta hai.</li>
-            <li>Apply se pehle 3 cheezein: <strong>Aadhaar-mobile link, Farmer ID (AgriStack), bank details + PAN</strong>. Inke bina file aage nahi badhti.</li>
-            <li>KCC limit Budget 2025 se <strong>₹5 lakh</strong> tak, effective interest timely repayment par ~4% (7% base − 3% bonus).</li>
-            <li>Advance fee maangne wala har aadmi thag hai — portal par koi fee nahi. <strong>Abhi jansamarth.in par eligibility check karo.</strong></li>
-          </ul>
-        </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
           <strong>Last Updated: 21/08/2026</strong>
@@ -92,6 +83,16 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           apply se pehle kaunsi teen cheezein taiyar rakhni hain. Aage wahi sab step-by-step hai — bina
           bank ki bhaasha ke.
         </p>
+
+        <DB>
+          <strong>Short Mein — apply karne se pehle:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>JanSamarth (jansamarth.in) sarkar ka <strong>free</strong> portal hai — KCC, Mudra, education/livelihood schemes ki eligibility ek jagah check hoti hai; loan bank hi deta hai.</li>
+            <li>Apply se pehle 3 cheezein: <strong>Aadhaar-mobile link, Farmer ID (AgriStack), bank details + PAN</strong>. Inke bina file aage nahi badhti.</li>
+            <li>KCC limit Budget 2025 se <strong>₹5 lakh</strong> tak, effective interest timely repayment par ~4% (7% base − 3% bonus).</li>
+            <li>Advance fee maangne wala har aadmi thag hai — portal par koi fee nahi. <strong>Abhi jansamarth.in par eligibility check karo.</strong></li>
+          </ul>
+        </DB>
 
         <SH>JanSamarth Hai Kya — Aur Kya Nahi Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">

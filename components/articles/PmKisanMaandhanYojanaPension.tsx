@@ -572,6 +572,22 @@ export default function PmKisanMaandhanYojanaPension() {
         </section>
 
         <section className="mb-8">
+          <SH>Aage Kya Padhein — Topic-Wise Deep Guides</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ye page poori scheme ki ABCD hai. Har hisse ki detail alag guide mein hai — apne kaam ki uthao:
+          </p>
+          <ul className="list-disc pl-5 space-y-2 text-sm text-[var(--color-text)]">
+            <li><Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="underline text-green-700 dark:text-green-400">Eligibility aur documents</Link> — kaun join kar sakta hai, kya kagaz lagenge.</li>
+            <li><Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="underline text-green-700 dark:text-green-400">Age-wise contribution chart</Link> — apni umar ka exact monthly amount.</li>
+            <li><Link href="/maandhan/pm-kisan-maandhan-pension-calculator" className="underline text-green-700 dark:text-green-400">Pension calculator</Link> — total jama vs pension ka hisaab.</li>
+            <li><Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="underline text-green-700 dark:text-green-400">Registration ka step-by-step process</Link>.</li>
+            <li><Link href="/maandhan/pm-kisan-maandhan-status-check-online" className="underline text-green-700 dark:text-green-400">Status check</Link> aur <Link href="/maandhan/pm-kisan-maandhan-pension-card-download" className="underline text-green-700 dark:text-green-400">pension card download</Link>.</li>
+            <li><Link href="/maandhan/pm-kisan-maandhan-withdrawal-refund-rules" className="underline text-green-700 dark:text-green-400">Beech mein nikalna ho to refund rules</Link> aur <Link href="/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana" className="underline text-green-700 dark:text-green-400">Maandhan vs Atal Pension</Link> comparison.</li>
+            <li>Poori list ek jagah: <Link href="/maandhan" className="underline text-green-700 dark:text-green-400">Maandhan hub page</Link>.</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Official Links aur Resources
           </h2>

@@ -8,7 +8,7 @@ import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
-  title: 'PM FME Yojana 2026: 35% Subsidy, ₹10 Lakh Tak',
+  title: 'PM FME Se ₹10 Lakh Tak — 35% Subsidy Ka Poora Math',
   description: 'Achar, papad, namkeen ya bakery unit chalate ho? PM FME me 35% credit-linked subsidy milti hai, max ₹10 lakh. Eligibility, documents aur apply ka tarika.',
   keywords: [
     'pm fme yojana',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
-    title: 'PM FME Yojana 2026: 35% Subsidy, ₹10 Lakh Tak',
+    title: 'PM FME Se ₹10 Lakh Tak — 35% Subsidy Ka Poora Math',
     description: 'Achar, papad, namkeen ya bakery unit chalate ho? PM FME me 35% credit-linked subsidy milti hai, max ₹10 lakh. Eligibility, documents aur apply ka tarika.',
     type: 'article',
     locale: 'hi_IN',
@@ -84,7 +84,7 @@ export default function PMFMEYojana() {
       />
 
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
-        PM FME Yojana 2026: 35% Subsidy, ₹10 Lakh Tak — Poora Process
+        Achar-Papad-Namkeen Unit Walo Ke Liye PM FME — ₹10 Lakh Tak Ka Poora Math
       </h1>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">

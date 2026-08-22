@@ -8,7 +8,7 @@ import { AuthorBox, FAQBlock } from '@/components/ArticleShared';
 import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
-  title: 'PM Matsya Sampada Yojana 2026: 60% Subsidy & Complete Guide',
+  title: 'Machli Palan Par 60% Tak Subsidy — PM Matsya Sampada',
   description: 'PM Matsya Sampada Yojana complete guide. Janein fish farming subsidy, biofloc technology, pond setup aur real profit calculation ke baare mein.',
   keywords: [
     'pm matsya sampada yojana',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
-    title: 'PM Matsya Sampada Yojana 2026: 60% Subsidy & Complete Guide',
+    title: 'Machli Palan Par 60% Tak Subsidy — PM Matsya Sampada',
     description: 'PM Matsya Sampada Yojana complete guide. Janein fish farming subsidy, biofloc technology, pond setup aur real profit calculation ke baare mein.',
     type: 'article',
     locale: 'hi_IN',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PM Matsya Sampada Yojana 2026: 60% Subsidy & Complete Guide',
+    title: 'Machli Palan Par 60% Tak Subsidy — PM Matsya Sampada',
     description: 'PM Matsya Sampada Yojana complete guide. Janein fish farming subsidy, biofloc technology, pond setup aur real profit calculation ke baare mein.',
     images: ['https://kisanstatus.com/images/kisanguides/fish-farming-hero.webp'],
   },
@@ -83,17 +83,15 @@ export default function PMatsyaSampada() {
       />
 
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
-        PM Matsya Sampada Yojana 2026: Machli Palan par 60% Subsidy, Biofloc Technology, aur Real Profit
+        Machli Palan Par 60% Tak Subsidy — Par Pehle Saal Ka Sach Bhi Suno
       </h1>
 
-      <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
-        <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Bina Lag Lapet Ke:</strong> Machli palan mein pehle saal oxygen management ya disease control mein chhoti galtiyan 20-30% tak crop loss karwa sakti hain. Par experience ke saath, doosre-teesre saal tak returns stabilize ho jate hain aur profit consistent hone lagta hai.
-        </p>
-      </div>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Pehle saal 20-30% crop loss. Ye number koi darane ke liye nahi likha — machli palan mein oxygen management ya disease control ki chhoti galtiyan itna nuksan karwa deti hain, aur ye naye logon ke saath aam hai. Doosre-teesre saal tak, experience ke saath, returns stabilize ho jate hain aur profit consistent hone lagta hai.
+      </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Aquaculture mein paani ki quality, oxygen level, aur feed management seedha aapki jeb se juda hai. Ek chhoti si chook poori crop khatam kar sakti hai. Lekin jab management sahi hota hai, toh returns kaafi achhe milte hain. Isme sarkar ki PM Matsya Sampada Yojana (PMMSY) 40-60% tak ki financial assistance dekar is business ko aur bhi viable bana deti hai.
+        Kyunki aquaculture mein paani ki quality, oxygen level, aur feed management seedha aapki jeb se juda hai — ek chhoti si chook poori crop khatam kar sakti hai. Jab management sahi hota hai, toh returns kaafi achhe milte hain. Isme sarkar ki PM Matsya Sampada Yojana (PMMSY) 40-60% tak ki financial assistance dekar is business ko aur bhi viable bana deti hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">

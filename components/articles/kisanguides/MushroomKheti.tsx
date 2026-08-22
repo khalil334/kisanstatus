@@ -8,12 +8,12 @@ import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
-  title: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide',
+  title: 'Mushroom Kheti Shuru Karni Hai? NHB Subsidy Se Sasta',
   description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.',
   keywords: ['mushroom farming in small room at home profit', 'oyster mushroom spawn price in India 2026', 'khumbi ki kheti mein kitna pani lagta hai', 'green mold in mushroom treatment home remedy', 'mushroom business plan 10x10 room', 'nhb mushroom subsidy'],
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
-    title: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide',
+    title: 'Mushroom Kheti Shuru Karni Hai? NHB Subsidy Se Sasta',
     description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.',
     type: 'article',
     locale: 'hi_IN',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mushroom Kheti 2026: Subsidy, Profit aur Complete Guide',
+    title: 'Mushroom Kheti Shuru Karni Hai? NHB Subsidy Se Sasta',
     description: 'Chhote kamre mein oyster mushroom kaise ugayein. NHB subsidy process, 100-bag setup cost, aur sachcha profit calculation janein.',
     images: ['https://kisanstatus.com/images/kisanguides/Mushroomhero.webp']
   },

@@ -8,7 +8,7 @@ import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
-  title: 'Silage Business Guide 2026: SMAM Subsidy & Profit',
+  title: 'Silage Ka Business — SMAM Subsidy Se Shuruat',
   description: 'Silage banane ka business kaise shuru karein — chara storage tarika, chaff cutter cost, SMAM subsidy aur real profit calculation, sab kuch is guide mein.',
   keywords: [
     'silage making business',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
-    title: 'Silage Business Guide 2026: SMAM Subsidy & Profit',
+    title: 'Silage Ka Business — SMAM Subsidy Se Shuruat',
     description: 'Silage banane ka business kaise shuru karein — chara storage tarika, chaff cutter cost, SMAM subsidy aur real profit calculation, sab kuch is guide mein.',
     type: 'article',
     locale: 'hi_IN',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Silage Business Guide 2026: SMAM Subsidy & Profit',
+    title: 'Silage Ka Business — SMAM Subsidy Se Shuruat',
     description: 'Silage banane ka business kaise shuru karein — chara storage tarika, chaff cutter cost, SMAM subsidy aur real profit calculation, sab kuch is guide mein.',
     images: ['https://kisanstatus.com/images/kisanguides/silage-hero.webp'],
   },

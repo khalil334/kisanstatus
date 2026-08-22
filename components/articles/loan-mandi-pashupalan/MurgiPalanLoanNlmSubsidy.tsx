@@ -70,16 +70,6 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           />
         </div>
 
-        <DB>
-          <strong>Ek Nazar Mein — poora hisaab:</strong>
-          <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li>NLM-EDP mein poultry project par <strong>50% capital subsidy, ₹25 lakh tak</strong> — parent farm, hatchery, brooder unit.</li>
-            <li>Subsidy <strong>back-ended</strong> hai: pehle apna margin + bank loan, subsidy verification ke baad. Advance nahi milti.</li>
-            <li>Apply online: <strong>nlm.udyamimitra.in</strong> — DPR, KYC, zameen ke kagaz, training certificate, bank sanction chahiye.</li>
-            <li>Chalu kharche ka 60-70% <strong>feed</strong> hai — munafe ka faisla shed nahi, feed conversion karta hai.</li>
-            <li><strong>Abhi check karo:</strong> nlm.udyamimitra.in par current guidelines aur application window.</li>
-          </ul>
-        </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
           <strong>Last Updated: 21/08/2026</strong>
@@ -97,6 +87,17 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           guide mein poora sach hai: subsidy ka asli structure, kaun eligible hai, layer vs broiler ka faisla,
           udyamimitra portal se apply ka process, aur woh galtiyan jo application ko latka deti hain.
         </p>
+
+        <DB>
+          <strong>Ek Nazar Mein — poora hisaab:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>NLM-EDP mein poultry project par <strong>50% capital subsidy, ₹25 lakh tak</strong> — parent farm, hatchery, brooder unit.</li>
+            <li>Subsidy <strong>back-ended</strong> hai: pehle apna margin + bank loan, subsidy verification ke baad. Advance nahi milti.</li>
+            <li>Apply online: <strong>nlm.udyamimitra.in</strong> — DPR, KYC, zameen ke kagaz, training certificate, bank sanction chahiye.</li>
+            <li>Chalu kharche ka 60-70% <strong>feed</strong> hai — munafe ka faisla shed nahi, feed conversion karta hai.</li>
+            <li><strong>Abhi check karo:</strong> nlm.udyamimitra.in par current guidelines aur application window.</li>
+          </ul>
+        </DB>
 
         <SH>NLM-EDP Kya Hai — Structure Samjho</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">

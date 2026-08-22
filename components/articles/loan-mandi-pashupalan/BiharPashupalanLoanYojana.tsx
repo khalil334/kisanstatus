@@ -71,15 +71,6 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           />
         </div>
 
-        <DB>
-          <strong>Aadha Minute — poori picture:</strong>
-          <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li>Bihar sarkar dairy unit ki project cost par <strong>EBC/SC/ST ko 75% tak, baaki ko 50% tak</strong> subsidy deti hai (2-4 pashu units); badi 15-20 pashu units par sab ke liye ~40% ka slab.</li>
-            <li>Application <strong>sirf online, bilkul free</strong> — dairy.bihar.gov.in par, notification window ke andar. Agent ki zaroorat nahi.</li>
-            <li>Subsidy <strong>unit lagne ke baad</strong>, verification par milti hai — pehle apna ya bank ka paisa lagana hota hai.</li>
-            <li>Naam mismatch (Aadhaar vs bank) aur window miss — files girne ki do sabse badi wajahein. Kagaz pehle milao.</li>
-          </ul>
-        </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
           <strong>Last Updated: 05/08/2026</strong>
@@ -101,6 +92,16 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           nikal gayi. Neeche wahi sab likha hai jo form bharne se pehle pata hona chahiye tha: eligibility, unit ka
           chunaav, subsidy ka asli hisaab, aur file atakne ki asli wajahein.
         </p>
+
+        <DB>
+          <strong>Aadha Minute — poori picture:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>Bihar sarkar dairy unit ki project cost par <strong>EBC/SC/ST ko 75% tak, baaki ko 50% tak</strong> subsidy deti hai (2-4 pashu units); badi 15-20 pashu units par sab ke liye ~40% ka slab.</li>
+            <li>Application <strong>sirf online, bilkul free</strong> — dairy.bihar.gov.in par, notification window ke andar. Agent ki zaroorat nahi.</li>
+            <li>Subsidy <strong>unit lagne ke baad</strong>, verification par milti hai — pehle apna ya bank ka paisa lagana hota hai.</li>
+            <li>Naam mismatch (Aadhaar vs bank) aur window miss — files girne ki do sabse badi wajahein. Kagaz pehle milao.</li>
+          </ul>
+        </DB>
 
         <SH>Pehle Yeh Samjho Ki Scheme Deti Kya Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
