@@ -1,26 +1,14 @@
-'use client';
-
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-
+// Perf: converted from a 'use client' component (useState + useRouter) to a
+// zero-JS server component. A native GET form submitting to /articles produces
+// the exact same URL (/articles?search=...) the client version pushed, with no
+// hydration cost in the homepage hero — the LCP-critical region.
 export default function SearchBar() {
-  const router = useRouter();
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      router.push(`/articles?search=${encodeURIComponent(searchQuery.trim())}`);
-    }
-  };
-
   return (
-    <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto mb-8" role="search">
+    <form action="/articles" method="get" className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto mb-8" role="search">
       <div className="flex-1 relative">
         <input
           type="search"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
+          name="search"
           placeholder="Search: PM Kisan Status, KCC Loan, Tractor Subsidy..."
           className="w-full px-5 py-4 pl-12 rounded-xl border-0 text-gray-900 placeholder-gray-400 text-sm bg-white shadow-xl focus:outline-none focus:ring-2 focus:ring-green-300"
           aria-label="Search PM Kisan articles and guides"

@@ -155,8 +155,12 @@ export default function RootLayout({
       className={poppins.variable}
     >
       <head>
-        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://region1.google-analytics.com" crossOrigin="anonymous" />
+        {/* Perf: GA/GTM load with strategy="lazyOnload" (after everything else),
+            so a full preconnect at head start is wasted work that competes with
+            fonts/CSS on the critical path. dns-prefetch is the cheap async hint
+            that still warms DNS before the lazy scripts fire. */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://region1.google-analytics.com" />
       </head>
 
       <body
