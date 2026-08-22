@@ -35,7 +35,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     ],
     title: 'Fasal Bima Claim Status — Paisa Kab Milega',
     description:
-      'PMFBY claim atka hai? pmfby.gov.in pe status check ke exact clicks, 72 ghante ka rule, reject hone ke 5 asli karan aur complaint ka poora rasta — 14447 se DGRO tak.',
+      'PMFBY claim atka hai? pmfby.gov.in pe status check ke exact clicks, 72 ghante ka rule, reject hone ke 5 karan aur complaint ka rasta — 14447 se DGRO tak.',
     ogTitle: 'Fasal Bima Claim Status — Paisa Kab Aur Kaise Milega',
     component: 'FasalBimaClaimStatusCheck',
     officialPortal: 'https://pmfby.gov.in',
@@ -59,7 +59,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     ],
     title: 'Kisan Karj Mafi 2026 — Kis State Me Chalu',
     description:
-      'Koi national karj mafi scheme nahi hai. Maharashtra, Telangana, UP aur Tamil Nadu ki asli sthiti, official portal, fake list wali sites ka pattern, aur scheme na hone par OTS jaise 4 asli raaste.',
+      'Koi national karj mafi scheme nahi hai. Maharashtra, Telangana, UP aur Tamil Nadu ki asli sthiti, official portals, fake list sites aur OTS jaise asli raaste.',
     ogTitle: 'Kisan Karj Mafi 2026 — Kis State Me Sach Me Chal Rahi Hai',
     component: 'KisanKarjMafiAllStates',
     officialPortal: 'https://mjpsky.maharashtra.gov.in',
@@ -86,7 +86,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     ],
     title: 'PM Kisan Khad Yojana ₹11,000 — Sach Kya Hai',
     description:
-      '₹11,000 wali koi alag Khad Yojana officially exist nahi karti. Rumor kahan se aaya, khad par sarkar asal me kya deti hai (urea ₹242 vs asli laagat ₹2,200+), aur fake registration forms se kaise bacho.',
+      '₹11,000 wali alag Khad Yojana officially exist nahi karti. Rumor kahan se aaya, khad par sarkar asal me kya deti hai, aur fake forms se kaise bacho.',
     ogTitle: 'PM Kisan Khad Yojana ₹11,000 — Sach Kya Hai',
     component: 'PmKisanKhadYojanaSach',
     officialPortal: 'https://pmkisan.gov.in',
@@ -113,7 +113,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     ],
     title: 'PM Kisan Helpline 155261 — Complaint Guide',
     description:
-      'Kist atki hai? 155261 aur 011-24300606 par kab call karein, kaunsi problem kahan hal hogi — eKYC CSC par, land seeding tehsil me, NPCI bank me — aur complaint escalate karne ka poora rasta.',
+      'Kist atki hai? 155261 aur 011-24300606 par kab call karein — eKYC CSC par, land seeding tehsil me, NPCI bank me — aur complaint escalate karne ka rasta.',
     ogTitle: 'PM Kisan Helpline 155261 — Complaint Kaise Aur Kahan Karein',
     component: 'PmKisanHelpline155261',
     officialPortal: 'https://pmkisan.gov.in',
@@ -140,7 +140,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     ],
     title: 'MGNREGA Pashu Shed Yojana — ₹1.6L Tak',
     description:
-      'Pashu shed ka koi online form nahi hota — kaam gram panchayat ke through hota hai. Job card, 2-3 pashu ka rule, asli amount ka sach, application ka poora rasta aur file atke to BDO tak complaint.',
+      'Pashu shed ka koi online form nahi hota — kaam gram panchayat se hota hai. Job card, 2-3 pashu ka rule, asli amount, aur file atke to BDO tak complaint.',
     ogTitle: 'MGNREGA Pashu Shed Yojana — ₹1.6 Lakh Tak, Asli Process',
     component: 'MgnregaPashuShedYojana',
     officialPortal: 'https://nrega.nic.in',
