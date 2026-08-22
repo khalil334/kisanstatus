@@ -152,6 +152,19 @@ Abhi problem: "PM Kisan", "status check", "2026" jaise phrases baar-baar repeat 
 
 ## 7.7 Priority order (kis se shuru karein)
 
+> **FIX LOG**
+>
+> **✅ Part 1 DONE (2026-08-22) — Cannibalization fixes (Section 3):**
+> - **Kist series:** `PmKisan26viKist` pehle se noindex + 25vi me merged summary tha — verify kiya, theek hai. `PmKisan25viKist2027` ka title formula-pattern se nikala: ab "25vi Kist Kab Aayegi? Gap Ka Hisaab Samjho" (sawaal shape) — 24vi ("Date & Status") se ab alag shape.
+> - **eKYC pair:** `PmKisanFaceAuthenticationEkyc` ne "eKYC" head-term chhod diya — title/seoTitle/ogTitle/H1 ab "Face Authentication — OTP Ke Bina Verify" par focused. "PM Kisan eKYC" query ab sirf `PmKisanEkycOnline2026` target karta hai.
+> - **Maandhan overview vs registration:** `PmKisanMaandhanYojanaPension` ab hub-style title/H1 ("PM Kisan Maandhan Yojana Kya Hai — Puri ABCD") — "₹3000 Pension" hata diya; wo ab sirf `PmKisanMaandhanRegistration2026` ke paas hai. 1:1 title collision khatam.
+> - **Bank-account pair:** `maandhan/pmkmy-bank-account-change` title/H1/desc ab "Maandhan (PMKMY)" clearly bolte hain; desc me PM-Kisan wale process se alag hone ka zikr. `PmKisanBankAccountChangeProcess` unchanged (already scheme-clear).
+> - **Helpline pair:** `maandhan/pmkmy-grievance-complaint-helpline` ab "Maandhan Pension (PMKMY) Ki Shikayat" — 155261 wali PM Kisan helpline se disambiguated.
+>
+> **⏳ Part 2 PENDING** — Title formula-break sab categories me (§7.1).
+> **⏳ Part 3 PENDING** — 5 template groups ke top articles de-uniform (§7.2/7.5).
+> **⏳ Part 4 PENDING** — Shared helpers extract to `components/ui/` (§7.6).
+
 1. **Hafta 1:** Cannibalization fix — kist series + eKYC pair + Maandhan titles (Section 3).
 2. **Hafta 2:** Sab 124 titles review — formula-break (7.1) apply karo jahan zaroorat hai.
 3. **Hafta 3-4:** 5 template groups (Section 4) mein se har group ke 2-3 articles ko re-open kar ke unique section + human touches (7.5) add karo — sabse zyada traffic wale pehle.

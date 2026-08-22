@@ -410,9 +410,9 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisan25viKist2027',
-    title: 'PM Kisan 25vi Kist 2027: Date & Amount',
+    title: '25vi Kist Kab Aayegi? Gap Ka Hisaab Samjho',
     desc: '25vi kist ki koi official date nahi hai abhi — 24vi ke baad 3-4 mahine ka gap normal hai. ₹2,000 hi milega. Abhi se eKYC aur bank seeding theek karo.',
-    ogTitle: 'PM Kisan 25vi Kist 2027 Guide',
+    ogTitle: '25vi Kist Kab Aayegi — Gap Ka Poora Hisaab',
     keywords: [
       'pm kisan 25vi kist 2027',
       '25vi kist kab aayegi',
@@ -536,10 +536,10 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanFaceAuthenticationEkyc',
-    title: 'PM Kisan Face Auth eKYC: Bina OTP',
-    seoTitle: 'PM Kisan Face Authentication eKYC: Bina OTP',
-    desc: 'OTP nahi aa raha? PMKisan app se face authentication karke bina OTP ke eKYC karo — 5 minute ka tarika, errors ke fix aur CSC ka sahi rate.',
-    ogTitle: 'PM Kisan Face Auth eKYC Guide',
+    title: 'Face Authentication: OTP Ke Bina Verify',
+    seoTitle: 'PM Kisan Face Authentication — OTP Ke Bina App Se Verify',
+    desc: 'OTP nahi aa raha? PMKisan app se face authentication karke bina OTP ke verification karo — 5 minute ka tarika, errors ke fix aur CSC ka sahi rate.',
+    ogTitle: 'Face Authentication — OTP Ke Bina Verify Karne Ka Tarika',
     keywords: [
       'pm kisan face authentication kyc',
       'pm kisan app bina otp kyc',
@@ -659,8 +659,8 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'PmKisanMaandhanYojanaPension',
-    title: 'PM Kisan Maandhan 2026: ₹3000 Pension',
-    seoTitle: 'PM Kisan Maandhan Yojana — ₹3000 Pension Kaise',
+    title: 'PM Kisan Maandhan Yojana Kya Hai — Puri ABCD',
+    seoTitle: 'PM Kisan Maandhan Yojana Kya Hai — Eligibility, Chart, Apply',
     desc: 'Kisan pension yojana: 18-40 umar mein join karo, ₹55-200 mahina do, 60 ke baad ₹3000 pension lo. Eligibility, mandhan chart aur CSC se apply ka tarika.',
     ogTitle: 'PM Kisan Maandhan Yojana Guide',
     keywords: [

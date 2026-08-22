@@ -104,7 +104,7 @@ export default function PmKisanMaandhanYojanaPension() {
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Pension Scheme Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan Maandhan Yojana: 60 Saal Ke Baad ₹3000 Pension Ka Sahi Tarika
+            PM Kisan Maandhan Yojana Kya Hai — Ek Jagah Puri ABCD
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>

@@ -67,7 +67,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Kisan Pension Scheme</span>
 
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan Maandhan Yojana Me Bank Account Kaise Badlein? (Complete Guide 2026)
+            Maandhan (PMKMY) Me Bank Account Badalna Hai? Ye Raha Poora Process
           </h1>
 
           <div className="flex flex-wrap gap-3 text-xs text-green-200">

@@ -45,11 +45,11 @@ export default function PmKisanFaceAuthenticationEkyc() {
             <span>/</span>
             <Link href="/articles" className="hover:text-white transition-colors">Articles</Link>
             <span>/</span>
-            <span className="text-white font-bold">Face eKYC</span>
+            <span className="text-white font-bold">Face Authentication</span>
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">New Feature</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan Face Authentication eKYC 2026: Bina OTP Ke Ghar Baithe Photo Verification
+            Face Authentication: OTP Ke Bina PMKisan App Se Ghar Baithe Verify
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>

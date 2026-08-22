@@ -101,8 +101,8 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   },
   {
     slug: 'pmkmy-bank-account-change',
-    title: 'PM Kisan Maandhan Bank Account Kaise Badlein',
-    description: 'PM Kisan Maandhan Yojana me registered bank account kaise badlein ya update karein. Documents, application format, aur common problems ka hal.',
+    title: 'Maandhan (PMKMY) Me Bank Account Badalna Ho To',
+    description: 'Maandhan pension yojana (PMKMY) me registered bank account kaise badlein ya update karein — ye PM Kisan Samman Nidhi wala process nahi hai. Documents, application format, aur common problems ka hal.',
     category: 'pension-scheme',
     published: '2026-04-30T07:56:05+05:30',
     modified: '2026-08-04T16:57:37+05:30',
@@ -112,8 +112,8 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   },
   {
     slug: 'pmkmy-grievance-complaint-helpline',
-    title: 'PM Kisan Maandhan Helpline Number 2026',
-    description: 'PM Kisan Maandhan Yojana me shikayat kaise karein? Helpline numbers, online grievance process, CSC complaint, aur common problems ka practical solution.',
+    title: 'Maandhan Pension (PMKMY) Ki Shikayat Kahan Karein',
+    description: 'Maandhan pension yojana (PMKMY) me shikayat kaise karein — 155261 wali PM Kisan helpline se alag rasta hai. Helpline numbers, online grievance process, CSC complaint, aur common problems ka practical solution.',
     category: 'pension-scheme',
     published: '2026-05-11T20:55:01+05:30',
     modified: '2026-07-31T14:10:21+05:30',
