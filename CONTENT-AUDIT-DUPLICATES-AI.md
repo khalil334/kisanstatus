@@ -167,7 +167,13 @@ Abhi problem: "PM Kisan", "status check", "2026" jaise phrases baar-baar repeat 
 > - Five shapes rotated per category — sawaal ("Gehu MSP Par Beche Ya Mandi Me?"), warning ("Land Seeding 'No' Hai To Kist Rukegi"), number ("7 Mandi Bhav Apps Compare Kiye"), result ("Krishak Bandhu Status — Voter ID Se 2 Minute Me"), simple ("eNAM Par Registration Kaise Hota Hai"). No two consecutive titles in a category share a shape.
 > - `yojana-2026-data.ts` and `maandhan-data.ts` titles were already varied — left alone (sirf zaroori Part-1 wale badle the).
 > - H1s inside components untouched in this part — wo pehle se varied hain; sirf metadata titles ka batch-footprint toda.
-> **⏳ Part 3 PENDING** — 5 template groups ke top articles de-uniform (§7.2/7.5).
+> **✅ Part 3 DONE (2026-08-22) — Template groups de-uniform (§7.2/7.5), 2-3 articles per group:**
+> - **kisanguides group:** `MushroomKheti` — blue "jaan lein" box hataya, ab chaunkane-wala-fact opening ("200 bags. 15 din. Hara fungus. Batch khatam.") + naya H1 unique angle ke saath ("Pehli Batch Kharab Kyun Hoti Hai"). `MadhumakhiPalan` — box hataya, ulti-baat opening (kisaan beekeepers ko paise dete hain) + dohri-kamai H1. `VerminCompost` — box hataya, seedha-hisaab opening (cost ₹5-8, rate ₹15-20) + naya H1. Teeno ka intro-pattern ab ek doosre se alag.
+> - **loan-mandi-pashupalan group:** `SbiDairyLoanInterestRate` aur `MandiBhavAppComparison` me TL;DR/summary box hero ke turant baad se hata kar intro paragraphs ke BAAD shift kiya — ab group ke andar section-order same nahi. `DairyFarmLoanWithoutCollateral` untouched (already personal-experience opening).
+> - **rajya-yojana group:** `NamoShetkariYojanaStatus` aur `MpKisanKalyanYojanaKist` me opening InfoBox-update H1+intro ke baad shift — 5 me se ab sirf 2 articles InfoBox se khulte hain.
+> - **hindi-yojana-2026 group:** openings already varied (seedha answer / myth-bust / numbers-first) — koi change nahi.
+> - **root "2026" set:** titles Part 2 me hi differentiated ho gaye the.
+> - Koi fact/figure invent nahi kiya — sirf order, opening shape aur wording badli; sab numbers wahi ke wahi.
 > **⏳ Part 4 PENDING** — Shared helpers extract to `components/ui/` (§7.6).
 
 1. **Hafta 1:** Cannibalization fix — kist series + eKYC pair + Maandhan titles (Section 3).

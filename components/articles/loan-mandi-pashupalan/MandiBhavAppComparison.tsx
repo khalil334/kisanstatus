@@ -90,17 +90,6 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           />
         </div>
 
-        <DB>
-          <strong>Jaldi Mein Hain? Ye 3 Baatein:</strong>
-          <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li>Phone mein sirf <strong>2 apps</strong> chahiye: ek sarkari (eNAM app ya AgMarknet) + ek jo aapki local mandiyan cover kare. Baaki uninstall.</li>
-            <li>Sab apps ka rate ek hi jagah se aata hai — <strong>sarkari mandi records</strong>. Accuracy ka sawaal hi galat hai; sawaal speed aur coverage ka hai.</li>
-            <li><strong>Modal price</strong> dekho, max nahi — aur 7-10 din ka trend, ek din ka number nahi.</li>
-            <li>Bina smartphone: <strong>Kisan Call Centre 1800-180-1551</strong> — free call, apni bhasha mein bhav.</li>
-            <li><strong>Abhi check karo:</strong> <a href="https://enam.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-bold">enam.gov.in</a> par apni mandi integrated hai ya nahi.</li>
-          </ul>
-        </DB>
-
         <p className="text-sm text-[var(--color-text)] mb-6">
           <strong>Last Updated: 21/08/2026</strong>
         </p>
@@ -116,6 +105,18 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           Padhne ke baad aap do minute mein tay kar loge ki aapke phone mein kaunsa app rehna chahiye aur kaunsa
           sirf jagah gher raha hai.
         </p>
+
+        <DB>
+          <strong>Jaldi Mein Hain? Ye 3 Baatein:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>Phone mein sirf <strong>2 apps</strong> chahiye: ek sarkari (eNAM app ya AgMarknet) + ek jo aapki local mandiyan cover kare. Baaki uninstall.</li>
+            <li>Sab apps ka rate ek hi jagah se aata hai — <strong>sarkari mandi records</strong>. Accuracy ka sawaal hi galat hai; sawaal speed aur coverage ka hai.</li>
+            <li><strong>Modal price</strong> dekho, max nahi — aur 7-10 din ka trend, ek din ka number nahi.</li>
+            <li>Bina smartphone: <strong>Kisan Call Centre 1800-180-1551</strong> — free call, apni bhasha mein bhav.</li>
+            <li><strong>Abhi check karo:</strong> <a href="https://enam.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-bold">enam.gov.in</a> par apni mandi integrated hai ya nahi.</li>
+          </ul>
+        </DB>
+
 
         <SH>Pehle Yeh Samjho — Rate Aata Kahan Se Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">

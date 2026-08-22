@@ -73,17 +73,15 @@ export default function MadhumakhiPalan() {
       />
 
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
-        Madhumakhi Palan 2026: Shahad Se Kamayein, Khet Ka Yield Badhayein - Complete Guide
+        Madhumakhi Palan Ki Dohri Kamai — Shahad Bechke Bhi, Bina Beche Bhi
       </h1>
 
-      <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
-        <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Sach kahoon toh:</strong> Jo log sirf YouTube videos dekhkar bina practical training ke seedha 40-50 boxes kharid kar khet mein phenk dete hain, wo aksar pehle saal ke lean period (May-June) mein hi demotivate ho kar chhod dete hain. Lekin agar isse ek proper business ki tarah treat kiya jaye, toh iski "dohri kamai" (shahad + pollination) ise ek highly profitable venture bana deti hai.
-        </p>
-      </div>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Himachal aur Uttarakhand ke apple belts mein ek ulti baat hoti hai: wahan kisaan khud beekeepers ko paise dete hain ki bhai, apni colonies mere orchard mein rakh do. Kyun? Kyunki bina pollination ke phal ki quality aur quantity dono 30-40% tak gir jati hai. Matlab is dhandhe mein shahad bechne se pehle hi ek kamai ka rasta khula hai.
+      </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Himachal Pradesh aur Uttarakhand ke apple belts mein toh kisaan khud beekeepers ko paise dekar apne orchards mein colonies rakhwate hain, kyunki unhe pata hai ki bina pollination ke phal ki quality aur quantity dono 30-40% tak gir jati hai. Yeh article aapko KVIC subsidy, breed selection, aur ground-level management ki complete jankari dega.
+        Lekin ek warning pehle. Jo log sirf YouTube dekhkar bina training ke 40-50 boxes kharid kar khet mein phenk dete hain, wo aksar pehle saal ke lean period (May-June) mein hi haar maan lete hain. Business ki tarah chalao to hi "dohri kamai" milti hai. Neeche KVIC subsidy, breed selection aur ground-level management — sab kram se.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">

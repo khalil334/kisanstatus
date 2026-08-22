@@ -79,17 +79,15 @@ export default function VerminCompost() {
       />
 
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
-        Vermi Compost Business 2026: Gobar Se Organic Khaad Banakar Extra Income Kamayein
+        Gobar Se Khaad, Khaad Se Paisa — Vermi Compost Ka Seedha Hisaab
       </h1>
 
-      <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
-        <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Dil Se Bataun Toh:</strong> Chemical fertilizers ke daam lagatar badhne se kisaanon ki lagat badh rahi hai. Aise mein, apne hi khet ke gobar aur kachre ko khaad mein badalna ek practical aur sasta solution ban gaya hai.
-        </p>
-      </div>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        Hisaab pehle: banane ki cost ₹5-8 per kg. Achhi quality ka bikne ka rate ₹15-20 per kg. Beech ka fark aapka.
+      </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Pehle saal shayad ye sirf apne khet ke liye banaya jaye, lekin jab quality set ho jati hai, toh ise bechkar ek alag income stream banayi ja sakti hai. Cost ₹5 - ₹8 per kg aati hai, aur achhi quality ka rate ₹15 - ₹20 per kg mil jata hai. Kachre ko khaad mein badalna aur usse paisa kamana ek proven model hai, kyunki organic farming ko sarkar actively promote kar rahi hai.
+        Chemical fertilizers ke daam jis raftar se badh rahe hain, apne hi khet ke gobar aur kachre ko khaad mein badalna ab shauk nahi, zaroorat ban gaya hai. Zyada tar log pehle saal sirf apne khet ke liye banate hain — aur yahi sahi tareeka bhi hai. Quality set ho jaye, phir bechna shuru karo. Sarkar organic farming ko actively push kar rahi hai, isliye khareedar dhoondhna utna mushkil nahi jitna lagta hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">

@@ -67,17 +67,15 @@ export default function MushroomKheti() {
       />
 
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
-        Mushroom (Khumbi) Ki Kheti 2026: Kamre Mein Shuru Karein, NHB Subsidy aur Real Profit Guide
+        Pehli Batch Kharab Kyun Hoti Hai — Mushroom Kheti Ka Asli Sach, Phir NHB Subsidy
       </h1>
 
-      <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
-        <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Pehle yeh jaan lein:</strong> YouTube par "zero investment, mahine ke lakhon" wale videos dekhkar bahut se naujawan seedha 200-300 bags laga lete hain. Par 15 din baad jab green mold (hara fungus) puri batch kharab kar deta hai, tab pata chalta hai ki khumbi ugana sirf bags latakane ka naam nahi hai. Yeh ek controlled science hai. Jab aap sterilization aur humidity control ka practical tareeka samajh jate hain, tabhi yeh business ek stable income source ban pata hai.
-        </p>
-      </div>
+      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+        200 bags. 15 din. Hara fungus. Batch khatam.
+      </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Himachal ke Solan ko "Mushroom City" kaha jata hai, lekin ab yeh zaroori nahi ki aap pahadi ilaqe mein hi rahein. Ek saamanaya chhat, storeroom, ya basement bhi ab commercial production ke liye kaafi hai. Shart sirf ek hai: controlled environment. Market mein protein-rich food ki maang tezi se badh rahi hai. Local hotels, hostels, aur health-conscious families regular khareedar ban sakte hain.
+        Ye kahani har doosre naye mushroom grower ki hai. YouTube par "zero investment, mahine ke lakhon" dekhkar log seedha 200-300 bags laga lete hain, aur jab green mold puri batch kha jata hai tab samajh aata hai ki khumbi ugana bags latakane ka naam nahi — controlled science hai. Sterilization aur humidity ka practical tareeka pakad lo, phir hi ye stable income banti hai. Himachal ke Solan ko "Mushroom City" kehte hain, par ab pahadi ilaqa zaroori nahi — ek saaf storeroom ya basement bhi commercial production ke liye kaafi hai. Shart bas ek: controlled environment.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">

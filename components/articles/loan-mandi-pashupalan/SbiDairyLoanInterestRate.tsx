@@ -94,17 +94,6 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           />
         </div>
 
-        <DB>
-          <strong>Chhota Jawab — rate aur EMI:</strong>
-          <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li>SBI ke paas &ldquo;dairy loan&rdquo; naam ka fixed-rate product nahi hai — rate = <strong>MCLR + spread</strong>, branch aur profile ke hisaab se banta hai.</li>
-            <li>Roz ka kharcha <strong>KCC (Animal Husbandry)</strong> se — subvention + prompt repayment se effective rate ~4% tak. Pashu/shed kharid <strong>term loan</strong> se.</li>
-            <li>Budget 2025-26 mein subvention KCC limit <strong>₹3 lakh → ₹5 lakh</strong> hui (AH/dairy ka sub-limit alag).</li>
-            <li>Loan amount aapki district ke <strong>Scale of Finance</strong> se tay hota hai — internet ke &ldquo;per animal&rdquo; number par DPR mat banao.</li>
-            <li><strong>Abhi karo:</strong> branch se likhit mein poocho — kaunsa MCLR, kitna spread, reset kab.</li>
-          </ul>
-        </DB>
-
         <p className="text-sm text-[var(--color-text)] mb-6">
           <strong>Last Updated: 05/08/2026</strong>
         </p>
@@ -120,6 +109,18 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           MCLR ke upar branch ka spread lagne ke baad banta hai. Neeche wahi ganit khol kar samjhaya gaya hai,
           taaki branch mein aap sahi sawaal pooch sako aur andaze wale number par bharosa na karo.
         </p>
+
+        <DB>
+          <strong>Chhota Jawab — rate aur EMI:</strong>
+          <ul className="list-disc pl-5 mt-2 space-y-1">
+            <li>SBI ke paas &ldquo;dairy loan&rdquo; naam ka fixed-rate product nahi hai — rate = <strong>MCLR + spread</strong>, branch aur profile ke hisaab se banta hai.</li>
+            <li>Roz ka kharcha <strong>KCC (Animal Husbandry)</strong> se — subvention + prompt repayment se effective rate ~4% tak. Pashu/shed kharid <strong>term loan</strong> se.</li>
+            <li>Budget 2025-26 mein subvention KCC limit <strong>₹3 lakh → ₹5 lakh</strong> hui (AH/dairy ka sub-limit alag).</li>
+            <li>Loan amount aapki district ke <strong>Scale of Finance</strong> se tay hota hai — internet ke &ldquo;per animal&rdquo; number par DPR mat banao.</li>
+            <li><strong>Abhi karo:</strong> branch se likhit mein poocho — kaunsa MCLR, kitna spread, reset kab.</li>
+          </ul>
+        </DB>
+
 
         <SH>Rate Banta Kaise Hai — MCLR + Spread</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">

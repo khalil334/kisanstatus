@@ -74,12 +74,6 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
   return (
     <article className="prose prose-lg max-w-4xl mx-auto">
 
-      <InfoBox type="update" date="04/08/2026">
-        <strong>Latest Update:</strong> Agli kist ki date SAARA portal par abhi announce nahi hui hai.
-        Har kist ₹2,000 ki hoti hai.  WhatsApp par ghoom rahi "confirmed date" ka koi aadhaar nahi hai —
-        jab tak SAARA portal par notification na dikhe, koi bhi tareekh pakki na maanein.
-      </InfoBox>
-
       <h1>
         MP CM Kisan Kalyan Yojana Kist Kab Aayegi: Status Check, Amount aur SAARA Portal
         Guide
@@ -97,6 +91,13 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         banta hai, kaun eligible hai, aur na aane par kahan jaana hai. Teen cheezein, sidhi
         baat.
       </p>
+
+      <InfoBox type="update" date="04/08/2026">
+        <strong>Latest Update:</strong> Agli kist ki date SAARA portal par abhi announce nahi hui hai.
+        Har kist ₹2,000 ki hoti hai.  WhatsApp par ghoom rahi "confirmed date" ka koi aadhaar nahi hai —
+        jab tak SAARA portal par notification na dikhe, koi bhi tareekh pakki na maanein.
+      </InfoBox>
+
 
       <Fig
         src="hero.webp"
