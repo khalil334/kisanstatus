@@ -179,6 +179,15 @@ Abhi problem: "PM Kisan", "status check", "2026" jaise phrases baar-baar repeat 
 > - **`lib/faq-schema.ts` (new):** `buildFaqSchema(faqs)` — verbatim FAQPage JSON-LD scaffold 28 files se hataya. 13 files jinke schema me extra fields the (`inLanguage`, nested `@graph` etc.) jaan-boojh kar untouched — unka shape alag hai.
 > - Checker tools (`rajya-yojana/tools/`) ka shared scaffolding abhi extract NAHI kiya — wo behaviour-risk wala refactor hai, alag se karna behtar (j=0.19 overlap sirf UI scaffolding hai, content issue nahi).
 > - Hindi article dirs ke helpers (Hd/Note/Td etc.) already per-file distinct hain — extraction ki zaroorat nahi.
+> **✅ Part 5 DONE (2026-08-22) — Remaining de-uniforming (§7.2/7.5) merged to main:**
+> - **kisanguides group:** baaki 5 files ka "2026:" colon-title pattern toda — `PMFMEYojana` (H1 bhi: "Achar-Papad-Namkeen Unit Walo Ke Liye"), `PMatsyaSampada` (blue InfoBox hata kar prose opening: "Pehle saal 20-30% crop loss…" + naya H1 "Par Pehle Saal Ka Sach Bhi Suno"), `SilageMaking`, `VerminCompost`, `MadhumakhiPalan`, `MushroomKheti` (metadata titles). `NamoDroneDidiYojana` ka "Ek Nazar Mein" DB box hero-image ke baad shift.
+> - **loan-mandi-pashupalan group:** `BiharPashupalanLoanYojana`, `JansamarthPortalLoanApply`, `MurgiPalanLoanNlmSubsidy`, `RashtriyaGokulMissionSubsidy` — summary/DB boxes intro ke baad shift, section-order ab group me uniform nahi.
+> - **Maandhan hub:** `PmKisanMaandhanYojanaPension` me "Aage Kya Padhein" section — 13 deep-dive guides ke links, ab genuinely hub-style page (§7.6 #3 complete).
+>
+> **✅ Part 6 DONE (2026-08-22) — Hindi hreflang verification (§6 #5):**
+> - Sab 34 Hindi slugs check kiye against `lib/hindi-hreflang.ts` (27 mapped). 7 unmapped mile: `kcc-limit-kaise-badhaye`, `nayi-registration`, `npci-aadhaar-seeding`, `payment-stopped-by-state`, `recovery-notice`, `status-check-mobile-se`, `tractor-subsidy`.
+> - Har ek ko English catalog (124 articles) se match kiya — **kisi ka English twin exist nahi karta**, isliye map entry nahi banti. Closest non-twins (deliberately NOT paired, alag intent): `payment-stopped-by-state` ≠ `PmKisanPaymentFailedFix2026` ("stopped by state" ek specific status error hai, payment-failed 7-reasons guide nahi); `nayi-registration` ≠ `PmKisanSelfRegisteredStatusCheck` (registration process vs status check); `tractor-subsidy` ≠ `KisanTractorLoan2026` (subsidy list vs loan); `kcc-limit-kaise-badhaye` ≠ `KisanCreditCardOnlineApply2026` (limit renewal vs new apply).
+> - `hindiAlternates()` unmapped slugs ke liye already correct self-referencing `hi-IN` + `x-default` return karta hai — koi code change nahi chahiye. Audit ka Section 5 action item close.
 
 1. **Hafta 1:** Cannibalization fix — kist series + eKYC pair + Maandhan titles (Section 3).
 2. **Hafta 2:** Sab 124 titles review — formula-break (7.1) apply karo jahan zaroorat hai.
