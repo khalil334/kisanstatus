@@ -161,7 +161,12 @@ Abhi problem: "PM Kisan", "status check", "2026" jaise phrases baar-baar repeat 
 > - **Bank-account pair:** `maandhan/pmkmy-bank-account-change` title/H1/desc ab "Maandhan (PMKMY)" clearly bolte hain; desc me PM-Kisan wale process se alag hone ka zikr. `PmKisanBankAccountChangeProcess` unchanged (already scheme-clear).
 > - **Helpline pair:** `maandhan/pmkmy-grievance-complaint-helpline` ab "Maandhan Pension (PMKMY) Ki Shikayat" — 155261 wali PM Kisan helpline se disambiguated.
 >
-> **⏳ Part 2 PENDING** — Title formula-break sab categories me (§7.1).
+> **✅ Part 2 DONE (2026-08-22) — Title formula-break (§7.1):**
+> - 54 titles rewritten across `core-articles-data.ts` (31), `loan-mandi-pashupalan-data.ts` (12), `rajya-yojana-data.ts` (11).
+> - "`<Topic> 2026: <Hook>`" colon-pattern removed wherever the year wasn't essential; kept only where it carries meaning (MSP List 2026-27, kist year pages).
+> - Five shapes rotated per category — sawaal ("Gehu MSP Par Beche Ya Mandi Me?"), warning ("Land Seeding 'No' Hai To Kist Rukegi"), number ("7 Mandi Bhav Apps Compare Kiye"), result ("Krishak Bandhu Status — Voter ID Se 2 Minute Me"), simple ("eNAM Par Registration Kaise Hota Hai"). No two consecutive titles in a category share a shape.
+> - `yojana-2026-data.ts` and `maandhan-data.ts` titles were already varied — left alone (sirf zaroori Part-1 wale badle the).
+> - H1s inside components untouched in this part — wo pehle se varied hain; sirf metadata titles ka batch-footprint toda.
 > **⏳ Part 3 PENDING** — 5 template groups ke top articles de-uniform (§7.2/7.5).
 > **⏳ Part 4 PENDING** — Shared helpers extract to `components/ui/` (§7.6).
 
