@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import HindiRelatedFooter from '@/components/HindiRelatedFooter';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
+import { buildFaqSchema } from '@/lib/faq-schema';
 
 const FAQS = [
   {
@@ -26,15 +27,7 @@ const FAQS = [
   },
 ];
 
-const FAQ_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: FAQS.map((f) => ({
-    '@type': 'Question',
-    name: f.q,
-    acceptedAnswer: { '@type': 'Answer', text: f.a },
-  })),
-};
+const FAQ_SCHEMA = buildFaqSchema(FAQS);
 
 function Hd({ children }: { children: React.ReactNode }) {
   return (

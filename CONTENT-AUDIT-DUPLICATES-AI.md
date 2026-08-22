@@ -174,7 +174,11 @@ Abhi problem: "PM Kisan", "status check", "2026" jaise phrases baar-baar repeat 
 > - **hindi-yojana-2026 group:** openings already varied (seedha answer / myth-bust / numbers-first) — koi change nahi.
 > - **root "2026" set:** titles Part 2 me hi differentiated ho gaye the.
 > - Koi fact/figure invent nahi kiya — sirf order, opening shape aur wording badli; sab numbers wahi ke wahi.
-> **⏳ Part 4 PENDING** — Shared helpers extract to `components/ui/` (§7.6).
+> **✅ Part 4 DONE (2026-08-22) — Code-level extraction (§7.6):**
+> - **`components/ui/Fig.tsx` (new):** shared figure+caption component. Sab 15 `rajya-yojana` articles ka 30-line inline `Fig` ab ek 3-line wrapper hai (per-file IMG_BASE + default height preserve kiya) — call-sites untouched, render output identical.
+> - **`lib/faq-schema.ts` (new):** `buildFaqSchema(faqs)` — verbatim FAQPage JSON-LD scaffold 28 files se hataya. 13 files jinke schema me extra fields the (`inLanguage`, nested `@graph` etc.) jaan-boojh kar untouched — unka shape alag hai.
+> - Checker tools (`rajya-yojana/tools/`) ka shared scaffolding abhi extract NAHI kiya — wo behaviour-risk wala refactor hai, alag se karna behtar (j=0.19 overlap sirf UI scaffolding hai, content issue nahi).
+> - Hindi article dirs ke helpers (Hd/Note/Td etc.) already per-file distinct hain — extraction ki zaroorat nahi.
 
 1. **Hafta 1:** Cannibalization fix — kist series + eKYC pair + Maandhan titles (Section 3).
 2. **Hafta 2:** Sab 124 titles review — formula-break (7.1) apply karo jahan zaroorat hai.
