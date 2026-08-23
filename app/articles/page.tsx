@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { ARTICLES } from '@/lib/articles-data';
 import { MAANDHAN_ARTICLES } from '@/lib/maandhan-data';
 import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
+import { LIVE_YOJANA_2026_ARTICLES } from '@/lib/yojana-2026-data';
 import { HINDI_ARTICLES } from '@/lib/hindi-articles-data';
 import {
   SITE_URL,
@@ -44,6 +45,21 @@ type ListingArticle = {
   keywords?: readonly string[];
 };
 
+// SEO fix (2026-08-23, part 2): the 6 Hinglish /yojana/* guides were absent from
+// ALL_ARTICLES, so the "Sabhi Guides A–Z" index linked 126 of 132 article URLs in
+// the sitemap and these 6 never got a link from the main hub.
+const YOJANA_LISTING_ARTICLES = LIVE_YOJANA_2026_ARTICLES.map((a) => ({
+  slug: a.slug,
+  title: a.title,
+  description: a.description,
+  category: 'yojana',
+  categoryLabel: 'Yojana',
+  href: `/yojana/${a.slug}`,
+  ogImage: a.ogImage,
+  published: a.published,
+  keywords: [a.mainKeyword, ...a.secondaryKeywords] as readonly string[],
+}));
+
 const HINDI_LISTING_ARTICLES = HINDI_ARTICLES.map((a) => ({
   slug: a.slug,
   title: a.titleHi,
@@ -57,7 +73,7 @@ const HINDI_LISTING_ARTICLES = HINDI_ARTICLES.map((a) => ({
   keywords: a.keywords,
 }));
 
-const ALL_ARTICLES: readonly ListingArticle[] = [...ARTICLES, ...MAANDHAN_ARTICLES, ...RAJYA_LISTING_ARTICLES, ...HINDI_LISTING_ARTICLES];
+const ALL_ARTICLES: readonly ListingArticle[] = [...ARTICLES, ...MAANDHAN_ARTICLES, ...RAJYA_LISTING_ARTICLES, ...YOJANA_LISTING_ARTICLES, ...HINDI_LISTING_ARTICLES];
 
 export const metadata: Metadata = {
   title: `PM Kisan aur Yojana Verified Guides 2026`,
