@@ -4,7 +4,6 @@
 **Data sources:** GSC URL Inspection API (live), live HTML crawl of all 145 sitemap URLs, repo source read.
 
 ---
-https://github.com/khalil334/kisanstatus/blob/main/HUMANIZE-PLAN.md
 ---
 
 ## ⚡ STATUS UPDATE — 2026-08-23 (naya GSC screenshot, last update 8/21/26)
