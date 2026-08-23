@@ -13,7 +13,7 @@ const Fig = (p: FigProps) => (
 const FAQS_DATA = [
   {
     q: 'Kya YSR Rythu Bharosa aur Annadata Sukhibhava ek hi scheme hai?',
-    a: 'Haan. Andhra Pradesh sarkar ne YSR Rythu Bharosa ko officially rename karke "Annadata Sukhibhava" kar diya hai. Benefits aur eligibility lagbhag same hain, bas naam aur kuch administrative processes update hue hain.',
+    a: 'Haan, wahi scheme hai. Bas naam badla — YSR Rythu Bharosa ab officially "Annadata Sukhibhava" hai. Benefits aur eligibility lagbhag same.',
   },
   {
     q: 'Zameen apne naam nahi hai — Annadata Sukhibhava milegi?',
@@ -21,7 +21,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Status "Pending" hai — verification baaki hai ya bank mein atka hai?',
-    a: '"Pending" ka matlab verification chal raha hai, ya payment file ho chuki hai lekin bank tak nahi pahunchi. 7-10 din intezaar karein. Phir bhi na aaye toh bank se NPCI mapping check karwayein.',
+    a: 'Dono ho sakta hai. 7-10 din intezaar karein; phir bhi na aaye toh bank se NPCI mapping check karwayein.',
   },
   {
     q: 'Kya mujhe alag se PM Kisan ke liye apply karna padega?',
@@ -29,7 +29,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Agar main government employee hoon, kya mujhe ye paisa milega?',
-    a: 'Nahi. Aap ya parivaar ka koi sadasya government sector mein regular employment par hai toh aap exclusion criteria mein aate hain, aur aaya hua paisa wapas karna pad sakta hai.',
+    a: 'Nahi. Government job wale (aap ya parivaar ka koi sadasya) exclusion mein aate hain — aur aaya hua paisa wapas karna pad sakta hai.',
   },
 ];
 

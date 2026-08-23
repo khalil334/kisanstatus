@@ -65,7 +65,7 @@ const FAQS = [
   },
   {
     q: 'Mandi wale keh rahe hain gate pass nahi banega, par mera registration to ho chuka hai?',
-    a: 'Registration hona alag baat hai, verify hona alag. Gate pass sirf verified entry par banta hai. Portal par status dekho — agar "Verified by Patwari" nahi likha, to pehle wo karwao.',
+    a: 'Registration alag cheez hai, verify alag. Gate pass sirf verified entry par banta hai — portal par "Verified by Patwari" nahi likha to pehle wo karwao.',
   },
   {
     q: 'Meri fasal ka rakba galat darj ho gaya, ab kya hoga?',
@@ -77,15 +77,15 @@ const FAQS = [
   },
   {
     q: 'Kya batai (theke) par li hui zameen ki fasal bhi register ho sakti hai?',
-    a: 'Ho sakti hai — registration me zameen ke asli record ke saath kaasht karne wale ki detail bhi jaati hai. Par dono taraf ki sahmati aur sahi kagaz zaroori hain, warna verification me atkegi.',
+    a: 'Ho sakti hai. Registration me zameen ke record ke saath kaasht karne wale ki detail jaati hai — bas dono taraf ki sahmati aur sahi kagaz chahiye.',
   },
   {
     q: 'Ek hi family ID par do bhaiyon ki alag-alag fasal register hogi kya?',
-    a: 'Family ID ek identity hai, zameen ka record khewat-killa se chalta hai. Jiske naam jitni zameen hai, uski utni entry banegi. Batwaara record me nahi chadha to pehle wo karwana padega.',
+    a: 'Haan. Family ID identity hai; zameen ka record khewat-killa se chalta hai — jiske naam jitni zameen, utni entry. Batwaara record me nahi chadha? Pehle wo.',
   },
   {
     q: 'Registration ki koi fees lagti hai kya? CSC wala 200 rupay maang raha hai.',
-    a: 'Portal par registration ka koi paisa nahi lagta. CSC par sirf mamooli service charge banta hai — koi "file aage badhane" ke naam par zyada paisa maange to mana kar do aur helpline par shikayat karo.',
+    a: 'Portal par registration free hai. CSC par sirf mamooli service charge banta hai — "file aage badhane" ke naam par zyada maange to mana karo, helpline par shikayat karo.',
   },
 ];
 

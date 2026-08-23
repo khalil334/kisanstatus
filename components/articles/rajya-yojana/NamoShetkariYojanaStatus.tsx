@@ -17,11 +17,11 @@ const FAQS_DATA = [
   },
   {
     q: 'Namo Shetkari hapta kadhi milel?',
-    a: 'Pattern ye raha hai ki rajya ka hapta kendriya kist aane ke kuch hafton baad release hota hai — kyunki suchi usi verified data se banti hai.  Agle hapte ki koi date officially announce nahi hui hai; GR (Government Resolution) nikalne ke baad hi tareekh pakki hoti hai.',
+    a: 'Pattern ye raha hai: rajya ka hapta kendriya kist ke kuch hafton baad aata hai, kyunki suchi usi verified data se banti hai. Agli date officially announce nahi hui — GR (Government Resolution) nikalne ke baad hi tareekh pakki hoti hai.',
   },
   {
     q: 'Namo Shetkari list mein naam nahi hai, kya karein?',
-    a: 'Pehle dekhein ki aap kendriya list mein eligible hain ya nahi. Agar wahan darj hain, toh apne taluka krishi adhikari (TAL) se sampark karein aur apna 7/12 Utara aur Aadhaar details verify karwayein.',
+    a: 'Pehle kendriya list dekho. Wahan darj ho? To taluka krishi adhikari (TAL) se milkar 7/12 Utara aur Aadhaar verify karwao.',
   },
   {
     q: 'nsmny.mahait.org phone par nahi khul raha — doosra raasta kya hai?',
@@ -29,7 +29,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Maharashtra chhod diya hai, lekin zameen wahin hai — hapta aayega?',
-    a: 'Ye hapta rajya ke apne budget se milta hai aur iske liye rehna Maharashtra mein hona zaroori hai, is liye pradesh chhodne par ye ruk jaata hai — chahe khet wahin ho. Kendriya grant par iska koi asar nahi hota; wo poore desh ki scheme hai aur nayi jagah bhi chalti rehti hai.',
+    a: 'Hapta rajya ke budget se milta hai, isliye Maharashtra chhodte hi ruk jaata hai — chahe khet wahin ho. Kendriya grant par asar nahi; wo poore desh ki scheme hai.',
   },
   {
     q: 'Zameen joint naam par hai (bhai-behen ya pita ke saath), kisko paisa milega?',
@@ -37,7 +37,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Hapta aadha aaya, ₹3,000 ki jagah kam amount dikha, aisa kyun?',
-    a: 'Rajya ka hapta fixed ₹3,000 hota hai, kam nahi aata. Agar kam raqam dikhi hai toh wo kisi aur scheme ki entry hai. Passbook mein transaction ka naam dekhein — NSMNY wali entry hamesha poori ₹3,000 ki hoti hai.',
+    a: 'Hapta fixed ₹3,000 hai — kam aata hi nahi. Kam dikha? Wo kisi aur scheme ki entry hai; passbook mein transaction ka naam dekho.',
   },
 ];
 

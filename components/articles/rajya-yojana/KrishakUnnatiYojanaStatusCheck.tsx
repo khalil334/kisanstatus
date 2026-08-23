@@ -18,15 +18,15 @@ const FAQS_DATA = [
   },
   {
     q: 'Is baar paisa ek saath kyun aaya, kiston mein kyun nahi?',
-    a: 'Pehle antar rashi kai kiston mein aati thi. 2026 se sarkar ne ise ekmusht (single installment) kar diya — Kharif 2025-26 ki poori raqam Holi se pehle ek hi baar mein release karne ka faisla cabinet ne liya tha. Isliye agar aap purane pattern ka intezaar kar rahe hain ki "doosri kist kab aayegi", to samajh lein ki ab doosri kist hoti hi nahi.',
+    a: '2026 se scheme ekmusht ho gayi — cabinet ne Kharif 2025-26 ki poori raqam Holi se pehle ek hi baar release karne ka faisla liya. Ab "doosri kist" hoti hi nahi.',
   },
   {
     q: 'Maine dhan society mein becha, token bhi kata — phir bhi paisa nahi aaya. Kahan atka?',
-    a: 'Pehla kaam — apni samiti se kharidi ki entry confirm karein ki aapke naam par kitne quintal darj hue. Entry sahi hai to mamla bank side ka hai: account band, dormant, ya Aadhaar se link na hona payment lautne ki sabse aam wajahein hain. Kharidi ki entry hi galat ya adhoori hai, to sudhaar samiti aur khadya vibhag ke record se hi hoga — bank ke chakkar se kuch nahi milega.',
+    a: 'Pehla kaam: samiti se kharidi ki entry confirm karo — aapke naam kitne quintal darj hue. Entry sahi hai? To mamla bank ka hai (account band, dormant, ya Aadhaar link nahi). Entry hi galat hai to sudhaar samiti aur khadya vibhag ke record se hoga.',
   },
   {
     q: 'Naye ₹15,000 prati acre wale faayde ka status alag se kahan dikhega?',
-    a: 'Wo alag component hai — Kharif 2026 se dhan chhodkar doosri fasal (dalhan, tilhan, makka, kodo, kutki, ragi, kapas) lene par input sahayata milegi. Iska hisaab AgriStack registration aur digital crop survey se chalega, isliye pehla kadam apna farmer registration aur girdawari-jaisi fasal entry sahi karwana hai. Bina digital survey mein fasal darj hue claim banta hi nahi.',
+    a: 'Wo alag component hai — Kharif 2026 se dhan chhodkar doosri fasal (dalhan, tilhan, makka, kodo, kutki, ragi, kapas) par input sahayata. Hisaab AgriStack aur digital crop survey se chalega. Survey mein fasal darj nahi? Claim banta hi nahi.',
   },
   {
     q: 'Samiti wale kehte hain "record bhej diya", bank kehta hai "kuch nahi aaya" — kis par bharosa karein?',

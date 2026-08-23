@@ -110,7 +110,7 @@ export default function BiharKisanRegistrationStatusCheck2026({
       <h2>DBT Agriculture Bihar Portal Aakhir Hai Kya, Aur Iske Bina Anudan Kyu Nahi Milta?</h2>
 
       <p>
-        DBT matlab Direct Benefit Transfer — sarkar ka paisa seedha khetihar ke bank khate me.
+        DBT matlab Direct Benefit Transfer. Seedha paisa, seedha khate me.
         Bihar krishi vibhag ne iske liye ek hi darwaza rakha hai:{' '}
         <Ext href="https://dbtagriculture.bihar.gov.in">dbtagriculture.bihar.gov.in</Ext>.
         Yahan ek baar enrolment hota hai aur 13-anka{' '}

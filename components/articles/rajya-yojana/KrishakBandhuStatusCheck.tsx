@@ -19,11 +19,11 @@ const FAQS_DATA = [
   },
   {
     q: '"Account valid" likha hai, phir bhi paisa nahi aaya. Kya karun?',
-    a: 'Is status ka matlab itna hi hai ki bank ne aapki details verify kar di hain — credit hona abhi baaki hai. File ab treasury ki qataar mein hai, is stage par branch jaane se kuch nahi badlega. Release ki khabar ke baad hafta bhar ruk kar passbook entry karwa lein.',
+    a: 'Iska matlab bas itna hai — bank ne details verify kar din, credit baaki hai. File treasury ki qataar mein hai; branch jaane se abhi kuch nahi badlega.',
   },
   {
     q: 'Ek acre se kam zameen hai, kya kuch milega?',
-    a: 'Haan, milega. Chhoti jot par raqam pro-rata ghatti hai, lekin ek minimum ke neeche kabhi nahi jaati — scheme ka jhukav chhote kisan ki taraf hi hai. Isi tarah bahut badi jot par bhi ek upper cap laga hai. To aapke aur kisi aur ke amount mein farq dikhe to ghabraane ki zaroorat nahi.',
+    a: 'Haan, milega. Chhoti jot par raqam pro-rata ghatti hai, par ek minimum se neeche kabhi nahi jaati. Badi jot par upper cap hai — isliye do logon ke amount mein farq dikhna normal hai.',
   },
   {
     q: 'Bhagchasi (sharecropper) hoon, meri zameen nahi hai — main eligible hoon?',
@@ -31,7 +31,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Death benefit kis-kis ko milta hai?',
-    a: 'Ye raqam registered kisan ke legal heir ya nominee ko milti hai, aur sirf ek baar. Shart umar ki hai — mrityu ke waqt kisan 18 se 60 ke beech ho; zameen kitni thi, is component mein iska koi role nahi. Claim der se karne par time-barred hone ka khatra rehta hai, to jitne kagaz haath mein hain unhi ke saath block office mein form daal dein.',
+    a: 'Legal heir ya nominee ko, sirf ek baar. Shart umar ki — mrityu ke waqt kisan 18 se 60 ke beech ho; zameen kitni thi, koi role nahi. Claim der se kiya to time-barred ho sakta hai.',
   },
 ];
 
@@ -363,8 +363,8 @@ export default function KrishakBandhuStatusCheck({ article }: { article: RajyaYo
         <h3>Joint khatian mein hissa saaf nahi</h3>
         <p>
           Kai gharon mein khatian sabhe bhaiyon ke naam saath hai, hissa alag likha nahi hota.
-          Aise mein per-acre hisaab lagana mushkil ho jaata hai aur file pending pad jaati hai.
-          Ek baar hissa record mein darj ho jaaye, to har saal ka jhanjhat khatam ho jaata hai.
+          Nateeja? Per-acre hisaab nahi lag paata, file pending. Ek baar hissa record mein
+          darj ho jaaye, to har saal ka jhanjhat khatam.
         </p>
 
         <h2>Jab Kuch Samajh Na Aaye To Kahan Jaana Hai</h2>

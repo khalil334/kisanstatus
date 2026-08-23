@@ -13,11 +13,11 @@ const Fig = (p: FigProps) => (
 const FAQS_DATA = [
   {
     q: 'Kya mujhe iske liye alag se application deni padegi?',
-    a: 'Alag form ka koi provision hi nahi hai. Is scheme ki list seedhi PM Kisan ke MP wale record se banti hai, is liye aapka kaam sirf itna hai ki PM Kisan mein aapka record chalu ho aur girdawari mein aapki fasal darj ho. Ye do cheezein theek hain to naam apne aap list mein aa jaata hai.',
+    a: 'Nahi, alag form ka provision hi nahi. List seedhi PM Kisan ke MP record se banti hai — PM Kisan chalu ho aur girdawari mein fasal darj ho, naam apne aap aa jaata hai.',
   },
   {
     q: 'Is state top-up ka amount kitna hai?',
-    a: 'State top-up ₹6,000 saalana hai, teen kiston mein ₹2,000-₹2,000. Scheme 2020 mein ₹4,000 se shuru hui thi, baad mein ise ₹6,000 kar diya gaya. PM Kisan ke ₹6,000 ke saath jodkar MP ke kisan ko total ₹12,000 saalana milta hai.',
+    a: '₹6,000 saalana, teen kiston mein ₹2,000-₹2,000. 2020 mein ₹4,000 se shuru hua tha. PM Kisan ke ₹6,000 jodo to MP ke kisan ko total ₹12,000 saalana.',
   },
   {
     q: 'Meri kist "Rejected" dikha rahi hai, kya karein?',
@@ -29,7 +29,7 @@ const FAQS_DATA = [
   },
   {
     q: 'MP chhod kar doosre rajya mein bas gaya hoon — top-up milta rahega?',
-    a: 'State top-up MP ke apne budget se aata hai, is liye MP ka permanent residence chhodne ke baad ye kist band ho jaati hai. Dhyan dein ki PM Kisan par iska koi asar nahi padta — wo central scheme hai aur aapke naye rajya mein bhi chalti rehti hai. Naye rajya ka apna top-up hai ya nahi, wo alag se dekhna hoga.',
+    a: 'State top-up MP ke budget se aata hai — permanent residence chhodte hi band. PM Kisan par asar nahi, wo central scheme hai aur naye rajya mein bhi chalti rahegi. Naye rajya ka apna top-up alag se dekhna hoga.',
   },
   {
     q: 'Girdawari mein fasal galat darj ho gayi hai, kist par asar padega kya?',

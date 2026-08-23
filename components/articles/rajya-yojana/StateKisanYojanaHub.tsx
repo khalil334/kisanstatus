@@ -12,23 +12,23 @@ const Fig = (p: FigProps) => (
 const FAQS_DATA = [
   {
     q: 'Kis state mein kisan ko sabse zyada paisa milta hai?',
-    a: 'Fixed amount wali schemes mein Andhra Pradesh ki Annadata Sukhibhava sabse aage hai, jahan kendriya hissa milakar saal ka ₹20,000 tak banta hai. Lekin Telangana ka hisaab per acre chalta hai, isliye zyada zameen wale khetihar ko wahan isse bhi upar mil sakta hai. Seedha comparison mushkil hai kyunki har jagah ka model apna-apna hai.',
+    a: 'Fixed amount mein Andhra Pradesh ki Annadata Sukhibhava sabse aage — kendriya hissa milakar saal ka ₹20,000 tak. Par Telangana per acre deta hai, to zyada zameen wale ko wahan isse upar bhi mil sakta hai. Seedha comparison mushkil hai; har jagah ka model apna-apna.',
   },
   {
     q: 'Main ek state se doosre state shift ho gaya hoon, kya purani state ki kist milti rahegi?',
-    a: 'Nahi. Har rajya ki yojana mein wahan ka nivasi hona zaroori shart hai. Shift hone par purani jagah ki eligibility khatam ho jaati hai. Naye pradesh mein wahan ke niyam ke hisaab se dobara register hona padta hai, aur zameen bhi wahin honi chahiye.',
+    a: 'Nahi. Shift hote hi purani eligibility khatam — har rajya nivasi hona maangta hai. Naye pradesh mein dobara register karo; zameen bhi wahin chahiye.',
   },
   {
     q: 'Rajya ki kist nahi aayi lekin PM Kisan aata hai, kya karein?',
-    a: 'Dono judaa systems hain, isliye ye normal hai. Pehle apne yahan ki website par sthiti dekhein. Aksar wajah e-KYC pending hona, bank account NPCI se seed na hona, ya land record mein naam ka farak hoti hai. Screen par kuch samajh na aaye to apne block ke krishi karyalay ya panchayat mein poochhein.',
+    a: 'Normal hai, dono judaa systems hain. Apne rajya ki website par sthiti dekho — aam wajah e-KYC pending, NPCI seeding, ya land record mein naam ka farak.',
   },
   {
     q: 'Kya bataidar (tenant farmer) ko bhi state yojana ka paisa milta hai?',
-    a: 'Zyadatar jagah nahi, kyunki list land record se banti hai. Andhra Pradesh iska exception hai, jahan Annadata Sukhibhava mein registered tenant farmers bhi aate hain. West Bengal mein bhagchasi ka record panchayat ke paas ho to Krishak Bandhu mil sakta hai. Baaki jagah zameen apne naam par honi chahiye.',
+    a: 'Zyadatar jagah nahi — list land record se banti hai. Exceptions: Andhra Pradesh (Annadata mein registered tenant farmers aate hain) aur West Bengal (bhagchasi ka record panchayat ke paas ho to Krishak Bandhu). Baaki jagah zameen apne naam par chahiye.',
   },
   {
     q: 'Chhattisgarh ki Krishak Unnati Yojana is list se alag kaise hai?',
-    a: 'Wahan paisa saal ke fixed amount ki jagah dhan ki kharidi se juda hai. Annadata ne kitna dhan becha, us par antar rashi milti hai. Kharif 2026 se dhan chhod kar doosri fasal lagane par per acre input sahayata ka naya raasta bhi khula hai. Isliye wahan ki raqam har khetihar ke liye apni-apni banti hai.',
+    a: 'Wahan paisa fixed nahi, dhan ki kharidi se juda hai — jitna becha, us par antar rashi. Kharif 2026 se doosri fasal par per acre input sahayata ka naya raasta bhi khula. Raqam har khetihar ki apni-apni banti hai.',
   },
 ];
 

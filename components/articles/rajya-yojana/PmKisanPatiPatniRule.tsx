@@ -13,19 +13,19 @@ const FAQS_DATA = [
   },
   {
     q: 'Baalig bete ko alag se PM Kisan mil sakta hai?',
-    a: 'Haan, lekin sirf tab jab batwaare ke baad zameen revenue record mein uski entry ho chuki ho. Naya ration card ya shaadi ho jaana kaafi nahi hai — mutation ke bina wo abhi bhi wahi ek parivaar mana jaata hai.',
+    a: 'Haan — par sirf tab jab batwaare ke baad zameen revenue record mein uski entry ho chuki ho. Ration card ya shaadi kaafi nahi; mutation ke bina wo wahi ek parivaar hai.',
   },
   {
     q: 'Galat mila PM Kisan ka paisa kaise wapas karein?',
-    a: 'PM Kisan portal ke "Voluntary Surrender of PM-KISAN Benefit" option se registration khud hataayein, aur portal par bane refund challan se paisa jama karein. Notice ka intezaar karne se recovery bank account se bhi ho sakti hai.',
+    a: 'Portal ke "Voluntary Surrender of PM-KISAN Benefit" option se registration hatao, refund challan se paisa jama karo. Notice ka intezaar mat karo — recovery bank account se bhi ho sakti hai.',
   },
   {
     q: 'Do registration par paisa aa raha hai aur kuch nahi hua, to shayad theek hai?',
-    a: 'Kist aana verification poori hone ka proof nahi hai. Kai case mein duplicate do-teen saal baad pakda gaya aur poora amount ek saath recover hua. Jitni der ruk kar theek karenge, refund utna bada banega.',
+    a: 'Bilkul nahi. Kai duplicate do-teen saal baad pakde gaye — poora amount ek saath recover hua.',
   },
   {
     q: 'Batai (tenant) par kheti karte hain, milta hai?',
-    a: 'PM Kisan landholding par aadharit hai, is liye batai par kheti karne wale is scheme mein nahi aate. Kuch rajya apni scheme mein tenant farmer ko shamil karte hain. Apne rajya ki scheme rajya kisan yojana list mein dekh lein.',
+    a: 'Nahi — PM Kisan landholding par chalta hai, batai wale ismein nahi aate. Kuch rajya apni scheme mein tenant farmer ko lete hain; apne rajya ki list dekh lo.',
   },
 ];
 

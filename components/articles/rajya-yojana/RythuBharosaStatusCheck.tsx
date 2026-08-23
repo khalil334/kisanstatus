@@ -286,9 +286,8 @@ export default function RythuBharosaStatusCheck2026() {
       <p>
         Guntas ka hisaab bhi note kar lein, kyunki Telangana mein zameen aksar acre-gunta mein boli
         jaati hai. Ek acre mein 40 guntas hote hain. Portal par land extent decimal mein dikhta hai:
-        maan lijiye aapke paas 2 acre 20 guntas hai, toh system 2.5 acre padhega aur season ka
-        ₹15,000 banega. Agar aapko lagta hai ki amount kam aaya hai, toh sabse pehle apna land
-        extent Dharani ke record se milayen. Aksar "kam paisa aaya" ki shikayat asal mein guntas ke
+        2 acre 20 guntas hai? System 2.5 acre padhega — season ka ₹15,000. Amount kam laga
+        ho toh sabse pehle apna land extent Dharani ke record se milayen. Aksar "kam paisa aaya" ki shikayat asal mein guntas ke
         galat record ki hoti hai.
       </p>
 
@@ -336,8 +335,8 @@ export default function RythuBharosaStatusCheck2026() {
 
       <p>
         Telangana mein zameen acre aur guntas mein boli jaati hai — ek acre mein 40 guntas.
-        Scheme ka hisaab bhi isi par chalta hai, isliye apna anumaanit figure nikaalna aasan
-        hai. Pattadar passbook mein likha extent lein — maan lijiye 2 acre 20 guntas, yaani
+        Scheme ka hisaab bhi isi par chalta hai. Anumaanit figure nikaalna aasan hai:
+        pattadar passbook mein likha extent lein — maan lijiye 2 acre 20 guntas, yaani
         2.5 acre. Saal ka ₹12,000 prati acre matlab ₹30,000, aur ek season (Kharif ya Rabi)
         ka credit iska aadha — ₹15,000. Credit is hisaab se kam aaye to pehla shak extent
         par karein: Dharani mein darj rakba passbook se milaayein, kyunki payment Dharani

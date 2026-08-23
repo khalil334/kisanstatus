@@ -384,9 +384,9 @@ export default function RajasthanKisanSammanNidhi9000() {
         <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-5 my-6 not-prose">
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
             <strong>Teen jagah, ek naam:</strong> aapka naam Aadhaar mein, Jan Aadhaar mein, aur
-            jamabandi mein — teeno mein ek jaisa hona chahiye. Ek jagah &ldquo;Rameshwar&rdquo; aur dusri jagah
-            &ldquo;Rameshwar Lal&rdquo; likha ho, to system ise do alag aadmi maan leta hai. Ye Rajasthan mein
-            rejection ki sabse aam technical wajah hai, aur sabse aasani se pehle se theek ki ja sakti hai.
+            jamabandi mein — teeno mein ek jaisa hona chahiye. Ek jagah &ldquo;Rameshwar&rdquo;, dusri jagah
+            &ldquo;Rameshwar Lal&rdquo;? System do alag aadmi maan leta hai. Rajasthan mein rejection ki
+            sabse aam technical wajah yahi hai — aur sabse aasaan fix bhi.
           </p>
         </div>
 
@@ -406,9 +406,9 @@ export default function RajasthanKisanSammanNidhi9000() {
         <p>
           Lekin &ldquo;automatic&rdquo; ka matlab &ldquo;bina shart&rdquo; nahi hai. Rajasthan mein ek extra layer hai jo dusre
           rajyon mein nahi milti — Jan Aadhaar. State ka har DBT payment Jan Aadhaar-linked bank
-          account se hokar jaata hai, aur yahi baat is scheme ko PM Kisan se alag banati hai. PM Kisan
-          ka paisa seedha Aadhaar-NPCI raste se aata hai; state ka ₹1,000 Jan Aadhaar family record se
-          match hone ke baad hi release hota hai. Isi ek farak se sabse zyada payment atakte hain, aur
+          account se hokar jaata hai. Yahi farak hai. PM Kisan ka paisa seedha Aadhaar-NPCI
+          raste se aata hai; state ka ₹1,000 Jan Aadhaar family record se match hone ke baad
+          hi release hota hai. Isi ek farak se sabse zyada payment atakte hain, aur
           isi wajah se aapko PM Kisan mil sakta hai jabki state wala na mile.
         </p>
 

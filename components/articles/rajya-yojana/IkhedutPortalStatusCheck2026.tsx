@@ -186,8 +186,8 @@ export default function IkhedutPortalStatusCheck2026({
 
       <p>
         Window khuli hai to us ghatak ke saamne &quot;Apply / arji karo&quot; ka link chalu
-        milega. Band hai to link dabta nahi, ya seedha message aata hai ki arji band hai.
-        Yahi ek line hai jo aapko batati hai ki aaj kaam hoga ya nahi.
+        milega. Band hai to link dabta hi nahi. Yahi ek line aapko batati hai ki aaj
+        kaam hoga ya nahi.
       </p>
 
       <p>

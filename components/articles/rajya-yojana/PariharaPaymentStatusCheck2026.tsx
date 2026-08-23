@@ -125,7 +125,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Padosi ka paisa aa gaya, mera nahi — iska matlab kya hai?',
-    a: 'Village-wise list ka yahi sabse bada fayda hai. Gaon me doosron ka credit ho gaya aur aapka nahi, to dikkat round me nahi, aapki entry me hai — us haalat me list me naam hai ya nahi, wahi se apna branch pakdo.',
+    a: 'Yahi village-wise list ka sabse bada fayda hai. Doosron ka credit ho gaya aur aapka nahi? To dikkat round me nahi, aapki entry me hai — list se apna branch pakdo.',
   },
   {
     q: 'List me naam hi nahi mila — kya karun?',
@@ -153,7 +153,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Parihara list dekhne ke liye koi app install karni chahiye?',
-    a: 'Kabhi nahi. Sarkari status sirf browser me, sarkari portal par dikhta hai — "parihara list download" ke naam par ghoomne wali APK file phone ka data churane ke liye banti hai. Aur koi agent kahe ki "paisa release karwa denge, itna kharcha lagega" to wo jhooth hai; release ka faisla treasury aur record se hota hai.',
+    a: 'Kabhi nahi. Sarkari status sirf browser me, sarkari portal par — "parihara list download" wali APK data churane ke liye banti hai. "Paisa release karwa denge" kehne wala agent jhooth bol raha hai; release treasury aur record se hota hai.',
   },
 ];
 
