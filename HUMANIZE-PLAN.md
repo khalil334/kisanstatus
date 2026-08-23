@@ -46,7 +46,7 @@ Har article mein ye 4 AI-footprints **zero** hone chahiye:
 | **Part 5** | `lib/yojana-2026-data.ts` (yojana 2026 / Hinglish) | 8 | ✅ Pushed (sab 6 component files scan — banned words 0, sab 6 me uniform FAQ lengths fix, 2 me same-rhythm runs tode; facts untouched) |
 | **Part 6** | `lib/hindi-rajya-yojana-data.ts` (Hindi rajya) | 15 | ✅ Pushed (sab 15 component files scan — banned words 0, sab 15 me uniform FAQ lengths fix, 5 me same-rhythm runs tode; facts untouched) |
 | **Part 7** | `lib/hindi-yojana-data.ts` + `lib/hindi-yojana-2026-data.ts` | 8+6 | ✅ Pushed (sab 14 component files scan — banned words 0, 9 files me same-rhythm sentence runs tode aur uniform FAQ lengths fix [PaymentStoppedByState ke FAQ answers sab ek jaise lambe the]; facts untouched) |
-| **Part 8** | `lib/hindi-loan-mandi-pashupalan-data.ts` + baaki chhoti Hindi files | ~5 | ⬜ Pending |
+| **Part 8** | `lib/hindi-loan-mandi-pashupalan-data.ts` + `lib/hindi-kisanguides-data.ts` | 3+2 | ✅ Pushed (sab 5 component files scan — banned words 0; NamoDroneDidi ke 5 FAQ answers sab ek jaise lambe the [327/318/320/318/332 chars] → 3 ko vary kiya; 3 files me same-rhythm sentence runs tode [GehuKaRateAaj, TractorSubsidy2027, NamoDroneDidi — 1-1 para each]; GauMutra + KccLimit clean the, koi edit nahi; facts untouched; `tsc --noEmit` pass) |
 
 Har part complete hone par is table mein status update karo (⬜ Pending → ✅ Pushed `<commit>`)
 aur wo update USI push mein jaye.
