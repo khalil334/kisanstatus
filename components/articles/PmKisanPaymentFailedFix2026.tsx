@@ -351,7 +351,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             Problem fix hone ke baad jab atki hui rakam aati hai, toh passbook entry dekh kar log phir confuse ho jaate hain. Do baatein yaad rakho. Pehli — arrears ki entry bhi wahi “PMKISAN” ya DBT credit ke naam se aati hai, koi alag label nahi hota. Doosri — do kist ek saath aayi toh kabhi ₹4,000 ki ek entry dikhegi, kabhi ₹2,000 ki do alag entries alag tarikhon par. Dono normal hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ek galti se bachna — SMS ka intezaar mat karo. Bahut baar paisa aa jaata hai aur SMS aata hi nahi, kyunki bank ka SMS alert band hai ya number purana hai. Mahine mein ek baar passbook update karwa lo ya bank ke app mein statement dekh lo. Jinke paas smartphone nahi, wo missed-call banking (har bank ka apna number, passbook par likha hota hai) se balance jaan sakte hain.
+            Ek galti se bachna — SMS ka intezaar mat karo. Bahut baar paisa aa jaata hai aur SMS aata hi nahi. Wajah? Bank ka SMS alert band hai ya number purana hai. Mahine mein ek baar passbook update karwa lo ya bank ke app mein statement dekh lo. Jinke paas smartphone nahi, wo missed-call banking (har bank ka apna number, passbook par likha hota hai) se balance jaan sakte hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Aur haan — gaon mein koi kahe ki “arrears nikalwane ke liye form bharna padta hai aur uski fees lagti hai”, toh saaf mana kar do. Atki rakam apne aap release hoti hai, iske liye na koi alag application hai, na koi charge. Jo aisa bole wo aapki jeb ka raasta dhundh raha hai.

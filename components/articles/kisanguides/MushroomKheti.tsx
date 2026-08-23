@@ -33,15 +33,15 @@ export const metadata: Metadata = {
 const mushroomKhetiFaqs = [
   {
     q: 'Kya 10x10 feet ke chhote kamre mein mushroom farming profitable hai?',
-    a: 'Haan, 100-150 bags aaram se aa jate hain. Pehle saal seekhne ka hota hai, isliye break-even hona bhi badi baat hai. Doosre saal se direct marketing karke 20-25% net margin nikalna shuru ho jata hai.',
+    a: 'Haan. 100-150 bags aaram se aa jate hain. Pehle saal seekhne ka hota hai — break-even ho gaya to bhi badi baat hai. Doosre saal se direct marketing karke 20-25% net margin nikalna shuru ho jata hai.',
   },
   {
     q: 'Khumbi ke kamre mein badboo ya smell kyun aati hai?',
-    a: 'Agar sterilization sahi se hua ho toh smell minimal hoti hai. Lekin agar straw zyada geela chhod diya ya koi bag kharab ho gaya aur use waqt par bahar nahi nikala, toh ammonia ya sadan ki badboo aane lagti hai.',
+    a: 'Sterilization sahi hua ho toh smell minimal hoti hai. Badboo ka matlab: ya straw zyada geela chhod diya, ya koi kharab bag waqt par bahar nahi nikala — usi se ammonia ya sadan ki smell aati hai.',
   },
   {
     q: 'Green mold (hara fungus) dikhe toh turant kya karein?',
-    a: 'Us bag ko chupke se kamre se bahar nikal kar jala dein ya gehra gaad dein. Bachaye hue bags ke aas-paas Neem oil (5ml/litre) ya Trichoderma viride spray karein. Bleaching powder se farsh saaf karein.',
+    a: 'Us bag ko turant bahar nikaal kar jala dein ya gehra gaad dein — deri mat karna. Bachaye hue bags ke aas-paas Neem oil (5ml/litre) ya Trichoderma viride spray, aur farsh bleaching powder se saaf.',
   },
   {
     q: 'Asli mushroom beej (spawn) kahan se aur kitne mein milega?',

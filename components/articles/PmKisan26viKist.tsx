@@ -77,7 +77,7 @@ export default function PmKisan26viKist({ article }: { article: ArticleMeta }) {
         <section className="mb-8 mt-8">
           <SH>26vi Kist Ka Number Kab Lagega — Pattern Se Samjho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Scheme ka rule saaf hai — saal mein teen kist, har chaar mahine mein ek: April–July, August–November, December–March. Ab ginti karo: 24vi aur 25vi ke do cycle poore hone ke baad 26vi aayegi. Har cycle 3-4 mahine ka hota hai, isliye 26vi ka realistic window 2027 ke beech se aage banta hai. Exact din? Wo release se ek-do hafte pehle hi pata chalta hai, kabhi mahino pehle nahi.
+            Scheme ka rule saaf hai — saal mein teen kist, har chaar mahine mein ek: April–July, August–November, December–March. Ab ginti karo. 24vi aur 25vi ke do cycle poore hone ke baad 26vi aayegi — har cycle 3-4 mahine ka. Isliye 26vi ka realistic window 2027 ke beech se aage banta hai. Exact din? Wo release se ek-do hafte pehle hi pata chalta hai, kabhi mahino pehle nahi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Sarkar aksar kist release PM ke kisi event ke saath karti hai — pichhli kai kists aise hi aayi hain. Isliye news mein jab &quot;PM Kisan Samman Sammelan&quot; jaisa koi event dikhne lage, tab samajh jao ki release paas hai.

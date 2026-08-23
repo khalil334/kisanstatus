@@ -44,7 +44,7 @@ const FAQS_DATA = [
   },
   {
     q: 'eKYC ek baar ho gayi, kya har saal dobara karni padegi?',
-    a: 'Nahi, ek baar successful ho gayi toh normally dobara nahi karni padti. System sirf tab dobara maangta hai jab aapne mobile number, naam, ya bank account mein koi badlaav kiya ho — routine mein har saal repeat karne ki zaroorat nahi.',
+    a: 'Nahi. Ek baar ho gayi toh ho gayi. System sirf tab dobara maangta hai jab aapne mobile number, naam ya bank account badla ho.',
   },
 ];
 

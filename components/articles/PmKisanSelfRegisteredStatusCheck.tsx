@@ -26,15 +26,15 @@ const FAQS_DATA = [
   },
   {
     q: 'Reference number kho gaya hai — ab kya karun?',
-    a: 'Koi baat nahi. Aadhaar number se hi sab check ho jaata hai. Beneficiary status mein Aadhaar daalo, puri history dikh jayegi. Reference number sirf tracking ke liye hota hai — zaroori nahi hai. Phir bhi chahiye toh CSC se print nikalwa sakte ho.',
+    a: 'Koi baat nahi — Aadhaar number se hi sab check ho jaata hai. Beneficiary status mein Aadhaar daalo, puri history saamne.',
   },
   {
     q: 'Online registration mein photo upload karni thi — kya size chahiye?',
-    a: 'Passport size photo, 20-50 KB tak. White background preferred hai lekin zaroori nahi. Clear honi chahiye — chehra dikhna chahiye. Mobile se kheench ke bhi ho jaata hai, bas dhundhla nahi hona chahiye. Agar reject ho gayi toh dobara upload kar sakte ho.',
+    a: 'Passport size, 20-50 KB tak. White background preferred hai, zaroori nahi. Mobile se kheenchi hui bhi chal jaati hai — bas chehra saaf dikhna chahiye, dhundhli nahi. Reject ho gayi? Dobara upload kar do, koi limit nahi hai.',
   },
   {
     q: 'Registration ke baad mobile number change kar sakte hain?',
-    a: 'Haan bilkul. pmkisan.gov.in par "Edit Aadhaar Details" option hai. Wahan se mobile number update kar sakte ho. OTP verify karna padega purane number par. Agar purana number band ho gaya hai toh CSC jaake karwana padega — operator help kar dega.',
+    a: 'Haan. pmkisan.gov.in par "Edit Aadhaar Details" se update ho jaata hai — purane number par OTP aayega. Purana number hi band ho gaya hai? Tab CSC jaana padega, operator karwa dega.',
   },
 ];
 

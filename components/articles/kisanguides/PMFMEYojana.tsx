@@ -54,7 +54,7 @@ const pMFMEYojanaFaqs = [
   },
   {
     q: 'Bank loan reject ho jaye to kya subsidy mil sakti hai?',
-    a: 'Nahi. Ye credit-linked subsidy hai — bank loan sanction aur disburse hone ke baad hi subsidy release hoti hai. Bina loan ke seedha grant lene ka koi rasta is scheme me nahi hai.',
+    a: 'Nahi. Ye credit-linked subsidy hai — loan sanction hone ke baad hi release hoti hai. Bina loan ke seedha grant? Is scheme me aisa koi rasta nahi.',
   },
   {
     q: 'Naya business shuru karne wale apply kar sakte hain?',

@@ -29,7 +29,7 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Kya sarkar ne is baar ki date bata di hai?',
-    a: 'Nahi. Aur sach poochho toh sarkar mahino pehle batati bhi nahi hai. 23vi ka hi example lo — official confirmation release se bas kuch din pehle aayi thi. Aaj ki tareekh me jo bhi channel pakki date bata raha hai, woh apna andaza bech raha hai. Bharosa sirf pmkisan.gov.in ke notice ya ministry ke announcement par karo.',
+    a: 'Nahi. Sarkar mahino pehle batati bhi nahi — 23vi ki official confirmation release se bas kuch din pehle aayi thi. Jo channel aaj pakki date bata raha hai, apna andaza bech raha hai.',
   },
   {
     q: 'October 2026 ka andaza kis aadhar par hai?',
@@ -37,7 +37,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Is baar amount badhega kya?',
-    a: 'Abhi tak aisi koi official baat nahi hui. ₹2,000 hi milenge — scheme ka structure shuru se yehi chala aa raha hai, saal ke ₹6,000 teen hisson me. "4000 milenge" type ke message har round se pehle ghoomte hain, aur har baar galat nikalte hain. Rakam kabhi badhi toh uski khabar Budget ya Cabinet se aayegi, kisi forward se nahi.',
+    a: '₹2,000 hi milenge. Koi official baat nahi hui badhne ki — scheme ka structure shuru se yehi hai, saal ke ₹6,000 teen hisson me. "4000 milenge" wale message har round se pehle ghoomte hain aur har baar galat nikalte hain. Rakam kabhi badhi toh khabar Budget ya Cabinet se aayegi, kisi WhatsApp forward se nahi.',
   },
   {
     q: '"Payment Success" dikh raha hai lekin account me kuch nahi aaya?',
@@ -45,7 +45,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Meri purani 2-3 kistein bhi ruki hui hain — woh milengi?',
-    a: 'Agar rukne ki wajah aapki taraf se thi — eKYC pending, land seeding adhuri, spelling mismatch — aur ab woh theek ho gayi hai, toh ruka hua pura amount arrears ke roop me ek saath aata hai. Ministry khud keh chuki hai ki mandatory requirements poori hote hi due installments nikal jaati hain. Alag se koi application nahi lagti.',
+    a: 'Milengi — agar rukne ki wajah (eKYC pending, land seeding adhuri, spelling mismatch) ab theek ho gayi hai. Ruka hua pura amount arrears ke roop me ek saath aata hai; alag se koi application nahi lagti.',
   },
 ];
 

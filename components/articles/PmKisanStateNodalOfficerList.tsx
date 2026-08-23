@@ -54,7 +54,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya nodal officer phone call par complaint sunte hain?',
-    a: 'Haan, lekin unke office hours (10:30 AM se 1:00 PM) mein hi call karein. Dopahar ke baad zyadatar officers field visit ya meetings mein hote hain. Call par humesha "Diary Number" ya "Complaint Reference Number" maangein.',
+    a: 'Haan — lekin sirf office hours (10:30 AM se 1:00 PM) mein. Dopahar ke baad zyadatar officers field visit ya meetings mein hote hain. Aur ek cheez kabhi mat bhoolna: call par "Diary Number" ya "Complaint Reference Number" zaroor maangein, wahi aapka saboot hai.',
   },
   {
     q: 'Agar nodal officer 30 din tak reply na kare toh kya karein?',
@@ -66,7 +66,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya complaint anonymous (bina naam ke) ho sakti hai?',
-    a: 'Nahi. PM Kisan ek beneficiary-specific scheme hai. Bina Registration Number aur Aadhaar details ke koi bhi officer aapki file trace nahi kar sakta. Aapki information confidential rehti hai.',
+    a: 'Nahi. Bina Registration Number aur Aadhaar details ke koi officer aapki file trace hi nahi kar sakta. Information confidential rehti hai.',
   },
 ];
 

@@ -16,7 +16,7 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: '25vi kist ki exact date kya hai?',
-    a: 'Abhi kuch bhi official nahi hai — na sarkar ne bola, na kisi aur ko pata. Net pe jo February ya March ghum raha hai wo sab guesswork hai. Announcement hamesha release se thoda pehle hoti hai, mahino pehle kabhi nahi. Official khabar aate hi hum yahan update kar denge.',
+    a: 'Koi exact date nahi hai. Na sarkar ne boli, na kisi aur ko pata — net pe jo February/March ghum raha hai wo guesswork hai. Official khabar aate hi ye page update hoga.',
   },
   {
     q: 'Kya is baar amount badhkar ₹2,500 ya ₹3,000 ho jayega?',
@@ -32,7 +32,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Naye registration ki koi last date hai kya?',
-    a: 'Nahi, portal saal bhar khula rehta hai. Lekin verification me hafto ka time lagta hai — document check, land seeding, eKYC sab hone ke baad hi naam list me aata hai. Jitni jaldi karoge, utni jaldi benefit shuru hone ke chance banenge. Der karne ka bas itna nuksan hai ki ek-do cycle nikal sakti hai.',
+    a: 'Nahi, portal saal bhar khula rehta hai. Bas itna yaad rakho: verification me hafte lagte hain — document check, land seeding, eKYC sab hone ke baad hi naam list me aata hai. Der ki toh ek-do cycle nikal sakti hai.',
   },
 ];
 

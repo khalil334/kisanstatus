@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 const FAQS_DATA = [
   {
     q: 'Drip par 75% ya 90% subsidy milne ka dawa sach hai?',
-    a: 'Nahi. Central PDMC ka notified rate 55% small & marginal kisan ke liye aur 45% doosre kisano ke liye hai — aur wo bhi indicative unit cost par, vendor ke bill par nahi. Kahin total figure zyada dikhta hai to wo state ka top-up hai, central rate nahi. Aise kisi bhi claim par vendor se likhit government order maangein.',
+    a: 'Nahi. Central PDMC ka notified rate 55% (small & marginal) aur 45% (baaki) hai — wo bhi indicative unit cost par, vendor ke bill par nahi. Zyada figure dikhe to wo state ka top-up hai. Aise claim par vendor se likhit government order maango.',
   },
   {
     q: 'NE aur Himalayan states mein subsidy percentage badh jaata hai?',
@@ -39,7 +39,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Mere khet ke liye drip theek hai ya sprinkler?',
-    a: 'Fasal ki qataar clear hai — ganna, cotton, sabziyan, bagwani — to drip. Gehu, makka, dalhan, tilhan jaisi ghani fasal, ya sandy aur uneven zameen — to sprinkler. Bagwani mein drip ka fertigation fayda sabse zyada dikhta hai, kyunki khaad bhi paani ke saath jad tak jaati hai.',
+    a: 'Simple hisaab: qataar wali fasal (ganna, cotton, sabziyan, bagwani) — drip. Ghani fasal (gehu, makka, dalhan, tilhan) ya sandy/uneven zameen — sprinkler. Bas.',
   },
   {
     q: 'Ek hi zameen par dobara subsidy kab milegi?',

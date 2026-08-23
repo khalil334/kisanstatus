@@ -57,7 +57,7 @@ const verminCompostFaqs = [
   },
   {
     q: 'Branded packaging ke liye FSSAI zaroori hai?',
-    a: 'Yeh ek "fertilizer" hai, "food" nahi, isliye iske liye FSSAI ki zaroorat nahi hoti. Iske liye FCO (Fertilizer Control Order) ke under state agriculture department se registration aur authorized lab se quality testing report kaafi hoti hai.',
+    a: 'Nahi. Yeh "fertilizer" hai, "food" nahi. FCO (Fertilizer Control Order) ke under state agriculture department se registration aur authorized lab ki quality testing report kaafi hai.',
   },
   {
     q: 'Normal gobar ki khaad (FYM) use nahi kar sakte?',

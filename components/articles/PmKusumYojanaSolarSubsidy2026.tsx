@@ -77,8 +77,8 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
       <div className="max-w-3xl mx-auto px-4 py-8">
         <p className="text-[var(--color-text)] leading-relaxed mb-4">
           Pehli baat jo koi nahi batata: is scheme me koi ek &quot;last date&quot; nahi hoti.
-          Har state ko pumps ka quota milta hai, aur application window usi hisaab se
-          khulti-band hoti hai. Isliye jo sabse pehle karna hai wo form bharna nahi —
+          Har state ko pumps ka quota milta hai. Application window usi hisaab se
+          khulti-band hoti rehti hai. Isliye jo sabse pehle karna hai wo form bharna nahi —
           apne state ki current window ka status dekhna hai. Window band hai to accha
           se accha form bhi waitlist me hi baithega.
         </p>

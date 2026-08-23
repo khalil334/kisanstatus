@@ -32,11 +32,11 @@ const FAQS_DATA = [
   },
   {
     q: 'CSC center par loan apply karne ka charge kitna hai?',
-    a: 'Nominal service charge ₹20-50 ho sakta hai form filling ke liye. Loan amount par koi commission nahi dena padta. Agar operator ₹500+ maange toh fraud hai — 1800-1214-060 par usi din complaint karo.',
+    a: 'Form filling ka ₹20-50, bas. Loan amount par koi commission nahi. Operator ₹500+ maange toh fraud hai — 1800-1214-060 par usi din complaint karo.',
   },
   {
     q: 'Pichle saal KCC tha lekin renew nahi hua — ab fresh apply karna padega?',
-    a: 'Haan, fresh application deni padegi. Lekin agar pichla repayment clean tha toh new approval fast-track hota hai. Old KCC number dikhao bank manager ko — positive credit history system mein dikhti hai.',
+    a: 'Haan, fresh application. Lekin pichla repayment clean tha? Toh approval fast-track hota hai — old KCC number bank manager ko dikhao, positive credit history system mein dikhti hai.',
   },
   {
     q: 'Tractor loan ke liye KCC pehle lena zaroori hai?',

@@ -387,8 +387,7 @@ export default function PmKisanBankAccountChangeProcess() {
             PM Kisan ka paisa sirf usi ke account mein jaata hai jiska naam registration mein hai — aur guzre hue
             vyakti ke record par kisi aur ka account chadhaya hi nahi ja sakta. Iske liye pehle CSC jaakar
             <strong> Succession Transfer</strong> karwana padta hai: death certificate, Khatauni (jisme zameen ab
-            waris ke naam ho) aur waris ka Aadhaar. Zameen ka mutation pehle, PM Kisan ka record baad mein — ye
-            order ulta kiya toh file atkegi. Transfer poora hone ke baad hi naye beneficiary ka apna account link
+            waris ke naam ho) aur waris ka Aadhaar. Order yaad rakho: zameen ka mutation pehle, PM Kisan ka record baad mein. Ulta kiya toh file atkegi. Transfer poora hone ke baad hi naye beneficiary ka apna account link
             hoga — tab wahi upar wala CSC process lagega.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">

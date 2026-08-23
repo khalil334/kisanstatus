@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 const silageMakingFaqs = [
   {
     q: 'Packaged fodder packet kholne ke baad kitne din tak use karna chahiye?',
-    a: 'Packet khulne ke 3-4 din ke andar use kar lena chahiye. Uske baad hawa lagne se fermentation reverse ho jata hai aur fungus lag sakta hai. Rozana thoda-thoda kaat kar nikalna sahi tarika hai.',
+    a: '3-4 din ke andar. Uske baad hawa lagne se fermentation reverse ho jata hai aur fungus lag sakta hai. Rozana thoda-thoda kaat kar nikalna sahi tarika hai.',
   },
   {
     q: 'Kya packaged fodder banane ke liye koi special training ya license chahiye?',
@@ -87,7 +87,7 @@ export default function SilageMaking() {
       </h1>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 italic">
-        December aate-aate khet khali ho jaate hain aur hari ghaas dhundhna mushkil ho jaata hai. Har saal yehi kahani dohrai jaati hai — pashupalak pareshan, doodh utpadan neeche gir jaata hai. Silage isi samasya ka hal hai: hara chara jo hawa-band karke mahino tak taaza rakha ja sakta hai.
+        December aate-aate khet khali. Hari ghaas dhundhna mushkil. Har saal yehi kahani dohrai jaati hai — pashupalak pareshan, doodh utpadan neeche gir jaata hai. Silage isi samasya ka hal hai: hara chara jo hawa-band karke mahino tak taaza rakha ja sakta hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">

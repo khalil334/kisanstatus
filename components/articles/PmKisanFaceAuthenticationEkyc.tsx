@@ -332,7 +332,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
           </p>
           <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4">
             <li>
-              <strong>Bank account ki Aadhaar seeding (NPCI).</strong> Paisa DBT se us khaate me jata hai jo NPCI system me Aadhaar se linked hai. Khaata chalu hai par Aadhaar se seeded nahi — to eKYC ke baad bhi transfer fail. Apni branch ja kar ek line poochho: &ldquo;Mera account NPCI me Aadhaar se seeded hai?&rdquo; Nahi hai to wahi form bhar do.
+              <strong>Bank account ki Aadhaar seeding (NPCI).</strong> Paisa DBT se us khaate me jata hai jo NPCI system me Aadhaar se linked hai. Khaata chalu hai par Aadhaar se seeded nahi? Transfer fail — eKYC ke baad bhi. Apni branch ja kar ek line poochho: &ldquo;Mera account NPCI me Aadhaar se seeded hai?&rdquo; Nahi hai to wahi form bhar do.
             </li>
             <li>
               <strong>Land seeding.</strong> Aapka khasra number portal ke record me dikhna chahiye. Ye wala kaam patwari/revenue office ke through hota hai — app ya CSC se nahi. Status page par land seeding &ldquo;No&rdquo; dikhe to wahi pakdo, eKYC dobara karne se kuch nahi hoga.

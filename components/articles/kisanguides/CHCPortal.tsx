@@ -111,7 +111,7 @@ export default function CHCPortal() {
           Sabse Bada Jhooth: "Free Tractor"
         </h3>
         <p className="text-sm text-red-800 dark:text-red-300">
-          Koi bhi sarkari scheme aapko <strong>Tractor par subsidy nahi deti</strong>. Subsidy sirf tractor ke peeche lagne wale implements (jaise Rotavator, Happy Seeder, Laser Leveler, etc.) par milti hai. Agar koi local agent aapse kehta hai ki "₹50,000 do, free tractor dilwa dunga", toh wo 100% scam hai. Aapko pehle tractor apne paiso ya bank loan se khareedna hoga, phir implements par subsidy claim karni hogi.
+          Koi bhi sarkari scheme aapko <strong>Tractor par subsidy nahi deti</strong>. Subsidy sirf tractor ke peeche lagne wale implements (jaise Rotavator, Happy Seeder, Laser Leveler, etc.) par milti hai. Koi local agent kahe "₹50,000 do, free tractor dilwa dunga"? 100% scam. Aapko pehle tractor apne paiso ya bank loan se khareedna hoga, phir implements par subsidy claim karni hogi.
         </p>
       </div>
 
