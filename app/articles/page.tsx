@@ -94,6 +94,39 @@ export const metadata: Metadata = {
   category: 'Agriculture & Farming',
 };
 
+// SEO fix (2026-08-23): /articles served only 3–15 real <a href> links to Googlebot
+// because ArticlesClient bails out to client-side rendering (useSearchParams inside
+// Suspense). JSON-LD URLs are NOT used for link discovery, so ~100 articles were
+// invisible to crawlers → GSC "Discovered - currently not indexed" (51 pages).
+// This server-rendered index guarantees every article link exists in the initial HTML.
+function articlePath(article: ListingArticle): string {
+  const isMaandhan = article.category === 'pension-scheme' || article.slug.includes('maandhan');
+  return article.href ?? (isMaandhan ? `/maandhan/${article.slug}` : `/articles/${article.slug}`);
+}
+
+function ServerArticleIndex() {
+  const sorted = [...ALL_ARTICLES].sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+  return (
+    <section aria-labelledby="all-guides-index" className="container-site px-4 pb-12">
+      <h2 id="all-guides-index" className="font-black text-[var(--color-text)] text-xl mb-4">
+        Sabhi Guides A–Z ({ALL_ARTICLES.length})
+      </h2>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-2 text-sm" role="list">
+        {sorted.map((article) => (
+          <li key={articlePath(article)}>
+            <a
+              href={articlePath(article)}
+              className="text-[var(--color-text-muted)] hover:text-green-700 dark:hover:text-green-400 transition-colors inline-block py-0.5"
+            >
+              {article.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
 export default function ArticlesPage() {
   // Ahrefs "Slow page" fix (2026-08-18): the ItemList previously embedded a
   // full Article object (author, publisher+logo, image, dates, description)
@@ -155,6 +188,7 @@ export default function ArticlesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <ArticlesClient articles={ALL_ARTICLES} />
+      <ServerArticleIndex />
     </>
   );
 }

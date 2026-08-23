@@ -54,6 +54,7 @@ export default function Footer() {
                   { href: '/articles', label: 'All Articles' },
                   { href: '/articles/hi', label: 'हिंदी योजना गाइड' },
                   { href: '/rajya-yojana', label: 'Rajya Yojana' },
+                  { href: '/yojana', label: 'Yojana Guides' },
                   { href: '/maandhan', label: 'PM Kisan Maandhan' },
                   { href: '/calculator', label: 'Calculators' },
                   { href: '/calculator/quick-status-check', label: 'Quick Status Check' },

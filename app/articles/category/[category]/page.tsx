@@ -542,7 +542,29 @@ export default async function CategoryPage({
             </Link>
           </div>
         ) : (
-          <ArticlesClient articles={categoryArticles} showHero={false} />
+          <>
+            <ArticlesClient articles={categoryArticles} showHero={false} />
+            {/* SEO fix (2026-08-23): ArticlesClient bails out to CSR, so crawlers see a
+                skeleton instead of links. This server-rendered list guarantees every
+                article in this category is discoverable in the initial HTML. */}
+            <section aria-label="Category article index" className="mt-10">
+              <h2 className="font-black text-[var(--color-text)] text-xl mb-4">
+                Is Category ke Sabhi Guides ({categoryArticles.length})
+              </h2>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-2 text-sm" role="list">
+                {categoryArticles.map((a) => (
+                  <li key={a.slug}>
+                    <a
+                      href={`/articles/${a.slug}`}
+                      className="text-[var(--color-text-muted)] hover:text-green-700 dark:hover:text-green-400 transition-colors inline-block py-0.5"
+                    >
+                      {a.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </>
         )}
       </div>
     </>

@@ -66,6 +66,66 @@
 
 ---
 
+## ⭐ 51 "Discovered – currently not indexed" pages — ye KESE theek honge (step-by-step)
+
+**Sabse pehle samjho problem kya thi:** Google ne ye 51 pages sitemap me *dekhe* (Discovered),
+par kabhi *download nahi kiye* (`last_crawl_time: null`). Kyun? Kyunki `/articles` hub page
+Googlebot ko HTML me sirf 3–15 links deta tha — baaki links JavaScript ke baad bante the,
+aur Googlebot ko koi internal link nahi mila to usne crawl priority hi nahi di.
+
+**Content ka koi kasoor nahi hai. Delete kuch nahi karna.**
+
+### Fix — 3 code changes (2026-08-23 ko is repo me push hue)
+
+| # | File | Change | Kya theek hota hai |
+|---|---|---|---|
+| 1 | `app/articles/page.tsx` | Server-rendered "Sabhi Guides A–Z" section — saare ~150 article links ab initial HTML me | 51 pages ko internal links milte hain → Google discover + crawl karega |
+| 2 | `app/articles/category/[category]/page.tsx` | Har category page pe bhi server-rendered article list | Category-level discovery, JSON-LD vs HTML mismatch khatam |
+| 3 | `components/Footer.tsx` | `/yojana` ka link Quick Links me add | Orphan `/yojana` section har page se reachable |
+
+Ye Option A hai (diagnosis § 7): `ArticlesClient` ka interactive filter waise hi chalta rahega —
+hum ne uske NEECHE ek plain server-rendered list add ki hai jo har visitor ko dikhti hai
+(hidden nahi — hidden links Google ke against hai). Googlebot ko pehli hi request me
+saare links mil jayenge, JavaScript ke bina.
+
+### Deploy ke baad — verify karo (5 minute)
+
+```bash
+curl -s https://kisanstatus.com/articles | grep -o 'href="/articles/' | wc -l
+# pehle: 15   → fix ke baad: 140+ hona chahiye
+
+curl -s https://kisanstatus.com/ | grep -o 'href="/yojana' | wc -l
+# pehle: 0    → fix ke baad: 1+ hona chahiye
+```
+
+Browser me bhi kholo (JavaScript band karke best test hai):
+1. `https://kisanstatus.com/articles` — neeche "Sabhi Guides A–Z" section me saare articles
+2. `https://kisanstatus.com/articles/category/loan` — "Is Category ke Sabhi Guides" list
+3. Homepage footer — "Yojana Guides" link dikhna chahiye
+
+### Phir GSC me (verify ke BAAD hi, pehle nahi)
+
+1. **URL Inspection → `https://kisanstatus.com/articles` → Request Indexing** — sabse zaroori step; yehi hub baaki 51 pages discover karayega
+2. `https://kisanstatus.com/yojana` ke liye bhi Request Indexing
+3. **Sitemaps → sitemap.xml re-submit**
+4. Page indexing → "Discovered – currently not indexed" → **VALIDATE FIX** (agar button available ho; pichla validation already Passed hai to skip)
+
+### Timeline — kya expect karo
+
+| Kab | Kya hoga |
+|---|---|
+| Din 1 (deploy) | curl checks pass |
+| Hafta 1 | Google `/articles` ko re-crawl karega, naye links dekhega |
+| Hafta 2–4 | 51 pages dhire-dhire "Discovered" se "Indexed" me shift honge |
+| Hafta 4+ | Jo bache, unhe individually inspect karo |
+
+⚠️ **Sabr rakho.** 51 pages ek din me index NAHI honge. Google apni speed se crawl karta hai.
+Daily GSC mat kholo — hafte me ek baar dekho. Indexed count already 114 → 138 ja chuka hai,
+trend sahi direction me hai.
+
+
+---
+
 ## 0. Bottom line — pehle ye padho
 
 **Aapka diagnosis galat hai. Ye AI spam / duplicate / thin content ka case NAHI hai.**
