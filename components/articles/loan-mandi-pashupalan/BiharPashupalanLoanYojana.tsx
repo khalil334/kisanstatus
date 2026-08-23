@@ -303,8 +303,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
         <SH>Kamai Kitni Hogi? YouTube Wale Number Bhool Jao</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           &ldquo;2 bhains, ₹50,000 mahina&rdquo; — aise thumbnail aapne bhi dekhe honge. Sach yeh hai ki doodh nasl, chara
-          aur season se banta hai, aur kamai usme se kharcha kaatne ke baad bachti hai. Aur ek cheez jo video wale
-          nahi batate: bhains byane ke baad hi doodh deti hai. Dry period mein chara bhi chalega, dawai bhi — bas
+          aur season se banta hai, aur kamai usme se kharcha kaatne ke baad bachti hai. Aur ek cheez video wale nahi batate. Bhains byane ke baad hi doodh deti hai. Dry period mein chara bhi chalega, dawai bhi — bas
           doodh nahi aayega, aur paisa bhi nahi.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">

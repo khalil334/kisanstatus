@@ -13,11 +13,11 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Kya JanSamarth par apply karna free hai?',
-    a: 'Bilkul free. Na registration ki fee hai, na application ki. Agar koi cyber cafe ya agent "portal ki fee" ke naam par paisa maange toh woh sirf apni service fee le raha hai — portal ka usse koi lena-dena nahi. Form khud bharna sabse safe hai.',
+    a: 'Bilkul free — na registration ki fee, na application ki. Cyber cafe ya agent "portal ki fee" maange toh wo apni service fee le raha hai, portal ka usse koi lena-dena nahi.',
   },
   {
     q: 'Eligibility check karne se CIBIL kharab hota hai kya?',
-    a: 'Portal par shuruati eligibility check aapke basic details aur scheme rules par hota hai. Haan, jab aap aage badh kar formal application karte ho toh bank apna credit check karta hai — yeh normal process hai, har loan mein hota hai. Sirf eligibility dekhne se ghabrane ki zaroorat nahi.',
+    a: 'Nahi. Shuruati eligibility check basic details aur scheme rules par hota hai. Formal application par bank apna credit check karta hai — wo har loan mein hota hai, normal process. Sirf eligibility dekhne se ghabrane ki koi zaroorat nahi.',
   },
   {
     q: 'Mujhe portal par "not eligible" dikha raha hai, ab kya karoon?',

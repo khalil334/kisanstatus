@@ -25,7 +25,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Apply kahan hota hai?',
-    a: 'NLM ke entrepreneurship projects ka application online hota hai — nlm.udyamimitra.in portal par. Wahan registration karke project details, documents aur bank ki jaankari bharni hoti hai. Application State Implementing Agency (SIA) ke through process hoti hai aur approval ke baad SIDBI ke through subsidy release hoti hai.',
+    a: 'Online — nlm.udyamimitra.in par. Registration, project details, documents, bank ki jaankari. Process State Implementing Agency (SIA) ke through hota hai; approval ke baad subsidy SIDBI ke through release hoti hai.',
   },
   {
     q: 'Murgi farm mein sabse bada risk kya hai?',

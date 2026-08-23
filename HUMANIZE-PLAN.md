@@ -40,7 +40,7 @@ Har article mein ye 4 AI-footprints **zero** hone chahiye:
 | Part | File(s) | Articles | Status |
 |---|---|---|---|
 | **Part 1** | `lib/core-articles-data.ts` (PM Kisan core — status, eKYC, kist) | 40 | ✅ Pushed (audit: sab 40 articles scan kiye — banned-word hits 0 asli [2 false positives: "Comprehensive insurance" product-naam, "elevated hive" literal], 12 files me AI-uniform FAQ answers ya same-rhythm sentence runs mile aur fix kiye; facts change nahi hue, sirf style) |
-| **Part 2** | `lib/loan-mandi-pashupalan-data.ts` (loans, mandi, pashupalan) | 12 | ⬜ Pending |
+| **Part 2** | `lib/loan-mandi-pashupalan-data.ts` (loans, mandi, pashupalan) | 12 | ✅ Pushed (sab 12 scan — banned words 0, 5 files me uniform FAQ lengths / rhythm-runs fix; facts untouched) |
 | **Part 3** | `lib/maandhan-data.ts` (Maandhan pension) | 14 | ⬜ Pending |
 | **Part 4** | `lib/rajya-yojana-data.ts` (state yojana) | 17 | ⬜ Pending |
 | **Part 5** | `lib/yojana-2026-data.ts` (yojana 2026 / Hinglish) | 8 | ⬜ Pending |

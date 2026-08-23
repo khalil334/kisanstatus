@@ -18,7 +18,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Sex-sorted semen kya hota hai aur iska fayda kya hai?',
-    a: 'Normal AI mein bachhda ya bachhiya — 50-50 chance hota hai. Sex-sorted semen mein technology se 90%+ probability bachhiya (female calf) ki hoti hai. Dairy kisan ke liye iska matlab seedha hai — bachhiya matlab aane wali doodh dene wali gay, bachhda matlab kharcha. RGM ke under is semen ki cost ka 50% tak sarkar deti hai.',
+    a: 'Normal AI mein bachhda ya bachhiya — 50-50. Sex-sorted semen mein 90%+ probability bachhiya ki. Bachhiya matlab aane wali doodh dene wali gay; bachhda matlab kharcha. Cost ka 50% tak RGM deta hai.',
   },
   {
     q: 'IVF pregnancy par ₹5,000 subsidy kaise milti hai?',
@@ -38,7 +38,7 @@ const FAQS_DATA = [
   },
   {
     q: 'MAITRI kya hota hai?',
-    a: 'Multi-Purpose AI Technician in Rural India — gaon ka trained AI technician. RGM ke under in technicians ko training aur equipment milta hai taaki AI service kisan ke darwaze tak pahunche. Agar aap khud berozgar yuva ho aur pashupalan background hai, toh MAITRI banna bhi ek rozgar ka rasta hai — apne district animal husbandry office se training ki jaankari lo.',
+    a: 'Multi-Purpose AI Technician in Rural India — gaon ka trained AI technician, jise RGM training aur equipment deta hai. Berozgar yuva ho aur pashupalan background hai? MAITRI banna khud ek rozgar ka rasta hai — district animal husbandry office se poochho.',
   },
   {
     q: 'Rashtriya Gokul Mission aur NLM mein kya fark hai?',
@@ -224,7 +224,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         <SH>IVF Se ₹5,000 — Kaise Kaam Karta Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           IVF (In Vitro Fertilization) mein high genetic merit gay ke embryo lab mein taiyar karke aapki gay/bhains
-          mein transfer kiye jaate hain. Aapki apni gay average nasl ki bhi ho, paida hone wali bachhiya top
+          mein transfer kiye jaate hain. Aapki apni gay average nasl ki ho? Koi baat nahi — paida hone wali bachhiya top
           genetics ki hogi. Desh mein 22+ IVF labs is kaam ke liye ban chuki hain aur hazaaron high genetic merit
           calves paida ho chuke hain.
         </p>

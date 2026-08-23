@@ -37,7 +37,7 @@ const FAQS_DATA = [
   },
   {
     q: 'YONO se online apply ho jata hai?',
-    a: 'YONO se KCC review aur kuch agri products ki enquiry ho jati hai, aur yahi se aap apna existing limit aur due date dekh sakte ho. Lekin naya dairy term loan zyada tar cases mein branch mein hi complete hota hai — kyunki DPR, site verification aur SoF ka kaam physical hota hai. App se shuruaat karo, follow-up branch mein karo.',
+    a: 'Aadha. YONO se KCC review, enquiry, existing limit aur due date dikh jaati hai. Naya dairy term loan branch mein hi complete hota hai — DPR, site verification aur SoF ka kaam physical hai.',
   },
   {
     q: 'Moratorium ya gestation period milta hai?',
@@ -45,11 +45,11 @@ const FAQS_DATA = [
   },
   {
     q: 'Pashu insurance zaroori hai kya?',
-    a: 'Bank aksar isko mandatory rakhta hai, aur imaandaari se kaha jaye toh aapke apne hit mein hai. Ek bhains ki maut poore project ka ganit bigad deti hai. Premium DPR mein pehle se jodwa lo, aur ear tag number policy par sahi likha ho — claim ke waqt sabse zyada jhagda tag mismatch par hota hai.',
+    a: 'Bank aksar mandatory rakhta hai — aur sach kahoon toh aapke apne hit mein hai. Ek bhains ki maut poore project ka ganit bigad deti hai. Ear tag number policy par sahi likha ho; claim ke waqt sabse zyada jhagda tag mismatch par hota hai.',
   },
   {
     q: 'Dairy loan sanction hone mein kitne hafte lagte hain?',
-    a: 'Poore documents ke saath chhoti file 2-4 hafte mein nikal jati hai; badi file jisme site inspection aur committee involvement ho, usme 1-2 mahine lag sakte hain. Sabse zyada delay do cheezon se hota hai — adhoori DPR aur account statement ka issue. Isliye branch jaane se pehle checklist tick karke jao, ek visit mein kaam ho jayega.',
+    a: 'Chhoti file (poore documents ke saath): 2-4 hafte. Badi file jisme site inspection aur committee ho: 1-2 mahine. Delay ki do hi wajah hoti hain — adhoori DPR aur account statement ka issue.',
   },
   {
     q: 'Doosre bank se sasta rate mil raha hai, switch karna chahiye?',
