@@ -5,6 +5,67 @@
 
 ---
 
+---
+
+## ⚡ STATUS UPDATE — 2026-08-23 (naya GSC screenshot, last update 8/21/26)
+
+**Data source:** GSC Page Indexing screenshots (8/21/26) + GSC URL Inspection API (live, aaj).
+
+### Naye numbers
+
+| | Pehle | Ab (8/21/26) |
+|---|---|---|
+| Indexed | ~114 | **138** ✅ (badh raha hai) |
+| Not indexed | 96 | 96 |
+
+### Reason-wise (8/21/26 screenshot)
+
+| Reason | Pages | Validation | Matlab |
+|---|---|---|---|
+| Discovered – currently not indexed | 51 | **✅ Passed** (6/25 → 7/1) | Google ne fix accept kar liya; ab crawl queue me hain |
+| Page with redirect | 19 | ❌ Failed | Purane redirect URLs — inpe kuch nahi karna, "Failed" sirf isliye hai ke ye pages redirect hi rahenge (by design) |
+| Not found (404) | 12 | Started | Purane deleted URLs — normal, khud drop ho jayenge |
+| Crawled – currently not indexed | 7 | ❌ Failed | **Yehi 7 asli content-work pages hain** (§ 7 P2 dekho) |
+| Soft 404 | 3 | Started | Check pending |
+| Redirect error | 2 | Started | Check pending |
+| Excluded by 'noindex' | 1 | Not Started | Intentional |
+| Alternate page w/ canonical | 1 | Not Started | Normal hreflang behaviour |
+
+### Aaj ki live URL Inspection (API se, fabricated nahi)
+
+| URL | Coverage state |
+|---|---|
+| `/articles` (hub) | **Submitted and indexed** ✅ (last crawl 7/20/26) |
+| `/articles/KisanCreditCardOnlineApply2026` | URL is unknown to Google |
+| `/articles/hi` | Discovered – currently not indexed |
+| `/articles/fto-status-check-paisa-kab-aayega` | Discovered – currently not indexed |
+
+### Iska matlab kya hai
+
+1. **"Validation passed" on Discovered-not-indexed (51 pages)** — sabse badi khushkhabri.
+   Google ne maan liya ke problem theek ho gayi hai. Ab ye sirf **crawl-queue waiting** hai.
+   Indexed count 114 → 138 ja chuka hai; trend chart me green bars lagatar badh rahe hain.
+   **Kuch mat karo — bas 2–4 hafte aur intezaar.**
+2. **Ye AI/spam/duplicate ka case ab bhi NAHI hai** — § 0–4 ka diagnosis valid hai.
+   Deleted kuch nahi karna. 91 articles delete karne ka idea ab bhi galat hai.
+3. **19 redirect + 12 404 = 31 pages** sitemap me hain hi nahi — purane URLs, ignore karo.
+   "Validation Failed" on redirects ka matlab error nahi hai; wo pages redirect hi rahenge.
+4. **Asli kaam sirf 7 pages ka hai** — "Crawled – currently not indexed" (validation failed).
+   GSC me is row pe click karke EXPORT karo aur list bhejo; sirf unhi ka content review hoga.
+5. `/articles` hub khud indexed hai ✅ — lekin last crawl 7/20 ka hai. Agar tab ke baad
+   bailout-fix deploy hua hai, to GSC me `/articles` pe **Request Indexing** dabao taake
+   Google naya HTML (114 links wala) dekhe.
+
+### Abhi karne wale kaam (chhota list)
+
+- [ ] GSC → "Crawled – currently not indexed" (7 pages) → EXPORT → list share karo
+- [ ] GSC → URL Inspection → `/articles` → **Request Indexing** (fresh crawl ke liye)
+- [ ] Sitemap `sitemap.xml` re-submit karo
+- [ ] Soft 404 (3) aur Redirect error (2) ki URLs bhi export karke bhejo
+- [ ] Baaki: **intezaar**. Daily check karke pareshan mat ho — weekly dekho.
+
+---
+
 ## 0. Bottom line — pehle ye padho
 
 **Aapka diagnosis galat hai. Ye AI spam / duplicate / thin content ka case NAHI hai.**
