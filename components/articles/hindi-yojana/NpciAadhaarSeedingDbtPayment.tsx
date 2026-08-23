@@ -318,7 +318,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         घबराहट खत्म। <strong>&quot;Aadhaar not seeded in NPCI&quot;</strong> — यही इस पूरे लेख का विषय है;
         सीधे Step 2 पर जाइए। <strong>&quot;Account closed&quot;</strong> — seeded खाता बंद हो चुका है; किसी
         चालू खाते में नई seeding करानी होगी। <strong>&quot;Name mismatch&quot;</strong> — आधार और बैंक
-        record के नाम अलग हैं; पहले नाम सुधरवाइए, फिर यह प्रक्रिया। और{' '}
+        record के नाम अलग हैं — पहले नाम सुधरवाइए, तभी यह प्रक्रिया आगे बढ़ेगी। और{' '}
         <strong>&quot;Payment Initiated&quot;</strong> दिखे तो कुछ मत कीजिए — पैसा रास्ते में है, FTO
         process होने के बाद भी खाते तक पहुंचने में कुछ कार्यदिवस लगते हैं। 24-48 घंटे बाद status दोबारा
         देखना और बैंक/NPCI के SMS संभालकर रखना — दो आदतें जो शिकायत के वक्त सबूत बनती हैं।
@@ -432,9 +432,9 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         <Link href="/articles/hi/payment-stopped-by-state">उसकी guide यहां</Link> है।
       </p>
       <p>
-        अनुभव से निकला सबसे बड़ा सबक — यह mapping एक बार की चीज नहीं, एक <em>स्थिति</em> है। खाता बदला,
-        बैंक merge हुआ, खाता dormant हुआ — किसी भी घटना से mapping बदल या टूट सकती है। तो साल में दो बार,
-        बुवाई और कटाई की तरह, myAadhaar खोलकर 2 मिनट का status-check कर लेने की आदत बना लीजिए। जितनी मेहनत
+        अनुभव से निकला सबसे बड़ा सबक — यह mapping एक बार की चीज नहीं, एक <em>स्थिति</em> है। खाता बदला?
+        बैंक merge हुआ? खाता dormant? किसी भी घटना से mapping बदल या टूट सकती है। तो साल में दो बार —
+        बुवाई और कटाई की तरह — myAadhaar खोलकर 2 मिनट का status-check कर लेने की आदत बना लीजिए। जितनी मेहनत
         खेत के दस्तावेज़ संभालने में लगाते हैं, उसका सौवां हिस्सा इस digital कागज पर भी लगा दें — किस्त अटकने की
         प्रमुख वजह से हमेशा के लिए छुट्टी।
       </p>

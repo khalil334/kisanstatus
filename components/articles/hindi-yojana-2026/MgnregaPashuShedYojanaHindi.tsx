@@ -46,8 +46,8 @@ export default function MgnregaPashuShedYojanaHindi({ article }: { article: Hind
         पर cattle shed बनवाने का इंतजाम है — इसी को लोग &ldquo;पशु शेड योजना&rdquo; कहते हैं।
       </p>
       <p>
-        पर एक बात पहले ही साफ — <strong>इसका कोई online application form नहीं है।</strong> न कोई
-        registration portal, न last date, न कोई list जिसमें नाम check होता है। यह MGNREGA की एक work
+        पर एक बात पहले ही साफ — <strong>इसका कोई online application form नहीं है।</strong> न registration
+        portal। न last date। न कोई list जिसमें नाम check होता हो। यह MGNREGA की एक work
         category है जो ग्राम पंचायत के जरिए sanction होती है। जो site आपसे form भरवा रही है, वह या तो
         ad-clicks के लिए है या आपका data लेने के लिए।
       </p>

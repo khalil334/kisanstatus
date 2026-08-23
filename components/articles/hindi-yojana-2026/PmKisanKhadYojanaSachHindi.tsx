@@ -69,9 +69,9 @@ export default function PmKisanKhadYojanaSachHindi({ article }: { article: Hindi
 
       <Head2>₹11,000 का हिसाब किसने बनाया?</Head2>
       <p>
-        Formula सीधा है, और बिल्कुल गलत। PM किसान सम्मान निधि से साल के ₹6,000 मिलते हैं — यह असली है।
-        कुछ blogs ने उसके ऊपर ₹5,000 का एक काल्पनिक &ldquo;fertilizer subsidy&rdquo; amount जोड़ा और total
-        ₹11,000 बना दिया। किसी ने पहली किस्त ₹6,000 और दूसरी ₹5,000 लिखी, किसी ने खरीफ-रबी में बांट दिया।
+        Formula सीधा है। और बिल्कुल गलत। PM किसान सम्मान निधि से साल के ₹6,000 मिलते हैं — यह असली है।
+        उसके ऊपर कुछ blogs ने ₹5,000 का एक काल्पनिक &ldquo;fertilizer subsidy&rdquo; amount जोड़कर total
+        ₹11,000 बना दिया। किसी ने पहली किस्त ₹6,000 और दूसरी ₹5,000 लिखी। किसी ने खरीफ-रबी में बांट दिया।
         हर blog का हिसाब अलग है — क्योंकि source कोई है ही नहीं।
       </p>
       <p>
@@ -137,9 +137,9 @@ export default function PmKisanKhadYojanaSachHindi({ article }: { article: Hindi
       <Head2>&ldquo;खाद योजना registration&rdquo; वाला form दिखे तो?</Head2>
       <p>
         जो चीज मौजूद नहीं, उसका registration form किसी के पास कैसे हो सकता है? फिर भी कई sites
-        &ldquo;खाद योजना apply online&rdquo; के नाम से form चला रही हैं। खेल दो तरह का है: पहला — आपका
-        आधार, mobile, bank detail जमा करके data बेचना। दूसरा, ज्यादा खतरनाक — registration
-        &ldquo;confirm&rdquo; करने के नाम पर <strong>OTP मांगना</strong>। OTP दिया तो खाते से पैसा गया।
+        &ldquo;खाद योजना apply online&rdquo; के नाम से form चला रही हैं। खेल दो तरह का। पहला — आपका
+        आधार, mobile, bank detail जमा करके data बेचना। दूसरा ज्यादा खतरनाक है: registration
+        &ldquo;confirm&rdquo; करने के नाम पर <strong>OTP मांगना</strong>। OTP दिया? खाते से पैसा गया।
       </p>
       <p>
         पहचान का आसान नियम: central scheme का हर असली portal <strong>gov.in</strong> या{' '}

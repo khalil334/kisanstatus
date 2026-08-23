@@ -42,9 +42,9 @@ export default function PashuKisanCreditCardHindi({ article }: { article: HindiA
       <p>
         पहली बात जो कोई साफ नहीं बताता: <strong>पशु किसान क्रेडिट कार्ड कोई नई या अलग योजना नहीं है।</strong>{' '}
         यह वही Kisan Credit Card है जो 2019 में animal husbandry और fisheries तक बढ़ाया गया था। हरियाणा सरकार
-        ने इस extension को अपना नाम दिया, camp लगाए — और &ldquo;पशु किसान क्रेडिट कार्ड&rdquo; brand बन गया।
-        बाकी राज्यों में भी यही चीज मिलती है, बस वहां इसे KCC-AH या &ldquo;KCC for animal husbandry&rdquo;
-        कहते हैं।
+        ने इस extension को अपना नाम दिया। Camp लगाए। और &ldquo;पशु किसान क्रेडिट कार्ड&rdquo; brand बन गया।
+        बाकी राज्यों में भी यही चीज मिलती है — वहां नाम बस KCC-AH या &ldquo;KCC for animal husbandry&rdquo;
+        है।
       </p>
       <p>
         फर्क समझना इसलिए जरूरी है क्योंकि हरियाणा के बाहर bank में &ldquo;पशु किसान क्रेडिट कार्ड का form
@@ -103,7 +103,7 @@ export default function PashuKisanCreditCardHindi({ article }: { article: HindiA
       <Head2>जमीन नहीं है? यही तो इसका असली काम है</Head2>
       <p>
         Crop KCC का दरवाजा जमीन से खुलता है — जितनी जमीन, उतनी limit। इसी वजह से भूमिहीन पशुपालक सालों तक
-        bank credit से बाहर रहे। सूद पर पैसा उठाया, 2-3% महीना दिया, और दूध का मुनाफा ब्याज में चला गया।
+        bank credit से बाहर रहे। सूद पर पैसा उठाया। 2-3% महीना दिया। और दूध का पूरा मुनाफा ब्याज खा गया।
       </p>
       <p>Animal husbandry KCC में limit का आधार पशु है, जमीन नहीं। मतलब:</p>
       <ul className="list-disc pl-6 space-y-1.5 my-4 text-sm leading-relaxed">
@@ -212,11 +212,11 @@ export default function PashuKisanCreditCardHindi({ article }: { article: HindiA
       <Head2>कितना time लगता है — ईमानदार जवाब</Head2>
       <p>
         कागज पूरे हों, पशु tagged हों और KYC साफ हो — तो काम आमतौर पर 2-4 हफ्ते में हो जाता है:
-        application, field visit, बीमा, फिर limit sanction। किसी भी स्टेप पर महीना भर से ज्यादा
-        रुके तो चुप मत बैठिए — acknowledgement लेकर branch manager से लिखित में वजह पूछिए। RBI के
-        निर्देश हैं कि KCC applications तय समय में निपटाई जाएं — लिखित सवाल का लिखित जवाब देना
+        application, field visit, बीमा, फिर limit sanction। किसी स्टेप पर महीना भर से ज्यादा रुके?
+        चुप मत बैठिए। Acknowledgement लेकर branch manager से लिखित में वजह पूछिए — RBI के
+        निर्देश हैं कि KCC applications तय समय में निपटाई जाएं, इसलिए लिखित सवाल का लिखित जवाब देना
         bank की जिम्मेदारी बन जाती है। उससे भी बात न बने तो bank की customer grievance और फिर
-        RBI Ombudsman (cms.rbi.org.in) का रास्ता खुला है — यह free है, कोई वकील नहीं चाहिए।
+        RBI Ombudsman (cms.rbi.org.in)। Free है। कोई वकील नहीं चाहिए।
       </p>
 
       <Head2>Application क्यों अटकती या reject होती है</Head2>

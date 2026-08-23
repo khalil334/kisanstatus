@@ -14,7 +14,7 @@ const FAQS = [
   },
   {
     q: 'क्या हेल्पलाइन से नया registration हो जाएगा?',
-    a: 'नहीं। हेल्पलाइन सिर्फ जानकारी और शिकायत के लिए है। नया registration pmkisan.gov.in के Farmers Corner से, CSC से या कृषि विभाग से होता है। Correction (नाम, bank, आधार) भी portal या CSC पर होता है, phone पर नहीं।',
+    a: 'नहीं। हेल्पलाइन सिर्फ जानकारी और शिकायत के लिए है। Registration और correction (नाम, bank, आधार) — ये सब pmkisan.gov.in के Farmers Corner, CSC या कृषि विभाग के काम हैं। Phone पर नहीं होते।',
   },
   {
     q: 'खुद online करना मुश्किल है — CSC से शिकायत हो जाएगी?',
@@ -22,7 +22,7 @@ const FAQS = [
   },
   {
     q: 'एक साथ कितनी शिकायतें डाल सकते हैं?',
-    a: 'एक problem की एक ही query डालें। एक ही बात की कई queries डालने से record उलझता है और जवाब देर से आता है। हां, दो अलग-अलग दिक्कतें हैं — eKYC भी और payment भी — तो दोनों की अलग query ठीक है।',
+    a: 'एक problem, एक query। एक ही बात की कई queries डालने से record उलझता है और जवाब और देर से आता है। हां, अगर दिक्कतें सचमुच दो अलग हैं — eKYC भी और payment भी — तो दोनों की अलग query बिल्कुल ठीक है।',
   },
 ];
 

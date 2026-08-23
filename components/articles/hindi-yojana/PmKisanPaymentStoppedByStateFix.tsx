@@ -6,11 +6,11 @@ import { buildFaqSchema } from '@/lib/faq-schema';
 const FAQS = [
   {
     q: 'क्या यह message आने का अर्थ है कि मैं योजना से बाहर हो गया?',
-    a: 'नहीं। इसका अर्थ है कि आपकी उस किस्त का भुगतान राज्य स्तर पर verification में रोका गया है — record से नाम कटना अलग बात है। गड़बड़ी सुधरते ही रुका हुआ पैसा आने की व्यवस्था है।',
+    a: 'नहीं। किस्त राज्य स्तर पर verification में रोकी गई है — record से नाम कटना अलग बात है। गड़बड़ी सुधरी, पैसा आया।',
   },
   {
     q: 'रुकी हुई किस्त का पैसा वापस मिलेगा या डूब गया?',
-    a: 'सुधार के बाद रुकी किस्तें आमतौर पर अगली release के साथ जुड़कर आती हैं। कई किसानों को एक साथ ₹4,000 (दो किस्तें) आई हैं। शर्त यही है कि जिस वजह से रुका था, वह वजह पूरी तरह ठीक हो।',
+    a: 'डूबा नहीं। सुधार के बाद रुकी किस्तें आमतौर पर अगली release के साथ जुड़कर आती हैं — कई किसानों को एक साथ ₹4,000 (दो किस्तें) मिली हैं। बस शर्त एक है: जिस वजह से रुका था, वह वजह पूरी तरह ठीक होनी चाहिए, आधी-अधूरी नहीं।',
   },
   {
     q: 'कितने दिन में ठीक हो जाता है?',
@@ -208,8 +208,8 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       </p>
       <p>
         <strong>सवाल 2 — आधार, passbook और आवेदन में नाम अक्षर-दर-अक्षर एक है?</strong> &ldquo;Ram Kumar&rdquo; और
-        &ldquo;Ramkumar&rdquo; system की नजर में दो अलग आदमी हैं। &ldquo;Devi&rdquo; कहीं है, कहीं नहीं — यह भी mismatch है। फर्क
-        मिले तो <Link href="/articles/PmKisanCorrectionForm2026">correction form</Link> ही रास्ता है।
+        &ldquo;Ramkumar&rdquo; system की नजर में दो अलग आदमी हैं। &ldquo;Devi&rdquo; कहीं है, कहीं नहीं? वह भी mismatch। फर्क
+        मिले तो रास्ता एक ही है — <Link href="/articles/PmKisanCorrectionForm2026">correction form</Link>।
       </p>
       <p>
         <strong>सवाल 3 — जमीन आपके नाम खतौनी में दर्ज है?</strong> पिता/दादा के नाम है और वरासत
@@ -404,10 +404,10 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
 
       <Sec>आखिर में — पूरी बात का सार</Sec>
       <p>
-        &ldquo;Installment payment stopped by state&rdquo; निष्कासन नहीं, राज्य की जांच में लगी अस्थायी रोक
-        है। वजह पांच में से कोई एक होती है — नाम mismatch, जमीन record, अपात्रता का flag, अधूरी
-        eKYC/seeding, या दोहरा आवेदन। घर बैठे eKYC-नाम-seeding जांचिए, portal पर grievance डालकर query
-        number संभालिए, और कागज लेकर ब्लॉक/तहसील में पूछिए कि objection क्या है। सुधार दर्ज होने के बाद
+        &ldquo;Installment payment stopped by state&rdquo; निष्कासन नहीं — राज्य की जांच में लगी अस्थायी रोक
+        है। वजह पांच में से कोई एक: नाम mismatch, जमीन record, अपात्रता का flag, अधूरी
+        eKYC/seeding, दोहरा आवेदन। करना क्या है? घर बैठे eKYC-नाम-seeding जांचिए। Portal पर grievance डालकर query
+        number संभालिए। और कागज लेकर ब्लॉक/तहसील में पूछिए कि objection क्या है। सुधार दर्ज हुआ तो
         रुकी किस्तें अगली release के साथ जुड़कर आती हैं — पैसा डूबता नहीं, बशर्ते जड़ ठीक की जाए। दलालों
         को पैसे देना समाधान नहीं, ठगी है।
       </p>
