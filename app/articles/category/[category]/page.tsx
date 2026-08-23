@@ -543,7 +543,7 @@ export default async function CategoryPage({
           </div>
         ) : (
           <>
-            <ArticlesClient articles={categoryArticles} showHero={false} />
+            <ArticlesClient articles={categoryArticles} showHero={false} activeCategory={category} />
             {/* SEO fix (2026-08-23): ArticlesClient bails out to CSR, so crawlers see a
                 skeleton instead of links. This server-rendered list guarantees every
                 article in this category is discoverable in the initial HTML. */}

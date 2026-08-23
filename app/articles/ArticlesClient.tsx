@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Script from 'next/script';
-import { useState, useMemo, Suspense } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useState, useMemo } from 'react';
+import { useRouter } from 'next/navigation';
 import type { CategorySlug } from '@/lib/articles-data';
 import { CATEGORIES } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
@@ -220,12 +220,23 @@ function ArticleCard({ article, showNewBadge = false, priority = false }: { arti
   );
 }
 
-function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[] }) {
-  const searchParams = useSearchParams();
+// SEO fix (2026-08-23, part 2): this component used to read useSearchParams(),
+// which Next.js cannot render on the server — it forced the whole <Suspense>
+// subtree to BAILOUT_TO_CLIENT_SIDE_RENDERING, so Googlebot received a loading
+// skeleton instead of the article grid on /articles and all 6 category pages.
+// The active category now arrives as a server-known prop (derived from the real
+// crawlable /articles/category/<slug> route), and search is plain client state.
+// No query-string read happens during render, so the grid is server-rendered.
+function ArticlesContent({
+  articles,
+  activeCategory = 'all',
+}: {
+  articles: readonly CombinedArticleMeta[];
+  activeCategory?: string;
+}) {
   const router = useRouter();
-  const activeCategory = searchParams.get('category') || 'all';
-  const searchQuery = searchParams.get('search') || '';
-  const [localSearch, setLocalSearch] = useState(searchQuery);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [localSearch, setLocalSearch] = useState('');
 
   const { latestArticles, remainingArticles, categoryCounts, activeCategoryName } = useMemo(() => {
     let filtered = activeCategory === 'all'
@@ -265,13 +276,12 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    const params = new URLSearchParams(searchParams.toString());
-    if (localSearch.trim()) {
-      params.set('search', localSearch.trim());
-    } else {
-      params.delete('search');
-    }
-    router.push(`/articles?${params.toString()}`);
+    setSearchQuery(localSearch.trim());
+  };
+
+  const clearSearch = () => {
+    setLocalSearch('');
+    setSearchQuery('');
   };
 
   return (
@@ -293,7 +303,7 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
             {localSearch && (
               <button
                 type="button"
-                onClick={() => { setLocalSearch(''); router.push('/articles'); }}
+                onClick={clearSearch}
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
                 aria-label="Clear search"
               >
@@ -328,7 +338,7 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
             return (
               <Link
                 key={slug}
-                href={`/articles?category=${slug}`}
+                href={`/articles/category/${slug}`}
                 className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-bold transition-all focus:outline-none focus:ring-2 focus:ring-green-500 ${
                   activeCategory === slug
                     ? 'bg-[var(--color-primary)] text-white shadow-lg scale-105'
@@ -343,7 +353,7 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
           })}
           {(categoryCounts['rajya-yojana'] || 0) > 0 && (
             <Link
-              href="/articles?category=rajya-yojana"
+              href="/rajya-yojana"
               className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-bold transition-all focus:outline-none focus:ring-2 focus:ring-green-500 ${
                 activeCategory === 'rajya-yojana'
                   ? 'bg-[var(--color-primary)] text-white shadow-lg scale-105'
@@ -390,7 +400,7 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
               Search results for: <span className="font-bold text-[var(--color-text)]">"{searchQuery}"</span>
             </p>
             <button
-              onClick={() => router.push('/articles')}
+              onClick={clearSearch}
               className="text-sm text-green-700 dark:text-green-400 font-bold hover:underline inline-flex items-center gap-1"
             >
               Clear search
@@ -452,27 +462,15 @@ function ArticlesContent({ articles }: { articles: readonly CombinedArticleMeta[
   );
 }
 
-function ArticlesLoading() {
-  return (
-    <div className="container-site py-12">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {[1, 2, 3, 4, 5, 6].map((i) => (
-          <div key={i} className="bg-[var(--color-card)] rounded-2xl overflow-hidden border border-[var(--color-border)] animate-pulse">
-            <div className="h-40 bg-gray-200 dark:bg-gray-700" />
-            <div className="p-4 space-y-2">
-              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-1/4" />
-              <div className="h-5 bg-gray-200 dark:bg-gray-700 rounded w-3/4" />
-              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full" />
-              <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-2/3" />
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-export default function ArticlesClient({ articles, showHero = true }: { articles: readonly CombinedArticleMeta[]; showHero?: boolean }) {
+export default function ArticlesClient({
+  articles,
+  showHero = true,
+  activeCategory = 'all',
+}: {
+  articles: readonly CombinedArticleMeta[];
+  showHero?: boolean;
+  activeCategory?: string;
+}) {
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -530,9 +528,7 @@ export default function ArticlesClient({ articles, showHero = true }: { articles
       )}
 
       <div className="container-site py-10 px-4">
-        <Suspense fallback={<ArticlesLoading />}>
-          <ArticlesContent articles={articles} />
-        </Suspense>
+        <ArticlesContent articles={articles} activeCategory={activeCategory} />
         <div className="text-center mt-12">
           <Link
             href="/"
