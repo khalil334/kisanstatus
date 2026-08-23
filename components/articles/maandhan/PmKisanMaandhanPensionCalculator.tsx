@@ -273,7 +273,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Har age par 60 ki umar ke baad milne wali pension ek hi rehti hai — ₹3,000 per mahina. Yani entry age chahe kuch bhi ho, final payout same hai; sirf raasta pahunchne mein lagne wali rakam alag-alag hai. Isi wajah se experts hamesha kehte hain ki jitni kam age mein enroll karo, utna faayda milta hai.
+            Har age par 60 ki umar ke baad milne wali pension ek hi rehti hai — ₹3,000 per mahina. Entry age kuch bhi ho, final payout same. Farak sirf raaste ka hai — pahunchne mein lagne wali rakam alag-alag. Isi liye jitni kam age mein enroll karo, utna faayda.
           </p>
         </section>
 

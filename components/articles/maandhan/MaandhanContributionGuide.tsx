@@ -32,11 +32,11 @@ const RELATED_CARDS = [
 const FAQS_DATA = [
   {
     q: '18 saal ke ladke ko PMKMY mein kitna monthly dena padega?',
-    a: '18 saal ki umar mein join karne par monthly contribution sirf ₹55 hota hai. Government bhi ₹55 match karegi. Total ₹110 har mahine pension fund mein jayega. Yeh sabse kam contribution slab hai.',
+    a: 'Sirf ₹55 mahina — sabse kam slab. Government bhi ₹55 match karegi, yaani total ₹110 har mahine pension fund mein jayega.',
   },
   {
     q: '40 saal ki umar mein join karun toh monthly kitna katega?',
-    a: '40 saal par monthly contribution ₹200 hota hai (Govt bhi ₹200 degi). Pension amount sabhi ko same ₹3000/month milegi, bas farak itna hai ke 40 saal wale ko sirf 20 saal contribute karna hota hai.',
+    a: '₹200 mahina, aur Govt bhi ₹200 degi. Pension sabko same ₹3000/month hi milegi — farak sirf itna ki 40 saal wale ko 20 saal contribute karna hota hai. Slab table upar article mein hai, apni exact umar wahan dekho.',
   },
   {
     q: 'Pre-mature exit par sarkar ka co-contribution wapas milta hai?',
@@ -160,7 +160,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
         <section className="mb-8">
           <SH>20 Saal vs 35 Saal — Numbers Bolte Hain</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Kai baar kisan sochte hain, "pension toh same ₹3000 milegi, toh umar se kya farak padta hai?" Farak bada padta hai. Example ke liye, Ramesh (20 saal) aur Suresh (35 saal) dono ko 60 ke baad ₹3000 hi milenge. Lekin Ramesh ka total contribution lagbhag 30 hazar (₹29,280) rahega, jabki Suresh ko lagbhag 45 hazar (₹45,000) dene honge.
+            Kai baar kisan sochte hain, "pension toh same ₹3000 milegi, toh umar se kya farak padta hai?" Bada farak. Example lo. Ramesh (20 saal) aur Suresh (35 saal). Dono ko 60 ke baad ₹3000 hi milenge. Par Ramesh ka total contribution lagbhag 30 hazar (₹29,280); Suresh ka lagbhag 45 hazar (₹45,000).
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Dono ko same pension milegi. Bas itna sa farak hai ke jawan ladke ko zyada saal dena padta hai lekin har mahine kam, aur bade umar wale ko kam saal dena hai lekin har mahine zyada. Meri raay mein, agar ghar mein koi 18-20 saal ka jawan kisan hai, toh uska enrollment abhi karwa dena sabse smart financial move hai.

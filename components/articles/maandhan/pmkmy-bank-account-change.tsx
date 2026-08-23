@@ -31,7 +31,7 @@ const RELATED_CARDS = [
 const FAQS_DATA = [
   {
     q: 'Ek se zyada bank account PMKMY me register hote hain?',
-    a: 'Nahi, PM Kisan Maandhan Yojana me ek samay me sirf ek hi bank account register ho sakta hai. Change karna ho to pehle purana hatakar naya khata add karna padega.',
+    a: 'Nahi — ek samay me sirf ek. Change karna ho to pehle purana hatakar naya khata add karna padega.',
   },
   {
     q: 'Account details update karne ka koi charge hai?',
@@ -39,11 +39,11 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya account badalne se meri pension amount kam/zyada ho jayegi?',
-    a: 'Bilkul nahi. Isse aapki pension amount par koi asar nahi padta. Aapki monthly contribution aur future pension same rahegi — sirf paisa naye account me jayega.',
+    a: 'Bilkul nahi. Contribution aur future pension same rahegi — sirf paisa naye account me jayega.',
   },
   {
     q: 'Agar mera khata badal gaya, to kya mujhe phir se enrollment karni padegi?',
-    a: 'Nahi, bilkul nahi. Aapko phir se enrollment karne ki zaroorat nahi hai. Sirf bank account details update karni hain. Aapka purana contribution record, age, aur sab kuch same rahega.',
+    a: 'Nahi. Sirf bank account details update karni hain — enrollment, purana contribution record, age, sab kuch waise ka waisa rahega. Dobara registration jaise bade kaam ki koi zaroorat nahi, ye sirf ek chhota sa detail-change hai jo CSC ya branch dono jagah se ho jata hai.',
   },
   {
     q: 'Kya joint account PMKMY me use kar sakta hoon?',

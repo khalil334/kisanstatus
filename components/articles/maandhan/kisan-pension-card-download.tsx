@@ -235,7 +235,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
             Charge kitna lagega? Iska seedha jawab center ki deewar par laga hua rate card hai — CSC rules ke hisaab se har center ko apne charges wahan display karne hote hain. Print ya search jaisi chhoti service ka daam wahin se confirm karein, aur kaam hone par receipt lena mat bhooliye. "Processing fee" ya "urgent charge" jaise naam sun kar samajh jaiye ki kuch gadbad hai — aisi koi official fee hoti hi nahi. Us halat me center ki CSC ID likh lein aur digitalseva portal ke grievance section me complaint daal dein; jab tak jawab aaye, paas ke kisi doosre center se kaam karwa lein.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Dusri jagah — aap apni bank branch par bhi ja sakte hain jahan se aapka auto-debit hota hai. Bank wale aapki pension details apne core banking system me dekh sakte hain aur ek printout nikaal ke de sakte hain. Lekin har chhoti branch me ye facility nahi hoti, isliye jaane se pehle phone par manager se puch lein.
+            Dusri jagah: aapki bank branch, jahan se auto-debit hota hai. Bank wale core banking system me aapki pension details dekh kar printout de sakte hain. Ek warning: har chhoti branch me ye facility nahi hoti — jaane se pehle phone par puch lein.
           </p>
         </section>
 

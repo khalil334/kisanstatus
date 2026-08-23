@@ -35,7 +35,7 @@ const FAQS_DATA = [
   },
   {
     q: 'PMKMY grievance ka email address kya hai?',
-    a: 'Official grievance email hai: scpms@licindia.com (PMKMY ke liye specific). Agar aap LIC se directly contact karna chahte hain to co_complaints@licindia.com par bhi email kar sakte hain. Email mein apna Subscriber ID, registered mobile number, aur clear issue likh kar bhejein.',
+    a: 'scpms@licindia.com — PMKMY ke liye specific. LIC se directly baat karni ho to co_complaints@licindia.com bhi hai. Email mein Subscriber ID, registered mobile number aur issue saaf-saaf likho.',
   },
   {
     q: 'Online grievance file karne ke baad reply aane mein kitna samay lagta hai?',
@@ -47,7 +47,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Auto-debit har mahine fail ho raha hai, permanent solution kya hai?',
-    a: 'Do mukhya karan hote hain: (1) Account mein sufficient balance nahi hai, ya (2) NACH mandate expire/block ho gaya hai. Bank branch mein jakar NACH mandate status check karwayein aur naya mandate form bharein agar zaroori ho.',
+    a: 'Do hi karan hote hain: balance kam, ya NACH mandate expire/block. Branch jao, mandate status check karwao, zaroorat ho to naya mandate form bharo. Bas.',
   },
 ];
 
