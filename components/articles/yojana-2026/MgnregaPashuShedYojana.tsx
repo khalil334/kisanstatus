@@ -12,11 +12,11 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Pashu shed yojana ka online form kahan bharein?',
-    a: 'Kahin nahi — yahi is scheme ki sabse badi galatfehmi hai. MGNREGA ke individual beneficiary works ka koi online application form nahi hota. Kaam gram panchayat ke through hota hai: likhit application panchayat me jama hoti hai, gram sabha se naam approve hota hai, phir work sanction hota hai. Jo bhi site "pashu shed online registration" ka form dikhaye, wahan apna Aadhaar ya OTP bilkul mat daalo.',
+    a: 'Kahin nahi — yahi sabse badi galatfehmi hai. MGNREGA ke individual works ka online form hota hi nahi. Raasta panchayat se hai: likhit application → gram sabha approval → work sanction. "Pashu shed online registration" dikhane wali site par Aadhaar ya OTP bilkul mat daalo.',
   },
   {
     q: 'Kitne pashu hone par shed milega?',
-    a: 'Zyada tar states me kam se kam 2-3 pashu (gaay/bhains) par individual cattle shed ka work sanction hota hai. Bakri aur murgi ke liye alag shelter works hain jinke apne minimum counts hain. Exact requirement state ki MGNREGA works guidelines me hoti hai — apne gram rozgar sevak se apne state ka norm poochho, ye number har jagah ek jaisa nahi hai.',
+    a: 'Zyada tar states me 2-3 pashu (gaay/bhains) par cattle shed sanction hota hai; bakri-murgi ke shelter ke apne alag minimum counts hain. Exact number har state ka alag hai — gram rozgar sevak se poochho.',
   },
   {
     q: 'Kitna paisa milta hai — ₹1.6 lakh sab ko milta hai kya?',
@@ -24,11 +24,11 @@ const FAQS_DATA = [
   },
   {
     q: 'Paisa seedha khaate me aata hai kya?',
-    a: 'Poora amount ek saath nahi. MGNREGA me labour ki majdoori NREGA wage rate se muster roll ke hisaab se aati hai (aap khud apne shed par kaam karke majdoori le sakte ho), aur material ka payment vendor/supply ke against hota hai. Isliye ise "₹1.6 lakh ki sarkari madad jo khaate me aayegi" samajh kar mat chalo — ye ek sanctioned construction work hai, cash transfer scheme nahi.',
+    a: 'Poora amount ek saath nahi. Labour ki majdoori NREGA wage rate se muster roll ke hisaab se aati hai (khud apne shed par kaam karke bhi le sakte ho); material ka payment vendor ke against. Ye sanctioned construction work hai — cash transfer scheme nahi.',
   },
   {
     q: 'Job card nahi hai to kya karein?',
-    a: 'Pehle job card banwao — ye free hai. Gram panchayat me ghar ke adult members ke naam, photo aur Aadhaar ke saath application do; panchayat verify karke job card issue karti hai. Job card ke bina MGNREGA ka koi bhi individual work sanction nahi ho sakta. Job card banane ke liye koi fees mange to wahi complaint ka pehla mudda hai.',
+    a: 'Pehle job card banwao — free hai. Gram panchayat me adult members ke naam, photo aur Aadhaar ke saath application do. Bina job card ke koi individual work sanction nahi hota. Fees mange koi? Wahi complaint ka pehla mudda.',
   },
   {
     q: 'Sarpanch ya rozgar sevak file aage nahi badha raha — kya karein?',
@@ -36,7 +36,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Shed pehle khud banwa liya, ab paisa mil jayega?',
-    a: 'Nahi milega. MGNREGA me pehle work sanction hota hai, phir kaam shuru hota hai — muster roll, measurement book aur geo-tagged photos ke saath. Jo shed sanction se pehle ban chuka hai us par payment ka koi rasta nahi hai. Isliye jab tak sanction ki likhit jankari na mile, construction shuru mat karo.',
+    a: 'Nahi milega. MGNREGA me pehle sanction, phir kaam — muster roll, measurement book, geo-tagged photos ke saath. Sanction se pehle bana shed = payment ka koi rasta nahi.',
   },
 ];
 

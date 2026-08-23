@@ -43,7 +43,7 @@ Har article mein ye 4 AI-footprints **zero** hone chahiye:
 | **Part 2** | `lib/loan-mandi-pashupalan-data.ts` (loans, mandi, pashupalan) | 12 | ✅ Pushed (sab 12 scan — banned words 0, 5 files me uniform FAQ lengths / rhythm-runs fix; facts untouched) |
 | **Part 3** | `lib/maandhan-data.ts` (Maandhan pension) | 14 | ✅ Pushed (sab 13 component files scan — banned words 0, 7 files me uniform FAQ / rhythm-runs fix; facts untouched) |
 | **Part 4** | `lib/rajya-yojana-data.ts` (state yojana) | 17 | ✅ Pushed (sab 15 component files + tools scan — banned words 0, 9 files me uniform FAQ lengths fix, 5 files me same-rhythm sentence runs tode; facts untouched) |
-| **Part 5** | `lib/yojana-2026-data.ts` (yojana 2026 / Hinglish) | 8 | ⬜ Pending |
+| **Part 5** | `lib/yojana-2026-data.ts` (yojana 2026 / Hinglish) | 8 | ✅ Pushed (sab 6 component files scan — banned words 0, sab 6 me uniform FAQ lengths fix, 2 me same-rhythm runs tode; facts untouched) |
 | **Part 6** | `lib/hindi-rajya-yojana-data.ts` (Hindi rajya) | 15 | ⬜ Pending |
 | **Part 7** | `lib/hindi-yojana-data.ts` + `lib/hindi-yojana-2026-data.ts` | 8+6 | ⬜ Pending |
 | **Part 8** | `lib/hindi-loan-mandi-pashupalan-data.ts` + baaki chhoti Hindi files | ~5 | ⬜ Pending |

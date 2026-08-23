@@ -12,19 +12,19 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Fasal bima ka paisa kitne din me aata hai?',
-    a: 'Rules kehte hain ki season ka yield data final hone ke baad claim lagbhag 2 mahine ke andar settle hona chahiye. Kharif 2024 se to der karne par insurance company ya state par 12% penalty ka provision bhi hai. Zameen par kai baar 3 se 6 mahine lag jaate hain — sabse badi wajah state ki taraf se crop cutting data ki deri hoti hai. 2 mahine se zyada ho jaye to complaint zaroor karo.',
+    a: 'Rule: yield data final hone ke baad lagbhag 2 mahine me settle. Kharif 2024 se der par insurance company ya state par 12% penalty ka provision bhi hai. Zameen par kai baar 3-6 mahine lagte hain — sabse badi wajah state ke crop cutting data ki deri. 2 mahine se zyada ho jaye to complaint karo.',
   },
   {
     q: 'Claim status check karne ke liye kya chahiye?',
-    a: 'Receipt number ya policy number — jo enrollment ke waqt mila tha. Loanee kisan ho aur receipt na mili ho to apni bank branch se policy ki copy maang lo, usme application number likha hota hai. Bina kisi number ke portal par status nahi khulta.',
+    a: 'Receipt number ya policy number — jo enrollment ke waqt mila tha. Bas. Loanee ho aur receipt na mili? Bank branch se policy copy maang lo, usme application number likha hota hai.',
   },
   {
     q: 'Status me "approved" dikh raha hai par paisa nahi aaya — kyun?',
-    a: 'Aksar wajah bank-Aadhaar seeding hoti hai. Claim approve hone ke baad paisa DBT se Aadhaar-linked account me jaata hai; NPCI seeding active nahi hai to transfer wapas laut jaata hai. Pehle apne account ki seeding check karo, phir bank aur insurance company dono ko application number ke saath inform karo.',
+    a: 'Aksar wajah: bank-Aadhaar seeding. NPCI seeding active nahi to DBT transfer wapas laut jaata hai. Seeding check karo, phir dono ko inform karo — bank bhi, insurance company bhi.',
   },
   {
     q: '72 ghante ka rule kis nuksan par lagta hai?',
-    a: 'Localized nuksan par — olaavrishti (hailstorm), jal-bharav, landslide, ya katai ke baad 14 din ke andar bemausam baarish se hua nuksan. Aise case me aapko khud 72 ghante ke andar intimation dena hota hai. Sookha ya baadh jaise widespread nuksan me alag se report karna zaroori nahi — wahan poore area ka assessment CCE se hota hai.',
+    a: 'Sirf localized nuksan par — olaavrishti, jal-bharav, landslide, ya katai ke baad 14 din ke andar bemausam baarish. In cases me khud 72 ghante me intimation do. Sookha-baadh jaise widespread nuksan me zaroori nahi; wahan poore area ka assessment CCE se hota hai.',
   },
   {
     q: '72 ghante nikal gaye, ab claim milega ya nahi?',
@@ -40,11 +40,11 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya WBCIS ka claim bhi aise hi check hota hai?',
-    a: 'WBCIS (mausam-aadharit bima) me claim ka hisaab weather station ke data se automatic hota hai — na survey, na 72 ghante ki intimation. Status wahi pmfby.gov.in ke National Crop Insurance Portal se dikh jaata hai. WBCIS ke payout aam taur par season ke ant me ek saath aate hain.',
+    a: 'Haan, wahi pmfby.gov.in ke National Crop Insurance Portal se. Farq itna: WBCIS ka hisaab weather station ke data se automatic hota hai — na survey, na 72 ghante ki intimation — aur payout aam taur par season ke ant me ek saath aate hain.',
   },
   {
     q: 'Fasal Bima app se status dekh sakte hain kya?',
-    a: 'Haan. Ministry of Agriculture ka official Crop Insurance / Fasal Bima app Play Store par hai — registered mobile number se login karke policy details aur claim status dono dikh jaate hain. Wahi app se crop loss report bhi hoti hai, isliye phone me rakhna kaam ka hai. Sirf official app hi lo — publisher me Ministry of Agriculture likha ho.',
+    a: 'Haan. Ministry of Agriculture ka official Crop Insurance / Fasal Bima app Play Store par hai — login registered mobile se, policy details aur claim status dono dikh jaate hain. Crop loss report bhi wahi se hoti hai. Publisher me Ministry of Agriculture likha ho, tabhi lo.',
   },
 ];
 

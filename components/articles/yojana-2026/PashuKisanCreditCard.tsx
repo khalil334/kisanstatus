@@ -16,7 +16,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Mere paas pehle se crop KCC hai — kya dusra card milega?',
-    a: 'Dusra card nahi milta, aur maangna bhi nahi chahiye. Bank aapke existing KCC me hi animal husbandry ka sub-limit jodta hai — yani limit enhance hoti hai. Bank jao, bolo "KCC me AH sub-limit add karwana hai", pashuon ka record dikhaao. Naya application, naya processing — sab usi account par hota hai.',
+    a: 'Dusra card nahi milta. Bank existing KCC me hi animal husbandry ka sub-limit jodta hai — limit enhance hoti hai. Bank jao, bolo "KCC me AH sub-limit add karwana hai", pashuon ka record dikhao.',
   },
   {
     q: 'Interest sach me 4% hai ya ye sirf ads me likha hota hai?',
@@ -24,7 +24,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kitne tak ka loan bina guarantee ke milta hai?',
-    a: 'January 2025 se RBI ne collateral-free agriculture loan ki limit ₹1.6 lakh se badha kar ₹2 lakh kar di hai. Matlab ₹2 lakh tak na zameen girvi, na FD, na koi guarantor. Isse upar ke amount par bank security maangega. Purane blogs abhi bhi ₹1.6 lakh likh rahe hain — wo figure December 2024 tak ka hai.',
+    a: '₹2 lakh tak — January 2025 se RBI ne limit ₹1.6 lakh se badha di hai. Na zameen girvi, na FD, na guarantor. Isse upar bank security maangega. (Purane blogs ka ₹1.6 lakh wala figure December 2024 tak ka hai.)',
   },
   {
     q: 'Bank wale keh rahe hain pashu ka bima karwana padega — ye sahi hai?',

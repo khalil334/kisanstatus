@@ -12,19 +12,19 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'PM Kisan Khad Yojana me ₹11,000 kab aayenge?',
-    a: 'Kabhi nahi — kyunki is naam ki koi official central scheme exist hi nahi karti. Na pmkisan.gov.in par iska koi zikr hai, na fert.nic.in par. ₹11,000 ka figure blogs ne PM Kisan ke ₹6,000 aur ek kalpanik ₹5,000 fertilizer amount ko jodkar banaya hai. Jo site aapko is naam se registration karwa rahi hai, wo aapka data ya paisa lena chahti hai.',
+    a: 'Kabhi nahi. Is naam ki koi official central scheme exist hi nahi karti — na pmkisan.gov.in par zikr, na fert.nic.in par. ₹11,000 ka figure blogs ne PM Kisan ke ₹6,000 aur ek kalpanik ₹5,000 ko jodkar banaya hai. Registration karwane wali site data ya paisa lena chahti hai.',
   },
   {
     q: 'To kya khad par sarkar koi paisa deti hi nahi?',
-    a: 'Deti hai, aur bahut bada deti hai — par kisan ke khaate me nahi. Subsidy fertilizer company ko jaati hai, taaki aapko urea ₹242 (45 kg bag, neem-coating/tax alag) me mile jabki uski asli laagat ₹2,200 se upar hai. Aapka fayda sasti bori ke roop me milta hai, cash ke roop me nahi. Isi liye "khaate me ₹11,000" wala dawa hi galat hai.',
+    a: 'Deti hai — bahut bada — par kisan ke khaate me nahi. Subsidy fertilizer company ko jaati hai: urea aapko ₹242 me milta hai (45 kg bag, neem-coating/tax alag) jabki asli laagat ₹2,200 se upar. Fayda sasti bori hai, cash nahi. Isi liye "khaate me ₹11,000" wala dawa hi galat hai.',
   },
   {
     q: 'Khad Yojana ka form kisi site par dikha to kya karoon?',
-    a: 'Kuch mat bharo. Na Aadhaar number, na bank details, na OTP. Central sarkar ki har asli scheme ka portal gov.in ya nic.in par hota hai — pmkisan.gov.in, agrimachinery.nic.in jaise. "pmkisankhadyojana" type ke naam wali site private blog ya fraud page hai. OTP kisi ko bataya to khaata khali ho sakta hai.',
+    a: 'Kuch mat bharo. Na Aadhaar, na bank details, na OTP. Asli central scheme ka portal hamesha gov.in ya nic.in par hota hai; "pmkisankhadyojana" jaisi site private blog ya fraud page hai.',
   },
   {
     q: 'Phir kisan ko seedha paisa kaunsi scheme se milta hai?',
-    a: 'Do bade raaste confirmed hain: PM Kisan Samman Nidhi — saal ke ₹6,000, teen kist me, seedhe Aadhaar-linked khaate me. Aur PMFBY — fasal kharab hone par bima claim ka paisa. Dono ke official portal hain, dono me bina kisi agent ke khud apply/check kar sakte ho. Inke alawa state schemes hain jo apne state ke krishi vibhag portal se verify karo.',
+    a: 'Do confirmed raaste: PM Kisan Samman Nidhi (saal ke ₹6,000, teen kist, seedhe khaate me) aur PMFBY (fasal kharab hone par bima claim). Agent ki zaroorat nahi.',
   },
 ];
 
@@ -123,10 +123,9 @@ export default function PmKisanKhadYojanaSach({ article }: { article: Yojana2026
           </table>
         </div>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          MRP se zyada koi dealer nahi le sakta — ye kanoon hai. Koi ₹242 wali bori ₹300 me de raha hai to
-          district agriculture officer se shikayat karo. Kharidte waqt PoS machine ki parchi lo; usme
-          subsidy ka amount bhi chhapa hota hai. Wo parchi dekhoge to khud dikh jaayega ki sarkar aapki har
-          bori par kitna de rahi hai.
+          MRP se zyada koi dealer nahi le sakta — ye kanoon hai. ₹242 wali bori ₹300 me? District agriculture
+          officer se shikayat karo. Kharidte waqt PoS machine ki parchi lo; usme subsidy ka amount bhi
+          chhapa hota hai — khud dikh jaayega ki sarkar aapki har bori par kitna de rahi hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           DAP aur potash ka system thoda alag hai — wahan Nutrient Based Subsidy (NBS) chalti hai, jisme

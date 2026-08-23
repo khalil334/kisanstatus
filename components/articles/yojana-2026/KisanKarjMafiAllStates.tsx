@@ -23,7 +23,7 @@ const UPDATE_LOG = [
 const FAQS_DATA = [
   {
     q: 'Kya 2026 me koi national kisan karj mafi scheme chal rahi hai?',
-    a: 'Nahi. Kheti ka karz maaf karna states ka kaam hai, kendra ka nahi. Aakhri baar poore desh ke liye waiver 2008 me aaya tha (ADWDRS), usse pehle 1990 me. Uske baad jo bhi karj mafi hui, kisi ek state ne apne budget se ki. Isliye jab koi site "PM Kisan Karj Mafi Yojana form" dikhaye, samajh jao ki wo naam hi galat hai — aisi koi central scheme nahi hai.',
+    a: 'Nahi. Karz maafi states ka kaam hai, kendra ka nahi. Aakhri national waiver 2008 ka tha (ADWDRS), usse pehle 1990. "PM Kisan Karj Mafi Yojana form" dikhane wali site ka naam hi galat hai — aisi koi central scheme nahi.',
   },
   {
     q: 'Karj mafi list me apna naam kahan dekhein?',
@@ -35,7 +35,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Karj maaf ho gaya to CIBIL theek ho jaata hai?',
-    a: 'Turant nahi. Waiver ke baad bank account ko settled/closed dikhata hai, aur credit report par wo entry kuch saal rehti hai. Ek baat dhyan me rakho — "settled" aur "closed" me farq hota hai, aur aage loan lene par bank yahi dekhta hai. Waiver ke baad bank se No Dues Certificate zaroor lo, aur 60-90 din baad apni credit report khud check karke dekho ki account update hua hai ya nahi.',
+    a: 'Turant nahi — entry credit report par kuch saal rehti hai. "Settled" aur "closed" me farq hota hai; aage loan lene par bank yahi dekhta hai. Waiver ke baad No Dues Certificate zaroor lo, aur 60-90 din baad apni report khud check karo.',
   },
 ];
 
@@ -252,9 +252,9 @@ export default function KisanKarjMafiAllStates({ article }: { article: Yojana202
 
         <SH>Scheme Nahi Hai To Kya Karein — Chaar Asli Raaste</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Jyaadatar kisan is page par is umeed me aate hain ki unka karz maaf hoga. Imaandaari se: agar aapka
-          state list me nahi hai, to sambhavna kam hai. Par karz ke saath jeene ke raaste hain, aur wo waiver
-          se zyada bharosemand hain.
+          Jyaadatar kisan is page par is umeed me aate hain ki unka karz maaf hoga. Imaandaari se? State list
+          me nahi hai to sambhavna kam hai. Par karz ke saath jeene ke raaste hain — aur wo waiver se
+          zyada bharosemand hain.
         </p>
         <StepList>
           <SI n={1}><strong>One Time Settlement (OTS)</strong> — jab khata NPA ho gaya ho. Bank ek baar me settle karne par kuch hissa chhod deta hai. Branch me likhit application do, aur settlement ke baad No Dues Certificate lena mat bhoolo.</SI>

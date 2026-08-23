@@ -20,11 +20,11 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya helpline se naya registration ho jaayega?',
-    a: 'Nahi. Helpline sirf jankari aur complaint ke liye hai. Naya registration pmkisan.gov.in ke Farmers Corner se, CSC se, ya apne krishi vibhag ke through hota hai. Aise hi correction (naam, bank, Aadhaar) bhi portal ya CSC par hota hai, phone par nahi.',
+    a: 'Nahi. Helpline sirf jankari aur complaint ke liye hai. Registration Farmers Corner (pmkisan.gov.in), CSC, ya krishi vibhag se; correction bhi portal ya CSC par — phone par nahi.',
   },
   {
     q: 'Call par kya kya ready rakhna chahiye?',
-    a: 'Registration number (na ho to Aadhaar number), Aadhaar card, aur apni problem ek line me. Beneficiary status ka screenshot ho to aur accha — usme jo error likha hai (jaise "Payment Stopped by State" ya "FTO Generated") wahi batana sabse tez kaam karta hai.',
+    a: 'Teen cheezein: registration number (na ho to Aadhaar), Aadhaar card, aur problem ek line me. Screenshot ho to sabse accha — usme likha error ("Payment Stopped by State", "FTO Generated") batana sabse tez kaam karta hai.',
   },
   {
     q: 'Email par complaint karna behtar hai ya phone par?',
@@ -44,7 +44,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Ek saath kitni complaints daal sakte hain?',
-    a: 'Ek problem ki ek hi query daalo. Ek hi baat ki kai queries dalne se record uljhta hai aur jawab der se aata hai. Haan, do alag-alag dikkatein hain — eKYC bhi aur payment bhi — to dono ki alag query theek hai.',
+    a: 'Ek problem, ek query. Bas. Kai queries se record uljhta hai, jawab aur der se aata hai. Do alag dikkatein hain (eKYC bhi, payment bhi)? To dono ki alag query theek hai.',
   },
 ];
 
