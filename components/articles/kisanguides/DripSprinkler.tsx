@@ -428,8 +428,8 @@ export default function DripSprinkler() {
           (special category areas jaise NE states, J&amp;K, Himachal, Uttarakhand mein <strong>50%</strong>),
           aur state ka hissa aam taur par kam se kam 30% — isse kisan ka share ghat kar 10–40% ke beech
           aata hai. Subsidy benchmark ya tender cost, jo kam ho, us par milti hai.{' '}
-          <a href="https://heavendesigns.in/blog/pm-kusum-component-b-c-ips-explained/" {...EXTERNAL_LINK_PROPS} className="underline">
-            [Component B CFA structure]
+          <a href="https://pmkusum.mnre.gov.in/" {...EXTERNAL_LINK_PROPS} className="underline">
+            [PM-KUSUM official portal]
           </a>{' '}
           Detail ke liye{' '}
           <Link href="/articles/PmKusumYojanaSolarSubsidy2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM-KUSUM guide</Link>{' '}

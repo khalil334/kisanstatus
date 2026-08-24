@@ -388,7 +388,7 @@ export default function IkhedutPortalStatusCheck2026({
       <p>
         Sabse zyada search hone wala ghatak. Rate ki misaal (guideline se badal sakti hai,
         apne ghatak ka page zaroor dekhein):{' '}
-        <Ext href="https://ikhedut.co.in/tractor-sahay-yojana/">
+        <Ext href="https://ikhedut.gujarat.gov.in/">
           20 se 60 PTO HP tak ke sarkar-manya model par kharch ka 25% ya adhiktam ₹1,00,000
           — jo kam ho, khaate dinth ek
         </Ext>

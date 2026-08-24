@@ -139,7 +139,12 @@ export default function AutoDebitFailRegularization() {
             <div className="space-y-3 text-sm text-[var(--color-text-muted)]">
               <p>
                 <strong>1. Khaate me balance rakho, phir CSC jao.</strong> Enrollment jis CSC se hua tha wahin apna Kisan
-                Pension Account Number le kar jao — pending contribution ka status wahi operator dekh kar bata dega.
+                Pension Account Number le kar jao — pending contribution ka status wahi operator dekh kar bata dega. Ghar
+                baithe status{' '}
+                <a href="https://maandhan.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline font-semibold">
+                  maandhan.in
+                </a>{' '}
+                ke official portal par bhi dekh sakte ho.
               </p>
               <p>
                 <strong>2. PM-Kisan wala option chuno.</strong> Agar aap PM-Kisan ke labharthi bhi hain, to Maandhan ka

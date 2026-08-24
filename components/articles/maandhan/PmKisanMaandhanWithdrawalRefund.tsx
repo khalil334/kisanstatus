@@ -47,7 +47,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Refund process mein kitna time lagta hai aur paisa kaise pata karein aaya ya nahi?',
-    a: 'Aam taur par exit request ke 30 se 45 din ke andar amount NPCI-linked bank account mein credit ho jata hai. Status check karne ke liye pmkisanmaandhan.in par apna registration number daal kar dekha ja sakta hai, ya CSC center se poocha ja sakta hai.',
+    a: 'Aam taur par exit request ke 30 se 45 din ke andar amount NPCI-linked bank account mein credit ho jata hai. Status check karne ke liye maandhan.in par apna registration number daal kar dekha ja sakta hai, ya CSC center se poocha ja sakta hai.',
   },
 ];
 
@@ -349,7 +349,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
           <SH>Refund Ka Paisa Track Kaise Karein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Exit request daalne ke baad ka intezaar sabse zyada pareshan karta hai. Roz bank jaane ki zaroorat
-            nahi — teen aasan raste hain. Pehla: pmkisanmaandhan.in par apna registration/KPAN number daal kar
+            nahi — teen aasan raste hain. Pehla: maandhan.in par apna registration/KPAN number daal kar
             status dekh lein. Doosra: bank passbook update karwa lein ya SMS alert on rakhein — credit LIC ki
             taraf se aata hai, entry mein PMKMY ya LIC ka zikr hota hai. Teesra: 30-45 din nikal jayein aur paisa
             na dikhe, toh usi CSC center par jaakar request ka acknowledgement number de kar status nikalwayein.
@@ -398,7 +398,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
             PM Kisan Portal Par Jayein <span aria-hidden>↗</span>
           </a>
           <a
-            href="https://pmkisanmaandhan.in"
+            href="https://maandhan.in"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-between gap-2 p-4 bg-white dark:bg-gray-800 border-2 border-[var(--color-primary)] text-[var(--color-primary)] dark:text-white rounded-xl font-bold text-sm hover:bg-green-50 dark:hover:bg-gray-700 transition-all"

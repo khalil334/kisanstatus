@@ -211,8 +211,8 @@ export default function MadhumakhiPalan() {
       </div>
 
       <ExternalLinkButton
-        url="https://www.honeymission.com/"
-        label="National Honey Mission Portal - Apply Karein"
+        url="https://www.kviconline.gov.in/"
+        label="KVIC Official Portal - Honey Mission Ke Liye Apply Karein"
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">

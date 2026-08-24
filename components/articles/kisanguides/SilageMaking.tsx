@@ -316,7 +316,7 @@ export default function SilageMaking() {
       </div>
 
       <ExternalLinkButton
-        url="https://nddb.org/"
+        url="https://www.nddb.coop/"
         label="NDDB Official Portal - Dairy Schemes Check Karein"
       />
 
