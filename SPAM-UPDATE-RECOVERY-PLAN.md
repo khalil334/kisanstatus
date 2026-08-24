@@ -131,7 +131,23 @@ nahi aayega. Panic mein articles delete/rewrite spree mat karo; upar wala target
 - ❌ Reconsideration request bina manual action ke — aisi koi cheez exist nahi karti
 - ❌ hreflang pairs / canonicals chhedna — wo sahi hain
 
-## 6. Bottom line
+## 6. Progress log
+
+| Date | Kaam | Status |
+|---|---|---|
+| 2026-08-24 | Sources audit: non-official/spammy outbound links ko official portals se replace kiya — `pmkisanmaandhan.in`→`maandhan.in` (3 jagah, PmKisanMaandhanWithdrawalRefund), `honeymission.com`→`kviconline.gov.in` (MadhumakhiPalan), `nddb.org`→`nddb.coop` (SilageMaking), `ikhedut.co.in`→`ikhedut.gujarat.gov.in` (IkhedutPortalStatusCheck2026), `heavendesigns.in`→`pmkusum.mnre.gov.in` (DripSprinkler); AutoDebitFailRegularization me maandhan.in official link add kiya | ✅ done, push pending |
+| 2026-08-24 | Kist-series consolidation (24vi → 25vi evergreen, 301) | ⏳ direction pe final OK ka intezaar |
+| 2026-08-24 | State doorway pages — GSC data se decide hoga (GSC connect ho gaya, read-approval pending) | ⏳ blocked on approval |
+| — | Thin pages (7 wali GSC list) | ⏳ list chahiye |
+| — | E-E-A-T: author bios/bylines already implemented (lib/author-bios.ts) | ✅ pehle se ho chuka |
+
+### Owner ke manual steps (repo se nahi ho sakte)
+- [ ] GSC → Security & Manual Actions — dono check karo (P0, 5 min)
+- [ ] Publishing velocity zero — naye articles 4–6 hafte band
+- [ ] Asli portal screenshots har major guide ke liye
+- [ ] Consolidation ke baad sitemap re-submit + re-crawl request
+
+## 7. Bottom line
 
 | | |
 |---|---|
