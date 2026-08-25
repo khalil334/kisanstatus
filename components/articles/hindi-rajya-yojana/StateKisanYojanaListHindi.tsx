@@ -69,7 +69,7 @@ const STATES = [
     scheme: 'कृषक बंधु',
     amount: '₹4,000–₹10,000 / साल (जमीन पर स्लैब)',
     total: '₹16,000 तक',
-    guide: '/rajya-yojana/krishak-bandhu-status-check-2026',
+    guide: '',
   },
   {
     state: 'ओडिशा',
@@ -83,7 +83,7 @@ const STATES = [
     scheme: 'कृषक उन्नति योजना',
     amount: 'धान खरीदी पर अंतर राशि (फिक्स नहीं)',
     total: 'बिक्री के हिसाब से',
-    guide: '/rajya-yojana/krishak-unnati-yojana-status-check-2026',
+    guide: '',
   },
 ];
 
@@ -181,9 +181,13 @@ export default function StateKisanYojanaListHindi({ article }: { article: HindiA
                 <Td>{s.amount}</Td>
                 <Td>{s.total}</Td>
                 <Td>
-                  <Link href={s.guide} className="text-green-700 dark:text-green-400 underline">
-                    पूरा गाइड
-                  </Link>
+                  {s.guide ? (
+                    <Link href={s.guide} className="text-green-700 dark:text-green-400 underline">
+                      पूरा गाइड
+                    </Link>
+                  ) : (
+                    'इसी पेज पर नीचे'
+                  )}
                 </Td>
               </tr>
             ))}
@@ -250,10 +254,13 @@ export default function StateKisanYojanaListHindi({ article }: { article: HindiA
       <SubHd>पश्चिम बंगाल — कृषक बंधु</SubHd>
       <p>
         जमीन के स्लैब पर ₹4,000 से ₹10,000 सालाना, दो किस्तों में (खरीफ + रबी)। पहचान का
-        मुख्य जरिया आधार नहीं, वोटर कार्ड (EPIC) है — यह पूरे देश में अनोखा सिस्टम है। साथ
-        में ₹2 लाख का डेथ बेनिफिट भी जुड़ा है। स्लैब का पूरा गणित और EPIC से स्थिति देखने
-        का तरीका <Link href="/rajya-yojana/krishak-bandhu-status-check-2026">कृषक बंधु गाइड</Link>{' '}
-        में, हिंदी में <Link href="/articles/hi/krishak-bandhu-status">यहां</Link>।
+        मुख्य जरिया आधार नहीं, वोटर कार्ड (EPIC) है — यह पूरे देश में अनोखा सिस्टम है।
+        स्लैब का गणित: 1 एकड़ या उससे ज्यादा पर पूरा ₹10,000; उससे कम पर अनुपात से, लेकिन
+        ₹4,000 से नीचे नहीं। साथ में ₹2 लाख का डेथ बेनिफिट भी जुड़ा है। स्थिति
+        krishakbandhu.wb.gov.in पर &ldquo;Search Beneficiary&rdquo; में EPIC नंबर डालकर दिखती
+        है। यहां नाम खुद जुड़वाना पड़ता है — दुआरे सरकार कैंप या ब्लॉक कृषि दफ्तर से। पैसा
+        अटकने की आम वजहें: म्यूटेशन अधूरा, बैंक खाता डोरमेंट, नाम की स्पेलिंग का फर्क,
+        या जॉइंट खतियान में हिस्सा साफ न होना।
       </p>
 
       <SubHd>ओडिशा — CM किसान योजना</SubHd>
@@ -269,11 +276,11 @@ export default function StateKisanYojanaListHindi({ article }: { article: HindiA
       <SubHd>छत्तीसगढ़ — कृषक उन्नति योजना</SubHd>
       <p>
         इस सूची की सबसे हटके योजना — फिक्स सालाना रकम नहीं मिलती। पैसा धान की सरकारी खरीदी
-        से जुड़ा है: MSP और ₹3,100 प्रति क्विंटल के बीच की अंतर राशि किसान के खाते में आती
-        है, यानी जितना धान बेचा, उतना हिसाब। खरीफ 2026 से धान छोड़कर दूसरी फसल लगाने पर
-        ₹15,000 प्रति एकड़ इनपुट सहायता का नया रास्ता भी खुला है। पूरा गणित{' '}
-        <Link href="/rajya-yojana/krishak-unnati-yojana-status-check-2026">कृषक उन्नति गाइड</Link>{' '}
-        में है।
+        से जुड़ा है: MSP और ₹3,100 प्रति क्विंटल के बीच की अंतर राशि एकमुश्त किसान के खाते
+        में आती है, यानी जितना धान समिति में दर्ज हुआ, उतना हिसाब। खरीफ 2026 से धान छोड़कर
+        दूसरी फसल लगाने पर ₹15,000 प्रति एकड़ इनपुट सहायता का नया रास्ता भी खुला है। खरीदी
+        की एंट्री khadya.cg.nic.in पर पंजीयन नंबर से दिखती है; पैसा न आए तो पहला
+        दरवाजा अपनी सहकारी समिति, दूसरा तहसील का खाद्य विभाग।
       </p>
 
       <figure className="my-5 rounded-2xl overflow-hidden border border-[var(--color-border)]">
@@ -302,17 +309,17 @@ export default function StateKisanYojanaListHindi({ article }: { article: HindiA
 
       <ul className="list-disc pl-6 space-y-2">
         <li>
-          <strong>बिहार</strong> — DBT Agriculture पोर्टल एक छाता है: डीजल अनुदान (₹750
-          प्रति एकड़ प्रति सिंचाई तक), कृषि इनपुट अनुदान, बीज अनुदान — सब एक ही 13 अंकों के
-          पंजीकरण से। पूरा सिस्टम{' '}
-          <Link href="/rajya-yojana/bihar-kisan-registration-status-check-2026">बिहार गाइड</Link>{' '}
-          में समझाया है।
+          <strong>बिहार</strong> — DBT Agriculture पोर्टल (dbtagriculture.bihar.gov.in) एक
+          छाता है: डीजल अनुदान (₹750 प्रति एकड़ प्रति सिंचाई तक), कृषि इनपुट अनुदान, बीज
+          अनुदान — सब एक ही 13 अंकों के पंजीकरण से। पंजीकरण संख्या खो जाए तो नई मत
+          बनवाइए — पुराना नंबर आधार से सर्च करके निकल जाता है। हर योजना के लिए उसकी
+          विंडो में अलग से आवेदन करना पड़ता है, और हर आवेदन मुफ्त है।
         </li>
         <li>
           <strong>हरियाणा</strong> — नकद योजना की जगह MSP खरीद का मजबूत सिस्टम: मेरी फसल
-          मेरा ब्योरा पर पंजीकरण के बिना मंडी में फसल नहीं बिकती। तरीका{' '}
-          <Link href="/rajya-yojana/meri-fasal-mera-byora-status-check-2026">हरियाणा गाइड</Link>{' '}
-          में।
+          मेरा ब्योरा (fasal.haryana.gov.in) पर पंजीकरण के बिना मंडी में फसल नहीं बिकती —
+          गेट पास इसी डेटा से बनता है। पंजीकरण Family ID या मोबाइल से होता है और पटवारी
+          सत्यापन के बाद ही Verified होता है।
         </li>
         <li>
           <strong>कर्नाटक</strong> — फसल नुकसान पर परिहार (मुआवजा) सिस्टम चलता है, FRUITS
@@ -321,13 +328,16 @@ export default function StateKisanYojanaListHindi({ article }: { article: HindiA
         </li>
         <li>
           <strong>उत्तर प्रदेश</strong> — 2017 की किसान कर्ज राहत (₹1 लाख तक माफी) के
-          बचे मामले निपट रहे हैं; नई सालाना नकद योजना नहीं है। ईमानदार हिसाब{' '}
-          <Link href="/rajya-yojana/up-kisan-karj-rahat-list-2026">UP गाइड</Link> में।
+          बचे मामले निपट रहे हैं; नई सालाना नकद योजना नहीं है। असली पोर्टल
+          upkisankarjrahat.upsdc.gov.in है — लिस्ट में नाम लोन अकाउंट नंबर से दिखता है,
+          और नाम न होने पर शिकायत भी वहीं दर्ज होती है। WhatsApp पर घूमती “नई माफी” की
+          खबर को पहले इसी पोर्टल से मिलाइए।
         </li>
         <li>
-          <strong>गुजरात</strong> — iKhedut पोर्टल से ट्रैक्टर, ड्रिप, मशीनरी जैसी दर्जनों
-          सब्सिडी मिलती हैं — सालाना नकद नहीं, आवेदन-आधारित सहायता। पूरा तरीका{' '}
-          <Link href="/rajya-yojana/ikhedut-portal-status-check-2026">iKhedut गाइड</Link> में।
+          <strong>गुजरात</strong> — iKhedut पोर्टल (ikhedut.gujarat.gov.in) से ट्रैक्टर, ड्रिप,
+          मशीनरी जैसी 100+ सब्सिडी मिलती हैं — सालाना नकद नहीं, आवेदन-आधारित सहायता।
+          सिस्टम विंडो-आधारित है: ऑनलाइन अर्जी के बाद प्रिंट साइन करके दफ्तर में जमा करना
+          जरूरी है — यही स्टेप सबसे ज्यादा लोग छोड़ते हैं और लाभ गंवा देते हैं।
         </li>
       </ul>
 

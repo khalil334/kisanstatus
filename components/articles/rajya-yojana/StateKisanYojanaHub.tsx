@@ -73,7 +73,7 @@ const STATE_SCHEMES = [
     scheme: 'Krishak Bandhu',
     amount: '₹4,000 se ₹10,000 / saal (zameen par slab)',
     portal: 'krishakbandhu.wb.gov.in',
-    guide: '/rajya-yojana/krishak-bandhu-status-check-2026',
+    guide: '',
   },
   {
     state: 'Odisha',
@@ -87,7 +87,7 @@ const STATE_SCHEMES = [
     scheme: 'Krishak Unnati Yojana',
     amount: 'Dhan kharidi par antar rashi (fixed nahi)',
     portal: 'khadya.cg.nic.in',
-    guide: '/rajya-yojana/krishak-unnati-yojana-status-check-2026',
+    guide: '',
   },
 ];
 
@@ -148,7 +148,7 @@ export default function StateKisanYojanaHub() {
             <td>{s.amount}</td>
             <td><code>{s.portal}</code></td>
             <td>
-              <Link href={s.guide}>Status guide</Link>
+              {s.guide ? <Link href={s.guide}>Status guide</Link> : 'Isi page par neeche'}
             </td>
           </tr>
         ))}
@@ -208,11 +208,19 @@ export default function StateKisanYojanaHub() {
 
       <h3>West Bengal — Krishak Bandhu</h3>
       <p>
-        Zameen ke slab par ₹4,000 se ₹10,000 saalana, do kiston mein. Pehchaan ka mukhya zariya
-        Aadhaar nahi, Voter ID (EPIC) hai. Saath mein ₹2 lakh ka death benefit bhi judta hai.
-        Slab ka logic aur EPIC se status check ka tareeka{' '}
-        <Link href="/rajya-yojana/krishak-bandhu-status-check-2026">Krishak Bandhu guide</Link>{' '}
-        mein hai.
+        Zameen ke slab par ₹4,000 se ₹10,000 saalana, do kiston mein (Kharif + Rabi). Pehchaan
+        ka mukhya zariya Aadhaar nahi, Voter ID (EPIC) hai — poore desh mein anokha system.
+        Slab ka logic: 1 acre ya usse zyada par poora ₹10,000; usse kam par pro-rata, lekin
+        ₹4,000 se neeche nahi jaata. Saath mein ₹2 lakh ka death benefit bhi judta hai —
+        18 se 60 saal ke registered kisan ki mrityu par parivaar claim kar sakta hai.
+      </p>
+      <p>
+        Status check ka raasta: <code>krishakbandhu.wb.gov.in</code> kholo, &ldquo;Search
+        Beneficiary&rdquo; mein Voter ID (EPIC) number daalo — kist ka status, amount aur
+        transaction ID wahin dikh jaata hai. Yahan enrolment khud karwana padta hai — Duare
+        Sarkar camp ya block krishi office se. Paisa atakne ki aam wajahein: land record
+        mein mutation adhoora, bank account dormant, naam ki spelling mismatch, ya joint
+        khatian mein hissa saaf nahi. In sab ka ilaaj block office se shuru hota hai.
       </p>
 
       <h3>Odisha — CM Kisan Yojana</h3>
@@ -227,11 +235,18 @@ export default function StateKisanYojanaHub() {
       <h3>Chhattisgarh — Krishak Unnati Yojana</h3>
       <p>
         Ye is list ki sabse hatke scheme hai. Fixed saalana amount nahi milta; paisa dhan ki
-        sarkari kharidi se juda hai aur antar rashi ke roop mein aata hai. Kharif 2026 se dhan
-        ki jagah doosri fasal lagane par per acre input sahayata ka naya component bhi juda hai.
-        Hisaab{' '}
-        <Link href="/rajya-yojana/krishak-unnati-yojana-status-check-2026">Krishak Unnati guide</Link>{' '}
-        mein hai.
+        sarkari kharidi se juda hai aur antar rashi ke roop mein aata hai — MSP aur ₹3,100
+        prati quintal ke beech ka antar, ekmusht payment mein. Jitna dhan samiti mein darj
+        hua, utna hisaab banta hai. Kharif 2026 se dhan chhod kar doosri fasal lagane par
+        ₹15,000 prati acre input sahayata ka naya component bhi juda hai.
+      </p>
+      <p>
+        Status check ke liye alag portal nahi hai — kharidi ki entry <code>khadya.cg.nic.in</code>{' '}
+        par apne panjiyan number se dikhti hai, aur antar rashi ka credit usi bank khaate mein
+        aata hai jo samiti ke record mein hai. Paisa na aaye to pehla darwaza apni sahkari
+        samiti hai, doosra tehsil ka khadya vibhag. Passbook mein credit ki entry dhan bechne
+        ke season ke baad ekmusht release par aati hai — hapte ka intezaar nahi, release ka
+        hota hai.
       </p>
 
       <Fig
@@ -404,7 +419,57 @@ export default function StateKisanYojanaHub() {
         Uttar Pradesh, Bihar, Punjab, Haryana jaise kai bade pradeshon mein abhi PM Kisan jaisi
         judaa rajya-level income-support scheme nahi chal rahi. Iska matlab ye nahi ki wahan
         annadata ke liye kuch nahi hai. Ye sarkarein doosre raaste se madad deti hain: kahin bijli
-        subsidy, kahin fasal bonus, kahin karz maafi ke rounds.
+        subsidy, kahin fasal bonus, kahin karz maafi ke rounds. Chaar bade rajya ka hisaab
+        neeche khula hai.
+      </p>
+
+      <h3>Bihar — DBT Agriculture: Ek Number, Saari Yojana Ka Darwaza</h3>
+      <p>
+        Bihar mein saalana nakad scheme nahi, par <code>dbtagriculture.bihar.gov.in</code> ek
+        chhata system hai. Yahan ek baar enrolment par 13-anka kisan panjikaran sankhya milti
+        hai, aur usi number se har madad khulti hai: diesel anudan (₹750 prati acre prati
+        sinchai tak), baadh/sukhad par krishi input anudan, beej anudan, aur PM-Kisan tak ki
+        arji ka raasta. Enrolment ke teen type hain — raiyat, gair-raiyat (batayidar,
+        swa-ghoshna ke saath), aur dono. Panjikaran sankhya kho jaaye to nayi mat banwao —
+        duplicate entry dono record atka deti hai; purana number portal par Aadhaar se search
+        karke nikal jaata hai. Panjikaran aur har arji free hai; har yojana ke liye uski
+        window mein alag se apply karna padta hai, paisa DBT se seedha khaate mein aata hai.
+      </p>
+
+      <h3>Haryana — Meri Fasal Mera Byora: MSP Ka Gatekeeper</h3>
+      <p>
+        Haryana ka model nakad kist nahi, MSP kharid ka pakka system hai.{' '}
+        <code>fasal.haryana.gov.in</code> par fasal register kiye bina mandi mein MSP par
+        fasal nahi bikti — gate pass isi data se banta hai. Registration Family ID (Parivar
+        Pehchan Patra) ya registered mobile se hota hai, aur patwari verification ke baad hi
+        entry Verified hoti hai. Status ke teen matlab: Pending (patwari ke paas), Verified
+        (gate pass ban sakta hai), Rejected (detail sudhaar kar dobara). Dhaan ki seedhi
+        bijai (DSR) aur Mera Pani Meri Virasat jaise incentive bhi isi registration se judte
+        hain. MSP ka paisa na aaye to pehle apni entry ka status dekho, phir bank khaate ki
+        NPCI seeding — chaar mein se teen mamle inhi do jagah atakte hain.
+      </p>
+
+      <h3>Uttar Pradesh — Karj Rahat Ke Bache Mamle, Nayi Scheme Nahi</h3>
+      <p>
+        UP mein 2017 ki Kisan Rin Mochan (karj rahat) yojana ke bache mamle ab bhi nipat
+        rahe hain — ₹1 lakh tak ki maafi, sirf 2016 se pehle ke fasal rin par. Nayi saalana
+        nakad yojana ya nayi karj maafi ki koi sarkari ghoshna abhi nahi hai — WhatsApp par
+        ghoomti &ldquo;nayi list&rdquo; ki khabar ko portal se milao. Asli portal{' '}
+        <code>upkisankarjrahat.upsdc.gov.in</code> hai; list mein naam bank ka loan account
+        number daal kar dikhta hai, aur naam na hone par shikayat bhi wahin darj hoti hai.
+        Collectorate ki taraf se shikayat ka jawab usi portal par status mein dikhta hai.
+      </p>
+
+      <h3>Gujarat — iKhedut: Nakad Nahi, Arji-Based Subsidy</h3>
+      <p>
+        Gujarat mein saalana nakad transfer nahi hai; <code>ikhedut.gujarat.gov.in</code> se
+        tractor sahay, drip/micro-irrigation, tar fencing, godown, pump set jaisi 100+ sahay
+        yojanaon ki arji hoti hai. System window-based hai: yojana ki window khulti hai, online
+        arji hoti hai, aur arji ka print sign karke office mein jama karna zaroori hai — yahi
+        step sabse zyada log chhodte hain aur labh gawa dete hain. Arji target se zyada ho to
+        draw/lottery hota hai. Status portal par arji number se dikhta hai; reject hone ki aam
+        wajahein (7/12 utara ka mismatch, bank detail, print jama na hona) sudhaar kar agli
+        window mein dobara arji ho jaati hai.
       </p>
 
       <p>
