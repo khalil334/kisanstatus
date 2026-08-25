@@ -66,7 +66,7 @@ const SCHEMES: Scheme[] = [
   {
     state: 'West Bengal',
     scheme: 'Krishak Bandhu (Notun Rupe)',
-    slug: 'krishak-bandhu-status-check-2026',
+    slug: 'state-kisan-yojana-list-all-states-2026',
     portal: 'krishakbandhu.wb.gov.in',
     kind: 'perAcre',
     perAcre: { rate: 10000, floor: 4000, capAcres: 1, seasons: 2 },

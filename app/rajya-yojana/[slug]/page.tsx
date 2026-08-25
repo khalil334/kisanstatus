@@ -27,16 +27,10 @@ import AnnadataSukhibhavaStatusCheck from '@/components/articles/rajya-yojana/An
 import MpKisanKalyanYojanaKist from '@/components/articles/rajya-yojana/MpKisanKalyanYojanaKist';
 import NamoShetkariYojanaStatus from '@/components/articles/rajya-yojana/NamoShetkariYojanaStatus';
 import RythuBharosaStatusCheck from '@/components/articles/rajya-yojana/RythuBharosaStatusCheck';
-import KrishakBandhuStatusCheck from '@/components/articles/rajya-yojana/KrishakBandhuStatusCheck';
 import OdishaCmKisanStatusCheck from '@/components/articles/rajya-yojana/OdishaCmKisanStatusCheck';
 import PmKisanPatiPatniRule from '@/components/articles/rajya-yojana/PmKisanPatiPatniRule';
 import StateKisanYojanaHub from '@/components/articles/rajya-yojana/StateKisanYojanaHub';
-import KrishakUnnatiYojanaStatusCheck from '@/components/articles/rajya-yojana/KrishakUnnatiYojanaStatusCheck';
-import MeriFasalMeraByoraStatusCheck2026 from '@/components/articles/rajya-yojana/MeriFasalMeraByoraStatusCheck2026';
-import UpKisanKarjRahatList2026 from '@/components/articles/rajya-yojana/UpKisanKarjRahatList2026';
 import PariharaPaymentStatusCheck2026 from '@/components/articles/rajya-yojana/PariharaPaymentStatusCheck2026';
-import BiharKisanRegistrationStatusCheck2026 from '@/components/articles/rajya-yojana/BiharKisanRegistrationStatusCheck2026';
-import IkhedutPortalStatusCheck2026 from '@/components/articles/rajya-yojana/IkhedutPortalStatusCheck2026';
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: RajyaYojanaArticleMeta }>> = {
   RajasthanKisanSammanNidhi9000,
@@ -44,16 +38,10 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: RajyaYojanaArtic
   MpKisanKalyanYojanaKist,
   NamoShetkariYojanaStatus,
   RythuBharosaStatusCheck,
-  KrishakBandhuStatusCheck,
   OdishaCmKisanStatusCheck,
   PmKisanPatiPatniRule,
   StateKisanYojanaHub,
-  KrishakUnnatiYojanaStatusCheck,
-  MeriFasalMeraByoraStatusCheck2026,
-  UpKisanKarjRahatList2026,
   PariharaPaymentStatusCheck2026,
-  BiharKisanRegistrationStatusCheck2026,
-  IkhedutPortalStatusCheck2026,
 };
 
 function buildSchemas(

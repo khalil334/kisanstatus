@@ -132,6 +132,18 @@ const nextConfig = {
       { source: '/articles/pm-kisan-ekyc-kaise-karein', destination: '/articles/PmKisanEkycOnline2026', permanent: true },
       { source: '/articles/pm-kisan-status-check-2026', destination: '/articles/PmKisan24viKist2026', permanent: true },
       { source: '/articles/PmKisan26viKist', destination: '/articles/PmKisan25viKist2027', permanent: true },
+      { source: '/rajya-yojana/krishak-unnati-yojana-status-check-2026', destination: '/rajya-yojana/state-kisan-yojana-list-all-states-2026', permanent: true },
+      { source: '/rajya-yojana/krishak-bandhu-status-check-2026', destination: '/rajya-yojana/state-kisan-yojana-list-all-states-2026', permanent: true },
+      { source: '/rajya-yojana/bihar-kisan-registration-status-check-2026', destination: '/rajya-yojana/state-kisan-yojana-list-all-states-2026', permanent: true },
+      { source: '/rajya-yojana/meri-fasal-mera-byora-status-check-2026', destination: '/rajya-yojana/state-kisan-yojana-list-all-states-2026', permanent: true },
+      { source: '/rajya-yojana/up-kisan-karj-rahat-list-2026', destination: '/rajya-yojana/state-kisan-yojana-list-all-states-2026', permanent: true },
+      { source: '/rajya-yojana/ikhedut-portal-status-check-2026', destination: '/rajya-yojana/state-kisan-yojana-list-all-states-2026', permanent: true },
+      { source: '/articles/hi/krishak-unnati-yojana-status', destination: '/articles/hi/state-kisan-yojana-list', permanent: true },
+      { source: '/articles/hi/krishak-bandhu-status', destination: '/articles/hi/state-kisan-yojana-list', permanent: true },
+      { source: '/articles/hi/bihar-kisan-registration-status', destination: '/articles/hi/state-kisan-yojana-list', permanent: true },
+      { source: '/articles/hi/meri-fasal-mera-byora-status', destination: '/articles/hi/state-kisan-yojana-list', permanent: true },
+      { source: '/articles/hi/up-kisan-karj-rahat-list', destination: '/articles/hi/state-kisan-yojana-list', permanent: true },
+      { source: '/articles/hi/ikhedut-portal-status', destination: '/articles/hi/state-kisan-yojana-list', permanent: true },
       // content-audit W2a: old Hindi helpline page merged into canonical hi twin
       { source: '/articles/hi/helpline-shikayat', destination: '/articles/hi/pm-kisan-helpline-155261', permanent: true },
       // content-audit W2b: old 2027-stamped Hindi karj-mafi page merged into hreflang-paired twin

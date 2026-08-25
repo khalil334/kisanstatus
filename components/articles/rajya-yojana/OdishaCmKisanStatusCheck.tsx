@@ -185,8 +185,8 @@ export default function OdishaCmKisanStatusCheck({
 
         <ul>
           <li>
-            <Link href="/rajya-yojana/krishak-bandhu-status-check-2026">
-              West Bengal Krishak Bandhu — Voter ID se status aur death benefit
+            <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
+              West Bengal Krishak Bandhu — Voter ID se status aur death benefit (state list guide me)
             </Link>
           </li>
           <li>

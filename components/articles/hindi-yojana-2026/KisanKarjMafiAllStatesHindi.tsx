@@ -190,7 +190,7 @@ export default function KisanKarjMafiAllStatesHindi({ article }: { article: Hind
         समय भी जवाब नहीं दे रहा था। इसे &ldquo;सर्वर पर लोड क्योंकि नई लिस्ट आ गई&rdquo; वाली अफवाह का
         सबूत मत मानिए। पोर्टल न खुले? सीधे अपनी बैंक ब्रांच या तहसील में पता करें। रिकॉर्ड वहीं
         है। विस्तार से{' '}
-        <Link href="/articles/hi/up-kisan-karj-rahat-list" className="underline font-bold">UP किसान कर्ज राहत लिस्ट वाला पेज</Link>{' '}
+        <Link href="/articles/hi/state-kisan-yojana-list" className="underline font-bold">राज्य योजना लिस्ट वाले पेज का UP हिस्सा</Link>{' '}
         देख लीजिए।
       </p>
 

@@ -211,7 +211,7 @@ export default function KisanKarjMafiAllStates({ article }: { article: Yojana202
           &ldquo;server par load kyunki nayi list aa gayi&rdquo; wali afwah ka saboot maanna chahiye. Portal
           na khule to seedha apni bank branch ya tehsil me pata karo — record wahin hai. Vistar se UP ke case
           par{' '}
-          <Link href="/rajya-yojana/up-kisan-karj-rahat-list-2026" className="underline font-bold">UP kisan karj rahat list wala page</Link>{' '}
+          <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026" className="underline font-bold">state yojana list wale page ka UP section</Link>{' '}
           dekh lena, usme district-level process likha hai.
         </p>
 

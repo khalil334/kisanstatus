@@ -67,7 +67,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     modified: '2026-08-21T22:35:18+05:30',
     readTime: '13 min read',
     relatedPaths: [
-      '/rajya-yojana/up-kisan-karj-rahat-list-2026',
+      '/rajya-yojana/state-kisan-yojana-list-all-states-2026',
       '/articles/KisanCreditCardOnlineApply2026',
       '/articles/KisanRinKahaSeLe2026',
     ],
