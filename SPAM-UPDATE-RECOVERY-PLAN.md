@@ -131,6 +131,55 @@ nahi aayega. Panic mein articles delete/rewrite spree mat karo; upar wala target
 - ❌ Reconsideration request bina manual action ke — aisi koi cheez exist nahi karti
 - ❌ hreflang pairs / canonicals chhedna — wo sahi hain
 
+## 5.5 — 25 Aug update: GSC deep-check complete (live API data)
+
+**Verdict confirm: poora domain sitewide hit hai, sirf kuch articles nahi.**
+
+GSC live pull (25 Aug, `sc-domain:kisanstatus.com`):
+
+| Date | Clicks | Impressions | Position |
+|---|---|---|---|
+| 13 Aug (peak) | 54 | 2,616 | 7.1 |
+| 17 Aug | 18 | 1,486 | 7.0 |
+| **18 Aug** | **1** | **64** | 2.2 |
+| 24 Aug | 0 | 61 | 3.5 |
+
+- Impressions −96% overnight 17→18 Aug — August 2026 Spam Update ke release din se exact match.
+- Technical side **clean verify hui**: canonicals sahi (live HTML check kiya — har page apna URL point karta hai), robots ALLOWED, sitemap 0 errors, homepage indexed. Ye technical problem NAHI hai.
+- "Position 2–3 improve" illusion hai — sirf brand/exact-match queries bachi hain.
+- Authority score 8 intact hai (backlink-based, spam update usse nahi girata) — naya domain kharidna galat move hoga; isi domain pe recovery karo.
+
+### 🛡️ Protect list — crash se pehle (1–17 Aug) ke top earners
+
+Consolidation me ye pages **keepers** hain — inhe delete/merge target mat banao, inhe base banao:
+
+| Page | Clicks | Impr. | Pos. |
+|---|---|---|---|
+| `/rajya-yojana/odisha-cm-kisan-status-check-2026` | 57 | 1,775 | 7.4 |
+| `/articles/hi/pm-kisan-25vi-kist` | 56 | 1,147 | **2.4** |
+| `/rajya-yojana/mp-kisan-kalyan-yojana-kist-status` | 38 | 919 | 9.3 |
+| `/articles/PmKisanLandSeedingForm` | 32 | 489 | 7.1 |
+| `/articles/hi/farmer-id-kaise-banaye` | 21 | 2,446 | 6.5 |
+| `/articles/hi/namo-shetkari-yojana` | 21 | 1,697 | 5.5 |
+| `/articles/msp-list-2026-27` | 21 | 1,066 | 7.4 |
+| `/articles/hi/karj-mafi-list` | 18 | 465 | 6.1 |
+| `/articles/bihar-pashupalan-loan-yojana` | 16 | 647 | 7.3 |
+| `/articles/NanoDap500mlPriceInIndia2026` | 11 | 1,401 | 6.4 |
+
+Do takeaways:
+1. **State doorway set ke andar bhi winners hain** — odisha + MP pages top 3 me the. Matlab `rajya-yojana` consolidation me delete nahi, **differentiate**: odisha/MP ko master banao (asli portal screenshots, state-specific detail), zero-traffic state pages unme merge/301 karo.
+2. **Kist-series ka evergreen canonical = `/articles/hi/pm-kisan-25vi-kist`** (site ka best ranker tha, pos 2.4). 24vi/26vi/2027 versions isme 301 karo.
+
+### ✅ Fix karne ke liye — concrete order (25 Aug se)
+
+1. **[Owner, aaj, 5 min]** GSC → Security & Manual Actions — dono check. Khaali = algorithmic; koi reconsideration nahi hoti, neeche wala kaam hi recovery hai.
+2. **[Owner]** Publishing velocity zero — naye AI articles 4–6 hafte band.
+3. **[Repo]** Kist-series consolidation: `pm-kisan-25vi-kist` ko evergreen banao, 24vi/26vi/25viKist2027 → 301. (Direction upar confirm ho gayi — GSC data se.)
+4. **[Repo]** State doorway consolidation: protect-list wale state pages ko genuinely differentiate karo; jo pages 1–17 Aug me ~0 clicks the unhe nearest keeper me merge + 301.
+5. **[Owner + repo]** E-E-A-T inject: har major guide pe asli portal screenshots, real error messages, "humne <date> ko check kiya" freshness proof.
+6. **[Owner]** Consolidation deploy ke baad: sitemap re-submit + protect-list pages pe Request Indexing.
+7. **[Wait]** Recovery mahino ki hai — agla spam update full re-assessment point. Panic delete/domain-change mat karo.
+
 ## 6. Progress log
 
 | Date | Kaam | Status |
@@ -140,6 +189,7 @@ nahi aayega. Panic mein articles delete/rewrite spree mat karo; upar wala target
 | 2026-08-24 | State doorway pages — GSC data se decide hoga (GSC connect ho gaya, read-approval pending) | ⏳ blocked on approval |
 | — | Thin pages (7 wali GSC list) | ⏳ list chahiye |
 | — | E-E-A-T: author bios/bylines already implemented (lib/author-bios.ts) | ✅ pehle se ho chuka |
+| 2026-08-25 | GSC deep-check via API: sitewide hit confirm (−96% impressions 17→18 Aug), technical side clean verify, protect list (top 25 pre-crash pages) pull ki, kist-series evergreen = `pm-kisan-25vi-kist` decide | ✅ done (Section 5.5) |
 
 ### Owner ke manual steps (repo se nahi ho sakte)
 - [ ] GSC → Security & Manual Actions — dono check karo (P0, 5 min)
