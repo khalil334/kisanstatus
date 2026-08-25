@@ -3,6 +3,7 @@ import HindiRelatedFooter from '@/components/HindiRelatedFooter';
 import Image from 'next/image';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 import { buildFaqSchema } from '@/lib/faq-schema';
+import SourcesSection from '@/components/ui/SourcesSection';
 
 const FAQS = [
   {
@@ -491,6 +492,17 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
       {FAQS.map((f) => (
         <Bubble key={f.q} q={f.q} a={f.a} />
       ))}
+
+      <SourcesSection
+        heading="स्रोत — जानकारी कहां से आई"
+        checkedLabel="आखिरी बार जांचा गया:"
+        checkedOn={article.modifiedTime}
+        sources={[
+          { label: 'नमो शेतकरी महासन्मान निधी portal (nsmny.mahait.org)', href: 'https://nsmny.mahait.org', note: 'status check और किस्त की आधिकारिक जानकारी — guide के steps इसी portal पर जांच कर लिखे गए हैं' },
+          { label: 'PM Kisan Portal (pmkisan.gov.in)', href: 'https://pmkisan.gov.in', note: 'PM Kisan beneficiary record — नमो शेतकरी की eligibility इसी से जुड़ी है' },
+          { label: 'तालुका कृषि अधिकारी कार्यालय', note: 'शिकायत और record सुधार का official रास्ता' },
+        ]}
+      />
 
       <HindiRelatedFooter
         heading="Related Articles — Yeh Bhi Padho"

@@ -5,6 +5,7 @@ import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
 import OdishaCmKisanChecker from '@/components/articles/rajya-yojana/tools/OdishaCmKisanChecker';
 import UIFig, { type FigProps } from '@/components/ui/Fig';
+import SourcesSection from '@/components/ui/SourcesSection';
 
 const IMG_BASE = '/images/articles/rajya-yojna/odisha-cm-kisan-status-check-2026';
 
@@ -554,6 +555,15 @@ export default function OdishaCmKisanStatusCheck({
             </a>
           </p>
         )}
+
+        <SourcesSection
+          checkedOn={article.modified || article.published}
+          sources={[
+            { label: 'CM Kisan Portal (cmkisan.odisha.gov.in)', href: 'https://cmkisan.odisha.gov.in', note: 'status check, beneficiary list, cultivator/landless track — is guide ka har step isi portal par khud check karke likha gaya hai' },
+            { label: 'Agriculture & Farmers\u2019 Empowerment Dept, Govt of Odisha', href: 'https://agri.odisha.gov.in', note: 'scheme guidelines, eligibility aur exclusion rules' },
+            { label: 'PM Kisan Portal (pmkisan.gov.in)', href: 'https://pmkisan.gov.in', note: 'PM Kisan aur CM Kisan ke saath-saath milne wale benefit ki puṣṭi' },
+          ]}
+        />
 
         <p>
           <Link href="/rajya-yojana">← Sabhi rajya ki kisan yojana</Link>

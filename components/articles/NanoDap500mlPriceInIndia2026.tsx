@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, CalcBanner, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
+import SourcesSection from '@/components/ui/SourcesSection';
 
 const PUBLISHED = '2026-06-24T04:22:58+05:30';
 const MODIFIED = '2026-07-31T19:12:48+05:30';
@@ -475,6 +476,14 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
           desc="MSP income, crop profit, KCC EMI — sab free calculators se"
           primaryCta={{ href: '/calculator/msp-income', label: 'MSP Calculator →' }}
           secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
+        />
+
+        <SourcesSection
+          checkedOn={MODIFIED}
+          sources={[
+            { label: 'IFFCO (iffco.in)', href: 'https://www.iffco.in', note: 'Nano DAP ka official MRP, product specification aur dealer network' },
+            { label: 'IFFCO Bazar / apna nazdeeki sahakari samiti kendra', note: 'asli bottle wahi milti hai — price table isi ke rates par aadharit hai' },
+          ]}
         />
 
         <RelatedArticles articles={RELATED} />

@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import type { RajyaYojanaArticleMeta } from '@/lib/rajya-yojana-data';
 import ExternalLinkButton from '@/components/ui/ExternalLinkButton';
+import SourcesSection from '@/components/ui/SourcesSection';
 import InfoBox from '@/components/ui/InfoBox';
 import SchemeTable from '@/components/ui/SchemeTable';
 import UIFig, { type FigProps } from '@/components/ui/Fig';
@@ -41,7 +43,7 @@ const FAQS_DATA = [
   },
 ];
 
-export default function MPCMKisanKalyanYojanaKistStatus() {
+export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: RajyaYojanaArticleMeta }) {
   return (
     <article className="prose prose-lg max-w-4xl mx-auto">
 
@@ -535,6 +537,15 @@ export default function MPCMKisanKalyanYojanaKistStatus() {
         Patwari, ADO aur portal ke raste hote hain. Aisi demand par MP CM Helpline
         <strong> 181</strong> par shikayat darj karwaayein.
       </InfoBox>
+
+      <SourcesSection
+        checkedOn={article.modified || article.published}
+        sources={[
+          { label: 'SAARA Portal (saara.mp.gov.in)', href: 'https://saara.mp.gov.in', note: 'kist status, beneficiary record aur official notification — is guide ke steps isi portal par check karke likhe gaye hain' },
+          { label: 'PM Kisan Portal (pmkisan.gov.in)', href: 'https://pmkisan.gov.in', note: 'PM Kisan beneficiary list — isi se MP ki state kist ki eligibility banti hai' },
+          { label: 'MP CM Helpline 181', note: 'kist ya list se judi shikayat darj karne ka official raasta' },
+        ]}
+      />
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">

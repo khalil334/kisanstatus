@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SI, StepList, IB, WB, SH, GovLink, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
 import { AUTHOR_NAME } from '@/lib/site-config';
+import SourcesSection from '@/components/ui/SourcesSection';
 
 const PUBLISHED = '2026-07-09T05:39:09+05:30';
 const MODIFIED = '2026-08-09T17:42:21+05:30';
@@ -491,6 +492,15 @@ export default function PmKisanLandSeedingFormPdf2026() {
           guide="Apna Status Check Karo"
           guideHref="/articles/PmKisanMasterGuide2026"
           portalName="pmkisan.gov.in"
+        />
+
+        <SourcesSection
+          checkedOn={MODIFIED}
+          sources={[
+            { label: 'PM Kisan Portal (pmkisan.gov.in)', href: 'https://pmkisan.gov.in', note: 'land seeding status, Farmer Corner aur form ka official process' },
+            { label: 'Apne rajya ka bhulekh portal', note: 'zameen ke record (khasra/khatauni) verify karne ke liye — state-wise portal list upar table mein di gayi hai' },
+            { label: 'PM Kisan Helpline 155261 / 011-24300606', note: 'land seeding pending hone par shikayat ka official number' },
+          ]}
         />
 
         <RelatedArticles articles={RELATED} />
