@@ -12,7 +12,7 @@ Rule: ek part poora karo → commit + push → tabhi agla part shuru. Har part k
 
 | Part | Kaam | Status |
 |---|---|---|
-| **1** | **Kist-series consolidation** — `PmKisan26viKist` (already noindexed, zero demand, content 25vi me merged) ko remove karo: 301 → `/articles/PmKisan25viKist2027`, data entry + component delete, relatedSlugs clean. Keepers: `PmKisan24viKist2026` (current demand, Oct 2026), `hi/pm-kisan-25vi-kist` ↔ `PmKisan25viKist2027` (hreflang pair, best ranker — mat chhedo) | ⏳ in progress |
+| **1** | **Kist-series consolidation** — `PmKisan26viKist` (already noindexed, zero demand, content 25vi me merged) ko remove karo: 301 → `/articles/PmKisan25viKist2027`, data entry + component delete, relatedSlugs clean. Keepers: `PmKisan24viKist2026` (current demand, Oct 2026), `hi/pm-kisan-25vi-kist` ↔ `PmKisan25viKist2027` (hreflang pair, best ranker — mat chhedo) | ✅ done (25 Aug) — data entry + component + dynamic import removed, 301 `/articles/PmKisan26viKist` → `/articles/PmKisan25viKist2027` added in next.config.js; koi relatedSlugs/sitemap reference nahi bacha; tsc + build clean |
 | **2** | **State doorway consolidation** — GSC per-page data (Jun 1–Aug 17) se `rajya-yojana/*` split karo: winners (odisha, MP — protect list) = differentiate; ~0-click pages = `StateKisanYojanaHub` me merge + 301. Har merge me unique state info hub row me add ho, tabhi 301 karo | ⏸️ pending |
 | **3** | **Thin pages** — GSC "Crawled – not indexed" list ke pages: expand (2,000+ words real info) ya nearest keeper me merge + 301. Owner se GSC export chahiye | ⏸️ pending |
 | **4** | **E-E-A-T inject** — har protect-list page pe: asli portal screenshot (owner dega), real error messages, "humne <date> ko check kiya" freshness line, Sources section consistent | ⏸️ pending (screenshots owner pe blocked) |
@@ -211,6 +211,7 @@ Do takeaways:
 | — | Thin pages (7 wali GSC list) | ⏳ list chahiye |
 | — | E-E-A-T: author bios/bylines already implemented (lib/author-bios.ts) | ✅ pehle se ho chuka |
 | 2026-08-25 | GSC deep-check via API: sitewide hit confirm (−96% impressions 17→18 Aug), technical side clean verify, protect list (top 25 pre-crash pages) pull ki, kist-series evergreen = `pm-kisan-25vi-kist` decide | ✅ done (Section 5.5) |
+| 2026-08-25 | **Part 1 complete**: `PmKisan26viKist` removed (core-articles-data entry, component file, dynamic import), 301 → `PmKisan25viKist2027` in next.config.js. Keepers untouched (`PmKisan24viKist2026`, `hi/pm-kisan-25vi-kist` ↔ `PmKisan25viKist2027`). Typecheck + production build verified | ✅ done, pushed |
 
 ### Owner ke manual steps (repo se nahi ho sakte)
 - [ ] GSC → Security & Manual Actions — dono check karo (P0, 5 min)
