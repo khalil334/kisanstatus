@@ -1,7 +1,28 @@
 # KisanStatus.com — August 2026 Spam Update Recovery Plan
 
-**Date:** 2026-08-23 · **Property:** `sc-domain:kisanstatus.com`
-**Data sources:** GSC Search Analytics API (live, aaj pull kiya), Google Search Status Dashboard, repo source.
+**Date:** 2026-08-23 · **Updated:** 2026-08-25 · **Property:** `sc-domain:kisanstatus.com`
+**Data sources:** GSC Search Analytics API (live), Google Search Status Dashboard, repo source.
+**Status:** Manual Actions + Security issues **CLEAN (owner ne 25 Aug ko verify kiya)** → ye pure algorithmic suppression hai. Recovery = neeche wale PARTS, order me.
+
+---
+
+## ⚡ EXECUTION PARTS — isi order me, har part ke baad direct push
+
+Rule: ek part poora karo → commit + push → tabhi agla part shuru. Har part ke baad yahan status update hota hai.
+
+| Part | Kaam | Status |
+|---|---|---|
+| **1** | **Kist-series consolidation** — `PmKisan26viKist` (already noindexed, zero demand, content 25vi me merged) ko remove karo: 301 → `/articles/PmKisan25viKist2027`, data entry + component delete, relatedSlugs clean. Keepers: `PmKisan24viKist2026` (current demand, Oct 2026), `hi/pm-kisan-25vi-kist` ↔ `PmKisan25viKist2027` (hreflang pair, best ranker — mat chhedo) | ⏳ in progress |
+| **2** | **State doorway consolidation** — GSC per-page data (Jun 1–Aug 17) se `rajya-yojana/*` split karo: winners (odisha, MP — protect list) = differentiate; ~0-click pages = `StateKisanYojanaHub` me merge + 301. Har merge me unique state info hub row me add ho, tabhi 301 karo | ⏸️ pending |
+| **3** | **Thin pages** — GSC "Crawled – not indexed" list ke pages: expand (2,000+ words real info) ya nearest keeper me merge + 301. Owner se GSC export chahiye | ⏸️ pending |
+| **4** | **E-E-A-T inject** — har protect-list page pe: asli portal screenshot (owner dega), real error messages, "humne <date> ko check kiya" freshness line, Sources section consistent | ⏸️ pending (screenshots owner pe blocked) |
+| **5** | **Re-crawl** — Parts 1–4 deploy ke baad: sitemap re-submit (GSC API se ho jayega), protect-list pages pe Request Indexing (owner, GSC UI) | ⏸️ pending |
+
+**Owner ke parallel kaam (repo se nahi hote):**
+- [x] GSC Manual Actions + Security check — **clean, 25 Aug**
+- [ ] Publishing velocity zero — naye AI articles 4–6 hafte band
+- [ ] Har major guide ke liye asli portal screenshots bhejo (Part 4 iske bina aadha rahega)
+- [ ] Part 5 pe: protect-list pages pe Request Indexing (GSC UI)
 
 ---
 
