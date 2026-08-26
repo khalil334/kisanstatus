@@ -13,19 +13,19 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Kya JanSamarth par apply karna free hai?',
-    a: 'Bilkul free — na registration ki fee, na application ki. Cyber cafe ya agent "portal ki fee" maange toh wo apni service fee le raha hai, portal ka usse koi lena-dena nahi.',
+    a: 'Bilkul free, na registration ki fee, na application ki. Cyber cafe ya agent "portal ki fee" maange toh wo apni service fee le raha hai, portal ka usse koi lena-dena nahi.',
   },
   {
     q: 'Eligibility check karne se CIBIL kharab hota hai kya?',
-    a: 'Nahi. Shuruati eligibility check basic details aur scheme rules par hota hai. Formal application par bank apna credit check karta hai — wo har loan mein hota hai, normal process. Sirf eligibility dekhne se ghabrane ki koi zaroorat nahi.',
+    a: 'Nahi. Shuruati eligibility check basic details aur scheme rules par hota hai. Formal application par bank apna credit check karta hai. Wo har loan mein hota hai, normal process. Sirf eligibility dekhne se ghabrane ki koi zaroorat nahi.',
   },
   {
     q: 'Mujhe portal par "not eligible" dikha raha hai, ab kya karoon?',
-    a: 'Pehle wajah samjho — aksar Farmer ID ka na hona, Aadhaar-mobile link na hona, ya zameen ka record match na karna hota hai. Yeh teeno cheezein theek karke dobara try karo. Agar phir bhi issue hai toh seedha apni branch mein jaakar offline apply kar sakte ho — portal ek raasta hai, ekmatra raasta nahi.',
+    a: 'Pehle wajah samjho, aksar Farmer ID ka na hona, Aadhaar-mobile link na hona, ya zameen ka record match na karna hota hai. Yeh teeno cheezein theek karke dobara try karo. Agar phir bhi issue hai toh seedha apni branch mein jaakar offline apply kar sakte ho, portal ek raasta hai, ekmatra raasta nahi.',
   },
   {
-    q: 'Password bhool gaya / OTP nahi aa raha — kya karoon?',
-    a: 'OTP Aadhaar se linked mobile par hi aata hai — pehle check karo ki wahi number chalu hai. Number badal gaya hai toh pehle Aadhaar centre par jaakar mobile update karwao. Password reset portal ke "Forgot Password" se ho jata hai. Portal ki helpline aur email support bhi hai, jansamarth.in par contact section dekho.',
+    q: 'Password bhool gaya / OTP nahi aa raha, kya karoon?',
+    a: 'OTP Aadhaar se linked mobile par hi aata hai. Pehle check karo ki wahi number chalu hai. Number badal gaya hai toh pehle Aadhaar centre par jaakar mobile update karwao. Password reset portal ke "Forgot Password" se ho jata hai. Portal ki helpline aur email support bhi hai, jansamarth.in par contact section dekho.',
   },
 ];
 
@@ -42,7 +42,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
             <span className="text-white font-bold">JanSamarth Portal Loan Apply</span>
           </nav>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            JanSamarth Portal 2026: Ek Jagah Se KCC, Mudra Aur Sarkari Loan Apply — Poora Process Samjho
+            JanSamarth Portal 2026: Ek Jagah Se KCC, Mudra Aur Sarkari Loan Apply. Poora Process Samjho
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
@@ -80,31 +80,31 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
           Lekin portal ka sahi istemal tabhi hota hai jab aapko pata ho ki yeh karta kya hai, kya nahi karta, aur
-          apply se pehle kaunsi teen cheezein taiyar rakhni hain. Aage wahi sab step-by-step hai — bina
+          apply se pehle kaunsi teen cheezein taiyar rakhni hain. Aage wahi sab step-by-step hai. Bina
           bank ki bhaasha ke.
         </p>
 
         <DB>
-          <strong>Short Mein — apply karne se pehle:</strong>
+          <strong>Short Mein, apply karne se pehle:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li>JanSamarth (jansamarth.in) sarkar ka <strong>free</strong> portal hai — KCC, Mudra, education/livelihood schemes ki eligibility ek jagah check hoti hai; loan bank hi deta hai.</li>
+            <li>JanSamarth (jansamarth.in) sarkar ka <strong>free</strong> portal hai. KCC, Mudra, education/livelihood schemes ki eligibility ek jagah check hoti hai; loan bank hi deta hai.</li>
             <li>Apply se pehle 3 cheezein: <strong>Aadhaar-mobile link, Farmer ID (AgriStack), bank details + PAN</strong>. Inke bina file aage nahi badhti.</li>
             <li>KCC limit Budget 2025 se <strong>₹5 lakh</strong> tak, effective interest timely repayment par ~4% (7% base − 3% bonus).</li>
-            <li>Advance fee maangne wala har aadmi thag hai — portal par koi fee nahi. <strong>Abhi jansamarth.in par eligibility check karo.</strong></li>
+            <li>Advance fee maangne wala har aadmi thag hai. Portal par koi fee nahi. <strong>Abhi jansamarth.in par eligibility check karo.</strong></li>
           </ul>
         </DB>
 
-        <SH>JanSamarth Hai Kya — Aur Kya Nahi Hai</SH>
+        <SH>JanSamarth Hai Kya. Aur Kya Nahi Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Sabse pehle confusion door karo: JanSamarth koi bank nahi hai aur na hi koi nayi loan scheme. Yeh ek
-          <strong> digital pul</strong> hai — ek taraf sarkari schemes (KCC, Mudra, education loan subsidy jaisi),
+          <strong> digital pul</strong> hai. Ek taraf sarkari schemes (KCC, Mudra, education loan subsidy jaisi),
           doosri taraf desh bhar ke banks aur lenders. Aap beech mein ho: apni details bharo, portal batayega kaunsi
           scheme mein aap fit baithte ho, phir application chune hue lender tak jaati hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Iska sabse bada fayda transparency hai. Pehle scheme ka pata hi nahi chalta tha, ya branch wale keh dete
           the &ldquo;yeh yahan nahi hota.&rdquo; Ab aap khud dekh sakte ho ki kaunsi scheme mein eligible ho, aur application
-          ka status ghar baithe track kar sakte ho. Sanction aur paisa dena aaj bhi bank ka kaam hai — portal sirf
+          ka status ghar baithe track kar sakte ho. Sanction aur paisa dena aaj bhi bank ka kaam hai. Portal sirf
           raasta saaf karta hai.
         </p>
 
@@ -116,14 +116,14 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/categories.webp"
-          alt="Kisan se lekar chhote vyapari tak — JanSamarth ki alag-alag loan categories inhi ke liye hain"
+          alt="Kisan se lekar chhote vyapari tak. JanSamarth ki alag-alag loan categories inhi ke liye hain"
           width={1000}
           height={558}
           className="w-full h-auto rounded-xl my-5"
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>Kaunse Loan Milte Hain — Chaar Categories</SH>
+        <SH>Kaunse Loan Milte Hain. Chaar Categories</SH>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
             <thead>
@@ -160,9 +160,9 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Kisan ke liye asli kaam ki category pehli wali hai. KCC ka digital flow ab AgriStack ke saath juda hua hai —
           yaani aapki Farmer ID aur zameen ka record system khud utha leta hai, kagaz ka dher nahi lagta. Isi wajah se
-          KCC ke liye JanSamarth ab sabse tez raasta ban gaya hai — kai states mein iske liye special camps aur
+          KCC ke liye JanSamarth ab sabse tez raasta ban gaya hai. Kai states mein iske liye special camps aur
           campaigns bhi chalte hain. 2023 mein Department of Fisheries ne KCC-Fisheries scheme ko bhi JanSamarth par
-          integrate kar diya — yaani dairy, poultry, machli palan wale bhi isi portal se KCC ke liye apply kar
+          integrate kar diya. Yaani dairy, poultry, machli palan wale bhi isi portal se KCC ke liye apply kar
           sakte hain, 7% lending rate par (2% interest subvention + timely repayment par 3% extra incentive ke saath).
         </p>
 
@@ -172,34 +172,34 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           RBI ke digital rupee (CBDC) se <strong>batai/tenant kisano ko KCC ka fayda</strong> dene ka pilot chalaya —
           FY25 ke ant tak Odisha mein 501 tenant kisano ko ₹2.73 crore aur Andhra mein 218 kisano ko ₹1.86 crore
           sanction hua (<a href="https://www.financialexpress.com/policy/economy-digital-currency-comes-to-farmers-aid-3845051/" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: Financial Express</a>).
-          Abhi yeh pilot hai, sab jagah nahi — par disha saaf hai: landless kisano ke liye bhi rasta ban raha hai.
+          Abhi yeh pilot hai, sab jagah nahi. Par disha saaf hai: landless kisano ke liye bhi rasta ban raha hai.
         </IB>
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/taiyari.webp"
-          alt="Apply se pehle ki taiyari — Aadhaar, bank passbook aur OTP wala mobile paas rakho"
+          alt="Apply se pehle ki taiyari. Aadhaar, bank passbook aur OTP wala mobile paas rakho"
           width={1200}
           height={670}
           className="w-full h-auto rounded-xl my-5"
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>Apply Se Pehle — Teen Cheezein Taiyar Karo</SH>
+        <SH>Apply Se Pehle. Teen Cheezein Taiyar Karo</SH>
         <StepList>
           <SI n={1}><strong>Aadhaar-mobile link:</strong> poora process OTP par chalta hai, aur OTP sirf Aadhaar se linked number par aata hai. Number band ho gaya hai ya badal gaya hai toh pehle Aadhaar centre par update karwao — yeh sabse common atkaav hai.</SI>
-          <SI n={2}><strong>Farmer ID (AgriStack):</strong> KCC/crop loan ke digital flow ke liye Farmer ID zaroori hai. Nahi bani hai toh pehle banwa lo — humne iska poora process alag guide mein likha hai: <Link href="/articles/AgriStackKyaHai2026" className="underline font-bold">AgriStack Kya Hai</Link>.</SI>
-          <SI n={3}><strong>Bank details + PAN:</strong> apna account number, IFSC aur PAN saamne rakho. Account aapke naam par ho aur chalu ho — DBT aur disbursement isi mein aayega.</SI>
+          <SI n={2}><strong>Farmer ID (AgriStack):</strong> KCC/crop loan ke digital flow ke liye Farmer ID zaroori hai. Nahi bani hai toh pehle banwa lo, humne iska poora process alag guide mein likha hai: <Link href="/articles/AgriStackKyaHai2026" className="underline font-bold">AgriStack Kya Hai</Link>.</SI>
+          <SI n={3}><strong>Bank details + PAN:</strong> apna account number, IFSC aur PAN saamne rakho. Account aapke naam par ho aur chalu ho. DBT aur disbursement isi mein aayega.</SI>
         </StepList>
 
         <DB>
           <strong>Zameen ka record:</strong> abhi ka paperless KCC flow un kisano ke liye sabse smooth hai jinke
-          naam par zameen hai — kyunki eligibility zameen ke digital record se nikalti hai. Batai/lease par kheti
+          naam par zameen hai. Kyunki eligibility zameen ke digital record se nikalti hai. Batai/lease par kheti
           karne walon ko portal par dikkat aa sakti hai; unke liye branch ka offline raasta abhi bhi khula hai.
         </DB>
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/otp-verify.webp"
-          alt="Mobile par OTP daal kar verify karta kisan — registration ka pehla step"
+          alt="Mobile par OTP daal kar verify karta kisan, registration ka pehla step"
           width={1200}
           height={670}
           className="w-full h-auto rounded-xl my-5"
@@ -209,41 +209,41 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         <SH>Step-by-Step: JanSamarth Se Loan Apply</SH>
         <StepList>
           <SI n={1}><strong>jansamarth.in kholo</strong> aur &ldquo;Register&rdquo; par jao. Mobile number aur email se account banao, OTP verify karo.</SI>
-          <SI n={2}><strong>Loan category chuno</strong> — kisan ho toh Agriculture wali. Uske neeche schemes ki list dikhegi.</SI>
-          <SI n={3}><strong>Eligibility check karo</strong> — kuch basic sawaal puchhe jaayenge (kaam, income, zameen, zaroorat kitni hai). Jawab imaandaari se do; galat jawab se aage verification mein file rukti hai.</SI>
-          <SI n={4}><strong>Eligible schemes dekho</strong> — portal batayega kaunsi scheme mein aap fit ho aur kitna loan ban sakta hai.</SI>
+          <SI n={2}><strong>Loan category chuno</strong>, kisan ho toh Agriculture wali. Uske neeche schemes ki list dikhegi.</SI>
+          <SI n={3}><strong>Eligibility check karo</strong>, kuch basic sawaal puchhe jaayenge (kaam, income, zameen, zaroorat kitni hai). Jawab imaandaari se do; galat jawab se aage verification mein file rukti hai.</SI>
+          <SI n={4}><strong>Eligible schemes dekho</strong>, portal batayega kaunsi scheme mein aap fit ho aur kitna loan ban sakta hai.</SI>
           <SI n={5}><strong>Documents/details bharo</strong> — Aadhaar e-KYC, bank details, PAN. KCC flow mein Farmer ID se zameen ka data khud aa jata hai.</SI>
-          <SI n={6}><strong>Lender chuno aur submit karo</strong> — available banks ke offers compare karo (rate, processing). Submit karte hi application number milega — save kar lo.</SI>
-          <SI n={7}><strong>Status track karo</strong> — login karke &ldquo;My Applications&rdquo; mein real-time status dikhta hai. Bank verification ke liye contact kare toh available raho.</SI>
+          <SI n={6}><strong>Lender chuno aur submit karo</strong>, available banks ke offers compare karo (rate, processing). Submit karte hi application number milega, save kar lo.</SI>
+          <SI n={7}><strong>Status track karo</strong>, login karke &ldquo;My Applications&rdquo; mein real-time status dikhta hai. Bank verification ke liye contact kare toh available raho.</SI>
         </StepList>
 
         <GovLink
           href="https://www.jansamarth.in"
-          label="JanSamarth — National Portal for Credit Linked Government Schemes"
+          label="JanSamarth. National Portal for Credit Linked Government Schemes"
           guide="Portal Kholo"
           portalName="jansamarth.in"
         />
 
-        <SH>Mudra Loan Bhi Isi Portal Se — Kaam-Dhandhe Walon Ke Liye</SH>
+        <SH>Mudra Loan Bhi Isi Portal Se. Kaam-Dhandhe Walon Ke Liye</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Kheti ke saath-saath jo parivar doodh ka kaam, kirana, silai, ya koi chhota dhandha chalate hain, unke liye
-          isi portal ki Business category mein <strong>Mudra (PMMY)</strong> ka raasta hai — bina collateral ke.
+          isi portal ki Business category mein <strong>Mudra (PMMY)</strong> ka raasta hai. Bina collateral ke.
           Mudra ke teen level hain: <strong>Shishu</strong> (₹50,000 tak, bilkul naya kaam shuru karne walon ke
           liye), <strong>Kishor</strong> (₹50,000 se ₹5 lakh tak, chalta hua kaam badhane ke liye) aur{' '}
-          <strong>Tarun</strong> (₹5 se ₹10 lakh tak). Budget 2024 mein ek naya level bhi juda — jo log Tarun ka
+          <strong>Tarun</strong> (₹5 se ₹10 lakh tak). Budget 2024 mein ek naya level bhi juda, jo log Tarun ka
           loan lekar time par chuka chuke hain, unke liye limit ₹20 lakh tak (Tarun Plus) kar di gayi.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Gaon ke liye iska matlab seedha hai — bhains kharidni hai, atta chakki lagani hai, ya kiraye ki dukaan
           shuru karni hai, toh KCC ke alawa yeh doosra darwaza hai. Process wahi hai jo upar steps mein likha:
           eligibility check, phir lender chun kar apply. Dhyan itna rakhna ki Mudra dhandhe ke liye hai, kheti ki
-          fasal ke kharche ke liye nahi — fasal ke liye KCC hi sahi jagah hai.
+          fasal ke kharche ke liye nahi. Fasal ke liye KCC hi sahi jagah hai.
         </p>
 
-        <SH>Kitna Time Lagta Hai — Sach Bataein</SH>
+        <SH>Kitna Time Lagta Hai. Sach Bataein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Portal ka digital hissa tez hai — eligibility minutes mein, aur kai cases mein initial approval bhi screen par hi
-          dikh jata hai. Lekin yeh samajhna zaroori hai ki initial approval aur haath mein paisa — do alag stations
+          Portal ka digital hissa tez hai. Eligibility minutes mein, aur kai cases mein initial approval bhi screen par hi
+          dikh jata hai. Lekin yeh samajhna zaroori hai ki initial approval aur haath mein paisa, do alag stations
           hain. Beech mein bank ka verification hota hai: details ka milaan, kabhi-kabhi branch visit ya field check.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
@@ -261,66 +261,66 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>Application Track Kaise Karein — Aur Kab Awaaz Uthayein</SH>
+        <SH>Application Track Kaise Karein. Aur Kab Awaaz Uthayein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Submit karne ke baad portal par login karke <strong>“My Applications”</strong> section mein har
-          application ka live status dikhta hai — pending, under review, sanctioned, ya query raised. Query
+          application ka live status dikhta hai. Pending, under review, sanctioned, ya query raised. Query
           aayi ho toh usi waqt jawab do; file wahin ruki rehti hai jab tak aap document ya jaankari nahi dete.
-          Status hafte bhar se ek hi jagah atka ho toh chuppi mat saadho — pehle portal ki helpline/grievance
+          Status hafte bhar se ek hi jagah atka ho toh chuppi mat saadho, pehle portal ki helpline/grievance
           section mein complaint daalo, aur saath mein us bank ki branch mein jaakar application number ke
           saath baat karo jise application gayi hai. Application number, screenshot aur date — yeh teen
           cheezein har baat-cheet mein saath rakho; follow-up wahi kisan jeet-ta hai jiske paas record hota hai.
         </p>
 
-        <SH>Documents Ki Poori List — Ek Nazar Mein</SH>
+        <SH>Documents Ki Poori List. Ek Nazar Mein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-3">
           Category koi bhi ho, core documents wahi chaar-paanch hain. Farak bas itna hai ki kis kaam ke liye kya
           extra lagta hai:
         </p>
         <ul className="list-disc pl-5 space-y-1.5 text-sm text-[var(--color-text)] mb-4">
           <li><strong>Har application ke liye:</strong> Aadhaar (mobile linked), PAN, bank account details, passport-size photo.</li>
-          <li><strong>KCC/crop loan:</strong> upar ke saath Farmer ID aur zameen ka record (khasra/khatauni) — digital flow mein yeh Farmer ID se khud aa jata hai.</li>
-          <li><strong>Mudra/business:</strong> dhandhe ka thoda sa hisaab — kya kaam hai, kitna kharcha, kitni kamai ka andaza. Bada project report nahi chahiye, par saaf jawab chahiye.</li>
+          <li><strong>KCC/crop loan:</strong> upar ke saath Farmer ID aur zameen ka record (khasra/khatauni), digital flow mein yeh Farmer ID se khud aa jata hai.</li>
+          <li><strong>Mudra/business:</strong> dhandhe ka thoda sa hisaab, kya kaam hai, kitna kharcha, kitni kamai ka andaza. Bada project report nahi chahiye, par saaf jawab chahiye.</li>
           <li><strong>Education loan:</strong> admission letter aur course ki fee structure.</li>
         </ul>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Ek chhoti si tip — in sab ki photo apne phone mein ek alag folder bana kar rakh lo. Portal par upload
+          Ek chhoti si tip, in sab ki photo apne phone mein ek alag folder bana kar rakh lo. Portal par upload
           karte waqt idhar-udhar dhoondhne mein hi aadha ghanta nikal jata hai, aur session timeout ho jaye toh
           dobara shuru karna padta hai.
         </p>
 
         <SH>In Galtiyon Se Bacho</SH>
         <StepList>
-          <SI n={1}><strong>Agent ke bharose sab chhod dena</strong> — OTP aur login aapka hai, kisi ko mat do. Fraud ka sabse bada raasta yahi hai.</SI>
-          <SI n={2}><strong>Advance fee dena</strong> — &ldquo;file aage badhane ke ₹2,000&rdquo; jaisi maang sirf thagi hai. Portal aur bank, dono ka application process free hai (bank ki official processing fee sanction ke documents mein likhi hoti hai, cash mein nahi li jaati).</SI>
-          <SI n={3}><strong>Ek se zyada jagah ek saath apply karna</strong> — har formal application par credit check hota hai; bahut saari enquiries aapka credit profile kamzor dikhati hain. Ek raasta chuno, uska jawab aane do.</SI>
+          <SI n={1}><strong>Agent ke bharose sab chhod dena</strong>. OTP aur login aapka hai, kisi ko mat do. Fraud ka sabse bada raasta yahi hai.</SI>
+          <SI n={2}><strong>Advance fee dena</strong>, &ldquo;file aage badhane ke ₹2,000&rdquo; jaisi maang sirf thagi hai. Portal aur bank, dono ka application process free hai (bank ki official processing fee sanction ke documents mein likhi hoti hai, cash mein nahi li jaati).</SI>
+          <SI n={3}><strong>Ek se zyada jagah ek saath apply karna</strong>, har formal application par credit check hota hai; bahut saari enquiries aapka credit profile kamzor dikhati hain. Ek raasta chuno, uska jawab aane do.</SI>
           <SI n={4}><strong>Galat income/details bharna</strong> — eligibility mein aage nikal jaoge, par verification mein file wahin rukegi aur record kharab alag hoga.</SI>
-          <SI n={5}><strong>Sirf portal par atke rehna</strong> — kisi wajah se online flow fail ho raha hai toh branch ka offline raasta hamesha khula hai. Portal ek sahulat hai, shart nahi.</SI>
+          <SI n={5}><strong>Sirf portal par atke rehna</strong>, kisi wajah se online flow fail ho raha hai toh branch ka offline raasta hamesha khula hai. Portal ek sahulat hai, shart nahi.</SI>
         </StepList>
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/branch-ya-online.webp"
-          alt="Branch jaayein ya online apply karein — KCC ke liye dono raaste khule hain"
+          alt="Branch jaayein ya online apply karein. KCC ke liye dono raaste khule hain"
           width={1200}
           height={670}
           className="w-full h-auto rounded-xl my-5"
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>CSC Se Bhi Ho Sakta Hai — Jinke Paas Smartphone Nahi</SH>
+        <SH>CSC Se Bhi Ho Sakta Hai. Jinke Paas Smartphone Nahi</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Ghar mein smartphone ya computer nahi hai toh nazdeeki CSC (Common Service Centre) se bhi yahi process karwa
-          sakte ho — operator aapke saamne portal par form bharega. Do baatein wahan bhi apne haath mein rakhna. Pehli,
+          sakte ho, operator aapke saamne portal par form bharega. Do baatein wahan bhi apne haath mein rakhna. Pehli,
           OTP aapke phone par aayega, operator ko sirf padh kar batao, phone haath mein mat do. Doosri, submit se pehle
-          operator se kaho ki bhara hua form ek baar poora padh kar sunaye — khaas kar naam ki spelling, account
+          operator se kaho ki bhara hua form ek baar poora padh kar sunaye, khaas kar naam ki spelling, account
           number aur zameen ka khasra. CSC ki apni chhoti si tay service fee hoti hai, wo portal ki fee nahi hai —
           receipt zaroor lena. Application number ki parchi ya screenshot ghar aakar sambhal kar rakho, aage har
           baat isi number se hogi.
         </p>
 
-        <SH>KCC Ke Liye JanSamarth vs Branch — Kya Chunein</SH>
+        <SH>KCC Ke Liye JanSamarth vs Branch. Kya Chunein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Agar aapki Farmer ID bani hai, zameen aapke naam hai aur Aadhaar-mobile linked hai — JanSamarth ka
+          Agar aapki Farmer ID bani hai, zameen aapke naam hai aur Aadhaar-mobile linked hai. JanSamarth ka
           paperless flow aazmao, yahi sabse kam bhaag-daud wala raasta hai. Agar record mein koi bhi pech hai
           (batai ki zameen, naam ka mismatch, purana khata), toh seedha branch jao — wahan aadmi baithkar pech
           suljha sakta hai, portal nahi.
@@ -341,7 +341,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           <strong>Abhi official portal par check karo:</strong>{' '}
           <a href="https://www.jansamarth.in" target="_blank" rel="noopener noreferrer" className="underline font-bold">jansamarth.in</a>{' '}
-          — eligibility check free hai, 10 minute lagte hain, aur koi advance fee nahi.
+         , eligibility check free hai, 10 minute lagte hain, aur koi advance fee nahi.
         </p>
 
         <FAQBlock faqs={FAQS_DATA} />
@@ -349,11 +349,11 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
-            JanSamarth — Govt of India unified credit portal.{' '}
+            JanSamarth. Govt of India unified credit portal.{' '}
             <a href="https://www.jansamarth.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">jansamarth.in</a>
           </li>
           <li>
-            Financial Express — NABARD-SBI CBDC pilot for tenant farmers.{' '}
+            Financial Express. NABARD-SBI CBDC pilot for tenant farmers.{' '}
             <a href="https://www.financialexpress.com/policy/economy-digital-currency-comes-to-farmers-aid-3845051/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">financialexpress.com</a>
           </li>
         </ul>

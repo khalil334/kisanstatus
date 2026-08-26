@@ -31,7 +31,7 @@ const RELATED_CARDS = [
 const FAQS_DATA = [
   {
     q: 'Ek se zyada bank account PMKMY me register hote hain?',
-    a: 'Nahi — ek samay me sirf ek. Change karna ho to pehle purana hatakar naya khata add karna padega.',
+    a: 'Nahi. Ek samay me sirf ek. Change karna ho to pehle purana hatakar naya khata add karna padega.',
   },
   {
     q: 'Account details update karne ka koi charge hai?',
@@ -39,15 +39,15 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya account badalne se meri pension amount kam/zyada ho jayegi?',
-    a: 'Bilkul nahi. Contribution aur future pension same rahegi — sirf paisa naye account me jayega.',
+    a: 'Bilkul nahi. Contribution aur future pension same rahegi. Sirf paisa naye account me jayega.',
   },
   {
     q: 'Agar mera khata badal gaya, to kya mujhe phir se enrollment karni padegi?',
-    a: 'Nahi. Sirf bank account details update karni hain — enrollment, purana contribution record, age, sab kuch waise ka waisa rahega. Dobara registration jaise bade kaam ki koi zaroorat nahi, ye sirf ek chhota sa detail-change hai jo CSC ya branch dono jagah se ho jata hai.',
+    a: 'Nahi. Sirf bank account details update karni hain. Enrollment, purana contribution record, age, sab kuch waise ka waisa rahega. Dobara registration jaise bade kaam ki koi zaroorat nahi, ye sirf ek chhota sa detail-change hai jo CSC ya branch dono jagah se ho jata hai.',
   },
   {
     q: 'Kya joint account PMKMY me use kar sakta hoon?',
-    a: 'Haan, joint account chal jaata hai, lekin holder ka naam PMKMY enrollment se match hona chahiye. Behtar yahi hai ki individual khata use karein — aage complications se bachte hain.',
+    a: 'Haan, joint account chal jaata hai, lekin holder ka naam PMKMY enrollment se match hona chahiye. Behtar yahi hai ki individual khata use karein, aage complications se bachte hain.',
   },
 ];
 
@@ -102,18 +102,18 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             Short Answer: PMKMY Me Bank Account Change Kaise Hota Hai?
           </h2>
           <p className="text-sm md:text-base text-gray-800 dark:text-gray-200 leading-relaxed font-medium">
-            Official PMKMY guidelines ke mutabik, khata badalne ke liye sabse recommended tarika hai apne nazdeeki CSC center me jaakar application dena (PMKMY number aur Aadhaar ke saath). Alternative ke roop me aap bank branch me bhi ja sakte hain. Process complete hone me 15-30 din lagte hain — aur is beech aapki pension ke saath kya hota hai, wahi is page ka asli topic hai.
+            Official PMKMY guidelines ke mutabik, khata badalne ke liye sabse recommended tarika hai apne nazdeeki CSC center me jaakar application dena (PMKMY number aur Aadhaar ke saath). Alternative ke roop me aap bank branch me bhi ja sakte hain. Process complete hone me 15-30 din lagte hain. Aur is beech aapki pension ke saath kya hota hai, wahi is page ka asli topic hai.
           </p>
         </div>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Pehle ek zaroori baat: ye page sirf <strong>PM Kisan Maandhan (pension wali scheme)</strong> ke liye hai. Agar aapko ₹2000 wali PM-Kisan kist ka khata badalna hai, to wo bilkul alag process hai — uske liye <Link href="/articles/PmKisanBankAccountChangeProcess" className="underline text-green-700 dark:text-green-400">PM-Kisan bank account change guide</Link> padhein.
+          Pehle ek zaroori baat: ye page sirf <strong>PM Kisan Maandhan (pension wali scheme)</strong> ke liye hai. Agar aapko ₹2000 wali PM-Kisan kist ka khata badalna hai, to wo bilkul alag process hai. Uske liye <Link href="/articles/PmKisanBankAccountChangeProcess" className="underline text-green-700 dark:text-green-400">PM-Kisan bank account change guide</Link> padhein.
         </p>
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Ab asli sawal jo sabko pareshan karta hai — "is beech mera auto-debit ka kya hoga?" Seedha jawab: application dene ke baad bhi 15-30 din tak paisa <strong>purane account se hi</strong> katega. Naya khata judne ke baad hi debit shift hota hai. Isliye sabse badi galti hai application dete hi purana account khali kar dena ya band kar dena — aisa kiya to contribution miss hogi, aur miss hui contribution ko regularize karana alag jhanjhat hai (uska poora process <Link href="/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein" className="underline text-green-700 dark:text-green-400">auto-debit fail regularization guide</Link> mein diya hai). Auto-debit system asal mein kaise kaam karta hai — NACH mandate, payment cycles (har mahine 1, 11 aur 21 tarikh), default rules — ye sab <Link href="/maandhan/pm-kisan-maandhan-auto-debit-poora-sach" className="underline text-green-700 dark:text-green-400">auto-debit ke poore sach</Link> mein detail se samjhaya gaya hai.
+          Ab asli sawal jo sabko pareshan karta hai. "is beech mera auto-debit ka kya hoga?" Seedha jawab: application dene ke baad bhi 15-30 din tak paisa <strong>purane account se hi</strong> katega. Naya khata judne ke baad hi debit shift hota hai. Isliye sabse badi galti hai application dete hi purana account khali kar dena ya band kar dena — aisa kiya to contribution miss hogi, aur miss hui contribution ko regularize karana alag jhanjhat hai (uska poora process <Link href="/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein" className="underline text-green-700 dark:text-green-400">auto-debit fail regularization guide</Link> mein diya hai). Auto-debit system asal mein kaise kaam karta hai. NACH mandate, payment cycles (har mahine 1, 11 aur 21 tarikh), default rules. Ye sab <Link href="/maandhan/pm-kisan-maandhan-auto-debit-poora-sach" className="underline text-green-700 dark:text-green-400">auto-debit ke poore sach</Link> mein detail se samjhaya gaya hai.
         </p>
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Achhi baat ye hai ki khata badalne par aapko phir se enrollment nahi karni padti. Purana contribution record, age calculation, aur pension amount — sab kuch same rehta hai. Bas account details update hoti hain.
+          Achhi baat ye hai ki khata badalne par aapko phir se enrollment nahi karni padti. Purana contribution record, age calculation, aur pension amount. Sab kuch same rehta hai. Bas account details update hoti hain.
         </p>
 
         <IB>
@@ -121,7 +121,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
         </IB>
 
         <section className="mb-8">
-          <SH>Auto-Debit Naye Account Se Kab Shuru Hoga? — Din-Ba-Din Timeline</SH>
+          <SH>Auto-Debit Naye Account Se Kab Shuru Hoga?. Din-Ba-Din Timeline</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ye timeline application dene ke din se count hoti hai. State aur bank ke hisab se thoda aage-peeche ho sakta hai, lekin pattern yahi rehta hai:
           </p>
@@ -137,9 +137,9 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
               <tbody>
                 {[
                   ['Din 0', 'CSC/bank me application + biometric verification, acknowledgement slip milti hai', 'Purana account'],
-                  ['Din 1-15', 'Request portal par process hoti hai, naye account ka Aadhaar-link verify hota hai', 'Purana account — balance rakhein'],
+                  ['Din 1-15', 'Request portal par process hoti hai, naye account ka Aadhaar-link verify hota hai', 'Purana account, balance rakhein'],
                   ['Din 15-30', 'Update complete hone par registered mobile par confirmation SMS aata hai', 'Confirmation ke baad wale cycle se naya account'],
-                  ['Agla debit cycle', 'Pehla auto-debit naye account se katta hai — passbook/SMS se khud verify karein', 'Naya account'],
+                  ['Agla debit cycle', 'Pehla auto-debit naye account se katta hai. Passbook/SMS se khud verify karein', 'Naya account'],
                 ].map(([day, what, from], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
                     <td className="p-3 border-b border-[var(--color-border)] text-xs font-medium text-[var(--color-text)]">{day}</td>
@@ -151,7 +151,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             </table>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Do cheezein is table se yaad rakhni hain. Ek — confirmation SMS aane tak purana account zinda aur balance-wala rehna chahiye. Do — SMS aane ke baad bhi pehla naya debit khud check karo; agar agle cycle me kisi bhi account se paisa nahi kata, to bina rukey CSC par acknowledgement slip lekar jao.
+            Do cheezein is table se yaad rakhni hain. Ek, confirmation SMS aane tak purana account zinda aur balance-wala rehna chahiye. Do — SMS aane ke baad bhi pehla naya debit khud check karo; agar agle cycle me kisi bhi account se paisa nahi kata, to bina rukey CSC par acknowledgement slip lekar jao.
           </p>
         </section>
 
@@ -163,7 +163,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
           <div className="grid md:grid-cols-2 gap-4 mb-4">
             <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-lg border border-blue-100 dark:border-blue-800">
               <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Bank Branch Band Hona</h3>
-              <p className="text-sm text-[var(--color-text-muted)]">Chhoti branches ka merger ya permanent closure — gaon me ye ab common ho gaya hai.</p>
+              <p className="text-sm text-[var(--color-text-muted)]">Chhoti branches ka merger ya permanent closure, gaon me ye ab common ho gaya hai.</p>
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 p-5 rounded-lg border border-green-100 dark:border-green-800">
               <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Location Shift</h3>
@@ -179,7 +179,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             </div>
             <div className="bg-purple-50 dark:bg-purple-900/20 p-5 rounded-lg border border-purple-100 dark:border-purple-800">
               <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Joint Account Issue</h3>
-              <p className="text-sm text-[var(--color-text-muted)]">Joint account se individual account me shift karna — especially widow/divorce cases me.</p>
+              <p className="text-sm text-[var(--color-text-muted)]">Joint account se individual account me shift karna, especially widow/divorce cases me.</p>
             </div>
             <div className="bg-pink-50 dark:bg-pink-900/20 p-5 rounded-lg border border-pink-100 dark:border-pink-800">
               <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Better Services</h3>
@@ -189,7 +189,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
         </section>
 
         <section className="mb-8">
-          <SH>Zaroori Documents — Ye 6 Cheezein Pehle Ready Karo</SH>
+          <SH>Zaroori Documents. Ye 6 Cheezein Pehle Ready Karo</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Application submit karne se pehle ye documents ready rakhein. Inme se koi bhi missing ho to process delay ho sakta hai:
           </p>
@@ -246,7 +246,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             </SI>
             <SI n={3}><strong>CSC Center Ya Bank Branch Me Visit Karein:</strong> Official PMKMY guidelines ke mutabik, bank details update karne ke liye sabse standard aur recommended tarika hai apne nazdeeki Common Service Centre (CSC) ya VLE (Village Level Entrepreneur) ke paas jaana. <strong>Option A (Recommended - Official Channel):</strong> Nazdeeki CSC center par jaayein. Apna PMKMY pension account number, Aadhaar card, aur naye bank ki passbook ki copy le jaayein. VLE operator aapki biometric verification karke seedha PMKMY portal par request raise karega. (Note: CSC par standard nominal service charge ₹20-₹50 lag sakta hai, jo ki official hai). <strong>Option B (Alternative):</strong> Agar CSC accessible nahi hai, to aap apne naye bank branch me bhi ja sakte hain, lekin wahan se bhi request ultimately CSC/portal ke through hi process hoti hai, isliye pehle bank manager se confirm karein ki wo PMKMY update directly kar sakte hain ya nahi.</SI>
             <SI n={4}><strong>Verification Process:</strong> CSC ya Bank wale ye verification karenge: Aadhaar se biometric verification (fingerprint/iris), Mobile number par OTP bhejkar confirm karenge, Naye bank account ki details cross-check karenge, aur Purana PMKMY account verify karenge.</SI>
-            <SI n={5}><strong>Acknowledgement Slip Lein:</strong> Application submit karne ke baad ek acknowledgement slip le lein jisme ye details hon: Application reference number, Submission date, aur CSC/Bank ka stamp aur signature. Is slip ko safe rakhein — status check karne me kaam aayegi.</SI>
+            <SI n={5}><strong>Acknowledgement Slip Lein:</strong> Application submit karne ke baad ek acknowledgement slip le lein jisme ye details hon: Application reference number, Submission date, aur CSC/Bank ka stamp aur signature. Is slip ko safe rakhein, status check karne me kaam aayegi.</SI>
             <SI n={6}><strong>Confirmation Ka Wait Karein:</strong> Update complete hone me time lagta hai: Minimum 7-10 working days, Maximum 30 working days, Average 15-20 din. Confirmation SMS aapke registered mobile par aayega jab account change ho jayega. Samay state aur bank ke hisab se thoda alag ho sakta hai.</SI>
           </StepList>
 
@@ -267,7 +267,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
         </section>
 
         <section className="mb-8 bg-gray-50 dark:bg-gray-900/50 p-6 rounded-xl">
-          <SH>Online Ya Offline — Kaunsa Tarika Behtar Hai?</SH>
+          <SH>Online Ya Offline. Kaunsa Tarika Behtar Hai?</SH>
           <div className="grid md:grid-cols-2 gap-6 mt-4">
             <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow border border-gray-100 dark:border-gray-700">
               <h3 className="text-lg font-bold text-green-600 dark:text-green-400 mb-3">Offline via CSC (Official & Recommended)</h3>
@@ -317,7 +317,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             <div className="border border-red-200 dark:border-red-800 rounded-lg p-5 bg-red-50 dark:bg-red-900/20">
               <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Problem 1: Purane Bank Me Paisa Atak Gaya</h3>
               <p className="text-sm text-[var(--color-text-muted)] mb-2"><strong>Scenario:</strong> Aapne bank change kar diya, lekin purane account se last contribution kat gaya.</p>
-              <p className="text-sm text-[var(--color-text-muted)]"><strong>Solution:</strong> Ghabraiye mat — ye paisa waste nahi hoga. Change complete hote hi system naye khate se link ho jayega, aur purane wale ka balance aur contributions transfer ho jayenge. Bas confirmation ka wait karein.</p>
+              <p className="text-sm text-[var(--color-text-muted)]"><strong>Solution:</strong> Ghabraiye mat. Ye paisa waste nahi hoga. Change complete hote hi system naye khate se link ho jayega, aur purane wale ka balance aur contributions transfer ho jayenge. Bas confirmation ka wait karein.</p>
             </div>
 
             <div className="border border-orange-200 dark:border-orange-800 rounded-lg p-5 bg-orange-50 dark:bg-orange-900/20">
@@ -341,7 +341,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             <div className="border border-green-200 dark:border-green-800 rounded-lg p-5 bg-green-50 dark:bg-green-900/20">
               <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">Problem 5: Process Bahut Lamba Chal Raha Hai</h3>
               <p className="text-sm text-[var(--color-text-muted)] mb-2"><strong>Scenario:</strong> 30 din se zyada ho gaye, lekin abhi tak confirmation nahi aaya.</p>
-              <p className="text-sm text-[var(--color-text-muted)]"><strong>Solution:</strong> PMKMY helpline number par call karein, apni application reference number ready rakhein, bank branch me complaint darj karein, CSC par jaakar status check karein, ya official PMKMY portal par grievance register karein. Kaunsa number kab use karein, email complaint ka ready format, aur escalation ka sahi order — ye sab <Link href="/maandhan/pmkmy-grievance-complaint-helpline" className="underline text-green-700 dark:text-green-400">PMKMY helpline & grievance guide</Link> mein step-by-step diya hai.</p>
+              <p className="text-sm text-[var(--color-text-muted)]"><strong>Solution:</strong> PMKMY helpline number par call karein, apni application reference number ready rakhein, bank branch me complaint darj karein, CSC par jaakar status check karein, ya official PMKMY portal par grievance register karein. Kaunsa number kab use karein, email complaint ka ready format, aur escalation ka sahi order. Ye sab <Link href="/maandhan/pmkmy-grievance-complaint-helpline" className="underline text-green-700 dark:text-green-400">PMKMY helpline & grievance guide</Link> mein step-by-step diya hai.</p>
             </div>
           </div>
         </section>
@@ -430,23 +430,23 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
             </div>
             <div className="flex items-start">
               <span className="text-red-600 mr-3 font-bold text-xl">!</span>
-              <p className="text-sm text-[var(--color-text-muted)]"><strong>Tip 2:</strong> Naye bank account ko Aadhaar se link karna mandatory hai — bina iske change nahi hoga.</p>
+              <p className="text-sm text-[var(--color-text-muted)]"><strong>Tip 2:</strong> Naye bank account ko Aadhaar se link karna mandatory hai. Bina iske change nahi hoga.</p>
             </div>
             <div className="flex items-start">
               <span className="text-red-600 mr-3 font-bold text-xl">!</span>
-              <p className="text-sm text-[var(--color-text-muted)]"><strong>Tip 3:</strong> Hamesha acknowledgement slip lein aur safe rakhein — future me proof ka kaam degi.</p>
+              <p className="text-sm text-[var(--color-text-muted)]"><strong>Tip 3:</strong> Hamesha acknowledgement slip lein aur safe rakhein, future me proof ka kaam degi.</p>
             </div>
             <div className="flex items-start">
               <span className="text-red-600 mr-3 font-bold text-xl">!</span>
-              <p className="text-sm text-[var(--color-text-muted)]"><strong>Tip 4:</strong> Bank change ke dauran purane account ko band mat karein — confirmation ka wait karein.</p>
+              <p className="text-sm text-[var(--color-text-muted)]"><strong>Tip 4:</strong> Bank change ke dauran purane account ko band mat karein, confirmation ka wait karein.</p>
             </div>
             <div className="flex items-start">
               <span className="text-red-600 mr-3 font-bold text-xl">!</span>
-              <p className="text-sm text-[var(--color-text-muted)]"><strong>Tip 5:</strong> IFSC code double-check karein — galat IFSC se transaction fail ho jayega.</p>
+              <p className="text-sm text-[var(--color-text-muted)]"><strong>Tip 5:</strong> IFSC code double-check karein, galat IFSC se transaction fail ho jayega.</p>
             </div>
             <div className="flex items-start">
               <span className="text-red-600 mr-3 font-bold text-xl">!</span>
-              <p className="text-sm text-[var(--color-text-muted)]"><strong>Tip 6:</strong> Mobile number active rakhein — har update SMS par aayega.</p>
+              <p className="text-sm text-[var(--color-text-muted)]"><strong>Tip 6:</strong> Mobile number active rakhein, har update SMS par aayega.</p>
             </div>
             <div className="flex items-start">
               <span className="text-red-600 mr-3 font-bold text-xl">!</span>
@@ -459,11 +459,11 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Bank Account Change Se Jude Sawal-Jawab
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM-KMY Khata Update — Sawal Jawab" />
+          <FAQBlock faqs={FAQS_DATA} caption="PM-KMY Khata Update. Sawal Jawab" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Purana Account Kab Band Karein — Iska Jawab Pehla Debit Hai</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Purana Account Kab Band Karein. Iska Jawab Pehla Debit Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
             Is process ki ek hi galti mehengi padti hai: confirmation aane se pehle purana khata band kar dena. Sahi sequence yeh hai — change application ke waqt purane wale mein 3 mahine ka contribution balance rakhein, naye ka Aadhaar-link aur IFSC do baar milaayein, aur jab tak pehla contribution naye khate se kat-ta hua na dikhe, purana chalu rakhein. Wahi pehla debit is transfer ka asli "completion certificate" hai; acknowledgement slip uske record ke saath sambhaal kar rakh lein.
           </p>

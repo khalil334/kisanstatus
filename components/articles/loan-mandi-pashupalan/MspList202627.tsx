@@ -13,39 +13,39 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Gehu ka MSP 2026-27 kitna hai?',
-    a: 'Gehu ka MSP ₹2,585 per quintal hai — pichhle saal ke ₹2,425 se ₹160 zyada. Ye rate Rabi Marketing Season 2026-27 ke liye hai, jo CCEA ne 01/10/2025 ko approve kiya tha. Ek quintal matlab 100 kilo, toh per kilo ke hisaab se ₹25.85 banta hai.',
+    a: 'Gehu ka MSP ₹2,585 per quintal hai. Pichhle saal ke ₹2,425 se ₹160 zyada. Ye rate Rabi Marketing Season 2026-27 ke liye hai, jo CCEA ne 01/10/2025 ko approve kiya tha. Ek quintal matlab 100 kilo, toh per kilo ke hisaab se ₹25.85 banta hai.',
   },
   {
     q: 'Dhan (paddy) ka MSP 2026-27 kya hai?',
-    a: 'Common variety ka ₹2,441 aur Grade A ka ₹2,461 per quintal. Dono mein ₹72 ki badhotri hui hai. Grade A ka rate zyada hota hai kyunki uske grain ki quality aur milling recovery behtar maani jati hai — lekin ye grading mandi mein hoti hai, aap khud decide nahi karte.',
+    a: 'Common variety ka ₹2,441 aur Grade A ka ₹2,461 per quintal. Dono mein ₹72 ki badhotri hui hai. Grade A ka rate zyada hota hai kyunki uske grain ki quality aur milling recovery behtar maani jati hai. Lekin ye grading mandi mein hoti hai, aap khud decide nahi karte.',
   },
   {
     q: 'Is saal sabse zyada MSP kis fasal ka badha?',
-    a: 'Kharif mein sunflower seed ka — poore ₹622 per quintal, ₹7,721 se ₹8,343. Uske baad cotton (₹557), nigerseed (₹515) aur til (₹500). Rabi mein safflower sabse aage raha, ₹600 ki badhotri ke saath ₹6,540. Sarkar ka maqsad saaf hai: oilseeds ki kheti badhao, import kam karo.',
+    a: 'Kharif mein sunflower seed ka, poore ₹622 per quintal, ₹7,721 se ₹8,343. Uske baad cotton (₹557), nigerseed (₹515) aur til (₹500). Rabi mein safflower sabse aage raha, ₹600 ki badhotri ke saath ₹6,540. Sarkar ka maqsad saaf hai: oilseeds ki kheti badhao, import kam karo.',
   },
   {
     q: 'MSP par fasal bechna zaroori hai kya?',
-    a: 'Nahi, zaroori nahi. MSP ek floor price hai, majboori nahi. Agar mandi ka rate MSP se upar chal raha hai toh khule bazaar mein bechna zyada faydemand hai. MSP tab kaam aata hai jab market rate gir jaye — us waqt sarkari agency aapse MSP par kharid legi.',
+    a: 'Nahi, zaroori nahi. MSP ek floor price hai, majboori nahi. Agar mandi ka rate MSP se upar chal raha hai toh khule bazaar mein bechna zyada faydemand hai. MSP tab kaam aata hai jab market rate gir jaye, us waqt sarkari agency aapse MSP par kharid legi.',
   },
   {
     q: 'MSP par bechne ke liye registration kahan karna padta hai?',
-    a: 'Apne state ke procurement portal par. Har state ka apna portal hai — UP mein fcs.up.gov.in, MP mein mpeuparjan.nic.in, Punjab mein anaaj kharid portal, Haryana mein Meri Fasal Mera Byora. Registration ki window sowing ke baad khulti hai aur procurement season se pehle band ho jati hai, isliye date miss mat karo.',
+    a: 'Apne state ke procurement portal par. Har state ka apna portal hai. UP mein fcs.up.gov.in, MP mein mpeuparjan.nic.in, Punjab mein anaaj kharid portal, Haryana mein Meri Fasal Mera Byora. Registration ki window sowing ke baad khulti hai aur procurement season se pehle band ho jati hai, isliye date miss mat karo.',
   },
   {
     q: 'Kharid ke baad DBT se paisa kab tak khate mein aata hai?',
-    a: 'Rules ke hisaab se 48-72 ghante mein DBT se seedha bank account mein. Practice mein 3-7 din lag jaate hain, aur peak season mein isse zyada bhi. Paisa usi account mein aayega jo procurement registration mein diya tha — isliye account active hona chahiye aur KYC poori honi chahiye.',
+    a: 'Rules ke hisaab se 48-72 ghante mein DBT se seedha bank account mein. Practice mein 3-7 din lag jaate hain, aur peak season mein isse zyada bhi. Paisa usi account mein aayega jo procurement registration mein diya tha. Isliye account active hona chahiye aur KYC poori honi chahiye.',
   },
   {
     q: 'Sabhi 22 faslon par sarkari kharid hoti hai?',
-    a: 'MSP declare 22+ faslon ka hota hai, lekin bade paimane par kharid sirf dhan, gehu aur kuch dalhan-tilhan ki hoti hai. Baaki faslon mein kharid tab hoti hai jab rate MSP se neeche gir jaye aur state PSS (Price Support Scheme) activate kar de. Isliye MSP ka rate dekhna kaafi nahi — apne state mein us fasal ki kharid ho rahi hai ya nahi, ye bhi confirm karna padta hai.',
+    a: 'MSP declare 22+ faslon ka hota hai, lekin bade paimane par kharid sirf dhan, gehu aur kuch dalhan-tilhan ki hoti hai. Baaki faslon mein kharid tab hoti hai jab rate MSP se neeche gir jaye aur state PSS (Price Support Scheme) activate kar de. Isliye MSP ka rate dekhna kaafi nahi. Apne state mein us fasal ki kharid ho rahi hai ya nahi, ye bhi confirm karna padta hai.',
   },
   {
     q: 'MSP kaun tay karta hai aur kaise?',
-    a: 'CACP (Commission for Agricultural Costs and Prices) recommendation deta hai, aur CCEA (Cabinet Committee on Economic Affairs) usko approve karta hai. Formula 2018-19 budget mein tay hua tha — MSP kam se kam production cost ka 1.5 guna. Cost mein hired labour, seed, khaad, sinchai, machine, leased land ka rent aur family labour ki imputed value — sab shamil hoti hai.',
+    a: 'CACP (Commission for Agricultural Costs and Prices) recommendation deta hai, aur CCEA (Cabinet Committee on Economic Affairs) usko approve karta hai. Formula 2018-19 budget mein tay hua tha — MSP kam se kam production cost ka 1.5 guna. Cost mein hired labour, seed, khaad, sinchai, machine, leased land ka rent aur family labour ki imputed value. Sab shamil hoti hai.',
   },
   {
     q: 'A2+FL aur C2 cost mein kya fark hai, aur ye baat kyun uthti hai?',
-    a: 'A2+FL mein paid-out kharche aur family labour ki value gini jati hai. C2 mein inke upar apni zameen ka rent aur fixed capital ka interest bhi joda jata hai — matlab C2 ka figure bada hota hai. Sarkar MSP A2+FL par 50% margin laga kar nikalti hai; kisan sangathan C2 par 50% ki maang karte hain. Isi wajah se har announcement ke baad ye bahes chalti hai.',
+    a: 'A2+FL mein paid-out kharche aur family labour ki value gini jati hai. C2 mein inke upar apni zameen ka rent aur fixed capital ka interest bhi joda jata hai. Matlab C2 ka figure bada hota hai. Sarkar MSP A2+FL par 50% margin laga kar nikalti hai; kisan sangathan C2 par 50% ki maang karte hain. Isi wajah se har announcement ke baad ye bahes chalti hai.',
   },
   {
     q: 'MSP list ka official PDF kahan milega?',
@@ -128,13 +128,13 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </div>
 
         <DB>
-          <strong>TL;DR — seedha kaam ki baat:</strong>
+          <strong>TL;DR, seedha kaam ki baat:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li>Gehu <strong>₹2,585</strong>, dhan (common) <strong>₹2,441</strong>, chana <strong>₹5,875</strong>, sarson <strong>₹6,200</strong> per quintal — poori Rabi + Kharif table neeche.</li>
+            <li>Gehu <strong>₹2,585</strong>, dhan (common) <strong>₹2,441</strong>, chana <strong>₹5,875</strong>, sarson <strong>₹6,200</strong> per quintal, poori Rabi + Kharif table neeche.</li>
             <li>Sabse badi badhotri tilhan mein: sunflower <strong>+₹622</strong>, nigerseed +₹515, til +₹500.</li>
-            <li>MSP par bechne ke liye <strong>state portal par registration + token</strong> zaroori — window miss ki toh season gaya.</li>
-            <li>Sabse zyada paisa <strong>nami (moisture)</strong> mein katta hai — bechne se pehle 1-2 din dhoop mein sukhao.</li>
-            <li><strong>Abhi check karo:</strong> apne state ka procurement portal (UP: fcs.up.gov.in, MP: mpeuparjan.nic.in) — registration window.</li>
+            <li>MSP par bechne ke liye <strong>state portal par registration + token</strong> zaroori, window miss ki toh season gaya.</li>
+            <li>Sabse zyada paisa <strong>nami (moisture)</strong> mein katta hai. Bechne se pehle 1-2 din dhoop mein sukhao.</li>
+            <li><strong>Abhi check karo:</strong> apne state ka procurement portal (UP: fcs.up.gov.in, MP: mpeuparjan.nic.in), registration window.</li>
           </ul>
         </DB>
 
@@ -149,7 +149,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Is page par 2026-27 marketing season ki poori MSP list hai — 17 Kharif entries aur 6 Rabi faslein,
+          Is page par 2026-27 marketing season ki poori MSP list hai. 17 Kharif entries aur 6 Rabi faslein,
           pichhle saal ke rate ke saath. Neeche ye bhi samjhaya hai ki ye rate kaise banta hai, kahan actually
           milta hai, aur kab MSP chhod kar khule bazaar mein bechna behtar rehta hai.
         </p>
@@ -160,10 +160,10 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           wagairah). Isliye ek hi &quot;2026-27 list&quot; mein dono announcements ke numbers aate hain.
         </IB>
 
-        <SH>Kharif MSP List 2026-27 — Dhan, Kapas, Dalhan, Tilhan</SH>
+        <SH>Kharif MSP List 2026-27. Dhan, Kapas, Dalhan, Tilhan</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Abhi Kharif ka season chal raha hai, isliye yahi table sabse pehle. Bo-ai monsoon ke saath June-July
-          mein hoti hai aur katai October-November mein — rate pehle se pata ho toh mandi mein baat karna
+          mein hoti hai aur katai October-November mein, rate pehle se pata ho toh mandi mein baat karna
           aasaan rehta hai. 14 faslon ke rate declare hote hain, lekin dhan, jowar aur kapas ki do-do grades
           hone ki wajah se table mein 17 entries banti hain.
         </p>
@@ -193,7 +193,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
             </tbody>
           </table>
           <p className="text-xs text-[var(--color-text-muted)] mt-2 italic">
-            Sabhi rate ₹ per quintal. Source: CCEA decision, 13/05/2026 — PIB press release.
+            Sabhi rate ₹ per quintal. Source: CCEA decision, 13/05/2026. PIB press release.
             Kharif 2026-27 ke liye anumanit payout ₹2.60 lakh crore aur procurement target 824.41 lakh metric tonne.
           </p>
         </div>
@@ -208,10 +208,10 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           loading="lazy"
         />
 
-        <SH>Rabi MSP List 2026-27 — Gehu, Chana, Sarson</SH>
+        <SH>Rabi MSP List 2026-27. Gehu, Chana, Sarson</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Rabi ki bo-ai October-December mein hoti hai aur katai March-April mein. Is season ki khaas baat:
-          gehu ka margin 109% nikla — matlab MSP production cost se do guna se bhi upar hai. Safflower mein
+          gehu ka margin 109% nikla. Matlab MSP production cost se do guna se bhi upar hai. Safflower mein
           badhotri sabse zyada rahi.
         </p>
 
@@ -243,7 +243,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           </table>
           <p className="text-xs text-[var(--color-text-muted)] mt-2 italic">
             Sabhi rate ₹ per quintal (100 kg). Lagat = all-India weighted average cost of production (A2+FL).
-            Source: CCEA decision, 01/10/2025 — PIB press release.
+            Source: CCEA decision, 01/10/2025. PIB press release.
           </p>
         </div>
 
@@ -265,7 +265,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Doosri taraf makka aur moong ko dekho — sirf ₹10 aur ₹12 ki badhotri. Ye almost flat hai. Iska matlab
-          ye nahi ki fasal kharab hai; inka margin pehle se hi upar chal raha tha (makka 56%, moong 61% — poori
+          ye nahi ki fasal kharab hai; inka margin pehle se hi upar chal raha tha (makka 56%, moong 61%, poori
           list mein sabse zyada). Jab margin already achha ho, CACP badhotri dheemi rakhta hai.
         </p>
 
@@ -281,11 +281,11 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </p>
         <StepList>
           <SI n={1}>
-            <strong>CACP data jama karta hai</strong> — sabhi rajyon se production cost, mandi ke rate,
+            <strong>CACP data jama karta hai</strong>, sabhi rajyon se production cost, mandi ke rate,
             demand-supply, import-export ke aankde.
           </SI>
           <SI n={2}>
-            <strong>All-India weighted average cost nikalti hai</strong> (A2+FL method) — paid-out kharche plus
+            <strong>All-India weighted average cost nikalti hai</strong> (A2+FL method), paid-out kharche plus
             family labour ki value.
           </SI>
           <SI n={3}>
@@ -295,14 +295,14 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
             <strong>CACP recommendation bhejti hai</strong> Agriculture Ministry ko.
           </SI>
           <SI n={5}>
-            <strong>CCEA approve karti hai</strong> — Rabi ke rate bo-ai se pehle (September-October), Kharif ke
+            <strong>CCEA approve karti hai</strong>. Rabi ke rate bo-ai se pehle (September-October), Kharif ke
             rate monsoon se pehle (May-June).
           </SI>
         </StepList>
 
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Yahin se wo bahes shuru hoti hai jo aapne news mein dekhi hogi. Sarkar A2+FL cost par 50% jodti hai.
-          Kisan sangathan kehte hain C2 cost par 50% mile — C2 mein apni zameen ka rent aur fixed capital ka
+          Kisan sangathan kehte hain C2 cost par 50% mile. C2 mein apni zameen ka rent aur fixed capital ka
           interest bhi shamil hota hai, toh base bada hota hai aur MSP bhi upar aata hai. Dono taraf ka apna
           hisaab hai, aur ye maang har announcement ke baad dohrai jati hai.
         </p>
@@ -326,11 +326,11 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         <SH>MSP Par Bechna Hai Toh Kya Karna Padega</SH>
         <StepList>
           <SI n={1}>
-            <strong>State procurement portal par registration</strong> — window sowing ke baad khulti hai.
+            <strong>State procurement portal par registration</strong>, window sowing ke baad khulti hai.
             UP: fcs.up.gov.in, MP: mpeuparjan.nic.in, Haryana: Meri Fasal Mera Byora, Punjab: anaaj kharid portal.
           </SI>
           <SI n={2}>
-            <strong>Documents ready rakho</strong> — Aadhaar, bank passbook, aur zameen ke kagaz
+            <strong>Documents ready rakho</strong>. Aadhaar, bank passbook, aur zameen ke kagaz
             (khatauni/khasra ya girdawari). Bank account active ho aur naam kagzon se match kare.
           </SI>
           <SI n={3}>
@@ -338,22 +338,22 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
             par hi upaj centre le jani hoti hai.
           </SI>
           <SI n={4}>
-            <strong>Quality norms samjho</strong> — nami (moisture), toota daana, mitti-kachra: sab ki limit
+            <strong>Quality norms samjho</strong>, nami (moisture), toota daana, mitti-kachra: sab ki limit
             hoti hai. Limit se bahar hui toh rate mein cut lagta hai ya lot reject ho jata hai.
           </SI>
           <SI n={5}>
-            <strong>Receipt sambhal ke rakho</strong> — kaante ki parchi aur procurement slip. Payment mein
+            <strong>Receipt sambhal ke rakho</strong>, kaante ki parchi aur procurement slip. Payment mein
             dikkat aayi toh yahi kaam aayegi.
           </SI>
           <SI n={6}>
-            <strong>Payment DBT se aayegi</strong> — rules mein 48-72 ghanta, practice mein 3-7 din. Peak season
+            <strong>Payment DBT se aayegi</strong>, rules mein 48-72 ghanta, practice mein 3-7 din. Peak season
             mein isse zyada bhi lag sakta hai.
           </SI>
         </StepList>
 
         <IB>
           Nami wala point sabse zyada paisa khata hai. Gehu mein aam tor par 12% aur dhan mein 17% ki limit hoti
-          hai. Ek-do din dhoop mein sukha lena rate ke cut se sasta padta hai — centre par pahunch kar pata
+          hai. Ek-do din dhoop mein sukha lena rate ke cut se sasta padta hai. Centre par pahunch kar pata
           chalne se pehle hi ye kaam kar lo.
         </IB>
 
@@ -367,7 +367,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/msp-list-2026-27/gehu-dheri.webp"
-          alt="Mandi mein gehu ki dheri par boli — vyapari aur kisan"
+          alt="Mandi mein gehu ki dheri par boli, vyapari aur kisan"
           width={1000}
           height={558}
           className="w-full h-auto rounded-xl my-5"
@@ -375,9 +375,9 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           loading="lazy"
         />
 
-        <SH>MSP Par Bechein Ya Mandi Mein — Faisla Kaise Karein</SH>
+        <SH>MSP Par Bechein Ya Mandi Mein. Faisla Kaise Karein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Har season ye sawal aata hai. Seedha jawab: dono rate compare karo, aur sirf rate nahi — kharche aur
+          Har season ye sawal aata hai. Seedha jawab: dono rate compare karo, aur sirf rate nahi. Kharche aur
           risk bhi.
         </p>
 
@@ -400,7 +400,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
               <tr className="bg-[var(--color-bg-alt)]">
                 <td className="border border-[var(--color-border)] p-3 font-semibold">Payment</td>
                 <td className="border border-[var(--color-border)] p-3">DBT se bank mein, 3-7 din</td>
-                <td className="border border-[var(--color-border)] p-3">Cash ya udhaar — vyapari par depend</td>
+                <td className="border border-[var(--color-border)] p-3">Cash ya udhaar, vyapari par depend</td>
               </tr>
               <tr>
                 <td className="border border-[var(--color-border)] p-3 font-semibold">Quality check</td>
@@ -462,7 +462,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
             <p className="font-bold text-sm text-[var(--color-text)] mb-1">&quot;MSP har state mein alag hota hai&quot;</p>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
               MSP poore desh mein ek hi hota hai. Kuch states apni taraf se bonus dete hain, toh wahan total
-              rate zyada ban jata hai — lekin base MSP wahi rehta hai.
+              rate zyada ban jata hai. Lekin base MSP wahi rehta hai.
             </p>
           </div>
           <div className="p-4 border border-[var(--color-border)] rounded-xl">
@@ -481,19 +481,19 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           </div>
         </div>
 
-        <SH>Aam Galtiyan — Jo Registration Aur Kharid Mein Files Rukwati Hain</SH>
+        <SH>Aam Galtiyan. Jo Registration Aur Kharid Mein Files Rukwati Hain</SH>
         <StepList>
-          <SI n={1}><strong>Naam ka mismatch:</strong> Aadhaar mein "Ram Kumar", khatauni mein "Ramkumar", bank mein "R. Kumar" — aur registration atak gaya. Portal par form bharne se pehle teeno kagaz saamne rakh kar naam ki spelling milao. Hazaron files isi ek wajah se rukti hain.</SI>
-          <SI n={2}><strong>Registration window miss karna:</strong> window sowing ke baad khulti hai aur kharid shuru hone se pehle band ho jati hai. "Katai ke baad dekhenge" wali soch season kha jati hai — abhi apne state portal par dates check karo.</SI>
+          <SI n={1}><strong>Naam ka mismatch:</strong> Aadhaar mein "Ram Kumar", khatauni mein "Ramkumar", bank mein "R. Kumar". Aur registration atak gaya. Portal par form bharne se pehle teeno kagaz saamne rakh kar naam ki spelling milao. Hazaron files isi ek wajah se rukti hain.</SI>
+          <SI n={2}><strong>Registration window miss karna:</strong> window sowing ke baad khulti hai aur kharid shuru hone se pehle band ho jati hai. "Katai ke baad dekhenge" wali soch season kha jati hai. Abhi apne state portal par dates check karo.</SI>
           <SI n={3}><strong>Agent ke bharose sab chhod dena:</strong> CSC ya agent se form bharwana theek hai, lekin apna registration number aur token ki tareekh khud likh kar rakho. Agent ka phone band hua toh aapke paas kuch proof hona chahiye.</SI>
-          <SI n={4}><strong>Bank account inactive ya bina-Aadhaar-linked hona:</strong> payment DBT se aati hai — account dormant hua ya NPCI mapping nahi hai toh paisa latak jata hai. Bechne se pehle branch se confirm karo.</SI>
+          <SI n={4}><strong>Bank account inactive ya bina-Aadhaar-linked hona:</strong> payment DBT se aati hai. Account dormant hua ya NPCI mapping nahi hai toh paisa latak jata hai. Bechne se pehle branch se confirm karo.</SI>
           <SI n={5}><strong>Geeli fasal le jaana:</strong> moisture limit (gehu ~12%, dhan ~17%) paar hui toh cut ya reject. Kaante par pahunch kar rona free hai, pehle sukhana sasta hai.</SI>
         </StepList>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">MSP Ki Table Se Zyada Kaam Ki Cheez: Nami Ka Meter</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            2026-27 ki badhotri tilhan mein sabse mote paise laayi — sunflower ₹622, nigerseed ₹515, til ₹500 —
+            2026-27 ki badhotri tilhan mein sabse mote paise laayi, sunflower ₹622, nigerseed ₹515, til ₹500 —
             jabki gehu ₹2,585 aur dhan ₹2,441 (common) par hai aur makka-moong lagbhag wahin rahe. Par saal bhar
             ka farak in numbers se nahi, kaante par tay hota hai.
           </p>
@@ -505,21 +505,21 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           </p>
         </div>
 
-        <SH>FAQ — Aapke Sawaal</SH>
+        <SH>FAQ. Aapke Sawaal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
         <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
-            CCEA press release, Rabi Marketing Season 2026-27 MSP — 01/10/2025.{' '}
+            CCEA press release, Rabi Marketing Season 2026-27 MSP, 01/10/2025.{' '}
             <a href="https://pib.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in</a>
           </li>
           <li>
-            CCEA press release, Kharif Marketing Season 2026-27 MSP (14 crops) — 13/05/2026.{' '}
+            CCEA press release, Kharif Marketing Season 2026-27 MSP (14 crops), 13/05/2026.{' '}
             <a href="https://pib.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in</a>
           </li>
           <li>
-            Commission for Agricultural Costs &amp; Prices — cost concepts aur MSP methodology.{' '}
+            Commission for Agricultural Costs &amp; Prices, cost concepts aur MSP methodology.{' '}
             <a href="https://cacp.dacnet.nic.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">cacp.dacnet.nic.in</a>
           </li>
           <li>

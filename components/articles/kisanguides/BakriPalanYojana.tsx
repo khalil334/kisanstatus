@@ -18,7 +18,7 @@ export default function BakriPalanYojana() {
     },
     {
       q: 'Subsidy ka paisa kitne din mein account mein aata hai?',
-      a: 'Approval mein hi 2-3 mahine chale jaate hain. Fir paisa ek saath nahi, do hisson mein aata hai. Total mila ke 4-6 mahine — plan waisa hi rakhna.',
+      a: 'Approval mein hi 2-3 mahine chale jaate hain. Fir paisa ek saath nahi, do hisson mein aata hai. Total mila ke 4-6 mahine, plan waisa hi rakhna.',
     },
     {
       q: 'Bank loan ke saath subsidy le sakte hain kya?',
@@ -36,19 +36,19 @@ export default function BakriPalanYojana() {
     },
     {
       q: 'Bahar ke state se bakriyan mangwane par kya documents chahiye?',
-      a: 'Quarantine certificate aur vehicle fitness certificate — dono zaroori. Bina inke transport illegal count hota hai.',
+      a: 'Quarantine certificate aur vehicle fitness certificate. Dono zaroori. Bina inke transport illegal count hota hai.',
     },
     {
-      q: 'Bakri palan subsidy reject ho gayi — dobara bhej sakte hain?',
+      q: 'Bakri palan subsidy reject ho gayi, dobara bhej sakte hain?',
       a: 'Kar sakte hain, aksar log karte bhi hain. Portal reason bata deta hai, wo fix karo aur fir se bhej do.',
     },
     {
       q: 'Subsidy ka paisa ek saath milta hai ya kisht mein?',
-      a: 'Kisht mein. Aam pattern do kisht ka hai — pehli kisht project approve hone aur bank loan disburse hone ke baad, doosri kisht physical verification ke baad jab unit chalti hui dikhe. Matlab poori subsidy pehle din nahi milti — isliye working capital ka intezaam subsidy ke bharose mat chhodo.',
+      a: 'Kisht mein. Aam pattern do kisht ka hai. Pehli kisht project approve hone aur bank loan disburse hone ke baad, doosri kisht physical verification ke baad jab unit chalti hui dikhe. Matlab poori subsidy pehle din nahi milti. Isliye working capital ka intezaam subsidy ke bharose mat chhodo.',
     },
     {
-      q: 'NLM ke 100+5 wale bar tak nahi pahunch sakta — chhote setup ke liye kya option hai?',
-      a: 'Apne state ki pashupalan schemes dekho — Rajasthan, UP, Bihar, MP sabki apni goat-unit schemes hain jinme 10-20 bakri ka unit bhi chal jata hai. Bihar ki scheme ka poora process humne alag guide mein likha hai. Doosra rasta: KCC ke pashupalan component se working capital lo aur dheere-dheere herd badhao, phir NLM ke liye apply karo.',
+      q: 'NLM ke 100+5 wale bar tak nahi pahunch sakta, chhote setup ke liye kya option hai?',
+      a: 'Apne state ki pashupalan schemes dekho. Rajasthan, UP, Bihar, MP sabki apni goat-unit schemes hain jinme 10-20 bakri ka unit bhi chal jata hai. Bihar ki scheme ka poora process humne alag guide mein likha hai. Doosra rasta: KCC ke pashupalan component se working capital lo aur dheere-dheere herd badhao, phir NLM ke liye apply karo.',
     },
     {
       q: 'Bakri Palan Yojana 2026 ki last date kya hai?',
@@ -83,7 +83,7 @@ export default function BakriPalanYojana() {
           2021 Ke Baad Scheme Badal Gayi Hai
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Purani scheme mein sarkar seedhe bakriyan de deti thi. Koi business plan nahi, koi accountability nahi. Natija? Do-teen saal mein aadhe se zyada units band ho gaye — na shed sahi tha, na khuraak ka hisaab.
+          Purani scheme mein sarkar seedhe bakriyan de deti thi. Koi business plan nahi, koi accountability nahi. Natija? Do-teen saal mein aadhe se zyada units band ho gaye, na shed sahi tha, na khuraak ka hisaab.
         </p>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Ab NLM 2.0 mein Department of Animal Husbandry &amp; Dairying ye dekhna chahta hai ki farm ek business ki tarah chale, charity ki tarah nahi. Base subsidy 50% hai. Mahila kisan ya SC/ST category mein ho toh state guidelines ke hisab se ye 60% tak bhi jaa sakti hai.
@@ -96,7 +96,7 @@ export default function BakriPalanYojana() {
           Ye sawal sabse zyada aata hai: "Mere paas 20-30 bakriyan hain, chalega?"
         </p>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Nahi chalega. Minimum 100 female aur 5 male. Wajah simple hai — koi bhi officer 10-15 bakriyon ke liye poora din site visit mein nahi lagayega, uska hisaab hi nahi banta. Setup chhota hai toh NLM chhod kar apne district ki Pashu Palan schemes dekho, wahan bar kaafi neeche hota hai.
+          Nahi chalega. Minimum 100 female aur 5 male. Wajah simple hai. Koi bhi officer 10-15 bakriyon ke liye poora din site visit mein nahi lagayega, uska hisaab hi nahi banta. Setup chhota hai toh NLM chhod kar apne district ki Pashu Palan schemes dekho, wahan bar kaafi neeche hota hai.
         </p>
 
         <div className="overflow-x-auto my-8 not-prose">
@@ -138,7 +138,7 @@ export default function BakriPalanYojana() {
         </p>
         <ul className="list-disc pl-5 space-y-3 text-gray-700 dark:text-gray-300 mb-6">
           <li><strong>Jamunapari:</strong> UP-Bihar ke liye badhiya, 3-4 litre doodh rozana. Garmi mein heat stress ka dar rehta hai, shed mein hawa ka rasta chhod dena.</li>
-          <li><strong>Sirohi:</strong> Rajasthan jaisi sookhi jagah ke liye — kam chara mein bhi chal jaati hai. Naye farmers ke liye sabse safe.</li>
+          <li><strong>Sirohi:</strong> Rajasthan jaisi sookhi jagah ke liye, kam chara mein bhi chal jaati hai. Naye farmers ke liye sabse safe.</li>
           <li><strong>Beetal:</strong> Punjab-Haryana mein demand achhi, rate bhi. Size badi hai toh khana bhi zyada khaati hai.</li>
           <li><strong>Black Bengal:</strong> Chhoti zameen wale ke liye theek. Ek baar mein 2-3 bachhe deti hai, flock jaldi badhta hai.</li>
         </ul>
@@ -166,22 +166,22 @@ export default function BakriPalanYojana() {
           Chara: Kharcha Yahin Chhupa Hota Hai
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Bakri khareedna toh aasaan hai. Roz khilaana asli kaam hai. Ek adult bakri ko body weight ka 3-4% dry matter rozana chahiye. 100 bakriyon pe jod ke dekho — figure chhota nahi rehta.
+          Bakri khareedna toh aasaan hai. Roz khilaana asli kaam hai. Ek adult bakri ko body weight ka 3-4% dry matter rozana chahiye. 100 bakriyon pe jod ke dekho, figure chhota nahi rehta.
         </p>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Roz mandi se hara chara khareedoge toh EMI aur profit dono pareshan honge. Behtar hai apni zameen ke ek tukde pe khud ugao — Kharif mein Maize, Rabi mein Berseem, saal bhar Napier grass. Silage banana bhi seekh lo, lean season mein wahi bachata hai.
+          Roz mandi se hara chara khareedoge toh EMI aur profit dono pareshan honge. Behtar hai apni zameen ke ek tukde pe khud ugao. Kharif mein Maize, Rabi mein Berseem, saal bhar Napier grass. Silage banana bhi seekh lo, lean season mein wahi bachata hai.
         </p>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
           Documents: Zyadatar Yahin Fasti Hai Baat
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-          Reject hui applications ka pattern uthao toh ek hi baat baar-baar dikhti hai — koi bada scam nahi, sirf adhoora ya bemel paperwork.
+          Reject hui applications ka pattern uthao toh ek hi baat baar-baar dikhti hai. Koi bada scam nahi, sirf adhoora ya bemel paperwork.
         </p>
         <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
           <li><strong>Zameen ka kagaz:</strong> khatauni akela kaafi nahi. 5 saal ka registered lease ya ownership proof, naam match hona chahiye.</li>
           <li><strong>Supplier quotations:</strong> dated, signed, official. Haath se likha kagaz chalta nahi.</li>
-          <li><strong>DPR:</strong> district ke registered vet se banwana behtar — unka stamp weight rakhta hai.</li>
+          <li><strong>DPR:</strong> district ke registered vet se banwana behtar, unka stamp weight rakhta hai.</li>
           <li><strong>Geotagged photos:</strong> GPS aur date ke saath. Plain photo reject ho sakti hai.</li>
         </ul>
 
@@ -207,19 +207,19 @@ export default function BakriPalanYojana() {
         />
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-          DPR — Sabse Important Kaam
+          DPR. Sabse Important Kaam
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           DPR banana rocket science nahi hai. Bas numbers phule-phule nahi hone chahiye, warna officer ko shak ho jata hai. Teen cheez clear honi chahiye:
         </p>
         <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
-          <li><strong>Capital Cost:</strong> shed, feeding trough, water tank, chaff cutter — actual quotation ke saath. Agar job card hai aur scale chhota hai, to shed ka kharcha MGNREGA se bhi nikal sakta hai — <Link href="/yojana/mgnrega-pashu-shed-yojana" className="underline font-semibold">pashu shed wali guide</Link> mein gram panchayat ka poora rasta likha hai.</li>
+          <li><strong>Capital Cost:</strong> shed, feeding trough, water tank, chaff cutter, actual quotation ke saath. Agar job card hai aur scale chhota hai, to shed ka kharcha MGNREGA se bhi nikal sakta hai. <Link href="/yojana/mgnrega-pashu-shed-yojana" className="underline font-semibold">pashu shed wali guide</Link> mein gram panchayat ka poora rasta likha hai.</li>
           <li><strong>Recurring Cost:</strong> pehle 6 mahine ka chara, feed, mineral mixture, labor.</li>
           <li><strong>Income Projection:</strong> conservative rakho. 15-20% mortality dikhao, warna plan unrealistic lagega.</li>
         </ul>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-          Vaccination — Isme Chhutti Nahi Chalti
+          Vaccination. Isme Chhutti Nahi Chalti
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Ek outbreak pura flock saaf kar sakta hai. Darane wali baat nahi, seedhi si sachai hai. Inspection mein vaccination record bhi documents jitna hi dekha jata hai.
@@ -236,7 +236,7 @@ export default function BakriPalanYojana() {
           <h3 className="font-bold text-blue-800 dark:text-blue-300 mb-3 text-sm">Biosecurity Basics:</h3>
           <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>Entry gate pe foot bath rakho.</li>
-            <li>Naye animals seedhe flock mein mat milao — 15-30 din alag rakho.</li>
+            <li>Naye animals seedhe flock mein mat milao, 15-30 din alag rakho.</li>
             <li>Farm regular saaf karo, disinfect karo.</li>
             <li>Mari hui bakri ko khule mein mat chhodo, deep burial karo.</li>
           </ul>
@@ -276,7 +276,7 @@ export default function BakriPalanYojana() {
         </div>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-          Apply Kaise Karein — Online Registration Ka Process
+          Apply Kaise Karein. Online Registration Ka Process
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Portal: <a href="https://nlm.udyamimitra.in" className="text-blue-600 hover:underline dark:text-blue-400 font-semibold" target="_blank" rel="noopener noreferrer" aria-label="Visit NLM Udyamimitra Portal for Goat Farming Subsidy">nlm.udyamimitra.in</a>
@@ -284,7 +284,7 @@ export default function BakriPalanYojana() {
         <ol className="list-decimal pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
           <li>DPR pehle vet se banwa lo.</li>
           <li>Portal pe registration karo. OTP kabhi late aata hai, ghabrana nahi.</li>
-          <li>Documents scan karke upload karo — PDF, 2MB se kam.</li>
+          <li>Documents scan karke upload karo. PDF, 2MB se kam.</li>
           <li>Submit karte hi acknowledgment number ka screenshot le lo.</li>
           <li>3-4 mahine wait, isi beech officer site visit karega.</li>
           <li>Approval ke baad bills submit karo, tabhi paisa aayega.</li>
@@ -314,12 +314,12 @@ export default function BakriPalanYojana() {
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Yahi wo hissa hai jo portal pe kahin saaf nahi likha, aur isi liye sabse zyada log yahin
-          confuse hote hain. Subsidy ka paisa ek saath nahi aata — do kisht ka pattern chalta hai:
+          confuse hote hain. Subsidy ka paisa ek saath nahi aata, do kisht ka pattern chalta hai:
         </p>
         <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
           <li><strong>Pehli kisht:</strong> project approval + bank loan disbursement ke baad. Bank
-          ke through hi aati hai — seedha aapke haath mein nahi.</li>
-          <li><strong>Doosri kisht:</strong> physical verification ke baad — officer dekh kar jaata
+          ke through hi aati hai. Seedha aapke haath mein nahi.</li>
+          <li><strong>Doosri kisht:</strong> physical verification ke baad, officer dekh kar jaata
           hai ki unit asal mein chal rahi hai: bakriyan ginti mein poori, shed quotation jaisa,
           vaccination record maujood.</li>
         </ul>
@@ -327,35 +327,35 @@ export default function BakriPalanYojana() {
           Iska seedha matlab: <strong>subsidy working capital nahi hai.</strong> Chara, labor aur
           pehle 6 mahine ka kharcha apne paise ya loan se chalana hoga. Jo log subsidy ko cash-flow
           maan kar plan banate hain, unka unit doosri kisht aane se pehle hi haanf jata hai.
-          Bank-end pe deri aam hai — branch se follow-up karte raho aur har visit ka naam-date
+          Bank-end pe deri aam hai. Branch se follow-up karte raho aur har visit ka naam-date
           likh kar rakho, escalation mein yahi kaam aata hai.
         </p>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-          Chara-Dawai Ka Rozana Kharcha — Pashu KCC Wala Raasta
+          Chara-Dawai Ka Rozana Kharcha. Pashu KCC Wala Raasta
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Upar clear ho gaya ki subsidy working capital nahi hai. Toh chara, feed aur dawai ka mahine ka
           kharcha kahan se aayega jab tak unit apna paisa banana shuru nahi karti? Iske liye sahi tool hai{' '}
-          <strong>Pashu Kisan Credit Card</strong> — KCC ka pashupalan wala roop. Ye revolving limit hoti hai:
+          <strong>Pashu Kisan Credit Card</strong>. KCC ka pashupalan wala roop. Ye revolving limit hoti hai:
           jitna use karo utne par byaj, chukao toh limit wapas khul jaati hai. Bakri palan jaise kaam ke liye
           animal husbandry limit ₹3 lakh tak hai, aur isi ke andar interest subvention bhi milta hai —
           samay par chukane wale ko paisa 4% jitna sasta pad jaata hai.
         </p>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Ek aur kaam ki baat: collateral-free limit ab <strong>₹2 lakh</strong> ho gayi hai (pehle ₹1.6 lakh
-          thi — purane blogs abhi bhi wahi likh rahe hain). Matlab ₹2 lakh tak na zameen girvi, na guarantor.
+          thi. Purane blogs abhi bhi wahi likh rahe hain). Matlab ₹2 lakh tak na zameen girvi, na guarantor.
           NLM ka term loan shed aur bakriyon ke liye, Pashu KCC rozana kharche ke liye — dono ka kaam alag hai,
           ek doosre ka substitute nahi. Poora process, documents aur banks ki list{' '}
           <Link href="/yojana/pashu-kisan-credit-card-apply" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Pashu KCC apply guide</Link> mein hai.
         </p>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-          100+5 Bahut Bada Hai? — Chhote Kisan Ke Liye Raasta
+          100+5 Bahut Bada Hai?. Chhote Kisan Ke Liye Raasta
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           NLM ka bar (100 female + 5 male) commercial farming ke liye bana hai. Ghar ke peeche
-          10-20 bakriyan paalne wale ke liye ye scheme hai hi nahi — aur ye koi kami nahi,
+          10-20 bakriyan paalne wale ke liye ye scheme hai hi nahi. Aur ye koi kami nahi,
           bas alag audience hai. Chhote setup ke liye teen raaste hain:
         </p>
         <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-6">
@@ -363,10 +363,10 @@ export default function BakriPalanYojana() {
           hai jisme 10-20 ka unit chalta hai aur subsidy percent bhi aksar achha hota hai —
           <Link href="/articles/bihar-pashupalan-loan-yojana" className="text-blue-600 hover:underline dark:text-blue-400 font-medium"> Bihar wali scheme ki poori guide yahan hai</Link>.</li>
           <li><strong>KCC pashupalan limit:</strong> Kisan Credit Card mein pashupalan ka
-          working-capital component hai — chara aur dawai ke kharche ke liye sasta paisa.
+          working-capital component hai. Chara aur dawai ke kharche ke liye sasta paisa.
           <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium"> KCC apply guide dekho</Link>.</li>
           <li><strong>Pehle badhao, phir apply karo:</strong> 2-3 saal mein herd 50-60 tak le jao,
-          records rakho (kharid ke bill, vaccination card) — phir NLM application mein yahi
+          records rakho (kharid ke bill, vaccination card). Phir NLM application mein yahi
           track record aapka sabse bada plus point banta hai.</li>
         </ul>
 
@@ -401,7 +401,7 @@ export default function BakriPalanYojana() {
           Paisa tabhi banta hai jab bakri palan ko business ki tarah loge, shauk ki tarah nahi. Documentation pe dhyan do, vet ki baat suno, shuruat mein patience rakho. Raaton-raat kuch nahi hota. Jo 2-3 saal tik jaate hain, wahi profit dekhte hain.
         </p>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-          Aage meat processing ka brand banana ho toh <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> dekh lena. Aur gobar fekna mat — <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Vermi Compost</Link> bana ke bech do, extra income ban jayega.
+          Aage meat processing ka brand banana ho toh <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME Yojana</Link> dekh lena. Aur gobar fekna mat, <Link href="/articles/vermi-compost-business-guide" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Vermi Compost</Link> bana ke bech do, extra income ban jayega.
         </p>
 
         <div className="mt-12 pt-8 border-t-2 border-gray-200 dark:border-gray-700 not-prose">

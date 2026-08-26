@@ -268,16 +268,16 @@ export default function PmkmyVsApyComparison2026({ article }: { article: Maandha
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Compare Karte Waqt Ke Zaroori Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PMKMY vs APY — Common Confusions" />
+          <FAQBlock faqs={FAQS_DATA} caption="PMKMY vs APY. Common Confusions" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Faisla Ek Number Par Tikta Hai: 1:1 Match</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Poori comparison ko ek number mein nichoda ja sakta hai: PMKMY mein sarkar aapke har rupaye ke saamne apna rupaya rakhti hai, APY mein nahi. 40 saal ki umar par ₹3000 pension ke liye PMKMY ₹200/mahina maangti hai, APY ₹873 — same pension, chaar guna se zyada daam.
+            Poori comparison ko ek number mein nichoda ja sakta hai: PMKMY mein sarkar aapke har rupaye ke saamne apna rupaya rakhti hai, APY mein nahi. 40 saal ki umar par ₹3000 pension ke liye PMKMY ₹200/mahina maangti hai, APY ₹873, same pension, chaar guna se zyada daam.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            APY sirf do surat mein aage hai: aapke paas 2 hectare wali kisan eligibility nahi hai, ya aapko ₹3000 se bade slab (₹5000 tak) ki zaroorat hai. In dono mein se koi lagoo nahi hota toh comparison yahin khatam ho jaata hai — eligible kisan ke liye 1:1 match ko haraane wala product filhaal market mein nahi hai.
+            APY sirf do surat mein aage hai: aapke paas 2 hectare wali kisan eligibility nahi hai, ya aapko ₹3000 se bade slab (₹5000 tak) ki zaroorat hai. In dono mein se koi lagoo nahi hota toh comparison yahin khatam ho jaata hai. Eligible kisan ke liye 1:1 match ko haraane wala product filhaal market mein nahi hai.
           </p>
         </div>
 

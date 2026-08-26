@@ -6,9 +6,9 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'dairy-farm-loan-without-collateral',
     ogImage: '/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/dairy-subah.webp',
-    title: 'Dairy Loan Bina Zamanat — Kaun Sa Bank Dega?',
-    desc: 'Zameen girvi rakhe bina dairy farm loan — Mudra se ₹20 lakh tak, PMEGP mein 15-35% subsidy, CGTMSE cover. EMI table, documents aur reject ki wajahein.',
-    ogTitle: 'Dairy Farm Loan Bina Collateral — Mudra 2026',
+    title: 'Dairy Loan Bina Zamanat: Kaun Sa Bank Dega?',
+    desc: 'Zameen girvi rakhe bina dairy farm loan: Mudra se ₹20 lakh tak, PMEGP mein 15-35% subsidy, CGTMSE cover. EMI table, documents aur reject ki wajahein.',
+    ogTitle: 'Dairy Farm Loan Bina Collateral: Mudra 2026',
     keywords: [
       'dairy farm loan without collateral 2026',
       'mudra loan dairy farming',
@@ -32,9 +32,9 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'sbi-dairy-loan-interest-rate',
     ogImage: '/images/articles/loan-mandi-pashupalan/sbi-dairy-loan-interest-rate/subah-doodh.webp',
-    title: 'SBI Dairy Loan Ka Byaj Kitna — Asli Rate',
-    desc: 'SBI dairy loan ka rate MCLR + spread se banta hai — koi fixed number nahi. KCC vs term loan ka fark, interest subvention, EMI table aur checklist.',
-    ogTitle: 'SBI Kisan Dairy Loan 2026 — Rate, EMI, Apply',
+    title: 'SBI Dairy Loan Ka Byaj Kitna: Asli Rate',
+    desc: 'SBI dairy loan ka rate MCLR + spread se banta hai: koi fixed number nahi. KCC vs term loan ka fark, interest subvention, EMI table aur checklist.',
+    ogTitle: 'SBI Kisan Dairy Loan 2026: Rate, EMI, Apply',
     keywords: [
       'sbi dairy loan interest rate 2026',
       'sbi pashupalan loan',
@@ -59,8 +59,8 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'jansamarth-portal-loan-apply',
     ogImage: '/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/form-bharna.webp',
-    title: 'JanSamarth Portal Se Loan — Ghar Baithe Apply',
-    desc: 'Ek portal par sabhi sarkari loan — KCC, Mudra, education, agri-infra. Eligibility check se application track tak, jansamarth.in ka step-by-step process.',
+    title: 'JanSamarth Portal Se Loan: Ghar Baithe Apply',
+    desc: 'Ek portal par sabhi sarkari loan: KCC, Mudra, education, agri-infra. Eligibility check se application track tak, jansamarth.in ka step-by-step process.',
     ogTitle: 'JanSamarth Portal Loan Apply 2026 Guide',
     keywords: [
       'jansamarth portal loan apply 2026',
@@ -81,7 +81,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'enam-registration-kaise-kare',
     ogImage: '/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/anaj-dheri.webp',
     title: 'eNAM Par Registration Kaise Hota Hai',
-    desc: 'eNAM par free registration karke fasal online mandi mein bechein — 3 documents, step-by-step process, inter-state bidding aur bank payment.',
+    desc: 'eNAM par free registration karke fasal online mandi mein bechein: 3 documents, step-by-step process, inter-state bidding aur bank payment.',
     ogTitle: 'eNAM Registration Kaise Kare 2026 Guide',
     keywords: [
       'enam registration kaise kare 2026',
@@ -102,10 +102,10 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'msp-list-2026-27',
-    title: 'MSP List 2026-27 — Rabi Aur Kharif Ke Sab Rate',
+    title: 'MSP List 2026-27: Rabi Aur Kharif Ke Sab Rate',
     seoTitle: 'MSP 2026-27 List: Kharif & Rabi Ke Rate',
-    desc: 'MSP 2026-27 list Kharif aur Rabi dono ek jagah — gehu ₹2,585, dhan ₹2,441, chana ₹5,875. Har fasal ka naya rate aur pichhle saal se badhotri table mein.',
-    ogTitle: 'MSP 2026-27 List — Rabi & Kharif Puri List',
+    desc: 'MSP 2026-27 list Kharif aur Rabi dono ek jagah: gehu ₹2,585, dhan ₹2,441, chana ₹5,875. Har fasal ka naya rate aur pichhle saal se badhotri table mein.',
+    ogTitle: 'MSP 2026-27 List: Rabi & Kharif Puri List',
     ogImage: '/images/articles/loan-mandi-pashupalan/msp-list-2026-27/kharid-kendra.webp',
     keywords: [
       'msp list 2026 27',
@@ -129,10 +129,10 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'mandi-bhav-app-comparison',
     ogImage: '/images/articles/loan-mandi-pashupalan/mandi-bhav-app-comparison/phone-bhav.webp',
-    title: '7 Mandi Bhav Apps Compare Kiye — Kaun Sa Sahi',
-    seoTitle: 'Aaj Ka Mandi Bhav App — Kaunsa Sahi Hai',
+    title: '7 Mandi Bhav Apps Compare Kiye: Kaun Sa Sahi',
+    seoTitle: 'Aaj Ka Mandi Bhav App: Kaunsa Sahi Hai',
     desc: 'Aaj ka mandi rate kaunsa app sach batata hai? eNAM, AgMarknet aur private apps ka comparison, modal price ka matlab aur 30 second ka faisla table.',
-    ogTitle: 'Best Mandi Bhav Apps 2026 — Top 7 Comparison',
+    ogTitle: 'Best Mandi Bhav Apps 2026: Top 7 Comparison',
     keywords: [
       'mandi bhav app 2026',
       'bijak app',
@@ -150,11 +150,11 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'gehu-ka-bhav-msp-vs-mandi',
-    seoTitle: 'Gehu Ka Rate 2026 — MSP vs Mandi Ka Hisaab',
+    seoTitle: 'Gehu Ka Rate 2026: MSP vs Mandi Ka Hisaab',
     ogImage: '/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/gehu-katai.webp',
     title: 'Gehu MSP Par Beche Ya Mandi Me? Hisaab Ye Raha',
-    desc: 'Gehu ka rate MSP ₹2,585 par lein ya mandi mein bechein? Ek bori ka seedha hisaab, saal bhar ka price pattern aur rokne ka ganit — sab yahan.',
-    ogTitle: 'Gehu Ka Rate 2026 — MSP vs Mandi, Kahan Bechein',
+    desc: 'Gehu ka rate MSP ₹2,585 par lein ya mandi mein bechein? Ek bori ka seedha hisaab, saal bhar ka price pattern aur rokne ka ganit: sab yahan.',
+    ogTitle: 'Gehu Ka Rate 2026: MSP vs Mandi, Kahan Bechein',
     keywords: [
       'gehu ka rate',
       'gehu msp 2026',
@@ -175,7 +175,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     ogImage: '/images/articles/loan-mandi-pashupalan/sabzi-bhav-guide-pyaz-aloo-tamatar/sabzi-mandi.webp',
     title: 'Pyaz, Aloo, Tamatar Ka Bhav Kaise Samjhe',
     desc: 'Pyaz, aloo, tamatar kab bechein? Teeno ka seasonal price cycle, aloo cold storage ka break-even hisaab aur NAFED buffer stock ka asar.',
-    ogTitle: 'Pyaz, Aloo, Tamatar Kab Bechein — Bhav Cycle',
+    ogTitle: 'Pyaz, Aloo, Tamatar Kab Bechein: Bhav Cycle',
     keywords: [
       'pyaz ka bhav kab badhega',
       'aloo mandi rate',
@@ -195,10 +195,10 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'murgi-palan-loan-nlm-subsidy',
     ogImage: '/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/murgi-farm.webp',
-    title: 'Murgi Palan Loan — NLM Ki 50% Subsidy Ka Rasta',
+    title: 'Murgi Palan Loan: NLM Ki 50% Subsidy Ka Rasta',
     seoTitle: 'Murgi Palan Loan 2026: NLM Se 50% Subsidy',
-    desc: 'NLM se poultry farm par 50% subsidy, ₹25 lakh tak — back-ended subsidy ka sach, layer vs broiler aur udyamimitra portal se apply ka process.',
-    ogTitle: 'Murgi Palan Loan 2026 — NLM se 50% Subsidy',
+    desc: 'NLM se poultry farm par 50% subsidy, ₹25 lakh tak: back-ended subsidy ka sach, layer vs broiler aur udyamimitra portal se apply ka process.',
+    ogTitle: 'Murgi Palan Loan 2026: NLM se 50% Subsidy',
     keywords: [
       'murgi palan loan 2026',
       'poultry farm subsidy',
@@ -217,11 +217,11 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'bihar-pashupalan-loan-yojana',
-    seoTitle: 'Bihar Pashupalan Loan 2026 — Last Date, Apply',
+    seoTitle: 'Bihar Pashupalan Loan 2026: Last Date, Apply',
     ogImage: '/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/kisan-bhains.webp',
-    title: 'Bihar Me Pashupalan Loan — Yojana Ka Poora Process',
-    desc: 'SC/ST ko 75%, General ko 50% tak subsidy — par window saal bhar nahi khulti (pichhli baar last date 25 July). Documents, unit size aur apply ka process.',
-    ogTitle: 'Bihar Pashupalan Loan Yojana 2026 — 50-75% Subsidy',
+    title: 'Bihar Me Pashupalan Loan: Yojana Ka Poora Process',
+    desc: 'SC/ST ko 75%, General ko 50% tak subsidy: par window saal bhar nahi khulti (pichhli baar last date 25 July). Documents, unit size aur apply ka process.',
+    ogTitle: 'Bihar Pashupalan Loan Yojana 2026: 50-75% Subsidy',
     keywords: [
       'bihar pashupalan loan yojana 2026',
       'bihar pashupalan loan yojana 2026 last date',
@@ -242,8 +242,8 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'rashtriya-gokul-mission-subsidy',
     ogImage: '/images/articles/loan-mandi-pashupalan/rashtriya-gokul-mission-subsidy/desi-gaay.webp',
     title: 'Rashtriya Gokul Mission Se Subsidy Kaise Milti Hai',
-    desc: 'RGM se kisan ko kya milta hai — IVF pregnancy par ₹5,000, sex-sorted semen par 50% subsidy, muft AI aur Breed Multiplication Farm par ₹2 crore tak.',
-    ogTitle: 'Rashtriya Gokul Mission — IVF ₹5,000 Subsidy',
+    desc: 'RGM se kisan ko kya milta hai: IVF pregnancy par ₹5,000, sex-sorted semen par 50% subsidy, muft AI aur Breed Multiplication Farm par ₹2 crore tak.',
+    ogTitle: 'Rashtriya Gokul Mission: IVF ₹5,000 Subsidy',
     keywords: [
       'rashtriya gokul mission 2026',
       'desi gay palan subsidy',
@@ -264,9 +264,9 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'gau-mutra-kharid-yojana-up-2026',
     title: 'UP Me Gau Mutra ₹10/Litre: Pilot Yojana Kahan Chal Rahi Hai',
-    desc: 'Bulandshahr ke Narsena gaon mein UP sarkaar ka pilot — gaay ke mutra ka rate ₹10 prati litre, FPO sangrah kendra, mahilaon ko +₹2 commission.',
-    seoTitle: 'Gaay Ke Mutra Se Kamai — UP ₹10 Prati Litre',
-    ogTitle: 'Gau Mutra Kharid Yojana UP — ₹10 Prati Litre',
+    desc: 'Bulandshahr ke Narsena gaon mein UP sarkaar ka pilot: gaay ke mutra ka rate ₹10 prati litre, FPO sangrah kendra, mahilaon ko +₹2 commission.',
+    seoTitle: 'Gaay Ke Mutra Se Kamai: UP ₹10 Prati Litre',
+    ogTitle: 'Gau Mutra Kharid Yojana UP: ₹10 Prati Litre',
     keywords: [
       'gau mutra kharid yojana up 2026',
       'gaay ke mutra ka rate 10 rupaye litre',

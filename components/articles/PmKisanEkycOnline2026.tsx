@@ -28,19 +28,19 @@ const RELATED_CARDS = [
 const FAQS_DATA = [
   {
     q: 'PM Kisan eKYC bina mobile number ke kaise karein?',
-    a: 'Agar Aadhaar mein mobile number link nahi hai, toh online OTP wala tarika kaam nahi karega. Aapko apne nazdeeki CSC (Common Service Centre) jaana hoga. Wahan fingerprint (biometric) scan karke eKYC ho jayegi. Iska government-fixed charge ₹15 hai — usse zyada koi maange toh galat hai.',
+    a: 'Agar Aadhaar mein mobile number link nahi hai, toh online OTP wala tarika kaam nahi karega. Aapko apne nazdeeki CSC (Common Service Centre) jaana hoga. Wahan fingerprint (biometric) scan karke eKYC ho jayegi. Iska government-fixed charge ₹15 hai. Usse zyada koi maange toh galat hai.',
   },
   {
     q: 'CSC par PM Kisan eKYC ke liye kitna paisa dena chahiye?',
-    a: 'Portal/app se OTP ya Face Auth wala verification bilkul free hai. CSC par biometric ka government-fixed charge ₹15 hai — bas itna hi. Operator ₹50-100 ya zyada maange toh fraud hai; usi waqt 155261 par ya CSC ke district manager se complaint karein.',
+    a: 'Portal/app se OTP ya Face Auth wala verification bilkul free hai. CSC par biometric ka government-fixed charge ₹15 hai. Bas itna hi. Operator ₹50-100 ya zyada maange toh fraud hai; usi waqt 155261 par ya CSC ke district manager se complaint karein.',
   },
   {
-    q: 'Aadhaar mein "Sunita Devi" aur PM Kisan mein "Sunita" — kya eKYC hogi?',
+    q: 'Aadhaar mein "Sunita Devi" aur PM Kisan mein "Sunita", kya eKYC hogi?',
     a: 'Nahi. System exact string match karta hai. "Devi" likha hai ya nahi, ek space ka farak bhi "Demographic Mismatch" error de dega. Pehle PM Kisan portal par ya Aadhaar mein naam correction karwayein, phir eKYC karein.',
   },
   {
     q: 'eKYC aur NPCI (Aadhaar seeding) mein kya farak hai?',
-    a: 'eKYC aapki pehchaan verify karti hai — ki aap wahi kisan hain. NPCI seeding aapke bank account ko Aadhaar se DBT ke liye jodti hai — ki paisa kis account mein jayega. Dono alag jagah hote hain: eKYC PM Kisan portal/CSC par, NPCI seeding aapke bank branch par. Kist ke liye DONO complete hone chahiye.',
+    a: 'eKYC aapki pehchaan verify karti hai. Ki aap wahi kisan hain. NPCI seeding aapke bank account ko Aadhaar se DBT ke liye jodti hai. Ki paisa kis account mein jayega. Dono alag jagah hote hain: eKYC PM Kisan portal/CSC par, NPCI seeding aapke bank branch par. Kist ke liye DONO complete hone chahiye.',
   },
   {
     q: 'eKYC ek baar ho gayi, kya har saal dobara karni padegi?',
@@ -86,7 +86,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/pm-kisan-ekyc-online-2026/otp-vs-biometric.webp'}
-            alt="PM Kisan eKYC OTP vs biometric comparison — dono tarike samjho"
+            alt="PM Kisan eKYC OTP vs biometric comparison. Dono tarike samjho"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -95,7 +95,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            OTP Ya Biometric — Kaunsa Tarika Aapke Liye Sahi Hai?
+            OTP Ya Biometric. Kaunsa Tarika Aapke Liye Sahi Hai?
           </p>
         </div>
 
@@ -112,7 +112,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         <section className="mb-8">
           <SH>PM Kisan eKYC Asal Mein Kya Hai aur Kyun Zaroori Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Simple shabdon mein samjhein — sarkar yeh confirm karna chahti hai ki jo insaan PM Kisan Samman Nidhi ka paisa le raha hai, woh sach mein wahi kisan hai jiske naam par zameen hai. Pehle ke saalon mein bahut se fake ya duplicate beneficiaries ne system ka faayda uthaya tha.
+            Simple shabdon mein samjhein, sarkar yeh confirm karna chahti hai ki jo insaan PM Kisan Samman Nidhi ka paisa le raha hai, woh sach mein wahi kisan hai jiske naam par zameen hai. Pehle ke saalon mein bahut se fake ya duplicate beneficiaries ne system ka faayda uthaya tha.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             eKYC (Electronic Know Your Customer) ka matlab hai aapki Aadhaar details ko PM Kisan database se live match karna. Jab aap OTP dalte hain ya fingerprint scan karte hain, toh UIDAI (Aadhaar wale) sarkar ko wahin "Haan" ya "Na" mein jawab dete hain.
@@ -146,7 +146,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         <section className="mb-8">
           <SH>Tarika 1: OTP Based eKYC (Sabse Fast aur Ghar Baithe)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Jab log <strong>"otp based ekyc"</strong> search karte hain, unka matlab yahi tarika hota hai — sirf Aadhaar-linked mobile se verification, bina kahin jaaye. Agar aapka mobile number Aadhaar card se pehle se linked hai, toh yeh sabse best, surakshit aur tezi se kaam karne wala option hai. Kahin jaane ki zaroorat nahi.
+            Jab log <strong>"otp based ekyc"</strong> search karte hain, unka matlab yahi tarika hota hai. Sirf Aadhaar-linked mobile se verification, bina kahin jaaye. Agar aapka mobile number Aadhaar card se pehle se linked hai, toh yeh sabse best, surakshit aur tezi se kaam karne wala option hai. Kahin jaane ki zaroorat nahi.
           </p>
           <StepList>
             <SI n={1}>Apne phone ya computer par official portal <strong>pmkisan.gov.in</strong> kholo.</SI>
@@ -163,7 +163,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-ekyc-online-2026/csc-biometric-process.webp"
-            alt="CSC par PM Kisan eKYC biometric fingerprint process — step by step"
+            alt="CSC par PM Kisan eKYC biometric fingerprint process, step by step"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -171,7 +171,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            CSC Par Fingerprint Se eKYC — Jab OTP Na Aaye
+            CSC Par Fingerprint Se eKYC. Jab OTP Na Aaye
           </p>
         </div>
 
@@ -183,12 +183,12 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
           <StepList>
             <SI n={1}>Apne gaon ya shehar ke nazdeeki CSC centre jao.</SI>
             <SI n={2}>Aadhaar card ki original ya ek clear photocopy saath le jao.</SI>
-            <SI n={3}>Operator ko saaf shabdon mein bolo — "PM Kisan wala verification karna hai".</SI>
+            <SI n={3}>Operator ko saaf shabdon mein bolo, "PM Kisan wala verification karna hai".</SI>
             <SI n={4}>Woh aapse machine par apna fingerprint (anguthe ya ungli ka nishaan) scan karne ko kahenge.</SI>
             <SI n={5}>Scan successful hote hi confirmation message aayega. Transaction ki chhoti si receipt sambhal kar le lo.</SI>
           </StepList>
           <DB>
-            <strong>Chetawani (Warning):</strong> CSC par biometric eKYC ka charge Government of India ne <strong>₹15 fixed</strong> kiya hai — bas itna hi dena hai. Operator ₹50, ₹100 ya "file charge" ke naam par zyada maange toh woh fraud hai. Usi waqt PM Kisan helpline <strong>155261</strong> par ya CSC ke district manager se complaint karo. Complaint karte waqt CSC centre ka naam/location aur date batayein — tabhi action possible hota hai.
+            <strong>Chetawani (Warning):</strong> CSC par biometric eKYC ka charge Government of India ne <strong>₹15 fixed</strong> kiya hai. Bas itna hi dena hai. Operator ₹50, ₹100 ya "file charge" ke naam par zyada maange toh woh fraud hai. Usi waqt PM Kisan helpline <strong>155261</strong> par ya CSC ke district manager se complaint karo. Complaint karte waqt CSC centre ka naam/location aur date batayein, tabhi action possible hota hai.
           </DB>
         </section>
 
@@ -210,9 +210,9 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         </section>
 
         <section className="mb-8">
-          <SH>eKYC vs NPCI Seeding — Do Alag Cheezein (Sabse Bada Confusion)</SH>
+          <SH>eKYC vs NPCI Seeding. Do Alag Cheezein (Sabse Bada Confusion)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bahut se kisan eKYC karwa kar sochte hain ki ab kaam khatam — aur phir bhi kist nahi aati. Wajah: <strong>eKYC aur NPCI/DBT seeding do bilkul alag requirements hain</strong>, aur kist ke liye dono zaroori hain. Farak yaad rakhne ka aasaan tarika:
+            Bahut se kisan eKYC karwa kar sochte hain ki ab kaam khatam. Aur phir bhi kist nahi aati. Wajah: <strong>eKYC aur NPCI/DBT seeding do bilkul alag requirements hain</strong>, aur kist ke liye dono zaroori hain. Farak yaad rakhne ka aasaan tarika:
           </p>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
@@ -226,8 +226,8 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
               <tbody className="text-xs text-[var(--color-text)]">
                 <tr className="bg-[var(--color-card)]">
                   <td className="p-3 border-b border-[var(--color-border)] font-bold">Kya verify hota hai</td>
-                  <td className="p-3 border-b border-[var(--color-border)]">Aapki pehchaan — "paisa lene wala wahi kisan hai"</td>
-                  <td className="p-3 border-b border-[var(--color-border)]">Aapka bank account — "paisa kis account mein jayega"</td>
+                  <td className="p-3 border-b border-[var(--color-border)]">Aapki pehchaan, "paisa lene wala wahi kisan hai"</td>
+                  <td className="p-3 border-b border-[var(--color-border)]">Aapka bank account, "paisa kis account mein jayega"</td>
                 </tr>
                 <tr className="bg-[var(--color-bg-alt)]">
                   <td className="p-3 border-b border-[var(--color-border)] font-bold">Kahan hota hai</td>
@@ -243,14 +243,14 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             </table>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Matlab: eKYC YES ho gayi aur phir bhi paisa nahi aa raha, toh agla checkpoint bank hai — branch jaakar bolein "mera account NPCI/DBT ke liye Aadhaar se seed karwana hai". Ek account hi Aadhaar se DBT-seeded ho sakta hai; naya account khulwaya hai toh seeding wahan shift karwani padti hai.
+            Matlab: eKYC YES ho gayi aur phir bhi paisa nahi aa raha, toh agla checkpoint bank hai. Branch jaakar bolein "mera account NPCI/DBT ke liye Aadhaar se seed karwana hai". Ek account hi Aadhaar se DBT-seeded ho sakta hai; naya account khulwaya hai toh seeding wahan shift karwani padti hai.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>OTP Based Ya Biometric — Konsa Tarika Chunein?</SH>
+          <SH>OTP Based Ya Biometric. Konsa Tarika Chunein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Teeno tarike government ki nazar mein barabar valid hain — koi ek "asli" ya "behtar" nahi hai, sirf situation ke hisaab se sahi option badalta hai.
+            Teeno tarike government ki nazar mein barabar valid hain. Koi ek "asli" ya "behtar" nahi hai, sirf situation ke hisaab se sahi option badalta hai.
           </p>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
@@ -315,7 +315,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
               { err: 'Demographic Mismatch (Naam ka farak)', fix: 'Aadhaar aur PM Kisan portal par naam EXACT same hona chahiye. "Kumar" likha hai ya nahi, ek space ka farak bhi reject karta hai. Pehle naam sudharo.' },
               { err: 'Server Down / Page Nahi Khulta', fix: 'Yeh aapki galti nahi hai. Din ke 11 baje se 4 baje tak server par load sabse zyada hota hai. Subah 6:00 AM se 8:00 AM best time hai try karne ka.' },
               { err: 'Invalid Aadhaar Number', fix: 'Dobara check karein ki aapne 12 digit sahi dale hain. Kabhi-kabhi space ya typing mistake ho jati hai.' },
-              { err: 'eKYC Done, Par Status "NO" Dikha Raha Hai', fix: 'Server sync mein time lagta hai — kuch din wait karein. Phir bhi "NO" ho toh CSC receipt ke saath dobara verify karwayein. Aur yaad rakhein: eKYC YES hone par bhi paisa NPCI seeding ke bina nahi aata — wo bank ka alag kaam hai (upar wala section padhein).' },
+              { err: 'eKYC Done, Par Status "NO" Dikha Raha Hai', fix: 'Server sync mein time lagta hai — kuch din wait karein. Phir bhi "NO" ho toh CSC receipt ke saath dobara verify karwayein. Aur yaad rakhein: eKYC YES hone par bhi paisa NPCI seeding ke bina nahi aata. Wo bank ka alag kaam hai (upar wala section padhein).' },
             ].map(({ err, fix }) => (
               <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden shadow-sm">
                 <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">
@@ -335,7 +335,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         <section className="mb-8">
           <SH>Status Kaise Check Karein? (100% Confirmation)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            eKYC ho gayi ya nahi — andaze mein na rahein, khud check karein. Yeh bahut easy hai.
+            eKYC ho gayi ya nahi. Andaze mein na rahein, khud check karein. Yeh bahut easy hai.
           </p>
           <StepList>
             <SI n={1}>pmkisan.gov.in par jao aur "Beneficiary Status" option par click karo.</SI>
@@ -357,12 +357,12 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         <section className="mb-8">
           <SH>Sab Try Kar Liya, Phir Bhi Nahi Ho Rahi? (Escalation)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            OTP fail, CSC par bhi issue, error samajh nahi aa raha — toh is order mein aage badhein:
+            OTP fail, CSC par bhi issue, error samajh nahi aa raha, toh is order mein aage badhein:
           </p>
           <StepList>
             <SI n={1}>PM Kisan helpline <strong>155261</strong> ya <strong>011-24300606</strong> par call karke apna Aadhaar/registration number dekar issue register karwayein aur complaint/ticket number note karein.</SI>
-            <SI n={2}>pmkisan.gov.in ke Grievance section mein online complaint file karein — wahan status bhi track hota hai.</SI>
-            <SI n={3}>Phir bhi hal na nikle toh apne state ke nodal officer se contact karein — state-wise list aur process hamari <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-blue-600 dark:text-blue-400 font-medium">Nodal Officer Guide</Link> mein hai.</SI>
+            <SI n={2}>pmkisan.gov.in ke Grievance section mein online complaint file karein, wahan status bhi track hota hai.</SI>
+            <SI n={3}>Phir bhi hal na nikle toh apne state ke nodal officer se contact karein, state-wise list aur process hamari <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-blue-600 dark:text-blue-400 font-medium">Nodal Officer Guide</Link> mein hai.</SI>
           </StepList>
         </section>
 
@@ -376,7 +376,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">eKYC Ke Baad Ek Kaam Aur Bacha Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            OTP wala tarika 2 minute ka hai, lekin woh sirf tab chalega jab Aadhaar mein mobile number linked ho — warna seedha CSC jaayein, wahan biometric se ho jayega. Aur eKYC “YES” ho jaane par bhi paisa tabhi aata hai jab bank mein NPCI seeding bhi ho — yeh dono alag kaam hain, dono check karein. Error aaye toh upar wali table mein 108, demographic mismatch aur server-timing wale fixes diye hain.
+            OTP wala tarika 2 minute ka hai, lekin woh sirf tab chalega jab Aadhaar mein mobile number linked ho, warna seedha CSC jaayein, wahan biometric se ho jayega. Aur eKYC “YES” ho jaane par bhi paisa tabhi aata hai jab bank mein NPCI seeding bhi ho. Yeh dono alag kaam hain, dono check karein. Error aaye toh upar wali table mein 108, demographic mismatch aur server-timing wale fixes diye hain.
           </p>
         </div>
 
@@ -390,13 +390,13 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
 
         <CalcBanner
           title="Apna Benefit Calculate Karo"
-          desc="Kitni kist mili, kitni pending — apna hisaab jaano"
+          desc="Kitni kist mili, kitni pending, apna hisaab jaano"
           primaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Calculator →' }}
           secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />
 
         <section className="my-10">
-          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Related Articles — Yeh Bhi Padho</h3>
+          <h3 className="text-lg font-black text-[var(--color-text)] mb-4">Related Articles. Yeh Bhi Padho</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {RELATED_CARDS.map((card) => (
               <Link

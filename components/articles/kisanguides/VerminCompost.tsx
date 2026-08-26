@@ -8,7 +8,7 @@ import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
-  title: 'Vermi Compost Me Kitna Profit — Poora Hisaab',
+  title: 'Vermi Compost Me Kitna Profit. Poora Hisaab',
   description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, subsidy ke raste, unit cost aur real profit calculation ke baare mein sab kuch.',
   keywords: [
     'vermi compost business',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
-    title: 'Vermi Compost Me Kitna Profit — Poora Hisaab',
+    title: 'Vermi Compost Me Kitna Profit. Poora Hisaab',
     description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, subsidy ke raste, unit cost aur real profit calculation ke baare mein sab kuch.',
     type: 'article',
     locale: 'hi_IN',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vermi Compost Me Kitna Profit — Poora Hisaab',
+    title: 'Vermi Compost Me Kitna Profit. Poora Hisaab',
     description: 'Vermi compost business complete guide. Janein organic fertilizer kaise banayein, subsidy ke raste, unit cost aur real profit calculation ke baare mein sab kuch.',
     images: ['https://kisanstatus.com/images/kisanguides/vermi-compost-hero.webp'],
   },
@@ -79,7 +79,7 @@ export default function VerminCompost() {
       />
 
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
-        Gobar Se Khaad, Khaad Se Paisa — Vermi Compost Ka Seedha Hisaab
+        Gobar Se Khaad, Khaad Se Paisa. Vermi Compost Ka Seedha Hisaab
       </h1>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -87,7 +87,7 @@ export default function VerminCompost() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Chemical fertilizers ke daam jis raftar se badh rahe hain, apne hi khet ke gobar aur kachre ko khaad mein badalna ab shauk nahi, zaroorat ban gaya hai. Zyada tar log pehle saal sirf apne khet ke liye banate hain — aur yahi sahi tareeka bhi hai. Quality set ho jaye, phir bechna shuru karo. Sarkar organic farming ko actively push kar rahi hai, isliye khareedar dhoondhna utna mushkil nahi jitna lagta hai.
+        Chemical fertilizers ke daam jis raftar se badh rahe hain, apne hi khet ke gobar aur kachre ko khaad mein badalna ab shauk nahi, zaroorat ban gaya hai. Zyada tar log pehle saal sirf apne khet ke liye banate hain. Aur yahi sahi tareeka bhi hai. Quality set ho jaye, phir bechna shuru karo. Sarkar organic farming ko actively push kar rahi hai, isliye khareedar dhoondhna utna mushkil nahi jitna lagta hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -234,7 +234,7 @@ export default function VerminCompost() {
         <ul className="space-y-4 text-sm text-gray-800 dark:text-gray-200">
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">1. Paramparagat Krishi Vikas Yojana (PKVY):</strong>
-            Cluster-based organic farming ki scheme hai — isme kisan ko ₹50,000 per hectare (3 saal ke liye) ki assistance milti hai, jisme se ₹31,000 seedha organic inputs (khaad, bio-fertilizer waghera) ke liye hota hai. Yeh compost unit banane ki subsidy nahi hai, lekin agar aap khud organic kheti karte hain toh aapke inputs ka kharcha isse cover ho sakta hai — aur PKVY clusters ke kisan aapke pakke customers bhi bante hain.
+            Cluster-based organic farming ki scheme hai. Isme kisan ko ₹50,000 per hectare (3 saal ke liye) ki assistance milti hai, jisme se ₹31,000 seedha organic inputs (khaad, bio-fertilizer waghera) ke liye hota hai. Yeh compost unit banane ki subsidy nahi hai, lekin agar aap khud organic kheti karte hain toh aapke inputs ka kharcha isse cover ho sakta hai. Aur PKVY clusters ke kisan aapke pakke customers bhi bante hain.
           </li>
 
           <li>
@@ -244,7 +244,7 @@ export default function VerminCompost() {
 
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">3. State-Level Schemes:</strong>
-            Kai states apne horticulture/agriculture mission ke under chhoti vermi compost units (pit/bed) par alag se subsidy dete hain — rate aur limit har state mein alag hai. Apne district ke Agriculture ya Horticulture Department office se apne state ka current norm poochhein.
+            Kai states apne horticulture/agriculture mission ke under chhoti vermi compost units (pit/bed) par alag se subsidy dete hain. Rate aur limit har state mein alag hai. Apne district ke Agriculture ya Horticulture Department office se apne state ka current norm poochhein.
           </li>
 
           <li>
@@ -526,7 +526,7 @@ export default function VerminCompost() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Subsidy jo bhi mile — state scheme ki ho ya PM FME ki — uska form bharna banta hai, par pits ka kharch usi mahine aata hai jab aap unhe banate hain, aur subsidy ka paisa aksar 3-6 mahine baad. Is business mein yeh gap aur chubhta hai kyunki pehla batch hi 60-90 din leta hai, yani do taraf se paisa ruka rehta hai. Isliye pits ka budget apni jeb ya KCC se planning karein aur subsidy ko baad mein aane wali rakam maanein, shuruaati punji nahi.
+        Subsidy jo bhi mile, state scheme ki ho ya PM FME ki, uska form bharna banta hai, par pits ka kharch usi mahine aata hai jab aap unhe banate hain, aur subsidy ka paisa aksar 3-6 mahine baad. Is business mein yeh gap aur chubhta hai kyunki pehla batch hi 60-90 din leta hai, yani do taraf se paisa ruka rehta hai. Isliye pits ka budget apni jeb ya KCC se planning karein aur subsidy ko baad mein aane wali rakam maanein, shuruaati punji nahi.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">

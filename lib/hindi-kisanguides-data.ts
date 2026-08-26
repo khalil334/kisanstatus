@@ -4,9 +4,9 @@ import type { HindiArticle } from '@/lib/hindi-articles-data';
 export const HINDI_KISANGUIDES_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/tractor-subsidy',
-    titleHi: 'ट्रैक्टर सब्सिडी 2027 — किस राज्य में कितनी छूट? पूरी लिस्ट',
-    seoTitleHi: 'ट्रैक्टर सब्सिडी 2027 — राज्यवार लिस्ट',
-    desc: 'ट्रैक्टर सब्सिडी 2027 में 50% तक छूट — UP, बिहार, MP, राजस्थान और हरियाणा की राज्यवार subsidy list, पात्रता शर्तें और online आवेदन का पूरा तरीका जानिए।',
+    titleHi: 'ट्रैक्टर सब्सिडी 2027: किस राज्य में कितनी छूट? पूरी लिस्ट',
+    seoTitleHi: 'ट्रैक्टर सब्सिडी 2027: राज्यवार लिस्ट',
+    desc: 'ट्रैक्टर सब्सिडी 2027 में 50% तक छूट: UP, बिहार, MP, राजस्थान और हरियाणा की राज्यवार subsidy list, पात्रता शर्तें और online आवेदन का पूरा तरीका जानिए।',
     keywords: ['ट्रैक्टर सब्सिडी 2027', 'tractor subsidy state wise'],
     category: 'agri-business',
     publishedTime: '2026-03-31T08:31:21+05:30',
@@ -17,9 +17,9 @@ export const HINDI_KISANGUIDES_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/namo-drone-didi-yojana',
-    titleHi: 'नमो ड्रोन दीदी योजना — कोई form नहीं, रास्ता SHG से जाता है',
-    seoTitleHi: 'नमो ड्रोन दीदी योजना — SHG चयन, ₹8 लाख',
-    desc: 'नमो ड्रोन दीदी में online form नहीं है — चयन SHG से होता है। 80% subsidy (₹8 लाख तक), 15 दिन की training और कमाई का सच्चा हिसाब — पूरा रास्ता यहां पढ़िए।',
+    titleHi: 'नमो ड्रोन दीदी योजना: कोई form नहीं, रास्ता SHG से जाता है',
+    seoTitleHi: 'नमो ड्रोन दीदी योजना: SHG चयन, ₹8 लाख',
+    desc: 'नमो ड्रोन दीदी में online form नहीं है: चयन SHG से होता है। 80% subsidy (₹8 लाख तक), 15 दिन की training और कमाई का सच्चा हिसाब: पूरा रास्ता यहां पढ़िए।',
     keywords: [
       'नमो ड्रोन दीदी योजना',
       'namo drone didi yojana in hindi',

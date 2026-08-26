@@ -5,8 +5,8 @@ import { buildFaqSchema } from '@/lib/faq-schema';
 
 const FAQS = [
   {
-    q: 'रजिस्टर्ड SIM खो गया है — क्या OTP के बिना कुछ देखा जा सकता है?',
-    a: 'हां, आधा काम हो जाता है। Farmers Corner की Beneficiary List में OTP नहीं लगता — राज्य, जिला, तहसील, ब्लॉक और गांव चुनने पर पूरे गांव की सूची खुल जाती है। नाम दिख गया तो रिकॉर्ड सही है और सिर्फ नंबर बदलवाना बाकी है। लेकिन eKYC या seeding वाले field सूची में नहीं दिखते — उनके लिये OTP वाला रास्ता ही चाहिये, इसलिये नंबर update कराना टालिये मत।',
+    q: 'रजिस्टर्ड SIM खो गया है. क्या OTP के बिना कुछ देखा जा सकता है?',
+    a: 'हां, आधा काम हो जाता है। Farmers Corner की Beneficiary List में OTP नहीं लगता. राज्य, जिला, तहसील, ब्लॉक और गांव चुनने पर पूरे गांव की सूची खुल जाती है। नाम दिख गया तो रिकॉर्ड सही है और सिर्फ नंबर बदलवाना बाकी है। लेकिन eKYC या seeding वाले field सूची में नहीं दिखते. उनके लिये OTP वाला रास्ता ही चाहिये, इसलिये नंबर update कराना टालिये मत।',
   },
   {
     q: 'क्या सिर्फ मोबाइल नंबर से स्टेटस देख सकते हैं?',
@@ -14,43 +14,43 @@ const FAQS = [
   },
   {
     q: 'OTP नहीं आ रहा, क्या करूं?',
-    a: 'पहले network check करें और 2-3 मिनट रुकें। फिर भी न आए तो हो सकता है आपका पुराना नंबर registered हो। SIM बंद हो चुका है तो पहले नंबर update कराना पड़ेगा — नंबर बदलवाने का पूरा तरीका अलग page पर step-by-step समझाया है।',
+    a: 'पहले network check करें और 2-3 मिनट रुकें। फिर भी न आए तो हो सकता है आपका पुराना नंबर registered हो। SIM बंद हो चुका है तो पहले नंबर update कराना पड़ेगा. नंबर बदलवाने का पूरा तरीका अलग page पर step-by-step समझाया है।',
   },
   {
     q: 'Registration number भूल गया हूं, कहां मिलेगा?',
-    a: 'Know Your Status page पर ही "Know your registration no." का link है। वहां मोबाइल नंबर या आधार डालकर OTP verify करें — registration number screen पर आ जाएगा। कहीं लिखकर रख लें।',
+    a: 'Know Your Status page पर ही "Know your registration no." का link है। वहां मोबाइल नंबर या आधार डालकर OTP verify करें, registration number screen पर आ जाएगा। कहीं लिखकर रख लें।',
   },
   {
     q: 'eKYC में NO दिख रहा है, इसका अर्थ?',
-    a: 'अर्थ यह कि आपकी eKYC pending है और अगली किस्त रुक सकती है। OTP से eKYC portal पर ही हो जाती है, या CSC पर biometric से। यह आपके हाथ का काम है — शिकायत से नहीं, खुद करने से होगा।',
+    a: 'अर्थ यह कि आपकी eKYC pending है और अगली किस्त रुक सकती है। OTP से eKYC portal पर ही हो जाती है, या CSC पर biometric से। यह आपके हाथ का काम है. शिकायत से नहीं, खुद करने से होगा।',
   },
   {
     q: 'Status में सब YES है फिर भी पैसा नहीं आया?',
-    a: 'FTO processed देखिए। अगर FTO generate हो गया है तो payment रास्ते में है — बैंक तक पहुंचने में कुछ दिन लगते हैं। अगर हफ्तों बाद भी नहीं आया, तो बैंक में NPCI आधार seeding check कराएं।',
+    a: 'FTO processed देखिए। अगर FTO generate हो गया है तो payment रास्ते में है. बैंक तक पहुंचने में कुछ दिन लगते हैं। अगर हफ्तों बाद भी नहीं आया, तो बैंक में NPCI आधार seeding check कराएं।',
   },
   {
     q: 'क्या किसी app से भी check हो सकता है?',
     a: 'हां, PM-KISAN GoI का official app है (Google Play पर)। Face authentication से eKYC भी उसमें हो जाती है। लेकिन app सिर्फ official store से लें — मिलते-जुलते नाम वाले fake apps बहुत हैं।',
   },
   {
-    q: 'पति और पत्नी दोनों का एक ही मोबाइल नंबर registered है — status अलग-अलग कैसे देखें?',
-    a: 'एक नंबर पर एक से ज्यादा आवेदन जुड़े हों तो "Know your registration no." में OTP के बाद list दिख सकती है, या पहला record ही खुलता है। पक्का तरीका यह है कि registration number अलग-अलग निकाल कर संभाल लें, और status हर बार registration number से देखें — नंबर से नहीं। ध्यान रखें, योजना का लाभ परिवार में एक ही सदस्य को मिलता है।',
+    q: 'पति और पत्नी दोनों का एक ही मोबाइल नंबर registered है. Status अलग-अलग कैसे देखें?',
+    a: 'एक नंबर पर एक से ज्यादा आवेदन जुड़े हों तो "Know your registration no." में OTP के बाद list दिख सकती है, या पहला record ही खुलता है। पक्का तरीका यह है कि registration number अलग-अलग निकाल कर संभाल लें, और status हर बार registration number से देखें. नंबर से नहीं। ध्यान रखें, योजना का लाभ परिवार में एक ही सदस्य को मिलता है।',
   },
   {
     q: 'Captcha बार-बार गलत बता रहा है, जबकि मैं सही डाल रहा हूं।',
     a: 'यह लगभग हमेशा browser का पुराना page होता है। Page को refresh करें ताकि नया captcha बने, फिर छोटे-बड़े अक्षरों का ध्यान रखकर डालें। एक बार में न बने तो browser का cache साफ करके या दूसरे browser से खोलें।',
   },
   {
-    q: 'गांव के CSC वाले status check करने के ₹50-100 लेते हैं — यह ठीक है?',
+    q: 'गांव के CSC वाले status check करने के ₹50-100 लेते हैं. यह ठीक है?',
     a: 'Status देखना portal पर मुफ्त है, यह काम आप खुद phone से कर सकते हैं। CSC पर biometric eKYC जैसी सेवाओं की तय सरकारी फीस होती है, लेकिन सिर्फ status दिखाने का कोई शुल्क नहीं बनता। दो मिनट खुद देख लेना पैसे बचाने का सीधा रास्ता है।',
   },
   {
-    q: 'Status में मेरा नाम गलत spelling में दिख रहा है — क्या पैसा रुक जाएगा?',
-    a: 'रुक सकता है, क्योंकि आधार, बैंक खाते और आवेदन का नाम मिलान होता है। इसे अनदेखा न करें — correction का रास्ता portal के correction form से या कृषि विभाग/CSC के जरिए है। जितनी जल्दी सुधरेगा, उतना कम इंतजार।',
+    q: 'Status में मेरा नाम गलत spelling में दिख रहा है. क्या पैसा रुक जाएगा?',
+    a: 'रुक सकता है, क्योंकि आधार, बैंक खाते और आवेदन का नाम मिलान होता है। इसे अनदेखा न करें, correction का रास्ता portal के correction form से या कृषि विभाग/CSC के जरिए है। जितनी जल्दी सुधरेगा, उतना कम इंतजार।',
   },
   {
     q: 'मैं दूसरे राज्य में मजदूरी करता हूं, वहां बैठे-बैठे status देख सकता हूं?',
-    a: 'हां। Portal internet पर है, कहीं से भी खुलेगा — शर्त एक ही है कि registered मोबाइल नंबर वाला SIM आपके पास चालू हो, क्योंकि OTP उसी पर आएगा। घर से बाहर निकलने से पहले वह SIM साथ रखना या नंबर update करा लेना समझदारी है।',
+    a: 'हां। Portal internet पर है, कहीं से भी खुलेगा. शर्त एक ही है कि registered मोबाइल नंबर वाला SIM आपके पास चालू हो, क्योंकि OTP उसी पर आएगा। घर से बाहर निकलने से पहले वह SIM साथ रखना या नंबर update करा लेना समझदारी है।',
   },
   {
     q: 'कितने दिन में एक बार status देखना चाहिए?',
@@ -124,7 +124,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
       />
       <p>
-        <strong>आपके पास registration number नहीं है, सिर्फ mobile number है — तो क्या स्टेटस चेक हो
+        <strong>आपके पास registration number नहीं है, सिर्फ mobile number है. तो क्या स्टेटस चेक हो
         सकता है?</strong>
       </p>
       <p>
@@ -134,7 +134,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         registration number वापस निकलता है, और उसी पर OTP आता है।
       </p>
       <p>
-        नीचे पूरा रास्ता है — पहले registration number निकालना, फिर status खोलना, फिर screen पर लिखी
+        नीचे पूरा रास्ता है. पहले registration number निकालना, फिर status खोलना, फिर screen पर लिखी
         अंग्रेजी lines को पढ़ना, और आखिर में वो हिस्सा जो वाकई काम का है: कौन सा field NO दिख रहा
         है और उस पर आज क्या करना है। बीच में वो गलतियां भी लिखी हैं जिनकी वजह से लोग घंटों अटके रहते हैं।
       </p>
@@ -151,30 +151,30 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         priority
         src="/images/articles/hindi-yojna/status-check-mobile-se/phone-status-check.webp"
         alt="मोबाइल पर PM Kisan status check करता किसान"
-        caption="पूरा काम phone से ही हो जाता है — CSC जाने की जरूरत नहीं"
+        caption="पूरा काम phone से ही हो जाता है. CSC जाने की जरूरत नहीं"
       />
 
-      <SH>शुरू करने से पहले — तीन चीजें पास रखें</SH>
+      <SH>शुरू करने से पहले. तीन चीजें पास रखें</SH>
       <p>
         बहुत लोग आधे रास्ते में अटकते हैं क्योंकि कोई एक चीज हाथ में नहीं होती। दो मिनट लगाकर पहले यह तीन
         इकट्ठा कर लें, फिर काम एक ही बैठक में पूरा होगा:
       </p>
       <ol className="space-y-0 my-4">
         <Step n={1}>
-          <strong>वह मोबाइल नंबर जो योजना में registered है</strong> — जरूरी नहीं कि यह आपका आज का मुख्य
+          <strong>वह मोबाइल नंबर जो योजना में registered है</strong>. जरूरी नहीं कि यह आपका आज का मुख्य
           नंबर हो। जिस नंबर से form भरा गया था, OTP उसी पर जाएगा। SIM चालू और phone पास में हो।
         </Step>
         <Step n={2}>
-          <strong>आधार कार्ड</strong> — नंबर याद न हो तो कार्ड सामने रखें। Registration number निकालने का
+          <strong>आधार कार्ड</strong>. नंबर याद न हो तो कार्ड सामने रखें। Registration number निकालने का
           दूसरा रास्ता आधार से भी है।
         </Step>
         <Step n={3}>
-          <strong>बैंक passbook</strong> — status में नाम या खाते से जुड़ी गड़बड़ी दिखे तो तुरंत मिलान कर
+          <strong>बैंक passbook</strong>, status में नाम या खाते से जुड़ी गड़बड़ी दिखे तो तुरंत मिलान कर
           पाएंगे, बाद में दोबारा बैठना नहीं पड़ेगा।
         </Step>
       </ol>
       <p>
-        और हां — काम phone के साधारण browser (Chrome आदि) में हो जाता है। किसी अलग app या software की
+        और हां. काम phone के साधारण browser (Chrome आदि) में हो जाता है। किसी अलग app या software की
         जरूरत नहीं।
       </p>
 
@@ -186,14 +186,14 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         <Step n={1}>
           Phone के browser में{' '}
           <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> खोलें।
-          Page थोड़ा नीचे scroll करें — <strong>Farmers Corner</strong> में <strong>Know Your Status</strong>{' '}
+          Page थोड़ा नीचे scroll करें, <strong>Farmers Corner</strong> में <strong>Know Your Status</strong>{' '}
           का box दिखेगा।
         </Step>
         <Step n={2}>
           उस page पर ऊपर की तरफ <strong>Know your registration no.</strong> का link है। उस पर tap करें।
         </Step>
         <Step n={3}>
-          दो option मिलेंगे — <strong>Mobile Number</strong> या <strong>Aadhaar Number</strong>। Mobile
+          दो option मिलेंगे, <strong>Mobile Number</strong> या <strong>Aadhaar Number</strong>। Mobile
           number वाला चुनें, अपना registered नंबर डालें, captcha भरें।
         </Step>
         <Step n={4}>
@@ -201,25 +201,25 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         </Step>
         <Step n={5}>
           Screen पर आपका <strong>registration number</strong> आ जाएगा। इसे कॉपी में या phone के notes में
-          लिख लें — हर बार यही काम आएगा।
+          लिख लें. हर बार यही काम आएगा।
         </Step>
       </ol>
       <div className="my-4 p-4 bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-r-xl text-sm text-[var(--color-text)] leading-relaxed">
         OTP उसी नंबर पर आएगा जो PM Kisan record में registered है। अगर वो SIM बंद हो चुका है, तो पहले नंबर
-        बदलवाना पड़ेगा — पूरा तरीका{' '}
+        बदलवाना पड़ेगा. पूरा तरीका{' '}
         <Link href="/articles/PmKisanMobileNumberChangeUpdate">इस page पर step-by-step समझाया</Link>{' '}
         है।
       </div>
       <p>
         एक सलाह जो आगे बहुत बचाएगी: registration number मिलते ही उसका screenshot ले लें और phone के notes
         में भी टाइप कर दें। Screenshot gallery साफ करते वक्त डिलीट हो जाते हैं, टाइप किया नंबर टिका रहता
-        है। घर में किसी और के phone पर भी लिख कर रख दें — अगली किस्त के time यही दो मिनट बचेंगे।
+        है। घर में किसी और के phone पर भी लिख कर रख दें. अगली किस्त के time यही दो मिनट बचेंगे।
       </p>
 
       <Figure
         src="/images/articles/hindi-yojna/status-check-mobile-se/know-registration.webp"
-        alt="Know your registration number वाला page — mobile या Aadhaar से नंबर निकालें"
-        caption="Mobile या Aadhaar — दोनों से registration number निकल जाता है"
+        alt="Know your registration number वाला page, mobile या Aadhaar से नंबर निकालें"
+        caption="Mobile या Aadhaar. दोनों से registration number निकल जाता है"
       />
 
       <SH>Step 2 — अब स्टेटस देखें</SH>
@@ -230,25 +230,25 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         <Step n={1}>Registration number वाले box में नंबर डालें।</Step>
         <Step n={2}>Captcha code भरें और <strong>Get OTP</strong> दबाएं।</Step>
         <Step n={3}>Mobile पर आया OTP डालकर submit करें।</Step>
-        <Step n={4}>बस — आपका पूरा record screen पर है। नाम, राज्य, किस्तों की history, eKYC की स्थिति, सब।</Step>
+        <Step n={4}>बस. आपका पूरा record screen पर है। नाम, राज्य, किस्तों की history, eKYC की स्थिति, सब।</Step>
       </ol>
       <p>
         जो page खुलेगा उसमें ऊपर आपकी बुनियादी जानकारी होती है और नीचे किस्तों की सूची। सूची में हर किस्त के
-        सामने उसकी स्थिति लिखी रहती है। नई से नई entry ही काम की है — उसी से पता चलता है कि इस बार का
+        सामने उसकी स्थिति लिखी रहती है। नई से नई entry ही काम की है. उसी से पता चलता है कि इस बार का
         पैसा किस पड़ाव पर है।
       </p>
 
       <div className="my-5 border-2 border-[var(--color-border)] rounded-2xl overflow-hidden bg-[var(--color-card)] shadow-sm">
         <div className="bg-green-50 dark:bg-green-900/20 border-b border-[var(--color-border)] px-4 py-2.5">
           <span className="text-green-700 dark:text-green-300 text-xs font-bold">
-             अब असली काम — सरकारी site पर status देखिए:
+             अब असली काम. सरकारी site पर status देखिए:
           </span>
         </div>
         <div className="p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">
           <div>
-            <p className="font-bold text-[var(--color-text)] text-sm">PM Kisan Portal — Know Your Status</p>
+            <p className="font-bold text-[var(--color-text)] text-sm">PM Kisan Portal. Know Your Status</p>
             <p className="text-xs text-[var(--color-text-muted)] mt-0.5">
-              Government of India — pmkisan.gov.in
+              Government of India, pmkisan.gov.in
             </p>
           </div>
           <a
@@ -264,8 +264,8 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
 
       <Figure
         src="/images/articles/hindi-yojna/status-check-mobile-se/status-fields.webp"
-        alt="Status के तीन मुख्य field — eKYC, bank seeding, land seeding"
-        caption="तीनों field YES हों तभी किस्त आती है — कोई भी NO हो तो पहले उसे ठीक करें"
+        alt="Status के तीन मुख्य field, eKYC, bank seeding, land seeding"
+        caption="तीनों field YES हों तभी किस्त आती है. कोई भी NO हो तो पहले उसे ठीक करें"
       />
 
       <SH>Screen पर जो दिख रहा है, उसे कैसे पढ़ें?</SH>
@@ -285,7 +285,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
           <tbody>
             <tr>
               <td className="border border-[var(--color-border)] p-2 font-semibold">eKYC Status</td>
-              <td className="border border-[var(--color-border)] p-2">आधार verification पूरा — किस्त के लिए रास्ता साफ</td>
+              <td className="border border-[var(--color-border)] p-2">आधार verification पूरा. किस्त के लिए रास्ता साफ</td>
               <td className="border border-[var(--color-border)] p-2">तुरंत eKYC कराएं, वरना किस्त रुकेगी</td>
             </tr>
             <tr>
@@ -300,14 +300,14 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
             </tr>
             <tr>
               <td className="border border-[var(--color-border)] p-2 font-semibold">FTO Processed</td>
-              <td className="border border-[var(--color-border)] p-2">Fund Transfer Order बन गया — पैसा रास्ते में</td>
-              <td className="border border-[var(--color-border)] p-2">अभी payment queue में नहीं — बाकी तीनों field पहले check करें</td>
+              <td className="border border-[var(--color-border)] p-2">Fund Transfer Order बन गया. पैसा रास्ते में</td>
+              <td className="border border-[var(--color-border)] p-2">अभी payment queue में नहीं. बाकी तीनों field पहले check करें</td>
             </tr>
           </tbody>
         </table>
       </div>
       <p>
-        सीधी सी बात — पैसा आने के लिए ऊपर की तीनों चीजें YES होनी चाहिए। तीनों YES हैं और FTO भी processed
+        सीधी सी बात. पैसा आने के लिए ऊपर की तीनों चीजें YES होनी चाहिए। तीनों YES हैं और FTO भी processed
         है, तो बस बैंक पहुंचने का इंतजार है। FTO वाली पूरी कहानी अलग से{' '}
         <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai">FTO generated का अर्थ</Link> वाले
         article में लिखी है।
@@ -330,7 +330,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
           <tbody>
             <tr>
               <td className="border border-[var(--color-border)] p-2 font-semibold">Rft Signed by State Government</td>
-              <td className="border border-[var(--color-border)] p-2">राज्य ने आपकी request आगे बढ़ा दी है — अच्छा संकेत</td>
+              <td className="border border-[var(--color-border)] p-2">राज्य ने आपकी request आगे बढ़ा दी है. अच्छा संकेत</td>
               <td className="border border-[var(--color-border)] p-2">कुछ नहीं, इंतजार करें</td>
             </tr>
             <tr>
@@ -346,14 +346,14 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
               </td>
             </tr>
             <tr>
-              <td className="border border-[var(--color-border)] p-2 font-semibold">eKYC — NO</td>
+              <td className="border border-[var(--color-border)] p-2 font-semibold">eKYC. NO</td>
               <td className="border border-[var(--color-border)] p-2">आधार verification बाकी है</td>
               <td className="border border-[var(--color-border)] p-2">
                 <Link href="/articles/hi/ekyc-mobile-se">phone से eKYC कर लें</Link>
               </td>
             </tr>
             <tr>
-              <td className="border border-[var(--color-border)] p-2 font-semibold">Aadhaar Bank Seeding — NO</td>
+              <td className="border border-[var(--color-border)] p-2 font-semibold">Aadhaar Bank Seeding. NO</td>
               <td className="border border-[var(--color-border)] p-2">खाता DBT के लिए तैयार नहीं</td>
               <td className="border border-[var(--color-border)] p-2">
                 <Link href="/articles/hi/npci-aadhaar-seeding">बैंक में NPCI seeding कराएं</Link>
@@ -368,7 +368,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       </p>
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
-        <p className="font-black text-lg mb-1">Status से आगे — किस्त कहां अटकी?</p>
+        <p className="font-black text-lg mb-1">Status से आगे. किस्त कहां अटकी?</p>
         <p className="text-green-100 text-sm mb-4">
           तीनों जांच का result tracker में एक साथ देखें।
         </p>
@@ -388,7 +388,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         </div>
       </div>
 
-      <SH>अब असली काम — NO वाले field पर आज क्या करें</SH>
+      <SH>अब असली काम. NO वाले field पर आज क्या करें</SH>
       <p>
         Status देख लेना आधा काम है। आधा यह है कि जो field NO दिखा, उस पर हाथ रखा जाए। नीचे तीनों का
         छोटे से छोटा रास्ता:
@@ -405,7 +405,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
 
       <H3>Aadhaar Bank Seeding पर NO है</H3>
       <p>
-        तात्पर्य यह कि आपका खाता आधार से जुड़कर DBT के लिए तैयार नहीं है। यह बैंक शाखा का काम है — passbook और
+        तात्पर्य यह कि आपका खाता आधार से जुड़कर DBT के लिए तैयार नहीं है। यह बैंक शाखा का काम है. Passbook और
         आधार लेकर जाइए, NPCI seeding/DBT enable करने का form भरवाइए। ध्यान दें: खाते में आधार नंबर दर्ज
         होना और खाता DBT के लिए active होना, दोनों अलग बातें हैं। विस्तार से{' '}
         <Link href="/articles/hi/npci-aadhaar-seeding">NPCI आधार सीडिंग guide</Link> देखें।
@@ -414,13 +414,13 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       <H3>Land Seeding पर NO है</H3>
       <p>
         यह धीमा हिस्सा है क्योंकि इसमें जमीन के कागज देखे जाते हैं। खतौनी/जमाबंदी की नकल लेकर तहसील या
-        ब्लॉक के कृषि कार्यालय जाइए और साफ पूछिए कि record में क्या अटका है — नाम दर्ज नहीं, वरासत बाकी है,
+        ब्लॉक के कृषि कार्यालय जाइए और साफ पूछिए कि record में क्या अटका है. नाम दर्ज नहीं, वरासत बाकी है,
         या खाता संख्या मेल नहीं खा रही। जो कमी बताई जाए, उसका कागज पूरा कराइए। यहां जल्दबाजी काम नहीं आती,
         लगातार follow-up आता है।
       </p>
 
       <div className="my-4 p-4 bg-green-50 dark:bg-green-900/20 border-l-4 border-green-600 dark:border-green-500 rounded-r-xl text-sm text-[var(--color-text)] leading-relaxed">
-        क्रम याद रखिए — <strong>पहले eKYC, फिर bank seeding, फिर land record</strong>। पहले दो जल्दी
+        क्रम याद रखिए, <strong>पहले eKYC, फिर bank seeding, फिर land record</strong>। पहले दो जल्दी
         निपटते हैं और अक्सर उतने से ही किस्त चल पड़ती है। तीनों को एक साथ पकड़ने की कोशिश में लोग थक जाते
         हैं और कुछ भी पूरा नहीं होता।
       </div>
@@ -431,9 +431,9 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         caption="OTP हमेशा registered mobile number पर ही आता है"
       />
 
-      <SH>OTP नहीं आ रहा — तीन common कारण</SH>
+      <SH>OTP नहीं आ रहा. तीन common कारण</SH>
       <p>
-        हमारे पास आने वाले सवालों में यह टॉप पर है। एक किसान भाई ने बताया था — बेटे के phone से check करने
+        हमारे पास आने वाले सवालों में यह टॉप पर है। एक किसान भाई ने बताया था. बेटे के phone से check करने
         बैठे, OTP का इंतजार करते रहे, आया ही नहीं। वजह निकली कि registration में उनका अपना पुराना नंबर था, जो
         recharge न होने से बंद हो चुका था। यह case बहुत आम है। कारण आम तौर पर तीन होते हैं:
       </p>
@@ -442,31 +442,31 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
           <strong>Network/delay</strong> — 2-3 मिनट रुकें, दोबारा try करें। शाम के time server धीमा चलता है।
         </Step>
         <Step n={2}>
-          <strong>गलत नंबर डाल रहे हैं</strong> — OTP उसी नंबर पर जाता है जो record में है, उस पर नहीं जो आप
+          <strong>गलत नंबर डाल रहे हैं</strong>. OTP उसी नंबर पर जाता है जो record में है, उस पर नहीं जो आप
           अभी इस्तेमाल कर रहे हैं। दोनों अलग हो सकते हैं।
         </Step>
         <Step n={3}>
-          <strong>Registered SIM बंद हो चुका है</strong> — यहां शिकायत काम नहीं आएगी; पहले नंबर update
-          कराना होगा — पूरा तरीका <Link href="/articles/PmKisanMobileNumberChangeUpdate">यहां है</Link>।
+          <strong>Registered SIM बंद हो चुका है</strong>. यहां शिकायत काम नहीं आएगी; पहले नंबर update
+          कराना होगा. पूरा तरीका <Link href="/articles/PmKisanMobileNumberChangeUpdate">यहां है</Link>।
         </Step>
       </ol>
 
       <H3>और चार छोटी अड़चनें, जिनका हल दो मिनट का है</H3>
       <ol className="space-y-0 my-4">
         <Step n={1}>
-          <strong>Captcha गलत बता रहा है</strong> — page refresh करके नया captcha लें। छोटे-बड़े अक्षर
+          <strong>Captcha गलत बता रहा है</strong>, page refresh करके नया captcha लें। छोटे-बड़े अक्षर
           उसी तरह डालें जिस तरह दिख रहे हैं।
         </Step>
         <Step n={2}>
-          <strong>Page खुल ही नहीं रहा या अटक रहा है</strong> — भुगतान वाले दिनों में भीड़ रहती है। सुबह जल्दी
+          <strong>Page खुल ही नहीं रहा या अटक रहा है</strong>. भुगतान वाले दिनों में भीड़ रहती है। सुबह जल्दी
           या देर रात कोशिश कीजिए, तब portal हल्का चलता है।
         </Step>
         <Step n={3}>
-          <strong>&quot;Invalid registration number&quot;</strong> — नंबर दोबारा मिलाइए। शक हो तो
+          <strong>&quot;Invalid registration number&quot;</strong>. नंबर दोबारा मिलाइए। शक हो तो
           &quot;Know your registration no.&quot; से फिर निकालें; कहीं आपने पुरानी पर्ची का गलत नंबर न डाल दिया हो।
         </Step>
         <Step n={4}>
-          <strong>Record ही नहीं मिल रहा</strong> — हो सकता है आवेदन ही पूरा दर्ज न हुआ हो। ऐसे में
+          <strong>Record ही नहीं मिल रहा</strong>. हो सकता है आवेदन ही पूरा दर्ज न हुआ हो। ऐसे में
           <Link href="/articles/hi/nayi-registration"> नई registration की प्रक्रिया</Link> देखिए और
           अपने ब्लॉक के कृषि अधिकारी से आवेदन की स्थिति पूछिए।
         </Step>
@@ -476,35 +476,35 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         ठगी का आम रास्ता यही है। किसी को भी अपना OTP, आधार OTP, बैंक का PIN या खाते की details मत
         बताइए — न phone पर, न किसी लिंक में। योजना का कोई अधिकारी status दिखाने के लिए OTP नहीं मांगता, और
         किस्त &quot;जल्दी दिलाने&quot; के नाम पर पैसे मांगने वाला हर व्यक्ति ठग है। शिकायत का सही रास्ता
-        portal की grievance और हेल्पलाइन <strong>155261</strong> है — शिकायत दर्ज करने की पूरी प्रक्रिया{' '}
+        portal की grievance और हेल्पलाइन <strong>155261</strong> है. शिकायत दर्ज करने की पूरी प्रक्रिया{' '}
         <Link href="/articles/hi/pm-kisan-helpline-155261">इस page पर समझाई</Link> है।
       </div>
 
       <SH>SIM हाथ में नहीं? तो OTP के बिना यह रास्ता है</SH>
       <p>
-        ऐसी हालत में लोग सबसे ज्यादा अटकते हैं — registered नंबर वाला SIM बंद हो गया है या वो
+        ऐसी हालत में लोग सबसे ज्यादा अटकते हैं. Registered नंबर वाला SIM बंद हो गया है या वो
         phone ही किसी और के पास है (कई बार CSC वाले ने अपना नंबर डाल दिया था)। OTP का रास्ता तब बंद
         हो जाता है। लेकिन यह जानने के लिये कि गांव की सूची में नाम है या नहीं, पूरा रास्ता बंद नहीं होता।
       </p>
       <p>
         Portal के Farmers Corner में <strong>Beneficiary List</strong> का option है, जिसमें OTP नहीं लगता।
         वहां राज्य → जिला → तहसील/सब-डिस्ट्रिक्ट → ब्लॉक → गांव चुनने पर पूरे गांव की सूची खुल जाती है।
-        अपना नाम मिल गया — मतलब रिकॉर्ड बना हुआ है और दिक्कत सिर्फ नंबर की है; नाम नहीं मिला — मतलब बात
+        अपना नाम मिल गया. मतलब रिकॉर्ड बना हुआ है और दिक्कत सिर्फ नंबर की है; नाम नहीं मिला. मतलब बात
         नंबर से बड़ी है, कृषि कार्यालय जाना पड़ेगा। यह दो मिनट की जांच कई लोगों का पूरा दिन बचा देती है।
       </p>
       <p>
-        सीमा यह है कि सूची में किस्त की वो पूरी history नहीं होती जो Know Your Status में मिलती है — eKYC या
+        सीमा यह है कि सूची में किस्त की वो पूरी history नहीं होती जो Know Your Status में मिलती है. EKYC या
         seeding वाले field वहां नहीं दिखते। इसलिये इसे पहला जांचने का ज़रिया मानिये, पूरा विकल्प नहीं। नंबर
         बदलवाना पड़ेगा, ये सबसे जरूरी काम रहेगा ही।
       </p>
 
-      <SH>Status देखने के तीन रास्ते — कौन कब चुनें</SH>
+      <SH>Status देखने के तीन रास्ते. कौन कब चुनें</SH>
       <p>
         हर किसी के लिए एक ही तरीका ठीक नहीं बैठता। छोटी तुलना देख लीजिए:
       </p>
       <ol className="space-y-0 my-4">
         <Step n={1}>
-          <strong>Portal, अपने phone के browser से</strong> — भरोसेमंद भी, मुफ्त भी। जब registered SIM
+          <strong>Portal, अपने phone के browser से</strong>. भरोसेमंद भी, मुफ्त भी। जब registered SIM
           आपके पास है, यही चुनिए। Registration number सुरक्षित रखें, हर बार यही काम आएगा।
         </Step>
         <Step n={2}>
@@ -513,20 +513,20 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
           वाले नकली apps से बचिए।
         </Step>
         <Step n={3}>
-          <strong>CSC केंद्र</strong> — जब phone पर काम न बन रहा हो, या biometric eKYC करानी हो। Status
+          <strong>CSC केंद्र</strong>. जब phone पर काम न बन रहा हो, या biometric eKYC करानी हो। Status
           देखना खुद मुफ्त है, CSC उधर ले जाइए जहां वाकई उसका काम है।
         </Step>
       </ol>
 
       <SH>अगर status ठीक है फिर भी पैसा नहीं आया</SH>
       <p>
-        यह स्थिति उलझन भरी लगती है, पर इसका क्रम साफ है। शुरुआत किस्त की सूची से कीजिए — देखिए कि इस बार की
-        entry बनी है या नहीं। बनी है और FTO वाला हिस्सा आगे बढ़ चुका है, तो पैसा प्रक्रिया में है — बैंक तक
+        यह स्थिति उलझन भरी लगती है, पर इसका क्रम साफ है। शुरुआत किस्त की सूची से कीजिए. देखिए कि इस बार की
+        entry बनी है या नहीं। बनी है और FTO वाला हिस्सा आगे बढ़ चुका है, तो पैसा प्रक्रिया में है. बैंक तक
         पहुंचने में कुछ दिन लगते हैं, और पहुंचते ही खाते का SMS आता है। SMS पर भरोसा न हो तो passbook या
         बैंक की app में entry देख लीजिए; कई बार पैसा आ चुका होता है और message ही नहीं मिलता।
       </p>
       <p>
-        हफ्तों बाद भी entry न दिखे तो दो जगह देखिए — खाता जिस बैंक में है, वह आधार seeding के लिए active है
+        हफ्तों बाद भी entry न दिखे तो दो जगह देखिए. खाता जिस बैंक में है, वह आधार seeding के लिए active है
         या नहीं, और record में नाम/खाता संख्या सही है या नहीं। इनमें से कोई भी गड़बड़ हो तो भुगतान वापस
         लौट जाता है। यहां तक आकर भी बात न बने तो portal की grievance और हेल्पलाइन <strong>155261</strong> पर
         शिकायत दर्ज कराइए और शिकायत संख्या संभालकर रखिए।
@@ -540,33 +540,33 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
 
       <SH>घर के बड़े-बुजुर्ग का status देखना हो तो</SH>
       <p>
-        गांव में अक्सर यही होता है — खाता पिताजी या दादाजी के नाम है, और देखने बैठता है घर का लड़का। इसमें
+        गांव में अक्सर यही होता है. खाता पिताजी या दादाजी के नाम है, और देखने बैठता है घर का लड़का। इसमें
         कोई दिक्कत नहीं, बस दो बातें ध्यान रखिए। पहली, OTP उनके registered नंबर पर जाएगा, वह phone
         पास में रखिए। दूसरी, उनका registration number एक बार निकाल कर घर की कॉपी में लिख दीजिए, ताकि हर
         किस्त पर पूरी प्रक्रिया दोहरानी न पड़े।
       </p>
       <p>
-        जो लोग पढ़ नहीं पाते, उनके लिए काम की बात यह है कि आप उन्हें पूरी screen न समझाएं — सिर्फ यह
+        जो लोग पढ़ नहीं पाते, उनके लिए काम की बात यह है कि आप उन्हें पूरी screen न समझाएं. सिर्फ यह
         बताएं कि तीन में से कौन सा काम बाकी है और उसके लिए कहां जाना है। eKYC है तो phone से हो जाएगा,
         बैंक seeding है तो शाखा जाना है, जमीन का record है तो तहसील। इतना साफ हो जाए, तो आधी परेशानी खत्म।
       </p>
 
-      <SH>एक बात साफ कर दें — यह guide किस चीज के लिए नहीं है</SH>
+      <SH>एक बात साफ कर दें. यह guide किस चीज के लिए नहीं है</SH>
       <p>
         Honestly, यह article सिर्फ mobile-number वाले रास्ते पर focused है। अगर आपको पूरी योजना की A-to-Z
-        जानकारी चाहिए — eligibility, नई registration, exclusion rules — तो उसके लिए हमारी{' '}
+        जानकारी चाहिए — eligibility, नई registration, exclusion rules. तो उसके लिए हमारी{' '}
         <Link href="/articles/PmKisanMasterGuide2026">A-to-Z master guide</Link> बनी हुई है। और अगर सवाल यह है कि
         अगली किस्त कब आएगी, तो <Link href="/articles/PmKisan24viKist2026">किस्त वाला article</Link> पढ़ें।
         यहां वो सब दोहराने की जरूरत नहीं।
       </p>
       <p>
-        आखिरी सलाह — status हफ्ते में एक बार देखना काफी है। रोज check करने से न किस्त जल्दी आती है, न
+        आखिरी सलाह, status हफ्ते में एक बार देखना काफी है। रोज check करने से न किस्त जल्दी आती है, न
         eKYC अपने आप हो जाती है। जो field NO दिखा रहा है, उस पर काम कीजिए; बाकी portal पर छोड़ दीजिए।
       </p>
 
       <SH>Status check पर बार-बार आने वाले सवाल</SH>
       <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">
-        किसानों के आम तौर पर पूछे गए सवाल — status, OTP, registration number और NO वाले field से जुड़े।
+        किसानों के आम तौर पर पूछे गए सवाल, status, OTP, registration number और NO वाले field से जुड़े।
       </p>
       <div className="space-y-3 mb-8">
         {FAQS.map(({ q, a }) => (
@@ -591,13 +591,13 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         यह पूरा तरीका{' '}
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> (कृषि एवं
         किसान कल्याण मंत्रालय) के Know Your Status flow से लिया गया है। Portal का layout समय-समय पर बदलता
-        रहता है — options के नाम थोड़े अलग दिख सकते हैं। आखिरी बार जांचा गया:{' '}
+        रहता है. Options के नाम थोड़े अलग दिख सकते हैं। आखिरी बार जांचा गया:{' '}
         {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })}.
       </p>
 
       <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
         <h3 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
-          Related Articles — Yeh Bhi Padho
+          Related Articles. Yeh Bhi Padho
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {RELATED.map((a) => (

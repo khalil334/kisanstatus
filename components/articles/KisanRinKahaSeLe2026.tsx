@@ -20,23 +20,23 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'KCC aur normal agricultural loan mein kya farak hai?',
-    a: 'KCC revolving credit hai — limit set hoti hai ek baar, jab chaaho withdraw karo, jab chaaho wapas karo. Normal term loan ek baar milta hai fixed tenure mein. KCC flexible hai seasonal expenses ke liye, term loan bade investments (tractor, irrigation) ke liye.',
+    a: 'KCC revolving credit hai. Limit set hoti hai ek baar, jab chaaho withdraw karo, jab chaaho wapas karo. Normal term loan ek baar milta hai fixed tenure mein. KCC flexible hai seasonal expenses ke liye, term loan bade investments (tractor, irrigation) ke liye.',
   },
   {
     q: 'Zameen na ho toh bhi kisan loan milta hai?',
-    a: 'Haan bilkul mil sakta hai. Tenant farmers lease agreement ya landowner certificate ke saath apply kar sakte hain. Sharecroppers bhi eligible hain kuch schemes mein. Landless farmers ke liye NABARD microfinance aur SHG loans available hain — ₹50,000-2 lakh tak.',
+    a: 'Haan bilkul mil sakta hai. Tenant farmers lease agreement ya landowner certificate ke saath apply kar sakte hain. Sharecroppers bhi eligible hain kuch schemes mein. Landless farmers ke liye NABARD microfinance aur SHG loans available hain. ₹50,000-2 lakh tak.',
   },
   {
-    q: 'Cooperative bank se loan lu ya SBI/PNB se — kya behtar hai?',
-    a: 'Cooperative banks faster hain (5-7 din) kyunki local land records se familiar hote hain. National banks better digital services dete hain — app tracking, online repayment. Interest rate same hai dono jagah. Speed chahiye toh cooperative, tech chahiye toh national.',
+    q: 'Cooperative bank se loan lu ya SBI/PNB se, kya behtar hai?',
+    a: 'Cooperative banks faster hain (5-7 din) kyunki local land records se familiar hote hain. National banks better digital services dete hain. App tracking, online repayment. Interest rate same hai dono jagah. Speed chahiye toh cooperative, tech chahiye toh national.',
   },
   {
     q: 'CSC center par loan apply karne ka charge kitna hai?',
-    a: 'Form filling ka ₹20-50, bas. Loan amount par koi commission nahi. Operator ₹500+ maange toh fraud hai — 1800-1214-060 par usi din complaint karo.',
+    a: 'Form filling ka ₹20-50, bas. Loan amount par koi commission nahi. Operator ₹500+ maange toh fraud hai. 1800-1214-060 par usi din complaint karo.',
   },
   {
-    q: 'Pichle saal KCC tha lekin renew nahi hua — ab fresh apply karna padega?',
-    a: 'Haan, fresh application. Lekin pichla repayment clean tha? Toh approval fast-track hota hai — old KCC number bank manager ko dikhao, positive credit history system mein dikhti hai.',
+    q: 'Pichle saal KCC tha lekin renew nahi hua, ab fresh apply karna padega?',
+    a: 'Haan, fresh application. Lekin pichla repayment clean tha? Toh approval fast-track hota hai. Old KCC number bank manager ko dikhao, positive credit history system mein dikhti hai.',
   },
   {
     q: 'Tractor loan ke liye KCC pehle lena zaroori hai?',
@@ -44,15 +44,15 @@ const FAQS_DATA = [
   },
   {
     q: 'Bataidar hoon, zameen kisi aur ke naam hai — rin milega?',
-    a: 'Haan. KCC bataidar, mokhik pattedar aur SHG/JLG samooh ke liye bhi khula hai — dikkat kagaz ki hoti hai, patrata ki nahi. Aapke rajya me batai ka jo proof maanya hai (likhit karar, swa-ghoshna, gram-star pramanan) wo bank ko chahiye. Jitna pakka kagaz, utni aasan approval.',
+    a: 'Haan. KCC bataidar, mokhik pattedar aur SHG/JLG samooh ke liye bhi khula hai. Dikkat kagaz ki hoti hai, patrata ki nahi. Aapke rajya me batai ka jo proof maanya hai (likhit karar, swa-ghoshna, gram-star pramanan) wo bank ko chahiye. Jitna pakka kagaz, utni aasan approval.',
   },
   {
-    q: 'Bank ne mana kar diya aur reason bhi nahi bataya — ab kahan jaun?',
-    a: 'Pehle likhit me rejection reason maango, wo dena bank ki zimmedari hai. Na mile to usi bank ke grievance cell me shikayat karo. Wahan se bhi hal na nikle to RBI ka Banking Ombudsman (cms.rbi.org.in) ka rasta khula hai. Har step par receiving lo — tareekh ka saboot aapka sabse bada hathiyar hai.',
+    q: 'Bank ne mana kar diya aur reason bhi nahi bataya, ab kahan jaun?',
+    a: 'Pehle likhit me rejection reason maango, wo dena bank ki zimmedari hai. Na mile to usi bank ke grievance cell me shikayat karo. Wahan se bhi hal na nikle to RBI ka Banking Ombudsman (cms.rbi.org.in) ka rasta khula hai. Har step par receiving lo, tareekh ka saboot aapka sabse bada hathiyar hai.',
   },
   {
-    q: 'Loan reject hua — CIBIL aur documents mein pehle kya theek karun?',
-    a: 'Pehle rejection reason samjho. Name mismatch tha toh fix karke usi hafte reapply karo. CIBIL issue tha toh 3-6 mahine wait karo score improve hone tak. Documents incomplete the toh complete set lekar jao. Bank se written rejection letter maango — specific reason likha hota hai.',
+    q: 'Loan reject hua. CIBIL aur documents mein pehle kya theek karun?',
+    a: 'Pehle rejection reason samjho. Name mismatch tha toh fix karke usi hafte reapply karo. CIBIL issue tha toh 3-6 mahine wait karo score improve hone tak. Documents incomplete the toh complete set lekar jao. Bank se written rejection letter maango, specific reason likha hota hai.',
   },
 ];
 
@@ -70,7 +70,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Kisan Loan Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            Kisan Rin Kaha Se Le 2026: KCC, Bank, CSC, Cooperative — Sahukar Se Bachne Ka Rasta
+            Kisan Rin Kaha Se Le 2026: KCC, Bank, CSC, Cooperative. Sahukar Se Bachne Ka Rasta
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
@@ -86,7 +86,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/kisan-rin-kaha-se-le-2026.webp'}
-            alt="Kisan loan sources India 2026 — KCC, bank loan, CSC, cooperative society comparison"
+            alt="Kisan loan sources India 2026. KCC, bank loan, CSC, cooperative society comparison"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -102,10 +102,10 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Gaon Mein Jo Dekha Hai</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
-            Kai kisano ke saath yeh dekha gaya hai — beej ke season mein ₹50,000 udhaar chahiye hota hai aur sahukar 3% monthly byaj maangta hai, saal ka 36%. Bank se 4% saalana mil sakta hai lekin yeh baat aksar pata nahi hoti.
+            Kai kisano ke saath yeh dekha gaya hai. Beej ke season mein ₹50,000 udhaar chahiye hota hai aur sahukar 3% monthly byaj maangta hai, saal ka 36%. Bank se 4% saalana mil sakta hai lekin yeh baat aksar pata nahi hoti.
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
-            <strong>"Bank wale humein loan thodi dete hain"</strong> — yeh soch bahut common hai aur isi wajah se kai kisan sahukar par dependent reh jaate hain. Ek doosri soch bhi utni hi mehngi padti hai — ki karz maaf ho jaayega, isliye kist rok do; kaunse state me waiver asal me chal raha hai wo{' '}
+            <strong>"Bank wale humein loan thodi dete hain"</strong>. Yeh soch bahut common hai aur isi wajah se kai kisan sahukar par dependent reh jaate hain. Ek doosri soch bhi utni hi mehngi padti hai. Ki karz maaf ho jaayega, isliye kist rok do; kaunse state me waiver asal me chal raha hai wo{' '}
             <Link href="/yojana/kisan-karj-mafi-list-all-states" className="underline font-bold">karj mafi ki asli sthiti</Link>{' '}
             wale page par dekh lo.
           </p>
@@ -120,16 +120,16 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
             Kisan Rin specifically kheti ke liye diya jaane wala loan hai. Personal loan nahi, business loan nahi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Beej, khaad, dawai, labour, equipment, irrigation — sab cover hota hai. Government subsidized rates par milta hai kyunki agriculture priority sector hai RBI guidelines mein. Banks ko quota fulfill karna hota hai — isliye eligible kisanon ko deny nahi kar sakte bina valid reason ke.
+            Beej, khaad, dawai, labour, equipment, irrigation. Sab cover hota hai. Government subsidized rates par milta hai kyunki agriculture priority sector hai RBI guidelines mein. Banks ko quota fulfill karna hota hai. Isliye eligible kisanon ko deny nahi kar sakte bina valid reason ke.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Eligibility:</strong> Zameen malik, tenant farmer, sharecropper, SHG member — sab eligible hain. 2 bigha se lekar 50 bigha tak. Size matter nahi karta, verified cultivation matter karta hai.
+            <strong>Eligibility:</strong> Zameen malik, tenant farmer, sharecropper, SHG member. Sab eligible hain. 2 bigha se lekar 50 bigha tak. Size matter nahi karta, verified cultivation matter karta hai.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>4 Jagah Se Rin Mil Sakta Hai — Comparison</SH>
+          <SH>4 Jagah Se Rin Mil Sakta Hai. Comparison</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ek hi option nahi hai. Char sources hain — har ek ka apna advantage hai.
           </p>
@@ -163,12 +163,12 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         </section>
 
         <section className="mb-8">
-          <SH>Kisan Credit Card — Sabse Pehla Option</SH>
+          <SH>Kisan Credit Card. Sabse Pehla Option</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bank manager se pehla sawaal yehi aayega — <em>"KCC hai?"</em>
+            Bank manager se pehla sawaal yehi aayega, <em>"KCC hai?"</em>
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Nahi hai toh yeh sabse pehle banwao. Revolving credit facility hai — ek baar limit set, jab chaaho use karo. Fasal becho, wapas karo, phir nikalo. Seasonal farming ke liye perfect hai.
+            Nahi hai toh yeh sabse pehle banwao. Revolving credit facility hai. Ek baar limit set, jab chaaho use karo. Fasal becho, wapas karo, phir nikalo. Seasonal farming ke liye perfect hai.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
@@ -190,21 +190,21 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
             </div>
           </div>
 
-          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">2025-26 Me Kya Badla — Do Kaam Ki Baatein</h3>
+          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">2025-26 Me Kya Badla. Do Kaam Ki Baatein</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             <strong>Pehli:</strong> Budget 2025-26 ne interest subvention ki ceiling <strong>₹3 lakh se badhakar
             ₹5 lakh</strong> kar di. Matlab ab ₹5 lakh tak ke short-term crop loan par bhi 4% wala effective
-            rate mil sakta hai — pehle ye fayda ₹3 lakh par ruk jaata tha. 7.75 crore se zyada active KCC
+            rate mil sakta hai. Pehle ye fayda ₹3 lakh par ruk jaata tha. 7.75 crore se zyada active KCC
             holders is daayre me aate hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             <strong>Doosri:</strong> RBI ne January 2025 se collateral-free agriculture loan ki limit
-            <strong> ₹1.6 lakh se badhakar ₹2 lakh</strong> kar di — allied activities (dairy, poultry) ke
+            <strong> ₹1.6 lakh se badhakar ₹2 lakh</strong> kar di, allied activities (dairy, poultry) ke
             loan bhi shamil. Iska seedha matlab: ₹2 lakh tak ke loan par bank zameen girvi ya margin nahi
             maang sakta. Branch me koi collateral maange to RBI ke is circular ka hawala do.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ek aur raasta — <Link href="/articles/jansamarth-portal-loan-apply" className="underline">JanSamarth
+            Ek aur raasta, <Link href="/articles/jansamarth-portal-loan-apply" className="underline">JanSamarth
             portal</Link> se KCC samet kai sarkari loan schemes ka online apply ek hi jagah se hota hai;
             branch jaane se pehle wahan eligibility check kar sakte ho.
           </p>
@@ -213,8 +213,8 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           <StepList>
             <SI n={1}>Nazdeeki bank branch jao — SBI, PNB, BOB, Gramin Bank koi bhi</SI>
             <SI n={2}>Loan officer se milo, KCC form maango</SI>
-            <SI n={3}>Documents submit karo — Aadhaar, PAN, Khatauni, photos, passbook</SI>
-            <SI n={4}>Land verification hoga — 7-15 din</SI>
+            <SI n={3}>Documents submit karo. Aadhaar, PAN, Khatauni, photos, passbook</SI>
+            <SI n={4}>Land verification hoga. 7-15 din</SI>
             <SI n={5}>Approval par passbook + ATM card milega</SI>
           </StepList>
 
@@ -224,12 +224,12 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         </section>
 
         <section className="mb-8">
-          <SH>Bade Kaam Ke Liye — Term Loan</SH>
+          <SH>Bade Kaam Ke Liye. Term Loan</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Tractor, drip irrigation, greenhouse, warehouse — yeh sab KCC se nahi hoga. Term loan chahiye.
+            Tractor, drip irrigation, greenhouse, warehouse. Yeh sab KCC se nahi hoga. Term loan chahiye.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Amount zyada, tenure lambi (3-7 saal), collateral required above ₹2 lakh. Process bhi lamba hai — 15-30 din. Par mumkin hai. Maine kai kisanon ko SBI se ₹3-5 lakh drip irrigation ke liye approve hote dekha hai.
+            Amount zyada, tenure lambi (3-7 saal), collateral required above ₹2 lakh. Process bhi lamba hai. 15-30 din. Par mumkin hai. Maine kai kisanon ko SBI se ₹3-5 lakh drip irrigation ke liye approve hote dekha hai.
           </p>
 
           <div className="space-y-3 mb-4">
@@ -257,7 +257,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         </section>
 
         <section className="mb-8">
-          <SH>CSC Aur Cooperative — Jab Bank Door Ho</SH>
+          <SH>CSC Aur Cooperative. Jab Bank Door Ho</SH>
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-4">CSC Center</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -269,7 +269,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Cooperative Society / PACS</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Local level par kaam karti hain. Officers kisanon ko personally jaante hain. Process fast — 3-7 din. Small amounts ke liye best hai.
+            Local level par kaam karti hain. Officers kisanon ko personally jaante hain. Process fast, 3-7 din. Small amounts ke liye best hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Member banna padta hai pehle. Thoda paperwork hai lekin ek baar member ban gaye toh credit access smooth. Rate competitive — 8-12%.
@@ -277,60 +277,60 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         </section>
 
         <section className="mb-8">
-          <SH>Zameen Apne Naam Nahi Hai — Tab Rin Kahan Se Aayega</SH>
+          <SH>Zameen Apne Naam Nahi Hai. Tab Rin Kahan Se Aayega</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ye sawaal sabse zyada poocha jaata hai, aur iska jawab wahi hai jo upar likha — patrata nahi, kagaz atakta hai.
+            Ye sawaal sabse zyada poocha jaata hai, aur iska jawab wahi hai jo upar likha, patrata nahi, kagaz atakta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             KCC bataidar, mokhik pattedar aur SHG/JLG samoohon ke liye bhi khula hai. Bank ko zameen ka <em>malikana</em> nahi,
-            uspe aapke <em>kaam ka saboot</em> chahiye hota hai. Har rajya me ye proof alag maana jaata hai — kahin registered
+            uspe aapke <em>kaam ka saboot</em> chahiye hota hai. Har rajya me ye proof alag maana jaata hai. Kahin registered
             batai karar, kahin swa-ghoshna, kahin gram-star ka pramanan. Branch jaane se pehle wahi ek cheez pata karo: is district
             me batai ka kaunsa kagaz chalta hai. Baqi documents wahi hain jo malik kisan ke lagte hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Kirae ki jagah par kuch banwana hai — shed, godown, pump — to ek chhoti si galti mehngi padti hai. Lease agreement
+            Kirae ki jagah par kuch banwana hai. Shed, godown, pump. To ek chhoti si galti mehngi padti hai. Lease agreement
             loan ki avadhi se <strong>chhota</strong> hua to objection pakka aayega. Bank ka logic seedha hai: loan 7 saal chalega
             aur jagah ka karar 3 saal ka hai, to baqi 4 saal kya? Agreement banwate waqt hi tenure lamba rakhwa lo, baad me
             registry dobara karwana kharcha aur waqt dono maangta hai.
           </p>
 
-          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Doodh, Murgi, Machli — Yahan Zameen Ka Sawaal Hi Nahi</h3>
+          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Doodh, Murgi, Machli. Yahan Zameen Ka Sawaal Hi Nahi</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Agar kaam pashupalan ya allied activity ka hai to ek poora alag darwaza khulta hai. Mudra Yojana me collateral maangna
-            bank ke bas me hi nahi hai — kisi bhi slab par nahi. Budget 2024-25 se <strong>Tarun Plus</strong> slab jud gaya, jisne
+            bank ke bas me hi nahi hai. Kisi bhi slab par nahi. Budget 2024-25 se <strong>Tarun Plus</strong> slab jud gaya, jisne
             upar ki limit ₹10 lakh se ₹20 lakh kar di. Par dhyan raho: Tarun Plus pehli baar wale applicant ke liye nahi hai, wo un
             logon ke liye hai jinhone pehle Tarun ka loan lekar poora chukaya. Pehli file daal rahe ho to aapki practical ceiling
             ₹10 lakh hai — project report usi hisaab se banwao.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            PMEGP wala rasta thoda lamba hai par usme margin money subsidy hai — project cost ka 15 se 35 pratishat, jo wapas nahi
+            PMEGP wala rasta thoda lamba hai par usme margin money subsidy hai. Project cost ka 15 se 35 pratishat, jo wapas nahi
             karni padti. Ek gaon me rehne wali mahila applicant ka ₹8 lakh ka dairy project maan lo: 35% yaani ₹2.8 lakh subsidy,
             5% yaani ₹40,000 apni jeb se, EMI sirf bache ₹4.8 lakh par banegi. Wahi project shahar ke general category applicant ka
             hota to subsidy sirf ₹1.2 lakh milti. Category aur area, dono milkar aapki kist tay karte hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Poora comparison — Mudra, PMEGP aur CGTMSE me se kaunsa kab — <Link href="/articles/dairy-farm-loan-without-collateral" className="underline font-bold">bina
+            Poora comparison. Mudra, PMEGP aur CGTMSE me se kaunsa kab, <Link href="/articles/dairy-farm-loan-without-collateral" className="underline font-bold">bina
             collateral dairy loan wali guide</Link> me hai. Aur teeno me se koi bhi route chuno, online eligibility ek hi jagah se
             check ho jaati hai <Link href="/articles/jansamarth-portal-loan-apply" className="underline">JanSamarth portal</Link> se.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>Bank Ne Mana Kar Diya — Chup Mat Baitho</SH>
+          <SH>Bank Ne Mana Kar Diya. Chup Mat Baitho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Yahi wo mod hai jahan zyadatar kisan sahukar ke paas laut jaate hain. Zaroorat nahi hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Pehla kadam ek hi hai — <strong>likhit me rejection ka reason maango</strong>. Ye ehsaan nahi, bank ki zimmedari hai.
-            Zubani &ldquo;file nahi banegi&rdquo; se aap kuch nahi kar sakte; likha hua reason do me se ek cheez batata hai — ya
+            Pehla kadam ek hi hai. <strong>likhit me rejection ka reason maango</strong>. Ye ehsaan nahi, bank ki zimmedari hai.
+            Zubani &ldquo;file nahi banegi&rdquo; se aap kuch nahi kar sakte; likha hua reason do me se ek cheez batata hai. Ya
             galti sudharne layak hai (naam mismatch, purani khatauni, adhoore kagaz), ya waqt maangti hai (chalu default, CIBIL).
             Pehli soorat me usi hafte dobara file lag sakti hai.
           </p>
           <StepList>
-            <SI n={1}>Application aur saare documents ki ek copy apne paas rakho, aur jama karte waqt <strong>receiving muhar</strong> lagwao — tareekh ka saboot yahi hai</SI>
+            <SI n={1}>Application aur saare documents ki ek copy apne paas rakho, aur jama karte waqt <strong>receiving muhar</strong> lagwao, tareekh ka saboot yahi hai</SI>
             <SI n={2}>Reason likhit me maango; na mile to usi baat ko application me likh kar dobara jama karo</SI>
             <SI n={3}>Baat na bane to usi bank ke <strong>grievance cell</strong> me shikayat karo — branch se upar zonal level par file dekhi jaati hai</SI>
-            <SI n={4}>Wahan se bhi hal na nikle to <strong>RBI Banking Ombudsman</strong> — cms.rbi.org.in par online shikayat, koi fees nahi</SI>
+            <SI n={4}>Wahan se bhi hal na nikle to <strong>RBI Banking Ombudsman</strong>, cms.rbi.org.in par online shikayat, koi fees nahi</SI>
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ek baat samajh lo: agriculture RBI ke priority sector me aata hai, isliye branch ko eligible kisan ko bina valid reason
@@ -340,10 +340,10 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Purana Loan Bigda Hua Hai To Pehle Wahi Sudhro</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Naya rin isliye nahi mil raha ki pichla khata overdue chal raha hai — to nayi application daalne se kuch nahi hoga.
+            Naya rin isliye nahi mil raha ki pichla khata overdue chal raha hai. To nayi application daalne se kuch nahi hoga.
             Do cheezein branch se poochho: <strong>One Time Settlement (OTS)</strong>, jisme NPA khate ka bacha amount ek baar me
             kam karke settle hota hai, aur <strong>restructuring</strong>, jisme kist ki avadhi lambi ho jaati hai ya moratorium
-            milta hai — khaaskar jab fasal kharab hui ho aur district me annawari/girdawari declare hui ho. Dono ka faisla branch
+            milta hai. Khaaskar jab fasal kharab hui ho aur district me annawari/girdawari declare hui ho. Dono ka faisla branch
             aur zonal level par hota hai, isliye application likhit me do.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -352,7 +352,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           </p>
           <DB>
             <strong>Karz maafi ka intezaar sabse kharab option hai.</strong> Kist rok kar waiver ka wait karne se khata NPA me chala
-            jaata hai — aur baad me scheme aayi bhi to default ka record apni jagah reh jaata hai. Kaunse state me waiver asal me chal
+            jaata hai. Aur baad me scheme aayi bhi to default ka record apni jagah reh jaata hai. Kaunse state me waiver asal me chal
             raha hai aur kahan sirf bayaan hai, wo{' '}
             <Link href="/yojana/kisan-karj-mafi-list-all-states" className="underline font-bold">karj mafi ki asli sthiti</Link>{' '}
             wale page par saaf likha hai.
@@ -360,7 +360,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         </section>
 
         <section className="mb-8">
-          <SH>Sahukar Vs Sarkari Scheme — Asli Farak</SH>
+          <SH>Sahukar Vs Sarkari Scheme. Asli Farak</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -395,7 +395,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         </section>
 
         <section className="mb-8">
-          <SH>Documents — Sab Ready Rakho</SH>
+          <SH>Documents. Sab Ready Rakho</SH>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
               <p className="font-black text-green-800 dark:text-green-300 text-sm mb-2">Har Case Mein Chahiye</p>
@@ -473,7 +473,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Real Sawal — Seedhe Jawaab
+            Real Sawal. Seedhe Jawaab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="Kisan Loan FAQ 2026 — Ground-Level Verified Answers" />
         </section>
@@ -481,7 +481,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Byaj Ka Farak: 4% Bhi Ho Sakta Hai, 36% Bhi</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Isi article ka poora ganit ek hi tulna par tika hai — KCC par time se chukane wale kisan ko effective
+            Isi article ka poora ganit ek hi tulna par tika hai. KCC par time se chukane wale kisan ko effective
             4% padta hai, jabki sahukar ka mahine wala 3% saal bhar mein 36% ban jaata hai. Yani ek hi ₹1 lakh
             saal bhar mein ₹4,000 ya ₹36,000 maang sakta hai. Isliye kaagaz ka jhanjhat pehle nipta lo:
           </p>
@@ -490,13 +490,13 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
             <li>Aadhaar-bank name match karwao</li>
             <li>Nazdeeki bank ya CSC jao</li>
             <li>KCC apply karo pehle</li>
-            <li>Time par repay karo — limit badhegi</li>
+            <li>Time par repay karo, limit badhegi</li>
           </ol>
         </div>
 
         <GovLink
           href="https://pmkisan.gov.in"
-          label="PM Kisan Portal — Beneficiary Verification"
+          label="PM Kisan Portal. Beneficiary Verification"
           guide="Apna Status Check Karo"
           guideHref="/articles/PmKisanMasterGuide2026"
           portalName="pmkisan.gov.in"
@@ -505,7 +505,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         <CalcBanner
           icon=""
           title="Apni EMI Calculate Karo"
-          desc="KCC ya term loan ki monthly payment jaano — bank jaane se pehle prepared raho"
+          desc="KCC ya term loan ki monthly payment jaano, bank jaane se pehle prepared raho"
           primaryCta={{ href: '/calculator/kcc-loan-emi', label: 'EMI Calculator →' }}
           secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />

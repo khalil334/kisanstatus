@@ -13,7 +13,7 @@ function SafeImage(props: Omit<React.ComponentProps<typeof SafeImageBase>, 'fall
 }
 
 const RELATED = [
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed — 7 Fixes' },
+  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed, 7 Fixes' },
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning' },
   { slug: 'PmKisanMobileNumberChangeUpdate', title: 'Mobile Number Change' },
 ];
@@ -37,7 +37,7 @@ const FAQS_DATA = [
   },
   {
     q: 'CSC wala kitne paise lega?',
-    a: 'CSC par is kaam ka charge aam taur par ₹15 se ₹30 ke beech hota hai. Kuch operators ₹50 ya ₹100 bhi maang lete hain — mol-bhav karo, zyada mat dena.',
+    a: 'CSC par is kaam ka charge aam taur par ₹15 se ₹30 ke beech hota hai. Kuch operators ₹50 ya ₹100 bhi maang lete hain. Mol-bhav karo, zyada mat dena.',
   },
   {
     q: 'Paisa kisi aur ke bank account mein mangwa sakta hoon?',
@@ -52,12 +52,12 @@ const FAQS_DATA = [
     a: '15 din baad pmkisan.gov.in par jaakar "Beneficiary Status" mein check karo. Wahan naya account number dikhna chahiye. Purana hi dikh raha ho toh matlab abhi update nahi hua.',
   },
   {
-    q: 'Pita ji guzar gaye, unka account link tha — ab kya karein?',
-    a: 'Sirf account change se kaam nahi banega — pehle CSC jaakar Succession Transfer karwana padta hai. Death certificate, Khatauni aur apna Aadhaar le jao. Transfer ke bina record purane naam par hi rahega aur account freeze rehta hai.',
+    q: 'Pita ji guzar gaye, unka account link tha. Ab kya karein?',
+    a: 'Sirf account change se kaam nahi banega, pehle CSC jaakar Succession Transfer karwana padta hai. Death certificate, Khatauni aur apna Aadhaar le jao. Transfer ke bina record purane naam par hi rahega aur account freeze rehta hai.',
   },
   {
     q: 'Account update ke liye koi call par OTP maange toh?',
-    a: 'Kabhi mat dena. PM Kisan ki taraf se koi phone karke OTP ya account detail nahi maangta — bank detail update sirf CSC, bank branch ya BAO ke through hota hai. Aisi call aaye toh cyber crime helpline 1930 par report karo ya cybercrime.gov.in par shikayat darj karo.',
+    a: 'Kabhi mat dena. PM Kisan ki taraf se koi phone karke OTP ya account detail nahi maangta, bank detail update sirf CSC, bank branch ya BAO ke through hota hai. Aisi call aaye toh cyber crime helpline 1930 par report karo ya cybercrime.gov.in par shikayat darj karo.',
   },
 ];
 
@@ -101,14 +101,14 @@ export default function PmKisanBankAccountChangeProcess() {
             priority
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)]">
-            Bank Account Change — Naya Account Link Karne Ka Pura Tarika
+            Bank Account Change. Naya Account Link Karne Ka Pura Tarika
           </p>
         </div>
 
         <section className="mb-8">
           <SH>Purana Account Band Ho Gaya? Paisa Kahan Aayega?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Kist aane ka din nazdeek aata hai toh har kisan phone baar-baar check karta hai. Par jo account link hai wahi band pada ho, ya branch merge hone se IFSC hi badal gaya ho — toh paisa atkega hi.
+            Kist aane ka din nazdeek aata hai toh har kisan phone baar-baar check karta hai. Par jo account link hai wahi band pada ho, ya branch merge hone se IFSC hi badal gaya ho, toh paisa atkega hi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Portal par <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline text-green-700 dark:text-green-400">FTO Generated</Link> dikha diya jaata hai, par bank mein "Transaction Rejected" bol dete hain. Yahi se pareshani shuru hoti hai. Ek kaam ki baat: jab bhi CSC ya bank jao, ek chhoti diary mein tareekh, kisse mile aur kya bataya gaya — ye teen cheezein likh lo. Baad mein kisi bhi vivaad mein ye kaafi kaam aata hai.
@@ -125,26 +125,26 @@ export default function PmKisanBankAccountChangeProcess() {
           <DB>
             <strong>Real Story:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
-              Aligarh ke Vinod ji ka account do saal se nishkriya (dormant) pada tha, kisi len-den ke bina. Natijan teen kist lagatar fail ho gayi. Naya account khulwaya gaya, CSC se portal update hua, aur bank mein NPCI seeding karwayi gayi — agli kist seedhe naye account mein aa gayi.
+              Aligarh ke Vinod ji ka account do saal se nishkriya (dormant) pada tha, kisi len-den ke bina. Natijan teen kist lagatar fail ho gayi. Naya account khulwaya gaya, CSC se portal update hua, aur bank mein NPCI seeding karwayi gayi, agli kist seedhe naye account mein aa gayi.
             </p>
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Hal ek hi hai — naya bank account link karna. Neeche har tarika detail mein diya hai. <Link href="/articles/PmKisanPaymentFailedFix2026" className="underline text-green-700 dark:text-green-400">Payment failed</Link> ki dikkat bhi isi se theek ho jaati hai.
+            Hal ek hi hai. Naya bank account link karna. Neeche har tarika detail mein diya hai. <Link href="/articles/PmKisanPaymentFailedFix2026" className="underline text-green-700 dark:text-green-400">Payment failed</Link> ki dikkat bhi isi se theek ho jaati hai.
           </p>
         </section>
 
         <section className="mb-8">
           <SH>Bank Account Kyun Change Karna Padta Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Har kisan ko ye kaam nahi karna padta — par kuch halaton mein koi chaara nahi bachta:
+            Har kisan ko ye kaam nahi karna padta. Par kuch halaton mein koi chaara nahi bachta:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               { icon: '', title: 'Account Dormant/Band', desc: 'Do saal tak koi len-den na ho toh bank account ko dormant ya freeze kar deta hai. Jan Dhan account bhi istemal na hone par freeze ho jaata hai.' },
               { title: 'IFSC Code Change', desc: 'Branches merge hone se IFSC badal jaata hai, aur purana code portal par kaam karna band kar deta hai.' },
               { title: 'Galat Account Link', desc: 'Registration ke waqt kabhi galat account number ya IFSC daal diya jaata hai, ya Current account de diya jaata hai jabki PM Kisan sirf Savings account mein aata hai.' },
-              { title: 'Naam Mismatch', desc: 'Passbook aur Aadhaar mein naam thoda alag ho toh payment reject ho jaati hai — isko system "Name Mismatch" kehta hai.' },
+              { title: 'Naam Mismatch', desc: 'Passbook aur Aadhaar mein naam thoda alag ho toh payment reject ho jaati hai. Isko system "Name Mismatch" kehta hai.' },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-green-300 dark:hover:border-green-700 transition-all">
                 {icon ? <span className="text-2xl block mb-2">{icon}</span> : null}
@@ -158,14 +158,14 @@ export default function PmKisanBankAccountChangeProcess() {
         <section className="mb-8">
           <SH>Method 1: CSC Center Se Bank Change Karo (Sabse Aasan)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ye tarika sabse tez hai. Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC center</Link> par jaao — operator apne login se seedha update kar dega.
+            Ye tarika sabse tez hai. Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC center</Link> par jaao, operator apne login se seedha update kar dega.
           </p>
           <StepList>
             <SI n={1}>
               <strong>Documents Le Jaiye:</strong> Aadhaar card (original), naya bank passbook (jisme IFSC aur Account No. saaf dikhe), aur mobile phone (OTP ke liye).
             </SI>
             <SI n={2}>
-              <strong>CSC Operator Ko Boliye:</strong> Saaf-saaf boliye "PM Kisan Bank Account Update karna hai". Jab operator details daal raha ho, screen ki ek photo le lo — kisi gadbad mein ye proof kaam aayega.
+              <strong>CSC Operator Ko Boliye:</strong> Saaf-saaf boliye "PM Kisan Bank Account Update karna hai". Jab operator details daal raha ho, screen ki ek photo le lo, kisi gadbad mein ye proof kaam aayega.
             </SI>
             <SI n={3}>
               <strong>Details Enter:</strong> Naya account number aur IFSC daala jaayega, purana apne aap hat jaayega. Transaction ID likh kar rakh lo.
@@ -174,7 +174,7 @@ export default function PmKisanBankAccountChangeProcess() {
               <strong>OTP Verification:</strong> Mobile par OTP aayega, wo daalne ke baad hi process poora hoga.
             </SI>
             <SI n={5}>
-              <strong>Receipt Li jiye:</strong> Naya account number likhi hui receipt milegi — sambhal kar rakho, aage kaam aayegi.
+              <strong>Receipt Li jiye:</strong> Naya account number likhi hui receipt milegi, sambhal kar rakho, aage kaam aayegi.
             </SI>
           </StepList>
 
@@ -238,7 +238,7 @@ export default function PmKisanBankAccountChangeProcess() {
           </p>
           <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-4">
             <p className="text-xs text-amber-800 dark:text-amber-300">
-              <strong>Dhyan Rahe:</strong> BAO office ke process mein 30 se 45 din lag sakte hain, CSC se 15 din mein ho jaata hai. Pehle CSC try karo — wahan se kaam na bane tabhi BAO ke chakkar kaato.
+              <strong>Dhyan Rahe:</strong> BAO office ke process mein 30 se 45 din lag sakte hain, CSC se 15 din mein ho jaata hai. Pehle CSC try karo, wahan se kaam na bane tabhi BAO ke chakkar kaato.
             </p>
           </div>
           <SafeImage
@@ -253,7 +253,7 @@ export default function PmKisanBankAccountChangeProcess() {
         <section className="mb-8">
           <SH>Documents Ki Complete List</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Kahin bhi jaao — CSC, bank, ya BAO — ye documents saath rakho:
+            Kahin bhi jaao. CSC, bank, ya BAO. Ye documents saath rakho:
           </p>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
@@ -377,18 +377,18 @@ export default function PmKisanBankAccountChangeProcess() {
         </section>
 
         <section className="mb-8">
-          <SH>Khaate Ke Maalik Ka Dehant Ho Gaya — Ye Alag Rasta Hai</SH>
+          <SH>Khaate Ke Maalik Ka Dehant Ho Gaya. Ye Alag Rasta Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Ek situation aisi hai jahan upar ke teeno methods kaam nahi karte. Ghar ke bade-buzurg ke naam par
-            registration tha, unka dehant ho gaya — aur ab parivar sochta hai ki bas naya account daal denge.
+            registration tha, unka dehant ho gaya. Aur ab parivar sochta hai ki bas naya account daal denge.
             Aisa nahi hota.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            PM Kisan ka paisa sirf usi ke account mein jaata hai jiska naam registration mein hai — aur guzre hue
+            PM Kisan ka paisa sirf usi ke account mein jaata hai jiska naam registration mein hai. Aur guzre hue
             vyakti ke record par kisi aur ka account chadhaya hi nahi ja sakta. Iske liye pehle CSC jaakar
             <strong> Succession Transfer</strong> karwana padta hai: death certificate, Khatauni (jisme zameen ab
             waris ke naam ho) aur waris ka Aadhaar. Order yaad rakho: zameen ka mutation pehle, PM Kisan ka record baad mein. Ulta kiya toh file atkegi. Transfer poora hone ke baad hi naye beneficiary ka apna account link
-            hoga — tab wahi upar wala CSC process lagega.
+            hoga. Tab wahi upar wala CSC process lagega.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Jab tak transfer nahi hota, purane record par aayi kist ko haath mat lagana — guzre hue beneficiary
@@ -397,19 +397,19 @@ export default function PmKisanBankAccountChangeProcess() {
         </section>
 
         <section className="mb-8">
-          <SH>Update Ke Baad Bhi Paisa Nahi Aaya — Shikayat Kahan Karein?</SH>
+          <SH>Update Ke Baad Bhi Paisa Nahi Aaya. Shikayat Kahan Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Naya account portal par dikh raha hai, NPCI seeding bhi ho gayi, phir bhi do cycle nikal gaye?
             Ab chakkar kaatne ki jagah shikayat ka seedha rasta pakdo:
           </p>
           <StepList>
-            <SI n={1}><strong>Helpline 155261 ya 011-24300606:</strong> call se pehle Aadhaar number, registration number aur naye account ki details saamne rakh lo — operator shuru mein yahi poochta hai. In par call free hai; koi aur number jo paise maange, wo fraud hai.</SI>
-            <SI n={2}><strong>pmkisan.gov.in ka Help Desk:</strong> portal ke Help Desk/Grievance section mein online ticket daal do. Complaint number likh kar rakho — agli baar isi se follow-up hoga.</SI>
-            <SI n={3}><strong>State Nodal Officer:</strong> helpline aur ticket dono se baat na bane toh apne rajya ke <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">nodal officer</Link> ko email karo — usme complaint number, tareekhein aur receipt ka zikr karo.</SI>
+            <SI n={1}><strong>Helpline 155261 ya 011-24300606:</strong> call se pehle Aadhaar number, registration number aur naye account ki details saamne rakh lo, operator shuru mein yahi poochta hai. In par call free hai; koi aur number jo paise maange, wo fraud hai.</SI>
+            <SI n={2}><strong>pmkisan.gov.in ka Help Desk:</strong> portal ke Help Desk/Grievance section mein online ticket daal do. Complaint number likh kar rakho, agli baar isi se follow-up hoga.</SI>
+            <SI n={3}><strong>State Nodal Officer:</strong> helpline aur ticket dono se baat na bane toh apne rajya ke <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">nodal officer</Link> ko email karo, usme complaint number, tareekhein aur receipt ka zikr karo.</SI>
           </StepList>
           <DB>
             <strong>Fraud Alert:</strong> Account update ke naam par koi phone karke OTP ya passbook detail
-            maange toh samajh jao fraud hai — ye kaam sirf CSC, bank branch ya BAO mein hota hai, phone par kabhi
+            maange toh samajh jao fraud hai. Ye kaam sirf CSC, bank branch ya BAO mein hota hai, phone par kabhi
             nahi. Aisi call par cyber crime helpline <strong>1930</strong> ya cybercrime.gov.in par shikayat karo.
           </DB>
         </section>
@@ -417,13 +417,13 @@ export default function PmKisanBankAccountChangeProcess() {
         <section className="mb-8">
           <SH>Purani Ruki Hui Kist Ka Kya Hoga?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Sabse zyada ye sawal poocha jaata hai — jo paisa pehle fail hua tha, wo ab kahan jaayega?
+            Sabse zyada ye sawal poocha jaata hai. Jo paisa pehle fail hua tha, wo ab kahan jaayega?
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Chinta ki baat nahi. Naya account link hote hi ruki hui kist bhi usi account mein aa jaati hai, alag se koi application nahi deni padti.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Bas agar lagatar 3-4 kist fail ho chuki ho, tab ek application District Agriculture Officer (DAO) ko de dena — usme registration number aur naya account number saaf likh dena. <Link href="/articles/PmKisanPaymentFailedFix2026" className="underline text-green-700 dark:text-green-400">Payment failed guide</Link> mein iski poori detail hai.
+            Bas agar lagatar 3-4 kist fail ho chuki ho, tab ek application District Agriculture Officer (DAO) ko de dena, usme registration number aur naya account number saaf likh dena. <Link href="/articles/PmKisanPaymentFailedFix2026" className="underline text-green-700 dark:text-green-400">Payment failed guide</Link> mein iski poori detail hai.
           </p>
         </section>
 

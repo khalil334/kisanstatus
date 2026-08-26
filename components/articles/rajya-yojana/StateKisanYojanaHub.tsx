@@ -12,23 +12,23 @@ const Fig = (p: FigProps) => (
 const FAQS_DATA = [
   {
     q: 'Kis state mein kisan ko sabse zyada paisa milta hai?',
-    a: 'Fixed amount mein Andhra Pradesh ki Annadata Sukhibhava sabse aage — kendriya hissa milakar saal ka ₹20,000 tak. Par Telangana per acre deta hai, to zyada zameen wale ko wahan isse upar bhi mil sakta hai. Seedha comparison mushkil hai; har jagah ka model apna-apna.',
+    a: 'Fixed amount mein Andhra Pradesh ki Annadata Sukhibhava sabse aage, kendriya hissa milakar saal ka ₹20,000 tak. Par Telangana per acre deta hai, to zyada zameen wale ko wahan isse upar bhi mil sakta hai. Seedha comparison mushkil hai; har jagah ka model apna-apna.',
   },
   {
     q: 'Main ek state se doosre state shift ho gaya hoon, kya purani state ki kist milti rahegi?',
-    a: 'Nahi. Shift hote hi purani eligibility khatam — har rajya nivasi hona maangta hai. Naye pradesh mein dobara register karo; zameen bhi wahin chahiye.',
+    a: 'Nahi. Shift hote hi purani eligibility khatam, har rajya nivasi hona maangta hai. Naye pradesh mein dobara register karo; zameen bhi wahin chahiye.',
   },
   {
     q: 'Rajya ki kist nahi aayi lekin PM Kisan aata hai, kya karein?',
-    a: 'Normal hai, dono judaa systems hain. Apne rajya ki website par sthiti dekho — aam wajah e-KYC pending, NPCI seeding, ya land record mein naam ka farak.',
+    a: 'Normal hai, dono judaa systems hain. Apne rajya ki website par sthiti dekho, aam wajah e-KYC pending, NPCI seeding, ya land record mein naam ka farak.',
   },
   {
     q: 'Kya bataidar (tenant farmer) ko bhi state yojana ka paisa milta hai?',
-    a: 'Zyadatar jagah nahi — list land record se banti hai. Exceptions: Andhra Pradesh (Annadata mein registered tenant farmers aate hain) aur West Bengal (bhagchasi ka record panchayat ke paas ho to Krishak Bandhu). Baaki jagah zameen apne naam par chahiye.',
+    a: 'Zyadatar jagah nahi. List land record se banti hai. Exceptions: Andhra Pradesh (Annadata mein registered tenant farmers aate hain) aur West Bengal (bhagchasi ka record panchayat ke paas ho to Krishak Bandhu). Baaki jagah zameen apne naam par chahiye.',
   },
   {
     q: 'Chhattisgarh ki Krishak Unnati Yojana is list se alag kaise hai?',
-    a: 'Wahan paisa fixed nahi, dhan ki kharidi se juda hai — jitna becha, us par antar rashi. Kharif 2026 se doosri fasal par per acre input sahayata ka naya raasta bhi khula. Raqam har khetihar ki apni-apni banti hai.',
+    a: 'Wahan paisa fixed nahi, dhan ki kharidi se juda hai. Jitna becha, us par antar rashi. Kharif 2026 se doosri fasal par per acre input sahayata ka naya raasta bhi khula. Raqam har khetihar ki apni-apni banti hai.',
   },
 ];
 
@@ -107,7 +107,7 @@ export default function StateKisanYojanaHub() {
       <p>
         Matlab, PM Kisan ka ₹6,000 to poore desh mein ek jaisa hai. Asli farak rajya ki apni yojana
         se padta hai. Rajasthan ka khetihar saal mein ₹9,000 tak pahunchta hai, Maharashtra ka
-        ₹12,000, aur Andhra Pradesh ka ₹20,000 tak. Sochiye — wahi zameen, wahi mehnat, aur
+        ₹12,000, aur Andhra Pradesh ka ₹20,000 tak. Sochiye, wahi zameen, wahi mehnat, aur
         income-support mein itna antar bas is baat se ki khet kis seema ke andar hai.
       </p>
 
@@ -162,7 +162,7 @@ export default function StateKisanYojanaHub() {
 
       <h2>Rajya-War Short Hisaab</h2>
 
-      <h3>Madhya Pradesh — CM Kisan Kalyan Yojana</h3>
+      <h3>Madhya Pradesh. CM Kisan Kalyan Yojana</h3>
       <p>
         Kendriya hisse ke barabar ₹6,000 saalana, teen kiston mein. Suchi kendriya data se banti
         hai, judaa application nahi deni padti. Sthiti SAARA portal par milti hai aur girdawari
@@ -179,7 +179,7 @@ export default function StateKisanYojanaHub() {
         likha hai.
       </p>
 
-      <h3>Maharashtra — Namo Shetkari Mahasanman Nidhi</h3>
+      <h3>Maharashtra. Namo Shetkari Mahasanman Nidhi</h3>
       <p>
         Kendra se eligible laabharthi ko pradesh ₹6,000 aur deta hai, do kiston mein ₹3,000 karke.
         Judaa apply nahi karna padta. 7/12 utara yahan ka sabse zaroori kagaz hai. Sthiti ka
@@ -188,7 +188,7 @@ export default function StateKisanYojanaHub() {
         mein dekhein.
       </p>
 
-      <h3>Andhra Pradesh — Annadata Sukhibhava</h3>
+      <h3>Andhra Pradesh. Annadata Sukhibhava</h3>
       <p>
         Fixed-amount schemes mein sabse bada package: kendriya hissa milakar saal ka ₹20,000 tak.
         Iski sabse judi baat ye hai ki registered bataidar bhi cover hote hain, jo kahin aur
@@ -196,7 +196,7 @@ export default function StateKisanYojanaHub() {
         <Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">AP guide</Link> mein hai.
       </p>
 
-      <h3>Telangana — Rythu Bharosa</h3>
+      <h3>Telangana. Rythu Bharosa</h3>
       <p>
         Yahan hisaab per acre chalta hai: har acre cultivable land par ₹12,000 saalana, aadha
         Kharif mein aur aadha Rabi mein. Do acre wale ko chaar acre wale se aadha milta hai,
@@ -206,18 +206,18 @@ export default function StateKisanYojanaHub() {
         samjhaya hai.
       </p>
 
-      <h3>West Bengal — Krishak Bandhu</h3>
+      <h3>West Bengal. Krishak Bandhu</h3>
       <p>
         Zameen ke slab par ₹4,000 se ₹10,000 saalana, do kiston mein (Kharif + Rabi). Pehchaan
-        ka mukhya zariya Aadhaar nahi, Voter ID (EPIC) hai — poore desh mein anokha system.
+        ka mukhya zariya Aadhaar nahi, Voter ID (EPIC) hai. Poore desh mein anokha system.
         Slab ka logic: 1 acre ya usse zyada par poora ₹10,000; usse kam par pro-rata, lekin
         ₹4,000 se neeche nahi jaata. Saath mein ₹2 lakh ka death benefit bhi judta hai —
         18 se 60 saal ke registered kisan ki mrityu par parivaar claim kar sakta hai.
       </p>
       <p>
         Status check ka raasta: <code>krishakbandhu.wb.gov.in</code> kholo, &ldquo;Search
-        Beneficiary&rdquo; mein Voter ID (EPIC) number daalo — kist ka status, amount aur
-        transaction ID wahin dikh jaata hai. Yahan enrolment khud karwana padta hai — Duare
+        Beneficiary&rdquo; mein Voter ID (EPIC) number daalo, kist ka status, amount aur
+        transaction ID wahin dikh jaata hai. Yahan enrolment khud karwana padta hai. Duare
         Sarkar camp ya block krishi office se. Paisa atakne ki aam wajahein: land record
         mein mutation adhoora, bank account dormant, naam ki spelling mismatch, ya joint
         khatian mein hissa saaf nahi. In sab ka ilaaj block office se shuru hota hai.
@@ -232,20 +232,20 @@ export default function StateKisanYojanaHub() {
         khula hai.
       </p>
 
-      <h3>Chhattisgarh — Krishak Unnati Yojana</h3>
+      <h3>Chhattisgarh. Krishak Unnati Yojana</h3>
       <p>
         Ye is list ki sabse hatke scheme hai. Fixed saalana amount nahi milta; paisa dhan ki
-        sarkari kharidi se juda hai aur antar rashi ke roop mein aata hai — MSP aur ₹3,100
+        sarkari kharidi se juda hai aur antar rashi ke roop mein aata hai. MSP aur ₹3,100
         prati quintal ke beech ka antar, ekmusht payment mein. Jitna dhan samiti mein darj
         hua, utna hisaab banta hai. Kharif 2026 se dhan chhod kar doosri fasal lagane par
         ₹15,000 prati acre input sahayata ka naya component bhi juda hai.
       </p>
       <p>
-        Status check ke liye alag portal nahi hai — kharidi ki entry <code>khadya.cg.nic.in</code>{' '}
+        Status check ke liye alag portal nahi hai. Kharidi ki entry <code>khadya.cg.nic.in</code>{' '}
         par apne panjiyan number se dikhti hai, aur antar rashi ka credit usi bank khaate mein
         aata hai jo samiti ke record mein hai. Paisa na aaye to pehla darwaza apni sahkari
         samiti hai, doosra tehsil ka khadya vibhag. Passbook mein credit ki entry dhan bechne
-        ke season ke baad ekmusht release par aati hai — hapte ka intezaar nahi, release ka
+        ke season ke baad ekmusht release par aati hai. Hapte ka intezaar nahi, release ka
         hota hai.
       </p>
 
@@ -280,17 +280,17 @@ export default function StateKisanYojanaHub() {
         khetihar ke liye apna-apna hota hai.
       </p>
 
-      <h2>Application Ka Farak — Kahan Khud Karna Hai, Kahan Apne Aap Hota Hai</h2>
+      <h2>Application Ka Farak. Kahan Khud Karna Hai, Kahan Apne Aap Hota Hai</h2>
 
       <p>
         Kya aapko form bharna padega? Jawab apne yahan ke model par nirbhar hai. Suchi do
-        tarah se banti hai, aur ye farak jaanna zaroori hai — isi se tay hota hai ki aapko kuch
+        tarah se banti hai, aur ye farak jaanna zaroori hai. Isi se tay hota hai ki aapko kuch
         karna hai ya sirf intezaar.
       </p>
 
       <p>
         <strong>Apne aap judne wali jagah:</strong> MP aur Maharashtra apni suchi kendriya
-        data se banate hain. Yahan judaa application ka koi form hi nahi hai — PM Kisan mein
+        data se banate hain. Yahan judaa application ka koi form hi nahi hai. PM Kisan mein
         active hain to naam khud aa jaata hai. Iska doosra pehlu ye hai ki wahan ki koi bhi
         problem (e-KYC expire, land seeding pending) yahan double nuksan
         karti hai: dono kist ek saath rukti hain.
@@ -307,39 +307,39 @@ export default function StateKisanYojanaHub() {
 
       <p>
         Agar aapko yaad nahi ki aapke yahan kaunsa model hai, to upar wale table se apna
-        guide kholiye — har guide mein enrolment ka poora tareeka saaf likha hai.
+        guide kholiye, har guide mein enrolment ka poora tareeka saaf likha hai.
       </p>
 
-      <h2>Kist Ka Calendar — Saal Bhar Mein Kab Kya Aata Hai</h2>
+      <h2>Kist Ka Calendar. Saal Bhar Mein Kab Kya Aata Hai</h2>
 
       <p>
         Har jagah ka apna schedule hai, lekin ek mota pattern jaan lena kaam aata hai. Kendriya
         teen kistein aam taur par April–July, August–November aur December–March ke
         windows mein aati hain. MP aur Maharashtra apne hapte inhi ke
-        aas-paas, lekin apne hi dinon par bhejte hain — isliye mahine mein do judaa credit
+        aas-paas, lekin apne hi dinon par bhejte hain. Isliye mahine mein do judaa credit
         dikhna bilkul normal hai. Telangana ka per-acre model Kharif aur Rabi ke season se
         juda hai, to wahan saal mein do bade credit aate hain. Aur Chhattisgarh ki antar
-        rashi ka time dhan kharidi ke season ke baad ka hai — hapte ka nahi, release ka
+        rashi ka time dhan kharidi ke season ke baad ka hai. Hapte ka nahi, release ka
         intezaar hota hai.
       </p>
 
       <p>
         Iska practical matlab: pichle saal ke credit ki dates passbook se
         nikaal kar likh lein. Agla saal lagbhag usi pattern par chalega, aur “paisa late
-        hai ya meri file atki hai” ka farak aap khud pehchaan lenge — poore gaon mein kisi
+        hai ya meri file atki hai” ka farak aap khud pehchaan lenge, poore gaon mein kisi
         ko nahi aaya to wo late release hai, sirf aapko nahi aaya to wo aapki file ka
         mamla hai. Dono ka ilaaj judaa hai: pehle mein intezaar, doosre mein bank ya site
         ki jaanch.
       </p>
 
-      <h2>Do Khetihar, Do Pradesh — Hisaab Ka Farak Ek Misaal Se</h2>
+      <h2>Do Khetihar, Do Pradesh. Hisaab Ka Farak Ek Misaal Se</h2>
 
       <p>
         Do bhai, do judaa message, aur dono ke sawaal ka jawab ek hi tha. Ek MP mein basa tha,
         doosra border
         paar Maharashtra mein. Dono ke paas lagbhag barabar zameen, par saal ke ant mein
         credit ka jod judaa nikla. Dono ko laga kisi ek ke saath galti hui hai. Galti nahi
-        thi — bas do jagah ke do model the. Rehne do, wo baat aur hai; hisaab dekhiye.
+        thi. Bas do jagah ke do model the. Rehne do, wo baat aur hai; hisaab dekhiye.
       </p>
 
       <p>
@@ -347,22 +347,22 @@ export default function StateKisanYojanaHub() {
         paas teen-teen acre zameen hai. Pehla Madhya Pradesh mein hai: use kendra ka ₹6,000
         aur pradesh ka ₹6,000 — kul ₹12,000 saalana milega, zameen teen acre ho ya paanch,
         raqam wahi rahegi. Doosra Telangana mein hai: wahan hisaab per acre hai, isliye teen
-        acre par ₹36,000 saalana banta hai — lekin ek acre wale padosi ko sirf ₹12,000.
+        acre par ₹36,000 saalana banta hai. Lekin ek acre wale padosi ko sirf ₹12,000.
       </p>
 
       <p>
-        Ab teesra naam jodein — Chhattisgarh ka, jo dhan bechta hai. Uski raqam na fixed hai
+        Ab teesra naam jodein. Chhattisgarh ka, jo dhan bechta hai. Uski raqam na fixed hai
         na per acre; wo is par nirbhar hai ki samiti mein kitne quintal dhan darj hua. Achhi
         fasal ke saal zyada, kam kharidi ke saal kam. Teeno barabar mehnat karte hain,
-        lekin teeno ki jaanch bilkul judi cheez hai — pehle ko sirf hapte ki date
+        lekin teeno ki jaanch bilkul judi cheez hai. Pehle ko sirf hapte ki date
         dekhni hai, doosre ko apna land record, aur teesre ko kharidi ki entry. Isi liye is
         page par har guide judaa hai; ek hi formula sab par nahi chalta.
       </p>
 
-      <h2>Naye Laabharthi Ke Liye Pehla Kadam — Rajya Koi Bhi Ho</h2>
+      <h2>Naye Laabharthi Ke Liye Pehla Kadam. Rajya Koi Bhi Ho</h2>
 
       <p>
-        Zameen abhi naam par aayi hai — kharidi ho, virasat ho ya batwaara — to income-support
+        Zameen abhi naam par aayi hai. Kharidi ho, virasat ho ya batwaara. To income-support
         ka raasta har jagah ek hi point se shuru hota hai: <strong>revenue record mein
         apna naam durust karwana</strong>. Mutation jab tak poora nahi hota, koi bhi website
         aapko khatedar nahi maanti, aur bina khatedar bane na kendriya grant banta hai na
@@ -382,7 +382,7 @@ export default function StateKisanYojanaHub() {
 
       <p>
         Website chahe koi bhi ho, atakne ki wajahein lagbhag wahi rehti hain. Bank account
-        NPCI se seeded ho — warna payment bank se wapas laut jaati hai. Aadhaar, bank aur
+        NPCI se seeded ho, warna payment bank se wapas laut jaati hai. Aadhaar, bank aur
         land record mein naam ki spelling ek jaisi ho. Aur e-KYC current ho. Ye aakhri wali
         sabse dhokha deti hai: screen par green dikhta hai, umeed bandhti hai, aur paisa phir
         bhi nahi aata.
@@ -390,7 +390,7 @@ export default function StateKisanYojanaHub() {
 
       <p>
         In teeno mein se koi bhi problem ho to pehle use theek karayein, uske baad hi kist ka
-        intezaar karein. Ulta mat karna — log yahi ulta karte hain, maine dekha hai — pehle intezaar,
+        intezaar karein. Ulta mat karna — log yahi ulta karte hain, maine dekha hai. Pehle intezaar,
         baad mein sudhaar. Ye kaam CSC, bank branch aur tehsil se ho jaate hain. Ek baar theek
         hone par saalon chalte hain, toh der mat karo.
       </p>
@@ -403,7 +403,7 @@ export default function StateKisanYojanaHub() {
         itna time nahi lagta: apna panjikaran/application number (har jagah ka apna
         format hai), Aadhaar number, bank khaate ke aakhri chaar ank, aur wo mobile number
         jo record mein darj hai. West Bengal mein Aadhaar ki jagah Voter ID (EPIC) chalta
-        hai — wahan wo number likhein.
+        hai. Wahan wo number likhein.
       </p>
 
       <p>
@@ -423,49 +423,49 @@ export default function StateKisanYojanaHub() {
         neeche khula hai.
       </p>
 
-      <h3>Bihar — DBT Agriculture: Ek Number, Saari Yojana Ka Darwaza</h3>
+      <h3>Bihar. DBT Agriculture: Ek Number, Saari Yojana Ka Darwaza</h3>
       <p>
         Bihar mein saalana nakad scheme nahi, par <code>dbtagriculture.bihar.gov.in</code> ek
         chhata system hai. Yahan ek baar enrolment par 13-anka kisan panjikaran sankhya milti
         hai, aur usi number se har madad khulti hai: diesel anudan (₹750 prati acre prati
         sinchai tak), baadh/sukhad par krishi input anudan, beej anudan, aur PM-Kisan tak ki
-        arji ka raasta. Enrolment ke teen type hain — raiyat, gair-raiyat (batayidar,
+        arji ka raasta. Enrolment ke teen type hain. Raiyat, gair-raiyat (batayidar,
         swa-ghoshna ke saath), aur dono. Panjikaran sankhya kho jaaye to nayi mat banwao —
         duplicate entry dono record atka deti hai; purana number portal par Aadhaar se search
         karke nikal jaata hai. Panjikaran aur har arji free hai; har yojana ke liye uski
         window mein alag se apply karna padta hai, paisa DBT se seedha khaate mein aata hai.
       </p>
 
-      <h3>Haryana — Meri Fasal Mera Byora: MSP Ka Gatekeeper</h3>
+      <h3>Haryana. Meri Fasal Mera Byora: MSP Ka Gatekeeper</h3>
       <p>
         Haryana ka model nakad kist nahi, MSP kharid ka pakka system hai.{' '}
         <code>fasal.haryana.gov.in</code> par fasal register kiye bina mandi mein MSP par
-        fasal nahi bikti — gate pass isi data se banta hai. Registration Family ID (Parivar
+        fasal nahi bikti, gate pass isi data se banta hai. Registration Family ID (Parivar
         Pehchan Patra) ya registered mobile se hota hai, aur patwari verification ke baad hi
         entry Verified hoti hai. Status ke teen matlab: Pending (patwari ke paas), Verified
         (gate pass ban sakta hai), Rejected (detail sudhaar kar dobara). Dhaan ki seedhi
         bijai (DSR) aur Mera Pani Meri Virasat jaise incentive bhi isi registration se judte
         hain. MSP ka paisa na aaye to pehle apni entry ka status dekho, phir bank khaate ki
-        NPCI seeding — chaar mein se teen mamle inhi do jagah atakte hain.
+        NPCI seeding, chaar mein se teen mamle inhi do jagah atakte hain.
       </p>
 
       <h3>Uttar Pradesh — Karj Rahat Ke Bache Mamle, Nayi Scheme Nahi</h3>
       <p>
         UP mein 2017 ki Kisan Rin Mochan (karj rahat) yojana ke bache mamle ab bhi nipat
-        rahe hain — ₹1 lakh tak ki maafi, sirf 2016 se pehle ke fasal rin par. Nayi saalana
-        nakad yojana ya nayi karj maafi ki koi sarkari ghoshna abhi nahi hai — WhatsApp par
+        rahe hain. ₹1 lakh tak ki maafi, sirf 2016 se pehle ke fasal rin par. Nayi saalana
+        nakad yojana ya nayi karj maafi ki koi sarkari ghoshna abhi nahi hai. WhatsApp par
         ghoomti &ldquo;nayi list&rdquo; ki khabar ko portal se milao. Asli portal{' '}
         <code>upkisankarjrahat.upsdc.gov.in</code> hai; list mein naam bank ka loan account
         number daal kar dikhta hai, aur naam na hone par shikayat bhi wahin darj hoti hai.
         Collectorate ki taraf se shikayat ka jawab usi portal par status mein dikhta hai.
       </p>
 
-      <h3>Gujarat — iKhedut: Nakad Nahi, Arji-Based Subsidy</h3>
+      <h3>Gujarat, iKhedut: Nakad Nahi, Arji-Based Subsidy</h3>
       <p>
         Gujarat mein saalana nakad transfer nahi hai; <code>ikhedut.gujarat.gov.in</code> se
         tractor sahay, drip/micro-irrigation, tar fencing, godown, pump set jaisi 100+ sahay
         yojanaon ki arji hoti hai. System window-based hai: yojana ki window khulti hai, online
-        arji hoti hai, aur arji ka print sign karke office mein jama karna zaroori hai — yahi
+        arji hoti hai, aur arji ka print sign karke office mein jama karna zaroori hai. Yahi
         step sabse zyada log chhodte hain aur labh gawa dete hain. Arji target se zyada ho to
         draw/lottery hota hai. Status portal par arji number se dikhta hai; reject hone ki aam
         wajahein (7/12 utara ka mismatch, bank detail, print jama na hona) sudhaar kar agli
@@ -483,13 +483,13 @@ export default function StateKisanYojanaHub() {
       <h2>Zameen Do Pradeshon Mein Ho To Kya Hota Hai</h2>
 
       <p>
-        Border ke gaon mein ye sawaal aam hai — kuch zameen idhar, kuch udhar.
+        Border ke gaon mein ye sawaal aam hai. Kuch zameen idhar, kuch udhar.
         Kis ka claim kahan banega? Kendriya grant par is se farak nahi padta; wo
         poore desh ki scheme hai aur parivaar ko ek hi grant deti hai, zameen chahe jahan ho.
         Lekin rajya ka niyam judaa hai: har sarkar
         sirf apne yahan ki zameen aur apne nivasi ko ginti hai. Matlab MP ki zameen
         par MP ki scheme ka claim banega aur Rajasthan wali zameen us hisaab se Rajasthan
-        ke niyam par jaayegi — lekin nivasi to aap ek hi jagah ke hain, isliye vyavhaar
+        ke niyam par jaayegi. Lekin nivasi to aap ek hi jagah ke hain, isliye vyavhaar
         mein aam taur par ek hi yojana milti hai. Aise case mein apne dono taraf
         ke patwari se record saaf karwa lena hi sabse pehla kadam hai.
       </p>
@@ -499,7 +499,7 @@ export default function StateKisanYojanaHub() {
       <ul>
         <li>
           <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">
-            PM Kisan Samman Nidhi — official portal (Central)
+            PM Kisan Samman Nidhi, official portal (Central)
           </a>
         </li>
         <li>
@@ -509,37 +509,37 @@ export default function StateKisanYojanaHub() {
         </li>
         <li>
           <a href="https://rajsahakar.rajasthan.gov.in/citizen/cmkisanstatus" target="_blank" rel="noopener noreferrer">
-            Raj Sahakar — Rajasthan CM Kisan status check
+            Raj Sahakar. Rajasthan CM Kisan status check
           </a>
         </li>
         <li>
           <a href="https://nsmny.mahait.org" target="_blank" rel="noopener noreferrer">
-            Namo Shetkari Mahasanman Nidhi — Maharashtra official portal
+            Namo Shetkari Mahasanman Nidhi. Maharashtra official portal
           </a>
         </li>
         <li>
           <a href="https://annadathasukhibhava.ap.gov.in" target="_blank" rel="noopener noreferrer">
-            Annadata Sukhibhava — Andhra Pradesh official portal
+            Annadata Sukhibhava. Andhra Pradesh official portal
           </a>
         </li>
         <li>
           <a href="https://rytubharosa.cgg.gov.in" target="_blank" rel="noopener noreferrer">
-            Rythu Bharosa — Telangana official portal
+            Rythu Bharosa. Telangana official portal
           </a>
         </li>
         <li>
           <a href="https://krishakbandhu.wb.gov.in" target="_blank" rel="noopener noreferrer">
-            Krishak Bandhu — West Bengal official portal
+            Krishak Bandhu. West Bengal official portal
           </a>
         </li>
         <li>
           <a href="https://cmkisan.odisha.gov.in" target="_blank" rel="noopener noreferrer">
-            CM Kisan Yojana — Odisha official portal
+            CM Kisan Yojana. Odisha official portal
           </a>
         </li>
         <li>
           <a href="https://khadya.cg.nic.in" target="_blank" rel="noopener noreferrer">
-            Khadya Vibhag Chhattisgarh — Krishak Unnati Yojana
+            Khadya Vibhag Chhattisgarh. Krishak Unnati Yojana
           </a>
         </li>
       </ul>
@@ -561,7 +561,7 @@ export default function StateKisanYojanaHub() {
         }}
       />
       <section className="mb-8 not-prose">
-        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Pradesh-war comparison — jo uljhanein sabse common hain</p>
+        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Pradesh-war comparison, jo uljhanein sabse common hain</p>
         <div className="space-y-3">
           {FAQS_DATA.map(({ q, a }) => (
             <details
@@ -587,7 +587,7 @@ export default function StateKisanYojanaHub() {
         karne ke naam par paise nahi maangti. Koi "fees" maange to wo fraud hai. Shikayat apne
         krishi vibhag ya panchayat karyalay mein darj karein. Ek aur aam tareeka
         WhatsApp par ghoomta "nayi yojana, itna paisa milega" wala message hai jisme link kisi
-        private website ka hota hai — aisi kisi bhi khabar ko pehle apne yahan ki sarkari
+        private website ka hota hai. Aisi kisi bhi khabar ko pehle apne yahan ki sarkari
         site par milaayein. Sarkari announcement hamesha .gov.in ya .nic.in wale pate par
         milti hai, aur Aadhaar ya bank ki jaankari kisi link par bharne ki zaroorat kabhi
         nahi hoti. Jo scheme is page ki list mein nahi hai aur portal par bhi nahi dikh rahi,

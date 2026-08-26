@@ -7,12 +7,12 @@ import { EXTERNAL_LINK_PROPS, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config'
 
 export const metadata: Metadata = {
   title: 'Drip aur Sprinkler Subsidy: PDMC ke 55% / 45% Niyam Aur Poora Process',
-  description: 'Micro-irrigation subsidy ka asli structure — PDMC ke tahat small/marginal kisan ko 55% aur baaki kisan ko 45% assistance, unit cost norms, state top-up, application steps aur maintenance reality.',
+  description: 'Micro-irrigation subsidy ka asli structure. PDMC ke tahat small/marginal kisan ko 55% aur baaki kisan ko 45% assistance, unit cost norms, state top-up, application steps aur maintenance reality.',
   keywords: ['drip irrigation subsidy', 'sprinkler irrigation subsidy', 'PDMC per drop more crop', 'micro irrigation unit cost', 'water conservation', 'irrigation subsidy'],
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
     title: 'Drip aur Sprinkler Subsidy: PDMC ke 55% / 45% Niyam Aur Poora Process',
-    description: 'Micro-irrigation subsidy ka asli structure — PDMC assistance rates, unit cost norms, state top-up aur application process.',
+    description: 'Micro-irrigation subsidy ka asli structure. PDMC assistance rates, unit cost norms, state top-up aur application process.',
     type: 'article',
     locale: 'hi_IN',
     siteName: 'KisanStatus.com',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Drip aur Sprinkler Subsidy: PDMC ke 55% / 45% Niyam',
-    description: 'Micro-irrigation subsidy ka asli structure — PDMC assistance rates, unit cost norms aur application process.',
+    description: 'Micro-irrigation subsidy ka asli structure. PDMC assistance rates, unit cost norms aur application process.',
     images: ['https://kisanstatus.com/images/kisanguides/drip-sprinkler-hero.webp'],
   },
   alternates: { canonical: 'https://kisanstatus.com/articles/drip-sprinkler-irrigation-subsidy' },
@@ -31,15 +31,15 @@ export const metadata: Metadata = {
 const FAQS_DATA = [
   {
     q: 'Drip par 75% ya 90% subsidy milne ka dawa sach hai?',
-    a: 'Nahi. Central PDMC ka notified rate 55% (small & marginal) aur 45% (baaki) hai — wo bhi indicative unit cost par, vendor ke bill par nahi. Zyada figure dikhe to wo state ka top-up hai. Aise claim par vendor se likhit government order maango.',
+    a: 'Nahi. Central PDMC ka notified rate 55% (small & marginal) aur 45% (baaki) hai. Wo bhi indicative unit cost par, vendor ke bill par nahi. Zyada figure dikhe to wo state ka top-up hai. Aise claim par vendor se likhit government order maango.',
   },
   {
     q: 'NE aur Himalayan states mein subsidy percentage badh jaata hai?',
-    a: 'Percentage wahi 55/45 rehta hai — badalta hai unit cost. NE aur Himalayan states ke liye unit cost 25% zyada maana jaata hai, aur low micro-irrigation penetration wale states mein 15% zyada. Isi ek line ki galat samajh se "hilly states mein 90% subsidy" jaisa dawa paida hota hai.',
+    a: 'Percentage wahi 55/45 rehta hai. Badalta hai unit cost. NE aur Himalayan states ke liye unit cost 25% zyada maana jaata hai, aur low micro-irrigation penetration wale states mein 15% zyada. Isi ek line ki galat samajh se "hilly states mein 90% subsidy" jaisa dawa paida hota hai.',
   },
   {
     q: 'Mere khet ke liye drip theek hai ya sprinkler?',
-    a: 'Simple hisaab: qataar wali fasal (ganna, cotton, sabziyan, bagwani) — drip. Ghani fasal (gehu, makka, dalhan, tilhan) ya sandy/uneven zameen — sprinkler. Bas.',
+    a: 'Simple hisaab: qataar wali fasal (ganna, cotton, sabziyan, bagwani), drip. Ghani fasal (gehu, makka, dalhan, tilhan) ya sandy/uneven zameen, sprinkler. Bas.',
   },
   {
     q: 'Ek hi zameen par dobara subsidy kab milegi?',
@@ -76,7 +76,7 @@ export default function DripSprinkler() {
         </p>
         <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
           Government ka apna statement saaf hai: micro-irrigation par assistance{' '}
-          <strong>55% small &amp; marginal kisan ko aur 45% doosre kisano ko</strong> — aur wo bhi
+          <strong>55% small &amp; marginal kisan ko aur 45% doosre kisano ko</strong>. Aur wo bhi
           <em> indicative unit cost</em> par, aapke vendor ke bill par nahi. Kuch states iske upar apna
           top-up dete hain, isliye kahin-kahin total figure zyada dikhta hai. Vo state ka hissa hai,
           central rate nahi.{' '}
@@ -88,7 +88,7 @@ export default function DripSprinkler() {
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Flood irrigation mein khet tak pahunche paani ka bada hissa evaporation, runoff aur deep
-        percolation mein nikal jaata hai — field-level efficiency aam taur par 30–40% ke aas-paas
+        percolation mein nikal jaata hai. Field-level efficiency aam taur par 30–40% ke aas-paas
         maani jaati hai, jabki drip/sprinkler jaisi pressurised systems 70–90% tak pahunchti hain.
         Isi farak par poori scheme khadi hai. Neeche wahi likha hai jo official documents se verify
         ho paaya; jo cheez sirf vendor ki zubaani hai, use maine number ki shakal mein nahi likha.
@@ -122,7 +122,7 @@ export default function DripSprinkler() {
               <td className="py-3 px-4" colSpan={2}>
                 AICRP jaise field studies micro-irrigation par roughly <strong>30–70% paani ki bachat</strong> aur
                 drip fertigation ke saath <strong>26–45% tak yield increase</strong> report karte hain. Ye ek
-                range hai — aapka actual result soil, crop aur system design par depend karega.{' '}
+                range hai. Aapka actual result soil, crop aur system design par depend karega.{' '}
                 <a href="https://bharatnotes.com/resources/key-terms/micro-irrigation-drip-sprinkler--13-water-resources-irrigation-india/" {...EXTERNAL_LINK_PROPS} className="underline">
                   [AICRP data summary]
                 </a>
@@ -139,7 +139,7 @@ export default function DripSprinkler() {
                 Iska ek all-India number likhna galat hoga. Subsidy aapke <strong>state ke notified
                 indicative unit cost</strong> par nikalti hai, jo crop spacing aur system type ke hisaab se
                 alag-alag hai. Sahi figure sirf apne state agriculture department ki current cost norms
-                list se lein — aur uska print quotation ke saath rakhein.
+                list se lein. Aur uska print quotation ke saath rakhein.
               </td>
             </tr>
           </tbody>
@@ -154,7 +154,7 @@ export default function DripSprinkler() {
 
       <Image
         src="/images/kisanguides/drip-vs-sprinkler-comparison.webp"
-        alt="Drip vs sprinkler irrigation ka comparison — working mechanism aur upyog"
+        alt="Drip vs sprinkler irrigation ka comparison, working mechanism aur upyog"
         width={800}
         height={450}
         sizes="(max-width: 768px) 100vw, 800px"
@@ -162,7 +162,7 @@ export default function DripSprinkler() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Subsidy kitni milti hai — aur kis cheez par
+        Subsidy kitni milti hai. Aur kis cheez par
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Micro-irrigation ka central component hai <strong>Per Drop More Crop (PDMC)</strong>. Ek
@@ -173,7 +173,7 @@ export default function DripSprinkler() {
         <a href="https://www.global-agriculture.com/india-region/micro-irrigation-centrally-sponsored-scheme-css-of-per-drop-more-crop-pdmc/" {...EXTERNAL_LINK_PROPS} className="underline">
           [DA&amp;FW]
         </a>{' '}
-        Isliye kahin form &ldquo;RKVY&rdquo; kehta hai aur kahin &ldquo;PMKSY&rdquo; — dono ek hi
+        Isliye kahin form &ldquo;RKVY&rdquo; kehta hai aur kahin &ldquo;PMKSY&rdquo;. Dono ek hi
         micro-irrigation assistance ki baat kar rahe hain.
       </p>
 
@@ -225,13 +225,13 @@ export default function DripSprinkler() {
       <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-4">
         <li>Assistance ek beneficiary ko <strong>5 hectare tak</strong> ke area par milti hai.</li>
         <li>
-          Usi zameen par dobara subsidy <strong>7 saal baad</strong> hi milegi — yaani pehli baar
+          Usi zameen par dobara subsidy <strong>7 saal baad</strong> hi milegi. Yaani pehli baar
           system lagwate waqt hi crop plan theek se soch lena zaroori hai.
         </li>
         <li>Aadhaar-linked bank account chahiye, kyunki release DBT route se hota hai.</li>
         <li>
           Minimum area, allowed crop-spacing aur eligible system types state guideline se tay hote
-          hain — inhe apne district agriculture office se likhit mein confirm karein.
+          hain. Inhe apne district agriculture office se likhit mein confirm karein.
         </li>
       </ul>
       <p className="text-xs text-gray-600 dark:text-gray-400 mb-8">
@@ -254,22 +254,22 @@ export default function DripSprinkler() {
           <li>Apne area ke liye <strong>notified indicative unit cost</strong> nikaalein (state agriculture department ki cost norms list).</li>
           <li>Apni category tay karein: small/marginal (55%) ya other (45%).</li>
           <li><strong>Subsidy = unit cost × aapka rate.</strong> Dhyan rahe: unit cost, vendor quotation nahi.</li>
-          <li>State top-up hai to wo alag se jodein — sirf tab jab wo state order mein likha ho.</li>
+          <li>State top-up hai to wo alag se jodein. Sirf tab jab wo state order mein likha ho.</li>
           <li>
             <strong>Aapka kharcha = vendor ka final bill − subsidy.</strong> Agar quotation notified norms se
-            upar chala gaya, to poora extra hissa aapki jeb se jaata hai — ye sabse aam surprise hai.
+            upar chala gaya, to poora extra hissa aapki jeb se jaata hai. Ye sabse aam surprise hai.
           </li>
         </ol>
       </div>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Baaki hissa cash mein nahi de sakte to{' '}
         <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Kisan Credit Card (KCC)</Link>{' '}
-        ke through credit ek raasta hai — byaaj aur eligibility apne bank se confirm karein.
+        ke through credit ek raasta hai. Byaaj aur eligibility apne bank se confirm karein.
       </p>
 
       <Image
         src="/images/kisanguides/irrigation-subsidy-calculation.webp"
-        alt="Irrigation subsidy calculation — unit cost aur farmer share ka breakdown"
+        alt="Irrigation subsidy calculation, unit cost aur farmer share ka breakdown"
         width={800}
         height={450}
         sizes="(max-width: 768px) 100vw, 800px"
@@ -286,7 +286,7 @@ export default function DripSprinkler() {
         current order dekhna zaroori hai.
       </p>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Top-up state budget par depend karta hai aur saal-dar-saal badal sakta hai — pichle saal ka
+        Top-up state budget par depend karta hai aur saal-dar-saal badal sakta hai. Pichle saal ka
         percentage is saal guarantee nahi hai. States ko resource jutane mein madad ke liye NABARD ke
         paas <strong>Micro Irrigation Fund (MIF)</strong> banaya gaya hai (initial corpus ₹5,000 crore);
         October 2024 mein Union Cabinet ne iska continuation approve kiya aur interest subvention 3%
@@ -310,10 +310,10 @@ export default function DripSprinkler() {
         System ke main components (aur kis par paisa bachana mehenga padta hai)
       </h2>
       <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
-        <li><strong>Water source &amp; pump:</strong> borewell, canal ya tank — system design isi ke discharge aur pressure par bharosa karta hai.</li>
+        <li><strong>Water source &amp; pump:</strong> borewell, canal ya tank, system design isi ke discharge aur pressure par bharosa karta hai.</li>
         <li>
           <strong>Filtration unit:</strong> sand media ya disc filter. Sabse zyada kanjoosi yahin hoti hai
-          aur sabse zyada nuksan bhi — filter chhota pad gaya to emitters ka choke hona tay hai.
+          aur sabse zyada nuksan bhi, filter chhota pad gaya to emitters ka choke hona tay hai.
         </li>
         <li><strong>Fertigation venturi / tank:</strong> ghulansheel khaad paani ke saath dene ke liye. Drip ka asli fayda isi se aata hai.</li>
         <li><strong>Mainline &amp; sub-main:</strong> khet ke hisson tak paani le jaane wali moti pipes.</li>
@@ -321,7 +321,7 @@ export default function DripSprinkler() {
       </ul>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Apply kaise karein — kadam se kadam
+        Apply kaise karein, kadam se kadam
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Application state ke portal se hota hai, central portal se nahi. Har state ka apna system
@@ -337,12 +337,12 @@ export default function DripSprinkler() {
         <li>
           <strong>State portal par registration aur application:</strong> apne state agriculture /
           horticulture department ke portal par micro-irrigation component chunein. Yahin par system
-          type aur area bharna hota hai — area galat bhara to aage estimation bhi galat banega.
+          type aur area bharna hota hai. Area galat bhara to aage estimation bhi galat banega.
         </li>
         <li>
           <strong>Field survey aur technical estimation:</strong> department ka officer soil, water
           source aur crop pattern dekh kar system design aur eligible unit cost tay karta hai. Isi
-          step par aapko apni actual subsidy figure milti hai — ise likhit mein lein.
+          step par aapko apni actual subsidy figure milti hai. Ise likhit mein lein.
         </li>
         <li>
           <strong>Empanelled vendor se quotation aur approval:</strong> approved / empanelled vendor
@@ -352,14 +352,14 @@ export default function DripSprinkler() {
         <li>
           <strong>Installation, verification, phir DBT release:</strong> installation ke baad dobara
           verification hota hai; clear hone par subsidy DBT se aapke account mein aati hai. Release ka
-          exact timeline state ke process aur fund availability par depend karta hai — koi fixed
+          exact timeline state ke process aur fund availability par depend karta hai. Koi fixed
           din-count guarantee nahi hai, isliye apne district office se hi current status poochein.
         </li>
       </ol>
 
       <Image
         src="/images/kisanguides/irrigation-application-process.webp"
-        alt="Micro-irrigation subsidy application process — registration, survey aur verification steps"
+        alt="Micro-irrigation subsidy application process, registration, survey aur verification steps"
         width={800}
         height={450}
         sizes="(max-width: 768px) 100vw, 800px"
@@ -373,7 +373,7 @@ export default function DripSprinkler() {
           <li><strong>Approval se pehle kharidari:</strong> file mein pre-approval nahi hai to claim atak jaata hai.</li>
           <li><strong>Emitter choking:</strong> khaare / retiley paani mein filtration aur flushing ka schedule lazmi hai. Chemical treatment ka interval apne system ke manufacturer manual se lein — har paani ke liye ek hi formula nahi hota.</li>
           <li><strong>Non-standard material:</strong> BIS-certified saaman aur likhit warranty maangein; empanelment list se cross-check karein.</li>
-          <li><strong>Sirf valve kholna kaafi nahi:</strong> pressure, irrigation timing aur fertigation dose seekhna padta hai — install ke waqt vendor se demo aur manual dono lein.</li>
+          <li><strong>Sirf valve kholna kaafi nahi:</strong> pressure, irrigation timing aur fertigation dose seekhna padta hai. Install ke waqt vendor se demo aur manual dono lein.</li>
         </ul>
       </div>
 
@@ -382,7 +382,7 @@ export default function DripSprinkler() {
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Micro-irrigation ek machine hai, ek baar ka kharcha nahi. Neeche wahi practices hain jo
-        manufacturer manuals aur extension advisories mein aam taur par aati hain — exact interval
+        manufacturer manuals aur extension advisories mein aam taur par aati hain. Exact interval
         aapke paani ki quality aur apne system ke manual se tay hoga:
       </p>
 
@@ -391,7 +391,7 @@ export default function DripSprinkler() {
           <div>
             <h3 className="font-bold text-lg mb-3 text-gray-900 dark:text-gray-100 border-b border-gray-300 dark:border-gray-600 pb-2">Rozana / haftawari</h3>
             <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-              <li>✓ Filter aur pressure gauge par nazar rakhein — pressure girna pehla warning signal hai.</li>
+              <li>✓ Filter aur pressure gauge par nazar rakhein, pressure girna pehla warning signal hai.</li>
               <li>✓ Filter backwash / cleaning routine follow karein.</li>
               <li>✓ Laterals ke end caps khol kar flushing karein.</li>
               <li>✓ Leak ya toota pipe usi din theek karein; ek leak poore block ka pressure kharab karti hai.</li>
@@ -400,7 +400,7 @@ export default function DripSprinkler() {
           <div>
             <h3 className="font-bold text-lg mb-3 text-gray-900 dark:text-gray-100 border-b border-gray-300 dark:border-gray-600 pb-2">Season / saal ke hisaab se</h3>
             <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-              <li>✓ Chemical / acid treatment manual ke interval par — andaze se nahi.</li>
+              <li>✓ Chemical / acid treatment manual ke interval par, andaze se nahi.</li>
               <li>✓ Season khatam hone par poore system ka high-pressure flush.</li>
               <li>✓ Ghise emitters aur nozzles replace karein, taaki discharge uniform rahe.</li>
               <li>✓ Off-season mein system khaali karke rakhein.</li>
@@ -411,7 +411,7 @@ export default function DripSprinkler() {
 
       <Image
         src="/images/kisanguides/irrigation-maintenance-guide.webp"
-        alt="Irrigation system maintenance — filter cleaning, flushing aur seasonal care"
+        alt="Irrigation system maintenance, filter cleaning, flushing aur seasonal care"
         width={800}
         height={450}
         sizes="(max-width: 768px) 100vw, 800px"
@@ -426,7 +426,7 @@ export default function DripSprinkler() {
           <strong className="text-gray-900 dark:text-gray-100">Solar pump (PM-KUSUM Component B):</strong>{' '}
           standalone solar agriculture pump par central financial assistance <strong>30%</strong> hoti hai
           (special category areas jaise NE states, J&amp;K, Himachal, Uttarakhand mein <strong>50%</strong>),
-          aur state ka hissa aam taur par kam se kam 30% — isse kisan ka share ghat kar 10–40% ke beech
+          aur state ka hissa aam taur par kam se kam 30%, isse kisan ka share ghat kar 10–40% ke beech
           aata hai. Subsidy benchmark ya tender cost, jo kam ho, us par milti hai.{' '}
           <a href="https://pmkusum.mnre.gov.in/" {...EXTERNAL_LINK_PROPS} className="underline">
             [PM-KUSUM official portal]
@@ -444,7 +444,7 @@ export default function DripSprinkler() {
         </li>
         <li>
           <strong className="text-gray-900 dark:text-gray-100">State top-up:</strong> upar §state section
-          mein bataya hua current order check karein — yahi aapka net kharcha sabse zyada badalta hai.
+          mein bataya hua current order check karein. Yahi aapka net kharcha sabse zyada badalta hai.
         </li>
       </ul>
 
@@ -480,8 +480,8 @@ export default function DripSprinkler() {
           [Ministry statement, Oct 2025]
         </a>{' '}
         Isi statement mein ye bhi hai ki states ko ab kharch limits se aage jaane ki zyada
-        flexibility di gayi hai — yani aane wale saalon mein state-level variation aur badh sakta
-        hai. Isliye is page ke number par mat rukein — <em>tareeka</em> hi kaam aayega: apne state ka
+        flexibility di gayi hai. Yani aane wale saalon mein state-level variation aur badh sakta
+        hai. Isliye is page ke number par mat rukein, <em>tareeka</em> hi kaam aayega: apne state ka
         current order hi aapka sach hai.
       </p>
 
@@ -489,9 +489,9 @@ export default function DripSprinkler() {
         <h3 className="font-bold text-base mb-3 text-gray-900 dark:text-gray-100">Is page ki limitations (saaf-saaf)</h3>
         <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
           <li>Yahan diye rates <strong>central PDMC</strong> ke hain. Aapka final figure state top-up aur notified unit cost se badlega.</li>
-          <li>Hum per-acre rupee cost nahi de rahe, kyunki wo state-notified norms se aata hai — andaza dena aapke budget ke liye risk hai.</li>
+          <li>Hum per-acre rupee cost nahi de rahe, kyunki wo state-notified norms se aata hai. Andaza dena aapke budget ke liye risk hai.</li>
           <li>Portal ka layout aur form fields states badalte rehte hain; steps ko structure ki tarah lein, screenshot ki tarah nahi.</li>
-          <li>Scheme ka administrative naam badal chuka hai (PMKSY → RKVY/PM-RKVY route) — purane articles isi wajah se alag baat kehte hain.</li>
+          <li>Scheme ka administrative naam badal chuka hai (PMKSY → RKVY/PM-RKVY route), purane articles isi wajah se alag baat kehte hain.</li>
         </ul>
       </div>
 

@@ -30,20 +30,20 @@ const RELATED_CARDS = [
 
 const FAQS_DATA = [
   {
-    q: 'Maine 3 saal scheme mein paisa dala, ab chhodna hai — kitna wapas aayega?',
-    a: 'Aapne jitne mahine jitna paisa jama kiya, wo poora amount aapko milega, saath mein us par jo bhi savings-account jaisa byaj bana hai wo bhi. Lekin in 3 salon mein sarkar ne apni taraf se jo barabar hissa dala tha, wo account band hote hi wapas treasury mein chala jata hai — kisan ko nahi milta.',
+    q: 'Maine 3 saal scheme mein paisa dala, ab chhodna hai. Kitna wapas aayega?',
+    a: 'Aapne jitne mahine jitna paisa jama kiya, wo poora amount aapko milega, saath mein us par jo bhi savings-account jaisa byaj bana hai wo bhi. Lekin in 3 salon mein sarkar ne apni taraf se jo barabar hissa dala tha, wo account band hote hi wapas treasury mein chala jata hai. Kisan ko nahi milta.',
   },
   {
     q: 'Kya beech mein emergency ke liye kuch paisa nikala ja sakta hai, poora account band kiye bina?',
-    a: 'Nahi, ye option hi maujood nahi hai. LIC jo is scheme ko chalati hai, usme partial withdrawal ka koi provision nahi rakha gaya — na loan, na advance. Agar paise ki sakht zaroorat ho toh sirf poora account close karke jama rashi + interest nikalne ka rasta bachta hai, aur us surat mein sarkari hissa chhootta hai.',
+    a: 'Nahi, ye option hi maujood nahi hai. LIC jo is scheme ko chalati hai, usme partial withdrawal ka koi provision nahi rakha gaya, na loan, na advance. Agar paise ki sakht zaroorat ho toh sirf poora account close karke jama rashi + interest nikalne ka rasta bachta hai, aur us surat mein sarkari hissa chhootta hai.',
   },
   {
-    q: 'Pati ki mrityu ho gayi, main 40 saal ki hoon — mujhe kya karna chahiye?',
+    q: 'Pati ki mrityu ho gayi, main 40 saal ki hoon, mujhe kya karna chahiye?',
     a: 'Aapke paas do rasta hai. Pehla: aap khud is scheme mein naye subscriber ki tarah continue kar sakti hain, apni umar ke hisaab se contribution dete hue, aur 60 saal ki umar par ₹3,000 mahine ki pension paengi. Doosra: agar continue nahi karna chahtin, toh pati ne jo paisa jama kiya tha wo interest sahit nominee ke account mein aa jayega. Ye faisla aapko CSC center ya nazdiki LIC branch mein jaakar form bharke dena hota hai.',
   },
   {
     q: 'Family pension mein ₹1,500 hamesha ke liye milte rahenge ya kuch saal ke baad band ho jayenge?',
-    a: 'Ye pension spouse ki poori zindagi tak chalti rahegi, koi fixed time-limit nahi hai. Agar spouse ki bhi mrityu ho jaye, tab ye pension aage kisi aur family member ko transfer nahi hoti — scheme wahin close ho jati hai.',
+    a: 'Ye pension spouse ki poori zindagi tak chalti rahegi, koi fixed time-limit nahi hai. Agar spouse ki bhi mrityu ho jaye, tab ye pension aage kisi aur family member ko transfer nahi hoti. Scheme wahin close ho jati hai.',
   },
   {
     q: 'Refund process mein kitna time lagta hai aur paisa kaise pata karein aaya ya nahi?',
@@ -111,7 +111,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
             Agar aap ye padh rahe hain kyunki paise ki tangi hai aur soch rahe hain ki Maandhan account band kar doon —
             ruko, pehle poori tasveer samajh lo. Beech mein exit karne par sirf apna jama paisa aur uska interest hi
             wapas aata hai; jo hissa sarkar ne dala tha wo chala jata hai. Doosri taraf, agar kisan ki mrityu ho jaye
-            toh family khaali haath nahi rehti — spouse ke paas continue karne ya paisa wapas lene, dono option hote
+            toh family khaali haath nahi rehti, spouse ke paas continue karne ya paisa wapas lene, dono option hote
             hain.
           </p>
         </div>
@@ -121,7 +121,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             PM Kisan Maandhan koi savings account nahi hai jahan jab chaho paisa daalo aur jab chaho nikaal lo. Ye ek
             pension fund hai, jise LIC manage karti hai, aur iska poora design isi soch par bana hai ki kisan 60 saal
-            ki umar tak isse juda rahe. Isi wajah se beech mein bahar nikalna &quot;mehenga&quot; pad jata hai — na
+            ki umar tak isse juda rahe. Isi wajah se beech mein bahar nikalna &quot;mehenga&quot; pad jata hai. Na
             ki kisi galat niyat se, balki isliye ki pension funds duniya bhar mein isi tarah kaam karte hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
@@ -131,9 +131,9 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
         </section>
 
         <section className="mb-8">
-          <SH>Halaat 1 — Aapne Khud Scheme Chhodne Ka Faisla Kiya</SH>
+          <SH>Halaat 1. Aapne Khud Scheme Chhodne Ka Faisla Kiya</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Zameen bik gayi, koi naya business shuru kiya, ya bas ab is contribution ka bhar nahi utha pa rahe — wajah
+            Zameen bik gayi, koi naya business shuru kiya, ya bas ab is contribution ka bhar nahi utha pa rahe, wajah
             koi bhi ho, 60 saal se pehle voluntarily bahar nikalne par ye hota hai:
           </p>
           <div className="space-y-3 mb-6">
@@ -141,13 +141,13 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
               <p className="font-black text-sm text-green-600 dark:text-green-400 mb-1">Aapko Milega</p>
               <p className="text-xs text-[var(--color-text-muted)]">
                 Har mahine jo aapne apni jeb se jama kiya, wo poora amount, plus us rashi par jitna savings-bank-rate se
-                byaj bana hai — dono ek saath ek hi transaction mein aayenge.
+                byaj bana hai. Dono ek saath ek hi transaction mein aayenge.
               </p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
               <p className="font-black text-sm text-red-600 dark:text-red-400 mb-1">Aapko Nahi Milega</p>
               <p className="text-xs text-[var(--color-text-muted)]">
-                Sarkar ne har mahine aapke barabar jo hissa dala tha, uska koi ansh wapas nahi aata — ye rashi
+                Sarkar ne har mahine aapke barabar jo hissa dala tha, uska koi ansh wapas nahi aata. Ye rashi
                 consolidated pension fund mein hi rehti hai. Isse ek tarah ka lock-in ban jata hai jo aapko 60 saal
                 tak rokta hai.
               </p>
@@ -155,12 +155,12 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
           </div>
           <WB>
             Ek chhota sa udaharan lein: agar kisi ne 30 saal ki umar mein join kiya toh uska monthly contribution
-            ₹55 hai — aur sarkar bhi utna hi ₹55 daalti hai. 10 saal baad exit karein toh sirf apne ₹6,600 (plus
+            ₹55 hai. Aur sarkar bhi utna hi ₹55 daalti hai. 10 saal baad exit karein toh sirf apne ₹6,600 (plus
             interest) milenge, jabki account mein sarkar ke bhi utne hi paise ja chuke the. Yehi wo hissa hai jo
             chhoot jata hai.
           </WB>
           <p className="text-[var(--color-text-muted)] text-xs leading-relaxed mt-3">
-            Ye exit rule sirf humari baat nahi hai — official scheme documentation mein bhi saaf likha hai ki
+            Ye exit rule sirf humari baat nahi hai. Official scheme documentation mein bhi saaf likha hai ki
             10 saal se pehle bahar nikalne par sirf farmer ka contribution hi savings-bank interest ke saath
             wapas hota hai (
             <a
@@ -180,12 +180,12 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
         </section>
 
         <section className="mb-8">
-          <SH>10 Saal Ka Farak — Interest Ka Hisaab Badal Jata Hai</SH>
+          <SH>10 Saal Ka Farak. Interest Ka Hisaab Badal Jata Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ek baareek baat jo scheme ke rules mein likhi hai par kam log jaante hain — exit ka waqt interest ka
             calculation badal deta hai. 10 saal poore hone se <strong>pehle</strong> nikle toh aapke jama paise par
             sirf savings-bank rate ka byaj milta hai. 10 saal ya usse zyada scheme mein rehne ke baad (par 60 se
-            pehle) exit karein, toh pension fund ne aapke paise par jo asli kamai ki hai wo milti hai — ya
+            pehle) exit karein, toh pension fund ne aapke paise par jo asli kamai ki hai wo milti hai. Ya
             savings-bank rate, dono mein se jo zyada ho.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
@@ -196,7 +196,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
         </section>
 
         <section className="mb-8">
-          <SH>Halaat 2 — 60 Saal Se Pehle Kisan Ki Mrityu Ho Jaye</SH>
+          <SH>Halaat 2, 60 Saal Se Pehle Kisan Ki Mrityu Ho Jaye</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ye sabse mushkil waqt hota hai, aur yahin scheme ka spouse-protection wala hissa kaam aata hai. Marne wale
             kisan ki patni ya pati ke paas do raste khulte hain:
@@ -205,7 +205,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
             <SI n={1}>
               <strong>Khud Scheme Mein Aage Badhna:</strong> Spouse chahe toh apni jagah subscriber ban sakta hai.
               Yahan se aage contribution spouse ki apni umar ke hisaab se calculate hoga, aur 60 saal poore hone par
-              usse bhi ₹3,000 mahine ki pension shuru ho jayegi — bilkul waise hi jaise kisan ko milti.
+              usse bhi ₹3,000 mahine ki pension shuru ho jayegi, bilkul waise hi jaise kisan ko milti.
             </SI>
             <SI n={2}>
               <strong>Paisa Wapas Le Lena:</strong> Agar spouse ko lagta hai ki wo continue nahi karna chahte, toh
@@ -217,7 +217,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
         </section>
 
         <section className="mb-8">
-          <SH>Halaat 3 — Pension Shuru Ho Chuki Thi Aur Uske Baad Mrityu Hui</SH>
+          <SH>Halaat 3. Pension Shuru Ho Chuki Thi Aur Uske Baad Mrityu Hui</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Agar kisan 60 paar kar chuka tha aur ₹3,000 mahine pa raha tha, uski mrityu ke baad scheme achanak band
             nahi ho jati.
@@ -237,7 +237,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
             </p>
           </div>
           <IB>
-            Kisan ki jitni pension thi, uski adhi rashi spouse ko har mahine milna shuru ho jati hai — bina kisi
+            Kisan ki jitni pension thi, uski adhi rashi spouse ko har mahine milna shuru ho jati hai. Bina kisi
             naye application ke, sirf mrityu praman patra jama karke bank/LIC branch mein ye process shuru karwaya
             ja sakta hai. Ye rashi spouse ke jeete-ji chalti rehti hai; agla koi transfer nahi hota.
           </IB>
@@ -261,7 +261,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
         </section>
 
         <section className="mb-8">
-          <SH>Kai Kisan Jo Baatein Nahi Jaante — Ye Bhi Padh Lein</SH>
+          <SH>Kai Kisan Jo Baatein Nahi Jaante. Ye Bhi Padh Lein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Upar wale teen halaat ke alawa kuch aur situations hain jo kam charcha mein aati hain lekin kaafi kisano
             ke saath hoti hain:
@@ -271,7 +271,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
               <p className="font-black text-sm text-[var(--color-text)] mb-1">Do Jagah Registration Ho Jaana</p>
               <p className="text-xs text-[var(--color-text-muted)]">
                 Kabhi-kabhi ek hi Aadhaar par galti se do CSC centron se apply ho jata hai. System duplicate pakad
-                leta hai aur ek entry band kar deta hai — us band wale account ka sirf farmer-hissa hi lauta jata
+                leta hai aur ek entry band kar deta hai. Us band wale account ka sirf farmer-hissa hi lauta jata
                 hai, dusra account bina rukawat chalta rehta hai.
               </p>
             </div>
@@ -295,21 +295,21 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
         </section>
 
         <section className="mb-8">
-          <SH>Exit Karna Hi Hai Toh Kaise Karein — Step By Step</SH>
+          <SH>Exit Karna Hi Hai Toh Kaise Karein. Step By Step</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Sab soch-samajh kar bhi faisla exit ka hi hai? Theek hai — process lamba nahi hai, bas sahi jagah aur
+            Sab soch-samajh kar bhi faisla exit ka hi hai? Theek hai. Process lamba nahi hai, bas sahi jagah aur
             sahi kagaz ke saath jaana hai. Online khud se exit ka koi self-service option portal par nahi hai;
             ye kaam CSC center ya LIC branch se hi hota hai.
           </p>
           <StepList>
             <SI n={1}>Apna Aadhaar card, Maandhan ka pension card ya KPAN number, aur bank passbook saath lein</SI>
-            <SI n={2}>Nazdiki CSC center jayein — operator ko voluntary exit ka bolein; wo system mein request daal dega</SI>
+            <SI n={2}>Nazdiki CSC center jayein, operator ko voluntary exit ka bolein; wo system mein request daal dega</SI>
             <SI n={3}>Jo receipt ya acknowledgement mile, uski photo phone mein save kar lein</SI>
             <SI n={4}>30-45 din ke andar aapka jama hissa + interest NPCI-linked bank account mein aa jana chahiye</SI>
             <SI n={5}>Paisa na aaye toh pehle CSC se status poochein; wahan se baat na bane toh pgportal.gov.in par shikayat karein</SI>
           </StepList>
           <WB>
-            Exit request daalne se pehle apna bank account check kar lein — wahi account active hona chahiye jo
+            Exit request daalne se pehle apna bank account check kar lein, wahi account active hona chahiye jo
             registration ke waqt link hua tha. Band account par refund atakne ki shikayat sabse aam hai.
           </WB>
         </section>
@@ -349,8 +349,8 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
           <SH>Refund Ka Paisa Track Kaise Karein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Exit request daalne ke baad ka intezaar sabse zyada pareshan karta hai. Roz bank jaane ki zaroorat
-            nahi — teen aasan raste hain. Pehla: maandhan.in par apna registration/KPAN number daal kar
-            status dekh lein. Doosra: bank passbook update karwa lein ya SMS alert on rakhein — credit LIC ki
+            nahi. Teen aasan raste hain. Pehla: maandhan.in par apna registration/KPAN number daal kar
+            status dekh lein. Doosra: bank passbook update karwa lein ya SMS alert on rakhein, credit LIC ki
             taraf se aata hai, entry mein PMKMY ya LIC ka zikr hota hai. Teesra: 30-45 din nikal jayein aur paisa
             na dikhe, toh usi CSC center par jaakar request ka acknowledgement number de kar status nikalwayein.
           </p>
@@ -359,7 +359,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
             <Link href="/maandhan/pmkmy-grievance-complaint-helpline" className="underline text-blue-600 dark:text-blue-400">
               grievance process
             </Link>{' '}
-            ka rasta pakdein — wahan complaint number milta hai jisse aage ki tracking aasan ho jati hai.
+            ka rasta pakdein, wahan complaint number milta hai jisse aage ki tracking aasan ho jati hai.
           </p>
         </section>
 
@@ -374,13 +374,13 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Exit Ki Asli Keemat Sarkari Hissa Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
             Withdrawal form bharne se pehle ek hisaab kaagaz par kar lein: voluntary exit par sirf aapka apna jama hissa
-            (+ interest) wapas aata hai — sarkar ka 1:1 co-contribution fund mein hi reh jaata hai. Yaani jitne saal
+            (+ interest) wapas aata hai. Sarkar ka 1:1 co-contribution fund mein hi reh jaata hai. Yaani jitne saal
             aap scheme mein rahe, utne saal ka matching paisa exit ke din chhod dete hain. Majboori ho toh yeh rasta
-            khula hai, lekin "paisa phas gaya" wali ghabrahat mein exit karna aadha corpus chhod kar jaana hai — aur
+            khula hai, lekin "paisa phas gaya" wali ghabrahat mein exit karna aadha corpus chhod kar jaana hai. Aur
             subscriber ki death par spouse ke paas continue karne se lekar corpus lene tak ke alag options waise bhi maujood hain.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Exit rules pehle se samajh kar enroll karna hi sabse achha bachav hai — hamari{' '}
+            Exit rules pehle se samajh kar enroll karna hi sabse achha bachav hai. Hamari{' '}
             <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="underline text-blue-600 dark:text-blue-400 font-medium">
               step-by-step registration guide
             </Link>{' '}

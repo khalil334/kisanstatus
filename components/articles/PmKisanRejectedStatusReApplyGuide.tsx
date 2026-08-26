@@ -88,14 +88,14 @@ export default function PmKisanRejectedStatusReApplyGuide() {
             priority
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)]">
-            Rejected Status — Galti Dhundo, Dobara Apply Karo
+            Rejected Status. Galti Dhundo, Dobara Apply Karo
           </p>
         </div>
 
         <section className="mb-8">
           <SH>Naam Kat Gaya? Ghabrao Mat, Ye Hota Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, subah utha, mobile nikala, PM Kisan ka status check kiya. Likha aa raha hai — <strong>"Rejected"</strong>. Dil dhak se ho gaya. 3-4 mahine ki kist ka paisa atak gaya. Dimag mein sawal aane lagte hain: "Meri galti kahan thi? Ab kya hoga? Paisa doob gaya kya?"
+            Bhai, subah utha, mobile nikala, PM Kisan ka status check kiya. Likha aa raha hai. <strong>"Rejected"</strong>. Dil dhak se ho gaya. 3-4 mahine ki kist ka paisa atak gaya. Dimag mein sawal aane lagte hain: "Meri galti kahan thi? Ab kya hoga? Paisa doob gaya kya?"
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             <strong>PM Kisan rejected status</strong> aana aam baat hai. Har mahine lakhon kisanon ka status reject hota hai aur agle mahine fix ho kar wapas active ho jata hai. Bas aapko ye pata hona chahiye ki galti kahan thi aur use kaise theek karna hai.
@@ -127,7 +127,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
             Dekho bhai, jab aap pehli baar PM Kisan ke liye apply karte ho, toh aapka form state ke agriculture department ke paas jata hai. Wahan ke officers (ya automated system) aapki details ko verify karte hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Agar unhe lagta hai ki aap eligible nahi ho, ya aapki details mein kuch gadbad hai, toh wo status ko "Rejected" kar dete hain. Iska seedha matlab hai — <strong>Abhi ke liye aap is list se bahar ho.</strong>
+            Agar unhe lagta hai ki aap eligible nahi ho, ya aapki details mein kuch gadbad hai, toh wo status ko "Rejected" kar dete hain. Iska seedha matlab hai. <strong>Abhi ke liye aap is list se bahar ho.</strong>
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-4">
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
@@ -225,7 +225,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
               title="PM Kisan Official Portal"
               message="Official portal load ho raha hai, bas kuch second..."
               url="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
-              infoNote="Bas kuch pal — official portal abhi khulega."
+              infoNote="Bas kuch pal, official portal abhi khulega."
               className="w-full px-4 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
             >
                Yahan Click Karo → PM Kisan Portal Khulega
@@ -373,13 +373,13 @@ export default function PmKisanRejectedStatusReApplyGuide() {
             <SI n={4}>Agar sab sahi hai, toh status "Active" dikhne lagega.</SI>
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Agar 30 din baad bhi status active na ho, toh samajh jao file kahin atki hai. Pehla kadam: helpline <strong>155261</strong> (busy ho toh <strong>011-24300606</strong>) par call karo — call se pehle registration number, Aadhaar aur correction ki date ek kagaz par likh lo, aur operator se complaint ka reference number zaroor le lo. Wahan se baat na bane toh <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">apne state ke nodal officer</Link> ko email karo ya physical complaint do — email mein wahi reference number quote karna, file wahi se track hoti hai.
+            Agar 30 din baad bhi status active na ho, toh samajh jao file kahin atki hai. Pehla kadam: helpline <strong>155261</strong> (busy ho toh <strong>011-24300606</strong>) par call karo, call se pehle registration number, Aadhaar aur correction ki date ek kagaz par likh lo, aur operator se complaint ka reference number zaroor le lo. Wahan se baat na bane toh <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">apne state ke nodal officer</Link> ko email karo ya physical complaint do, email mein wahi reference number quote karna, file wahi se track hoti hai.
           </p>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Rejection Ke Baad Ke Sawal — Jawab Ke Saath
+            Rejection Ke Baad Ke Sawal. Jawab Ke Saath
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Rejected Status Re-Apply FAQ 2026" />
         </section>
@@ -387,10 +387,10 @@ export default function PmKisanRejectedStatusReApplyGuide() {
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Reject Hua Hai, Band Nahi — Order Ka Dhyan Rakhein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Sabse common galti: log pehle dobara apply kar dete hain aur reason baad mein dekhte hain — toh wahi wajah dobara reject karwa deti hai. Sahi order yeh hai:
+            Sabse common galti: log pehle dobara apply kar dete hain aur reason baad mein dekhte hain. Toh wahi wajah dobara reject karwa deti hai. Sahi order yeh hai:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
-            <li>Portal par rejection reason note karein — bank, land record ya eKYC, teeno ke fix alag hain</li>
+            <li>Portal par rejection reason note karein, bank, land record ya eKYC, teeno ke fix alag hain</li>
             <li>Pehle woh galti theek karwayein (upar reason-wise steps diye hain)</li>
             <li>Uske baad hi CSC se correction form bharke dobara apply karein</li>
           </ol>
@@ -404,13 +404,13 @@ export default function PmKisanRejectedStatusReApplyGuide() {
              PM Kisan Official Portal
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            <strong>PM Kisan status check</strong>, <strong>PM Kisan grievance</strong>, ya koi bhi kaam ke liye official portal par jaayein. Button dabao, thoda ruk jao — portal khud khul jaayega.
+            <strong>PM Kisan status check</strong>, <strong>PM Kisan grievance</strong>, ya koi bhi kaam ke liye official portal par jaayein. Button dabao, thoda ruk jao, portal khud khul jaayega.
           </p>
           <OfficialLinkButton
             title="PM Kisan Official Portal"
             message="Official portal load ho raha hai, bas kuch second..."
             url="https://pmkisan.gov.in"
-            infoNote="Bas kuch pal — official portal abhi khulega."
+            infoNote="Bas kuch pal, official portal abhi khulega."
             className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-lg transition-all shadow-md hover:shadow-lg transform hover:scale-105"
           >
              Yahan Click Karo → PM Kisan Portal Khulega

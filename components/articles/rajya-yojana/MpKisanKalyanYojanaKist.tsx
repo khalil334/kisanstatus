@@ -15,7 +15,7 @@ const Fig = (p: FigProps) => (
 const FAQS_DATA = [
   {
     q: 'Kya mujhe iske liye alag se application deni padegi?',
-    a: 'Nahi, alag form ka provision hi nahi. List seedhi PM Kisan ke MP record se banti hai — PM Kisan chalu ho aur girdawari mein fasal darj ho, naam apne aap aa jaata hai.',
+    a: 'Nahi, alag form ka provision hi nahi. List seedhi PM Kisan ke MP record se banti hai. PM Kisan chalu ho aur girdawari mein fasal darj ho, naam apne aap aa jaata hai.',
   },
   {
     q: 'Is state top-up ka amount kitna hai?',
@@ -27,11 +27,11 @@ const FAQS_DATA = [
   },
   {
     q: 'SAARA portal phone par khulta hai ya CSC jaana padega?',
-    a: 'Haan, saara.mp.gov.in phone ke browser mein bhi chal jaata hai — OTP usi number par aayega jo PM Kisan/state database mein chadha hai. Purana number chadha ho aur OTP na aaye to portal par zor lagane ke bajaye seedha CSC ya kiosk par jaayein; wahan free check ho jaata hai aur number update ka raasta bhi wahin se milta hai.',
+    a: 'Haan, saara.mp.gov.in phone ke browser mein bhi chal jaata hai. OTP usi number par aayega jo PM Kisan/state database mein chadha hai. Purana number chadha ho aur OTP na aaye to portal par zor lagane ke bajaye seedha CSC ya kiosk par jaayein; wahan free check ho jaata hai aur number update ka raasta bhi wahin se milta hai.',
   },
   {
-    q: 'MP chhod kar doosre rajya mein bas gaya hoon — top-up milta rahega?',
-    a: 'State top-up MP ke budget se aata hai — permanent residence chhodte hi band. PM Kisan par asar nahi, wo central scheme hai aur naye rajya mein bhi chalti rahegi. Naye rajya ka apna top-up alag se dekhna hoga.',
+    q: 'MP chhod kar doosre rajya mein bas gaya hoon, top-up milta rahega?',
+    a: 'State top-up MP ke budget se aata hai. Permanent residence chhodte hi band. PM Kisan par asar nahi, wo central scheme hai aur naye rajya mein bhi chalti rahegi. Naye rajya ka apna top-up alag se dekhna hoga.',
   },
   {
     q: 'Girdawari mein fasal galat darj ho gayi hai, kist par asar padega kya?',
@@ -39,7 +39,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Pichhli kist mili thi, is baar nahi aayi. Naam kat gaya kya?',
-    a: 'Zaroori nahi. Pehle SAARA par status dekhein. Agar wahan "eligible" dikh raha hai toh sirf release ka intezaar hai. "Not eligible" ya record gayab dikhe tab Janpad Panchayat mein poochhein — aksar e-KYC expire hone ya land record update ki wajah se temporary hold hota hai, jo document theek karte hi hat jaata hai.',
+    a: 'Zaroori nahi. Pehle SAARA par status dekhein. Agar wahan "eligible" dikh raha hai toh sirf release ka intezaar hai. "Not eligible" ya record gayab dikhe tab Janpad Panchayat mein poochhein, aksar e-KYC expire hone ya land record update ki wajah se temporary hold hota hai, jo document theek karte hi hat jaata hai.',
   },
 ];
 
@@ -53,14 +53,14 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
       </h1>
 
       <p>
-        <strong>CM Kisan Kalyan Yojana kist kab aayegi</strong> — MP ke kisan yahi poochhte
+        <strong>CM Kisan Kalyan Yojana kist kab aayegi</strong>. MP ke kisan yahi poochhte
         hain. Aur jawab dene wali aadhi websites? Afwaah chhaap deti hain. Amount par bhi
         wahi haal: kahin purana ₹4,000 likha hai, kahin ₹2,000 ki ek kist ko hi saal ka
         total bata diya jaata hai. Padhne wala aur confuse ho jaata hai.
       </p>
 
       <p>
-        Samajhne ki baat yeh hai — neeche jo bhi likha hai wo SAARA portal aur official guidelines se hai. Kitna paisa
+        Samajhne ki baat yeh hai. Neeche jo bhi likha hai wo SAARA portal aur official guidelines se hai. Kitna paisa
         banta hai, kaun eligible hai, aur na aane par kahan jaana hai. Teen cheezein, sidhi
         baat.
       </p>
@@ -83,14 +83,14 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
 
       <ExternalLinkButton
         href="https://saara.mp.gov.in"
-        label="Official Portal — SAARA MP Govt"
+        label="Official Portal. SAARA MP Govt"
       />
 
       <h2>Ye Scheme Kahan Se Aayi, Aur Kitna Paisa Banta Hai</h2>
 
       <p>
         Ye MP sarkar ki apni scheme hai, lekin iski list PM Kisan se banti hai. Maqsad
-        seedha hai — beej, khaad aur sinchai ke kharche mein thodi raahat. Bade dawe nahi,
+        seedha hai. Beej, khaad aur sinchai ke kharche mein thodi raahat. Bade dawe nahi,
         bas season ke kharch ka sahara.
       </p>
 
@@ -98,7 +98,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
         Scheme September 2020 mein shuru hui thi, tab CM ne elaan kiya tha ki PM Kisan ke
         har beneficiary ko state apni taraf se top-up degi. Shuruaat mein amount ₹4,000
         saalana tha (do kiston mein ₹2,000-₹2,000), baad mein ise badha kar ₹6,000 kar diya
-        gaya — teen kiston mein ₹2,000 har baar.
+        gaya, teen kiston mein ₹2,000 har baar.
       </p>
 
       <p>
@@ -114,7 +114,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
       </p>
 
       <InfoBox type="warning">
-        <strong>Satark Rahein:</strong> ₹4,000 wala figure purana hai — wo scheme ke shuruaati
+        <strong>Satark Rahein:</strong> ₹4,000 wala figure purana hai. Wo scheme ke shuruaati
         saalon ka amount tha. Aur kist late hone par koi "jaldi nikalwane" ka dawa kare toh wo
         fraud hai. Status sirf SAARA portal se dekhein.
       </InfoBox>
@@ -159,7 +159,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
       <h3>Mandatory Conditions:</h3>
       <ul>
         <li>
-          <strong>MP domicile:</strong> Permanent residence Madhya Pradesh ka ho — kheti MP
+          <strong>MP domicile:</strong> Permanent residence Madhya Pradesh ka ho, kheti MP
           mein aur rehna kisi doosre rajya mein, is combination par top-up nahi banta.
         </li>
         <li>
@@ -172,10 +172,10 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
         </li>
         <li>
           <strong>Girdawari mein fasal darj:</strong> Jis season ki fasal SAARA mein darj
-          nahi, us season ki state kist atak sakti hai — ye MP ki apni extra shart hai.
+          nahi, us season ki state kist atak sakti hai. Ye MP ki apni extra shart hai.
         </li>
         <li>
-          <strong>e-KYC poori:</strong> PM Kisan wali e-KYC ho chuki ho — Aadhaar bank se seeded
+          <strong>e-KYC poori:</strong> PM Kisan wali e-KYC ho chuki ho. Aadhaar bank se seeded
           ho aur mobile number link ho, dono shartein zaroori hain.
         </li>
       </ul>
@@ -226,7 +226,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
         </tr>
       </SchemeTable>
 
-      <h2>SAARA Portal Kya Hai — Aur Wahi Kyun</h2>
+      <h2>SAARA Portal Kya Hai. Aur Wahi Kyun</h2>
 
       <p>
         SAARA (Smart Application for Revenue Administration) MP sarkar ka revenue department
@@ -242,7 +242,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
         SAARA app se kisan khud bhi apni fasal darj kar sakta hai.
       </p>
 
-      <h2>MP SAARA Portal Payment Status कैसे देखें — saara.mp.gov.in Steps</h2>
+      <h2>MP SAARA Portal Payment Status कैसे देखें, saara.mp.gov.in Steps</h2>
 
       <p>
         <strong>MP Saara payment status</strong> ho ya <strong>CM Kisan beneficiary status</strong> —
@@ -254,7 +254,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
       <Fig
         src="saara-portal-status-check.webp"
         alt="CSC kiosk par operator kisan ko SAARA portal par Kisan Kalyan Yojana ka status check karke dikha raha hai"
-        caption="SAARA portal mobile par bhi khulta hai — na khule to CSC ya kiosk par free check ho jaata hai"
+        caption="SAARA portal mobile par bhi khulta hai. Na khule to CSC ya kiosk par free check ho jaata hai"
       />
 
       <ol>
@@ -296,10 +296,10 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
 
       <ol>
         <li>Portal par "Reports" ya "Beneficiary List" section kholein.</li>
-        <li>Zila, Janpad aur Gram Panchayat — teeno dropdown apne gaon ke hisaab se bharein.</li>
+        <li>Zila, Janpad aur Gram Panchayat. Teeno dropdown apne gaon ke hisaab se bharein.</li>
         <li>List generate karein; MP mein ye aksar PDF ke roop mein utarti hai.</li>
         <li>
-          PDF mein apna naam khud dhoondhein — computer par Ctrl+F, phone ke PDF app mein
+          PDF mein apna naam khud dhoondhein, computer par Ctrl+F, phone ke PDF app mein
           search icon. Naam ki spelling RoR wali rakhein, kyunki list wahi se banti hai.
         </li>
       </ol>
@@ -309,7 +309,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
         CSC ya Gram Panchayat se sync karwane ko kahein.
       </p>
 
-      <h2>Kist Ka Waqt — Pichhle Saalon Ka Pattern</h2>
+      <h2>Kist Ka Waqt. Pichhle Saalon Ka Pattern</h2>
 
       <p>
         Fixed date? Koi nahi hai. State sarkar national calendar se nahi chalti. Zyada waqt nahi lagta
@@ -339,7 +339,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
       <p>
         PM Kisan aa gaya aur state ka nahi aaya? Ye normal hai, bilkul normal, dono ka
         release cycle apna hai aur state treasury se fund nikalne mein 15 se 30 din lag hi
-        jaate hain — toh intezaar khalta hai, samajh mein aata hai, par ye deri gadbad ki
+        jaate hain. Toh intezaar khalta hai, samajh mein aata hai, par ye deri gadbad ki
         nishani nahi hai.
       </p>
 
@@ -348,7 +348,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
       <p>
         Baaki states mein aisa koi season-wise requirement nahi hai, isliye bahar se aaye
         logon ko ye cheez pata hi nahi hoti. MP mein har season (Kharif aur Rabi) mein
-        girdawari hoti hai — record banta hai ki kis khet mein kya boya gaya. Patwari ye
+        girdawari hoti hai. Record banta hai ki kis khet mein kya boya gaya. Patwari ye
         record banata hai. Lekin patwari bhi insaan hai; galti aur der, dono common hain.
       </p>
 
@@ -362,7 +362,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
 
       <p>
         Agar aapki kist bina wajah atki lag rahi hai aur bank sab theek keh raha hai, toh
-        girdawari record khud check karwayein — ye wo kona hai jahan koi nahi dekhta.
+        girdawari record khud check karwayein. Ye wo kona hai jahan koi nahi dekhta.
       </p>
 
       <h2>Saal Bhar Ke Chhote Kaam</h2>
@@ -374,21 +374,21 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
       </p>
 
       <p>
-        <strong>Season ki shuruaat mein girdawari.</strong> Kharif aur Rabi — dono season
+        <strong>Season ki shuruaat mein girdawari.</strong> Kharif aur Rabi. Dono season
         mein apni fasal ki entry confirm karein, chahe patwari ne kar di ho. MP Kisan App
         se khud darj karna sabse pakka raasta hai; upar iska tareeka likha hai.
       </p>
 
       <p>
-        Sehore ke ek kisan ne WhatsApp pe screenshot bheja tha — bank, Aadhaar, e-KYC sab perfect,
+        Sehore ke ek kisan ne WhatsApp pe screenshot bheja tha. Bank, Aadhaar, e-KYC sab perfect,
         phir bhi state kist do season se nahi aayi. Aakhir mein nikli girdawari: patwari ne us
         season uski fasal darj hi nahi ki thi. App se khud entry karne ke baad agli kist aa gayi.
-        Chhodo, wo purani baat hai — par sabak wahi hai, girdawari khud check karo.
+        Chhodo, wo purani baat hai. Par sabak wahi hai, girdawari khud check karo.
       </p>
 
       <p>
         <strong>PM Kisan ki e-KYC current rakhein.</strong> MP ki list PM Kisan ke data se
-        banti hai, isliye e-KYC expire hone ka nuksan dohra hai — central aur state, dono
+        banti hai, isliye e-KYC expire hone ka nuksan dohra hai. Central aur state, dono
         kist rukti hain. Saal mein ek baar, kisi bhi kist ke aane se pehle, pmkisan.gov.in
         par apna e-KYC status dekh lein.
       </p>
@@ -402,7 +402,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
       <p>
         <strong>Har credit ki entry milaayein.</strong> PM Kisan aur state ki kist alag-alag
         dinon par aati hai, isliye passbook mein dono entries alag pehchaanein. Ek aayi aur
-        doosri nahi — to problem sirf us system mein dhoondhein jiski kist ruki hai; dono
+        doosri nahi. To problem sirf us system mein dhoondhein jiski kist ruki hai; dono
         ke portal aur helpline alag hain.
       </p>
 
@@ -422,7 +422,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
         </li>
         <li>
           <Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">
-            Annadata Sukhibhava (Andhra Pradesh) — Tenant Farmers ke liye bhi
+            Annadata Sukhibhava (Andhra Pradesh). Tenant Farmers ke liye bhi
           </Link>
         </li>
         <li>
@@ -432,23 +432,23 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
         </li>
         <li>
           <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
-            State Kisan Yojana List — Sabhi States Ka Comparison Table, amount aur portal ek saath
+            State Kisan Yojana List. Sabhi States Ka Comparison Table, amount aur portal ek saath
           </Link>
         </li>
       </ul>
 
-      <h2>"Payment Successful" Dikha, Paisa Nahi Aaya — Ab Kya</h2>
+      <h2>"Payment Successful" Dikha, Paisa Nahi Aaya. Ab Kya</h2>
 
       <p>
         Sabse zyada confusion isi baat pe hota hai: portal par status green, passbook khaali. Dil toot jaata hai
-        thoda. Pehle mujhe bhi lagta tha ki portal galat hai — par nahi, kahani aage hoti hai. Ya phir seedha "Rejected" aa jaata hai — bina ye bataye ki kyun. Teen jagah
+        thoda. Pehle mujhe bhi lagta tha ki portal galat hai. Par nahi, kahani aage hoti hai. Ya phir seedha "Rejected" aa jaata hai. Bina ye bataye ki kyun. Teen jagah
         check karni hoti hai, isi order mein:
       </p>
 
       <Fig
         src="bank-npci-mapping.webp"
         alt="Kisan bank branch mein passbook dikhakar DBT aur NPCI Aadhaar mapping check karwa raha hai"
-        caption={'"Payment Successful" par paisa nahi aaya — sabse pehle bank mein NPCI mapping check karwao'}
+        caption={'"Payment Successful" par paisa nahi aaya, sabse pehle bank mein NPCI mapping check karwao'}
       />
 
       <h3>1. Bank Account aur NPCI Mapping Check Karein</h3>
@@ -479,20 +479,20 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
         caption="Payment Failed dikhe to Janpad Panchayat ya Tehsil office mein ADO/Patwari se details update karwao"
       />
 
-      <h2>Shikayat Ka Raasta — CM Helpline 181 Ka Sahi Istemaal</h2>
+      <h2>Shikayat Ka Raasta. CM Helpline 181 Ka Sahi Istemaal</h2>
 
       <p>
         SAARA ya bank se baat na bane to MP ke paas ek kaam ka hathiyaar hai — CM Helpline
         181. Call karne se pehle teen cheezein saamne rakhein: apna PM Kisan registration
         number, Aadhaar, aur samasya ek line mein. Complaint number jo mile use likh kar
         rakhein; follow-up isi number se hota hai aur har complaint ka jawab dena vibhag ki
-        zimmedari hai. Ek hi baat ka dhyan rakhein — complaint mein wahi likhwaayein jo
+        zimmedari hai. Ek hi baat ka dhyan rakhein, complaint mein wahi likhwaayein jo
         sach mein problem hai. “Paisa nahi aaya” se behtar hai “PM Kisan ki kist aayi,
-        state ki nahi aayi, bank kehta hai koi credit nahi” — jitna saaf record, utna
+        state ki nahi aayi, bank kehta hai koi credit nahi”, jitna saaf record, utna
         jaldi kaam.
       </p>
 
-      <h2>MP Kisan Kalyan — Jo Log Aksar Poochhte Hain</h2>
+      <h2>MP Kisan Kalyan. Jo Log Aksar Poochhte Hain</h2>
 
       <script
         type="application/ld+json"
@@ -509,7 +509,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
         }}
       />
       <section className="mb-8 not-prose">
-        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">MP ke kisano ne jo poochha — CM Kisan Kalyan Yojana par seedhe jawab</p>
+        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">MP ke kisano ne jo poochha. CM Kisan Kalyan Yojana par seedhe jawab</p>
         <div className="space-y-3">
           {FAQS_DATA.map(({ q, a }) => (
             <details
@@ -532,7 +532,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
 
       <InfoBox type="tip">
         <strong>Fraud se bachein:</strong> SAARA par status dekhna, e-KYC karna aur bank
-        details update karwana — teeno kaam bilkul free hain. Kist "jaldi nikalwane" ya list
+        details update karwana. Teeno kaam bilkul free hain. Kist "jaldi nikalwane" ya list
         mein entry "chadhwane" ke liye koi paisa maange, to wo fraud hai: ye dono kaam sirf
         Patwari, ADO aur portal ke raste hote hain. Aisi demand par MP CM Helpline
         <strong> 181</strong> par shikayat darj karwaayein.
@@ -541,8 +541,8 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
       <SourcesSection
         checkedOn={article.modified || article.published}
         sources={[
-          { label: 'SAARA Portal (saara.mp.gov.in)', href: 'https://saara.mp.gov.in', note: 'kist status, beneficiary record aur official notification — is guide ke steps isi portal par check karke likhe gaye hain' },
-          { label: 'PM Kisan Portal (pmkisan.gov.in)', href: 'https://pmkisan.gov.in', note: 'PM Kisan beneficiary list — isi se MP ki state kist ki eligibility banti hai' },
+          { label: 'SAARA Portal (saara.mp.gov.in)', href: 'https://saara.mp.gov.in', note: 'kist status, beneficiary record aur official notification, is guide ke steps isi portal par check karke likhe gaye hain' },
+          { label: 'PM Kisan Portal (pmkisan.gov.in)', href: 'https://pmkisan.gov.in', note: 'PM Kisan beneficiary list, isi se MP ki state kist ki eligibility banti hai' },
           { label: 'MP CM Helpline 181', note: 'kist ya list se judi shikayat darj karne ka official raasta' },
         ]}
       />

@@ -15,28 +15,28 @@ const MODIFIED = '2026-07-14T22:08:58+05:30';
 
 const FAQS_DATA = [
   {
-    q: 'Khatauni mein naam ki spelling galat hai — register ho paunga ya nahi?',
+    q: 'Khatauni mein naam ki spelling galat hai. Register ho paunga ya nahi?',
     a: 'Ho toh jayega, profile ban jayegi. Par mera manna hai risk mat lo. Pehle patwari ke paas jao, Khasra/Khatauni mein naam theek karwao, uske baad registry karo. Humne aise case dekhe hain jahan naam mismatch ki wajah se baad mein kisht atak gayi. Chhoti si galti, mahino ka chakkar.',
   },
   {
-    q: 'Main batai/theke pe kheti karta hoon, zameen mere naam pe nahi — kya main bhi banwa sakta hoon?',
-    a: 'Iska jawab state pe depend karta hai. Farmer Registry mein pehla focus zameen waale kisano pe hai kyunki verification land records se hota hai. Kuch states tenant farmers ke liye alag process la rahe hain. Apne block ke krishi adhikari (BAO) ya CSC se apne state ka current niyam puch lo — yahi sabse pakka tarika hai.',
+    q: 'Main batai/theke pe kheti karta hoon, zameen mere naam pe nahi. Kya main bhi banwa sakta hoon?',
+    a: 'Iska jawab state pe depend karta hai. Farmer Registry mein pehla focus zameen waale kisano pe hai kyunki verification land records se hota hai. Kuch states tenant farmers ke liye alag process la rahe hain. Apne block ke krishi adhikari (BAO) ya CSC se apne state ka current niyam puch lo. Yahi sabse pakka tarika hai.',
   },
   {
     q: 'Register hone ke baad Farmer ID card kahan se milega?',
-    a: 'Apne state ke Agristack portal pe (jaise UP ke liye upfr.agristack.gov.in) login karo — Aadhaar number aur OTP se. Dashboard mein Farmer ID dikhegi aur wahan se card ka PDF download ho jata hai. Print karwa lo ek copy, aur phone mein bhi save rakho.',
+    a: 'Apne state ke Agristack portal pe (jaise UP ke liye upfr.agristack.gov.in) login karo. Aadhaar number aur OTP se. Dashboard mein Farmer ID dikhegi aur wahan se card ka PDF download ho jata hai. Print karwa lo ek copy, aur phone mein bhi save rakho.',
   },
   {
-    q: 'CSC waale ne paise maange — dena chahiye?',
+    q: 'CSC waale ne paise maange, dena chahiye?',
     a: 'Farmer Registry ka registration sarkar ne free rakha hai. Haan, CSC operator apni service ka mamuli charge le sakta hai, yeh alag baat hai. Par agar koi bada amount maange ya "fees" bol ke daraye, toh mana kar do. PM-Kisan se judi shikayat ke liye helpline 155261 ya 011-24300606 pe call karo, aur Kisan Call Centre 1800-180-1551 bhi hai.',
   },
   {
     q: 'Farmer ID ban gayi, ab kya eKYC ki zaroorat nahi?',
-    a: 'Zaroorat hai bhai. Farmer ID aur eKYC do alag cheezein hain. eKYC ab har saal karni padti hai — 2026 se sarkar ne yeh saaf kar diya hai ki bina current eKYC ke agli kisht ruk sakti hai, chahe Farmer ID bani ho. Toh dono updated rakho: Farmer ID ek baar, eKYC har saal.',
+    a: 'Zaroorat hai bhai. Farmer ID aur eKYC do alag cheezein hain. eKYC ab har saal karni padti hai. 2026 se sarkar ne yeh saaf kar diya hai ki bina current eKYC ke agli kisht ruk sakti hai, chahe Farmer ID bani ho. Toh dono updated rakho: Farmer ID ek baar, eKYC har saal.',
   },
   {
     q: 'Meri Farmer ID nahi bani toh kya PM-Kisan ki kisht ruk jayegi?',
-    a: 'Kai states me haan. 14 states me PM-Kisan ke liye Farmer ID zaroori ki gayi hai: Andhra Pradesh, Assam, Bihar, Chhattisgarh, Gujarat, Karnataka, Kerala, Madhya Pradesh, Maharashtra, Odisha, Rajasthan, Tamil Nadu, Telangana aur Uttar Pradesh. Sakhti khaas kar naye registration par hai, lekin purane labharthiyon ko bhi ID banwa lene ki salah di ja rahi hai. Aapka rajya list me na ho toh bhi der mat karo — baaki rajya bhi isi taraf badh rahe hain.',
+    a: 'Kai states me haan. 14 states me PM-Kisan ke liye Farmer ID zaroori ki gayi hai: Andhra Pradesh, Assam, Bihar, Chhattisgarh, Gujarat, Karnataka, Kerala, Madhya Pradesh, Maharashtra, Odisha, Rajasthan, Tamil Nadu, Telangana aur Uttar Pradesh. Sakhti khaas kar naye registration par hai, lekin purane labharthiyon ko bhi ID banwa lene ki salah di ja rahi hai. Aapka rajya list me na ho toh bhi der mat karo, baaki rajya bhi isi taraf badh rahe hain.',
   },
   {
     q: 'AgriStack, Farmer Registry aur Kisan ID — teeno alag cheezein hain kya?',
@@ -58,7 +58,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">AgriStack / Farmer Registry 2026</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            AgriStack Kya Hai? Kisan ID Banwane Ka Poora Tarika — Ek Kisan Ki Zubani
+            AgriStack Kya Hai? Kisan ID Banwane Ka Poora Tarika. Ek Kisan Ki Zubani
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
@@ -82,7 +82,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Ek profile, sari yojanayein — yahi iska maksad hai
+            Ek profile, sari yojanayein. Yahi iska maksad hai
           </p>
         </div>
 
@@ -93,12 +93,12 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Phir maine khud registry karwai, portal ghangala, block ke krishi adhikari se baat ki. Ab jo samajh aaya, wahi seedhi
-            bhasha mein yahan likh raha hoon. Na koi dar, na koi jhooti guarentee — jo hai so hai.
+            bhasha mein yahan likh raha hoon. Na koi dar, na koi jhooti guarentee, jo hai so hai.
           </p>
 
           <SH>Toh Yeh AgriStack Hai Kya Cheez?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Sarkar ka <strong>Digital Agriculture Mission</strong> — usi ka naam hai AgriStack. Iske andar ek <strong>Farmer Registry</strong> ban
+            Sarkar ka <strong>Digital Agriculture Mission</strong>, usi ka naam hai AgriStack. Iske andar ek <strong>Farmer Registry</strong> ban
             rahi hai, matlab desh ke kisano ka ek verified digital record. Register karne pe har kisan ko ek unique <strong>Farmer ID</strong> milti
             hai (log ise Kisan Pehchaan Patra bhi kehte hain).
           </p>
@@ -106,9 +106,9 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             Is record mein teen cheezein judti hain:
           </p>
           <ul className="space-y-2 mb-4 text-sm text-[var(--color-text-muted)]">
-            <li className="flex gap-2"><span className="text-green-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>Aapki pehchaan</strong> — naam, Aadhaar, mobile number.</li>
-            <li className="flex gap-2"><span className="text-green-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>Aapki zameen</strong> — khasra/gata number, rakba, malikana haq.</li>
-            <li className="flex gap-2"><span className="text-green-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>Aapki fasal</strong> — kya boya hai, kitne area mein.</li>
+            <li className="flex gap-2"><span className="text-green-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>Aapki pehchaan</strong>, naam, Aadhaar, mobile number.</li>
+            <li className="flex gap-2"><span className="text-green-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>Aapki zameen</strong>, khasra/gata number, rakba, malikana haq.</li>
+            <li className="flex gap-2"><span className="text-green-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>Aapki fasal</strong>, kya boya hai, kitne area mein.</li>
           </ul>
 
           <IB>
@@ -119,7 +119,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </IB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Pehle kya hota tha — har yojana ka apna register. Kahin naam "Ramesh Kumar", kahin "Ramesh Kr", bank mein kuch aur.
+            Pehle kya hota tha. Har yojana ka apna register. Kahin naam "Ramesh Kumar", kahin "Ramesh Kr", bank mein kuch aur.
             In mismatch ke chakkar mein payment failhoti thi, chakkar lagte the. Ab sarkar chahti hai ki ek hi verified record ho,
             aur sab yojanayein usi se chalen.
           </p>
@@ -128,7 +128,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
         <section className="mb-8">
           <SH>Banwana Kyun Zaroori Hai? (Asli Wajah)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Seedhi baat — <strong>PM-Kisan ki kisht ke liye kai states mein Farmer Registry zaroori ki ja rahi hai.</strong> Matlab
+            Seedhi baat, <strong>PM-Kisan ki kisht ke liye kai states mein Farmer Registry zaroori ki ja rahi hai.</strong> Matlab
             agar registry nahi hui, toh aage samman nidhi ka paisa rukne ka risk hai. Yeh sabse badi wajah hai, baki sab uske baad.
           </p>
 
@@ -145,7 +145,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
 
             <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl">
               <p className="font-black text-yellow-800 dark:text-yellow-300 text-sm mb-1">Bima claim mein madad</p>
-              <p className="text-xs text-[var(--color-text-muted)]"><Link href="/articles/PmfbyCropInsurance2026" className="underline font-bold text-yellow-800 dark:text-yellow-400">Fasal bima</Link> mein sabse bada jhagda hota hai — "aapne yeh fasal boi hi nahi thi". Jab fasal ka record system mein pehle se hai, toh yeh bahas hi khatam.</p>
+              <p className="text-xs text-[var(--color-text-muted)]"><Link href="/articles/PmfbyCropInsurance2026" className="underline font-bold text-yellow-800 dark:text-yellow-400">Fasal bima</Link> mein sabse bada jhagda hota hai. "aapne yeh fasal boi hi nahi thi". Jab fasal ka record system mein pehle se hai, toh yeh bahas hi khatam.</p>
             </div>
           </div>
 
@@ -155,7 +155,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
         </section>
 
         <section className="mb-8">
-          <SH>2026 Mein Kya Badla Hai — 4 Nayi Baatein</SH>
+          <SH>2026 Mein Kya Badla Hai. 4 Nayi Baatein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Jab yeh article pehli baar likha tha (January 2026), tab Farmer ID "aage zaroori hogi" waali baat thi.
             Ab August 2026 hai, aur kaafi kuch badal chuka hai. Jo naya hai, wo yeh raha:
@@ -163,11 +163,11 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           <div className="space-y-3 mb-4">
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <p className="font-black text-[var(--color-text)] text-sm mb-1">1. Ab 14 states me Farmer ID mandatory hai</p>
-              <p className="text-xs text-[var(--color-text-muted)]">UP samet 14 states me PM-Kisan ki kisht ke liye Farmer Registry zaroori ho chuki hai. "Baad mein karwa lenge" waala time nikal gaya — agar aapke state me mandatory hai aur registry nahi hui, toh kisht atakne ka seedha risk hai.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">UP samet 14 states me PM-Kisan ki kisht ke liye Farmer Registry zaroori ho chuki hai. "Baad mein karwa lenge" waala time nikal gaya, agar aapke state me mandatory hai aur registry nahi hui, toh kisht atakne ka seedha risk hai.</p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-[var(--color-text)] text-sm mb-1">2. PM-Kisan 5 saal aur chalegi — matlab registry ka faida lamba hai</p>
-              <p className="text-xs text-[var(--color-text-muted)]">August 2026 me Cabinet ne PM-Kisan ko 2026-27 se 2030-31 tak, ₹3.15 lakh crore ke saath aage badhaya hai. Scheme kahin nahi ja rahi — toh registry karwana ek baar ka kaam hai jiska faida agle 5 saal milega.</p>
+              <p className="font-black text-[var(--color-text)] text-sm mb-1">2. PM-Kisan 5 saal aur chalegi. Matlab registry ka faida lamba hai</p>
+              <p className="text-xs text-[var(--color-text-muted)]">August 2026 me Cabinet ne PM-Kisan ko 2026-27 se 2030-31 tak, ₹3.15 lakh crore ke saath aage badhaya hai. Scheme kahin nahi ja rahi, toh registry karwana ek baar ka kaam hai jiska faida agle 5 saal milega.</p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <p className="font-black text-[var(--color-text)] text-sm mb-1">3. Fasal bima me bhi Farmer ID maangi ja rahi hai</p>
@@ -175,7 +175,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <p className="font-black text-[var(--color-text)] text-sm mb-1">4. eKYC ab har saal — Farmer ID iska substitute nahi hai</p>
-              <p className="text-xs text-[var(--color-text-muted)]">2026 ke niyam ke hisaab se PM-Kisan ki <Link href="/articles/PmKisanEkycOnline2026" className="underline font-bold">eKYC har saal</Link> karni hai — biometric CSC pe ya Face Auth app se. Farmer ID banne ke baad bhi yeh saalana kaam chalta rahega.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">2026 ke niyam ke hisaab se PM-Kisan ki <Link href="/articles/PmKisanEkycOnline2026" className="underline font-bold">eKYC har saal</Link> karni hai. Biometric CSC pe ya Face Auth app se. Farmer ID banne ke baad bhi yeh saalana kaam chalta rahega.</p>
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
@@ -185,9 +185,9 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
         </section>
 
         <section className="mb-8">
-          <SH>Wo 14 States Kaun Hain — Naam Se Dekh Lo</SH>
+          <SH>Wo 14 States Kaun Hain. Naam Se Dekh Lo</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            &ldquo;14 states me mandatory hai&rdquo; — ye line har jagah likhi milti hai, par naam kahin nahi milte,
+            &ldquo;14 states me mandatory hai&rdquo;. Ye line har jagah likhi milti hai, par naam kahin nahi milte,
             aur asli sawal to yahi hai ki <em>mera</em> rajya usme hai ya nahi. To seedhi list:
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4 text-xs">
@@ -198,9 +198,9 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             ))}
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Aapka rajya is list me hai — to registry ko optional maan kar baithe rehna sabse mehnga faisla hai.
-            List me nahi hai — to bhi sirf waqt mila hai, chhoot nahi: Farmer ID kendra ka plan hai aur baaki
-            rajya bhi isi taraf badh rahe hain. Aur ek baat jo aksar chhoot jaati hai — ye niyam khaas kar
+            Aapka rajya is list me hai. To registry ko optional maan kar baithe rehna sabse mehnga faisla hai.
+            List me nahi hai. To bhi sirf waqt mila hai, chhoot nahi: Farmer ID kendra ka plan hai aur baaki
+            rajya bhi isi taraf badh rahe hain. Aur ek baat jo aksar chhoot jaati hai. Ye niyam khaas kar
             <strong> naye registration</strong> par sakhti se lagta hai; purane labharthi ko turant dikkat na aaye,
             phir bhi ID banwa lena hi samajhdari hai.
           </p>
@@ -212,7 +212,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             system hai.
           </IB>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Ek reference bhi note kar lo: 23vi kisht 20 June 2026 ko aayi thi — karib ₹18,880 crore, 9.44
+            Ek reference bhi note kar lo: 23vi kisht 20 June 2026 ko aayi thi. Karib ₹18,880 crore, 9.44
             crore kisano tak. Jinki ID aur eKYC saaf thi, unka paisa usi din chala; jinke record adhoore the,
             wo aaj bhi chakkar laga rahe hain. Farak sirf itna hi hota hai.
           </p>
@@ -247,26 +247,26 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ek cheez yaad rakhna — <strong>Aadhaar se linked mobile number chalu hona chahiye</strong>, kyunki OTP usi pe aata hai.
+            Ek cheez yaad rakhna, <strong>Aadhaar se linked mobile number chalu hona chahiye</strong>, kyunki OTP usi pe aata hai.
             Agar number band ho gaya hai toh pehle Aadhaar center jaake number update karwao, warna registry atak jayegi.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>Registry Kaise Karein — Do Tarike</SH>
+          <SH>Registry Kaise Karein. Do Tarike</SH>
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">1. CSC ya Camp Se (Zyadatar Log Yahi Karte Hain)</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Jinko online ka jhanjhat nahi chahiye, unke liye Common Service Centre sabse aasan rasta hai. Kai jagah panchayat level
-            pe camp bhi lag rahe hain — Pradhan ya krishi vibhag se pata chal jata hai.
+            pe camp bhi lag rahe hain. Pradhan ya krishi vibhag se pata chal jata hai.
           </p>
           <StepList>
             <SI n={1}>Saath le jao: <strong>Aadhaar card, Aadhaar-linked chalu mobile, khasra/khatauni, bank passbook</strong>. Photocopy bhi rakh lo, kaam aati hai.</SI>
-            <SI n={2}>Operator ko saaf bolo — <strong>"Farmer Registry / Kisan ID"</strong> banwani hai. Naam confusion mein galat form na khul jaye.</SI>
-            <SI n={3}>Aadhaar se eKYC hogi — OTP ya fingerprint se.</SI>
+            <SI n={2}>Operator ko saaf bolo, <strong>"Farmer Registry / Kisan ID"</strong> banwani hai. Naam confusion mein galat form na khul jaye.</SI>
+            <SI n={3}>Aadhaar se eKYC hogi. OTP ya fingerprint se.</SI>
             <SI n={4}>Zameen ki detail record se match karwai jayegi. Khasra number sahi batao, andaze se nahi.</SI>
-            <SI n={5}>Submit hone pe enrollment/application number milega — <strong>photo khinch lo ya likh lo</strong>, status check karne ke kaam aayega.</SI>
-            <SI n={6}>Verification ke baad Farmer ID ban jati hai. Kitna time lagega, yeh state aur record pe depend karta hai — kahin jaldi, kahin hafte lag jate hain.</SI>
+            <SI n={5}>Submit hone pe enrollment/application number milega, <strong>photo khinch lo ya likh lo</strong>, status check karne ke kaam aayega.</SI>
+            <SI n={6}>Verification ke baad Farmer ID ban jati hai. Kitna time lagega, yeh state aur record pe depend karta hai. Kahin jaldi, kahin hafte lag jate hain.</SI>
           </StepList>
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">2. Khud Online (Ghar Baithe)</h3>
@@ -277,13 +277,13 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           </p>
           <StepList>
             <SI n={1}>Portal pe "Farmer" select karke <strong>Create New User Account</strong> pe jao.</SI>
-            <SI n={2}>Aadhaar number daalo, OTP aayega linked mobile pe — verify karo.</SI>
+            <SI n={2}>Aadhaar number daalo, OTP aayega linked mobile pe, verify karo.</SI>
             <SI n={3}>Password set karo, login karo.</SI>
             <SI n={4}>"Register as Farmer" mein apni details check karo, zameen ki detail (district, tehsil, gaon, khasra) bhar ke <strong>Fetch Land Details</strong> karo.</SI>
             <SI n={5}>Sab check karke submit. Enrollment number save kar lo.</SI>
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Portal kabhi kabhi slow chalta hai ya land record fetch nahi hota — aisa ho toh 1-2 din baad phir try karo,
+            Portal kabhi kabhi slow chalta hai ya land record fetch nahi hota. Aisa ho toh 1-2 din baad phir try karo,
             ya seedha CSC chale jao. Isme pareshan hone waali koi baat nahi, sarkari portal hai, hota rehta hai.
           </p>
 
@@ -303,7 +303,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
               sizes="(max-width: 768px) 100vw, 768px"
             />
             <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-              Registration ke steps — camp ho ya online, process yahi hai
+              Registration ke steps, camp ho ya online, process yahi hai
             </p>
           </div>
 
@@ -321,7 +321,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
               <ul className="text-xs text-[var(--color-text-muted)] space-y-1">
                 <li>✓ Aadhaar card (original)</li>
                 <li>✓ Aadhaar se linked chalu mobile number</li>
-                <li>✓ Zameen ke kagaz — Khasra/Khatauni/7-12</li>
+                <li>✓ Zameen ke kagaz. Khasra/Khatauni/7-12</li>
                 <li>✓ Bank passbook</li>
               </ul>
             </div>
@@ -335,13 +335,13 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ek chhota sa mashwara — sab documnets ki photo apne phone mein bhi rakh lo. Center pe xerox ki line se bach jaoge,
+            Ek chhota sa mashwara. Sab documnets ki photo apne phone mein bhi rakh lo. Center pe xerox ki line se bach jaoge,
             aur original kho jaane ka darr bhi nahi rehta.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>ID Ban Gayi — Uske Baad Kya?</SH>
+          <SH>ID Ban Gayi. Uske Baad Kya?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             ID milne ke baad bhi 3 kaam karne chahiye. Zyada time nahi lagta, par baad ke bade jhamele se bacha lete hain.
           </p>
@@ -357,7 +357,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
               sizes="(max-width: 768px) 100vw, 768px"
             />
             <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-              Farmer ID card — state portal ke dashboard se PDF download hota hai
+              Farmer ID card, state portal ke dashboard se PDF download hota hai
             </p>
           </div>
 
@@ -380,7 +380,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
               <span className="text-green-600 dark:text-green-400 font-black text-lg shrink-0" aria-hidden="true">03</span>
               <div>
                 <p className="font-bold text-[var(--color-text)] text-sm">pmkisan.gov.in pe apna status dekho</p>
-                <p className="text-xs text-[var(--color-text-muted)] mt-1">"Know Your Status" mein Aadhaar/registration number daal ke dekh lo — eKYC, land seeding, sab wahan dikh jata hai.</p>
+                <p className="text-xs text-[var(--color-text-muted)] mt-1">"Know Your Status" mein Aadhaar/registration number daal ke dekh lo, eKYC, land seeding, sab wahan dikh jata hai.</p>
               </div>
             </div>
           </div>
@@ -390,13 +390,13 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Camp Mein Jo Sawal Sabse Zyada Puchhe Gaye
           </h2>
-          <FAQBlock faqs={FAQS_DATA} variant="cards" caption="Yeh sawal asli kisano ne puchhe the — jawab seedhe rakhe hain." />
+          <FAQBlock faqs={FAQS_DATA} variant="cards" caption="Yeh sawal asli kisano ne puchhe the, jawab seedhe rakhe hain." />
         </section>
 
         <section className="mb-8">
-          <SH>Ek Warning — Registry Ke Naam Par Paise Maangne Wale</SH>
+          <SH>Ek Warning. Registry Ke Naam Par Paise Maangne Wale</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Jahan bhi naya sarkari registration shuru hota hai, wahan “agent” bhi paida ho jaate hain. Saaf baat: Farmer ID banwana <strong>bilkul free hai</strong> — camp mein bhi, portal par khud bhi. Koi “registration fee” ya “file charge” maange toh mana kar do. Aur sabse zaroori: aapka OTP sirf aapke apne registration ke waqt, aapke apne haath se portal mein daalne ke liye hota hai — <strong>phone par kisi ko OTP batana kabhi process ka hissa nahi hai.</strong> OTP diya to khaate se paisa ja sakta hai. Aisi galti ho jaye toh turant <strong>1930</strong> par call karo ya <strong>cybercrime.gov.in</strong> par shikayat darj karo, aur bank ko usi din batao.
+            Jahan bhi naya sarkari registration shuru hota hai, wahan “agent” bhi paida ho jaate hain. Saaf baat: Farmer ID banwana <strong>bilkul free hai</strong>, camp mein bhi, portal par khud bhi. Koi “registration fee” ya “file charge” maange toh mana kar do. Aur sabse zaroori: aapka OTP sirf aapke apne registration ke waqt, aapke apne haath se portal mein daalne ke liye hota hai. <strong>phone par kisi ko OTP batana kabhi process ka hissa nahi hai.</strong> OTP diya to khaate se paisa ja sakta hai. Aisi galti ho jaye toh turant <strong>1930</strong> par call karo ya <strong>cybercrime.gov.in</strong> par shikayat darj karo, aur bank ko usi din batao.
           </p>
         </section>
 
@@ -404,14 +404,14 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Aakhri Baat</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
             Registry free hai, zyada time nahi lagta, aur PM-Kisan samet kai yojanaon ka rasta isi se hoke ja raha hai.
-            Season ki bhaag-daud shuru hone se pehle karwa lo — jab sabko yaad aata hai tab centers pe line lag jati hai.
+            Season ki bhaag-daud shuru hone se pehle karwa lo, jab sabko yaad aata hai tab centers pe line lag jati hai.
             Gaon ke 2-4 aur logon ko bhi bata dena, kisi ka bhala hi hoga.
           </p>
         </div>
 
         <CalcBanner
           title="Apna Benefit Calculate Karein"
-          desc="Samman nidhi benefit, credit EMI, crop profit — sab free calculators se check karein"
+          desc="Samman nidhi benefit, credit EMI, crop profit. Sab free calculators se check karein"
           primaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator →' }}
           secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />

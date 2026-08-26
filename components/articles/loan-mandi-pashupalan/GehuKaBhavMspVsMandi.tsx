@@ -13,47 +13,47 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Is saal gehu ka sarkari kharid rate kya chal raha hai?',
-    a: 'Rabi Marketing Season 2026-27 ke liye gehu ka MSP ₹2,585 per quintal hai — pichhle saal ke ₹2,425 se ₹160 zyada. Yeh rate sarkari kharid kendra par milta hai, mandi ki khuli boli mein nahi. Poori faslon ki list ke liye hamari MSP List 2026-27 guide dekho.',
+    a: 'Rabi Marketing Season 2026-27 ke liye gehu ka MSP ₹2,585 per quintal hai. Pichhle saal ke ₹2,425 se ₹160 zyada. Yeh rate sarkari kharid kendra par milta hai, mandi ki khuli boli mein nahi. Poori faslon ki list ke liye hamari MSP List 2026-27 guide dekho.',
   },
   {
     q: 'MSP par bechna hamesha behtar hota hai kya?',
-    a: 'Nahi — MSP floor hai, ceiling nahi. Jab open market ka rate MSP se neeche chal raha ho, tab sarkari kharid aapko bachati hai. Lekin achhi quality ka gehu, sahi time par, open market mein MSP se upar bhi bik jata hai. Faisla har saal ke rate aur apni quality dekh kar karo, aadat se nahi.',
+    a: 'Nahi. MSP floor hai, ceiling nahi. Jab open market ka rate MSP se neeche chal raha ho, tab sarkari kharid aapko bachati hai. Lekin achhi quality ka gehu, sahi time par, open market mein MSP se upar bhi bik jata hai. Faisla har saal ke rate aur apni quality dekh kar karo, aadat se nahi.',
   },
   {
     q: 'Sarkari kharid kendra par bechne ke liye kya taiyari chahiye?',
-    a: 'Apne state ke procurement portal par registration (zyada tar states mein online hota hai), phir slot/token lekar apne kharid kendra par gehu le jao. Aadhaar, bank details aur zameen ke record chahiye hote hain. Payment seedha bank account mein aati hai. Registration window season se pehle khulti hai — miss mat karo.',
+    a: 'Apne state ke procurement portal par registration (zyada tar states mein online hota hai), phir slot/token lekar apne kharid kendra par gehu le jao. Aadhaar, bank details aur zameen ke record chahiye hote hain. Payment seedha bank account mein aati hai. Registration window season se pehle khulti hai. Miss mat karo.',
   },
   {
     q: 'Mandi mein rate MSP se neeche kyun chala jata hai?',
-    a: 'Harvest hote hi (April-May) sab kisan ek saath bechne aate hain — aavak ka pahad ban jata hai aur boli dab jaati hai. Buyers ko pata hai ki kisan ko paisa usi hafte chahiye. Yahi woh waqt hai jab MSP ki sarkari kharid sabse zyada kaam aati hai.',
+    a: 'Harvest hote hi (April-May) sab kisan ek saath bechne aate hain. Aavak ka pahad ban jata hai aur boli dab jaati hai. Buyers ko pata hai ki kisan ko paisa usi hafte chahiye. Yahi woh waqt hai jab MSP ki sarkari kharid sabse zyada kaam aati hai.',
   },
   {
     q: 'Gehu rok kar bechne se kitna fayda ho sakta hai?',
-    a: 'Aam pattern yeh hai ki harvest ke mahino mein rate sabse dabav mein hota hai aur baad ke mahino mein sudhrta hai. Lekin yeh guarantee nahi hai — kisi saal import/export policy ya bumper crop pattern tod deti hai. Rok kar bechne ka faisla storage ke kharche, paise ki zaroorat aur us saal ke trend ko jod kar karo.',
+    a: 'Aam pattern yeh hai ki harvest ke mahino mein rate sabse dabav mein hota hai aur baad ke mahino mein sudhrta hai. Lekin yeh guarantee nahi hai. Kisi saal import/export policy ya bumper crop pattern tod deti hai. Rok kar bechne ka faisla storage ke kharche, paise ki zaroorat aur us saal ke trend ko jod kar karo.',
   },
   {
     q: 'Ghar par gehu store karne mein kya dhyan rakhein?',
-    a: 'Nami (moisture) sabse bada dushman hai — gehu achhi tarah sukha kar (dry) store karo, zameen se upar lakdi/pallet par rakho, aur bori ko deewar se sata kar mat rakho. Ghun se bachne ke liye saaf-sutharaa bhandaran aur time par jaanch zaroori hai. Kharab storage mein 3 mahine mein hi weight loss aur quality cut ka nuksan rate ke fayde ko kha jata hai.',
+    a: 'Nami (moisture) sabse bada dushman hai. Gehu achhi tarah sukha kar (dry) store karo, zameen se upar lakdi/pallet par rakho, aur bori ko deewar se sata kar mat rakho. Ghun se bachne ke liye saaf-sutharaa bhandaran aur time par jaanch zaroori hai. Kharab storage mein 3 mahine mein hi weight loss aur quality cut ka nuksan rate ke fayde ko kha jata hai.',
   },
   {
     q: 'Aadha MSP par aur aadha market mein bech doon to chalega?',
-    a: 'Haan, aur samajhdaar kisan aksar yahi karte hain. Sar par khade kharche ke liye ek hissa MSP/mandi mein bech do, baaki quality wala maal rok lo. Isse risk bant jata hai — na poora maal daba, na poora sasta bika.',
+    a: 'Haan, aur samajhdaar kisan aksar yahi karte hain. Sar par khade kharche ke liye ek hissa MSP/mandi mein bech do, baaki quality wala maal rok lo. Isse risk bant jata hai. Na poora maal daba, na poora sasta bika.',
   },
   {
     q: 'MSP kharid mein quality cut kya hota hai?',
-    a: 'Kharid kendra par gehu FAQ (Fair Average Quality) standards par jaancha jata hai — nami, tuta dana, mitti/kachra. Standards se bahar ka maal reject ho sakta hai ya sharton ke saath liya jata hai. Isliye bechne se pehle gehu saaf karo aur sukha lo — yeh mehnat seedha rate mein wapas milti hai.',
+    a: 'Kharid kendra par gehu FAQ (Fair Average Quality) standards par jaancha jata hai — nami, tuta dana, mitti/kachra. Standards se bahar ka maal reject ho sakta hai ya sharton ke saath liya jata hai. Isliye bechne se pehle gehu saaf karo aur sukha lo. Yeh mehnat seedha rate mein wapas milti hai.',
   },
   {
     q: 'Rate ka daily update kahan dekhein?',
-    a: 'Apni mandi ka reported rate eNAM/AgMarknet data se dekho — hamari Aaj Ka Mandi Bhav page aur Best Mandi Bhav Apps guide isi ke liye hai. Bade sauda se pehle mandi mein phone karke us din ki boli confirm kar lo.',
+    a: 'Apni mandi ka reported rate eNAM/AgMarknet data se dekho, hamari Aaj Ka Mandi Bhav page aur Best Mandi Bhav Apps guide isi ke liye hai. Bade sauda se pehle mandi mein phone karke us din ki boli confirm kar lo.',
   },
   {
     q: 'Kya state apna bonus bhi deta hai MSP ke upar?',
-    a: 'Kuch states dete hain — jaise Madhya Pradesh ne 2026-27 season mein ₹40 per quintal ka state bonus diya, jisse kisan ko total ₹2,625 mila. Yeh har saal aur har state mein alag hota hai. Apne state ke procurement portal ya kharid kendra se current season ka bonus pooch lo — yeh seedha extra paisa hai.',
+    a: 'Kuch states dete hain. Jaise Madhya Pradesh ne 2026-27 season mein ₹40 per quintal ka state bonus diya, jisse kisan ko total ₹2,625 mila. Yeh har saal aur har state mein alag hota hai. Apne state ke procurement portal ya kharid kendra se current season ka bonus pooch lo. Yeh seedha extra paisa hai.',
   },
   {
-    q: 'Premium variety (sharbati/lokwan) ka kya karein — MSP mein dena to ghata hai?',
-    a: 'Bilkul — sharbati, lokwan jaisi premium varieties open market mein MSP se kaafi upar bikti hain; unhe sarkari kendra par general rate mein dena apna hi nuksan hai. Premium maal ke liye buyers alag hote hain (flour mills, traders, seed companies) — wahan seedha ya eNAM ke through pahuncho. MSP wala rasta general/FAQ quality ke maal ke liye rakho.',
+    q: 'Premium variety (sharbati/lokwan) ka kya karein. MSP mein dena to ghata hai?',
+    a: 'Bilkul, sharbati, lokwan jaisi premium varieties open market mein MSP se kaafi upar bikti hain; unhe sarkari kendra par general rate mein dena apna hi nuksan hai. Premium maal ke liye buyers alag hote hain (flour mills, traders, seed companies), wahan seedha ya eNAM ke through pahuncho. MSP wala rasta general/FAQ quality ke maal ke liye rakho.',
   },
 ];
 
@@ -95,11 +95,11 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </div>
 
         <DB>
-          <strong>Kaam Ki Baat — bechne se pehle:</strong>
+          <strong>Kaam Ki Baat, bechne se pehle:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>Gehu ka MSP RMS 2026-27 mein <strong>₹2,585/quintal</strong> hai (pichhle saal se ₹160 zyada). State bonus alag: MP +₹40 = ₹2,625, Rajasthan +₹150 = ₹2,735, UP mein koi bonus nahi.</li>
             <li>Mandi ka rate MSP se <strong>neeche</strong> chal raha hai → sarkari kendra. <strong>Upar</strong> hai aur maal saaf-sookha hai → mandi/eNAM.</li>
-            <li>Sharbati/lokwan jaisi premium variety sarkari kendra par dena apna premium chhodna hai — wahan sab ek rate par taula jaata hai.</li>
+            <li>Sharbati/lokwan jaisi premium variety sarkari kendra par dena apna premium chhodna hai. Wahan sab ek rate par taula jaata hai.</li>
             <li>Rokne ka faisla ganit se: 6 mahine ka storage kharcha + loss ≈ ₹150/qtl paar ho toh hi jeet. <strong>Aaj ka rate agmarknet.gov.in par check karo.</strong></li>
           </ul>
         </DB>
@@ -109,13 +109,13 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          April aata hai aur wahi teen raaste saamne khade ho jaate hain — sarkari kendra, mandi ki boli, ya
+          April aata hai aur wahi teen raaste saamne khade ho jaate hain. Sarkari kendra, mandi ki boli, ya
           ghar ka godaam. Har saal jawab badal jaata hai. Pichhle saal jisne roka usne kamaya, us se pichhle
           saal jisne roka woh pachhtaya. Formula ratta maar ke kaam nahi chalta.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Toh yahan formula nahi, faisla karne ka tareeka likha hai — MSP asal mein kya cheez hai, rate ka
+          Toh yahan formula nahi, faisla karne ka tareeka likha hai. MSP asal mein kya cheez hai, rate ka
           saal-bhar ka chakkar kaise ghoomta hai, rokne ka hisaab kagaz par kaise banta hai, aur woh chaar
           sawaal jo trolley bharne se pehle khud se pooch lene chahiye. Numbers sirf official liye hain; boli
           ka rate roz ka roz apni mandi se dekhna.
@@ -123,15 +123,15 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
 
         <SH>MSP Jaal Hai, Chhat Nahi</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Rabi Marketing Season 2026-27 ke liye gehu ka MSP <strong>₹2,585 per quintal</strong> hai — pichhle saal ke
+          Rabi Marketing Season 2026-27 ke liye gehu ka MSP <strong>₹2,585 per quintal</strong> hai. Pichhle saal ke
           ₹2,425 se ₹160 zyada. Yeh woh rate hai jis par sarkar apne kharid kendra par aapka gehu (FAQ quality ka)
           kharidne ko taiyar hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           MSP ko aise samjho: yeh aapke rate ka <strong>neeche ka jaal</strong> hai. Market girta hai toh MSP aapko
-          us jaal ke neeche girne se rokta hai. Lekin market chadhta hai toh MSP aapka haath nahi pakadta — achhi
+          us jaal ke neeche girne se rokta hai. Lekin market chadhta hai toh MSP aapka haath nahi pakadta, achhi
           quality ka gehu open market mein MSP se upar bikta hai, khaas kar sharbati/lokwan jaisi premium varieties.
-          Isliye &ldquo;MSP hi best hai&rdquo; aur &ldquo;mandi hi best hai&rdquo; — dono andhe niyam hain.
+          Isliye &ldquo;MSP hi best hai&rdquo; aur &ldquo;mandi hi best hai&rdquo;. Dono andhe niyam hain.
         </p>
 
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
@@ -143,7 +143,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
             <tbody>
               <tr>
                 <td className="border border-[var(--color-border)] p-3 font-semibold">1 quintal (100 kg)</td>
-                <td className="border border-[var(--color-border)] p-3">₹2,585 — MSP ka official unit</td>
+                <td className="border border-[var(--color-border)] p-3">₹2,585. MSP ka official unit</td>
               </tr>
               <tr className="bg-[var(--color-bg-alt)]">
                 <td className="border border-[var(--color-border)] p-3 font-semibold">50 kg ki bori</td>
@@ -157,7 +157,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           </table>
         </div>
         <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-4">
-          Bori ka wazan har jagah ek jaisa nahi hota — kahin 50 kg, kahin 40, kahin bhari 100 ki. Isliye
+          Bori ka wazan har jagah ek jaisa nahi hota. Kahin 50 kg, kahin 40, kahin bhari 100 ki. Isliye
           sauda karte waqt rate quintal mein hi tay karo aur taul par nazar rakho; boriyon mein baat hone se
           hi zyada hisaab bigadta hai.
         </p>
@@ -180,7 +180,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
 
         <SH>Rate Ka Saal-Bhar Ka Chakkar</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Gehu ka bhav saal mein aise ghoomta hai — aam taur par:
+          Gehu ka bhav saal mein aise ghoomta hai. Aam taur par:
         </p>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
@@ -195,7 +195,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
               <tr>
                 <td className="border border-[var(--color-border)] p-3 font-semibold">April–May (harvest)</td>
                 <td className="border border-[var(--color-border)] p-3">Sab ek saath bechne aate hain, aavak peak par</td>
-                <td className="border border-[var(--color-border)] p-3">Sabse zyada dabav — rate aksar MSP ke aas-paas ya neeche</td>
+                <td className="border border-[var(--color-border)] p-3">Sabse zyada dabav, rate aksar MSP ke aas-paas ya neeche</td>
               </tr>
               <tr className="bg-[var(--color-bg-alt)]">
                 <td className="border border-[var(--color-border)] p-3 font-semibold">June–September</td>
@@ -217,14 +217,14 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </div>
 
         <WB>
-          Yeh pattern <strong>aam saal</strong> ka hai — pattharr ki lakeer nahi. Sarkari stock release, import/export
+          Yeh pattern <strong>aam saal</strong> ka hai. Pattharr ki lakeer nahi. Sarkari stock release, import/export
           policy ka badlav, ya bumper/kamzor fasal kisi bhi saal is cycle ko tod sakti hai. Isliye pattern ko
           starting point banao, aur us saal ka asli trend apni mandi ke daily rate se pakdo.
         </WB>
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/gehu-boli.webp"
-          alt="Mandi mein gehu ke dher par khuli boli — vyapari aur kisan"
+          alt="Mandi mein gehu ke dher par khuli boli, vyapari aur kisan"
           width={1200}
           height={669}
           className="w-full h-auto rounded-xl my-5"
@@ -232,7 +232,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           loading="lazy"
         />
 
-        <SH>&ldquo;Rok Lo, Rate Badhega&rdquo; — Aadhi Salah Hai Yeh</SH>
+        <SH>&ldquo;Rok Lo, Rate Badhega&rdquo;. Aadhi Salah Hai Yeh</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Poori salah aise banti hai: baad ka rate tabhi fayda hai jab woh <strong>storage ka kharcha, nuksan
           aur paise ki lagat</strong> — teeno ko paar kar jaye. Warna sirf mehnat badhti hai, kamai nahi. Kagaz
@@ -250,7 +250,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           karke bhi wahi ke wahi ho.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Aur ek cheez jise log ganit mein bhoolte hain — <strong>kist ka waqt</strong>. Agar aapko May mein
+          Aur ek cheez jise log ganit mein bhoolte hain. <strong>kist ka waqt</strong>. Agar aapko May mein
           bacchon ki fees ya shaadi ka kharcha nikaalna hai, toh October ka behtar rate kagaz par to sundar hai,
           jeb mein nahi aata. Us haalat mein sasta udhaar lekar maal rokna aksar ghata de jaata hai. Rokna un logon
           ka hathiyaar hai jinke paas 3-4 mahine ka sabr aur sookha godaam dono ho.
@@ -258,7 +258,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/gehu-bhandaran.webp"
-          alt="Ghar par gehu ka sahi bhandaran — pallet par rakhi boriyaan"
+          alt="Ghar par gehu ka sahi bhandaran, pallet par rakhi boriyaan"
           width={1200}
           height={669}
           className="w-full h-auto rounded-xl my-5"
@@ -266,7 +266,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           loading="lazy"
         />
 
-        <SH>Trolley Bharne Se Pehle — Chaar Sawaal</SH>
+        <SH>Trolley Bharne Se Pehle. Chaar Sawaal</SH>
         <StepList>
           <SI n={1}><strong>Aaj mandi ka rate MSP se upar hai ya neeche?</strong> Neeche hai → MSP registration karke sarkari kendra ka rasta pakdo. Upar hai → agla sawaal.</SI>
           <SI n={2}><strong>Meri quality kaisi hai?</strong> Saaf, sookha, premium variety → open market mein behtar boli milegi. Nami/kachra wala maal → pehle saaf-sukha karo, warna dono jagah cut lagega.</SI>
@@ -275,22 +275,22 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </StepList>
 
         <DB>
-          <strong>Sabse practical strategy — teen hisse:</strong> ek hissa harvest par bech do (kharche ke liye),
+          <strong>Sabse practical strategy, teen hisse:</strong> ek hissa harvest par bech do (kharche ke liye),
           ek hissa MSP par do (agar rate daba hai), aur sabse achhi quality wala hissa rok lo (behtar season ke
           liye). Isse aap na poore girte rate mein fanste ho, na poora fayda chhodte ho.
         </DB>
 
         <SH>Sharbati-Lokwan Walon Ka Hisaab Alag Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          MSP vs mandi ka faisla variety ke hisaab se bilkul palat jaata hai. General/dara gehu — jiski quality
-          FAQ standard ke aas-paas hai — uske liye MSP ka jaal sabse zyada matter karta hai. Lekin{' '}
+          MSP vs mandi ka faisla variety ke hisaab se bilkul palat jaata hai. General/dara gehu, jiski quality
+          FAQ standard ke aas-paas hai. Uske liye MSP ka jaal sabse zyada matter karta hai. Lekin{' '}
           <strong>sharbati, lokwan, bansi jaisi premium varieties</strong> ka open market rate aam taur par MSP
-          se kaafi upar chalta hai — sharbati toh kai baar MSP se ₹1,000-2,000 upar bikta hai. Aisi variety
+          se kaafi upar chalta hai. Sharbati toh kai baar MSP se ₹1,000-2,000 upar bikta hai. Aisi variety
           sarkari kendra par dena apne premium ko muft mein chhodna hai, kyunki wahan variety ka koi extra
           nahi milta — sab ek hi rate par taula jaata hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Premium maal ke liye buyers bhi alag hote hain — flour mills, branded atta companies, seed producers
+          Premium maal ke liye buyers bhi alag hote hain. Flour mills, branded atta companies, seed producers
           aur bade traders. Inke saath seedha sauda ya eNAM ki online bidding behtar rate nikalti hai, kyunki
           door ke buyers assaying report mein variety aur quality dekh kar bid karte hain. Aur ek baat —
           premium variety saaf-suthri, graded halat mein hi apna premium paati hai; mila-jula maal general
@@ -309,31 +309,31 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
 
         <SH>Sarkari Kendra Ka Rasta Chuna? Toh Process Yeh Hai</SH>
         <StepList>
-          <SI n={1}><strong>Registration:</strong> apne state ke procurement portal par (UP, MP, Rajasthan, Bihar — sab ke apne portal hain) season se pehle registration karo. Aadhaar, bank details, zameen ke record lagenge.</SI>
+          <SI n={1}><strong>Registration:</strong> apne state ke procurement portal par (UP, MP, Rajasthan, Bihar. Sab ke apne portal hain) season se pehle registration karo. Aadhaar, bank details, zameen ke record lagenge.</SI>
           <SI n={2}><strong>Slot/token:</strong> registration ke baad kharid kendra aur date ka slot milta hai. Bina slot ke maal le jaakar khada rehna padta hai.</SI>
-          <SI n={3}><strong>Quality prep:</strong> gehu saaf karo, sukha lo — FAQ standards (nami, tuta dana, kachra) par jaanch hoti hai.</SI>
+          <SI n={3}><strong>Quality prep:</strong> gehu saaf karo, sukha lo. FAQ standards (nami, tuta dana, kachra) par jaanch hoti hai.</SI>
           <SI n={4}><strong>Taul aur payment:</strong> electronic taul ke baad payment seedha bank account mein aati hai. Receipt sambhaal kar rakho.</SI>
           <SI n={5}><strong>State bonus check karo:</strong> 2026-27 season mein MP ne ₹40 per quintal bonus diya (total ₹2,625) aur Rajasthan ne ₹150 (total ₹2,735); UP mein koi bonus nahi tha (KisanPortal/TheTractorHub ki season reports). Yeh automatic milta hai, par pata hona chahiye taaki payment short aaye toh pakad sako.</SI>
         </StepList>
 
         <IB>
-          <strong>System kitna asli hai — MP ka is season ka record:</strong> Rabi 2026-27 mein Madhya Pradesh mein{' '}
+          <strong>System kitna asli hai. MP ka is season ka record:</strong> Rabi 2026-27 mein Madhya Pradesh mein{' '}
           <strong>19.04 lakh kisano</strong> ne wheat procurement ke liye registration kiya (pichhle saal se 3.60 lakh
           zyada), 3,171 kharid kendra chale, aur seedha Aadhaar-linked bank account mein payment gayi. Slot booking ki
           last date 30/04/2026 thi (
           <a href="https://thetractorhub.in/msp-on-wheat-2026/" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: TheTractorHub season report</a>).
-          Matlab: e-Uparjan jaisa registration system ab exception nahi, rule hai — window ke andar registration hi
+          Matlab: e-Uparjan jaisa registration system ab exception nahi, rule hai. Window ke andar registration hi
           poora khel hai.
         </IB>
         <WB>
-          Registration window season se pehle khulti hai aur deadline sakht hoti hai — jaise Gujarat mein
+          Registration window season se pehle khulti hai aur deadline sakht hoti hai. Jaise Gujarat mein
           registration February mein hota hai aur kharid March-May mein. Window nikal gayi toh us season MSP
           ka rasta band. Apne state ke portal par January-February se nazar rakhna shuru kar do.
         </WB>
 
         <GovLink
           href="https://agmarknet.gov.in"
-          label="AgMarknet — Mandi-wise Daily Rates"
+          label="AgMarknet. Mandi-wise Daily Rates"
           guide="Portal Kholo"
           portalName="agmarknet.gov.in"
         />
@@ -350,7 +350,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
 
         <SH>Roz Ka Rate Kahan Se Dekhein</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Ek din ka rate kuch nahi batata; trend batata hai. Apni mandi ka modal price roz dekho — hamari{' '}
+          Ek din ka rate kuch nahi batata; trend batata hai. Apni mandi ka modal price roz dekho, hamari{' '}
           <Link href="/articles/mandi-bhav-today" className="underline font-bold">Aaj Ka Mandi Bhav</Link> page se ya{' '}
           <Link href="/articles/mandi-bhav-app-comparison" className="underline font-bold">in apps</Link> se. Aur agar
           aapki mandi eNAM se judi hai, toh online bidding ka fayda lena bhi seekho:{' '}
@@ -360,7 +360,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
 
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           <strong>Abhi check karo:</strong> aaj ka mandi rate <a href="https://agmarknet.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-bold">agmarknet.gov.in</a> par,
-          aur apne state ke procurement portal par registration window ki date — deadline sakht hoti hai.
+          aur apne state ke procurement portal par registration window ki date, deadline sakht hoti hai.
         </p>
 
         <FAQBlock faqs={FAQS_DATA} />
@@ -368,7 +368,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
-            Agmarknet — daily mandi rates, Govt of India.{' '}
+            Agmarknet, daily mandi rates, Govt of India.{' '}
             <a href="https://agmarknet.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">agmarknet.gov.in</a>
           </li>
           <li>
@@ -376,7 +376,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
             <a href="https://thetractorhub.in/msp-on-wheat-2026/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">thetractorhub.in</a>
           </li>
           <li>
-            CCEA Rabi MSP press release — PIB.{' '}
+            CCEA Rabi MSP press release. PIB.{' '}
             <a href="https://pib.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in</a>
           </li>
         </ul>

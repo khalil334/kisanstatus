@@ -16,23 +16,23 @@ const Fig = (p: FigProps) => (
 const FAQS_DATA = [
   {
     q: 'KALIA band ho gayi hai, kya iska matlab mera paisa bhi band ho gaya?',
-    a: 'Nahi. KALIA ki jagah CM Kisan aayi hai, lekin scheme ka core kaam wahi hai. Aapka purana KALIA registration bekar nahi hua. Sirf do cheezein badli hain: status ab cmkisan.odisha.gov.in par dekhna hoga, aur beneficiary base dobara verify hua hai — is liye kuch purane record hate aur kuch naye jude.',
+    a: 'Nahi. KALIA ki jagah CM Kisan aayi hai, lekin scheme ka core kaam wahi hai. Aapka purana KALIA registration bekar nahi hua. Sirf do cheezein badli hain: status ab cmkisan.odisha.gov.in par dekhna hoga, aur beneficiary base dobara verify hua hai. Is liye kuch purane record hate aur kuch naye jude.',
   },
   {
     q: 'Mere paas zameen nahi hai, phir bhi CM Kisan mil sakta hai?',
-    a: 'Haan. Bhoomiheen krishi parivaar ke liye ismein landless track banaya gaya hai. Paisa kheti ke input ke liye nahi, balki bakri palan, murgi palan, dairy ya machhli jaise allied kaam ke liye milta hai — aur tranche teen hote hain, cultivator side ke do ke muqable.',
+    a: 'Haan. Bhoomiheen krishi parivaar ke liye ismein landless track banaya gaya hai. Paisa kheti ke input ke liye nahi, balki bakri palan, murgi palan, dairy ya machhli jaise allied kaam ke liye milta hai. Aur tranche teen hote hain, cultivator side ke do ke muqable.',
   },
   {
     q: 'Meri zameen bahut kam hai, phir bhi naam list mein nahi aaya. Kyun?',
-    a: 'Ye scheme means-tested hai — sirf zameen dekh kar faisla nahi hota. Ghar ka koi sadasya income tax bharta ho, sarkari naukri ya pension par ho, ya registered professional (doctor, vakil, CA, engineer) ho, to poora parivaar exclusion mein aa jaata hai. Ye rule parivaar-level par lagta hai, sirf form bharne wale par nahi.',
+    a: 'Ye scheme means-tested hai. Sirf zameen dekh kar faisla nahi hota. Ghar ka koi sadasya income tax bharta ho, sarkari naukri ya pension par ho, ya registered professional (doctor, vakil, CA, engineer) ho, to poora parivaar exclusion mein aa jaata hai. Ye rule parivaar-level par lagta hai, sirf form bharne wale par nahi.',
   },
   {
-    q: 'Status mein naam hai lekin paisa nahi aaya — sabse pehle kya check karun?',
-    a: 'Result screen teen alag baatein batati hai — aavedan kahan tak pahuncha, bank ki mapping, aur e-KYC. Atakne ki sabse badi wajah pending e-KYC nikalti hai; doosre number par Aadhaar ka NPCI mapper se link na hona. Bank mein Aadhaar ki photocopy dena kaafi nahi — branch se saaf poochein ki NPCI seeding hui hai ya nahi.',
+    q: 'Status mein naam hai lekin paisa nahi aaya, sabse pehle kya check karun?',
+    a: 'Result screen teen alag baatein batati hai. Aavedan kahan tak pahuncha, bank ki mapping, aur e-KYC. Atakne ki sabse badi wajah pending e-KYC nikalti hai; doosre number par Aadhaar ka NPCI mapper se link na hona. Bank mein Aadhaar ki photocopy dena kaafi nahi. Branch se saaf poochein ki NPCI seeding hui hai ya nahi.',
   },
   {
     q: 'Beneficiary list mein apna record kahan dhoondhna chahiye?',
-    a: 'Cultivator aur landless — dono ki suchi juda hoti hai. Bhoomiheen parivaar cultivator wali mein nahi milega aur zameen wala kisan landless wali mein nahi. Pehle apna track pakka karein, phir portal ke report section mein zila, block aur gram panchayat chun kar sahi category kholein.',
+    a: 'Cultivator aur landless. Dono ki suchi juda hoti hai. Bhoomiheen parivaar cultivator wali mein nahi milega aur zameen wala kisan landless wali mein nahi. Pehle apna track pakka karein, phir portal ke report section mein zila, block aur gram panchayat chun kar sahi category kholein.',
   },
   {
     q: 'CM Kisan lene se PM Kisan band ho jaayega?',
@@ -61,34 +61,34 @@ export default function OdishaCmKisanStatusCheck({
         <Fig
           src="hero.webp"
           alt="Odisha ka kisan apne dhaan ke khet mein mobile par CM Kisan ka status dekh raha hai"
-          caption="CM Kisan — Odisha ki kisan income-support yojana, jo KALIA ki jagah aayi"
+          caption="CM Kisan. Odisha ki kisan income-support yojana, jo KALIA ki jagah aayi"
           priority
         />
 
         <p>
           Odisha ke gaon mein aaj bhi log &ldquo;KALIA ka paisa&rdquo; kehte hain. Portal
-          kuch aur kehta hai — form, bank ka message, sab CM Kisan (ସିଏମ କିଷାନ) likh kar aata hai.
+          kuch aur kehta hai. Form, bank ka message, sab CM Kisan (ସିଏମ କିଷାନ) likh kar aata hai.
         </p>
 
         <p>
-          Hua kuch aisa — isi farak ne bahut confusion paida kar diya. Kuch log purane portal par status
+          Hua kuch aisa, isi farak ne bahut confusion paida kar diya. Kuch log purane portal par status
           dhoondte reh jaate hain, kuch samajhte hain ki purani scheme band hone se unka
-          paisa hi band ho gaya. Darne ki zaroorat nahi — haan, paisa season ka sawaal
+          paisa hi band ho gaya. Darne ki zaroorat nahi. Haan, paisa season ka sawaal
           hai. Par sachchai iske beech mein hai, aur usse samajhna is page ka pehla kaam hai.
         </p>
 
         <InfoBox type="info">
           KALIA aur CM Kisan do juda scheme hain, lekin ek hi zarurat ke liye banayi gayi
-          hain — Odisha ke chhote kisan aur bhoomiheen krishi parivaar ko seedha paisa dena.
+          hain. Odisha ke chhote kisan aur bhoomiheen krishi parivaar ko seedha paisa dena.
           Purana enrolment aap ka claim khatam nahi karta, magar naya verification aur e-KYC
           har haal mein zaroori hai.
         </InfoBox>
 
-        <h2>PM Kisan Aur CM Kisan — Dono Sath Chalte Hain</h2>
+        <h2>PM Kisan Aur CM Kisan. Dono Sath Chalte Hain</h2>
 
         <p>
           Arre, ye sawaal bahut aata hai: CM Kisan lene se PM Kisan band ho jaayega? Nahi, bilkul
-          nahi — dono apni-apni sarkar ki scheme hain aur ek dusre ko cancel nahi
+          nahi. Dono apni-apni sarkar ki scheme hain aur ek dusre ko cancel nahi
           karti. Bahut se Odisha ke log dono se paisa lete hain — central wala PM Kisan se,
           state wala CM Kisan se.
         </p>
@@ -96,7 +96,7 @@ export default function OdishaCmKisanStatusCheck({
         <p>
           Lekin ek zaroori farak hai. PM Kisan mein zameen ki koi upper limit nahi hai,
           jabki CM Kisan ka cultivator track chhoti jotdaari tak seemit hai. Isliye aisa ho
-          sakta hai ki central wala paisa mile aur state wala nahi — ye bilkul normal hai,
+          sakta hai ki central wala paisa mile aur state wala nahi. Ye bilkul normal hai,
           koi galti nahi. Iska ulta bhi mumkin hai: bhoomiheen parivaar ko landless benefit
           milta hai, jabki PM Kisan landholding wali scheme hone ke naate wahan lagu nahi
           hoti.
@@ -125,24 +125,24 @@ export default function OdishaCmKisanStatusCheck({
           </tr>
           <tr>
             <td>Paisa kaise aata hai</td>
-            <td>Central DBT — sab jagah lagbhag ek saath</td>
-            <td>State release — har zile ki apni raftaar</td>
+            <td>Central DBT. Sab jagah lagbhag ek saath</td>
+            <td>State release, har zile ki apni raftaar</td>
           </tr>
         </SchemeTable>
 
-        <h2>KALIA Se CM Kisan — Kya Badla Aur Kya Waisa Hi Raha</h2>
+        <h2>KALIA Se CM Kisan. Kya Badla Aur Kya Waisa Hi Raha</h2>
 
         <p>
           KALIA Odisha ki pehchaan bani hui scheme thi, jismein kisan, bhagchasi aur khet
-          mazdoor — teeno ke liye apne-apne component the. Sarkar badalne ke baad usi jagah
+          mazdoor. Teeno ke liye apne-apne component the. Sarkar badalne ke baad usi jagah
           par CM Kisan laayi gayi. Naam badla, dhaancha thoda simple hua, lekin core idea
           nahi badla: chhoti jot walon ko season par nagad madad, aur bhoomiheen parivaar ko
           allied kaam ke liye alag support.
         </p>
 
         <p>
-          Practically iska matlab teen cheezein hain. Ek — portal naya hai, aur purana KALIA
-          wala pata ab final source nahi hai. Do — beneficiary base dobara verify kiya gaya
+          Practically iska matlab teen cheezein hain. Ek, portal naya hai, aur purana KALIA
+          wala pata ab final source nahi hai. Do, beneficiary base dobara verify kiya gaya
           hai, is liye kuch purane naam list se hat gaye aur kuch naye jud gaye. Teen — Aadhaar
           e-KYC aur NPCI-mapped bank account ab dheele rules nahi hain; inke bina payment
           release hi hold ho jaati hai. Teeno mein se aakhri wala sabse zyada logon ko
@@ -173,42 +173,42 @@ export default function OdishaCmKisanStatusCheck({
           <tr>
             <td>e-KYC</td>
             <td>Shuruaat mein dheela</td>
-            <td>Anivaarya — iske bina DBT ruk jaata hai</td>
+            <td>Anivaarya, iske bina DBT ruk jaata hai</td>
           </tr>
         </SchemeTable>
 
         <h2>Padosi Rajyon Mein Kya Ho Raha Hai</h2>
 
         <p>
-          Waise, ye maine aapko bataya tha na — raqam har rajya mein ek jaisi nahi hoti. Apne
+          Waise, ye maine aapko bataya tha na, raqam har rajya mein ek jaisi nahi hoti. Apne
           aas-paas ka haal khud padh lo:
         </p>
 
         <ul>
           <li>
             <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
-              West Bengal Krishak Bandhu — Voter ID se status aur death benefit (state list guide me)
+              West Bengal Krishak Bandhu. Voter ID se status aur death benefit (state list guide me)
             </Link>
           </li>
           <li>
             <Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">
-              Andhra Pradesh Annadata Sukhibhava — bataidar kisan bhi cover hote hain
+              Andhra Pradesh Annadata Sukhibhava, bataidar kisan bhi cover hote hain
             </Link>
           </li>
           <li>
             <Link href="/rajya-yojana/rythu-bharosa-status-check-2026">
-              Telangana Rythu Bharosa — per-acre raqam ka hisaab
+              Telangana Rythu Bharosa, per-acre raqam ka hisaab
             </Link>
           </li>
           <li>
             <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
-              Sabhi rajyon ka amount aur portal ek saath — comparison table
+              Sabhi rajyon ka amount aur portal ek saath, comparison table
             </Link>
           </li>
         </ul>
 
         <p>
-          (Odisha ka domicile nahi hai to CM Kisan aap par laagu nahi hoti — lekin landless
+          (Odisha ka domicile nahi hai to CM Kisan aap par laagu nahi hoti. Lekin landless
           track jaisa intezaam har rajya mein nahi milta, aur raqam bhi jagah-jagah badalti
           hai.)
         </p>
@@ -233,12 +233,12 @@ export default function OdishaCmKisanStatusCheck({
         <Fig
           src="landless-family-odisha.webp"
           alt="Odisha ka bhoomiheen parivaar apne chhote ghar ke saamne khada hai"
-          caption="Landless track — zameen na ho tab bhi allied kaam ke liye support milta hai"
+          caption="Landless track, zameen na ho tab bhi allied kaam ke liye support milta hai"
         />
 
         <p>
           <strong>Cultivator track</strong> un gharon ke liye hai jinke paas apni kheti ki
-          zameen hai. Yahan raqam fix hai aur zameen ke area se badalti nahi — bas ek upper
+          zameen hai. Yahan raqam fix hai aur zameen ke area se badalti nahi. Bas ek upper
           limit hai, jiske paar jaakar ghar is scheme se bahar ho jaata hai. Grant do barabar
           tranche mein aata hai, Kharif aur Rabi ke aas-paas.
         </p>
@@ -252,17 +252,17 @@ export default function OdishaCmKisanStatusCheck({
         </p>
 
         <p>
-          Ye tool isi logic par chalta hai — aap apni category, zameen aur ghar ki
+          Ye tool isi logic par chalta hai. Aap apni category, zameen aur ghar ki
           detail bharenge, aur wo bata dega ki aap kahan aate hain, saal bhar mein kitna
           banega, ek tranche mein kitna, aur aapke case mein kaun kaun se kagaz lagenge.
         </p>
 
         <OdishaCmKisanChecker />
 
-        <h2>Landless Track Ka Alag Raasta — Kise Kya Karna Hai</h2>
+        <h2>Landless Track Ka Alag Raasta. Kise Kya Karna Hai</h2>
 
         <p>
-          Zameen wale kisan ka raasta seedha hai — record saaf rakho, list mein naam aata
+          Zameen wale kisan ka raasta seedha hai. Record saaf rakho, list mein naam aata
           hai. Landless agricultural household ka raasta thoda alag hai, aur isi liye
           wahan zyada log chhoot jaate hain. Yahan aadhaar zameen ka record nahi, balki ye
           pehchaan hai ki parivaar kheti-mazdoori ya allied activities (bakri-murgi paalan,
@@ -274,7 +274,7 @@ export default function OdishaCmKisanStatusCheck({
           Landless track ke liye teen cheezein taiyaar rakhein: parivaar ki pehchaan ke
           kagaz (Aadhaar sab sadasyon ke), kheti-mazdoori se judaav ka koi bhi saboot ya
           panchayat ka certificate, aur ek active Aadhaar-linked bank khaata. Raqam yahan
-          ₹12,500 ki hai — allied activity shuru karne ki madad ke roop mein — isliye
+          ₹12,500 ki hai. Allied activity shuru karne ki madad ke roop mein. Isliye
           verification bhi zameen wale track se zyada baareek hota hai. Naam list mein na
           aaye to block agriculture office mein likhit shikayat dein aur paavti lein;
           zubaani poochhne ka record nahi banta.
@@ -299,11 +299,11 @@ export default function OdishaCmKisanStatusCheck({
           </li>
           <li>
             Kisi bhi &ldquo;agent&rdquo; ko paisa dekar list mein naam chadhaane ka wada mat
-            maaniye — enrolment aur verification dono sarkari raste se hi hote hain.
+            maaniye, enrolment aur verification dono sarkari raste se hi hote hain.
           </li>
         </ul>
 
-        <h2>Exclusion List — Zameen Kam Hone Par Bhi Naam Kat Sakta Hai</h2>
+        <h2>Exclusion List. Zameen Kam Hone Par Bhi Naam Kat Sakta Hai</h2>
 
         <p>
           Ye scheme means-tested hai, matlab sirf zameen dekh kar faisla nahi hota. Ghar ki
@@ -314,15 +314,15 @@ export default function OdishaCmKisanStatusCheck({
 
         <ul>
           <li>Ghar ka koi sadasya income tax bharta ho</li>
-          <li>Koi sadasya sarkari naukri mein ho — serving ya pension paane wala</li>
-          <li>Registered professional ho — doctor, vakil, CA, engineer</li>
+          <li>Koi sadasya sarkari naukri mein ho, serving ya pension paane wala</li>
+          <li>Registered professional ho, doctor, vakil, CA, engineer</li>
           <li>Landholding scheme ki upper limit se zyada ho</li>
         </ul>
 
         <InfoBox type="warning">
           Exclusion parivaar-level par lagti hai. Agar ghar ka ek sadasya sarkari naukri mein
           hai, to alag ration card bana lene ya alag form bharne se scheme mein entry nahi
-          milti — verification ke waqt yahi pakda jaata hai aur payment recover bhi ki ja
+          milti, verification ke waqt yahi pakda jaata hai aur payment recover bhi ki ja
           sakti hai.
         </InfoBox>
 
@@ -342,14 +342,14 @@ export default function OdishaCmKisanStatusCheck({
           <li>Captcha bharein aur submit karein.</li>
           <li>
             Screen par aapka application stage, bank account mapping aur e-KYC ki halat
-            dikhegi. Teeno cheezein dhyan se padhein — sirf pehli line par faisla mat karein.
+            dikhegi. Teeno cheezein dhyan se padhein. Sirf pehli line par faisla mat karein.
           </li>
         </ol>
 
         <Fig
           src="status-check-phone.webp"
           alt="Odisha ka kisan dhaan ke khet ke kinare baith kar phone par payment status dekh raha hai"
-          caption="Status hamesha official portal par dekhein — teeno lines (stage, bank mapping, e-KYC) padhna zaroori hai"
+          caption="Status hamesha official portal par dekhein. Teeno lines (stage, bank mapping, e-KYC) padhna zaroori hai"
         />
 
         <ExternalLinkButton
@@ -361,21 +361,21 @@ export default function OdishaCmKisanStatusCheck({
 
         <p>
           Agar status search khaali aata hai, to district aur panchayat wise suchi dekhna
-          agla qadam hai. Wahan naam hona iska matlab hai aapka record active hai — chahe
+          agla qadam hai. Wahan naam hona iska matlab hai aapka record active hai. Chahe
           paisa abhi tak aaya na ho.
         </p>
 
         <ol>
           <li>Portal ke report section mein jaayein.</li>
           <li>Apna zila, block aur gram panchayat chunein.</li>
-          <li>Category chunein — cultivator ya landless. Ye do suchi juda hoti hain.</li>
+          <li>Category chunein, cultivator ya landless. Ye do suchi juda hoti hain.</li>
           <li>Apna naam aur category dono verify karein.</li>
         </ol>
 
         <Fig
           src="panchayat-beneficiary-list.webp"
           alt="Gram panchayat notice board par lagi beneficiary list dekhte hue gaon ke log"
-          caption="Zila → block → gram panchayat — suchi mein naam ke saath apni category bhi milaa lein"
+          caption="Zila → block → gram panchayat, suchi mein naam ke saath apni category bhi milaa lein"
         />
 
         <p>
@@ -385,16 +385,16 @@ export default function OdishaCmKisanStatusCheck({
         </p>
 
         <p>
-          Village wise list bhi isi raaste se milti hai — portal par alag se “village list” naam
+          Village wise list bhi isi raaste se milti hai. Portal par alag se “village list” naam
           ka koi button nahi hota. Zila → block → gram panchayat select karte jaayein, aapke gaon
           ke sabhi beneficiaries ki suchi khul jaayegi. Yahi list panchayat office ke notice board
           par bhi lagti hai, toh internet na chale toh wahan bhi dekh sakte hain.
         </p>
 
-        <h2>Kist Ka Waqt — Kya Umeed Rakhein</h2>
+        <h2>Kist Ka Waqt. Kya Umeed Rakhein</h2>
 
         <p>
-          Cultivator track ke tranche kheti ke season ke saath chalte hain — saal mein do
+          Cultivator track ke tranche kheti ke season ke saath chalte hain. Saal mein do
           baar. Landless track ke teen hote hain, allied kaam ki zaroorat ke hisaab se.
           Exact tareekh? Har saal badalti hai. Release se pehle verification aur fund
           clearance ka apna waqt lagta hai, aur wo waqt kisi calendar mein nahi likha hota.
@@ -403,7 +403,7 @@ export default function OdishaCmKisanStatusCheck({
         <p>
           Odisha mein ek baat khaas hai: release state ke haath mein hoti hai, is liye ek hi
           tranche har zile mein apni raftaar se pahunchta hai. Padosi ke account mein paisa
-          aa gaya aur aapke mein nahi — ye apne aap mein kisi gadbad ka saboot nahi hai.
+          aa gaya aur aapke mein nahi. Ye apne aap mein kisi gadbad ka saboot nahi hai.
           Pakki tareekh batane wale forward par plan banane ke bajaye, apne record ki teen
           lines (stage, bank mapping, e-KYC) durust rakhein; wahi tay karti hain ki release
           ke din aapki file uthegi ya nahi.
@@ -430,7 +430,7 @@ export default function OdishaCmKisanStatusCheck({
         <h3>Land record mein naam ya area galat</h3>
         <p>
           Cultivator track poora RoR par tikta hai. Virasat ke baad mutation na hona, ya joint
-          patta mein hissa saaf na hona — dono file ko pending mein daal dete hain. Iska hal
+          patta mein hissa saaf na hona. Dono file ko pending mein daal dete hain. Iska hal
           tehsil office mein hai, portal par nahi.
         </p>
 
@@ -447,27 +447,27 @@ export default function OdishaCmKisanStatusCheck({
           pakda jaata hai aur dono ki file ruk jaati hai jab tak ek withdraw na ho.
         </p>
 
-        <h2>Aakhri Kist Kab Aayi Thi — Aur Agli Kab Aayegi?</h2>
+        <h2>Aakhri Kist Kab Aayi Thi. Aur Agli Kab Aayegi?</h2>
 
         <p>
           Sabse taaza record: <strong>chauthi kist 20 April 2026 ko Akshaya Tritiya
-          (Krushak Divas)</strong> par release hui — Cuttack ke CRRI mein hue state-level
+          (Krushak Divas)</strong> par release hui. Cuttack ke CRRI mein hue state-level
           function se <strong>₹838 crore se zyada, 41.68 lakh</strong> beneficiaries ke
           khaate mein ₹2,000 karke gaye. Inme 41,049 landless aur 3,292 tribal kisan
           shamil the. Scheme ke pattern ke hisaab se agli kist{' '}
           <strong>Nuakhai (August–September 2026)</strong> ke aas-paas expect ki ja sakti
-          hai — pichhle saal Nuakhai wali kist 27 August ko aayi thi. Pakki date sirf
+          hai. Pichhle saal Nuakhai wali kist 27 August ko aayi thi. Pakki date sirf
           state sarkar ke elaan se aati hai; portal par status check karte rahein.
         </p>
 
-        <h2>Kist Aayi Par Kam Lagi — Hisaab Kaise Milaayein</h2>
+        <h2>Kist Aayi Par Kam Lagi. Hisaab Kaise Milaayein</h2>
 
         <p>
-          Zameen wale track mein saal ka ₹4,000 do kiston mein aata hai — Akshaya Tritiya
+          Zameen wale track mein saal ka ₹4,000 do kiston mein aata hai. Akshaya Tritiya
           aur Nuakhai ke aas-paas ₹2,000 karke. Passbook mein credit dekhte waqt yahi
           figure milaayein; PM Kisan ki ₹2,000 wali kist alag entry hai aur aksar dono ko
           jod kar log confuse ho jaate hain ki kitna kis scheme se aaya. Entry ke saath
-          likha reference dekhein — CM Kisan ka credit state treasury ke reference se aata
+          likha reference dekhein. CM Kisan ka credit state treasury ke reference se aata
           hai, PM Kisan ka “PMKISAN” naam se. Raqam scheme ke hisaab se kam aaye to pehle
           ye confirm karein ki aap kaunse track mein gine gaye hain — kyunki landless track
           ki raqam aur schedule dono alag hain, aur galat track mein ginti hona hi kam
@@ -483,15 +483,15 @@ export default function OdishaCmKisanStatusCheck({
           </tr>
           <tr>
             <td>e-KYC nahi ho rahi, OTP nahi aa raha</td>
-            <td>Nazdeeki CSC center — biometric se ho jaati hai</td>
+            <td>Nazdeeki CSC center, biometric se ho jaati hai</td>
           </tr>
           <tr>
             <td>Bank account Aadhaar se linked nahi</td>
-            <td>Bank branch — NPCI seeding karwaayein</td>
+            <td>Bank branch. NPCI seeding karwaayein</td>
           </tr>
           <tr>
             <td>RoR mein naam ya area galat</td>
-            <td>Tehsil office — mutation ya correction</td>
+            <td>Tehsil office, mutation ya correction</td>
           </tr>
           <tr>
             <td>Landless certificate nahi hai</td>
@@ -499,7 +499,7 @@ export default function OdishaCmKisanStatusCheck({
           </tr>
           <tr>
             <td>Record suchi mein hi nahi hai</td>
-            <td>Block agriculture office — file ka remark wahi dikhta hai</td>
+            <td>Block agriculture office, file ka remark wahi dikhta hai</td>
           </tr>
         </SchemeTable>
 
@@ -509,7 +509,7 @@ export default function OdishaCmKisanStatusCheck({
           caption="Rejected ya missing record ka kaaran sirf block agriculture office ki file par dikhta hai"
         />
 
-        <h2>CM Kisan Odisha — Aur Kuch Jaanna Hai?</h2>
+        <h2>CM Kisan Odisha. Aur Kuch Jaanna Hai?</h2>
 
         <script
           type="application/ld+json"
@@ -526,7 +526,7 @@ export default function OdishaCmKisanStatusCheck({
           }}
         />
         <section className="mb-8 not-prose">
-          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Odisha CM Kisan — status aur patrata par kisano ki asli uljhanein</p>
+          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Odisha CM Kisan, status aur patrata par kisano ki asli uljhanein</p>
           <div className="space-y-3">
             {FAQS_DATA.map(({ q, a }) => (
               <details
@@ -559,7 +559,7 @@ export default function OdishaCmKisanStatusCheck({
         <SourcesSection
           checkedOn={article.modified || article.published}
           sources={[
-            { label: 'CM Kisan Portal (cmkisan.odisha.gov.in)', href: 'https://cmkisan.odisha.gov.in', note: 'status check, beneficiary list, cultivator/landless track — is guide ka har step isi portal par khud check karke likha gaya hai' },
+            { label: 'CM Kisan Portal (cmkisan.odisha.gov.in)', href: 'https://cmkisan.odisha.gov.in', note: 'status check, beneficiary list, cultivator/landless track, is guide ka har step isi portal par khud check karke likha gaya hai' },
             { label: 'Agriculture & Farmers\u2019 Empowerment Dept, Govt of Odisha', href: 'https://agri.odisha.gov.in', note: 'scheme guidelines, eligibility aur exclusion rules' },
             { label: 'PM Kisan Portal (pmkisan.gov.in)', href: 'https://pmkisan.gov.in', note: 'PM Kisan aur CM Kisan ke saath-saath milne wale benefit ki puṣṭi' },
           ]}

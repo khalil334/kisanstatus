@@ -66,15 +66,15 @@ const RAJYA_LINKS: readonly CrossLink[] = [
 ];
 
 const CATEGORY_LINKS: readonly CrossLink[] = Object.entries(CATEGORIES).flatMap(([slug, cat]) => [
-  { href: `/articles/category/${slug}`, label: `${cat.name} — sabhi guides`, section: 'Category' },
-  { href: `/articles/hi/category/${slug}`, label: `${cat.nameHi} — सभी गाइड`, section: 'श्रेणी' },
+  { href: `/articles/category/${slug}`, label: `${cat.name}, sabhi guides`, section: 'Category' },
+  { href: `/articles/hi/category/${slug}`, label: `${cat.nameHi}. सभी गाइड`, section: 'श्रेणी' },
 ]);
 
 const HUB_LINKS: readonly CrossLink[] = [
   { href: '/articles/hi', label: 'सभी हिंदी योजना गाइड', section: 'Hub' },
   { href: '/calculator', label: 'Sabhi Free Kisan Tools', section: 'Hub' },
-  { href: '/maandhan', label: 'PM Kisan Maandhan Yojana — poora section', section: 'Hub' },
-  { href: '/rajya-yojana', label: 'Rajya Kisan Yojana — sabhi rajya', section: 'Hub' },
+  { href: '/maandhan', label: 'PM Kisan Maandhan Yojana, poora section', section: 'Hub' },
+  { href: '/rajya-yojana', label: 'Rajya Kisan Yojana, sabhi rajya', section: 'Hub' },
   { href: '/articles', label: 'Sabhi PM Kisan Guides', section: 'Hub' },
 ];
 

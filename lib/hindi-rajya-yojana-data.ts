@@ -4,9 +4,9 @@ import type { HindiArticle } from '@/lib/hindi-articles-data';
 export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/mp-kisan-kalyan-yojana',
-    titleHi: 'MP किसान कल्याण योजना — ₹12000 सालाना कैसे मिलेंगे? जानिए',
-    seoTitleHi: 'MP Kisan Kalyan Yojana — ₹12000 कैसे मिलेंगे?',
-    desc: 'MP मुख्यमंत्री किसान कल्याण योजना से हर साल ₹12000 पाएं — kisan kalyan yojana status check, पात्रता और अगली किस्त की date की पूरी जानकारी हिंदी में देखें।',
+    titleHi: 'MP किसान कल्याण योजना: ₹12000 सालाना कैसे मिलेंगे? जानिए',
+    seoTitleHi: 'MP Kisan Kalyan Yojana: ₹12000 कैसे मिलेंगे?',
+    desc: 'MP मुख्यमंत्री किसान कल्याण योजना से हर साल ₹12000 पाएं: kisan kalyan yojana status check, पात्रता और अगली किस्त की date की पूरी जानकारी हिंदी में देखें।',
     keywords: ['मुख्यमंत्री किसान कल्याण योजना', 'mp kisan kalyan yojana status', '₹12000 किसान योजना MP'],
     category: 'farming',
     publishedTime: '2026-04-17T21:51:25+05:30',
@@ -18,8 +18,8 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/namo-shetkari-yojana',
     titleHi: 'नमो शेतकरी किस्त कब आएगी? पैसे का पूरा हिसाब जानिए',
-    seoTitleHi: 'नमो शेतकरी किस्त कब आएगी — पैसे कब मिलेंगे',
-    desc: 'नमो शेतकरी के पैसे कब आएंगे? किस्त का schedule PM Kisan से अलग है — nsmny.mahait.org पर status देखने का तरीका और पैसा अटके तो 4 fix यहां जानिए।',
+    seoTitleHi: 'नमो शेतकरी किस्त कब आएगी: पैसे कब मिलेंगे',
+    desc: 'नमो शेतकरी के पैसे कब आएंगे? किस्त का schedule PM Kisan से अलग है: nsmny.mahait.org पर status देखने का तरीका और पैसा अटके तो 4 fix यहां जानिए।',
     keywords: ['नमो शेतकरी योजना', 'namo shetkari yojana status', 'namo shetkari mahasanman nidhi', 'नमो शेतकरी महासन्मान निधी', 'namo shetkari yojana beneficiary list', 'namo shetkari ke paise kab aayenge'],
     category: 'farming',
     publishedTime: '2026-07-05T18:35:14+05:30',
@@ -30,9 +30,9 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/rajasthan-kisan-samman-nidhi',
-    titleHi: 'राजस्थान किसान सम्मान निधि — ₹9,000 का हिसाब और किस्त की स्थिति',
-    seoTitleHi: 'राजस्थान किसान सम्मान निधि — ₹9,000 किस्त',
-    desc: 'राजस्थान के किसान को पीएम किसान के ₹6,000 के ऊपर राज्य से ₹3,000 — कुल ₹9,000। जन आधार से किस्त देखने का तरीका और पैसा अटकने की वजहें।',
+    titleHi: 'राजस्थान किसान सम्मान निधि: ₹9,000 का हिसाब और किस्त की स्थिति',
+    seoTitleHi: 'राजस्थान किसान सम्मान निधि: ₹9,000 किस्त',
+    desc: 'राजस्थान के किसान को पीएम किसान के ₹6,000 के ऊपर राज्य से ₹3,000: कुल ₹9,000। जन आधार से किस्त देखने का तरीका और पैसा अटकने की वजहें।',
     keywords: [
       'राजस्थान किसान सम्मान निधि',
       'rajasthan kisan samman nidhi',
@@ -52,9 +52,9 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/annadata-sukhibhava-status',
-    titleHi: 'अन्नदाता सुखीभव स्थिति — ₹20,000 और CCRC का पूरा हिसाब',
-    seoTitleHi: 'अन्नदाता सुखीभव स्थिति — ₹20,000 और CCRC कार्ड',
-    desc: 'आंध्र प्रदेश की अन्नदाता सुखीभव से ₹20,000 सालाना — आधार से स्थिति देखने का तरीका, किस्तों का दर्ज हिसाब, और बटाईदार किसान के लिए CCRC कार्ड की पूरी बात।',
+    titleHi: 'अन्नदाता सुखीभव स्थिति: ₹20,000 और CCRC का पूरा हिसाब',
+    seoTitleHi: 'अन्नदाता सुखीभव स्थिति: ₹20,000 और CCRC कार्ड',
+    desc: 'आंध्र प्रदेश की अन्नदाता सुखीभव से ₹20,000 सालाना: आधार से स्थिति देखने का तरीका, किस्तों का दर्ज हिसाब, और बटाईदार किसान के लिए CCRC कार्ड की पूरी बात।',
     keywords: [
       'अन्नदाता सुखीभव स्थिति',
       'annadata sukhibhava status check',
@@ -74,9 +74,9 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/rythu-bharosa-status',
-    titleHi: 'रायथु भरोसा स्थिति — बंधु से भरोसा तक, ₹12,000 प्रति एकड़ का हिसाब',
-    seoTitleHi: 'रायथु भरोसा स्थिति — ₹12,000 प्रति एकड़',
-    desc: 'तेलंगाना की रायथु भरोसा से ₹6,000 प्रति एकड़ हर मौसम — रायथु बंधु से असली फर्क, आधार से स्टेटस चेक और भू भारती रिकॉर्ड की रुकावटें।',
+    titleHi: 'रायथु भरोसा स्थिति: बंधु से भरोसा तक, ₹12,000 प्रति एकड़ का हिसाब',
+    seoTitleHi: 'रायथु भरोसा स्थिति: ₹12,000 प्रति एकड़',
+    desc: 'तेलंगाना की रायथु भरोसा से ₹6,000 प्रति एकड़ हर मौसम: रायथु बंधु से असली फर्क, आधार से स्टेटस चेक और भू भारती रिकॉर्ड की रुकावटें।',
     keywords: [
       'रायथु भरोसा स्थिति',
       'rythu bharosa status check',
@@ -96,9 +96,9 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/odisha-cm-kisan-status',
-    titleHi: 'ओडिशा CM Kisan स्थिति — भूमिहीन को भी ₹12,500 का रास्ता',
-    seoTitleHi: 'ओडिशा CM Kisan स्थिति — भूमिहीन को ₹12,500',
-    desc: 'KALIA की जगह आई ओडिशा CM Kisan — आधार से स्टेटस चेक, जमीन वालों को ₹4,000 और भूमिहीन परिवार को ₹12,500 का हिसाब, और पैसा अटकने की आम वजहें।',
+    titleHi: 'ओडिशा CM Kisan स्थिति: भूमिहीन को भी ₹12,500 का रास्ता',
+    seoTitleHi: 'ओडिशा CM Kisan स्थिति: भूमिहीन को ₹12,500',
+    desc: 'KALIA की जगह आई ओडिशा CM Kisan: आधार से स्टेटस चेक, जमीन वालों को ₹4,000 और भूमिहीन परिवार को ₹12,500 का हिसाब, और पैसा अटकने की आम वजहें।',
     keywords: [
       'ओडिशा सीएम किसान स्थिति',
       'odisha cm kisan status check',
@@ -120,7 +120,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     slug: 'hi/pati-patni-pm-kisan-rule',
     titleHi: 'पति-पत्नी दोनों को PM Kisan मिलेगा? नियम का सीधा जवाब',
     seoTitleHi: 'पति-पत्नी दोनों को PM Kisan मिलेगा?',
-    desc: 'नहीं — एक परिवार (पति, पत्नी, नाबालिग बच्चे) में सिर्फ एक को PM Kisan मिलता है। गाइडलाइन का नियम, असली केस और गलत पंजीकरण सरेंडर करने का तरीका।',
+    desc: 'नहीं: एक परिवार (पति, पत्नी, नाबालिग बच्चे) में सिर्फ एक को PM Kisan मिलता है। गाइडलाइन का नियम, असली केस और गलत पंजीकरण सरेंडर करने का तरीका।',
     keywords: [
       'पति पत्नी दोनों को पीएम किसान',
       'pm kisan pati patni dono ko milega',
@@ -139,9 +139,9 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/state-kisan-yojana-list',
-    titleHi: 'राज्य किसान योजना लिस्ट 2026 — किस राज्य में कितना पैसा मिलता है?',
-    seoTitleHi: 'राज्य किसान योजना लिस्ट 2026 — कितना पैसा',
-    desc: 'PM Kisan के ₹6,000 के ऊपर आपका राज्य कितना देता है? MP, राजस्थान, महाराष्ट्र, AP, तेलंगाना, बंगाल, ओडिशा — हर राज्य की योजना, रकम और स्टेटस लिंक।',
+    titleHi: 'राज्य किसान योजना लिस्ट 2026: किस राज्य में कितना पैसा मिलता है?',
+    seoTitleHi: 'राज्य किसान योजना लिस्ट 2026: कितना पैसा',
+    desc: 'PM Kisan के ₹6,000 के ऊपर आपका राज्य कितना देता है? MP, राजस्थान, महाराष्ट्र, AP, तेलंगाना, बंगाल, ओडिशा: हर राज्य की योजना, रकम और स्टेटस लिंक।',
     keywords: [
       'राज्य किसान योजना लिस्ट',
       'state kisan yojana list 2026',
@@ -160,9 +160,9 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/parihara-payment-status',
-    titleHi: 'परिहार पेमेंट स्टेटस 2026 — फसल नुकसान मुआवजा कहां अटका, कैसे देखें?',
-    seoTitleHi: 'परिहार पेमेंट स्टेटस 2026 — फसल नुकसान मुआवजा',
-    desc: 'कर्नाटक में फसल नुकसान (bele hani) का मुआवजा — parihara.karnataka.gov.in पर आधार या गांव की सूची से स्टेटस, SDRF दरें, FRUITS ID और अटके पैसे का हर रास्ता।',
+    titleHi: 'परिहार पेमेंट स्टेटस 2026: फसल नुकसान मुआवजा कहां अटका, कैसे देखें?',
+    seoTitleHi: 'परिहार पेमेंट स्टेटस 2026: फसल नुकसान मुआवजा',
+    desc: 'कर्नाटक में फसल नुकसान (bele hani) का मुआवजा: parihara.karnataka.gov.in पर आधार या गांव की सूची से स्टेटस, SDRF दरें, FRUITS ID और अटके पैसे का हर रास्ता।',
     keywords: [
       'परिहार पेमेंट स्टेटस',
       'parihara payment status check',

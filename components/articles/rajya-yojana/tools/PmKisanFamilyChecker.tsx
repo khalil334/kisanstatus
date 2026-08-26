@@ -7,7 +7,7 @@ type Applicant = 'one' | 'both' | 'son';
 const EXCLUSIONS: [string, string][] = [
   ['tax', 'Pichle saal kisi sadasya ne income tax bhara tha'],
   ['govt', 'Koi sadasya sarkari naukri mein hai ya pension le raha hai (Class-IV / MTS chhod kar)'],
-  ['prof', 'Ghar mein practising professional hai — doctor, vakil, CA, engineer, architect'],
+  ['prof', 'Ghar mein practising professional hai. Doctor, vakil, CA, engineer, architect'],
   ['post', 'Koi sadasya MP, MLA, mayor ya zila parishad chairman raha hai'],
   ['inst', 'Zameen kisi trust, sanstha ya company ke naam par hai'],
 ];
@@ -35,12 +35,12 @@ export default function PmKisanFamilyChecker() {
         tone: 'bad' as const,
         headline: 'Ye ghar exclusion list mein aata hai',
         detail:
-          'PM Kisan ki exclusion parivaar par lagti hai, sirf form bharne wale par nahi. Ghar mein ek bhi sadasya in categories mein ho, to us parivaar ka koi member scheme nahi le sakta — chahe zameen kitni bhi chhoti ho aur chahe naam kisi aur ka ho.',
+          'PM Kisan ki exclusion parivaar par lagti hai, sirf form bharne wale par nahi. Ghar mein ek bhi sadasya in categories mein ho, to us parivaar ka koi member scheme nahi le sakta, chahe zameen kitni bhi chhoti ho aur chahe naam kisi aur ka ho.',
         annual: 0,
         heads: 0,
         refund: alreadyPaid,
         steps: [
-          'Aur kist na lein — status active dikhe to bhi.',
+          'Aur kist na lein, status active dikhe to bhi.',
           'Portal ke voluntary surrender option se apna naam khud hata dein.',
           'Ab tak mila paisa refund karne ki taiyari rakhein; recovery notice baad mein aata hai.',
         ],
@@ -52,12 +52,12 @@ export default function PmKisanFamilyChecker() {
         tone: 'bad' as const,
         headline: 'Pati aur patni dono ko ek saath nahi milega',
         detail:
-          'Scheme ka beneficiary "family" hai — pati, patni aur naabaalig bachche milkar ek unit. Is unit ko saal mein ek hi ₹6,000 milta hai. Do adult ek hi ghar se do alag registration karwa lete hain to verification par duplicate pakda jaata hai, aur aam taur par dono file hold ho jaati hain jab tak ek withdraw na ho.',
+          'Scheme ka beneficiary "family" hai. Pati, patni aur naabaalig bachche milkar ek unit. Is unit ko saal mein ek hi ₹6,000 milta hai. Do adult ek hi ghar se do alag registration karwa lete hain to verification par duplicate pakda jaata hai, aur aam taur par dono file hold ho jaati hain jab tak ek withdraw na ho.',
         annual: 6000,
         heads: 1,
         refund: alreadyPaid,
         steps: [
-          'Tay karein kis ke naam par claim rakhna hai — behtar hai jiske naam par land record saaf hai.',
+          'Tay karein kis ke naam par claim rakhna hai. Behtar hai jiske naam par land record saaf hai.',
           'Doosre member ka naam voluntary surrender se hataayein.',
           'Jitni kist doosre naam par aa chuki hai, wo refund karni hogi.',
           'Ek naam hatane ke baad rehne wale naam ki e-KYC aur NPCI mapping dobara verify karein.',
@@ -69,9 +69,9 @@ export default function PmKisanFamilyChecker() {
       if (sonPartitioned) {
         return {
           tone: 'good' as const,
-          headline: 'Alag parivaar — beta apna alag claim rakh sakta hai',
+          headline: 'Alag parivaar, beta apna alag claim rakh sakta hai',
           detail:
-            'Baalig beta, jiske naam par batwaare ke baad zameen record mein darj ho chuki hai, apne aap mein ek alag family unit hai. Aise case mein ek hi ghar ke do adult ko paisa milta dikhta hai, lekin scheme ki nazar mein wo do alag parivaar hain — is liye ye duplicate nahi hai.',
+            'Baalig beta, jiske naam par batwaare ke baad zameen record mein darj ho chuki hai, apne aap mein ek alag family unit hai. Aise case mein ek hi ghar ke do adult ko paisa milta dikhta hai, lekin scheme ki nazar mein wo do alag parivaar hain. Is liye ye duplicate nahi hai.',
           annual: 6000,
           heads: 2,
           refund: false,
@@ -84,16 +84,16 @@ export default function PmKisanFamilyChecker() {
       }
       return {
         tone: 'warn' as const,
-        headline: 'Batwaara nahi hua — abhi wahi ek parivaar hai',
+        headline: 'Batwaara nahi hua, abhi wahi ek parivaar hai',
         detail:
-          'Sirf ration card alag ho jaana ya shaadi ho jaana batwaara nahi hai. Jab tak revenue record mein zameen bete ke naam par transfer nahi hoti, ghar ek hi khatedar ke neeche ek unit rehta hai — aur ek unit ko ek hi grant milta hai.',
+          'Sirf ration card alag ho jaana ya shaadi ho jaana batwaara nahi hai. Jab tak revenue record mein zameen bete ke naam par transfer nahi hoti, ghar ek hi khatedar ke neeche ek unit rehta hai. Aur ek unit ko ek hi grant milta hai.',
         annual: 6000,
         heads: 1,
         refund: alreadyPaid,
         steps: [
           'Tehsil office mein batwaara aur mutation ki arzi dein.',
           'Mutation ke baad naye khata ke saath fresh registration karein.',
-          'Tab tak dusra registration na karwaayein — wo verification par reject hoga.',
+          'Tab tak dusra registration na karwaayein. Wo verification par reject hoga.',
         ],
       };
     }
@@ -103,14 +103,14 @@ export default function PmKisanFamilyChecker() {
         tone: 'warn' as const,
         headline: 'Zameen aavedak ke naam par nahi hai',
         detail:
-          'PM Kisan landholding-based scheme hai. Jis naam par claim ho raha hai, usi naam par revenue record mein zameen honi chahiye. Bataye gaye kheti karne wale, batai par lene wale aur virasat mein mili par mutation na karaye gaye case — teeno yahin atakte hain.',
+          'PM Kisan landholding-based scheme hai. Jis naam par claim ho raha hai, usi naam par revenue record mein zameen honi chahiye. Bataye gaye kheti karne wale, batai par lene wale aur virasat mein mili par mutation na karaye gaye case. Teeno yahin atakte hain.',
         annual: 0,
         heads: 0,
         refund: alreadyPaid,
         steps: [
           'Virasat ka case ho to mutation karwaayein, phir apply karein.',
           'Zameen kisi aur ke naam par rehni hai to claim usi ke naam par rakhein.',
-          'Batai par kheti karne wale ke liye PM Kisan nahi hai — state ki tenant-farmer scheme dekhein.',
+          'Batai par kheti karne wale ke liye PM Kisan nahi hai. State ki tenant-farmer scheme dekhein.',
         ],
       };
     }
@@ -119,12 +119,12 @@ export default function PmKisanFamilyChecker() {
       tone: 'good' as const,
       headline:
         landInName === 'joint'
-          ? 'Joint holding — hissa saaf ho to claim ban jaata hai'
+          ? 'Joint holding, hissa saaf ho to claim ban jaata hai'
           : 'Ek claim ban raha hai',
       detail:
         landInName === 'joint'
           ? 'Joint patta apne aap mein rukaawat nahi hai. Shart ye hai ki record mein aapka hissa saaf darj ho aur wahi khasra kisi doosre parivaar ki file mein bhi claim na ho raha ho. Ek hi hissa do file mein aane par dono ruk jaati hain.'
-          : 'Ek parivaar, ek claim, flat raqam. Zameen ka area raqam nahi badalta — chaar bigha ho ya chaalis, saal bhar ka grant same rehta hai. Aage sab kuch e-KYC aur bank ki NPCI seeding par tikta hai.',
+          : 'Ek parivaar, ek claim, flat raqam. Zameen ka area raqam nahi badalta, chaar bigha ho ya chaalis, saal bhar ka grant same rehta hai. Aage sab kuch e-KYC aur bank ki NPCI seeding par tikta hai.',
       annual: 6000,
       heads: 1,
       refund: false,
@@ -150,7 +150,7 @@ export default function PmKisanFamilyChecker() {
     >
       <header className="px-5 py-4 bg-green-50 dark:bg-green-900/20 border-b border-gray-200 dark:border-gray-700">
         <h2 className="text-base md:text-lg font-black text-gray-900 dark:text-gray-100 m-0">
-          Family Checker — aapke ghar se kitne naam ban sakte hain
+          Family Checker, aapke ghar se kitne naam ban sakte hain
         </h2>
         <p className="text-xs text-gray-600 dark:text-gray-400 mt-1 mb-0">
           Sab hisaab aapke phone mein hota hai. Kuch submit nahi hota aur koi record nahi
@@ -220,7 +220,7 @@ export default function PmKisanFamilyChecker() {
                 {(
                   [
                     ['yes', 'Haan, akele uske naam par darj hai'],
-                    ['joint', 'Joint patta hai — hissa record mein likha hai'],
+                    ['joint', 'Joint patta hai. Hissa record mein likha hai'],
                     ['no', 'Nahi, kisi aur ke naam par hai'],
                   ] as ['yes' | 'joint' | 'no', string][]
                 ).map(([val, label]) => (
@@ -332,7 +332,7 @@ export default function PmKisanFamilyChecker() {
 
               {result.refund && (
                 <p className="text-xs m-0 rounded-lg p-3 bg-red-50 dark:bg-red-900/20 text-red-800 dark:text-red-300">
-                  Ek hi parivaar ke do naam par kist gayi hai — ye recovery wala case hai.
+                  Ek hi parivaar ke do naam par kist gayi hai. Ye recovery wala case hai.
                   Extra naam par mila poora paisa wapas karna padta hai, aur portal par khud
                   surrender karna notice ka intezaar karne se behtar rehta hai.
                 </p>

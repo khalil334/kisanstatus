@@ -13,23 +13,23 @@ const Fig = (p: FigProps) => (
 const FAQS_DATA = [
   {
     q: 'Kya mujhe Namo Shetkari ke liye alag se registration karna padega?',
-    a: 'Is yojana ka apna koi application form hi nahi hai — beneficiary list PM Kisan ke Maharashtra wale database se uthai jaati hai. Is liye aapka kaam do jagah hai: kendriya record chaalu rakhein aur 7/12 Utara mein apni entry durust rakhein. "Registration" ka wada karne wali site private hai, official nahi.',
+    a: 'Is yojana ka apna koi application form hi nahi hai. Beneficiary list PM Kisan ke Maharashtra wale database se uthai jaati hai. Is liye aapka kaam do jagah hai: kendriya record chaalu rakhein aur 7/12 Utara mein apni entry durust rakhein. "Registration" ka wada karne wali site private hai, official nahi.',
   },
   {
     q: 'Namo Shetkari hapta kadhi milel?',
-    a: 'Pattern ye raha hai: rajya ka hapta kendriya kist ke kuch hafton baad aata hai, kyunki suchi usi verified data se banti hai. Agli date officially announce nahi hui — GR (Government Resolution) nikalne ke baad hi tareekh pakki hoti hai.',
+    a: 'Pattern ye raha hai: rajya ka hapta kendriya kist ke kuch hafton baad aata hai, kyunki suchi usi verified data se banti hai. Agli date officially announce nahi hui. GR (Government Resolution) nikalne ke baad hi tareekh pakki hoti hai.',
   },
   {
     q: 'Namo Shetkari list mein naam nahi hai, kya karein?',
     a: 'Pehle kendriya list dekho. Wahan darj ho? To taluka krishi adhikari (TAL) se milkar 7/12 Utara aur Aadhaar verify karwao.',
   },
   {
-    q: 'nsmny.mahait.org phone par nahi khul raha — doosra raasta kya hai?',
-    a: 'Release ke dinon mein site par load bahut badh jaata hai, is liye page atakna aam baat hai. Do raaste hain: kuch ghante baad raat mein try karein, ya CSC/Mahaonline kendra par free check karwa lein. Offline dekhna ho to talathi office chale jaayein — gaon ki poori suchi wahan har waqt maujood rehti hai.',
+    q: 'nsmny.mahait.org phone par nahi khul raha, doosra raasta kya hai?',
+    a: 'Release ke dinon mein site par load bahut badh jaata hai, is liye page atakna aam baat hai. Do raaste hain: kuch ghante baad raat mein try karein, ya CSC/Mahaonline kendra par free check karwa lein. Offline dekhna ho to talathi office chale jaayein, gaon ki poori suchi wahan har waqt maujood rehti hai.',
   },
   {
-    q: 'Maharashtra chhod diya hai, lekin zameen wahin hai — hapta aayega?',
-    a: 'Hapta rajya ke budget se milta hai, isliye Maharashtra chhodte hi ruk jaata hai — chahe khet wahin ho. Kendriya grant par asar nahi; wo poore desh ki scheme hai.',
+    q: 'Maharashtra chhod diya hai, lekin zameen wahin hai. Hapta aayega?',
+    a: 'Hapta rajya ke budget se milta hai, isliye Maharashtra chhodte hi ruk jaata hai. Chahe khet wahin ho. Kendriya grant par asar nahi; wo poore desh ki scheme hai.',
   },
   {
     q: 'Zameen joint naam par hai (bhai-behen ya pita ke saath), kisko paisa milega?',
@@ -37,7 +37,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Hapta aadha aaya, ₹3,000 ki jagah kam amount dikha, aisa kyun?',
-    a: 'Hapta fixed ₹3,000 hai — kam aata hi nahi. Kam dikha? Wo kisi aur scheme ki entry hai; passbook mein transaction ka naam dekho.',
+    a: 'Hapta fixed ₹3,000 hai. Kam aata hi nahi. Kam dikha? Wo kisi aur scheme ki entry hai; passbook mein transaction ka naam dekho.',
   },
 ];
 
@@ -55,8 +55,8 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <p>
         Suno zara, do sawaal har baar wahi hote hain. Paisa kab aayega? Suchi mein entry hai ya nahi?
-        Neeche dono ka jawab hai — sthiti dekhne ka tareeka, hapte ka waqt, aur naam kat
-        jaane ki wajahein — bina ghumaye, jaise koi apna hi samjha raha ho.
+        Neeche dono ka jawab hai. Sthiti dekhne ka tareeka, hapte ka waqt, aur naam kat
+        jaane ki wajahein, bina ghumaye, jaise koi apna hi samjha raha ho.
       </p>
 
       <InfoBox type="update" date="04/08/2026">
@@ -70,7 +70,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <Fig
         src="hero.webp"
         alt="Maharashtra ka shetkari apne ganne ke khet mein mobile par mahasanman nidhi ka hapta dekh raha hai"
-        caption="Mahasanman Nidhi — kendriya grant ke saath Maharashtra ka apna judaa hapta"
+        caption="Mahasanman Nidhi, kendriya grant ke saath Maharashtra ka apna judaa hapta"
         width={1200}
         height={675}
         priority
@@ -78,15 +78,15 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <ExternalLinkButton
         href="https://nsmny.mahait.org"
-        label="Official Portal — Namo Shetkari Mahasanman Nidhi"
+        label="Official Portal. Namo Shetkari Mahasanman Nidhi"
       />
 
-      <h2>7/12 Utara — Maharashtra Ka Sabse Zaroori Kagaz</h2>
+      <h2>7/12 Utara. Maharashtra Ka Sabse Zaroori Kagaz</h2>
 
       <p>
         Is yojana mein baar-baar 7/12 Utara (saat-baara) ka zikr aata hai, isliye do minute
         ismein laga lein. 7/12 Maharashtra ka land record document hai: form 7 mein malik ka
-        naam aur rights hote hain, form 12 mein fasal ka record. Rajya aur kendra — dono ki
+        naam aur rights hote hain, form 12 mein fasal ka record. Rajya aur kendra. Dono ki
         madad ke liye aapki entry isi document mein honi chahiye.
       </p>
 
@@ -111,7 +111,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <p>
-        Isliye jab koi kahe "paisa aa gaya", toh pehle entry dekh lein — kaun si aayi
+        Isliye jab koi kahe "paisa aa gaya", toh pehle entry dekh lein, kaun si aayi
         hai? Aadhi shikayatein sirf is galatfehmi ki hoti hain: ₹2,000 aaya, log samajh
         lete hain poori payment aa gayi, jabki pradesh ke ₹3,000 abhi pipeline mein hote
         hain. Mobile banking ya SMS alert mein bhi yahi codes dikhte hain.
@@ -167,10 +167,10 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <ul>
-        <li>Rehna Maharashtra mein: permanent residence Maharashtra ka ho — sirf khet Maharashtra mein hona kaafi nahi hai.</li>
+        <li>Rehna Maharashtra mein: permanent residence Maharashtra ka ho. Sirf khet Maharashtra mein hona kaafi nahi hai.</li>
         <li>Kendriya file chaalu: wo record hold ya rejected na ho; wahan atakte hi yahan ka hapta bhi ruk jaata hai.</li>
         <li>7/12 Utara mein naam: cultivable land ka record aapke naam par ho, aur zameen ka type "sheti" darj ho.</li>
-        <li>Naam ki spelling milti ho: Aadhaar, bank aur 7/12 — teeno mein ek hi spelling. Marathi/English ka farak bhi verification atka deta hai.</li>
+        <li>Naam ki spelling milti ho: Aadhaar, bank aur 7/12. Teeno mein ek hi spelling. Marathi/English ka farak bhi verification atka deta hai.</li>
         <li>e-KYC poori: Aadhaar seeding aur mobile linking dono complete hon.</li>
       </ul>
 
@@ -182,7 +182,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <p>
         Kendriya suchi mein entry hai aur domicile Maharashtra ka hai? Bas. Itne se aap
-        eligible ho jaate hain. Paisa seedha bank account mein aata hai — na form, na
+        eligible ho jaate hain. Paisa seedha bank account mein aata hai. Na form, na
         line, na agent.
       </p>
 
@@ -202,7 +202,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <p>
-        Ek padosi ne bataya tha — Nashik ki taraf ka ek shetkari teen baar taluka office gaya "is
+        Ek padosi ne bataya tha. Nashik ki taraf ka ek shetkari teen baar taluka office gaya "is
         yojana ka form" maangne. Teeno baar khaali haath lauta. Baad mein pata chala uska kendriya
         record pehle se approved tha aur pehli kist account mein aa bhi chuki thi; usne
         passbook update hi nahi karwayi thi. Galati mat karna, maine dekha hai log yahi karte hain.
@@ -210,11 +210,11 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <Fig
         src="vidarbha-cotton-farmer.webp"
-        alt="Vidarbha ke kapas ke khet mein mahila shetkari kapas chun rahi hai — mahasanman nidhi ki madad kheti ke kharche mein"
-        caption="Vidarbha se Konkan tak — hapta buwai aur katai ke kharche ke waqt sabse zyada kaam aata hai"
+        alt="Vidarbha ke kapas ke khet mein mahila shetkari kapas chun rahi hai. Mahasanman nidhi ki madad kheti ke kharche mein"
+        caption="Vidarbha se Konkan tak, hapta buwai aur katai ke kharche ke waqt sabse zyada kaam aata hai"
       />
 
-      <h2>Namo Shetkari Hapta Kadhi Milel — Kist Ka Waqt</h2>
+      <h2>Namo Shetkari Hapta Kadhi Milel. Kist Ka Waqt</h2>
 
       <p>
         Namo shetkari hapta kadhi milel — ye sawaal sabse zyada poochha jaata
@@ -247,12 +247,12 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </InfoBox>
 
       <p>
-        9va hapta (9th instalment) kab aayega — yeh sawaal aajkal sabse zyada
-        poochha ja raha hai. Haan, yaad aaya — yojana 2023 se chal rahi hai, har saal do-teen kist aati hain, toh
+        9va hapta (9th instalment) kab aayega. Yeh sawaal aajkal sabse zyada
+        poochha ja raha hai. Haan, yaad aaya, yojana 2023 se chal rahi hai, har saal do-teen kist aati hain, toh
         ginti ab aage badh chuki hai. Official date sirf sarkari site aur announcement se
-        confirm hoti hai — aur pichhla pattern yahi raha hai ki naya hissa kendriya latest
+        confirm hoti hai. Aur pichhla pattern yahi raha hai ki naya hissa kendriya latest
         kist ke kuch hafte baad aata hai. Jaanch ka tareeka har baar same rehta
-        hai — neeche wale steps follow karein.
+        hai. Neeche wale steps follow karein.
       </p>
 
       <h2>Sthiti Kaise Dekhein</h2>
@@ -264,7 +264,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <Fig
         src="status-check-csc.webp"
         alt="CSC centre par operator shetkari ko sarkari site par beneficiary sthiti dikha raha hai"
-        caption="Site mobile par bhi khulti hai — na khule to CSC ya Mahaonline centre par free check karwao"
+        caption="Site mobile par bhi khulti hai. Na khule to CSC ya Mahaonline centre par free check karwao"
       />
 
       <ol>
@@ -284,7 +284,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <h2>Beneficiary List 2026 PDF Mein Naam Dhoondhna</h2>
 
       <p>
-        Poore gaon ya taluke ka hisaab dekhna ho — kis-kis ki entry bani hai — to{' '}
+        Poore gaon ya taluke ka hisaab dekhna ho, kis-kis ki entry bani hai. To{' '}
         namo shetkari yojana beneficiary list 2026 PDF sarkari site se khud download
         ki jaa sakti hai:
       </p>
@@ -304,16 +304,16 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         jaati hai aur land record ki galti bhi pakdi jaati hai.
       </p>
 
-      <h2>Ek Aam Timeline — Do Acre Wale Ka Hisaab</h2>
+      <h2>Ek Aam Timeline. Do Acre Wale Ka Hisaab</h2>
 
       <p>
-        Rule sookhe lagte hain — ye baat pallu se baandhne wali hai, kyunki isse hi aage ka kaam banta hai. Isliye ek aam pattern se samajhein — ye kahani taluka
+        Rule sookhe lagte hain. Ye baat pallu se baandhne wali hai, kyunki isse hi aage ka kaam banta hai. Isliye ek aam pattern se samajhein. Ye kahani taluka
         krishi office mein har season dohrayi jaati hai. Do acre wala khetihar, kendriya grant
-        2019 se aa raha hai. Ye yojana shuru hone par usne kuch nahi kiya — aur pehla
+        2019 se aa raha hai. Ye yojana shuru hone par usne kuch nahi kiya. Aur pehla
         hapta apne aap aa gaya, kyunki suchi kendriya data se bani thi. Doosri baar
         problem: e-KYC expire ho gayi thi. Kendra wali kist bhi ruki
-        aur pradesh wali bhi — dono ek hi record par khadi hain. CSC par biometric e-KYC
-        karwane ke baad agli release mein dono kistein ek saath aayi — ruki hui raqam
+        aur pradesh wali bhi. Dono ek hi record par khadi hain. CSC par biometric e-KYC
+        karwane ke baad agli release mein dono kistein ek saath aayi, ruki hui raqam
         record mein rehti hai, khatam nahi hoti.
       </p>
 
@@ -322,20 +322,20 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         hain: har season se pehle e-KYC ki sthiti dekhna, 7/12 mein naam ki spelling
         Aadhaar se milana, aur passbook mein dono entries (PMKISAN aur treasury wali) alag
         pehchaan kar likhna. In teen kaamon ke baad jaanch karna sirf tasalli ka
-        kaam reh jaata hai — rukavat aane ki jagah hi nahi bachti.
+        kaam reh jaata hai. Rukavat aane ki jagah hi nahi bachti.
       </p>
 
       <h2>Kendriya Paisa Aa Gaya, Rajya Ka Nahi — Ye Kyun Hota Hai</h2>
 
       <p>
-        Yahi baat baar-baar sunne ko milti hai — pm kisan aaya namo shetkari nahi aaya. Chaar
+        Yahi baat baar-baar sunne ko milti hai. Pm kisan aaya namo shetkari nahi aaya. Chaar
         wajahein hain jinme se koi ek nikalti hai:
       </p>
 
       <Fig
         src="bank-dbt-check.webp"
         alt="Shetkari cooperative bank mein passbook lekar Aadhaar seeding aur DBT activation confirm karwa raha hai"
-        caption="Kendra ka paisa aaya par pradesh ka nahi — pehla shak DBT aur NPCI seeding par jaata hai"
+        caption="Kendra ka paisa aaya par pradesh ka nahi. Pehla shak DBT aur NPCI seeding par jaata hai"
       />
 
       <h3>1. Bank Account DBT Enabled Nahi Hai</h3>
@@ -364,7 +364,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         <li>Aapne kendriya grant voluntarily surrender kar diya ho.</li>
       </ul>
 
-      <h2>Payment Fail Ho Gayi — Ab Kya</h2>
+      <h2>Payment Fail Ho Gayi. Ab Kya</h2>
 
       <ol>
         <li>PFMS Portal Check Karein: <code>pfms.nic.in</code> par jaakar "Know Your Payments" mein apna bank account number aur IFSC code daalein. Yahan pata chalega ki paisa fail kyun hua.</li>
@@ -378,11 +378,11 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         caption="Bank theek ho phir bhi paisa na aaye to gram panchayat ya taluka krishi office se re-verify karwao"
       />
 
-      <h2>Shikayat Ka Raasta — Kisse Kya Poochhein</h2>
+      <h2>Shikayat Ka Raasta. Kisse Kya Poochhein</h2>
 
       <p>
         Hapta ruka ho to shikayat ka darwaza problem ke hisaab se chunein. e-KYC aur bank
-        seeding ki dikkat CSC aur bank branch ka kaam hai — wahan website ki shikayat le
+        seeding ki dikkat CSC aur bank branch ka kaam hai. Wahan website ki shikayat le
         jaane ka fayda nahi. 7/12 ke record ki galti talathi ke paas jaati hai. Aur suchi ya
         payment se judi baat apne taluka krishi adhikari ke office mein likhit dein —
         panjikaran number, Aadhaar aur problem ek line mein likh kar, paavti ke saath.
@@ -422,10 +422,10 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <p>
         Maharashtra ke bahar rehte hain to ye madad aap par laagu nahi hoti, lekin aapke
-        yahan ka apna intezaam ho sakta hai — upar wali lists mein dekh lein.
+        yahan ka apna intezaam ho sakta hai. Upar wali lists mein dekh lein.
       </p>
 
-      <h2>Namo Shetkari — Aur Kuch Jaanna Hai?</h2>
+      <h2>Namo Shetkari. Aur Kuch Jaanna Hai?</h2>
 
       <script
         type="application/ld+json"
@@ -464,7 +464,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </section>
 
       <InfoBox type="tip">
-        <strong>Fraud se bachein:</strong> Is yojana mein bharne ke liye koi form hi nahi hai, is liye "registration karwa dunga" ya "hapta jaldi nikalwa dunga" kehne wala har aadmi jhooth bol raha hai. Sthiti dekhna, e-KYC aur 7/12 correction — sab sarkari raste se free hote hain. Aisi demand par apne Taluka Krishi Adhikari (TAO) office mein ya Maharashtra ke Anti-Corruption Bureau ki helpline <strong>1064</strong> par shikayat darj karwaayein.
+        <strong>Fraud se bachein:</strong> Is yojana mein bharne ke liye koi form hi nahi hai, is liye "registration karwa dunga" ya "hapta jaldi nikalwa dunga" kehne wala har aadmi jhooth bol raha hai. Sthiti dekhna, e-KYC aur 7/12 correction. Sab sarkari raste se free hote hain. Aisi demand par apne Taluka Krishi Adhikari (TAO) office mein ya Maharashtra ke Anti-Corruption Bureau ki helpline <strong>1064</strong> par shikayat darj karwaayein.
       </InfoBox>
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">

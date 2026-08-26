@@ -13,19 +13,19 @@ const FAQS_DATA = [
   },
   {
     q: "PM Kisan Maandhan ki kist kat nahi rahi to bounce charge lagega?",
-    a: "Nahi. Maandhan pension scheme hai, loan nahi — isme bank wala bounce charge aur CIBIL ka asar dono nahi hota. Bas us mahine sarkar ka matching hissa bhi fund me nahi aata, isliye nuksaan aapka apna hai. Khaate me balance rakho aur apne CSC pe Kisan Pension Account Number le jaao; PM-Kisan labharthi ho to contribution seedha PM-Kisan benefit me se katwa lo, phir balance ki tension hi khatam.",
+    a: "Nahi. Maandhan pension scheme hai, loan nahi. Isme bank wala bounce charge aur CIBIL ka asar dono nahi hota. Bas us mahine sarkar ka matching hissa bhi fund me nahi aata, isliye nuksaan aapka apna hai. Khaate me balance rakho aur apne CSC pe Kisan Pension Account Number le jaao; PM-Kisan labharthi ho to contribution seedha PM-Kisan benefit me se katwa lo, phir balance ki tension hi khatam.",
   },
   {
     q: "Kya EMI bounce hone se CIBIL score par bura asar padta hai?",
-    a: "30 din ke andar theek kar liya toh kuch nahi hota, report bilkul clean rehti hai. Asli dikkat tab shuru hoti hai jab ye 90 din tak khichta hai — tab score 50-100 points tak gir sakta hai aur account NPA mein chala jaata hai.",
+    a: "30 din ke andar theek kar liya toh kuch nahi hota, report bilkul clean rehti hai. Asli dikkat tab shuru hoti hai jab ye 90 din tak khichta hai. Tab score 50-100 points tak gir sakta hai aur account NPA mein chala jaata hai.",
   },
   {
     q: "Bank ke auto-debit bounce charges kaise waive (maaf) karwayein?",
-    a: "Seedha customer care ko call lagao aur bol do ye pehli galti hai. Record accha ho toh SBI, HDFC, ICICI — inme se zyadatar banks ₹250-₹500 tak ka charge bina zyada bahas ke maaf kar dete hain.",
+    a: "Seedha customer care ko call lagao aur bol do ye pehli galti hai. Record accha ho toh SBI, HDFC, ICICI, inme se zyadatar banks ₹250-₹500 tak ka charge bina zyada bahas ke maaf kar dete hain.",
   },
   {
     q: "NACH mandate fail hone par kya karein?",
-    a: "Mandate expire ho gaya ho toh online se kaam nahi chalega, branch jaana hi padega. Aadhaar/PAN aur cancelled cheque le jaao, form bhar do — 3-5 din mein auto-debit wapas chalu ho jaata hai.",
+    a: "Mandate expire ho gaya ho toh online se kaam nahi chalega, branch jaana hi padega. Aadhaar/PAN aur cancelled cheque le jaao, form bhar do, 3-5 din mein auto-debit wapas chalu ho jaata hai.",
   },
   {
     q: "Kya ek baar auto-debit fail hone se loan default maan liya jata hai?",
@@ -33,7 +33,7 @@ const FAQS_DATA = [
   },
   {
     q: "SIP auto debit fail hone par mutual fund ka kya hoga?",
-    a: "Bas us mahine ke units miss ho jayenge, itni si baat hai. Balance aate hi agli SIP apne aap chal padegi. Ek cheez yaad rakhna — 3 baar lagatar fail ho jaye toh HDFC AMC, SBI Mutual Fund jaisi companies SIP hi band kar deti hain apne aap.",
+    a: "Bas us mahine ke units miss ho jayenge, itni si baat hai. Balance aate hi agli SIP apne aap chal padegi. Ek cheez yaad rakhna, 3 baar lagatar fail ho jaye toh HDFC AMC, SBI Mutual Fund jaisi companies SIP hi band kar deti hain apne aap.",
   },
 ];
 
@@ -41,7 +41,7 @@ const RELATED_CARDS = [
   {
     href: '/articles/KisanTractorLoan2026',
     title: 'Tractor Loan aur CIBIL Score',
-    desc: 'EMI bounce CIBIL par kaise asar karta hai, aur tractor loan ke liye kaun sa score chahiye — poori jankari.',
+    desc: 'EMI bounce CIBIL par kaise asar karta hai, aur tractor loan ke liye kaun sa score chahiye, poori jankari.',
     
   },
   {
@@ -100,19 +100,19 @@ export default function AutoDebitFailRegularization() {
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Verified banking process — Last updated: August 2026
+            Verified banking process. Last updated: August 2026
           </p>
         </div>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Phone par bank ka SMS aata hai — "Auto-debit failed" — aur dil ek baar dhak se reh jaata hai. Ho sakta hai account mein us din paise kam the, ya mandate ki date nikal gayi ho, ya bank ke system mein hi koi glitch aa gaya ho. Wajah jo bhi ho, ye article usi ke baare mein hai: kya karna hai, kitne din mein karna hai, aur kis baat se bilkul mat darna. Chaliye shuru karte hain.
+          Phone par bank ka SMS aata hai — "Auto-debit failed". Aur dil ek baar dhak se reh jaata hai. Ho sakta hai account mein us din paise kam the, ya mandate ki date nikal gayi ho, ya bank ke system mein hi koi glitch aa gaya ho. Wajah jo bhi ho, ye article usi ke baare mein hai: kya karna hai, kitne din mein karna hai, aur kis baat se bilkul mat darna. Chaliye shuru karte hain.
         </p>
 
         <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 rounded-xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">ABHI AUTO-DEBIT FAIL HUA HAI TOH YE 6 KAAM KAR LO</h3>
           <div className="space-y-3 text-sm text-[var(--color-text-muted)]">
-            <p>1. <strong>SMS Padho Pehle:</strong> Bank ka message dobara padho, usme reason likha hota hai — zyadatar 'Insufficient Funds' hi nikalta hai.</p>
-            <p>2. <strong>Paisa Daalo:</strong> Account mein EMI/SIP ka amount daal do, saath mein thoda extra bhi rakh lo — safe side ke liye.</p>
+            <p>1. <strong>SMS Padho Pehle:</strong> Bank ka message dobara padho, usme reason likha hota hai. Zyadatar 'Insufficient Funds' hi nikalta hai.</p>
+            <p>2. <strong>Paisa Daalo:</strong> Account mein EMI/SIP ka amount daal do, saath mein thoda extra bhi rakh lo, safe side ke liye.</p>
             <p>3. <strong>Khud Pay Kar Do:</strong> UPI se sabse tez hota hai. Bank dobara try karega ye sochkar mat baitho.</p>
             <p>4. <strong>Bank Ko Batao:</strong> Payment ki screenshot ya ref number bhej do, customer care ho ya branch.</p>
             <p>5. <strong>Mandate Dekh Lo:</strong> Expire ho gaya ho toh naya form bharke re-activate karwana padega.</p>
@@ -130,7 +130,7 @@ export default function AutoDebitFailRegularization() {
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Maandhan me aapki umar ke hisaab se ₹55 se ₹200 tak mahina jaata hai, aur utna hi sarkar apni taraf se pension
-            fund me daalti hai — 60 saal ke baad ₹3,000 mahina isi 50:50 ke hisaab se banta hai. Fund LIC sambhalta hai.
+            fund me daalti hai. 60 saal ke baad ₹3,000 mahina isi 50:50 ke hisaab se banta hai. Fund LIC sambhalta hai.
             Kist ruk gayi to sarkar ka matching hissa bhi us mahine nahi aata; isliye jaldi regularize karna aapke hi
             fayde ka kaam hai, kisi penalty ke dar se nahi.
           </p>
@@ -139,7 +139,7 @@ export default function AutoDebitFailRegularization() {
             <div className="space-y-3 text-sm text-[var(--color-text-muted)]">
               <p>
                 <strong>1. Khaate me balance rakho, phir CSC jao.</strong> Enrollment jis CSC se hua tha wahin apna Kisan
-                Pension Account Number le kar jao — pending contribution ka status wahi operator dekh kar bata dega. Ghar
+                Pension Account Number le kar jao, pending contribution ka status wahi operator dekh kar bata dega. Ghar
                 baithe status{' '}
                 <a href="https://maandhan.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline font-semibold">
                   maandhan.in
@@ -153,7 +153,7 @@ export default function AutoDebitFailRegularization() {
               </p>
               <p>
                 <strong>3. Bank details badli hain to pehle wo theek karao.</strong> Naya account, naya IFSC ya band
-                khaata — in teeno case me kist wapas chalu karne se pehle account update karana padta hai; poora tarika{' '}
+                khaata, in teeno case me kist wapas chalu karne se pehle account update karana padta hai; poora tarika{' '}
                 <Link href="/maandhan/pmkmy-bank-account-change" className="text-green-700 dark:text-green-400 underline font-semibold">
                   bank account change wali guide
                 </Link>{' '}
@@ -162,7 +162,7 @@ export default function AutoDebitFailRegularization() {
             </div>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Aur agar aapka mann scheme se nikalne ka hai — 60 saal se pehle chhodne par jama kiya hua paisa byaj ke saath
+            Aur agar aapka mann scheme se nikalne ka hai. 60 saal se pehle chhodne par jama kiya hua paisa byaj ke saath
             wapas milta hai; ye rule{' '}
             <Link href="/maandhan/pm-kisan-maandhan-withdrawal-refund-rules" className="text-green-700 dark:text-green-400 underline">
               exit aur refund wali guide
@@ -178,7 +178,7 @@ export default function AutoDebitFailRegularization() {
         <section className="mb-8">
           <SH>Auto-Debit Fail Kyun Hota Hai — 5 Wajahein Jo Aksar Dikhti Hain</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Fix karne se pehle ye jaan lena zaroori hai ki hua kya. Aur achi baat ye hai ki 90% cases mein wajah koi badi galti nahi hoti — bas ek chhoti si cheez miss ho jaati hai jo aasani se pakdi ja sakti hai.
+            Fix karne se pehle ye jaan lena zaroori hai ki hua kya. Aur achi baat ye hai ki 90% cases mein wajah koi badi galti nahi hoti. Bas ek chhoti si cheez miss ho jaati hai jo aasani se pakdi ja sakti hai.
           </p>
 
           <div className="my-6 rounded-xl overflow-hidden border border-[var(--color-border)]">
@@ -194,11 +194,11 @@ export default function AutoDebitFailRegularization() {
 
           <div className="space-y-4">
             {[
-              { title: "1. Account Mein Paisa Kam Tha", desc: "Sabse common wajah, koi shak nahi. EMI date par jitna chahiye utna balance nahi tha, toh system khud hi transaction reject kar deta hai — saath mein bounce charge bhi lag jaata hai." },
-              { title: "2. NACH Mandate Expire Ho Gaya", desc: "Ye log bhool jaate hain — mandate hamesha ke liye valid nahi rehta, 1 se 3 saal ki hi validity hoti hai. Expire hone ke baad bank ke paas legally auto-debit karne ka right hi nahi bachta." },
-              { title: "3. Account Dormant Ho Gaya", desc: "6 mahine se account mein koi movement nahi, ya KYC pending pada hai — dono cases mein bank account freeze kar sakta hai, aur wahan se koi bhi auto-debit fail ho jaata hai." },
-              { title: "4. Bank Ke Server Ka Issue", desc: "Kabhi kabhi galti aapki bilkul nahi hoti. Server down ho jaana, ya RBI ke NACH system mein technical dikkat — inki wajah se bhi genuine payment fail dikh sakta hai." },
-              { title: "5. Details Update Nahi Karwaye", desc: "Mobile number badla, IFSC change hua, ya loan account number update hua — aur lender ko bataya nahi. Purana instruction system mein hi reh jaata hai, aur wahi fail ho jaata hai." },
+              { title: "1. Account Mein Paisa Kam Tha", desc: "Sabse common wajah, koi shak nahi. EMI date par jitna chahiye utna balance nahi tha, toh system khud hi transaction reject kar deta hai. Saath mein bounce charge bhi lag jaata hai." },
+              { title: "2. NACH Mandate Expire Ho Gaya", desc: "Ye log bhool jaate hain. Mandate hamesha ke liye valid nahi rehta, 1 se 3 saal ki hi validity hoti hai. Expire hone ke baad bank ke paas legally auto-debit karne ka right hi nahi bachta." },
+              { title: "3. Account Dormant Ho Gaya", desc: "6 mahine se account mein koi movement nahi, ya KYC pending pada hai. Dono cases mein bank account freeze kar sakta hai, aur wahan se koi bhi auto-debit fail ho jaata hai." },
+              { title: "4. Bank Ke Server Ka Issue", desc: "Kabhi kabhi galti aapki bilkul nahi hoti. Server down ho jaana, ya RBI ke NACH system mein technical dikkat, inki wajah se bhi genuine payment fail dikh sakta hai." },
+              { title: "5. Details Update Nahi Karwaye", desc: "Mobile number badla, IFSC change hua, ya loan account number update hua. Aur lender ko bataya nahi. Purana instruction system mein hi reh jaata hai, aur wahi fail ho jaata hai." },
             ].map((reason, idx) => (
               <div key={idx} className="bg-gray-50 dark:bg-gray-800/50 border-l-4 border-green-500 rounded-r-lg p-4 hover:shadow-md transition-shadow">
                 <h3 className="font-bold text-gray-900 dark:text-white mb-1">{reason.title}</h3>
@@ -209,7 +209,7 @@ export default function AutoDebitFailRegularization() {
         </section>
 
         <section className="mb-8">
-          <SH>Ab Regularize Kaise Karein — Ek-Ek Step</SH>
+          <SH>Ab Regularize Kaise Karein. Ek-Ek Step</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Yahan se dikhta hai mushkil hai, par actual mein 10-15 minute ka kaam hai. Ek ek karke steps follow karte jao.
           </p>
@@ -227,7 +227,7 @@ export default function AutoDebitFailRegularization() {
 
           <StepList>
             <SI n={1}><strong>Pehle Reason Confirm Karo:</strong> SMS ya email mein reason likha hota hai. 'Insufficient Funds' dikhe toh seedha step 2 par jao.</SI>
-            <SI n={2}><strong>Manual Payment — Ye Sabse Important Step Hai:</strong> Bank dobara try kare ya na kare, aap khud kar do. UPI sabse fast hai, Net Banking ka 'Loan EMI Pay' option bhi kaam karta hai, ya branch jaakar cash/cheque se bhi ho jaata hai.</SI>
+            <SI n={2}><strong>Manual Payment. Ye Sabse Important Step Hai:</strong> Bank dobara try kare ya na kare, aap khud kar do. UPI sabse fast hai, Net Banking ka 'Loan EMI Pay' option bhi kaam karta hai, ya branch jaakar cash/cheque se bhi ho jaata hai.</SI>
             <SI n={3}><strong>Mandate Expire Ho Toh Naya Form Bharo:</strong> Nazdiki branch jao, Aadhaar/PAN aur cancelled cheque le jao. 3-5 working days mein auto-debit wapas start ho jaata hai.</SI>
             <SI n={4}><strong>Bank Ko Likh Ke Bhi Bata Do:</strong> Payment ho jaane ke baad ek chhoti application ya email de do bank ko. Isse record clean rehta hai, agli baar system confuse nahi hota.</SI>
             <SI n={5}><strong>Agli Baar Ke Liye Thoda Buffer Rakho:</strong> EMI date se 2-3 din pehle balance daal do, ₹500 extra bhi. SMS alerts on rakho, kaafi kaam aate hain.</SI>
@@ -239,15 +239,15 @@ export default function AutoDebitFailRegularization() {
         </section>
 
         <section className="mb-8">
-          <SH>CIBIL Score Par Asar — Kab Girta Hai, Kab Nahi</SH>
+          <SH>CIBIL Score Par Asar. Kab Girta Hai, Kab Nahi</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Yahi sabse zyada tension deta hai logo ko. Achi khabar ye hai — ek baar auto-debit fail hone se score usi mahine nahi girta. Bura tab hota hai jab isse latka ke rakh do.
+            Yahi sabse zyada tension deta hai logo ko. Achi khabar ye hai. Ek baar auto-debit fail hone se score usi mahine nahi girta. Bura tab hota hai jab isse latka ke rakh do.
           </p>
 
           <div className="my-6 rounded-xl overflow-hidden border border-[var(--color-border)]">
             <Image
               src="/images/articles/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein/cibil-score-asar.webp"
-              alt="CIBIL score par auto-debit fail hone ka asar — timeline"
+              alt="CIBIL score par auto-debit fail hone ka asar, timeline"
               width={1000}
               height={560}
               className="w-full object-cover"
@@ -265,7 +265,7 @@ export default function AutoDebitFailRegularization() {
             <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border-2 border-red-500">
               <h4 className="font-bold text-red-900 dark:text-red-300 mb-2 flex items-center gap-2">90 Din Se Zyada Nikal Gaye</h4>
               <p className="text-sm text-red-800 dark:text-red-200 leading-relaxed">
-                Ab dikkat hai — score 50 se 100 points tak gir sakta hai, aur account NPA (Non-Performing Asset) ban sakta hai. Iske baad naya loan lena mushkil ho jaata hai.
+                Ab dikkat hai. Score 50 se 100 points tak gir sakta hai, aur account NPA (Non-Performing Asset) ban sakta hai. Iske baad naya loan lena mushkil ho jaata hai.
               </p>
             </div>
           </div>
@@ -281,12 +281,12 @@ export default function AutoDebitFailRegularization() {
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 rounded-full bg-yellow-500 shrink-0" />
                 <span className="font-semibold w-24 shrink-0">31-60 Days:</span>
-                <span className="text-[var(--color-text-muted)]">DPD-1 report hota hai, halka sa drop — 10-20 points.</span>
+                <span className="text-[var(--color-text-muted)]">DPD-1 report hota hai, halka sa drop, 10-20 points.</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 rounded-full bg-orange-500 shrink-0" />
                 <span className="font-semibold w-24 shrink-0">61-90 Days:</span>
-                <span className="text-[var(--color-text-muted)]">DPD-2, ab drop thoda zyada — 30-50 points.</span>
+                <span className="text-[var(--color-text-muted)]">DPD-2, ab drop thoda zyada, 30-50 points.</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 rounded-full bg-red-500 shrink-0" />
@@ -297,14 +297,14 @@ export default function AutoDebitFailRegularization() {
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Ek aur baat — agar galti bank ki thi, jaise server down hona, toh written proof lekar CIBIL bureau mein free dispute bhi daal sakte ho.
+            Ek aur baat, agar galti bank ki thi, jaise server down hona, toh written proof lekar CIBIL bureau mein free dispute bhi daal sakte ho.
           </p>
         </section>
 
         <section className="mb-8">
           <SH>Bounce Charges Maaf Karwane Ke Kaam Ke Tips</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Banks ₹250 se ₹750 tak bounce charge le lete hain, ye toh sabko pata hai. Kam log jaante hain ki ye waive bhi ho sakta hai — bina zyada dimag lagaye.
+            Banks ₹250 se ₹750 tak bounce charge le lete hain, ye toh sabko pata hai. Kam log jaante hain ki ye waive bhi ho sakta hai. Bina zyada dimag lagaye.
           </p>
 
           <div className="space-y-4 mb-6">
@@ -312,7 +312,7 @@ export default function AutoDebitFailRegularization() {
               <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">1</div>
               <div>
                 <h4 className="font-bold text-gray-900 dark:text-white mb-1">Bas Call Karke Pooch Lo</h4>
-                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Toll-free number par call karo, bol do pehli baar hua hai galti se. Record accha ho toh 70-80% baar representative charge waive kar hi deta hai — koi bada drama nahi hota isme.</p>
+                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Toll-free number par call karo, bol do pehli baar hua hai galti se. Record accha ho toh 70-80% baar representative charge waive kar hi deta hai. Koi bada drama nahi hota isme.</p>
               </div>
             </div>
             <div className="flex gap-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4">
@@ -325,7 +325,7 @@ export default function AutoDebitFailRegularization() {
             <div className="flex gap-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4">
               <div className="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">3</div>
               <div>
-                <h4 className="font-bold text-gray-900 dark:text-white mb-1">Agar Bank Bhi Sunn Na Rahi Ho — RBI Ke Paas Jao</h4>
+                <h4 className="font-bold text-gray-900 dark:text-white mb-1">Agar Bank Bhi Sunn Na Rahi Ho. RBI Ke Paas Jao</h4>
                 <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Galti bank ki thi (server issue) aur phir bhi charge nahi hata rahe, toh RBI ke Complaint Management System mein online shikayat daal do. Ye last resort hai, par kaam karta hai.</p>
               </div>
             </div>
@@ -365,7 +365,7 @@ export default function AutoDebitFailRegularization() {
         </section>
 
         <section className="mb-8">
-          <SH>RBI Ke Niyam — Aapke Rights Kya Hain</SH>
+          <SH>RBI Ke Niyam. Aapke Rights Kya Hain</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ye section thoda technical hai par padh lena chahiye, kyunki isse pata chalta hai bank aapse zyadti kar bhi sakti hai ya nahi.
           </p>
@@ -384,7 +384,7 @@ export default function AutoDebitFailRegularization() {
           <div className="grid md:grid-cols-2 gap-4 mb-6">
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm">
               <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">24 Ghante Pehle Notification Zaroori Hai</h4>
-              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Debit katne se pehle SMS ya email aana hi chahiye — ye bank ki legal responsibility hai. Nahi aaya toh charge dispute kar sakte ho.</p>
+              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">Debit katne se pehle SMS ya email aana hi chahiye. Ye bank ki legal responsibility hai. Nahi aaya toh charge dispute kar sakte ho.</p>
             </div>
             <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm">
               <h4 className="font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">Grace Period Bhi Milta Hai Kai Baar</h4>
@@ -419,7 +419,7 @@ export default function AutoDebitFailRegularization() {
               <span className="text-red-600 mr-3 font-bold text-xl">✗</span>
               <div>
                 <p className="text-sm font-bold text-gray-900 dark:text-white">Score ki tension mein payment delay karna</p>
-                <p className="text-xs text-[var(--color-text-muted)]">Ulta effect hota hai ye — jitni deri utna nuksaan. Jaldi payment karna hi CIBIL ko safe rakhta hai.</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Ulta effect hota hai ye, jitni deri utna nuksaan. Jaldi payment karna hi CIBIL ko safe rakhta hai.</p>
               </div>
             </div>
             <div className="flex items-start bg-red-50 dark:bg-red-900/10 p-3 rounded-lg">
@@ -436,7 +436,7 @@ export default function AutoDebitFailRegularization() {
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Regularization Par Aapke Sawal, Seedhe Jawab
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="Auto Debit Regularization — Sawal Jawab" />
+          <FAQBlock faqs={FAQS_DATA} caption="Auto Debit Regularization. Sawal Jawab" />
         </section>
 
         <section className="my-10">

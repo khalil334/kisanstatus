@@ -54,7 +54,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya nodal officer phone call par complaint sunte hain?',
-    a: 'Haan — lekin sirf office hours (10:30 AM se 1:00 PM) mein. Dopahar ke baad zyadatar officers field visit ya meetings mein hote hain. Aur ek cheez kabhi mat bhoolna: call par "Diary Number" ya "Complaint Reference Number" zaroor maangein, wahi aapka saboot hai.',
+    a: 'Haan. Lekin sirf office hours (10:30 AM se 1:00 PM) mein. Dopahar ke baad zyadatar officers field visit ya meetings mein hote hain. Aur ek cheez kabhi mat bhoolna: call par "Diary Number" ya "Complaint Reference Number" zaroor maangein, wahi aapka saboot hai.',
   },
   {
     q: 'Agar nodal officer 30 din tak reply na kare toh kya karein?',
@@ -118,14 +118,14 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
             priority
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)]">
-            State Nodal Officer List — Direct Contact Karein
+            State Nodal Officer List. Direct Contact Karein
           </p>
         </div>
 
         <section className="mb-8">
           <SH>155261 Se Kaam Nahi Ban Raha? (Ground Reality)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bhai, national helpline (155261) par call karne ke baad bhi problem solve nahi hui? Ya wahan se koi proper jawab nahi mila? Aise mein frustration hoti hai. Call center wale operators sirf ek script padhte hain — "FTO generate ho gaya hai, 15 din wait karo" ya "Aapke bank se baat karo".
+            Bhai, national helpline (155261) par call karne ke baad bhi problem solve nahi hui? Ya wahan se koi proper jawab nahi mila? Aise mein frustration hoti hai. Call center wale operators sirf ek script padhte hain. "FTO generate ho gaya hai, 15 din wait karo" ya "Aapke bank se baat karo".
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Jab mahine beet jaate hain aur paisa nahi aata, tab aapko kisi aise insaan ki zaroorat hoti hai jiske paas <strong>actual administrative power</strong> ho. Yahan entry hoti hai <strong>PM Kisan State Nodal Officer</strong> ki. Har state mein ek officer baitha hai jo specifically PM Kisan ki shikayaten dekhta hai aur District Agriculture Officers (DAO) ko order de sakta hai.
@@ -284,7 +284,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
               <strong>Details Ready Rakho:</strong> Call milane se pehle ek kagaz par Reg Number, Aadhaar, aur problem 2 line mein likh lo.
             </SI>
             <SI n={3}>
-              <strong>Diary Number Maango:</strong> Sabse zaroori baat. Jab officer aapki baat sun le, toh politely kahein — <em>"Sir, meri shikayat ka ek Diary Number ya Reference Number de dijiye taaki main baad mein follow-up kar sakun."</em> Agar diary number ban gaya, toh file track hogi.
+              <strong>Diary Number Maango:</strong> Sabse zaroori baat. Jab officer aapki baat sun le, toh politely kahein, <em>"Sir, meri shikayat ka ek Diary Number ya Reference Number de dijiye taaki main baad mein follow-up kar sakun."</em> Agar diary number ban gaya, toh file track hogi.
             </SI>
           </StepList>
 
@@ -377,10 +377,10 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
         <section className="mb-8">
           <SH>Phone Aur Email Ke Alawa Teesra Raasta: Help Desk Ticket</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Bahut kisan ye option jaante hi nahi. pmkisan.gov.in par ek <strong>Help Desk / Grievance</strong> section hai jahan aap khud online shikayat darj kar sakte ho — na call ka wait, na email ka. Registration number daalo, problem chuno, submit karo. Badle mein ek <strong>ticket number</strong> milta hai — use kahin likh kar rakho, kyunki agli baar 155261 par call karoge to operator se seedha usi ticket ka status poochh sakte ho. Bina number ke har call zero se shuru hoti hai.
+            Bahut kisan ye option jaante hi nahi. pmkisan.gov.in par ek <strong>Help Desk / Grievance</strong> section hai jahan aap khud online shikayat darj kar sakte ho, na call ka wait, na email ka. Registration number daalo, problem chuno, submit karo. Badle mein ek <strong>ticket number</strong> milta hai. Use kahin likh kar rakho, kyunki agli baar 155261 par call karoge to operator se seedha usi ticket ka status poochh sakte ho. Bina number ke har call zero se shuru hoti hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Waise 155261 ke alawa ek aur number bhi hai — <strong>011-24300606</strong>. Ek busy ho to doosra try karo, dono PM Kisan ke hi hain. Aur email ka central pata <strong>pmkisan-ict@gov.in</strong> hai — state officer ka direct email na mile to yahi likho, subject me apna registration number daal kar.
+            Waise 155261 ke alawa ek aur number bhi hai. <strong>011-24300606</strong>. Ek busy ho to doosra try karo, dono PM Kisan ke hi hain. Aur email ka central pata <strong>pmkisan-ict@gov.in</strong> hai — state officer ka direct email na mile to yahi likho, subject me apna registration number daal kar.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Sabse strong combination? Ticket + email dono. Pehle Help Desk par ticket banao, phir email me wahi ticket number quote karo. Ab aapki shikayat do jagah record me hai aur officer ke paas &ldquo;humein mili hi nahi&rdquo; kehne ki gunjaish nahi bachti.
@@ -388,12 +388,12 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
         </section>
 
         <section className="mb-8">
-          <SH>&ldquo;Nodal Officer Bol Raha Hoon&rdquo; — Aisi Call Aaye To Kya Karein</SH>
+          <SH>&ldquo;Nodal Officer Bol Raha Hoon&rdquo;. Aisi Call Aaye To Kya Karein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ek kadwi sachai: jaise hi kisan shikayat darj karte hain, kuch dino baad fraud calls shuru ho jaati hain. Koi khud ko adhikari batayega, kahega &ldquo;aapki payment release karni hai, OTP batao&rdquo; ya &ldquo;processing fee bhejo.&rdquo; Yaad rakho — <strong>koi bhi asli sarkari adhikari na OTP maangta hai, na fee.</strong> Payment release karne ke liye unhe aapse kuch nahi chahiye; system PFMS se seedha bank me bhejta hai.
+            Ek kadwi sachai: jaise hi kisan shikayat darj karte hain, kuch dino baad fraud calls shuru ho jaati hain. Koi khud ko adhikari batayega, kahega &ldquo;aapki payment release karni hai, OTP batao&rdquo; ya &ldquo;processing fee bhejo.&rdquo; Yaad rakho, <strong>koi bhi asli sarkari adhikari na OTP maangta hai, na fee.</strong> Payment release karne ke liye unhe aapse kuch nahi chahiye; system PFMS se seedha bank me bhejta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            OTP de diya aur paisa kat gaya? Turant <strong>1930</strong> par call karo ya <strong>cybercrime.gov.in</strong> par shikayat darj karo, aur apne bank ko usi din batao — jitni jaldi report, utne recovery ke chances. Bank account se judi galti ke liye humara{' '}
+            OTP de diya aur paisa kat gaya? Turant <strong>1930</strong> par call karo ya <strong>cybercrime.gov.in</strong> par shikayat darj karo, aur apne bank ko usi din batao, jitni jaldi report, utne recovery ke chances. Bank account se judi galti ke liye humara{' '}
             <Link href="/articles/PmKisanBankAccountChangeProcess" className="underline font-bold text-green-700 dark:text-green-400">bank account change guide</Link> bhi kaam aayega.
           </p>
         </section>
@@ -406,14 +406,14 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Shikayat Ka Sahi Raasta — Aur Diary Number Kyun Sabse Zaroori Hai</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Shikayat Ka Sahi Raasta. Aur Diary Number Kyun Sabse Zaroori Hai</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Seedha email karna aksar bekar jaata hai agar helpline ka record nahi hai — isliye hierarchy ka order matter karta hai:
+            Seedha email karna aksar bekar jaata hai agar helpline ka record nahi hai. Isliye hierarchy ka order matter karta hai:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
-            <li>Pehle 155261 par call karke <strong>Diary number</strong> lein — yahi number aage har level par aapka proof hai.</li>
+            <li>Pehle 155261 par call karke <strong>Diary number</strong> lein. Yahi number aage har level par aapka proof hai.</li>
             <li>15 din mein hal na ho toh state adhikari ko email mein wahi Diary number, registration number aur date daalein.</li>
-            <li>Uske baad bhi jawab na aaye toh RTI daalein — usme bhi Diary number quote karein.</li>
+            <li>Uske baad bhi jawab na aaye toh RTI daalein, usme bhi Diary number quote karein.</li>
           </ol>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mt-3">
             Bina Diary number ke complaint ka koi trail nahi banta — wahi ek cheez hai jo aapki shikayat ko “suni gayi” se “darj hui” banati hai.

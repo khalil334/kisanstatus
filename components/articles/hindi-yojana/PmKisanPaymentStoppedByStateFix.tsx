@@ -6,18 +6,18 @@ import { buildFaqSchema } from '@/lib/faq-schema';
 const FAQS = [
   {
     q: 'क्या यह message आने का अर्थ है कि मैं योजना से बाहर हो गया?',
-    a: 'नहीं। किस्त राज्य स्तर पर verification में रोकी गई है — record से नाम कटना अलग बात है। गड़बड़ी सुधरी, पैसा आया।',
+    a: 'नहीं। किस्त राज्य स्तर पर verification में रोकी गई है. Record से नाम कटना अलग बात है। गड़बड़ी सुधरी, पैसा आया।',
   },
   {
     q: 'रुकी हुई किस्त का पैसा वापस मिलेगा या डूब गया?',
-    a: 'डूबा नहीं। सुधार के बाद रुकी किस्तें आमतौर पर अगली release के साथ जुड़कर आती हैं — कई किसानों को एक साथ ₹4,000 (दो किस्तें) मिली हैं। बस शर्त एक है: जिस वजह से रुका था, वह वजह पूरी तरह ठीक होनी चाहिए, आधी-अधूरी नहीं।',
+    a: 'डूबा नहीं। सुधार के बाद रुकी किस्तें आमतौर पर अगली release के साथ जुड़कर आती हैं. कई किसानों को एक साथ ₹4,000 (दो किस्तें) मिली हैं। बस शर्त एक है: जिस वजह से रुका था, वह वजह पूरी तरह ठीक होनी चाहिए, आधी-अधूरी नहीं।',
   },
   {
     q: 'कितने दिन में ठीक हो जाता है?',
-    a: 'कोई तय समय-सीमा नहीं है — यह इस पर निर्भर है कि गड़बड़ी क्या है और सुधार कितनी जल्दी दर्ज होता है। नाम की spelling का सुधार हफ्तों में हो जाता है; जमीन के record वाला मामला महीनों खींच सकता है।',
+    a: 'कोई तय समय-सीमा नहीं है. यह इस पर निर्भर है कि गड़बड़ी क्या है और सुधार कितनी जल्दी दर्ज होता है। नाम की spelling का सुधार हफ्तों में हो जाता है; जमीन के record वाला मामला महीनों खींच सकता है।',
   },
   {
-    q: 'कोई कह रहा है पैसे देकर रोक हटवा देगा — सच है?',
+    q: 'कोई कह रहा है पैसे देकर रोक हटवा देगा. सच है?',
     a: 'सौ प्रतिशत ठगी है। राज्य की जांच किसी दलाल के पैसे से तेज नहीं होती, और शिकायत दर्ज करने का कोई शुल्क नहीं है। OTP, बैंक details या fees मांगने वाले से दूरी रखें।',
   },
 ];
@@ -94,9 +94,9 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       />
 
       <p>
-        Status check किया, और screen पर लिखा आया — <strong>&ldquo;Installment payment stopped by
+        Status check किया, और screen पर लिखा आया, <strong>&ldquo;Installment payment stopped by
         state&rdquo;</strong>। पढ़कर पहला खयाल यही आता है कि पैसा गया। रुकिए। यह message जितना डरावना दिखता है,
-        उतना है नहीं — लेकिन इसे अनदेखा करने की चीज भी नहीं है। आइए बिना घुमाए समझते हैं कि system के अंदर
+        उतना है नहीं. लेकिन इसे अनदेखा करने की चीज भी नहीं है। आइए बिना घुमाए समझते हैं कि system के अंदर
         हुआ क्या है, आपको करना क्या है, और किस दरवाजे पर जाने से काम बनेगा।
       </p>
 
@@ -104,7 +104,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         priority
         src="/images/articles/hindi-yojna/payment-stopped/stopped-status.webp"
         alt="PM Kisan status page पर Payment Stopped by State का message"
-        caption="यही वह line है — डरावनी दिखती है, पर इलाज मौजूद है"
+        caption="यही वह line है. डरावनी दिखती है, पर इलाज मौजूद है"
       />
 
       <Sec>इस line का असली अर्थ</Sec>
@@ -116,13 +116,13 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       </p>
       <p>
         इसे एक डाकिये के उदाहरण से समझिए। केंद्र ने चिट्ठी (पैसा) भेज दी, पर गांव के डाकघर (राज्य) ने कहा —
-        पते में गड़बड़ है, पहले पता ठीक कराओ, चिट्ठी यहीं रखी है। चिट्ठी लौटी नहीं है, फटी भी नहीं है — बस
+        पते में गड़बड़ है, पहले पता ठीक कराओ, चिट्ठी यहीं रखी है। चिट्ठी लौटी नहीं है, फटी भी नहीं है. बस
         रुकी है। पता ठीक होते ही पहुंच जाएगी। &ldquo;Stopped by state&rdquo; ठीक यही स्थिति है।
       </p>
 
       <Aside tone="info">
         अच्छी खबर यह है कि जिस वजह से रोक लगी, वह सुधर जाए तो रुकी हुई राशि आगे की release के साथ मिलने
-        की व्यवस्था है। असली काम एक ही है — वजह पकड़ना और सुधारना। नीचे इसी की पूरी विधि है।
+        की व्यवस्था है। असली काम एक ही है. वजह पकड़ना और सुधारना। नीचे इसी की पूरी विधि है।
       </Aside>
 
       <Sec>Status के message आपस में मत उलझाइए</Sec>
@@ -142,7 +142,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
           <tbody>
             <tr>
               <td className="border border-[var(--color-border)] p-2 font-semibold">Rft Signed by State Government</td>
-              <td className="border border-[var(--color-border)] p-2">राज्य ने आपकी request आगे बढ़ा दी — शुभ संकेत</td>
+              <td className="border border-[var(--color-border)] p-2">राज्य ने आपकी request आगे बढ़ा दी. शुभ संकेत</td>
               <td className="border border-[var(--color-border)] p-2">इंतजार, कुछ नहीं करना</td>
             </tr>
             <tr>
@@ -152,7 +152,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
             </tr>
             <tr>
               <td className="border border-[var(--color-border)] p-2 font-semibold">Payment stopped by state</td>
-              <td className="border border-[var(--color-border)] p-2">राज्य की जांच में आवेदन अटका — रोक</td>
+              <td className="border border-[var(--color-border)] p-2">राज्य की जांच में आवेदन अटका. रोक</td>
               <td className="border border-[var(--color-border)] p-2">वजह खोजें, सुधार कराएं (यह guide)</td>
             </tr>
             <tr>
@@ -164,9 +164,9 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         </table>
       </div>
       <p>
-        ध्यान दीजिए — आखिरी दो में जमीन-आसमान का फर्क है। &ldquo;Failed&rdquo; में पैसा चलकर लौटा है (गड़बड़ी बैंक की
+        ध्यान दीजिए. आखिरी दो में जमीन-आसमान का फर्क है। &ldquo;Failed&rdquo; में पैसा चलकर लौटा है (गड़बड़ी बैंक की
         तरफ), जबकि &ldquo;stopped by state&rdquo; में पैसा चला ही नहीं (गड़बड़ी राज्य की जांच में)। इस कारण &ldquo;stopped&rdquo;
-        वालों का बैंक के दस चक्कर लगाना अक्सर बेकार जाता है — दरवाजा ही गलत है।
+        वालों का बैंक के दस चक्कर लगाना अक्सर बेकार जाता है. दरवाजा ही गलत है।
       </p>
 
       <Figure
@@ -175,55 +175,55 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         caption="रोक की जड़ अक्सर record के मिलान में निकलती है"
       />
 
-      <Sec>रोक की आम वजहें — गिनकर पांच</Sec>
+      <Sec>रोक की आम वजहें. गिनकर पांच</Sec>
       <ol className="my-4 space-y-3 pl-5 list-decimal text-sm leading-relaxed">
         <li>
           <strong>नाम का mismatch</strong> — आधार, बैंक खाते और आवेदन में नाम की spelling अलग-अलग है। एक
           अक्षर का फर्क भी जांच में पकड़ा जाता है।
         </li>
         <li>
-          <strong>जमीन के record की जांच अधूरी</strong> — खतौनी में नाम नहीं, वरासत दर्ज नहीं, या land
+          <strong>जमीन के record की जांच अधूरी</strong>. खतौनी में नाम नहीं, वरासत दर्ज नहीं, या land
           seeding pending है।
         </li>
         <li>
-          <strong>अपात्रता का संदेह</strong> — record में आप income tax payer, सरकारी कर्मचारी या pension
+          <strong>अपात्रता का संदेह</strong>, record में आप income tax payer, सरकारी कर्मचारी या pension
           पाने वाले के रूप में flag हुए हैं।
         </li>
         <li>
-          <strong>Documents अधूरे</strong> — eKYC बाकी है, या बैंक खाते की आधार seeding inactive है।
+          <strong>Documents अधूरे</strong>, eKYC बाकी है, या बैंक खाते की आधार seeding inactive है।
         </li>
         <li>
-          <strong>दोहरा आवेदन</strong> — एक ही परिवार से एक से ज्यादा नाम, या एक ही जमीन पर दो आवेदन।
+          <strong>दोहरा आवेदन</strong>. एक ही परिवार से एक से ज्यादा नाम, या एक ही जमीन पर दो आवेदन।
         </li>
       </ol>
 
-      <Sub>अपनी वजह खुद कैसे छांटें — तीन सवाल</Sub>
+      <Sub>अपनी वजह खुद कैसे छांटें. तीन सवाल</Sub>
       <p>
         तहसील जाने से पहले पांच मिनट खुद से ये तीन सवाल पूछ लीजिए, आधी छंटाई घर बैठे हो जाती है:
       </p>
       <p>
-        <strong>सवाल 1 — status page पर eKYC के आगे क्या लिखा है?</strong> NO लिखा है तो ढूंढना बंद — यही
+        <strong>सवाल 1, status page पर eKYC के आगे क्या लिखा है?</strong> NO लिखा है तो ढूंढना बंद. यही
         पहली और संभावित वजह है। <Link href="/articles/hi/ekyc-mobile-se">Phone से eKYC</Link> कर लीजिए,
         बाकी सवाल बाद में।
       </p>
       <p>
         <strong>सवाल 2 — आधार, passbook और आवेदन में नाम अक्षर-दर-अक्षर एक है?</strong> &ldquo;Ram Kumar&rdquo; और
         &ldquo;Ramkumar&rdquo; system की नजर में दो अलग आदमी हैं। &ldquo;Devi&rdquo; कहीं है, कहीं नहीं? वह भी mismatch। फर्क
-        मिले तो रास्ता एक ही है — <Link href="/articles/PmKisanCorrectionForm2026">correction form</Link>।
+        मिले तो रास्ता एक ही है. <Link href="/articles/PmKisanCorrectionForm2026">correction form</Link>।
       </p>
       <p>
-        <strong>सवाल 3 — जमीन आपके नाम खतौनी में दर्ज है?</strong> पिता/दादा के नाम है और वरासत
-        (mutation) नहीं चढ़ी, तो जांच यहीं अटकती है। यह इकलौती वजह है जो online ठीक नहीं होती — तहसील
+        <strong>सवाल 3. जमीन आपके नाम खतौनी में दर्ज है?</strong> पिता/दादा के नाम है और वरासत
+        (mutation) नहीं चढ़ी, तो जांच यहीं अटकती है। यह इकलौती वजह है जो online ठीक नहीं होती. तहसील
         जाना ही पड़ता है।
       </p>
       <p>
-        तीनों सवालों के जवाब ठीक निकलें, तब मानिए कि मामला अपात्रता की जांच या दोहरे आवेदन का है — और
+        तीनों सवालों के जवाब ठीक निकलें, तब मानिए कि मामला अपात्रता की जांच या दोहरे आवेदन का है. और
         तब सीधे grievance + ब्लॉक कार्यालय वाला रास्ता पकड़िए, जो आगे लिखा है।
       </p>
 
       <div className="my-8 p-6 bg-gradient-to-r from-green-800 to-green-600 rounded-2xl text-white text-center">
         <p className="font-black text-lg mb-1">State ने payment रोका? वजह ढूंढिए</p>
-        <p className="text-green-100 text-sm mb-4">चार झटपट जांच — eKYC, seeding, land record और list में नाम।</p>
+        <p className="text-green-100 text-sm mb-4">चार झटपट जांच, eKYC, seeding, land record और list में नाम।</p>
         <div className="flex flex-wrap justify-center gap-2.5">
           <Link
             href="/calculator/installment-tracker"
@@ -240,11 +240,11 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         </div>
       </div>
 
-      <Sec>अब इलाज — नुस्खा तीन कदम का</Sec>
+      <Sec>अब इलाज. नुस्खा तीन कदम का</Sec>
       <Figure
         src="/images/articles/hindi-yojna/payment-stopped/fix-flow.webp"
         alt="रुकी किस्त ठीक करने के तीन कदम का flowchart"
-        caption="कारण → सुधार → verification के बाद किस्त — पूरा रास्ता इन तीन कदमों में"
+        caption="कारण → सुधार → verification के बाद किस्त. पूरा रास्ता इन तीन कदमों में"
       />
       <Rx step="1" title="घर बैठे जांच">
         Status page पर eKYC का column देखें (NO है तो{' '}
@@ -256,13 +256,13 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       <Rx step="2" title="Online शिकायत + query number">
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> के
         Farmers Corner में Help Desk/Grievance का विकल्प है, आधार number से query register होती है। जो
-        query number मिले, उसे कागज पर लिखकर रखिए — आगे की हर बातचीत में यही आपकी पहचान है। साथ
+        query number मिले, उसे कागज पर लिखकर रखिए. आगे की हर बातचीत में यही आपकी पहचान है। साथ
         में helpline <strong>155261</strong> पर भी बात कर लें। पूरा तरीका{' '}
         <Link href="/articles/hi/pm-kisan-helpline-155261">शिकायत guide</Link> में लिखा है।
       </Rx>
-      <Rx step="3" title="ब्लॉक/तहसील — अक्सर निर्णायक">
+      <Rx step="3" title="ब्लॉक/तहसील. अक्सर निर्णायक">
         रोक <em>राज्य</em> ने लगाई है, तो ताला भी वहां से ही खुलेगा। अपने ब्लॉक के कृषि अधिकारी या तहसील में
-        पटवारी से मिलिए और साफ पूछिए — मेरा आवेदन किस जांच में रुका है? जमीन का मामला हो तो खतौनी की
+        पटवारी से मिलिए और साफ पूछिए. मेरा आवेदन किस जांच में रुका है? जमीन का मामला हो तो खतौनी की
         नकल साथ ले जाएं। जिले से बात न बने तो{' '}
         <Link href="/articles/PmKisanStateNodalOfficerList">State Nodal Officer</Link> अगली सीढ़ी है।
       </Rx>
@@ -274,13 +274,13 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       </p>
       <ul className="my-4 space-y-2 list-none pl-0">
         <li className="flex gap-2 text-sm leading-relaxed"><span>आधार कार्ड (original + एक photocopy)</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span>बैंक passbook का पहला पन्ना — जिस खाते में किस्त आती है</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span>खतौनी/खसरा की ताजा नकल — जमीन आपके नाम दिखनी चाहिए</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span>बैंक passbook का पहला पन्ना. जिस खाते में किस्त आती है</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span>खतौनी/खसरा की ताजा नकल. जमीन आपके नाम दिखनी चाहिए</span></li>
         <li className="flex gap-2 text-sm leading-relaxed"><span>PM Kisan का registration number (status page से लिखकर या screenshot)</span></li>
         <li className="flex gap-2 text-sm leading-relaxed"><span>Grievance का query number, अगर online शिकायत पहले डाल चुके हैं</span></li>
       </ul>
       <p>
-        अधिकारी से मिलते समय एक ही साफ सवाल पूछिए — <em>&ldquo;मेरे registration number पर state verification
+        अधिकारी से मिलते समय एक ही साफ सवाल पूछिए, <em>&ldquo;मेरे registration number पर state verification
         में क्या objection लगा है?&rdquo;</em> गोल-मोल जवाब मिले तो विनम्रता से लिखित में देने या record दिखाने
         को कहिए। ज्यादातर block office में PFMS/portal की entry सामने खोलकर वजह बता दी जाती है।
       </p>
@@ -291,7 +291,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         दोनों रुकी किस्तें एक साथ आ गईं। सबक: message portal पर दिखता है, पर जड़ अक्सर कागज में होती है।
       </Aside>
 
-      <Sec>सुधार के बाद क्या होता है — और कब तक</Sec>
+      <Sec>सुधार के बाद क्या होता है. और कब तक</Sec>
       <p>
         यह हिस्सा समझना जरूरी है, वरना सुधार के बाद भी रोज status देखकर घबराहट बनी रहती है। क्रम ऐसा
         चलता है: आपका सुधार (eKYC, correction, वरासत — जो भी था) पहले <em>record में दर्ज</em> होता है।
@@ -299,36 +299,36 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         beneficiary list में लौट आता है, और रुकी राशि उस release के साथ जुड़कर आती है।
       </p>
       <p>
-        दो बातें पल्ले बांध लीजिए। पहली — सुधार और पैसे के बीच एक release का फासला होना सामान्य
-        है; सुधार के अगले हफ्ते पैसा नहीं आता। दूसरी — सुधार के बाद status बदलकर पहले &ldquo;Rft Signed&rdquo; वाली
+        दो बातें पल्ले बांध लीजिए। पहली. सुधार और पैसे के बीच एक release का फासला होना सामान्य
+        है; सुधार के अगले हफ्ते पैसा नहीं आता। दूसरी. सुधार के बाद status बदलकर पहले &ldquo;Rft Signed&rdquo; वाली
         अच्छी lines दिखने लगती हैं; यही संकेत है कि गाड़ी पटरी पर लौट आई। महीने में एक-दो बार status
         देखते रहिए, रोज देखने से कुछ जल्दी नहीं होता।
       </p>
       <p>
-        और अगर दो release निकल जाएं, सुधार भी दर्ज हो और फिर भी वह message अटका रहे — तब मान लीजिए
+        और अगर दो release निकल जाएं, सुधार भी दर्ज हो और फिर भी वह message अटका रहे. तब मान लीजिए
         कि शिकायत को ऊपर की सीढ़ी चाहिए। पुराने query number के साथ जिला कृषि अधिकारी, और वहां से{' '}
-        <Link href="/articles/PmKisanStateNodalOfficerList">Nodal Officer</Link> — यही chain है। हर स्तर
+        <Link href="/articles/PmKisanStateNodalOfficerList">Nodal Officer</Link>. यही chain है। हर स्तर
         पर लिखित/entry वाला proof बनवाते चलिए।
       </p>
 
-      <Sec>दो पेचीदा मामले — जरा गहराई से</Sec>
+      <Sec>दो पेचीदा मामले. जरा गहराई से</Sec>
       <Sub>मामला 1: अपात्रता का flag गलत लगा है</Sub>
       <p>
         योजना के नियम में income tax भरने वाले, सरकारी सेवा में रहे लोग (चतुर्थ श्रेणी/multi-tasking staff
         को छोड़कर), ₹10,000 से ऊपर pension पाने वाले retired कर्मचारी, और doctor-वकील-CA सरीखे registered
-        professional लाभ के दायरे से बाहर हैं। जांच में कभी-कभी यह flag गलत आदमी पर लग जाता है — हमनाम
+        professional लाभ के दायरे से बाहर हैं। जांच में कभी-कभी यह flag गलत आदमी पर लग जाता है. हमनाम
         व्यक्ति tax भरता हो, या आपने किसी एक साल return भरा हो और बाद में बंद कर दिया हो।
       </p>
       <p>
-        ऐसा लगे तो घबराने की जगह proof इकट्ठा कीजिए — आप tax नहीं भरते तो उसका आधार, सरकारी सेवा में
+        ऐसा लगे तो घबराने की जगह proof इकट्ठा कीजिए. आप tax नहीं भरते तो उसका आधार, सरकारी सेवा में
         नहीं हैं तो उसका। फिर ब्लॉक कार्यालय में लिखित आपत्ति दीजिए कि flag गलत लगा है, साथ में proof।
         यह मामला सिर्फ online शिकायत से शायद ही सुलझता है — कागज के साथ आमने-सामने की बात ही काम
-        करती है। और अगर flag सही है, तो सच्चाई यह है कि रोक हटेगी नहीं — बल्कि पहले लिया पैसा वापस
+        करती है। और अगर flag सही है, तो सच्चाई यह है कि रोक हटेगी नहीं. बल्कि पहले लिया पैसा वापस
         मांगा जा सकता है (<Link href="/articles/hi/recovery-notice">recovery notice guide</Link> पढ़ें)।
       </p>
       <Sub>मामला 2: एक जमीन, दो आवेदन</Sub>
       <p>
-        भाइयों में बंटवारा कागज पर नहीं चढ़ा, और दोनों ने एक ही खतौनी के आधार पर आवेदन कर दिया — यह
+        भाइयों में बंटवारा कागज पर नहीं चढ़ा, और दोनों ने एक ही खतौनी के आधार पर आवेदन कर दिया. यह
         स्थिति गांवों में बहुत आम है और जांच में दोनों आवेदन रोक देती है। इसका इलाज बंटवारे को record
         में चढ़वाना है, या आपसी सहमति से एक आवेदन रखकर दूसरा हटवाना। जब तक record में दो दावे दिखेंगे,
         राज्य की जांच किसी एक को भी पास नहीं करेगी। वही बात पति-पत्नी दोनों के आवेदन पर लागू होती है —
@@ -338,22 +338,22 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       <Sec>किन गलतियों से बचें</Sec>
       <p>
         <strong>बार-बार नई शिकायत डालना।</strong> हर नई शिकायत नई कतार में लगती है। एक query number लेकर
-        उसी पर follow-up कीजिए — यह ज्यादा तेज चलता है।
+        उसी पर follow-up कीजिए. यह ज्यादा तेज चलता है।
       </p>
       <p>
-        <strong>बैंक बदल लेना।</strong> &ldquo;पैसा नहीं आ रहा तो खाता ही बदल दूं&rdquo; — यह &ldquo;stopped by state&rdquo; में
+        <strong>बैंक बदल लेना।</strong> &ldquo;पैसा नहीं आ रहा तो खाता ही बदल दूं&rdquo;. यह &ldquo;stopped by state&rdquo; में
         उल्टा पड़ता है। रोक राज्य की जांच में है; नया खाता जुड़वाने से एक और verification की परत बढ़ जाती
         है। खाता तभी छेड़ें जब वजह पक्के तौर पर बैंक की निकली हो।
       </p>
       <p>
         <strong>सिर्फ helpline के भरोसे बैठना।</strong> Helpline शिकायत दर्ज कर देती है, पर राज्य की जांच
-        का ताला जिले/ब्लॉक में खुलता है। Phone और चक्कर — दोनों साथ चलाइए।
+        का ताला जिले/ब्लॉक में खुलता है। Phone और चक्कर. दोनों साथ चलाइए।
       </p>
 
       <Aside tone="warn">
         &ldquo;Payment stopped हटवाने&rdquo; के नाम पर पैसे मांगने वाले बिचौलियों से सावधान। न शिकायत दर्ज करने का
         कोई शुल्क है, न राज्य की जांच किसी को पैसे देकर तेज होती है। जो व्यक्ति OTP या बैंक details मांगे,
-        समझ जाइए मामला ठगी का है। सरकारी काम सिर्फ सरकारी खिड़की से — portal, helpline 155261, या
+        समझ जाइए मामला ठगी का है। सरकारी काम सिर्फ सरकारी खिड़की से, portal, helpline 155261, या
         ब्लॉक/तहसील कार्यालय।
       </Aside>
 
@@ -363,7 +363,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         </div>
         <div className="p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">
           <div>
-            <p className="font-bold text-[var(--color-text)] text-sm">PM Kisan Portal — Know Your Status</p>
+            <p className="font-bold text-[var(--color-text)] text-sm">PM Kisan Portal. Know Your Status</p>
             <p className="text-xs text-[var(--color-text-muted)] mt-0.5">pmkisan.gov.in · भारत सरकार</p>
           </div>
           <a
@@ -383,44 +383,44 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         caption="कागज लेकर सही दफ्तर पहुंचें — आधा काम वहीं बन जाता है"
       />
 
-      <Sec>राज्य-दर-राज्य फर्क — किससे पूछें, कहां जाएं</Sec>
+      <Sec>राज्य-दर-राज्य फर्क. किससे पूछें, कहां जाएं</Sec>
       <p>
         जांच राज्य करता है, तो दफ्तरों के नाम और काम का बंटवारा हर जगह एक सा नहीं। UP में जमीन का
         काम तहसील (लेखपाल/पटवारी) देखता है और योजना का सत्यापन कृषि विभाग; Bihar में कृषि समन्वयक
         (Kisan Salahkar) गांव स्तर पर पहला संपर्क है; MP-Rajasthan में पटवारी और ग्राम सेवक दोनों से
-        बात बनती है। नाम जो भी हो, सूत्र एक है — पहले गांव/ब्लॉक स्तर का कृषिकर्मी, फिर जिला कृषि
-        अधिकारी, और आखिर में राज्य का Nodal Officer। सीढ़ी लांघकर ऊपर मत जाइए — Nodal Officer के
+        बात बनती है। नाम जो भी हो, सूत्र एक है. पहले गांव/ब्लॉक स्तर का कृषिकर्मी, फिर जिला कृषि
+        अधिकारी, और आखिर में राज्य का Nodal Officer। सीढ़ी लांघकर ऊपर मत जाइए. Nodal Officer के
         दफ्तर से मामला घूमकर फिर जिले के पास ही आता है, बस समय ज्यादा लगता है।
       </p>
       <p>
-        एक और काम की बात — कई राज्य अपने portal (UP का upagripardarshi या राज्य कृषि विभाग की
-        site) पर भी लाभार्थी सूची दिखाते हैं। वहां अपना नाम खोजकर देख लीजिए — राज्य की सूची में नाम
+        एक और काम की बात. कई राज्य अपने portal (UP का upagripardarshi या राज्य कृषि विभाग की
+        site) पर भी लाभार्थी सूची दिखाते हैं। वहां अपना नाम खोजकर देख लीजिए. राज्य की सूची में नाम
         है पर केंद्र के portal पर रोक है, तो मामला दोनों record के मिलान का है और वही बात grievance में
         लिखने से सुनवाई तेज होती है। राज्य योजनाओं के लाभ (<Link href="/articles/hi/namo-shetkari-yojana">Maharashtra की नमो शेतकरी</Link> या{' '}
         <Link href="/articles/hi/mp-kisan-kalyan-yojana">MP की किसान कल्याण</Link>) अक्सर PM Kisan की
-        लिस्ट से जुड़े होते हैं — यहां रोक लगी रही तो वहां का पैसा भी अटक सकता है। एक सुधार से दोनों
-        दरवाजे खुलते हैं — टालिए मत।
+        लिस्ट से जुड़े होते हैं. यहां रोक लगी रही तो वहां का पैसा भी अटक सकता है। एक सुधार से दोनों
+        दरवाजे खुलते हैं. टालिए मत।
       </p>
 
       <Sec>आखिर में — पूरी बात का सार</Sec>
       <p>
-        &ldquo;Installment payment stopped by state&rdquo; निष्कासन नहीं — राज्य की जांच में लगी अस्थायी रोक
+        &ldquo;Installment payment stopped by state&rdquo; निष्कासन नहीं. राज्य की जांच में लगी अस्थायी रोक
         है। वजह पांच में से कोई एक: नाम mismatch, जमीन record, अपात्रता का flag, अधूरी
         eKYC/seeding, दोहरा आवेदन। करना क्या है? घर बैठे eKYC-नाम-seeding जांचिए। Portal पर grievance डालकर query
         number संभालिए। और कागज लेकर ब्लॉक/तहसील में पूछिए कि objection क्या है। सुधार दर्ज हुआ तो
-        रुकी किस्तें अगली release के साथ जुड़कर आती हैं — पैसा डूबता नहीं, बशर्ते जड़ ठीक की जाए। दलालों
+        रुकी किस्तें अगली release के साथ जुड़कर आती हैं. पैसा डूबता नहीं, बशर्ते जड़ ठीक की जाए। दलालों
         को पैसे देना समाधान नहीं, ठगी है।
       </p>
 
       <p>
         रोक लंबी खिंचने की असली वजह अक्सर तरीका होता है, योजना नहीं। जिन किसानों की रोक लंबी खिंचती
         है, उनमें ज्यादातर वे होते हैं जो या तो वजह पकड़े बिना इंतजार करते रहे, या गलत दरवाजे (सिर्फ बैंक,
-        सिर्फ helpline) खटखटाते रहे। जो क्रम ऊपर लिखा है — घर बैठे जांच, online शिकायत, फिर कागज लेकर
-        ब्लॉक/तहसील — उसी क्रम में चलिए, हर कदम का proof संभालते चलिए, और release के मौसम में status
+        सिर्फ helpline) खटखटाते रहे। जो क्रम ऊपर लिखा है. घर बैठे जांच, online शिकायत, फिर कागज लेकर
+        ब्लॉक/तहसील. उसी क्रम में चलिए, हर कदम का proof संभालते चलिए, और release के मौसम में status
         पर नजर रखिए। नीचे के सवाल-जवाब में वे उलझनें हैं जो किसान अक्सर पूछते हैं।
       </p>
 
-      <Sec>रुकी किस्त पर किसानों की आम उलझनें — छोटे जवाब</Sec>
+      <Sec>रुकी किस्त पर किसानों की आम उलझनें. छोटे जवाब</Sec>
       <div className="my-4 space-y-5">
         {FAQS.map((f) => (
           <div key={f.q} className="border-l-4 border-[var(--color-primary)] pl-4">
@@ -435,7 +435,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> (कृषि
         एवं किसान कल्याण मंत्रालय) से ली गई है, और DBT भुगतान के ढांचे के लिए{' '}
         <a href="https://dbtbharat.gov.in" target="_blank" rel="noopener noreferrer">dbtbharat.gov.in</a> देखा
-        गया। राज्य-स्तरीय verification राज्य-दर-राज्य थोड़ा अलग चलता है — इस page की जानकारी{' '}
+        गया। राज्य-स्तरीय verification राज्य-दर-राज्य थोड़ा अलग चलता है. इस page की जानकारी{' '}
         {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })} तक की है।
       </p>
 

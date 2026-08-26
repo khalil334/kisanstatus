@@ -16,23 +16,23 @@ export default function RajasthanKisanSammanNidhi9000() {
     },
     {
       q: '6vi kist kab tak aa jaani chahiye?',
-      a: 'Officially koi date announce nahi hui hai. Kisi bhi tareekh ka andaaza lagana bekaar hai — WhatsApp par ghoom rahi dates par bharosa na karein. Sahi jaankari ek hi jagah milegi: apna Aadhaar number Jan Soochna portal par daal kar khud status dekh lein.',
+      a: 'Officially koi date announce nahi hui hai. Kisi bhi tareekh ka andaaza lagana bekaar hai. WhatsApp par ghoom rahi dates par bharosa na karein. Sahi jaankari ek hi jagah milegi: apna Aadhaar number Jan Soochna portal par daal kar khud status dekh lein.',
     },
     {
       q: 'CM Kisan Samman Nidhi Rajasthan 7vi kist kab aayegi 2026?',
-      a: '7vi kist ka number 6vi ke baad lagega — aur 6vi abhi pending hai. Koi official date announce nahi hui. WhatsApp ya YouTube wali tareekhon par bharosa na karein; sahi update sirf Jan Soochna portal aur Rajasthan sarkar ki official ghoshna se milega.',
+      a: '7vi kist ka number 6vi ke baad lagega. Aur 6vi abhi pending hai. Koi official date announce nahi hui. WhatsApp ya YouTube wali tareekhon par bharosa na karein; sahi update sirf Jan Soochna portal aur Rajasthan sarkar ki official ghoshna se milega.',
     },
     {
       q: 'Registration alag se karna padega kya?',
-      a: 'Nahi. Ye scheme ka sabse acha part hai — PM Kisan mein naam hai to yahan bhi automatically aa jaate ho. Kuch extra bharne ki zaroorat nahi.',
+      a: 'Nahi. Ye scheme ka sabse acha part hai. PM Kisan mein naam hai to yahan bhi automatically aa jaate ho. Kuch extra bharne ki zaroorat nahi.',
     },
     {
       q: 'Agar PM Kisan band ho jaaye to ye chalti rahegi?',
-      a: 'Nahi chalegi. State wali scheme central wali ke upar khadi hai — jad kaat do to poora paudha hi sookh jaata hai.',
+      a: 'Nahi chalegi. State wali scheme central wali ke upar khadi hai. Jad kaat do to poora paudha hi sookh jaata hai.',
     },
     {
       q: 'Mobile number badal gaya, OTP nahi aa raha, ab kya?',
-      a: 'Pehle Aadhaar mein number update karwao, uske baad PM Kisan portal par. State wali list mein khud-ba-khud reflect ho jaayega — bas thoda time lagta hai, ek din mein umeed mat rakhna.',
+      a: 'Pehle Aadhaar mein number update karwao, uske baad PM Kisan portal par. State wali list mein khud-ba-khud reflect ho jaayega. Bas thoda time lagta hai, ek din mein umeed mat rakhna.',
     },
     {
       q: 'Dusre state mein reh kar Rajasthan wala fayda le sakte hain?',
@@ -46,7 +46,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
           <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Status (04/08/2026):</strong> 6vi kist abhi pending hai.  Next kist date officially announce nahi hua. Jan Soochna portal check karte rahein — kisi bhi WhatsApp forward wali tareekh par bharosa na karein.
+            <strong>Status (04/08/2026):</strong> 6vi kist abhi pending hai.  Next kist date officially announce nahi hua. Jan Soochna portal check karte rahein, kisi bhi WhatsApp forward wali tareekh par bharosa na karein.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <Fig
           src="hero.webp"
           alt="Rajasthan ka kisan apne khet mein mobile par Kisan Samman Nidhi ka status dekh raha hai"
-          caption="Rajasthan Kisan Samman Nidhi — PM Kisan ke ₹6,000 ke saath state ka ₹3,000, total ₹9,000 saalana"
+          caption="Rajasthan Kisan Samman Nidhi. PM Kisan ke ₹6,000 ke saath state ka ₹3,000, total ₹9,000 saalana"
           width={1200}
           height={675}
           priority
@@ -69,32 +69,32 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <p>
           Ek minute, pehle ye samajh lo — confusion wahan shuru hoti hai jahan log ₹12,000 wale number ke peeche bhaagte
-          hain. Wo abhi tak sirf ek ghoshna hai — khaate mein aane wali raashi nahi.
+          hain. Wo abhi tak sirf ek ghoshna hai. Khaate mein aane wali raashi nahi.
           Umeed rakhna galat nahi, par usi par budget banana galat hai. Neeche dono
           baatein saaf-saaf alag karke rakhi hain: kya pakka hai, aur kya sirf umeed.
         </p>
 
-        <h2>6vi Kist — Ruki Kyun Hai</h2>
+        <h2>6vi Kist. Ruki Kyun Hai</h2>
 
         <p>
-          Pehli paanch kiste time par aa chuki hain — koi issue nahi hua. 6vi kist
+          Pehli paanch kiste time par aa chuki hain. Koi issue nahi hua. 6vi kist
           verification aur data-matching mein atki hai. Kab aayegi? Next kist ki date
           officially announce nahi hui. Intezaar khalta hai, samajh sakta hoon, par afwaahon se date nahi
-          banti — Jan Soochna portal check karte rahein. Aur bas, yehi tha is kist ka scene.
+          banti. Jan Soochna portal check karte rahein. Aur bas, yehi tha is kist ka scene.
         </p>
 
         <p>
           Paimaana samajhna zaroori hai. Media reports ke mutabik is phase mein karib{' '}
-          <strong>66.56 lakh kisan</strong> aur <strong>₹665 crore se zyada</strong> ki raashi shaamil hai — itni badi
+          <strong>66.56 lakh kisan</strong> aur <strong>₹665 crore se zyada</strong> ki raashi shaamil hai. Itni badi
           list mein Aadhaar, bank aur land record ka milaan hone mein waqt lagta hai, aur ek bhi field na mile to wo
           record pending mein chala jaata hai. April 2026 mein jo tareekh log maan kar baithe the wo bhi administrative
           wajah se aage khisak gayi thi. Isliye tareekh ka anumaan lagane se behtar hai ki apna record clear karwa lo.
         </p>
 
         <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-          <h3 className="font-bold text-amber-800 dark:text-amber-300 mb-2 text-sm">Farmer ID — ye naya pech hai, dhyan do</h3>
+          <h3 className="font-bold text-amber-800 dark:text-amber-300 mb-2 text-sm">Farmer ID. Ye naya pech hai, dhyan do</h3>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-            Ab state ki list Farmer ID (digital kisan pehchaan) se judne lagi hai — isme e-KYC, land seeding aur DBT
+            Ab state ki list Farmer ID (digital kisan pehchaan) se judne lagi hai. Isme e-KYC, land seeding aur DBT
             wala bank khaata, teeno ek jagah bandhe rehte hain. Jinki Farmer ID nahi bani, unka naam list mein{' '}
             <em>pending</em> ki taraf chala jaata hai aur kist ruk jaati hai.
           </p>
@@ -111,18 +111,18 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-5 my-6 not-prose">
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Yaad rakho:</strong> Rajasthan wali kist PM Kisan ki kist se bilkul alag time par aati hai — dono ka koi connection nahi. PM Kisan aa gaya aur state wala nahi, to chinta chhodo, ye normal hi hai.
+            <strong>Yaad rakho:</strong> Rajasthan wali kist PM Kisan ki kist se bilkul alag time par aati hai. Dono ka koi connection nahi. PM Kisan aa gaya aur state wala nahi, to chinta chhodo, ye normal hi hai.
           </p>
         </div>
 
-        <h2>7vi Kist Kab Aayegi — CM Kisan Samman Nidhi Rajasthan</h2>
+        <h2>7vi Kist Kab Aayegi. CM Kisan Samman Nidhi Rajasthan</h2>
 
         <p>
-          Bahut log seedha “7vi kist kab aayegi” search kar rahe hain — to saaf baat: <strong>7vi kist ka number 6vi ke baad lagega</strong>, aur 6vi abhi pending hai. Jab tak 6vi release nahi hoti, 7vi ki kisi bhi “confirm date” wali khabar ka koi matlab nahi. Internet ya WhatsApp par ghoom rahi tareekhein sirf andaaza hain — official date sirf Rajasthan sarkar ki ghoshna ya Jan Soochna portal se hi milegi. Jaise hi koi official update aayega, ye page usi din update hoga.
+          Bahut log seedha “7vi kist kab aayegi” search kar rahe hain. To saaf baat: <strong>7vi kist ka number 6vi ke baad lagega</strong>, aur 6vi abhi pending hai. Jab tak 6vi release nahi hoti, 7vi ki kisi bhi “confirm date” wali khabar ka koi matlab nahi. Internet ya WhatsApp par ghoom rahi tareekhein sirf andaaza hain. Official date sirf Rajasthan sarkar ki ghoshna ya Jan Soochna portal se hi milegi. Jaise hi koi official update aayega, ye page usi din update hoga.
         </p>
 
         <p>
-          Tab tak sabse kaam ki cheez ye hai: apna status check karke dekh lo ki aapka record clear hai — e-KYC, bank seeding aur Jan Aadhaar linking. Record atka hoga to 6vi ho ya 7vi, koi bhi kist nahi aayegi.
+          Tab tak sabse kaam ki cheez ye hai: apna status check karke dekh lo ki aapka record clear hai. E-KYC, bank seeding aur Jan Aadhaar linking. Record atka hoga to 6vi ho ya 7vi, koi bhi kist nahi aayegi.
         </p>
 
         <h2>Status Kaise Check Karein</h2>
@@ -132,7 +132,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <Fig
           src="status-check-phone.webp"
           alt="Kisan mobile par Jan Soochna portal kholkar Kisan Samman Nidhi ka payment status check kar raha hai"
-          caption="Status check ka koi paisa nahi — Jan Soochna portal mobile par bhi khul jaata hai"
+          caption="Status check ka koi paisa nahi. Jan Soochna portal mobile par bhi khul jaata hai"
         />
 
         <h3>Jan Soochna Portal</h3>
@@ -142,7 +142,7 @@ export default function RajasthanKisanSammanNidhi9000() {
           <li>"Mukhyamantri Kisan Samman Nidhi" search karke scheme select karo</li>
           <li>Aadhaar ya Jan Aadhaar number daalo</li>
           <li>Registered mobile par aaya OTP verify karo</li>
-          <li>Status saamne aa jaayega — Payment Successful, Pending, ya Rejected</li>
+          <li>Status saamne aa jaayega. Payment Successful, Pending, ya Rejected</li>
         </ol>
 
         <ExternalLinkButton url="https://jansoochna.rajasthan.gov.in" label="Jan Soochna Portal — Status Check" />
@@ -155,19 +155,19 @@ export default function RajasthanKisanSammanNidhi9000() {
           <li>Details bharkar status dekh lo</li>
         </ol>
 
-        <ExternalLinkButton url="https://rajsahakar.rajasthan.gov.in/citizen/cmkisanstatus" label="Cooperative Portal — CM Kisan Status" />
+        <ExternalLinkButton url="https://rajsahakar.rajasthan.gov.in/citizen/cmkisanstatus" label="Cooperative Portal. CM Kisan Status" />
 
         <h2>Eligible Kaun Hai, Kaun Nahi</h2>
 
         <p>
-          Yahan koi alag test nahi hai — jo PM Kisan pass karta hai, wahi yahan bhi eligible hota hai. Bas kuch bunyaadi sharten:
+          Yahan koi alag test nahi hai. Jo PM Kisan pass karta hai, wahi yahan bhi eligible hota hai. Bas kuch bunyaadi sharten:
         </p>
 
         <ul>
           <li>PM Kisan mein registered ho, e-KYC bhi complete ho. Wahan koi gadbad hai to yahan bhi wahi gadbad chalegi.</li>
           <li>Rajasthan ka permanent resident ho. Bahar se aakar yahan kheti karne wale is scheme mein nahi aate.</li>
           <li>Zameen apni ho. Landless mazdoor aur bataidar (tenant farmers) is scheme se bahar hain.</li>
-          <li>Bank account DBT-enabled ho — yahin paisa aata hai, kahin aur nahi.</li>
+          <li>Bank account DBT-enabled ho, yahin paisa aata hai, kahin aur nahi.</li>
         </ul>
 
         <p>
@@ -175,15 +175,15 @@ export default function RajasthanKisanSammanNidhi9000() {
         </p>
 
         <p>
-          Naye kisan ho aur abhi shuruaat ki hai? Pehle PM Kisan mein register karo (CSC centre ya online), e-KYC karwao, Patwari se land record verify karwao. Approval milte hi state wali list mein khud aa jaoge. Poora process district ke hisaab se 1-3 mahine le sakta hai — jaldi mat karna, ye normal speed hai.
+          Naye kisan ho aur abhi shuruaat ki hai? Pehle PM Kisan mein register karo (CSC centre ya online), e-KYC karwao, Patwari se land record verify karwao. Approval milte hi state wali list mein khud aa jaoge. Poora process district ke hisaab se 1-3 mahine le sakta hai. Jaldi mat karna, ye normal speed hai.
         </p>
 
         <h3>Pati-Patni Dono Le Sakte Hain?</h3>
         <p>
-          Nahi. Ek family — pati, patni, aur unmarried bachche — mein sirf ek hi vyakti eligible hota hai. Dono ne register karwa liya to ek registration cancel hoga, aur jitna extra le liya wo wapas bhi karna pad sakta hai. Detail mein <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">is article</Link> mein padho.
+          Nahi. Ek family, pati, patni, aur unmarried bachche, mein sirf ek hi vyakti eligible hota hai. Dono ne register karwa liya to ek registration cancel hoga, aur jitna extra le liya wo wapas bhi karna pad sakta hai. Detail mein <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega">is article</Link> mein padho.
         </p>
 
-        <h2>Paisa Nahi Aaya — Ab Kya</h2>
+        <h2>Paisa Nahi Aaya. Ab Kya</h2>
 
         <p>
           Pareshaan hone se pehle ek kaam karo: bank statement khud check karo. SMS kabhi-kabhi
@@ -192,27 +192,27 @@ export default function RajasthanKisanSammanNidhi9000() {
         </p>
 
         <p>
-          Kuch nahi mila to PFMS portal par dispatch status dekho. Wahan "Successful" dikhe aur bank mein na aaya ho, to branch jaakar NPCI mapping check karwao — zyadatar yahi wajah nikalti hai.
+          Kuch nahi mila to PFMS portal par dispatch status dekho. Wahan "Successful" dikhe aur bank mein na aaya ho, to branch jaakar NPCI mapping check karwao, zyadatar yahi wajah nikalti hai.
         </p>
 
         <Fig
           src="bank-visit.webp"
           alt="Kisan bank branch mein passbook lekar DBT payment aur NPCI mapping check karwa raha hai"
-          caption={'Portal par "Successful" dikhe par paisa na aaya ho — bank branch mein NPCI mapping check karwao'}
+          caption={'Portal par "Successful" dikhe par paisa na aaya ho, bank branch mein NPCI mapping check karwao'}
         />
 
         <p>
-          Fir bhi kuch samajh na aaye to Jan Soochna portal ki helpline 1800-180-6127 par call karein (ye number portal ke homepage par hi likha hai). Ya apne District Agriculture Office ya e-Mitra kiosk par jaakar case dikhaayein — status ka screenshot aur passbook saath rakhein.
+          Fir bhi kuch samajh na aaye to Jan Soochna portal ki helpline 1800-180-6127 par call karein (ye number portal ke homepage par hi likha hai). Ya apne District Agriculture Office ya e-Mitra kiosk par jaakar case dikhaayein, status ka screenshot aur passbook saath rakhein.
         </p>
 
         <p>
-          Aur agar online sab sahi dikh raha hai fir bhi paisa nahi aa raha — seedhe Patwari ya Tehsildar ke paas chale jao. Kai baar land record ka koi purana jhanjhat hota hai jo sirf ground level par hi sulajhta hai.
+          Aur agar online sab sahi dikh raha hai fir bhi paisa nahi aa raha, seedhe Patwari ya Tehsildar ke paas chale jao. Kai baar land record ka koi purana jhanjhat hota hai jo sirf ground level par hi sulajhta hai.
         </p>
 
         <h3>Patwari Ke Paas Jaane Se Pehle Ye Kaam Ghar Baithe Ho Jaata Hai</h3>
 
         <p>
-          Tehsil ke chakkar lagane se pehle apna land record khud padh lena samajhdari hai — Rajasthan
+          Tehsil ke chakkar lagane se pehle apna land record khud padh lena samajhdari hai. Rajasthan
           mein iska koi shulk nahi. <code>apnakhata.rajasthan.gov.in</code> (jise e-Dharti bhi kehte hain)
           kholein, apna zila chunein, phir tehsil aur gaon, aur khata number, khasra number ya malik ke
           naam se apni jamabandi nikaal lein.
@@ -222,12 +222,12 @@ export default function RajasthanKisanSammanNidhi9000() {
           Isse aap khud dekh sakte hain ki dikkat kahan hai: naam ki spelling galat hai, area kam-zyada
           dikh raha hai, ya virasat ke baad naam abhi tak purane malik ka hi chal raha hai. Yahi teen
           cheezein zyadatar rejection ke peeche hoti hain. Jab aap Patwari ke paas jaate hain to seedha
-          bata sakte hain ki kya theek karana hai — ye poori baat ek chakkar mein khatam kara deta hai.
+          bata sakte hain ki kya theek karana hai. Ye poori baat ek chakkar mein khatam kara deta hai.
         </p>
 
         <p>
           Online dekhna free hai, lekin agar kisi kaam ke liye certified copy chahiye to
-          wo e-Mitra se milti hai — lagbhag ₹10 per page. Portal se print nikaal kar reference ke liye
+          wo e-Mitra se milti hai. Lagbhag ₹10 per page. Portal se print nikaal kar reference ke liye
           rakh sakte hain, magar office mein certified copy hi chalti hai. Mutation (naam badalne) ki
           arzi bhi isi portal se lagti hai; Rajasthan ka apna record batata hai ki mutation case average
           taur par lagbhag 24 din mein nipat jaate hain — matlab kist ka intezaar karne se behtar hai ki
@@ -240,10 +240,10 @@ export default function RajasthanKisanSammanNidhi9000() {
           caption="Land record ka jhanjhat sirf Patwari ya Tehsil office mein hi theek hota hai"
         />
 
-        <h2>₹12,000 Ka Sach — Announcement Aur Notification Mein Fark Hai</h2>
+        <h2>₹12,000 Ka Sach. Announcement Aur Notification Mein Fark Hai</h2>
 
         <p>
-          CM Bhajanlal Sharma ne prastaav rakha hai ki state apna ₹3,000 wala hissa badhakar ₹6,000 kar de — jisse total ₹12,000 tak pahunch jaaye.  Ye abhi sirf ghoshna hai, official notification nahi aaya.
+          CM Bhajanlal Sharma ne prastaav rakha hai ki state apna ₹3,000 wala hissa badhakar ₹6,000 kar de, jisse total ₹12,000 tak pahunch jaaye.  Ye abhi sirf ghoshna hai, official notification nahi aaya.
         </p>
 
         <p>
@@ -253,11 +253,11 @@ export default function RajasthanKisanSammanNidhi9000() {
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
           <h3 className="font-bold text-yellow-800 dark:text-yellow-300 mb-2 text-sm">Savdhaan</h3>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-            WhatsApp aur YouTube par "₹12,000 aa gaye" jaisi khabrein ghoom rahi hain — ye sach nahi hain. Apna budget ₹9,000 ke hisaab se hi rakho. Badhotri aayi to bonus samjho, plan mat karo.
+            WhatsApp aur YouTube par "₹12,000 aa gaye" jaisi khabrein ghoom rahi hain. Ye sach nahi hain. Apna budget ₹9,000 ke hisaab se hi rakho. Badhotri aayi to bonus samjho, plan mat karo.
           </p>
         </div>
 
-        <h2>PM Kisan vs Rajasthan Wali Scheme — Kya Fark Hai</h2>
+        <h2>PM Kisan vs Rajasthan Wali Scheme. Kya Fark Hai</h2>
 
         <div className="overflow-x-auto my-8 not-prose">
           <table className="w-full border-collapse border border-gray-300 dark:border-gray-600 rounded-xl overflow-hidden text-sm shadow-sm">
@@ -294,17 +294,17 @@ export default function RajasthanKisanSammanNidhi9000() {
         </div>
 
         <p>
-          Yaad rakhne wali baat sirf ek hai: PM Kisan mein eligible ho to state wali mein bhi ho. Wahan koi issue (e-KYC pending, Aadhaar mismatch) hai to wahi issue yahan bhi chalega — dono ek doosre se juda hua hai.
+          Yaad rakhne wali baat sirf ek hai: PM Kisan mein eligible ho to state wali mein bhi ho. Wahan koi issue (e-KYC pending, Aadhaar mismatch) hai to wahi issue yahan bhi chalega. Dono ek doosre se juda hua hai.
         </p>
 
         <h2>Aksar Aane Wale Problems</h2>
 
         <p>
-          "PM Kisan aa gaya, Rajasthan wala nahi aaya" — normal hai, dono alag time par release hote hain. 15-20 din ka gap chalta hai. Ek mahine se zyada ho jaaye tab portal check karo.
+          "PM Kisan aa gaya, Rajasthan wala nahi aaya", normal hai, dono alag time par release hote hain. 15-20 din ka gap chalta hai. Ek mahine se zyada ho jaaye tab portal check karo.
         </p>
 
         <p>
-          "Status mein Rejected dikha raha hai" — usually Aadhaar aur land record ka naam match nahi karta, ya bank DBT-enabled nahi, ya family mein koi income tax payer hai, ya duplicate entry ban gayi hai. Patwari ke paas jaakar records theek karwao.
+          "Status mein Rejected dikha raha hai". Usually Aadhaar aur land record ka naam match nahi karta, ya bank DBT-enabled nahi, ya family mein koi income tax payer hai, ya duplicate entry ban gayi hai. Patwari ke paas jaakar records theek karwao.
         </p>
 
         <p>
@@ -316,7 +316,7 @@ export default function RajasthanKisanSammanNidhi9000() {
           nahi hai. Ek parivaar se ek hi benefit banta hai, aur Jan Aadhaar family record hi tay karta
           hai ki &ldquo;parivaar&rdquo; kaun hai. Zameen batwaare ke baad bhi agar Jan Aadhaar mein sab ek hi
           family ID mein hain, to system ek hi ghar ginta hai. Alag benefit chahiye to pehle Jan Aadhaar
-          mein parivaar alag hona chahiye — aur wo tabhi hota hai jab waqai alag ghar ho, kaagaz par
+          mein parivaar alag hona chahiye. Aur wo tabhi hota hai jab waqai alag ghar ho, kaagaz par
           dikhawe se nahi.
         </p>
 
@@ -333,23 +333,23 @@ export default function RajasthanKisanSammanNidhi9000() {
           <li>Aadhaar Card (PM Kisan se linked)</li>
           <li>Jan Aadhaar (Rajasthan-specific ID)</li>
           <li>Bank Passbook, DBT-enabled account ka</li>
-          <li>Land Records — Jamabandi ya Khatauni</li>
+          <li>Land Records. Jamabandi ya Khatauni</li>
           <li>Mobile Number, Aadhaar se linked (OTP ke liye)</li>
         </ul>
 
         <Fig
           src="documents-checklist.webp"
-          alt="Rajasthan Kisan Samman Nidhi ke liye zaroori documents — bank passbook, Aadhaar, Jan Aadhaar aur land record"
-          caption="Status check ya correction ke waqt yeh kagaz saath rakho — passbook, Aadhaar, Jan Aadhaar aur jamabandi"
+          alt="Rajasthan Kisan Samman Nidhi ke liye zaroori documents, bank passbook, Aadhaar, Jan Aadhaar aur land record"
+          caption="Status check ya correction ke waqt yeh kagaz saath rakho, passbook, Aadhaar, Jan Aadhaar aur jamabandi"
         />
 
         <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Fraud se bachein:</strong> ye scheme poori tarah free aur automatic hai. Koi agent "registration karwane" ke naam par paisa maange, to wo fraud hai. Paisa mat do — Rajasthan Anti-Corruption Bureau ki helpline <strong>1064</strong> par shikayat darj karwaayein.
+            <strong>Fraud se bachein:</strong> ye scheme poori tarah free aur automatic hai. Koi agent "registration karwane" ke naam par paisa maange, to wo fraud hai. Paisa mat do. Rajasthan Anti-Corruption Bureau ki helpline <strong>1064</strong> par shikayat darj karwaayein.
           </p>
         </div>
 
-        <h2>Jan Aadhaar — Rajasthan Ka Asli Gatekeeper</h2>
+        <h2>Jan Aadhaar. Rajasthan Ka Asli Gatekeeper</h2>
 
         <p>
           Dusre rajyon ke kisan sirf Aadhaar aur bank ki chinta karte hain. Rajasthan mein
@@ -358,7 +358,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         </p>
 
         <p>
-          Sikar se ek call aayi thi, pareshaan awaaz thi — PM Kisan har baar time par
+          Sikar se ek call aayi thi, pareshaan awaaz thi. PM Kisan har baar time par
           aata tha, par state wala ₹1,000 do kist se gayab. Wajah nikli Jan Aadhaar: shaadi ke
           baad uska naam purane parivaar ki family ID mein hi chal raha tha. Record alag hote hi
           agli kist se paisa aana shuru ho gaya.
@@ -373,7 +373,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <p>
           Ek baat jo kaagaz par likhi hai lekin log kam jaante hain: Jan Aadhaar mein ghar ka
-          mukhiya aurat hoti hai — 18 saal se upar ki mahila. Agar ghar mein aisi koi
+          mukhiya aurat hoti hai. 18 saal se upar ki mahila. Agar ghar mein aisi koi
           mahila nahi hai, tab 21 saal se upar ka purush mukhiya banta hai. Iska seedha asar aap par ye
           padta hai: kist us bank account mein jaa sakti hai jo mukhiya ke naam par mapped hai, jabki
           zameen kisi aur sadasya ke naam par ho. Ghar mein ye baat pehle se saaf kar lena behtar hai,
@@ -384,14 +384,14 @@ export default function RajasthanKisanSammanNidhi9000() {
         <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-5 my-6 not-prose">
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
             <strong>Teen jagah, ek naam:</strong> aapka naam Aadhaar mein, Jan Aadhaar mein, aur
-            jamabandi mein — teeno mein ek jaisa hona chahiye. Ek jagah &ldquo;Rameshwar&rdquo;, dusri jagah
+            jamabandi mein. Teeno mein ek jaisa hona chahiye. Ek jagah &ldquo;Rameshwar&rdquo;, dusri jagah
             &ldquo;Rameshwar Lal&rdquo;? System do alag aadmi maan leta hai. Rajasthan mein rejection ki
-            sabse aam technical wajah yahi hai — aur sabse aasaan fix bhi.
+            sabse aam technical wajah yahi hai. Aur sabse aasaan fix bhi.
           </p>
         </div>
 
         <p>
-          Naya sadasya jodna ho — shaadi, janm, ya koi chhoot gaya ho — to
+          Naya sadasya jodna ho, shaadi, janm, ya koi chhoot gaya ho. To
           <code>janaadhaar.rajasthan.gov.in</code> par family ID se login karke OTP verify karein, phir
           &ldquo;Add Member&rdquo; se naya Aadhaar number jodein. Navjaat bachche ka Aadhaar na ho to birth
           certificate lekar nazdeeki e-Mitra kiosk jaana padta hai.
@@ -405,7 +405,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <p>
           Lekin &ldquo;automatic&rdquo; ka matlab &ldquo;bina shart&rdquo; nahi hai. Rajasthan mein ek extra layer hai jo dusre
-          rajyon mein nahi milti — Jan Aadhaar. State ka har DBT payment Jan Aadhaar-linked bank
+          rajyon mein nahi milti. Jan Aadhaar. State ka har DBT payment Jan Aadhaar-linked bank
           account se hokar jaata hai. Yahi farak hai. PM Kisan ka paisa seedha Aadhaar-NPCI
           raste se aata hai; state ka ₹1,000 Jan Aadhaar family record se match hone ke baad
           hi release hota hai. Isi ek farak se sabse zyada payment atakte hain, aur
@@ -447,14 +447,14 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <ExternalLinkButton
           url="https://jansoochna.rajasthan.gov.in"
-          label="Official Portal — Jan Soochna Rajasthan"
+          label="Official Portal. Jan Soochna Rajasthan"
         />
 
         <h2>Scheme Ka Safar — ₹2,000 Se ₹3,000 Tak</h2>
 
         <p>
           Aaj jo ₹3,000 milte hain, wo shuru se ₹3,000 nahi the. Baat yeh hai ki ye jaan lena kaam aata hai, kyunki
-          purane articles aur purane YouTube videos aaj bhi purani raqam bata rahe hain — aur wahi
+          purane articles aur purane YouTube videos aaj bhi purani raqam bata rahe hain. Aur wahi
           confusion ka ek bada source hai.
         </p>
 
@@ -462,7 +462,7 @@ export default function RajasthanKisanSammanNidhi9000() {
           Budget 2024-25 mein Rajasthan sarkar ne pehli baar ailaan kiya ki PM Kisan ke ₹6,000 ke
           upar state apni taraf se ₹2,000 saalana dega. Scheme zameen par 30/06/2024
           ko Tonk se launch hui. Uske agle saal, Budget 2025-26 mein, ye state hissa
-          ₹2,000 se badhakar ₹3,000 kar diya gaya — aur tabhi se total ₹9,000 ka aankda
+          ₹2,000 se badhakar ₹3,000 kar diya gaya. Aur tabhi se total ₹9,000 ka aankda
           bana. Matlab ₹9,000 wala figure khud ek badhotri ka nateeja hai, shuruaati raqam nahi.
         </p>
 
@@ -488,12 +488,12 @@ export default function RajasthanKisanSammanNidhi9000() {
               </tr>
               <tr className="bg-white dark:bg-gray-800">
                 <td className="border border-gray-300 dark:border-gray-600 p-3">Budget 2025-26</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">Badhotri — total ₹9,000 bana</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Badhotri, total ₹9,000 bana</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹3,000 saalana</td>
               </tr>
               <tr className="bg-gray-50 dark:bg-gray-700">
                 <td className="border border-gray-300 dark:border-gray-600 p-3">18/10/2025</td>
-                <td className="border border-gray-300 dark:border-gray-600 p-3">Nadbai, Bharatpur se kist — 71.8 lakh kisan, ₹718 crore</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Nadbai, Bharatpur se kist, 71.8 lakh kisan, ₹718 crore</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹1,000 per kisan</td>
               </tr>
             </tbody>
@@ -502,7 +502,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <p>
           Ye aakhri line dhyan se padhein: ek kist mein 71.8 lakh kisan aur ₹718 crore. Isse do baatein
-          pata chalti hain — ek, scheme ka scale bahut bada hai; do, itne bade beneficiary base ko verify
+          pata chalti hain. Ek, scheme ka scale bahut bada hai; do, itne bade beneficiary base ko verify
           karne mein waqt lagta hai, aur yahi wajah hai ki kist ki tareekh aage-peeche hoti rehti hai.
           Ye kisi ek kisan ki file ka issue nahi, poore system ka size hai.
         </p>
@@ -515,7 +515,7 @@ export default function RajasthanKisanSammanNidhi9000() {
           <li><Link href="/rajya-yojana/annadata-sukhibhava-status-check-2026">Annadata Sukhibhava (Andhra Pradesh)</Link></li>
           <li><Link href="/rajya-yojana/namo-shetkari-yojana-status-check-2026">Namo Shetkari Mahasanman Nidhi (Maharashtra)</Link></li>
           <li><Link href="/rajya-yojana/mp-kisan-kalyan-yojana-kist-status">MP CM Kisan Kalyan Yojana</Link></li>
-          <li><Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">Sab States Ki List — Ek Table Mein</Link></li>
+          <li><Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">Sab States Ki List. Ek Table Mein</Link></li>
         </ul>
 
         <h2>Kuch Aur Sawaal</h2>
@@ -534,7 +534,7 @@ export default function RajasthanKisanSammanNidhi9000() {
           }}
         />
         <section className="mb-8 not-prose">
-          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Rajasthan Kisan Samman Nidhi — ₹9,000 wale sawaal jo sab poochhte hain</p>
+          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Rajasthan Kisan Samman Nidhi. ₹9,000 wale sawaal jo sab poochhte hain</p>
           <div className="space-y-3">
             {faqs.map(({ q, a }) => (
               <details
@@ -562,7 +562,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         </p>
 
         <p>
-          ₹12,000 ka notification aa gaya to hum yahan sabse pehle update karenge. Tab tak Jan Soochna portal apna dost hai — WhatsApp forwards nahi.
+          ₹12,000 ka notification aa gaya to hum yahan sabse pehle update karenge. Tab tak Jan Soochna portal apna dost hai. WhatsApp forwards nahi.
         </p>
 
         <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">

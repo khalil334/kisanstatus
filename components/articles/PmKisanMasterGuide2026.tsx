@@ -10,9 +10,9 @@ const MODIFIED = '2026-08-11T13:56:37+05:30';
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
-  { slug: 'PmKisan25viKist2027', title: '25vi Kist 2027 — Kab Aayegi' },
+  { slug: 'PmKisan25viKist2027', title: '25vi Kist 2027. Kab Aayegi' },
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed — 7 Fixes' },
+  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed, 7 Fixes' },
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
   { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
   { slug: 'PmKisanVoluntarySurrenderGuide', title: 'Voluntary Surrender Guide' },
@@ -57,7 +57,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Master Guide 2026</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan Guide 2026: Registration, eKYC, Status Aur Payment Fix — Sab Ek Jagah
+            PM Kisan Guide 2026: Registration, eKYC, Status Aur Payment Fix. Sab Ek Jagah
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
@@ -73,7 +73,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/pm-kisan-complete-guide/hero.webp'}
-            alt="PM Kisan scheme complete guide 2026 — registration, eKYC, payment status, problem solutions"
+            alt="PM Kisan scheme complete guide 2026, registration, eKYC, payment status, problem solutions"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -82,7 +82,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            PM Kisan Master Guide 2026 — Har Problem Ka Ek Saath Hal
+            PM Kisan Master Guide 2026. Har Problem Ka Ek Saath Hal
           </p>
         </div>
 
@@ -110,18 +110,18 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
         </section>
 
         <section className="mb-8">
-          <SH>Kaun Eligible NAHI Hai — Pehle Ye Dekh Lo</SH>
+          <SH>Kaun Eligible NAHI Hai. Pehle Ye Dekh Lo</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Bahut log apply kar dete hain aur baad mein recovery notice aata hai. Scheme ke official guidelines mein ek exclusion list hai — in categories mein aate ho toh paisa milega hi nahi, aur galti se mil gaya toh wapas dena padega:
+            Bahut log apply kar dete hain aur baad mein recovery notice aata hai. Scheme ke official guidelines mein ek exclusion list hai. In categories mein aate ho toh paisa milega hi nahi, aur galti se mil gaya toh wapas dena padega:
           </p>
           <ul className="space-y-2 mb-4">
             {[
               'Income tax bharne wale — pichhle assessment year mein tax file kiya hai toh out',
               'Serving ya retired government employee (Group D / Class IV chhod kar)',
               '\u20B910,000 ya usse zyada monthly pension pane wale retired log',
-              'Doctor, engineer, vakil, CA, architect — jo practice kar rahe hain',
-              'Constitutional post wale — current ya former MP, MLA, minister, mayor waghera',
-              'Institutional landholder — zameen kisi trust/company/sanstha ke naam ho',
+              'Doctor, engineer, vakil, CA, architect, jo practice kar rahe hain',
+              'Constitutional post wale, current ya former MP, MLA, minister, mayor waghera',
+              'Institutional landholder, zameen kisi trust/company/sanstha ke naam ho',
             ].map((item, i) => (
               <li key={i} className="flex gap-2 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-xs text-[var(--color-text-muted)]">
                 <span className="text-red-600 dark:text-red-400 font-bold shrink-0">✗</span>
@@ -130,10 +130,10 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             ))}
           </ul>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ek aur baat jo log miss karte hain — benefit <strong>parivar</strong> ke hisaab se milta hai, vyakti ke hisaab se nahi. Parivar matlab pati, patni aur nabalig bachche. Dono ke naam zameen hai tab bhi ghar mein ek hi member ko ₹6,000 milenge. Poora rule <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega" className="text-[var(--color-primary)] underline">pati-patni wale page</Link> par samjhaya hai.
+            Ek aur baat jo log miss karte hain. Benefit <strong>parivar</strong> ke hisaab se milta hai, vyakti ke hisaab se nahi. Parivar matlab pati, patni aur nabalig bachche. Dono ke naam zameen hai tab bhi ghar mein ek hi member ko ₹6,000 milenge. Poora rule <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega" className="text-[var(--color-primary)] underline">pati-patni wale page</Link> par samjhaya hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Agar aap exclusion list mein aate ho aur kist aa chuki hai, toh khud se surrender karna sabse safe rasta hai — process <Link href="/articles/PmKisanVoluntarySurrenderGuide" className="text-[var(--color-primary)] underline">voluntary surrender guide</Link> mein hai. Notice aa jaye uske baad ka tarika <Link href="/articles/hi/recovery-notice" className="text-[var(--color-primary)] underline">recovery notice article</Link> mein alag se likha hai.
+            Agar aap exclusion list mein aate ho aur kist aa chuki hai, toh khud se surrender karna sabse safe rasta hai. Process <Link href="/articles/PmKisanVoluntarySurrenderGuide" className="text-[var(--color-primary)] underline">voluntary surrender guide</Link> mein hai. Notice aa jaye uske baad ka tarika <Link href="/articles/hi/recovery-notice" className="text-[var(--color-primary)] underline">recovery notice article</Link> mein alag se likha hai.
           </p>
         </section>
 
@@ -160,7 +160,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
                Abhi Registration Karo
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official PM Kisan portal par jakar apna <strong>pm kisan online registration</strong> karo — redirect 10 second ka hai.
+              Official PM Kisan portal par jakar apna <strong>pm kisan online registration</strong> karo, redirect 10 second ka hai.
             </p>
             <OfficialLinkButton
               title="PM Kisan Registration Portal"
@@ -195,7 +195,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-complete-guide/documents-checklist.webp"
-            alt="PM Kisan documents checklist — registration ke liye zaroori documents"
+            alt="PM Kisan documents checklist, registration ke liye zaroori documents"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -227,14 +227,14 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             CSC center jaao. Wahan fingerprint scan hoga. ₹20-30 charge lag sakta hai. 24 ghante mein complete ho jata hai.
           </p>
           <DB>
-            <strong>Khatre Ki Ghanti:</strong> eKYC free hai - ye government ne bola hai. Koi ₹100+ maange toh fraud hai. 155261 par usi din complaint karo. Waise, PM Kisan ke naam par chalne wali fake schemes bhi bahut hain — jaise <Link href="/yojana/pm-kisan-khad-yojana-11000-sach" className="underline font-bold">₹11,000 wali &ldquo;Khad Yojana&rdquo;</Link>, jo officially exist hi nahi karti.
+            <strong>Khatre Ki Ghanti:</strong> eKYC free hai - ye government ne bola hai. Koi ₹100+ maange toh fraud hai. 155261 par usi din complaint karo. Waise, PM Kisan ke naam par chalne wali fake schemes bhi bahut hain. Jaise <Link href="/yojana/pm-kisan-khad-yojana-11000-sach" className="underline font-bold">₹11,000 wali &ldquo;Khad Yojana&rdquo;</Link>, jo officially exist hi nahi karti.
           </DB>
         </section>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-complete-guide/ekyc-process.webp"
-            alt="PM Kisan eKYC process — OTP and biometric verification methods"
+            alt="PM Kisan eKYC process. OTP and biometric verification methods"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -242,7 +242,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            eKYC Process — OTP aur Biometric Dono Tarike
+            eKYC Process. OTP aur Biometric Dono Tarike
           </p>
         </div>
 
@@ -301,7 +301,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
         </section>
 
         <section className="mb-8">
-          <SH>Payment Kyun Nahi Aayi? — 5 Reasons</SH>
+          <SH>Payment Kyun Nahi Aayi?, 5 Reasons</SH>
           <div className="space-y-3">
             {[
               { reason: 'eKYC Pending', fix: 'eKYC nipta lo - portal ya CSC se, dono mein se koi bhi' },
@@ -321,7 +321,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-complete-guide/payment-success.webp"
-            alt="PM Kisan payment success — ₹2000 credited to bank account"
+            alt="PM Kisan payment success. ₹2000 credited to bank account"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -329,7 +329,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Payment Success — ₹2,000 Direct Bank Account Mein
+            Payment Success. ₹2,000 Direct Bank Account Mein
           </p>
         </div>
 
@@ -442,18 +442,18 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4 mb-3">
-            Table mein gap dekho — November se March char mahine, March se June teen. Rule saal mein teen kist ka hai, par zameen par timing aage-peeche hoti rehti hai. 24vi ke liye news mein October chal raha hai, lekin pmkisan.gov.in ya PIB par koi tareekh notify nahi hui — isliye humne &quot;Expected&quot; likha hai, &quot;confirm&quot; nahi. Live update <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline font-medium">24vi kist page</Link> par rehta hai.
+            Table mein gap dekho. November se March char mahine, March se June teen. Rule saal mein teen kist ka hai, par zameen par timing aage-peeche hoti rehti hai. 24vi ke liye news mein October chal raha hai, lekin pmkisan.gov.in ya PIB par koi tareekh notify nahi hui — isliye humne &quot;Expected&quot; likha hai, &quot;confirm&quot; nahi. Live update <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline font-medium">24vi kist page</Link> par rehta hai.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Table mein apni koi kist &quot;Paid&quot; dikh rahi hai par account mein paisa nahi aaya — to wajah teen jagah se ek hoti hai: <Link href="/articles/PmKisanPaymentFailedFix2026" className="text-[var(--color-primary)] underline">payment failed</Link> (bank/NPCI ka issue), <Link href="/articles/PmKisanEkycOnline2026" className="text-[var(--color-primary)] underline">eKYC pending</Link>, ya <Link href="/articles/PmKisanLandSeedingForm" className="text-[var(--color-primary)] underline">land seeding</Link> atka hua. Teeno ka poora fix apne page par hai.
+            Table mein apni koi kist &quot;Paid&quot; dikh rahi hai par account mein paisa nahi aaya. To wajah teen jagah se ek hoti hai: <Link href="/articles/PmKisanPaymentFailedFix2026" className="text-[var(--color-primary)] underline">payment failed</Link> (bank/NPCI ka issue), <Link href="/articles/PmKisanEkycOnline2026" className="text-[var(--color-primary)] underline">eKYC pending</Link>, ya <Link href="/articles/PmKisanLandSeedingForm" className="text-[var(--color-primary)] underline">land seeding</Link> atka hua. Teeno ka poora fix apne page par hai.
           </p>
         </section>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-complete-guide/state-map.webp"
-            alt="PM Kisan state-wise beneficiary map — sabhi states ka status"
+            alt="PM Kisan state-wise beneficiary map, sabhi states ka status"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -466,7 +466,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
         </div>
 
         <section className="mb-8">
-          <SH>10 Common Problems — Quick Fixes</SH>
+          <SH>10 Common Problems. Quick Fixes</SH>
           <div className="space-y-2">
             {[
               'OTP nahi aa raha - Mobile Aadhaar se linked hai? Pehle ye check karo',
@@ -514,7 +514,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-complete-guide/rejection-fix.webp"
-            alt="PM Kisan rejection fix guide — application reject hone par kya karein"
+            alt="PM Kisan rejection fix guide, application reject hone par kya karein"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -522,7 +522,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Rejection Fix — Application Reject Hone Par Kya Karein
+            Rejection Fix. Application Reject Hone Par Kya Karein
           </p>
         </div>
 
@@ -534,14 +534,14 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Payment Rukne Ki Teen Wajahein — Aur Teeno Ka Ilaaj</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Payment Rukne Ki Teen Wajahein. Aur Teeno Ka Ilaaj</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
             Is guide mein jitne bhi problems cover hue, unme se lagbhag har atki payment in teen mein se kisi ek par jaakar rukti hai:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
-            <li>eKYC pending — portal par OTP se ya CSC par biometric se complete karein</li>
+            <li>eKYC pending, portal par OTP se ya CSC par biometric se complete karein</li>
             <li>NPCI seeding nahi hui — bank branch se “DBT enabled” confirm karwayein</li>
-            <li>Naam teeno record mein alag — Aadhaar, bank aur PM Kisan mein spelling tak same karwayein</li>
+            <li>Naam teeno record mein alag. Aadhaar, bank aur PM Kisan mein spelling tak same karwayein</li>
           </ol>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mt-3">
             Naye registration se pehle bhi yahi teen cheezein pehle se durust kar lena sabse zyada time bachata hai.
@@ -553,7 +553,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
              PM Kisan Official Portal
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            <strong>PM Kisan registration</strong>, <strong>eKYC</strong>, <strong>payment status check</strong>, ya koi bhi kaam ke liye official portal par jaayein — countdown ke baad aap seedhe pmkisan.gov.in par honge.
+            <strong>PM Kisan registration</strong>, <strong>eKYC</strong>, <strong>payment status check</strong>, ya koi bhi kaam ke liye official portal par jaayein, countdown ke baad aap seedhe pmkisan.gov.in par honge.
           </p>
           <OfficialLinkButton
             title="PM Kisan Official Portal"
@@ -568,7 +568,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
 
         <CalcBanner
           title="Apna Benefit Calculate Karo"
-          desc="Kitni installments mili, kitni pending — sab jaano"
+          desc="Kitni installments mili, kitni pending. Sab jaano"
           primaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Calculator Kholo →' }}
           secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />

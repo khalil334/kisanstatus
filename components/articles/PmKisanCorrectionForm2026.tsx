@@ -40,7 +40,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Gender/DOB correction aur land record mismatch ka solution pm kisan portal par online ho jayega?',
-    a: 'Gender aur DOB correction thoda tricky hai. Agar portal par edit option aa raha hai toh kar sakte ho, lekin aksar ye fields locked hoti hain. Aise mein CSC jana padta hai. Land record mismatch ka solution portal par nahi hota — iske liye tumhe apne district ke Agriculture Officer ya Patwari ke paas jaake land records (Khatauni) update karwane honge. Jab sarkari records mein naam aur zameen sahi ho jayegi, tabhi portal par reflect hogi.',
+    a: 'Gender aur DOB correction thoda tricky hai. Agar portal par edit option aa raha hai toh kar sakte ho, lekin aksar ye fields locked hoti hain. Aise mein CSC jana padta hai. Land record mismatch ka solution portal par nahi hota. Iske liye tumhe apne district ke Agriculture Officer ya Patwari ke paas jaake land records (Khatauni) update karwane honge. Jab sarkari records mein naam aur zameen sahi ho jayegi, tabhi portal par reflect hogi.',
   },
 ];
 
@@ -58,7 +58,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Details Fix Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan Correction Form Kaise Bharein — Naam, Aadhaar, Bank Details Galat Hai To Kya Karein 2026
+            PM Kisan Correction Form Kaise Bharein. Naam, Aadhaar, Bank Details Galat Hai To Kya Karein 2026
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
@@ -72,22 +72,22 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
       <div className="container-site max-w-3xl py-8">
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          PM Kisan ki baat ho rahi hai toh sabse pehli problem jo har kisan ko aati hai — <strong>galat details</strong>.
+          PM Kisan ki baat ho rahi hai toh sabse pehli problem jo har kisan ko aati hai. <strong>galat details</strong>.
         </p>
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Haan, bilkul wahi. Naam mein spelling mistake, bank account number galat, IFSC code mismatch, Aadhaar seeding error... ye sab chhoti chhoti cheezein lagti hain lekin inki wajah se <strong>poori kist ruk jaati hai</strong>.
         </p>
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Sabse aam case naam ki spelling ka hota hai: portal par "RAMESH KUMAR" aur bank mein "RAMESH KUAMR" — bas ek letter ka fark, aur kist atak jaati hai.
+          Sabse aam case naam ki spelling ka hota hai: portal par "RAMESH KUMAR" aur bank mein "RAMESH KUAMR". Bas ek letter ka fark, aur kist atak jaati hai.
         </p>
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Ye dikkat hazaron kisanon ke saath hoti hai har saal. Aage ka process yahan diya hai — isme tumhe bataunga ki <strong>PM Kisan correction form kaise bharein</strong> — step-by-step, bilkul simple tarike se. Chahe naam ki spelling online theek karni ho, bank account update karna ho, ya phir Aadhaar seeding error fix karna ho... sab kuch cover karenge.
+          Ye dikkat hazaron kisanon ke saath hoti hai har saal. Aage ka process yahan diya hai. Isme tumhe bataunga ki <strong>PM Kisan correction form kaise bharein</strong>, step-by-step, bilkul simple tarike se. Chahe naam ki spelling online theek karni ho, bank account update karna ho, ya phir Aadhaar seeding error fix karna ho... sab kuch cover karenge.
         </p>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/pm-kisan-correction-form-2026/pm-kisan-correction-hero.webp'}
-            alt="PM Kisan correction form 2026 — farmer fixing details on mobile phone in village"
+            alt="PM Kisan correction form 2026, farmer fixing details on mobile phone in village"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -141,11 +141,11 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
             <SI n={2}>Farmers Corner ke page par <strong>"Edit Aadhaar Details"</strong> dhundo aur click karo. Ye option specifically un logon ke liye hai jinhone khud registration kiya tha aur ab usmein sudhaar karna chahte hain.</SI>
             <SI n={3}>Ab apna <strong>Registration Number</strong> daalo. Yaad nahi hai? Neeche "Know your registration no." link se Aadhaar ya mobile number se retrieve kar lo.</SI>
             <SI n={4}>Captcha code type karo aur <strong>"Get Data"</strong> button par click karo.</SI>
-            <SI n={5}>Tumhari saari details screen par aa jayengi. Ab edit details wale section mein galat cheezon ko sahi karo — naam, bank account, IFSC, ya mobile number.</SI>
+            <SI n={5}>Tumhari saari details screen par aa jayengi. Ab edit details wale section mein galat cheezon ko sahi karo, naam, bank account, IFSC, ya mobile number.</SI>
             <SI n={6}>Sahi karne ke baad niche <strong>"Update"</strong> button par click kar do. OTP aayega, verify karo. Bas ho gaya!</SI>
           </StepList>
           <IB>
-            <strong>Chhota Sa Nuskha:</strong> Naam edit karte waqt dhyan rakhna — spelling bilkul wahi likho jo Aadhaar card aur bank passbook par hai. Ek space ya comma ka bhi fark payment rok sakta hai. Agar OTP nahi aa raha toh iske liye CSC jana padega, online koi doosra rasta nahi hai. Kabhi kabhi bank details update karte waqt server issue ki wajah se page kaam nahi karta — aise mein 2-3 ghante baad try karo.
+            <strong>Chhota Sa Nuskha:</strong> Naam edit karte waqt dhyan rakhna, spelling bilkul wahi likho jo Aadhaar card aur bank passbook par hai. Ek space ya comma ka bhi fark payment rok sakta hai. Agar OTP nahi aa raha toh iske liye CSC jana padega, online koi doosra rasta nahi hai. Kabhi kabhi bank details update karte waqt server issue ki wajah se page kaam nahi karta, aise mein 2-3 ghante baad try karo.
           </IB>
         </section>
 
@@ -179,7 +179,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
             <strong>Kitna Kharcha?</strong> CSC par is kaam ka charge aam taur par ₹20 se ₹30 ke aas-paas hota hai. Agar koi ₹100-200 maang raha hai toh usko mat do, dusre center par chale jao. Kuch log form ka PDF khud download karke offline bharne ki koshish karte hain, lekin online submission ke liye CSC ya portal hi zaroori hai.
           </WB>
           <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
-            <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">Self Correction vs CSC Correction — Kaunsa Behtar?</p>
+            <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">Self Correction vs CSC Correction. Kaunsa Behtar?</p>
             <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
               Farq sirf speed ka hai. Online khud karo toh free hai par OTP chahiye. CSC se karo toh ₹30 lagte hain par biometric se instant verify ho jata hai. Agar mobile number active hai toh khud karo, agar band hai toh CSC jao.
             </p>
@@ -189,7 +189,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
         <section className="mb-8">
           <SH>Bank Account Correction Alag Se Kaise Kare (Bank Branch Visit)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ek baat samajh lo — bank account update karna portal se alag process hai. Portal par tum naya number daal sakte ho, lekin agar bank ke system mein Aadhaar seeding nahi hai toh paisa aayega nahi.
+            Ek baat samajh lo, bank account update karna portal se alag process hai. Portal par tum naya number daal sakte ho, lekin agar bank ke system mein Aadhaar seeding nahi hai toh paisa aayega nahi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Isliye pehle bank jao. Branch manager se milo aur bolo: <em>"Mera PM Kisan ka paisa nahi aa raha, please Aadhaar seeding kar do aur NPCI mapping check kar lo."</em>
@@ -198,7 +198,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
             Wo ek form denge (Aadhaar Seeding Form). Bharo, sign karo, submit karo. Jab wo backend se ye seeding error fix kar denge, tab portal par jaake naya account number update karna.
           </p>
           <DB>
-            <strong>Zaruri Baat:</strong> Purana bank account tab tak band mat karna jab tak naye account mein pehli kist na aa jaye. Kabhi kabhi transition mein 1-2 mahine lag jate hain. Bank branch visit kiye bina ye kaam online nahi hoga — seeding ke liye jaana hi padega. Status mein agar "seeding pending" dikh raha hai toh iska matlab bank ne abhi NPCI mapper update nahi kiya — 7-10 din wait karo.
+            <strong>Zaruri Baat:</strong> Purana bank account tab tak band mat karna jab tak naye account mein pehli kist na aa jaye. Kabhi kabhi transition mein 1-2 mahine lag jate hain. Bank branch visit kiye bina ye kaam online nahi hoga. Seeding ke liye jaana hi padega. Status mein agar "seeding pending" dikh raha hai toh iska matlab bank ne abhi NPCI mapper update nahi kiya, 7-10 din wait karo.
           </DB>
         </section>
 
@@ -232,7 +232,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
             Sabse bada sawal — correction ke baad kitne din mein paisa aayega? Jab details verify ho jayengi, agli scheduled kist mein paisa aa jayega. Agar beech mein kist release hui thi aur tumhari miss ho gayi thi, toh arrears ke roop mein 15-30 din mein extra amount credit hoga.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Aur ruki hui kist ka kya? Agar aap eligible the aur sirf details ki galti se payment ruki thi, toh fix hone ke baad pending kistein release ho jaati hain. Haan, agar us period mein aap eligible hi nahi the, toh woh paisa nahi milta — iska niyam alag hai.
+            Aur ruki hui kist ka kya? Agar aap eligible the aur sirf details ki galti se payment ruki thi, toh fix hone ke baad pending kistein release ho jaati hain. Haan, agar us period mein aap eligible hi nahi the, toh woh paisa nahi milta, iska niyam alag hai.
           </p>
         </section>
 
@@ -268,45 +268,45 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
         </section>
 
         <section className="mb-8">
-          <SH>15 Din Baad Bhi Update Nahi Hua — Shikayat Ki Poori Chain</SH>
+          <SH>15 Din Baad Bhi Update Nahi Hua. Shikayat Ki Poori Chain</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Correction submit ki, 15 din nikal gaye, portal par wahi purani detail. Ab andaze se dobara-dobara form mat bharo — ek fixed chain pakdo, kadam-dar-kadam:
+            Correction submit ki, 15 din nikal gaye, portal par wahi purani detail. Ab andaze se dobara-dobara form mat bharo, ek fixed chain pakdo, kadam-dar-kadam:
           </p>
           <StepList>
-            <SI n={1}><strong>155261 par call karo</strong> — aur busy aaye toh doosra number <strong>011-24300606</strong> bhi hai. Call se pehle registration number, Aadhaar aur correction ki date ek kagaz par likh lo. Operator se complaint ka reference number zaroor maango.</SI>
-            <SI n={2}><strong>pmkisan.gov.in ke Help Desk se online ticket banao</strong> — registration number daalo, problem chuno, submit. Jo ticket number mile use sambhal kar rakho — agli call par seedha usi ka status poochh sakte ho, kahani dobara sunane ki zaroorat nahi.</SI>
-            <SI n={3}><strong>Email karo:</strong> <strong>pmkisan-ict@gov.in</strong> par — subject mein registration number, body mein 2-3 line problem, aur ticket number quote karo. Status ka screenshot attach kar do.</SI>
+            <SI n={1}><strong>155261 par call karo</strong>. Aur busy aaye toh doosra number <strong>011-24300606</strong> bhi hai. Call se pehle registration number, Aadhaar aur correction ki date ek kagaz par likh lo. Operator se complaint ka reference number zaroor maango.</SI>
+            <SI n={2}><strong>pmkisan.gov.in ke Help Desk se online ticket banao</strong>, registration number daalo, problem chuno, submit. Jo ticket number mile use sambhal kar rakho, agli call par seedha usi ka status poochh sakte ho, kahani dobara sunane ki zaroorat nahi.</SI>
+            <SI n={3}><strong>Email karo:</strong> <strong>pmkisan-ict@gov.in</strong> par, subject mein registration number, body mein 2-3 line problem, aur ticket number quote karo. Status ka screenshot attach kar do.</SI>
             <SI n={4}>Phir bhi kuch na ho toh <strong>state nodal officer tak escalate karo</strong> — kis officer ko, kaise likhna hai, ye sab <Link href="/articles/PmKisanStateNodalOfficerList" className="underline font-bold text-green-700 dark:text-green-400">nodal officer guide</Link> mein template ke saath diya hai.</SI>
           </StepList>
           <WB>
-            <strong>Fraud Alert:</strong> Correction ke chakkar mein Google par milne wali .com sites ya WhatsApp wale “helpline numbers” se door raho. Koi bhi asli sarkari process mein aapse <strong>OTP nahi poochha jaata</strong> aur na hi “correction fee” online transfer karwai jaati hai. OTP de diya aur paisa kat gaya toh turant <strong>1930</strong> par call karo ya <strong>cybercrime.gov.in</strong> par shikayat darj karo — aur apne bank ko usi din batao.
+            <strong>Fraud Alert:</strong> Correction ke chakkar mein Google par milne wali .com sites ya WhatsApp wale “helpline numbers” se door raho. Koi bhi asli sarkari process mein aapse <strong>OTP nahi poochha jaata</strong> aur na hi “correction fee” online transfer karwai jaati hai. OTP de diya aur paisa kat gaya toh turant <strong>1930</strong> par call karo ya <strong>cybercrime.gov.in</strong> par shikayat darj karo. Aur apne bank ko usi din batao.
           </WB>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Correction Form — Puchhe Gaye Sawal
+            Correction Form. Puchhe Gaye Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Correction Form FAQ 2026 — Real Answers" />
+          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Correction Form FAQ 2026. Real Answers" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Is Kaam Ka Rate ₹30 Hai, ₹500 Nahi</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
             Correction ka poora kaam portal par khud karne par free hai aur CSC par lagbhag ₹30 ka. Agent ₹500-1000
-            isliye maang lete hain kyunki kist rukne ka dabaav aapke paas hota hai, unke paas nahi — rate pata hona
+            isliye maang lete hain kyunki kist rukne ka dabaav aapke paas hota hai, unke paas nahi. Rate pata hona
             hi is page ka sabse mehenga hissa hai.
           </p>
           <p className="text-xs text-green-700 dark:text-green-400 italic">
             Correction submit hone ke baad bhi status na badle toh helpline 155261 par call karein, aur uske baad
-            district agriculture office mein written complaint dein — likhi hui shikayat par diary number milta hai,
+            district agriculture office mein written complaint dein, likhi hui shikayat par diary number milta hai,
             jisse aap aage follow-up kar sakte hain.
           </p>
         </div>
 
         <GovLink
           href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
-          label="PM Kisan Beneficiary Status — Check After Correction"
+          label="PM Kisan Beneficiary Status. Check After Correction"
           guide="Abhi Status Check Karo"
           guideHref="/articles/PmKisanMasterGuide2026"
           portalName="pmkisan.gov.in"
@@ -314,7 +314,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
 
         <CalcBanner
           title="Apni Kist Track Karo"
-          desc="Correction ke baad kitni kist pending hai — jaano"
+          desc="Correction ke baad kitni kist pending hai. Jaano"
           primaryCta={{ href: '/calculator/installment-tracker', label: 'Tracker Kholo →' }}
           secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator' }}
         />

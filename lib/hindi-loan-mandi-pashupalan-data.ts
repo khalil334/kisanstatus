@@ -4,8 +4,8 @@ import type { HindiArticle } from '@/lib/hindi-articles-data';
 export const HINDI_LOAN_MANDI_PASHUPALAN_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/gehu-ka-rate-aaj',
-    titleHi: 'गेहूं का रेट आज — MSP vs मंडी भाव तुलना',
-    desc: 'गेहूं का आज का रेट और MSP 2027 की राज्यवार तुलना यहां देखें — आपकी मंडी में भाव MSP से ऊपर है या नीचे? Weekly update के साथ बेचने का सही समय भी जानिए।',
+    titleHi: 'गेहूं का रेट आज: MSP vs मंडी भाव तुलना',
+    desc: 'गेहूं का आज का रेट और MSP 2027 की राज्यवार तुलना यहां देखें: आपकी मंडी में भाव MSP से ऊपर है या नीचे? Weekly update के साथ बेचने का सही समय भी जानिए।',
     keywords: ['गेहूं का रेट आज', 'gehu ka bhav today', 'गेहूं MSP 2027'],
     category: 'mandi',
     publishedTime: '2026-07-22T07:56:40+05:30',
@@ -18,7 +18,7 @@ export const HINDI_LOAN_MANDI_PASHUPALAN_ARTICLES: readonly HindiArticle[] = [
     slug: 'hi/kcc-limit-kaise-badhaye',
     titleHi: 'KCC लिमिट ₹3 से ₹5 लाख कैसे बढ़ाएं? Renewal का पूरा तरीका',
     seoTitleHi: 'KCC लिमिट ₹3 से ₹5 लाख कैसे बढ़ाएं',
-    desc: 'KCC लिमिट अब ₹3 लाख से बढ़कर ₹5 लाख हुई — Kisan Credit Card limit बढ़ाने का आसान तरीका, renewal process और ब्याज सब्सिडी का पूरा फायदा उठाना यहां सीखें।',
+    desc: 'KCC लिमिट अब ₹3 लाख से बढ़कर ₹5 लाख हुई: Kisan Credit Card limit बढ़ाने का आसान तरीका, renewal process और ब्याज सब्सिडी का पूरा फायदा उठाना यहां सीखें।',
     keywords: ['kcc limit kaise badhaye', 'kcc renewal process', 'kcc interest rate'],
     category: 'loan',
     publishedTime: '2026-07-14T10:37:32+05:30',
@@ -29,9 +29,9 @@ export const HINDI_LOAN_MANDI_PASHUPALAN_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/gau-mutra-kharid-yojana',
-    titleHi: 'गाय के मूत्र की खरीद योजना — बुलंदशहर में 10 रुपये लीटर',
-    seoTitleHi: 'गौ मूत्र खरीद योजना UP — 10 रुपये प्रति लीटर',
-    desc: 'बुलंदशहर के नरसेना गांव से शुरू योजना — गौमूत्र 10 रूपये प्रति लीटर, FPO संग्रह केंद्र, महिलाओं को 2 रूपये कमीशन और ठगी से बचाव यहां।',
+    titleHi: 'गाय के मूत्र की खरीद योजना: बुलंदशहर में 10 रुपये लीटर',
+    seoTitleHi: 'गौ मूत्र खरीद योजना UP: 10 रुपये प्रति लीटर',
+    desc: 'बुलंदशहर के नरसेना गांव से शुरू योजना: गौमूत्र 10 रूपये प्रति लीटर, FPO संग्रह केंद्र, महिलाओं को 2 रूपये कमीशन और ठगी से बचाव यहां।',
     keywords: [
       'गाय के मूत्र की खरीद योजना',
       'गौ मूत्र 10 रुपये प्रति लीटर',

@@ -8,8 +8,8 @@ import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
-  title: 'Silage Ka Business — SMAM Subsidy Se Shuruat',
-  description: 'Silage banane ka business kaise shuru karein — chara storage tarika, chaff cutter cost, SMAM subsidy aur real profit calculation, sab kuch is guide mein.',
+  title: 'Silage Ka Business. SMAM Subsidy Se Shuruat',
+  description: 'Silage banane ka business kaise shuru karein, chara storage tarika, chaff cutter cost, SMAM subsidy aur real profit calculation, sab kuch is guide mein.',
   keywords: [
     'silage making business',
     'silage business plan india',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
-    title: 'Silage Ka Business — SMAM Subsidy Se Shuruat',
-    description: 'Silage banane ka business kaise shuru karein — chara storage tarika, chaff cutter cost, SMAM subsidy aur real profit calculation, sab kuch is guide mein.',
+    title: 'Silage Ka Business. SMAM Subsidy Se Shuruat',
+    description: 'Silage banane ka business kaise shuru karein, chara storage tarika, chaff cutter cost, SMAM subsidy aur real profit calculation, sab kuch is guide mein.',
     type: 'article',
     locale: 'hi_IN',
     siteName: 'KisanStatus.com',
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Silage Ka Business — SMAM Subsidy Se Shuruat',
-    description: 'Silage banane ka business kaise shuru karein — chara storage tarika, chaff cutter cost, SMAM subsidy aur real profit calculation, sab kuch is guide mein.',
+    title: 'Silage Ka Business. SMAM Subsidy Se Shuruat',
+    description: 'Silage banane ka business kaise shuru karein, chara storage tarika, chaff cutter cost, SMAM subsidy aur real profit calculation, sab kuch is guide mein.',
     images: ['https://kisanstatus.com/images/kisanguides/silage-hero.webp'],
   },
   alternates: {
@@ -87,11 +87,11 @@ export default function SilageMaking() {
       </h1>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 italic">
-        December aate-aate khet khali. Hari ghaas dhundhna mushkil. Har saal yehi kahani dohrai jaati hai — pashupalak pareshan, doodh utpadan neeche gir jaata hai. Silage isi samasya ka hal hai: hara chara jo hawa-band karke mahino tak taaza rakha ja sakta hai.
+        December aate-aate khet khali. Hari ghaas dhundhna mushkil. Har saal yehi kahani dohrai jaati hai. Pashupalak pareshan, doodh utpadan neeche gir jaata hai. Silage isi samasya ka hal hai: hara chara jo hawa-band karke mahino tak taaza rakha ja sakta hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Model samajhna mushkil nahi hai — makka ugao ya kisaanon se khareedo, kaato, airtight packet mein band karo, aur nazdeeki gaushala ya dairy farm ko becho. Jo log is prakriya ko dhang se seekh lete hain unke liye margin achha hai, kyunki abhi bhi bahut kam log isse waqif hain. Local level par ye ek kam-jaani, kam-lada hua niche hai — aur yahi wajah hai ki naye entrants ke liye jagah bachi hai.
+        Model samajhna mushkil nahi hai — makka ugao ya kisaanon se khareedo, kaato, airtight packet mein band karo, aur nazdeeki gaushala ya dairy farm ko becho. Jo log is prakriya ko dhang se seekh lete hain unke liye margin achha hai, kyunki abhi bhi bahut kam log isse waqif hain. Local level par ye ek kam-jaani, kam-lada hua niche hai. Aur yahi wajah hai ki naye entrants ke liye jagah bachi hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -99,11 +99,11 @@ export default function SilageMaking() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Concept naya nahi hai, bas India mein commercial scale par abhi raftaar pakad raha hai. Hari ghaas — zyadatar makka — ko bina oxygen ke heavy-duty plastic packets mein seal kiya jaata hai. Andar natural fermentation shuru hoti hai: lactic acid bacteria badhte hain, pH 4.0 ke aas-paas aa jaata hai, aur ghaas mahino tak sadne se bach jaati hai.
+        Concept naya nahi hai, bas India mein commercial scale par abhi raftaar pakad raha hai. Hari ghaas, zyadatar makka, ko bina oxygen ke heavy-duty plastic packets mein seal kiya jaata hai. Andar natural fermentation shuru hoti hai: lactic acid bacteria badhte hain, pH 4.0 ke aas-paas aa jaata hai, aur ghaas mahino tak sadne se bach jaati hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Sahi tarike se taiyar kiya gaya chara 6 mahine tak taaza rehta hai, aur poshan bhi barkarar rehta hai — crude protein 7-9%, dry matter 30-35%.
+        Sahi tarike se taiyar kiya gaya chara 6 mahine tak taaza rehta hai, aur poshan bhi barkarar rehta hai. Crude protein 7-9%, dry matter 30-35%.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 font-semibold">
@@ -114,7 +114,7 @@ export default function SilageMaking() {
         <li><strong>Sardiyon mein kami:</strong> December se February tak taaza chara milna mushkil hota hai.</li>
         <li><strong>Ek jaisi quality:</strong> Har packet ka poshan level same rehta hai, isliye doodh ki matra bhi stable rehti hai.</li>
         <li><strong>Aasaan storage:</strong> 6 mahine tak kharab nahi hota, bas chhaon mein rakh do.</li>
-        <li><strong>Mehnat kam lagti hai:</strong> 25 kg ka packet uthana aur khilana jhanjhat-free hai — roz khet mein jaakar ghaas kaatne ki zarurat nahi.</li>
+        <li><strong>Mehnat kam lagti hai:</strong> 25 kg ka packet uthana aur khilana jhanjhat-free hai. Roz khet mein jaakar ghaas kaatne ki zarurat nahi.</li>
       </ul>
 
       <Image
@@ -137,29 +137,29 @@ export default function SilageMaking() {
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8 border border-gray-200 dark:border-gray-700 not-prose">
         <ol className="list-decimal pl-5 space-y-3 text-sm text-gray-700 dark:text-gray-300">
           <li><strong>Makka ki kheti karein</strong> ya kisaanon se contract farming par khareedein.</li>
-          <li><strong>60-70 din mein harvest karein</strong> — jab makka dough stage mein ho, lagbhag 70% moisture par.</li>
-          <li><strong>Chaff cutter se kaatein</strong> — 1-2 inch ke pieces mein.</li>
+          <li><strong>60-70 din mein harvest karein</strong>, jab makka dough stage mein ho, lagbhag 70% moisture par.</li>
+          <li><strong>Chaff cutter se kaatein</strong>, 1-2 inch ke pieces mein.</li>
           <li><strong>Fodder bags mein bharein</strong> — 25 kg ya 50 kg ke UV-treated plastic bags.</li>
-          <li><strong>Sealing machine se seal karein</strong> — bilkul air-tight.</li>
-          <li><strong>45-60 din ferment hone dein</strong> — thandi chhaon mein stack karke.</li>
-          <li><strong>Pashupalakon ko supply karein</strong> — ₹300-₹400 per 25 kg packet, market rate ke hisaab se.</li>
+          <li><strong>Sealing machine se seal karein</strong>, bilkul air-tight.</li>
+          <li><strong>45-60 din ferment hone dein</strong>, thandi chhaon mein stack karke.</li>
+          <li><strong>Pashupalakon ko supply karein</strong>. ₹300-₹400 per 25 kg packet, market rate ke hisaab se.</li>
         </ol>
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        <strong>Model 1 — Apni zameen par makka ugana:</strong> 5-10 acre zameen ho toh khud ugao. Munafa zyada milta hai (40-50%), par lagat aur jokhim bhi zyada hai.
+        <strong>Model 1. Apni zameen par makka ugana:</strong> 5-10 acre zameen ho toh khud ugao. Munafa zyada milta hai (40-50%), par lagat aur jokhim bhi zyada hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        <strong>Model 2 — Kisaanon se khareedna:</strong> Sirf processing unit lagao, local makka khareedo, preserve karo aur becho. Margin kam hai (20-30%), par jokhim kam hai aur unit ko badhana bhi aasan hai. Zameen na ho toh yahi model shuru karne layak hai.
+        <strong>Model 2. Kisaanon se khareedna:</strong> Sirf processing unit lagao, local makka khareedo, preserve karo aur becho. Margin kam hai (20-30%), par jokhim kam hai aur unit ko badhana bhi aasan hai. Zameen na ho toh yahi model shuru karne layak hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Kitna Paisa Lagega — Realistic Budget
+        Kitna Paisa Lagega. Realistic Budget
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Medium-scale unit ka budget dekhte hain — jo mahine mein 3,000-4,000 packets (25 kg each) bana sake.
+        Medium-scale unit ka budget dekhte hain. Jo mahine mein 3,000-4,000 packets (25 kg each) bana sake.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4 text-sm italic">
@@ -209,11 +209,11 @@ export default function SilageMaking() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Is investment ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">KCC (Kisan Credit Card) guide</Link> ek badhiya option hai — working capital ke liye limit badhwa sakte ho.
+        Is investment ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">KCC (Kisan Credit Card) guide</Link> ek badhiya option hai. Working capital ke liye limit badhwa sakte ho.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Machinery ke liye <a href="https://www.mudra.org.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Mudra Loan scheme</a> bhi le sakte ho — Tarun category mein ₹10 lakh tak bina collateral ke milta hai.
+        Machinery ke liye <a href="https://www.mudra.org.in/" className="text-blue-600 hover:underline dark:text-blue-400 font-medium" target="_blank" rel="noopener noreferrer">Mudra Loan scheme</a> bhi le sakte ho. Tarun category mein ₹10 lakh tak bina collateral ke milta hai.
       </p>
 
       <Image
@@ -250,18 +250,18 @@ export default function SilageMaking() {
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
               <td className="py-3 px-4">Weather dependency</td>
-              <td className="py-3 px-4">Kam — indoor fermentation</td>
-              <td className="py-3 px-4">Zyada — 3-4 din dhoop chahiye</td>
+              <td className="py-3 px-4">Kam, indoor fermentation</td>
+              <td className="py-3 px-4">Zyada, 3-4 din dhoop chahiye</td>
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700">
               <td className="py-3 px-4">Palatability</td>
-              <td className="py-3 px-4">High — janwar zyada shauk se khaate hain</td>
+              <td className="py-3 px-4">High, janwar zyada shauk se khaate hain</td>
               <td className="py-3 px-4">Medium</td>
             </tr>
             <tr className="bg-gray-50 dark:bg-gray-800/50">
               <td className="py-3 px-4">Setup cost</td>
-              <td className="py-3 px-4">Zyada — machinery chahiye</td>
-              <td className="py-3 px-4">Kam — dhoop aur jagah kaafi hai</td>
+              <td className="py-3 px-4">Zyada, machinery chahiye</td>
+              <td className="py-3 px-4">Kam, dhoop aur jagah kaafi hai</td>
             </tr>
           </tbody>
         </table>
@@ -283,7 +283,7 @@ export default function SilageMaking() {
         <ul className="space-y-4 text-sm text-gray-800 dark:text-gray-200">
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">1. SMAM (Sub-Mission on Agricultural Mechanization):</strong>
-            Chaff cutter aur sealing machine par 40-50% subsidy — general category 40%, SC/ST/mahila 50%. Ek machine par maximum ₹1-2 lakh.
+            Chaff cutter aur sealing machine par 40-50% subsidy, general category 40%, SC/ST/mahila 50%. Ek machine par maximum ₹1-2 lakh.
             <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
               SMAM ke niyam state-wise alag hote hain, apne zila Agriculture Department se latest figures le lena.
             </p>
@@ -307,7 +307,7 @@ export default function SilageMaking() {
 
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">4. State-Level Fodder Development Schemes:</strong>
-            Haryana mein "Fodder Development Scheme", Rajasthan mein "Mukhyamantri Pashudhan Vikas Yojana" — processing units par 30-50% subsidy.
+            Haryana mein "Fodder Development Scheme", Rajasthan mein "Mukhyamantri Pashudhan Vikas Yojana", processing units par 30-50% subsidy.
             <p className="mt-1 text-xs text-gray-600 dark:text-gray-400 italic">
               State ke hisaab se badalta hai, Animal Husbandry Department se latest jaankari lo.
             </p>
@@ -325,7 +325,7 @@ export default function SilageMaking() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        25 kg packet ka lagat breakdown — Model 2 ke hisaab se, yaani kisaanon se makka khareed kar.
+        25 kg packet ka lagat breakdown. Model 2 ke hisaab se, yaani kisaanon se makka khareed kar.
       </p>
 
       <div className="overflow-x-auto mb-8 not-prose">
@@ -378,7 +378,7 @@ export default function SilageMaking() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Average munafa ₹150-180 per packet maan lo. 3,000 packets mahine mein bechoge toh monthly profit ₹4.5-5.4 lakh, saal ka ₹50-65 lakh ban sakta hai. Shuruaati 6 mahine mein realistically 1,000-1,500 packets hi bikenge, tab bhi monthly ₹1.5-2.7 lakh banta hai — bura nahi hai.
+        Average munafa ₹150-180 per packet maan lo. 3,000 packets mahine mein bechoge toh monthly profit ₹4.5-5.4 lakh, saal ka ₹50-65 lakh ban sakta hai. Shuruaati 6 mahine mein realistically 1,000-1,500 packets hi bikenge, tab bhi monthly ₹1.5-2.7 lakh banta hai. Bura nahi hai.
       </p>
 
       <Image
@@ -391,7 +391,7 @@ export default function SilageMaking() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Asli Jokhim — Jo Koi Nahi Batata
+        Asli Jokhim. Jo Koi Nahi Batata
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -400,8 +400,8 @@ export default function SilageMaking() {
 
       <div className="space-y-4 mb-8 not-prose">
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
-          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Packet Failure — Sabse Badi Samasya</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Sealing thik nahi hui, ya bag mein chhed reh gaya, toh oxygen andar chala jata hai — fungus lagta hai, badbu aati hai. Shuru mein 100 mein se 5-10 packets aise kharab ho sakte hain. Quality control par sabse zyada dhyan yahi rakhna padta hai.</p>
+          <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Packet Failure. Sabse Badi Samasya</h4>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Sealing thik nahi hui, ya bag mein chhed reh gaya, toh oxygen andar chala jata hai. Fungus lagta hai, badbu aati hai. Shuru mein 100 mein se 5-10 packets aise kharab ho sakte hain. Quality control par sabse zyada dhyan yahi rakhna padta hai.</p>
         </div>
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
@@ -429,9 +429,9 @@ export default function SilageMaking() {
       </p>
 
       <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
-        <li><strong>Galat harvest timing:</strong> Makka bahut jaldi kaat lena — jab moisture 80% se zyada ho — sabse aam galti hai. Ispe seepage ho jaata hai aur fermentation bigad jaati hai. Dough stage ka intezaar zaroori hai, chahe do-teen din late ho jaaye.</li>
+        <li><strong>Galat harvest timing:</strong> Makka bahut jaldi kaat lena, jab moisture 80% se zyada ho, sabse aam galti hai. Ispe seepage ho jaata hai aur fermentation bigad jaati hai. Dough stage ka intezaar zaroori hai, chahe do-teen din late ho jaaye.</li>
         <li><strong>Sirf ek grahak par nirbhar rehna:</strong> Agar sirf ek bade dairy farm ko supply karte ho aur wo order rok de, toh poora cash flow atak jaata hai. Shuru se hi 8-10 chhote-mote khareedar banao.</li>
-        <li><strong>Quality testing chhod dena:</strong> pH aur badbu check kiye bina packet bech dena reputation kharab kar sakta hai. Ek bhi kharab batch pashupalak ka bharosa tod sakti hai — dobara order milna mushkil ho jaata hai.</li>
+        <li><strong>Quality testing chhod dena:</strong> pH aur badbu check kiye bina packet bech dena reputation kharab kar sakta hai. Ek bhi kharab batch pashupalak ka bharosa tod sakti hai. Dobara order milna mushkil ho jaata hai.</li>
       </ul>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -444,15 +444,15 @@ export default function SilageMaking() {
 
       <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-8 border border-gray-200 dark:border-gray-700 not-prose">
         <ul className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
-          <li><strong>Mahina 1-2 — Pilot batch:</strong> Sirf 200-300 packets banao. In par pH testing, moisture check aur sealing quality par poora focus rakho. Ye batch bechne se zyada seekhne ke liye hai.</li>
-          <li><strong>Mahina 3-4 — Local reputation banao:</strong> Pehle 5-6 pashupalakon ko free sample do, unka feedback record karo. Jo cheez unhe pasand aayi wahi apna USP bana lo.</li>
-          <li><strong>Mahina 5-8 — Volume badhao:</strong> Demand dekh kar 1,000-1,500 packets tak jao. Isi phase mein SMAM subsidy ke liye apply kar dena chahiye, kyunki approval mein waqt lagta hai.</li>
-          <li><strong>Mahina 9-12 — Diversify karo:</strong> Sirf makka par nirbhar rehne ke bajaye, sorghum ya bajra silage bhi try karo — off-season mein alag revenue stream milta hai.</li>
+          <li><strong>Mahina 1-2. Pilot batch:</strong> Sirf 200-300 packets banao. In par pH testing, moisture check aur sealing quality par poora focus rakho. Ye batch bechne se zyada seekhne ke liye hai.</li>
+          <li><strong>Mahina 3-4. Local reputation banao:</strong> Pehle 5-6 pashupalakon ko free sample do, unka feedback record karo. Jo cheez unhe pasand aayi wahi apna USP bana lo.</li>
+          <li><strong>Mahina 5-8. Volume badhao:</strong> Demand dekh kar 1,000-1,500 packets tak jao. Isi phase mein SMAM subsidy ke liye apply kar dena chahiye, kyunki approval mein waqt lagta hai.</li>
+          <li><strong>Mahina 9-12. Diversify karo:</strong> Sirf makka par nirbhar rehne ke bajaye, sorghum ya bajra silage bhi try karo — off-season mein alag revenue stream milta hai.</li>
         </ul>
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Ye roadmap kisi bhi chara vyapar ke liye kaam karta hai, chahe wo choti unit ho ya badi. Jaldi scale karne ki jagah, quality consistency par pehle bharosa jamao — grahak khud dobara aayenge.
+        Ye roadmap kisi bhi chara vyapar ke liye kaam karta hai, chahe wo choti unit ho ya badi. Jaldi scale karne ki jagah, quality consistency par pehle bharosa jamao, grahak khud dobara aayenge.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -465,9 +465,9 @@ export default function SilageMaking() {
 
       <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
         <li><strong>Local Dairy Farms Par Seedha Visit:</strong> Apne area ke 20-30 dairy farms ki list banao. Pehla order free sample ke saath do. Quality achhi lagi toh 70% cases mein order mil jata hai.</li>
-        <li><strong>Dairy Cooperatives Se Tie-Up:</strong> Amul, Mother Dairy, Sudha jaise cooperatives ke local collection centers se baat karo — wo member kisaanon ko recommend kar sakte hain.</li>
+        <li><strong>Dairy Cooperatives Se Tie-Up:</strong> Amul, Mother Dairy, Sudha jaise cooperatives ke local collection centers se baat karo. Wo member kisaanon ko recommend kar sakte hain.</li>
         <li><strong>WhatsApp Groups:</strong> Gaon ke pashupalak groups mein daily rate aur availability daalte raho, saath photos-videos bhi.</li>
-        <li><strong>Contract Farming with Dairy Farms:</strong> 50+ bhains wale bade farms ke saath annual contract karo — fixed matra, fixed rate.</li>
+        <li><strong>Contract Farming with Dairy Farms:</strong> 50+ bhains wale bade farms ke saath annual contract karo, fixed matra, fixed rate.</li>
       </ul>
 
       <Image
@@ -513,16 +513,16 @@ export default function SilageMaking() {
         <div className="bg-red-50 dark:bg-red-900/20 p-5 rounded-lg border border-red-200 dark:border-red-800">
           <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">Sochna Padega, agar:</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-            <li>• Non-dairy area mein ho — grahak milna mushkil hoga.</li>
+            <li>• Non-dairy area mein ho, grahak milna mushkil hoga.</li>
             <li>• Zameen nahi hai aur contract farming bhi option nahi hai.</li>
-            <li>• Marketing se bachte ho — sirf utpadan karke baithna nahi chalega.</li>
-            <li>• Pehle mahine se returns chahte ho — pehle 6 mahine sirf setup karne mein jaate hain.</li>
+            <li>• Marketing se bachte ho. Sirf utpadan karke baithna nahi chalega.</li>
+            <li>• Pehle mahine se returns chahte ho, pehle 6 mahine sirf setup karne mein jaate hain.</li>
           </ul>
         </div>
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Pehli category mein aate ho toh choti scale se shuru karo. Pehle 6 mahine seekho, grahak banao, prakriya samjho — fir badhao. Seedhe ₹20 lakh laga kar badi machine mat lo, pehle bazaar mein prove karo.
+        Pehli category mein aate ho toh choti scale se shuru karo. Pehle 6 mahine seekho, grahak banao, prakriya samjho. Fir badhao. Seedhe ₹20 lakh laga kar badi machine mat lo, pehle bazaar mein prove karo.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -530,7 +530,7 @@ export default function SilageMaking() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Seriously interested ho toh pehle apne area ke 5-10 dairy farms se baat karo. Puchho — packaged fodder use karte hain ya nahi, kahan se lete hain, rate kya chalta hai. Research pehle, faisla baad mein.
+        Seriously interested ho toh pehle apne area ke 5-10 dairy farms se baat karo. Puchho, packaged fodder use karte hain ya nahi, kahan se lete hain, rate kya chalta hai. Research pehle, faisla baad mein.
       </p>
 
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">

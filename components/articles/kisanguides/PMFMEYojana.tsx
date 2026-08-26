@@ -8,7 +8,7 @@ import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
-  title: 'PM FME Se ₹10 Lakh Tak — 35% Subsidy Ka Poora Math',
+  title: 'PM FME Se ₹10 Lakh Tak, 35% Subsidy Ka Poora Math',
   description: 'Achar, papad, namkeen ya bakery unit chalate ho? PM FME me 35% credit-linked subsidy milti hai, max ₹10 lakh. Eligibility, documents aur apply ka tarika.',
   keywords: [
     'pm fme yojana',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
-    title: 'PM FME Se ₹10 Lakh Tak — 35% Subsidy Ka Poora Math',
+    title: 'PM FME Se ₹10 Lakh Tak, 35% Subsidy Ka Poora Math',
     description: 'Achar, papad, namkeen ya bakery unit chalate ho? PM FME me 35% credit-linked subsidy milti hai, max ₹10 lakh. Eligibility, documents aur apply ka tarika.',
     type: 'article',
     locale: 'hi_IN',
@@ -50,15 +50,15 @@ export const metadata: Metadata = {
 const pMFMEYojanaFaqs = [
   {
     q: 'Kya rented jagah par kaam karne walon ko subsidy milti hai?',
-    a: 'Haan, valid rent agreement ho to. Kiraye par subsidy nahi milti, lekin us rented space me renovation, electrical work ya machinery installation ka kharcha project cost me gina jata hai — us par 35% claim ho sakta hai.',
+    a: 'Haan, valid rent agreement ho to. Kiraye par subsidy nahi milti, lekin us rented space me renovation, electrical work ya machinery installation ka kharcha project cost me gina jata hai. Us par 35% claim ho sakta hai.',
   },
   {
     q: 'Bank loan reject ho jaye to kya subsidy mil sakti hai?',
-    a: 'Nahi. Ye credit-linked subsidy hai — loan sanction hone ke baad hi release hoti hai. Bina loan ke seedha grant? Is scheme me aisa koi rasta nahi.',
+    a: 'Nahi. Ye credit-linked subsidy hai. Loan sanction hone ke baad hi release hoti hai. Bina loan ke seedha grant? Is scheme me aisa koi rasta nahi.',
   },
   {
     q: 'Naya business shuru karne wale apply kar sakte hain?',
-    a: 'Haan, scheme naye aur purane dono tarah ke micro food processing units ko cover karti hai. Lekin zameen par verification hota hai — DPR realistic honi chahiye aur unit ka plan clear. Chalta hua unit hone par process aasan rehta hai.',
+    a: 'Haan, scheme naye aur purane dono tarah ke micro food processing units ko cover karti hai. Lekin zameen par verification hota hai. DPR realistic honi chahiye aur unit ka plan clear. Chalta hua unit hone par process aasan rehta hai.',
   },
   {
     q: 'SHG members ko kya alag benefit hai?',
@@ -66,7 +66,7 @@ const pMFMEYojanaFaqs = [
   },
   {
     q: 'Subsidy ka paisa kab aur kaise milta hai?',
-    a: 'Loan disburse hone aur unit chalu hone ke baad subsidy bank me aati hai aur aapke loan account me back-end me adjust hoti hai — 3 saal ke lock-in ke baad principal me se ghat jati hai. Haath me cash nahi milta.',
+    a: 'Loan disburse hone aur unit chalu hone ke baad subsidy bank me aati hai aur aapke loan account me back-end me adjust hoti hai. 3 saal ke lock-in ke baad principal me se ghat jati hai. Haath me cash nahi milta.',
   },
 ];
 
@@ -84,7 +84,7 @@ export default function PMFMEYojana() {
       />
 
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
-        Achar-Papad-Namkeen Unit Walo Ke Liye PM FME — ₹10 Lakh Tak Ka Poora Math
+        Achar-Papad-Namkeen Unit Walo Ke Liye PM FME. ₹10 Lakh Tak Ka Poora Math
       </h1>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -93,12 +93,12 @@ export default function PMFMEYojana() {
         cost ka <strong>35% credit-linked subsidy</strong> milta hai — zyada se zyada
         <strong> ₹10 lakh</strong>. Apni jeb se kam se kam 10% lagana hota hai, baaki bank
         loan. Scheme Ministry of Food Processing Industries (MoFPI) ki hai aur iski deadline
-        September 2026 tak badhai gayi hai — matlab abhi window khuli hai, lekin hamesha ke
+        September 2026 tak badhai gayi hai. Matlab abhi window khuli hai, lekin hamesha ke
         liye nahi.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Ab detail me chalte hain — kaun eligible hai, paisa kaise milta hai, ODOP ka chakkar
+        Ab detail me chalte hain. Kaun eligible hai, paisa kaise milta hai, ODOP ka chakkar
         kya hai, aur application me log kahan atakte hain. Maine process ko waise hi likha
         hai jaise zameen par hota hai, brochure wali bhasha me nahi.
       </p>
@@ -108,7 +108,7 @@ export default function PMFMEYojana() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Poora naam hai — PM Formalisation of Micro food processing Enterprises. 2020 me
+        Poora naam hai. PM Formalisation of Micro food processing Enterprises. 2020 me
         shuru hui. Sarkar ka andaza hai ki desh me lagbhag 25 lakh aise chhote food
         processing units hain jo bina registration, bina FSSAI license ke chal rahe hain.
         Ghar ki rasoi se achar nikal raha hai, becha ja raha hai, lekin na brand hai na
@@ -117,7 +117,7 @@ export default function PMFMEYojana() {
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         MoFPI ke May 2026 ke aankde ke hisaab se ab tak 1.96 lakh se zyada units ko is
-        scheme ke under credit-linked subsidy mil chuki hai — inme 40% se zyada mahilayen
+        scheme ke under credit-linked subsidy mil chuki hai. Inme 40% se zyada mahilayen
         hain. Matlab scheme kagaz par nahi, sach me chal rahi hai.
       </p>
 
@@ -127,13 +127,13 @@ export default function PMFMEYojana() {
 
       <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-4">
         <li><strong>Individual/proprietorship:</strong> 18 saal se upar, kam se kam 8vi pass. Ek parivar (pati-patni-bachche) se ek hi vyakti.</li>
-        <li><strong>SHG:</strong> Self Help Groups aur unke members — inke liye seed capital ka alag provision hai.</li>
+        <li><strong>SHG:</strong> Self Help Groups aur unke members, inke liye seed capital ka alag provision hai.</li>
         <li><strong>FPO / Cooperative:</strong> Kisano ke registered collectives, value chain ke kaam ke liye.</li>
         <li><strong>Existing MSME:</strong> Udyam-registered food units jo upgrade karna chahte hain.</li>
       </ul>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Ek baat saaf kar dun — scheme naye aur purane dono units ko cover karti hai, lekin
+        Ek baat saaf kar dun, scheme naye aur purane dono units ko cover karti hai, lekin
         zameen par verification hota hai. Chalti hui unit dikhana sabse aasan rasta hai;
         bilkul zero se shuru karne walo ko DPR aur bank dono ko convince karna padta hai.
       </p>
@@ -143,7 +143,7 @@ export default function PMFMEYojana() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        &quot;Credit-linked&quot; — ye do shabd sabse zaroori hain. Subsidy tabhi milti hai jab bank
+        &quot;Credit-linked&quot;. Ye do shabd sabse zaroori hain. Subsidy tabhi milti hai jab bank
         aapka loan approve karke disburse kar de. Paisa aapke haath me nahi aata; wo
         back-end me aapke loan account me adjust hota hai. Isliye jo log sochte hain ki
         form bharo aur ₹10 lakh account me aa jayenge — waisa bilkul nahi hai.
@@ -181,7 +181,7 @@ export default function PMFMEYojana() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        <strong>Ek example se samjho.</strong> Maan lo project cost ₹10 lakh hai — machinery,
+        <strong>Ek example se samjho.</strong> Maan lo project cost ₹10 lakh hai. Machinery,
         packaging equipment, thoda renovation. Aap ₹1 lakh (10%) lagate ho, bank ₹9 lakh ka
         loan deta hai. Unit chalu hone ke baad ₹3.5 lakh (35%) subsidy bank me aati hai aur
         lock-in period ke baad aapke principal me se ghat jati hai. Aapko asal me ₹5.5-6.5
@@ -189,7 +189,7 @@ export default function PMFMEYojana() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Machinery, processing equipment, packaging, technology upgrade — ye sab project cost
+        Machinery, processing equipment, packaging, technology upgrade. Ye sab project cost
         me aata hai. Zameen ya building ki khareed nahi aati. Rented jagah ho to rent bhi
         nahi ginta, haan us jagah ka renovation gin sakte ho.
       </p>
@@ -203,13 +203,13 @@ export default function PMFMEYojana() {
         Project cost me ye sab aata hai: processing machinery, packaging machine aur
         material, technology upgrade (purani machine ki jagah nayi, food-safe equipment),
         aur unit ki jagah ka renovation-electrical work. Working capital ka intezam loan
-        ke through hota hai — chhote loans par CGTMSE ka credit guarantee cover mil sakta
+        ke through hota hai. Chhote loans par CGTMSE ka credit guarantee cover mil sakta
         hai, jisse collateral ki zaroorat aksar nahi padti (final call bank ki hoti hai).
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Nahi ginta: zameen ya building ki khareed, kiraya, gaadi, aur ghar ke personal
-        kharche. Ek aur baat — machinery second-hand nahi, quotation wali nayi honi
+        kharche. Ek aur baat, machinery second-hand nahi, quotation wali nayi honi
         chahiye, kyunki verification me bill milaye jaate hain.
       </p>
 
@@ -226,7 +226,7 @@ export default function PMFMEYojana() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Har district ka ek ODOP (One District One Product) hai — wo food product jo us
+        Har district ka ek ODOP (One District One Product) hai. Wo food product jo us
         zile me sabse zyada banta hai ya jiska raw material wahan sasta milta hai. Bihar
         ke kai zilon me makhana, Rajasthan me besan-papad, UP me aloo-based products —
         aisa mapping 726 districts me ho chuka hai, 137 products identify hue hain.
@@ -234,7 +234,7 @@ export default function PMFMEYojana() {
 
       <Image
         src="/images/kisanguides/odop-products.webp"
-        alt="Alag alag zilon ke ODOP food products — makhana, papad, achar"
+        alt="Alag alag zilon ke ODOP food products, makhana, papad, achar"
         width={800}
         height={450}
         sizes="(max-width: 768px) 100vw, 800px"
@@ -242,7 +242,7 @@ export default function PMFMEYojana() {
       />
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Scheme ka jhukav ODOP ki taraf hai — apne zile ka ODOP product process karoge to
+        Scheme ka jhukav ODOP ki taraf hai. Apne zile ka ODOP product process karoge to
         application ko priority milti hai aur branding-marketing support (jo group level
         par kharche ka 50% tak hota hai) ka rasta bhi khulta hai. ODOP se alag product
         ho to bhi apply kar sakte ho, ye galatfehmi mat palo ki ODOP ke bina form hi
@@ -275,34 +275,34 @@ export default function PMFMEYojana() {
 
       <ol className="list-decimal pl-5 space-y-3 text-gray-700 dark:text-gray-300 mb-6">
         <li>
-          <strong>Udyam registration</strong> — <a href="https://udyamregistration.gov.in/" className="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">udyamregistration.gov.in</a> par
+          <strong>Udyam registration</strong>, <a href="https://udyamregistration.gov.in/" className="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">udyamregistration.gov.in</a> par
           free hai, online ho jata hai. MSME ke roop me register hona zaroori hai.
         </li>
         <li>
-          <strong>FSSAI</strong> — food business ke liye anivarya. Basic registration
+          <strong>FSSAI</strong>, food business ke liye anivarya. Basic registration
           (chhote turnover walo ke liye) <a href="https://foscos.fssai.gov.in/" className="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">FoSCoS portal</a> se
           hota hai. Agar abhi nahi hai to application ke saath-saath process shuru kar do —
           scheme FSSAI lene me bhi handholding deti hai.
         </li>
         <li>
-          <strong>DPR banwao</strong> — Detailed Project Report, jisme machinery quotations,
+          <strong>DPR banwao</strong>. Detailed Project Report, jisme machinery quotations,
           cost breakdown aur financial projection ho. DRP ye free me banane me madad karta
           hai; private consultant se banwao to paisa lagta hai. Projections realistic rakho —
           bank isi par loan decide karta hai.
         </li>
         <li>
-          <strong>PM FME portal par application</strong> — <a href="https://pmfme.mofpi.gov.in/" className="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">pmfme.mofpi.gov.in</a> par
+          <strong>PM FME portal par application</strong>, <a href="https://pmfme.mofpi.gov.in/" className="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">pmfme.mofpi.gov.in</a> par
           register karke online form bharo. Application DRP/State Nodal Agency se hote hue
           bank tak jaati hai.
         </li>
         <li>
-          <strong>Bank loan</strong> — sanction ke liye Udyam certificate, DPR, Aadhaar, PAN,
+          <strong>Bank loan</strong>, sanction ke liye Udyam certificate, DPR, Aadhaar, PAN,
           bank statement aur machinery quotations chahiye. Working capital ke liye alag se{' '}
           <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 dark:text-blue-400 hover:underline">KCC ka rasta</Link> bhi
           dekh sakte ho agar aap kisan ho.
         </li>
         <li>
-          <strong>Verification aur disbursement</strong> — DIC/bank ki taraf se unit ka
+          <strong>Verification aur disbursement</strong>. DIC/bank ki taraf se unit ka
           physical verification hota hai. Loan disburse hota hai, aap machinery lagate ho,
           aur subsidy back-end me loan account me aa jaati hai.
         </li>
@@ -319,7 +319,7 @@ export default function PMFMEYojana() {
 
       <Image
         src="/images/kisanguides/documents-checklist.webp"
-        alt="Application ke documents — Aadhaar, FSSAI, Udyam certificate"
+        alt="Application ke documents. Aadhaar, FSSAI, Udyam certificate"
         width={800}
         height={450}
         sizes="(max-width: 768px) 100vw, 800px"
@@ -350,7 +350,7 @@ export default function PMFMEYojana() {
       <ul className="list-disc pl-5 space-y-3 text-gray-700 dark:text-gray-300 mb-8">
         <li>
           <strong>Bank stage par file ruk jaati hai.</strong> Portal par application approve,
-          lekin bank loan dene me hichkichata hai — kharab CIBIL, income proof ki kami, ya
+          lekin bank loan dene me hichkichata hai. Kharab CIBIL, income proof ki kami, ya
           weak DPR. Yaad rakho, subsidy ki guarantee loan ki guarantee nahi hai. Bank apni
           credit policy se hi chalega.
         </li>
@@ -363,13 +363,13 @@ export default function PMFMEYojana() {
           hi pehchaan hai. Iske bina na bade buyer milenge na formal channel.
         </li>
         <li>
-          <strong>Agent ke bharose form.</strong> DRP free me help karta hai — fir bhi log
+          <strong>Agent ke bharose form.</strong> DRP free me help karta hai. Fir bhi log
           bahar hazaro de aate hain, aur galat category me form lag jata hai.
         </li>
       </ul>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        PM FME Ya PMEGP — Kaunsa Form Bharein?
+        PM FME Ya PMEGP. Kaunsa Form Bharein?
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -428,15 +428,15 @@ export default function PMFMEYojana() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Agar aapka unit chal raha hai — chahe ghar ke ek kamre me hi — to ye scheme us
+        Agar aapka unit chal raha hai. Chahe ghar ke ek kamre me hi. To ye scheme us
         unit ko brand banane ka sabse sasta rasta hai jo abhi sarkar de rahi hai. Kram
         yaad rakho: pehle apne zile ka ODOP dekho, Udyam aur FSSAI karwao, DRP se DPR
-        banwao, portal par apply karo, phir bank. Aur thoda sabr — 4-6 mahine ka process
+        banwao, portal par apply karo, phir bank. Aur thoda sabr, 4-6 mahine ka process
         hai, beech me file ka peecha karte rehna padta hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        SHG ki mahilao ke liye alag se kehna chahunga — ₹40,000 per member ka seed capital
+        SHG ki mahilao ke liye alag se kehna chahunga. ₹40,000 per member ka seed capital
         wala provision sabse kam use hota hai kyunki logo ko pata hi nahi. Apne block ke
         SRLM/Mission office me iska zikr karo.
       </p>
@@ -457,16 +457,16 @@ export default function PMFMEYojana() {
         Aage Padhne Layak
       </h2>
       <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300 mb-8">
-        <li><Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 dark:text-blue-400 hover:underline">KCC online apply</Link> — working capital ka sasta intezam (4% effective interest, timely repayment par)</li>
-        <li><Link href="/articles/vermi-compost-business-guide" className="text-blue-600 dark:text-blue-400 hover:underline">Vermi compost business</Link> — kam lagat ka ek aur agri-business rasta</li>
-        <li><Link href="/articles/PmKisanMaandhanYojanaPension" className="text-blue-600 dark:text-blue-400 hover:underline">PM Kisan Maandhan pension</Link> — ₹3000 mahina pension wali scheme</li>
+        <li><Link href="/articles/KisanCreditCardOnlineApply2026" className="text-blue-600 dark:text-blue-400 hover:underline">KCC online apply</Link>, working capital ka sasta intezam (4% effective interest, timely repayment par)</li>
+        <li><Link href="/articles/vermi-compost-business-guide" className="text-blue-600 dark:text-blue-400 hover:underline">Vermi compost business</Link>, kam lagat ka ek aur agri-business rasta</li>
+        <li><Link href="/articles/PmKisanMaandhanYojanaPension" className="text-blue-600 dark:text-blue-400 hover:underline">PM Kisan Maandhan pension</Link>. ₹3000 mahina pension wali scheme</li>
       </ul>
 
       <AuthorBox modified={getArticleBySlug('pm-fme-yojana-food-processing')!.modifiedTime} bioKey="PMFMEYojana" />
 
       <GuideDisclaimer
         consult="CAs, business consultants"
-        extra="PM FME ki guidelines aur eligibility criteria badal sakte hain — official website pmfme.mofpi.gov.in ya apne zile ke District Industries Centre se confirm karein."
+        extra="PM FME ki guidelines aur eligibility criteria badal sakte hain. Official website pmfme.mofpi.gov.in ya apne zile ke District Industries Centre se confirm karein."
         modified={getArticleBySlug('pm-fme-yojana-food-processing')!.modifiedTime}
       />
     </article>

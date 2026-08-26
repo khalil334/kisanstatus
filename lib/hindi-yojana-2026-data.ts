@@ -4,9 +4,9 @@ import type { HindiArticle } from '@/lib/hindi-articles-data';
 export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/fasal-bima-claim-status',
-    titleHi: 'फसल बीमा क्लेम स्टेटस — पैसा कब और कैसे मिलेगा',
-    seoTitleHi: 'फसल बीमा क्लेम स्टेटस — पैसा कब मिलेगा',
-    desc: 'PMFBY क्लेम अटका है? pmfby.gov.in पर status check का तरीका, 72 घंटे का नियम, claim reject होने के असली कारण और 14447 से शिकायत तक — पूरा रास्ता यहां।',
+    titleHi: 'फसल बीमा क्लेम स्टेटस: पैसा कब और कैसे मिलेगा',
+    seoTitleHi: 'फसल बीमा क्लेम स्टेटस: पैसा कब मिलेगा',
+    desc: 'PMFBY क्लेम अटका है? pmfby.gov.in पर status check का तरीका, 72 घंटे का नियम, claim reject होने के असली कारण और 14447 से शिकायत तक: पूरा रास्ता यहां।',
     keywords: [
       'फसल बीमा क्लेम स्टेटस',
       'fasal bima claim status',
@@ -26,8 +26,8 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/kisan-karj-mafi-list',
-    titleHi: 'किसान कर्ज माफी 2026 — किस राज्य में सच में चल रही है',
-    seoTitleHi: 'किसान कर्ज माफी 2026 — किस राज्य में चालू',
+    titleHi: 'किसान कर्ज माफी 2026: किस राज्य में सच में चल रही है',
+    seoTitleHi: 'किसान कर्ज माफी 2026: किस राज्य में चालू',
     desc: 'कोई राष्ट्रीय कर्ज माफी योजना नहीं है। महाराष्ट्र, तेलंगाना, UP और तमिलनाडु की असली स्थिति, official पोर्टल और फर्जी लिस्ट का pattern।',
     keywords: [
       'किसान कर्ज माफी 2026',
@@ -48,7 +48,7 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/pm-kisan-khad-yojana-sach',
-    titleHi: 'PM किसान खाद योजना ₹11,000 — सच क्या है',
+    titleHi: 'PM किसान खाद योजना ₹11,000: सच क्या है',
     seoTitleHi: 'PM किसान खाद योजना ₹11,000 का सच',
     desc: '₹11,000 वाली कोई अलग खाद योजना officially मौजूद नहीं है। अफवाह कहां से आई, खाद पर सरकार असल में क्या देती है और fake forms से कैसे बचें।',
     keywords: [
@@ -68,9 +68,9 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/pm-kisan-helpline-155261',
-    titleHi: 'PM किसान हेल्पलाइन 155261 — शिकायत कैसे और कहां करें',
-    seoTitleHi: 'PM किसान हेल्पलाइन 155261 — शिकायत',
-    desc: 'किस्त अटकी है? 155261 और 011-24300606 पर कब call करें, कौन सी problem कहां हल होगी — eKYC CSC पर, land seeding तहसील में।',
+    titleHi: 'PM किसान हेल्पलाइन 155261: शिकायत कैसे और कहां करें',
+    seoTitleHi: 'PM किसान हेल्पलाइन 155261: शिकायत',
+    desc: 'किस्त अटकी है? 155261 और 011-24300606 पर कब call करें, कौन सी problem कहां हल होगी: eKYC CSC पर, land seeding तहसील में।',
     keywords: [
       'PM किसान हेल्पलाइन नंबर',
       'pm kisan helpline 155261',
@@ -88,9 +88,9 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/mgnrega-pashu-shed-yojana',
-    titleHi: 'मनरेगा पशु शेड योजना — ₹1.6 लाख तक, असली प्रोसेस',
-    seoTitleHi: 'मनरेगा पशु शेड योजना — ₹1.6 लाख तक',
-    desc: 'पशु शेड का कोई online form नहीं होता — काम ग्राम पंचायत के जरिए होता है। Job card, 2-3 पशु का नियम, असली राशि का सच और आवेदन का रास्ता।',
+    titleHi: 'मनरेगा पशु शेड योजना: ₹1.6 लाख तक, असली प्रोसेस',
+    seoTitleHi: 'मनरेगा पशु शेड योजना: ₹1.6 लाख तक',
+    desc: 'पशु शेड का कोई online form नहीं होता: काम ग्राम पंचायत के जरिए होता है। Job card, 2-3 पशु का नियम, असली राशि का सच और आवेदन का रास्ता।',
     keywords: [
       'मनरेगा पशु शेड योजना',
       'pashu shed yojana',
@@ -108,9 +108,9 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/pashu-kisan-credit-card',
-    titleHi: 'पशु किसान क्रेडिट कार्ड — ₹3 लाख तक लोन, बिना जमीन के भी',
-    seoTitleHi: 'पशु किसान क्रेडिट कार्ड — ₹3 लाख तक',
-    desc: 'पशु KCC कोई अलग योजना नहीं — KCC का ही animal husbandry रूप है। भैंस ₹60,249, गाय ₹40,783 प्रति पशु, ₹2 लाख तक बिना guarantee और 4% interest का पूरा math।',
+    titleHi: 'पशु किसान क्रेडिट कार्ड: ₹3 लाख तक लोन, बिना जमीन के भी',
+    seoTitleHi: 'पशु किसान क्रेडिट कार्ड: ₹3 लाख तक',
+    desc: 'पशु KCC कोई अलग योजना नहीं: KCC का ही animal husbandry रूप है। भैंस ₹60,249, गाय ₹40,783 प्रति पशु, ₹2 लाख तक बिना guarantee और 4% interest का पूरा math।',
     keywords: [
       'पशु किसान क्रेडिट कार्ड',
       'pashu kisan credit card',

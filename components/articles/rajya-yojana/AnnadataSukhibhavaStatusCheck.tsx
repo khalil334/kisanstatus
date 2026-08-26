@@ -13,14 +13,14 @@ const Fig = (p: FigProps) => (
 const FAQS_DATA = [
   {
     q: 'Kya YSR Rythu Bharosa aur Annadata Sukhibhava ek hi scheme hai?',
-    a: 'Haan, wahi scheme hai. Bas naam badla — YSR Rythu Bharosa ab officially "Annadata Sukhibhava" hai. Benefits aur eligibility lagbhag same.',
+    a: 'Haan, wahi scheme hai. Bas naam badla. YSR Rythu Bharosa ab officially "Annadata Sukhibhava" hai. Benefits aur eligibility lagbhag same.',
   },
   {
-    q: 'Zameen apne naam nahi hai — Annadata Sukhibhava milegi?',
+    q: 'Zameen apne naam nahi hai. Annadata Sukhibhava milegi?',
     a: 'Haan. Tenant farmer hain aur valid CCRC (Crop Cultivator Rights Card) hai toh aap eligible hain. Yahi is scheme ka sabse bada fark hai. Dusre states mein bataidar aksar bahar reh jaate hain.',
   },
   {
-    q: 'Status "Pending" hai — verification baaki hai ya bank mein atka hai?',
+    q: 'Status "Pending" hai. Verification baaki hai ya bank mein atka hai?',
     a: 'Dono ho sakta hai. 7-10 din intezaar karein; phir bhi na aaye toh bank se NPCI mapping check karwayein.',
   },
   {
@@ -29,7 +29,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Agar main government employee hoon, kya mujhe ye paisa milega?',
-    a: 'Nahi. Government job wale (aap ya parivaar ka koi sadasya) exclusion mein aate hain — aur aaya hua paisa wapas karna pad sakta hai.',
+    a: 'Nahi. Government job wale (aap ya parivaar ka koi sadasya) exclusion mein aate hain. Aur aaya hua paisa wapas karna pad sakta hai.',
   },
 ];
 
@@ -50,7 +50,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <p>
         Sun, is scheme ki khaas baat toh aage aati hai. Yahan bataidar (tenant farmer) ko bhi jagah mili hai, jo PM Kisan mein
-        nahi aate — shart sirf ek: valid <strong>CCRC</strong> (Crop Cultivator Rights Card) hona chahiye. Land wali shart
+        nahi aate, shart sirf ek: valid <strong>CCRC</strong> (Crop Cultivator Rights Card) hona chahiye. Land wali shart
         bhi dhyan mein rakho: 5 acre se kam kheti wali zameen. Pehle eligibility aur paise ka hisaab, phir status dekhne ka
         tareeka, aur phir wahi fark.
       </p>
@@ -58,7 +58,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <Fig
         src="hero.webp"
         alt="Andhra Pradesh ka kisan apne dhaan ke khet mein mobile par Annadata Sukhibhava status dekh raha hai"
-        caption="Annadata Sukhibhava — Andhra Pradesh ke kisanon ke liye state ka ₹5,000 aur PM Kisan ka ₹2,000"
+        caption="Annadata Sukhibhava. Andhra Pradesh ke kisanon ke liye state ka ₹5,000 aur PM Kisan ka ₹2,000"
         width={1200}
         height={675}
         priority
@@ -66,7 +66,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <ExternalLinkButton
         href="https://annadathasukhibhava.ap.gov.in"
-        label="Official Portal — Annadatha Sukhibhava AP"
+        label="Official Portal. Annadatha Sukhibhava AP"
       />
 
       <h2>Status "Rejected" Dikhaye Toh Kya Karein</h2>
@@ -138,8 +138,8 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <Fig
         src="documents-checklist.webp"
-        alt="Annadata Sukhibhava status check ke liye zaroori documents — bank passbook, Aadhaar card, CCRC card aur mobile"
-        caption="Status check se pehle yeh saath rakho — Aadhaar, bank passbook, CCRC card aur registered mobile"
+        alt="Annadata Sukhibhava status check ke liye zaroori documents, bank passbook, Aadhaar card, CCRC card aur mobile"
+        caption="Status check se pehle yeh saath rakho. Aadhaar, bank passbook, CCRC card aur registered mobile"
       />
 
       <ol>
@@ -153,7 +153,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <ExternalLinkButton
         href="https://annadathasukhibhava.ap.gov.in/know-your-status/"
-        label="Check Status Now — Official AP Portal"
+        label="Check Status Now. Official AP Portal"
       />
 
       <h2>Beneficiary List Mein Naam Dhoondhna</h2>
@@ -177,7 +177,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         pakadne ka.
       </p>
 
-      <h2>PM Kisan Aur Annadata Sukhibhava — Saath Rakhkar Dekhein</h2>
+      <h2>PM Kisan Aur Annadata Sukhibhava. Saath Rakhkar Dekhein</h2>
 
       <p>
         Dono ek saath milte hain, isliye log ise ek hi scheme samajh lete hain. Fark yahan saaf hai:
@@ -223,7 +223,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         hain:
       </p>
       <ul>
-        <li>Official portal: <code>annadathasukhibhava.ap.gov.in</code> — helpline number portal ke &ldquo;Contact&rdquo; section mein diya hota hai; wahi se lein, kyunki numbers samay samay par badalte hain.</li>
+        <li>Official portal: <code>annadathasukhibhava.ap.gov.in</code>, helpline number portal ke &ldquo;Contact&rdquo; section mein diya hota hai; wahi se lein, kyunki numbers samay samay par badalte hain.</li>
         <li>District Agriculture Officer (DAO): Apne district ke DAO office mein personal visit karein.</li>
         <li>Gram Sachivalayam: Apne nearest Village Secretariat mein Agriculture Assistant se milen.</li>
       </ul>
@@ -234,13 +234,13 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         caption="Online na ho paaye to Gram Sachivalayam mein Agriculture Assistant free madad karta hai"
       />
 
-      <h2>Pehle Se Taiyaari — Phir Der Nahi Lagti</h2>
+      <h2>Pehle Se Taiyaari. Phir Der Nahi Lagti</h2>
 
       <p>
         AP mein scheme ka dhaancha aisa hai ki zyadatar rukavat pehle se dikh jaati hai —
         bas koi dekhta nahi. Har season shuru hone se pehle ye paanch cheezein milaa lein:
         zameen wale kisan apna khata number land record se, bataidar apna CCRC card ki
-        validity (wo har saal renew hota hai — purana card season badalte hi bekar ho
+        validity (wo har saal renew hota hai. Purana card season badalte hi bekar ho
         jaata hai), bank khaate ki Aadhaar seeding, PM Kisan ki e-KYC (kyunki combined
         ₹20,000 ka central hissa usi par khada hai), aur mobile number jo record mein darj
         hai. Paanchon durust hon to kist ka intezaar sirf release ki tareekh ka intezaar
@@ -280,7 +280,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <p>
         Exclusion parivar ke level par lagta hai, sirf applicant par nahi. Maan lijiye aap
         kheti karte hain lekin aapki patni government school mein teacher hai. Aap dono ek
-        hi parivar (husband, wife, minor children) mein aate hain — isliye aap exclusion
+        hi parivar (husband, wife, minor children) mein aate hain. Isliye aap exclusion
         mein aa jayenge. Ye baat thodi kadwi hai, par kai kisanon ko ye baat tab pata chalti hai
         jab do-teen kist aane ke baad recovery notice aata hai. Tab tak paisa kharch ho
         chuka hota hai. Isliye pehle hi check kar lena behtar hai.
@@ -295,7 +295,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <p>
         AP mein hazaron kisan doosron ki zameen lease par lekar kheti karte hain. Mehnat
-        unki, fasal unki — par saalon tak wo central schemes se bahar rehte the, sirf
+        unki, fasal unki. Par saalon tak wo central schemes se bahar rehte the, sirf
         isliye ki khata unke naam nahi tha. Ab tasveer badli hai. Valid CCRC card hai to
         aap is scheme mein poore eligible hain.
       </p>
@@ -324,7 +324,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <p>
         Guntur ke Ramesh ka message aaya tha, usne likha tha ki uska CCRC renewal season ke beech mein expire ho
-        gaya — kist ruk gayi aur usse lagaa ki naam hi kat gaya. VAA ke paas gaya, do din mein
+        gaya, kist ruk gayi aur usse lagaa ki naam hi kat gaya. VAA ke paas gaya, do din mein
         renewal hua, agle cycle mein paisa aa gaya. Card ki validity ka dhyan rakhna isliye zaroori hai.
       </p>
 
@@ -337,25 +337,25 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         check karna ho toh sabse bharosemand raasta hai apne Gram Sachivalayam{' '}
         jaakar VAA se poochhna, ya Rythu Seva Kendra par Aadhaar number dekar record nikalwana.
         Internet par jo bhi site &ldquo;CCRC login&rdquo; ka daawa kare, us par apni details mat
-        daalein — fraud ka khatra hai.
+        daalein, fraud ka khatra hai.
       </p>
 
       <Fig
         src="tenant-farmer-ccrc.webp"
-        alt="Andhra Pradesh mein bataidar kisan dusre ki zameen par dhaan ki ropai kar raha hai — CCRC card holders bhi eligible hain"
-        caption="Bataidar aur CCRC card holders bhi eligible hain — yahi PM Kisan se sabse bada fark hai"
+        alt="Andhra Pradesh mein bataidar kisan dusre ki zameen par dhaan ki ropai kar raha hai. CCRC card holders bhi eligible hain"
+        caption="Bataidar aur CCRC card holders bhi eligible hain. Yahi PM Kisan se sabse bada fark hai"
       />
 
       <h2>Kitna Paisa, Kahan Se Aata Hai</h2>
 
       <p>
-        Naam ka matlab hai "annadata sukhi rahe". Aap soch rahe honge ki itna paisa aata kahan se hai — do jagah se. Paisa seedha bank account mein aata hai, taaki
+        Naam ka matlab hai "annadata sukhi rahe". Aap soch rahe honge ki itna paisa aata kahan se hai. Do jagah se. Paisa seedha bank account mein aata hai, taaki
         beej, khaad aur season ke baaki kharche waqt par ho sakein. Matlab paisa haath mein nahi,
         seedha khaate mein — yahi DBT ka poora point hai.
       </p>
 
       <p>
-        <strong>Saal Bhar Ka Hisaab — ₹20,000 Tak, Do Jagah Se</strong>
+        <strong>Saal Bhar Ka Hisaab. ₹20,000 Tak, Do Jagah Se</strong>
       </p>
 
       <SchemeTable>
@@ -383,14 +383,14 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
 
       <p>
         Haal hi mein, 20/06/2026 ko CM N. Chandrababu Naidu ne 2026-27 ke pehle installment ke roop mein ₹3,125.47 crore
-        jaari kiye — karib <strong>46.85 lakh kisan parivaar</strong> is release mein the, aur har beneficiary ko ₹7,000
+        jaari kiye, karib <strong>46.85 lakh kisan parivaar</strong> is release mein the, aur har beneficiary ko ₹7,000
         (₹5,000 State + ₹2,000 Central) mile. Pichhli baar March 2026 (Ugadi ke aas-paas) ki release mein ₹6,000 aaye
-        the — ₹4,000 state ka aur ₹2,000 PM Kisan ka. Yaani har kist mein raqam ek jaisi nahi hoti; season aur state ke
+        the. ₹4,000 state ka aur ₹2,000 PM Kisan ka. Yaani har kist mein raqam ek jaisi nahi hoti; season aur state ke
         hisse ke hisaab se badalti hai. Isi wajah se "padosi ko zyada aaya, mujhe kam" wali baat aksar galat nikalti hai —
         dono ki kist ek hi phase ki nahi hoti.
       </p>
 
-      <h2>Rythu Bharosa Se Annadata Sukhibhava Tak — Naam Kyun Badla</h2>
+      <h2>Rythu Bharosa Se Annadata Sukhibhava Tak. Naam Kyun Badla</h2>
 
       <p>
         Thoda background jaan lein, kyunki isi confusion mein bahut log galat portal par status
@@ -410,10 +410,10 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         bas ghar badla hai. Samajh gaye? Achha, aage badhte hain.
       </p>
 
-      <h2>Kist Kab Aati Hai — Season Ka Hisaab</h2>
+      <h2>Kist Kab Aati Hai. Season Ka Hisaab</h2>
 
       <p>
-        Kist ka calendar kya hai? AP sarkar kist ko kheti ke season se jodti hai — Kharif,
+        Kist ka calendar kya hai? AP sarkar kist ko kheti ke season se jodti hai. Kharif,
         Rabi aur Summer. Teen season, teen kist, aur unka waqt buwai ke aas-paas rakha
         jaata hai:
       </p>
@@ -464,7 +464,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         </li>
         <li>
           <Link href="/rajya-yojana/namo-shetkari-yojana-status-check-2026">
-            Namo Shetkari Mahasanman Nidhi (Maharashtra) — Auto Eligible
+            Namo Shetkari Mahasanman Nidhi (Maharashtra). Auto Eligible
           </Link>
         </li>
         <li>
@@ -474,12 +474,12 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         </li>
         <li>
           <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
-            State Kisan Yojana List — Sabhi States Ka Comparison Table, ek jagah saare rajyon ka hisaab
+            State Kisan Yojana List. Sabhi States Ka Comparison Table, ek jagah saare rajyon ka hisaab
           </Link>
         </li>
       </ul>
 
-      <h2>Annadata Sukhibhava — Kuch Aur Sawaal</h2>
+      <h2>Annadata Sukhibhava. Kuch Aur Sawaal</h2>
 
       <script
         type="application/ld+json"
@@ -496,7 +496,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         }}
       />
       <section className="mb-8 not-prose">
-        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Annadata Sukhibhava — kisano ke aam sawaal (2026)</p>
+        <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Annadata Sukhibhava, kisano ke aam sawaal (2026)</p>
         <div className="space-y-3">
           {FAQS_DATA.map(({ q, a }) => (
             <details

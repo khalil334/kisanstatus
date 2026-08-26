@@ -10,20 +10,20 @@ const MODIFIED = '2026-08-20T21:06:58+05:30';
 const RELATED_CARDS = [
   {
     slug: 'auto-debit-fail-hone-par-regularization-kaise-karein',
-    title: 'Auto Debit Fail Ho Gaya — Ab Kya',
+    title: 'Auto Debit Fail Ho Gaya. Ab Kya',
     desc: 'Chhooti hui kist ko regularize karne ka step-by-step rasta aur late charge ka hisaab.',
     
   },
   {
     slug: 'pmkmy-bank-account-change',
     title: 'Auto Debit Wala Bank Badalna',
-    desc: 'Mandate naye account par shift karne ka process — purana account band hone se pehle.',
+    desc: 'Mandate naye account par shift karne ka process, purana account band hone se pehle.',
     
   },
   {
     slug: 'pm-kisan-maandhan-age-wise-contribution-chart-2026',
     title: 'Umar Ke Hisaab Se Contribution Chart',
-    desc: 'Aapke account se har mahine kitna kategi — poori age-wise list ek jagah.',
+    desc: 'Aapke account se har mahine kitna kategi, poori age-wise list ek jagah.',
     
   },
 ];
@@ -38,12 +38,12 @@ const FAQS_DATA = [
     a: 'Apni bank branch jakar NACH mandate cancellation form submit karein, ya net banking/mobile banking ke "Mandates" section se cancel karein. 5-7 din mein process complete ho jata hai. Cancellation ka acknowledgement receipt maang kar lein.',
   },
   {
-    q: 'Maandhan aur PM Kisan — alag-alag scheme hain?',
+    q: 'Maandhan aur PM Kisan, alag-alag scheme hain?',
     a: 'Haan, dono bilkul alag hain. PM Kisan Samman Nidhi mein government aapko ₹6000 saal deti hai. PM Kisan Maandhan mein aap khud share dete hain taaki 60 saal ke baad ₹3000 pension mile. Dono ka koi direct link nahi hai, bas ek optional facility hai ke PM Kisan ki kist se aapka Maandhan share kat jaye.',
   },
   {
     q: '3 mahine contribution nahi diya toh kya hoga?',
-    a: 'Aapka account default status mein chala jayega. Pehle mahine mein koi late fee nahi. Uske baad savings bank interest rate ki late fee lagti hai. 6 mahine tak payment nahi hui toh account dormant ho jayega. 3 saal tak regularize karne ka option rehta hai — poora outstanding + interest jama karke.',
+    a: 'Aapka account default status mein chala jayega. Pehle mahine mein koi late fee nahi. Uske baad savings bank interest rate ki late fee lagti hai. 6 mahine tak payment nahi hui toh account dormant ho jayega. 3 saal tak regularize karne ka option rehta hai. Poora outstanding + interest jama karke.',
   },
 ];
 
@@ -95,7 +95,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
 
         <div className="my-6 p-5 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded-r-xl">
           <p className="text-sm md:text-base text-red-900 dark:text-red-100 leading-relaxed font-medium">
-            <strong>Sach Pehle Jaan Lijiye:</strong> Agar aapke PM Kisan ke ₹2000 mein se ₹55, ₹100, ya ₹200 kat rahe hain aur aapko samajh nahi aa raha ke yeh kahan jaa raha hai — toh ghabraiye mat. Aapne hi CSC center pe ek form sign kiya tha jismein likha tha ke PM Kisan ki kist se aapka Maandhan share kat jaye. Yeh chori nahi hai, yeh aapki khud ki pension ka hissa hai.
+            <strong>Sach Pehle Jaan Lijiye:</strong> Agar aapke PM Kisan ke ₹2000 mein se ₹55, ₹100, ya ₹200 kat rahe hain aur aapko samajh nahi aa raha ke yeh kahan jaa raha hai. Toh ghabraiye mat. Aapne hi CSC center pe ek form sign kiya tha jismein likha tha ke PM Kisan ki kist se aapka Maandhan share kat jaye. Yeh chori nahi hai, yeh aapki khud ki pension ka hissa hai.
           </p>
         </div>
 
@@ -104,22 +104,22 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Aaj main aapko yahan bataunga ke yeh katauti kaise kaam karti hai, kyun kat ta hai, kitna kat ta hai, aur agar aap chahein toh is process ko kaise control kar sakte hain. Saath hi yeh bhi samjhaunga ke agar kisi mahine payment miss ho jaye toh kya hota hai, aur default hone se kaise bacha jaye. Sab kuch official sources — PIB release, DAC&amp;FW operational guidelines, aur maandhan.in portal — se verify karke.
+          Aaj main aapko yahan bataunga ke yeh katauti kaise kaam karti hai, kyun kat ta hai, kitna kat ta hai, aur agar aap chahein toh is process ko kaise control kar sakte hain. Saath hi yeh bhi samjhaunga ke agar kisi mahine payment miss ho jaye toh kya hota hai, aur default hone se kaise bacha jaye. Sab kuch official sources. PIB release, DAC&amp;FW operational guidelines, aur maandhan.in portal — se verify karke.
         </p>
 
         <section className="mb-8">
-          <SH>PM Kisan aur PM Kisan Maandhan — Dono Alag Alag Hain</SH>
+          <SH>PM Kisan aur PM Kisan Maandhan. Dono Alag Alag Hain</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Sabse pehle ek basic confusion door karte hain. Bahut se kisan sochte hain ke PM Kisan aur PM Kisan Maandhan ek hi scheme hai. Nahi. Dono bilkul alag hain, alag ministry handle karti hai, aur alag purpose serve karte hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            PM Kisan Samman Nidhi ek direct benefit transfer scheme hai jismein government har saal ₹6000 aapke account mein bhejti hai — ₹2000 har 4 mahine mein. Ismein aapko kuch bhi pay nahi karna padta. Bas eligible hona chahiye.
+            PM Kisan Samman Nidhi ek direct benefit transfer scheme hai jismein government har saal ₹6000 aapke account mein bhejti hai. ₹2000 har 4 mahine mein. Ismein aapko kuch bhi pay nahi karna padta. Bas eligible hona chahiye.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            PM Kisan Maandhan Yojana ek contributory pension scheme hai. Ismein aap 18-40 saal ki umar ke beech join kar sakte hain. 60 saal ke baad aapko ₹3000 monthly pension milti hai. Lekin iske liye aapko har mahine ek fixed amount pay karna padta hai — jo aapki entry age ke hisaab se ₹55 se ₹200 tak hota hai. Government bhi utna hi amount match karti hai.
+            PM Kisan Maandhan Yojana ek contributory pension scheme hai. Ismein aap 18-40 saal ki umar ke beech join kar sakte hain. 60 saal ke baad aapko ₹3000 monthly pension milti hai. Lekin iske liye aapko har mahine ek fixed amount pay karna padta hai. Jo aapki entry age ke hisaab se ₹55 se ₹200 tak hota hai. Government bhi utna hi amount match karti hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ab dono ka connection kya hai? Bas itna ke government ne ek optional facility di hai ke agar aap PM Kisan ke beneficiary hain, toh aap apna Maandhan share PM Kisan ki kist se katwa sakte hain. Isse aapko alag se cash jama karne ki tension nahi hoti. Lekin yeh optional tha — aapne enrollment ke waqt chuna tha. Agar aapne nahi chuna tha, toh aapke PM Kisan ke paise se kuch nahi katega.
+            Ab dono ka connection kya hai? Bas itna ke government ne ek optional facility di hai ke agar aap PM Kisan ke beneficiary hain, toh aap apna Maandhan share PM Kisan ki kist se katwa sakte hain. Isse aapko alag se cash jama karne ki tension nahi hoti. Lekin yeh optional tha. Aapne enrollment ke waqt chuna tha. Agar aapne nahi chuna tha, toh aapke PM Kisan ke paise se kuch nahi katega.
           </p>
 
           <div className="overflow-x-auto mb-4">
@@ -132,8 +132,8 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-t border-[var(--color-border)]"><td className="p-2 font-bold">Nature</td><td className="p-2">Direct income support — government gives money</td><td className="p-2">Contributory pension — you save for old age</td></tr>
-                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-2 font-bold">Your role</td><td className="p-2">Nothing — just be eligible</td><td className="p-2">Pay monthly share till age 60</td></tr>
+                <tr className="border-t border-[var(--color-border)]"><td className="p-2 font-bold">Nature</td><td className="p-2">Direct income support, government gives money</td><td className="p-2">Contributory pension, you save for old age</td></tr>
+                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-2 font-bold">Your role</td><td className="p-2">Nothing, just be eligible</td><td className="p-2">Pay monthly share till age 60</td></tr>
                 <tr className="border-t border-[var(--color-border)]"><td className="p-2 font-bold">Money flow</td><td className="p-2">Govt → Your account</td><td className="p-2">Your account → Pension fund (managed by LIC)</td></tr>
                 <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]"><td className="p-2 font-bold">Link between both</td><td className="p-2" colSpan={2}>Optional: You can choose to deduct Maandhan share from PM Kisan benefit</td></tr>
               </tbody>
@@ -173,9 +173,9 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
         </section>
 
         <section className="mb-8">
-          <SH>Kitna Katna Chahiye — Verify Karein</SH>
+          <SH>Kitna Katna Chahiye. Verify Karein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Aapke account se jo amount kat raha hai wo aapki entry age par fix hua tha — ₹55 (18 saal) se ₹200 (40 saal) tak. Har ek umar ka exact figure, government match ke saath, reference chart mein dekhein aur apni passbook entry se milayein:
+            Aapke account se jo amount kat raha hai wo aapki entry age par fix hua tha. ₹55 (18 saal) se ₹200 (40 saal) tak. Har ek umar ka exact figure, government match ke saath, reference chart mein dekhein aur apni passbook entry se milayein:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Age-Wise Contribution Chart (18–40) →</Link>
@@ -224,23 +224,23 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
             </div>
             <div className="p-4 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl">
               <p className="font-black text-sm text-gray-800 dark:text-gray-300 mb-1">3 Saal Ke Baad</p>
-              <p className="text-xs text-[var(--color-text-muted)]">SMS alerts band ho jate hain, lekin aap phir bhi call center ya online inquiry karke status check kar sakte hain. Account regularize karne ka option ab bhi available hai — poora due amount + applicable interest jama karke.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">SMS alerts band ho jate hain, lekin aap phir bhi call center ya online inquiry karke status check kar sakte hain. Account regularize karne ka option ab bhi available hai. Poora due amount + applicable interest jama karke.</p>
             </div>
           </div>
 
           <WB>
-            <strong>Default hone se bachne ke liye:</strong> Har hafte apne bank account ka balance check karein. Agar debit fail ho, toh us hafte hi CSC center jakar manual payment karein. 3 mahine se zyada gap mat dein. Agar kisi mahine PM Kisan ki kist late aayi, toh manual payment ka option use karein. Aur agar aap bank hi badalna chahte hain — branch band ho gayi ho ya doosre bank mein shift ho rahe hon — toh <Link href="/maandhan/pmkmy-bank-account-change" className="underline text-green-700 dark:text-green-400">PMKMY bank account change ka poora process</Link> pehle padh lein, kyunki change ke 15-30 din tak debit purane account se hi hota hai.
+            <strong>Default hone se bachne ke liye:</strong> Har hafte apne bank account ka balance check karein. Agar debit fail ho, toh us hafte hi CSC center jakar manual payment karein. 3 mahine se zyada gap mat dein. Agar kisi mahine PM Kisan ki kist late aayi, toh manual payment ka option use karein. Aur agar aap bank hi badalna chahte hain. Branch band ho gayi ho ya doosre bank mein shift ho rahe hon, toh <Link href="/maandhan/pmkmy-bank-account-change" className="underline text-green-700 dark:text-green-400">PMKMY bank account change ka poora process</Link> pehle padh lein, kyunki change ke 15-30 din tak debit purane account se hi hota hai.
           </WB>
         </section>
 
         <section className="mb-8">
           <SH>Auto-Debit Band Kaise Karein? NACH Mandate Cancellation Ka Exact Process</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Agar aap chahte hain ke PM Kisan ke paise se share na kata jaye, balki aap khud alag se jama karein, toh aap ye mandate band karwa sakte hain. Lekin band karne se aapka monthly payment band nahi hota — aapko khud se jama karna padta hai, warna default ho jayega.
+            Agar aap chahte hain ke PM Kisan ke paise se share na kata jaye, balki aap khud alag se jama karein, toh aap ye mandate band karwa sakte hain. Lekin band karne se aapka monthly payment band nahi hota. Aapko khud se jama karna padta hai, warna default ho jayega.
           </p>
 
           <StepList>
-            <SI n={1}><strong>Net Banking / Mobile Banking Se:</strong> Apne bank ke net banking ya mobile banking app mein login karein. "Mandates" ya "Standing Instructions" section mein jayein. Active mandates ki list mein PM-KMY ya LIC wala mandate dhundein. Uspe "Cancel" ya "Delete" karein. Confirmation ke baad ek reference number milega — usse save kar lein. NPCI guidelines ke hisaab se cancellation 5 working days mein complete ho jata hai.</SI>
+            <SI n={1}><strong>Net Banking / Mobile Banking Se:</strong> Apne bank ke net banking ya mobile banking app mein login karein. "Mandates" ya "Standing Instructions" section mein jayein. Active mandates ki list mein PM-KMY ya LIC wala mandate dhundein. Uspe "Cancel" ya "Delete" karein. Confirmation ke baad ek reference number milega, usse save kar lein. NPCI guidelines ke hisaab se cancellation 5 working days mein complete ho jata hai.</SI>
             <SI n={2}><strong>Bank Branch Ja Kar:</strong> Apni bank branch mein jayein aur NACH mandate cancellation form maangein. Form mein account number, mandate reference number (agar pata ho), scheme name (PM Kisan Maandhan Yojana), aur cancellation reason likhein. Saath mein Aadhaar card aur bank passbook le jayein. Form submit karne ke baad bank se acknowledgement receipt le lein. RBI aur NPCI guidelines ke hisaab se koi cancellation charge nahi lagti.</SI>
             <SI n={3}><strong>Confirmation:</strong> Aapko confirmation SMS aayega jismein UMR number, entity name, account ke last 4 digits, aur cancellation date likhi hogi. Process 5-7 working days mein complete hota hai.</SI>
           </StepList>
@@ -277,7 +277,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
                 <span className="text-xl mt-0.5"></span>
                 <div>
                   <p className="font-black text-sm text-[var(--color-text)] mb-1">CSC Center</p>
-                  <p className="text-xs text-[var(--color-text-muted)]">Yeh sabse aasan tareeqa hai gaon mein rehne wale farmers ke liye. Apne nazdeeki CSC center jayein. VLE (Village Level Entrepreneur) ke paas PM-KMY portal ka access hota hai. Aap cash dekar apna due amount jama karwa sakte hain. CSC wala aapko ek receipt dega — usse sambhal kar rakhein.</p>
+                  <p className="text-xs text-[var(--color-text-muted)]">Yeh sabse aasan tareeqa hai gaon mein rehne wale farmers ke liye. Apne nazdeeki CSC center jayein. VLE (Village Level Entrepreneur) ke paas PM-KMY portal ka access hota hai. Aap cash dekar apna due amount jama karwa sakte hain. CSC wala aapko ek receipt dega, usse sambhal kar rakhein.</p>
                 </div>
               </div>
             </div>
@@ -301,7 +301,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
           </div>
 
           <IB>
-            Agar aap gaon mein hain aur CSC center aasani se available hai, toh ise band mat karo. Kyunki har mahine CSC jana ya online payment karna ek extra responsibility hai. Auto-debit mein aapka share time par chala jata hai aur account active rehta hai. Sirf tab band karo jab aapko sach mein problem ho rahi ho — jaise account change karna hai ya PM Kisan ki kist irregular aati hai.
+            Agar aap gaon mein hain aur CSC center aasani se available hai, toh ise band mat karo. Kyunki har mahine CSC jana ya online payment karna ek extra responsibility hai. Auto-debit mein aapka share time par chala jata hai aur account active rehta hai. Sirf tab band karo jab aapko sach mein problem ho rahi ho, jaise account change karna hai ya PM Kisan ki kist irregular aati hai.
           </IB>
         </section>
 
@@ -343,7 +343,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
             Kai kisanon ke man mein yeh sawal rehta hai ke "Mera paisa kahan jaa raha hai? Koi bank mein jama ho raha hai ya kisi ne kha liya?"
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Aapka paisa bilkul safe hai. PM-KMY ek Central Sector Scheme hai jise Ministry of Agriculture &amp; Farmers Welfare administer karta hai. Pension fund manager LIC of India hai — jo Life Insurance Corporation Act, 1956 ke under established statutory corporation hai. Matlab yeh government ki hi company hai.
+            Aapka paisa bilkul safe hai. PM-KMY ek Central Sector Scheme hai jise Ministry of Agriculture &amp; Farmers Welfare administer karta hai. Pension fund manager LIC of India hai. Jo Life Insurance Corporation Act, 1956 ke under established statutory corporation hai. Matlab yeh government ki hi company hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Aapka share aur government ka matching share dono alag alag track hote hain. Government ka co-contribution separately maintain hota hai LIC ke paas. Yeh amount pension payout ke liye use hota hai. Agar aap premature exit lete hain, toh sirf aapka deposited amount + interest wapas milta hai. Government ka share pension fund mein transfer ho jata hai wapas.
@@ -352,7 +352,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
             Har contribution jama hone par aapke registered mobile number par SMS confirmation aata hai. Apna balance ya status verify karne ke liye maandhan.in ya pmkmy.gov.in portal par apna KPAN number ya mobile number daal kar login kar sakte hain, ya nazdeeki CSC center se bhi pata kar sakte hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            60 saal ke baad jo ₹3000 monthly pension milti hai, woh bhi LIC hi disburse karti hai. Pension aapke registered bank account mein credit hoti hai. Family pension ka provision bhi hai — agar subscriber ki death 60 saal ke baad hoti hai, toh spouse ko 50% pension (₹1500/month) milti hai.
+            60 saal ke baad jo ₹3000 monthly pension milti hai, woh bhi LIC hi disburse karti hai. Pension aapke registered bank account mein credit hoti hai. Family pension ka provision bhi hai. Agar subscriber ki death 60 saal ke baad hoti hai, toh spouse ko 50% pension (₹1500/month) milti hai.
           </p>
         </section>
 
@@ -360,13 +360,13 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Auto-Debit Ko Lekar Kisan Kya Poochhte Hain
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM-KMY Auto Debit Aur Contribution — Sawal Jawab" />
+          <FAQBlock faqs={FAQS_DATA} caption="PM-KMY Auto Debit Aur Contribution. Sawal Jawab" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Band Karwane Se Pehle SMS Trail Set Kar Lein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Ye consent aapne enrollment par diya tha aur kabhi bhi wapas le sakte hain — lekin band karwane ke baad har mahine khud jama karne ki zimmedari aap par aa jaati hai, aur wahi woh mod hai jahan zyada tar accounts dormant hote hain. Isliye band karwane se pehle registered mobile number active karwa lein: har jama contribution ka SMS aata hai, aur jis mahine SMS na aaye, usi hafte KPAN se maandhan.in par balance check kar lein. Ye chhota sa trail 60 saal wali ₹3000 pension ko default se bachaata hai.
+            Ye consent aapne enrollment par diya tha aur kabhi bhi wapas le sakte hain. Lekin band karwane ke baad har mahine khud jama karne ki zimmedari aap par aa jaati hai, aur wahi woh mod hai jahan zyada tar accounts dormant hote hain. Isliye band karwane se pehle registered mobile number active karwa lein: har jama contribution ka SMS aata hai, aur jis mahine SMS na aaye, usi hafte KPAN se maandhan.in par balance check kar lein. Ye chhota sa trail 60 saal wali ₹3000 pension ko default se bachaata hai.
           </p>
         </div>
 

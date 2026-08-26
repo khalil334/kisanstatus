@@ -5,9 +5,9 @@ import { useMemo, useState } from 'react';
 type FarmerType = 'owner' | 'bhagchasi' | 'bhumihin';
 
 const DOCS_COMMON = [
-  'Voter ID card (EPIC number) — Krishak Bandhu ka primary identifier yahi hai',
+  'Voter ID card (EPIC number). Krishak Bandhu ka primary identifier yahi hai',
   'Aadhaar card',
-  'Bank passbook ka pehla page — account number aur IFSC saaf dikhe',
+  'Bank passbook ka pehla page, account number aur IFSC saaf dikhe',
   'Registered mobile number jispar SMS aata hai',
 ];
 
@@ -18,7 +18,7 @@ const DOCS_BY_TYPE: Record<FarmerType, string[]> = {
   ],
   bhagchasi: [
     'Recorded bhagchasi (sharecropper) certificate ya panchayat ka attestation',
-    'Jis zameen par kheti karte hain uska ROR — malik ke naam wala bhi chalega',
+    'Jis zameen par kheti karte hain uska ROR, malik ke naam wala bhi chalega',
   ],
   bhumihin: [
     'Camp se mila acknowledgement ID (Bhumihin Khetmajur enrolment slip)',
@@ -52,7 +52,7 @@ export default function KrishakBandhuChecker() {
         ok: false,
         headline: 'West Bengal ke permanent resident hi eligible hain',
         detail:
-          'Krishak Bandhu poori tarah state-funded scheme hai. Domicile hi pehli shart hai — doosre rajya mein rehte hue ye grant nahi milta, chahe zameen Bengal mein ho.',
+          'Krishak Bandhu poori tarah state-funded scheme hai. Domicile hi pehli shart hai. Doosre rajya mein rehte hue ye grant nahi milta, chahe zameen Bengal mein ho.',
         annual: 0,
         instalment: 0,
         death: false,
@@ -90,11 +90,11 @@ export default function KrishakBandhuChecker() {
       ok: true,
       headline:
         acres >= 1
-          ? 'Full slab — 1 acre ya usse zyada'
-          : 'Pro-rata slab — 1 acre se kam, minimum floor lagu',
+          ? 'Full slab, 1 acre ya usse zyada'
+          : 'Pro-rata slab, 1 acre se kam, minimum floor lagu',
       detail:
         acres >= 1
-          ? '1 acre ya zyada cultivable land par poora annual grant milta hai. Isse aage zameen badhne se raqam nahi badhti — upar ki limit fix hai.'
+          ? '1 acre ya zyada cultivable land par poora annual grant milta hai. Isse aage zameen badhne se raqam nahi badhti, upar ki limit fix hai.'
           : 'Chhoti jotdaari par hisaab pro-rata hota hai, lekin ek minimum floor bhi hai. Isliye bahut kam zameen par bhi grant floor se neeche nahi jaata.',
       annual,
       instalment: annual / 2,
@@ -303,7 +303,7 @@ export default function KrishakBandhuChecker() {
                 >
                   {result.death
                     ? 'Death Benefit cover: aapki umar 18–60 ke andar hai, is component mein aate hain.'
-                    : 'Death Benefit cover: umar 18–60 ke bahar (ya bhari nahi) hai — income support to chalta rahega, lekin ye cover lagu nahi hoga.'}
+                    : 'Death Benefit cover: umar 18–60 ke bahar (ya bhari nahi) hai. Income support to chalta rahega, lekin ye cover lagu nahi hoga.'}
                 </p>
               )}
 
@@ -320,7 +320,7 @@ export default function KrishakBandhuChecker() {
 
               <p className="text-[11px] text-gray-500 dark:text-gray-400 m-0">
                 Ye estimate scheme ke published structure par bana hai. Aapka actual
-                sanctioned amount portal ke record — khaas kar ROR mein darj area — par
+                sanctioned amount portal ke record, khaas kar ROR mein darj area. Par
                 nirbhar karta hai.
               </p>
             </div>

@@ -9,23 +9,23 @@ import UIFig, { type FigProps } from '@/components/ui/Fig';
 const FAQS_DATA = [
   {
     q: 'Pati aur patni dono ko PM Kisan ka paisa milta hai?',
-    a: 'Nahi. PM Kisan mein beneficiary "family" hai — pati, patni aur naabaalig bachche milkar ek unit. Ek unit ko saal mein ek hi grant milta hai. Dono taraf se registration ho jaaye to verification par duplicate pakda jaata hai aur extra wala paisa recover kiya jaata hai.',
+    a: 'Nahi. PM Kisan mein beneficiary "family" hai. Pati, patni aur naabaalig bachche milkar ek unit. Ek unit ko saal mein ek hi grant milta hai. Dono taraf se registration ho jaaye to verification par duplicate pakda jaata hai aur extra wala paisa recover kiya jaata hai.',
   },
   {
     q: 'Baalig bete ko alag se PM Kisan mil sakta hai?',
-    a: 'Haan — par sirf tab jab batwaare ke baad zameen revenue record mein uski entry ho chuki ho. Ration card ya shaadi kaafi nahi; mutation ke bina wo wahi ek parivaar hai.',
+    a: 'Haan. Par sirf tab jab batwaare ke baad zameen revenue record mein uski entry ho chuki ho. Ration card ya shaadi kaafi nahi; mutation ke bina wo wahi ek parivaar hai.',
   },
   {
     q: 'Galat mila PM Kisan ka paisa kaise wapas karein?',
-    a: 'Portal ke "Voluntary Surrender of PM-KISAN Benefit" option se registration hatao, refund challan se paisa jama karo. Notice ka intezaar mat karo — recovery bank account se bhi ho sakti hai.',
+    a: 'Portal ke "Voluntary Surrender of PM-KISAN Benefit" option se registration hatao, refund challan se paisa jama karo. Notice ka intezaar mat karo, recovery bank account se bhi ho sakti hai.',
   },
   {
     q: 'Do registration par paisa aa raha hai aur kuch nahi hua, to shayad theek hai?',
-    a: 'Bilkul nahi. Kai duplicate do-teen saal baad pakde gaye — poora amount ek saath recover hua.',
+    a: 'Bilkul nahi. Kai duplicate do-teen saal baad pakde gaye, poora amount ek saath recover hua.',
   },
   {
     q: 'Batai (tenant) par kheti karte hain, milta hai?',
-    a: 'Nahi — PM Kisan landholding par chalta hai, batai wale ismein nahi aate. Kuch rajya apni scheme mein tenant farmer ko lete hain; apne rajya ki list dekh lo.',
+    a: 'Nahi. PM Kisan landholding par chalta hai, batai wale ismein nahi aate. Kuch rajya apni scheme mein tenant farmer ko lete hain; apne rajya ki list dekh lo.',
   },
 ];
 
@@ -48,7 +48,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <Fig
           src="hero.webp"
           alt="Buzurg kisan pati-patni apne ghar ke bahar ID card aur bank passbook ke saath baithe hain"
-          caption="PM Kisan ka beneficiary ek vyakti nahi, poora parivaar hai — yahi sabse zyada galat samjha jaata hai"
+          caption="PM Kisan ka beneficiary ek vyakti nahi, poora parivaar hai. Yahi sabse zyada galat samjha jaata hai"
           priority
         />
 
@@ -57,7 +57,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           humare yahan ek hi kyun?&rdquo; Kisi ne CSC wale se form bharwa liya, kisi ne khud
           portal par apply kar diya, aur kuch mahine tak dono khaton mein do-do hazaar aata
           bhi raha. Phir achanak ek din pehla status badal gaya aur doosre par recovery ka
-          message aa gaya. Ye kisi clerk ki galti nahi thi — ye scheme ka wo rule tha jo
+          message aa gaya. Ye kisi clerk ki galti nahi thi. Ye scheme ka wo rule tha jo
           shuru se likha hua hai, bas padha kam gaya.
         </p>
 
@@ -68,21 +68,21 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           paisa kisi bhi haalat mein nahi banta.
         </InfoBox>
 
-        <h2>Teen Ghar, Teen Faisle — Rule Ko Misaal Se Samajhein</h2>
+        <h2>Teen Ghar, Teen Faisle. Rule Ko Misaal Se Samajhein</h2>
 
         <p>
           <strong>Pehla ghar:</strong> pati ke naam do bigha, patni ke naam teen bigha.
           Dono ke registration alag-alag CSC se ho gaye the aur dono khaton mein kist aa
           rahi thi. Verification mein dono Aadhaar ek hi parivaar se jude nikle. Sahi
           raasta yahan ye tha ki jiski teeno kagaz (land record, Aadhaar, bank) ek jaise
-          the — patni ke the — uska registration rehta aur pati apna surrender karta.
+          the, patni ke the, uska registration rehta aur pati apna surrender karta.
           Unhone yahi kiya, refund challan se pichli kistein lautayi, aur patni ka
           registration bina rukavat chal raha hai.
         </p>
 
         <p>
           <strong>Doosra ghar:</strong> pita aur do baalig bete. Zameen abhi poori pita ke
-          naam hai, batwaara sirf zubaani hua hai. Teeno ke registration ho gaye the — do
+          naam hai, batwaara sirf zubaani hua hai. Teeno ke registration ho gaye the, do
           gir gaye. Yahan jaldi ka raasta koi nahi hai: pehle tehsil mein batwaara aur
           mutation, uske baad hi beton ke apne claim banenge. Jab tak record ek hai, claim
           ek hai.
@@ -91,12 +91,12 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <p>
           <strong>Teesra ghar:</strong> vidhwa maa aur uska baalig beta, dono ke naam par
           virasat ki zameen mutation ke saath alag-alag darj ho chuki hai. Ye do alag
-          family unit hain — maa apna registration rakh sakti hai aur beta apna. Yahan do
+          family unit hain. Maa apna registration rakh sakti hai aur beta apna. Yahan do
           registration hona bilkul jaayaz hai, aur kisi surrender ki zaroorat nahi.
         </p>
 
         <p>
-          In teeno mein farak sirf ek cheez ka hai — revenue record. Ghar ka batwara,
+          In teeno mein farak sirf ek cheez ka hai. Revenue record. Ghar ka batwara,
           ration card, ya rehne ka alag intezaam scheme ki nazar mein kuch nahi badalta;
           jo tehsil ke kagaz mein hai, wahi sach hai.
         </p>
@@ -104,7 +104,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <h2>Rule Ek Line Mein: Ginti Aadmi Ki Nahi, Ghar Ki Hoti Hai</h2>
 
         <p>
-          Theek hai, baat yeh hai — bahut si sarkari schemes vyakti ko unit maankar chalti hain: jitne log eligible,
+          Theek hai, baat yeh hai. Bahut si sarkari schemes vyakti ko unit maankar chalti hain: jitne log eligible,
           utne benefit. PM Kisan ka dhaancha ulta hai. Ulta, aur isi liye confusing. Yahan
           pehle ye dekha jaata hai ki landholding kis <em>parivaar</em> ki hai, aur us
           parivaar ke andar se ek hi grant nikalta hai. Bas.
@@ -119,11 +119,11 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <Fig
           src="family-documents-check.webp"
           alt="Kisan parivaar ghar mein bank passbook, Aadhaar card aur zameen ke kagaz milaa kar dekh raha hai"
-          caption="Registration se pehle teeno kagaz — land record, Aadhaar aur passbook — ek saath milaa lein"
+          caption="Registration se pehle teeno kagaz, land record, Aadhaar aur passbook, ek saath milaa lein"
         />
 
         <p>
-          Aur ek baat jo log der se samajhte hain — zameen ka area raqam par asar nahi daalta.
+          Aur ek baat jo log der se samajhte hain. Zameen ka area raqam par asar nahi daalta.
           Do bigha ho ya bees, saal bhar ka grant ₹6,000 hi rehta hai. Isliye &ldquo;humari
           zameen zyada hai, to humein dugna milna chahiye&rdquo; wali soch se doosra claim
           justify nahi hota.
@@ -134,21 +134,21 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <h2>Wo Case Jismein Ek Parivaar Se Do Claim Sach Mein Ban Jaate Hain</h2>
 
         <p>
-          Wait, pehle ek baat bata deta hoon — aap soch rahe honge ki ye niyam sirf kagaz par
+          Wait, pehle ek baat bata deta hoon, aap soch rahe honge ki ye niyam sirf kagaz par
           hai. Mujhe bhi shuru mein aisa hi laga tha. Nahi hai; verification isi par tikta hai.
         </p>
 
         <p>
           To phir padosi ke yahan do registration kaise chal rahe hain? Achha sawaal hai.
           Do registration kabhi-kabhi bilkul sahi hote hain, lekin uski wajah pati-patni
-          nahi hoti — <strong>batwaara</strong> hoti hai.
+          nahi hoti. <strong>batwaara</strong> hoti hai.
         </p>
 
         <p>
-          Comment box mein ek lambi si baat likhi hui mili thi — likhne wale ne aur uski patni
+          Comment box mein ek lambi si baat likhi hui mili thi. Likhne wale ne aur uski patni
           ne alag-alag CSC se form
           bharwa liya tha, do saal tak dono khaton mein kist aati rahi. Phir ek din patni
-          wale registration par recovery notice aa gaya — chaar kist ka poora paisa wapas.
+          wale registration par recovery notice aa gaya, chaar kist ka poora paisa wapas.
           Usne kaha hota to pehle hi ek surrender kar dete. Yahi is page ka maqsad hai.
           Bas, itni si baat.
         </p>
@@ -171,7 +171,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           Lekin yahan galti karne ki gunjaish poori hai. Log samajhte hain ki naya ration card
           banwa lene se, ya bete ki shaadi ho jaane se, ya panchayat se &ldquo;alag
           parivaar&rdquo; ka certificate le aane se batwaara ho gaya. Nahi hua. Jab tak tehsil
-          ke record mein zameen bete tak transfer nahi hoti, tab tak wahi ek unit hai — aur
+          ke record mein zameen bete tak transfer nahi hoti, tab tak wahi ek unit hai. Aur
           doosra registration verification par gir jaata hai.
         </p>
 
@@ -208,12 +208,12 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           </tr>
         </SchemeTable>
 
-        <h2>Exclusion List — Yahan Poora Ghar Ek Saath Bahar Ho Jaata Hai</h2>
+        <h2>Exclusion List. Yahan Poora Ghar Ek Saath Bahar Ho Jaata Hai</h2>
 
         <p>
           Family rule ka doosra pehlu ye hai ki exclusion bhi parivaar par lagti hai. Matlab
           agar koi ek sadasya in categories mein aata hai, to us ghar ka koi bhi member PM
-          Kisan nahi le sakta — chahe form kisi aur ne bhara ho.
+          Kisan nahi le sakta, chahe form kisi aur ne bhara ho.
         </p>
 
         <p className="text-sm">
@@ -227,7 +227,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <ul>
           <li>Pichle assessment year mein kisi sadasya ne income tax bhara ho.</li>
           <li>
-            Koi sadasya serving ya retired sarkari karmchari ho — central, state, PSU ya
+            Koi sadasya serving ya retired sarkari karmchari ho, central, state, PSU ya
             autonomous body. Multi-tasking staff / Class-IV / Group-D is se bahar rakhe gaye
             hain.
           </li>
@@ -236,11 +236,11 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
             chhod kar).
           </li>
           <li>
-            Practising professional ho — doctor, engineer, vakil, chartered accountant,
-            architect — chahe registration ho aur practice band ho.
+            Practising professional ho, doctor, engineer, vakil, chartered accountant,
+            architect, chahe registration ho aur practice band ho.
           </li>
           <li>
-            Constitutional ya elected post par raha ho — MP, MLA, MLC, mayor, zila parishad
+            Constitutional ya elected post par raha ho. MP, MLA, MLC, mayor, zila parishad
             chairman, ya mantri.
           </li>
           <li>
@@ -250,12 +250,12 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
 
         <InfoBox type="warning">
           Sabse zyada recovery notices isi rule se aate hain. Beta sarkari naukri mein lag
-          gaya, ya ek saal income tax bhar diya gaya — aur pita ki kist aati rahi.
+          gaya, ya ek saal income tax bhar diya gaya. Aur pita ki kist aati rahi.
           Verification jab data cross-check karta hai, to poora parivaar ineligible nikalta
           hai aur ab tak ka paisa wapas maanga jaata hai.
         </InfoBox>
 
-        <h2>Shaadi, Virasat, Batwaara — Zindagi Ke Mod Par Registration Ka Kya Ho</h2>
+        <h2>Shaadi, Virasat, Batwaara. Zindagi Ke Mod Par Registration Ka Kya Ho</h2>
 
         <p>
           Family rule ka asli imtihaan tab aata hai jab ghar ki haalat badalti hai. Teen
@@ -264,7 +264,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
 
         <p>
           <strong>Shaadi:</strong> beti ka registration mayke ki zameen par tha aur shaadi
-          ho gayi — ab wo apne pati ke saath naya family unit hai. Mayke wali zameen agar
+          ho gayi, ab wo apne pati ke saath naya family unit hai. Mayke wali zameen agar
           record mein uske naam par hai to claim ban sakta hai, lekin sasural ke unit mein
           pehle se koi registration hai to dono mein se ek hi chalega. Yahan bhi wahi kasauti
           hai: record kis ke naam, unit kaun sa.
@@ -272,13 +272,13 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
 
         <p>
           <strong>Virasat:</strong> registration wale sadasya ke guzar jaane par purani
-          entry par kist lena band karein — wo recovery ka seedha raasta hai. Pehle mutation
+          entry par kist lena band karein. Wo recovery ka seedha raasta hai. Pehle mutation
           se zameen waaris ke naam ho, phir waaris apna naya registration kare. Beech ke
           mahinon ki kistein chhod deni padti hain; ye nuksan nahi, niyam hai.
         </p>
 
         <p>
-          <strong>Batwaara:</strong> upar vistaar se likha hai — zubaani ya panchayat ke
+          <strong>Batwaara:</strong> upar vistaar se likha hai. Zubaani ya panchayat ke
           kagaz se kuch nahi hota, tehsil ka mutation hi batwaara hai. Mutation ke baad har
           naya khatedar apna registration alag se karega; purana registration apne aap
           update nahi hota.
@@ -287,11 +287,11 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <p>
           <strong>Talaq:</strong> kaanooni taur par judai ho jaane ke baad dono apne-apne
           family unit hain. Agar dono ki apni-apni zameen record mein darj hai to dono ka
-          claim ban sakta hai — lekin yahan bhi kasauti record hi hai; kachcha samjhauta
+          claim ban sakta hai. Lekin yahan bhi kasauti record hi hai; kachcha samjhauta
           kaafi nahi hota.
         </p>
 
-        <h2>Kaise Pakda Jaata Hai — Data Ab Aapas Mein Juda Hua Hai</h2>
+        <h2>Kaise Pakda Jaata Hai. Data Ab Aapas Mein Juda Hua Hai</h2>
 
         <Fig
           src="aadhaar-ekyc-couple.webp"
@@ -304,11 +304,11 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           registration pakde nahi jaayenge. Wo daur gaya. Aadhaar e-KYC anivaarya hone ke
           baad har beneficiary ek unique identity se juda hai, land record digitize ho chuke
           hain, aur payment Aadhaar-linked NPCI mapper se hoti hai. System ko ab aankh nahi,
-          data chahiye — aur data jhooth nahi bolta.
+          data chahiye. Aur data jhooth nahi bolta.
         </p>
 
         <p>
-          Verification mein aam taur par teen cheezein match ki jaati hain — ek hi khasra ya
+          Verification mein aam taur par teen cheezein match ki jaati hain. Ek hi khasra ya
           khata number do file mein hai kya, ek hi parivaar ke do Aadhaar par kist ja rahi
           hai kya, aur income tax ya sarkari salary ka data kisi member ke Aadhaar se match
           ho raha hai kya. Teeno mein se koi ek hit ho jaaye, to file hold ho jaati hai.
@@ -316,14 +316,14 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
 
         <p>
           Isi liye kai baar saal-do saal chalne ke baad achanak paisa rukta hai. Us waqt
-          naya rule nahi lagta — bas purana record cross-check hota hai. Der se pakda gaya,
+          naya rule nahi lagta. Bas purana record cross-check hota hai. Der se pakda gaya,
           par pakda gaya.
         </p>
 
-        <h2>Dono Taraf Paisa Aa Gaya Hai — Ab Kya Karein</h2>
+        <h2>Dono Taraf Paisa Aa Gaya Hai. Ab Kya Karein</h2>
 
         <p>
-          Agar aapko padhte hue lag raha hai ki aapke saath yahi hua hai — hairaan hone ki
+          Agar aapko padhte hue lag raha hai ki aapke saath yahi hua hai. Hairaan hone ki
           baat nahi, par ruk bhi mat jaiye. Notice ka intezaar karna sabse mehenga raasta hai. Khud
           aage badhkar theek karna sasta bhi padta hai aur jaldi bhi khatam hota hai.
         </p>
@@ -331,7 +331,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <ol>
           <li>
             <strong>Pehle tay karein kaunsa registration rakhna hai.</strong> Aam taur par
-            wahi rakhein jiske land record, Aadhaar aur bank account — teeno mein spelling ek
+            wahi rakhein jiske land record, Aadhaar aur bank account. Teeno mein spelling ek
             jaisi likhi ho. Ye farak baad mein sabse zyada dikkat deta hai.
           </li>
           <li>
@@ -341,7 +341,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           </li>
           <li>
             <strong>Refund ka hisaab lagayein.</strong> Jitni kist us taraf aa chuki hai,
-            wahi wapas karni hoti hai — poora amount, kist ke hisaab se. Portal par refund ka
+            wahi wapas karni hoti hai. Poora amount, kist ke hisaab se. Portal par refund ka
             challan ban jaata hai; usse jama karke receipt sambhaal lein.
           </li>
           <li>
@@ -368,11 +368,11 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           zyada kaam ka rahega.
         </p>
 
-        <h2>Ek Hi Claim Banta Hai — Kiska Rakhein</h2>
+        <h2>Ek Hi Claim Banta Hai. Kiska Rakhein</h2>
 
         <p>
           Jab parivaar se ek hi claim banta hai, to sawaal ye reh jaata hai ki registration
-          kis ka rakhein. Yahan koi kaanooni majboori nahi hai — pati ho ya patni, koi bhi
+          kis ka rakhein. Yahan koi kaanooni majboori nahi hai. Pati ho ya patni, koi bhi
           chal jaata hai. Faisla practical aadhaar par karna chahiye, kyunki aage ki poori
           DBT chain usi vyakti se bandhi rehti hai.
         </p>
@@ -402,17 +402,17 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           </tr>
           <tr>
             <td>Mobile number kiske paas active hai</td>
-            <td>OTP aur payment SMS usi number par aate hain — badalna baad mein jhanjhat hai</td>
+            <td>OTP aur payment SMS usi number par aate hain. Badalna baad mein jhanjhat hai</td>
           </tr>
         </SchemeTable>
 
         <p>
-          Ek chhoti si salah: jiske teeno kaagaz — land record, Aadhaar aur bank — ek jaise
+          Ek chhoti si salah: jiske teeno kaagaz, land record, Aadhaar aur bank, ek jaise
           likhe hon, usi ko chunein. Spelling correction baad mein sabse dheema kaam hai,
           kyunki wo tehsil aur bank dono jagah karana padta hai.
         </p>
 
-        <h2>Surrender Ka Faisla Lene Se Pehle — Kya Kya Milaa Lein</h2>
+        <h2>Surrender Ka Faisla Lene Se Pehle. Kya Kya Milaa Lein</h2>
 
         <p>
           Jis ghar mein do registration chal rahe hain, wahan surrender se pehle ek chhota
@@ -423,7 +423,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         </p>
 
         <p>
-          Aam taur par jawab khud saamne aa jaata hai — ek registration har jagah saaf
+          Aam taur par jawab khud saamne aa jaata hai. Ek registration har jagah saaf
           hota hai aur doosra kahin na kahin atka hua. Saaf wala rakhein, atka hua
           surrender karein. Refund ka hisaab bhi isi audit se nikal aata hai: jo kistein
           surrender wale registration par aayi hain, wahi lautani hain — rakhe gaye
@@ -431,10 +431,10 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         </p>
 
         <p>
-          Ek baat aur — surrender ke baad usi season ki agli kist ka schedule nahi
+          Ek baat aur, surrender ke baad usi season ki agli kist ka schedule nahi
           badalta. Rakhe gaye registration par kist apne time par hi aayegi; surrender
           karne se koi “nayi” kist ya adjust hua paisa nahi milta. Agent log kabhi-kabhi
-          iske ulte dawe karte hain — unse door rahein.
+          iske ulte dawe karte hain. Unse door rahein.
         </p>
 
         <h2>Baaki Doubts</h2>
@@ -454,7 +454,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           }}
         />
         <section className="mb-8 not-prose">
-          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">PM Kisan pati-patni rule — ground-level sawaal jawab</p>
+          <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">PM Kisan pati-patni rule, ground-level sawaal jawab</p>
           <div className="space-y-3">
             {FAQS_DATA.map(({ q, a }) => (
               <details
@@ -485,7 +485,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <ul>
           <li>
             Parivaar mein sirf ek registration rakhein, aur uska number likh kar sambhaal
-            lein — poochhne par yahi kaam aata hai.
+            lein, poochhne par yahi kaam aata hai.
           </li>
           <li>
             Naukri, pension ya income tax jaisi koi badlav ho, to us saal apna status khud

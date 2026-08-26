@@ -120,14 +120,14 @@ const STATE_CHECKLISTS: StateChecklist[] = [
     mandis: ['Azadpur Mandi (Delhi)', 'Kanpur Mandi', 'Lucknow Mandi', 'Varanasi Mandi', 'Agra Mandi'],
     topVegetables: ['Aloo', 'Pyaaz', 'Tamatar', 'Gobhi', 'Bhindi'],
     topFruits: ['Seb', 'Kela', 'Aam', 'Santra'],
-    notes: 'Azadpur (Delhi ke paas) UP ki sabse badi supply chain hai — yahan se North India ke bade hisse mein maal jata hai.',
+    notes: 'Azadpur (Delhi ke paas) UP ki sabse badi supply chain hai. Yahan se North India ke bade hisse mein maal jata hai.',
   },
   {
     state: 'Maharashtra',
     mandis: ['Vashi APMC Mandi (Mumbai)', 'Pune Mandi', 'Nashik Mandi', 'Nagpur Mandi'],
     topVegetables: ['Pyaaz', 'Tamatar', 'Mirch', 'Bhindi', 'Palak'],
     topFruits: ['Kela', 'Santra', 'Angoor', 'Ananas'],
-    notes: 'Nashik ka pyaaz aur angoor pura desh khareedta hai — Lasalgaon mandi to onion pricing ka benchmark hi maani jaati hai.',
+    notes: 'Nashik ka pyaaz aur angoor pura desh khareedta hai. Lasalgaon mandi to onion pricing ka benchmark hi maani jaati hai.',
   },
   {
     state: 'Madhya Pradesh',
@@ -148,7 +148,7 @@ const STATE_CHECKLISTS: StateChecklist[] = [
     mandis: ['Ahmedabad Mandi', 'Surat Mandi', 'Rajkot Mandi', 'Vadodara Mandi'],
     topVegetables: ['Bataka (Aloo)', 'Dungli (Pyaaz)', 'Tamatar', 'Ringna (Baingan)'],
     topFruits: ['Keri (Aam)', 'Chiku', 'Kela', 'Jamun'],
-    notes: 'Keri aur chiku ka export yahin se hota hai — season mein rate roz badalte hain.',
+    notes: 'Keri aur chiku ka export yahin se hota hai. Season mein rate roz badalte hain.',
   },
   {
     state: 'Punjab',
@@ -318,19 +318,19 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Aaj ka mandi bhav kaise pata karein?',
-    a: 'Upar diye gaye live cards seedha rate dikhate hain — Aloo, Pyaaz, Tamatar sab kuch. Apna state select karo, wahi rate niche adjust ho jaayega. Agar exact mandi ka rate chahiye (jaise sirf Azadpur ka), toh us mandi ke naam se search karna zyada theek rahega.',
+    a: 'Upar diye gaye live cards seedha rate dikhate hain. Aloo, Pyaaz, Tamatar sab kuch. Apna state select karo, wahi rate niche adjust ho jaayega. Agar exact mandi ka rate chahiye (jaise sirf Azadpur ka), toh us mandi ke naam se search karna zyada theek rahega.',
   },
   {
     q: 'Ye rates din mein kitni baar update hote hain?',
-    a: 'Live feed subah 9 se shaam 6 ke beech chalta hai, kyunki zyadatar mandiyon mein arrival isi window mein record hoti hai. Subah 10-11 baje ka rate sabse reliable maana jaata hai — us waqt tak din ki pehli trading ho chuki hoti hai.',
+    a: 'Live feed subah 9 se shaam 6 ke beech chalta hai, kyunki zyadatar mandiyon mein arrival isi window mein record hoti hai. Subah 10-11 baje ka rate sabse reliable maana jaata hai. Us waqt tak din ki pehli trading ho chuki hoti hai.',
   },
   {
     q: 'Yeh rate wholesale hai ya retail?',
-    a: 'Wholesale — seedha mandi ka rate. Local sabzi wale ya rehdi tak pahunchte-pahunchte isme aam taur par 20-30% add ho jaata hai, kyunki unka transport aur margin bhi isi mein aata hai.',
+    a: 'Wholesale, seedha mandi ka rate. Local sabzi wale ya rehdi tak pahunchte-pahunchte isme aam taur par 20-30% add ho jaata hai, kyunki unka transport aur margin bhi isi mein aata hai.',
   },
   {
     q: 'Fasal bechne ka sahi time kaise tay karein?',
-    a: 'Agar paise ki abhi zaroorat hai, current rate par bech dena hi safe hai — market kabhi bhi neeche ja sakta hai. Aloo-pyaaz jaisi cheezein thodi der store ho sakti hain, isliye agar rate badhne ka pattern dikh raha ho toh 2-3 hafte rukna ek option hai. Lekin yeh gamble bhi hai.',
+    a: 'Agar paise ki abhi zaroorat hai, current rate par bech dena hi safe hai. Market kabhi bhi neeche ja sakta hai. Aloo-pyaaz jaisi cheezein thodi der store ho sakti hain, isliye agar rate badhne ka pattern dikh raha ho toh 2-3 hafte rukna ek option hai. Lekin yeh gamble bhi hai.',
   },
   {
     q: 'Data kahan se aata hai — bharosemand hai kya?',
@@ -566,7 +566,7 @@ export default function MandiBhavToday() {
             <span className="text-white font-bold">Mandi Bhav Today</span>
           </nav>
           <h1 className="text-3xl font-black text-white mb-3">
-            {selectedState} Mandi Bhav Aaj Ka Rate — Sabzi, Phal Aur 7 Din Ka Mausam
+            {selectedState} Mandi Bhav Aaj Ka Rate. Sabzi, Phal Aur 7 Din Ka Mausam
           </h1>
           <div className="flex gap-3 text-xs text-green-100">
             <span>{currentTime}</span>
@@ -579,7 +579,7 @@ export default function MandiBhavToday() {
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-fresh-vegetables-mixed.webp"
-            alt={`${selectedState} mandi mein taazi sabzi — thok bhav aaj ka rate 2026`}
+            alt={`${selectedState} mandi mein taazi sabzi, thok bhav aaj ka rate 2026`}
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -587,17 +587,17 @@ export default function MandiBhavToday() {
             priority
           />
           <p className="text-center text-xs text-gray-600 py-2 bg-gray-50">
-            State-wise live mandi bhav — {selectedState} ke liye taaza sabzi-phal ka thok rate
+            State-wise live mandi bhav, {selectedState} ke liye taaza sabzi-phal ka thok rate
           </p>
         </div>
 
         <section className="mb-8">
           <SH>Aaj Ka Mandi Bhav Kaise Padhein?</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-3">
-            Sabzi ka thok rate roz badalta hai, kabhi kabhi ek hi din mein do baar. Isliye bina fresh number dekhe kuch bhi bechna ya bulk mein khareedna risky ho sakta hai — chahe aap chhote kisan ho ya thok vyapari.
+            Sabzi ka thok rate roz badalta hai, kabhi kabhi ek hi din mein do baar. Isliye bina fresh number dekhe kuch bhi bechna ya bulk mein khareedna risky ho sakta hai. Chahe aap chhote kisan ho ya thok vyapari.
           </p>
           <p className="text-gray-700 text-sm leading-relaxed mb-3">
-            Yeh page agmarknet ke sarkari feed se number nikaal kar dikhata hai, aur agar live data kisi wajah se nahi mil paata toh state-adjusted estimate use hota hai — number kabhi khaali nahi rehta.
+            Yeh page agmarknet ke sarkari feed se number nikaal kar dikhata hai, aur agar live data kisi wajah se nahi mil paata toh state-adjusted estimate use hota hai. Number kabhi khaali nahi rehta.
           </p>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
             Neeche 7-din ka mausam forecast bhi hai. Wajah simple hai: barish ka seedha asar transport aur isliye rate par padta hai. Dono ek saath dekh kar decision lena zyada aasaan ho jaata hai.
@@ -626,9 +626,9 @@ export default function MandiBhavToday() {
         </section>
 
         <section className="mb-8">
-          <SH>Apna State Chuno — Har State Ka Rate Alag Hai</SH>
+          <SH>Apna State Chuno. Har State Ka Rate Alag Hai</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
-            Transport, local demand aur us jagah ki apni upaj — teeno factor state ke rate ko national average se upar ya neeche le jaate hain. Neeche button dabao, sabzi-phal ke rate aur mausam dono ek saath refresh honge.
+            Transport, local demand aur us jagah ki apni upaj. Teeno factor state ke rate ko national average se upar ya neeche le jaate hain. Neeche button dabao, sabzi-phal ke rate aur mausam dono ek saath refresh honge.
           </p>
           <div className="flex flex-wrap gap-2 mb-4 max-h-64 overflow-y-auto p-2 border-2 border-gray-300 rounded-xl">
             {STATE_CHECKLISTS.map((s) => (
@@ -698,20 +698,20 @@ export default function MandiBhavToday() {
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-vegetables-potato-onion.webp"
-            alt="Aloo pyaaz ka aaj ka thok rate — potato onion wholesale mandi price"
+            alt="Aloo pyaaz ka aaj ka thok rate, potato onion wholesale mandi price"
             width={800}
             height={450}
             className="w-full rounded-xl"
           />
           <p className="text-center text-xs text-gray-600 py-2 bg-gray-50">
-            Har ghar mein rozana use hone wali do sabzi — aloo aur pyaaz
+            Har ghar mein rozana use hone wali do sabzi, aloo aur pyaaz
           </p>
         </div>
 
         <section className="mb-10">
           <SH>{selectedState} Sabzi Mandi Bhav</SH>
           <p className="text-gray-700 text-sm leading-relaxed mb-4">
-            Yeh {selectedState} ke liye wholesale (mandi) rate hain, per kilogram. Retail dukaan tak pahunchte-pahunchte 20-30% aam taur par jud jaata hai — yeh transport aur dukaandar ka margin hota hai.
+            Yeh {selectedState} ke liye wholesale (mandi) rate hain, per kilogram. Retail dukaan tak pahunchte-pahunchte 20-30% aam taur par jud jaata hai. Yeh transport aur dukaandar ka margin hota hai.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {filteredVeg.map((v, i) => (
@@ -723,20 +723,20 @@ export default function MandiBhavToday() {
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-vegetables-tomato-carrot.webp"
-            alt="Tamatar gaajar ka rate — daily use sabzi ka mandi bhav aaj"
+            alt="Tamatar gaajar ka rate, daily use sabzi ka mandi bhav aaj"
             width={800}
             height={450}
             className="w-full rounded-xl"
           />
           <p className="text-center text-xs text-gray-600 py-2 bg-gray-50">
-            Tamatar aur gaajar — season ke saath sabse zyada rate badalne wali sabzi
+            Tamatar aur gaajar, season ke saath sabse zyada rate badalne wali sabzi
           </p>
         </div>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-fresh-fruits-mixed.webp"
-            alt="Mandi mein rakhe taaze phal — wholesale fruit rate today"
+            alt="Mandi mein rakhe taaze phal, wholesale fruit rate today"
             width={800}
             height={450}
             className="w-full rounded-xl"
@@ -761,7 +761,7 @@ export default function MandiBhavToday() {
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-fruits-apple-banana.webp"
-            alt="Seb kela ka bhav — apple banana wholesale price aaj ka"
+            alt="Seb kela ka bhav, apple banana wholesale price aaj ka"
             width={800}
             height={450}
             className="w-full rounded-xl"
@@ -774,22 +774,22 @@ export default function MandiBhavToday() {
         <div className="my-6 rounded-2xl overflow-hidden border border-gray-300 shadow-md">
           <Image
             src="/images/articles/mandi-bhav-today/mandi-fruits-mango-orange.webp"
-            alt="Aam santra ka rate — seasonal fruit mandi bhav"
+            alt="Aam santra ka rate, seasonal fruit mandi bhav"
             width={800}
             height={450}
             className="w-full rounded-xl"
           />
           <p className="text-center text-xs text-gray-600 py-2 bg-gray-50">
-            Aam aur santra — season shuru hote hi rate teji se girta hai
+            Aam aur santra, season shuru hote hi rate teji se girta hai
           </p>
         </div>
 
         <section className="mb-8">
-          <SH>Kisan Ke Liye — Kab Bechein, Kab Roke?</SH>
+          <SH>Kisan Ke Liye. Kab Bechein, Kab Roke?</SH>
           <div className="space-y-3">
             <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-xl">
               <p className="text-sm text-green-800">
-                <strong>Rate achha hai:</strong> Agar paisa is hafte chahiye aur aaj ka rate theek dikh raha hai, bech dena hi safe rehta hai — market kal kya karega, koi guarantee nahi.
+                <strong>Rate achha hai:</strong> Agar paisa is hafte chahiye aur aaj ka rate theek dikh raha hai, bech dena hi safe rehta hai. Market kal kya karega, koi guarantee nahi.
               </p>
             </div>
             <div className="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl">
@@ -804,7 +804,7 @@ export default function MandiBhavToday() {
             </div>
             <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-xl">
               <p className="text-sm text-blue-800">
-                <strong>Roz track karo:</strong> Ek hafta bhi daily check karoge toh pattern dikhne lagega — kaun se din rate upar jaata hai, kab neeche.
+                <strong>Roz track karo:</strong> Ek hafta bhi daily check karoge toh pattern dikhne lagega, kaun se din rate upar jaata hai, kab neeche.
               </p>
             </div>
           </div>
@@ -827,7 +827,7 @@ export default function MandiBhavToday() {
               <span className="text-green-600 font-black text-lg shrink-0">02</span>
               <div>
                 <p className="font-bold text-sm mb-1">Apna state select karo</p>
-                <p className="text-xs text-gray-600">Sirf display nahi badalta — rate, checklist aur mausam teeno us state ke hisaab se refresh ho jaate hain.</p>
+                <p className="text-xs text-gray-600">Sirf display nahi badalta, rate, checklist aur mausam teeno us state ke hisaab se refresh ho jaate hain.</p>
               </div>
             </div>
             <div className="flex gap-3 p-4 bg-white border-2 border-gray-200 rounded-xl">
@@ -858,7 +858,7 @@ export default function MandiBhavToday() {
           <h3 className="font-black text-green-800 text-lg mb-3">Ek Mandi Ka Rate Adhoori Tasveer Hai</h3>
           <p className="text-sm text-green-800 leading-relaxed mb-3">
             Yahan diya rate mol-bhav ki shuruaat hai, ant nahi. Sirf apni mandi ka number dekhkar nikalne se aksar
-            nuksan hota hai — kai baar 30-40 km door wali mandi ka rate transport kharch nikaalne ke baad bhi upar
+            nuksan hota hai. Kai baar 30-40 km door wali mandi ka rate transport kharch nikaalne ke baad bhi upar
             baithta hai.
           </p>
           <p className="text-sm text-green-800 leading-relaxed mb-3">

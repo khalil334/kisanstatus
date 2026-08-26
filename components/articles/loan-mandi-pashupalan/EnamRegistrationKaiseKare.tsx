@@ -13,11 +13,11 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'eNAM registration free hai ya paisa lagta hai?',
-    a: 'Farmer registration ka ek rupaya nahi lagta. enam.gov.in par ya help desk par — kahin bhi paisa nahi lagta. Agar koi CSC ya agent charge maange toh woh sirf apni service fee hai, portal ki koi fee nahi.',
+    a: 'Farmer registration ka ek rupaya nahi lagta. enam.gov.in par ya help desk par, kahin bhi paisa nahi lagta. Agar koi CSC ya agent charge maange toh woh sirf apni service fee hai, portal ki koi fee nahi.',
   },
   {
     q: 'Trade hone ke baad payment kab aati hai?',
-    a: 'Trade complete hone ke baad payment seedha aapke bank account mein aati hai — zyada tar cases mein usi din ya 1-2 working days mein. Isliye bank details bilkul sahi bharna zaroori hai.',
+    a: 'Trade complete hone ke baad payment seedha aapke bank account mein aati hai. Zyada tar cases mein usi din ya 1-2 working days mein. Isliye bank details bilkul sahi bharna zaroori hai.',
   },
   {
     q: 'Meri gaon ki mandi is platform se judi hai ya nahi, kaise pata karoon?',
@@ -25,11 +25,11 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya FPO bhi is platform par bech sakta hai?',
-    a: 'Haan — FPO/FPC ka alag registration module hai. FPO apne members ki upaj aggregate karke collection centre se hi trade kar sakta hai, har kisan ko khud jaane ki zaroorat nahi. Chhote kisano ke liye FPO ke through bechna aksar behtar deal hota hai — volume zyada, bargaining power zyada.',
+    a: 'Haan. FPO/FPC ka alag registration module hai. FPO apne members ki upaj aggregate karke collection centre se hi trade kar sakta hai, har kisan ko khud jaane ki zaroorat nahi. Chhote kisano ke liye FPO ke through bechna aksar behtar deal hota hai. Volume zyada, bargaining power zyada.',
   },
   {
     q: 'Bid pasand na aaye toh kya fasal wapas la sakte hain?',
-    a: 'Haan. Sabse oonchi bid aapko dikhai jaati hai — accept karna aapki marzi hai. Rate pasand nahi toh mana kar do; fasal aapki hai, aap wapas le ja sakte ho ya agle din phir lot lagwa sakte ho. Koi penalty nahi hai. Bas yeh dekho ki roz ke transport ka kharcha na badh jaye.',
+    a: 'Haan. Sabse oonchi bid aapko dikhai jaati hai. Accept karna aapki marzi hai. Rate pasand nahi toh mana kar do; fasal aapki hai, aap wapas le ja sakte ho ya agle din phir lot lagwa sakte ho. Koi penalty nahi hai. Bas yeh dekho ki roz ke transport ka kharcha na badh jaye.',
   },
 ];
 
@@ -46,7 +46,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
             <span className="text-white font-bold">eNAM Registration</span>
           </nav>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            eNAM Registration 2026: Online Mandi Mein Fasal Kaise Bechein — Step-by-Step Guide
+            eNAM Registration 2026: Online Mandi Mein Fasal Kaise Bechein. Step-by-Step Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
@@ -61,7 +61,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/anaj-dheri.webp"
-            alt="Mandi mein anaj ki dheri aur vyapari — eNAM se yahi boli online ho jaati hai"
+            alt="Mandi mein anaj ki dheri aur vyapari, eNAM se yahi boli online ho jaati hai"
             width={1200}
             height={670}
             className="w-full h-auto object-cover"
@@ -74,9 +74,9 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           <strong>Ek line mein poori kahani:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>eNAM registration <strong>bilkul free</strong> — enam.gov.in par ya mandi ke help desk par; documents sirf 3 (Aadhaar, bank passbook, mobile).</li>
-            <li>Fasal apni hi mandi le jaani hai — sirf <strong>boli online</strong> hoti hai; zyada buyers, behtar rate, payment seedha bank mein.</li>
+            <li>Fasal apni hi mandi le jaani hai. Sirf <strong>boli online</strong> hoti hai; zyada buyers, behtar rate, payment seedha bank mein.</li>
             <li>1,400+ mandiyan judi hain; 11/02/2024 tak <strong>1.77 crore+ kisan</strong> registered (Ministry of Agriculture ke figures).</li>
-            <li>Sabse zyada fayda anaaj-dalein-tilhan-masale walon ko — grading standardised hai. <strong>Abhi enam.gov.in par check karo</strong> ki aapki mandi judi hai ya nahi.</li>
+            <li>Sabse zyada fayda anaaj-dalein-tilhan-masale walon ko, grading standardised hai. <strong>Abhi enam.gov.in par check karo</strong> ki aapki mandi judi hai ya nahi.</li>
           </ul>
         </DB>
 
@@ -85,23 +85,23 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Purana scene sabko pata hai — fasal utaari, aur wahi chaar-paanch vyapari aapas mein dekh kar
+          Purana scene sabko pata hai. Fasal utaari, aur wahi chaar-paanch vyapari aapas mein dekh kar
           rate tay. Na competition, na chaara. eNAM isi ganth ko kholta hai: aapki upaj wahin padi
           rehti hai, par boli online hoti hai, aur usme doosre zile-doosre state ke buyers bhi utarte hain.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
           Registration ka kharcha zero, kagaz sirf teen. Neeche registration se le kar gate entry, boli
-          aur payment tak ka poora rasta hai — aur woh atakne wali jagahein bhi jo pehli baar walon ko pareshan
+          aur payment tak ka poora rasta hai. Aur woh atakne wali jagahein bhi jo pehli baar walon ko pareshan
           karti hain.
         </p>
 
         <SH>eNAM Hai Kya Cheez</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Ek sarkari online trading portal — PM Modi ne 14/04/2016 ko pilot launch kiya tha — jisse ab 1,400 se
+          Ek sarkari online trading portal. PM Modi ne 14/04/2016 ko pilot launch kiya tha. Jisse ab 1,400 se
           zyada APMC yards judi hain. 11/02/2024 tak 1.77 crore se zyada kisan aur 2.53 lakh se zyada
           trader register ho chuke the, aur December 2023 tak platform par ₹31.9 lakh crore ka trade ho chuka tha
-          (Ministry of Agriculture ke aankde, MyNation ki report ke according). Kaam karne ka tareeqa simple hai — fasal aap wahi le jaate ho jahan hamesha se bechte aaye ho, bas boli kagaz-kalam ki
+          (Ministry of Agriculture ke aankde, MyNation ki report ke according). Kaam karne ka tareeqa simple hai. Fasal aap wahi le jaate ho jahan hamesha se bechte aaye ho, bas boli kagaz-kalam ki
           jagah online lagti hai, aur bid karne wala Jaipur mein bhi baitha ho sakta hai, Indore mein bhi.
         </p>
 
@@ -112,14 +112,14 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/documents.webp"
-          alt="eNAM registration ke teen documents — Aadhaar, bank passbook aur zameen ke kagaz"
+          alt="eNAM registration ke teen documents. Aadhaar, bank passbook aur zameen ke kagaz"
           width={1200}
           height={670}
           className="w-full h-auto rounded-xl my-5"
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>Teen Kagaz — Bas</SH>
+        <SH>Teen Kagaz. Bas</SH>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
             <thead>
@@ -147,7 +147,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
 
         <WB>
           Kuch states mein zameen ke records (khasra/khatauni) bhi mange ja sakte hain. Help desk se
-          confirm kar lena — state ke hisaab se thoda fark hota hai.
+          confirm kar lena, state ke hisaab se thoda fark hota hai.
         </WB>
 
         <Image
@@ -168,11 +168,11 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
             Registration type mein <strong>"Farmer"</strong> select karo.
           </SI>
           <SI n={3}>
-            Apni details bharo — naam, state, district, apni <strong>APMC mandi</strong> (jahan fasal le jaoge),
+            Apni details bharo, naam, state, district, apni <strong>APMC mandi</strong> (jahan fasal le jaoge),
             mobile number aur email (optional).
           </SI>
           <SI n={4}>
-            <strong>Bank details</strong> bharo — account number, IFSC. Yahan galti mat karna, payment isi account mein aayegi.
+            <strong>Bank details</strong> bharo, account number, IFSC. Yahan galti mat karna, payment isi account mein aayegi.
           </SI>
           <SI n={5}>
             Aadhaar aur bank passbook ki <strong>photo/scan upload</strong> karo aur form submit kar do.
@@ -181,7 +181,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
             Registered mobile/email par <strong>login ID aur temporary password</strong> aayega. Login karke password change kar lo.
           </SI>
           <SI n={7}>
-            Aapki select ki hui mandi aapka record <strong>verify</strong> karegi — uske baad aap trade ke liye ready ho.
+            Aapki select ki hui mandi aapka record <strong>verify</strong> karegi, uske baad aap trade ke liye ready ho.
           </SI>
         </StepList>
 
@@ -194,7 +194,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         />
 
         <IB>
-          <strong>Online nahi kar pa rahe?</strong> Seedha apni mandi jao — har integrated yard mein
+          <strong>Online nahi kar pa rahe?</strong> Seedha apni mandi jao, har integrated yard mein
           help desk hota hai jahan staff free mein registration kar deta hai. Mobile app se bhi
           kaam ho jata hai.
         </IB>
@@ -208,37 +208,37 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>Bechne Ka Din — Gate Se Payment Tak</SH>
+        <SH>Bechne Ka Din. Gate Se Payment Tak</SH>
         <StepList>
           <SI n={1}>
             <strong>Gate Entry:</strong> Fasal le kar pahuncho. Gate par entry hoti hai aur aapko lot number milta hai.
           </SI>
           <SI n={2}>
-            <strong>Quality Check (Assaying):</strong> Fasal ke samples ki quality jaanchi jati hai — moisture,
+            <strong>Quality Check (Assaying):</strong> Fasal ke samples ki quality jaanchi jati hai. Moisture,
             grade waghera. Quality report online buyers ko dikhti hai.
           </SI>
           <SI n={3}>
             <strong>Online Bidding:</strong> Buyers (local + doosre districts/states ke) aapke lot par online bid karte hain.
           </SI>
           <SI n={4}>
-            <strong>Bid Accept Karo:</strong> Sabse achhi bid aapko dikhai jati hai — accept karna ya nahi, aapki marzi.
+            <strong>Bid Accept Karo:</strong> Sabse achhi bid aapko dikhai jati hai. Accept karna ya nahi, aapki marzi.
             Rate pasand nahi toh mana kar sakte ho.
           </SI>
           <SI n={5}>
             <strong>Weighment + Payment:</strong> Bid accept hui toh tulai hoti hai aur payment seedha aapke
-            bank account mein aa jati hai — zyada tar 1-2 working days mein.
+            bank account mein aa jati hai. Zyada tar 1-2 working days mein.
           </SI>
         </StepList>
 
         <SH>Kaun Si Fasal Par Kitna Fayda</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Platform par 200+ commodities notified hain — anaaj (gehu, dhaan, makka, bajra), dalein (chana, arhar,
+          Platform par 200+ commodities notified hain. Anaaj (gehu, dhaan, makka, bajra), dalein (chana, arhar,
           moong, masoor), tilhan (sarson, soyabean, moongfali), masale (jeera, dhania, haldi, mirch), aur kai
           fal-sabziyan bhi. Aapke yahan kaun si commodities trade hoti hain, yeh jagah ke hisaab se alag
-          hai — help desk se list mil jaati hai.
+          hai. Help desk se list mil jaati hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Ek practical pattern samajh lo — <strong>jitni standardised fasal, utna zyada eNAM ka fayda</strong>.
+          Ek practical pattern samajh lo, <strong>jitni standardised fasal, utna zyada eNAM ka fayda</strong>.
           Gehu, chana, sarson, jeera jaisi fasal ki grading saaf-saaf ho jaati hai, isliye door ke buyers
           report dekh kar bharose se bid karte hain aur competition asli hota hai. Tamatar jaisi jaldi kharab
           hone wali sabzi mein door ka buyer kam interest leta hai — wahan local hi khareedta hai. Matlab:
@@ -251,22 +251,22 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/enam-app.webp"
-          alt="Khet ke kinare mobile par bhav check karta kisan — eNAM app se mandi jeb mein"
+          alt="Khet ke kinare mobile par bhav check karta kisan, eNAM app se mandi jeb mein"
           width={1200}
           height={670}
           className="w-full h-auto rounded-xl my-5"
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>App Wala Rasta — Zyada Tar Logon Ke Liye Yahi Sahi</SH>
+        <SH>App Wala Rasta. Zyada Tar Logon Ke Liye Yahi Sahi</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Portal ke alawa official mobile app (Play Store par “eNAM” — publisher: Small Farmers
+          Portal ke alawa official mobile app (Play Store par “eNAM”, publisher: Small Farmers
           Agribusiness Consortium) bhi hai, aur sach kahein toh zyada tar kisano ke liye app hi asaan rasta hai.
           App se registration ho jaata hai, apne lot ka status dikhta hai, bidding ki progress live milti hai,
           aur payment ka update bhi. Hindi samet kai bhashayein support hoti hain.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          App ka ek aur kaam ka feature — <strong>nearby yards ke rates</strong>. Fasal le jaane se pehle
+          App ka ek aur kaam ka feature, <strong>nearby yards ke rates</strong>. Fasal le jaane se pehle
           2-3 jagah ka bhav compare karna 5 minute ka kaam hai, aur kai baar 40-50 km door wali jagah ka
           rate transport nikaal kar bhi behtar baithta hai. Rates check karne ke aur bhi tareeqe humne{' '}
           <Link href="/articles/mandi-bhav-app-comparison" className="underline font-bold">Mandi Bhav Apps
@@ -275,7 +275,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/trade-loading.webp"
-          alt="Mandi se doosre state ke buyer ke liye truck loading — inter-state trade ka asli fayda"
+          alt="Mandi se doosre state ke buyer ke liye truck loading, inter-state trade ka asli fayda"
           width={1200}
           height={670}
           className="w-full h-auto rounded-xl my-5"
@@ -284,7 +284,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
 
         <IB>
           <strong>Asli misaal, record ke saath:</strong> Andhra Pradesh ke Kurnool district ki <strong>Adoni mandi</strong>
-          — March 2017 se juda hua — desh ki pehli bani jisko platform par <strong>1 crore bids</strong> mile
+         . March 2017 se juda hua, desh ki pehli bani jisko platform par <strong>1 crore bids</strong> mile
           (11.34 lakh lots par, 20/01/2023 tak; average 9 bids per lot). Wahan assaying lab, price display boards
           aur eNAM-integrated weighing machines lagi hain — tulai ka data seedha portal par jaata hai, haath ki
           gadbad ka chance khatam. Poori kahani official blog par hai:{' '}
@@ -292,24 +292,24 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           Matlab: jahan system theek laga hai, wahan competition sach mein hota hai.
         </IB>
 
-        <SH>Asli Fayda Kahan Hai — Inter-Mandi Aur Inter-State</SH>
+        <SH>Asli Fayda Kahan Hai. Inter-Mandi Aur Inter-State</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Trade ke teen level hote hain, aur yeh samajhna zaroori hai kyunki fayda level ke saath badhta hai.
-          Pehla — <strong>intra-mandi</strong>: aapke apne yard ke vyapari online bid karte hain; transparency
-          badhti hai par buyers wahi purane. Doosra — <strong>inter-mandi</strong>: aapke state ke doosre
-          yards ke licensed buyers bhi bid kar sakte hain. Teesra — <strong>inter-state</strong>: doosre
+          Pehla, <strong>intra-mandi</strong>: aapke apne yard ke vyapari online bid karte hain; transparency
+          badhti hai par buyers wahi purane. Doosra, <strong>inter-mandi</strong>: aapke state ke doosre
+          yards ke licensed buyers bhi bid kar sakte hain. Teesra, <strong>inter-state</strong>: doosre
           states ke buyers bhi. Jitna bada pool, utna behtar rate milne ka chance.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Ab woh baat, jo koi brochure nahi batayega — inter-state trade abhi bhi bahut chhota hai. Financial
+          Ab woh baat, jo koi brochure nahi batayega, inter-state trade abhi bhi bahut chhota hai. Financial
           Express ki April 2025 report ke according FY25 mein inter-state trade sirf ₹21 crore ka tha (FY24 ke
           ₹42 crore se aadha), jabki state ke andar inter-mandi trade ₹1,769 crore aur total turnover ₹80,262 crore
           raha (<a href="https://www.financialexpress.com/policy/economy-enam-remains-local-inter-state-trade-minimal-halves-in-fy25-3817271/" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: Financial Express</a>).
-          Matlab door ke state ka buyer milna abhi exception hai, rule nahi — asli fayda apne yahan transparent
+          Matlab door ke state ka buyer milna abhi exception hai, rule nahi. Asli fayda apne yahan transparent
           bidding aur seedha bank payment ka hai. Expectations wahi rakho.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Practical baat: har jagah teeno levels active nahi hote — yeh state government ke integration
+          Practical baat: har jagah teeno levels active nahi hote. Yeh state government ke integration
           par depend karta hai. Help desk se seedha pucho: <em>“yahan inter-mandi/inter-state
           trade chalu hai ya nahi?”</em> Agar chalu hai, toh assaying (quality report) ka role aur bada ho
           jaata hai — door ka buyer aapki fasal aankh se nahi dekh sakta, woh report dekh kar hi bid karta
@@ -317,18 +317,18 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           behtar bids.
         </p>
         <WB>
-          Logistics ka dhyan raho — inter-state deal mein fasal ki delivery ka intezam buyer aur yard ke
+          Logistics ka dhyan raho, inter-state deal mein fasal ki delivery ka intezam buyer aur yard ke
           system se hota hai, lekin tulai aur handover aapke apne yahan hi hota hai. Aapko apni fasal kahin
           aur nahi le jaani. Yeh galatfehmi kai kisano ko rokti hai ki “doosre state ka
-          buyer mila toh maal wahan pahunchana padega” — nahi padta.
+          buyer mila toh maal wahan pahunchana padega”, nahi padta.
         </WB>
 
-        <SH>Jahan Log Atakte Hain — Aur Nikalne Ka Rasta</SH>
+        <SH>Jahan Log Atakte Hain. Aur Nikalne Ka Rasta</SH>
         <StepList>
-          <SI n={1}><strong>OTP nahi aa raha:</strong> network check karo, 2-3 minute ruko, phir resend. Number Aadhaar se linked ho toh process smooth rehta hai. Baar-baar fail ho toh help desk se registration karwa lo — wahi sabse tez rasta hai.</SI>
-          <SI n={2}><strong>Bank detail galat bhar gayi:</strong> login karke profile mein bank details update karo ya help desk par passbook le jao. Payment atakne ki sabse badi wajah galat IFSC/account number hi hai — do baar check karke bharo.</SI>
-          <SI n={3}><strong>Record verify nahi ho raha:</strong> registration ke baad record aapki chuni hui APMC ke paas jaata hai. 2-3 din se zyada latke toh office mein Mandi Analyst se milo — aam taur par usi din verify ho jaata hai.</SI>
-          <SI n={4}><strong>Assaying report se sehmat nahi:</strong> sample ke saamne dobara jaanch ki request kar sakte ho. Moisture zyada nikle toh fasal ko aur sukha kar agle din lot lagana behtar hai — gili upaj par bid hamesha kam aati hai.</SI>
+          <SI n={1}><strong>OTP nahi aa raha:</strong> network check karo, 2-3 minute ruko, phir resend. Number Aadhaar se linked ho toh process smooth rehta hai. Baar-baar fail ho toh help desk se registration karwa lo, wahi sabse tez rasta hai.</SI>
+          <SI n={2}><strong>Bank detail galat bhar gayi:</strong> login karke profile mein bank details update karo ya help desk par passbook le jao. Payment atakne ki sabse badi wajah galat IFSC/account number hi hai. Do baar check karke bharo.</SI>
+          <SI n={3}><strong>Record verify nahi ho raha:</strong> registration ke baad record aapki chuni hui APMC ke paas jaata hai. 2-3 din se zyada latke toh office mein Mandi Analyst se milo, aam taur par usi din verify ho jaata hai.</SI>
+          <SI n={4}><strong>Assaying report se sehmat nahi:</strong> sample ke saamne dobara jaanch ki request kar sakte ho. Moisture zyada nikle toh fasal ko aur sukha kar agle din lot lagana behtar hai. Gili upaj par bid hamesha kam aati hai.</SI>
           <SI n={5}><strong>Payment nahi aayi:</strong> trade ID le kar help desk ya helpline 1800 270 0224 par baat karo. Zyada tar cases mein wajah bank detail ki galti ya account inactive hona hota hai.</SI>
         </StepList>
 
@@ -372,7 +372,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
             Registration ka faayda poora aapki local yard par tika hai, aapke form par nahi. Agar woh
             1,400+ integrated list mein nahi hai, toh ID ban jayegi par online bidding
-            aapke lot par nahi khulegi — kaagaz sahi, nateeja zero.
+            aapke lot par nahi khulegi, kaagaz sahi, nateeja zero.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
             Isliye order ulta rakho: pehle <strong>enam.gov.in ki list</strong> mein apna APMC dhoondho,
@@ -388,11 +388,11 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
-            eNAM — National Agriculture Market official portal & blog (Adoni mandi case).{' '}
+            eNAM. National Agriculture Market official portal & blog (Adoni mandi case).{' '}
             <a href="https://enam.gov.in/web/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">enam.gov.in</a>
           </li>
           <li>
-            Financial Express — eNAM inter-state trade reality, FY25 analysis.{' '}
+            Financial Express, eNAM inter-state trade reality, FY25 analysis.{' '}
             <a href="https://www.financialexpress.com/policy/economy-enam-remains-local-inter-state-trade-minimal-halves-in-fy25-3817271/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">financialexpress.com</a>
           </li>
         </ul>

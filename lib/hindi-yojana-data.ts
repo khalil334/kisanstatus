@@ -5,8 +5,8 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/pm-kisan-25vi-kist',
     titleHi: 'पीएम किसान 25वीं किस्त कब आएगी? Date और Latest Update',
-    seoTitleHi: 'पीएम किसान 25वीं किस्त कब आएगी — Date Update',
-    desc: 'किस्त की तारीख का इंतजार है? 25वीं किस्त की latest स्थिति, और वो तीन चीजें — eKYC, बैंक seeding, land seeding — जिनमें एक अटकी तो पैसा रुकेगा।',
+    seoTitleHi: 'पीएम किसान 25वीं किस्त कब आएगी: Date Update',
+    desc: 'किस्त की तारीख का इंतजार है? 25वीं किस्त की latest स्थिति, और वो तीन चीजें: eKYC, बैंक seeding, land seeding: जिनमें एक अटकी तो पैसा रुकेगा।',
     keywords: [
       'पीएम किसान 25वीं किस्त',
       'pm kisan 25th installment date',
@@ -29,7 +29,7 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
     slug: 'hi/status-check-mobile-se',
     titleHi: 'मोबाइल नंबर से पीएम किसान स्टेटस कैसे चेक करें? आसान तरीका',
     seoTitleHi: 'मोबाइल नंबर से पीएम किसान स्टेटस चेक करें',
-    desc: 'पीएम किसान स्टेटस मोबाइल नंबर से 2 मिनट में चेक करें — रजिस्ट्रेशन नंबर भूल गए या OTP नहीं आ रहा? हर problem का आसान step-by-step solution यहां जानिए।',
+    desc: 'पीएम किसान स्टेटस मोबाइल नंबर से 2 मिनट में चेक करें: रजिस्ट्रेशन नंबर भूल गए या OTP नहीं आ रहा? हर problem का आसान step-by-step solution यहां जानिए।',
     keywords: [
       'पीएम किसान स्टेटस चेक मोबाइल नंबर से',
       'pm kisan status mobile number',
@@ -50,9 +50,9 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
   },
   {
     slug: 'hi/nayi-registration',
-    titleHi: 'पीएम किसान नई रजिस्ट्रेशन 2027 — Farmer ID से ऐसे करें Apply',
-    seoTitleHi: 'पीएम किसान नई रजिस्ट्रेशन 2027 — Farmer ID',
-    desc: 'पीएम किसान नई रजिस्ट्रेशन 2027 अब Farmer ID से होगी — online apply का step-by-step तरीका, जरूरी documents और आवेदन के बाद status चेक करना भी यहां सीखें।',
+    titleHi: 'पीएम किसान नई रजिस्ट्रेशन 2027: Farmer ID से ऐसे करें Apply',
+    seoTitleHi: 'पीएम किसान नई रजिस्ट्रेशन 2027: Farmer ID',
+    desc: 'पीएम किसान नई रजिस्ट्रेशन 2027 अब Farmer ID से होगी: online apply का step-by-step तरीका, जरूरी documents और आवेदन के बाद status चेक करना भी यहां सीखें।',
     keywords: ['पीएम किसान नई रजिस्ट्रेशन', 'pm kisan new registration 2027'],
     category: 'status-check',
     publishedTime: '2026-04-19T18:42:50+05:30',
@@ -65,7 +65,7 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
     slug: 'hi/farmer-id-kaise-banaye',
     titleHi: 'किसान आईडी कैसे बनाएं? AgriStack ID Free, मोबाइल से 10 मिनट में',
     seoTitleHi: 'किसान आईडी कैसे बनाएं? AgriStack Free गाइड',
-    desc: 'किसान आईडी मोबाइल से 10 मिनट में free बनाएं — आधार OTP से AgriStack registration के steps, documents की list और अपने राज्य का portal यहां।',
+    desc: 'किसान आईडी मोबाइल से 10 मिनट में free बनाएं: आधार OTP से AgriStack registration के steps, documents की list और अपने राज्य का portal यहां।',
     keywords: ['किसान आईडी कैसे बनाएं', 'farmer id kaise banaye', 'agristack id kaise banaye', 'farmer id banane ke liye documents', 'किसान आईडी कार्ड', 'agristack farmer id', 'farmer id banane me kitna time lagta hai', 'agristack id kya hai', 'मोबाइल से farmer id कैसे बनाएं', 'farmer id kaisi dikhti hai', 'agrisnet farmer id', 'farmer id me dvc name kya hota hai', 'किसान आईडी डाउनलोड'],
     category: 'farming',
     publishedTime: '2026-06-07T21:01:19+05:30',
@@ -78,7 +78,7 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
     slug: 'hi/ekyc-mobile-se',
     titleHi: 'PM Kisan eKYC मोबाइल से कैसे करें? OTP और Face Auth तरीका',
     seoTitleHi: 'PM Kisan eKYC मोबाइल से कैसे करें',
-    desc: 'PM Kisan eKYC मोबाइल से free में करें — OTP और Face Auth App दोनों के आसान steps यहां। OTP नहीं आ रहा या record not found error? हर problem का fix भी।',
+    desc: 'PM Kisan eKYC मोबाइल से free में करें: OTP और Face Auth App दोनों के आसान steps यहां। OTP नहीं आ रहा या record not found error? हर problem का fix भी।',
     keywords: [
       'पीएम किसान eKYC मोबाइल से',
       'pm kisan ekyc kaise kare',
@@ -100,7 +100,7 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/npci-aadhaar-seeding',
     titleHi: 'Aadhaar Not Seeded? NPCI सीडिंग से DBT फिक्स',
-    desc: 'आपका aadhaar not seeded दिख रहा है? चाहे PM Kisan हो या gas subsidy — बैंक में NPCI आधार सीडिंग कराकर DBT चालू करने का पूरा तरीका यहां step-by-step जानिए।',
+    desc: 'आपका aadhaar not seeded दिख रहा है? चाहे PM Kisan हो या gas subsidy: बैंक में NPCI आधार सीडिंग कराकर DBT चालू करने का पूरा तरीका यहां step-by-step जानिए।',
     keywords: ['npci aadhaar seeding online', 'dbt enable kaise kare', 'आधार बैंक लिंक स्टेटस', 'de seeded meaning in hindi', 'aadhaar not seeded', 'bank seeding status active means'],
     category: 'status-check',
     publishedTime: '2026-07-19T18:38:27+05:30',
@@ -125,8 +125,8 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/recovery-notice',
     titleHi: 'PM Kisan Recovery Notice आया? पैसा वापस करने का पूरा तरीका',
-    seoTitleHi: 'PM Kisan Recovery Notice — पैसा वापसी',
-    desc: 'PM Kisan recovery notice आया है तो घबराएं नहीं — जानिए किन किसानों को पैसा वापस करना होगा, online refund का पूरा process और notice गलत हो तो क्या करें।',
+    seoTitleHi: 'PM Kisan Recovery Notice: पैसा वापसी',
+    desc: 'PM Kisan recovery notice आया है तो घबराएं नहीं: जानिए किन किसानों को पैसा वापस करना होगा, online refund का पूरा process और notice गलत हो तो क्या करें।',
     keywords: ['pm kisan recovery notice', 'pm kisan paisa wapas kaise kare'],
     category: 'status-check',
     publishedTime: '2026-04-26T14:26:28+05:30',

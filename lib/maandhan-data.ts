@@ -25,7 +25,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   {
     slug: 'pm-kisan-maandhan-eligibility-documents',
     title: 'PM Kisan Maandhan Eligibility & Documents',
-    description: 'Umar 18-40, zameen 2 hectare tak — Maandhan pension ki asli shartein, excluded categories aur CSC le jaane wale 5 documents ki poori list.',
+    description: 'Umar 18-40, zameen 2 hectare tak: Maandhan pension ki asli shartein, excluded categories aur CSC le jaane wale 5 documents ki poori list.',
     category: 'pension-scheme',
     published: '2026-03-18T19:44:07+05:30',
     modified: '2026-07-12T23:28:59+05:30',
@@ -90,8 +90,8 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   },
   {
     slug: 'family-pension-rules',
-    title: 'PMKMY Family Pension Rules 2026 — Kya Hoga?',
-    description: 'Kisan ke dehant ke baad spouse ko ₹1,500 pension ya refund — dono raaste, claim ke steps, documents aur atke claim ka hal ek jagah.',
+    title: 'PMKMY Family Pension Rules 2026: Kya Hoga?',
+    description: 'Kisan ke dehant ke baad spouse ko ₹1,500 pension ya refund: dono raaste, claim ke steps, documents aur atke claim ka hal ek jagah.',
     category: 'pension-scheme',
     published: '2026-04-22T17:52:14+05:30',
     modified: '2026-08-02T13:47:26+05:30',
@@ -102,7 +102,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   {
     slug: 'pmkmy-bank-account-change',
     title: 'Maandhan (PMKMY) Me Bank Account Badalna Ho To',
-    description: 'Maandhan pension yojana (PMKMY) me registered bank account kaise badlein ya update karein — ye PM Kisan Samman Nidhi wala process nahi hai. Documents, application format, aur common problems ka hal.',
+    description: 'Maandhan pension yojana (PMKMY) me registered bank account kaise badlein ya update karein: ye PM Kisan Samman Nidhi wala process nahi hai. Documents, application format, aur common problems ka hal.',
     category: 'pension-scheme',
     published: '2026-04-30T07:56:05+05:30',
     modified: '2026-08-04T16:57:37+05:30',
@@ -113,7 +113,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   {
     slug: 'pmkmy-grievance-complaint-helpline',
     title: 'Maandhan (PMKMY) Ki Shikayat Kahan Karein',
-    description: 'Maandhan pension yojana (PMKMY) me shikayat kaise karein — 155261 wali PM Kisan helpline se alag rasta hai. Helpline numbers, online grievance process, CSC complaint, aur common problems ka practical solution.',
+    description: 'Maandhan pension yojana (PMKMY) me shikayat kaise karein: 155261 wali PM Kisan helpline se alag rasta hai. Helpline numbers, online grievance process, CSC complaint, aur common problems ka practical solution.',
     category: 'pension-scheme',
     published: '2026-05-11T20:55:01+05:30',
     modified: '2026-07-31T14:10:21+05:30',
@@ -135,7 +135,7 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   {
     slug: 'pm-kisan-maandhan-age-wise-contribution-chart-2026',
     title: 'PM Kisan Maandhan Contribution Chart 2026',
-    description: 'PM-KMY mein 18–40 saal har umar ka exact monthly contribution, government co-contribution aur pension rules — official sources se verified.',
+    description: 'PM-KMY mein 18–40 saal har umar ka exact monthly contribution, government co-contribution aur pension rules: official sources se verified.',
     category: 'pension-scheme',
     published: '2026-05-22T17:41:10+05:30',
     modified: '2026-07-25T14:40:27+05:30',

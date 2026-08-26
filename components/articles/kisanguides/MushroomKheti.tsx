@@ -33,15 +33,15 @@ export const metadata: Metadata = {
 const mushroomKhetiFaqs = [
   {
     q: 'Kya 10x10 feet ke chhote kamre mein mushroom farming profitable hai?',
-    a: 'Haan. 100-150 bags aaram se aa jate hain. Pehle saal seekhne ka hota hai — break-even ho gaya to bhi badi baat hai. Doosre saal se direct marketing karke 20-25% net margin nikalna shuru ho jata hai.',
+    a: 'Haan. 100-150 bags aaram se aa jate hain. Pehle saal seekhne ka hota hai. Break-even ho gaya to bhi badi baat hai. Doosre saal se direct marketing karke 20-25% net margin nikalna shuru ho jata hai.',
   },
   {
     q: 'Khumbi ke kamre mein badboo ya smell kyun aati hai?',
-    a: 'Sterilization sahi hua ho toh smell minimal hoti hai. Badboo ka matlab: ya straw zyada geela chhod diya, ya koi kharab bag waqt par bahar nahi nikala — usi se ammonia ya sadan ki smell aati hai.',
+    a: 'Sterilization sahi hua ho toh smell minimal hoti hai. Badboo ka matlab: ya straw zyada geela chhod diya, ya koi kharab bag waqt par bahar nahi nikala, usi se ammonia ya sadan ki smell aati hai.',
   },
   {
     q: 'Green mold (hara fungus) dikhe toh turant kya karein?',
-    a: 'Us bag ko turant bahar nikaal kar jala dein ya gehra gaad dein — deri mat karna. Bachaye hue bags ke aas-paas Neem oil (5ml/litre) ya Trichoderma viride spray, aur farsh bleaching powder se saaf.',
+    a: 'Us bag ko turant bahar nikaal kar jala dein ya gehra gaad dein, deri mat karna. Bachaye hue bags ke aas-paas Neem oil (5ml/litre) ya Trichoderma viride spray, aur farsh bleaching powder se saaf.',
   },
   {
     q: 'Asli mushroom beej (spawn) kahan se aur kitne mein milega?',
@@ -49,7 +49,7 @@ const mushroomKhetiFaqs = [
   },
   {
     q: 'NHB mushroom subsidy kitni milti hai aur kaise apply karein?',
-    a: 'NHB back-ended capital subsidy deta hai, jiska percentage state aur unit size ke hisaab se badalta hai — zyadatar general category ke liye 40% ke aas-paas rehta hai. Apply apne zila Horticulture Office se ya NHB ke online portal se hota hai, project report ke saath.',
+    a: 'NHB back-ended capital subsidy deta hai, jiska percentage state aur unit size ke hisaab se badalta hai. Zyadatar general category ke liye 40% ke aas-paas rehta hai. Apply apne zila Horticulture Office se ya NHB ke online portal se hota hai, project report ke saath.',
   },
 ];
 
@@ -67,7 +67,7 @@ export default function MushroomKheti() {
       />
 
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
-        Pehli Batch Kharab Kyun Hoti Hai — Mushroom Kheti Ka Asli Sach, Phir NHB Subsidy
+        Pehli Batch Kharab Kyun Hoti Hai. Mushroom Kheti Ka Asli Sach, Phir NHB Subsidy
       </h1>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -75,7 +75,7 @@ export default function MushroomKheti() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Ye kahani har doosre naye mushroom grower ki hai. YouTube par "zero investment, mahine ke lakhon" dekhkar log seedha 200-300 bags laga lete hain, aur jab green mold puri batch kha jata hai tab samajh aata hai ki khumbi ugana bags latakane ka naam nahi — controlled science hai. Sterilization aur humidity ka practical tareeka pakad lo, phir hi ye stable income banti hai. Himachal ke Solan ko "Mushroom City" kehte hain, par ab pahadi ilaqa zaroori nahi — ek saaf storeroom ya basement bhi commercial production ke liye kaafi hai. Shart bas ek: controlled environment.
+        Ye kahani har doosre naye mushroom grower ki hai. YouTube par "zero investment, mahine ke lakhon" dekhkar log seedha 200-300 bags laga lete hain, aur jab green mold puri batch kha jata hai tab samajh aata hai ki khumbi ugana bags latakane ka naam nahi. Controlled science hai. Sterilization aur humidity ka practical tareeka pakad lo, phir hi ye stable income banti hai. Himachal ke Solan ko "Mushroom City" kehte hain, par ab pahadi ilaqa zaroori nahi. Ek saaf storeroom ya basement bhi commercial production ke liye kaafi hai. Shart bas ek: controlled environment.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -359,24 +359,24 @@ export default function MushroomKheti() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Setup Ka Paisa Kahan Se — Jab Tak Subsidy Nahi Aati
+        Setup Ka Paisa Kahan Se. Jab Tak Subsidy Nahi Aati
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        NHB back-ended hai — pehle poora kharcha aapka, paisa baad mein. Toh shuru ka ₹40,000-60,000
+        NHB back-ended hai. Pehle poora kharcha aapka, paisa baad mein. Toh shuru ka ₹40,000-60,000
         (ya bade setup ka lakh-do-lakh) kahan se aaye? Do practical raaste hain, dono ka mizaaj alag:
       </p>
       <ul className="list-disc pl-5 space-y-3 text-gray-700 dark:text-gray-300 mb-4">
         <li><strong>Mudra loan:</strong> mushroom unit ek non-farm micro-business ki tarah bhi chal jaata hai.
         Mudra mein bank collateral nahi maang sakta, aur Shishu se Tarun Plus tak categories ₹20 lakh tak
-        jaati hain — 100-bag unit ke liye toh Shishu/Kishor hi kaafi hai. Process aur documents ka poora
-        hisaab <Link href="/articles/dairy-farm-loan-without-collateral" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">bina collateral loan wali guide</Link> mein hai — wahan dairy ka example hai, par Mudra ka rasta same hai.</li>
+        jaati hain. 100-bag unit ke liye toh Shishu/Kishor hi kaafi hai. Process aur documents ka poora
+        hisaab <Link href="/articles/dairy-farm-loan-without-collateral" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">bina collateral loan wali guide</Link> mein hai. Wahan dairy ka example hai, par Mudra ka rasta same hai.</li>
         <li><strong>PM FME (agar processing bhi karni hai):</strong> dried mushroom ya pickle banane ka plan hai
         toh PM FME mein 35% credit-linked subsidy hai, ₹10 lakh per unit tak. "Credit-linked" ka matlab —
         pehle bank loan approve hota hai, subsidy uske principal mein adjust hoti hai, haath mein cash nahi
         aata. Details <Link href="/articles/pm-fme-yojana-food-processing" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">PM FME guide</Link> mein.</li>
       </ul>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Ek hi kaam ke liye do sarkari funding ek saath nahi milti — NHB subsidy claim karni hai toh usi unit par
+        Ek hi kaam ke liye do sarkari funding ek saath nahi milti. NHB subsidy claim karni hai toh usi unit par
         PM FME ka claim nahi banega. Pehle decide karo: sirf ugana hai (NHB + Mudra ka combination) ya ugana +
         process karna hai (PM FME ka rasta). Ye decision district Horticulture Officer se baat karke lo, kyunki
         state-wise guidelines ka farak yahan sabse zyada padta hai.

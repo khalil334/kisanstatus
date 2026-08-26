@@ -10,7 +10,7 @@ const MODIFIED = '2026-08-19T19:34:36+05:30';
 const IMG_BASE = '/images/articles/pm-kisan-self-registered-status-check';
 
 const RELATED = [
-  { slug: 'PmKisanRejectedStatusReApplyGuide', title: 'Rejected Status — Dobara Apply' },
+  { slug: 'PmKisanRejectedStatusReApplyGuide', title: 'Rejected Status. Dobara Apply' },
   { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Meaning' },
 ];
@@ -18,31 +18,31 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Self-registration mein kitna time lagta hai approval mein?',
-    a: 'Normally ek-do hafte lagte hain verification mein. Lekin kabhi-kabhi 30-45 din bhi ho jaate hain agar land records match nahi hote ya eKYC pending hai. Status check karte raho — "Pending" dikh raha hai toh wait karo, "Rejected" dikhe toh reason dekho aur fix karo.',
+    a: 'Normally ek-do hafte lagte hain verification mein. Lekin kabhi-kabhi 30-45 din bhi ho jaate hain agar land records match nahi hote ya eKYC pending hai. Status check karte raho, "Pending" dikh raha hai toh wait karo, "Rejected" dikhe toh reason dekho aur fix karo.',
   },
   {
-    q: 'Khud registration kiya lekin abhi tak koi payment nahi aayi — kyun?',
-    a: 'Teen wajah ho sakti hain: (1) eKYC nahi hui — pehle wahi nipta lo, (2) Bank account Aadhaar se link nahi — NPCI seeding karwao, (3) Land seeding pending hai — revenue office se contact karo. Sabse pehle status check karo portal par — wahan exact reason dikhega.',
+    q: 'Khud registration kiya lekin abhi tak koi payment nahi aayi, kyun?',
+    a: 'Teen wajah ho sakti hain: (1) eKYC nahi hui, pehle wahi nipta lo, (2) Bank account Aadhaar se link nahi. NPCI seeding karwao, (3) Land seeding pending hai. Revenue office se contact karo. Sabse pehle status check karo portal par, wahan exact reason dikhega.',
   },
   {
     q: 'Reference number kho gaya hai — ab kya karun?',
-    a: 'Koi baat nahi — Aadhaar number se hi sab check ho jaata hai. Beneficiary status mein Aadhaar daalo, puri history saamne.',
+    a: 'Koi baat nahi. Aadhaar number se hi sab check ho jaata hai. Beneficiary status mein Aadhaar daalo, puri history saamne.',
   },
   {
-    q: 'Online registration mein photo upload karni thi — kya size chahiye?',
-    a: 'Passport size, 20-50 KB tak. White background preferred hai, zaroori nahi. Mobile se kheenchi hui bhi chal jaati hai — bas chehra saaf dikhna chahiye, dhundhli nahi. Reject ho gayi? Dobara upload kar do, koi limit nahi hai.',
+    q: 'Online registration mein photo upload karni thi. Kya size chahiye?',
+    a: 'Passport size, 20-50 KB tak. White background preferred hai, zaroori nahi. Mobile se kheenchi hui bhi chal jaati hai. Bas chehra saaf dikhna chahiye, dhundhli nahi. Reject ho gayi? Dobara upload kar do, koi limit nahi hai.',
   },
   {
     q: 'Registration ke baad mobile number change kar sakte hain?',
-    a: 'Haan. pmkisan.gov.in par "Edit Aadhaar Details" se update ho jaata hai — purane number par OTP aayega. Purana number hi band ho gaya hai? Tab CSC jaana padega, operator karwa dega.',
+    a: 'Haan. pmkisan.gov.in par "Edit Aadhaar Details" se update ho jaata hai. Purane number par OTP aayega. Purana number hi band ho gaya hai? Tab CSC jaana padega, operator karwa dega.',
   },
 ];
 
 const HOWTO_STEPS = [
-  { name: 'pmkisan.gov.in kholo', text: 'Mobile ya computer, jo bhi ho — official portal pmkisan.gov.in kholo.' },
+  { name: 'pmkisan.gov.in kholo', text: 'Mobile ya computer, jo bhi ho, official portal pmkisan.gov.in kholo.' },
   { name: 'Farmers Corner dhundo', text: 'Homepage par upar "Farmers Corner" section dhundo.' },
   { name: 'Beneficiary Status par click karo', text: '"Beneficiary Status" option select karo.' },
-  { name: 'Aadhaar option select karo', text: 'Do options milenge — Aadhaar ya Mobile number. Aadhaar select karo, zyada reliable hai.' },
+  { name: 'Aadhaar option select karo', text: 'Do options milenge. Aadhaar ya Mobile number. Aadhaar select karo, zyada reliable hai.' },
   { name: 'Aadhaar number type karo', text: '12-digit Aadhaar number bina space ya dash ke type karo.' },
   { name: 'Captcha bharo aur Get Data dabao', text: 'Screen par diya captcha bharo aur "Get Data" button dabao.' },
   { name: 'Status dekho', text: 'Registered ho toh naam, gaon, mobile/bank ke last digits, registration date aur status (Active/Pending/Rejected) dikh jayega.' },
@@ -94,7 +94,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || `${IMG_BASE}/hero.webp`}
-            alt="PM Kisan self registration status check — online application tracking guide 2026"
+            alt="PM Kisan self registration status check, online application tracking guide 2026"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -110,33 +110,33 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Alag Portal Dhundna Band Karein</h2>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
-            CSC se karwaya ya khud online kiya — farak nahi padta. <strong>Status check karne ka tarika same hai.</strong>
+            CSC se karwaya ya khud online kiya, farak nahi padta. <strong>Status check karne ka tarika same hai.</strong>
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
-            Self-registration karne wale aksar sochte hain ki unke liye koi alag portal hoga — aisa kuch nahi hai. Sab ka status ek hi jagah, pmkisan.gov.in ke Beneficiary Status mein, sirf Aadhaar number se check hota hai.
+            Self-registration karne wale aksar sochte hain ki unke liye koi alag portal hoga. Aisa kuch nahi hai. Sab ka status ek hi jagah, pmkisan.gov.in ke Beneficiary Status mein, sirf Aadhaar number se check hota hai.
           </p>
         </div>
 
         <section className="mb-8">
           <SH>Self Registration Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Jab aap khud pmkisan.gov.in par jaake form bharte hain — bina CSC operator ki help ke — usse self-registration kehte hain. Yeh option 2019 mein add hua tha jab portal ko farmer-friendly banaya gaya, lekin abhi bhi zyadatar log iske baare mein nahi jaante — isliye CSC pe line lagi rehti hai jabki ghar baithe kaam ho sakta hai.
+            Jab aap khud pmkisan.gov.in par jaake form bharte hain. Bina CSC operator ki help ke, usse self-registration kehte hain. Yeh option 2019 mein add hua tha jab portal ko farmer-friendly banaya gaya, lekin abhi bhi zyadatar log iske baare mein nahi jaante. Isliye CSC pe line lagi rehti hai jabki ghar baithe kaam ho sakta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Registration khud karne ke baad sabse zyada confusion status check karne mein hoti hai — log sochte hain "maine khud kiya, shayad koi alag reference number ya login chahiye." Aisa kuch nahi hai. System mein CSC registration aur self registration mein koi field-level farak nahi hota — dono Aadhaar-linked entries hain.
+            Registration khud karne ke baad sabse zyada confusion status check karne mein hoti hai. Log sochte hain "maine khud kiya, shayad koi alag reference number ya login chahiye." Aisa kuch nahi hai. System mein CSC registration aur self registration mein koi field-level farak nahi hota. Dono Aadhaar-linked entries hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Waise portal par ek dedicated option bhi hai — Farmers Corner mein <strong>"Status of Self Registered Farmer"</strong> naam se. Wahan Aadhaar daal ke sirf apni application ka verification status dekh sakte ho — approve hui ya abhi patwari ke paas atki hai. Beneficiary Status se pehle yeh wala check karna better hai agar registration naya-naya kiya hai.
+            Waise portal par ek dedicated option bhi hai — Farmers Corner mein <strong>"Status of Self Registered Farmer"</strong> naam se. Wahan Aadhaar daal ke sirf apni application ka verification status dekh sakte ho, approve hui ya abhi patwari ke paas atki hai. Beneficiary Status se pehle yeh wala check karna better hai agar registration naya-naya kiya hai.
           </p>
           <IB>
-            <strong>Fayda:</strong> ₹20-50 bach jaate hain jo CSC wala charge leta hai. <strong>Nuksan:</strong> Agar koi galti ho gayi toh khud correct karna padega — koi help nahi karega. Ek common mistake: naam Aadhaar se hooba-hoo match nahi karna (middle name chhod dena, spelling farak) — isse verification atak jaata hai.
+            <strong>Fayda:</strong> ₹20-50 bach jaate hain jo CSC wala charge leta hai. <strong>Nuksan:</strong> Agar koi galti ho gayi toh khud correct karna padega, koi help nahi karega. Ek common mistake: naam Aadhaar se hooba-hoo match nahi karna (middle name chhod dena, spelling farak), isse verification atak jaata hai.
           </IB>
         </section>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={`${IMG_BASE}/self-registration-form.webp`}
-            alt="PM Kisan self registration online form on pmkisan.gov.in — Farmers Corner new farmer registration"
+            alt="PM Kisan self registration online form on pmkisan.gov.in. Farmers Corner new farmer registration"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -144,22 +144,22 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            New Farmer Registration Form — Farmers Corner Section
+            New Farmer Registration Form. Farmers Corner Section
           </p>
         </div>
 
         <section className="mb-8">
-          <SH>Status Check Kaise Karein — Step by Step</SH>
+          <SH>Status Check Kaise Karein. Step by Step</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Yeh process bas 2 minute ka hai — login ya password kuch nahi chahiye, sirf Aadhaar number.
+            Yeh process bas 2 minute ka hai. Login ya password kuch nahi chahiye, sirf Aadhaar number.
           </p>
 
           <StepList>
             <SI n={1}>pmkisan.gov.in kholo — mobile ya computer, jo bhi ho</SI>
-            <SI n={2}>Farmers Corner dhundo — homepage par upar dikhega</SI>
+            <SI n={2}>Farmers Corner dhundo, homepage par upar dikhega</SI>
             <SI n={3}>"Beneficiary Status" par click karo</SI>
-            <SI n={4}>Do options milenge — Aadhaar ya Mobile number. Aadhaar select karo (zyada reliable hai)</SI>
-            <SI n={5}>12-digit Aadhaar number type karo — bina space ya dash ke</SI>
+            <SI n={4}>Do options milenge. Aadhaar ya Mobile number. Aadhaar select karo (zyada reliable hai)</SI>
+            <SI n={5}>12-digit Aadhaar number type karo, bina space ya dash ke</SI>
             <SI n={6}>Captcha bharo aur "Get Data" button dabao</SI>
             <SI n={7}>Agar aap registered ho toh puri details dikh jayengi:</SI>
           </StepList>
@@ -178,14 +178,14 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </div>
 
           <WB>
-            <strong>Ek Suggestion:</strong> "Not Found" dikh raha hai? Do baar check karo — Aadhaar sahi type kiya? Agar phir bhi nahi mil raha toh registration hi nahi hua hoga — kabhi-kabhi form submit hote waqt session timeout ho jaata hai aur data save nahi hota, lekin farmer ko lagta hai ho gaya. Dobara apply karo.
+            <strong>Ek Suggestion:</strong> "Not Found" dikh raha hai? Do baar check karo. Aadhaar sahi type kiya? Agar phir bhi nahi mil raha toh registration hi nahi hua hoga. Kabhi-kabhi form submit hote waqt session timeout ho jaata hai aur data save nahi hota, lekin farmer ko lagta hai ho gaya. Dobara apply karo.
           </WB>
         </section>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={`${IMG_BASE}/beneficiary-status-result.webp`}
-            alt="PM Kisan beneficiary status check result screen — showing active status with payment details"
+            alt="PM Kisan beneficiary status check result screen, showing active status with payment details"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -193,7 +193,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Beneficiary Status Result — Active Dikh Raha Hai
+            Beneficiary Status Result. Active Dikh Raha Hai
           </p>
         </div>
 
@@ -214,7 +214,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl">
               <h3 className="font-black text-amber-800 dark:text-amber-300 text-sm mb-2">Pending / Under Verification</h3>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed mb-2">
-                Matlab application submit ho gayi hai lekin abhi verify nahi hui. Yeh normal hai — usually ek se do hafte ke andar clear ho jaata hai, kyunki verification State Nodal Officer ke through manually hota hai, automated nahi.
+                Matlab application submit ho gayi hai lekin abhi verify nahi hui. Yeh normal hai. Usually ek se do hafte ke andar clear ho jaata hai, kyunki verification State Nodal Officer ke through manually hota hai, automated nahi.
               </p>
               <p className="text-xs text-[var(--color-text-muted)]">
                 <strong>Kya karein:</strong> Wait karo. 15 din se zyada ho raha hai toh CSC jaao ya helpline 155261 par call karo.
@@ -224,7 +224,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-4 rounded-r-xl">
               <h3 className="font-black text-red-800 dark:text-red-300 text-sm mb-2">Rejected</h3>
               <p className="text-xs text-[var(--color-text-muted)] leading-relaxed mb-2">
-                Matlab koi problem hai. Portal par reason dikhega — woh dekho.
+                Matlab koi problem hai. Portal par reason dikhega. Woh dekho.
               </p>
               <p className="text-xs text-[var(--color-text-muted)]">
                 <strong>Common reasons:</strong> Naam mismatch, land record issue, eKYC pending, bank account inactive. Reason ke hisaab se fix karo aur dobara apply karo.
@@ -234,9 +234,9 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         </section>
 
         <section className="mb-8">
-          <SH>Self Registration vs CSC — Kya Farak Hai?</SH>
+          <SH>Self Registration vs CSC. Kya Farak Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Log confuse ho jaate hain — kya farak padta hai?
+            Log confuse ho jaate hain. Kya farak padta hai?
           </p>
 
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -269,14 +269,14 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </div>
 
           <IB>
-            <strong>Yaani:</strong> Registration process mein farak hai, lekin ek baar registered ho jaane ke baad system dono ko ek jaisa treat karta hai — koi alag category ya priority nahi hoti.
+            <strong>Yaani:</strong> Registration process mein farak hai, lekin ek baar registered ho jaane ke baad system dono ko ek jaisa treat karta hai. Koi alag category ya priority nahi hoti.
           </IB>
         </section>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={`${IMG_BASE}/edit-aadhaar-details.webp`}
-            alt="PM Kisan Edit Aadhaar Details option — correcting name, mobile number, and bank details after self registration"
+            alt="PM Kisan Edit Aadhaar Details option, correcting name, mobile number, and bank details after self registration"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -284,7 +284,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Edit Aadhaar Details — Correction Option for Self-Registered Farmers
+            Edit Aadhaar Details. Correction Option for Self-Registered Farmers
           </p>
         </div>
 
@@ -294,27 +294,27 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             {[
               {
                 problem: 'Status check karne par "Not Found" dikh raha hai',
-                solution: 'Aadhaar number dobara check karo. Agar sahi hai toh matlab registration hi nahi hua — form submit hote waqt error aaya hoga jo notice nahi hua. Aisa bhi ho sakta hai ki internet slow ho aur confirmation page load hone se pehle hi tab band ho jaaye — lagta hai registration ho gaya, lekin backend mein kuch save hi nahi hota. Dobara apply karo pmkisan.gov.in par, aur is baar confirmation message ka screenshot le lo.',
+                solution: 'Aadhaar number dobara check karo. Agar sahi hai toh matlab registration hi nahi hua — form submit hote waqt error aaya hoga jo notice nahi hua. Aisa bhi ho sakta hai ki internet slow ho aur confirmation page load hone se pehle hi tab band ho jaaye, lagta hai registration ho gaya, lekin backend mein kuch save hi nahi hota. Dobara apply karo pmkisan.gov.in par, aur is baar confirmation message ka screenshot le lo.',
               },
               {
                 problem: 'Naam galat dikh raha hai',
-                solution: 'Registration mein typing mistake ho gayi hogi. "Edit Aadhaar Details" mein jaake correct karo. Aadhaar card se exact match hona chahiye — spelling, spacing, initials sab.',
+                solution: 'Registration mein typing mistake ho gayi hogi. "Edit Aadhaar Details" mein jaake correct karo. Aadhaar card se exact match hona chahiye, spelling, spacing, initials sab.',
               },
               {
                 problem: 'Mobile number galat hai',
-                solution: 'Edit option se change kar sakte ho. Purane number par OTP aayega. Agar purana number band hai toh CSC jaana padega — wahan operator biometric se verify karke update kar dega.',
+                solution: 'Edit option se change kar sakte ho. Purane number par OTP aayega. Agar purana number band hai toh CSC jaana padega, wahan operator biometric se verify karke update kar dega.',
               },
               {
                 problem: 'Bank account number wrong hai',
-                solution: 'Yeh serious hai — payment galat account mein jaayegi. Bina der correct karo. Branch se IFSC code bhi verify karo — ek digit galat hone se bhi transfer fail ho jaata hai.',
+                solution: 'Yeh serious hai. Payment galat account mein jaayegi. Bina der correct karo. Branch se IFSC code bhi verify karo, ek digit galat hone se bhi transfer fail ho jaata hai.',
               },
               {
                 problem: 'Do baar registration ho gaya galti se',
-                solution: 'Ghabrao mat — system Aadhaar se duplicate pakad leta hai aur zyada tar entries khud filter ho jaati hain. Lekin agar dono alag-alag dikh rahi hain toh helpline 155261 par call karo; wo ek entry hata denge. Dhyan rahe: jab tak duplicate bana rehta hai, payment kisi bhi entry par release nahi hoti.',
+                solution: 'Ghabrao mat, system Aadhaar se duplicate pakad leta hai aur zyada tar entries khud filter ho jaati hain. Lekin agar dono alag-alag dikh rahi hain toh helpline 155261 par call karo; wo ek entry hata denge. Dhyan rahe: jab tak duplicate bana rehta hai, payment kisi bhi entry par release nahi hoti.',
               },
               {
                 problem: 'Pending dikh raha hai 30 din se zyada',
-                solution: 'Helpline 155261 par call karo. Ya nearest Block Agriculture Office jaao. Woh log manually check karke bata denge ki kahan atka hai — zyadatar cases mein land seeding ya eKYC hi wajah hoti hai. Maan lijiye khasra number revenue records mein purane naam se register hai (jaise dada ke naam par), jabki PM Kisan form mein current owner ka naam diya gaya hai — aisi mismatch verification ko lambe samay tak atka sakti hai. Aise case mein tehsil/revenue office se naam-transfer (dakhil-kharij) record dikhana padta hai, tabhi status aage badhta hai.',
+                solution: 'Helpline 155261 par call karo. Ya nearest Block Agriculture Office jaao. Woh log manually check karke bata denge ki kahan atka hai. Zyadatar cases mein land seeding ya eKYC hi wajah hoti hai. Maan lijiye khasra number revenue records mein purane naam se register hai (jaise dada ke naam par), jabki PM Kisan form mein current owner ka naam diya gaya hai — aisi mismatch verification ko lambe samay tak atka sakti hai. Aise case mein tehsil/revenue office se naam-transfer (dakhil-kharij) record dikhana padta hai, tabhi status aage badhta hai.',
               },
             ].map(({ problem, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
@@ -355,12 +355,12 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         </section>
 
         <section className="mb-8">
-          <SH>Active Ho Gaya — Ab Paisa Kab Aayega? (FTO Ka Chakkar)</SH>
+          <SH>Active Ho Gaya. Ab Paisa Kab Aayega? (FTO Ka Chakkar)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Status Active dikhne ka matlab ye nahi ki kal paisa aa jayega. Active hone ke baad ek aur station hai — <strong>FTO</strong>, yaani Fund Transfer Order. Ye ek tarah ka payment order hai jo batch mein banta hai — aapke state/district ke verified kisano ki list ek saath process hoti hai, ek-ek karke nahi. FTO ban gaya to uske kuch hi dino mein DBT (Direct Benefit Transfer) se paisa seedha bank khaate me credit hota hai.
+            Status Active dikhne ka matlab ye nahi ki kal paisa aa jayega. Active hone ke baad ek aur station hai. <strong>FTO</strong>, yaani Fund Transfer Order. Ye ek tarah ka payment order hai jo batch mein banta hai. Aapke state/district ke verified kisano ki list ek saath process hoti hai, ek-ek karke nahi. FTO ban gaya to uske kuch hi dino mein DBT (Direct Benefit Transfer) se paisa seedha bank khaate me credit hota hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Isliye agar aapke gaon ke kisi aur ka paisa aa gaya aur aapka nahi, to ghabrao mat — ho sakta hai aapka FTO agle batch me ho. Status page par hi FTO ka status bhi dikhta hai. Uska poora matlab, har stage ka timeline aur 30 din se zyada atakne par kya karna hai — sab humne{' '}
+            Isliye agar aapke gaon ke kisi aur ka paisa aa gaya aur aapka nahi, to ghabrao mat, ho sakta hai aapka FTO agle batch me ho. Status page par hi FTO ka status bhi dikhta hai. Uska poora matlab, har stage ka timeline aur 30 din se zyada atakne par kya karna hai. Sab humne{' '}
             <Link href="/articles/fto-status-check-paisa-kab-aayega" className="underline font-bold text-green-700 dark:text-green-400">FTO status guide</Link> mein detail se likha hai. Naye self-registered kisano ke liye yahi agla page hai.
           </p>
         </section>
@@ -368,10 +368,10 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         <section className="mb-8">
           <SH>Status Check Ke Naam Par Chalne Wali Fake Websites</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Google par &ldquo;pm kisan status&rdquo; type karo to upar kai .com aur .in websites dikhengi jo sarkari jaisi lagti hain. Inme se kuch sirf ads dikhati hain — wo jhelne layak hain — par kuch aapka Aadhaar number aur mobile maang kar <strong>OTP</strong> tak poochhne lagti hain. Yaad rakho: asli status check me <strong>OTP ki zaroorat hi nahi padti</strong> — sirf Aadhaar aur captcha. Aur central sarkar ki har asli scheme ka portal <strong>gov.in ya nic.in</strong> par hota hai — pmkisan.gov.in ke alawa kisi site par apni details mat daalo.
+            Google par &ldquo;pm kisan status&rdquo; type karo to upar kai .com aur .in websites dikhengi jo sarkari jaisi lagti hain. Inme se kuch sirf ads dikhati hain. Wo jhelne layak hain. Par kuch aapka Aadhaar number aur mobile maang kar <strong>OTP</strong> tak poochhne lagti hain. Yaad rakho: asli status check me <strong>OTP ki zaroorat hi nahi padti</strong> — sirf Aadhaar aur captcha. Aur central sarkar ki har asli scheme ka portal <strong>gov.in ya nic.in</strong> par hota hai. Pmkisan.gov.in ke alawa kisi site par apni details mat daalo.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Agar kisi call ya website par OTP de diya aur khaate se paisa kat gaya, to der mat karo — <strong>1930</strong> par call karo ya <strong>cybercrime.gov.in</strong> par shikayat darj karo, aur apne bank ko turant batao. Jitni jaldi report hogi, paisa wapas milne ke chances utne behtar.
+            Agar kisi call ya website par OTP de diya aur khaate se paisa kat gaya, to der mat karo, <strong>1930</strong> par call karo ya <strong>cybercrime.gov.in</strong> par shikayat darj karo, aur apne bank ko turant batao. Jitni jaldi report hogi, paisa wapas milne ke chances utne behtar.
           </p>
         </section>
 
@@ -406,12 +406,12 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             <p className="text-xs font-bold text-[var(--color-text)] mb-2">Official Source</p>
             <ul className="text-xs text-[var(--color-text-muted)] space-y-1 list-disc list-inside">
               <li>
-                Status check ka process — Farmers Corner &gt; Know Your Status, official portal:{' '}
+                Status check ka process. Farmers Corner &gt; Know Your Status, official portal:{' '}
                 <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="underline text-[var(--color-primary)]">pmkisan.gov.in</a>
               </li>
               <li>
-                Status of Self Registered Farmer — updation/verification page, official portal:{' '}
-                <a href="https://pmkisan.gov.in/SearchSelfRegisterfarmerDetailsnewUpdated.aspx" target="_blank" rel="noopener noreferrer" className="underline text-[var(--color-primary)]">pmkisan.gov.in — Self Registered Farmers Updation</a>
+                Status of Self Registered Farmer, updation/verification page, official portal:{' '}
+                <a href="https://pmkisan.gov.in/SearchSelfRegisterfarmerDetailsnewUpdated.aspx" target="_blank" rel="noopener noreferrer" className="underline text-[var(--color-primary)]">pmkisan.gov.in. Self Registered Farmers Updation</a>
               </li>
             </ul>
           </div>
@@ -428,7 +428,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Where to Get Help — Helpline, Block Office, CSC, Email
+            Where to Get Help. Helpline, Block Office, CSC, Email
           </p>
         </div>
 
@@ -436,7 +436,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Self Registration Wale Kisano Ke Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Self Registration Status FAQ 2026 — Real Answers" />
+          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Self Registration Status FAQ 2026. Real Answers" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
@@ -446,16 +446,16 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
             <li>pmkisan.gov.in par Beneficiary Status mein Aadhaar se status dekhein</li>
-            <li>Pehli baar “Pending for Approval” dikhna normal hai — state verification chal raha hai</li>
-            <li>eKYC complete karein — self-registered logon ka yeh sabse zyada chhutta hai</li>
-            <li>Land seeding status bhi dekh lein — form khud bhara hai toh Khasra galti aam hai</li>
+            <li>Pehli baar “Pending for Approval” dikhna normal hai. State verification chal raha hai</li>
+            <li>eKYC complete karein, self-registered logon ka yeh sabse zyada chhutta hai</li>
+            <li>Land seeding status bhi dekh lein, form khud bhara hai toh Khasra galti aam hai</li>
             <li>Har 7-10 din mein status dobara check karte rahein jab tak Active na ho</li>
           </ol>
         </div>
 
         <GovLink
           href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
-          label="PM Kisan Beneficiary Status — Official Portal"
+          label="PM Kisan Beneficiary Status. Official Portal"
           guide="Abhi Check Karo"
           guideHref="/articles/PmKisanMasterGuide2026"
           portalName="pmkisan.gov.in"
@@ -463,7 +463,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
 
         <CalcBanner
           title="Apna Total Benefit Calculate Karo"
-          desc="Kitni installments mili, kitni pending — sab jaano"
+          desc="Kitni installments mili, kitni pending. Sab jaano"
           primaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator →' }}
           secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />

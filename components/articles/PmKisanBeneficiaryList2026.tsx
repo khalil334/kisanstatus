@@ -18,7 +18,7 @@ const MODIFIED = '2026-07-14T15:47:23+05:30';
 
 const RELATED = [
   { slug: 'PmKisanVillageWiseListPdfDownload', title: 'Village Wise List PDF' },
-  { slug: 'PmKisanRejectedStatusReApplyGuide', title: 'Rejected Status — Dobara Apply' },
+  { slug: 'PmKisanRejectedStatusReApplyGuide', title: 'Rejected Status. Dobara Apply' },
   { slug: 'PmKisanLandSeedingForm', title: 'Land Seeding Form' },
 ];
 
@@ -36,7 +36,7 @@ const FAQS_DATA = [
     a: 'Nahi, list mein sirf naam, father name, mobile number, aur bank details hote hain. Caste ka column nahi hota.',
   },
   {
-    q: 'Beneficiary list mein naam nahi mila — pehle eKYC dekhun ya land seeding?',
+    q: 'Beneficiary list mein naam nahi mila, pehle eKYC dekhun ya land seeding?',
     a: 'Pehle eKYC check karo, phir land seeding verify karo. Dono complete hain toh 155261 helpline par call karo ya Block Agriculture Office mein complaint darj karo.',
   },
   {
@@ -169,7 +169,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/pm-kisan-beneficiary-status-kisanstatus.webp'}
-            alt="PM Kisan beneficiary list 2026 — individual status check aur village wise list"
+            alt="PM Kisan beneficiary list 2026, individual status check aur village wise list"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -178,7 +178,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            PM Kisan Beneficiary List 2026 — Apna Naam Check Karo + Village Wise List
+            PM Kisan Beneficiary List 2026. Apna Naam Check Karo + Village Wise List
           </p>
         </div>
 
@@ -214,7 +214,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
             <SI n={2}><strong>Farmers Corner</strong> menu tap karo</SI>
             <SI n={3}><strong>Beneficiary Status</strong> select karo</SI>
             <SI n={4}>Aadhaar Number ya Mobile Number enter karo</SI>
-            <SI n={5}><strong>Get Data</strong> dabao — naam aur status dikh jaayega</SI>
+            <SI n={5}><strong>Get Data</strong> dabao, naam aur status dikh jaayega</SI>
           </StepList>
           <IB>
             <strong>"Active"</strong> = list mein ho, kist aayegi. <strong>"Rejected"</strong> = problem hai, neeche wali guide padho.
@@ -227,7 +227,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
             Sirf wahi kisan is list mein aate hain jinka verification pura ho gaya hai. Government har kist release karne se pehle isko update karti hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Naam hona matlab paisa aayega. Nahi hona matlab koi na koi adchkan hai. Registration ke baad <strong>state verification + land seeding + eKYC</strong> — ye teeno kaam hone ke baad hi naam aata hai. Isme 15-30 din lagte hain.
+            Naam hona matlab paisa aayega. Nahi hona matlab koi na koi adchkan hai. Registration ke baad <strong>state verification + land seeding + eKYC</strong>. Ye teeno kaam hone ke baad hi naam aata hai. Isme 15-30 din lagte hain.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl text-center">
@@ -236,7 +236,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl text-center">
               <p className="font-black text-sm text-red-800 dark:text-red-300">Rejected</p>
-              <p className="text-xs text-[var(--color-text-muted)] mt-1">Problem hai — fix karo</p>
+              <p className="text-xs text-[var(--color-text-muted)] mt-1">Problem hai. Fix karo</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-center">
               <p className="font-black text-sm text-amber-800 dark:text-amber-300">Pending</p>
@@ -254,8 +254,8 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
             <SI n={1}><strong>pmkisan.gov.in</strong> → upar menu mein <strong>Dashboard</strong> click karo</SI>
             <SI n={2}>Left side mein <strong>State</strong> select karo</SI>
             <SI n={3}><strong>District</strong> → phir <strong>Sub-District/Block</strong></SI>
-            <SI n={4}><strong>Village</strong> select karo — apna gaon dhundho</SI>
-            <SI n={5}>Poori list screen par aa jayegi — <strong>Ctrl+F</strong> se naam search karo</SI>
+            <SI n={4}><strong>Village</strong> select karo, apna gaon dhundho</SI>
+            <SI n={5}>Poori list screen par aa jayegi, <strong>Ctrl+F</strong> se naam search karo</SI>
             <SI n={6}>PDF save: Browser Print → <strong>Save as PDF</strong></SI>
           </StepList>
           <WB>
@@ -263,18 +263,18 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
             <ul className="list-disc list-inside mt-2 space-y-1 text-xs">
               <li><strong>PC/Laptop:</strong> List kholne ke baad <strong>Ctrl+P</strong> dabao → "Save as PDF" select karo → Save button</li>
               <li><strong>Mobile:</strong> Share button → Print → "Save as PDF" → Download</li>
-              <li>Ya upar wala <strong>green button</strong> dabao — official portal par PDF wahin ban jayegi!</li>
+              <li>Ya upar wala <strong>green button</strong> dabao, official portal par PDF wahin ban jayegi!</li>
             </ul>
           </WB>
           <IB>
-            <strong>Kaam Aane Wali Trick:</strong> Kisi bhi state/district/block/village ki list publicly accessible hai. Padosi gaon ki list bhi dekh sakte ho — comparison ke liye achha hai.
+            <strong>Kaam Aane Wali Trick:</strong> Kisi bhi state/district/block/village ki list publicly accessible hai. Padosi gaon ki list bhi dekh sakte ho, comparison ke liye achha hai.
           </IB>
         </section>
 
         <section className="mb-8">
-          <SH>Naam Nahi Hai — 7 Common Reasons + Fix</SH>
+          <SH>Naam Nahi Hai. 7 Common Reasons + Fix</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Rejected dikh raha hai? Ek ek reason check karo — 90% cases mein yehi problems hoti hain:
+            Rejected dikh raha hai? Ek ek reason check karo, 90% cases mein yehi problems hoti hain:
           </p>
           <div className="space-y-3">
             {[
@@ -283,7 +283,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
               { n: 3, reason: 'Naam Mismatch', desc: 'Aadhaar mein naam alag, bank mein alag. System reject kar deta hai.', fix: 'Farmers Corner → Name Correction → Aadhaar jaisa naam daalo.' },
               { n: 4, reason: 'NPCI Seeding Missing', desc: 'Bank account mein Aadhaar link nahi hai. NPCI seeding missing.', fix: 'Bank branch jao → Aadhaar seeding form bharo → 3-7 din mein fix ho jayega.' },
               { n: 5, reason: 'Duplicate Registration', desc: 'Same Aadhaar se do baar registration ho gaya.', fix: 'Helpline 155261 par call karo → duplicate entry remove karwao.' },
-              { n: 6, reason: 'Eligible Nahi Ho', desc: 'Government employee, income tax filer, MP/MLA — eligible nahi hote.', fix: 'Eligibility dobara check karo. Galat reject hua hai toh Agriculture office mein appeal karo.' },
+              { n: 6, reason: 'Eligible Nahi Ho', desc: 'Government employee, income tax filer, MP/MLA, eligible nahi hote.', fix: 'Eligibility dobara check karo. Galat reject hua hai toh Agriculture office mein appeal karo.' },
               { n: 7, reason: 'State Verification Pending', desc: 'Registration hua lekin state ne abhi verify nahi kiya.', fix: '2-4 hafte wait karo. Phir bhi nahi hua toh Block Agriculture Officer se contact karo.' },
             ].map(({ n, reason, desc, fix }) => (
               <div key={n} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4 shadow-sm">
@@ -315,7 +315,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
               <tbody>
                 {[
                   ['Active', 'List mein hai — kist aayegi', 'Wait karo'],
-                  ['Rejected', 'Application fail — reason check karo', 'Fix karo'],
+                  ['Rejected', 'Application fail, reason check karo', 'Fix karo'],
                   ['Under Verification', 'State review chal rahi hai', '2-4 hafte wait karo'],
                   ['Payment Failed', 'Approved hai, payment nahi pahunchi', 'Bank/NPCI fix karo'],
                   ['Pending', 'Registration hua, verification baaki', 'Wait karo'],
@@ -333,10 +333,10 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
         </section>
 
         <section className="mb-8">
-          <SH>Naam List Mein Hai Par Paisa Nahi Aaya — Asli Sawaal Yahi Hai</SH>
+          <SH>Naam List Mein Hai Par Paisa Nahi Aaya. Asli Sawaal Yahi Hai</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            List mein naam dekh lena aadha kaam hai. Har kist ke baad sabse zyada yahi sawaal aata hai — &quot;bhai naam to list mein hai, phir paisa kahan gaya?&quot; Ye normal hai, aur iski wajah list mein nahi hoti. List sirf itna batati hai ki aap scheme mein registered aur active ho. Paisa uske aage char cheezon par rukta hai: eKYC, bank ki Aadhaar-NPCI linking, land record, aur FTO.
+            List mein naam dekh lena aadha kaam hai. Har kist ke baad sabse zyada yahi sawaal aata hai. &quot;bhai naam to list mein hai, phir paisa kahan gaya?&quot; Ye normal hai, aur iski wajah list mein nahi hoti. List sirf itna batati hai ki aap scheme mein registered aur active ho. Paisa uske aage char cheezon par rukta hai: eKYC, bank ki Aadhaar-NPCI linking, land record, aur FTO.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -344,70 +344,70 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </p>
 
           <StepList>
-            <SI n={1}><strong>&quot;FTO is Generated&quot; dikh raha hai:</strong> aapka payment approve ho chuka hai, bank tak order chala gaya hai. Yahan par kuch karne ki zaroorat nahi — 3-7 din mein credit ho jata hai. Iska poora matlab <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="text-[var(--color-primary)] underline">FTO guide</Link> mein hai.</SI>
+            <SI n={1}><strong>&quot;FTO is Generated&quot; dikh raha hai:</strong> aapka payment approve ho chuka hai, bank tak order chala gaya hai. Yahan par kuch karne ki zaroorat nahi. 3-7 din mein credit ho jata hai. Iska poora matlab <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="text-[var(--color-primary)] underline">FTO guide</Link> mein hai.</SI>
             <SI n={2}><strong>&quot;Payment Failed&quot; ya &quot;Rft Signed but Payment Failed&quot;:</strong> paisa nikla tha par bank ne wapas kar diya. Aksar account band ho gaya ho, IFSC badal gaya ho (bank merger ke baad ye bohot hua hai), ya NPCI mapping purane account par ho. Fix karne ka poora tarika <Link href="/articles/PmKisanPaymentFailedFix2026" className="text-[var(--color-primary)] underline">payment failed guide</Link> mein step-wise hai.</SI>
-            <SI n={3}><strong>&quot;Payment Stopped by State&quot;:</strong> ye bank ka issue nahi, state ke verification ka hai — zyadatar land record ya duplicate entry ka matter hota hai. Iske liye seedha block krishi office jana padta hai, phone par ye theek nahi hota. <Link href="/articles/PmKisanLandSeedingForm" className="text-[var(--color-primary)] underline">Land seeding form</Link> wala page saath rakho, wahan form aur process dono hai.</SI>
+            <SI n={3}><strong>&quot;Payment Stopped by State&quot;:</strong> ye bank ka issue nahi, state ke verification ka hai. Zyadatar land record ya duplicate entry ka matter hota hai. Iske liye seedha block krishi office jana padta hai, phone par ye theek nahi hota. <Link href="/articles/PmKisanLandSeedingForm" className="text-[var(--color-primary)] underline">Land seeding form</Link> wala page saath rakho, wahan form aur process dono hai.</SI>
           </StepList>
 
           <IB>
-            <strong>Ek line ka rule:</strong> naam list mein hai matlab aap eligible ho — paisa rukne ki wajah hamesha status message mein likhi hoti hai. Pehle message padho, phir usi ka fix karo. Randomly eKYC dobara karne se kuch nahi hota.
+            <strong>Ek line ka rule:</strong> naam list mein hai matlab aap eligible ho, paisa rukne ki wajah hamesha status message mein likhi hoti hai. Pehle message padho, phir usi ka fix karo. Randomly eKYC dobara karne se kuch nahi hota.
           </IB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4 mb-3">
-            Ek cheez jo log miss karte hain: <strong>ruki hui kist maaf nahi hoti</strong>. Wajah theek karne ke baad pending amount arrears ke roop mein baad mein ek saath aa jati hai, agar aap us period mein eligible the. Isliye &quot;ab to nikal gayi, chhodo&quot; sochkar baithna nuksan hai — fix karo, paisa aata hai.
+            Ek cheez jo log miss karte hain: <strong>ruki hui kist maaf nahi hoti</strong>. Wajah theek karne ke baad pending amount arrears ke roop mein baad mein ek saath aa jati hai, agar aap us period mein eligible the. Isliye &quot;ab to nikal gayi, chhodo&quot; sochkar baithna nuksan hai. Fix karo, paisa aata hai.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Aur agar status ekdum &quot;Active&quot; dikh raha hai, koi failure message nahi hai, phir bhi paisa nahi aaya — to release ki date dekho. Ho sakta hai us kist ka transfer aapke state mein abhi chal raha ho; sabhi ka paisa ek hi din mein credit nahi hota, batch-wise hota hai. Do-teen din ruk kar dekho, phir 155261 par call karo — call se pehle registration number aur portal ka exact message note kar lena, warna baat aage nahi badhti.
+            Aur agar status ekdum &quot;Active&quot; dikh raha hai, koi failure message nahi hai, phir bhi paisa nahi aaya — to release ki date dekho. Ho sakta hai us kist ka transfer aapke state mein abhi chal raha ho; sabhi ka paisa ek hi din mein credit nahi hota, batch-wise hota hai. Do-teen din ruk kar dekho, phir 155261 par call karo, call se pehle registration number aur portal ka exact message note kar lena, warna baat aage nahi badhti.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>Gaon Ki Poori List PDF Mein — Kab Kaam Aati Hai</SH>
+          <SH>Gaon Ki Poori List PDF Mein. Kab Kaam Aati Hai</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Apna naam check karna ek baat hai, aur poore gaon ki list nikalna doosri. Gaon ki list tab kaam aati hai jab shak ho ki kisi ka naam galat entry se juda hai, ya jab panchayat/CSC par ek saath kai logon ka status batana ho. Dashboard se list screen par khulti hai, aur usi ko PDF mein save karke rakh lena behtar hai — baad mein compare karne ke liye.
+            Apna naam check karna ek baat hai, aur poore gaon ki list nikalna doosri. Gaon ki list tab kaam aati hai jab shak ho ki kisi ka naam galat entry se juda hai, ya jab panchayat/CSC par ek saath kai logon ka status batana ho. Dashboard se list screen par khulti hai, aur usi ko PDF mein save karke rakh lena behtar hai. Baad mein compare karne ke liye.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Do practical baatein. Ek — list mein naam wahi spelling mein dikhega jo Aadhaar/registration ke time bhara gaya tha, isliye Ctrl+F karte waqt poora naam mat likho, sirf 4-5 akshar likho warna match nahi hoga. Do — list bade gaon mein kai page ki hoti hai, PDF save karte waqt browser &quot;all pages&quot; select karna zaroori hai.
+            Do practical baatein. Ek, list mein naam wahi spelling mein dikhega jo Aadhaar/registration ke time bhara gaya tha, isliye Ctrl+F karte waqt poora naam mat likho, sirf 4-5 akshar likho warna match nahi hoga. Do, list bade gaon mein kai page ki hoti hai, PDF save karte waqt browser &quot;all pages&quot; select karna zaroori hai.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Step-by-step screenshots ke saath poora tarika alag page par hai: <Link href="/articles/PmKisanVillageWiseListPdfDownload" className="text-[var(--color-primary)] underline font-medium">village wise list PDF download guide</Link>. Naam list mein nahi mila to <Link href="/articles/PmKisanRejectedStatusReApplyGuide" className="text-[var(--color-primary)] underline">rejected status wala page</Link> dekho — wahan reason ke hisaab se fix likha hai.
+            Step-by-step screenshots ke saath poora tarika alag page par hai: <Link href="/articles/PmKisanVillageWiseListPdfDownload" className="text-[var(--color-primary)] underline font-medium">village wise list PDF download guide</Link>. Naam list mein nahi mila to <Link href="/articles/PmKisanRejectedStatusReApplyGuide" className="text-[var(--color-primary)] underline">rejected status wala page</Link> dekho, wahan reason ke hisaab se fix likha hai.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>Beneficiary List vs Know Your Status — Dono Ka Farak Samjho</SH>
+          <SH>Beneficiary List vs Know Your Status. Dono Ka Farak Samjho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Portal par do alag cheezein hain aur log inhe mila dete hain. <strong>Beneficiary List</strong> gaon ke
             hisaab se banti hai — usme sirf naam, registration number aur status dikhta hai. <strong>Know Your
-            Status</strong> aapka apna personal page hai — usme eKYC ka status, land seeding, Aadhaar bank seeding,
+            Status</strong> aapka apna personal page hai. Usme eKYC ka status, land seeding, Aadhaar bank seeding,
             aur ab tak aayi har kist ki entry alag-alag dikhti hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Kaam ka rule ye hai: naam dhoondhna hai to list kholo, problem dhoondhni hai to Know Your Status kholo.
             Kist ruki hai aur wajah nahi samajh aa rahi, to list mein sau baar naam dekhne se kuch nahi milega —
             Know Your Status ke teen indicator (eKYC / land seeding / bank seeding) dekho, jo bhi “No” dikhe wahi
-            aapka kaam hai. Know Your Status ke liye registration number chahiye — nahi pata to usi page par
+            aapka kaam hai. Know Your Status ke liye registration number chahiye, nahi pata to usi page par
             “Know Your Registration Number” se mobile/Aadhaar se nikal jata hai.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>Naam Pehle Tha, Ab Kat Gaya — Deactivate Kyun Hota Hai</SH>
+          <SH>Naam Pehle Tha, Ab Kat Gaya. Deactivate Kyun Hota Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Ye case alag hai aur iska ilaaj bhi alag. Naya aavedan reject hona ek baat hai; chalta hua naam list se
-            hat jaana doosri. Naam deactivate hone ki teen badi wajah dekhi jaati hain — pehli, eKYC ya bank seeding
+            hat jaana doosri. Naam deactivate hone ki teen badi wajah dekhi jaati hain. Pehli, eKYC ya bank seeding
             lambi time se pending thi aur state ne safai abhiyan mein naam rok diya. Doosri, land record ke naye
             verification (AgriStack se milaan) mein zameen ka record match nahi hua. Teesri, income tax ya sarkari
-            naukri wala flag lag gaya — iske baad recovery notice bhi aa sakta hai.
+            naukri wala flag lag gaya, iske baad recovery notice bhi aa sakta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Pehli wajah aapke haath mein hai — eKYC aur seeding poori karo, agli release mein naam wapas aa jata
+            Pehli wajah aapke haath mein hai. EKYC aur seeding poori karo, agli release mein naam wapas aa jata
             hai. Doosri ke liye patwari/tehsil se record ka milaan karwana padega. Teesri galat lagi hai (aap tax
-            payer nahi ho, naam ka koi aur hai) to block krishi office mein documents ke saath appeal karo — phone
+            payer nahi ho, naam ka koi aur hai) to block krishi office mein documents ke saath appeal karo, phone
             se ye kaam nahi hota, likhit mein do aur receiving lo.
           </p>
         </section>
@@ -418,23 +418,23 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
             Ghar mein internet nahi chalti to bhi naam check ho sakta hai. Pehla raasta — nazdeeki <strong>CSC
             centre</strong>: operator Aadhaar number se status nikal dega, chhoti si fee lagti hai. Doosra —{' '}
             <strong>helpline 155261</strong>: registration number ya Aadhaar batao, wahi se status bata dete hain
-            (line busy mile to subah 10 baje se pehle try karo). Teesra — gaon ke <strong>patwari ya krishi
+            (line busy mile to subah 10 baje se pehle try karo). Teesra, gaon ke <strong>patwari ya krishi
             sahayak</strong> ke paas bhi block-level list hoti hai, kist release ke time unse poochna sabse aasaan
             hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Jis se bhi check karwao, ek cheez khud sambhal ke rakho — apna <strong>registration number</strong>.
+            Jis se bhi check karwao, ek cheez khud sambhal ke rakho, apna <strong>registration number</strong>.
             Ye number ek baar mil gaya to aage har kaam (status, complaint, correction) usi se chalta hai, aur
             kisi par nirbhar nahi rehna padta. Ek kagaz par number likh kar Aadhaar ke saath rakh lo, aur ghar ke
-            kisi padhe-likhe sadasya ke phone mein bhi note karwa do — kist ke time yahi chhoti si taiyari sabse
+            kisi padhe-likhe sadasya ke phone mein bhi note karwa do, kist ke time yahi chhoti si taiyari sabse
             zyada kaam aati hai.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>State Wise List — Apna State Chunein (37 States & UTs)</SH>
+          <SH>State Wise List. Apna State Chunein (37 States & UTs)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Apna state select karo — 10 second countdown ke baad aapko official PM Kisan portal par PDF download ka option milega. Wahan se aap apne state/district/village ki poori list download kar sakte ho:
+            Apna state select karo, 10 second countdown ke baad aapko official PM Kisan portal par PDF download ka option milega. Wahan se aap apne state/district/village ki poori list download kar sakte ho:
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {STATES_LIST.map(([icon, name, slug]) => (
@@ -458,11 +458,11 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           <SH>24vi Kist Ke Liye Tayyar Ho</SH>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
-              <p className="text-sm font-black text-green-800 dark:text-green-300 mb-1">23vi Kist — Released</p>
+              <p className="text-sm font-black text-green-800 dark:text-green-300 mb-1">23vi Kist. Released</p>
               <p className="text-xs text-green-700 dark:text-green-400">9.44 Crore+ ko ₹2,000 mil chuke hain.</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 rounded-xl">
-              <p className="text-sm font-black text-amber-800 dark:text-amber-300 mb-1">24vi Kist — October 2026 Expected</p>
+              <p className="text-sm font-black text-amber-800 dark:text-amber-300 mb-1">24vi Kist. October 2026 Expected</p>
               <p className="text-xs text-amber-700 dark:text-amber-400">List mein naam hona chahiye. Checklist follow karo.</p>
             </div>
           </div>
@@ -497,7 +497,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
 
         <GovLink
           href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
-          label="PM Kisan Beneficiary Status — Official Portal"
+          label="PM Kisan Beneficiary Status. Official Portal"
           guide="Abhi Naam Check Karo"
           guideHref="/articles/PmKisanMasterGuide2026"
           portalName="pmkisan.gov.in"
@@ -505,7 +505,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
 
         <CalcBanner
           title="Apni Kist Track Karo"
-          desc="Kitni kist aayi, kitni pending — complete history jaano"
+          desc="Kitni kist aayi, kitni pending, complete history jaano"
           primaryCta={{ href: '/calculator/installment-tracker', label: 'Tracker Kholo →' }}
           secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator' }}
         />

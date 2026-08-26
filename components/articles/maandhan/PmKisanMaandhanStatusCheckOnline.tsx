@@ -18,19 +18,19 @@ const FAQS_DATA = [
   },
   {
     q: "Contribution history mobile se kaise dekhein?",
-    a: "Mobile browser mein pmkmy.gov.in kholein. Login karke Contribution History ya Passbook section mein jayein. Har mahine ka record dikhega — success, failed, ya pending.",
+    a: "Mobile browser mein pmkmy.gov.in kholein. Login karke Contribution History ya Passbook section mein jayein. Har mahine ka record dikhega, success, failed, ya pending.",
   },
   {
-    q: "Payment diya tha par history mein nahi dikh raha — kya karein?",
-    a: "Ek hafta wait karein — record update hone mein time lagta hai. Uske baad bhi na dikhe toh receipt lekar usi CSC center jayein jahan payment kiya tha, aur wahan se solve na ho toh upar bataye escalation order (CSC → portal grievance → LIC branch) follow karein. Payment ka proof kabhi delete na karein.",
+    q: "Payment diya tha par history mein nahi dikh raha, kya karein?",
+    a: "Ek hafta wait karein, record update hone mein time lagta hai. Uske baad bhi na dikhe toh receipt lekar usi CSC center jayein jahan payment kiya tha, aur wahan se solve na ho toh upar bataye escalation order (CSC → portal grievance → LIC branch) follow karein. Payment ka proof kabhi delete na karein.",
   },
   {
     q: "Portal nahi khul raha toh kya karein?",
     a: "Peak hours mein server slow hota hai. Raat ya subah try karein. Agar 2-3 din se nahi khul raha, toh apne nazdeeki CSC center jakar status verify karwayein. CSC operator ke paas special access hota hai jo directly LIC system se connected hai.",
   },
   {
-    q: "Status mein Default likha aa raha hai — pension gayi kya?",
-    a: "Nahi, Default ka matlab hai kuch contributions outstanding hain — scheme khatam nahi hui. Bakaya rakam interest ke saath jama karke account regularize ho jata hai. Jitni jaldi karwayenge, utna kam bojh. Tareeka auto-debit regularization wali guide mein hai.",
+    q: "Status mein Default likha aa raha hai. Pension gayi kya?",
+    a: "Nahi, Default ka matlab hai kuch contributions outstanding hain. Scheme khatam nahi hui. Bakaya rakam interest ke saath jama karke account regularize ho jata hai. Jitni jaldi karwayenge, utna kam bojh. Tareeka auto-debit regularization wali guide mein hai.",
   },
 ];
 
@@ -112,7 +112,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-        KPAN yaad nahi? Koi baat nahi — mobile number se hi aapka poora record aa jata hai. KPAN basically aapka pension account number hai — jaise bank mein account number hota hai. Enrollment complete hone ke baad yeh generate hota hai aur registered mobile number par SMS ke zariye bata diya jata hai.
+        KPAN yaad nahi? Koi baat nahi. Mobile number se hi aapka poora record aa jata hai. KPAN basically aapka pension account number hai. Jaise bank mein account number hota hai. Enrollment complete hone ke baad yeh generate hota hai aur registered mobile number par SMS ke zariye bata diya jata hai.
       </p>
 
       <Image
@@ -158,7 +158,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
           <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
           <div>
             <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">OTP Se Verify Karein</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Aapke mobile pe ek 6-digit OTP aayega. Us OTP ko box mein daal kar Verify karein. OTP kuch minuton mein expire ho jata hai, jaldi daaliye. Agar OTP nahi aata, toh Resend OTP pe click karein. Network issue ho sakta hai — thoda wait karein.</p>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Aapke mobile pe ek 6-digit OTP aayega. Us OTP ko box mein daal kar Verify karein. OTP kuch minuton mein expire ho jata hai, jaldi daaliye. Agar OTP nahi aata, toh Resend OTP pe click karein. Network issue ho sakta hai. Thoda wait karein.</p>
           </div>
         </div>
         <div className="flex gap-4">
@@ -215,7 +215,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
             <tr className="border-b border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
               <td className="py-3 px-4 font-medium">Contribution History</td>
               <td className="py-3 px-4">Month-wise list</td>
-              <td className="py-3 px-4">Har mahine ka record — kab kitna gaya, kab fail hua, kab successful hua.</td>
+              <td className="py-3 px-4">Har mahine ka record, kab kitna gaya, kab fail hua, kab successful hua.</td>
             </tr>
             <tr className="bg-green-50 dark:bg-green-900/20">
               <td className="py-3 px-4 font-medium">KPAN Card</td>
@@ -251,7 +251,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-        Ek aur important baat — KPAN number ko kisi diary mein likh kar rakhein. Phone kharab ho jaye ya number change ho jaye, toh bhi aapka pension account number haath mein hona chahiye. Iske bina status verify karna mushkil ho jata hai.
+        Ek aur important baat. KPAN number ko kisi diary mein likh kar rakhein. Phone kharab ho jaye ya number change ho jaye, toh bhi aapka pension account number haath mein hona chahiye. Iske bina status verify karna mushkil ho jata hai.
       </p>
 
       <div className="bg-yellow-50 dark:bg-yellow-900/20 p-5 rounded-lg mb-8 border border-yellow-200 dark:border-yellow-800 not-prose">
@@ -303,7 +303,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
             </tr>
             <tr className="border-b border-gray-100 dark:border-gray-700">
               <td className="py-3 px-4 font-semibold text-red-600">Failed / Bounced</td>
-              <td className="py-3 px-4">Auto-debit fail ho gaya — balance nahi tha ya account issue tha</td>
+              <td className="py-3 px-4">Auto-debit fail ho gaya, balance nahi tha ya account issue tha</td>
               <td className="py-3 px-4"><strong>Der mat karo!</strong> CSC jakar manual payment karo</td>
             </tr>
             <tr className="bg-gray-50 dark:bg-gray-800/50">
@@ -316,11 +316,11 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Failed ya Bounced dikhe to panic wali baat nahi hai — lekin delay bhi mat karein. Usi hafte apne CSC center jayein aur manual payment jama karwayein.
+        Failed ya Bounced dikhe to panic wali baat nahi hai. Lekin delay bhi mat karein. Usi hafte apne CSC center jayein aur manual payment jama karwayein.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Ek baar fail hone se account default nahi hota. Agle cycle mein LIC wahi demand dobara uthati hai — yeh cycles mahine ki 1, 11 aur 21 tareekh ko chalte hain. Lekin agar payment miss hone ke baad bhi contribution successfully raise nahi hoti aur outstanding rehti hai, toh account default status mein chala jata hai. Auto-debit baar-baar fail ho raha hai aur account regularize karna hai, toh iska poora process alag guide mein step-by-step likha hai: <Link href="/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Auto-Debit Fail Hone Par Regularization Kaise Karein</Link>.
+        Ek baar fail hone se account default nahi hota. Agle cycle mein LIC wahi demand dobara uthati hai. Yeh cycles mahine ki 1, 11 aur 21 tareekh ko chalte hain. Lekin agar payment miss hone ke baad bhi contribution successfully raise nahi hoti aur outstanding rehti hai, toh account default status mein chala jata hai. Auto-debit baar-baar fail ho raha hai aur account regularize karna hai, toh iska poora process alag guide mein step-by-step likha hai: <Link href="/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">Auto-Debit Fail Hone Par Regularization Kaise Karein</Link>.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -347,14 +347,14 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       <div className="space-y-4 mb-8 not-prose">
         <div className="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">OTP nahi aa raha hai</h3>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Pehle check karein ke wohi registered mobile daala hai jo enrollment ke waqt diya tha. Agar number change ho gaya hai, toh purane no. se hi OTP ayega. Network issue ho sakta hai — 2-3 minute wait karein. Resend OTP pe click karein. Agar phir bhi nahi aata, toh thodi der baad try karein. Peak hours mein server thoda busy ho sakta hai.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Pehle check karein ke wohi registered mobile daala hai jo enrollment ke waqt diya tha. Agar number change ho gaya hai, toh purane no. se hi OTP ayega. Network issue ho sakta hai. 2-3 minute wait karein. Resend OTP pe click karein. Agar phir bhi nahi aata, toh thodi der baad try karein. Peak hours mein server thoda busy ho sakta hai.</p>
         </div>
         <div className="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
           <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Login ho gaya par dashboard blank hai</h3>
           <p className="text-sm text-gray-700 dark:text-gray-300">Yeh mostly internet speed ki problem hoti hai. Portal ka data load hone mein time lagta hai. 30 second wait karein. Agar nahi khulta, toh page refresh karein. Ya browser ka cache clear karke dubara try karein. Chrome mein Incognito mode mein try karein — wahan cache ka issue nahi hota.</p>
         </div>
         <div className="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Website hi nahi khul rahi — error aa raha hai</h3>
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Website hi nahi khul rahi, error aa raha hai</h3>
           <p className="text-sm text-gray-700 dark:text-gray-300">Government portals kabhi-kabhi maintenance mein hote hain. Din ke peak hours mein traffic zyada hota hai, isliye raat ya subah try karna behtar rehta hai. Agar 2-3 din se nahi khul rahi, toh ho sakta hai server down ho. Tab CSC center jana hi best option hai.</p>
         </div>
         <div className="bg-white dark:bg-gray-800 p-5 rounded-lg border border-gray-200 dark:border-gray-700">
@@ -380,29 +380,29 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-        CSC center jaane ka ek aur faida — agar aapka KPAN card download nahi ho raha tha, toh CSC wala aapko print kar ke de dega. Kuch CSC centers mein print ke charges alag se lagte hain, poochh lein. Saath hi agar aapko koi correction karni hai — jaise mobile number change, <Link href="/maandhan/pmkmy-bank-account-change" className="text-blue-600 hover:underline dark:text-blue-400">bank account update</Link>, ya nominee change — toh woh bhi CSC pe hi hoti hai.
+        CSC center jaane ka ek aur faida, agar aapka KPAN card download nahi ho raha tha, toh CSC wala aapko print kar ke de dega. Kuch CSC centers mein print ke charges alag se lagte hain, poochh lein. Saath hi agar aapko koi correction karni hai. Jaise mobile number change, <Link href="/maandhan/pmkmy-bank-account-change" className="text-blue-600 hover:underline dark:text-blue-400">bank account update</Link>, ya nominee change, toh woh bhi CSC pe hi hoti hai.
       </p>
 
       <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-lg mb-8 border border-blue-200 dark:border-blue-800 not-prose">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-          <strong>Salah:</strong> Har 3 mahine mein ek baar apna status dekh lein — chahe online ho ya CSC center ja kar. Isse pata chalta rahega ke aapka account active hai ya nahi. Aur contribution history ko screenshot le kar apne phone mein save kar lein. Future mein koi dispute ho toh proof kaam ayega.
+          <strong>Salah:</strong> Har 3 mahine mein ek baar apna status dekh lein, chahe online ho ya CSC center ja kar. Isse pata chalta rahega ke aapka account active hai ya nahi. Aur contribution history ko screenshot le kar apne phone mein save kar lein. Future mein koi dispute ho toh proof kaam ayega.
         </p>
       </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Ek Kaam Jo Status Check Ke Saath Hi Kar Lein — Apni Details Milaana
+        Ek Kaam Jo Status Check Ke Saath Hi Kar Lein. Apni Details Milaana
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Dashboard khula hai toh sirf contribution mat dekhiye — apni personal details bhi ek baar Aadhaar se milaa lijiye: naam ki spelling, date of birth, aur bank account number. Date of birth is scheme mein sabse important field hai, kyunki pension 60 saal poore hone par shuru hoti hai — DOB galat register hui toh pension ya toh der se shuru hogi ya claim ke waqt atkegi.
+        Dashboard khula hai toh sirf contribution mat dekhiye, apni personal details bhi ek baar Aadhaar se milaa lijiye: naam ki spelling, date of birth, aur bank account number. Date of birth is scheme mein sabse important field hai, kyunki pension 60 saal poore hone par shuru hoti hai — DOB galat register hui toh pension ya toh der se shuru hogi ya claim ke waqt atkegi.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Koi mismatch dikhe toh abhi correction karwaiye, 60 saal ka intezaar mat kijiye. Correction CSC center ya us bank branch se hoti hai jahan se auto-debit chalta hai — Aadhaar copy ke saath written request dein aur receiving lein. Bank account hi badalna ho (purana account band ho gaya, ya doosre bank mein shift hona hai) toh uska alag process hai — <Link href="/maandhan/pmkmy-bank-account-change" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">bank account change guide</Link> mein step-by-step likha hai.
+        Koi mismatch dikhe toh abhi correction karwaiye, 60 saal ka intezaar mat kijiye. Correction CSC center ya us bank branch se hoti hai jahan se auto-debit chalta hai. Aadhaar copy ke saath written request dein aur receiving lein. Bank account hi badalna ho (purana account band ho gaya, ya doosre bank mein shift hona hai) toh uska alag process hai. <Link href="/maandhan/pmkmy-bank-account-change" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">bank account change guide</Link> mein step-by-step likha hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-        Aur haan — status check karte waqt kabhi bhi kisi ko OTP share mat kijiye. Status dekhne ke liye OTP sirf aap khud portal par daalte hain. Koi phone karke bole ki "aapka Maandhan account verify karna hai, OTP batayein" — wo fraud hai, kyunki sarkari system phone par OTP kabhi nahi maangta. Aisa call aaye toh 1930 (cyber crime helpline) par report karein.
+        Aur haan, status check karte waqt kabhi bhi kisi ko OTP share mat kijiye. Status dekhne ke liye OTP sirf aap khud portal par daalte hain. Koi phone karke bole ki "aapka Maandhan account verify karna hai, OTP batayein". Wo fraud hai, kyunki sarkari system phone par OTP kabhi nahi maangta. Aisa call aaye toh 1930 (cyber crime helpline) par report karein.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -410,23 +410,23 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Status galat dikh raha hai, payment diya par record nahi aaya, ya KPAN card mein galti hai — aisi situation mein idhar-udhar bhatakne ke bajaye is order mein escalate karein:
+        Status galat dikh raha hai, payment diya par record nahi aaya, ya KPAN card mein galti hai. Aisi situation mein idhar-udhar bhatakne ke bajaye is order mein escalate karein:
       </p>
 
       <div className="space-y-3 mb-6 not-prose">
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 1 — CSC center (jahan se enroll kiya tha):</strong> Enrollment aur payment ka pehla record wahi hota hai. Receipt/transaction ID saath le jayein. Zyada tar dikkat yahi solve ho jati hai.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 1. CSC center (jahan se enroll kiya tha):</strong> Enrollment aur payment ka pehla record wahi hota hai. Receipt/transaction ID saath le jayein. Zyada tar dikkat yahi solve ho jati hai.</p>
         </div>
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 2 — Official helpline / portal grievance:</strong> <a href="https://maandhan.in" target="_blank" rel="noopener noreferrer nofollow" className="text-blue-600 hover:underline dark:text-blue-400">maandhan.in</a> ke Contact Us section mein current helpline number aur grievance ka rasta diya hota hai — number time ke saath badal sakta hai, isliye hamesha portal se hi lein. Complaint karte waqt KPAN number, registered mobile aur problem ki date saath mein batayein.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 2. Official helpline / portal grievance:</strong> <a href="https://maandhan.in" target="_blank" rel="noopener noreferrer nofollow" className="text-blue-600 hover:underline dark:text-blue-400">maandhan.in</a> ke Contact Us section mein current helpline number aur grievance ka rasta diya hota hai — number time ke saath badal sakta hai, isliye hamesha portal se hi lein. Complaint karte waqt KPAN number, registered mobile aur problem ki date saath mein batayein.</p>
         </div>
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 3 — LIC branch:</strong> Pension fund LIC manage karti hai. Contribution jama hone ke baad bhi record mein na dikhe, toh nazdeeki LIC office mein KPAN aur payment proof ke saath written complaint dein aur acknowledgement lein.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300"><strong>Step 3. LIC branch:</strong> Pension fund LIC manage karti hai. Contribution jama hone ke baad bhi record mein na dikhe, toh nazdeeki LIC office mein KPAN aur payment proof ke saath written complaint dein aur acknowledgement lein.</p>
         </div>
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Har step par ek cheez common hai: <strong>proof sambhal kar rakhein</strong> — payment receipt, SMS, screenshot. Bina proof ke complaint sirf zubaani reh jati hai; proof ke saath usko track karna aur resolve karwana dono aasan ho jata hai. Verified helpline numbers, email addresses aur email-complaint ka ready format ek jagah chahiye toh <Link href="/maandhan/pmkmy-grievance-complaint-helpline" className="text-blue-600 hover:underline dark:text-blue-400">PMKMY helpline & grievance guide</Link> dekhein.
+        Har step par ek cheez common hai: <strong>proof sambhal kar rakhein</strong>, payment receipt, SMS, screenshot. Bina proof ke complaint sirf zubaani reh jati hai; proof ke saath usko track karna aur resolve karwana dono aasan ho jata hai. Verified helpline numbers, email addresses aur email-complaint ka ready format ek jagah chahiye toh <Link href="/maandhan/pmkmy-grievance-complaint-helpline" className="text-blue-600 hover:underline dark:text-blue-400">PMKMY helpline & grievance guide</Link> dekhein.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -438,15 +438,15 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Kai baar kisan sochte hain ke Registration ho gaya, ab toh bas 60 saal ka intezaar hai. Nahi, aise nahi chalta. Agar aapka share lagatar miss hota rahe, toh account default ho jayega. Aur default hone ke baad account dubara activate nahi hota automatically — aapko khud regularize karwana padta hai.
+        Kai baar kisan sochte hain ke Registration ho gaya, ab toh bas 60 saal ka intezaar hai. Nahi, aise nahi chalta. Agar aapka share lagatar miss hota rahe, toh account default ho jayega. Aur default hone ke baad account dubara activate nahi hota automatically, aapko khud regularize karwana padta hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Official guidelines ke hisaab se, agar 6 mahine tak payment nahi hoti, toh account dormant ho jata hai. Uske baad bhi 3 saal tak SMS alerts aate rehte hain aur aap account regularize kar sakte hain — poora outstanding amount + interest jama karke. 3 saal ke baad SMS alerts band ho jate hain, lekin regularize karne ka option tab bhi rehta hai.
+        Official guidelines ke hisaab se, agar 6 mahine tak payment nahi hoti, toh account dormant ho jata hai. Uske baad bhi 3 saal tak SMS alerts aate rehte hain aur aap account regularize kar sakte hain. Poora outstanding amount + interest jama karke. 3 saal ke baad SMS alerts band ho jate hain, lekin regularize karne ka option tab bhi rehta hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-        Isliye main kehta hoon — har 3 mahine mein ek baar status check karo. Bas 5 minute lagte hain. Mobile pe portal kholo, OTP daalo, dashboard dekho. Sab green dikha toh theek hai. Kuch red ya yellow dikha toh usi din action lo. Yeh 5 minute aapke future ki 3000 rupees monthly pension bacha sakte hain.
+        Isliye main kehta hoon, har 3 mahine mein ek baar status check karo. Bas 5 minute lagte hain. Mobile pe portal kholo, OTP daalo, dashboard dekho. Sab green dikha toh theek hai. Kuch red ya yellow dikha toh usi din action lo. Yeh 5 minute aapke future ki 3000 rupees monthly pension bacha sakte hain.
       </p>
 
       <div className="bg-orange-50 dark:bg-orange-900/20 p-5 rounded-lg mb-8 border border-orange-200 dark:border-orange-800 not-prose">
@@ -466,7 +466,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       <div className="grid md:grid-cols-2 gap-4 mb-10 not-prose">
         <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
           <div className="text-blue-600 dark:text-blue-400 font-bold mb-1 group-hover:underline">Registration 2026</div>
-          <p className="text-xs text-gray-600 dark:text-gray-400">CSC center, bank branch ya online — 3 tareeke se kaise apply karein. Documents ki puri list.</p>
+          <p className="text-xs text-gray-600 dark:text-gray-400">CSC center, bank branch ya online, 3 tareeke se kaise apply karein. Documents ki puri list.</p>
         </Link>
         <Link href="/maandhan/pm-kisan-maandhan-auto-debit-poora-sach" className="group block p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all shadow-sm">
           <div className="text-blue-600 dark:text-blue-400 font-bold mb-1 group-hover:underline">Auto Debit Ka Sach</div>
@@ -490,7 +490,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Sources & Disclaimer:</strong>
-          Yeh article maine Maandhan Yojana ki official guidelines (DAC&FW, Krishi Mantralaya) aur maandhan.in / pmkmy.gov.in portal ko khud padh kar likha hai. Lekin portal ka roop-rang aur process badalta rehta hai — kal ko kuch alag dikhe to hairaan na hon. Kaam hamesha official pmkmy.gov.in ya maandhan.in par hi karein, aur OTP ya password kisi bhi doosri website par kabhi na daalein — chahe woh kitni bhi asli lage. Madad chahiye to portal par diya helpline number hi use karein. Maine yeh {fmtDate(MODIFIED)} ko aakhri baar verify kiya tha.
+          Yeh article maine Maandhan Yojana ki official guidelines (DAC&FW, Krishi Mantralaya) aur maandhan.in / pmkmy.gov.in portal ko khud padh kar likha hai. Lekin portal ka roop-rang aur process badalta rehta hai. Kal ko kuch alag dikhe to hairaan na hon. Kaam hamesha official pmkmy.gov.in ya maandhan.in par hi karein, aur OTP ya password kisi bhi doosri website par kabhi na daalein — chahe woh kitni bhi asli lage. Madad chahiye to portal par diya helpline number hi use karein. Maine yeh {fmtDate(MODIFIED)} ko aakhri baar verify kiya tha.
         </p>
       </div>
 

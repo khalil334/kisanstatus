@@ -20,11 +20,11 @@ const FAQS_DATA = [
 },
 {
  q: 'Second-hand tractor ke liye loan milta hai?',
- a: 'Haan. Kuch banks aur finance companies used tractors finance karti hain — current market value ka 70-80% tak. Interest slightly zyada hota hai (1-2% extra). Tractor ki age 7 saal se kam honi chahiye zyadatar lenders ke liye.',
+ a: 'Haan. Kuch banks aur finance companies used tractors finance karti hain. Current market value ka 70-80% tak. Interest slightly zyada hota hai (1-2% extra). Tractor ki age 7 saal se kam honi chahiye zyadatar lenders ke liye.',
 },
 {
  q: 'EMI nahi bhar paye toh kya hoga?',
- a: 'Pehle bank se baat karo. Restructuring ya moratorium maango — crop loss par 6-12 mahine EMI pause hoti hai NABARD guidelines mein. Communication todna = NPA declaration = 90 din mein seizure notice. Hamesha written record rakho.',
+ a: 'Pehle bank se baat karo. Restructuring ya moratorium maango, crop loss par 6-12 mahine EMI pause hoti hai NABARD guidelines mein. Communication todna = NPA declaration = 90 din mein seizure notice. Hamesha written record rakho.',
 },
 {
  q: 'Kitni zameen chahiye tractor loan ke liye?',
@@ -36,19 +36,19 @@ const FAQS_DATA = [
 },
 {
  q: 'NBFC se loan liya, ab bank mein shift kar sakta hun?',
- a: 'Haan. Refinancing possible hai. Existing loan pre-close karo (2-4% foreclosure charges lag sakte hain), bank se naya loan lo lower rate par. NBFC ka 12-14% wala loan bank ke 9-11% par shift karne se tenure ke hisaab se hazaron rupaye bach sakte hain — foreclosure charge jodkar hisaab pehle laga lo. RC par hypothecation transfer mein 2-3 hafte lag sakte hain.',
+ a: 'Haan. Refinancing possible hai. Existing loan pre-close karo (2-4% foreclosure charges lag sakte hain), bank se naya loan lo lower rate par. NBFC ka 12-14% wala loan bank ke 9-11% par shift karne se tenure ke hisaab se hazaron rupaye bach sakte hain. Foreclosure charge jodkar hisaab pehle laga lo. RC par hypothecation transfer mein 2-3 hafte lag sakte hain.',
 },
 {
  q: 'EMI nikalne ke liye tractor kiraye par dena samajhdari hai?',
- a: 'Haan, aur yahi cheez pehle 2-3 saal EMI sambhalti hai. Ek tractor peak season me lagbhag 120 ghante chalta hai to gross ₹1 lakh ke aas-paas ban jaata hai; diesel, driver salary aur maintenance kaat kar bhi EMI nikal aati hai. Par lean season ka hisaab pehle se karo — garmiyon me agricultural demand 60-70% gir jaati hai, isliye us waqt goods transport jaisa koi plan chahiye. Naye customers se 50% advance lo, gaon me udhaari phailne se cash flow ruk jaata hai.',
+ a: 'Haan, aur yahi cheez pehle 2-3 saal EMI sambhalti hai. Ek tractor peak season me lagbhag 120 ghante chalta hai to gross ₹1 lakh ke aas-paas ban jaata hai; diesel, driver salary aur maintenance kaat kar bhi EMI nikal aati hai. Par lean season ka hisaab pehle se karo, garmiyon me agricultural demand 60-70% gir jaati hai, isliye us waqt goods transport jaisa koi plan chahiye. Naye customers se 50% advance lo, gaon me udhaari phailne se cash flow ruk jaata hai.',
 },
 {
- q: 'Loan poora chuka diya — RC se bank ka naam hatana zaroori hai?',
- a: 'Bilkul zaroori hai. Loan chalu hone par RC par lender ki hypothecation entry chadh jaati hai; wo hatane tak kagaz par tractor poora aapka nahi hota — bechne, exchange karne ya nayi file lagane me wahi entry atakti hai. Aakhri EMI ke baad bank se NOC aur loan closure statement lo, phir RTO me hypothecation hatane ki application do. Do-teen hafte ka kaam hai, par saalon baad karne se purani branch dhoondhne me zyada pareshani hoti hai.',
+ q: 'Loan poora chuka diya. RC se bank ka naam hatana zaroori hai?',
+ a: 'Bilkul zaroori hai. Loan chalu hone par RC par lender ki hypothecation entry chadh jaati hai; wo hatane tak kagaz par tractor poora aapka nahi hota. Bechne, exchange karne ya nayi file lagane me wahi entry atakti hai. Aakhri EMI ke baad bank se NOC aur loan closure statement lo, phir RTO me hypothecation hatane ki application do. Do-teen hafte ka kaam hai, par saalon baad karne se purani branch dhoondhne me zyada pareshani hoti hai.',
 },
 {
  q: 'Electric tractor par loan milta hai?',
- a: 'Haan. Sonalika samet kai companies ke electric models market mein hain, aur banks/NBFCs inko bhi normal tractor ki tarah finance karti hain. Koi alag sarkari flat rate abhi official confirm nahi hai — rate lender se poochho. Running cost diesel se kaafi kam hoti hai; battery warranty apne model ki dealer se likhit mein confirm karo.',
+ a: 'Haan. Sonalika samet kai companies ke electric models market mein hain, aur banks/NBFCs inko bhi normal tractor ki tarah finance karti hain. Koi alag sarkari flat rate abhi official confirm nahi hai. Rate lender se poochho. Running cost diesel se kaafi kam hoti hai; battery warranty apne model ki dealer se likhit mein confirm karo.',
 },
 ];
 
@@ -91,25 +91,25 @@ return (
          sizes="(max-width: 768px) 100vw, 768px"
        />
        <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-         Tractor Finance 2026 — Bank, NBFC, Subsidy, Hidden Costs Sab Ek Jagah
+         Tractor Finance 2026. Bank, NBFC, Subsidy, Hidden Costs Sab Ek Jagah
        </p>
      </div>
 
      <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 border-l-[6px] rounded-xl">
        <h2 className="text-base font-black text-amber-800 dark:text-amber-300 mb-2">Dealer Showroom Mein Jo Hua</h2>
        <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
-         MP ke Sehore district mein. Ek cultivator tractor lene gaya. Dealer ne kaha — ₹6.5 lakh on-road, ₹1.3 lakh down payment.
+         MP ke Sehore district mein. Ek cultivator tractor lene gaya. Dealer ne kaha. ₹6.5 lakh on-road, ₹1.3 lakh down payment.
        </p>
        <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed mb-2">
-         Uske paas ₹1.3 lakh nahi the. Wapas aane hi wala tha ki usse pata chala — MP mein e-Krishi Yantra Anudan portal se tractor subsidy milti hai, aur NBFC us month 90%+ financing de rahi thi. Dono combine karke down payment kaafi kam reh gayi. <strong className="text-amber-900 dark:text-amber-100">Yeh information dealer ne nahi di thi.</strong>
+         Uske paas ₹1.3 lakh nahi the. Wapas aane hi wala tha ki usse pata chala. MP mein e-Krishi Yantra Anudan portal se tractor subsidy milti hai, aur NBFC us month 90%+ financing de rahi thi. Dono combine karke down payment kaafi kam reh gayi. <strong className="text-amber-900 dark:text-amber-100">Yeh information dealer ne nahi di thi.</strong>
        </p>
        <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
-         Isliye yeh guide likh raha hun. Sirf loan process nahi — hidden costs, subsidy workflow, refinancing tricks, crop failure protocol. Woh sab jo showroom mein nahi bataya jaata.
+         Isliye yeh guide likh raha hun. Sirf loan process nahi. Hidden costs, subsidy workflow, refinancing tricks, crop failure protocol. Woh sab jo showroom mein nahi bataya jaata.
        </p>
      </div>
 
      <section className="mb-8">
-       <SH>Bina Down Payment — Sach Kya Hai?</SH>
+       <SH>Bina Down Payment. Sach Kya Hai?</SH>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
          Seedha jawab. Haan, kuch cases mein possible hai.
        </p>
@@ -148,12 +148,12 @@ return (
        </div>
 
        <IB>
-         <strong>Hisaab Aise Banta Hai:</strong> ₹5.5 lakh ka tractor, NBFC ka 95% finance wala offer mil jaye toh down payment sirf ₹27,500 banti hai. Upar se subsidy alag. Yeh mushkil nahi hai agar planning sahi ho — bas offer ki likhit condition padho.
+         <strong>Hisaab Aise Banta Hai:</strong> ₹5.5 lakh ka tractor, NBFC ka 95% finance wala offer mil jaye toh down payment sirf ₹27,500 banti hai. Upar se subsidy alag. Yeh mushkil nahi hai agar planning sahi ho. Bas offer ki likhit condition padho.
        </IB>
      </section>
 
      <section className="mb-8">
-       <SH>Loan Kaise Kaam Karta Hai — Numbers Samjho</SH>
+       <SH>Loan Kaise Kaam Karta Hai. Numbers Samjho</SH>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
          Tractor loan secured loan hai. Tractor khud collateral. RC hypothecation ke saath register hoti hai lender ke naam par. Jab tak loan poora nahi bhara, technically tractor lender ki property.
        </p>
@@ -204,7 +204,7 @@ return (
          </table>
        </div>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-         Ek baat aur — tractor loan <strong>priority sector lending</strong> me aata hai, isliye banks
+         Ek baat aur, tractor loan <strong>priority sector lending</strong> me aata hai, isliye banks
          ise normal consumer loan se sasta dete hain; yeh line bank manager ke saamne bolo, kaam aati hai.
          Rates har bank ki website par published hote hain aur RBI ke repo rate ke saath badalte rehte hain —
          apply karne se pehle 2-3 banks ke current rate khud compare karo.
@@ -244,16 +244,16 @@ return (
      </section>
 
      <section className="mb-8">
-       <SH>Apply Kaise Karein — Ground Process</SH>
+       <SH>Apply Kaise Karein. Ground Process</SH>
        <StepList>
-         <SI n={1}>Tractor choose karo — HP, brand, authorized dealer se quotation lo. On-road price confirm karo</SI>
-         <SI n={2}>Bank branch jaao ya online apply karo — SBI/PNB/BOB mein agricultural loan section dhundo</SI>
-         <SI n={3}>Application form bharo — personal, land, income, tractor details</SI>
-         <SI n={4}>Documents submit karo — complete set, koi missing nahi</SI>
-         <SI n={5}>Field verification — bank officer zameen check karega, khasra/khatauni verify hoga</SI>
+         <SI n={1}>Tractor choose karo. HP, brand, authorized dealer se quotation lo. On-road price confirm karo</SI>
+         <SI n={2}>Bank branch jaao ya online apply karo. SBI/PNB/BOB mein agricultural loan section dhundo</SI>
+         <SI n={3}>Application form bharo, personal, land, income, tractor details</SI>
+         <SI n={4}>Documents submit karo, complete set, koi missing nahi</SI>
+         <SI n={5}>Field verification, bank officer zameen check karega, khasra/khatauni verify hoga</SI>
          <SI n={6}>Sanction letter — 7-15 din mein. Amount, rate, tenure sab likha hoga</SI>
-         <SI n={7}>Dealer ko direct payment — bank seedha dealer account mein bhejta hai. RC process hoti hai</SI>
-         <SI n={8}>EMI shuru — ek mahine baad auto-debit. Time par bharo, CIBIL maintain rahega</SI>
+         <SI n={7}>Dealer ko direct payment, bank seedha dealer account mein bhejta hai. RC process hoti hai</SI>
+         <SI n={8}>EMI shuru, ek mahine baad auto-debit. Time par bharo, CIBIL maintain rahega</SI>
        </StepList>
        <WB>
          <strong>Timing Tip:</strong> Rabi/Kharif season se 1-2 mahine pehle apply karo. Peak season mein banks overloaded hote hain, processing slow. Off-season mein fast approval.
@@ -263,7 +263,7 @@ return (
      <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
        <Image
          src="/images/articles/kisan-tractor-loan-2026/bank-loan-process.webp"
-         alt="Bank tractor loan application process flowchart — step by step guide from application to approval"
+         alt="Bank tractor loan application process flowchart, step by step guide from application to approval"
          width={1200}
          height={630}
          className="w-full object-cover"
@@ -271,12 +271,12 @@ return (
          sizes="(max-width: 768px) 100vw, 768px"
        />
        <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-         Bank Loan Process — Application Se Lekar Disbursement Tak
+         Bank Loan Process. Application Se Lekar Disbursement Tak
        </p>
      </div>
 
      <section className="mb-8">
-       <SH>Hidden Costs — Jo Dealer Aur Bank Dono Chupate Hain</SH>
+       <SH>Hidden Costs. Jo Dealer Aur Bank Dono Chupate Hain</SH>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
          Loan amount sirf shuruwat hai. Asli cost RC registration, insurance, aur prepayment mein chhipi hoti hai. 80% cultivators yeh ignore karte hain.
        </p>
@@ -303,14 +303,14 @@ return (
          </div>
        </div>
        <DB>
-         <strong>Critical:</strong> Dealer se "on-road cost breakup" maango. Registration, insurance, hypothecation alag se likhwao. Inko loan amount mein include mat karo — warna interest par interest dena padega.
+         <strong>Critical:</strong> Dealer se "on-road cost breakup" maango. Registration, insurance, hypothecation alag se likhwao. Inko loan amount mein include mat karo, warna interest par interest dena padega.
        </DB>
      </section>
 
      <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
        <Image
          src="/images/articles/kisan-tractor-loan-2026/tractor-approved.webp"
-         alt="Tractor loan approval success — farmer with new tractor after bank approval"
+         alt="Tractor loan approval success, farmer with new tractor after bank approval"
          width={1200}
          height={630}
          className="w-full object-cover"
@@ -323,7 +323,7 @@ return (
      </div>
 
      <section className="mb-8">
-       <SH>4 Real Scenarios — Jo Field Mein Hote Hain</SH>
+       <SH>4 Real Scenarios. Jo Field Mein Hote Hain</SH>
 
        <div className="space-y-4">
          <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
@@ -336,14 +336,14 @@ return (
          <div className="p-4 bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 rounded-r-xl">
            <h3 className="font-black text-green-800 dark:text-green-300 text-sm mb-2">First-Time Woman Farmer</h3>
            <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
-             Zameen pita/pati ke naam. Bank reject initially — no legal heir certificate. Panchayat joint liability affidavit + SC category SMAM subsidy = 50% down payment adjust. Mahila kisan = additional 0.25% interest concession. 45 din subsidy approval.
+             Zameen pita/pati ke naam. Bank reject initially, no legal heir certificate. Panchayat joint liability affidavit + SC category SMAM subsidy = 50% down payment adjust. Mahila kisan = additional 0.25% interest concession. 45 din subsidy approval.
            </p>
          </div>
 
          <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-r-xl">
            <h3 className="font-black text-amber-800 dark:text-amber-300 text-sm mb-2">NBFC Emergency → Bank Refinance</h3>
            <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
-             Rabi urgent tha, NBFC ne 12-13% par 90%+ finance turant de diya. Kuch mahine baad bank ka rate compare kiya — 2-3% kam nikla. Pre-close (foreclosure charge dekh kar) + naya bank loan = tenure bhar mein achhi bachat. Formula simple hai: Emergency = NBFC. Long-term = bank.
+             Rabi urgent tha, NBFC ne 12-13% par 90%+ finance turant de diya. Kuch mahine baad bank ka rate compare kiya, 2-3% kam nikla. Pre-close (foreclosure charge dekh kar) + naya bank loan = tenure bhar mein achhi bachat. Formula simple hai: Emergency = NBFC. Long-term = bank.
            </p>
          </div>
 
@@ -357,15 +357,15 @@ return (
      </section>
 
      <section className="mb-8">
-       <SH>State Subsidy — Portal Se Bank Tak Ka Exact Workflow</SH>
+       <SH>State Subsidy. Portal Se Bank Tak Ka Exact Workflow</SH>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
          Subsidy = loan amount kam. Par process technical hai. Yeh exact 2026 workflow hai:
        </p>
        <StepList>
-         <SI n={1}><strong>Portal Registration:</strong> agrimachinery.nic.in (Agriculture Mechanization DBT portal) ya apne state ke portal (MP: e-Krishi Yantra Anudan, Rajasthan: Raj Kisan Sathi) par farmer registration karo — Aadhaar, land record aur Aadhaar-seeded bank account chahiye</SI>
+         <SI n={1}><strong>Portal Registration:</strong> agrimachinery.nic.in (Agriculture Mechanization DBT portal) ya apne state ke portal (MP: e-Krishi Yantra Anudan, Rajasthan: Raj Kisan Sathi) par farmer registration karo. Aadhaar, land record aur Aadhaar-seeded bank account chahiye</SI>
          <SI n={2}><strong>Quotation Upload:</strong> Authorized dealer se proforma invoice. Portal par upload. Dealer empaneled status check</SI>
-         <SI n={3}><strong>Bank NOC:</strong> Branch manager se "No Objection Certificate" — loan pending confirmation</SI>
-         <SI n={4}><strong>Selection:</strong> Kai states mein lottery ya first-come basis par selection hota hai. Priority aam taur par SC/ST, mahila aur small/marginal farmers ko milti hai — unka subsidy slab bhi zyada hota hai (aam taur par 50% tak, general ke liye 40% tak)</SI>
+         <SI n={3}><strong>Bank NOC:</strong> Branch manager se "No Objection Certificate", loan pending confirmation</SI>
+         <SI n={4}><strong>Selection:</strong> Kai states mein lottery ya first-come basis par selection hota hai. Priority aam taur par SC/ST, mahila aur small/marginal farmers ko milti hai. Unka subsidy slab bhi zyada hota hai (aam taur par 50% tak, general ke liye 40% tak)</SI>
          <SI n={5}><strong>Kharid + DBT Transfer:</strong> Selection ke baad empaneled dealer se kharid karo, bill aur machine ka serial number portal par upload karo. Officer inspection ke baad subsidy seedha Aadhaar-seeded account mein aati hai</SI>
        </StepList>
        <WB>
@@ -376,7 +376,7 @@ return (
      <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
        <Image
          src="/images/articles/kisan-tractor-loan-2026/tractor-finance-guide.webp"
-         alt="Complete tractor finance guide comparison — banks vs NBFC vs government subsidy options"
+         alt="Complete tractor finance guide comparison, banks vs NBFC vs government subsidy options"
          width={1200}
          height={630}
          className="w-full object-cover"
@@ -384,14 +384,14 @@ return (
          sizes="(max-width: 768px) 100vw, 768px"
        />
        <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-         Finance Options Comparison — Bank, NBFC, Subsidy
+         Finance Options Comparison. Bank, NBFC, Subsidy
        </p>
      </div>
 
      <section className="mb-8">
-       <SH>Fasal Kharab Ho Gayi — EMI Kaise Manage Karein</SH>
+       <SH>Fasal Kharab Ho Gayi. EMI Kaise Manage Karein</SH>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-         Mausam, keede, baarish — koi bharosa nahi. Crop fail ≠ loan default. Protocol follow karo:
+         Mausam, keede, baarish, koi bharosa nahi. Crop fail ≠ loan default. Protocol follow karo:
        </p>
        <div className="space-y-3 mb-4">
          <div className="flex gap-3 p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
@@ -429,7 +429,7 @@ return (
      </section>
 
      <section className="mb-8">
-       <SH>Loan Reject Kyun Hota Hai — 7 Reasons + Fix</SH>
+       <SH>Loan Reject Kyun Hota Hai. 7 Reasons + Fix</SH>
        <div className="space-y-3">
          {[
            { err: 'CIBIL Below 600', fix: '6 mahine pehle existing loans time par bharo. Credit card bills clear. Free check: cibil.com ya Paytm.' },
@@ -456,14 +456,14 @@ return (
      </section>
 
      <section className="mb-8">
-       <SH>EMI Kahan Se Aayegi — Tractor Ko Kamane Par Lagao</SH>
+       <SH>EMI Kahan Se Aayegi. Tractor Ko Kamane Par Lagao</SH>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-         Loan mil gaya, tractor aa gaya. Ab asli sawaal shuru hota hai — EMI kahan se aayegi. Sirf apne khet se nahi.
+         Loan mil gaya, tractor aa gaya. Ab asli sawaal shuru hota hai. EMI kahan se aayegi. Sirf apne khet se nahi.
        </p>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
          Desh me 85% se zyada kisaanon ke paas 2 hectare se kam zameen hai — unke liye apna tractor lena mumkin nahi hai,
          par kiraye par lena zaroori hai. Yahi aapka customer base hai, aur wo aapke gaon me pehle se maujood hai.
-         Kiraya ghante ya acre ke hisaab se chalta hai, aur implement badalne se rate badalta hai — rotavator wala kaam
+         Kiraya ghante ya acre ke hisaab se chalta hai, aur implement badalne se rate badalta hai. Rotavator wala kaam
          alag rate par jaata hai, laser leveler wala alag.
        </p>
        <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -476,7 +476,7 @@ return (
            </thead>
            <tbody>
              {[
-               ['Tractor — lagbhag 120 ghante ka kaam', '₹1,08,000 gross'],
+               ['Tractor, lagbhag 120 ghante ka kaam', '₹1,08,000 gross'],
                ['Diesel + lubricants', '₹50,000–70,000'],
                ['Driver salary', '₹25,000–35,000'],
                ['Repair + maintenance', '₹10,000–15,000'],
@@ -490,26 +490,26 @@ return (
          </table>
        </div>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-         Ginti saaf hai — peak season me kharche kaat kar bhi EMI nikal aati hai, aur upar kuch bachta hai. Par yahi
+         Ginti saaf hai. Peak season me kharche kaat kar bhi EMI nikal aati hai, aur upar kuch bachta hai. Par yahi
          table lean season me ulta ho jaata hai: garmiyon me agricultural demand 60–70% gir jaati hai, kaam nahi rehta,
-         aur EMI apni tareekh par aati hai. Isliye do cheezein pehle se socho — off-season me tractor ka doosra kaam
+         aur EMI apni tareekh par aati hai. Isliye do cheezein pehle se socho, off-season me tractor ka doosra kaam
          (goods transport sabse aam hai), aur EMI ka size aisa ki lean mahine me bhi bhar sake.
        </p>
        <WB>
          <strong>Udhaari ka chakkar sabse bada risk hai.</strong> Gaon me &ldquo;fasal bikte hi de dunga&rdquo; wali baat
          se cash flow ruk jaata hai, aur diesel ka paisa aapki jeb se lagta rehta hai. Naye customers se hamesha 50%
-         advance lo. Aur peak season me belts, blades aur nuts-bolts ka stock rakho — ek din ka breakdown bhi aapki
+         advance lo. Aur peak season me belts, blades aur nuts-bolts ka stock rakho, ek din ka breakdown bhi aapki
          booking doosre ke paas bhej deta hai.
        </WB>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-         Ye kaam thoda systematic karna ho to iska poora structure banaya jaa sakta hai — SMAM ke tahat implements par
+         Ye kaam thoda systematic karna ho to iska poora structure banaya jaa sakta hai. SMAM ke tahat implements par
          40–50% subsidy milti hai, aur Custom Hiring Centre (group ya FPO) ke roop me wahi percentage ₹10 lakh tak ki
          limit par jaata hai, jabki individual kisan ke case me ₹5 lakh par rukta hai. Poora budget, rental rate aur DPR
          wala hisaab{' '}
          <Link href="/articles/custom-hiring-centre-chc-portal" className="underline font-bold">CHC guide</Link> me hai.
        </p>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-         Aur mahine ke chalte-firte kharche — diesel, driver, spare parts — ke liye term loan mat todo. Uske liye KCC
+         Aur mahine ke chalte-firte kharche, diesel, driver, spare parts — ke liye term loan mat todo. Uske liye KCC
          hai: jitna nikala utne din ka byaj, aur time par chukane par effective rate 4% ke aas-paas.{' '}
          <Link href="/articles/KisanRinKahaSeLe2026" className="underline">Rin kahan se le</Link> wale page par dono ka
          farak table me hai.
@@ -517,55 +517,55 @@ return (
      </section>
 
      <section className="mb-8">
-       <SH>Aakhri EMI Ke Baad Ka Kaam — RC Se Bank Ka Naam Hatao</SH>
+       <SH>Aakhri EMI Ke Baad Ka Kaam. RC Se Bank Ka Naam Hatao</SH>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-         Loan khatam hone par log sabse zyada yahi galti karte hain — mithai baant kar kagaz bhool jaate hain.
+         Loan khatam hone par log sabse zyada yahi galti karte hain. Mithai baant kar kagaz bhool jaate hain.
        </p>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-         Loan chalu hote waqt aapki RC par lender ki <strong>hypothecation</strong> entry chadhti hai — isi ke liye
+         Loan chalu hote waqt aapki RC par lender ki <strong>hypothecation</strong> entry chadhti hai. Isi ke liye
          shuru me ₹2,000–5,000 lagte hain, aur iske bina disbursement hi nahi hota. Matlab kagaz par tractor par bank ka
          bhi haq darj hai. Aakhri EMI ke baad ye entry khud se nahi hatti; hatane tak tractor bechna, exchange karna, ya
-         usi tractor par nayi file lagana — sab me dikkat aati hai.
+         usi tractor par nayi file lagana. Sab me dikkat aati hai.
        </p>
        <StepList>
-         <SI n={1}>Aakhri EMI ke baad bank se <strong>NOC</strong> aur loan closure statement lo — zubani &ldquo;ho gaya&rdquo; kaafi nahi hai</SI>
+         <SI n={1}>Aakhri EMI ke baad bank se <strong>NOC</strong> aur loan closure statement lo, zubani &ldquo;ho gaya&rdquo; kaafi nahi hai</SI>
          <SI n={2}>Original documents (jo bank ke paas jama the) wapas lo aur list se milaao</SI>
-         <SI n={3}>RTO me hypothecation hatane ki application do — NOC, RC aur insurance copy ke saath</SI>
+         <SI n={3}>RTO me hypothecation hatane ki application do. NOC, RC aur insurance copy ke saath</SI>
          <SI n={4}>Nayi RC aane par check karo ki lender ka naam hat gaya hai; usi ke baad insurance me bhi update karwao</SI>
        </StepList>
        <DB>
          <strong>Der karne ka nuksan asli hai.</strong> Kuch saal baad wahi branch manager nahi rehta, file archive me
-         chali jaati hai, aur NOC nikalwane me hafte lag jaate hain — jabki loan closure ke waqt wahi kaam ek visit ka
+         chali jaati hai, aur NOC nikalwane me hafte lag jaate hain. Jabki loan closure ke waqt wahi kaam ek visit ka
          hota hai. Aur ek baat: pre-closure karne ja rahe ho to pehle penalty pooch lo — 12 mahine ke andar poora chukane
          par 2–4% tak lag sakti hai.
        </DB>
      </section>
 
      <section className="mb-8">
-       <SH>2026-27 Trends — Tayyar Raho</SH>
+       <SH>2026-27 Trends. Tayyar Raho</SH>
        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
          <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
            <p className="font-black text-green-800 dark:text-green-300 text-sm mb-1">Electric Tractors</p>
-           <p className="text-xs text-[var(--color-text-muted)]">Kai companies ke electric models market mein aa chuke hain. Running cost diesel se kaafi kam. Finance normal tractor jaisa hi — current rate lender se confirm karo.</p>
+           <p className="text-xs text-[var(--color-text-muted)]">Kai companies ke electric models market mein aa chuke hain. Running cost diesel se kaafi kam. Finance normal tractor jaisa hi, current rate lender se confirm karo.</p>
          </div>
          <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
            <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-1">Digital Land Records + AgriStack</p>
-           <p className="text-xs text-[var(--color-text-muted)]">Farmer ID aur digital land records se loan verification tez ho rahi hai — jitna saaf aapka digital record, utni aasan processing.</p>
+           <p className="text-xs text-[var(--color-text-muted)]">Farmer ID aur digital land records se loan verification tez ho rahi hai. Jitna saaf aapka digital record, utni aasan processing.</p>
          </div>
        </div>
      </section>
 
      <section className="mb-8">
        <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-         Tractor Loan — Aapke Asli Sawal
+         Tractor Loan. Aapke Asli Sawal
        </h2>
-       <FAQBlock faqs={FAQS_DATA} caption="Tractor Loan FAQ 2026 — Ground-Level Verified Answers" />
+       <FAQBlock faqs={FAQS_DATA} caption="Tractor Loan FAQ 2026. Ground-Level Verified Answers" />
      </section>
 
      <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
        <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Ex-Showroom Nahi, On-Road Breakup Par Mol-Bhav Karo</h3>
        <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-         Down payment 10-15% dikhta hai, par woh hisaab ex-showroom par hota hai — insurance, registration,
+         Down payment 10-15% dikhta hai, par woh hisaab ex-showroom par hota hai. Insurance, registration,
          accessories aur processing fee jud kar aapki jeb se jaane wali rakam upar chali jaati hai. Isliye
          dealer se likhit on-road breakup lo, phir usi number par loan aur subsidy set karo:
        </p>
@@ -580,7 +580,7 @@ return (
 
      <GovLink
        href="https://agrimachinery.nic.in"
-       label="Agriculture Mechanization DBT Portal — Subsidy Application"
+       label="Agriculture Mechanization DBT Portal. Subsidy Application"
        guide="Subsidy Check Karo"
        guideHref="/articles/KisanRinKahaSeLe2026"
        portalName="agrimachinery.nic.in"

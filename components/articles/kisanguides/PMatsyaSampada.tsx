@@ -8,7 +8,7 @@ import { AuthorBox, FAQBlock } from '@/components/ArticleShared';
 import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
-  title: 'Machli Palan Par 60% Tak Subsidy — PM Matsya Sampada',
+  title: 'Machli Palan Par 60% Tak Subsidy. PM Matsya Sampada',
   description: 'PM Matsya Sampada Yojana complete guide. Janein fish farming subsidy, biofloc technology, pond setup aur real profit calculation ke baare mein.',
   keywords: [
     'pm matsya sampada yojana',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
-    title: 'Machli Palan Par 60% Tak Subsidy — PM Matsya Sampada',
+    title: 'Machli Palan Par 60% Tak Subsidy. PM Matsya Sampada',
     description: 'PM Matsya Sampada Yojana complete guide. Janein fish farming subsidy, biofloc technology, pond setup aur real profit calculation ke baare mein.',
     type: 'article',
     locale: 'hi_IN',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Machli Palan Par 60% Tak Subsidy — PM Matsya Sampada',
+    title: 'Machli Palan Par 60% Tak Subsidy. PM Matsya Sampada',
     description: 'PM Matsya Sampada Yojana complete guide. Janein fish farming subsidy, biofloc technology, pond setup aur real profit calculation ke baare mein.',
     images: ['https://kisanstatus.com/images/kisanguides/fish-farming-hero.webp'],
   },
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
 
 const pMatsyaSampadaFaqs = [
   {
-    q: 'PMMSY 2026 mein chalu hai ya band ho gayi — apply kar sakte hain?',
-    a: 'PMMSY ka approved implementation period FY 2020-21 se FY 2024-25 tha, jise FY 2025-26 tak extend kiya gaya. Iske baad ki extension ki official confirmation abhi nahi aayi hai, isliye is waqt "window khuli hai" maan kar consultant ko DPR ke paise dena jaldi hogi. Jo hissa FY 2026-27 tak approved hai wo PM-MKSSY hai (₹6,000 crore, NFDP ke zariye). Sahi kadam: pehle NFDP par register karo, phir District Fisheries Officer se poochho ki aapke zile mein aaj kaun si component chalu hai. Kuch states apni alag Matsya Sampada scheme bhi chalate hain — wo bhi wahin se pata chalegi.',
+    q: 'PMMSY 2026 mein chalu hai ya band ho gayi, apply kar sakte hain?',
+    a: 'PMMSY ka approved implementation period FY 2020-21 se FY 2024-25 tha, jise FY 2025-26 tak extend kiya gaya. Iske baad ki extension ki official confirmation abhi nahi aayi hai, isliye is waqt "window khuli hai" maan kar consultant ko DPR ke paise dena jaldi hogi. Jo hissa FY 2026-27 tak approved hai wo PM-MKSSY hai (₹6,000 crore, NFDP ke zariye). Sahi kadam: pehle NFDP par register karo, phir District Fisheries Officer se poochho ki aapke zile mein aaj kaun si component chalu hai. Kuch states apni alag Matsya Sampada scheme bhi chalate hain. Wo bhi wahin se pata chalegi.',
   },
   {
     q: 'Kya kiraye ki zameen par fish farming karne par subsidy milti hai?',
@@ -83,11 +83,11 @@ export default function PMatsyaSampada() {
       />
 
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
-        Machli Palan Par 60% Tak Subsidy — Par Pehle Saal Ka Sach Bhi Suno
+        Machli Palan Par 60% Tak Subsidy. Par Pehle Saal Ka Sach Bhi Suno
       </h1>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Pehle saal 20-30% crop loss. Ye number koi darane ke liye nahi likha — machli palan mein oxygen management ya disease control ki chhoti galtiyan itna nuksan karwa deti hain, aur ye naye logon ke saath aam hai. Doosre-teesre saal tak, experience ke saath, returns stabilize ho jate hain aur profit consistent hone lagta hai.
+        Pehle saal 20-30% crop loss. Ye number koi darane ke liye nahi likha, machli palan mein oxygen management ya disease control ki chhoti galtiyan itna nuksan karwa deti hain, aur ye naye logon ke saath aam hai. Doosre-teesre saal tak, experience ke saath, returns stabilize ho jate hain aur profit consistent hone lagta hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
@@ -160,7 +160,7 @@ export default function PMatsyaSampada() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Biofloc technology tab choose karein jab zameen kam hai par investment capacity zyada. Urban areas mein yeh isi liye popular ho rahi hai — kam space, zyada production. Par isme electricity cost zyada hai (aerators 24x7 chalte hain), aur technical knowledge zaroori hai.
+        Biofloc technology tab choose karein jab zameen kam hai par investment capacity zyada. Urban areas mein yeh isi liye popular ho rahi hai. Kam space, zyada production. Par isme electricity cost zyada hai (aerators 24x7 chalte hain), aur technical knowledge zaroori hai.
       </p>
 
       <Image
@@ -236,19 +236,19 @@ export default function PMatsyaSampada() {
 
       <div className="mb-8 p-5 bg-amber-50 dark:bg-amber-900/20 rounded-xl border-l-4 border-amber-500 not-prose shadow-sm">
         <p className="text-sm text-gray-800 dark:text-gray-200 mb-2">
-          <strong>Apply karne se pehle ye timing samajh lein — 2026 mein sabse zaroori baat yahi hai.</strong>
+          <strong>Apply karne se pehle ye timing samajh lein, 2026 mein sabse zaroori baat yahi hai.</strong>
         </p>
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
           PMMSY ka original period FY 2020-21 se FY 2024-25 tha, jise baad mein{' '}
           <strong>FY 2025-26 tak extend kiya gaya</strong>. Iske aage ki extension ki koi official
-          confirmation abhi humein nahi mili — isliye &ldquo;abhi window khuli hai&rdquo; maan kar DPR par
+          confirmation abhi humein nahi mili. Isliye &ldquo;abhi window khuli hai&rdquo; maan kar DPR par
           paisa kharch karna galat kadam ho sakta hai. Neeche di gayi subsidy rates PMMSY guidelines ki
           hain aur reference ke liye hain; aapke zile mein is waqt kaun si component chalu hai, ye sirf
           District Fisheries Officer bata sakta hai. Pehla phone wahi karo, portal baad mein.
         </p>
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           Jo hissa 2026-27 tak chalne ka approved hai wo hai <strong>PM-MKSSY</strong> (Pradhan Mantri
-          Matsya Kisan Samridhi Sah-Yojana) — ₹6,000 crore ka central sector sub-scheme, FY 2023-24 se
+          Matsya Kisan Samridhi Sah-Yojana). ₹6,000 crore ka central sector sub-scheme, FY 2023-24 se
           FY 2026-27 tak, jo National Fisheries Digital Platform (NFDP) ke zariye chhote fish farmers aur
           micro-enterprises ko formal pehchaan aur benefits deta hai. Matlab: aaj ka pehla kaam DPR nahi,
           NFDP par apna registration hai.
@@ -344,13 +344,13 @@ export default function PMatsyaSampada() {
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Ek cheez jo pehle nipta lein: <strong>NFDP par registration</strong>. Ye National Fisheries
         Digital Platform (11 September 2024 se chalu) fish farmer aur fish worker ko ek work-based
-        digital pehchaan deta hai, aur PM-MKSSY ke faayde isi registration se jude hue hain — PM-MKSSY
+        digital pehchaan deta hai, aur PM-MKSSY ke faayde isi registration se jude hue hain. PM-MKSSY
         ka lakshya hi 40 lakh chhote/micro enterprises ko formal system mein laana hai. DPR banwane se
         pehle ye 10 minute ka kaam kar lein; kal ki kisi bhi component ke liye yahi aapki entry banegi.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Neeche diya gaya button PMMSY ke official portal par le jayega — wahan current component,
+        Neeche diya gaya button PMMSY ke official portal par le jayega, wahan current component,
         guidelines aur apne state ka contact dekh lein (aur haan, jo bhi dikhe, uski pushti District
         Fisheries Office se karwa lein):
       </p>
@@ -669,7 +669,7 @@ export default function PMatsyaSampada() {
       </div>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Machli Palan Aapke Liye Hai Ya Nahi — Khud Check Karein
+        Machli Palan Aapke Liye Hai Ya Nahi. Khud Check Karein
       </h2>
 
       <div className="grid md:grid-cols-2 gap-6 mb-8 not-prose">
@@ -715,7 +715,7 @@ export default function PMatsyaSampada() {
       </p>
 
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Matsya Sampada Yojana — Sawal Jawab Corner
+        Matsya Sampada Yojana. Sawal Jawab Corner
       </h2>
       <FAQBlock faqs={pMatsyaSampadaFaqs} variant="inline" />
 

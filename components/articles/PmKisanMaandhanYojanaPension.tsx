@@ -28,7 +28,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Agar beech mein paisa dena band kar dein toh?',
-    a: 'Account default mein chala jata hai. Pehle mahine koi late fee nahi; uske baad savings-bank rate jitna byaj lagta hai, aur 6 mahine baad account dormant ho jata hai. Achhi baat ye ki 3 saal tak poora bakaya + byaj dekar account dobara regular ho sakta hai — jama paisa doobta nahi.',
+    a: 'Account default mein chala jata hai. Pehle mahine koi late fee nahi; uske baad savings-bank rate jitna byaj lagta hai, aur 6 mahine baad account dormant ho jata hai. Achhi baat ye ki 3 saal tak poora bakaya + byaj dekar account dobara regular ho sakta hai. Jama paisa doobta nahi.',
   },
   {
     q: 'Ye scheme PM Kisan Samman Nidhi ke sath le sakte hain?',
@@ -44,15 +44,15 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya government bhi paisa deti hai?',
-    a: 'Haan, jitna paisa aap dalte ho utna hi sarkar bhi dal ti hai. Matlab aap ₹100 dalo, sarkar ₹100 dalegi — total ₹200 jama hoga.',
+    a: 'Haan, jitna paisa aap dalte ho utna hi sarkar bhi dal ti hai. Matlab aap ₹100 dalo, sarkar ₹100 dalegi, total ₹200 jama hoga.',
   },
   {
-    q: 'CSC wala enrollment ke liye alag "processing fee" maang raha hai — dun?',
-    a: 'Nahi. Enrollment bilkul free hai — dena sirf pehla monthly contribution hota hai (umar ke slab ke hisaab se ₹55 se ₹200). Alag se ₹100-200 ki "processing fee" maangna galat hai. Aisa ho toh wahin mana karo aur helpline 1800-3000-3468 par shikayat karo.',
+    q: 'CSC wala enrollment ke liye alag "processing fee" maang raha hai. Dun?',
+    a: 'Nahi. Enrollment bilkul free hai. Dena sirf pehla monthly contribution hota hai (umar ke slab ke hisaab se ₹55 se ₹200). Alag se ₹100-200 ki "processing fee" maangna galat hai. Aisa ho toh wahin mana karo aur helpline 1800-3000-3468 par shikayat karo.',
   },
   {
-    q: 'Paisa jama kahan hota hai — kaun sambhaalta hai?',
-    a: 'Pension fund LIC of India manage karti hai; auto-debit ka mandate NPCI system se chalta hai aur IDBI Bank sponsor bank hai. Passbook mein har kist par "NACH Debit" ya "LIC-PMKMY" jaisa description dikhta hai — yahi pehchan hai ki paisa sahi jagah gaya.',
+    q: 'Paisa jama kahan hota hai. Kaun sambhaalta hai?',
+    a: 'Pension fund LIC of India manage karti hai; auto-debit ka mandate NPCI system se chalta hai aur IDBI Bank sponsor bank hai. Passbook mein har kist par "NACH Debit" ya "LIC-PMKMY" jaisa description dikhta hai. Yahi pehchan hai ki paisa sahi jagah gaya.',
   },
 ];
 
@@ -104,7 +104,7 @@ export default function PmKisanMaandhanYojanaPension() {
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Pension Scheme Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan Maandhan Yojana Kya Hai — Ek Jagah Puri ABCD
+            PM Kisan Maandhan Yojana Kya Hai. Ek Jagah Puri ABCD
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
@@ -135,10 +135,10 @@ export default function PmKisanMaandhanYojanaPension() {
         <section className="mb-8">
           <SH>60 Saal Ke Baad Kheti Kaun Karega?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ek baat sach batao — jab kisan budha ho jata hai, toh kheti kaun karta hai? Bete shehar chale jaate hain. Zameen banjar pad jaati hai. Aur buzurg kisan ke paas koi income nahi bachti.
+            Ek baat sach batao, jab kisan budha ho jata hai, toh kheti kaun karta hai? Bete shehar chale jaate hain. Zameen banjar pad jaati hai. Aur buzurg kisan ke paas koi income nahi bachti.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Isi problem ko dekh kar sarkar ne <strong>PM Kisan Maandhan Yojana (PM-KMY)</strong> banayi. Iska seedha matlab hai — "kisan ki buzurgi ka sahara".
+            Isi problem ko dekh kar sarkar ne <strong>PM Kisan Maandhan Yojana (PM-KMY)</strong> banayi. Iska seedha matlab hai. "kisan ki buzurgi ka sahara".
           </p>
 
           <Image
@@ -152,7 +152,7 @@ export default function PmKisanMaandhanYojanaPension() {
           <DB>
             <strong>Field Observation:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
-              CSC operators aksar batate hain ki kai aise kisan hain jo 35-40 saal ki umar mein join karte hain, aur 60 ke baad unhe ye pension family par depend na karne ka confidence deti hai. Ek common feedback hai ki ₹3000 gaon ke basic expenses — bijli, paani, dawai — ke liye kaafi helpful hota hai.
+              CSC operators aksar batate hain ki kai aise kisan hain jo 35-40 saal ki umar mein join karte hain, aur 60 ke baad unhe ye pension family par depend na karne ka confidence deti hai. Ek common feedback hai ki ₹3000 gaon ke basic expenses, bijli, paani, dawai, ke liye kaafi helpful hota hai.
             </p>
           </DB>
 
@@ -177,7 +177,7 @@ export default function PmKisanMaandhanYojanaPension() {
             <li>Ye pension umar bhar milti rehti hai</li>
           </ul>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Matlab aapne jawani mein jo thoda sa paisa daala, buzurgi mein wo aapko har mahine wapas mil raha hai — aur sarkar ka hissa bhi. Ye koi choti baat nahi hai.
+            Matlab aapne jawani mein jo thoda sa paisa daala, buzurgi mein wo aapko har mahine wapas mil raha hai. Aur sarkar ka hissa bhi. Ye koi choti baat nahi hai.
           </p>
         </section>
 
@@ -386,7 +386,7 @@ export default function PmKisanMaandhanYojanaPension() {
             </div>
             <div className="bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500 p-4 rounded-r-xl">
               <p className="text-sm text-purple-800 dark:text-purple-300">
-                <strong> Dono Ki Maut:</strong> Agar kisan aur patni dono ki maut ho jaye, toh <strong>nominee ko pura paisa wapas</strong> milta hai jo jama hua tha — with interest.
+                <strong> Dono Ki Maut:</strong> Agar kisan aur patni dono ki maut ho jaye, toh <strong>nominee ko pura paisa wapas</strong> milta hai jo jama hua tha. With interest.
               </p>
             </div>
             <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-4 rounded-r-xl">
@@ -473,7 +473,7 @@ export default function PmKisanMaandhanYojanaPension() {
         <section className="mb-8">
           <SH>Ye Scheme Kahan Lagu Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Poore desh mein — ye Central Sector Scheme hai, isliye niyam, contribution
+            Poore desh mein. Ye Central Sector Scheme hai, isliye niyam, contribution
             aur pension har state mein same hain. Enrollment ka rasta bhi har jagah wahi
             hai: nazdeeki CSC center ya maandhan.in portal. Farq bas itna padta hai ki
             aapke ilake mein CSC kitna paas hai aur operator ko is scheme ka process
@@ -504,32 +504,32 @@ export default function PmKisanMaandhanYojanaPension() {
           </div>
           <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl">
             <p className="text-sm text-amber-800 dark:text-amber-300">
-              <strong>Details Ki Galti Mehngi Padti Hai:</strong> Naam, DOB ya bank details galat chali gayi to correction ke liye CSC ke chakkar lagte hain. Enrollment ke waqt hi Aadhaar se har detail milaan kar lo — yahi sabse sasta bachav hai.
+              <strong>Details Ki Galti Mehngi Padti Hai:</strong> Naam, DOB ya bank details galat chali gayi to correction ke liye CSC ke chakkar lagte hain. Enrollment ke waqt hi Aadhaar se har detail milaan kar lo. Yahi sabse sasta bachav hai.
             </p>
           </div>
         </section>
 
         <section className="mb-8">
-          <SH>Har Mahine Ka Paisa Katta Kaise Hai — Auto-Debit Ka Sach</SH>
+          <SH>Har Mahine Ka Paisa Katta Kaise Hai. Auto-Debit Ka Sach</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Enrollment ke waqt aap ek NACH auto-debit mandate sign karte ho. Iska matlab: har mahine aapka
-            share aapke bank account se apne aap kat kar pension fund mein chala jaata hai — fund LIC of India
+            share aapke bank account se apne aap kat kar pension fund mein chala jaata hai. Fund LIC of India
             manage karti hai, aur IDBI Bank sponsor bank ke taur par NPCI ke through ye debit chalata hai.
             Passbook mein <strong>"NACH Debit"</strong> ya <strong>"LIC-PMKMY"</strong> jaisi entry dikhe toh
             samajh jao system theek chal raha hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Account mein balance nahi tha aur debit fail ho gaya? Ghabrao mat — LIC agle payment cycle mein
+            Account mein balance nahi tha aur debit fail ho gaya? Ghabrao mat. LIC agle payment cycle mein
             demand dobara raise karti hai. Payment cycles har mahine <strong>1, 11 aur 21 tareekh</strong> ko
             hote hain (holiday ho toh agla working day). Haan, lagatar miss hone par account default mein jaata
-            hai aur baad mein penalty ke saath regularize karna padta hai — isliye kist wale hafte account mein
+            hai aur baad mein penalty ke saath regularize karna padta hai. Isliye kist wale hafte account mein
             balance rakho. Auto-debit ka poora mechanism{' '}
             <Link href="/maandhan/pm-kisan-maandhan-auto-debit-poora-sach" className="underline text-green-700 dark:text-green-400">alag guide</Link>{' '}
             mein detail se likha hai.
           </p>
           <WB>
-            <strong>Enrollment Free Hai — Fee Fraud Se Bacho:</strong> Kuch CSC operators "processing fee" ya
-            "service charge" ke naam par ₹100–200 extra maang lete hain. Enrollment bilkul free hai — dena sirf
+            <strong>Enrollment Free Hai. Fee Fraud Se Bacho:</strong> Kuch CSC operators "processing fee" ya
+            "service charge" ke naam par ₹100–200 extra maang lete hain. Enrollment bilkul free hai. Dena sirf
             pehla monthly contribution hota hai (₹55–₹200, umar ke hisaab se). Alag fee maange toh wahin mana
             karo aur helpline <strong>1800-3000-3468</strong> (Mon–Sat, 9:30 AM–6 PM) par shikayat karo.
           </WB>
@@ -538,22 +538,22 @@ export default function PmKisanMaandhanYojanaPension() {
         <section className="mb-8">
           <SH>Nominee Ka Naam — 15 Minute Ka Kaam, Saalon Ki Bachat</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Upar family pension ke rules padhe — par wo sab kaagaz par tabhi smooth chalta hai jab nomination
+            Upar family pension ke rules padhe. Par wo sab kaagaz par tabhi smooth chalta hai jab nomination
             updated ho. Jinke nominee ka naam register tha, unke parivar ka settlement 1–2 mahine mein ho jaata
             hai; jinke record mein nominee tha hi nahi ya galat tha, wahi case 6–12 mahine tak ghisatta hai —
             court se legal heir certificate tak baat pahunch jaati hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Isliye aaj hi check karo: CSC par jaakar apni PMKMY nomination dekho. Shaadi hui, nominee guzar
-            gaye, ya naam ki spelling galat hai — to update karwao, ye free hai aur 15 minute ka kaam hai.
-            Surviving spouse ke ₹1,500 monthly family pension ka process bhi automatic nahi hota — claim karna
+            gaye, ya naam ki spelling galat hai. To update karwao, ye free hai aur 15 minute ka kaam hai.
+            Surviving spouse ke ₹1,500 monthly family pension ka process bhi automatic nahi hota. Claim karna
             padta hai. Poore rules{' '}
             <Link href="/maandhan/family-pension-rules" className="underline text-green-700 dark:text-green-400">family pension guide</Link>{' '}
             mein hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Aur ek baat jo bahut kam log jaante hain: 60 se pehle scheme chhodne par sirf <em>aapka</em> jama
-            hissa byaj ke saath wapas milta hai — sarkar ka daala hua barabar ka hissa wapas nahi milta. Isliye
+            hissa byaj ke saath wapas milta hai. Sarkar ka daala hua barabar ka hissa wapas nahi milta. Isliye
             "kuch saal chala kar chhod denge" wali soch mein asli nuksan aapka hi hai.
           </p>
         </section>
@@ -564,7 +564,7 @@ export default function PmKisanMaandhanYojanaPension() {
             Kuch log sochte hain ki ye scheme fraud hai ya pension kabhi nahi milegi. Jabki is scheme ko LIC aur government jointly manage karti hain, aur ab tak lakhon kisanon ko regular pension mil rahi hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ek aur common confusion hai ki ₹3000 bahut kam hai. Lekin gaon ke expenses ke hisaab se ye amount bijli, paani, aur dawai ke liye kaafi helpful hota hai — aur ye har mahine guaranteed milega.
+            Ek aur common confusion hai ki ₹3000 bahut kam hai. Lekin gaon ke expenses ke hisaab se ye amount bijli, paani, aur dawai ke liye kaafi helpful hota hai. Aur ye har mahine guaranteed milega.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Kuch log sochte hain ki sarkar baad mein rules badal degi. Lekin ye ek contractual scheme hai. Ek baar join kiya toh terms lock ho jaate hain.
@@ -572,14 +572,14 @@ export default function PmKisanMaandhanYojanaPension() {
         </section>
 
         <section className="mb-8">
-          <SH>Aage Kya Padhein — Topic-Wise Deep Guides</SH>
+          <SH>Aage Kya Padhein. Topic-Wise Deep Guides</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ye page poori scheme ki ABCD hai. Har hisse ki detail alag guide mein hai — apne kaam ki uthao:
+            Ye page poori scheme ki ABCD hai. Har hisse ki detail alag guide mein hai. Apne kaam ki uthao:
           </p>
           <ul className="list-disc pl-5 space-y-2 text-sm text-[var(--color-text)]">
             <li><Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="underline text-green-700 dark:text-green-400">Eligibility aur documents</Link> — kaun join kar sakta hai, kya kagaz lagenge.</li>
-            <li><Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="underline text-green-700 dark:text-green-400">Age-wise contribution chart</Link> — apni umar ka exact monthly amount.</li>
-            <li><Link href="/maandhan/pm-kisan-maandhan-pension-calculator" className="underline text-green-700 dark:text-green-400">Pension calculator</Link> — total jama vs pension ka hisaab.</li>
+            <li><Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="underline text-green-700 dark:text-green-400">Age-wise contribution chart</Link>, apni umar ka exact monthly amount.</li>
+            <li><Link href="/maandhan/pm-kisan-maandhan-pension-calculator" className="underline text-green-700 dark:text-green-400">Pension calculator</Link>, total jama vs pension ka hisaab.</li>
             <li><Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="underline text-green-700 dark:text-green-400">Registration ka step-by-step process</Link>.</li>
             <li><Link href="/maandhan/pm-kisan-maandhan-status-check-online" className="underline text-green-700 dark:text-green-400">Status check</Link> aur <Link href="/maandhan/pm-kisan-maandhan-pension-card-download" className="underline text-green-700 dark:text-green-400">pension card download</Link>.</li>
             <li><Link href="/maandhan/pm-kisan-maandhan-withdrawal-refund-rules" className="underline text-green-700 dark:text-green-400">Beech mein nikalna ho to refund rules</Link> aur <Link href="/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana" className="underline text-green-700 dark:text-green-400">Maandhan vs Atal Pension</Link> comparison.</li>
@@ -619,7 +619,7 @@ export default function PmKisanMaandhanYojanaPension() {
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Pension Yojana — Doubts Aur Unke Jawab
+            Pension Yojana. Doubts Aur Unke Jawab
           </h2>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Maandhan Yojana FAQ" />
         </section>

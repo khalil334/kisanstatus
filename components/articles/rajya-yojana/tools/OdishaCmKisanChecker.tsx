@@ -5,7 +5,7 @@ import { useMemo, useState } from 'react';
 type Household = 'cultivator' | 'landless';
 
 const DOCS_COMMON = [
-  'Aadhaar card — e-KYC aur DBT dono isi par tikte hain',
+  'Aadhaar card, e-KYC aur DBT dono isi par tikte hain',
   'Bank passbook jismein account NPCI mapper se juda ho',
   'Registered mobile number, kyunki OTP usi par aata hai',
   'Odisha ka residence proof',
@@ -18,7 +18,7 @@ const DOCS_BY_HOUSEHOLD: Record<Household, string[]> = {
   ],
   landless: [
     'Gram panchayat ya revenue authority ka landless certificate',
-    'Allied activity ka byora — bakri palan, murgi palan, dairy ya machhli',
+    'Allied activity ka byora, bakri palan, murgi palan, dairy ya machhli',
   ],
 };
 
@@ -37,7 +37,7 @@ export default function OdishaCmKisanChecker() {
   const EXCLUSIONS: [string, string][] = [
     ['tax', 'Ghar mein koi income tax bharta hai'],
     ['govt', 'Koi sadasya sarkari naukri mein hai (serving ya pensioner)'],
-    ['prof', 'Ghar mein registered professional hai — doctor, vakil, CA, engineer'],
+    ['prof', 'Ghar mein registered professional hai. Doctor, vakil, CA, engineer'],
   ];
 
   const acres = useMemo(() => {
@@ -52,7 +52,7 @@ export default function OdishaCmKisanChecker() {
         ok: false,
         headline: 'Exclusion list is case par lagti hai',
         detail:
-          'CM Kisan means-tested scheme hai. Income tax bharne wale, sarkari naukri wale aur registered professional wale ghar exclusion list mein aate hain — zameen kitni bhi ho, grant nahi banta. Ye rule poore parivaar par lagta hai, sirf aavedak par nahi.',
+          'CM Kisan means-tested scheme hai. Income tax bharne wale, sarkari naukri wale aur registered professional wale ghar exclusion list mein aate hain. Zameen kitni bhi ho, grant nahi banta. Ye rule poore parivaar par lagta hai, sirf aavedak par nahi.',
         annual: 0,
         tranche: 0,
         tranches: 0,
@@ -64,7 +64,7 @@ export default function OdishaCmKisanChecker() {
         ok: true,
         headline: 'Landless agricultural household track',
         detail:
-          'Bina zameen wale krishi parivaaron ko kheti ke input ke bajaye allied livelihood ke liye support milta hai — jaise bakri palan, murgi palan ya dairy. Isliye raqam bhi zyada hai aur tranche bhi teen hote hain.',
+          'Bina zameen wale krishi parivaaron ko kheti ke input ke bajaye allied livelihood ke liye support milta hai. Jaise bakri palan, murgi palan ya dairy. Isliye raqam bhi zyada hai aur tranche bhi teen hote hain.',
         annual: 12500,
         tranche: Math.round(12500 / 3),
         tranches: 3,
@@ -86,7 +86,7 @@ export default function OdishaCmKisanChecker() {
     if (acres > 5) {
       return {
         ok: false,
-        headline: '5 acre se zyada zameen — cultivator track se bahar',
+        headline: '5 acre se zyada zameen, cultivator track se bahar',
         detail:
           'CM Kisan jaan-boojh kar chhote aur seemant kisan par kendrit hai. 5 acre se upar ki jotdaari medium/large category mein aati hai, jo is scheme se bahar rakhi gayi hai. PM Kisan mein aisi koi land ceiling nahi hai, is liye wahan aapki eligibility alag se dekhi jaati hai.',
         annual: 0,
@@ -99,10 +99,10 @@ export default function OdishaCmKisanChecker() {
       ok: true,
       headline:
         acres <= 2
-          ? 'Marginal cultivator — scheme ka core target group'
+          ? 'Marginal cultivator, scheme ka core target group'
           : 'Small cultivator — 5 acre limit ke andar',
       detail:
-        'Cultivator track mein raqam zameen ke area se badalti nahi hai. 5 acre ki limit ke andar har eligible kisan ko same annual grant milta hai, do barabar tranche mein — ek Kharif ke aas-paas, doosra Rabi ke aas-paas.',
+        'Cultivator track mein raqam zameen ke area se badalti nahi hai. 5 acre ki limit ke andar har eligible kisan ko same annual grant milta hai, do barabar tranche mein, ek Kharif ke aas-paas, doosra Rabi ke aas-paas.',
       annual: 4000,
       tranche: 2000,
       tranches: 2,
@@ -125,7 +125,7 @@ export default function OdishaCmKisanChecker() {
     >
       <header className="px-5 py-4 bg-green-50 dark:bg-green-900/20 border-b border-gray-200 dark:border-gray-700">
         <h2 className="text-base md:text-lg font-black text-gray-900 dark:text-gray-100 m-0">
-          CM Kisan Checker — aap kis track mein hain aur kitna banta hai
+          CM Kisan Checker, aap kis track mein hain aur kitna banta hai
         </h2>
         <p className="text-xs text-gray-600 dark:text-gray-400 mt-1 mb-0">
           Poora hisaab aapke browser mein chalta hai. Kuch submit nahi hota, koi record
@@ -143,7 +143,7 @@ export default function OdishaCmKisanChecker() {
               {(
                 [
                   ['cultivator', 'Khud kheti karte hain, zameen record mein hai'],
-                  ['landless', 'Zameen nahi hai — khet mazdoori ya allied kaam'],
+                  ['landless', 'Zameen nahi hai. Khet mazdoori ya allied kaam'],
                 ] as [Household, string][]
               ).map(([val, label]) => (
                 <label
@@ -204,7 +204,7 @@ export default function OdishaCmKisanChecker() {
                 </select>
               </div>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                Ghar ke sabhi sadasyon ki zameen jodkar likhein — limit parivaar par
+                Ghar ke sabhi sadasyon ki zameen jodkar likhein, limit parivaar par
                 lagti hai.
               </p>
             </div>
@@ -260,7 +260,7 @@ export default function OdishaCmKisanChecker() {
         >
           {!submitted ? (
             <p className="text-sm text-gray-600 dark:text-gray-400 m-0">
-              Apne ghar ki detail upar bharo, phir button dabao — turant pata chal
+              Apne ghar ki detail upar bharo, phir button dabao, turant pata chal
               jaayega ki aap kis track mein aate ho, saal ka kitna banta hai aur kaun se
               kagaz chahiye honge.
             </p>
@@ -313,8 +313,8 @@ export default function OdishaCmKisanChecker() {
                   }`}
                 >
                   {ekyc
-                    ? 'e-KYC aur NPCI mapping ho chuki hai — DBT ke raste mein koi rukaawat nahi dikhti.'
-                    : 'e-KYC ya NPCI mapping adhoori hai. Eligibility rehti hai, lekin paisa tab tak hold mein pada rahega — yahi sabse aam wajah hai jiski shikayat aati hai.'}
+                    ? 'e-KYC aur NPCI mapping ho chuki hai. DBT ke raste mein koi rukaawat nahi dikhti.'
+                    : 'e-KYC ya NPCI mapping adhoori hai. Eligibility rehti hai, lekin paisa tab tak hold mein pada rahega. Yahi sabse aam wajah hai jiski shikayat aati hai.'}
                 </p>
               )}
 

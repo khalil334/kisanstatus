@@ -32,11 +32,11 @@ const RELATED_CARDS = [
 const FAQS_DATA = [
   {
     q: '18 saal ke ladke ko PMKMY mein kitna monthly dena padega?',
-    a: 'Sirf ₹55 mahina — sabse kam slab. Government bhi ₹55 match karegi, yaani total ₹110 har mahine pension fund mein jayega.',
+    a: 'Sirf ₹55 mahina, sabse kam slab. Government bhi ₹55 match karegi, yaani total ₹110 har mahine pension fund mein jayega.',
   },
   {
     q: '40 saal ki umar mein join karun toh monthly kitna katega?',
-    a: '₹200 mahina, aur Govt bhi ₹200 degi. Pension sabko same ₹3000/month hi milegi — farak sirf itna ki 40 saal wale ko 20 saal contribute karna hota hai. Slab table upar article mein hai, apni exact umar wahan dekho.',
+    a: '₹200 mahina, aur Govt bhi ₹200 degi. Pension sabko same ₹3000/month hi milegi, farak sirf itna ki 40 saal wale ko 20 saal contribute karna hota hai. Slab table upar article mein hai, apni exact umar wahan dekho.',
   },
   {
     q: 'Pre-mature exit par sarkar ka co-contribution wapas milta hai?',
@@ -158,7 +158,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
         <ContributionCalculator />
 
         <section className="mb-8">
-          <SH>20 Saal vs 35 Saal — Numbers Bolte Hain</SH>
+          <SH>20 Saal vs 35 Saal. Numbers Bolte Hain</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Kai baar kisan sochte hain, "pension toh same ₹3000 milegi, toh umar se kya farak padta hai?" Bada farak. Example lo. Ramesh (20 saal) aur Suresh (35 saal). Dono ko 60 ke baad ₹3000 hi milenge. Par Ramesh ka total contribution lagbhag 30 hazar (₹29,280); Suresh ka lagbhag 45 hazar (₹45,000).
           </p>
@@ -185,7 +185,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
         <section className="mb-8">
           <SH>Eligibility Sirf Ek Nazar Mein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ye page sirf numbers ke liye hai — 18–40 saal entry, 2 hectare tak zameen, PM Kisan beneficiary hona zaroori. Shartein detail mein, exclusion list aur documents ke saath, alag guide mein hain:
+            Ye page sirf numbers ke liye hai. 18–40 saal entry, 2 hectare tak zameen, PM Kisan beneficiary hona zaroori. Shartein detail mein, exclusion list aur documents ke saath, alag guide mein hain:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Eligibility & Documents Ki Poori Checklist →</Link>
@@ -210,15 +210,15 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
         <section className="mb-8">
           <SH>Register Karna Ho To</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Contribution amount confirm karne ke baad agla kadam registration hai — CSC aur online app dono ke step-by-step screenshots wali guide alag se maujood hai:
+            Contribution amount confirm karne ke baad agla kadam registration hai. CSC aur online app dono ke step-by-step screenshots wali guide alag se maujood hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Registration Kaise Karein — Poora Tareeka →</Link>
+            <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Registration Kaise Karein. Poora Tareeka →</Link>
           </div>
         </section>
 
         <section className="mb-8">
-          <SH>PM Kisan Se Auto-Debit — Optional Hai, Mandatory Nahi</SH>
+          <SH>PM Kisan Se Auto-Debit. Optional Hai, Mandatory Nahi</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ek bahut common sawal: "Kya PM Kisan ki ₹2000 ki kist se Maandhan ka paisa apne aap kat jayega?" Jawab hai: bilkul nahi, jab tak aapne khud allow na kiya ho. Yeh process 100% optional hai.
           </p>
@@ -248,7 +248,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
         <section className="mb-8">
           <SH>Payment Miss Ho Jaye Toh Kya Hoga? Exact Rules</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Maan lijiye aapke account mein balance nahi tha aur 11th ka debit fail ho gaya — aisi situation har kisi ke saath kabhi na kabhi hoti hai. Guidelines ke hisaab se payment cycles har mahine 1st, 11th, aur 21st ko hote hain, aur system thoda flexible hai.
+            Maan lijiye aapke account mein balance nahi tha aur 11th ka debit fail ho gaya, aisi situation har kisi ke saath kabhi na kabhi hoti hai. Guidelines ke hisaab se payment cycles har mahine 1st, 11th, aur 21st ko hote hain, aur system thoda flexible hai.
           </p>
 
           <div className="space-y-3 mb-4">
@@ -258,24 +258,24 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
             </div>
 
             <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
-              <strong>1 mahine ke baad</strong> thoda strict ho jata hai — late fee lagti hai jo savings bank interest rate ke barabar hoti hai. Pehle 12 mahine tak simple interest, uske baad compounding shuru. Yeh woh point hai jahan zyada log confuse hote hain.
+              <strong>1 mahine ke baad</strong> thoda strict ho jata hai. Late fee lagti hai jo savings bank interest rate ke barabar hoti hai. Pehle 12 mahine tak simple interest, uske baad compounding shuru. Yeh woh point hai jahan zyada log confuse hote hain.
             </p>
 
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
               <p className="font-black text-sm text-red-800 dark:text-red-300 mb-1">6 Mahine Tak Payment Nahi Hui</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Account "dormant" ho jata hai, lekin 3 saal tak SMS alerts aate rehte hain. Is dauran bhi aap entire outstanding amount + interest jama karke account regular karwa sakte hain — account cancel nahi hota.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Account "dormant" ho jata hai, lekin 3 saal tak SMS alerts aate rehte hain. Is dauran bhi aap entire outstanding amount + interest jama karke account regular karwa sakte hain. Account cancel nahi hota.</p>
             </div>
           </div>
 
           <p className="text-sm text-[var(--color-text-muted)] mb-4">
-            Ek cheez clear kar dun — kai websites par "3 mahine ka grace period" likha milta hai, jo technically sahi nahi hai. Official guidelines ke hisaab se <strong>sirf 1 mahine</strong> tak koi late fee nahi hai. Uske baad interest lagna shuru hota hai. Maine khud kai VLEs ko galat information dete hue dekha hai, isliye hamesha official guidelines ya apne CSC se confirm karein.
+            Ek cheez clear kar dun, kai websites par "3 mahine ka grace period" likha milta hai, jo technically sahi nahi hai. Official guidelines ke hisaab se <strong>sirf 1 mahine</strong> tak koi late fee nahi hai. Uske baad interest lagna shuru hota hai. Maine khud kai VLEs ko galat information dete hue dekha hai, isliye hamesha official guidelines ya apne CSC se confirm karein.
           </p>
         </section>
 
         <section className="mb-8">
           <SH>Beech Mein Chhodne Ka Hisaab</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Scheme chhodne par kitna refund milega, ye aapki exit ki timing par depend karta hai — teen alag halaat ke exact rules scenario-wise guide mein diye hain:
+            Scheme chhodne par kitna refund milega, ye aapki exit ki timing par depend karta hai. Teen alag halaat ke exact rules scenario-wise guide mein diye hain:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/maandhan/pm-kisan-maandhan-withdrawal-refund-rules" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Withdrawal & Refund Ke Exact Rules →</Link>
@@ -293,14 +293,14 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            KPAN card enrollment ke baad generate hota hai — isse sambhal kar rakhein
+            KPAN card enrollment ke baad generate hota hai. Isse sambhal kar rakhein
           </p>
         </div>
 
         <section className="mb-8">
           <SH>APY Se Compare Karna Ho To</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Dono schemes ₹3000 pension deti hain lekin contribution aur government match bilkul alag hai — head-to-head scorecard alag article mein hai:
+            Dono schemes ₹3000 pension deti hain lekin contribution aur government match bilkul alag hai. Head-to-head scorecard alag article mein hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">PMKMY vs APY: Full Comparison →</Link>
@@ -318,22 +318,22 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
         </section>
 
         <section className="mb-8">
-          <SH>Paisa Jama Kahan Hota Hai — Aur Premature Exit Par Kiska Kya</SH>
+          <SH>Paisa Jama Kahan Hota Hai. Aur Premature Exit Par Kiska Kya</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Table dekh kar ek waajib sawal uthta hai: har mahine jo ₹55 ya ₹200 kat rahe hain, woh jaate kahan hain? Poora fund <strong>LIC (Life Insurance Corporation)</strong> manage karti hai. Aur ek baareeki jo aksar koi nahi batata — aapka share aur sarkar ka matching share LIC ke paas <strong>alag-alag track</strong> hote hain. Iska practical matlab tab samajh aata hai jab koi beech mein scheme chhodta hai: premature exit par sirf <em>aapka</em> jama paisa + interest wapas milta hai; sarkar ka matching share kabhi aapke haath nahi aata, woh pension fund mein wapas chala jata hai.
+            Table dekh kar ek waajib sawal uthta hai: har mahine jo ₹55 ya ₹200 kat rahe hain, woh jaate kahan hain? Poora fund <strong>LIC (Life Insurance Corporation)</strong> manage karti hai. Aur ek baareeki jo aksar koi nahi batata, aapka share aur sarkar ka matching share LIC ke paas <strong>alag-alag track</strong> hote hain. Iska practical matlab tab samajh aata hai jab koi beech mein scheme chhodta hai: premature exit par sirf <em>aapka</em> jama paisa + interest wapas milta hai; sarkar ka matching share kabhi aapke haath nahi aata, woh pension fund mein wapas chala jata hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Isliye upar wali table ka "Total Fund" column padhte waqt yeh dhyan rakhein — ₹110 ya ₹400 mahina fund mein zaroor ja raha hai, lekin woh poora amount tabhi aapke kaam aata hai jab aap 60 tak scheme mein tike rahen. Aadha raste se utarne par hisaab sirf aapke aadhe hisse ka hota hai. Jitni der se yeh baat samajh aati hai, utna mehnga padta hai.
+            Isliye upar wali table ka "Total Fund" column padhte waqt yeh dhyan rakhein. ₹110 ya ₹400 mahina fund mein zaroor ja raha hai, lekin woh poora amount tabhi aapke kaam aata hai jab aap 60 tak scheme mein tike rahen. Aadha raste se utarne par hisaab sirf aapke aadhe hisse ka hota hai. Jitni der se yeh baat samajh aati hai, utna mehnga padta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Registration ki baat karein toh ek aur kharcha jo <strong>hona hi nahi chahiye</strong>: kuch CSC operators "processing fee" ya "service charge" ke naam par ₹100–200 extra maang lete hain. Enrollment bilkul free hai — dena sirf pehla monthly contribution hota hai (aapki umar ke slab ke hisaab se ₹55–₹200). Koi alag fee maange toh wahin mana kar dijiye aur helpline <strong>1800-3000-3468</strong> par shikayat kar dijiye.
+            Registration ki baat karein toh ek aur kharcha jo <strong>hona hi nahi chahiye</strong>: kuch CSC operators "processing fee" ya "service charge" ke naam par ₹100–200 extra maang lete hain. Enrollment bilkul free hai. Dena sirf pehla monthly contribution hota hai (aapki umar ke slab ke hisaab se ₹55–₹200). Koi alag fee maange toh wahin mana kar dijiye aur helpline <strong>1800-3000-3468</strong> par shikayat kar dijiye.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>Aapke Baad Parivar Ka Kya — Contribution Ke Nazariye Se</SH>
+          <SH>Aapke Baad Parivar Ka Kya. Contribution Ke Nazariye Se</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Yeh sawal contribution chart se seedha juda hai, kyunki jawab is par depend karta hai ki dehant kab hota hai. <strong>60 se pehle</strong> (pension shuru hone se pehle): spouse ke paas do raste hain — bacha hua contribution khud dekar scheme continue karein aur 60 par poori ₹3,000 pension lein, ya jama paisa interest ke saath lekar exit kar jayein. <strong>60 ke baad</strong> (pension chalu ho chuki thi): spouse ko ₹3,000 ka aadha — <strong>₹1,500 har mahine</strong> — puri zindagi milta hai. Yeh family pension sirf legally wedded spouse ke liye hai, bachon ke liye nahi.
+            Yeh sawal contribution chart se seedha juda hai, kyunki jawab is par depend karta hai ki dehant kab hota hai. <strong>60 se pehle</strong> (pension shuru hone se pehle): spouse ke paas do raste hain. Bacha hua contribution khud dekar scheme continue karein aur 60 par poori ₹3,000 pension lein, ya jama paisa interest ke saath lekar exit kar jayein. <strong>60 ke baad</strong> (pension chalu ho chuki thi): spouse ko ₹3,000 ka aadha, <strong>₹1,500 har mahine</strong> — puri zindagi milta hai. Yeh family pension sirf legally wedded spouse ke liye hai, bachon ke liye nahi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Enrollment ke waqt ek 2-minute ka kaam is poore process ko aasan bana deta hai: <strong>nominee ka naam sahi bharwana</strong>. Nominee registered ho toh claim settlement 1–2 mahine mein ho jata hai; nominee na ho toh spouse ko tehsil se Legal Heir Certificate lena padta hai aur wahi kaam 6–12 mahine kheench jata hai. Scenario-wise poore rules —{' '}
@@ -345,16 +345,16 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Contribution Ko Lekar Poochhe Gaye Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Maandhan — Common Sawal" />
+          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Maandhan. Common Sawal" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">"3 Mahine Grace" Wali Galatfehmi Se Bachein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Is guide ka sabse kaam ka hissa woh hai jo zyada tar VLE bhi galat batate hain: grace period 3 mahine ka nahi, <strong>sirf 1 mahine</strong> ka hai. Uske baad savings-rate ke barabar late fee lagti hai — pehle 12 mahine simple interest, phir compounding. Contribution miss ho jaye toh ghabraane ki zaroorat nahi (account 3 saal tak regularize ho sakta hai), lekin 1 mahine ke andar bharna sabse sasta rasta hai.
+            Is guide ka sabse kaam ka hissa woh hai jo zyada tar VLE bhi galat batate hain: grace period 3 mahine ka nahi, <strong>sirf 1 mahine</strong> ka hai. Uske baad savings-rate ke barabar late fee lagti hai. Pehle 12 mahine simple interest, phir compounding. Contribution miss ho jaye toh ghabraane ki zaroorat nahi (account 3 saal tak regularize ho sakta hai), lekin 1 mahine ke andar bharna sabse sasta rasta hai.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Slab ka hisaab bhi ek baar upar wali table se milaa lein — 18 par ₹55, 40 par ₹200 — aur enrollment form sign karne se pehle auto-debit wala box khud padhein, kyunki woh 100% optional hai; PM Kisan ki ₹2000 ki kist se apne aap kuch nahi kat-ta jab tak aap likh kar allow na karein.
+            Slab ka hisaab bhi ek baar upar wali table se milaa lein, 18 par ₹55, 40 par ₹200. Aur enrollment form sign karne se pehle auto-debit wala box khud padhein, kyunki woh 100% optional hai; PM Kisan ki ₹2000 ki kist se apne aap kuch nahi kat-ta jab tak aap likh kar allow na karein.
           </p>
         </div>
 

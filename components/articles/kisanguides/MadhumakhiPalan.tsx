@@ -8,12 +8,12 @@ import GuideDisclaimer from '@/components/GuideDisclaimer';
 import { getArticleBySlug } from '@/lib/articles-data';
 
 export const metadata: Metadata = {
-  title: 'Madhumakhi Palan — KVIC Subsidy Aur Kamai Ka Hisaab',
+  title: 'Madhumakhi Palan. KVIC Subsidy Aur Kamai Ka Hisaab',
   description: 'Madhumakhi palan (beekeeping) ka complete guide. Janein KVIC subsidy, bee box price, Apis mellifera farming aur honey business ki ground reality aur profit margin.',
   keywords: ['madhumakhi palan', 'beekeeping subsidy 2026', 'KVIC honey mission', 'chhote scale par bee farming kaise shuru karein', 'bee box price', 'honey business profit in india', 'apis mellifera farming'],
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
-    title: 'Madhumakhi Palan — KVIC Subsidy Aur Kamai Ka Hisaab',
+    title: 'Madhumakhi Palan. KVIC Subsidy Aur Kamai Ka Hisaab',
     description: 'Madhumakhi palan ka complete guide. Janein bee farming, KVIC subsidy, bee box price aur honey business ki ground reality.',
     type: 'article',
     locale: 'hi_IN',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Madhumakhi Palan — KVIC Subsidy Aur Kamai Ka Hisaab',
+    title: 'Madhumakhi Palan. KVIC Subsidy Aur Kamai Ka Hisaab',
     description: 'Madhumakhi palan ka complete guide. Janein bee farming, KVIC subsidy, bee box price aur honey business ki ground reality.',
     images: ['https://kisanstatus.com/images/kisanguides/madhumakhi-palan-hero.webp']
   },
@@ -47,11 +47,11 @@ const madhumakhiPalanFaqs = [
   },
   {
     q: 'Setup ka paisa subsidy aane se pehle kahan se laun?',
-    a: 'Mudra sabse seedha rasta hai — beekeeping iske andar finance hoti hai aur kisi bhi slab par bank collateral nahi maang sakta; pehli baar apply karne walon ki practical ceiling ₹10 lakh hai, jo 50-box unit ke liye kaafi hai. PMEGP me 15–35% margin money milti hai par wo 3 saal lock-in wale alag account me rehti hai, cash hath me nahi aata. Roz ke kharche (feed, mite treatment, transport) ke liye KCC sahi rehta hai, kyunki beekeeping allied activity me aati hai.',
+    a: 'Mudra sabse seedha rasta hai. Beekeeping iske andar finance hoti hai aur kisi bhi slab par bank collateral nahi maang sakta; pehli baar apply karne walon ki practical ceiling ₹10 lakh hai, jo 50-box unit ke liye kaafi hai. PMEGP me 15–35% margin money milti hai par wo 3 saal lock-in wale alag account me rehti hai, cash hath me nahi aata. Roz ke kharche (feed, mite treatment, transport) ke liye KCC sahi rehta hai, kyunki beekeeping allied activity me aati hai.',
   },
   {
     q: 'Pollination ke liye colony rakhne ka kaam kaise shuru karein?',
-    a: 'Aas-paas ke bade sarson ya sunflower khet aur bagwanon se bloom se pehle baat karo — kitne boxes, kitne din, transport kiska. Sabse zaroori shart: colony rakhne ke dino me pesticide spray nahi hoga, ye likhwa lo. Rate ilake par nirbhar karta hai, isliye apne KVK ya pehle se kaam kar rahe beekeeper se chalu rate pooch lo. Colony hilane ke baad 15–30 din ka quarantine rule mat todo.',
+    a: 'Aas-paas ke bade sarson ya sunflower khet aur bagwanon se bloom se pehle baat karo, kitne boxes, kitne din, transport kiska. Sabse zaroori shart: colony rakhne ke dino me pesticide spray nahi hoga, ye likhwa lo. Rate ilake par nirbhar karta hai, isliye apne KVK ya pehle se kaam kar rahe beekeeper se chalu rate pooch lo. Colony hilane ke baad 15–30 din ka quarantine rule mat todo.',
   },
   {
     q: 'Purane frames reuse karne ka risk?',
@@ -73,7 +73,7 @@ export default function MadhumakhiPalan() {
       />
 
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100 leading-tight">
-        Madhumakhi Palan Ki Dohri Kamai — Shahad Bechke Bhi, Bina Beche Bhi
+        Madhumakhi Palan Ki Dohri Kamai. Shahad Bechke Bhi, Bina Beche Bhi
       </h1>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -81,7 +81,7 @@ export default function MadhumakhiPalan() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Lekin ek warning pehle. Jo log sirf YouTube dekhkar bina training ke 40-50 boxes kharid kar khet mein phenk dete hain, wo aksar pehle saal ke lean period (May-June) mein hi haar maan lete hain. Business ki tarah chalao to hi "dohri kamai" milti hai. Neeche KVIC subsidy, breed selection aur ground-level management — sab kram se.
+        Lekin ek warning pehle. Jo log sirf YouTube dekhkar bina training ke 40-50 boxes kharid kar khet mein phenk dete hain, wo aksar pehle saal ke lean period (May-June) mein hi haar maan lete hain. Business ki tarah chalao to hi "dohri kamai" milti hai. Neeche KVIC subsidy, breed selection aur ground-level management. Sab kram se.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -224,25 +224,25 @@ export default function MadhumakhiPalan() {
       </p>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         <strong>Mudra</strong> sabse seedha rasta hai. Beekeeping iske andar finance hoti hai aur iska sabse bada point
-        yahi hai ki collateral maangna bank ke bas me hi nahi hai — kisi bhi slab par. Budget 2024-25 se Tarun Plus slab
+        yahi hai ki collateral maangna bank ke bas me hi nahi hai. Kisi bhi slab par. Budget 2024-25 se Tarun Plus slab
         jud gaya jisne upar ki limit ₹10 lakh se ₹20 lakh kar di, par dhyan raho: wo slab un logon ke liye hai jinhone
-        pehle Tarun ka loan lekar poora chukaya. Pehli file daal rahe ho to practical ceiling ₹10 lakh hai — 50-box unit
+        pehle Tarun ka loan lekar poora chukaya. Pehli file daal rahe ho to practical ceiling ₹10 lakh hai. 50-box unit
         ke liye ye kaafi se zyada hai. Byaj sarkari bank se aam taur par 9–12%, NBFC se 18 tak bhi. Do-teen branch se
         likhit rate lekar compare karo.
       </p>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         <strong>PMEGP</strong> me subsidy hai, par uska structure samajh lo. Margin money project cost ka 15 se 35
         pratishat hoti hai (gaon ki mahila applicant ko sabse zyada, shahar ke general category ko sabse kam), aur wo
-        paisa seedha hath me nahi aata — ek alag account me <strong>3 saal ke lock-in</strong> ke saath rakha jaata hai.
+        paisa seedha hath me nahi aata, ek alag account me <strong>3 saal ke lock-in</strong> ke saath rakha jaata hai.
         Unit theek chali to teen saal baad loan me adjust ho jaata hai; beech me band kar di to subsidy wapas le li jaati
         hai. Matlab: PMEGP se EMI halki hoti hai, upfront cash nahi milta. Isi liye “pehle apni jeb se setup karo” wali
         salaah upar likhi hai.
       </p>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Teesra — <strong>KCC</strong>. Beekeeping allied activity me aati hai, isliye KCC iske liye bhi banta hai. Ye
+        Teesra, <strong>KCC</strong>. Beekeeping allied activity me aati hai, isliye KCC iske liye bhi banta hai. Ye
         setup ka paisa nahi, chalne ka paisa hai: sugar syrup ka feed, mite treatment, naye frames, transport. Revolving
-        credit hai — jitna nikala, utne din ka byaj, aur time par chukane par effective rate 4% ke aas-paas. Lean season
-        (April–June) me jab kharcha hai aur bikri nahi, wahi mahine KCC sambhalta hai. Kaunsa rasta kab — poora
+        credit hai. Jitna nikala, utne din ka byaj, aur time par chukane par effective rate 4% ke aas-paas. Lean season
+        (April–June) me jab kharcha hai aur bikri nahi, wahi mahine KCC sambhalta hai. Kaunsa rasta kab, poora
         comparison{' '}
         <Link href="/articles/KisanRinKahaSeLe2026" className="text-blue-600 hover:underline dark:text-blue-400 font-medium">kisan
         rin kahan se le</Link> me hai, aur bina collateral wale routes ka detail{' '}
@@ -251,7 +251,7 @@ export default function MadhumakhiPalan() {
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Pollination Ka Kiraya — Shahad Se Alag Kamai
+        Pollination Ka Kiraya. Shahad Se Alag Kamai
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Himachal aur Uttarakhand ke apple belt me kisaan khud beekeepers ko paise dekar apne orchard me colonies
@@ -259,32 +259,32 @@ export default function MadhumakhiPalan() {
         tak gir jaati hai. Bagwan ke liye ye kharcha nahi, bima hai.
       </p>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Aapke liye iska matlab ye hai ki ek hi unit se do kamai ban sakti hai — shahad, aur pollination service. Aur ye
+        Aapke liye iska matlab ye hai ki ek hi unit se do kamai ban sakti hai. Shahad, aur pollination service. Aur ye
         doosri kamai bloom ke un hafton me aati hai jab colony kisi bhi tarah wahan pahunchni hi thi.
       </p>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Ye kaam sirf apple belt tak nahi hai. Jan–March me sarson aur litchi ka bloom hai, Oct–Dec me sunflower aur ber
-        — yani aapke apne calendar me pehle se do window hain jinme aas-paas ka koi bada khet ya bagicha colony ka fayda
+       . Yani aapke apne calendar me pehle se do window hain jinme aas-paas ka koi bada khet ya bagicha colony ka fayda
         le sakta hai. Sarson wale bade khet aur sunflower ke plot sabse aasaan shuruat hain, kyunki wahan bloom ek saath
         aata hai aur khet malik ko farak turant dikhta hai.
       </p>
       <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-5 my-6 not-prose">
         <h3 className="font-bold text-green-800 dark:text-green-300 mb-3 text-sm">Baat karne se pehle ye tay kar lo:</h3>
         <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700 dark:text-gray-300">
-          <li>Kitne boxes, kitne din — aur bloom ki tareekh kiski zimmedari hai. Bloom nikal gaya to colony ka koi
+          <li>Kitne boxes, kitne din. Aur bloom ki tareekh kiski zimmedari hai. Bloom nikal gaya to colony ka koi
             matlab nahi rehta.</li>
-          <li><strong>Pesticide ki shart likhwao.</strong> Colony rakhne ke dino me spray nahi hoga — ye sabse zaroori
+          <li><strong>Pesticide ki shart likhwao.</strong> Colony rakhne ke dino me spray nahi hoga. Ye sabse zaroori
             line hai, warna aapki colony hi khatam ho jaayegi. Padosi ke khet ka spray plan bhi pooch lo.</li>
-          <li>Paani ka source aur hive rakhne ki jagah — dhoop aur tez hawa se bachi, zameen se oonchi.</li>
+          <li>Paani ka source aur hive rakhne ki jagah, dhoop aur tez hawa se bachi, zameen se oonchi.</li>
           <li>Le jaane–laane ka transport kiska, aur nuksan hone par kya. Baat zubani rehne se dono taraf shikayat
             banti hai; ek kagaz par likh lena hi kaafi hai.</li>
         </ul>
       </div>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Rate ilake aur bloom ke hisaab se tay hota hai, isliye koi ek figure yahan likhna theek nahi — apne district ke
+        Rate ilake aur bloom ke hisaab se tay hota hai, isliye koi ek figure yahan likhna theek nahi. Apne district ke
         KVK ya pehle se kaam kar rahe beekeeper se chalu rate pooch lo. Ek baar do-teen bagwan ya bade kisan ke saath
         kaam ho gaya, to agle saal wo khud bulate hain. Aur haan, colony hilane ke baad 15–30 din ka quarantine wala
-        rule mat todo — doosre ke khet se laayi hui bimari poore apiary ko le doobti hai.
+        rule mat todo, doosre ke khet se laayi hui bimari poore apiary ko le doobti hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">

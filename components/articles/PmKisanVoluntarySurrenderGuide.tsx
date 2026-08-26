@@ -15,11 +15,11 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Sarkar sach mein pakadti hai kya? Ya bas dar dikhaya jata hai?',
-    a: 'Sach mein pakadti hai. Ab tak ineligible logon se ₹416 crore se zyada ki recovery ho chuki hai. Bihar jaise state me 13 lakh se zyada log ineligible mile — zyadatar Aadhaar-ration card matching se pakde gaye, jisme ek hi parivar ke kai log paisa le rahe the. System ab data se cross-check karta hai, toh chupne ka scope pehle jaisa nahi raha.',
+    a: 'Sach mein pakadti hai. Ab tak ineligible logon se ₹416 crore se zyada ki recovery ho chuki hai. Bihar jaise state me 13 lakh se zyada log ineligible mile, zyadatar Aadhaar-ration card matching se pakde gaye, jisme ek hi parivar ke kai log paisa le rahe the. System ab data se cross-check karta hai, toh chupne ka scope pehle jaisa nahi raha.',
   },
   {
-    q: 'Zameen dada/pita ke naam hai, kheti main karta hoon — mujhe surrender karna padega?',
-    a: 'Surrender ka nahi, mutation (dakhil-kharij) ka case hai. March 2026 se niyam sakht hue hain — benefit sirf usko milega jiske apne naam zameen ke kagaz aur lagaan rasid ho. Agar zameen abhi bhi purkhon ke naam hai, toh pehle mutation karwao. Jab tak kagaz aapke naam nahi, aap technically eligible nahi ho, aur payment ruk sakti hai.',
+    q: 'Zameen dada/pita ke naam hai, kheti main karta hoon, mujhe surrender karna padega?',
+    a: 'Surrender ka nahi, mutation (dakhil-kharij) ka case hai. March 2026 se niyam sakht hue hain. Benefit sirf usko milega jiske apne naam zameen ke kagaz aur lagaan rasid ho. Agar zameen abhi bhi purkhon ke naam hai, toh pehle mutation karwao. Jab tak kagaz aapke naam nahi, aap technically eligible nahi ho, aur payment ruk sakti hai.',
   },
   {
     q: 'Kaun logon ko surrender karna chahiye?',
@@ -39,7 +39,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Surrender aur refund me kya fark hai?',
-    a: 'Surrender aage ki kistein rokta hai, refund pichli li hui kistein wapas karta hai. Agar aap ineligible the aur pehle paisa le chuke ho, toh sirf surrender kaafi nahi — recovery ka sawaal phir bhi khada rahega. Aise case me refund ka rasta bhi portal se hi hai, aur jitni kistein chunoge utni hi lautti hain.',
+    a: 'Surrender aage ki kistein rokta hai, refund pichli li hui kistein wapas karta hai. Agar aap ineligible the aur pehle paisa le chuke ho, toh sirf surrender kaafi nahi. Recovery ka sawaal phir bhi khada rahega. Aise case me refund ka rasta bhi portal se hi hai, aur jitni kistein chunoge utni hi lautti hain.',
   },
   {
     q: 'Surrender ke baad list se naam kab hatta hai?',
@@ -89,7 +89,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
             priority
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)]">
-            Voluntary Surrender — Galti Sudharne Ka Tarika
+            Voluntary Surrender. Galti Sudharne Ka Tarika
           </p>
         </div>
 
@@ -130,11 +130,11 @@ export default function PmKisanVoluntarySurrenderGuide() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
             {[
-              { icon: '', title: 'Government Employees', desc: 'Teachers, clerks, officers — sabhi government jobs wale' },
+              { icon: '', title: 'Government Employees', desc: 'Teachers, clerks, officers, sabhi government jobs wale' },
               { title: 'Income Tax Filers', desc: 'Jo log income tax return file karte hain' },
               { icon: '', title: 'Pensioners', desc: 'Old age pension ya family pension lene wale' },
               { icon: '', title: 'MP/MLA/Officials', desc: 'Elected representatives aur unke family members' },
-              { icon: '', title: 'Professionals', desc: 'CA, Doctor, Lawyer, Engineer — registered professionals' },
+              { icon: '', title: 'Professionals', desc: 'CA, Doctor, Lawyer, Engineer, registered professionals' },
               { icon: '', title: 'Institutional Land', desc: 'Jinki zameen trust ya company ke naam par hai' },
             ].map(({ icon, title, desc }) => (
               <div key={title} className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
@@ -336,19 +336,19 @@ export default function PmKisanVoluntarySurrenderGuide() {
         </section>
 
         <section className="mb-8">
-          <SH>2026 Mein Sakhti Kitni Badh Gayi Hai — Asli Numbers</SH>
+          <SH>2026 Mein Sakhti Kitni Badh Gayi Hai. Asli Numbers</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             "Koi nahi dekh raha, chalne do" waali soch ab 2026 me kaam nahi karegi. Verified aankde dekho:
           </p>
           <ul className="space-y-2 mb-4 text-sm text-[var(--color-text-muted)]">
-            <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>₹416 crore+ ki recovery</strong> ho chuki hai ineligible beneficiaries se — yeh dhamki nahi, ho chuka kaam hai.</li>
-            <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>Bihar me 13 lakh+ log ineligible</strong> paye gaye (~₹780 crore galat haath me gaya) — Aadhaar-ration card matching se pakde gaye, jisme ek parivar ke kai members paisa le rahe the.</li>
-            <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>2026 ke audit me 1.13 crore+ naam</strong> beneficiary list se hataye gaye — eKYC, land record aur taxpayer cross-check se.</li>
+            <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>₹416 crore+ ki recovery</strong> ho chuki hai ineligible beneficiaries se. Yeh dhamki nahi, ho chuka kaam hai.</li>
+            <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>Bihar me 13 lakh+ log ineligible</strong> paye gaye (~₹780 crore galat haath me gaya). Aadhaar-ration card matching se pakde gaye, jisme ek parivar ke kai members paisa le rahe the.</li>
+            <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>2026 ke audit me 1.13 crore+ naam</strong> beneficiary list se hataye gaye, eKYC, land record aur taxpayer cross-check se.</li>
             <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>March 2026 se land-ownership rule:</strong> zameen ke kagaz apne naam hone zaroori hain. Purkhon ke naam waali zameen pe bina mutation ke benefit band ho sakta hai.</li>
           </ul>
           <IB>
             <strong>Seedha matlab:</strong> agar aap jaante ho ki eligible nahi ho (taxpayer ho, pension ₹10,000+ hai,
-            parivar me pehle se koi le raha hai), toh khud surrender karna sabse sasta rasta hai — recovery notice aane
+            parivar me pehle se koi le raha hai), toh khud surrender karna sabse sasta rasta hai. Recovery notice aane
             ke baad wahi kaam byaj samet mehnga padta hai. Notice aa chuka hai toh{' '}
             <Link href="/articles/hi/recovery-notice" className="underline font-semibold">recovery notice waala guide</Link> padho.
           </IB>
@@ -378,21 +378,21 @@ export default function PmKisanVoluntarySurrenderGuide() {
         </section>
 
         <section className="mb-8">
-          <SH>Surrender, Refund Ya Aapatti — Teeno Alag Raaste Hain</SH>
+          <SH>Surrender, Refund Ya Aapatti. Teeno Alag Raaste Hain</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Log in teeno ko mila dete hain, aur wahi sabse badi galti hai. Teeno ka kaam alag hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            <strong>Surrender</strong> aage ki kistein rokta hai. Bas. Jo paisa pehle aa chuka hai, us par surrender ka koi asar nahi. <strong>Refund</strong> ulta kaam karta hai — pichli li hui kistein sarkar ko wapas karta hai. Aur <strong>aapatti (objection)</strong> tab hai jab aapko lagta hai ki aap eligible ho hi, aur notice ya entry galat hai.
+            <strong>Surrender</strong> aage ki kistein rokta hai. Bas. Jo paisa pehle aa chuka hai, us par surrender ka koi asar nahi. <strong>Refund</strong> ulta kaam karta hai. Pichli li hui kistein sarkar ko wapas karta hai. Aur <strong>aapatti (objection)</strong> tab hai jab aapko lagta hai ki aap eligible ho hi, aur notice ya entry galat hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ineligible aadmi ke liye poora safai ka rasta dono se milkar banta hai: surrender + refund. Sirf surrender karke baith gaye? Hisaab khula rehta hai — recovery notice baad me bhi aa sakta hai. Refund bhi portal se hi hota hai, aur jitni kistein chunoge utni hi lautti hain — yaani hisson me lautana technically possible hai. District recovery wale mamlon me shartein local prashasan tay karta hai; likhit me pooch lo.
+            Ineligible aadmi ke liye poora safai ka rasta dono se milkar banta hai: surrender + refund. Sirf surrender karke baith gaye? Hisaab khula rehta hai — recovery notice baad me bhi aa sakta hai. Refund bhi portal se hi hota hai, aur jitni kistein chunoge utni hi lautti hain. Yaani hisson me lautana technically possible hai. District recovery wale mamlon me shartein local prashasan tay karta hai; likhit me pooch lo.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ek aur baat jo kam log jaante hain: zyadatar mamle — galat entry ki aapatti, refund, record sudhaar — krishi vibhag ya tehsil ke level par hi nipat jaate hain, aur inki koi fees nahi lagti. Vakil ki zaroorat tabhi padti hai jab mamla bhu-rajasva vasooli ki kanooni karrawai tak pahunch jaye. Wahan tak jaane hi kyon dena?
+            Ek aur baat jo kam log jaante hain: zyadatar mamle, galat entry ki aapatti, refund, record sudhaar, krishi vibhag ya tehsil ke level par hi nipat jaate hain, aur inki koi fees nahi lagti. Vakil ki zaroorat tabhi padti hai jab mamla bhu-rajasva vasooli ki kanooni karrawai tak pahunch jaye. Wahan tak jaane hi kyon dena?
           </p>
           <IB>
-            <strong>Dobara judne ka rasta band nahi hota:</strong> agar ineligibility ki wajah baad me khatam ho jaye — naukri chhoot gayi, ya record ki galti sudhar gayi — toh naye sire se aavedan ka rasta khula hai. Purana refund isme baadha nahi banta; saaf record ulta madad karta hai. Poori detail{' '}
+            <strong>Dobara judne ka rasta band nahi hota:</strong> agar ineligibility ki wajah baad me khatam ho jaye, naukri chhoot gayi, ya record ki galti sudhar gayi, toh naye sire se aavedan ka rasta khula hai. Purana refund isme baadha nahi banta; saaf record ulta madad karta hai. Poori detail{' '}
             <Link href="/articles/hi/recovery-notice" className="underline font-semibold">recovery notice guide</Link> me hai.
           </IB>
         </section>
@@ -403,12 +403,12 @@ export default function PmKisanVoluntarySurrenderGuide() {
             Portal par Self Surrender ka page nahi khul raha? Aadhaar daalne par record nahi mil raha? Ya submit ke 30 din baad bhi list se naam nahi hata? Teen raaste hain, teeno official:
           </p>
           <ul className="space-y-2 mb-4 text-sm text-[var(--color-text-muted)]">
-            <li className="flex gap-2"><span className="text-green-700 shrink-0 font-bold" aria-hidden="true">1.</span> <span><strong>Helpline 155261</strong> — busy ho toh landline <strong>011-24300606</strong>. Timing aam taur par subah 9 se shaam 6, somvar se shanivar. Kist release wale hafte lines sabse zyada busy hoti hain — subah 9-10 baje ke beech lagao, load kam hota hai.</span></li>
+            <li className="flex gap-2"><span className="text-green-700 shrink-0 font-bold" aria-hidden="true">1.</span> <span><strong>Helpline 155261</strong>, busy ho toh landline <strong>011-24300606</strong>. Timing aam taur par subah 9 se shaam 6, somvar se shanivar. Kist release wale hafte lines sabse zyada busy hoti hain. Subah 9-10 baje ke beech lagao, load kam hota hai.</span></li>
             <li className="flex gap-2"><span className="text-green-700 shrink-0 font-bold" aria-hidden="true">2.</span> <span><strong>Email</strong> — <strong>pmkisan-ict@gov.in</strong> par apna Aadhaar-linked registration number aur problem ek line me likh kar bhejo.</span></li>
-            <li className="flex gap-2"><span className="text-green-700 shrink-0 font-bold" aria-hidden="true">3.</span> <span><strong>Help Desk Query Form</strong> — pmkisan.gov.in ke Help Desk me online complaint daalo. Iska ticket number milta hai, jo phone call se zyada kaam ka hai — follow-up me yahi number kaam aata hai. Poori guide{' '}<Link href="/yojana/pm-kisan-helpline-155261" className="underline text-green-700 dark:text-green-400">helpline 155261 article</Link> me hai.</span></li>
+            <li className="flex gap-2"><span className="text-green-700 shrink-0 font-bold" aria-hidden="true">3.</span> <span><strong>Help Desk Query Form</strong>, pmkisan.gov.in ke Help Desk me online complaint daalo. Iska ticket number milta hai, jo phone call se zyada kaam ka hai. Follow-up me yahi number kaam aata hai. Poori guide{' '}<Link href="/yojana/pm-kisan-helpline-155261" className="underline text-green-700 dark:text-green-400">helpline 155261 article</Link> me hai.</span></li>
           </ul>
           <WB>
-            <strong>Ek warning saaf-saaf:</strong> 155261 ya kisi bhi sarkari number se call karke koi OTP nahi poochta, bank detail confirm nahi karwata. "Surrender cancel karna hai toh OTP batao" type ka call aaye toh wo fraud hai — kaat do. Surrender ke naam par bhi thagi chalti hai.
+            <strong>Ek warning saaf-saaf:</strong> 155261 ya kisi bhi sarkari number se call karke koi OTP nahi poochta, bank detail confirm nahi karwata. "Surrender cancel karna hai toh OTP batao" type ka call aaye toh wo fraud hai. Kaat do. Surrender ke naam par bhi thagi chalti hai.
           </WB>
         </section>
 

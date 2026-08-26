@@ -10,13 +10,13 @@ const MODIFIED = '2026-08-18T07:02:28+05:30';
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
-  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed — 7 Fixes' },
+  { slug: 'PmKisanPaymentFailedFix2026', title: 'Payment Failed, 7 Fixes' },
   { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Account Change' },
 ];
 
 const FAQS_DATA = [
-  { q: 'FTO ka full form kya hai?', a: 'FTO ka full form hai Fund Transfer Order (फंड ट्रांसफर ऑर्डर). Ye sarkar ki taraf se bank ko diya gaya payment ka aadesh hai — kis kisan ke account me kitni rakam bhejni hai. PM Kisan status me "FTO is Generated" dikhne ka matlab hai ki aapki kist ka order ban chuka hai.' },
-  { q: 'Status me "Reason for Failed Transaction / FTO" likha aa raha hai — iska matlab?', a: 'Ye ek heading hai jo batati hai ki aapki payment kyun fail hui. Asli jawab uske aage/neeche likhi entry me hota hai — jaise Aadhaar not seeded, account closed, ya name mismatch. Wahi entry padho aur usi hisaab se sudhaar karao. Column khaali hai to payment fail nahi hui, sirf format aise dikhta hai.' },
+  { q: 'FTO ka full form kya hai?', a: 'FTO ka full form hai Fund Transfer Order (फंड ट्रांसफर ऑर्डर). Ye sarkar ki taraf se bank ko diya gaya payment ka aadesh hai. Kis kisan ke account me kitni rakam bhejni hai. PM Kisan status me "FTO is Generated" dikhne ka matlab hai ki aapki kist ka order ban chuka hai.' },
+  { q: 'Status me "Reason for Failed Transaction / FTO" likha aa raha hai. Iska matlab?', a: 'Ye ek heading hai jo batati hai ki aapki payment kyun fail hui. Asli jawab uske aage/neeche likhi entry me hota hai. Jaise Aadhaar not seeded, account closed, ya name mismatch. Wahi entry padho aur usi hisaab se sudhaar karao. Column khaali hai to payment fail nahi hui, sirf format aise dikhta hai.' },
   { q: 'Status me Generated dikhne ke baad paisa kitne din me aata hai?', a: 'Iska koi official fixed timeline nahi hai, sarkar ne kabhi announce nahi kiya ki kitne din lagenge. Aam taur par order banne ke baad DBT se paisa kuch hi dino me aa jata hai. Haan, 15 din se upar ho jayein to phir wait karne ke bajay Aadhaar seeding aur account ki jaanch karwani chahiye.' },
   { q: 'Processed aur Generated me kya fark hai?', a: 'Generated: sarkar ne bank ko payment ka order bhej diya. Processed: bank ne us order par kaam shuru kar diya, yaani ek step aage. Processed dikhne ke baad credit ki umeed jaldi rakh sakte ho.' },
   { q: '"Will be generated" ka kya matlab hua?', a: 'Order abhi bana nahi, banna baki hai. Aap beneficiary list me ho, bas aapki batch ki bari nahi aayi. Kuch dino me ye khud hi "Generated" ho jata hai, aapko kuch nahi karna.' },
@@ -45,7 +45,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           </nav>
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Payment Status Guide</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            FTO Full Form Aur FTO Generated Ka Matlab — PM Kisan Guide
+            FTO Full Form Aur FTO Generated Ka Matlab. PM Kisan Guide
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
@@ -61,7 +61,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp'}
-            alt="Fund Transfer Order status samjhane wali guide — PM Kisan payment 2026"
+            alt="Fund Transfer Order status samjhane wali guide. PM Kisan payment 2026"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -75,7 +75,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         </div>
 
         <p className="text-base leading-relaxed mb-4">
-          <strong>FTO ka full form hai “Fund Transfer Order” (फंड ट्रांसफर ऑर्डर)</strong> — sarkar ki taraf se bank ko diya gaya aadesh ki kis kisan ke account me kitni rakam dalni hai. PM Kisan status me “FTO is Generated” dikhe to matlab aapki kist ka payment order ban chuka hai.
+          <strong>FTO ka full form hai “Fund Transfer Order” (फंड ट्रांसफर ऑर्डर)</strong>, sarkar ki taraf se bank ko diya gaya aadesh ki kis kisan ke account me kitni rakam dalni hai. PM Kisan status me “FTO is Generated” dikhe to matlab aapki kist ka payment order ban chuka hai.
         </p>
 
         <div className="my-6 p-5 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-500 dark:border-amber-700 border-l-[6px] rounded-xl">
@@ -102,16 +102,16 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           <SH>FTO Generated Ka Matlab Kya Hai?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Cheque wala example lo. Aapne kisi ko cheque de diya — paisa dene ka pakka order ho gya, ab use cash karna bank ka kaam hai. <strong>Ye bhi theek wahi cheez hai, bas digital roop me.</strong> Portal ke alag-alag status isi safar ke padav hain:
+            Cheque wala example lo. Aapne kisi ko cheque de diya, paisa dene ka pakka order ho gya, ab use cash karna bank ka kaam hai. <strong>Ye bhi theek wahi cheez hai, bas digital roop me.</strong> Portal ke alag-alag status isi safar ke padav hain:
           </p>
 
           <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-300 dark:border-green-700 rounded-xl p-5 mb-6">
             <ul className="text-sm text-green-800 dark:text-green-200 space-y-1">
-              <li><strong>FTO will be generated</strong> — order abhi bana hi nahi, list mein naam chadhne ka intezaar hai</li>
-              <li><strong>FTO Generated</strong> — government ne order bhej diya</li>
-              <li><strong>FTO Processed</strong> — bank ne order par kaam shuru kar diya</li>
-              <li><strong>Credit Release Pending</strong> — paisa nikalne ki final stage chal rahi hai</li>
-              <li><strong>Payment Success / Credited</strong> — paisa account me aa gaya</li>
+              <li><strong>FTO will be generated</strong>, order abhi bana hi nahi, list mein naam chadhne ka intezaar hai</li>
+              <li><strong>FTO Generated</strong>, government ne order bhej diya</li>
+              <li><strong>FTO Processed</strong>, bank ne order par kaam shuru kar diya</li>
+              <li><strong>Credit Release Pending</strong>, paisa nikalne ki final stage chal rahi hai</li>
+              <li><strong>Payment Success / Credited</strong>, paisa account me aa gaya</li>
             </ul>
           </div>
 
@@ -162,7 +162,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-300 dark:border-blue-700 rounded-xl p-5 mb-4">
             <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-2">
-              <li><strong>&ldquo;FTO is generated&rdquo;</strong> — accha hissa. Aapka order ban chuka hai, government ne apna kaam kar diya.</li>
+              <li><strong>&ldquo;FTO is generated&rdquo;</strong>, accha hissa. Aapka order ban chuka hai, government ne apna kaam kar diya.</li>
               <li><strong>&ldquo;Payment confirmation is pending&rdquo;</strong> — bank ki taraf se credit hone ki confirmation abhi portal tak wapas nahi aayi.</li>
             </ul>
           </div>
@@ -209,7 +209,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             <strong>24vi kist kab?</strong> Official date abhi announce nahi hui. 4-mahine ke pattern ke hisaab se October–November 2026 ke aas-paas expect ki ja sakti hai. Lekin pakki date sirf pmkisan.gov.in ya PIB ke elaan se aati hai, kisi YouTube video ya WhatsApp forward se nahi. Detail ke liye padhein:{' '}
-            <Link href="/articles/PmKisan24viKist2026" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">24vi Kist — Latest Update</Link>.
+            <Link href="/articles/PmKisan24viKist2026" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">24vi Kist. Latest Update</Link>.
           </p>
           <DB>
             eKYC abhi tak pending hai? Aaj hi karwa lo, bina iske kist rok di jati hai. OTP wali to ghar baithe ho jati hai. Poora process:{' '}
@@ -243,7 +243,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <li>Account lambe samay se istemaal nahi hua aur inoperative ho gaya</li>
           </ul>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Status page par ye ek khaas line bhi dikh sakti hai — <strong>&ldquo;Reason for Failed Transaction / FTO&rdquo;</strong>. Iske aage jo likha hai, wahi aapki asli problem hai. Aam entries aur unka matlab:
+            Status page par ye ek khaas line bhi dikh sakti hai. <strong>&ldquo;Reason for Failed Transaction / FTO&rdquo;</strong>. Iske aage jo likha hai, wahi aapki asli problem hai. Aam entries aur unka matlab:
           </p>
           <div className="my-4 overflow-x-auto">
             <table className="w-full text-sm border-collapse">
@@ -256,7 +256,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
               <tbody>
                 <tr>
                   <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Aadhaar not seeded / NPCI inactive</td>
-                  <td className="border border-[var(--color-border)] px-3 py-2">Bank shakha me NPCI seeding form bharo — poora tareeka <Link href="/articles/hi/npci-aadhaar-seeding" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">is guide me</Link></td>
+                  <td className="border border-[var(--color-border)] px-3 py-2">Bank shakha me NPCI seeding form bharo, poora tareeka <Link href="/articles/hi/npci-aadhaar-seeding" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">is guide me</Link></td>
                 </tr>
                 <tr>
                   <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Account closed / inactive</td>
@@ -264,23 +264,23 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
                 </tr>
                 <tr>
                   <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Name mismatch</td>
-                  <td className="border border-[var(--color-border)] px-3 py-2">Aadhaar aur bank record me naam ki spelling alag hai — jo galat hai use pehle sudhrwao</td>
+                  <td className="border border-[var(--color-border)] px-3 py-2">Aadhaar aur bank record me naam ki spelling alag hai. Jo galat hai use pehle sudhrwao</td>
                 </tr>
                 <tr>
                   <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Rejected / Returned by bank</td>
-                  <td className="border border-[var(--color-border)] px-3 py-2">Bank ne paisa wapas bhej diya — correction ke baad agle cycle me dobara process hota hai</td>
+                  <td className="border border-[var(--color-border)] px-3 py-2">Bank ne paisa wapas bhej diya, correction ke baad agle cycle me dobara process hota hai</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Bank jakar seeding aur naam ki spelling, dono ek sath verify karwa lo. Zyadatar cases wahi sulajh jate hain. Har failure reason ka step-by-step ilaaj alag article me likha hai:{' '}
-            <Link href="/articles/PmKisanPaymentFailedFix2026" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">Payment Failed — 7 Fixes</Link>.
+            <Link href="/articles/PmKisanPaymentFailedFix2026" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">Payment Failed, 7 Fixes</Link>.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>Account "Dormant" Ho Gaya — Asli Niyam Kya Hai?</SH>
+          <SH>Account "Dormant" Ho Gaya. Asli Niyam Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Is par bahut galat jaankari failai jati hai, isliye RBI ka asli niyam jaan lo: <strong>savings ya current account tab inoperative (dormant) hota hai jab usme 2 saal tak aapki taraf se koi transaction na ho.</strong> 6 mahine me nahi, jaisa kai jagah likha milta hai. 12 mahine bina transaction ke bank aapko warning notice bhejta hai.
           </p>
@@ -389,15 +389,15 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             Kuch sawal is topic se jude hote hain par unki apni poori kahani hai. Unke liye alag detailed guides likhi hain, wahan step-by-step sab milega:
           </p>
           <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2">
-            <li><strong>FTO ban gaya, ab paisa kab aayega?</strong> — 15-din rule aur delay checklist:{' '}
-              <Link href="/articles/fto-status-check-paisa-kab-aayega" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">FTO Status Check — Paisa Kab Aayega</Link></li>
-            <li><strong>Land seeding "Not Seeded" dikha raha hai?</strong> — Form, documents aur process:{' '}
+            <li><strong>FTO ban gaya, ab paisa kab aayega?</strong>, 15-din rule aur delay checklist:{' '}
+              <Link href="/articles/fto-status-check-paisa-kab-aayega" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">FTO Status Check. Paisa Kab Aayega</Link></li>
+            <li><strong>Land seeding "Not Seeded" dikha raha hai?</strong>. Form, documents aur process:{' '}
               <Link href="/articles/PmKisanLandSeedingForm" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">Land Seeding Form Guide</Link></li>
-            <li><strong>Khud portal se registration kiya tha?</strong> — Status check ka alag tareeka:{' '}
+            <li><strong>Khud portal se registration kiya tha?</strong>. Status check ka alag tareeka:{' '}
               <Link href="/articles/pm-kisan-self-registered-status-check" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">Self Registered Status Check</Link></li>
-            <li><strong>CSC wale ne registration ke paise mange?</strong> — Kya official charge hai aur kya nahi:{' '}
+            <li><strong>CSC wale ne registration ke paise mange?</strong>. Kya official charge hai aur kya nahi:{' '}
               <Link href="/articles/PmKisanCscRegistrationCharges" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">CSC Registration Charges</Link></li>
-            <li><strong>Naam ya IFSC galat hai?</strong> — Sudhaarne ka process:{' '}
+            <li><strong>Naam ya IFSC galat hai?</strong>. Sudhaarne ka process:{' '}
               <Link href="/articles/PmKisanCorrectionForm2026" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">Correction Form Guide</Link></li>
           </ul>
         </section>
@@ -412,7 +412,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           <div className="space-y-4">
             <div className="border-l-4 border-red-500 dark:border-red-700 pl-4 py-1">
               <h3 className="font-black text-[var(--color-text)] text-sm mb-1">Aadhaar Seeding Check Karein</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">Pehla kaam — bank jaakar counter par Aadhaar seeding ki jaankari poochein. Yahi sabse common reason hai jab paisa atak jata hai. "Not Seeded" nikle toh usi din karwa lein.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Pehla kaam, bank jaakar counter par Aadhaar seeding ki jaankari poochein. Yahi sabse common reason hai jab paisa atak jata hai. "Not Seeded" nikle toh usi din karwa lein.</p>
             </div>
             <div className="border-l-4 border-orange-500 dark:border-orange-700 pl-4 py-1">
               <h3 className="font-black text-[var(--color-text)] text-sm mb-1">NPCI Mapping</h3>
@@ -495,7 +495,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             PM Kisan Official Portal
           </h3>
           <p className="text-xs text-blue-700 dark:text-blue-400 mb-3">
-            Payment status, land seeding, ya beneficiary list — teeno ki jaankari isi ek portal par mil jayegi. 10 second baad khulega.
+            Payment status, land seeding, ya beneficiary list. Teeno ki jaankari isi ek portal par mil jayegi. 10 second baad khulega.
           </p>
           <OfficialLinkButton
             title="PM Kisan Official Portal"
@@ -510,7 +510,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
 
         <CalcBanner
           title="Apni Kist Track Karein"
-          desc="Kitni kist aayi, payment kahan tak pahuncha, arrears kitne — sab jaanein"
+          desc="Kitni kist aayi, payment kahan tak pahuncha, arrears kitne. Sab jaanein"
           primaryCta={{ href: '/calculator/installment-tracker', label: 'Tracker Kholein →' }}
           secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator' }}
         />

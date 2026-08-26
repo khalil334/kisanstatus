@@ -13,23 +13,23 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'NLM mein murgi palan par kitni subsidy milti hai?',
-    a: 'NLM ke Entrepreneurship Development component mein poultry project par 50% capital subsidy milti hai — poultry unit (parent farm, hatchery, brooding unit) ke liye maximum ₹25 lakh tak. Yaani ₹50 lakh ke project par ₹25 lakh sarkar deti hai. Subsidy back-ended hoti hai — pehle project lagta hai, phir subsidy release hoti hai.',
+    a: 'NLM ke Entrepreneurship Development component mein poultry project par 50% capital subsidy milti hai. Poultry unit (parent farm, hatchery, brooding unit) ke liye maximum ₹25 lakh tak. Yaani ₹50 lakh ke project par ₹25 lakh sarkar deti hai. Subsidy back-ended hoti hai. Pehle project lagta hai, phir subsidy release hoti hai.',
   },
   {
     q: 'Back-ended subsidy ka matlab kya hai?',
-    a: 'Matlab subsidy advance mein nahi milti. Pehle aapka loan sanction hota hai / aap apna paisa lagate ho, project shuru hota hai, phir verification ke baad subsidy installments mein release hoti hai. Isliye project ka non-subsidy hissa (apna margin + bank loan) pehle se arrange karna zaroori hai — yahi is scheme ka sabse bada practical point hai.',
+    a: 'Matlab subsidy advance mein nahi milti. Pehle aapka loan sanction hota hai / aap apna paisa lagate ho, project shuru hota hai, phir verification ke baad subsidy installments mein release hoti hai. Isliye project ka non-subsidy hissa (apna margin + bank loan) pehle se arrange karna zaroori hai. Yahi is scheme ka sabse bada practical point hai.',
   },
   {
     q: 'Kaun apply kar sakta hai?',
-    a: 'Individual (kisan ya berozgar yuva), SHG, FPO, FCO, JLG aur Section 8 companies — sab eligible hain. Shart yeh hai ki aapke paas training/anubhav ho (ya trained staff ho), project ke liye zameen ho (khud ki ya lease par), aur bank se loan sanction ho ya self-finance mein bank guarantee de sako.',
+    a: 'Individual (kisan ya berozgar yuva), SHG, FPO, FCO, JLG aur Section 8 companies. Sab eligible hain. Shart yeh hai ki aapke paas training/anubhav ho (ya trained staff ho), project ke liye zameen ho (khud ki ya lease par), aur bank se loan sanction ho ya self-finance mein bank guarantee de sako.',
   },
   {
     q: 'Apply kahan hota hai?',
-    a: 'Online — nlm.udyamimitra.in par. Registration, project details, documents, bank ki jaankari. Process State Implementing Agency (SIA) ke through hota hai; approval ke baad subsidy SIDBI ke through release hoti hai.',
+    a: 'Online, nlm.udyamimitra.in par. Registration, project details, documents, bank ki jaankari. Process State Implementing Agency (SIA) ke through hota hai; approval ke baad subsidy SIDBI ke through release hoti hai.',
   },
   {
     q: 'Murgi farm mein sabse bada risk kya hai?',
-    a: 'Do cheezein — bimari (ek baar flu/Ranikhet phaila toh poora batch saaf) aur feed cost (total kharche ka 60-70% feed hi hota hai). Biosecurity ke rules (bahar walon ki entry band, disinfection, vaccination schedule) aur feed ka sauda samajhdari se karna — yahi do aadatein farm ko chalati hain.',
+    a: 'Do cheezein, bimari (ek baar flu/Ranikhet phaila toh poora batch saaf) aur feed cost (total kharche ka 60-70% feed hi hota hai). Biosecurity ke rules (bahar walon ki entry band, disinfection, vaccination schedule) aur feed ka sauda samajhdari se karna. Yahi do aadatein farm ko chalati hain.',
   },
 ];
 
@@ -61,7 +61,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
         <div className="my-2 mb-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/murgi-farm.webp"
-            alt="Broiler shed mein subah ka round lagata hua murgi palak — NLM subsidy isi business ke liye hai"
+            alt="Broiler shed mein subah ka round lagata hua murgi palak. NLM subsidy isi business ke liye hai"
             width={1200}
             height={670}
             className="w-full h-auto object-cover"
@@ -77,24 +77,24 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Murgi palan un ginti ke dhandhon mein hai jahan chhoti zameen par bhi structured business khada ho sakta
-          hai — aur sarkar iske liye apni sabse badi livestock scheme se paisa de rahi hai. National Livestock
+          hai. Aur sarkar iske liye apni sabse badi livestock scheme se paisa de rahi hai. National Livestock
           Mission (NLM) ke Entrepreneurship Development component mein poultry project par <strong>50% capital
           subsidy, ₹25 lakh tak</strong> milti hai.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Lekin isi scheme mein sabse zyada log ek hi galatfehmi se atakte hain — subsidy ko advance samajhna. Is
+          Lekin isi scheme mein sabse zyada log ek hi galatfehmi se atakte hain. Subsidy ko advance samajhna. Is
           guide mein poora sach hai: subsidy ka asli structure, kaun eligible hai, layer vs broiler ka faisla,
           udyamimitra portal se apply ka process, aur woh galtiyan jo application ko latka deti hain.
         </p>
 
         <DB>
-          <strong>Ek Nazar Mein — poora hisaab:</strong>
+          <strong>Ek Nazar Mein, poora hisaab:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li>NLM-EDP mein poultry project par <strong>50% capital subsidy, ₹25 lakh tak</strong> — parent farm, hatchery, brooder unit.</li>
+            <li>NLM-EDP mein poultry project par <strong>50% capital subsidy, ₹25 lakh tak</strong>, parent farm, hatchery, brooder unit.</li>
             <li>Subsidy <strong>back-ended</strong> hai: pehle apna margin + bank loan, subsidy verification ke baad. Advance nahi milti.</li>
-            <li>Apply online: <strong>nlm.udyamimitra.in</strong> — DPR, KYC, zameen ke kagaz, training certificate, bank sanction chahiye.</li>
-            <li>Chalu kharche ka 60-70% <strong>feed</strong> hai — munafe ka faisla shed nahi, feed conversion karta hai.</li>
+            <li>Apply online: <strong>nlm.udyamimitra.in</strong>. DPR, KYC, zameen ke kagaz, training certificate, bank sanction chahiye.</li>
+            <li>Chalu kharche ka 60-70% <strong>feed</strong> hai. Munafe ka faisla shed nahi, feed conversion karta hai.</li>
             <li><strong>Abhi check karo:</strong> nlm.udyamimitra.in par current guidelines aur application window.</li>
           </ul>
         </DB>
@@ -117,7 +117,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
             <tbody>
               <tr>
                 <td className="border border-[var(--color-border)] p-3 font-semibold">Subsidy</td>
-                <td className="border border-[var(--color-border)] p-3">50% of project cost — poultry unit par max ₹25 lakh</td>
+                <td className="border border-[var(--color-border)] p-3">50% of project cost, poultry unit par max ₹25 lakh</td>
               </tr>
               <tr className="bg-[var(--color-bg-alt)]">
                 <td className="border border-[var(--color-border)] p-3 font-semibold">Type</td>
@@ -143,20 +143,20 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           <strong>Sabse zaroori line:</strong> subsidy <strong>back-ended</strong> hai. Pehle aapka apna margin +
           bank loan project ko khada karta hai, phir verification ke baad subsidy aati hai. Jo log &ldquo;sarkar 25 lakh
           degi phir shuru karenge&rdquo; soch kar baithe hain, unka project kabhi shuru hi nahi hota. Financing pehle,
-          subsidy baad mein — yahi order hai.
+          subsidy baad mein. Yahi order hai.
         </DB>
 
-        <SH>Eligibility — Chaar Cheezein Chahiye</SH>
+        <SH>Eligibility. Chaar Cheezein Chahiye</SH>
         <StepList>
-          <SI n={1}><strong>Training ya anubhav:</strong> poultry ki training, livestock ka anubhav, ya trained staff — teeno mein se kuch ek. KVK ya sarkari poultry training centre ka certificate file ko mazboot karta hai.</SI>
-          <SI n={2}><strong>Zameen:</strong> khud ki ya registered lease par. Location bhi socho — hatchery/farm ke liye bijli-paani aur market ki doori matter karti hai.</SI>
+          <SI n={1}><strong>Training ya anubhav:</strong> poultry ki training, livestock ka anubhav, ya trained staff. Teeno mein se kuch ek. KVK ya sarkari poultry training centre ka certificate file ko mazboot karta hai.</SI>
+          <SI n={2}><strong>Zameen:</strong> khud ki ya registered lease par. Location bhi socho, hatchery/farm ke liye bijli-paani aur market ki doori matter karti hai.</SI>
           <SI n={3}><strong>Finance ka intezam:</strong> bank/NCDC se sanctioned loan, YA self-finance ke saath scheduled bank ki guarantee. Bina iske application aage nahi badhti.</SI>
-          <SI n={4}><strong>KYC poora:</strong> Aadhaar, PAN, address proof, bank details — sab matched aur updated.</SI>
+          <SI n={4}><strong>KYC poora:</strong> Aadhaar, PAN, address proof, bank details. Sab matched aur updated.</SI>
         </StepList>
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/layer-broiler.webp"
-          alt="Layer farm mein ande ki tray — layer ya broiler, pehla bada business faisla"
+          alt="Layer farm mein ande ki tray, layer ya broiler, pehla bada business faisla"
           width={1200}
           height={670}
           className="w-full h-auto rounded-xl my-5"
@@ -176,8 +176,8 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
             <tbody>
               <tr>
                 <td className="border border-[var(--color-border)] p-3 font-semibold">Cycle</td>
-                <td className="border border-[var(--color-border)] p-3">Lamba — production shuru hone mein mahine lagte hain, phir saal bhar ande</td>
-                <td className="border border-[var(--color-border)] p-3">Chhota — 5-7 hafte mein batch taiyar</td>
+                <td className="border border-[var(--color-border)] p-3">Lamba, production shuru hone mein mahine lagte hain, phir saal bhar ande</td>
+                <td className="border border-[var(--color-border)] p-3">Chhota, 5-7 hafte mein batch taiyar</td>
               </tr>
               <tr className="bg-[var(--color-bg-alt)]">
                 <td className="border border-[var(--color-border)] p-3 font-semibold">Income pattern</td>
@@ -186,8 +186,8 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
               </tr>
               <tr>
                 <td className="border border-[var(--color-border)] p-3 font-semibold">Shuruati lagat</td>
-                <td className="border border-[var(--color-border)] p-3">Zyada — cages, lamba feeding period</td>
-                <td className="border border-[var(--color-border)] p-3">Kam — sasta setup, jaldi turnover</td>
+                <td className="border border-[var(--color-border)] p-3">Zyada, cages, lamba feeding period</td>
+                <td className="border border-[var(--color-border)] p-3">Kam, sasta setup, jaldi turnover</td>
               </tr>
               <tr className="bg-[var(--color-bg-alt)]">
                 <td className="border border-[var(--color-border)] p-3 font-semibold">Risk</td>
@@ -203,7 +203,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           </table>
         </div>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Broiler mein ek aur rasta hai — <strong>contract farming</strong>: badi company (integrator) chooza, feed
+          Broiler mein ek aur rasta hai. <strong>contract farming</strong>: badi company (integrator) chooza, feed
           aur dawai deti hai, aap shed aur mehnat dete ho, aur per-bird growing charge milta hai. Risk kam, munafa
           bhi kam. Apne dam par karne mein dono zyada hain. Naye logon ke liye 1-2 saal contract mein seekh kar
           apna setup karna ek samajhdaar raasta hai.
@@ -218,81 +218,81 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>Apply Kaise Karein — udyamimitra Portal</SH>
+        <SH>Apply Kaise Karein, udyamimitra Portal</SH>
         <StepList>
           <SI n={1}><strong>Project report (DPR) banao:</strong> unit ka type, capacity, cost breakdown, income projection, repayment plan. DPR jitni realistic, file utni mazboot. Hawai numbers wali DPR verification mein pakdi jaati hai.</SI>
-          <SI n={2}><strong>nlm.udyamimitra.in par registration karo</strong> — apni details bharo aur applicant type chuno (individual/SHG/FPO...).</SI>
+          <SI n={2}><strong>nlm.udyamimitra.in par registration karo</strong>, apni details bharo aur applicant type chuno (individual/SHG/FPO...).</SI>
           <SI n={3}><strong>Application form + documents upload karo:</strong> DPR, KYC, zameen ke kagaz/lease, training certificate, bank sanction letter (ya guarantee).</SI>
           <SI n={4}><strong>SIA ki jaanch:</strong> State Implementing Agency application verify karti hai — document check aur project appraisal. Yahan queries aa sakti hain, jawab time par do.</SI>
           <SI n={5}><strong>Approval ke baad project shuru karo:</strong> loan release hota hai, construction/setup chalta hai.</SI>
-          <SI n={6}><strong>Subsidy release:</strong> verification ke baad SIDBI ke through subsidy installments mein aati hai — pehli project shuru par, baaki completion verify hone par.</SI>
+          <SI n={6}><strong>Subsidy release:</strong> verification ke baad SIDBI ke through subsidy installments mein aati hai. Pehli project shuru par, baaki completion verify hone par.</SI>
         </StepList>
 
         <GovLink
           href="https://nlm.udyamimitra.in"
-          label="NLM Entrepreneurship — Udyamimitra Portal"
+          label="NLM Entrepreneurship. Udyamimitra Portal"
           guide="Portal Kholo"
           portalName="nlm.udyamimitra.in"
         />
 
         <WB>
           Subsidy pattern, unit-wise caps aur eligible project types scheme guidelines ke updates ke saath badal
-          sakte hain. Apply se pehle nlm.udyamimitra.in par current guidelines PDF khol kar dekho — aur kisi bhi
+          sakte hain. Apply se pehle nlm.udyamimitra.in par current guidelines PDF khol kar dekho. Aur kisi bhi
           &ldquo;guaranteed approval&rdquo; wale agent se door raho. Application free hai aur khud ho jaati hai.
         </WB>
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/feed-kharcha.webp"
-          alt="Feed ki boriyon se daana nikalta hua worker — poultry mein 60-70% kharcha feed ka hota hai"
+          alt="Feed ki boriyon se daana nikalta hua worker, poultry mein 60-70% kharcha feed ka hota hai"
           width={1200}
           height={670}
           className="w-full h-auto rounded-xl my-5"
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>Kharche Ka Sach — Feed Hi Asli Game Hai</SH>
+        <SH>Kharche Ka Sach. Feed Hi Asli Game Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Poultry ke chalu kharche ka 60-70% sirf feed hota hai. Iska matlab: aapke munafe ka faisla shed ki
-          chamak se nahi, feed conversion se hota hai — kitna feed kha kar murgi kitna anda/weight deti hai. Achhi
-          quality ka chooza, sahi feed ratio, aur bimari se bachav — yeh teen cheezein feed ka paisa vasool karati
+          chamak se nahi, feed conversion se hota hai. Kitna feed kha kar murgi kitna anda/weight deti hai. Achhi
+          quality ka chooza, sahi feed ratio, aur bimari se bachav. Yeh teen cheezein feed ka paisa vasool karati
           hain.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Doosra bada kharcha working capital hai — har batch ke liye chooza, feed, dawai ka paisa chahiye. Iske
           liye KCC (Animal Husbandry) sabse sasta rasta hai. Capital cost NLM + term loan se, chalane ka kharcha
-          KCC se — yeh combination yahan bhi wahi hai jo har livestock project mein kaam karta hai. Working capital
+          KCC se. Yeh combination yahan bhi wahi hai jo har livestock project mein kaam karta hai. Working capital
           ke options ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC banwane
           ke online process</Link> wali guide dekho.
         </p>
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/vaccination.webp"
-          alt="Chooze ko vaccination dete hue haath — mortality control ka sabse zaroori kaam"
+          alt="Chooze ko vaccination dete hue haath, mortality control ka sabse zaroori kaam"
           width={1200}
           height={670}
           className="w-full h-auto rounded-xl my-5"
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>Mortality Aur Vaccination — Jo Numbers Mein Nahi Dikhta</SH>
+        <SH>Mortality Aur Vaccination. Jo Numbers Mein Nahi Dikhta</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Har DPR mein mortality ka ek chhota sa percentage likha hota hai, par asli farm par yeh number
           discipline se banta hai. Ranikhet (Newcastle), Gumboro aur fowl pox ka vaccination schedule din ke
-          hisaab se fix hota hai — chooza aane ke pehle hafte se hi. Apne area ke veterinary doctor se poora
+          hisaab se fix hota hai. Chooza aane ke pehle hafte se hi. Apne area ke veterinary doctor se poora
           schedule likhwa lo aur calendar par chipka do; ek missed dose poore batch ka risk hai. Naye batch se
-          pehle shed ki poori safai-disinfection aur kam se kam ek hafte ka gap (downtime) — yeh aadat hi
+          pehle shed ki poori safai-disinfection aur kam se kam ek hafte ka gap (downtime). Yeh aadat hi
           purane aur naye farmer ka fark hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Waise chhote backyard-scale par shuru karna ho aur job card ho, to poultry shelter MGNREGA ke
-          individual works se bhi ban jaata hai — bina loan ke.{' '}
+          individual works se bhi ban jaata hai. Bina loan ke.{' '}
           <Link href="/yojana/mgnrega-pashu-shed-yojana" className="underline font-semibold">MGNREGA pashu
           shed guide</Link> mein gram panchayat wala poora process hai.
         </p>
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/murgi-palan-loan-nlm-subsidy/shed-nirman.webp"
-          alt="Naye poultry shed ka nirman — setup mein paisa sahi jagah lagana zaroori hai"
+          alt="Naye poultry shed ka nirman, setup mein paisa sahi jagah lagana zaroori hai"
           width={1200}
           height={670}
           className="w-full h-auto rounded-xl my-5"
@@ -301,42 +301,42 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
 
         <SH>Shed Aur Setup — Jahan Paisa Sahi Lagana Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Naye log aksar paisa galat jagah lagate hain — chamakdaar gate aur pakki boundary par, jabki murgi ko
+          Naye log aksar paisa galat jagah lagate hain. Chamakdaar gate aur pakki boundary par, jabki murgi ko
           chahiye <strong>hawa, sookha farsh aur sahi temperature</strong>. Shed ki disha east-west rakho taaki
           seedhi dhoop andar na aaye, chhat par heat-reflective sheet ya chhappar ki doosri parat garmi se
           bachati hai, aur side curtains sardiyon mein brooding ka kharcha ghatate hain. Deep litter system
-          (bhusi/dhaan ki bhusi ka farsh) chhote-medium units ke liye sasta aur practical hai — bas litter
+          (bhusi/dhaan ki bhusi ka farsh) chhote-medium units ke liye sasta aur practical hai. Bas litter
           sookha rehna chahiye, gila litter bimari ka ghar hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Doosri baat — <strong>pani</strong>. Murgi feed se zyada pani peeti hai, aur garmi mein paani ka
+          Doosri baat, <strong>pani</strong>. Murgi feed se zyada pani peeti hai, aur garmi mein paani ka
           intezam fail hua toh mortality seedha upar jaati hai. Bore/well ka backup, tanki ki capacity aur
           nipple drinkers ka layout project plan mein pehle din se rakho. DPR mein bhi yeh detail dikhna
-          chahiye — appraisal karne wala bhi samajh jaata hai ki plan zameen se juda hai ya internet se utha hai.
+          chahiye, appraisal karne wala bhi samajh jaata hai ki plan zameen se juda hai ya internet se utha hai.
         </p>
 
         <SH>5 Galtiyan Jo Application Aur Farm Dono Dubati Hain</SH>
         <StepList>
-          <SI n={1}><strong>Subsidy ko advance samajhna</strong> — pehle financing, phir subsidy. Ulta socha toh project shuru hi nahi hoga.</SI>
-          <SI n={2}><strong>Copy-paste DPR</strong> — internet se uthai DPR mein local rates nahi hote; appraisal mein pakdi jaati hai. Apne district ke asli rates par banao.</SI>
-          <SI n={3}><strong>Biosecurity ko luxury samajhna</strong> — visitors ki entry, disinfection, vaccination schedule. Ek chook, poora batch saaf. Yeh kharcha nahi, bima hai.</SI>
-          <SI n={4}><strong>Market ka plan na hona</strong> — ande/meat kahan bikega, kis rate par, kaun uthayega — yeh unit lagane se pehle tay karo, baad mein nahi.</SI>
-          <SI n={5}><strong>Capacity se bada unit</strong> — pehli baar mein hi sabse bada project lene ka lalach. Chhota shuru karo, seekho, phir badhao — scheme baad mein bhi rahegi.</SI>
+          <SI n={1}><strong>Subsidy ko advance samajhna</strong>, pehle financing, phir subsidy. Ulta socha toh project shuru hi nahi hoga.</SI>
+          <SI n={2}><strong>Copy-paste DPR</strong>, internet se uthai DPR mein local rates nahi hote; appraisal mein pakdi jaati hai. Apne district ke asli rates par banao.</SI>
+          <SI n={3}><strong>Biosecurity ko luxury samajhna</strong>, visitors ki entry, disinfection, vaccination schedule. Ek chook, poora batch saaf. Yeh kharcha nahi, bima hai.</SI>
+          <SI n={4}><strong>Market ka plan na hona</strong> — ande/meat kahan bikega, kis rate par, kaun uthayega. Yeh unit lagane se pehle tay karo, baad mein nahi.</SI>
+          <SI n={5}><strong>Capacity se bada unit</strong>, pehli baar mein hi sabse bada project lene ka lalach. Chhota shuru karo, seekho, phir badhao, scheme baad mein bhi rahegi.</SI>
         </StepList>
 
-        <SH>Zameen Se Ek Misaal — Khagaria (Bihar) Ke Dayanand Singh</SH>
+        <SH>Zameen Se Ek Misaal. Khagaria (Bihar) Ke Dayanand Singh</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Yeh dhandha chhoti zameen par bhi khada hota hai — iska documented example KVK Khagaria (Bihar) ke
+          Yeh dhandha chhoti zameen par bhi khada hota hai. Iska documented example KVK Khagaria (Bihar) ke
           record mein hai. Parbatta gaon ke <strong>Dayanand Singh</strong> ke paas sirf 1 acre zameen thi. 500
           chooze se shuruaat ki, phir KVK se training lekar 2,000 Vencobb chicks ka brick-walled poultry house
           banaya. KVK ki report ke mutabik ab woh saal mein 10 batches se lagbhag <strong>28,500 kg chicken</strong>{' '}
           produce karte hain, <strong>₹2.4-3 lakh saalana net income</strong> kamate hain, do logon ko full-time
-          rozgar diya hai — aur poultry litter ko khaad bana kar sabzi se ₹60-70 hazaar alag se. Unka apna quote:
+          rozgar diya hai. Aur poultry litter ko khaad bana kar sabzi se ₹60-70 hazaar alag se. Unka apna quote:
           &ldquo;Murgi khad apnayen, khet bachayen.&rdquo; (
           <a href="https://khagaria.kvk4.in/success-stories.php" target="_blank" rel="noopener noreferrer" className="underline font-bold">source: KVK Khagaria success stories</a>)
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Is story ka sabak wahi hai jo upar likha hai — training pehle, phir scale. 500 se 2,000 tak ka safar
+          Is story ka sabak wahi hai jo upar likha hai. Training pehle, phir scale. 500 se 2,000 tak ka safar
           KVK ke guidance ke saath hua, ek jhatke mein nahi.
         </p>
 
@@ -354,16 +354,16 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
         <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
-            NLM Entrepreneurship — Udyamimitra portal, scheme guidelines.{' '}
+            NLM Entrepreneurship. Udyamimitra portal, scheme guidelines.{' '}
             <a href="https://nlm.udyamimitra.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">nlm.udyamimitra.in</a>
           </li>
           <li>
-            KVK Khagaria (Bihar) — documented poultry success story, Dayanand Singh, Parbatta.{' '}
+            KVK Khagaria (Bihar), documented poultry success story, Dayanand Singh, Parbatta.{' '}
             <a href="https://khagaria.kvk4.in/success-stories.php" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">khagaria.kvk4.in</a>
           </li>
           <li>
-            Department of Animal Husbandry &amp; Dairying — National Livestock Mission (NLM) scheme page: sub-missions, activities aur operational guidelines.{' '}
-            <a href="https://dahd.gov.in/schemes/programmes/national_livestock_mission" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">dahd.gov.in — National Livestock Mission (NLM)</a>
+            Department of Animal Husbandry &amp; Dairying. National Livestock Mission (NLM) scheme page: sub-missions, activities aur operational guidelines.{' '}
+            <a href="https://dahd.gov.in/schemes/programmes/national_livestock_mission" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">dahd.gov.in. National Livestock Mission (NLM)</a>
           </li>
         </ul>
 

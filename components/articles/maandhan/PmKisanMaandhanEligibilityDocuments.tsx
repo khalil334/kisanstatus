@@ -31,23 +31,23 @@ const RELATED_CARDS = [
 const FAQS_DATA = [
   {
     q: '2.5 hectare zameen wala Maandhan mein apply kar sakta hai?',
-    a: 'Nahi hoga. Scheme ki seema 2 hectare (karib 5 acre) tak hi hai — state ke land records ke hisaab se. Isse zyada landholding hui toh aap small/marginal farmer ki category mein hi nahi aate, aur verification mein application ruk jaayegi.',
+    a: 'Nahi hoga. Scheme ki seema 2 hectare (karib 5 acre) tak hi hai. State ke land records ke hisaab se. Isse zyada landholding hui toh aap small/marginal farmer ki category mein hi nahi aate, aur verification mein application ruk jaayegi.',
   },
   {
     q: '6000 wali PM Kisan yojana aur ye Maandhan wali pension yojana same hai kya?',
-    a: 'Bilkul alag hain, log aksar confuse ho jate hain. PM Kisan Samman Nidhi mein saal ke 6000 rupaye milte hain, jabki Maandhan ek pension scheme hai jisme aap khud paisa jama karte hain aur 60 saal ke baad 3000 rupaye mahina milta hai. PM Kisan mein hona Maandhan ke liye zaroori nahi — haan, agar aap beneficiary hain toh apna monthly contribution PM Kisan ki kist se hi katwane ka option mil jaata hai, alag se paisa nahi dena padta.',
+    a: 'Bilkul alag hain, log aksar confuse ho jate hain. PM Kisan Samman Nidhi mein saal ke 6000 rupaye milte hain, jabki Maandhan ek pension scheme hai jisme aap khud paisa jama karte hain aur 60 saal ke baad 3000 rupaye mahina milta hai. PM Kisan mein hona Maandhan ke liye zaroori nahi. Haan, agar aap beneficiary hain toh apna monthly contribution PM Kisan ki kist se hi katwane ka option mil jaata hai, alag se paisa nahi dena padta.',
   },
   {
-    q: 'Maine 4-5 saal pehle ek baar ITR file kiya tha, ab nahi karta — kya ab bhi exclude rahoonga?',
+    q: 'Maine 4-5 saal pehle ek baar ITR file kiya tha, ab nahi karta, kya ab bhi exclude rahoonga?',
     a: 'Guidelines mein "pichhle assessment year" ka zikr hai, poori history ka nahi. Agar aapne sabse recent assessment year mein ITR file nahi kiya, purani baat is exclusion ko trigger nahi karti.',
   },
   {
-    q: 'Bhaiyon mein zameen maukhik taur par baant li hai, kagaz par abhi tak batwara nahi hua — kya karein?',
-    a: 'Sirf maukhik samjhauta verification process nahi maanega, kyunki documentary proof chahiye. Patwari ya tehsil office se ek share certificate banwana padega jisme aapke hisse ki zameen likhi ho — ye process aam taur par ek-do hafte le leta hai, isliye registration se pehle hi shuru kar dein.',
+    q: 'Bhaiyon mein zameen maukhik taur par baant li hai, kagaz par abhi tak batwara nahi hua, kya karein?',
+    a: 'Sirf maukhik samjhauta verification process nahi maanega, kyunki documentary proof chahiye. Patwari ya tehsil office se ek share certificate banwana padega jisme aapke hisse ki zameen likhi ho. Ye process aam taur par ek-do hafte le leta hai, isliye registration se pehle hi shuru kar dein.',
   },
   {
-    q: 'Maine pehle Shram Yogi Maandhan (PM-SYM) join kar liya tha, ab kheti hi karta hoon — switch kar sakta hoon?',
-    a: 'Ek waqt mein sirf ek scheme active reh sakti hai — PM-SYM enrolled rehte hue Kisan Maandhan mein register nahi hoga. Pehle PM-SYM se exit karna hoga, uske baad hi Kisan Maandhan ke liye apply karein. Exit process ke exact steps CSC ya Maandhan application se hi confirm karein, kyunki ye case-by-case thoda alag ho sakta hai.',
+    q: 'Maine pehle Shram Yogi Maandhan (PM-SYM) join kar liya tha, ab kheti hi karta hoon, switch kar sakta hoon?',
+    a: 'Ek waqt mein sirf ek scheme active reh sakti hai. PM-SYM enrolled rehte hue Kisan Maandhan mein register nahi hoga. Pehle PM-SYM se exit karna hoga, uske baad hi Kisan Maandhan ke liye apply karein. Exit process ke exact steps CSC ya Maandhan application se hi confirm karein, kyunki ye case-by-case thoda alag ho sakta hai.',
   },
 ];
 
@@ -106,38 +106,38 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
         <section className="mb-8">
           <SH>Documents Le Jaane Se Pehle Ek Baar Ruk Kar Sochein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Gaon ke CSC par roz aise log aate hain jo pehle form bhar dete hain, tab pata chalta hai ki wo fit hi nahi baithte. Scheme ka official portal maandhan.in hai — wahan eligibility ki shartein saaf likhi hain, aur galat jankari dekar enrolled hone par benefit wapas recover ho sakta hai. Yahan risk sirf time zaya hone ka nahi hai.
+            Gaon ke CSC par roz aise log aate hain jo pehle form bhar dete hain, tab pata chalta hai ki wo fit hi nahi baithte. Scheme ka official portal maandhan.in hai. Wahan eligibility ki shartein saaf likhi hain, aur galat jankari dekar enrolled hone par benefit wapas recover ho sakta hai. Yahan risk sirf time zaya hone ka nahi hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Neeche teen sharton ki tafseel hai. Tino ka ek saath poora hona zaroori hai — sirf zameen kam hone se ya sirf umar sahi hone se kaam nahi chalta.
+            Neeche teen sharton ki tafseel hai. Tino ka ek saath poora hona zaroori hai. Sirf zameen kam hone se ya sirf umar sahi hone se kaam nahi chalta.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>Teen Zaroori Shartein — Inme Se Koi Bhi Miss Nahi Honi Chahiye</SH>
+          <SH>Teen Zaroori Shartein. Inme Se Koi Bhi Miss Nahi Honi Chahiye</SH>
           <div className="space-y-3 mb-6">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl flex gap-3">
               <div>
-                <p className="font-black text-sm text-green-800 dark:text-green-300 mb-1">Pehli Shart — Umar</p>
-                <p className="text-xs text-[var(--color-text-muted)]">Registration ke waqt umar poori 18 se 40 saal ke beech honi chahiye. Ye seema isliye rakhi gayi hai taaki 60 tak pahunchte-pahunchte kaafi saal contribution ho sake aur pension fund thik se banta rahe — 41 saal ke baad naya enrolment ruk jaata hai, koi relaxation nahi milti.</p>
+                <p className="font-black text-sm text-green-800 dark:text-green-300 mb-1">Pehli Shart. Umar</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Registration ke waqt umar poori 18 se 40 saal ke beech honi chahiye. Ye seema isliye rakhi gayi hai taaki 60 tak pahunchte-pahunchte kaafi saal contribution ho sake aur pension fund thik se banta rahe, 41 saal ke baad naya enrolment ruk jaata hai, koi relaxation nahi milti.</p>
               </div>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl flex gap-3">
               <div>
-                <p className="font-black text-sm text-blue-800 dark:text-blue-300 mb-1">Doosri Shart — Zameen Ka Size</p>
-                <p className="text-xs text-[var(--color-text-muted)]">Kul milakar 2 hectare (lagbhag 5 acre) tak hi cultivable landholding honi chahiye — chahe ek jagah ho ya alag khaton mein bikhri ho, jod isi seema ke andar aana chahiye. Official guidelines ke mutabik scheme ka focus chhote aur seemant kisano par hai, isliye zameen ka total size dekha jaata hai, sirf ek khata nahi.</p>
+                <p className="font-black text-sm text-blue-800 dark:text-blue-300 mb-1">Doosri Shart. Zameen Ka Size</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Kul milakar 2 hectare (lagbhag 5 acre) tak hi cultivable landholding honi chahiye, chahe ek jagah ho ya alag khaton mein bikhri ho, jod isi seema ke andar aana chahiye. Official guidelines ke mutabik scheme ka focus chhote aur seemant kisano par hai, isliye zameen ka total size dekha jaata hai, sirf ek khata nahi.</p>
               </div>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl flex gap-3">
               <div>
                 <p className="font-black text-sm text-amber-800 dark:text-amber-300 mb-1">Teesri Shart — Excluded Category Mein Na Hona</p>
-                <p className="text-xs text-[var(--color-text-muted)]">Umar aur zameen sahi hone ke baad bhi kuch log scheme se bahar rakhe gaye hain — income tax bharne wale, sarkari karmchari, doosri Maandhan/pension schemes (NPS, ESIC, EPFO) wale, waghera. Poori list neeche alag section mein di hai. Ek aam galatfehmi yahin door kar dein: <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-blue-600 dark:text-blue-400 font-medium">PM Kisan Samman Nidhi</Link> ki list mein hona Maandhan ke liye shart NAHI hai. PM Kisan beneficiary ko bas ye suvidha extra milti hai ki wo apna monthly contribution seedha PM Kisan ki kist se katwa sakta hai.</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Umar aur zameen sahi hone ke baad bhi kuch log scheme se bahar rakhe gaye hain. Income tax bharne wale, sarkari karmchari, doosri Maandhan/pension schemes (NPS, ESIC, EPFO) wale, waghera. Poori list neeche alag section mein di hai. Ek aam galatfehmi yahin door kar dein: <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-blue-600 dark:text-blue-400 font-medium">PM Kisan Samman Nidhi</Link> ki list mein hona Maandhan ke liye shart NAHI hai. PM Kisan beneficiary ko bas ye suvidha extra milti hai ki wo apna monthly contribution seedha PM Kisan ki kist se katwa sakta hai.</p>
               </div>
             </div>
           </div>
 
           <IB>
-            Joint family wali zameen ka case sabse zyada confusion create karta hai. Agar khet baap-dada ke naam se hai ya bhaiyon ke beech baanti hui hai, toh dekhna sirf aapke hisse ka size hai, poori family ki zameen nahi. Khatauni mein agar aapka naam alag se darj hai toh theek hai, warna Patwari se apne share ka likhit certificate le lena — CSC operator yahi maangega.
+            Joint family wali zameen ka case sabse zyada confusion create karta hai. Agar khet baap-dada ke naam se hai ya bhaiyon ke beech baanti hui hai, toh dekhna sirf aapke hisse ka size hai, poori family ki zameen nahi. Khatauni mein agar aapka naam alag se darj hai toh theek hai, warna Patwari se apne share ka likhit certificate le lena. CSC operator yahi maangega.
           </IB>
         </section>
 
@@ -159,7 +159,7 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
         <section className="mb-8">
           <SH>Eligibility Clear? Ab Kharcha Jaan Lein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Shartein poori hone ke baad aapka monthly contribution sirf aapki aaj ki umar tay karti hai — 18 saal walon ka ₹55 aur 40 saal walon ka ₹200. Har umar ka exact official figure reference chart mein hai:
+            Shartein poori hone ke baad aapka monthly contribution sirf aapki aaj ki umar tay karti hai. 18 saal walon ka ₹55 aur 40 saal walon ka ₹200. Har umar ka exact official figure reference chart mein hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Age-Wise Contribution Chart Dekhen →</Link>
@@ -169,12 +169,12 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
         <section className="mb-8">
           <SH>Ye Log Bilkul Apply Nahi Kar Sakte</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Umar, zameen aur PM Kisan list — teeno match ho jaayein, tab bhi kuch categories scheme se bahar rakhi gayi hain. PM-KMY sirf un kisano ke liye bana hai jinke paas koi aur regular income ya government support pehle se nahi hai — is karan ye chhe categories exclude hoti hain:
+            Umar, zameen aur PM Kisan list. Teeno match ho jaayein, tab bhi kuch categories scheme se bahar rakhi gayi hain. PM-KMY sirf un kisano ke liye bana hai jinke paas koi aur regular income ya government support pehle se nahi hai. Is karan ye chhe categories exclude hoti hain:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
             {[
               { title: 'Income Tax Bharne Wale', desc: 'Pichhle assessment year mein ITR file kiya ho, chahe final tax kam ya zero hi kyun na bana ho.' },
-              { title: 'Sarkari Naukri Wale', desc: 'Central ya State government ke serving ya retired officer/employee — sirf MTS aur Group D staff ko chhoot hai.' },
+              { title: 'Sarkari Naukri Wale', desc: 'Central ya State government ke serving ya retired officer/employee. Sirf MTS aur Group D staff ko chhoot hai.' },
               { title: 'Bade Pension Wale', desc: 'Jinki mahine ki pension ₹10,000 ya usse zyada hai, unhe is scheme mein jagah nahi.' },
               { title: 'Constitutional Post Holders', desc: 'Maujuda ya pehle ke MP, MLA, Mayor, ya Zila Panchayat Chairperson.' },
               { title: 'Professional Body Wale', desc: 'Registered Doctor, Engineer, Lawyer, Architect, ya Chartered Accountant.' },
@@ -206,7 +206,7 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
         <section className="mb-8">
           <SH>CSC Jaane Se Pehle Ye Paanch Cheezein Sath Rakhein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Eligibility clear ho gayi toh ab practical sawal — CSC jaate waqt bag mein kya rakhna hai. List chhoti hai, lekin har item ke saath ek chhoti detail hai jo miss hone par kaam rok deti hai.
+            Eligibility clear ho gayi toh ab practical sawal. CSC jaate waqt bag mein kya rakhna hai. List chhoti hai, lekin har item ke saath ek chhoti detail hai jo miss hone par kaam rok deti hai.
           </p>
 
           <div className="space-y-4 mb-6">
@@ -224,7 +224,7 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
                 <span className="text-xl mt-0.5"></span>
                 <div>
                   <p className="font-black text-sm text-[var(--color-text)] mb-1">Bank Passbook, Individual Account Ki</p>
-                  <p className="text-xs text-[var(--color-text-muted)]">Contribution aur baad mein pension, dono isi ek account se aana-jaana hai, isliye joint account yahan nahi chalta — malikana haq ka jhagda hone par claim atak sakta hai. Passbook ke pehle page par naam, account number aur IFSC saaf dikhna chahiye.</p>
+                  <p className="text-xs text-[var(--color-text-muted)]">Contribution aur baad mein pension, dono isi ek account se aana-jaana hai, isliye joint account yahan nahi chalta, malikana haq ka jhagda hone par claim atak sakta hai. Passbook ke pehle page par naam, account number aur IFSC saaf dikhna chahiye.</p>
                 </div>
               </div>
             </div>
@@ -232,8 +232,8 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <div className="flex items-start gap-3">
                 <div>
-                  <p className="font-black text-sm text-[var(--color-text)] mb-1">Zameen Ka Record — Khatauni Ya Khasra</p>
-                  <p className="text-xs text-[var(--color-text-muted)]">Isi se 2 hectare wali seema prove hoti hai. Yad rakhein ki record mein zameen "krishi yogya" (cultivable) darj ho — agar classification banjar ya non-agricultural dikha rahi hai toh eligibility hi nahi banegi, chahe size sahi ho. Lease par li gayi zameen ke liye registered lease deed bhi saath rakhein.</p>
+                  <p className="font-black text-sm text-[var(--color-text)] mb-1">Zameen Ka Record. Khatauni Ya Khasra</p>
+                  <p className="text-xs text-[var(--color-text-muted)]">Isi se 2 hectare wali seema prove hoti hai. Yad rakhein ki record mein zameen "krishi yogya" (cultivable) darj ho, agar classification banjar ya non-agricultural dikha rahi hai toh eligibility hi nahi banegi, chahe size sahi ho. Lease par li gayi zameen ke liye registered lease deed bhi saath rakhein.</p>
                 </div>
               </div>
             </div>
@@ -251,7 +251,7 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
               <div className="flex items-start gap-3">
                 <div>
                   <p className="font-black text-sm text-[var(--color-text)] mb-1">Do-Teen Passport Size Photo</p>
-                  <p className="text-xs text-[var(--color-text-muted)]">Offline form bharte waqt ya CSC record ke liye rakh lein, kaam aa jaata hai — kai centre digitally hi le lete hain lekin printed copy saath hona nuksaan nahi karta.</p>
+                  <p className="text-xs text-[var(--color-text-muted)]">Offline form bharte waqt ya CSC record ke liye rakh lein, kaam aa jaata hai. Kai centre digitally hi le lete hain lekin printed copy saath hona nuksaan nahi karta.</p>
                 </div>
               </div>
             </div>
@@ -261,12 +261,12 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
         <section className="mb-8">
           <SH>Ghar Baithe 3 Baatein Confirm Kar Lein</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Documents ready hone ke baad bhi ek risk bacha rehta hai — detail mismatch, jo CSC pahunchne ke baad sabse zyada form atkata hai. Ghar se nikalne se pehle ye teen cheez khud verify kar lein, taaki dobara chakkar na lagana pade:
+            Documents ready hone ke baad bhi ek risk bacha rehta hai. Detail mismatch, jo CSC pahunchne ke baad sabse zyada form atkata hai. Ghar se nikalne se pehle ye teen cheez khud verify kar lein, taaki dobara chakkar na lagana pade:
           </p>
           <StepList>
-            <SI n={1}><strong>Naam Ka Spelling Milaein:</strong> Aadhaar, bank passbook aur PM Kisan list — teeno jagah naam letter-by-letter same hona chahiye. "Ramkumar" aur "Ram Kumar" jaisa chhota farak bhi verification process ko confuse kar deta hai.</SI>
+            <SI n={1}><strong>Naam Ka Spelling Milaein:</strong> Aadhaar, bank passbook aur PM Kisan list. Teeno jagah naam letter-by-letter same hona chahiye. "Ramkumar" aur "Ram Kumar" jaisa chhota farak bhi verification process ko confuse kar deta hai.</SI>
             <SI n={2}><strong>NPCI Seeding Status Dekhein:</strong> myaadhaar.uidai.gov.in par jaakar Bank Seeding Status check karein. Agar wahan "Yes" nahi dikh raha, pehle bank branch jaakar ye theek karwayein, phir CSC jayein.</SI>
-            <SI n={3}><strong>Zameen Record Update Rakhein:</strong> Recently kharidi ya virasat mein mili zameen ho toh Patwari se Khatauni mein naam update karwana pehla kaam hai — bina iske land-based eligibility verify hi nahi ho payegi.</SI>
+            <SI n={3}><strong>Zameen Record Update Rakhein:</strong> Recently kharidi ya virasat mein mili zameen ho toh Patwari se Khatauni mein naam update karwana pehla kaam hai. Bina iske land-based eligibility verify hi nahi ho payegi.</SI>
           </StepList>
         </section>
 
@@ -305,13 +305,13 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
                 reason: 'Doosri Pension Scheme Pehle Se Chal Rahi Hai',
                 solution: (
                   <>
-                    NPS, ESIC ya EPFO mein already covered hain toh application aage nahi badhegi — ye check enrollment ke waqt hi ho jaata hai. Agar aap salaried job chhod kar kheti mein aaye hain toh pehle purani scheme ka status clear karwayein. PM Kisan wale confusion ke liye <Link href="/articles/PmKisanMasterGuide2026" className="underline text-blue-600 dark:text-blue-400 font-medium">Master Guide</Link> dekh lein — wo scheme alag hai, uska Maandhan ki eligibility se lena-dena nahi.
+                    NPS, ESIC ya EPFO mein already covered hain toh application aage nahi badhegi. Ye check enrollment ke waqt hi ho jaata hai. Agar aap salaried job chhod kar kheti mein aaye hain toh pehle purani scheme ka status clear karwayein. PM Kisan wale confusion ke liye <Link href="/articles/PmKisanMasterGuide2026" className="underline text-blue-600 dark:text-blue-400 font-medium">Master Guide</Link> dekh lein. Wo scheme alag hai, uska Maandhan ki eligibility se lena-dena nahi.
                   </>
                 ),
               },
               {
                 reason: 'Umar 40 Saal Paar Kar Chuki Hai',
-                solution: 'Iska koi workaround nahi hai. Agar 38-39 saal ke hain toh der na karein — birthday nikal jaane ke baad system entry hi accept nahi karega.',
+                solution: 'Iska koi workaround nahi hai. Agar 38-39 saal ke hain toh der na karein, birthday nikal jaane ke baad system entry hi accept nahi karega.',
               },
             ].map(({ reason, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
@@ -326,13 +326,13 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Eligibility Aur Documents Par Quick Jawab
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM-KMY Eligibility Aur Zaroori Kagazat — Sawal Jawab" />
+          <FAQBlock faqs={FAQS_DATA} caption="PM-KMY Eligibility Aur Zaroori Kagazat. Sawal Jawab" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">CSC Jaane Se Ek Din Pehle: Teen Kagaz, Ek Hi Naam</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Reject hone wale applications mein sabse aam wajah documents ka aapas mein na milna hai — Aadhaar par ek naam, bank passbook par doosri spelling, khatauni par teesri. CSC jaane se ek din pehle teeno kagaz saath rakh kar naam, spelling aur date of birth khud milaa lein; jo bhi alag ho, pehle use theek karwayein, phir enrollment karwayein. Confusion ho toh apply karne se pehle hamari <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="underline text-blue-600 dark:text-blue-400 font-medium">Registration Guide</Link> ek baar padh lein.
+            Reject hone wale applications mein sabse aam wajah documents ka aapas mein na milna hai. Aadhaar par ek naam, bank passbook par doosri spelling, khatauni par teesri. CSC jaane se ek din pehle teeno kagaz saath rakh kar naam, spelling aur date of birth khud milaa lein; jo bhi alag ho, pehle use theek karwayein, phir enrollment karwayein. Confusion ho toh apply karne se pehle hamari <Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="underline text-blue-600 dark:text-blue-400 font-medium">Registration Guide</Link> ek baar padh lein.
           </p>
         </div>
 

@@ -34,7 +34,7 @@ const SCHEMES: Scheme[] = [
     portal: 'nsmny.mahait.org',
     kind: 'flat',
     flat: 6000,
-    note: 'State PM Kisan ke barabar hi deta hai — do ₹3,000 ki kist mein. Eligibility seedha PM Kisan record se uthti hai.',
+    note: 'State PM Kisan ke barabar hi deta hai. Do ₹3,000 ki kist mein. Eligibility seedha PM Kisan record se uthti hai.',
   },
   {
     state: 'Rajasthan',
@@ -52,7 +52,7 @@ const SCHEMES: Scheme[] = [
     portal: 'saara.mp.gov.in',
     kind: 'flat',
     flat: 6000,
-    note: 'State top-up ₹6,000 saalana hai — teen kiston mein ₹2,000-₹2,000. Scheme ₹4,000 se shuru hui thi, baad mein badhaya gaya; ₹4,000 wala figure purana hai.',
+    note: 'State top-up ₹6,000 saalana hai. Teen kiston mein ₹2,000-₹2,000. Scheme ₹4,000 se shuru hui thi, baad mein badhaya gaya; ₹4,000 wala figure purana hai.',
   },
   {
     state: 'Telangana',
@@ -61,7 +61,7 @@ const SCHEMES: Scheme[] = [
     portal: 'rythubharosa.telangana.gov.in',
     kind: 'perAcre',
     perAcre: { rate: 12000, floor: 0, seasons: 2 },
-    note: 'Har acre par ₹12,000 saalana — ₹6,000 Kharif aur ₹6,000 Rabi. Paisa sirf cultivable land par banta hai; real estate layout aur parti zameen shamil nahi.',
+    note: 'Har acre par ₹12,000 saalana. ₹6,000 Kharif aur ₹6,000 Rabi. Paisa sirf cultivable land par banta hai; real estate layout aur parti zameen shamil nahi.',
   },
   {
     state: 'West Bengal',
@@ -79,7 +79,7 @@ const SCHEMES: Scheme[] = [
     portal: 'cmkisan.odisha.gov.in',
     kind: 'track',
     track: { cultivator: 4000, landless: 12500, ceilingAcres: 5 },
-    note: 'Do alag track hain — zameen wale kisan ka ₹4,000 do tranche mein, aur bhoomiheen krishi parivaar ka ₹12,500 teen tranche mein.',
+    note: 'Do alag track hain. Zameen wale kisan ka ₹4,000 do tranche mein, aur bhoomiheen krishi parivaar ka ₹12,500 teen tranche mein.',
   },
 ];
 
@@ -110,7 +110,7 @@ export default function StateYojanaFinder() {
       return {
         headline: 'Is rajya ki apni top-up scheme humare cluster mein nahi hai',
         detail:
-          'Har rajya PM Kisan ke upar apna paisa nahi deta. Aise rajyon mein saal bhar ka hisaab sirf central grant se banta hai, aur alag se koi state status page nahi hota. Agar aapke rajya ne haal mein koi scheme shuru ki hai, to uska official notification dekh lein — announcement aur notification do alag cheezein hoti hain.',
+          'Har rajya PM Kisan ke upar apna paisa nahi deta. Aise rajyon mein saal bhar ka hisaab sirf central grant se banta hai, aur alag se koi state status page nahi hota. Agar aapke rajya ne haal mein koi scheme shuru ki hai, to uska official notification dekh lein, announcement aur notification do alag cheezein hoti hain.',
         central,
         stateAmount: 0,
         rows: [] as [string, string][],
@@ -162,7 +162,7 @@ export default function StateYojanaFinder() {
     }
 
     return {
-      headline: `${scheme.state} — ${scheme.scheme}`,
+      headline: `${scheme.state}, ${scheme.scheme}`,
       detail: scheme.note,
       central,
       stateAmount,
@@ -177,7 +177,7 @@ export default function StateYojanaFinder() {
     >
       <header className="px-5 py-4 bg-green-50 dark:bg-green-900/20 border-b border-gray-200 dark:border-gray-700">
         <h2 className="text-base md:text-lg font-black text-gray-900 dark:text-gray-100 m-0">
-          State Yojana Finder — aapke rajya mein saal bhar kitna banta hai
+          State Yojana Finder, aapke rajya mein saal bhar kitna banta hai
         </h2>
         <p className="text-xs text-gray-600 dark:text-gray-400 mt-1 mb-0">
           Rajya chunein, zameen bharein — central aur state ka jod, portal aur detail page ek
@@ -223,7 +223,7 @@ export default function StateYojanaFinder() {
               }}
               className="mt-1 accent-green-600"
             />
-            <span>Zameen nahi hai — khet mazdoori ya allied kaam par nirbhar hain</span>
+            <span>Zameen nahi hai. Khet mazdoori ya allied kaam par nirbhar hain</span>
           </label>
 
           {!landless && (

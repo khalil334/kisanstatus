@@ -10,7 +10,7 @@ const MODIFIED = '2026-08-12T17:59:16+05:30';
 
 const RELATED = [
   { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
-  { slug: 'PmKisanRejectedStatusReApplyGuide', title: 'Rejected Status — Dobara Apply' },
+  { slug: 'PmKisanRejectedStatusReApplyGuide', title: 'Rejected Status. Dobara Apply' },
   { slug: 'PmKisanStateNodalOfficerList', title: 'Nodal Officer Contacts' },
 ];
 
@@ -20,8 +20,8 @@ const FAQS_DATA = [
     a: 'Pehle individual status check karein pmkisan.gov.in par. Zyadatar cases mein eKYC pending hoti hai, ya Patwari ne land verification nahi kiya. CSC jakar jaldi eKYC karwa lein.',
   },
   {
-    q: 'Naam list mein hai par paisa nahi aaya — iska kya matlab?',
-    a: 'List mein naam hona sirf pehla step hai — iska matlab aap eligible beneficiary ho. Paisa tabhi aata hai jab us kist ka FTO (Fund Transfer Order) generate ho kar process ho jaye. Apne status mein FTO ka stage dekhen — FTO generated ka matlab payment pipeline mein hai. Detail hamari FTO guide mein hai.',
+    q: 'Naam list mein hai par paisa nahi aaya, iska kya matlab?',
+    a: 'List mein naam hona sirf pehla step hai. Iska matlab aap eligible beneficiary ho. Paisa tabhi aata hai jab us kist ka FTO (Fund Transfer Order) generate ho kar process ho jaye. Apne status mein FTO ka stage dekhen. FTO generated ka matlab payment pipeline mein hai. Detail hamari FTO guide mein hai.',
   },
   {
     q: 'Gram Pradhan keh rahe hain unke paas purani list hai, kya unse le lun?',
@@ -32,7 +32,7 @@ const FAQS_DATA = [
     a: 'Galat gaon select kar liya hoga. Dobara check karein: State, District, Block, aur Gaon ka naam exactly match hona chahiye. Kabhi-kabhi "Rampur Khurd" aur "Rampur Kalan" mein confusion ho jati hai.',
   },
   {
-    q: 'Pitaji ka dehant ho gaya — unki jagah apna naam list mein aa sakta hai?',
+    q: 'Pitaji ka dehant ho gaya, unki jagah apna naam list mein aa sakta hai?',
     a: 'Haan, lekin sirf tab jab aapne CSC jakar "Succession Transfer" karwa liya ho. Death certificate, Khatauni, aur Aadhaar ke sath transfer karwayein, warna account freeze rehta hai.',
   },
 ];
@@ -76,7 +76,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
             priority
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Gram Roster PDF — Gaon Ka Pura Data Ek Click Mein
+            Gram Roster PDF. Gaon Ka Pura Data Ek Click Mein
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
         <section className="mb-8">
           <SH>Pehle Confusion Clear Karein: List vs Status vs Village Dashboard</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            pmkisan.gov.in par teen alag-alag tools hain aur log inhe aapas mein mila dete hain. Galat tool kholne par lagta hai "mera data nahi mil raha" — jabki aap galat jagah dekh rahe hote hain:
+            pmkisan.gov.in par teen alag-alag tools hain aur log inhe aapas mein mila dete hain. Galat tool kholne par lagta hai "mera data nahi mil raha", jabki aap galat jagah dekh rahe hote hain:
           </p>
           <div className="space-y-3">
             <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
@@ -119,7 +119,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
             </div>
             <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
               <p className="font-black text-sm text-[var(--color-text)] mb-1">3. Village Dashboard</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Gaon-level ka summary view — kitne farmers registered, kitne eKYC-complete, kitne paid. Numbers/aggregate ke liye hai; naam-wise poori list chahiye toh Beneficiary List hi use karein.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Gaon-level ka summary view, kitne farmers registered, kitne eKYC-complete, kitne paid. Numbers/aggregate ke liye hai; naam-wise poori list chahiye toh Beneficiary List hi use karein.</p>
             </div>
           </div>
         </section>
@@ -248,14 +248,14 @@ export default function PmKisanVillageWiseListPdfDownload() {
         <section className="mb-8">
           <SH>Naam List Mein Hai, Par Paisa Nahi Aaya?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ye sabse common confusion hai. List mein naam hona = aap beneficiary ho. Paisa aana = us kist ka <strong>FTO (Fund Transfer Order)</strong> generate aur process hona — ye do alag cheezein hain. Kist ka paisa states/banks ke through FTO ke zariye hi transfer hota hai, isliye naam hone ke bawajood payment ruk sakti hai agar:
+            Ye sabse common confusion hai. List mein naam hona = aap beneficiary ho. Paisa aana = us kist ka <strong>FTO (Fund Transfer Order)</strong> generate aur process hona. Ye do alag cheezein hain. Kist ka paisa states/banks ke through FTO ke zariye hi transfer hota hai, isliye naam hone ke bawajood payment ruk sakti hai agar:
           </p>
           <ul className="list-disc list-inside text-xs text-[var(--color-text-muted)] leading-relaxed mb-3 space-y-1">
             <li>eKYC ya bank/NPCI seeding pending hai (FTO bana hi nahi)</li>
             <li>FTO generate hua par bank level par payment fail ho gayi (account band, IFSC change, naam mismatch)</li>
           </ul>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Apna exact stage individual status mein dekhein, aur FTO statuses ka matlab + payment fail hone par kya karna hai — in dono ke liye alag guides hain: <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline text-blue-600 dark:text-blue-400 font-medium">FTO Generated Ka Matlab</Link> aur <Link href="/articles/PmKisanPaymentFailedFix2026" className="underline text-blue-600 dark:text-blue-400 font-medium">Payment Failed Fix Guide</Link>.
+            Apna exact stage individual status mein dekhein, aur FTO statuses ka matlab + payment fail hone par kya karna hai. In dono ke liye alag guides hain: <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline text-blue-600 dark:text-blue-400 font-medium">FTO Generated Ka Matlab</Link> aur <Link href="/articles/PmKisanPaymentFailedFix2026" className="underline text-blue-600 dark:text-blue-400 font-medium">Payment Failed Fix Guide</Link>.
           </p>
         </section>
 
@@ -310,48 +310,48 @@ export default function PmKisanVillageWiseListPdfDownload() {
         </section>
 
         <section className="mb-8">
-          <SH>Ghar Ke Bade-Buzurg Ka Naam List Mein Hai — Unke Baad Kya?</SH>
+          <SH>Ghar Ke Bade-Buzurg Ka Naam List Mein Hai. Unke Baad Kya?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Ye sawal list check karte waqt sabse zyada takleef ke saath aata hai: pitaji ka naam
-            list mein chal raha hai, unka dehant ho gaya — ab kist ka kya hoga? Seedha jawab:
+            list mein chal raha hai, unka dehant ho gaya, ab kist ka kya hoga? Seedha jawab:
             paisa apne aap bete ke naam transfer <strong>nahi</strong> hota. Iske liye CSC par
-            jakar <strong>Succession Transfer</strong> karwana padta hai — death certificate,
+            jakar <strong>Succession Transfer</strong> karwana padta hai. Death certificate,
             Khatauni (jisme zameen ab aapke naam ho) aur aapka Aadhaar lekar. Jab tak ye nahi
             hota, purana account effectively freeze rehta hai aur kist rukti hai. Transfer poora hone
-            ke baad agli list update mein naya naam khud dikhne lagta hai — alag se koi naya
+            ke baad agli list update mein naya naam khud dikhne lagta hai. Alag se koi naya
             registration nahi karna padta.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Yahan ek galti bahut mehngi padti hai — dehant ke baad bhi purane naam par kist lete
             rehna. Har kist se pehle list ka verification hota hai, ineligible naam hataye jaate
             hain, aur galat li hui kist ki recovery bhi hoti hai. Isliye zameen ka mutation
-            (naam-transfer) pehle karwao, phir PM Kisan ka record — dono ek hi chain ke kaam hain.
+            (naam-transfer) pehle karwao, phir PM Kisan ka record. Dono ek hi chain ke kaam hain.
             Bank account badalna ho toh uska process{' '}
             <Link href="/articles/PmKisanBankAccountChangeProcess" className="underline text-blue-600 dark:text-blue-400 font-medium">bank account change guide</Link> mein hai.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>List Se Shikayat Tak — Gaon Ke Level Par Escalation Ka Rasta</SH>
+          <SH>List Se Shikayat Tak. Gaon Ke Level Par Escalation Ka Rasta</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Village list ka asli power tab dikhta hai jab usse shikayat judti hai. Maan lo list
             nikaali aur dikha ki aapke gaon ke 200 mein se 40 logon ka naam pichhli list se gayab
-            hai — ye individual problem nahi, block-level data ki problem hai. Aise case mein
+            hai. Ye individual problem nahi, block-level data ki problem hai. Aise case mein
             akele helpline par call karne se zyada asar hota hai jab Gram Pradhan ke through
             block agriculture office mein likhit shikayat jaye, saath mein list ki PDF ka print.
-            Kagaz ka saboot hamesha zubaani shikayat se bhari padta hai. Aur haan — shikayat se
+            Kagaz ka saboot hamesha zubaani shikayat se bhari padta hai. Aur haan, shikayat se
             pehle ek baar taaza list dobara nikaal lena; kai baar naam agli update mein khud wapas
             aa jata hai, aur tab bina wajah ka chakkar bach jata hai. List har kist cycle se pehle
             refresh hoti hai, isliye mahine-do-mahine purani PDF ko aakhri sach mat maano.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Apni individual problem ke liye seedhi chain ye hai: pehle <strong>155261</strong>{' '}
-            (national helpline) par call — Aadhaar, registration number aur bank details saamne
+            (national helpline) par call. Aadhaar, registration number aur bank details saamne
             rakh kar. Wahan se hal na nikle toh pmkisan.gov.in ke Help Desk par ticket, aur uske
-            baad apne state ke <strong>Nodal Officer</strong> ko email — unke paas district
+            baad apne state ke <strong>Nodal Officer</strong> ko email, unke paas district
             administration ko order dene ki power hoti hai. Har state ke nodal officer ka contact{' '}
             <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-blue-600 dark:text-blue-400 font-medium">nodal officer list</Link> mein hai. List ki PDF, status ka screenshot aur complaint
-            number — teeno sambhal kar rakho, har agla step inhi par chalta hai.
+            number. Teeno sambhal kar rakho, har agla step inhi par chalta hai.
           </p>
         </section>
 
@@ -362,7 +362,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
               <strong>Fraud Se Bacho:</strong>
             </p>
             <p className="text-xs text-red-700 dark:text-red-400">
-              Official list mein naam aur partially masked account details dikh sakti hain — itna hi data public hota hai. Koi bhi unknown link par click mat karein jo kahe ki "Yahan se complete data download karo" — poora Aadhaar ya account number dikhane ka dawa karne wali har site fraud hai. Hamesha sirf <strong>pmkisan.gov.in</strong> ka use karein.
+              Official list mein naam aur partially masked account details dikh sakti hain — itna hi data public hota hai. Koi bhi unknown link par click mat karein jo kahe ki "Yahan se complete data download karo", poora Aadhaar ya account number dikhane ka dawa karne wali har site fraud hai. Hamesha sirf <strong>pmkisan.gov.in</strong> ka use karein.
             </p>
           </div>
         </section>
@@ -377,16 +377,16 @@ export default function PmKisanVillageWiseListPdfDownload() {
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">List Download Karke Kya Karein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Gaon ki list sirf apna naam dekhne ke liye nahi hai — isi se pata chalta hai ki kaun ineligible hote hue paisa le raha hai aur kaun eligible hote hue chhut gaya hai. Har kist se pehle list update hoti hai, isliye purani save ki hui PDF par bharosa na karein.
+            Gaon ki list sirf apna naam dekhne ke liye nahi hai. Isi se pata chalta hai ki kaun ineligible hote hue paisa le raha hai aur kaun eligible hote hue chhut gaya hai. Har kist se pehle list update hoti hai, isliye purani save ki hui PDF par bharosa na karein.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Naam list mein hai par payment nahi aayi — toh problem list mein nahi, bank seeding mein hai; woh alag check karni padegi.
+            Naam list mein hai par payment nahi aayi, toh problem list mein nahi, bank seeding mein hai; woh alag check karni padegi.
           </p>
         </div>
 
         <CountdownPortalCard
           title="PM Kisan Official Portal"
-          description="Beneficiary data access karne ke liye, ya saari jaankari ke liye government website par jaayein — countdown poora hote hi portal khulega."
+          description="Beneficiary data access karne ke liye, ya saari jaankari ke liye government website par jaayein, countdown poora hote hi portal khulega."
           url="https://pmkisan.gov.in/BeneficiaryList.aspx"
           buttonText="Yahan Click Karo → PM Kisan Portal Khulega"
           variant="blue"

@@ -35,7 +35,7 @@ const FAQS_DATA = [
   },
   {
     q: 'PMKMY grievance ka email address kya hai?',
-    a: 'scpms@licindia.com — PMKMY ke liye specific. LIC se directly baat karni ho to co_complaints@licindia.com bhi hai. Email mein Subscriber ID, registered mobile number aur issue saaf-saaf likho.',
+    a: 'scpms@licindia.com. PMKMY ke liye specific. LIC se directly baat karni ho to co_complaints@licindia.com bhi hai. Email mein Subscriber ID, registered mobile number aur issue saaf-saaf likho.',
   },
   {
     q: 'Online grievance file karne ke baad reply aane mein kitna samay lagta hai?',
@@ -67,7 +67,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
           <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Verified Contact Info</span>
 
           <h1 className="hero-title text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            Maandhan Pension (PMKMY) Ki Shikayat — Sahi Number Aur Sahi Rasta
+            Maandhan Pension (PMKMY) Ki Shikayat. Sahi Number Aur Sahi Rasta
           </h1>
 
           <div className="hero-description flex flex-wrap gap-3 text-xs text-green-200">
@@ -93,7 +93,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Official verified contact details — Last updated: July 2026
+            Official verified contact details. Last updated: July 2026
           </p>
         </div>
 
@@ -103,24 +103,24 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
               <p className="font-bold text-gray-900 dark:text-white mb-2"> Helpline Numbers:</p>
               <ul className="space-y-1 text-[var(--color-text-muted)]">
-                <li><strong>18002676888</strong> (Toll-Free) — PMKMY Official Portal</li>
-                <li><strong>14434</strong> (Toll-Free) — Ministry of Labour & Employment</li>
-                <li><strong>14599</strong> (CSC Helpdesk) — 9:30 AM to 6:00 PM, Mon-Sat</li>
-                <li><strong>+91-22-68276827</strong> (LIC Call Center) — 8:00 AM to 8:00 PM</li>
+                <li><strong>18002676888</strong> (Toll-Free). PMKMY Official Portal</li>
+                <li><strong>14434</strong> (Toll-Free). Ministry of Labour & Employment</li>
+                <li><strong>14599</strong> (CSC Helpdesk), 9:30 AM to 6:00 PM, Mon-Sat</li>
+                <li><strong>+91-22-68276827</strong> (LIC Call Center), 8:00 AM to 8:00 PM</li>
               </ul>
             </div>
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
               <p className="font-bold text-gray-900 dark:text-white mb-2"> Official Email Addresses:</p>
               <ul className="space-y-1 text-[var(--color-text-muted)]">
                 <li><strong>scpms@licindia.com</strong> — PMKMY specific grievances</li>
-                <li><strong>co_complaints@licindia.com</strong> — General LIC complaints</li>
+                <li><strong>co_complaints@licindia.com</strong>. General LIC complaints</li>
               </ul>
             </div>
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
               <p className="font-bold text-gray-900 dark:text-white mb-2">Official Portals:</p>
               <ul className="space-y-1 text-[var(--color-text-muted)]">
-                <li><strong>pmkmy.gov.in</strong> — Main portal for grievances</li>
-                <li><strong>maandhan.in</strong> — Ministry of Labour & Employment portal</li>
+                <li><strong>pmkmy.gov.in</strong>. Main portal for grievances</li>
+                <li><strong>maandhan.in</strong>. Ministry of Labour & Employment portal</li>
               </ul>
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
         </div>
 
         <section className="mb-8">
-          <SH>Problem Ke Hisab Se Sahi Contact — Decision Tree</SH>
+          <SH>Problem Ke Hisab Se Sahi Contact. Decision Tree</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Har samasya ka alag department hota hai. Neeche di gayi table se samjhein ki aapki problem ke liye kaunsa contact sabse behtar hai:
           </p>
@@ -174,7 +174,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
         </section>
 
         <section className="mb-8">
-          <SH>Hypothetical Example — Step-by-Step Resolution Process</SH>
+          <SH>Hypothetical Example. Step-by-Step Resolution Process</SH>
           <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-400 rounded-xl p-5 mb-6">
             <h3 className="font-bold text-blue-900 dark:text-blue-300 mb-3">Example Scenario: Payment Deduction Issue</h3>
             <div className="space-y-3 text-sm text-[var(--color-text-muted)]">
@@ -187,9 +187,9 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
                 <li>Detail mein likhein: "Last 3 months deduction confirmed but status inactive. Transaction IDs: [Apni transaction IDs yahan likhein]"</li>
                 <li>Bank statement screenshot attach karein</li>
                 <li>Submit karne par Reference Number note karein</li>
-                <li>7 din baad portal par check karein — status "Under Process" ho sakta hai</li>
+                <li>7 din baad portal par check karein, status "Under Process" ho sakta hai</li>
                 <li>12-15 din baad email aa sakta hai: "Your grievance has been resolved"</li>
-                <li>Portal par status check karein — "Active" dikhna chahiye</li>
+                <li>Portal par status check karein, "Active" dikhna chahiye</li>
               </ol>
               <p className="text-green-700 dark:text-green-300 font-medium"><strong>Expected Time:</strong> 12-15 working days (official guidelines ke mutabiq)</p>
             </div>
@@ -209,10 +209,10 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
             <SI n={1}><strong>PMKMY Portal Par Jaayein:</strong> pmkmy.gov.in (sirf .gov.in wali site)</SI>
             <SI n={2}><strong>Login Karein:</strong> "Subscriber Login" → Registered mobile number → OTP verify</SI>
             <SI n={3}><strong>Grievance Section:</strong> Dashboard par "Grievance" ya "Raise Complaint" par click karein</SI>
-            <SI n={4}><strong>Complaint Type:</strong> Dropdown se select karein — "Payment Not Received", "Wrong Deduction", "Account Issue", etc.</SI>
+            <SI n={4}><strong>Complaint Type:</strong> Dropdown se select karein, "Payment Not Received", "Wrong Deduction", "Account Issue", etc.</SI>
             <SI n={5}><strong>Detail Mein Likhein:</strong> Example: "Mere account se har mahine ₹100 kat rahe hain lekin portal par status 'Inactive' hai. Last 3 mahine se payment confirm nahi ho rahi. Transaction IDs: [IDs yahan likhein]"</SI>
             <SI n={6}><strong>Documents Attach Karein:</strong> Bank statement screenshot, transaction IDs, ya koi bhi proof</SI>
-            <SI n={7}><strong>Reference Number Note Karein:</strong> Submit karne par ek unique number milega — ise screenshot le lein</SI>
+            <SI n={7}><strong>Reference Number Note Karein:</strong> Submit karne par ek unique number milega, ise screenshot le lein</SI>
           </StepList>
 
           <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
@@ -226,7 +226,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               sizes="(max-width: 768px) 100vw, 768px"
             />
             <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-              Online grievance form — Complaint reference number likh lein
+              Online grievance form. Complaint reference number likh lein
             </p>
           </div>
 
@@ -236,7 +236,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
         </section>
 
         <section className="mb-8">
-          <SH>CSC Helpdesk (14599) — Kab aur Kaise Contact Karein?</SH>
+          <SH>CSC Helpdesk (14599). Kab aur Kaise Contact Karein?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             CSC (Common Service Center) ka helpdesk number <strong>14599</strong> hai. Working hours: <strong>9:30 AM to 6:00 PM (Monday to Saturday)</strong>.
           </p>
@@ -286,13 +286,13 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
         </section>
 
         <section className="mb-8">
-          <SH>Email Par Grievance — Perfect Format</SH>
+          <SH>Email Par Grievance. Perfect Format</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Email tab sabse effective hoti hai jab aap detail mein likhte hain aur documents attach karte hain. Official email: <strong>scpms@licindia.com</strong>.
           </p>
 
           <div className="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-xl border border-blue-200 dark:border-blue-800 mb-6">
-            <h3 className="font-bold text-blue-900 dark:text-blue-300 mb-3">Email Format — Copy-Paste Ready:</h3>
+            <h3 className="font-bold text-blue-900 dark:text-blue-300 mb-3">Email Format. Copy-Paste Ready:</h3>
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg text-xs space-y-2 font-mono">
               <p><strong>Subject:</strong> PMKMY Grievance - [Aapka Naam] - [Mobile Number]</p>
               <br />
@@ -313,7 +313,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               </ul>
               <br />
               <p><strong>Meri Samasya:</strong></p>
-              <p>[Yahan detail mein likhein — jaise "Pichle 3 mahine se mere account se ₹100 kat rahe hain lekin portal par status 'Inactive' dikh raha hai. Transaction IDs: TXN123, TXN456, TXN789"]</p>
+              <p>[Yahan detail mein likhein, jaise "Pichle 3 mahine se mere account se ₹100 kat rahe hain lekin portal par status 'Inactive' dikh raha hai. Transaction IDs: TXN123, TXN456, TXN789"]</p>
               <br />
               <p><strong>Attachments:</strong></p>
               <ul className="list-disc pl-4">
@@ -370,7 +370,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               sizes="(max-width: 768px) 100vw, 600px"
             />
             <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-              Grievance status tracking — "Resolved" dikh raha hai
+              Grievance status tracking, "Resolved" dikh raha hai
             </p>
           </div>
 
@@ -389,7 +389,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
         </section>
 
         <section className="mb-8">
-          <SH>Common Mistakes — In Galtiyon Se Bachein</SH>
+          <SH>Common Mistakes. In Galtiyon Se Bachein</SH>
           <div className="space-y-3">
             <div className="flex items-start bg-red-50 dark:bg-red-900/10 p-3 rounded-lg">
               <span className="text-red-600 mr-3 font-bold text-xl">✗</span>
@@ -402,7 +402,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               <span className="text-red-600 mr-3 font-bold text-xl">✗</span>
               <div>
                 <p className="text-sm font-bold text-gray-900 dark:text-white">Problem ko detail mein nahi batana</p>
-                <p className="text-xs text-[var(--color-text-muted)]">"Paisa nahi mila" likhne se kaam nahi chalega — date, amount, transaction ID sab likhein.</p>
+                <p className="text-xs text-[var(--color-text-muted)]">"Paisa nahi mila" likhne se kaam nahi chalega, date, amount, transaction ID sab likhein.</p>
               </div>
             </div>
             <div className="flex items-start bg-red-50 dark:bg-red-900/10 p-3 rounded-lg">
@@ -416,14 +416,14 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
               <span className="text-red-600 mr-3 font-bold text-xl">✗</span>
               <div>
                 <p className="text-sm font-bold text-gray-900 dark:text-white">Galat jagah request karna</p>
-                <p className="text-xs text-[var(--color-text-muted)]">Payment issue ke liye CSC par jaane se kaam nahi banega — bank ya LIC ko contact karein.</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Payment issue ke liye CSC par jaane se kaam nahi banega, bank ya LIC ko contact karein.</p>
               </div>
             </div>
             <div className="flex items-start bg-red-50 dark:bg-red-900/10 p-3 rounded-lg">
               <span className="text-red-600 mr-3 font-bold text-xl">✗</span>
               <div>
                 <p className="text-sm font-bold text-gray-900 dark:text-white">Documents attach nahi karna</p>
-                <p className="text-xs text-[var(--color-text-muted)]">Bank statement, screenshot, receipt — jo bhi proof ho, use saath attach karein.</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Bank statement, screenshot, receipt, jo bhi proof ho, use saath attach karein.</p>
               </div>
             </div>
           </div>
@@ -433,7 +433,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Shikayat Aur Helpline Ke Common Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PMKMY Helpline & Grievance — Sawal Jawab" />
+          <FAQBlock faqs={FAQS_DATA} caption="PMKMY Helpline & Grievance. Sawal Jawab" />
         </section>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
@@ -447,7 +447,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Aapki mehnat, aapka haq — pension milna hi chahiye
+            Aapki mehnat, aapka haq, pension milna hi chahiye
           </p>
         </div>
 
@@ -460,7 +460,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
             Toh seedi aise chadhein: pehle portal par grievance darj karein aur reference number note karein; 7–10 din mein jawab na aaye toh 18002676888 par call karke wahi number batayein; phir bhi hal na nikle toh scpms@licindia.com par email mein number, KPAN aur poori timeline likhein. Har step ka record agle step ki taakat hai.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mt-3">
-            Aur agar in teeno steps ke baad bhi samadhan na mile, toh aakhri rasta hai Government of India ka centralized grievance portal <a href="https://pgportal.gov.in" target="_blank" rel="noopener noreferrer nofollow" className="underline">pgportal.gov.in (CPGRAMS)</a> — wahan Ministry of Labour &amp; Employment select karke complaint darj karein aur pichhle sab reference numbers saath attach karein.
+            Aur agar in teeno steps ke baad bhi samadhan na mile, toh aakhri rasta hai Government of India ka centralized grievance portal <a href="https://pgportal.gov.in" target="_blank" rel="noopener noreferrer nofollow" className="underline">pgportal.gov.in (CPGRAMS)</a>, wahan Ministry of Labour &amp; Employment select karke complaint darj karein aur pichhle sab reference numbers saath attach karein.
           </p>
         </div>
 

@@ -14,12 +14,12 @@ const RELATED = [
 
 const FAQS_DATA = [
   {
-    q: 'eKYC ek baar kar li thi — phir se karni padegi kya?',
-    a: 'Haan, ab eKYC har saal karni hai. 2026 se sarkar ne saaf kar diya hai ki beneficiaries ko saalana biometric ya face eKYC karni hogi — pichle saal ki eKYC agli kist ke liye kaafi nahi hai. 2026 ke audit me 1.13 crore se zyada naam list se hataye gaye the, jisme adhoora eKYC bada kaaran tha. Toh har kist se pehle ek baar status check kar lo.',
+    q: 'eKYC ek baar kar li thi. Phir se karni padegi kya?',
+    a: 'Haan, ab eKYC har saal karni hai. 2026 se sarkar ne saaf kar diya hai ki beneficiaries ko saalana biometric ya face eKYC karni hogi. Pichle saal ki eKYC agli kist ke liye kaafi nahi hai. 2026 ke audit me 1.13 crore se zyada naam list se hataye gaye the, jisme adhoora eKYC bada kaaran tha. Toh har kist se pehle ek baar status check kar lo.',
   },
   {
     q: 'Bina OTP ke eKYC sach mein ho jaati hai?',
-    a: 'Haan. Chehre wale tarike mein OTP ki koi zaroorat nahi. PMKisan app ke saath AadhaarFaceRD app (dono Play Store par sarkari publisher se) install karo, camera ke samne aao, screen ki instructions (palak jhapkana waghera) follow karo — bas.',
+    a: 'Haan. Chehre wale tarike mein OTP ki koi zaroorat nahi. PMKisan app ke saath AadhaarFaceRD app (dono Play Store par sarkari publisher se) install karo, camera ke samne aao, screen ki instructions (palak jhapkana waghera) follow karo. Bas.',
   },
   {
     q: 'Face scan fail ho raha hai, kya karein?',
@@ -27,7 +27,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya CSC jakar bhi karwa sakte hain?',
-    a: 'Haan, nazdiki CSC center par biometric device se yahi kaam ho jata hai. Rate ₹15-20 hai — receipt zaroor lena. 5 minute ka kaam hai.',
+    a: 'Haan, nazdiki CSC center par biometric device se yahi kaam ho jata hai. Rate ₹15-20 hai. Receipt zaroor lena. 5 minute ka kaam hai.',
   },
   {
     q: 'Chehra verify hone ke baad kya karein?',
@@ -73,12 +73,12 @@ export default function PmKisanFaceAuthenticationEkyc() {
             priority
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)]">
-            Chehre se eKYC — bina OTP ke
+            Chehre se eKYC, bina OTP ke
           </p>
         </div>
 
         <section className="mb-8">
-          <SH>OTP vs Face vs Biometric — Aapke Liye Kaunsa Tarika Sahi Hai?</SH>
+          <SH>OTP vs Face vs Biometric. Aapke Liye Kaunsa Tarika Sahi Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             eKYC karne ke teen raaste hain, aur galat raasta pakadne mein hi zyadatar logon ka time barbaad hota hai. Isliye pehle 30 second mein ye decide karo ki aapka case kaunsa hai. Face authentication unhi ke liye bana hai jinke paas baaki do raaste band hain.
           </p>
@@ -108,7 +108,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
             </table>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Pehli line wale ho? Toh ye page aapke liye nahi hai — seedha <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">normal eKYC guide</Link> kholo, OTP se 2 minute mein kaam ho jayega. Doosri line wale yahin ruko. Roz aise messages aate hain — "Bhaiya OTP hi nahi aa raha, kya karein?" Number purana band ho gaya, naya Aadhaar se link nahi karaya. Unhi ke liye ye poora page hai.
+            Pehli line wale ho? Toh ye page aapke liye nahi hai. Seedha <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">normal eKYC guide</Link> kholo, OTP se 2 minute mein kaam ho jayega. Doosri line wale yahin ruko. Roz aise messages aate hain — "Bhaiya OTP hi nahi aa raha, kya karein?" Number purana band ho gaya, naya Aadhaar se link nahi karaya. Unhi ke liye ye poora page hai.
           </p>
 
           <Image
@@ -122,22 +122,22 @@ export default function PmKisanFaceAuthenticationEkyc() {
           <DB>
             <strong>Sabse Aam Case:</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
-              Purana SIM band ho gaya, naya number le liya lekin Aadhaar se link nahi karaya — ab OTP kahin nahi aata. Aise kisano ke messages har hafte aate hain. Inke liye number link karane ka intezaar karne ki zaroorat nahi: chehre wale tarike se 5 minute mein kaam ho jata hai, aur number link karane ka kaam baad me aaram se karo.
+              Purana SIM band ho gaya, naya number le liya lekin Aadhaar se link nahi karaya, ab OTP kahin nahi aata. Aise kisano ke messages har hafte aate hain. Inke liye number link karane ka intezaar karne ki zaroorat nahi: chehre wale tarike se 5 minute mein kaam ho jata hai, aur number link karane ka kaam baad me aaram se karo.
             </p>
           </DB>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
-            Ye kaam karta kaise hai? Simple biometric verification hai — jaise fingerprint se Aadhaar verify hota hai, waise hi camera aapka chehra scan karke Aadhaar database ki photo se milata hai. Match hua toh verified. Sarkari system hai, data UIDAI ke through hi jata hai. Bas ek shart hai: sirf official app use karni hai, koi milti-julti third-party app nahi.
+            Ye kaam karta kaise hai? Simple biometric verification hai. Jaise fingerprint se Aadhaar verify hota hai, waise hi camera aapka chehra scan karke Aadhaar database ki photo se milata hai. Match hua toh verified. Sarkari system hai, data UIDAI ke through hi jata hai. Bas ek shart hai: sirf official app use karni hai, koi milti-julti third-party app nahi.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>Do App Chahiye — PMKisan + AadhaarFaceRD (Setup Aur Install Errors)</SH>
+          <SH>Do App Chahiye. PMKisan + AadhaarFaceRD (Setup Aur Install Errors)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Yahan zyadatar log atakte hain, kyunki koi batata nahi ki app <strong>ek nahi, do</strong> chahiye. PMKisan app toh sabko pata hai, lekin chehra scan asal mein <strong>AadhaarFaceRD</strong> naam ki UIDAI wali app karti hai — wo background mein chalti hai, uska koi icon-screen nahi dikhta. Agar wo install nahi hai, toh scan shuru hote hi error aa jata hai aur log samajhte hain ki unka phone kharab hai.
+            Yahan zyadatar log atakte hain, kyunki koi batata nahi ki app <strong>ek nahi, do</strong> chahiye. PMKisan app toh sabko pata hai, lekin chehra scan asal mein <strong>AadhaarFaceRD</strong> naam ki UIDAI wali app karti hai. Wo background mein chalti hai, uska koi icon-screen nahi dikhta. Agar wo install nahi hai, toh scan shuru hote hi error aa jata hai aur log samajhte hain ki unka phone kharab hai.
           </p>
           <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4">
-            <li><strong>PMKisan app</strong> — Play Store se, publisher "Government of India" check karo. Play Store par na mile toh pmkisan.gov.in se APK download karo.</li>
-            <li><strong>AadhaarFaceRD</strong> — Play Store par isi naam se hai, publisher UIDAI. Install karke bhoolo — kholne ki zaroorat nahi, ye service ki tarah kaam karti hai.</li>
+            <li><strong>PMKisan app</strong>. Play Store se, publisher "Government of India" check karo. Play Store par na mile toh pmkisan.gov.in se APK download karo.</li>
+            <li><strong>AadhaarFaceRD</strong>. Play Store par isi naam se hai, publisher UIDAI. Install karke bhoolo, kholne ki zaroorat nahi, ye service ki tarah kaam karti hai.</li>
           </ul>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Install ke waqt jo errors aate hain, unka seedha fix:
@@ -168,21 +168,21 @@ export default function PmKisanFaceAuthenticationEkyc() {
             </table>
           </div>
           <IB>
-            <strong>Kaam Shuru Karne Se Pehle:</strong> Dono app free hain. Koi app ya website is kaam ke paise maange (khud karne par), toh wo fraud hai. CSC par karwane ka charge alag baat hai — uski receipt milti hai.
+            <strong>Kaam Shuru Karne Se Pehle:</strong> Dono app free hain. Koi app ya website is kaam ke paise maange (khud karne par), toh wo fraud hai. CSC par karwane ka charge alag baat hai. Uski receipt milti hai.
           </IB>
         </section>
 
         <section className="mb-8">
-          <SH>Scan Kaise Karein — Step by Step</SH>
+          <SH>Scan Kaise Karein. Step by Step</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Dono app install ho gayi? Ab asli kaam. Poora process 5 minute ka hai:
           </p>
           <StepList>
             <SI n={1}>
-              <strong>PMKisan app kholo:</strong> Home screen par "Face Authentication" ka option dikhega. Us par tap karo. (Option na dikhe toh app update karo — purane version mein ye feature nahi tha.)
+              <strong>PMKisan app kholo:</strong> Home screen par "Face Authentication" ka option dikhega. Us par tap karo. (Option na dikhe toh app update karo, purane version mein ye feature nahi tha.)
             </SI>
             <SI n={2}>
-              <strong>Aadhaar number daalo:</strong> Apna 12 digit ka Aadhaar number daalo. Dhyan se — ek number bhi galat hua toh error aayega. "Search" dabao.
+              <strong>Aadhaar number daalo:</strong> Apna 12 digit ka Aadhaar number daalo. Dhyan se, ek number bhi galat hua toh error aayega. "Search" dabao.
             </SI>
             <SI n={3}>
               <strong>Details confirm karo:</strong> Screen par tumhara naam aur photo dikhegi. Check karo ki ye aap hi ho. Photo purani hai lekin pehchan mein aa rahi hai toh "Yes" dabao.
@@ -191,7 +191,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
               <strong>Camera on hoga:</strong> Chehra frame ke gol ghere mein rakho. Roshni saamne se aani chahiye, peeche se nahi. Background plain rakho.
             </SI>
             <SI n={5}>
-              <strong>Instructions follow karo:</strong> Screen par likha aayega "Blink your eyes" — palak jhapkao. Ye isliye taaki koi photo dikha kar verify na kar le; system live insaan check karta hai.
+              <strong>Instructions follow karo:</strong> Screen par likha aayega "Blink your eyes", palak jhapkao. Ye isliye taaki koi photo dikha kar verify na kar le; system live insaan check karta hai.
             </SI>
             <SI n={6}>
               <strong>Success message:</strong> Sab sahi hua toh "Successfully Authenticated" aayega, green tick ke saath. Screenshot le lo apne record ke liye.
@@ -201,10 +201,10 @@ export default function PmKisanFaceAuthenticationEkyc() {
           <WB>
             <strong>Zaroori Tips:</strong>
             <ul className="list-disc list-inside mt-2 space-y-1 text-xs">
-              <li>Din mein khidki ke paas karo — andhere mein scan fail ho jata hai</li>
+              <li>Din mein khidki ke paas karo, andhere mein scan fail ho jata hai</li>
               <li>Chashma utaar do scan ke time</li>
               <li>Net tez hona chahiye (4G/WiFi)</li>
-              <li>3 baar fail ho toh 1 ghanta ruko — bar-bar try karne se attempt block ho sakta hai</li>
+              <li>3 baar fail ho toh 1 ghanta ruko, bar-bar try karne se attempt block ho sakta hai</li>
             </ul>
           </WB>
 
@@ -222,16 +222,16 @@ export default function PmKisanFaceAuthenticationEkyc() {
         </section>
 
         <section className="mb-8">
-          <SH>Ghar Ke Buzurg Ya Feature-Phone Wale Kisan — Aapka Raasta Alag Hai</SH>
+          <SH>Ghar Ke Buzurg Ya Feature-Phone Wale Kisan. Aapka Raasta Alag Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Sach baat: 60-65 saal ke kisan ke liye app download, permission, scan — ye sab jhanjhat hai. Aur jinke paas button wala phone hai, unke liye ye tarika hai hi nahi. Aise mein do practical raaste:
+            Sach baat: 60-65 saal ke kisan ke liye app download, permission, scan. Ye sab jhanjhat hai. Aur jinke paas button wala phone hai, unke liye ye tarika hai hi nahi. Aise mein do practical raaste:
           </p>
           <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4">
             <li>
-              <strong>Ghar ke kisi jawaan ka smartphone use karo.</strong> App mein login aapke Aadhaar se hota hai, phone kiska hai isse fark nahi padta. Beta/beti/pota — kisi ka bhi phone, 5 minute ka kaam. Kai gharon mein ek hi phone se dada, dadi, chacha sabki eKYC hui hai — ye bilkul allowed hai.
+              <strong>Ghar ke kisi jawaan ka smartphone use karo.</strong> App mein login aapke Aadhaar se hota hai, phone kiska hai isse fark nahi padta. Beta/beti/pota, kisi ka bhi phone, 5 minute ka kaam. Kai gharon mein ek hi phone se dada, dadi, chacha sabki eKYC hui hai. Ye bilkul allowed hai.
             </li>
             <li>
-              <strong>Ya seedha <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC seva kendra</Link> jao.</strong> Aadhaar card original le jao. Operator biometric device se fingerprint ya chehra scan karega. ₹15-20 lagenge (poora rate chart usi guide me hai), receipt lekar hi uthna. 5 minute mein kaam hota hai — line ka time alag.
+              <strong>Ya seedha <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">CSC seva kendra</Link> jao.</strong> Aadhaar card original le jao. Operator biometric device se fingerprint ya chehra scan karega. ₹15-20 lagenge (poora rate chart usi guide me hai), receipt lekar hi uthna. 5 minute mein kaam hota hai. Line ka time alag.
             </li>
           </ul>
           <Image
@@ -242,7 +242,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
             className="w-full rounded-xl my-4"
           />
           <IB>
-            <strong>CSC par ye line bol dena:</strong> "PM Kisan ki eKYC karni hai." Operator ko pata hota hai kaunsa portal kholna hai. Receipt lena mat bhoolna — baad mein dikkat aayi toh yahi proof hai.
+            <strong>CSC par ye line bol dena:</strong> "PM Kisan ki eKYC karni hai." Operator ko pata hota hai kaunsa portal kholna hai. Receipt lena mat bhoolna, baad mein dikkat aayi toh yahi proof hai.
           </IB>
           <Image
             src="/images/articles/pm-kisan-face-authentication-ekyc/who-should-use.webp"
@@ -254,7 +254,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
         </section>
 
         <section className="mb-8">
-          <SH>"Photo Match Nahi Ho Raha" — Asli Kaaran Aur Fix</SH>
+          <SH>"Photo Match Nahi Ho Raha". Asli Kaaran Aur Fix</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             App sahi chal rahi hai, scan bhi ho raha hai, lekin aakhir mein fail — "Authentication failed" ya "Face not matched". Iske gine-chune kaaran hote hain:
           </p>
@@ -262,10 +262,10 @@ export default function PmKisanFaceAuthenticationEkyc() {
             {[
               {
                 error: 'Aadhaar ki photo bahut purani hai',
-                fix: 'Ye sabse bada kaaran hai. 10-15 saal purani photo se aaj ka chehra system match nahi kar pata — umar, daadhi, chashma, sab badal jata hai. Iska ek hi ilaaj: Aadhaar Seva Kendra jakar photo (biometric) update karwao — UIDAI ki official fees ₹125 hai (uidai.gov.in par rate list hai). Update hone ke baad dobara scan karo.',
+                fix: 'Ye sabse bada kaaran hai. 10-15 saal purani photo se aaj ka chehra system match nahi kar pata, umar, daadhi, chashma, sab badal jata hai. Iska ek hi ilaaj: Aadhaar Seva Kendra jakar photo (biometric) update karwao. UIDAI ki official fees ₹125 hai (uidai.gov.in par rate list hai). Update hone ke baad dobara scan karo.',
               },
               {
-                error: 'Face not detected — chehra pakad hi nahi raha',
+                error: 'Face not detected, chehra pakad hi nahi raha',
                 fix: 'Roshni ka issue hai. Khidki ke paas jao, roshni chehre par ho (peeche se nahi). Camera ka lens saaf karo. Topi/gamchha hatao, chashma utaro.',
               },
               {
@@ -274,11 +274,11 @@ export default function PmKisanFaceAuthenticationEkyc() {
               },
               {
                 error: 'Network timeout',
-                fix: 'Scan ke waqt data UIDAI tak jata hai — net toota toh fail. WiFi ya achha 4G pakdo. Gaon mein subah 6-8 baje network sabse khali hota hai.',
+                fix: 'Scan ke waqt data UIDAI tak jata hai. Net toota toh fail. WiFi ya achha 4G pakdo. Gaon mein subah 6-8 baje network sabse khali hota hai.',
               },
               {
-                error: 'Baar-baar fail — 3+ attempts',
-                fix: 'Ab zid mat karo, attempt lock ho sakta hai. Seedha CSC jao aur fingerprint se karwa lo — wahan chehre ki zaroorat hi nahi.',
+                error: 'Baar-baar fail, 3+ attempts',
+                fix: 'Ab zid mat karo, attempt lock ho sakta hai. Seedha CSC jao aur fingerprint se karwa lo, wahan chehre ki zaroorat hi nahi.',
               },
             ].map(({ error, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
@@ -297,7 +297,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
             Nazdiki Aadhaar Seva Kendra dhoondhne aur update fees confirm karne ke liye{' '}
             <a href="https://uidai.gov.in" target="_blank" rel="nofollow noopener" className="underline text-green-700 dark:text-green-400">uidai.gov.in</a>{' '}
-            sahi jagah hai — wahan appointment bhi book ho jaati hai.
+            sahi jagah hai. Wahan appointment bhi book ho jaati hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
             Ek aur cheez jo log miss karte hain: app ka version. Purani version mein bugs the jo ab fix ho chuke hain — Play Store kholkar update check kar lo, cache clear kar lo (Settings &gt; Apps &gt; PMKisan &gt; Storage &gt; Clear Cache). Aur agar kuch bhi kaam na kare, toh helpline <strong>155261</strong> ya apne <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">state nodal officer</Link> se baat karo. Poori process ki detail ke liye <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">Master Guide</Link> bhi hai.
@@ -305,51 +305,51 @@ export default function PmKisanFaceAuthenticationEkyc() {
         </section>
 
         <section className="mb-8">
-          <SH>2026 Ka Naya Niyam — eKYC Ab Har Saal, Aur Deadline Ka Hisaab</SH>
+          <SH>2026 Ka Naya Niyam, eKYC Ab Har Saal, Aur Deadline Ka Hisaab</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Pehle log samajhte the ki eKYC ek baar ka kaam hai. Ab aisa nahi hai. 2026 se sarkar ne{' '}
-            <strong>saalana eKYC</strong> ki baat saaf kar di hai — har saal biometric ya face authentication
+            <strong>saalana eKYC</strong> ki baat saaf kar di hai. Har saal biometric ya face authentication
             se apni pehchaan dobara verify karni hogi, warna agli kist atak sakti hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ye niyam kitna serious hai, iska andaza is baat se lagao: 2026 ke audit me{' '}
-            <strong>1.13 crore se zyada naam</strong> beneficiary list se hataye gaye — adhoora eKYC, land record
+            <strong>1.13 crore se zyada naam</strong> beneficiary list se hataye gaye, adhoora eKYC, land record
             mismatch aur ineligibility ke chakkar me. Matlab jo log "ho jayega baad me" bol ke taalte rahe,
             unme se lakhon ki kist ruk gayi.
           </p>
           <IB>
             <strong>Timing ka funda:</strong> Agli (24vi) kist <Link href="/articles/PmKisan24viKist2026" className="underline font-semibold">October 2026 me expected</Link> hai.
-            eKYC abhi karwa lo — August-September me CSC khali milte hain, October me release ke aas-paas
+            eKYC abhi karwa lo. August-September me CSC khali milte hain, October me release ke aas-paas
             har center pe bheed hoti hai aur portal bhi slow chalta hai. 10 minute ka kaam hai, kist ke
             ₹2,000 daav pe mat lagao.
           </IB>
         </section>
 
         <section className="mb-8">
-          <SH>eKYC Ho Gayi, Phir Bhi Paisa Nahi Aaya — Baaki Do Taale</SH>
+          <SH>eKYC Ho Gayi, Phir Bhi Paisa Nahi Aaya. Baaki Do Taale</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Green tick dekh kar log samajhte hain ki ab kist pakki. Sach ye hai ki eKYC teen taalon me se sirf ek taala kholti hai. Baaki do bhi khule hone chahiye, tabhi paisa aata hai:
           </p>
           <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4">
             <li>
-              <strong>Bank account ki Aadhaar seeding (NPCI).</strong> Paisa DBT se us khaate me jata hai jo NPCI system me Aadhaar se linked hai. Khaata chalu hai par Aadhaar se seeded nahi? Transfer fail — eKYC ke baad bhi. Apni branch ja kar ek line poochho: &ldquo;Mera account NPCI me Aadhaar se seeded hai?&rdquo; Nahi hai to wahi form bhar do.
+              <strong>Bank account ki Aadhaar seeding (NPCI).</strong> Paisa DBT se us khaate me jata hai jo NPCI system me Aadhaar se linked hai. Khaata chalu hai par Aadhaar se seeded nahi? Transfer fail, eKYC ke baad bhi. Apni branch ja kar ek line poochho: &ldquo;Mera account NPCI me Aadhaar se seeded hai?&rdquo; Nahi hai to wahi form bhar do.
             </li>
             <li>
-              <strong>Land seeding.</strong> Aapka khasra number portal ke record me dikhna chahiye. Ye wala kaam patwari/revenue office ke through hota hai — app ya CSC se nahi. Status page par land seeding &ldquo;No&rdquo; dikhe to wahi pakdo, eKYC dobara karne se kuch nahi hoga.
+              <strong>Land seeding.</strong> Aapka khasra number portal ke record me dikhna chahiye. Ye wala kaam patwari/revenue office ke through hota hai. App ya CSC se nahi. Status page par land seeding &ldquo;No&rdquo; dikhe to wahi pakdo, eKYC dobara karne se kuch nahi hoga.
             </li>
           </ul>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Teeno cheezein (eKYC + bank seeding + land seeding) green hone ke baad bhi paisa batch se aata hai — FTO bante hi kuch dino me credit hota hai, ek-ek karke nahi. Wo poora hisaab{' '}
-            <Link href="/articles/fto-status-check-paisa-kab-aayega" className="underline text-green-700 dark:text-green-400">FTO status guide</Link> me hai. Aur agar 30 din se sab green hai par credit nahi — to{' '}
+            <Link href="/articles/fto-status-check-paisa-kab-aayega" className="underline text-green-700 dark:text-green-400">FTO status guide</Link> me hai. Aur agar 30 din se sab green hai par credit nahi. To{' '}
             <Link href="/articles/PmKisanPaymentFailedFix2026" className="underline text-green-700 dark:text-green-400">payment failed fix guide</Link> kholo, wahan reason-wise rasta likha hai.
           </p>
         </section>
 
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-            Face eKYC — Har Sawal Ka Jawab
+            Face eKYC. Har Sawal Ka Jawab
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="Chehre se eKYC — FAQ" />
+          <FAQBlock faqs={FAQS_DATA} caption="Chehre se eKYC. FAQ" />
         </section>
 
         <GovLink

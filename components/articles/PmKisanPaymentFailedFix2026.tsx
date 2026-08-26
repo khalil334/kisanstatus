@@ -15,7 +15,7 @@ const RELATED_CARDS = [
   },
   {
     slug: 'PmKisanRejectedStatusReApplyGuide',
-    title: 'Rejected Ho Gaya — Dobara Kaise Apply Karein',
+    title: 'Rejected Ho Gaya. Dobara Kaise Apply Karein',
     desc: 'Application reject hone ki wajah pehchaan kar phir se apply karne ka rasta.',
   },
   {
@@ -27,7 +27,7 @@ const RELATED_CARDS = [
 
 const FAQS_DATA = [
   {
-    q: 'Status mein approved dikh raha hai par paisa nahi aaya — kya hua?',
+    q: 'Status mein approved dikh raha hai par paisa nahi aaya, kya hua?',
     a: 'Approved ka matlab sirf itna hai ki government ne aapka naam clear kar diya aur paisa release kar diya. Aage ka kaam bank ka hai. Zyadatar cases mein Aadhaar NPCI seeding missing hoti hai. Branch jao, "DBT seeding" karwao, 3-7 din wait karo.',
   },
   {
@@ -35,16 +35,16 @@ const FAQS_DATA = [
     a: 'Seeding jaisi chhoti cheez 3-7 din mein ho jaati hai. NPCI remapping ya name correction mein 10-15 din lag sakte hain. 20 din se zyada ho jaye toh PM Kisan helpline 155261 par call karein.',
   },
   {
-    q: 'IFSC code galat daal diya — ab pm kisan bank account change online kaise karein?',
+    q: 'IFSC code galat daal diya, ab pm kisan bank account change online kaise karein?',
     a: 'Portal khol kar "Farmers Corner" mein "Edit Bank Details" wale option se sahi IFSC daal do. Agar OTP purane number par nahi aa raha, toh CSC waale bhai se correction karwa lo. Bank merger hua hai toh cheque book se naya IFSC milaa kar check karein.',
   },
   {
-    q: 'Account dormant ho gaya hai — kya paisa aayega?',
+    q: 'Account dormant ho gaya hai. Kya paisa aayega?',
     a: 'Nahi, jab tak account reactivate nahi karwate. Bank mein jaakar "KYC Update" form bharein aur ₹100-₹500 ka chhota deposit karein. Account active hote hi DBT payments aana shuru ho jaayengi.',
   },
   {
-    q: 'Joint account mein payment fail ho rahi hai — kyun?',
-    a: 'Scheme ka rule saaf hai — sirf "Individual Savings Account" accept hota hai. Joint, Current, ya Business account mein paisa nahi jaata. Naya individual account khulwa kar portal update karein.',
+    q: 'Joint account mein payment fail ho rahi hai. Kyun?',
+    a: 'Scheme ka rule saaf hai. Sirf "Individual Savings Account" accept hota hai. Joint, Current, ya Business account mein paisa nahi jaata. Naya individual account khulwa kar portal update karein.',
   },
 ];
 
@@ -86,7 +86,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/articles/pm-kisan-payment-failed-fix-2026/payment-failed-hero.webp'}
-            alt="PM Kisan payment failed fix guide 2026 — bank rejection reasons and solutions"
+            alt="PM Kisan payment failed fix guide 2026, bank rejection reasons and solutions"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -112,22 +112,22 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         <section className="mb-8">
           <SH>PM Kisan Payment Not Credited Kyun Hoti Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Portal khola, "Approved" bhi likha hai, lekin bank khaali. Ye situation har kist mein hazaron logon ke saath hoti hai. Wajah almost hamesha ek hi hoti hai — bank account DBT (Direct Benefit Transfer) system se sahi tarike se juda nahi hai.
+            Portal khola, "Approved" bhi likha hai, lekin bank khaali. Ye situation har kist mein hazaron logon ke saath hoti hai. Wajah almost hamesha ek hi hoti hai. Bank account DBT (Direct Benefit Transfer) system se sahi tarike se juda nahi hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Sarkar PFMS (Public Financial Management System) ke zariye paisa bhejti hai. PFMS ko teen cheezein bilkul 100% sahi chahiye — valid bank account number, sahi IFSC code, aur Aadhaar link (NPCI seeding). Ek bhi cheez galat hui nahi ki transaction wahin ruk jaata hai, aur status mein "failed" ya "rejected" jaisa message aa jaata hai. Waise ye seeding wali dikkat sirf PM Kisan ki nahi hai —{' '}
+            Sarkar PFMS (Public Financial Management System) ke zariye paisa bhejti hai. PFMS ko teen cheezein bilkul 100% sahi chahiye, valid bank account number, sahi IFSC code, aur Aadhaar link (NPCI seeding). Ek bhi cheez galat hui nahi ki transaction wahin ruk jaata hai, aur status mein "failed" ya "rejected" jaisa message aa jaata hai. Waise ye seeding wali dikkat sirf PM Kisan ki nahi hai —{' '}
             <Link href="/yojana/fasal-bima-claim-status-check" className="underline font-bold">fasal bima ka claim</Link>{' '}
             bhi isi wajah se atakta hai, kyunki wahan bhi paisa DBT se hi aata hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Ek kaam ki baat — jab portal par kuch samajh na aaye, toh seedha PFMS par dekhna sabse bharosemand tarika hai ki paisa bank tak pahuncha ya nahi. Iska tarika aage detail mein diya hai.
+            Ek kaam ki baat, jab portal par kuch samajh na aaye, toh seedha PFMS par dekhna sabse bharosemand tarika hai ki paisa bank tak pahuncha ya nahi. Iska tarika aage detail mein diya hai.
           </p>
         </section>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-payment-failed-fix-2026/failure-reasons-infographic.webp"
-            alt="PM Kisan payment failure 7 reasons infographic — visual diagnosis chart"
+            alt="PM Kisan payment failure 7 reasons infographic, visual diagnosis chart"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -135,7 +135,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            7 Common Reasons — Apni Problem Identify Karo
+            7 Common Reasons. Apni Problem Identify Karo
           </p>
         </div>
 
@@ -155,7 +155,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
               <tbody>
                 {[
                   ['FTO Generated', 'Order bank ko chala gaya, paisa abhi credit nahi hua (2-3 din lagenge)'],
-                  ['Rejected by Bank / Payment Failure', 'Bank ne transaction wapas kar diya — seeding ya account problem'],
+                  ['Rejected by Bank / Payment Failure', 'Bank ne transaction wapas kar diya, seeding ya account problem'],
                   ['Account Does Not Exist', 'Account number galat hai ya account band ho chuka hai'],
                   ['Invalid Aadhaar Mapping', 'NPCI seeding nahi hui ya kisi aur account se pehle se mapped hai'],
                   ['Name Mismatch', 'Aadhaar, bank aur portal ka naam exact match nahi kar raha'],
@@ -176,16 +176,16 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         <section className="mb-8">
           <SH>Reason #1: Aadhaar Seeding Nahi Hui (Sabse Aam Wajah)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Sabse zyada cases isi wajah se atakte hain. Yaad rakhna — Aadhaar link hona aur Aadhaar seed hona do alag cheezein hain. Bahut se kisan bhai yehi confuse ho jaate hain.
+            Sabse zyada cases isi wajah se atakte hain. Yaad rakhna. Aadhaar link hona aur Aadhaar seed hona do alag cheezein hain. Bahut se kisan bhai yehi confuse ho jaate hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            "Link" ka matlab bas itna hai ki UIDAI ke database mein connection ban gaya. Lekin "Seeding" — wo hoti hai NPCI (National Payments Corporation of India) ke mapper mein, jahan aapka Aadhaar us particular bank account se pakka jud jaata hai payment ke liye. Bank waale kabhi kabhi bol dete hain "ho gaya link" par asal mein DBT seeding nahi karte. Isliye jab branch jao, saaf-saaf bolo — <strong>"DBT ke liye Aadhaar NPCI seeding karni hai."</strong>
+            "Link" ka matlab bas itna hai ki UIDAI ke database mein connection ban gaya. Lekin "Seeding" — wo hoti hai NPCI (National Payments Corporation of India) ke mapper mein, jahan aapka Aadhaar us particular bank account se pakka jud jaata hai payment ke liye. Bank waale kabhi kabhi bol dete hain "ho gaya link" par asal mein DBT seeding nahi karte. Isliye jab branch jao, saaf-saaf bolo, <strong>"DBT ke liye Aadhaar NPCI seeding karni hai."</strong>
           </p>
           <StepList>
             <SI n={1}>Passbook aur Aadhaar card (original) lekar apni branch jao.</SI>
             <SI n={2}>Counter par bolo: <strong>"DBT ke liye Aadhaar seeding karni hai."</strong></SI>
             <SI n={3}>Form milega, bharo aur submit kar do.</SI>
-            <SI n={4}>Acknowledgement receipt leke aana — proof ke kaam aayega.</SI>
+            <SI n={4}>Acknowledgement receipt leke aana, proof ke kaam aayega.</SI>
             <SI n={5}>3-7 din mein seeding ho jaati hai generally.</SI>
           </StepList>
           <IB>
@@ -212,7 +212,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-payment-failed-fix-2026/bank-visit-checklist.webp"
-            alt="Bank visit checklist for PM Kisan payment fix — documents and steps visual guide"
+            alt="Bank visit checklist for PM Kisan payment fix, documents and steps visual guide"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -230,7 +230,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             RBI ke rules ke mutabik, agar kisi savings account mein pichhle 12 mahine se koi customer-induced transaction (jama ya nikasi) nahi hui, bank use "Dormant" (Nishkriya) kar deta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Dormant account mein DBT credit hota hi nahi — paisa usi din waapas PFMS ke paas chala jaata hai aur status "Rejected" dikhata hai. Aisa un logon ke saath zyada hota hai jo ye account sirf PM Kisan ke liye rakhte hain aur baaki koi lena-dena nahi karte.
+            Dormant account mein DBT credit hota hi nahi. Paisa usi din waapas PFMS ke paas chala jaata hai aur status "Rejected" dikhata hai. Aisa un logon ke saath zyada hota hai jo ye account sirf PM Kisan ke liye rakhte hain aur baaki koi lena-dena nahi karte.
           </p>
           <StepList>
             <SI n={1}>Branch mein "KYC Update / Account Reactivation" form maango.</SI>
@@ -243,10 +243,10 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         <section className="mb-8">
           <SH>Reason #4: Joint, Current Ya Business Account</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Scheme ka niyam saaf hai — sirf <strong>Individual Savings Account</strong> mein paisa jaata hai. Joint account (chahe "Former or Survivor" hi kyun na ho), Current account, ya Business account — koi bhi is scheme mein accept nahi hota.
+            Scheme ka niyam saaf hai. Sirf <strong>Individual Savings Account</strong> mein paisa jaata hai. Joint account (chahe "Former or Survivor" hi kyun na ho), Current account, ya Business account, koi bhi is scheme mein accept nahi hota.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Kai kisan anjaane mein joint account de dete hain registration ke waqt. Fix karne ke liye naya individual account kholna padega — zero balance waala Jan Dhan account bhi chal jaayega. Fir portal par naye details daalo aur seeding karwao.
+            Kai kisan anjaane mein joint account de dete hain registration ke waqt. Fix karne ke liye naya individual account kholna padega, zero balance waala Jan Dhan account bhi chal jaayega. Fir portal par naye details daalo aur seeding karwao.
           </p>
           <DB>
             <strong>Zaroori Note:</strong> Naya account khulwane ke agle hi pal portal update mat karo. 24-48 ghante wait karo, tab tak NPCI mapper mein entry set ho jaati hai, warna phir se fail ho sakta hai.
@@ -259,7 +259,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             Portal par likha "RAMESH KUMAR", bank record mein "RAMESH KUAMR" — bas itni si spelling ki galti aur payment reject ho jaati hai. PFMS ka name-matching system bahut strict hai, kabhi kabhi father ke naam mein farak bhi problem kar deta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Teeno jagah — Aadhaar, bank, aur portal — naam bilkul same hona chahiye, ek letter bhi idhar-udhar nahi.
+            Teeno jagah. Aadhaar, bank, aur portal, naam bilkul same hona chahiye, ek letter bhi idhar-udhar nahi.
           </p>
           <StepList>
             <SI n={1}>Teeno documents nikaal ke letter-by-letter compare karo.</SI>
@@ -292,7 +292,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pm-kisan-payment-failed-fix-2026/payment-success-after-fix.webp"
-            alt="PM Kisan payment success after bank fix — credited amount in bank account"
+            alt="PM Kisan payment success after bank fix, credited amount in bank account"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -300,21 +300,21 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Problem Fix Ke Baad — Paisa Aur Arrears Dono Milte Hain
+            Problem Fix Ke Baad. Paisa Aur Arrears Dono Milte Hain
           </p>
         </div>
 
         <section className="mb-8">
-          <SH>Ab Kya Karna Hai — Step-by-Step Action Plan</SH>
+          <SH>Ab Kya Karna Hai. Step-by-Step Action Plan</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Samajh nahi aa raha kahan se shuru karein? Ye tarika follow karo. Zyadatar log pehle teen steps mein hi solve kar lete hain.
           </p>
           <StepList>
-            <SI n={1}>Pehle status check karo — pmkisan.gov.in par Beneficiary Status mein exact error dekho.</SI>
-            <SI n={2}>Bank jaao — seeding, account active status, aur IFSC teeno ek hi visit mein check karwao.</SI>
+            <SI n={1}>Pehle status check karo, pmkisan.gov.in par Beneficiary Status mein exact error dekho.</SI>
+            <SI n={2}>Bank jaao, seeding, account active status, aur IFSC teeno ek hi visit mein check karwao.</SI>
             <SI n={3}>Portal par bhi verify kar lo — naam, Aadhaar, bank details sab dobara padh lo.</SI>
             <SI n={4}>3-7 din intezaar karo, seeding ko time lagta hai process hone mein.</SI>
-            <SI n={5}>Fir se status check karo — abhi bhi fail hai to 155261 par call ya email karo. Kaunsi problem helpline par hal hoti hai aur kaunsi CSC/tehsil/bank par — iska poora naksha <Link href="/yojana/pm-kisan-helpline-155261" className="underline font-bold">helpline complaint guide</Link> me hai.</SI>
+            <SI n={5}>Fir se status check karo, abhi bhi fail hai to 155261 par call ya email karo. Kaunsi problem helpline par hal hoti hai aur kaunsi CSC/tehsil/bank par, iska poora naksha <Link href="/yojana/pm-kisan-helpline-155261" className="underline font-bold">helpline complaint guide</Link> me hai.</SI>
             <SI n={6}>Kuch na bane to CSC jaake written grievance darj karwa do.</SI>
           </StepList>
         </section>
@@ -336,25 +336,25 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         </section>
 
         <section className="mb-8">
-          <SH>Ruki Hui Kistein — Milengi Ya Nahi?</SH>
+          <SH>Ruki Hui Kistein. Milengi Ya Nahi?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Milengi. Is scheme mein installment kabhi expire nahi hoti, ye baat pakki samajh lo. Jis din problem theek hogi, system apne aap pending kistein process kar dega.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Maan lo teen kistein fail hui thi — toh fix hone ke baad teeno ka paisa ek saath aa sakta hai, ya kabhi kabhi alag-alag transaction mein bhi aata hai. Agar ek kist aayi aur baaki nahi aayi, ghabrao mat, kuch din aur ruk jaao.
+            Maan lo teen kistein fail hui thi. Toh fix hone ke baad teeno ka paisa ek saath aa sakta hai, ya kabhi kabhi alag-alag transaction mein bhi aata hai. Agar ek kist aayi aur baaki nahi aayi, ghabrao mat, kuch din aur ruk jaao.
           </p>
         </section>
 
         <section className="mb-8">
-          <SH>Passbook Mein Arrears Kaise Dikhte Hain — Pehchanna Seekho</SH>
+          <SH>Passbook Mein Arrears Kaise Dikhte Hain. Pehchanna Seekho</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Problem fix hone ke baad jab atki hui rakam aati hai, toh passbook entry dekh kar log phir confuse ho jaate hain. Do baatein yaad rakho. Pehli — arrears ki entry bhi wahi “PMKISAN” ya DBT credit ke naam se aati hai, koi alag label nahi hota. Doosri — do kist ek saath aayi toh kabhi ₹4,000 ki ek entry dikhegi, kabhi ₹2,000 ki do alag entries alag tarikhon par. Dono normal hai.
+            Problem fix hone ke baad jab atki hui rakam aati hai, toh passbook entry dekh kar log phir confuse ho jaate hain. Do baatein yaad rakho. Pehli, arrears ki entry bhi wahi “PMKISAN” ya DBT credit ke naam se aati hai, koi alag label nahi hota. Doosri, do kist ek saath aayi toh kabhi ₹4,000 ki ek entry dikhegi, kabhi ₹2,000 ki do alag entries alag tarikhon par. Dono normal hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Ek galti se bachna — SMS ka intezaar mat karo. Bahut baar paisa aa jaata hai aur SMS aata hi nahi. Wajah? Bank ka SMS alert band hai ya number purana hai. Mahine mein ek baar passbook update karwa lo ya bank ke app mein statement dekh lo. Jinke paas smartphone nahi, wo missed-call banking (har bank ka apna number, passbook par likha hota hai) se balance jaan sakte hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Aur haan — gaon mein koi kahe ki “arrears nikalwane ke liye form bharna padta hai aur uski fees lagti hai”, toh saaf mana kar do. Atki rakam apne aap release hoti hai, iske liye na koi alag application hai, na koi charge. Jo aisa bole wo aapki jeb ka raasta dhundh raha hai.
+            Aur haan, gaon mein koi kahe ki “arrears nikalwane ke liye form bharna padta hai aur uski fees lagti hai”, toh saaf mana kar do. Atki rakam apne aap release hoti hai, iske liye na koi alag application hai, na koi charge. Jo aisa bole wo aapki jeb ka raasta dhundh raha hai.
           </p>
         </section>
 
@@ -383,19 +383,19 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Payment Fail Hone Par Sabse Common Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Payment Failed FAQ 2026 — Ground-Level Answers" />
+          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Payment Failed FAQ 2026. Ground-Level Answers" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Failed Payment Ka Sabse Chota Rasta</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            “Payment Failed” ka matlab paisa cancel nahi hua — agli FTO cycle mein dobara try hota hai, isliye fix jitna jaldi hoga, utni jaldi wahi atki rakam aa jaati hai. Zyadatar cases ek hi bank visit mein sulajh jaate hain: Aadhaar seeding aur NPCI mapping dono ek saath confirm karwa lein. Iske liye kisi middleman ko paisa dene ki zaroorat nahi — na bank iske charge leta hai, na portal.
+            “Payment Failed” ka matlab paisa cancel nahi hua, agli FTO cycle mein dobara try hota hai, isliye fix jitna jaldi hoga, utni jaldi wahi atki rakam aa jaati hai. Zyadatar cases ek hi bank visit mein sulajh jaate hain: Aadhaar seeding aur NPCI mapping dono ek saath confirm karwa lein. Iske liye kisi middleman ko paisa dene ki zaroorat nahi. Na bank iske charge leta hai, na portal.
           </p>
         </div>
 
         <GovLink
           href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
-          label="PM Kisan Beneficiary Status — Check Payment"
+          label="PM Kisan Beneficiary Status. Check Payment"
           guide="Abhi Status Dekho"
           guideHref="/articles/PmKisanMasterGuide2026"
           portalName="pmkisan.gov.in"
@@ -403,7 +403,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
 
         <CalcBanner
           title="Kist Ka Poora Hisaab Nikaalo"
-          desc="Ab tak kitna mila, kitna baaki — sab ek jagah calculate karo"
+          desc="Ab tak kitna mila, kitna baaki. Sab ek jagah calculate karo"
           primaryCta={{ href: '/calculator/installment-tracker', label: 'Tracker Kholo →' }}
           secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator' }}
         />

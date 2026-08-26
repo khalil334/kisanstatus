@@ -14,7 +14,7 @@ const bullets = [
   {
     tag: 'Shuruat',
     heading: 'Shuruat kahan se hui',
-    body: `Puri kahani Bulandshahr zile ki Syana tehsil ke Narsena gaon se nikalti hai. Wahan ek FPO — kisano ka apna sangathan — ye kaam sambhal rha hai, aur agwai Dr. Praveen kar rahe hain.
+    body: `Puri kahani Bulandshahr zile ki Syana tehsil ke Narsena gaon se nikalti hai. Wahan ek FPO, kisano ka apna sangathan. Ye kaam sambhal rha hai, aur agwai Dr. Praveen kar rahe hain.
 
 Shuru me sirf apna gaon tha. Dheere dheere aaspaas ke karib 15 gaon jud gye, aur aaj rozana lagbhag 500 litre ikattha ho jata hai. 500 litre sun ke bada lagta hai, par 15 gaon me baant do to har gaon se ek-do can hi bante hain. Yani koi badi machinery nahi, bas roz ka thoda thoda.
 
@@ -27,9 +27,9 @@ Mahilaon ke samooh bhi is kaam me seedhe jude hain, unhe 2 rupay prati litre ala
   {
     tag: 'Maqsad',
     heading: 'Aakhir sarkaar karegi kya isse',
-    body: `Jawab jaivik kheti se juda hai, aur seedha bhi hai. Jo tarl ikattha ho rha hai usse jaivik keetnashak aur jeevamrit jaisi khaad banayi jayegi. Maqsad ye ki mehengi rasayanik khaad par nirbharta thodi kam ho — DAP aur urea ke daam har saal chubhte hain, aur chote kisan ka pura hisab wahin bigad jata hai.
+    body: `Jawab jaivik kheti se juda hai, aur seedha bhi hai. Jo tarl ikattha ho rha hai usse jaivik keetnashak aur jeevamrit jaisi khaad banayi jayegi. Maqsad ye ki mehengi rasayanik khaad par nirbharta thodi kam ho. DAP aur urea ke daam har saal chubhte hain, aur chote kisan ka pura hisab wahin bigad jata hai.
 
-Kendra sarkar ka National Mission on Natural Farming bhi isi disha me chal rha hai. Iske tehet gaon gaon Bio-Input Resource Centre khole ja rhe hain — chote kendra, jahan jeevamrit aur neemastra jaisi cheezein banti hain aur aaspaas ke kisano ko milti hain. In kendro ka kacha maal wahi hai jo aapke bade me roz nali me beh jata hai.
+Kendra sarkar ka National Mission on Natural Farming bhi isi disha me chal rha hai. Iske tehet gaon gaon Bio-Input Resource Centre khole ja rhe hain. Chote kendra, jahan jeevamrit aur neemastra jaisi cheezein banti hain aur aaspaas ke kisano ko milti hain. In kendro ka kacha maal wahi hai jo aapke bade me roz nali me beh jata hai.
 
 To dono taraf se baat mil jati hai. Sarkar ko kache maal ki zarurat hai; kisan ke paas wo cheez roz banti hai aur muft behti hai. Bich me ek sangrah kendra khada kar do, ek nayi kadi ban gyi.`,
     img: {
@@ -42,11 +42,11 @@ To dono taraf se baat mil jati hai. Sarkar ko kache maal ki zarurat hai; kisan k
     heading: 'Yogi sarkaar ki soch ke peeche kya tark hai',
     body: `Soch ye hai ki gaay jab doodh dena band kar de, tab bhi use palna ghate ka sauda na lage.
 
-Iske piche jo asli samasya hai wo har gaon janta hai. Boodhi gaay ka chara-pani mahine bhar me thik thak kharcha khada kar deta hai, aur badle me doodh sifar. Isliye log use bech dete hain, ya sadak pe chhod aate hain. Awara pashu, fasal ka nuksan, raat bhar khet ki pehradari — ye puri chain wahin se shuru hoti hai.
+Iske piche jo asli samasya hai wo har gaon janta hai. Boodhi gaay ka chara-pani mahine bhar me thik thak kharcha khada kar deta hai, aur badle me doodh sifar. Isliye log use bech dete hain, ya sadak pe chhod aate hain. Awara pashu, fasal ka nuksan, raat bhar khet ki pehradari. Ye puri chain wahin se shuru hoti hai.
 
-Ab agar wahi gaay khadi khadi mahine ke kuch hazar kama de, to samikaran badal jata hai. Admi use rakhega. Mera manna hai ki is soch ka asli maqsad kamai se zyada yehi hai — gaay ko bade me rokna.
+Ab agar wahi gaay khadi khadi mahine ke kuch hazar kama de, to samikaran badal jata hai. Admi use rakhega. Mera manna hai ki is soch ka asli maqsad kamai se zyada yehi hai. Gaay ko bade me rokna.
 
-Chhattisgarh me bhi aisi ek scheme pehle chal chuki hai, wahan rate kam tha — 4 rupay litre. To vichar naya nahi hai, par 10 rupay ka rate pehli baar sunai de rha hai.`,
+Chhattisgarh me bhi aisi ek scheme pehle chal chuki hai, wahan rate kam tha. 4 rupay litre. To vichar naya nahi hai, par 10 rupay ka rate pehli baar sunai de rha hai.`,
     img: {
       src: '/images/desi-gaay-gaushala-bulandshahr.webp',
       alt: 'Gaushala mein boodhi desi gaay ko chara khilata hua kisan',
@@ -59,9 +59,9 @@ Chhattisgarh me bhi aisi ek scheme pehle chal chuki hai, wahan rate kam tha — 
 
 Pehli — boodhi ya ghair-dudharu gaay bhi kamai ka zariya ban jati hai. Pehle wo sirf kharcha thi. Ab roz 4-5 litre bhi bik jaye to mahine bhar me thik thak jod ban jata hai, khaskar un gharon ke liye jinke paas dusra koi sahara nahi tha.
 
-Dusri — paisa usi din. Doodh ka hisab mahine ke baad aata hai, dairy ki parchi ke sath. Isme raqam hath me aa jati hai, aur chote ghar me ye farq bada hota hai: bacche ki kitab, dawa, ration, sab isi rozana ke paise se nikal jata hai.
+Dusri, paisa usi din. Doodh ka hisab mahine ke baad aata hai, dairy ki parchi ke sath. Isme raqam hath me aa jati hai, aur chote ghar me ye farq bada hota hai: bacche ki kitab, dawa, ration, sab isi rozana ke paise se nikal jata hai.
 
-Tisri — jo cheez ab tak bekar thi, uski kimat lag gyi. Isse gaay ko dekhne ka nazariya badal jata hai, aur mere hisab se lambe samay me iska asar rate se bhi zyada hoga.`,
+Tisri, jo cheez ab tak bekar thi, uski kimat lag gyi. Isse gaay ko dekhne ka nazariya badal jata hai, aur mere hisab se lambe samay me iska asar rate se bhi zyada hoga.`,
     img: {
       src: '/images/kisan-ko-turant-bhugtan-gau-mutra.webp',
       alt: 'Sangrah kendra par kisan ko nakad bhugtaan milta hua',
@@ -70,12 +70,12 @@ Tisri — jo cheez ab tak bekar thi, uski kimat lag gyi. Isse gaay ko dekhne ka 
   {
     tag: 'Aage',
     heading: 'Pilot kaamyaab raha toh aage kya',
-    body: `Filhal baat sirf Bulandshahr tak simit hai. Safal rha to pure Uttar Pradesh me failaya jayega, aur rate 20 rupay litre tak badhne ke sanket bhi hain. Lekin yehi wo hissa hai jispe koi sarkari kagaz ab tak nahi aya — isliye ise umeed maniye, tay baat nahi.`,
+    body: `Filhal baat sirf Bulandshahr tak simit hai. Safal rha to pure Uttar Pradesh me failaya jayega, aur rate 20 rupay litre tak badhne ke sanket bhi hain. Lekin yehi wo hissa hai jispe koi sarkari kagaz ab tak nahi aya. Isliye ise umeed maniye, tay baat nahi.`,
   },
   {
     tag: 'Siyasat',
     heading: 'Siyasi galiyaron mein mili-juli pratikriya',
-    body: `Samajwadi Party ne ise dikhawa bataya; BJP ka jawab tha ki vipaksh ko har vikas kaam me kami hi nazar aati hai. Ye behas chalti rahegi. Zameen pe itna hai ki Narsena ke gaanvon me log iska fayda uthate saaf dikh rhe hain — aur kisan ke liye behas se zyada matlab isi baat ka hai.`,
+    body: `Samajwadi Party ne ise dikhawa bataya; BJP ka jawab tha ki vipaksh ko har vikas kaam me kami hi nazar aati hai. Ye behas chalti rahegi. Zameen pe itna hai ki Narsena ke gaanvon me log iska fayda uthate saaf dikh rhe hain. Aur kisan ke liye behas se zyada matlab isi baat ka hai.`,
   },
 ] as const;
 
@@ -83,12 +83,12 @@ const collectSteps = [
   {
     n: '1',
     h: 'Bartan sahi ho, aur sabun bilkul na bache',
-    p: `Steel ki balti ya khadya-star ka plastic drum — dono chalte hain. Loha aur tamba nahi, kyuki inke sath tarl kirya kar jata hai. Aur ek baat jo log bhool jate hain: sabun ki jhaag bilkul na bache. Do bar saaf pani se khangal lo, phir ulta rakh ke sukha lo. Sabun ki halki si parat bhi kendra ki jaanch me pakdi jati hai.`,
+    p: `Steel ki balti ya khadya-star ka plastic drum. Dono chalte hain. Loha aur tamba nahi, kyuki inke sath tarl kirya kar jata hai. Aur ek baat jo log bhool jate hain: sabun ki jhaag bilkul na bache. Do bar saaf pani se khangal lo, phir ulta rakh ke sukha lo. Sabun ki halki si parat bhi kendra ki jaanch me pakdi jati hai.`,
   },
   {
     n: '2',
     h: 'Waqt subah ka rakhein',
-    p: `Jaivik kheti ke jaankar subah uthte hi pehla mutra sabse acha mante hain — raat bhar rukne se wo gadha rehta hai. Bade me dhalan wali jagah pe ek chaudi thali ya pipe laga do, aur gaay ke uthte waqt paas khade raho. Do teen din me aadat ban jati hai, phir mushkil nahi lagti.`,
+    p: `Jaivik kheti ke jaankar subah uthte hi pehla mutra sabse acha mante hain. Raat bhar rukne se wo gadha rehta hai. Bade me dhalan wali jagah pe ek chaudi thali ya pipe laga do, aur gaay ke uthte waqt paas khade raho. Do teen din me aadat ban jati hai, phir mushkil nahi lagti.`,
   },
   {
     n: '3',
@@ -98,12 +98,12 @@ const collectSteps = [
   {
     n: '4',
     h: 'Dhoop se dur, thandi jagah',
-    p: `Seedhi dhup me rakha bartan garam hoke bhap chhodta hai aur halat badal jati hai. Chhaya wala kona, ya bori se dhaka drum — yehi behtar hai. Aur jitni jaldi kendra pohcha do, utna acha daam milne ki gunjaish rehti hai. Sham tak rakh chhodne ka koi fayda nahi.`,
+    p: `Seedhi dhup me rakha bartan garam hoke bhap chhodta hai aur halat badal jati hai. Chhaya wala kona, ya bori se dhaka drum, yehi behtar hai. Aur jitni jaldi kendra pohcha do, utna acha daam milne ki gunjaish rehti hai. Sham tak rakh chhodne ka koi fayda nahi.`,
   },
   {
     n: '5',
     h: 'Paani milane ki galti kabhi na karein',
-    p: `Matra badhane ka lalach aata hai, mai janta hu. Par kendra pe har can ki jaanch hoti hai, aur ek bar milawat pakdi gyi to pure gaon ka bharosa chala jata hai — kai jagah aage lena hi band kar dete hain. Ye apni kamai ka rasta khud band karne wali baat hai. Aur do batein isi me jod lo: gaay bimar ho ya antibiotic ki dawa chal rhi ho to us dauran ka mutra jama mat karo — pashu chikitsak se puch lo kitne din rukna hai. Aur bhains ka chalega ya nahi, ye har kendra ki apni policy hai; paramparik nuskhe desi gaay — Sahiwal, Gir, Hariana — ki baat karte hain, isliye gadi bhar ke le jane se pehle phone pe hi puch lena.`,
+    p: `Matra badhane ka lalach aata hai, mai janta hu. Par kendra pe har can ki jaanch hoti hai, aur ek bar milawat pakdi gyi to pure gaon ka bharosa chala jata hai — kai jagah aage lena hi band kar dete hain. Ye apni kamai ka rasta khud band karne wali baat hai. Aur do batein isi me jod lo: gaay bimar ho ya antibiotic ki dawa chal rhi ho to us dauran ka mutra jama mat karo, pashu chikitsak se puch lo kitne din rukna hai. Aur bhains ka chalega ya nahi, ye har kendra ki apni policy hai; paramparik nuskhe desi gaay. Sahiwal, Gir, Hariana, ki baat karte hain, isliye gadi bhar ke le jane se pehle phone pe hi puch lena.`,
   },
 ] as const;
 
@@ -118,22 +118,22 @@ const channels = [
   },
   {
     k: 'Bio-Input Resource Centre (BRC)',
-    v: `Prakritik kheti mission ke tehet gaon star pe khule ye kendra jeevamrit aur neemastra jaisi cheezein bana ke aage bechte hain, isliye inhe roz kacha maal chahiye hota hai. Kendra sarkar in kendron ko National Mission on Natural Farming ke tehet khada kar rhi hai — desh bhar me 10 hazar BRC ka lakshya hai. Zile ke Krishi Vigyan Kendra (KVK) se puch lo ki aaspaas koi BRC hai ya nahi.`,
+    v: `Prakritik kheti mission ke tehet gaon star pe khule ye kendra jeevamrit aur neemastra jaisi cheezein bana ke aage bechte hain, isliye inhe roz kacha maal chahiye hota hai. Kendra sarkar in kendron ko National Mission on Natural Farming ke tehet khada kar rhi hai. Desh bhar me 10 hazar BRC ka lakshya hai. Zile ke Krishi Vigyan Kendra (KVK) se puch lo ki aaspaas koi BRC hai ya nahi.`,
   },
   {
     k: 'Panchgavya aur ayurvedic units',
-    v: `Kuch private units ise saaf karke, distil karke arq banati hain. Ye ache daam de sakti hain, lekin matra aur safai ke unke apne paimane hote hain. Pehle jake baat kar lo, phir jama karna shuru karo — warna maal tayar rahega aur kharidar nahi.`,
+    v: `Kuch private units ise saaf karke, distil karke arq banati hain. Ye ache daam de sakti hain, lekin matra aur safai ke unke apne paimane hote hain. Pehle jake baat kar lo, phir jama karna shuru karo, warna maal tayar rahega aur kharidar nahi.`,
   },
   {
     k: 'Aaspaas ke jaivik kisan',
-    v: `Jo padosi rasayan chhod ke prakritik tarike pe aa gye hain, unhe har 15 din drum bharne ke liye maal chahiye hota hai. Na koi bicholiya, sabse saral sauda — aur gadi ka kiraya bhi bach jata hai.`,
+    v: `Jo padosi rasayan chhod ke prakritik tarike pe aa gye hain, unhe har 15 din drum bharne ke liye maal chahiye hota hai. Na koi bicholiya, sabse saral sauda. Aur gadi ka kiraya bhi bach jata hai.`,
   },
 ] as const;
 
 const warnings = [
   {
     h: 'Advance paisa maangne wala agent',
-    p: `Koi kahe ki "registration ke 500 lagenge, phir roz uthwa lenge" — wahin ruk jao. Kharidne wala paisa deta hai, leta nahi. Ye purana tarika hai jo har nayi yojana ke sath gaon me ghoomne lagta hai, bas naam badal jata hai.`,
+    p: `Koi kahe ki "registration ke 500 lagenge, phir roz uthwa lenge", wahin ruk jao. Kharidne wala paisa deta hai, leta nahi. Ye purana tarika hai jo har nayi yojana ke sath gaon me ghoomne lagta hai, bas naam badal jata hai.`,
   },
   {
     h: 'Bina tolai bhugtaan',
@@ -145,30 +145,30 @@ const warnings = [
   },
   {
     h: 'Rate ka jhoota vaada',
-    p: `Kisi ne 20 ya 50 rupay litre ka lalach diya to pehle pucho — kaun kharid rha hai, kahan le jayega, aur pichle mahine kisko paisa diya. Do teen gaon walo se pushti kar lo, phir haan bolo.`,
+    p: `Kisi ne 20 ya 50 rupay litre ka lalach diya to pehle pucho, kaun kharid rha hai, kahan le jayega, aur pichle mahine kisko paisa diya. Do teen gaon walo se pushti kar lo, phir haan bolo.`,
   },
 ] as const;
 
 const faqs = [
   {
     q: 'Isse kitni kamai ho sakti hai?',
-    a: 'Bulandshahr me rate ₹10 litre hai. Ek gaay roz ka 4 litre de de to mahine ke 1200 ke aas paas banta hai — bada paisa nahi, par ye doodh ke upar ki kamai hai, uski jagah nahi. Char gaay hain to hisab char guna kar lo. Haan, mahila samooh se jude ghar ko ₹2 litre upar se milta hai.',
+    a: 'Bulandshahr me rate ₹10 litre hai. Ek gaay roz ka 4 litre de de to mahine ke 1200 ke aas paas banta hai. Bada paisa nahi, par ye doodh ke upar ki kamai hai, uski jagah nahi. Char gaay hain to hisab char guna kar lo. Haan, mahila samooh se jude ghar ko ₹2 litre upar se milta hai.',
   },
   {
     q: 'Kya yeh poore UP mein shuru ho chuka hai?',
-    a: 'Nahi. Abhi sirf Bulandshahr ke kuch gaon. Baki zilon ke liye na koi aadesh aya hai, na tarikh. Koi kahe ki aapke zile me bhi sarkari kharid chalu ho gyi — to pehle block daftar se pushti kar lo.',
+    a: 'Nahi. Abhi sirf Bulandshahr ke kuch gaon. Baki zilon ke liye na koi aadesh aya hai, na tarikh. Koi kahe ki aapke zile me bhi sarkari kharid chalu ho gyi. To pehle block daftar se pushti kar lo.',
   },
   {
     q: 'Kya kisi rajya mein sarkaar sach mein gau mutra kharidti hai?',
-    a: 'Chhattisgarh me kharidti rhi hai — Godhan Nyay Yojana, ₹4 litre, Gauthan kendron pe. Scheme ka apna sarkari portal hai: godhannyay.cgstate.gov.in. Yani baat hawa hawai nahi hai; bas UP me abhi wo star ki vyavastha nahi bani.',
+    a: 'Chhattisgarh me kharidti rhi hai. Godhan Nyay Yojana, ₹4 litre, Gauthan kendron pe. Scheme ka apna sarkari portal hai: godhannyay.cgstate.gov.in. Yani baat hawa hawai nahi hai; bas UP me abhi wo star ki vyavastha nahi bani.',
   },
   {
     q: 'Jama kahan karna padta hai, aur registration ka kya chakkar hai?',
-    a: 'Sthaniya FPO ke sangrah kendra pe. FPO apna register khud rakhta hai — koi online form, koi portal, koi fees nahi. Aapke ilake me kaun le rha hai, ye block ka BDO daftar ya KVK bata dega. Fees mangne wala admi galat hai, seedhi baat.',
+    a: 'Sthaniya FPO ke sangrah kendra pe. FPO apna register khud rakhta hai. Koi online form, koi portal, koi fees nahi. Aapke ilake me kaun le rha hai, ye block ka BDO daftar ya KVK bata dega. Fees mangne wala admi galat hai, seedhi baat.',
   },
   {
     q: 'Paisa kab aur kaise milta hai?',
-    a: 'Pilot me usi din bhugtan ki baat hai — nakad ya khate me, kharidne wale pe nirbhar. Bas parchi zaroor lo, aur bina tolai ke sauda kabhi mat karo.',
+    a: 'Pilot me usi din bhugtan ki baat hai. Nakad ya khate me, kharidne wale pe nirbhar. Bas parchi zaroor lo, aur bina tolai ke sauda kabhi mat karo.',
   },
 ] as const;
 
@@ -266,7 +266,7 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
             Gaay ke mutra se bhi ab ghar chalega! Bulandshahr ke kisano ko mil rahe 10 rupaye litre
           </h1>
           <p className="mt-3 text-[15px] leading-7 text-[#D8C9DE]">
-            Subha doodh ki can ke sath ab ek aur bartan bhi nikal rha hai — puri kahani niche ↓
+            Subha doodh ki can ke sath ab ek aur bartan bhi nikal rha hai. Puri kahani niche ↓
           </p>
           <div className="mt-4 overflow-hidden rounded-xl">
             <Image
@@ -304,19 +304,19 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
             Niche do tarah ki batein aayengi, aur main chahta hu ki aap dono ka farq samajh lein.
           </p>
           <p className="mt-2 text-[14px] leading-7 text-[#D8C9DE]">
-            Ek — Bulandshahr ke pilot ke ankde. Rate, gaon ki ginti, rozana kitna jama ho rha hai,
+            Ek. Bulandshahr ke pilot ke ankde. Rate, gaon ki ginti, rozana kitna jama ho rha hai,
             mahilaon ka commission. Ye sab media reports aur zamini jankari se aya hai. Iska koi
             rajya-star ka sarkari aadesh, koi GO number, aaj tak samne nahi aya. Isliye jab tak wo
-            kagaz na aye, ise ek chalta hua prayog maniye — poore UP ki yojana nahi.
+            kagaz na aye, ise ek chalta hua prayog maniye, poore UP ki yojana nahi.
           </p>
           <p className="mt-2 text-[14px] leading-7 text-[#D8C9DE]">
-            Do — khaad banane ka tarika, sangrahan ke niyam, prakritik kheti wale mission ki batein.
+            Do, khaad banane ka tarika, sangrahan ke niyam, prakritik kheti wale mission ki batein.
             Ye purani, jaanchi parkhi jankari hai. Isme naya kuch nahi, wahi jo dashkon se kisan
             karte aye hain.
           </p>
           <p className="mt-2 text-[14px] leading-7 text-[#D8C9DE]">
             Isliye rate aur vistaar pe aakhri faisla apne block ke daftar se pushti karke hi lena.
-            Main wahi likhta hu jo pata hai; jo nahi pata, uska bhi zikr kar deta hu — chhupata
+            Main wahi likhta hu jo pata hai; jo nahi pata, uska bhi zikr kar deta hu, chhupata
             nahi.
           </p>
         </div>
@@ -414,7 +414,7 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
             Kya gau mutra sach me bikta hai? Aur kaise pakka karein?
           </h2>
           <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
-            Haan, bikta hai — lekin har jagah nahi, aur har jagah sarkari daam pe bhi nahi. Ye baat
+            Haan, bikta hai. Lekin har jagah nahi, aur har jagah sarkari daam pe bhi nahi. Ye baat
             saaf samajh lo, kyuki isi pe sara faisla tikta hai.
           </p>
           <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
@@ -432,7 +432,7 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
             Brahmastra keetnashak aur Jeevamrit banate hain.
           </p>
           <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
-            UP me abhi aisi rajya-vyapi sarkari kharid nahi hai — sirf Bulandshahr ka pilot,
+            UP me abhi aisi rajya-vyapi sarkari kharid nahi hai. Sirf Bulandshahr ka pilot,
             jiska zikr upar ho chuka. Baki zilon me bikri private raston se hoti hai: gaushala,
             BRC, ayurvedic unit, ya jaivik kisan. Wahan daam aapas ki baat cheet se tay hota hai —
             kahin 5 rupay, kahin 10, kahin usse zyada bhi agar maal saaf aur bharosemand ho.
@@ -462,7 +462,7 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
               <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#7FD1AE] text-[12px] font-black text-[#1B1023]">3</span>
               <p className="text-[14px] leading-6 text-[#D8C9DE]">
                 <strong className="text-[#F5EDE3]">Pehla sauda chota rakho.</strong> 10-15
-                litre le jake pura chakkar khud dekh lo — tolai, parchi, bhugtan. Bharosa bane
+                litre le jake pura chakkar khud dekh lo, tolai, parchi, bhugtan. Bharosa bane
                 to hi rozana ka silsila shuru karo.
               </p>
             </li>
@@ -480,27 +480,27 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
         <div className="mt-3 rounded-2xl bg-[#2A1830] p-5">
           <SectionLabel>Khud banaiye</SectionLabel>
           <h2 className="mt-2 text-lg font-bold text-[#F5EDE3]">
-            Ek drum jeevamrit — ghar ki cheezon se
+            Ek drum jeevamrit, ghar ki cheezon se
           </h2>
           <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
             Ye rasta kisi aadesh ka intezar nahi mangta, aur mere hisab se aadhe kisano ke liye
             behtar hai. Prakritik kheti ka sabse purana nuskha jeevamrit hai: 200 litre ka ek drum
             karib ek ekad ke liye kafi mana jata hai, aur khaad ki dukan ka bill seedha girta hai.
-            Matra ke ankdon me jaankaron ke beech thoda farq milta hai — isliye niche range di gyi
+            Matra ke ankdon me jaankaron ke beech thoda farq milta hai. Isliye niche range di gyi
             hai, ek pakka aankda nahi.
           </p>
           <p className="mt-3 text-[15px] leading-7 text-[#D8C9DE]">
-            Saman ki list lambi nahi hai — zyada tar cheezein ghar me hi mil jayengi. 200 litre
+            Saman ki list lambi nahi hai. Zyada tar cheezein ghar me hi mil jayengi. 200 litre
             pani se drum bhar lo (nal ka klorin wala pani ho to ek raat khula chhod dena). Usme{' '}
-            <strong className="text-[#F5EDE3]">10 kilo taza gobar</strong> daalo — desi gaay ka,
+            <strong className="text-[#F5EDE3]">10 kilo taza gobar</strong> daalo, desi gaay ka,
             sookha nahi chalega. Mutra <strong className="text-[#F5EDE3]">5 se 10 litre</strong>{' '}
-            — alag alag jaankar alag matra batate hain, isliye range likh rha hu.
+           , alag alag jaankar alag matra batate hain, isliye range likh rha hu.
           </p>
           <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
             Uske upar <strong className="text-[#F5EDE3]">ek-do kilo gud</strong> (purana kala gud
             bhi chal jata hai) aur utna hi <strong className="text-[#F5EDE3]">besan ya kisi dal
-            ka aata</strong> — chana, moong, urad, jo ghar me pada ho. Aakhri cheez ek muthi
-            khet ki mitti, aur wo us khet se ho jahan rasayan na pada ho — isi mitti ke jeevanu
+            ka aata</strong>, chana, moong, urad, jo ghar me pada ho. Aakhri cheez ek muthi
+            khet ki mitti, aur wo us khet se ho jahan rasayan na pada ho, isi mitti ke jeevanu
             pure drum me phailte hain.
           </p>
           <p className="mt-3 text-[15px] leading-7 text-[#D8C9DE]">
@@ -513,13 +513,13 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
             Ek imandar baat: gud aur besan bazar se kharidne padte hain, to ye bilkul muft nahi
             hai. Phir bhi utni zameen pe rasayanik khaad ke bill se samna karo to farq apne aap
-            dikh jata hai. Neem ki patti wale nuskhe — neemastra jaisi cheezein — bhi isi tarl se
+            dikh jata hai. Neem ki patti wale nuskhe, neemastra jaisi cheezein, bhi isi tarl se
             bante hain, aur sundi-keede ke liye kisan unhe kaam ka batate hain.
           </p>
           <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
             Aur ye ek ya dusra chunne ka mamla nahi hai. Kai ghar aadha bech dete hain, aadha khud
             ke khet me laga dete hain. Dono sath chal sakta hai. Waise gobar se bhi ek alag kamai
-            ka rasta hai — humne{' '}
+            ka rasta hai. Humne{' '}
             <Link href="/articles/vermi-compost-business-guide" className="underline hover:text-[#F5EDE3]">
               vermi compost ke business
             </Link>{' '}
@@ -543,15 +543,15 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
             Roz ka jod mahine me kitna banta hai
           </h2>
           <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
-            Niche wali matra andaza hai, wada nahi — gaay ki nasl, umar, chara aur mausam sabse
+            Niche wali matra andaza hai, wada nahi. Gaay ki nasl, umar, chara aur mausam sabse
             farq padta hai. Sabse imandar tarika ye hai ki apne ghar ka aankda do teen din khud
             naap lo, phir dus se guna kar lo. Kisi ke bataye aankde pe ghar ka hisab mat banao.
           </p>
           <p className="mt-3 text-[15px] leading-7 text-[#D8C9DE]">
-            Motta motta hisab aise banta hai. Ghar me ek gaay hai — sabse aam sthiti — to roz ka
+            Motta motta hisab aise banta hai. Ghar me ek gaay hai. Sabse aam sthiti. To roz ka
             karib 4 litre, yani ₹40 ke aas paas; mahine ka 1200 ke andar-bahar. Do gaay pe ye
             8 litre aur 2400 tak chala jata hai. Chota pashupalak jiske paas chaar gaay hain,
-            wo roz 15 litre ke kareeb pohch jata hai — mahine ke 4500, doodh ki kamai ke upar
+            wo roz 15 litre ke kareeb pohch jata hai. Mahine ke 4500, doodh ki kamai ke upar
             se.
           </p>
           <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
@@ -562,7 +562,7 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           <p className="mt-3 text-[15px] leading-7 text-[#D8C9DE]">
             Ek baat jo koi nahi batata: mehnat aur waqt bhi kharcha hai. Subah ka 15-20 minute,
             bartan dhona, kendra tak pohchana. Chalte firte kaam ke sath ho jaye to fayda saaf
-            hai. Iske liye alag se admi rakhna pade, to hisab dobara karna padega — kyuki phir
+            hai. Iske liye alag se admi rakhna pade, to hisab dobara karna padega, kyuki phir
             majoori is kamai se bhut kam nahi bachegi.
           </p>
           <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
@@ -570,7 +570,7 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
             <Link href="/articles/dairy-farm-loan-without-collateral" className="underline hover:text-[#F5EDE3]">
               bina zamanat wale dairy loan
             </Link>{' '}
-            ke bare me padh lena — sirf is 10 rupay wali kamai ke bharose gaay lena samajhdari
+            ke bare me padh lena. Sirf is 10 rupay wali kamai ke bharose gaay lena samajhdari
             nahi hogi.
           </p>
         </div>
@@ -605,7 +605,7 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
             Pashupalan pe paisa lagana ho to kahan jayein
           </h2>
           <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
-            Ye kaam apne aap me badi aamdani nahi hai — sahara hai. Lekin agar aap desi nasl
+            Ye kaam apne aap me badi aamdani nahi hai. Sahara hai. Lekin agar aap desi nasl
             badhane ya shed banane ki soch rhe hain, to kendra sarkar ki do yojnayein isi kaam ki
             hain, aur dono ka apna portal hai.
           </p>
@@ -613,7 +613,7 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
             <div className="rounded-xl bg-[#1B1023] px-4 py-3">
               <p className="text-[14px] font-bold text-[#FFB238]">Rashtriya Gokul Mission</p>
               <p className="mt-1 text-[14px] leading-6 text-[#D8C9DE]">
-                Desi nasl ke sudhar aur sanrakshan pe kaam karti hai — nasl badhane wale farm,
+                Desi nasl ke sudhar aur sanrakshan pe kaam karti hai. Nasl badhane wale farm,
                 behtar saand, kritrim garbhadhan. Hamare paas iski alag guide hai:{' '}
                 <Link
                   href="/articles/rashtriya-gokul-mission-subsidy"
@@ -671,11 +671,11 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           </p>
           <div className="mt-3 rounded-xl bg-[#1B1023] px-4 py-3">
             <p className="text-[12px] font-bold uppercase tracking-wide text-[#7FD1AE]">
-              Sarkari website — seedha link
+              Sarkari website, seedha link
             </p>
             <ul className="mt-2 space-y-1.5 text-[13px] leading-6 text-[#D8C9DE]">
               <li>
-                · Godhan Nyay Yojana (Chhattisgarh — gau mutra kharid):{' '}
+                · Godhan Nyay Yojana (Chhattisgarh, gau mutra kharid):{' '}
                 <a
                   href="https://godhannyay.cgstate.gov.in"
                   target="_blank"
@@ -733,7 +733,7 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           </p>
           <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
             Jama hua maal keetnashak aur jeevamrit banane me lagta hai. Aage rajya bhar me
-            failane ki baat zaroor hai — par kagaz abhi tak nahi aya, isliye use umeed hi
+            failane ki baat zaroor hai. Par kagaz abhi tak nahi aya, isliye use umeed hi
             samjho, wada nahi.
           </p>
         </div>
@@ -767,7 +767,7 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           </p>
           <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
             Aur agar aapke zile tak ye baat na bhi pohche, tab bhi ek rasta khula hai. Drum
-            bharo, khaad khud banao, apne khet pe lagao — isme kisi aadesh ka intezar nahi
+            bharo, khaad khud banao, apne khet pe lagao, isme kisi aadesh ka intezar nahi
             karna padta.
           </p>
           <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
