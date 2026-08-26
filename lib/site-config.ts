@@ -79,7 +79,7 @@ export const EXTERNAL_LINK_PROPS = {
 } as const;
 
 export const DISCLAIMER_TEXT =
-  'Seedhi baat bata doon. KisanStatus.com meri apni banayi site hai, sarkar ya kisi bhi sarkari portal se iska koi lena-dena nahi. Jo bhi likhta hoon, bas samjhane ke liye likhta hoon taaki aapka kaam aasaan ho. Kist, eKYC, registration, koi bhi asli kaam ho to seedha pmkisan.gov.in jaise official portal par hi karein, wahi aakhri sach hai.';
+  'KisanStatus.com meri apni banayi site hai, sarkar ya kisi sarkari portal se iska koi lena-dena nahi. Jo likhta hoon bas samjhane ke liye likhta hoon, taaki aapka kaam aasaan ho. Kist, eKYC, registration jaisa asli kaam seedha pmkisan.gov.in par hi karein.';
 
 export const SITEMAP_URL = `${SITE_URL}/sitemap.xml`;
 export const RSS_URL = `${SITE_URL}/rss.xml`;

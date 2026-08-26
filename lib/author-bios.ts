@@ -27,12 +27,16 @@ export const AUTHOR_TAGLINES: readonly string[] = [
 ] as const;
 
 export const DISCLAIMER_VARIANTS: readonly string[] = [
-  'Seedhi baat bata doon. KisanStatus.com meri apni banayi site hai, sarkar ya kisi bhi sarkari portal se iska koi lena-dena nahi. Jo bhi likhta hoon, bas samjhane ke liye likhta hoon taaki aapka kaam aasaan ho. Kist, eKYC, registration, koi bhi asli kaam ho to seedha pmkisan.gov.in jaise official portal par hi karein, wahi aakhri sach hai.',
-  'Ek baat clear kar doon. Ye meri personal site hai, koi sarkari website nahi. Yahan sab kuch sirf samjhane ke liye likha gaya hai. Kist check, eKYC ya registration jaisa koi bhi asli kaam pmkisan.gov.in ya apne state ke official portal par hi karein.',
-  'KisanStatus.com ka kisi sarkari vibhag se koi sambandh nahi hai. Ye ek independent guide site hai. Yahan di gayi jankari samajhne ke liye hai; final aur updated jankari ke liye hamesha official portal (jaise pmkisan.gov.in) par hi bharosa karein.',
-  'Note kar lein. Ye site sarkari nahi hai, main apni taraf se yojanaon ki jankari aasan bhasha me likhta hoon. Koi bhi payment, eKYC ya form ka kaam karna ho to seedha official portal par jayein, wahi aakhri aur sahi jagah hai.',
-  'Disclaimer seedha sa hai: KisanStatus ek niji (private) website hai, sarkar se iska koi lena-dena nahi. Content sirf jankari ke liye hai. Asli kaam, kist, registration, eKYC, hamesha pmkisan.gov.in jaise official portals par hi karein.',
-  'Yahan jo bhi padha, wo samajhne ke liye likha gaya hai — KisanStatus koi sarkari portal nahi, meri apni site hai. Scheme ka koi bhi official kaam karne se pehle pmkisan.gov.in ya apne state ke portal par jaakar confirm zaroor karein.',
+  'KisanStatus.com meri apni site hai. Sarkar se koi rishta nahi, na kisi vibhag se. Yahan bas samjhane ka kaam hota hai. Kist, eKYC, registration jaisa asli kaam pmkisan.gov.in par hi hota hai, wahin karein.',
+  'Ye sarkari website nahi hai. Main yojana ki jankari apni samajh se, aasan bhasha me likhta hoon. Galti ho sakti hai, rules badal bhi jaate hain. Isliye koi bhi form ya payment ka kaam official portal par jaakar hi karein.',
+  'KisanStatus.com ka kisi sarkari vibhag se koi sambandh nahi. Ek independent guide site hai. Padhne ke liye yahan aaiye, kaam karne ke liye pmkisan.gov.in ya apne state ke portal par jaiye.',
+  'Ye site sarkari nahi hai. Jo likha hai wo samjhane ke liye hai, sarkari dastavez nahi. Payment, eKYC ya form bharne jaisa kaam seedha official portal par karein. Aur haan, OTP ya password kisi ko na batayein, chahe call kitni bhi asli lage.',
+  'KisanStatus ek niji website hai. Na hum sarkar hain, na sarkar ke agent. Content padh kar samajh lijiye, par bharosa aakhir me official portal ka hi kijiye. Rules wahan badalte hain, humein baad me pata chalta hai.',
+  'Site meri personal hai, sarkari nahi. Yahan ki jankari time ke saath purani bhi ho sakti hai, isliye koi bhi bada kadam uthane se pehle pmkisan.gov.in ya apne state ke portal par taaza status dekh lein.',
+  'Chhota sa disclaimer: ye sarkari portal nahi hai. Main jo samjha, wahi likha. Aapka paisa ya application juda ho to faisla official portal ki jankari dekh kar hi lein, is site ke bharose nahi.',
+  'Ye ek guide site hai, sarkari daftar nahi. Yahan se samajh lijiye ki karna kya hai, phir karne ka kaam official portal par kariye. Wahi record maana jaata hai, ye page nahi.',
+  'Hum sarkar ke koi ang nahi hain, ye site niji taur par chalti hai. Likhne me puri koshish sahi rehne ki hoti hai, par final baat hamesha official portal ya apne krishi adhikari se hi confirm karein.',
+  'Sirf itna yaad rakhiye: KisanStatus jankari deta hai, faisla nahi. Sarkari kaam sarkari portal par hi hota hai. Kist ka status ho ya eKYC, pmkisan.gov.in kholiye aur wahin kariye.',
 ] as const;
 
 function hash(key: string): number {
