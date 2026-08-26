@@ -130,7 +130,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
             ))}
           </ul>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ek aur baat jo log miss karte hain. Benefit <strong>parivar</strong> ke hisaab se milta hai, vyakti ke hisaab se nahi. Parivar matlab pati, patni aur nabalig bachche. Dono ke naam zameen hai tab bhi ghar mein ek hi member ko ₹6,000 milenge. Poora rule <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega" className="text-[var(--color-primary)] underline">pati-patni wale page</Link> par samjhaya hai.
+            Log aksar ye miss kar dete hain. Benefit <strong>parivar</strong> ke hisaab se milta hai, vyakti ke hisaab se nahi. Parivar matlab pati, patni aur nabalig bachche. Dono ke naam zameen hai tab bhi ghar mein ek hi member ko ₹6,000 milenge. Poora rule <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega" className="text-[var(--color-primary)] underline">pati-patni wale page</Link> par samjhaya hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Agar aap exclusion list mein aate ho aur kist aa chuki hai, toh khud se surrender karna sabse safe rasta hai. Process <Link href="/articles/PmKisanVoluntarySurrenderGuide" className="text-[var(--color-primary)] underline">voluntary surrender guide</Link> mein hai. Notice aa jaye uske baad ka tarika <Link href="/articles/hi/recovery-notice" className="text-[var(--color-primary)] underline">recovery notice article</Link> mein alag se likha hai.

@@ -275,7 +275,7 @@ export default function PMatsyaSampada() {
           </li>
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">5. Ornamental Fish Farming:</strong>
-            Agar aap decorative/aquarium fish paalna chahte hain, toh 50-60% subsidy milti hai. Isme margin bahut zyada hai (₹50-500 per fish), par market access zaroori hai.
+            Decorative/aquarium fish paalne par 50-60% subsidy milti hai. Isme margin bahut zyada hai (₹50-500 per fish), par market access zaroori hai.
           </li>
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">6. PMEGP (Prime Minister's Employment Generation Programme):</strong>
@@ -501,7 +501,7 @@ export default function PMatsyaSampada() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Agar aap high-value fish paalte hain (jaise Pangasius, Tilapia, ya Ornamental fish), toh margins 2-3x zyada ho sakte hain. Par inki market access aur technical knowledge bhi zyada chahiye.
+        High-value fish (jaise Pangasius, Tilapia, ya Ornamental fish) me margins 2-3x zyada ho sakte hain. Par inki market access aur technical knowledge bhi zyada chahiye.
       </p>
 
       <Image
@@ -699,7 +699,7 @@ export default function PMatsyaSampada() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Agar aap pehle category mein aate hain, toh 1 acre se start karein. Pehle saal seekhein, mistakes karein, experience gain karein. Phir Year 2 mein 2-3 acres tak expand karein. Direct 5-10 acres se start mat karein - risk bahut hai.
+        Pehli category wale 1 acre se start karein. Pehle saal seekhein, mistakes karein, experience gain karein. Phir Year 2 mein 2-3 acres tak expand karein. Direct 5-10 acres se start mat karein - risk bahut hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -711,7 +711,7 @@ export default function PMatsyaSampada() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Agar aap isme serious hain, toh pehle apne ilaake ke kisi experienced machli palak se milein aur unke challenges samjhein. Uske baad training lein aur chhote scale par shuruat karein. Sahi planning aur mehnat se yeh ek sustainable income source ban sakta hai.
+        Isme serious ho toh pehle apne ilaake ke kisi experienced machli palak se milein aur unke challenges samjhein. Uske baad training lein aur chhote scale par shuruat karein. Sahi planning aur mehnat se yeh ek sustainable income source ban sakta hai.
       </p>
 
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">

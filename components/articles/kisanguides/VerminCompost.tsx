@@ -522,7 +522,7 @@ export default function VerminCompost() {
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Agar aap pehle category mein aate hain, toh chhote scale par start karein. Pehle 6 mahine seekhein, customers banao, process samjho. Phir gradually expand karein. Direct 20-30 pits mat banao - pehle prove karo ki market hai.
+        Pehli category wale chhote scale par start karein. Pehle 6 mahine seekhein, customers banao, process samjho. Phir gradually expand karein. Direct 20-30 pits mat banao - pehle prove karo ki market hai.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -530,7 +530,7 @@ export default function VerminCompost() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Agar aap seriously interested hain, toh pehle apne area ke 5-10 organic farmers se baat karein. Unse pata karein ki wo kenchua khaad use karte hain ya nahi, kahan se khareedte hain, rate kya hai. Market research karo, phir decision lo.
+        Seriously interested ho toh pehle apne area ke 5-10 organic farmers se baat karein. Unse pata karein ki wo kenchua khaad use karte hain ya nahi, kahan se khareedte hain, rate kya hai. Market research karo, phir decision lo.
       </p>
 
       <h2 id="faq" className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">

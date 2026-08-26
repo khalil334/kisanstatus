@@ -431,7 +431,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         </p>
 
         <p>
-          Ek baat aur, surrender ke baad usi season ki agli kist ka schedule nahi
+          Dhyan rahe, surrender ke baad usi season ki agli kist ka schedule nahi
           badalta. Rakhe gaye registration par kist apne time par hi aayegi; surrender
           karne se koi “nayi” kist ya adjust hua paisa nahi milta. Agent log kabhi-kabhi
           iske ulte dawe karte hain. Unse door rahein.

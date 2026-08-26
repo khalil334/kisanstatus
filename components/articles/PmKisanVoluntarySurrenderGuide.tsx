@@ -389,7 +389,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
             Ineligible aadmi ke liye poora safai ka rasta dono se milkar banta hai: surrender + refund. Sirf surrender karke baith gaye? Hisaab khula rehta hai — recovery notice baad me bhi aa sakta hai. Refund bhi portal se hi hota hai, aur jitni kistein chunoge utni hi lautti hain. Yaani hisson me lautana technically possible hai. District recovery wale mamlon me shartein local prashasan tay karta hai; likhit me pooch lo.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ek aur baat jo kam log jaante hain: zyadatar mamle, galat entry ki aapatti, refund, record sudhaar, krishi vibhag ya tehsil ke level par hi nipat jaate hain, aur inki koi fees nahi lagti. Vakil ki zaroorat tabhi padti hai jab mamla bhu-rajasva vasooli ki kanooni karrawai tak pahunch jaye. Wahan tak jaane hi kyon dena?
+            Kam log jaante hain ki zyadatar mamle, galat entry ki aapatti, refund, record sudhaar, krishi vibhag ya tehsil ke level par hi nipat jaate hain, aur inki koi fees nahi lagti. Vakil ki zaroorat tabhi padti hai jab mamla bhu-rajasva vasooli ki kanooni karrawai tak pahunch jaye. Wahan tak jaane hi kyon dena?
           </p>
           <IB>
             <strong>Dobara judne ka rasta band nahi hota:</strong> agar ineligibility ki wajah baad me khatam ho jaye, naukri chhoot gayi, ya record ki galti sudhar gayi, toh naye sire se aavedan ka rasta khula hai. Purana refund isme baadha nahi banta; saaf record ulta madad karta hai. Poori detail{' '}

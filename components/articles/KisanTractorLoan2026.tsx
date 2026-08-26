@@ -204,7 +204,7 @@ return (
          </table>
        </div>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-         Ek baat aur, tractor loan <strong>priority sector lending</strong> me aata hai, isliye banks
+         Waise tractor loan <strong>priority sector lending</strong> me aata hai, isliye banks
          ise normal consumer loan se sasta dete hain; yeh line bank manager ke saamne bolo, kaam aati hai.
          Rates har bank ki website par published hote hain aur RBI ke repo rate ke saath badalte rehte hain —
          apply karne se pehle 2-3 banks ke current rate khud compare karo.

@@ -236,7 +236,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
         <section className="mb-8">
           <SH>Auto-Debit Band Kaise Karein? NACH Mandate Cancellation Ka Exact Process</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Agar aap chahte hain ke PM Kisan ke paise se share na kata jaye, balki aap khud alag se jama karein, toh aap ye mandate band karwa sakte hain. Lekin band karne se aapka monthly payment band nahi hota. Aapko khud se jama karna padta hai, warna default ho jayega.
+            Chahte ho ke PM Kisan ke paise se share na kata jaye, balki aap khud alag se jama karein, toh aap ye mandate band karwa sakte hain. Lekin band karne se aapka monthly payment band nahi hota. Aapko khud se jama karna padta hai, warna default ho jayega.
           </p>
 
           <StepList>
@@ -301,7 +301,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
           </div>
 
           <IB>
-            Agar aap gaon mein hain aur CSC center aasani se available hai, toh ise band mat karo. Kyunki har mahine CSC jana ya online payment karna ek extra responsibility hai. Auto-debit mein aapka share time par chala jata hai aur account active rehta hai. Sirf tab band karo jab aapko sach mein problem ho rahi ho, jaise account change karna hai ya PM Kisan ki kist irregular aati hai.
+            Gaon mein ho aur CSC center aasani se available hai? Toh ise band mat karo. Kyunki har mahine CSC jana ya online payment karna ek extra responsibility hai. Auto-debit mein aapka share time par chala jata hai aur account active rehta hai. Sirf tab band karo jab aapko sach mein problem ho rahi ho, jaise account change karna hai ya PM Kisan ki kist irregular aati hai.
           </IB>
         </section>
 

@@ -209,7 +209,7 @@ export default function PMFMEYojana() {
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Nahi ginta: zameen ya building ki khareed, kiraya, gaadi, aur ghar ke personal
-        kharche. Ek aur baat, machinery second-hand nahi, quotation wali nayi honi
+        kharche. Machinery second-hand nahi chalegi, quotation wali nayi honi
         chahiye, kyunki verification me bill milaye jaate hain.
       </p>
 

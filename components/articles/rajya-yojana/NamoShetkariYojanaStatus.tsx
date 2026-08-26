@@ -192,7 +192,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </p>
 
       <p>
-        Ek aur baat jo auto-enrollment ke saath aati hai: aap kuch "select" nahi kar sakte.
+        Auto-enrollment ka doosra pehlu bhi hai: aap kuch "select" nahi kar sakte.
         Kai log taluka office jaakar poochhte hain ki is yojana ka form kahan milega.
         Aisa koi form hai hi nahi. Agar kendriya list mein ho, toh andar ho; nahi ho, toh pehle wahan
         panjikaran karwana padega (wo CSC centre se ya <code>pmkisan.gov.in</code>

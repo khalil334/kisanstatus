@@ -124,7 +124,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
           <li>Agar spouse khud pehle se PMKMY member hain aur apni pension le rahi hain, to unhe family pension alag se nahi milegi, scheme guidelines mein yeh saaf likha hai.</li>
         </ul>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Ek aur baat jo log puchte hain. Dono (member aur spouse) ke guzar jaane ke baad kya bacha hua
+          Log ye bhi puchte hain. Dono (member aur spouse) ke guzar jaane ke baad kya bacha hua
           paisa bachhon ko milega? Nahi. Rules ke hisaab se us case mein corpus wapas LIC ke pension fund
           mein chala jata hai. Yeh pension scheme hai, virasat wali FD nahi. Is farq ko samajhna zaroori hai.
         </p>

@@ -420,7 +420,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
 
           <div className="mt-4 p-4 bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 rounded-r-xl">
             <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed mb-2">
-              <strong>Ek aur baat, kyunki khaad ke naam par fraud bahut chalta hai.</strong> Sarkar khaad ki subsidy kisan ke khaate
+              <strong>Khaad ke naam par fraud bahut chalta hai, isliye ye bhi samajh lo.</strong> Sarkar khaad ki subsidy kisan ke khaate
               me cash nahi bhejti. Wo fertilizer company ko jaati hai, aur aapko fayda sasti bori ke roop me milta hai. Isliye
               &ldquo;khad yojana ke ₹11,000 khaate me aayenge&rdquo; type ka koi message ya thumbnail dikhe to samajh jao ki wo
               registration ke naam par data ya paisa maangne wala jaal hai.

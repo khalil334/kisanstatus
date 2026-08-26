@@ -297,7 +297,7 @@ export default function AutoDebitFailRegularization() {
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Ek aur baat, agar galti bank ki thi, jaise server down hona, toh written proof lekar CIBIL bureau mein free dispute bhi daal sakte ho.
+            Agar galti bank ki thi, jaise server down hona, toh written proof lekar CIBIL bureau mein free dispute bhi daal sakte ho.
           </p>
         </section>
 

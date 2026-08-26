@@ -122,7 +122,7 @@ kuch me personal-style observation ("Humne dekha hai zyadatar cases me bank seed
 | 1 | ~~Em-dash cleanup (4,340 → ~800)~~ **DONE** — 6,386 → 872 across 126 files (~7/article). Replaced with full stops, commas, or colons depending on context; kept ~1 in 8 for natural rhythm. | `components/articles/**/*.tsx`, `lib/*data*.ts` | High (per-file, but mechanical) | Highest |
 | 2 | ~~"X nahi — Y" pattern rewrite (195 spots)~~ **DONE** — down to 11 remaining (within the <30 target); these read naturally and were left. | same | Medium | High |
 | 3 | ~~Titles/descriptions de-formulize ("Ka Sach" x12, "Seedhi baat" x10)~~ **DONE** — 5 "Ka Sach" titles/seoTitles rewritten in `core-articles-data.ts`, `maandhan-data.ts`, `loan-mandi-pashupalan-data.ts`. Kept "खाद योजना ₹11,000 का सच" (genuine myth-bust, allowed). "Seedhi baat" in author-bio/site-config is a single shared string, handled with openers pass. | `lib/core-articles-data.ts`, `lib/*data*.ts` | Low (metadata only) | High |
-| 4 | Paragraph-opener dedupe ("Ek aur/Ek baat/Agar aap") | article components | Medium | Medium |
+| 4 | ~~Paragraph-opener dedupe ("Ek aur/Ek baat/Agar aap")~~ **DONE** — all 10 "Ek aur baat / Ek baat aur" filler transitions removed; "Agar aap" openers reduced to ≤2 per article in the 4 worst files. "PM Kisan" repeats are mostly `<SH>` SEO headings and were kept intentionally. | article components | Medium | Medium |
 | 5 | Template variety (FAQ optional, section order shuffle) | article components + `ArticleShared.tsx` | Medium | Medium |
 | 6 | Add first-hand E-E-A-T signals (1 per article, top-20 traffic pages pehle) | top articles | Ongoing | High (long-term) |
 

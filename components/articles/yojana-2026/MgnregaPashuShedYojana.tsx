@@ -98,7 +98,7 @@ export default function MgnregaPashuShedYojana({ article }: { article: Yojana202
           hisaab se tay hote hain.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Ek aur baat jo samajhna zaroori hai: ye <em>construction work</em> hai, cash scheme nahi. Paisa do
+          Samajhna zaroori hai ki ye <em>construction work</em> hai, cash scheme nahi. Paisa do
           hisson me bantta hai. Labour (NREGA majdoori, muster roll se) aur material (cement, sariya,
           chaddar — vendor payment). Aap khud apne shed par majdoori kar sakte ho to wage bhi aapke ghar me
           aati hai. Par &ldquo;₹1.6 lakh khaate me aayenge&rdquo; wali soch lekar chaloge to nirasha hogi.

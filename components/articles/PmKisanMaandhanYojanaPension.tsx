@@ -299,7 +299,7 @@ export default function PmKisanMaandhanYojanaPension() {
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Method 3: Online (Self Service)</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Agar aap tech-savvy ho, toh <strong>maandhan.in</strong> website par jakar khud apply kar sakte ho. Lekin ismein thodi technical knowledge chahiye.
+            Tech-savvy ho toh <strong>maandhan.in</strong> website par jakar khud apply kar sakte ho. Lekin ismein thodi technical knowledge chahiye.
           </p>
 
           <Image
