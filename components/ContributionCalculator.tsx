@@ -2,16 +2,11 @@
 
 import { useState } from 'react';
 
-/**
- * Client island: age slider contribution calculator.
- * Extracted so the article stays a server component (INP fix).
- */
 const CONTRIB_DATA: Record<number, number> = {
   18: 55, 19: 58, 20: 61, 21: 64, 22: 68, 23: 72, 24: 76, 25: 80,
   26: 85, 27: 90, 28: 95, 29: 100, 30: 105, 31: 110, 32: 120, 33: 130,
   34: 140, 35: 150, 36: 160, 37: 170, 38: 180, 39: 190, 40: 200,
 };
-
 
 export default function ContributionCalculator() {
   const [age, setAge] = useState(25);

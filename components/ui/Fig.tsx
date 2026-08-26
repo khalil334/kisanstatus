@@ -9,12 +9,6 @@ export type FigProps = {
   priority?: boolean;
 };
 
-/**
- * Shared article figure block (image + caption).
- * `src` must be the full public path. Article files that used a local
- * IMG_BASE bind it via a one-line wrapper:
- *   const Fig = (p: FigProps) => <UIFig {...p} src={`${IMG_BASE}/${p.src}`} height={p.height ?? 675} />;
- */
 export default function Fig({
   src,
   alt,

@@ -12,9 +12,6 @@ async function main() {
     return;
   }
 
-  // Validate the ledger handoff BEFORE sending anything: the builder records
-  // the lastmods it compared against in state.pending, and without them we
-  // could not record what we submitted - which would resubmit the whole site.
   const state = fs.existsSync(STATE_PATH)
     ? JSON.parse(fs.readFileSync(STATE_PATH, 'utf8'))
     : { submitted: {} };
@@ -28,7 +25,6 @@ async function main() {
     );
   }
 
-  // The key must be verifiable at keyLocation or IndexNow rejects the batch.
   const keyRes = await fetch(payload.keyLocation, {
     headers: { 'User-Agent': 'kisanstatus-indexnow-submitter' },
   });
@@ -48,10 +44,8 @@ async function main() {
   const text = await res.text();
   console.log(`IndexNow response: ${res.status} ${text}`);
 
-  // 200 = accepted, 202 = accepted pending key validation.
   if (res.status !== 200 && res.status !== 202) process.exit(1);
 
-  // Record what we submitted so the next build only sends genuine changes.
   for (const url of payload.urlList) {
     state.submitted[url] = pending[url];
   }

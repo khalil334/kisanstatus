@@ -79,7 +79,6 @@ Tisri — jo cheez ab tak bekar thi, uski kimat lag gyi. Isse gaay ko dekhne ka 
   },
 ] as const;
 
-/* ── Sangrahan: kaise ikattha karna hai ── */
 const collectSteps = [
   {
     n: '1',
@@ -108,7 +107,6 @@ const collectSteps = [
   },
 ] as const;
 
-/* ── Kahan bech sakte hain ── */
 const channels = [
   {
     k: 'FPO ka sangrah kendra',
@@ -132,7 +130,6 @@ const channels = [
   },
 ] as const;
 
-/* ── Dhoke se bachav ── */
 const warnings = [
   {
     h: 'Advance paisa maangne wala agent',
@@ -301,7 +298,6 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           </p>
         </Bubble>
 
-        {/* Verification status — kya pukhta hai, kya nahi */}
         <div className="mt-3 rounded-2xl border border-[#4A2E52] bg-[#241430] p-5">
           <SectionLabel tone="mint">Pehle yeh saaf kar dein</SectionLabel>
           <p className="mt-2 text-[14px] leading-7 text-[#D8C9DE]">
@@ -353,7 +349,6 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           ))}
         </div>
 
-        {/* Sangrahan — numbered steps, alag layout */}
         <div className="mt-3 rounded-2xl bg-[#2A1830] p-5">
           <SectionLabel>Kaam ki baat · ikattha kaise karein</SectionLabel>
           <h2 className="mt-2 text-lg font-bold text-[#F5EDE3]">
@@ -389,7 +384,6 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           </div>
         </div>
 
-        {/* Kahan bech sakte hain — definition-list layout */}
         <div className="mt-3 rounded-2xl bg-[#241430] p-5">
           <SectionLabel tone="mint">Bikri ke raste</SectionLabel>
           <h2 className="mt-2 text-lg font-bold text-[#F5EDE3]">
@@ -414,7 +408,6 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           </p>
         </div>
 
-        {/* Bikta hai ya nahi — seedha jawab + kaise pakka karein */}
         <div className="mt-3 rounded-2xl bg-[#2A1830] p-5">
           <SectionLabel>Seedha sawaal, seedha jawab</SectionLabel>
           <h2 className="mt-2 text-lg font-bold text-[#F5EDE3]">
@@ -484,7 +477,6 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           </ol>
         </div>
 
-        {/* Jeevamrit table */}
         <div className="mt-3 rounded-2xl bg-[#2A1830] p-5">
           <SectionLabel>Khud banaiye</SectionLabel>
           <h2 className="mt-2 text-lg font-bold text-[#F5EDE3]">
@@ -545,7 +537,6 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           </div>
         </div>
 
-        {/* Paisa hisaab */}
         <div className="mt-3 rounded-2xl bg-[#241430] p-5">
           <SectionLabel tone="mint">Hisaab</SectionLabel>
           <h2 className="mt-2 text-lg font-bold text-[#F5EDE3]">
@@ -584,7 +575,6 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           </p>
         </div>
 
-        {/* Warnings */}
         <div className="mt-3 rounded-2xl border border-[#5A2A2A] bg-[#2A1830] p-5">
           <SectionLabel>Savdhaan</SectionLabel>
           <h2 className="mt-2 text-lg font-bold text-[#F5EDE3]">
@@ -609,7 +599,6 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           </div>
         </div>
 
-        {/* Sarkari raste */}
         <div className="mt-3 rounded-2xl bg-[#241430] p-5">
           <SectionLabel tone="mint">Sarkari madad</SectionLabel>
           <h2 className="mt-2 text-lg font-bold text-[#F5EDE3]">
@@ -733,7 +722,6 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           </div>
         </div>
 
-        {/* summary — likha hua recap, grid nahi */}
         <div className="mt-3 rounded-2xl bg-[#241430] p-5">
           <SectionLabel tone="mint">📌 Poori baat ek nazar mein</SectionLabel>
           <p className="mt-3 text-[15px] leading-7 text-[#D8C9DE]">
@@ -750,7 +738,6 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           </p>
         </div>
 
-        {/* FAQ — seedhe sawal jawab, jaise phone pe log puchte hain */}
         <div className="mt-3 rounded-2xl bg-[#2A1830] p-5">
           <SectionLabel>❓ Aksar poochhe gaye sawaal</SectionLabel>
           <p className="mt-2 text-[14px] leading-6 text-[#9C86A6]">
@@ -789,7 +776,6 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           </p>
         </Bubble>
 
-        {/* author box — same info as the standard AuthorBox, styled for the bulletin theme */}
         <div className="mt-3 flex items-start gap-4 rounded-2xl bg-[#241430] p-5">
           <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full border-2 border-[#7FD1AE]">
             <Image

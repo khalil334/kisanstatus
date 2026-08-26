@@ -6,36 +6,13 @@ import { RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
 import { HINGLISH_TO_HINDI, HINDI_TO_HINGLISH } from '@/lib/hindi-hreflang';
 import { LIVE_YOJANA_2026_ARTICLES } from '@/lib/yojana-2026-data';
 
-/**
- * Cross-section internal linking (SEO-INDEXING-FIX.md — Fix 0 / Part 11).
- *
- * Problem: 46 of 138 sitemap URLs are not indexed, and GSC URL Inspection returned
- * ZERO internal referring URLs for 8 of 9 pages inspected. Sections only link inside
- * themselves, so Hindi articles, calculators, /maandhan/*, /rajya-yojana/* and the
- * category pages get no inbound links and stay at the back of the crawl queue.
- *
- * Fix: every article page renders a block of links that deliberately point OUT of its
- * own section. Targets are chosen by a deterministic rotation over the source page's
- * position in a stable global ordering, so the inbound links spread evenly across all
- * target pages instead of piling onto the newest few. No randomness — the same page
- * always renders the same links, so static output stays stable between builds.
- */
-
 export type CrossLink = {
   href: string;
   label: string;
   section: string;
-  /**
-   * Epoch ms of the target's last publish/update, when known. Drives the
-   * freshness weighting in `weight()` — see GSC-DISCOVERED-NOT-INDEXED-FIX.md
-   * Fix 2: new pages are the ones Google has "discovered" but not crawled, so
-   * they need inbound links the most. Undated pools (tools, hubs, categories)
-   * are stable evergreen targets and stay unweighted.
-   */
   freshness?: number;
 };
 
-/** Latest of published/modified, as epoch ms. 0 when neither parses. */
 function freshnessOf(published?: string, modified?: string): number {
   const p = published ? new Date(published).getTime() : 0;
   const m = modified ? new Date(modified).getTime() : 0;
@@ -43,7 +20,6 @@ function freshnessOf(published?: string, modified?: string): number {
   return t > 0 ? t : 0;
 }
 
-/** Calculator/tool pages — paths + labels mirror app/calculator/page.tsx TOOLS. */
 const CALCULATOR_LINKS: readonly CrossLink[] = [
   { href: '/calculator/quick-status-check', label: 'PM Kisan Status Check Tool', section: 'Tool' },
   { href: '/calculator/installment-tracker', label: 'Kist Status Tracker', section: 'Tool' },
@@ -55,15 +31,12 @@ const CALCULATOR_LINKS: readonly CrossLink[] = [
 ];
 
 const HINDI_LINKS: readonly CrossLink[] = HINDI_ARTICLES.map((a) => ({
-  // Hindi slugs are stored with the `hi/` prefix, so the path is /articles/hi/<slug>.
   href: `/articles/${a.slug}`,
   label: a.titleHi,
   section: 'हिंदी गाइड',
   freshness: freshnessOf(a.publishedTime, a.modifiedTime),
 }));
 
-// noindex articles are deliberately out of Google's index (see core-articles-data.ts) —
-// linking to them wastes crawl budget and sends a mixed signal, so filter them here.
 const HINGLISH_LINKS: readonly CrossLink[] = ARTICLES.filter((a) => !a.noindex).map((a) => ({
   href: `/articles/${a.slug}`,
   label: a.title,
@@ -105,7 +78,6 @@ const HUB_LINKS: readonly CrossLink[] = [
   { href: '/articles', label: 'Sabhi PM Kisan Guides', section: 'Hub' },
 ];
 
-/** Stable, deterministic 32-bit hash of the source path — drives the rotation offset. */
 function pathSeed(path: string): number {
   let h = 2166136261;
   for (let i = 0; i < path.length; i += 1) {
@@ -115,24 +87,11 @@ function pathSeed(path: string): number {
   return Math.abs(h);
 }
 
-// Freshness weighting (Fix 2). A page newer than RECENT_DAYS gets RECENT_WEIGHT
-// slots in the rotation pool instead of one, so it receives proportionally more
-// inbound links until it ages out — at which point the weighting decays to 1 on
-// its own and the spread returns to even. Deliberately mild: a big multiplier
-// would starve the older pages that currently carry the section's rankings.
 const RECENT_DAYS = 45;
 const RECENT_WEIGHT = 3;
 const MID_DAYS = 120;
 const MID_WEIGHT = 2;
 
-/**
- * Expand a pool so recent entries occupy more slots. Order is preserved, and
- * an entry's copies stay adjacent, so the walk in `rotate` still spreads links
- * across distinct targets rather than repeating one.
- *
- * `now` is passed in rather than read from the clock so a single render pass is
- * internally consistent (and so builds stay reproducible within a day).
- */
 function weight(pool: readonly CrossLink[], now: number): readonly CrossLink[] {
   if (!pool.some((l) => l.freshness)) return pool;
   const day = 86_400_000;
@@ -145,10 +104,6 @@ function weight(pool: readonly CrossLink[], now: number): readonly CrossLink[] {
   return out;
 }
 
-/**
- * Pick `count` links from `pool`, walking forward from a path-derived offset.
- * Skips repeats so a weighted pool never yields the same href twice on one page.
- */
 function rotate(pool: readonly CrossLink[], seed: number, count: number, currentPath: string): CrossLink[] {
   const usable = pool.filter((l) => l.href !== currentPath);
   if (usable.length === 0) return [];
@@ -166,12 +121,6 @@ function rotate(pool: readonly CrossLink[], seed: number, count: number, current
 
 export type SectionKind = 'articles' | 'hindi' | 'maandhan' | 'rajya-yojana';
 
-/**
- * Build the cross-section link set for one page.
- *
- * Always returns links from at least three *other* sections plus one hub page, so no
- * page is a dead end and every orphan section receives inbound links from across the site.
- */
 export function getCrossSectionLinks(currentPath: string, section: SectionKind): CrossLink[] {
   const seed = pathSeed(currentPath);
   const now = Date.now();
@@ -214,15 +163,10 @@ export function getCrossSectionLinks(currentPath: string, section: SectionKind):
   );
   links.push(...rotate(HUB_LINKS, seed, 1, currentPath));
 
-  // De-duplicate while preserving order.
   const seen = new Set<string>();
   return links.filter((l) => (seen.has(l.href) ? false : (seen.add(l.href), true)));
 }
 
-/**
- * The same-topic page in the other language, if one exists (hreflang pairs already
- * mapped in lib/hindi-hreflang.ts). Rendered as a visible link, not just a <link> tag.
- */
 export function getLanguagePairLink(currentPath: string): CrossLink | null {
   if (currentPath.startsWith('/articles/hi/')) {
     const slug = currentPath.replace('/articles/hi/', '');

@@ -1,13 +1,9 @@
-// New 2026 yojana articles section (SEO-KEYWORDS-RANK1-PLAN.md).
-// Components live in components/articles/yojana-2026/.
-// Route: app/yojana/[slug]/page.tsx → /yojana/<slug>
-// Existing data files are NOT touched — this file is the only source for this section.
 
 export type Yojana2026ArticleMeta = {
   slug: string;
   mainKeyword: string;
   readonly secondaryKeywords: readonly string[];
-  title: string; // ≤46 chars — root layout appends " - KisanStatus" (14 chars, 60 budget)
+  title: string;
   description: string;
   ogTitle: string;
   component: string;

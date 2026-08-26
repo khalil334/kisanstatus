@@ -1,29 +1,10 @@
 #!/usr/bin/env node
-// Content-length guard (GSC-DISCOVERED-NOT-INDEXED-FIX.md → Fix 5).
-//
-// Why: "Discovered - currently not indexed" on this site correlates with thin
-// pages. The audit in that doc measured every sitemap page's word count with
-// boilerplate (nav/footer) excluded and found the site standard is 2,000+ words.
-// This guard catches a thin article at build time, before it ships and becomes
-// another un-indexed URL.
-//
-// This WARNS, it never fails the build — some topics legitimately run short,
-// and the doc's Fix 3 gives them an explicit escape hatch (expand / merge /
-// noindex). A hard failure would just get bypassed.
-//
-// Counting note: this reads the JSX source, not rendered HTML, so counts land
-// a few percent below a live-page measurement (markup identifiers vs. prose).
-// Treat the numbers as a relative signal; the doc's Reference section has the
-// authoritative curl-based audit for absolute figures.
 
 const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 
-// Same data files the title guard walks — these are the real content articles.
-// Rajya-yojana / maandhan tool pages are status checkers, not articles, so word
-// count does not apply to them (see the doc's "Baaki notes").
 const DATA_FILES = [
   'lib/articles-data.ts',
   'lib/core-articles-data.ts',
@@ -39,8 +20,6 @@ const ROUTES = [
   'app/rajya-yojana/[slug]/page.tsx',
 ];
 
-// Site standard from the audit. Anything under TARGET is below standard;
-// anything under WARN is thin enough to be an indexing risk.
 const TARGET = 2000;
 const WARN = 1500;
 
@@ -81,9 +60,6 @@ function componentFiles(dir, acc = {}) {
   return acc;
 }
 
-// Approximate the prose a crawler sees: drop imports, JSX attributes, tags and
-// punctuation-only tokens, then keep tokens containing a Latin or Devanagari
-// letter. Mirrors the boilerplate-excluded intent of the doc's audit script.
 function wordCount(file) {
   let t = fs.readFileSync(file, 'utf8');
   t = t.replace(/^import .*$/gm, '');
@@ -131,8 +107,6 @@ function main() {
       const slug = field('slug');
       if (!slug) continue;
 
-      // noindex pages are deliberately out of the index (the doc's Fix 3
-      // "noindex" option and Fix 4), so thin content there is intentional.
       if (/\bnoindex:\s*true\b/.test(chunk)) continue;
 
       const compName = field('component') || (routeMaps[file] || {})[slug] || null;
@@ -178,7 +152,6 @@ function main() {
     console.log(`\nall checked articles are at or above the ${TARGET}-word standard.`);
   }
 
-  // Warning only — never blocks a build. See header comment.
   process.exit(0);
 }
 

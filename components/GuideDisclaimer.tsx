@@ -1,21 +1,13 @@
 import React from 'react';
 import { fmtDate } from '@/components/ArticleShared';
 
-/**
- * Canonical disclaimer for kisanguides/ business-guide articles.
- * One wording site-wide; the "Last updated" date comes from the article's
- * modifiedTime constant (lib/core-articles-data.ts) instead of a hand-typed string.
- */
 export default function GuideDisclaimer({
   consult,
   extra,
   modified,
 }: {
-  /** Who the reader should consult, e.g. "agriculture officers, CAs" */
   consult: string;
-  /** Optional article-specific sentence (e.g. an official portal to verify on) */
   extra?: string;
-  /** ISO date string — the article's modifiedTime */
   modified: string;
 }) {
   return (

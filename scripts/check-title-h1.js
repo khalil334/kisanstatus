@@ -28,11 +28,7 @@ const BRAND_ROUTES = [
 ];
 const MIN_WORD_LEN = 3;
 const WINDOW = 6;
-// app/layout.tsx title template appends ' - KisanStatus' (14 chars) to every
-// per-page title. Google's practical desktop limit is ~60 chars, so each
-// seoTitle must fit in 60 - 14 = 46 chars — longer titles get truncated or
-// rewritten in the SERP (Ahrefs "Page and SERP titles do not match").
-const TITLE_SUFFIX_LEN = 14; // ' - KisanStatus'
+const TITLE_SUFFIX_LEN = 14;
 const RENDERED_TITLE_BUDGET = 60;
 
 const read = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
@@ -122,10 +118,6 @@ function main() {
       };
       const slug = field('slug');
       if (!slug) continue;
-      // Hindi articles: the route template (app/articles/hi/[slug]/page.tsx)
-      // renders titleHi as the visible <h1>, and uses seoTitleHi ?? titleHi as
-      // the <title>. So the pair to compare is seoTitleHi vs titleHi directly —
-      // the Hindi components contain no <h1> of their own.
       const isHindi = /hindi-/.test(file);
       const title = isHindi
         ? field('seoTitleHi') || field('titleHi')
@@ -133,11 +125,6 @@ function main() {
       const compName = field('component') || (routeMaps[file] || {})[slug] || null;
       const h1 = isHindi ? field('titleHi') : firstH1(resolve(compName));
 
-      // Measure the string each route actually renders into <title>:
-      //   app/articles/[slug]      → seoTitle || ogTitle || title
-      //   app/articles/hi/[slug]   → seoTitleHi ?? titleHi
-      //   app/maandhan/[slug], app/rajya-yojana/[slug] → title
-      // noindex pages have no SERP, so their length doesn't matter.
       const usesPlainTitle = /maandhan-data|rajya-yojana-data/.test(file);
       const renderedTitle = isHindi
         ? field('seoTitleHi') || field('titleHi')

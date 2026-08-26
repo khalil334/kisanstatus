@@ -83,8 +83,6 @@ export default function YojanaHubPage() {
       </div>
 
       <div className="container-site max-w-3xl py-8">
-        {/* Fix 4 (GSC-DISCOVERED-NOT-INDEXED-FIX.md): hub was ~376 words — intro
-            content with contextual deep links makes it a real hub page. */}
         <section className="mb-10">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-3">
             Yojana ka naam suna hai — par sach kitna hai?

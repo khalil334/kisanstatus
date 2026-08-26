@@ -275,9 +275,6 @@ export function FAQBlock({
   caption,
   variant = 'accordion',
 }: {
-  // `a` may be rich JSX (e.g. an internal <Link>). When it is not a plain
-  // string, supply `schemaText` — the plain-text equivalent that goes into the
-  // FAQPage JSON-LD, so the schema still mirrors the visible answer.
   faqs: { q: string; a: React.ReactNode; schemaText?: string }[];
   caption?: string;
   variant?: 'accordion' | 'inline' | 'cards';

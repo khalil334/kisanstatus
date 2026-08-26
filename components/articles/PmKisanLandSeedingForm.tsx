@@ -56,11 +56,6 @@ const FAQS_DATA = [
   },
 ];
 
-// Har rajya ka OFFICIAL land-records (Bhulekh) portal — DILRMP (dilrmp.gov.in) ki
-// state-wise RoR list se verify kiya gaya. Jin states/UTs ka dedicated portal nahi
-// hai, wahan state ka official govt portal diya hai. In portals se khasra-khatauni
-// (RoR) ki copy nikalti hai — seeding ka aavedan yahan se download NahI hota, wo
-// Patwari/CSC/BAO se milta hai. Isliye buttons ka label imaandaar rakha hai.
 const STATE_LINKS = [
   { name: 'Uttar Pradesh', url: 'https://upbhulekh.gov.in' },
   { name: 'Bihar', url: 'https://biharbhumi.bihar.gov.in' },
@@ -100,7 +95,6 @@ const STATE_LINKS = [
   { name: 'Ladakh', url: 'https://ladakh.gov.in' },
 ];
 
-// Chaupal-style sawaal-jawaab — gaon mein jo asli sawaal uthte hain
 const CHAUPAL = [
   {
     who: 'Ramesh, Sitapur',

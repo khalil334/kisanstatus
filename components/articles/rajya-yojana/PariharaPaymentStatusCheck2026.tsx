@@ -624,7 +624,6 @@ export default function PariharaPaymentStatusCheck2026({
         </p>
       </div>
 
-      {/* <!-- typos: "goverment" (InfoBox warning — Goverment ka relief), "haftte" (Branch B — 2-4 haftte ka farq), "lautt" (Branch C — sarkari credit lautt jaata hai) --> */}
     </article>
   );
 }

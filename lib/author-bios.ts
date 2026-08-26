@@ -1,9 +1,3 @@
-// Author bios for Manish Kumar — same person, same facts, but worded the
-// way a real person actually talks about himself in different moments:
-// different lengths, different moods, different sentence rhythm. Some are
-// two lines, some are one. Some mention verification, some don't bother.
-// Selection is deterministic per page (hash of a stable key), so a given
-// article always shows the same bio across builds.
 
 export const AUTHOR_BIOS: readonly string[] = [
   'PM Kisan aur kheti ki yojanaon par likhta hoon, kai saal ho gaye. Jo cheez portal par khud check nahi ki, wo yahan nahi aati. Bas itna sa usool hai.',
@@ -24,9 +18,6 @@ export const AUTHOR_BIOS: readonly string[] = [
   'Yojana ki jankari me galti ki gunjaish nahi hoti, isliye har fact official portal se milakar likhta hoon. Baki sab log jaise main bhi seekh hi raha hoon, roz kuch naya samne aata hai.',
 ] as const;
 
-// Short one-liner under the author name. Was a single hardcoded line on
-// every page ("Sarkari yojana information — official sources se verified"),
-// which read machine-stamped. Now varies per page like the bio.
 export const AUTHOR_TAGLINES: readonly string[] = [
   'PM Kisan aur sarkari yojanaon par likhta hoon',
   'Sarkari yojana ki verified jankari, aasan bhasha me',
@@ -35,9 +26,6 @@ export const AUTHOR_TAGLINES: readonly string[] = [
   'PM Kisan, KCC aur yojana updates cover karta hoon',
 ] as const;
 
-// Disclaimer variants — same essential message (independent site, not a
-// government portal; verify real work on official portals), worded
-// differently so the block isn't byte-identical on every article.
 export const DISCLAIMER_VARIANTS: readonly string[] = [
   'Seedhi baat bata doon — KisanStatus.com meri apni banayi site hai, sarkar ya kisi bhi sarkari portal se iska koi lena-dena nahi. Jo bhi likhta hoon, bas samjhane ke liye likhta hoon taaki aapka kaam aasaan ho. Kist, eKYC, registration — koi bhi asli kaam ho to seedha pmkisan.gov.in jaise official portal par hi karein, wahi aakhri sach hai.',
   'Ek baat clear kar doon — ye meri personal site hai, koi sarkari website nahi. Yahan sab kuch sirf samjhane ke liye likha gaya hai. Kist check, eKYC ya registration jaisa koi bhi asli kaam pmkisan.gov.in ya apne state ke official portal par hi karein.',
@@ -55,17 +43,14 @@ function hash(key: string): number {
   return h;
 }
 
-/** Deterministic pick: same key always returns the same bio. */
 export function getAuthorBio(key: string): string {
   return AUTHOR_BIOS[hash(key) % AUTHOR_BIOS.length];
 }
 
-/** Deterministic pick for the short tagline; offset so bio/tagline pairs vary. */
 export function getAuthorTagline(key: string): string {
   return AUTHOR_TAGLINES[(hash(key) + 7) % AUTHOR_TAGLINES.length];
 }
 
-/** Deterministic pick for the disclaimer; offset so it doesn't pair with the bio. */
 export function getDisclaimer(key: string): string {
   return DISCLAIMER_VARIANTS[(hash(key) + 3) % DISCLAIMER_VARIANTS.length];
 }

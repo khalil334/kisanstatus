@@ -1,9 +1,6 @@
 import { AUTHOR_NAME } from '@/lib/site-config';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// Rajya (state) yojana articles — Hindi (Devanagari) versions.
-// Hinglish originals live in lib/rajya-yojana-data.ts + app/rajya-yojana/.
-// URL structure unchanged: /articles/hi/<slug> (see lib/hindi-hreflang.ts for mapping).
 export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/mp-kisan-kalyan-yojana',

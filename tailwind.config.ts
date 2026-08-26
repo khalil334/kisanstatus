@@ -9,7 +9,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Harvest palette — terracotta primary, distinct from govt-green
         primary: {
           DEFAULT: '#B85C1A',
           50: '#FDF6EF',
@@ -24,8 +23,6 @@ const config: Config = {
           900: '#633112',
           950: '#371A08',
         },
-        // Remap Tailwind's stock green scale -> terracotta so every
-        // existing `green-*` class site-wide picks up the new brand.
         green: {
           50: '#FDF6EF',
           100: '#FAEADB',
@@ -39,7 +36,6 @@ const config: Config = {
           900: '#633112',
           950: '#371A08',
         },
-        // Remap emerald -> deep olive/moss (secondary, keeps agri feel)
         emerald: {
           50: '#F7F8F0',
           100: '#EEF0DE',

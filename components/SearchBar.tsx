@@ -1,7 +1,3 @@
-// Perf: converted from a 'use client' component (useState + useRouter) to a
-// zero-JS server component. A native GET form submitting to /articles produces
-// the exact same URL (/articles?search=...) the client version pushed, with no
-// hydration cost in the homepage hero — the LCP-critical region.
 export default function SearchBar() {
   return (
     <form action="/articles" method="get" className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto mb-8" role="search">

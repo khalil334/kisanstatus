@@ -77,10 +77,6 @@ const REFERENCE_DATE = new Date(
 
 const FALLBACK_DATE = REFERENCE_DATE;
 
-// The homepage and /articles are listing pages: they genuinely change when a
-// NEW article is published (it appears in their lists), but an edit to an old
-// article does not change them. Using publishedTime (not modifiedTime) keeps
-// their lastmod honest instead of bumping on every content tweak site-wide.
 const LATEST_PUBLISHED = new Date(
   Math.max(
     ...ALL_ARTICLES.map((a) => {
@@ -90,9 +86,6 @@ const LATEST_PUBLISHED = new Date(
   ),
 );
 
-// Each calculator component declares `const MODIFIED = '<ISO date>'` — read it
-// from the source at build time so a real edit moves the sitemap date and a
-// non-edit doesn't. Falls back to the given date if the const is missing.
 function calculatorModified(componentFile: string, fallback: string): Date {
   try {
     const src = fs.readFileSync(
@@ -105,20 +98,15 @@ function calculatorModified(componentFile: string, fallback: string): Date {
       if (Number.isFinite(d.getTime())) return d;
     }
   } catch {
-    // fall through to fallback
   }
   return new Date(fallback);
 }
 
-// Google ignores lastmod site-wide if it catches future timestamps — clamp
-// any content date that is still ahead of the build moment.
 function clampToNow(d: Date): Date {
   const buildTime = new Date();
   return d.getTime() > buildTime.getTime() ? buildTime : d;
 }
 
-// /articles/hi lists only Hindi articles — its lastmod should track the
-// freshest Hindi article, not the whole site's freshest article.
 const HINDI_UPDATED = new Date(
   Math.max(
     ...HINDI_ARTICLES.map((a) => {
@@ -128,8 +116,6 @@ const HINDI_UPDATED = new Date(
   ),
 );
 
-// Hub pages inherit the freshest date of the content they list, so they can never
-// drift out of sync with their children the way hardcoded dates did.
 const MAANDHAN_UPDATED = new Date(
   Math.max(
     ...MAANDHAN_ARTICLES.map((a) => {
@@ -169,7 +155,6 @@ const CALC_DATES = {
   cropProfit: calculatorModified('CropProfitCalcPage.tsx', '2026-04-28'),
 };
 
-// The /calculator hub lists all calculators — it changes when the freshest one does.
 const CALCULATORS_UPDATED = new Date(
   Math.max(...Object.values(CALC_DATES).map((d) => d.getTime())),
 );
@@ -203,8 +188,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: clampToNow(LATEST_PUBLISHED),
       changeFrequency: 'daily',
       priority: 1.0,
-      // No hreflang alternates: single-language site — a lone self-referencing
-      // hreflang on one URL is half-done markup and adds nothing for Google.
     },
     {
       url: `${SITE_URL}/articles`,
@@ -288,10 +271,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.70,
     },
-    // /about, /contact, /privacy-policy, /disclaimer, /terms-of-service are
-    // noindexed utility/compliance pages (AdSense requirement pages) — kept live
-    // and crawlable via footer links, but excluded from the sitemap: a sitemap
-    // entry for a noindex URL is a mixed signal.
   ];
 
   const categoryPages: MetadataRoute.Sitemap = Object.keys(CATEGORIES).map((category) => {
@@ -330,8 +309,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       };
     });
 
-  // noindex pages (premature future-topic pages, see ArticleMeta.noindex) are
-  // deliberately excluded — a sitemap entry for a noindex URL is a mixed signal.
   const articlePages: MetadataRoute.Sitemap = ALL_ARTICLES.filter((a) => !a.noindex).map((article) => {
     const modified = article.modifiedTime || article.publishedTime;
     const modifiedDate = modified ? clampToNow(new Date(modified)) : now;

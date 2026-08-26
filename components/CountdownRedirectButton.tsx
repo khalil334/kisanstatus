@@ -2,10 +2,6 @@
 
 import { useState, useEffect } from 'react';
 
-/**
- * Tiny client island: countdown-then-open-official-portal button.
- * Extracted from article components so they can stay server components (INP fix).
- */
 export default function CountdownRedirectButton({
   href,
   label,

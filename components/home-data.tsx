@@ -1,4 +1,3 @@
-// Homepage data & icons — extracted from HomeContent.tsx (no content changes).
 
 export function IconWallet({ className = 'w-6 h-6' }: { className?: string }) {
   return (

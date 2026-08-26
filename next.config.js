@@ -29,9 +29,6 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
-    // Trimmed to packages actually in package.json — the previous list
-    // (lucide-react, recharts, framer-motion, …) referenced deps that were
-    // never installed; dead config.
     optimizePackageImports: [],
   },
 
@@ -40,14 +37,8 @@ const nextConfig = {
     reactRemoveProperties: true,
   },
 
-
   async redirects() {
     return [
-      // Host normalisation MUST come first: www/preview traffic is moved to the
-      // canonical apex host in hop 1, so every slug redirect below then resolves
-      // on kisanstatus.com. Previously the www rule sat mid-list, so a www request
-      // for an early slug redirected www->www->apex, adding an avoidable hop and
-      // making Google see the slug redirect on the non-canonical host.
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.kisanstatus.com' }],
@@ -69,9 +60,6 @@ const nextConfig = {
       { source: '/articles/pm-kisan-ekyc-online-2026', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
       { source: '/articles/pm-kisan-23vi-kist-2026-status-check', destination: '/articles/PmKisan24viKist2026', permanent: true },
       { source: '/articles/pm-kisan-21vi-installment-status-check', destination: '/articles/PmKisan24viKist2026', permanent: true },
-      // Retargeted 2026-08-19: this is the site's #1 URL by impressions (531/90d) and
-      // land-seeding now has a dedicated page — sending it to the generic master guide
-      // was an intent mismatch (1.3% CTR). See GSC-INDEXING-FIX-AUG-2026.md.
       { source: '/articles/pm-kisan-land-seeding-status-check', destination: '/articles/PmKisanLandSeedingForm', permanent: true },
       { source: '/articles/pm-kisan-rejected-list-2026', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
       { source: '/articles/pm-kisan-payment-failed-status-2026', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
@@ -81,7 +69,6 @@ const nextConfig = {
       { source: '/articles/pm-kisan-mobile-number-change-2026', destination: '/articles/PmKisanMobileNumberChangeUpdate', permanent: true },
       { source: '/pm-kisan-21vi-installment-status-check', destination: '/articles/PmKisan24viKist2026', permanent: true },
       { source: '/articles/pm-kisan-24vi-kist-2026', destination: '/articles/PmKisan24viKist2026', permanent: true },
-      // GSC fix (2026-08-17): old kebab-case URLs Google still ranks were 404ing — redirect to current slugs
       { source: '/articles/pm-kisan-beneficiary-list-2026', destination: '/articles/PmKisanBeneficiaryList2026', permanent: true },
       { source: '/articles/pm-kisan-beneficiary-list-village-wise-2026', destination: '/articles/PmKisanBeneficiaryList2026', permanent: true },
       { source: '/articles/pm-kisan-complete-guide', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
@@ -144,26 +131,18 @@ const nextConfig = {
       { source: '/articles/hi/meri-fasal-mera-byora-status', destination: '/articles/hi/state-kisan-yojana-list', permanent: true },
       { source: '/articles/hi/up-kisan-karj-rahat-list', destination: '/articles/hi/state-kisan-yojana-list', permanent: true },
       { source: '/articles/hi/ikhedut-portal-status', destination: '/articles/hi/state-kisan-yojana-list', permanent: true },
-      // content-audit W2a: old Hindi helpline page merged into canonical hi twin
       { source: '/articles/hi/helpline-shikayat', destination: '/articles/hi/pm-kisan-helpline-155261', permanent: true },
-      // content-audit W2b: old 2027-stamped Hindi karj-mafi page merged into hreflang-paired twin
       { source: '/articles/hi/karj-mafi-list', destination: '/articles/hi/kisan-karj-mafi-list', permanent: true },
 
-      // GSC fix (2026-08-19): URLs Google still ranks that returned 404 — slugs were
-      // renamed over time without a redirect, so each rename orphaned its old URL and
-      // lost its ranking signals. Impressions per URL (90d) noted for triage order.
-      // See GSC-INDEXING-FIX-AUG-2026.md for the full audit.
-      { source: '/articles/pm-kisan-problems-solution-guide-2026', destination: '/articles/PmKisanMasterGuide2026', permanent: true }, // 19 imp
-      { source: '/articles/pm-kisan-correction-deactivate-block-guide-2026', destination: '/articles/PmKisanCorrectionForm2026', permanent: true }, // 17 imp
-      { source: '/articles/pm-kisan-status-check-online-2026-complete-guide', destination: '/articles/PmKisan24viKist2026', permanent: true }, // 14 imp
-      { source: '/articles/kisan-rin-kaha-se-le-2026', destination: '/articles/KisanRinKahaSeLe2026', permanent: true }, // 10 imp — exact twin slug, casing only
-      { source: '/articles/pm-kisan-registration-online-2026', destination: '/articles/PmKisanMasterGuide2026', permanent: true }, // 7 imp
-      { source: '/articles/pm-kisan-installment-history-check-online', destination: '/articles/PmKisan24viKist2026', permanent: true }, // 6 imp
-      { source: '/articles/pm-kisan-land-seeding-status', destination: '/articles/PmKisanLandSeedingForm', permanent: true }, // 1 imp — exact page exists
-      // /articles/category/* 404s when the segment isn't a CATEGORIES key in lib/categories.ts.
-      // 'registration' and 'ekyc' were never valid CategorySlugs; both topics live under status-check.
-      { source: '/articles/category/registration', destination: '/articles/category/status-check', permanent: true }, // 3 imp
-      { source: '/articles/category/ekyc', destination: '/articles/category/status-check', permanent: true }, // 1 imp
+      { source: '/articles/pm-kisan-problems-solution-guide-2026', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
+      { source: '/articles/pm-kisan-correction-deactivate-block-guide-2026', destination: '/articles/PmKisanCorrectionForm2026', permanent: true },
+      { source: '/articles/pm-kisan-status-check-online-2026-complete-guide', destination: '/articles/PmKisan24viKist2026', permanent: true },
+      { source: '/articles/kisan-rin-kaha-se-le-2026', destination: '/articles/KisanRinKahaSeLe2026', permanent: true },
+      { source: '/articles/pm-kisan-registration-online-2026', destination: '/articles/PmKisanMasterGuide2026', permanent: true },
+      { source: '/articles/pm-kisan-installment-history-check-online', destination: '/articles/PmKisan24viKist2026', permanent: true },
+      { source: '/articles/pm-kisan-land-seeding-status', destination: '/articles/PmKisanLandSeedingForm', permanent: true },
+      { source: '/articles/category/registration', destination: '/articles/category/status-check', permanent: true },
+      { source: '/articles/category/ekyc', destination: '/articles/category/status-check', permanent: true },
     ];
   },
 
@@ -180,14 +159,6 @@ const nextConfig = {
           { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
           { key: 'X-DNS-Prefetch-Control', value: 'on' },
           {
-            // Enforced CSP (was Report-Only, which protects nothing).
-            // Changes vs the old report-only policy:
-            // - removed https://api.openweathermap.org (weather now proxied
-            //   server-side through /api/weather via Open-Meteo)
-            // - added https://stats.g.doubleclick.net to connect-src (GA4 can
-            //   beacon there when Google Signals is enabled)
-            // Vercel Analytics posts to same-origin /_vercel/insights ('self');
-            // Speed Insights uses vitals.vercel-insights.com.
             key: 'Content-Security-Policy',
             value:
               "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net https://vitals.vercel-insights.com; frame-src https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests",

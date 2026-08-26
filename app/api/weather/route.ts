@@ -1,7 +1,5 @@
 import { NextResponse } from 'next/server';
 
-// Open-Meteo: free weather API, NO API key required (https://open-meteo.com).
-// Replaces OpenWeatherMap so the site works without any WEATHER_API_KEY.
 const UPSTREAM_BASE = 'https://api.open-meteo.com/v1/forecast';
 const CACHE_SECONDS = 1800;
 const UPSTREAM_TIMEOUT_MS = 8000;
@@ -34,7 +32,6 @@ const STATE_COORDS: Record<string, { lat: number; lon: number }> = {
   'Delhi': DEFAULT_COORDS,
 };
 
-// WMO weather codes → simple condition label (same style the UI already renders).
 function codeToCondition(code: number): string {
   if (code === 0) return 'Clear';
   if (code === 1 || code === 2) return 'Partly Cloudy';
@@ -89,9 +86,6 @@ export async function GET(request: Request) {
     const daily: UpstreamDaily = (data as { daily?: UpstreamDaily }).daily ?? {};
     const times = Array.isArray(daily.time) ? daily.time : [];
 
-    // Same shape the frontend already consumes (ForecastEntry[]):
-    // one entry per day; dt is local midnight, so the client's per-date
-    // grouping keeps working unchanged.
     const list = times.slice(0, FORECAST_DAYS).map((dt, i) => ({
       dt,
       main: {

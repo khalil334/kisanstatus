@@ -25,10 +25,6 @@ import {
 
 const poppins = Poppins({
   subsets: ['latin', 'devanagari'],
-  // Perf: dropped the 600 weight — with only 400/700 loaded, CSS font-weight
-  // 600 resolves to 700 (nearest available), visually near-identical. This
-  // removes 2 preloaded woff2 files (~47KB latin+devanagari) from the critical
-  // path, which competes with the LCP hero text render.
   weight: ['400', '700'],
   adjustFontFallback: true,
   display: 'swap',
@@ -155,10 +151,6 @@ export default function RootLayout({
       className={poppins.variable}
     >
       <head>
-        {/* Perf: GA/GTM load with strategy="lazyOnload" (after everything else),
-            so a full preconnect at head start is wasted work that competes with
-            fonts/CSS on the critical path. dns-prefetch is the cheap async hint
-            that still warms DNS before the lazy scripts fire. */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://region1.google-analytics.com" />
       </head>

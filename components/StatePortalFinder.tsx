@@ -2,10 +2,6 @@
 
 import { useState, useMemo } from 'react';
 
-/**
- * Client island: searchable state land-record portal table.
- * Extracted so the surrounding article stays a server component (INP fix).
- */
 const STATE_PORTALS = [
   { state: 'Andhra Pradesh', portal: 'meebhoomi.ap.gov.in', url: 'https://meebhoomi.ap.gov.in', note: 'Mee Bhoomi portal par land details.' },
   { state: 'Bihar', portal: 'biharbhumi.bihar.gov.in', url: 'https://biharbhumi.bihar.gov.in', note: 'Bhumi Jankari portal.' },

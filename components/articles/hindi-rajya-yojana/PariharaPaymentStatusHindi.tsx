@@ -325,7 +325,6 @@ export default function PariharaPaymentStatusHindi({ article }: { article: Hindi
         इस पूरी चेन में कहीं कोई शुल्क नहीं है।
       </div>
 
-      {/* typos (intentional, per style guide): "जादा" (pending वाले पैरा में — ज्यादा की जगह), "recieving" (objection वाले पैरा में — receiving की जगह) */}
     </>
   );
 }

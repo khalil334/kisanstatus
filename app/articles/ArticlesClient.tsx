@@ -220,13 +220,6 @@ function ArticleCard({ article, showNewBadge = false, priority = false }: { arti
   );
 }
 
-// SEO fix (2026-08-23, part 2): this component used to read useSearchParams(),
-// which Next.js cannot render on the server — it forced the whole <Suspense>
-// subtree to BAILOUT_TO_CLIENT_SIDE_RENDERING, so Googlebot received a loading
-// skeleton instead of the article grid on /articles and all 6 category pages.
-// The active category now arrives as a server-known prop (derived from the real
-// crawlable /articles/category/<slug> route), and search is plain client state.
-// No query-string read happens during render, so the grid is server-rendered.
 function ArticlesContent({
   articles,
   activeCategory = 'all',

@@ -1,9 +1,6 @@
 import { AUTHOR_NAME } from '@/lib/site-config';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// Loan / mandi / pashupalan articles — Hindi (Devanagari) versions.
-// Components live in components/articles/hindi-loan-mandi-pashupalan/.
-// URL structure unchanged: /articles/hi/<slug> (see lib/hindi-hreflang.ts for mapping).
 export const HINDI_LOAN_MANDI_PASHUPALAN_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/gehu-ka-rate-aaj',

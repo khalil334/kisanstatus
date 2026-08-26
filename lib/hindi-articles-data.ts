@@ -18,18 +18,8 @@ export interface HindiArticle {
   ogImage: string;
 }
 
-// Section data files (mirrors the Hinglish split: core / kisanguides /
-// loan-mandi-pashupalan / rajya-yojana):
-//   lib/hindi-yojana-data.ts                → components/articles/hindi-yojana/
-//   lib/hindi-kisanguides-data.ts           → components/articles/hindi-kisanguides/
-//   lib/hindi-loan-mandi-pashupalan-data.ts → components/articles/hindi-loan-mandi-pashupalan/
-//   lib/hindi-rajya-yojana-data.ts          → components/articles/hindi-rajya-yojana/
-// URLs unchanged: every article stays at /articles/hi/<slug>.
-
-// Back-compat alias — "core" = PM Kisan yojana articles.
 export const HINDI_CORE_ARTICLES: readonly HindiArticle[] = HINDI_YOJANA_ARTICLES;
 
-// Combined list — all Hindi articles across every section.
 export const HINDI_ARTICLES: readonly HindiArticle[] = [
   ...HINDI_YOJANA_ARTICLES,
   ...HINDI_KISANGUIDES_ARTICLES,

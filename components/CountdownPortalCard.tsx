@@ -2,10 +2,6 @@
 
 import { useState, useEffect, useCallback, memo } from 'react';
 
-/**
- * Client island: 10s countdown card with cancel, then reveals the official-portal link.
- * Extracted so the surrounding article stays a server component (INP fix).
- */
 const CountdownPortalCard = memo(function CountdownPortalCard({
   title,
   description,

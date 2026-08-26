@@ -1,14 +1,6 @@
 import Link from 'next/link';
 import { getCrossSectionLinks, getLanguagePairLink, type SectionKind } from '@/lib/cross-links';
 
-/**
- * Cross-section internal-link block (SEO-INDEXING-FIX.md — Fix 0 / Part 11).
- *
- * Rendered at the bottom of every article template. Unlike the existing
- * same-category "Related Articles" blocks, this deliberately links OUT of the
- * current section (Hindi ↔ Hinglish ↔ calculators ↔ maandhan ↔ rajya-yojana ↔
- * category hubs) so the orphaned sections get inbound internal links.
- */
 export function CrossSectionLinks({
   currentPath,
   section,

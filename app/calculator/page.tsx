@@ -220,8 +220,6 @@ export default function CalculatorIndexPage() {
           })}
         </div>
 
-        {/* Fix 4 (GSC-DISCOVERED-NOT-INDEXED-FIX.md): hub was ~361 words — prose
-            context on when each tool actually helps, with deep links. */}
         <section className="mt-10">
           <h2 className="font-black text-[var(--color-text)] text-lg mb-3">
             Kaunsa tool kab kaam aata hai?

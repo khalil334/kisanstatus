@@ -2,7 +2,6 @@ import { LOAN_MANDI_PASHUPALAN_ARTICLES } from './loan-mandi-pashupalan-data';
 import { CATEGORIES, type CategorySlug, type ArticleMeta } from './categories';
 import { CORE_ARTICLES } from './core-articles-data';
 
-// Re-export so existing imports elsewhere keep working unchanged.
 export { CATEGORIES } from './categories';
 export type { CategorySlug, ArticleMeta } from './categories';
 export const ARTICLES: readonly ArticleMeta[] = [...CORE_ARTICLES, ...LOAN_MANDI_PASHUPALAN_ARTICLES];
@@ -60,8 +59,6 @@ export function getRelatedArticles(slug: string, limit: number = 3): readonly Ar
   if (!current) return [];
 
   if (current.relatedSlugs && current.relatedSlugs.length > 0) {
-    // Never surface noindex articles as related links — they are deliberately out of
-    // Google's index, and internal links to them waste crawl budget (GSC Aug 2026 fix).
     const explicit = current.relatedSlugs
       .map((s) => ARTICLES_MAP[s])
       .filter(Boolean)

@@ -224,7 +224,6 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
             Yeh sawal camp mein sabse zyada pucha gaya tha. Jawab aasan hai — Aadhaar batata hai <em>aap kaun ho</em>,
             Farmer ID batati hai <em>aap kisan ho, kitni zameen hai, kya ugate ho</em>. Dono ka kaam alag hai.
           </p>
-          {/* Do-patti comparison — is article ka apna style, standard table nahi */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 my-5 rounded-2xl overflow-hidden border-2 border-[var(--color-border)]">
             <div className="p-5 bg-[var(--color-bg-alt)] border-b sm:border-b-0 sm:border-r border-[var(--color-border)]">
               <p className="text-xs uppercase tracking-widest font-black text-[var(--color-text-muted)] mb-1">Card #1</p>
@@ -417,7 +416,6 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
         />
 
-        {/* Aage ki padhai — grid ki jagah baat-cheet waale andaz mein internal links */}
         <div className="mt-8 p-5 border-l-4 border-[var(--color-primary)] bg-[var(--color-bg-alt)] rounded-r-2xl">
           <h3 className="font-black text-[var(--color-text)] mb-2 text-base">Iske Baad Kya Padhein?</h3>
           <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">

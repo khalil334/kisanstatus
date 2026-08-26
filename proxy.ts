@@ -3,9 +3,6 @@ import type { NextRequest } from 'next/server'
 import { ARTICLES } from '@/lib/articles-data'
 import { HINDI_ARTICLES } from '@/lib/hindi-articles-data'
 
-// Lowercase → canonical slug map so wrong-case article URLs
-// (e.g. /articles/pmkisanekyconline2026 shared via WhatsApp/social)
-// 308-redirect to the canonical mixed-case URL instead of 404ing.
 const CANONICAL_SLUGS = new Map<string, string>()
 for (const a of ARTICLES) CANONICAL_SLUGS.set(a.slug.toLowerCase(), a.slug)
 for (const a of HINDI_ARTICLES) CANONICAL_SLUGS.set(a.slug.toLowerCase(), a.slug)
@@ -24,7 +21,6 @@ export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone()
   let changed = false
 
-  // Case-insensitive article slug redirect (permanent, preserves query).
   const articleMatch = url.pathname.match(ARTICLE_PATH)
   if (articleMatch) {
     const slug = decodeURIComponent(articleMatch[1])

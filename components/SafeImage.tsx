@@ -3,10 +3,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-/**
- * Tiny client island: next/image with an onError fallback source.
- * Keeps the surrounding article a server component (INP fix).
- */
 export default function SafeImage({
   fallbackSrc,
   src,

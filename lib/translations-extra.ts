@@ -1,13 +1,6 @@
 import { AUTHOR_NAME } from '@/lib/site-config';
 import type { LangCode, Translations } from './translations';
 
-/**
- * Translations for languages that are not yet enabled at runtime
- * (LanguageContext SUPPORTED_LANGS only allows 'hi' | 'en').
- * Kept out of the main bundle so every page doesn't ship ~26 KB of
- * unused strings. When enabling a language, load it from here
- * (e.g. via dynamic import) and add it to SUPPORTED_LANGS.
- */
 const extraTranslations: Partial<Record<LangCode, Translations>> = {
   bn: {
     nav_home: 'হোম',

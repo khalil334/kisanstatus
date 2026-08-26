@@ -1,9 +1,6 @@
 import { AUTHOR_NAME } from '@/lib/site-config';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// PM Kisan yojana / status-check articles — Hindi (Devanagari) versions.
-// Components live in components/articles/hindi-yojana/.
-// URL structure unchanged: /articles/hi/<slug> (see lib/hindi-hreflang.ts for mapping).
 export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/pm-kisan-25vi-kist',

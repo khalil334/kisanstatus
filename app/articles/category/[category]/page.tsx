@@ -544,9 +544,6 @@ export default async function CategoryPage({
         ) : (
           <>
             <ArticlesClient articles={categoryArticles} showHero={false} activeCategory={category} />
-            {/* SEO fix (2026-08-23): ArticlesClient bails out to CSR, so crawlers see a
-                skeleton instead of links. This server-rendered list guarantees every
-                article in this category is discoverable in the initial HTML. */}
             <section aria-label="Category article index" className="mt-10">
               <h2 className="font-black text-[var(--color-text)] text-xl mb-4">
                 Is Category ke Sabhi Guides ({categoryArticles.length})

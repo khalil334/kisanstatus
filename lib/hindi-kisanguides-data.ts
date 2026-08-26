@@ -1,9 +1,6 @@
 import { AUTHOR_NAME } from '@/lib/site-config';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// Kisan guides (subsidy / training schemes) — Hindi (Devanagari) versions.
-// Components live in components/articles/hindi-kisanguides/.
-// URL structure unchanged: /articles/hi/<slug> (see lib/hindi-hreflang.ts for mapping).
 export const HINDI_KISANGUIDES_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/tractor-subsidy',

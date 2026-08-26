@@ -92,7 +92,6 @@ const sections = [
   },
 ] as const;
 
-/* संग्रहण का सही तरीका */
 const collectionTips = [
   {
     n: '1',
@@ -121,7 +120,6 @@ const collectionTips = [
   },
 ] as const;
 
-/* बुलंदशहर से बाहर के रास्ते */
 const sellingOptions = [
   {
     k: 'FPO का संग्रह केंद्र',
@@ -145,7 +143,6 @@ const sellingOptions = [
   },
 ] as const;
 
-/* जीवामृत का नुस्खा */
 const jeevamritRows: readonly (readonly [string, string, string])[] = [
   ['पानी', '200 लीटर', 'ड्रम भरने के लिये; क्लोरीन वाला नल का पानी हो तो एक रात खुला रख दें'],
   ['देसी गाय का गोबर', '10 किलो', 'ताजा हो, सूखा नहीं'],
@@ -155,7 +152,6 @@ const jeevamritRows: readonly (readonly [string, string, string])[] = [
   ['खेत की मिट्टी', 'एक मुट्ठी', 'उस खेत से जहां रसायन न पड़ा हो'],
 ];
 
-/* पैसे का हिसाब */
 const moneyRows: readonly (readonly [string, string, string])[] = [
   ['1 गाय', 'करीब 4 लीटर रोज', 'सबसे आम हालत — घर की एक गाय, महीने का जोड़ 1200 के आसपास'],
   ['2 गाय', 'करीब 8 लीटर रोज', 'छोटा पशुपालक घर, महीने का 2400 के आसपास'],
@@ -163,7 +159,6 @@ const moneyRows: readonly (readonly [string, string, string])[] = [
   ['महिला समूह के जरिये', 'वही मात्रा, ऊपर +₹2/लीटर', 'बुलंदशहर पायलट में समूह से जुड़े घरों को'],
 ];
 
-/* धोखे से बचाव */
 const warnings = [
   {
     h: 'एडवांस पैसा मांगने वाला एजेंट',
@@ -264,7 +259,6 @@ export default function GauMutraKharidYojanaHindi({ article }: { article: HindiA
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
       />
 
-      {/* masthead */}
       <div className="flex items-center justify-between border-b-2 border-[#C98A3B] pb-3">
         <span className="font-serif text-lg tracking-widest text-[#8B5A20]">खेत पत्रिका</span>
         <span className="text-[11px] tracking-[0.25em] text-[#5C7A5E]">
@@ -272,9 +266,7 @@ export default function GauMutraKharidYojanaHindi({ article }: { article: HindiA
         </span>
       </div>
 
-      {/* paper card */}
       <div className="relative mt-6 rounded-sm bg-[#EDE6D3] px-5 py-8 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.45)] sm:px-10 sm:py-12">
-        {/* stamp */}
         <div className="absolute -top-4 right-2 grid h-20 w-20 rotate-6 place-items-center rounded-full border-[3px] border-[#C98A3B] bg-[#EDE6D3] text-center text-[10px] font-bold leading-tight text-[#8B5A20]">
           पायलट
           <br />
@@ -356,7 +348,6 @@ export default function GauMutraKharidYojanaHindi({ article }: { article: HindiA
 
         <FurrowDivider />
 
-        {/* संग्रहण के नियम */}
         <div className="grid grid-cols-[auto,1fr] gap-4 sm:grid-cols-[110px,1fr] sm:gap-6">
           <Eyebrow>तैयारी</Eyebrow>
           <div>
@@ -396,7 +387,6 @@ export default function GauMutraKharidYojanaHindi({ article }: { article: HindiA
 
         <FurrowDivider />
 
-        {/* बुलंदशहर से बाहर */}
         <div className="grid grid-cols-[auto,1fr] gap-4 sm:grid-cols-[110px,1fr] sm:gap-6">
           <Eyebrow>विकल्प</Eyebrow>
           <div>
@@ -427,7 +417,6 @@ export default function GauMutraKharidYojanaHindi({ article }: { article: HindiA
 
         <FurrowDivider />
 
-        {/* जीवामृत */}
         <div className="grid grid-cols-[auto,1fr] gap-4 sm:grid-cols-[110px,1fr] sm:gap-6">
           <Eyebrow>खुद बनाइये</Eyebrow>
           <div>
@@ -500,7 +489,6 @@ export default function GauMutraKharidYojanaHindi({ article }: { article: HindiA
 
         <FurrowDivider />
 
-        {/* पैसे का हिसाब */}
         <div className="grid grid-cols-[auto,1fr] gap-4 sm:grid-cols-[110px,1fr] sm:gap-6">
           <Eyebrow>हिसाब</Eyebrow>
           <div>
@@ -567,7 +555,6 @@ export default function GauMutraKharidYojanaHindi({ article }: { article: HindiA
 
         <FurrowDivider />
 
-        {/* सावधान */}
         <div className="grid grid-cols-[auto,1fr] gap-4 sm:grid-cols-[110px,1fr] sm:gap-6">
           <Eyebrow>सावधान</Eyebrow>
           <div>
@@ -598,7 +585,6 @@ export default function GauMutraKharidYojanaHindi({ article }: { article: HindiA
 
         <FurrowDivider />
 
-        {/* सरकारी मदद */}
         <div className="grid grid-cols-[auto,1fr] gap-4 sm:grid-cols-[110px,1fr] sm:gap-6">
           <Eyebrow>सरकारी मदद</Eyebrow>
           <div>
@@ -699,7 +685,6 @@ export default function GauMutraKharidYojanaHindi({ article }: { article: HindiA
 
         <FurrowDivider />
 
-        {/* ledger summary */}
         <div className="border border-[#C98A3B]/50 bg-[#E4DBBF] p-5">
           <h2 className="font-serif text-lg font-bold uppercase tracking-wide text-[#2B2620]">
             पूरी बात एक नजर में
@@ -722,7 +707,6 @@ export default function GauMutraKharidYojanaHindi({ article }: { article: HindiA
 
         <FurrowDivider />
 
-        {/* FAQ */}
         <h2 className="font-serif text-2xl font-bold text-[#2B2620]">
           अक्सर पूछे जाने वाले सवाल
         </h2>

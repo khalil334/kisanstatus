@@ -1,10 +1,5 @@
 import Link from 'next/link';
 
-/**
- * Shared closing "related articles" box for Hindi articles.
- * Markup lives here once; each article passes its own heading + links,
- * so wording stays varied per-page while the layout is maintained centrally.
- */
 export type RelatedLink = { href: string; label: string };
 
 export default function HindiRelatedFooter({

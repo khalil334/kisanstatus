@@ -1,6 +1,5 @@
 export type FaqItem = { q: string; a: string };
 
-/** Builds a schema.org FAQPage JSON-LD object from a q/a list. */
 export function buildFaqSchema(faqs: FaqItem[]) {
   return {
     '@context': 'https://schema.org',

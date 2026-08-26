@@ -45,9 +45,6 @@ type ListingArticle = {
   keywords?: readonly string[];
 };
 
-// SEO fix (2026-08-23, part 2): the 6 Hinglish /yojana/* guides were absent from
-// ALL_ARTICLES, so the "Sabhi Guides A–Z" index linked 126 of 132 article URLs in
-// the sitemap and these 6 never got a link from the main hub.
 const YOJANA_LISTING_ARTICLES = LIVE_YOJANA_2026_ARTICLES.map((a) => ({
   slug: a.slug,
   title: a.title,
@@ -110,11 +107,6 @@ export const metadata: Metadata = {
   category: 'Agriculture & Farming',
 };
 
-// SEO fix (2026-08-23): /articles served only 3–15 real <a href> links to Googlebot
-// because ArticlesClient bails out to client-side rendering (useSearchParams inside
-// Suspense). JSON-LD URLs are NOT used for link discovery, so ~100 articles were
-// invisible to crawlers → GSC "Discovered - currently not indexed" (51 pages).
-// This server-rendered index guarantees every article link exists in the initial HTML.
 function articlePath(article: ListingArticle): string {
   const isMaandhan = article.category === 'pension-scheme' || article.slug.includes('maandhan');
   return article.href ?? (isMaandhan ? `/maandhan/${article.slug}` : `/articles/${article.slug}`);
@@ -144,12 +136,6 @@ function ServerArticleIndex() {
 }
 
 export default function ArticlesPage() {
-  // Ahrefs "Slow page" fix (2026-08-18): the ItemList previously embedded a
-  // full Article object (author, publisher+logo, image, dates, description)
-  // per article — ~120 KB of JSON-LD, ~25% of the page HTML — regenerated on
-  // every ISR revalidation. Google's summary-page guidance for list pages is
-  // minimal ListItems (url only is required); the full Article schema already
-  // lives on each article page. Keeping position + url + name only.
   const schemaArticles = ALL_ARTICLES.map((article, i) => {
     const isMaandhan = article.category === 'pension-scheme' || article.slug.includes('maandhan');
     const articlePath =

@@ -13,12 +13,6 @@ interface OfficialLinkButtonProps {
   children: ReactNode;
 }
 
-/**
- * Small client island for the "official portal" countdown buttons.
- * Keeps the surrounding article a server component (INP fix — previously
- * each ~500-line article was fully hydrated just for this one button).
- * CountdownModal is lazy-loaded so its JS only ships after the first tap.
- */
 export default function OfficialLinkButton({
   title,
   message,

@@ -1,9 +1,6 @@
 import { AUTHOR_NAME } from '@/lib/site-config';
 import type { HindiArticle } from '@/lib/hindi-articles-data';
 
-// Hindi (Devanagari) versions of the new 2026 yojana articles
-// (SEO-KEYWORDS-RANK1-PLAN.md). Components live in
-// components/articles/hindi-yojana-2026/. URLs: /articles/hi/<slug>.
 export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/fasal-bima-claim-status',

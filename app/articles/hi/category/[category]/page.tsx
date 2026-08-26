@@ -15,10 +15,6 @@ import {
   LOGO_HEIGHT,
 } from '@/lib/site-config';
 
-// Fix 1 (GSC-DISCOVERED-NOT-INDEXED-FIX.md) — Hindi category pages were 114–199
-// words of pure template boilerplate. Each intro below is unique, structurally
-// different from the others (and from the Hinglish /articles/category intros),
-// and only states facts already verified in this repo's articles.
 function CategoryIntroHi({ category }: { category: CategorySlug }) {
   if (category === 'status-check') {
     return (
@@ -283,7 +279,6 @@ const CATEGORY_DATA: Record<CategorySlug, {
 export const revalidate = 86400;
 
 export async function generateStaticParams() {
-  // Only categories that actually have Hindi articles get a page.
   const withArticles = new Set(HINDI_ARTICLES.map((a) => a.category));
   return [...withArticles].map((category) => ({ category }));
 }

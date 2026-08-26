@@ -5,9 +5,6 @@ const PAYLOAD_PATH = path.join(__dirname, 'indexnow-payload.json');
 const STATE_PATH = path.join(__dirname, 'indexnow-state.json');
 const SITEMAP_URL = 'https://kisanstatus.com/sitemap.xml';
 
-// Parse <url><loc>..</loc><lastmod>..</lastmod></url> blocks so we can tell
-// *changed* pages from merely *present* ones. Submitting the whole site on
-// every run is what gets an IndexNow key throttled or ignored.
 function parseSitemap(xml) {
   const out = new Map();
   for (const block of xml.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
@@ -38,7 +35,6 @@ async function main() {
     throw new Error('sitemap yielded no usable URLs; refusing to build a payload');
   }
 
-  // Normalise to the payload host, dropping anything off-host.
   const live = new Map();
   for (const [rawUrl, lastmod] of sitemap) {
     let u;
@@ -52,24 +48,17 @@ async function main() {
     live.set(normalised, lastmod);
   }
 
-  // Only new URLs, or ones whose lastmod moved since we last submitted them.
   const changed = [...live.entries()]
     .filter(([url, lastmod]) => submitted[url] !== lastmod)
     .map(([url]) => url);
 
-  // IndexNow accepts at most 10,000 URLs per request.
   const urlList = changed.slice(0, 10000);
 
   const next = { ...current, urlList };
   fs.writeFileSync(PAYLOAD_PATH, `${JSON.stringify(next, null, 1)}\n`);
 
-  // Hand the submitter the exact lastmod we compared against, so it never has
-  // to re-fetch the sitemap. A second fetch could fail (recording empty
-  // lastmods and resubmitting the whole site next run) or race a deploy.
   state.submitted = submitted;
   state.pending = Object.fromEntries(urlList.map((url) => [url, live.get(url) ?? '']));
-  // Drop ledger entries for URLs no longer in the sitemap so the file cannot
-  // grow without bound as articles are retired.
   for (const url of Object.keys(state.submitted)) {
     if (!live.has(url)) delete state.submitted[url];
   }

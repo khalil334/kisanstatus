@@ -9,7 +9,6 @@ import { AUTHOR_NAME } from '@/lib/site-config';
 const PUBLISHED = '2026-06-20T21:34:06+05:30';
 const MODIFIED = '2026-07-27T07:14:25+05:30';
 
-// Inline source citation link (E-E-A-T / transparency)
 function Src({ href, children }: { href: string; children: ReactNode }) {
   return (
     <a
