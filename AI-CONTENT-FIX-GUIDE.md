@@ -126,6 +126,8 @@ kuch me personal-style observation ("Humne dekha hai zyadatar cases me bank seed
 | 5 | ~~Template variety (FAQ optional, section order shuffle)~~ **DONE (partial)** — FAQ rendering now varies: 28 articles switched from default accordion to `inline`/`cards` variants (mix now 33/18/19). Copy-paste "Sources" heading varied in 17 files; duplicate FAQ headings replaced with topic-specific ones in 6 files. Full section-order shuffle deferred (structural rewrite per article, higher regression risk). | article components + `ArticleShared.tsx` | Medium | Medium |
 | 6 | Add first-hand E-E-A-T signals (1 per article, top-20 traffic pages pehle) | top articles | Ongoing | High (long-term) |
 
+> **Disclaimer pass (2026-08-26):** All 6 sitewide `DISCLAIMER_VARIANTS` rewritten and expanded to 10 distinct human-sounding versions (different length, tone, structure — no shared opening formula). Default `DISCLAIMER_TEXT` in `site-config.ts` trimmed. `/disclaimer` legal page: em-dashes 23 → 1.
+
 > **Status (2026-08-26):** Fixes #1–#5 applied and pushed to main. Current numbers: em-dash total **779** (was 6,386; ~7/article, 3 files at 11–13), "nahi —" pattern **11** (target <30 ✅), "Ek aur baat" openers **0**. Fix #6 needs real first-hand input (CSC visits, farmer cases, fresh portal checks) — that's owner work, AI can't and shouldn't generate it. Add 1 first-hand note per article starting with top-traffic pages.
 
 **Suggested order:** Pehle #3 (sirf metadata, 1 din ka kaam, poore site ke titles turant behtar).
