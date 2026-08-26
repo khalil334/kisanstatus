@@ -377,7 +377,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             FAQs
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="Maandhan Registration FAQ" />
+          <FAQBlock faqs={FAQS_DATA} variant="cards" caption="Maandhan Registration FAQ" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">

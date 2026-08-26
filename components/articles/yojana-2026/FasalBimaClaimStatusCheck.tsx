@@ -267,9 +267,9 @@ export default function FasalBimaClaimStatusCheck({ article }: { article: Yojana
           hai.
         </p>
 
-        <FAQBlock faqs={FAQS_DATA} />
+        <FAQBlock faqs={FAQS_DATA} variant="inline" />
 
-        <SH>Sources</SH>
+        <SH>Jaankari Ke Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             PMFBY. National Crop Insurance Portal, Ministry of Agriculture &amp; Farmers Welfare.{' '}

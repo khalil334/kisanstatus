@@ -383,7 +383,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Payment Fail Hone Par Sabse Common Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Payment Failed FAQ 2026. Ground-Level Answers" />
+          <FAQBlock faqs={FAQS_DATA} variant="inline" caption="PM Kisan Payment Failed FAQ 2026. Ground-Level Answers" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">

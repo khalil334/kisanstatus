@@ -365,7 +365,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
 
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>Sources</SH>
+        <SH>Sources Aur Official Portals</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             Agmarknet, daily mandi rates, Govt of India.{' '}

@@ -530,7 +530,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Aksar Puche Jane Wale Sawal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Master Guide FAQ 2026" />
+          <FAQBlock faqs={FAQS_DATA} variant="inline" caption="PM Kisan Master Guide FAQ 2026" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">

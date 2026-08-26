@@ -223,7 +223,7 @@ export default function MgnregaPashuShedYojana({ article }: { article: Yojana202
           collateral wali dairy loan guide</Link> me dekho.
         </p>
 
-        <FAQBlock faqs={FAQS_DATA} />
+        <FAQBlock faqs={FAQS_DATA} variant="cards" />
 
         <SH>Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">

@@ -416,7 +416,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Surrender Se Pehle Ke Sawal, Yahan Jawab
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="Voluntary Surrender FAQ" />
+          <FAQBlock faqs={FAQS_DATA} variant="cards" caption="Voluntary Surrender FAQ" />
         </section>
 
         <GovLink

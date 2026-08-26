@@ -277,9 +277,9 @@ export default function PashuKisanCreditCard({ article }: { article: Yojana2026A
           ₹2 lakh tak koi security nahi lagti. Aur 4% se sasta paisa is desh me kisan ko kahin nahi milta.
         </DB>
 
-        <FAQBlock faqs={FAQS_DATA} />
+        <FAQBlock faqs={FAQS_DATA} variant="inline" />
 
-        <SH>Sources</SH>
+        <SH>Official Links Aur Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             RBI. Interest Subvention Scheme for KCC to Animal Husbandry &amp; Fisheries farmers (circular

@@ -374,9 +374,9 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           Kare</Link>.
         </p>
 
-        <FAQBlock faqs={FAQS_DATA} />
+        <FAQBlock faqs={FAQS_DATA} variant="cards" />
 
-        <SH>Sources</SH>
+        <SH>Ye Jaankari Kahan Se Aayi</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             eNAM. National Agriculture Market, official portal (registration, mandis aur commodities).{' '}

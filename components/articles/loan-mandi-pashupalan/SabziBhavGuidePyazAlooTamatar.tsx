@@ -331,10 +331,10 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           <SI n={5}><strong>NAFED/buffer stock ko ignore karna</strong>, pyaz mein bade boom ka intezaar karne walo ka stock aksar tab bikta hai jab sarkar buffer utar chuki hoti hai. Sarkari intervention ab cycle ka permanent hissa hai. Strategy usi ke hisaab se banao.</SI>
         </StepList>
 
-        <SH>FAQ. Aksar Puche Jaane Wale Sawal</SH>
-        <FAQBlock faqs={FAQS_DATA} />
+        <SH>Sabzi Bhav Se Jude Sawal</SH>
+        <FAQBlock faqs={FAQS_DATA} variant="inline" />
 
-        <SH>Sources</SH>
+        <SH>Jaankari Ke Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             Free Press Journal. Nashik onion MAPP ₹1,580 order, May 2026.{' '}

@@ -246,9 +246,9 @@ export default function PmKisanKhadYojanaSach({ article }: { article: Yojana2026
           baad wo site kisi rishtedaar ko bhi forward mat karna; chain wahin todo.
         </p>
 
-        <FAQBlock faqs={FAQS_DATA} />
+        <FAQBlock faqs={FAQS_DATA} variant="cards" />
 
-        <SH>Sources</SH>
+        <SH>Ye Jaankari Kahan Se Aayi</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             PM Kisan Samman Nidhi, official portal.{' '}

@@ -441,10 +441,10 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           </p>
         </div>
 
-        <SH>FAQ. Aapke Sawaal</SH>
+        <SH>Dairy Loan Par Poochhe Jaane Wale Sawal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>Sources</SH>
+        <SH>Jaankari Ke Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             SBI. Agriculture & Rural banking, official product pages.{' '}

@@ -621,7 +621,7 @@ export default function PmKisanMaandhanYojanaPension() {
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Pension Yojana. Doubts Aur Unke Jawab
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Maandhan Yojana FAQ" />
+          <FAQBlock faqs={FAQS_DATA} variant="cards" caption="PM Kisan Maandhan Yojana FAQ" />
         </section>
 
         <RelatedArticles articles={RELATED} />

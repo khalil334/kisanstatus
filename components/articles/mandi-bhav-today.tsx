@@ -851,7 +851,7 @@ export default function MandiBhavToday() {
           <h2 className="text-xl font-black mb-4 pb-2 border-b-2 border-gray-300">
             Mandi Bhav Se Judhe Sawal-Jawab
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="Mandi Bhav Today FAQ 2026" />
+          <FAQBlock faqs={FAQS_DATA} variant="inline" caption="Mandi Bhav Today FAQ 2026" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 border-2 border-green-400 rounded-2xl">

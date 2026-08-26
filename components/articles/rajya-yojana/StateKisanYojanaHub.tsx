@@ -494,7 +494,7 @@ export default function StateKisanYojanaHub() {
         ke patwari se record saaf karwa lena hi sabse pehla kadam hai.
       </p>
 
-      <h2>Sources</h2>
+      <h2>Ye Jaankari Kahan Se Aayi</h2>
 
       <ul>
         <li>

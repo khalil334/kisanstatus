@@ -431,7 +431,7 @@ export default function PmKisanBankAccountChangeProcess() {
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Bank Account Change Ke Sawaal — Jawab Yahin
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="Bank Account Change FAQ" />
+          <FAQBlock faqs={FAQS_DATA} variant="cards" caption="Bank Account Change FAQ" />
         </section>
 
         <GovLink

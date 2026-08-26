@@ -353,10 +353,10 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           <SI n={4}><strong>&ldquo;Sex-sorted semen se 100% bachhiya hogi&rdquo;</strong>, 90%+ hai, 100% nahi. Aur conception mein repeat lag sakta hai. Realistic expectation ke saath jao, tabhi faida dikhega.</SI>
         </StepList>
 
-        <SH>FAQ. Aksar Puche Jaane Wale Sawal</SH>
+        <SH>Gokul Mission Subsidy: Aam Confusion</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>Sources</SH>
+        <SH>Ye Jaankari Kahan Se Aayi</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             Rashtriya Gokul Mission, official page, Dept of Animal Husbandry & Dairying.{' '}

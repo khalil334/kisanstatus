@@ -282,7 +282,7 @@ export default function FtoStatusCheckPaisaKabAayega({ article }: { article: Art
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             FTO Status Ke Common Sawaal
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="FTO Status Check 2026. FAQ" />
+          <FAQBlock faqs={FAQS_DATA} variant="inline" caption="FTO Status Check 2026. FAQ" />
         </section>
 
         <GovLink

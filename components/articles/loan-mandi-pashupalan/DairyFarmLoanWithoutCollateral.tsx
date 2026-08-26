@@ -560,10 +560,10 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           aur PMEGP ke liye kviconline.gov.in. Rate aur slab wahi final hain jo portal aur branch bataye.
         </p>
 
-        <SH>Aapke Sawaal</SH>
+        <SH>Bina Guarantee Loan Par Sawal-Jawab</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>Sources</SH>
+        <SH>Official Links Aur Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             PMEGP e-portal. Khadi and Village Industries Commission (KVIC).{' '}

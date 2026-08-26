@@ -476,7 +476,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Mobile Number Update Se Jude Sawal-Jawab
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Mobile Number Change. Aksar Puchhe Jaane Wale Sawal" />
+          <FAQBlock faqs={FAQS_DATA} variant="inline" caption="PM Kisan Mobile Number Change. Aksar Puchhe Jaane Wale Sawal" />
         </section>
 
         <GovLink

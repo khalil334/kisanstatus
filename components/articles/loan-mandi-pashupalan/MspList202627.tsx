@@ -505,10 +505,10 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           </p>
         </div>
 
-        <SH>FAQ. Aapke Sawaal</SH>
+        <SH>MSP List Par Aam Sawal</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>Sources</SH>
+        <SH>Official Links Aur Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             CCEA press release, Rabi Marketing Season 2026-27 MSP, 01/10/2025.{' '}

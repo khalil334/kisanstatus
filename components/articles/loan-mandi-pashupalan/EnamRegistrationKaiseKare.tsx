@@ -382,10 +382,10 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           </p>
         </div>
 
-        <SH>Aapke Sawaal</SH>
+        <SH>eNAM Registration Ke Common Doubts</SH>
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>Sources</SH>
+        <SH>Official Links Aur Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             eNAM. National Agriculture Market official portal & blog (Adoni mandi case).{' '}

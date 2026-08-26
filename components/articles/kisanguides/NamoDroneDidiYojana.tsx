@@ -427,9 +427,9 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           milti hai aur wahan individual kisan bhi apply kar sakta hai.
         </p>
 
-        <FAQBlock faqs={FAQS_DATA} />
+        <FAQBlock faqs={FAQS_DATA} variant="cards" />
 
-        <SH>Sources</SH>
+        <SH>Jaankari Ke Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             PIB. Union Cabinet approval aur operational guidelines, Namo Drone Didi (28-30 November 2023).{' '}

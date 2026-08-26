@@ -492,7 +492,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             List Se Jude Sawal Aur Unke Jawab
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Beneficiary List FAQ 2026 — Verified Answers" />
+          <FAQBlock faqs={FAQS_DATA} variant="inline" caption="PM Kisan Beneficiary List FAQ 2026 — Verified Answers" />
         </section>
 
         <GovLink

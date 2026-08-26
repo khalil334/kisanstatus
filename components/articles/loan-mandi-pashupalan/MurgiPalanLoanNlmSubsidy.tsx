@@ -349,9 +349,9 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           Sampada Yojana</Link> dekho. Ek hi zameen par sahi scheme ka chunav lakhon ka fark banata hai.
         </p>
 
-        <FAQBlock faqs={FAQS_DATA} />
+        <FAQBlock faqs={FAQS_DATA} variant="cards" />
 
-        <SH>Sources</SH>
+        <SH>Jaankari Ke Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             NLM Entrepreneurship. Udyamimitra portal, scheme guidelines.{' '}

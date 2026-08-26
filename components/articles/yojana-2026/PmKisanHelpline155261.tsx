@@ -267,7 +267,7 @@ export default function PmKisanHelpline155261({ article }: { article: Yojana2026
 
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>Sources</SH>
+        <SH>Official Links Aur Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             PM Kisan. Contact Us / Help Desk, official portal.{' '}

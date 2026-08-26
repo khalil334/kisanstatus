@@ -348,7 +348,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
 
         <FAQBlock faqs={FAQS_DATA} />
 
-        <SH>Sources</SH>
+        <SH>Ye Jaankari Kahan Se Aayi</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
             Samagra Gavya Vikas Yojana — official portal, Directorate of Dairy Development, Bihar.{' '}

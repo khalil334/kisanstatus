@@ -349,7 +349,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Face eKYC. Har Sawal Ka Jawab
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="Chehre se eKYC. FAQ" />
+          <FAQBlock faqs={FAQS_DATA} variant="cards" caption="Chehre se eKYC. FAQ" />
         </section>
 
         <GovLink

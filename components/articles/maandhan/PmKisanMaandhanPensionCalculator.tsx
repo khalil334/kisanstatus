@@ -358,7 +358,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Frequently Asked Questions (FAQs)
           </h2>
-          <FAQBlock faqs={FAQS_DATA} caption="PM Kisan Maandhan Calculator FAQ" />
+          <FAQBlock faqs={FAQS_DATA} variant="cards" caption="PM Kisan Maandhan Calculator FAQ" />
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
