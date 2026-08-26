@@ -46,8 +46,8 @@ export const MAANDHAN_ARTICLES: MaandhanArticleMeta[] = [
   },
   {
     slug: 'pm-kisan-maandhan-withdrawal-refund-rules',
-    title: 'Maandhan Exit: Refund & Family Pension Ka Sach',
-    description: 'PM Kisan Maandhan se exit karne ke rules, pension ka paisa family ko kaise milega, aur contribution refund hone ki puri sachai.',
+    title: 'Maandhan Se Exit Kaise Karein: Refund Aur Family Pension Ke Rules',
+    description: 'PM Kisan Maandhan se exit karne ke rules, pension ka paisa family ko kaise milega, aur contribution refund kab aur kitna milta hai.',
     category: 'pension-scheme',
     published: '2026-03-23T11:18:53+05:30',
     modified: '2026-08-03T22:48:13+05:30',

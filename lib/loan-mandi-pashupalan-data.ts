@@ -263,7 +263,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'gau-mutra-kharid-yojana-up-2026',
-    title: 'UP Me Gau Mutra ₹10/Litre? Yojana Ka Sach',
+    title: 'UP Me Gau Mutra ₹10/Litre: Pilot Yojana Kahan Chal Rahi Hai',
     desc: 'Bulandshahr ke Narsena gaon mein UP sarkaar ka pilot — gaay ke mutra ka rate ₹10 prati litre, FPO sangrah kendra, mahilaon ko +₹2 commission.',
     seoTitle: 'Gaay Ke Mutra Se Kamai — UP ₹10 Prati Litre',
     ogTitle: 'Gau Mutra Kharid Yojana UP — ₹10 Prati Litre',
