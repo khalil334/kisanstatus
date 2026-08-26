@@ -341,7 +341,7 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
         है। आवेदन टालना = सीधा नुकसान।
       </p>
       <p>
-        SMS का इंतजार मत कीजिए — कई बार पैसा आ जाता है और SMS नहीं आता। पक्के तरीके दो हैं: passbook entry
+        SMS का इंतजार मत कीजिए। कई बार पैसा आ जाता है और SMS नहीं आता। पक्के तरीके दो हैं: passbook entry
         कराना, या portal पर Know Your Status में payment का record देखना। किस्त कब आती है और उससे पहले
         क्या-क्या निपटा लेना चाहिए. पूरी कहानी के लिए{' '}
         <Link href="/articles/hi/pm-kisan-25vi-kist">अगली किस्त वाला लेख</Link> पढ़ लें।
@@ -365,7 +365,7 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
 
       <H2x>आवेदन reject क्यों होता है. छह असली वजहें</H2x>
       <p>
-        Reject हुए आवेदनों की कहानियां सुनें तो एक pattern दिखता है — गलती form भरने के दिन ही हो चुकी थी, पता
+        Reject हुए आवेदनों की कहानियां सुनें तो एक pattern दिखता है। गलती form भरने के दिन ही हो चुकी थी, पता
         महीनों बाद चला। इन छह पर नजर डाल लीजिए, इनमें से कोई आपकी अर्जी में न हो:
       </p>
       <ol className="list-decimal pl-6 space-y-2 my-4 text-sm leading-relaxed">
@@ -395,7 +395,7 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
         </li>
       </ol>
       <p>
-        इनमें से पहली तीन आपके हाथ में हैं — आधे से ज्यादा rejection सिर्फ तैयारी से बच जाते हैं। इसलिए ही इस
+        इनमें से पहली तीन आपके हाथ में हैं। आधे से ज्यादा rejection सिर्फ तैयारी से बच जाते हैं। इसलिए ही इस
         लेख में पड़ाव 1 (documents का मिलान) को इतना लंबा लिखा गया है. असली मेहनत उसी में है, form भरना तो
         दस मिनट का काम है।
       </p>
@@ -423,7 +423,7 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
         ये छोटी बातें हैं पर इन्हीं पर आवेदन लौटते हैं। पहली. खतौनी की photo साफ रोशनी में सीधी खींचिए;
         तिरछी, कटी या धुंधली photo पर सत्यापन अटकता है। दूसरी, file size की limit का ध्यान रखिए; बड़ी file
         हो तो phone के किसी भी free compressor से छोटी कर लीजिए, पर इतनी भी नहीं कि लिखा पढ़ा न जाए। तीसरी
-        — खसरा नंबर वाला पन्ना ही upload करना है, पूरी खतौनी का पहला पन्ना नहीं। Upload के बाद preview
+       । खसरा नंबर वाला पन्ना ही upload करना है, पूरी खतौनी का पहला पन्ना नहीं। Upload के बाद preview
         खोलकर एक बार देख लीजिए कि सही file गई है. गलत file चढ़ जाना उतना ही आम है जितना सुनने में मजाक
         लगता है।
       </p>
@@ -479,7 +479,7 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
             <Link href="/articles/PmKisanCorrectionForm2026">Record सुधारने वाला form</Link>
           </li>
           <li>
-            <Link href="/articles/PmKisanEkycOnline2026">eKYC online — पूरा process</Link>
+            <Link href="/articles/PmKisanEkycOnline2026">eKYC online। पूरा process</Link>
           </li>
           <li>
             <Link href="/articles/pm-kisan-self-registered-status-check">Self-Registered Status Check</Link>

@@ -302,7 +302,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         </div>
         <div className="p-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 justify-between">
           <div>
-            <p className="font-bold text-[var(--color-text)] text-sm">AgriStack — Farmer Registry Portal</p>
+            <p className="font-bold text-[var(--color-text)] text-sm">AgriStack. Farmer Registry Portal</p>
             <p className="text-xs text-[var(--color-text-muted)] mt-0.5">
               Government of India, agristack.gov.in
             </p>
@@ -341,7 +341,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
       <Sec>खसरा, खतौनी, registry. तीनों का फर्क दो मिनट में</Sec>
       <p>
         Registration में जमीन के कागज मांगे जाते हैं तो बहुत किसान उलझ जाते हैं कि कौन सा लेकर जाएं।
-        सीधी भाषा में — <strong>खसरा नंबर</strong> आपके खेत के टुकड़े का पता है. घर के plot नंबर की तरह;
+        सीधी भाषा में, <strong>खसरा नंबर</strong> आपके खेत के टुकड़े का पता है. घर के plot नंबर की तरह;
         form के Land details वाले खाने में यही भरना होता है।
         <strong> खतौनी</strong> वह रजिस्टर है जिसमें लिखा है कि किस खसरे पर किस-किसका नाम और कितना
         हिस्सा दर्ज है. असली काम की चीज यही है, verification इसी से मिलता है। और <strong>registry (बैनामा)</strong>
@@ -363,7 +363,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         आपकी profile।
       </p>
       <p>
-        Card देखने में साधारण है — ऊपर राज्य और Farmer Registry का नाम, नीचे आपका नाम, पिता या पति का नाम,
+        Card देखने में साधारण है। ऊपर राज्य और Farmer Registry का नाम, नीचे आपका नाम, पिता या पति का नाम,
         गांव-तहसील-जिला, आपकी Farmer ID और एक QR code। वही QR काम की चीज है; scheme के counter पर बाबू
         उसे scan करता है और आपकी details screen पर आ जाती हैं।
       </p>
@@ -388,7 +388,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         है।
       </p>
       <p>
-        <strong>और वह सवाल जो हर कोई पूछता है — कितने दिन लगेंगे?</strong> आधार का OTP तो हाथ के हाथ हो
+        <strong>और वह सवाल जो हर कोई पूछता है। कितने दिन लगेंगे?</strong> आधार का OTP तो हाथ के हाथ हो
         जाता है, अटकाव उसके बाद शुरू होता है। जिनकी खतौनी में नाम आधार से हूबहू मिल जाता है, उनकी ID
         हफ्ते भर के अंदर approve हो जाती है। लेकिन नाम में जरा भी फर्क हो, विरासत के बाद नामांतरण अटका
         पड़ा हो, या जमीन joint खाते की हो. तो मामला हफ्तों खिंच सकता है, क्योंकि तब file पटवारी की मेज
@@ -428,7 +428,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
             <Td>आधार केंद्र पर number update कराएं, या CSC पर biometric रास्ता पकड़ें।</Td>
           </tr>
           <tr>
-            <Td strong>खसरा नंबर मेल नहीं खाता — पुराना नंबर भर दिया या चकबंदी के बाद नंबर बदल गया</Td>
+            <Td strong>खसरा नंबर मेल नहीं खाता। पुराना नंबर भर दिया या चकबंदी के बाद नंबर बदल गया</Td>
             <Td>ताजा खतौनी निकलवाकर उसी में लिखा नंबर भरें. याद्दाश्त से नहीं।</Td>
           </tr>
         </tbody>
@@ -449,7 +449,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         पहचान है; गलत हाथों में जाकर फर्जी claim का जरिया बन सकती है।
       </p>
 
-      <Sec>आंकड़े झूठ नहीं बोलते — कितने किसानों की ID बन चुकी है</Sec>
+      <Sec>आंकड़े झूठ नहीं बोलते। कितने किसानों की ID बन चुकी है</Sec>
       <p>
         यह कोई कागजों में अटकी योजना नहीं है। March 2026 में संसद में सरकार ने बताया कि 19 राज्यों में
         <strong> 9.20 करोड़ से ज्यादा Farmer ID</strong> generate हो चुकी हैं। गिनती में आगे UP, 1.99 करोड़;
@@ -485,7 +485,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         खड़े रहे। आपके राज्य में भी ऐसी drive आए तो पहले हफ्ते वाले बनिए, आखिरी दिन वाले नहीं।
       </p>
       <p>
-        दूसरी बात — registry में सिर्फ जमीन वाले पुरुष किसान नहीं आते। सरकारी ऐलान में साफ कहा गया
+        दूसरी बात, registry में सिर्फ जमीन वाले पुरुष किसान नहीं आते। सरकारी ऐलान में साफ कहा गया
         है कि महिला किसान, और जिन राज्यों में नियम इजाजत देते हैं वहां tenant/बटाईदार भी इसमें
         शामिल होंगे। जिन किसानों के पास mobile नहीं है, उनके लिए FPO, कृषि सखी और CSC को जिम्मा
         दिया गया है. अर्थात् &quot;मेरे पास smartphone नहीं&quot; अब बहाना नहीं रहा, रास्ता हर किसी के
@@ -511,7 +511,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
       </p>
       <p>
         दूसरा फर्क. कहीं यह काम पटवारी के हाथ में है, कहीं कृषि सहायक के, और कहीं CSC को आगे किया
-        गया है। लिहाजा पड़ोस के जिले का तरीका आपके यहां हूबहू लागू हो, यह जरूरी नहीं — अपने यहां की
+        गया है। लिहाजा पड़ोस के जिले का तरीका आपके यहां हूबहू लागू हो, यह जरूरी नहीं। अपने यहां की
         व्यवस्था ग्राम पंचायत या कृषि कार्यालय से ही confirm करें। एक चीज जरूर हर जगह एक-सी है —
         आधार + जमीन + बैंक का मिलान, और मिलान में गड़बड़ी हो तो अटकाव।
       </p>
@@ -529,7 +529,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         एक ही गांव के दो किसानों का रास्ता सोचिए। पहले के पास आधार में चालू mobile जुड़ा था, खतौनी
         उसी के नाम, spelling दोनों जगह एक. घर बैठे portal पर 20 मिनट में form जमा, कुछ दिन में
         approval, ID download। दूसरे की जमीन अभी तक स्वर्गवासी पिता के नाम थी। पहले तहसील में
-        नामांतरण की अर्जी, फिर वारिसों की सहमति के कागज, फिर नई खतौनी — तब जाकर registration।
+        नामांतरण की अर्जी, फिर वारिसों की सहमति के कागज, फिर नई खतौनी। तब जाकर registration।
         कुल समय: कई महीने। फर्क किस्मत का नहीं था. तैयारी का था।
       </p>
       <p>
@@ -562,7 +562,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
       <p>
         सबसे पहले आज शाम आधार और खतौनी निकालकर नाम की spelling मिला लीजिए. फर्क निकले तो पहले
         वही सुधार शुरू करें, बाकी सब बाद में। नाम मिल गया? तो अपने राज्य के portal पर account बनाकर form
-        जमा कर दीजिए. या अगले camp/CSC का दिन पता कर लीजिए। उसके बाद बस status पर नजर — approve होते
+        जमा कर दीजिए. या अगले camp/CSC का दिन पता कर लीजिए। उसके बाद बस status पर नजर, approve होते
         ही card download करके print और mobile दोनों में संभाल लें।
       </p>
 

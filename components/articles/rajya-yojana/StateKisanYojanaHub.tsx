@@ -504,7 +504,7 @@ export default function StateKisanYojanaHub() {
         </li>
         <li>
           <a href="https://saara.mp.gov.in" target="_blank" rel="noopener noreferrer">
-            SAARA Portal — MP CM Kisan Kalyan Yojana
+            SAARA Portal. MP CM Kisan Kalyan Yojana
           </a>
         </li>
         <li>
@@ -544,7 +544,7 @@ export default function StateKisanYojanaHub() {
         </li>
       </ul>
 
-      <h2>Rajya Kisan Yojana — Common Doubts</h2>
+      <h2>Rajya Kisan Yojana. Common Doubts</h2>
 
       <script
         type="application/ld+json"

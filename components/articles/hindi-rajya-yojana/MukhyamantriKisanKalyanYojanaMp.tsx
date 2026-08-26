@@ -370,7 +370,7 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
       <Hd>आम गलतियां जो महीनों की देरी करा देती हैं</Hd>
       <p>
         <strong>गलती 1. दो बैंक खातों का घालमेल।</strong> Form में एक खाता लिखा, NPCI seeding दूसरे खाते
-        में है — पैसा seeded खाते में ही जाएगा। किसान पहले खाते की passbook देखकर कहता रहता है &quot;आया ही
+        में है। पैसा seeded खाते में ही जाएगा। किसान पहले खाते की passbook देखकर कहता रहता है &quot;आया ही
         नहीं&quot;. जबकि रकम दूसरे खाते में पड़ी है।
       </p>
       <p>
@@ -388,7 +388,7 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
         बेच रहा है। और OTP तो किसी को भी नहीं. पटवारी को भी आपके phone का OTP नहीं चाहिए होता।
       </p>
 
-      <Hd>पैसा नहीं आया — किस order में जांच करें?</Hd>
+      <Hd>पैसा नहीं आया। किस order में जांच करें?</Hd>
       <Figure
         src="/images/articles/hindi-yojna/mp-kisan-kalyan/passbook-dbt.webp"
         alt="बैंक passbook में DBT की entry जांचता किसान"
@@ -416,7 +416,7 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
       <Hd>नए किसान के लिए document checklist. एक ही बार में सब तैयार</Hd>
       <p>
         चक्कर इसी वजह से लगते हैं कि कागज एक-एक करके निकाले जाते हैं। पहली बार registration से
-        पहले ये सब एक folder में रख लीजिए — <strong>आधार card</strong>, उस mobile नंबर के साथ जो आज चालू
+        पहले ये सब एक folder में रख लीजिए, <strong>आधार card</strong>, उस mobile नंबर के साथ जो आज चालू
         है (नंबर बंद है तो पहला काम आधार केंद्र पर नया नंबर link कराना है. बाकी सब इसी पर टिका है)।{' '}
         <strong>खसरा/खतौनी की ताजा नकल</strong>. MP में यह mpbhulekh.gov.in से online भी निकलती है; नाम की
         spelling आधार से मिलाकर देख लें, फर्क है तो पहले सुधार कराएं। <strong>बैंक passbook</strong>. उसी
@@ -450,7 +450,7 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
         कल्याण योजना से ₹6,000, कुल ₹12,000 सालाना, और राज्य वाले हिस्से के लिए कोई अलग आवेदन
         नहीं। लेकिन इसी सरलता में एक शर्त छिपी है जो हर साल हजारों किसानों को खटकती है. राज्य की किस्त
         केंद्र के verified database से निकलती है। तात्पर्य, PM Kisan में eKYC अधूरी, बैंक seeding नहीं, या
-        पटवारी verification अटका — तो दोनों किस्तें रुकेंगी, सिर्फ एक नहीं। इसी तरह, देरी का अर्थ नाम
+        पटवारी verification अटका। तो दोनों किस्तें रुकेंगी, सिर्फ एक नहीं। इसी तरह, देरी का अर्थ नाम
         कटना नहीं. राज्य अपनी किस्तें अपने कार्यक्रम से भेजता है, PM Kisan के साथ नहीं।
       </p>
       <p>
@@ -467,7 +467,7 @@ export default function MukhyamantriKisanKalyanYojanaMp({ article }: { article: 
         <a href="https://saara.mp.gov.in" target="_blank" rel="noopener noreferrer">saara.mp.gov.in</a> तथा{' '}
         <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer">pmkisan.gov.in</a> से मिलाया
         गया है ({new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })} तक)। किस्तों का schedule सरकार के
-        हाथ में है — exact dates official घोषणा से ही confirm करें।
+        हाथ में है, exact dates official घोषणा से ही confirm करें।
       </p>
 
       <HindiRelatedFooter

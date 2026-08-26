@@ -302,7 +302,7 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
           21 लाख किसान अपात्र मिले
         </a>{' '}
         और उनसे मिली रकम वापस ली जाएगी। इनमें बड़ी संख्या उन घरों की थी जहां पति-पत्नी दोनों किस्तें ले रहे
-        थे — दोहरी-entry वाली वह श्रेणी जो ऊपर की सूची में &lsquo;ङ&rsquo; पर है। बहुत से परिवारों को पता
+        थे। दोहरी-entry वाली वह श्रेणी जो ऊपर की सूची में &lsquo;ङ&rsquo; पर है। बहुत से परिवारों को पता
         भी नहीं था कि नियम &ldquo;एक परिवार, एक लाभार्थी&rdquo; कहता है। अनजाने में हुई गलती भी वसूली से नहीं बचाती —
         हां, आगे का रास्ता (refund या आपत्ति) जरूर आसान रहता है अगर आप खुद कागज लेकर पहुंचें।
       </CaseFile>
@@ -354,7 +354,7 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
       <p>
         केंद्र का portal एक है, पर वसूली का जमीनी अमल राज्य करते हैं. और तरीके अलग-अलग हैं। Bihar
         में बैंकों को आगे करके वसूली हुई; कई राज्यों में तहसील/जिला प्रशासन अलग खाते में जमा करवाता है;
-        कहीं सिर्फ portal का Refund Online ही मान्य है। इसी वजह से दो नियम पक्के रखिए: पहला — जो तरीका
+        कहीं सिर्फ portal का Refund Online ही मान्य है। इसी वजह से दो नियम पक्के रखिए: पहला। जो तरीका
         आपके notice में लिखा है वह आपके लिए अंतिम है, किसी और जिले के रिश्तेदार का अनुभव आप पर लागू नहीं
         होगा। दूसरा. तरीका चाहे जो हो, भुगतान सरकारी खाते/portal में ही जाएगा. नकद मांगने वाला हर
         बिचौलिया आपकी जेब का रास्ता खोज रहा है।
@@ -375,7 +375,7 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
         जगह रखिए. यह आदत सिर्फ इस notice में नहीं, आगे हर सरकारी काम में काम आएगी।
       </p>
 
-      <T>अपात्र हैं पर notice अभी नहीं आया — तो?</T>
+      <T>अपात्र हैं पर notice अभी नहीं आया। तो?</T>
       <p>
         बेहतर है खुद आगे बढ़कर नाम हटवा लें, portal पर voluntary surrender की सुविधा है, जिससे आगे की
         किस्तें बंद हो जाती हैं और मामला बढ़ने से पहले सुलझ जाता है। तरीका{' '}
@@ -429,7 +429,7 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">आगे काम आने वाले page</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li><Link href="/articles/PmKisanVoluntarySurrenderGuide">Voluntary Surrender Guide</Link></li>
-          <li><Link href="/articles/PmKisanRejectedStatusReApplyGuide">Rejected Status — Re-apply</Link></li>
+          <li><Link href="/articles/PmKisanRejectedStatusReApplyGuide">Rejected Status. Re-apply</Link></li>
           <li><Link href="/articles/hi/pm-kisan-helpline-155261">शिकायत कहां और कैसे करें</Link></li>
           <li><Link href="/articles/PmKisanMasterGuide2026">योजना का पूरा नक्शा. Master Guide</Link></li>
         </ul>

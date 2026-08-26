@@ -380,7 +380,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       <Figure
         src="/images/articles/hindi-yojna/payment-stopped/krishi-office.webp"
         alt="किसान कृषि अधिकारी से दफ्तर में बात करते हुए"
-        caption="कागज लेकर सही दफ्तर पहुंचें — आधा काम वहीं बन जाता है"
+        caption="कागज लेकर सही दफ्तर पहुंचें। आधा काम वहीं बन जाता है"
       />
 
       <Sec>राज्य-दर-राज्य फर्क. किससे पूछें, कहां जाएं</Sec>
@@ -402,7 +402,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         दरवाजे खुलते हैं. टालिए मत।
       </p>
 
-      <Sec>आखिर में — पूरी बात का सार</Sec>
+      <Sec>आखिर में। पूरी बात का सार</Sec>
       <p>
         &ldquo;Installment payment stopped by state&rdquo; निष्कासन नहीं. राज्य की जांच में लगी अस्थायी रोक
         है। वजह पांच में से कोई एक: नाम mismatch, जमीन record, अपात्रता का flag, अधूरी

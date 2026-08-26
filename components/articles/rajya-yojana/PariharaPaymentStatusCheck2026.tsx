@@ -289,7 +289,7 @@ export default function PariharaPaymentStatusCheck2026({
         seedha &ldquo;kaat liya&rdquo; maan lena jaldi hoga.
       </p>
 
-      <h2>Ab Sahi Portal Pakdo — Teen Naam, Teen Alag Kaam</h2>
+      <h2>Ab Sahi Portal Pakdo. Teen Naam, Teen Alag Kaam</h2>
 
       <p>
         Yahi wo jagah hai jahan sabse zyada log bhatakte hain. Teen portal ke naam ghoomte
@@ -347,7 +347,7 @@ export default function PariharaPaymentStatusCheck2026({
         Koi site OTP ke bahane bank detail maange to wahi ruk jao, wo sarkari page nahi hai.
       </p>
 
-      <h2>Method 2 — Village-Wise List Kholo Aur Poore Gaon Ka Hisaab Dekho</h2>
+      <h2>Method 2. Village-Wise List Kholo Aur Poore Gaon Ka Hisaab Dekho</h2>
 
       <Fig
         src="village-wise-list.webp"
@@ -393,7 +393,7 @@ export default function PariharaPaymentStatusCheck2026({
         chuno.
       </p>
 
-      <h2>Branch A: Naam List Me Hai Hi Nahi — Ye Karo</h2>
+      <h2>Branch A: Naam List Me Hai Hi Nahi. Ye Karo</h2>
 
       <p>
         Sabse pehle ghabrao mat, list me naam na hona aksar iska matlab hota hai ki aapke
@@ -450,7 +450,7 @@ export default function PariharaPaymentStatusCheck2026({
 
       <p>
         Realistic baat: fund kisto me release hota hai, aur har taluk ka number alag-alag
-        waqt par aata hai. Padosi taluk me paisa aa gaya aur aapke me nahi — ye normal hai,
+        waqt par aata hai. Padosi taluk me paisa aa gaya aur aapke me nahi, ye normal hai,
         2-4 haftte ka farq aam baat hai. Par 2-3 mahine se zyada ho jaaye to pending ko
         chhupi hui rejection samjho aur upar wale steps chalao.
       </p>
@@ -503,7 +503,7 @@ export default function PariharaPaymentStatusCheck2026({
 
       <p>
         Relief RTC ke record se banta hai. RTC me jo naam pehle darj hai. Ya jiska Aadhaar
-        seeded hai — payment usi taraf jaati hai. Teen aam roop:
+        seeded hai, payment usi taraf jaati hai. Teen aam roop:
       </p>
 
       <ul>
@@ -556,7 +556,7 @@ export default function PariharaPaymentStatusCheck2026({
       <ul>
         <li>
           &quot;Parihara list download&quot; ke naam par ghoomne wali <strong>APK file kabhi
-          install mat karo</strong> — sarkari status sirf browser me, sarkari portal par
+          install mat karo</strong>, sarkari status sirf browser me, sarkari portal par
           dikhta hai. Aise APK phone ka data churane ke liye bante hain.
         </li>
         <li>

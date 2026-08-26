@@ -321,7 +321,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         </div>
       </div>
 
-      <Hd>Beneficiary list PDF कहां मिलेगी? — सीधी बात</Hd>
+      <Hd>Beneficiary list PDF कहां मिलेगी?। सीधी बात</Hd>
       <p>
         बहुत किसान गांव-वार list की PDF ढूंढते रहते हैं. पहले यह समझ लीजिए कि नमो शेतकरी की कोई
         अलग beneficiary list बनती ही नहीं। योजना PM Kisan के verified database पर चलती है, इसलिए
@@ -359,7 +359,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
           करें. पूरा तरीका <Link href="/articles/hi/ekyc-mobile-se">यहां खुलेगा</Link>।
         </li>
         <li>
-          <strong>बैंक खाता आधार से linked नहीं / DBT off</strong> — यह NPCI seeding का मामला है, branch
+          <strong>बैंक खाता आधार से linked नहीं / DBT off</strong>। यह NPCI seeding का मामला है, branch
           जाकर form भरना पड़ता है। Seeding का पूरा खेल{' '}
           <Link href="/articles/hi/npci-aadhaar-seeding">इस लेख में खोलकर बताया है</Link>।
         </li>
@@ -399,7 +399,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
 
       <Hd>कागज़ात की तैयारी. हाथ में क्या-क्या हो</Hd>
       <p>
-        चाहे नई registration हो या अटकी किस्त की शिकायत — तलाठी या कृषि सहायक के पास खाली हाथ मत
+        चाहे नई registration हो या अटकी किस्त की शिकायत। तलाठी या कृषि सहायक के पास खाली हाथ मत
         जाइए। हर चक्कर में एक ही जवाब मिलेगा: &ldquo;फलां कागज़ लेकर आओ।&rdquo; एक बार में काम निपटाना है तो यह
         बंडल पहले से तैयार रखिए:
       </p>
@@ -415,7 +415,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         भरते समय खसरा नंबर या खाता नंबर ढूंढने घर नहीं लौटना पड़े।
       </p>
 
-      <Hd>समय का हिसाब — कितने दिन में क्या होता है</Hd>
+      <Hd>समय का हिसाब। कितने दिन में क्या होता है</Hd>
       <p>
         एक आम scenario लीजिए: मान लीजिए आपने आज eKYC पूरी की, क्योंकि उसी की वजह से किस्त रुकी थी।
         अब क्या उम्मीद रखें? Portal पर eKYC का status आमतौर पर कुछ ही दिनों में update दिखने लगता है,
@@ -436,7 +436,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         जमीन के record की हर गड़बड़ी उसी की desk पर। <strong>कृषि सहायक</strong>? कृषि विभाग का —
         beneficiary स्थिति, किस्त न आने की शिकायत, eKYC में मदद।
         बैंक seeding का मसला इन दोनों में से किसी के पास नहीं. वह सिर्फ बैंक branch में सुलझता है। यह बंटवारा
-        याद रखने भर से आधे चक्कर बच जाते हैं — क्योंकि हर desk दूसरे की तरफ इशारा करने में माहिर होती है।
+        याद रखने भर से आधे चक्कर बच जाते हैं। क्योंकि हर desk दूसरे की तरफ इशारा करने में माहिर होती है।
       </p>
 
       <Hd>साल भर की आदत, 10 मिनट, तीन काम</Hd>
@@ -456,7 +456,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         </li>
       </ol>
 
-      <Hd>किस्त गिनने का सही तरीका — passbook से पहचान</Hd>
+      <Hd>किस्त गिनने का सही तरीका, passbook से पहचान</Hd>
       <Figure
         src="/images/articles/hindi-yojna/namo-shetkari/passbook-entry.webp"
         alt="Passbook में DBT की entry दिखाते हाथ"
@@ -475,7 +475,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
 
       <p>
         एक और छोटी पर काम की बात. शिकायत कभी भी करें, लिखित में करें और पावती लें। तालुका कृषि अधिकारी
-        के दफ्तर में inward register होता है — अपने आवेदन पर inward नंबर और तारीख लिखवा लें। आगे कभी मामला
+        के दफ्तर में inward register होता है। अपने आवेदन पर inward नंबर और तारीख लिखवा लें। आगे कभी मामला
         ऊपर ले जाना पड़ा (जिला कृषि अधीक्षक तक), तो यही नंबर आपका सबूत है कि आपने सही रास्ते से कोशिश की
         थी। मौखिक शिकायत का कोई record नहीं बनता. और बिना record के follow-up सिर्फ नए चक्कर हैं।
       </p>
@@ -505,7 +505,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
       />
 
       <HindiRelatedFooter
-        heading="Related Articles — Yeh Bhi Padho"
+        heading="Related Articles. Yeh Bhi Padho"
         links={[
         { href: '/articles/hi/mp-kisan-kalyan-yojana', label: 'MP किसान कल्याण योजना ₹12000' },
         { href: '/articles/PmKisanMasterGuide2026', label: 'PM Kisan की मुख्य guide' },

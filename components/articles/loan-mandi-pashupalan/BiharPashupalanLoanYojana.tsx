@@ -271,7 +271,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>Baaki Paisa Kahan Se — Bank Ki Kahani</SH>
+        <SH>Baaki Paisa Kahan Se. Bank Ki Kahani</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Subsidy ke baad jo bacha, woh ya apni jeb se aayega ya bank se. Bank wala rasta chuna toh ek baat gaanth
           baandh lo, scheme mein select ho jana alag cheez hai, bank ka loan pass hona bilkul alag. Bank apne
@@ -302,7 +302,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
 
         <SH>Kamai Kitni Hogi? YouTube Wale Number Bhool Jao</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          &ldquo;2 bhains, ₹50,000 mahina&rdquo; — aise thumbnail aapne bhi dekhe honge. Sach yeh hai ki doodh nasl, chara
+          &ldquo;2 bhains, ₹50,000 mahina&rdquo;, aise thumbnail aapne bhi dekhe honge. Sach yeh hai ki doodh nasl, chara
           aur season se banta hai, aur kamai usme se kharcha kaatne ke baad bachti hai. Aur ek cheez video wale nahi batate. Bhains byane ke baad hi doodh deti hai. Dry period mein chara bhi chalega, dawai bhi. Bas
           doodh nahi aayega, aur paisa bhi nahi.
         </p>
@@ -323,7 +323,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           <SI n={1}><strong>Window miss kar dena</strong>, notification dekh kar &ldquo;baad mein karenge&rdquo; sochna. Window band, saal gaya.</SI>
           <SI n={2}><strong>Naam ka mismatch</strong>. Aadhaar, bank aur jati praman mein alag-alag spelling.</SI>
           <SI n={3}><strong>Jagah ka intezam na hona</strong>, verification mein shed ki jagah nahi dikha paye toh selection cancel.</SI>
-          <SI n={4}><strong>Capacity se badi unit chunna</strong> — 20 pashu ki unit ka form bhar diya, par na jagah hai na anubhav. File wahin giri.</SI>
+          <SI n={4}><strong>Capacity se badi unit chunna</strong>, 20 pashu ki unit ka form bhar diya, par na jagah hai na anubhav. File wahin giri.</SI>
           <SI n={5}><strong>Agent ke bharose form bharwana</strong>, galat details bhar di, OTP wala number agent ka hai, status kabhi pata hi nahi chala. Form khud bharo ya saamne baith kar bharwao.</SI>
           <SI n={6}><strong>Subsidy ko advance samajhna</strong>, subsidy unit lagne ke baad milti hai. Beech ka finance plan kiye bina pashu book kar lena project ko aadhe mein latka deta hai.</SI>
           <SI n={7}><strong>Bima skip karna</strong>, premium bacha liya, pashu ki maut hui, poora ganit khatam. Bima ko kharcha nahi, suraksha samjho.</SI>
@@ -351,7 +351,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
         <SH>Ye Jaankari Kahan Se Aayi</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
-            Samagra Gavya Vikas Yojana — official portal, Directorate of Dairy Development, Bihar.{' '}
+            Samagra Gavya Vikas Yojana, official portal, Directorate of Dairy Development, Bihar.{' '}
             <a href="https://dairy.bihar.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">dairy.bihar.gov.in</a>
           </li>
           <li>

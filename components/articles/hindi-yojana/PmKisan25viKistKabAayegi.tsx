@@ -389,7 +389,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
       <p>
         और यह समझना जरूरी है कि गलती से पैसा ले लेना बाद में बोझ बन जाता है, क्योंकि अपात्र पाई गई रकम वापस
         मांगी जाती है। अगर ऐसा notice आ चुका हो तो घबराने की जगह{' '}
-        <Link href="/articles/hi/recovery-notice">recovery notice वाली guide</Link> पढ़िए — वापसी का
+        <Link href="/articles/hi/recovery-notice">recovery notice वाली guide</Link> पढ़िए। वापसी का
         तरीका वहां लिखा है।
       </p>
 
@@ -442,7 +442,7 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         वह किस्त को समय पर खाते तक पहुंचाता है; बाद में दौड़-भाग करने से क्रम नहीं बदलता।
       </p>
 
-      <H2>मुख्य बात — तीन लाइन में</H2>
+      <H2>मुख्य बात। तीन लाइन में</H2>
       <p>
         तारीख का इंतजार कीजिए, पर उसी में समय मत गंवाइए। घोषणा सरकार करेगी और खबर खुद पहुंच जाएगी; उससे पहले
         जो आपके हाथ में है वह कर लीजिए, eKYC पूरी, बैंक खाते की आधार seeding चालू, जमीन का record साफ। इन

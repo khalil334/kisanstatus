@@ -290,7 +290,7 @@ export default function NamoDroneDidiYojanaHindi({ article }: { article: HindiAr
 
       <Figure
         src="/images/articles/namo-drone-didi-yojana-shg-selection/drone-spray-training-demo.webp"
-        alt="ड्रोन दीदी training — खेत में छिड़काव का practical demo"
+        alt="ड्रोन दीदी training। खेत में छिड़काव का practical demo"
         caption="5 दिन DGCA pilot course + 10 दिन खेती का practical. कुल 15 दिन, पूरी तरह मुफ्त"
       />
 
@@ -344,7 +344,7 @@ export default function NamoDroneDidiYojanaHindi({ article }: { article: HindiAr
         knapsack pump वाले जानते है, पर इसका हिसाब कोई खर्च में नही जोड़ता।
       </p>
       <p>
-        थोड़ा और खोल के बताऊं — ड्रोन से spray एक जैसा गिरता है। हाथ से छिडकाव में कही ज्यादा गिर गया, कही
+        थोड़ा और खोल के बताऊं। ड्रोन से spray एक जैसा गिरता है। हाथ से छिडकाव में कही ज्यादा गिर गया, कही
         छूट गया. नतीजा ये की कहीं फसल झुलस जाती है और कहीं कीड़ा बच जाता है। ड्रोन नियत ऊंचाई और
         नियत रफ्तार से चलता है, इसलिए coverage एक समान रहता है। और nano urea जैसी चीजों के लिए तो ड्रोन
         spray ही सही तरीका माना जाता है. बोतल खरीदकर हाथ से छिड़कने में आधा फायदा वैसे ही निकल जाता
@@ -376,7 +376,7 @@ export default function NamoDroneDidiYojanaHindi({ article }: { article: HindiAr
         बन जाती है।
       </p>
       <p>
-        खर्चे का भी एक सच जान लीजिए जो अक्सर छुपा लिया जाता है — battery। खेत मे बिजली तो होती नही।
+        खर्चे का भी एक सच जान लीजिए जो अक्सर छुपा लिया जाता है, battery। खेत मे बिजली तो होती नही।
         इसलिए charging का इंतजाम साथ लेकर चलना पड़ता है. Generator या गाड़ी से। एक battery से मोटामोटी
         दो-ढाई acre निकलते है; दिन भर काम चाहिए तो 4-6 batteries का set और उनका rotation भी। यही वो
         काम है जो assistant संभालती है। इसीलिए ड्रोन दीदी अकेले का नहीं, दो लोगों की team का काम है।
@@ -445,7 +445,7 @@ export default function NamoDroneDidiYojanaHindi({ article }: { article: HindiAr
       <p>
         एक practical सलाह. जब भी जाएं, समूह की 2-3 सदस्य साथ जाएं और अपने समूह का नाम, गांव,
         registration की जानकारी लिख के ले जाएं। मुंहजुबानी बात हवा मे उड़ जाती है, लिखित नाम कही ना कही
-        दर्ज हो ही जाता है। और एक बार जाकर भूल मत जाइए — दो-तीन महीने मे एक बार हाल पूछ लेना समूह को
+        दर्ज हो ही जाता है। और एक बार जाकर भूल मत जाइए। दो-तीन महीने मे एक बार हाल पूछ लेना समूह को
         याद रखवाता है। सरकारी काम में जो दिखता रहता है, उसी का काम पहले होता है. यह बात किसी guideline
         में नहीं लिखी, पर हर गांव जानता है।
       </p>
@@ -465,7 +465,7 @@ export default function NamoDroneDidiYojanaHindi({ article }: { article: HindiAr
       <p>
         दूसरा सहारा fertilizer dealer हैं. IFFCO के केंद्र, किसान सेवा केंद्र। nano urea उन्हें बेचना है और
         उसका spray ड्रोन से ही सबसे सही होता है, इसलिए वे खुद ड्रोन दीदी को किसानों से जोड़ते हैं। अपने
-        इलाके के dealer से पहचान बनाकर रखिए — शुरुआती दिनों में आधे से ज्यादा काम वहीं से आता है।
+        इलाके के dealer से पहचान बनाकर रखिए। शुरुआती दिनों में आधे से ज्यादा काम वहीं से आता है।
       </p>
 
       <T2>अफवाहें बनाम सच. जो बातें गलत फैली हुई हैं</T2>
@@ -488,7 +488,7 @@ export default function NamoDroneDidiYojanaHindi({ article }: { article: HindiAr
         </li>
         <li>
           <strong>&ldquo;यह सिर्फ बड़े राज्यों के लिए है&rdquo;</strong>. नहीं, यह राष्ट्रीय योजना है। हां, जिन
-          इलाकों में खेती का रकबा ज्यादा है, वहां cluster पहले बनेंगे — इतना जरूर है।
+          इलाकों में खेती का रकबा ज्यादा है, वहां cluster पहले बनेंगे। इतना जरूर है।
         </li>
         <li>
           <strong>&ldquo;ड्रोन उड़ाने के लिए license अलग से बनवाना पड़ेगा&rdquo;</strong>, training के अंदर ही
@@ -530,7 +530,7 @@ export default function NamoDroneDidiYojanaHindi({ article }: { article: HindiAr
         </li>
         <li>
           <strong>मत सोचिए अगर</strong> समूह के भीतर झगड़ा है कि ड्रोन किसके पास रहेगा। यह SHG की संपत्ति
-          है — साफ समझौता पहले, मशीन बाद में।
+          है। साफ समझौता पहले, मशीन बाद में।
         </li>
       </ul>
       <p>

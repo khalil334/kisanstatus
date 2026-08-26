@@ -556,7 +556,7 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
           </p>
           <p className="mt-2 text-[15px] leading-7 text-[#D8C9DE]">
             Aur agar maal mahila samooh ke zariye ja rha hai, to matra wahi rehti hai par har
-            litre pe ₹2 upar se judte hain — Bulandshahr pilot me samooh se jude gharon ke liye
+            litre pe ₹2 upar se judte hain. Bulandshahr pilot me samooh se jude gharon ke liye
             yehi vyavastha hai. Char gaay wale ghar ka hisab tab 5400 ke aas paas baithta hai.
           </p>
           <p className="mt-3 text-[15px] leading-7 text-[#D8C9DE]">
@@ -752,7 +752,7 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
               </div>
             ))}
             <p className="text-[13px] leading-6 text-[#9C86A6]">
-              Ek sawal aur aata hai — kharidar hi na mile to? Uska jawab upar jeevamrit wale hisse
+              Ek sawal aur aata hai, kharidar hi na mile to? Uska jawab upar jeevamrit wale hisse
               me pura diya hai: khud khaad banao, bill ghatao. Jama kiya hua kabhi bekar nahi jata.
             </p>
           </div>

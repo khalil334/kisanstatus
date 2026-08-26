@@ -380,7 +380,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         सुधार की प्रक्रिया शुरू कर दीजिए, वरना हर किस्त पर नया सवाल खड़ा होगा।
       </p>
 
-      <Sec>काम पूरा हुआ या नहीं — आखिरी जांच</Sec>
+      <Sec>काम पूरा हुआ या नहीं। आखिरी जांच</Sec>
       <Figure
         src="/images/articles/hindi-yojna/ekyc-mobile-se/ekyc-success.webp"
         alt="Mobile पर eKYC successful का green confirmation"
@@ -419,7 +419,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
           pmkisan.gov.in और official app, बस दो जगह।
         </li>
         <li>
-          <strong>बैंक details का eKYC से कोई लेना-देना नहीं</strong> — इसमें खाता संख्या, ATM PIN या CVV की
+          <strong>बैंक details का eKYC से कोई लेना-देना नहीं</strong>। इसमें खाता संख्या, ATM PIN या CVV की
           जरूरत ही नहीं पड़ती। मांगे जाने का सीधा संकेत ठगी है।
         </li>
         <li>

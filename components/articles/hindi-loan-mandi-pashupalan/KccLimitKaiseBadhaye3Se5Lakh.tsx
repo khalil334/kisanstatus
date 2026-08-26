@@ -288,7 +288,7 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
         scale of finance अनाज से ऊपर होता है। बैंक वह बढ़ाता है जो कागज पर दिखता है।
       </Callout>
 
-      <Head2>Branch manager की नजर से देखिए — तो बात जल्दी बनेगी</Head2>
+      <Head2>Branch manager की नजर से देखिए। तो बात जल्दी बनेगी</Head2>
       <Figure
         src="/images/articles/hindi-yojna/kcc-limit/branch-visit.webp"
         alt="बैंक branch में manager से KCC limit पर बात करता किसान"
@@ -305,7 +305,7 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
       <p>
         समय का चुनाव भी रणनीति है। बुवाई के ऐन पहले branch पर भीड़ और दबाव दोनों चरम पर होते हैं. उस
         समय enhancement के काम टलते हैं। कटाई के बाद का खाली महीना. जब आपकी वसूली भी खाते में
-        ताजा जमा दिख रही हो — आवेदन का अच्छा मौसम है। तब manager के सामने आपका ताकतवर
+        ताजा जमा दिख रही हो। आवेदन का अच्छा मौसम है। तब manager के सामने आपका ताकतवर
         कागज. भरा हुआ खाता. खुद बोलता है।
       </p>
 
@@ -328,7 +328,7 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
       <p>
         और हां, request हमेशा लिखित में, दो प्रतियों में। एक जमा, एक पर received की मुहर लेकर वापस।
         मौखिक &quot;देख लेंगे&quot; का कोई follow-up नहीं होता; received-मुहर वाले कागज का होता है। तीस दिन में
-        कोई जवाब न आए तो उसी कागज के हवाले से branch manager से लिखित स्थिति पूछिए — यह क्रम बनाए
+        कोई जवाब न आए तो उसी कागज के हवाले से branch manager से लिखित स्थिति पूछिए। यह क्रम बनाए
         रखने वाले किसानों के काम पहले निपटते हैं।
       </p>
 
@@ -353,7 +353,7 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
           मांग नियम-सम्मत है, branch से लिखित में समझ लें।
         </li>
         <li>
-          <strong>अधूरा record</strong>. वरासत दर्ज नहीं, खतौनी पुरानी, बटाई का कोई कागज नहीं — इनमें से
+          <strong>अधूरा record</strong>. वरासत दर्ज नहीं, खतौनी पुरानी, बटाई का कोई कागज नहीं। इनमें से
           कुछ भी हो तो पहले वह सुधरवाइए, फिर बैंक जाइए।
         </li>
       </UL>
@@ -404,7 +404,7 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
 
       <Head2>Branch जाने से पहले की छोटी सी तैयारी</Head2>
       <p>
-        पूरा लेख संक्षेप में समेटें तो — सरकार ने रियायती दर का दायरा ₹5 लाख तक खोल दिया है; अब
+        पूरा लेख संक्षेप में समेटें तो। सरकार ने रियायती दर का दायरा ₹5 लाख तक खोल दिया है; अब
         उस दायरे में अपनी जगह बनाना आपका काम है। और वह काम खाली हाथ branch पहुंचने से नहीं होता।
         जाने से पहले ये चार खाने भर लीजिए. मामला एक बैठक में बनने की संभावना कई गुना बढ़ जाती है:
       </p>
@@ -428,7 +428,7 @@ export default function KccLimitKaiseBadhaye3Se5Lakh({ article }: { article: Hin
       </UL>
       <p>
         चारों खाने भरे हुए हों, तो आप manager के सामने &quot;लिमिट बढ़ा दीजिए&quot; नहीं, बल्कि &quot;मेरा SOF × रकबा इतना
-        बनता है, मेरी limit इससे कम है&quot; कह रहे होंगे — और यही दो बातों में फर्क है।
+        बनता है, मेरी limit इससे कम है&quot; कह रहे होंगे। और यही दो बातों में फर्क है।
       </p>
 
       <p className="text-xs text-[var(--color-text-muted)] italic">

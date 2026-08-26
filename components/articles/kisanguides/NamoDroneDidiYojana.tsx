@@ -331,7 +331,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Service rate ilaake ke mutabik ₹300 se ₹500 per acre ke beech ghoomta hai. Drone ek acre 7-8 minute
           mein nipta deta hai, lekin din ka final output batteries, khet ke beech ki doori aur mausam par depend
-          karta hai — practically 20-25 acre ek achha din hai. Ab ganit dekho: ₹400 average rate par 20 acre
+          karta hai, practically 20-25 acre ek achha din hai. Ab ganit dekho: ₹400 average rate par 20 acre
           ka din matlab ₹8,000 gross. Isme se diesel/transport, battery charging, assistant ka hissa aur
           maintenance nikalo toh bhi season ke mahino mein theek-thaak kamai banti hai.
         </p>
@@ -412,7 +412,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           nahi hai, koi agent nahi hai. Paisa maangne wala har aadmi fraud hai.
         </WB>
 
-        <SH>Kis SHG Ke Liye Yeh Sahi Hai — Aur Kiske Liye Nahi</SH>
+        <SH>Kis SHG Ke Liye Yeh Sahi Hai. Aur Kiske Liye Nahi</SH>
         <StepList>
           <SI n={1}><strong>Sahi hai agar:</strong> aapka group active hai, records saaf hain, ilaake mein kheti ka rakba achha hai, aur ek member aisi hai jo technical cheez seekhne mein sach mein interested hai. Sirf naam ke liye nahi.</SI>
           <SI n={2}><strong>Sahi hai agar:</strong> group 20% wale hisse ka intezam soch sakta hai. Chahe apne savings se, chahe AIF loan se. Yeh koi bahut bada amount nahi hota, lekin plan chahiye.</SI>
@@ -448,7 +448,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
             <a href="https://digitalsky.dgca.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">digitalsky.dgca.gov.in</a>
           </li>
           <li>
-            Photo credits — Wikimedia Commons: drone spray photos by Christopher Hedreyd / PIA 4A CALABARZON (public domain);{' '}
+            Photo credits. Wikimedia Commons: drone spray photos by Christopher Hedreyd / PIA 4A CALABARZON (public domain);{' '}
             <a href="https://commons.wikimedia.org/wiki/File:Agricultural_drone_spraying_on_paddy_field.jpg" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">paddy field spray</a>{' '}
             by Shreesha Sharma (CC BY-SA 4.0);{' '}
             <a href="https://commons.wikimedia.org/wiki/File:An_Agriculture_Sprayer_UAV_displayed_at_Amaravati_Drone_Summit_by_Aries_Agro_Ltd._(01).jpg" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">sprayer UAV</a>{' '}

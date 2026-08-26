@@ -254,7 +254,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         का नाम सही है।
       </p>
       <p>
-        कई बैंकों में यह काम net-banking या NPCI के BASE portal से online भी हो जाता है — पर हर बैंक में
+        कई बैंकों में यह काम net-banking या NPCI के BASE portal से online भी हो जाता है। पर हर बैंक में
         नहीं। शाखा वाला रास्ता हर जगह चलता है, उसी को मुख्य बताया है।
       </p>
 
@@ -292,7 +292,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
       </p>
       <p>
         <strong>1. Request शाखा में ही रह गई।</strong> Staff ने अपने system में entry की, पर NPCI तक
-        request गई ही नहीं या रास्ते में reject हो गई। इलाज — acknowledgement number लेकर शाखा से request
+        request गई ही नहीं या रास्ते में reject हो गई। इलाज, acknowledgement number लेकर शाखा से request
         का हाल पूछें, जरूरत हो तो दोबारा भिजवाएं।
       </p>
       <p>
@@ -316,7 +316,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
       <p>
         Portal के Know Your Status में अंग्रेजी के जो message आते हैं, उनकी व्याख्या पहले से पता हो तो आधी
         घबराहट खत्म। <strong>&quot;Aadhaar not seeded in NPCI&quot;</strong>. यही इस पूरे लेख का विषय है;
-        सीधे Step 2 पर जाइए। <strong>&quot;Account closed&quot;</strong> — seeded खाता बंद हो चुका है; किसी
+        सीधे Step 2 पर जाइए। <strong>&quot;Account closed&quot;</strong>, seeded खाता बंद हो चुका है; किसी
         चालू खाते में नई seeding करानी होगी। <strong>&quot;Name mismatch&quot;</strong>. आधार और बैंक
         record के नाम अलग हैं. पहले नाम सुधरवाइए, तभी यह प्रक्रिया आगे बढ़ेगी। और{' '}
         <strong>&quot;Payment Initiated&quot;</strong> दिखे तो कुछ मत कीजिए. पैसा रास्ते में है, FTO
@@ -346,7 +346,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
             </tr>
             <tr>
               <td className="border border-[var(--color-border)] px-3 py-2 font-medium">Not seeded</td>
-              <td className="border border-[var(--color-border)] px-3 py-2">आधार किसी भी बैंक से mapper में नहीं जुड़ा — DBT का पैसा कहीं जा ही नहीं सकता</td>
+              <td className="border border-[var(--color-border)] px-3 py-2">आधार किसी भी बैंक से mapper में नहीं जुड़ा. DBT का पैसा कहीं जा ही नहीं सकता</td>
               <td className="border border-[var(--color-border)] px-3 py-2">अपनी बैंक शाखा में seeding form भरें (Step 2 ऊपर)</td>
             </tr>
             <tr>
@@ -405,7 +405,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         </div>
       </div>
 
-      <T2>CSC जाएं या बैंक? — सही चुनाव का गणित</T2>
+      <T2>CSC जाएं या बैंक?। सही चुनाव का गणित</T2>
       <Figure
         src="/images/articles/hindi-yojna/npci-seeding/csc-biometric.webp"
         alt="CSC पर biometric से आधार verification कराता किसान"
@@ -432,7 +432,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         <Link href="/articles/hi/payment-stopped-by-state">उसकी guide यहां</Link> है।
       </p>
       <p>
-        अनुभव से निकला सबसे बड़ा सबक — यह mapping एक बार की चीज नहीं, एक <em>स्थिति</em> है। खाता बदला?
+        अनुभव से निकला सबसे बड़ा सबक। यह mapping एक बार की चीज नहीं, एक <em>स्थिति</em> है। खाता बदला?
         बैंक merge हुआ? खाता dormant? किसी भी घटना से mapping बदल या टूट सकती है। तो साल में दो बार —
         बुवाई और कटाई की तरह, myAadhaar खोलकर 2 मिनट का status-check कर लेने की आदत बना लीजिए। जितनी मेहनत
         खेत के दस्तावेज़ संभालने में लगाते हैं, उसका सौवां हिस्सा इस digital कागज पर भी लगा दें. किस्त अटकने की

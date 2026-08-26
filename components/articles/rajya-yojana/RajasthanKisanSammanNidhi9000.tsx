@@ -365,7 +365,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         </p>
 
         <p>
-          Jan Aadhaar Rajasthan ka family identity system hai — 10-ank ka family ID aur har sadasya ka
+          Jan Aadhaar Rajasthan ka family identity system hai, 10-ank ka family ID aur har sadasya ka
           11-ank ka member ID. Ye Bhamashah card ki jagah April 2020 mein aaya, aur aaj state ki
           lagbhag poori aabaadi isme cover hai. Iske bina state ki koi bhi badi scheme nahi chalti —
           ration, pension, scholarship, health cover, aur haan, ye kisan wali kist bhi.
@@ -450,7 +450,7 @@ export default function RajasthanKisanSammanNidhi9000() {
           label="Official Portal. Jan Soochna Rajasthan"
         />
 
-        <h2>Scheme Ka Safar — ₹2,000 Se ₹3,000 Tak</h2>
+        <h2>Scheme Ka Safar। ₹2,000 Se ₹3,000 Tak</h2>
 
         <p>
           Aaj jo ₹3,000 milte hain, wo shuru se ₹3,000 nahi the. Baat yeh hai ki ye jaan lena kaam aata hai, kyunki
@@ -558,7 +558,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <h2>Kist Ko Lekar Realistic Kaise Rahein</h2>
 
         <p>
-          ₹9,000 saal bhar mein koi bahut badi raashi nahi lagti, lekin beej-khaad-diesel ke badhte kharche mein har kist kaam aati hai. Iska zyada faayda tabhi hoga jab aap timeline ko lekar realistic raho — jo confirm hai usi par plan karo, jo announcement hai usko bonus samjho.
+          ₹9,000 saal bhar mein koi bahut badi raashi nahi lagti, lekin beej-khaad-diesel ke badhte kharche mein har kist kaam aati hai. Iska zyada faayda tabhi hoga jab aap timeline ko lekar realistic raho, jo confirm hai usi par plan karo, jo announcement hai usko bonus samjho.
         </p>
 
         <p>

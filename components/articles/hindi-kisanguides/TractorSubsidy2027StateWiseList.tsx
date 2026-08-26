@@ -324,7 +324,7 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
       />
       <ol className="my-4 space-y-2 pl-5 list-decimal text-sm leading-relaxed">
         <li>
-          अपने राज्य के portal पर <strong>किसान registration</strong> करो — आधार, mobile (आधार से
+          अपने राज्य के portal पर <strong>किसान registration</strong> करो। आधार, mobile (आधार से
           linked), बैंक खाता।
         </li>
         <li>
@@ -367,7 +367,7 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
       <H2>Form reject क्यों होते हैं. 4 आम गलतियां</H2>
       <ol className="my-4 space-y-3 pl-5 list-decimal text-sm leading-relaxed">
         <li>
-          <strong>आधार-खतौनी में नाम का फर्क</strong> — spelling तक मिलनी चाहिए। फर्क है तो पहले
+          <strong>आधार-खतौनी में नाम का फर्क</strong>, spelling तक मिलनी चाहिए। फर्क है तो पहले
           तहसील/आधार केंद्र से सुधार, फिर आवेदन।
         </li>
         <li>
@@ -397,7 +397,7 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
         अक्सर काम निकाल देता है. दाम आधे से भी कम, diesel खर्च कम, और सब्सिडी का प्रतिशत अक्सर
         बेहतर। 3-5 एकड़ पर 15-20 HP का गणित बैठता है। बाग/अंगूर वाली कतारों की खेती में compact
         tractor देखिए। और अगर जोत इतनी छोटी है कि साल में ट्रैक्टर 30-40 दिन ही चलेगा, तो ईमानदारी से
-        हिसाब लगाइए — कई बार खरीदने से सस्ता किराए पर लेना पड़ता है, भले यह बात सुनने में अच्छी न लगे।
+        हिसाब लगाइए। कई बार खरीदने से सस्ता किराए पर लेना पड़ता है, भले यह बात सुनने में अच्छी न लगे।
       </p>
 
       <H2>सब्सिडी + लोन का combo. असली बचत यहीं है</H2>
@@ -421,7 +421,7 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
       <p>
         एक realistic scenario से समझिए कि इंतजार किस चीज का कितना होता है। Window खुली, आपने पहले ही
         दिन आवेदन डाल दिया. अच्छी शुरुआत। अब चयन (token/lottery) का इंतजार। यह कुछ दिनों से कुछ हफ्तों
-        तक खिंच सकता है, राज्य के schedule पर निर्भर। चयन हुआ? तो खरीद की सख्त खिड़की — अक्सर 10-15
+        तक खिंच सकता है, राज्य के schedule पर निर्भर। चयन हुआ? तो खरीद की सख्त खिड़की। अक्सर 10-15
         दिन. डीलर और पैसे का इंतज़ाम पहले से सोच कर रखिए। Bill upload के बाद physical verification की
         बारी आती है, जो अधिकारी के दौरे के हिसाब से कुछ हफ्ते ले सकती है। और आखिर में DBT —
         verification के बाद सब्सिडी खाते में आने में कुछ हफ्तों से कुछ महीने तक।
@@ -439,7 +439,7 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
         Showroom पहुंचने से पहले ये सवाल लिख कर ले जाइए. और जवाब मौखिक नहीं, quotation पर लिखे
         हुए लीजिए। पहला. क्या आप इस scheme के लिए empanelled हैं, और किस portal-listing के नाम से?
         दूसरा. इस model की सरकारी approved cost क्या है, और on-road कीमत उससे कितनी अलग है?
-        तीसरा — bill में ट्रैक्टर, accessories और insurance अलग-अलग दिखेंगे या जोड़कर? (सब्सिडी
+        तीसरा, bill में ट्रैक्टर, accessories और insurance अलग-अलग दिखेंगे या जोड़कर? (सब्सिडी
         सिर्फ मूल मशीन पर बनती है।) चौथा, delivery और bill की तारीख क्या होगी? जो डीलर इन चारों
         का सीधा जवाब न दे, वहां से quotation लेकर आगे बढ़ जाइए, empanelled डीलर एक से ज्यादा होते हैं।
       </p>
@@ -458,7 +458,7 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
 
       <H2>तीन आदतें जो Form Reject होने से बचाती हैं</H2>
       <p>
-        पहली — सब्सिडी मिलती है, पर <strong>window में आवेदन करने वालों को</strong>, इसके चलते अपने राज्य
+        पहली। सब्सिडी मिलती है, पर <strong>window में आवेदन करने वालों को</strong>, इसके चलते अपने राज्य
         के portal का notification section महीने में एक बार जरूर देखिए। दूसरी. श्रेणी के हिसाब से जो
         higher slab बनता है, उसके <strong>प्रमाण-पत्र पहले से तैयार</strong> रखिए। तीसरी. जो बात portal
         पर नहीं लिखी, वह किसी की भी जुबान से सुनकर मत मानिए। बस यही तीन आदतें आपको उन हजारों आवेदकों से

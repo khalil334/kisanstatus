@@ -294,7 +294,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           <SI n={1}><strong>Agent ke bharose sab chhod dena</strong>. OTP aur login aapka hai, kisi ko mat do. Fraud ka sabse bada raasta yahi hai.</SI>
           <SI n={2}><strong>Advance fee dena</strong>, &ldquo;file aage badhane ke ₹2,000&rdquo; jaisi maang sirf thagi hai. Portal aur bank, dono ka application process free hai (bank ki official processing fee sanction ke documents mein likhi hoti hai, cash mein nahi li jaati).</SI>
           <SI n={3}><strong>Ek se zyada jagah ek saath apply karna</strong>, har formal application par credit check hota hai; bahut saari enquiries aapka credit profile kamzor dikhati hain. Ek raasta chuno, uska jawab aane do.</SI>
-          <SI n={4}><strong>Galat income/details bharna</strong> — eligibility mein aage nikal jaoge, par verification mein file wahin rukegi aur record kharab alag hoga.</SI>
+          <SI n={4}><strong>Galat income/details bharna</strong>, eligibility mein aage nikal jaoge, par verification mein file wahin rukegi aur record kharab alag hoga.</SI>
           <SI n={5}><strong>Sirf portal par atke rehna</strong>, kisi wajah se online flow fail ho raha hai toh branch ka offline raasta hamesha khula hai. Portal ek sahulat hai, shart nahi.</SI>
         </StepList>
 
@@ -322,7 +322,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Agar aapki Farmer ID bani hai, zameen aapke naam hai aur Aadhaar-mobile linked hai. JanSamarth ka
           paperless flow aazmao, yahi sabse kam bhaag-daud wala raasta hai. Agar record mein koi bhi pech hai
-          (batai ki zameen, naam ka mismatch, purana khata), toh seedha branch jao — wahan aadmi baithkar pech
+          (batai ki zameen, naam ka mismatch, purana khata), toh seedha branch jao, wahan aadmi baithkar pech
           suljha sakta hai, portal nahi.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
