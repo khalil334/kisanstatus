@@ -18,7 +18,7 @@ const KIST = {
 };
 
 const PUBLISHED = '2026-06-24T16:27:03+05:30';
-const MODIFIED = '2026-08-02T11:00:42+05:30';
+const MODIFIED = '2026-08-26T18:35:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisan25viKist2027', title: '25vi Kist Date & Amount' },
@@ -37,7 +37,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Is baar amount badhega kya?',
-    a: '₹2,000 hi milenge. Koi official baat nahi hui badhne ki, scheme ka structure shuru se yehi hai, saal ke ₹6,000 teen hisson me. "4000 milenge" wale message har round se pehle ghoomte hain aur har baar galat nikalte hain. Rakam kabhi badhi toh khabar Budget ya Cabinet se aayegi, kisi WhatsApp forward se nahi.',
+    a: '₹2,000 hi milenge. Koi official baat nahi hui badhne ki, scheme ka structure shuru se yehi hai, saal ke ₹6,000 teen hisson me. August 2026 me "Raksha Bandhan par 4000 milenge" wala video bhi viral hua tha, sarkar ne saaf mana kar diya. Aise message har round se pehle ghoomte hain aur har baar galat nikalte hain. Rakam kabhi badhi toh khabar Budget ya Cabinet se aayegi, kisi WhatsApp forward se nahi.',
   },
   {
     q: '"Payment Success" dikh raha hai lekin account me kuch nahi aaya?',
@@ -138,7 +138,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             Date abhi announce nahi hui hai. Bas, itni si baat.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            <strong>Aaj tak ka update ({fmtDate(MODIFIED)}):</strong> pmkisan.gov.in par 24vi kist ko lekar koi naya notice nahi hai, na PIB se koi release aayi hai. Jaise hi kuch official aata hai, ye page usi din update hota hai. Isliye bookmark karke rakhna kaam ka hai.
+            <strong>Aaj tak ka update ({fmtDate(MODIFIED)}):</strong> pmkisan.gov.in par 24vi kist ko lekar koi naya notice nahi hai, na PIB se koi release aayi hai. Haan, August me ek video khoob ghooma jisme dawa thi ki Raksha Bandhan par ₹4,000 aayenge. Sarkar ne saaf kar diya ki aisi koi ghoshna nahi hui. Us par neeche afwah wale section me detail se likha hai. Jaise hi kuch official aata hai, ye page usi din update hota hai. Isliye bookmark karke rakhna kaam ka hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Lekin jo pata hai, woh kaafi kuch bata deta hai. Pichhla transfer 20/06/2026 ko hua tha. Tarakeswar (Hooghly, West Bengal) ke event se PM ne button dabaya aur 9.44 crore parivaron ko kul ₹18,880 crore gaye. Usse pehle wala 13 March ko Guwahati se. Beech ka fasla lagbhag sava teen mahine ka, isi hisaab se agla number <strong>October 2026 ke aas-paas</strong> banta hai.
@@ -355,6 +355,9 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
               <p className="text-xs text-[var(--color-text-muted)]">PM Kisan app se face scan karke bhi ho jaati hai. Bujurg kisano ke liye sabse aasaan raasta, na OTP ka jhanjhat, na center ka chakkar.</p>
             </div>
           </div>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ek nayi cheez jo ab dheere dheere zaroori ho rahi hai: <strong>Farmer ID</strong> (AgriStack wali kisan pehchan). Kai states me naye registrations aur khaad ki subsidy ke liye ye maangi jaane lagi hai, aur aage chal kar PM Kisan ke records bhi isi se judenge. Abhi 24vi kist ke liye ye anivarya nahi hai, par jin states me camps lag rahe hain wahan banwa lena samajhdari hai. Baad ki bhaag-daud bach jayegi.
+          </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Doosri badi rukavat NPCI mapping hai. Upar wale case me yehi nikli thi. Aadhaar ka account se &quot;linked&quot; hona alag baat hai, DBT ke liye map hona alag. Iske liye branch jaakar &quot;Aadhaar seeding for DBT&quot; karwana padta hai. Likhit confirmation jarur lijiye. Screenshots ke saath pura process humne <Link href="/articles/PmKisanMasterGuide2026" className="underline font-bold text-[var(--color-primary)]">master guide</Link> me samjhaya hai.
           </p>
@@ -419,7 +422,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             Har release se pehle do tarah ke jaal bichhte hain. Pehla nuksaan kam karta hai, doosra jyada.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Pehla, badhi hui rakam ki afwah. &quot;Is baar 4000 milenge&quot;, &quot;10,000 ho gaya.&quot; Nahi hua. ₹2,000 hi hai. Jab bhi badhega, Budget ya Cabinet ke faisle se badhega. WhatsApp forward se nahi. Doosra jaal khatarnak hai: fake links. Message aata hai &quot;yahan se check karo&quot;, click karte hi Aadhaar, OTP ya bank details maangi jati hain. Yaad rakhiye, <strong>OTP batane se sarkari kaam nahi hota, account khali hota hai.</strong> Na sarkar phone karke OTP maangti hai, na kuch dene ke liye fees leti hai. Jo maange, woh thag hai.
+            Pehla, badhi hui rakam ki afwah. Taaza example August 2026 ka hi hai. Social media par ek video viral hua ki Raksha Bandhan par kisano ko ₹4,000 milenge, matlab do kistein ek saath. Video itna phaila ki sarkar ko aage aakar kehna pada ki aisi koi ghoshna nahi hui hai. Na Raksha Bandhan par kuch aaya, na ₹4,000 ka koi plan hai. ₹2,000 hi hai, aur jab bhi badhega, Budget ya Cabinet ke faisle se badhega. WhatsApp forward se nahi. Doosra jaal khatarnak hai: fake links. Message aata hai &quot;yahan se check karo&quot;, click karte hi Aadhaar, OTP ya bank details maangi jati hain. Yaad rakhiye, <strong>OTP batane se sarkari kaam nahi hota, account khali hota hai.</strong> Na sarkar phone karke OTP maangti hai, na kuch dene ke liye fees leti hai. Jo maange, woh thag hai.
           </p>
           <WB>
             Bharose ki jagah sirf teen: pmkisan.gov.in ka homepage, PIB press release, aur Agriculture Ministry ke verified handles. Date in teeno mein se kahin aaye, tabhi maaniye.
@@ -448,6 +451,38 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             Koi bhi adhura raha toh amount hold par — aur phir agli cycle tak intzaar.
           </p>
         </div>
+
+        <section className="mb-8">
+          <SH>Sources</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Is article ki har date aur figure inhi jagahon se milaayi gayi hai. Aap khud bhi check kar sakte hain:
+          </p>
+          <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-2 list-disc pl-5">
+            <li>
+              PM-KISAN official portal (status, eKYC, beneficiary list, notices).{' '}
+              <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pmkisan.gov.in</a>
+            </li>
+            <li>
+              23vi kist release (20 June 2026, ₹18,880 crore, 9.44 crore parivar). PIB press release, Ministry of Agriculture &amp; Farmers Welfare.{' '}
+              <a href="https://pib.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in</a>
+            </li>
+            <li>
+              24vi kist expected timeline aur eKYC requirement. The Economic Times.{' '}
+              <a href="https://economictimes.indiatimes.com/wealth/save/pm-kisan-yojana-24th-instalment-date-prime-minister-kisan-samman-nidhi-yojana-eligibility-status-check-how-to-complete-e-kyc/articleshow/132411566.cms" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">economictimes.indiatimes.com</a>
+            </li>
+            <li>
+              ₹4,000 Raksha Bandhan wale viral video ka khandan. PIB Fact Check.{' '}
+              <a href="https://pib.gov.in/factcheck.aspx" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in/factcheck</a>
+            </li>
+            <li>
+              Payment tracking. Public Financial Management System.{' '}
+              <a href="https://pfms.nic.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pfms.nic.in</a>
+            </li>
+          </ul>
+          <p className="text-xs text-[var(--color-text-muted)] italic">
+            Aakhri baar in sab se milaan {fmtDate(MODIFIED)} ko kiya gaya.
+          </p>
+        </section>
 
         <GovLink
           href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
