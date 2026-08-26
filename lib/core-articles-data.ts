@@ -242,7 +242,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan 24vi Kist: October Ka Andaza Kaise Nikla, Status Kahan Dekhe',
     desc: '23vi kist 20 June ko aa chuki hai, ab 24vi ka intezaar. Pattern ke hisaab se October 2026 expected. Andaza kaise nikla, status check aur taiyari, sab is guide me.',
     ogTitle: 'PM Kisan 24vi Kist Kab Aayegi?',
-    seoTitle: 'PM Kisan 24vi Kist Kab Aayegi: Expected Date Aur Status Check',
+    seoTitle: 'PM Kisan 24vi Kist Kab Aayegi? Status Check',
     keywords: [
       'pm kisan 24vi kist 2026',
       'pm kisan 24vi kist kab aayegi',
@@ -481,7 +481,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: "Land Seeding 'No' Hai To Kist Rukegi: Form Kahan Se Milega",
     desc: 'Land seeding form kahan se milta hai, kaise bharein aur kaunse documents chahiye. State wise Bhulekh portal links aur khasra-khatauni ke saath poori guide.',
     ogTitle: 'PM Kisan Land Seeding Form 2026: Kahan Se Milega, Kaise Bharein',
-    seoTitle: 'PM Kisan Land Seeding Form: PDF, Documents Aur Bharne Ka Tarika',
+    seoTitle: 'PM Kisan Land Seeding Form: PDF Aur Tarika',
     keywords: [
       'pm kisan land seeding form',
       'pm kisan land seeding form pdf download',
@@ -809,7 +809,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-matsya-sampada-yojana-fish-farming',
     title: 'Machli Palan Par 60% Tak Subsidy: PM Matsya Sampada',
-    seoTitle: 'Machli Palan Subsidy 2026: PMMSY Me Kitni Milti Hai',
+    seoTitle: 'Machli Palan Subsidy 2026: PMMSY Guide',
     desc: 'Machli palan par 40-60% subsidy asal me kaise milti hai: PMMSY ki window kahan tak hai, PM-MKSSY aur NFDP ka role, 1 acre pond ka budget aur asli profit.',
     ogTitle: 'Machli Palan Subsidy 2026: PMMSY Se Kitna Paisa Milta Hai',
     keywords: [
