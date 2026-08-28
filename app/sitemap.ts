@@ -171,7 +171,8 @@ function getArticlePriority(slug: string): number {
 
 function getArticleFrequency(category: string): MetadataRoute.Sitemap[number]['changeFrequency'] {
   switch (category as CategorySlug) {
-    case 'mandi': return 'daily';
+    // SPAM-UPDATE FIX: mandi articles roz update nahi hote — 'daily' claim mat karo.
+    case 'mandi': return 'weekly';
     case 'status-check': return 'weekly';
     case 'loan': return 'monthly';
     case 'farming': return 'monthly';
@@ -183,16 +184,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = clampToNow(FALLBACK_DATE);
 
   const staticPages: MetadataRoute.Sitemap = [
+    // SPAM-UPDATE FIX: changefreq 'daily' -> 'weekly'. Homepage/articles ki
+    // lastmod roz nahi badalti; 'daily' + repeated lastmod bumps freshness
+    // manipulation signal dete hain.
     {
       url: SITE_URL,
       lastModified: clampToNow(LATEST_PUBLISHED),
-      changeFrequency: 'daily',
+      changeFrequency: 'weekly',
       priority: 1.0,
     },
     {
       url: `${SITE_URL}/articles`,
       lastModified: clampToNow(LATEST_PUBLISHED),
-      changeFrequency: 'daily',
+      changeFrequency: 'weekly',
       priority: 0.90,
     },
     {

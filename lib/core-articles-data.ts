@@ -398,6 +398,11 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     readingTime: 8,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisan25viKist2027'),
+    // SPAM-UPDATE FIX: pure-speculation article (khud likha hai "kisi ko nahi
+    // pata") — YMYL topic par future-date prediction Google trust girata hai.
+    // Jab tak 24vi kist release hokar 25vi ki koi official info na ho, isse
+    // index se bahar rakho. Official announcement aane par noindex hata dena.
+    noindex: true,
     schemes: ['pm-kisan'],
     ogImage: '/images/articles/pm-kisan-25vi-kist-2027/hero-25vi-kist.webp',
     relatedSlugs: ['PmKisan24viKist2026', 'PmKisanMasterGuide2026', 'PmKisanEkycOnline2026', 'PmKisanBeneficiaryList2026', 'PmKisanPaymentFailedFix2026'],
