@@ -1,106 +1,135 @@
-# KisanStatus.com — Google Spam Update: Deep Analysis (Repo + Live Site)
+# KisanStatus.com — Google Spam Hit: Confirmed Analysis + Human-Recovery Guide
 
 **Site:** https://kisanstatus.com · **Repo:** khalil334/kisanstatus
 **Analysis date:** 29 August 2026
-**Data sources:** Full git history (2,798 commits), sab article registries (`lib/*.ts`), live sitemap.xml (132 URLs), live homepage crawl. Koi value fabricate nahi ki gayi — har claim ke saath evidence hai.
+**Data sources:** Google Search Console (sc-domain:kisanstatus.com, siteOwner), full git history (2,798 commits), article registries (`lib/*.ts`), live sitemap.xml (132 URLs). Har number real hai — kuch bhi fabricate nahi.
 
 ---
 
-## TL;DR
+## GSC SE CONFIRMED: Hit ki Exact Date = 18 August 2026
 
-Site **algorithmic spam hit** me hai — manual action nahi (GSC se confirm karna baaki hai). Root cause **AI-scaled content ka publishing pattern** hai, content ki quality nahi. Aur sabse critical: **jo galti pehli baar hit ka sabab bani, wohi galti 15–18 August ko dobara ki gayi** — 4 din me 22 naye articles. Recovery tab tak start nahi hogi jab tak ye pattern band nahi hota.
+Search Console ka daily data (June–Aug 2026):
+
+| Period | Impressions/din | Clicks/din |
+|---|---|---|
+| Late June (launch ke baad) | 100–200 | 1–3 |
+| July (dheere growth) | 200–350 | 4–6 |
+| 4–13 Aug (achanak spike) | 600 → **2,616** | 16 → **54** |
+| 14–17 Aug | 1,400–1,900 | 18–38 |
+| **18 Aug se aaj tak** | **40–73 (–96%)** | **0–2** |
+
+**Ab dhyan se dekho timeline:**
+
+- **15–18 Aug:** 22 naye articles publish hue (18 Aug ko akele 13, subah 7 baje se raat tak, minutes ke gap par)
+- **18 Aug:** usi din impressions 1,486 → 64. Ek din me. Ye coincidence nahi hai.
+
+Google ne 10–13 Aug ko site ko test diya tha (impressions 2,600/din tak chadhaye — "ranking test window"). Site us test ke beech me 22 AI articles ka burst kar gayi. Result: poora domain demote. Ye classic **scaled content abuse** classification hai.
+
+**Ek aur cheez:** 18 Aug ke baad position 7 se improve hokar 2–3 dikh rahi hai — ye recovery nahi hai. Matlab sirf 2-4 branded queries bachi hain jahan site abhi bhi upar hai; baaki sab queries se site poori tarah nikal di gayi.
 
 ---
 
-## Part 1: Kyun Hit Hui — Evidence
+## Root Causes (Evidence ke Saath)
 
-### 1. ⚠️ CRITICAL: Backdated Publish Dates (Date Fabrication)
+### 1. 🔴 18-Aug Burst — Direct Trigger (GSC-confirmed)
+22 articles in 4 din, jab pichhli analysis ne warn kiya tha "max 2–3/hafta". Machine-pace publishing = machine content, Google ke liye case closed.
 
-- Git history ka **pehla commit 20 June 2026** ka hai ("final upload kisanstatus v2").
-- Lekin article registries me **29 articles ki `publishedTime` March–early June 2026** ki hai — site ke exist karne se **pehle** ki dates (e.g. `2026-03-07`, `2026-04-14`, `2026-05-18`).
-- Matlab: launch ke waqt articles ko purana dikhane ke liye dates peeche ki gayin. Google ye cross-check karta hai (first-crawl date vs claimed datePublished) — mismatch pakda jata hai aur **poore domain ki date-trust khatam ho jati hai**. YMYL niche me ye akela bhi hit ke liye kafi hai.
+### 2. 🔴 Backdated Publish Dates
+Repo ka pehla commit **20 June 2026**. Lekin 29 articles ki `publishedTime` **March–May 2026** ki hai — site ke exist hone se pehle. Google first-crawl date se cross-check karta hai; ye date-fabrication domain ka poora date-trust khatam kar deti hai.
 
-**Fix:** Har article ki `publishedTime` ko realistic karo — jo articles 20 June ko upload hue, unki date 20 June se pehle ki nahi ho sakti. Sach likhna hi safe hai.
+### 3. 🟠 Mass Date-Refresh
+Sitemap ke 132 me se ~100+ URLs ki lastmod August ki. Har article har hafte genuinely update nahi ho sakta — ye "stale date abuse" hai.
 
-### 2. ⚠️ CRITICAL: Naya Burst — 22 Articles in 4 Din (15–18 Aug 2026)
+### 4. 🟠 AI-Template Fingerprints
+107 articles, ek author, ek jaisa structure, zero real screenshots, sirf 2 articles me sources. Insaan ka kaam aisa nahi dikhta — aur Google ab exactly yehi difference maapta hai.
 
-Purani analysis (28 Aug wali, ab deleted) ne warn kiya tha: "max 2–3 articles/hafta, kabhi burst nahi". Lekin registries dikhati hain:
+### 5. 🟠 Bot 403
+Article pages non-browser user-agents ko 403 dete hain. Vercel Firewall me check karo ke Googlebot verified-bot allowlist me hai. GSC → URL Inspection → Live Test se confirm karo.
 
-| Date | Naye articles |
+---
+
+# RECOVERY: Sab Kuch Real Insaan Jaisa Kaise Banayein
+
+Ye samajhna sabse zaroori hai: **Google "AI content" ko directly nahi marta — wo "insaan ka haath na hone" ke signals ko marta hai.** Isliye fix ye nahi ke AI use karna band karo; fix ye hai ke har page par asli insaan ki mehnat *visible* ho. Neeche har robotic signal ka human replacement hai.
+
+## Rule 0: Pehle Rukna Hai
+
+**4–6 hafte ZERO naye articles.** Ye sabse bara human signal hai — insaan 13 articles/din nahi likhta, aur rukne se Google ko dikhta hai ke burst khatam ho gaya. Recovery ke chakkar me aur content chaapna = pattern dobara confirm karna. Iske baad bhi max 2/hafta, alag-alag dino aur alag-alag time par (Tuesday 9pm, Saturday 11am — jaise real insaan ka schedule hota hai, robot ka cron job nahi).
+
+## Rule 1: Dates Me Sach Likho
+
+- March–May wali backdated `publishedTime` sab **real upload dates** par lao (git history me sach maujood hai). Ek data-file edit hai — `lib/core-articles-data.ts` etc.
+- `modifiedTime` sirf tab badlo jab tumne khud content me kuch **asli** badla ho — naya section, updated kist date, corrected number. Typo fix ya styling change par nahi.
+- Aur jab badlo, to article ke andar **visible changelog** rakho: *"Update 26 Aug: 23vi kist ki official date add ki. Pehli baar 24 June ko likha tha."* — ye insaan ki diary jaisa hai; robot chhup ke dates badalta hai, insaan bata ke badalta hai.
+
+## Rule 2: Har Article Me Apna Haath Dikhao
+
+AI kya NAHI kar sakta? Yehi cheezein sabse strong human proof hain:
+
+1. **Asli screenshots** — pmkisan.gov.in par khud status check karo, screen ka screenshot lo (personal info blur), article me daalo caption ke saath: *"Maine 29 Aug ko apne mobile se check kiya — ye screen aayi thi."* Har status/eKYC guide me kam se kam 2–3 asli screenshots.
+2. **Apne phone ki photos** — CSC center ki, kisan card ki, bank passbook entry ki (blur karke). Stock images aur generic hero images hatao.
+3. **Real cases likho** — *"Mere chacha ka payment NPCI mapping me 3 hafte atka raha. Humne bank jaakar Aadhaar seeding karwayi, agli kist aa gayi."* Specific, verifiable, imperfect detail — yehi insaan ki pehchan hai.
+4. **"Last verified" note** — har guide ke top par: *"Maine ye process aakhri baar 29 Aug 2026 ko portal par khud check ki thi."* Lekin ye SACH hona chahiye — jhooth likha to wahi date-fabrication problem wapas.
+5. **2-minute screen recording** — phone se status check karte hue YouTube video, article me embed. Face/voice zaroori nahi, sirf asli haath chalta hua dikhna kaafi hai. Ye ek cheez AI sites kabhi nahi kar sakti.
+
+## Rule 3: Robot Ki Awaaz Todo
+
+Abhi ke articles me AI ke tell-tale signs bache hain. Har article edit karte waqt:
+
+| Robotic pattern | Human replacement |
 |---|---|
-| 15 Aug | 3 |
-| 16 Aug | 4 |
-| 17 Aug | 3 |
-| **18 Aug** | **13 (ek hi din, subah 7 baje se raat tak)** |
+| Har article same skeleton (intro → recap → table → FAQ → related) | Kisi article me FAQ hi na ho. Kisi me sirf ek lambi kahani ho. Kisi me table upar ho. Insaan ka har article alag shape ka hota hai |
+| Rhetorical filler headings (*"Sabse Pehle Woh Jawab, Jiske Liye Aap Aaye Hain"*) | Seedha heading: *"Status kaise check karein"*. Jo user Google me type karta hai, wahi heading |
+| Har section poori tarah "complete" — har angle covered | Kuch skip karo. Jahan tumhe zyada pata hai wahan deep jao, jahan nahi pata wahan honestly likho *"iska mujhe pakka nahi pata, portal par confirm karein"* |
+| "official" 44 baar, "pmkisan.gov.in" 24 baar per 4 articles | Ek baar link karo, phir "portal" ya "wahan" kaho — jaise baat-cheet me kehte ho |
+| Em-dashes har jagah (abhi bhi ~764) | Aadhe hatao. Chhote sentences. Kabhi adhoora sentence bhi. Theek hai. |
+| Perfect Hinglish grammar har jagah | Insaan kabhi "ki" ki jagah "ke" likh deta hai. Kabhi English word beech me aa jata hai. Ye theek hai — over-polish mat karo |
+| Ek jaisa tone 107 articles me | Kist wale article me urgency, loan wale me caution, scam wale me gussa. Mood topic ke saath badalna chahiye |
 
-Total content 51 → **107 articles** ho gaya, zyada tar Hindi (`hindi-rajya-yojana`, `hindi-yojana-2026`, `yojana-2026`) sections me. Ye **scaled content abuse** ka textbook pattern hai — spam update ke aas paas hi. Agar hit 18 Aug ke baad aayi/gehri hui, to ye burst directly responsible hai.
+## Rule 4: Content Kaato — Aadha Site Delete Karna Theek Hai
 
-**Fix:** Foran band. Agle 4–6 hafte **zero naye articles**. Uske baad max 2/hafta, alag dino par.
+107 articles me se zyada tar ne kabhi ek click nahi liya. GSC page-data se audit karo (agla step, neeche):
 
-### 3. ⚠️ Mass Date Refresh Jaari Hai
+- **Jo pages impressions late the (Aug spike me)** → ye tumhare asli assets hain. Inhe Rule 2–3 se rewrite karo. Roughly 15–25 pages honge.
+- **15–18 Aug ke 22 articles** → inme se jo pure template hain, **delete + 301** nearest relevant page par. Inhi ne site ko dubaya hai.
+- **Hindi duplicate copies jo kuch naya nahi kehti** → merge ya delete. hreflang lagana kaafi nahi agar dono versions thin hain.
+- Target: **107 → ~45–55 articles.** Kam pages jahan har page par insaan ka haath dikhe > 107 template pages. Spam recovery ka proven pattern yehi hai.
 
-Live sitemap me **132 me se ~100+ URLs ki lastmod August 2026** ki hai (19 URLs sirf 21 Aug ki). `modifiedTime` registry me bhi August me 60+ entries. Itne articles ka genuinely har hafte substantively update hona possible nahi — Google ke liye ye **stale date abuse** hai.
+## Rule 5: Author Ko Asli Banao
 
-**Fix:** `modifiedTime` sirf real content change par haath se update karo. Build/script se auto-bump band karo.
+- `/about` par asli kahani already achhi hai (personal PM Kisan problem se start hui) — ab usme **asli photo, location (state/district), aur ye process** likho ke verify kaise karte ho.
+- LinkedIn URL agar asli profile nahi hai to schema ke `sameAs` se **hata do** — fake social link negative signal hai. Asli hai to profile par site ka link back karo.
+- Article ke end me kabhi-kabhi ek personal line: *"Is hafte 3 logon ne email karke poocha ke..."* — sirf tab jab sach ho.
 
-### 4. ⚠️ AI-Generated Content Ke Structural Signals
+## Rule 6: Technical Cleanup
 
-- 18 Aug ko 13 articles minutes ke gap par — insaan ye pace nahi likh sakta.
-- Ek hi author ("Manish Kumar") 107 articles par, koi real photo-proof/credentials nahi.
-- Sirf **2 articles me Sources section** (30 core components me se) — baaki me koi citation nahi.
-- 764 em-dashes abhi bhi components me (pehle 6,386 the — kaafi kam hue, theek direction).
-- Parallel Hinglish + Hindi copies same topics par (hreflang ab added hai — good).
+1. **Vercel Firewall → Googlebot verify** (403 issue). GSC URL Inspection Live Test se confirm.
+2. **GSC → Manual Actions** report check karo. Agar manual action hai to upar ke sab fixes ke BAAD reconsideration request. Agar nahi (sirf algorithmic), to koi request nahi hoti — agla spam/core update rollout hi recovery lata hai.
+3. Delete kiye articles ke **301 redirects** `next.config.js` me.
+4. Sitemap se deleted URLs foran nikal do; IndexNow script se sirf genuinely changed URLs bhejo.
 
-Google "AI content" ko nahi, **"scaled + no first-hand experience"** ko marta hai. 107 template articles, zero screenshots, zero real-world proof = wohi category.
+## Timeline Ki Sachchai
 
-### 5. Bot-Blocking Check Karo (Technical)
-
-Article pages non-browser user-agents ko **HTTP 403** de rahe hain (homepage 200 hai). Agar ye Vercel firewall/challenge Googlebot ko bhi block kar raha hai to indexing khud tut jayegi. **Vercel dashboard → Firewall me verify karo ke Googlebot allowed hai**, aur GSC URL Inspection se live-test karo.
-
----
-
-## Kya Already Fix Ho Chuka Hai ✅
-
-- Static author bio (AI-rotation band) — `lib/author-bios.ts`
-- Sitemap `changefreq: daily` → `weekly`
-- Speculative `PmKisan25viKist2027` par `noindex`
-- hreflang pairs Hindi ↔ Hinglish (`lib/hindi-hreflang.ts`)
-- Em-dash overuse 6,386 → ~764
-- Repeated title patterns ("Ka Sach") rewrite
-
-Ye sab sahi direction me hai — lekin points 1–3 upar wale inse zyada bhari hain.
+- Fixes ke baad bhi traffic **2–6 mahine flat** rahega. Ye normal hai.
+- Recovery agle spam/core update rollout par aati hai, beech me nahi.
+- Is dauran sabse bari galti: ghabra kar aur articles chaapna. Sabse achha kaam: 10–15 best articles ko haath se, screenshots ke saath, dheere-dheere rebuild karna.
 
 ---
 
-## Part 2: Recovery Plan (Priority Order)
+## Priority Checklist
 
-### Week 1 — Bleeding Roko
-1. **Naye articles publish karna band** — 4–6 hafte complete freeze.
-2. **Backdated dates theek karo** — March–May 2026 wali `publishedTime` ko real upload dates par lao (git history se verify ho sakta hai). Ye ek data-file edit hai, template-level fix.
-3. **Auto date-bump band karo** — jo bhi mechanism `modifiedTime`/lastmod refresh kar raha hai.
-4. **Vercel firewall me Googlebot verify karo** + GSC URL Inspection live test.
-5. **GSC Manual Actions report dekho** — agar manual action hai to reconsideration ka rasta alag hai.
-
-### Week 2–6 — Content Audit (107 → ~50)
-6. GSC data se dekho kaunse pages ne kabhi clicks/impressions liye:
-   - **Impressions the** → rewrite: real screenshots, "last verified [date]" notes, sources section har article me.
-   - **Kabhi rank nahi hue + pure template** (khaaskar 15–18 Aug ke 22) → delete + 301 nearest relevant page par. Aadhi site kaat dena is halat me sahi hai.
-7. **Hindi duplicate sections consolidate karo** — hreflang hai, lekin 5 alag hindi-* registries me thin parallel copies hain; jo unique value nahi deti unhe merge/delete karo.
-
-### Month 2+ — Trust
-8. Real E-E-A-T: author page par asli photo/background, YouTube screen-recordings (status check karte hue), article-level changelogs.
-9. 2–3 quality articles/mahina, manually likhe hue, screenshots ke saath.
-10. **Sabar** — algorithmic recovery agle spam/core update rollout par aati hai, fixes ke 2–6 mahine baad. Beech me traffic flat rahega; aur content chaapna recovery ko reset kar deta hai.
+- [ ] Content freeze — 4–6 hafte zero naye articles
+- [ ] Backdated publishedTime → real dates (`lib/*-data.ts`)
+- [ ] Auto lastmod/modifiedTime bump band
+- [ ] Vercel firewall: Googlebot allowed? + GSC live test
+- [ ] GSC Manual Actions check
+- [ ] GSC page-level audit → keep/rewrite/delete list (107 → ~50)
+- [ ] 15–18 Aug ke template articles delete + 301
+- [ ] Top 15–25 articles rewrite: screenshots, real cases, changelog, varied structure
+- [ ] Author page: real photo, location, verification process; fake LinkedIn hatao
+- [ ] Em-dash aur filler-heading cleanup jaari
+- [ ] Aage: max 2 articles/hafta, haath se, irregular schedule par
 
 ---
 
-## GSC Connect (Pending)
-
-Search Console data ke bina exact hit-date aur page-level damage confirm nahi ho sakta. Letaido workspace me GSC connect card pending hai — approve hote hi:
-- Hit ki exact date vs 18-Aug burst ka correlation
-- Kaunse 107 me se pages ne kabhi traffic liya (audit ka basis)
-- Manual Actions + Index Coverage status
-
----
-
-*Sab evidence git history (`git log`), `lib/*-data.ts` registries, aur live sitemap.xml se — 29 Aug 2026. Koi number fabricate nahi.*
+*GSC daily data (June 8 – Aug 26, 2026) sc-domain:kisanstatus.com se; publish dates git history + registries se; sitemap live crawl se. 29 Aug 2026.*
