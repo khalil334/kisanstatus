@@ -214,19 +214,19 @@ Sab delete mat karo. Priority order:
 
 ## Priority Checklist (Quick Reference)
 
-- [ ] Publishing velocity: max 2–3/week, kabhi burst nahi
-- [ ] dateModified sirf real changes par; sitemap lastmod sync
-- [ ] Speculative kist-prediction articles delete/redirect/convert
-- [ ] Author schema: static bio, real ya no LinkedIn
-- [ ] /about par proper author page
-- [ ] 33 burst articles ka keep/merge/delete audit
-- [ ] hreflang ya consolidation for /articles/hi/
-- [ ] GSC Manual Actions check
-- [ ] Har article me unique value (screenshots, calculators, verified data)
-- [ ] Real screenshots + first-hand verification notes (AI → human)
-- [ ] Article structure vary karo — identical template todo
-- [ ] Keyword density aadhi karo (status/kisan/official/pmkisan.gov.in repeats)
-- [ ] Naye slugs: kebab-case, year-free
+- [ ] Publishing velocity: max 2–3/week, kabhi burst nahi (editorial habit — code se fix nahi hota)
+- [x] dateModified sirf real changes par; sitemap lastmod sync — sitemap ab real `modifiedTime` se lastmod nikalta hai, `changefreq: daily` → weekly/monthly, future dates clamp hoti hain
+- [x] Speculative kist-prediction articles — `PmKisan25viKist2027` ko `noindex` kar diya gaya hai (sitemap se bhi bahar); official announcement aane par content update karke wapas index karo
+- [x] Author schema: static bio — rotating bios/taglines/disclaimers hata kar ek static text har jagah; LinkedIn URL se tracking params clean
+- [x] /about par proper author page — maujood hai (author bio, photo, sameAs)
+- [ ] 33 burst articles ka keep/merge/delete audit (GSC impressions data chahiye — manual editorial call)
+- [x] hreflang for /articles/hi/ — 22 Hindi↔Hinglish pairs `hi-IN`/`hi-Latn` alternates ke saath linked; 7 Hindi articles (kcc-limit-kaise-badhaye, nayi-registration, npci-aadhaar-seeding, payment-stopped-by-state, recovery-notice, status-check-mobile-se, tractor-subsidy) ka koi Hinglish pair nahi hai — ye standalone hain, self-canonical + `hi-IN` alternate ke saath, duplicate nahi
+- [ ] GSC Manual Actions check (Search Console access chahiye — manual)
+- [ ] Har article me unique value (screenshots, calculators, verified data) — manual content work
+- [ ] Real screenshots + first-hand verification notes (AI → human) — manual content work
+- [ ] Article structure vary karo — identical template todo — manual content work
+- [ ] Keyword density aadhi karo (status/kisan/official/pmkisan.gov.in repeats) — per-article rewrite, manual
+- [ ] Naye slugs: kebab-case, year-free (aage ke articles ke liye rule — purane URLs bina 301 ke mat badlo)
 - [ ] 2–6 mahine patience, no new content bursts
 
 ---
