@@ -119,8 +119,8 @@ Abhi ke articles me AI ke tell-tale signs bache hain. Har article edit karte waq
 ## Priority Checklist
 
 - [ ] Content freeze — 4–6 hafte zero naye articles
-- [ ] Backdated publishedTime → real dates (`lib/*-data.ts`)
-- [ ] Auto lastmod/modifiedTime bump band
+- [x] Backdated publishedTime → real dates (`lib/*-data.ts`) — *fixed (commit a3fb8b88): pre-launch dates replaced with git first-commit dates*
+- [x] Auto lastmod/modifiedTime bump band — *fixed: `update-dates` step build pipeline se hata diya (`package.json`); script ab sirf manual run ke liye hai, har build par blanket modifiedTime bump nahi hoga*
 - [ ] Vercel firewall: Googlebot allowed? + GSC live test
 - [ ] GSC Manual Actions check
 - [ ] GSC page-level audit → keep/rewrite/delete list (107 → ~50)
