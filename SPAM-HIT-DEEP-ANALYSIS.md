@@ -82,7 +82,7 @@ Abhi ke articles me AI ke tell-tale signs bache hain. Har article edit karte waq
 | Rhetorical filler headings (*"Sabse Pehle Woh Jawab, Jiske Liye Aap Aaye Hain"*) | Seedha heading: *"Status kaise check karein"*. Jo user Google me type karta hai, wahi heading |
 | Har section poori tarah "complete" — har angle covered | Kuch skip karo. Jahan tumhe zyada pata hai wahan deep jao, jahan nahi pata wahan honestly likho *"iska mujhe pakka nahi pata, portal par confirm karein"* |
 | "official" 44 baar, "pmkisan.gov.in" 24 baar per 4 articles | Ek baar link karo, phir "portal" ya "wahan" kaho — jaise baat-cheet me kehte ho |
-| Em-dashes har jagah (abhi bhi ~764) | Aadhe hatao. Chhote sentences. Kabhi adhoora sentence bhi. Theek hai. |
+| Em-dashes har jagah (repo me 1,319 — components 1,058, app 244, lib 17; 30 Aug ko counted) | Aadhe hatao. Chhote sentences. Kabhi adhoora sentence bhi. Theek hai. |
 | Perfect Hinglish grammar har jagah | Insaan kabhi "ki" ki jagah "ke" likh deta hai. Kabhi English word beech me aa jata hai. Ye theek hai — over-polish mat karo |
 | Ek jaisa tone 107 articles me | Kist wale article me urgency, loan wale me caution, scam wale me gussa. Mood topic ke saath badalna chahiye |
 
@@ -121,12 +121,15 @@ Abhi ke articles me AI ke tell-tale signs bache hain. Har article edit karte waq
 - [ ] Content freeze — 4–6 hafte zero naye articles
 - [x] Backdated publishedTime → real dates (`lib/*-data.ts`) — *fixed (commit a3fb8b88): pre-launch dates replaced with git first-commit dates*
 - [x] Auto lastmod/modifiedTime bump band — *fixed: `update-dates` step build pipeline se hata diya (`package.json`); script ab sirf manual run ke liye hai, har build par blanket modifiedTime bump nahi hoga*
-- [ ] Vercel firewall: Googlebot allowed? + GSC live test
-- [ ] GSC Manual Actions check
-- [ ] GSC page-level audit → keep/rewrite/delete list (107 → ~50)
-- [ ] 15–18 Aug ke template articles delete + 301
+- [ ] Vercel firewall: Googlebot allowed? + GSC live test *(sirf Vercel dashboard se hoga, code se nahi)*
+- [ ] GSC Manual Actions check *(sirf Search Console se hoga)*
+- [x] GSC page-level audit → keep/rewrite/delete list (107 → ~50) — *audit neeche maujood hai (Page-Level Audit section)*
+- [ ] 15–18 Aug ke template articles delete + 301 — **abhi tak live hain.** Registry me confirmed: `lib/yojana-2026-data.ts` (6), `lib/hindi-yojana-2026-data.ts` (6), `lib/hindi-rajya-yojana-data.ts` (7 Hindi copies), `lib/hindi-kisanguides-data.ts` (1), `lib/core-articles-data.ts` (2)
+- [x] NanoDap duplicate merge + 301 — *already done: `next.config.js` me `nano-dap-500ml-price-in-india-2026` → `NanoDap500mlPriceInIndia2026` (permanent), aur registry me duplicate entry nahi hai*
+- [x] FTO page: full-form ka seedha jawab upar + title/meta rewrite — *fixed (Part 3)*
 - [ ] Top 15–25 articles rewrite: screenshots, real cases, changelog, varied structure
-- [ ] Author page: real photo, location, verification process; fake LinkedIn hatao
+- [ ] Author page: real photo, location, verification process
+- [ ] **LinkedIn:** profile asli hai (confirmed 30 Aug), isliye schema `sameAs` me rehne diya. Baaki kaam: us LinkedIn profile par kisanstatus.com ka link back add karna — do-tarfa link hi E-E-A-T signal banata hai
 - [ ] Em-dash aur filler-heading cleanup jaari
 - [ ] Aage: max 2 articles/hafta, haath se, irregular schedule par
 
@@ -217,6 +220,28 @@ Result: ~107 → **~55–60 pages**, har bacha hua page insaan ke haath ka.
 
 ---
 
+# Fix Log (kya-kya ho chuka)
+
+Har entry code me verify ki gayi hai, sirf plan nahi.
+
+| Date | Part | Kya kiya | Files |
+|---|---|---|---|
+| 29 Aug | 1 | Backdated `publishedTime` (Mar–May) → git ki asli first-commit dates; modified dates clamp | `lib/*-data.ts` |
+| 29 Aug | 2 | Auto date-bump band — `update-dates` build pipeline se hataya, ab sirf manual | `package.json` |
+| 30 Aug | 3 | FTO page: full-form ka seedha jawab hero ke upar; `seoTitle` + `desc` rewrite (query "fto ka full form", 118 impr / 0 clicks); visible changelog block add | `lib/core-articles-data.ts`, `components/articles/pm-kisan-fto-generated-ka-matlab-kya-hai.tsx` |
+
+**Verify kiya (pehle se theek tha, dobara kaam ki zarurat nahi):**
+- NanoDap duplicate ka 301 `next.config.js` me maujood hai; registry me duplicate entry nahi
+- LinkedIn URL asli profile hai (30 Aug confirmed) — schema `sameAs` se hatane ki zarurat nahi
+
+**Aage ka kaam, priority order me:**
+1. 21 burst articles delete + 301 (sabse bada asar, sabse bada kaam)
+2. Section C ke 6 zero-click pages ka title/meta rewrite
+3. Em-dash + filler-heading cleanup (script-driven pass)
+4. Publishing guardrail: build-time check jo hafte me 2 se zyada naye article dates par fail ho
+
+---
+
 # Query-Level Data (GSC Top Queries — Jun 1 – Aug 28)
 
 1,000 queries me se jo clicks laayi, unka pattern bilkul saaf hai:
@@ -236,7 +261,7 @@ Result: ~107 → **~55–60 pages**, har bacha hua page insaan ke haath ka.
 
 ## Missed Opportunities (rank tha, click nahi)
 
-- **"nano dap price 500 ml"** — 612 impressions, sirf 2 clicks (pos 10.7). Duplicate articles ne isse kharab kiya (upar dekho). Merge + ek strong article = ye query winner ban sakti hai.
-- **"fto ka full form"** — 118 impressions, 0 clicks (pos 10.7). FTO article me seedha ek-line answer upar daalo: "FTO ka full form: Fund Transfer Order..."
+- **"nano dap price 500 ml"** — 612 impressions, sirf 2 clicks (pos 10.7). Duplicate articles ne isse kharab kiya (upar dekho). ✅ 301 already lagaya hua hai (`next.config.js`), ab ek hi article live hai — agla step us bache article ko strong banana.
+- **"fto ka full form"** — 118 impressions, 0 clicks (pos 10.7). ✅ **Fixed (30 Aug):** article ke sabse upar seedha jawab box daala — "FTO ka full form: Fund Transfer Order". Sath hi `seoTitle` "FTO Ka Full Form Aur Paisa Kab Aayega" kiya aur meta description me pehla vaakya hi jawab bana diya (3,492 impressions, CTR 0.8% wala problem).
 - "25 kist kab aayegi" pos 1.75 par tha — Hindi 25vi-kist page site ka strongest asset hai. Isse "official record only" style me carefully rakho, speculation hatao.
 

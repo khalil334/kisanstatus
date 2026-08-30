@@ -6,7 +6,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-06-23T02:40:59+05:30';
-const MODIFIED = '2026-08-18T07:02:28+05:30';
+const MODIFIED = '2026-08-30T09:15:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist Status' },
@@ -57,6 +57,15 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
       </div>
 
       <div className="container-site max-w-3xl py-8">
+
+        <div className="p-5 bg-[var(--color-bg-alt)] border-l-[6px] border-[var(--color-primary)] rounded-xl">
+          <p className="text-base leading-relaxed">
+            <strong>FTO ka full form: Fund Transfer Order</strong> (फंड ट्रांसफर ऑर्डर). Sarkar ka bank ko diya gaya aadesh, ki kis kisan ke khate me kitna paisa dalna hai.
+          </p>
+          <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mt-2">
+            Status me &ldquo;FTO is Generated&rdquo; dikhe to aapki kist ka order ban chuka hai. Aage ka kaam bank ka hai. Poora matlab aur der hone par kya karna hai, neeche.
+          </p>
+        </div>
 
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
@@ -514,6 +523,13 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           primaryCta={{ href: '/calculator/installment-tracker', label: 'Tracker Kholein →' }}
           secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calculator' }}
         />
+
+        <div className="mt-8 p-4 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl">
+          <p className="text-xs font-bold text-[var(--color-text)] mb-1">Is page me kya badla</p>
+          <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">
+            <strong>30 Aug 2026:</strong> Full form ka jawab sabse upar le aaya, kyunki log Google se yahi ek line dhoondte hue aate the aur unhe neeche tak scroll karna padta tha. Baaki content wahi hai. Pehli baar 23 June 2026 ko likha tha.
+          </p>
+        </div>
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} bioKey="pm-kisan-fto-generated-ka-matlab-kya-hai" />
