@@ -90,6 +90,16 @@ export async function generateMetadata({
       description: article.desc,
       images: [ogImage],
     },
+    robots: {
+      index: !article.noindex,
+      follow: true,
+      googleBot: {
+        index: !article.noindex,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
   };
 }
 

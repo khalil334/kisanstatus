@@ -190,6 +190,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: article.description,
       images: [ogImage],
     },
+    robots: {
+      index: !article.noindex,
+      follow: true,
+      googleBot: {
+        index: !article.noindex,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
   };
 }
 

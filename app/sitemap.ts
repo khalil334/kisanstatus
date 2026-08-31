@@ -51,7 +51,7 @@ const ALL_ARTICLES = [
     modifiedTime: a.modified,
     ogImage: a.ogImage,
     path: `/yojana/${a.slug}`,
-    noindex: false,
+    noindex: a.noindex === true,
   })),
   ...HINDI_ARTICLES.map((a) => ({
     slug: a.slug,
@@ -62,7 +62,7 @@ const ALL_ARTICLES = [
     modifiedTime: a.modifiedTime,
     ogImage: a.ogImage as string | undefined,
     path: `/articles/${a.slug}`,
-    noindex: false,
+    noindex: a.noindex === true,
   })),
 ];
 

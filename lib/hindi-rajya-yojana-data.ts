@@ -49,6 +49,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     author: AUTHOR_NAME,
     component: 'RajasthanKisanSammanNidhiHindi',
     ogImage: '/images/articles/rajya-yojna/rajasthan-kisan-samman-nidhi-9000/hero.webp',
+    noindex: true,
   },
   {
     slug: 'hi/annadata-sukhibhava-status',
@@ -71,6 +72,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     author: AUTHOR_NAME,
     component: 'AnnadataSukhibhavaStatusHindi',
     ogImage: '/images/articles/rajya-yojna/annadata-sukhibhava-status-check-2026/hero.webp',
+    noindex: true,
   },
   {
     slug: 'hi/rythu-bharosa-status',
@@ -93,6 +95,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     author: AUTHOR_NAME,
     component: 'RythuBharosaStatusHindi',
     ogImage: '/images/articles/rajya-yojna/rythu-bharosa-status-check-2026/hero.webp',
+    noindex: true,
   },
   {
     slug: 'hi/odisha-cm-kisan-status',
@@ -115,6 +118,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     author: AUTHOR_NAME,
     component: 'OdishaCmKisanStatusHindi',
     ogImage: '/images/articles/rajya-yojna/odisha-cm-kisan-status-check-2026/hero.webp',
+    noindex: true,
   },
   {
     slug: 'hi/pati-patni-pm-kisan-rule',
@@ -136,6 +140,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     author: AUTHOR_NAME,
     component: 'PatiPatniPmKisanRuleHindi',
     ogImage: '/images/articles/rajya-yojna/pm-kisan-pati-patni-dono-ko-milega/hero.webp',
+    noindex: true,
   },
   {
     slug: 'hi/state-kisan-yojana-list',
@@ -157,6 +162,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     author: AUTHOR_NAME,
     component: 'StateKisanYojanaListHindi',
     ogImage: '/images/articles/rajya-yojna/state-kisan-yojana-list-all-states-2026/hero.webp',
+    noindex: true,
   },
   {
     slug: 'hi/parihara-payment-status',
@@ -178,5 +184,6 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     author: AUTHOR_NAME,
     component: 'PariharaPaymentStatusHindi',
     ogImage: '/images/articles/rajya-yojna/parihara-payment-status-check-2026/hero.webp',
+    noindex: true,
   },
 ] as const;

@@ -16,6 +16,8 @@ export interface HindiArticle {
   author: string;
   component: string;
   ogImage: string;
+  /** 15-18 Aug 2026 burst article or thin Hindi duplicate: de-indexed pending human rewrite */
+  noindex?: boolean;
 }
 
 export const HINDI_CORE_ARTICLES: readonly HindiArticle[] = HINDI_YOJANA_ARTICLES;

@@ -12,6 +12,8 @@ export type Yojana2026ArticleMeta = {
   modified: string;
   readTime: string;
   ogImage?: string;
+  /** 18-Aug-2026 burst article: de-indexed pending human rewrite (see docs/spam-hit/04-page-level-audit.md) */
+  noindex?: boolean;
   readonly relatedPaths: readonly string[];
 };
 
@@ -38,6 +40,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     published: '2026-08-18T07:33:52+05:30',
     modified: '2026-08-20T19:02:04+05:30',
     readTime: '12 min read',
+    noindex: true,
     relatedPaths: ['/articles/PmfbyCropInsurance2026', '/calculator/pmfby-premium'],
   },
   {
@@ -62,6 +65,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     published: '2026-08-18T15:43:47+05:30',
     modified: '2026-08-21T22:35:18+05:30',
     readTime: '13 min read',
+    noindex: true,
     relatedPaths: [
       '/rajya-yojana/state-kisan-yojana-list-all-states-2026',
       '/articles/KisanCreditCardOnlineApply2026',
@@ -89,6 +93,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     published: '2026-08-18T18:47:43+05:30',
     modified: '2026-08-19T13:49:36+05:30',
     readTime: '11 min read',
+    noindex: true,
     relatedPaths: [
       '/articles/PmKisanMasterGuide2026',
       '/articles/PmfbyCropInsurance2026',
@@ -116,6 +121,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     published: '2026-08-18T10:23:28+05:30',
     modified: '2026-08-21T22:59:24+05:30',
     readTime: '10 min read',
+    noindex: true,
     relatedPaths: [
       '/articles/PmKisanPaymentFailedFix2026',
       '/articles/PmKisanEkycOnline2026',
@@ -143,6 +149,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     published: '2026-08-18T08:42:59+05:30',
     modified: '2026-08-19T14:29:34+05:30',
     readTime: '11 min read',
+    noindex: true,
     relatedPaths: [
       '/articles/bakri-palan-yojana-nlm-subsidy',
       '/articles/murgi-palan-loan-nlm-subsidy',
@@ -171,6 +178,7 @@ export const YOJANA_2026_ARTICLES: readonly Yojana2026ArticleMeta[] = [
     published: '2026-08-18T12:39:21+05:30',
     modified: '2026-08-21T08:07:18+05:30',
     readTime: '12 min read',
+    noindex: true,
     relatedPaths: [
       '/articles/KisanCreditCardOnlineApply2026',
       '/articles/dairy-farm-loan-without-collateral',

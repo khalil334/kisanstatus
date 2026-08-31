@@ -36,5 +36,6 @@ export const HINDI_KISANGUIDES_ARTICLES: readonly HindiArticle[] = [
     author: AUTHOR_NAME,
     component: 'NamoDroneDidiYojanaHindi',
     ogImage: '/images/articles/namo-drone-didi-yojana-shg-selection/drone-didi-spray-hero.webp',
+    noindex: true,
   },
 ] as const;

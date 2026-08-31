@@ -23,6 +23,7 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
     author: AUTHOR_NAME,
     component: 'FasalBimaClaimStatusHindi',
     ogImage: '/images/articles/pmfby-crop-insurance-2026/hero-image.webp',
+    noindex: true,
   },
   {
     slug: 'hi/kisan-karj-mafi-list',
@@ -45,6 +46,7 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
     author: AUTHOR_NAME,
     component: 'KisanKarjMafiAllStatesHindi',
     ogImage: '/images/articles/hindi-yojna/karj-mafi-list/karj-mafi-hero.webp',
+    noindex: true,
   },
   {
     slug: 'hi/pm-kisan-khad-yojana-sach',
@@ -65,6 +67,7 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
     author: AUTHOR_NAME,
     component: 'PmKisanKhadYojanaSachHindi',
     ogImage: '/og-image.webp',
+    noindex: true,
   },
   {
     slug: 'hi/pm-kisan-helpline-155261',
@@ -85,6 +88,7 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
     author: AUTHOR_NAME,
     component: 'PmKisanHelpline155261Hindi',
     ogImage: '/og-image.webp',
+    noindex: true,
   },
   {
     slug: 'hi/mgnrega-pashu-shed-yojana',
@@ -105,6 +109,7 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
     author: AUTHOR_NAME,
     component: 'MgnregaPashuShedYojanaHindi',
     ogImage: '/og-image.webp',
+    noindex: true,
   },
   {
     slug: 'hi/pashu-kisan-credit-card',
@@ -125,5 +130,6 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
     author: AUTHOR_NAME,
     component: 'PashuKisanCreditCardHindi',
     ogImage: '/og-image.webp',
+    noindex: true,
   },
 ];
