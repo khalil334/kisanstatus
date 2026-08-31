@@ -20,8 +20,9 @@
 - [ ] **LinkedIn:** profile asli hai (confirmed 30 Aug), isliye schema `sameAs` me rehne diya. Baaki kaam: us LinkedIn profile par kisanstatus.com ka link back add karna — do-tarfa link hi E-E-A-T signal banata hai
 - [x] Section C zero-click title/meta rewrites — *fixed (commit 07d45fb4): gehu-ka-bhav (MSP number title me), jansamarth (scheme count), PmKisan24viKist2026 (jawab title me, sawal nahi), hi/nayi-registration (Farmer ID prerequisite lead). Bache 2 — pm-kisan-complete-guide aur bihar-kisan-registration — Top-15 deep-rewrite pass ke saath honge*
 - [x] hreflang guard — *fixed (commit 07d45fb4): `lib/hindi-hreflang.ts` me DEINDEXED_PATHS — noindex page kabhi kisi indexed page ka hreflang alternate na bane*
-- [ ] Em-dash aur filler-heading cleanup jaari
-- [ ] Aage: max 2 articles/hafta, haath se, irregular schedule par
+- [x] Em-dash aur filler-heading cleanup — *fixed (commit 2ee89c25): 565 body em-dashes hataye 152 files me (aadhe rakhe — human mix), titles/meta untouched; 24vi-kist ka filler heading query-shaped kiya*
+- [x] Publishing guardrail — *fixed: `scripts/check-publish-pace.js` — build FAIL agar baseline (31 Aug) ke baad kisi 7-din window me 2 se zyada naye publishedTime; noindex pages exempt; deliberate exception `ALLOW_PUBLISH_BURST=1`. Build pipeline me `check:pace` added*
+- [ ] Aage: max 2 articles/hafta, haath se, irregular schedule par — *guardrail ab ise enforce karta hai*
 
 ---
 

@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run check:titles && npm run check:content && next build",
+    "build": "npm run check:titles && npm run check:content && npm run check:pace && next build",
     "start": "next start",
     "lint": "eslint .",
     "update-dates": "node scripts/update-article-dates.js",
     "check:titles": "node scripts/check-title-h1.js",
     "check:content": "node scripts/check-content-length.js",
+    "check:pace": "node scripts/check-publish-pace.js",
     "indexnow:build": "node scripts/build-indexnow-payload.js",
     "indexnow:submit": "node scripts/build-indexnow-payload.js && node scripts/submit-indexnow.js",
     "analyze": "ANALYZE=true next build"

@@ -132,8 +132,9 @@ Abhi ke articles me AI ke tell-tale signs bache hain. Har article edit karte waq
 - [ ] **LinkedIn:** profile asli hai (confirmed 30 Aug), isliye schema `sameAs` me rehne diya. Baaki kaam: us LinkedIn profile par kisanstatus.com ka link back add karna — do-tarfa link hi E-E-A-T signal banata hai
 - [x] Section C zero-click title/meta rewrites — *fixed (commit 07d45fb4): gehu-ka-bhav (MSP number title me), jansamarth (scheme count), PmKisan24viKist2026 (jawab title me, sawal nahi), hi/nayi-registration (Farmer ID prerequisite lead). Bache 2 — pm-kisan-complete-guide aur bihar-kisan-registration — Top-15 deep-rewrite pass ke saath honge*
 - [x] hreflang guard — *fixed (commit 07d45fb4): `lib/hindi-hreflang.ts` me DEINDEXED_PATHS — noindex page kabhi kisi indexed page ka hreflang alternate na bane*
-- [ ] Em-dash aur filler-heading cleanup jaari
-- [ ] Aage: max 2 articles/hafta, haath se, irregular schedule par
+- [x] Em-dash aur filler-heading cleanup — *fixed (commit 2ee89c25): 565 body em-dashes hataye 152 files me (aadhe rakhe — human mix), titles/meta untouched; 24vi-kist ka filler heading query-shaped kiya*
+- [x] Publishing guardrail — *fixed: `scripts/check-publish-pace.js` — build FAIL agar baseline (31 Aug) ke baad kisi 7-din window me 2 se zyada naye publishedTime; noindex pages exempt; deliberate exception `ALLOW_PUBLISH_BURST=1`. Build pipeline me `check:pace` added*
+- [ ] Aage: max 2 articles/hafta, haath se, irregular schedule par — *guardrail ab ise enforce karta hai*
 
 ---
 
@@ -233,6 +234,8 @@ Har entry code me verify ki gayi hai, sirf plan nahi.
 | 30 Aug | 3 | FTO page: full-form ka seedha jawab hero ke upar; `seoTitle` + `desc` rewrite (query "fto ka full form", 118 impr / 0 clicks); visible changelog block add | `lib/core-articles-data.ts`, `components/articles/pm-kisan-fto-generated-ka-matlab-kya-hai.tsx` |
 | 31 Aug | 4 | 18-Aug burst + thin Hindi duplicates **index se bahar** (commit 72a7f09e): 19 pages par `noindex: true` + sitemap se exclude. Delete + 301 ki jagah noindex isliye: dates asli hain, pages delete karke topic naye slug par laana wahi date-games repeat karta; noindex reversible hai aur user ke liye page zinda rehta hai. Robots meta `app/yojana/[slug]` + `app/articles/hi/[slug]` me flag honour karta hai | `lib/yojana-2026-data.ts`, `lib/hindi-yojana-2026-data.ts`, `lib/hindi-rajya-yojana-data.ts`, `lib/hindi-kisanguides-data.ts`, `app/sitemap.ts`, `app/yojana/[slug]/page.tsx`, `app/articles/hi/[slug]/page.tsx` |
 | 31 Aug | 5 | FTO duplicate fold (noindex + 301 original par jo 28 clicks leta tha); hreflang guard (`DEINDEXED_PATHS` — noindex page kabhi alternate na bane, `hi/kisan-karj-mafi-list` wapas indexed kyunki proven winner ka 301 usme aata hai); Section C ke 4 zero-click titles rewrite (gehu-ka-bhav, jansamarth, 24vi-kist, hi/nayi-registration). Verified: `tsc --noEmit` clean, `check:titles` 95/95, `check:content` pass | `lib/core-articles-data.ts`, `lib/hindi-hreflang.ts`, `lib/hindi-yojana-data.ts`, `lib/loan-mandi-pashupalan-data.ts`, `next.config.js` (commit 07d45fb4) |
+| 31 Aug | 6 | Em-dash cleanup: 565 body em-dashes removed across 152 files (alternating pass — aadhe rakhe, human mix); titles/meta untouched; 24vi-kist filler heading → query-shaped | components/, app/, lib/ (commit 2ee89c25) |
+| 31 Aug | 7 | Publishing-pace guardrail: `check:pace` build step — baseline 31 Aug ke baad >2 naye publishedTime kisi 7-din window me = build FAIL; noindex exempt; `ALLOW_PUBLISH_BURST=1` override. Negative-tested (3 fake future articles → fail) | `scripts/check-publish-pace.js`, `package.json` |
 
 **Verify kiya (pehle se theek tha, dobara kaam ki zarurat nahi):**
 - NanoDap duplicate ka 301 `next.config.js` me maujood hai; registry me duplicate entry nahi
@@ -241,9 +244,10 @@ Har entry code me verify ki gayi hai, sirf plan nahi.
 **Aage ka kaam, priority order me:**
 1. ~~21 burst articles delete + 301~~ ✅ done as noindex + sitemap removal (Part 4, upar) — delete nahi kiya, reasoning Fix Log me
 2. ~~Section C ke 6 zero-click pages ka title/meta rewrite~~ ✅ 4/6 done (Part 5); bache 2 (pm-kisan-complete-guide, bihar-kisan-registration) Top-15 deep-rewrite ke saath
-3. Em-dash + filler-heading cleanup (script-driven pass) — components me ~1,040 em-dashes
-4. Publishing guardrail: build-time check jo hafte me 2 se zyada naye article dates par fail ho
+3. ~~Em-dash + filler-heading cleanup~~ ✅ done (commit 2ee89c25) — 565/1,100 hataye, human mix rakha
+4. ~~Publishing guardrail~~ ✅ done — `check:pace` build step (details checklist me)
 5. Top 15 winners ka deep rewrite (screenshots, real cases, changelog) — sirf haath se, code se nahi hota
+6. Vercel firewall Googlebot check + GSC Manual Actions check — sirf dashboards se hota hai
 
 ---
 
