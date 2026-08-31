@@ -99,7 +99,7 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            Jaldi mein hain toh itna samajh lijiye: umar 18-40 saal, land record mein naam ke saath 2 hectare tak cultivable zameen, aur neeche di gayi excluded categories mein se koi lagoo na ho — bas yehi Pradhan Mantri Kisan Maandhan Yojana (PM-KMY) ki asli shartein hain. PM Kisan Samman Nidhi mein hona zaroori nahi hai; wo sirf contribution katwane ka ek aasan raasta deta hai. Neeche har shart ka practical matlab hai, aur Common Service Centre (CSC) par log kahan atakte hain.
+            Jaldi mein hain toh itna samajh lijiye: umar 18-40 saal, land record mein naam ke saath 2 hectare tak cultivable zameen, aur neeche di gayi excluded categories mein se koi lagoo na ho, bas yehi Pradhan Mantri Kisan Maandhan Yojana (PM-KMY) ki asli shartein hain. PM Kisan Samman Nidhi mein hona zaroori nahi hai; wo sirf contribution katwane ka ek aasan raasta deta hai. Neeche har shart ka practical matlab hai, aur Common Service Centre (CSC) par log kahan atakte hain.
           </p>
         </div>
 
@@ -214,7 +214,7 @@ export default function PmKisanMaandhanEligibilityDocuments({ article }: { artic
               <div className="flex items-start gap-3">
                 <div>
                   <p className="font-black text-sm text-[var(--color-text)] mb-1">Aadhaar Card, Original Aur Ek Copy</p>
-                  <p className="text-xs text-[var(--color-text-muted)]">Aadhaar hi wo unique ID hai jisse system aapki PM Kisan entry, bank account aur land record teeno ko jodta hai — isliye copy dhundhli ya purani na ho, warna operator scan karke upload nahi kar payega aur naya print nikalwana padega.</p>
+                  <p className="text-xs text-[var(--color-text-muted)]">Aadhaar hi wo unique ID hai jisse system aapki PM Kisan entry, bank account aur land record teeno ko jodta hai, isliye copy dhundhli ya purani na ho, warna operator scan karke upload nahi kar payega aur naya print nikalwana padega.</p>
                 </div>
               </div>
             </div>

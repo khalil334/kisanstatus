@@ -385,7 +385,7 @@ export default function PmKisanRejectedStatusReApplyGuide() {
         </section>
 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
-          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Reject Hua Hai, Band Nahi — Order Ka Dhyan Rakhein</h3>
+          <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Reject Hua Hai, Band Nahi. Order Ka Dhyan Rakhein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
             Sabse common galti: log pehle dobara apply kar dete hain aur reason baad mein dekhte hain. Toh wahi wajah dobara reject karwa deti hai. Sahi order yeh hai:
           </p>

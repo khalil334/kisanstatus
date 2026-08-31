@@ -111,7 +111,7 @@ export default function KrishakBandhuChecker() {
     >
       <header className="px-5 py-4 bg-green-50 dark:bg-green-900/20 border-b border-gray-200 dark:border-gray-700">
         <h2 className="text-base md:text-lg font-black text-gray-900 dark:text-gray-100 m-0">
-          Krishak Bandhu Checker — kitna banta hai aur kya kagaz lagega
+          Krishak Bandhu Checker, kitna banta hai aur kya kagaz lagega
         </h2>
         <p className="text-xs text-gray-600 dark:text-gray-400 mt-1 mb-0">
           Sab hisaab aapke phone mein hi hota hai. Koi data kahin bheja nahi jaata, koi

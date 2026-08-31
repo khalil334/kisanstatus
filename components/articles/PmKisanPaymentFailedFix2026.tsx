@@ -102,7 +102,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         <div className="my-6 p-5 bg-red-50 dark:bg-red-900/20 border-2 border-red-400 dark:border-red-700 border-l-[6px] rounded-xl">
           <h2 className="text-base font-black text-red-800 dark:text-red-300 mb-2">Pehle Ye Baat Dimag Mein Baitha Lo</h2>
           <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed mb-2">
-            "Payment Failed" ya "Payment Not Credited" likha dekh ke ghabrane ki bilkul zaroorat nahi hai. Paisa gaya nahi hai kahin — government ne toh release kar diya tha, bas bank tak pahunchne se pehle kahin technical ya procedural wajah se atak gaya.
+            "Payment Failed" ya "Payment Not Credited" likha dekh ke ghabrane ki bilkul zaroorat nahi hai. Paisa gaya nahi hai kahin, government ne toh release kar diya tha, bas bank tak pahunchne se pehle kahin technical ya procedural wajah se atak gaya.
           </p>
           <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed">
             Jis din bhi problem fix hogi, pending kistein (arrears) ek saath ya alag-alag transactions mein aapke account mein aa jaayengi. Neeche har wajah alag se samjhayi hai, apni waali dhundh lo aur usi wajah par kaam shuru karo.
@@ -256,7 +256,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
         <section className="mb-8">
           <SH>Reason #5: Naam Mein Farak (Name Mismatch)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Portal par likha "RAMESH KUMAR", bank record mein "RAMESH KUAMR" — bas itni si spelling ki galti aur payment reject ho jaati hai. PFMS ka name-matching system bahut strict hai, kabhi kabhi father ke naam mein farak bhi problem kar deta hai.
+            Portal par likha "RAMESH KUMAR", bank record mein "RAMESH KUAMR" bas itni si spelling ki galti aur payment reject ho jaati hai. PFMS ka name-matching system bahut strict hai, kabhi kabhi father ke naam mein farak bhi problem kar deta hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Teeno jagah. Aadhaar, bank, aur portal, naam bilkul same hona chahiye, ek letter bhi idhar-udhar nahi.
@@ -351,7 +351,7 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
             Problem fix hone ke baad jab atki hui rakam aati hai, toh passbook entry dekh kar log phir confuse ho jaate hain. Do baatein yaad rakho. Pehli, arrears ki entry bhi wahi “PMKISAN” ya DBT credit ke naam se aati hai, koi alag label nahi hota. Doosri, do kist ek saath aayi toh kabhi ₹4,000 ki ek entry dikhegi, kabhi ₹2,000 ki do alag entries alag tarikhon par. Dono normal hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ek galti se bachna — SMS ka intezaar mat karo. Bahut baar paisa aa jaata hai aur SMS aata hi nahi. Wajah? Bank ka SMS alert band hai ya number purana hai. Mahine mein ek baar passbook update karwa lo ya bank ke app mein statement dekh lo. Jinke paas smartphone nahi, wo missed-call banking (har bank ka apna number, passbook par likha hota hai) se balance jaan sakte hain.
+            Ek galti se bachna. SMS ka intezaar mat karo. Bahut baar paisa aa jaata hai aur SMS aata hi nahi. Wajah? Bank ka SMS alert band hai ya number purana hai. Mahine mein ek baar passbook update karwa lo ya bank ke app mein statement dekh lo. Jinke paas smartphone nahi, wo missed-call banking (har bank ka apna number, passbook par likha hota hai) se balance jaan sakte hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Aur haan, gaon mein koi kahe ki “arrears nikalwane ke liye form bharna padta hai aur uski fees lagti hai”, toh saaf mana kar do. Atki rakam apne aap release hoti hai, iske liye na koi alag application hai, na koi charge. Jo aisa bole wo aapki jeb ka raasta dhundh raha hai.

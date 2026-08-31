@@ -128,7 +128,7 @@ export default function PmKisanMaandhanYojanaPension() {
             priority
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)]">
-            Maandhan Yojana — Buzurgi Ki Suraksha
+            Maandhan Yojana. Buzurgi Ki Suraksha
           </p>
         </div>
 
@@ -536,7 +536,7 @@ export default function PmKisanMaandhanYojanaPension() {
         </section>
 
         <section className="mb-8">
-          <SH>Nominee Ka Naam — 15 Minute Ka Kaam, Saalon Ki Bachat</SH>
+          <SH>Nominee Ka Naam, 15 Minute Ka Kaam, Saalon Ki Bachat</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Upar family pension ke rules padhe. Par wo sab kaagaz par tabhi smooth chalta hai jab nomination
             updated ho. Jinke nominee ka naam register tha, unke parivar ka settlement 1–2 mahine mein ho jaata

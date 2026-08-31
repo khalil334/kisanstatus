@@ -28,7 +28,7 @@ const FAQS = [
   },
   {
     q: 'नमो शेतकरी के पैसे कब आएंगे?',
-    a: 'कोई fixed महीना नहीं — हर किस्त की अलग घोषणा होती है। nsmny.mahait.org पर Beneficiary Status देखते रहें। WhatsApp वाली "इस तारीख को पैसा" post का कोई आधार नहीं।',
+    a: 'कोई fixed महीना नहीं हर किस्त की अलग घोषणा होती है। nsmny.mahait.org पर Beneficiary Status देखते रहें। WhatsApp वाली "इस तारीख को पैसा" post का कोई आधार नहीं।',
   },
   {
     q: 'नमो शेतकरी की beneficiary list PDF कहां से download करें?',
@@ -161,7 +161,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         priority
         src="/images/articles/hindi-yojna/namo-shetkari/shetkari-field.webp"
         alt="महाराष्ट्र का किसान अपने खेत में"
-        caption="नमो शेतकरी — महाराष्ट्र के किसान को PM Kisan के ऊपर ₹6,000 और"
+        caption="नमो शेतकरी महाराष्ट्र के किसान को PM Kisan के ऊपर ₹6,000 और"
       />
 
       <Hd>9वीं किस्त की ताजा स्थिति. पैसे कब आएंगे?</Hd>
@@ -210,7 +210,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         >
           यह report
         </a>{' '}
-        देखें)। खास बात. यह किस्त अगस्त से नवंबर 2025 की अवधि की थी — जिस चार-महीने का पैसा था,
+        देखें)। खास बात. यह किस्त अगस्त से नवंबर 2025 की अवधि की थी जिस चार-महीने का पैसा था,
         वह करीब चार महीने बाद खाते में पहुंचा। इससे सबक यह है कि राज्य की किस्त में कुछ महीनों की देरी इस
         योजना में सामान्य बात रही है. देरी का अर्थ नाम कटना नहीं होता। पहले GR/घोषणा आती है, फिर कुछ
         दिनों में DBT. यह क्रम पहचान लेंगे तो अफवाहों से बचे रहेंगे।

@@ -148,7 +148,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
             <strong>Sabse Zaroori:</strong> Agar aap inme se kisi category mein aate hain, toh khud aage badh kar surrender kar do. Baad mein problem ho sakti hai.
           </IB>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Ek aur case jo bahut aam hai: <strong>pati aur patni dono</strong> registered hain. Scheme me beneficiary "family" hai — pati, patni aur naabaalig bachche milkar ek unit, aur ek unit ko saal me ek hi grant milta hai. Zameen alag-alag khaton me ho tab bhi. Aise me ek ko surrender karna hoga, warna verification me duplicate pakda jata hai aur extra paisa recover hota hai. Poora niyam{' '}
+            Ek aur case jo bahut aam hai: <strong>pati aur patni dono</strong> registered hain. Scheme me beneficiary "family" hai, pati, patni aur naabaalig bachche milkar ek unit, aur ek unit ko saal me ek hi grant milta hai. Zameen alag-alag khaton me ho tab bhi. Aise me ek ko surrender karna hoga, warna verification me duplicate pakda jata hai aur extra paisa recover hota hai. Poora niyam{' '}
             <Link href="/rajya-yojana/pm-kisan-pati-patni-dono-ko-milega" className="underline text-green-700 dark:text-green-400">pati-patni rule article</Link> me hai.
           </p>
         </section>
@@ -404,7 +404,7 @@ export default function PmKisanVoluntarySurrenderGuide() {
           </p>
           <ul className="space-y-2 mb-4 text-sm text-[var(--color-text-muted)]">
             <li className="flex gap-2"><span className="text-green-700 shrink-0 font-bold" aria-hidden="true">1.</span> <span><strong>Helpline 155261</strong>, busy ho toh landline <strong>011-24300606</strong>. Timing aam taur par subah 9 se shaam 6, somvar se shanivar. Kist release wale hafte lines sabse zyada busy hoti hain. Subah 9-10 baje ke beech lagao, load kam hota hai.</span></li>
-            <li className="flex gap-2"><span className="text-green-700 shrink-0 font-bold" aria-hidden="true">2.</span> <span><strong>Email</strong> — <strong>pmkisan-ict@gov.in</strong> par apna Aadhaar-linked registration number aur problem ek line me likh kar bhejo.</span></li>
+            <li className="flex gap-2"><span className="text-green-700 shrink-0 font-bold" aria-hidden="true">2.</span> <span><strong>Email</strong> <strong>pmkisan-ict@gov.in</strong> par apna Aadhaar-linked registration number aur problem ek line me likh kar bhejo.</span></li>
             <li className="flex gap-2"><span className="text-green-700 shrink-0 font-bold" aria-hidden="true">3.</span> <span><strong>Help Desk Query Form</strong>, pmkisan.gov.in ke Help Desk me online complaint daalo. Iska ticket number milta hai, jo phone call se zyada kaam ka hai. Follow-up me yahi number kaam aata hai. Poori guide{' '}<Link href="/yojana/pm-kisan-helpline-155261" className="underline text-green-700 dark:text-green-400">helpline 155261 article</Link> me hai.</span></li>
           </ul>
           <WB>

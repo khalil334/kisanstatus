@@ -125,7 +125,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
             ki kisi galat niyat se, balki isliye ki pension funds duniya bhar mein isi tarah kaam karte hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Neeche teen alag halaat diye gaye hain jo asal mein kisano ke saath ho sakte hain — apna wala dhoondh kar
+            Neeche teen alag halaat diye gaye hain jo asal mein kisano ke saath ho sakte hain, apna wala dhoondh kar
             padhein.
           </p>
         </section>
@@ -286,7 +286,7 @@ export default function PmKisanMaandhanWithdrawalRefund({ article }: { article: 
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <p className="font-black text-sm text-[var(--color-text)] mb-1">Atal Pension Yojana (APY) Se Farq</p>
               <p className="text-xs text-[var(--color-text-muted)]">
-                Jo log dono scheme compare karte hain unke liye — APY mein exit ke niyam thode alag hain aur wahan
+                Jo log dono scheme compare karte hain unke liye. APY mein exit ke niyam thode alag hain aur wahan
                 accumulated corpus ka calculation bhi different tareeke se hota hai. Maandhan purely ek defined
                 monthly-pension model hai, APY ki tarah lump-sum corpus wapas dene wali scheme nahi hai.
               </p>

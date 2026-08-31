@@ -104,7 +104,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Aaj main aapko yahan bataunga ke yeh katauti kaise kaam karti hai, kyun kat ta hai, kitna kat ta hai, aur agar aap chahein toh is process ko kaise control kar sakte hain. Saath hi yeh bhi samjhaunga ke agar kisi mahine payment miss ho jaye toh kya hota hai, aur default hone se kaise bacha jaye. Sab kuch official sources. PIB release, DAC&amp;FW operational guidelines, aur maandhan.in portal — se verify karke.
+          Aaj main aapko yahan bataunga ke yeh katauti kaise kaam karti hai, kyun kat ta hai, kitna kat ta hai, aur agar aap chahein toh is process ko kaise control kar sakte hain. Saath hi yeh bhi samjhaunga ke agar kisi mahine payment miss ho jaye toh kya hota hai, aur default hone se kaise bacha jaye. Sab kuch official sources. PIB release, DAC&amp;FW operational guidelines, aur maandhan.in portal, se verify karke.
         </p>
 
         <section className="mb-8">
@@ -246,7 +246,7 @@ export default function PmKisanMaandhanAutoDebitPooraSach({ article }: { article
           </StepList>
 
           <IB>
-            Mandate cancel karne se aapka PM-KMY account band nahi hota. Sirf katauti rukti hai. Aapko ab har mahine khud se payment karni hogi — chahe CSC center ja kar cash dein, ya maandhan.in pe online pay karein, ya bank branch mein jama karwayein. Agar payment miss hui, toh wohi default process shuru ho jayega.
+            Mandate cancel karne se aapka PM-KMY account band nahi hota. Sirf katauti rukti hai. Aapko ab har mahine khud se payment karni hogi, chahe CSC center ja kar cash dein, ya maandhan.in pe online pay karein, ya bank branch mein jama karwayein. Agar payment miss hui, toh wohi default process shuru ho jayega.
           </IB>
         </section>
 

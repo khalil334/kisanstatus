@@ -153,7 +153,7 @@ export default function ArticlesPage() {
   const collectionSchema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: `KisanStatus Guides & Resources 2026 — ${ALL_ARTICLES.length}+ Articles`,
+    name: `KisanStatus Guides & Resources 2026, ${ALL_ARTICLES.length}+ Articles`,
     description: SITE_DESCRIPTION,
     url: `${SITE_URL}/articles`,
     inLanguage: 'hi-IN',

@@ -49,7 +49,7 @@ export default function DisclaimerPage() {
             <span className="text-white font-bold">Legal Notice</span>
           </nav>
           <h1 className="text-2xl md:text-3xl font-bold text-white">Legal Notice & Disclaimer</h1>
-          <p className="text-amber-100 text-sm mt-1">Do minute nikaal kar ise padh lein — kaam ki baat hai</p>
+          <p className="text-amber-100 text-sm mt-1">Do minute nikaal kar ise padh lein, kaam ki baat hai</p>
         </div>
       </div>
 

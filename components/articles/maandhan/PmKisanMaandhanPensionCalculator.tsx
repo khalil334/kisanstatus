@@ -213,7 +213,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
             Practical baat: jitni jaldi entry hogi, utna kam bharna padega. 25 saal ki age mein judne par outflow ₹80 per mahina rehta hai, jabki 40 saal mein wahi target pura karne ke liye ₹200 per mahina dena padta hai. Farak seedha double se zyada ka hai.
           </p>
           <WB>
-            Ek baar age ke hisaab se rate fix ho gayi, to wo 60 saal tak same rehti hai — na mehngai se badhti hai, na kisi aur wajah se.
+            Ek baar age ke hisaab se rate fix ho gayi, to wo 60 saal tak same rehti hai, na mehngai se badhti hai, na kisi aur wajah se.
           </WB>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
             Ye model dusri jagah bhi dekha jata hai. Jaise EPF mein employer aur employee dono contribute karte hain. Lekin PM-KMY ka faayda ye hai ki isme entry barrier bahut kam hai. Formal job na hone par bhi, sirf zameen ka record aur Aadhaar dikhakar koi bhi eligible kisan is structure ka hissa ban sakta hai. Fund ka poora record LIC ke system mein digitally maintain hota hai, isliye subscriber apna status kabhi bhi portal par check kar sakta hai.
@@ -320,7 +320,7 @@ export default function PmKisanMaandhanPensionCalculator({ article }: { article:
         <section className="mb-8">
           <SH>Pariwar Ka Hisaab Alag Hai</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Death ke baad spouse ke paas kya options hain. Scheme continue karna, corpus lena ya ₹1,500 family pension — iska pura ganit family pension rules wale article mein worked examples ke saath hai:
+            Death ke baad spouse ke paas kya options hain. Scheme continue karna, corpus lena ya ₹1,500 family pension, iska pura ganit family pension rules wale article mein worked examples ke saath hai:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Link href="/maandhan/family-pension-rules" className="block p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-sm font-bold text-[var(--color-text)] hover:border-[var(--color-primary)] transition-colors">Family Pension Rules & Claim Process →</Link>

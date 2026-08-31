@@ -30,7 +30,7 @@ const FAQS = [
   },
   {
     q: 'क्या किसी app से भी check हो सकता है?',
-    a: 'हां, PM-KISAN GoI का official app है (Google Play पर)। Face authentication से eKYC भी उसमें हो जाती है। लेकिन app सिर्फ official store से लें — मिलते-जुलते नाम वाले fake apps बहुत हैं।',
+    a: 'हां, PM-KISAN GoI का official app है (Google Play पर)। Face authentication से eKYC भी उसमें हो जाती है। लेकिन app सिर्फ official store से लें मिलते-जुलते नाम वाले fake apps बहुत हैं।',
   },
   {
     q: 'पति और पत्नी दोनों का एक ही मोबाइल नंबर registered है. Status अलग-अलग कैसे देखें?',
@@ -178,7 +178,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
         जरूरत नहीं।
       </p>
 
-      <SH>Step 1 — मोबाइल नंबर से registration number निकालें</SH>
+      <SH>Step 1, मोबाइल नंबर से registration number निकालें</SH>
       <p>
         अगर registration number पहले से पता है, तो सीधे अगले section पर जाएं। बाकी लोग यह करें:
       </p>
@@ -270,7 +270,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
 
       <SH>Screen पर जो दिख रहा है, उसे कैसे पढ़ें?</SH>
       <p>
-        यहीं पर ज्यादातर लोग अटकते हैं। Status खुल गया, अंग्रेजी में चार-पांच lines दिख रही हैं — अब इनको
+        यहीं पर ज्यादातर लोग अटकते हैं। Status खुल गया, अंग्रेजी में चार-पांच lines दिख रही हैं अब इनको
         समझें कैसे? एक-एक करके देखते हैं।
       </p>
       <div className="overflow-x-auto my-4">
@@ -439,7 +439,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
       </p>
       <ol className="space-y-0 my-4">
         <Step n={1}>
-          <strong>Network/delay</strong> — 2-3 मिनट रुकें, दोबारा try करें। शाम के time server धीमा चलता है।
+          <strong>Network/delay</strong> 2-3 मिनट रुकें, दोबारा try करें। शाम के time server धीमा चलता है।
         </Step>
         <Step n={2}>
           <strong>गलत नंबर डाल रहे हैं</strong>. OTP उसी नंबर पर जाता है जो record में है, उस पर नहीं जो आप
@@ -508,7 +508,7 @@ export default function PmKisanStatusCheckMobileNumberSe({ article }: { article:
           आपके पास है, यही चुनिए। Registration number सुरक्षित रखें, हर बार यही काम आएगा।
         </Step>
         <Step n={2}>
-          <strong>Official PM-KISAN app</strong> — बार-बार देखने वालों के लिए सुविधाजनक; face
+          <strong>Official PM-KISAN app</strong> बार-बार देखने वालों के लिए सुविधाजनक; face
           authentication वाली eKYC भी इसी में होती है। App सिर्फ official store से लीजिए, मिलते-जुलते नाम
           वाले नकली apps से बचिए।
         </Step>

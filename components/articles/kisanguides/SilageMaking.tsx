@@ -91,7 +91,7 @@ export default function SilageMaking() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Model samajhna mushkil nahi hai — makka ugao ya kisaanon se khareedo, kaato, airtight packet mein band karo, aur nazdeeki gaushala ya dairy farm ko becho. Jo log is prakriya ko dhang se seekh lete hain unke liye margin achha hai, kyunki abhi bhi bahut kam log isse waqif hain. Local level par ye ek kam-jaani, kam-lada hua niche hai. Aur yahi wajah hai ki naye entrants ke liye jagah bachi hai.
+        Model samajhna mushkil nahi hai, makka ugao ya kisaanon se khareedo, kaato, airtight packet mein band karo, aur nazdeeki gaushala ya dairy farm ko becho. Jo log is prakriya ko dhang se seekh lete hain unke liye margin achha hai, kyunki abhi bhi bahut kam log isse waqif hain. Local level par ye ek kam-jaani, kam-lada hua niche hai. Aur yahi wajah hai ki naye entrants ke liye jagah bachi hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
@@ -186,7 +186,7 @@ export default function SilageMaking() {
             <span className="font-semibold">₹30,000 - ₹50,000</span>
           </li>
           <li className="flex justify-between">
-            <span>Plastic Bags (initial stock — 5,000 pieces):</span>
+            <span>Plastic Bags (initial stock, 5,000 pieces):</span>
             <span className="font-semibold">₹25,000 - ₹35,000</span>
           </li>
           <li className="flex justify-between">
@@ -416,7 +416,7 @@ export default function SilageMaking() {
 
         <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 shadow-sm">
           <h4 className="font-bold text-red-600 dark:text-red-400 mb-1">Customer Payment Mein Deri</h4>
-          <p className="text-sm text-gray-700 dark:text-gray-300">Dairy farms aksar udhaar par lete hain — 15-30 din ka credit cycle common hai. Working capital kam ho toh cash flow atak jata hai. Shuru se hi advance ya partial payment ka system rakho.</p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">Dairy farms aksar udhaar par lete hain, 15-30 din ka credit cycle common hai. Working capital kam ho toh cash flow atak jata hai. Shuru se hi advance ya partial payment ka system rakho.</p>
         </div>
       </div>
 
@@ -526,7 +526,7 @@ export default function SilageMaking() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Subsidy ka fayda uthao — 40-50% tak machinery par mil rahi hai. Par ye guaranteed nahi hai. Application process mein 3-6 mahine lag sakte hain, isliye planning subsidy ke bina karo. Mil gayi toh bonus samajh lo.
+        Subsidy ka fayda uthao, 40-50% tak machinery par mil rahi hai. Par ye guaranteed nahi hai. Application process mein 3-6 mahine lag sakte hain, isliye planning subsidy ke bina karo. Mil gayi toh bonus samajh lo.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">

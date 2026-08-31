@@ -47,7 +47,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Approval se pehle material khareed lein to claim ka kya hota hai?',
-    a: 'Bina approval ki purchase aksar reject hoti hai aur wo nuksan poora aapka hota hai. Sahi sequence hai: state portal par application, field survey aur technical estimation (yahin aapki actual subsidy figure banti hai — ise likhit mein lein), empanelled vendor se quotation, approval, phir kharidari; installation ke baad dobara verification, phir DBT release.',
+    a: 'Bina approval ki purchase aksar reject hoti hai aur wo nuksan poora aapka hota hai. Sahi sequence hai: state portal par application, field survey aur technical estimation (yahin aapki actual subsidy figure banti hai, ise likhit mein lein), empanelled vendor se quotation, approval, phir kharidari; installation ke baad dobara verification, phir DBT release.',
   },
 ];
 
@@ -299,7 +299,7 @@ export default function DripSprinkler() {
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           <strong>Apne state ka sach pata karne ka tarika:</strong> apne state ke agriculture /
           horticulture department portal par &ldquo;micro irrigation&rdquo; ya &ldquo;PDMC&rdquo;
-          section kholein aur teen cheezein dhundhein — (1) current financial year ki cost norms
+          section kholein aur teen cheezein dhundhein, (1) current financial year ki cost norms
           list, (2) top-up percentage wala order, (3) empanelled vendor list. Teeno ka PDF
           download kar lein. Jo baat in PDFs mein nahi hai, wo aapke case mein applicable nahi maani
           jaayegi, chahe vendor kuch bhi kahe.
@@ -463,7 +463,7 @@ export default function DripSprinkler() {
           <h3 className="font-bold text-red-800 dark:text-red-300 mb-3 flex items-center gap-2">Ruk kar sochein, agar</h3>
           <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
             <li>• Har season crop aur spacing badalta hai (layout dobara karna padega).</li>
-            <li>• Water source hi bharosemand nahi hai — system paani banata nahi, bachata hai.</li>
+            <li>• Water source hi bharosemand nahi hai, system paani banata nahi, bachata hai.</li>
             <li>• Filter cleaning aur flushing ke liye kisi ke paas time nahi hoga.</li>
             <li>• 7-saal repeat rule ke chalte aapko jaldi layout badalna pad sakta hai.</li>
           </ul>

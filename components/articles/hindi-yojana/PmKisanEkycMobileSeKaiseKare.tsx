@@ -109,7 +109,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         <strong>क्या घर बैठे, सिर्फ phone से, बिना CSC गए eKYC हो जाती है?</strong>
       </p>
       <p>
-        हो जाती है। दस मिनट का काम है — बशर्ते एक शर्त पूरी हो: आपका mobile number आधार से जुड़ा हो। यही
+        हो जाती है। दस मिनट का काम है बशर्ते एक शर्त पूरी हो: आपका mobile number आधार से जुड़ा हो। यही
         एक बात है जिस पर पूरा खेल टिका है। जुड़ा है, तो नीचे के तरीकों में से कोई भी रास्ता पकड़िए। नहीं जुड़ा,
         तो सीधे इस लेख के आखिरी हिस्से पर जाइए. वहां उसका इलाज लिखा है।
       </p>
@@ -171,7 +171,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
         caption="Face Auth. OTP का झंझट नहीं, चेहरा ही पहचान"
       />
 
-      <PathCard badge="B" title="PM-KISAN app में Face Authentication — बुजुर्गों के लिए वरदान">
+      <PathCard badge="B" title="PM-KISAN app में Face Authentication, बुजुर्गों के लिए वरदान">
         <p>
           जिनके आधार में नंबर तो linked है पर OTP का झंझट नहीं चाहिए. या घर के बुजुर्ग की eKYC करनी है —
           उनके लिए सरकार ने चेहरे से पहचान वाला तरीका दिया है। Google Play Store से{' '}
@@ -320,7 +320,7 @@ export default function PmKisanEkycMobileSeKaiseKare({ article }: { article: Hin
 
       <Sec>और अगर आधार में mobile number linked ही नहीं है?</Sec>
       <p>
-        तब phone वाले दोनों रास्ते बंद हैं — यह कड़वा सच पहले ही बता देना ठीक है। अब दो विकल्प बचते हैं।
+        तब phone वाले दोनों रास्ते बंद हैं यह कड़वा सच पहले ही बता देना ठीक है। अब दो विकल्प बचते हैं।
         पहला: नजदीकी CSC (Common Service Centre) जाकर fingerprint से biometric सत्यापन करवा लें. आधार card
         साथ ले जाएं, काम मिनटों में होता है। दूसरा, थोड़ा लंबा पर स्थायी इलाज: Aadhaar Seva Kendra में जाकर
         आधार में अपना चालू नंबर registered करवा लें (

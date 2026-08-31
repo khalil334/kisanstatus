@@ -69,7 +69,7 @@ export default function PmKisanKhadYojanaSachHindi({ article }: { article: Hindi
 
       <Head2>₹11,000 का हिसाब किसने बनाया?</Head2>
       <p>
-        Formula सीधा है। और बिल्कुल गलत। PM किसान सम्मान निधि से साल के ₹6,000 मिलते हैं — यह असली है।
+        Formula सीधा है। और बिल्कुल गलत। PM किसान सम्मान निधि से साल के ₹6,000 मिलते हैं यह असली है।
         उसके ऊपर कुछ blogs ने ₹5,000 का एक काल्पनिक &ldquo;fertilizer subsidy&rdquo; amount जोड़कर total
         ₹11,000 बना दिया। किसी ने पहली किस्त ₹6,000 और दूसरी ₹5,000 लिखी। किसी ने खरीफ-रबी में बांट दिया।
         हर blog का हिसाब अलग है. क्योंकि source कोई है ही नहीं।
@@ -148,7 +148,7 @@ export default function PmKisanKhadYojanaSachHindi({ article }: { article: Hindi
         PIB Fact Check (@PIBFactCheck) पर scheme का नाम search कर लीजिए।
       </p>
 
-      <Head2>खाद पर असली बचत का रास्ता — जो कोई blog नहीं बताता</Head2>
+      <Head2>खाद पर असली बचत का रास्ता जो कोई blog नहीं बताता</Head2>
       <p>
         ₹11,000 वाली अफवाह के पीछे भागने से जो नहीं मिलेगा, वह खाद के <em>सही इस्तेमाल</em> से मिल सकता
         है। ज्यादातर खेतों में खाद जरूरत से ज्यादा डलती है. अंदाजे से। जितनी बोरी बच गई, उतना पैसा जेब
@@ -211,7 +211,7 @@ export default function PmKisanKhadYojanaSachHindi({ article }: { article: Hindi
         <Link href="/articles/hi/npci-aadhaar-seeding" className="underline">NPCI आधार सीडिंग गाइड</Link>।
       </p>
       <p>
-        <strong>PMFBY (फसल बीमा)</strong> — फसल खराब होने पर claim का पैसा। Claim अटका हो तो{' '}
+        <strong>PMFBY (फसल बीमा)</strong> फसल खराब होने पर claim का पैसा। Claim अटका हो तो{' '}
         <Link href="/articles/hi/fasal-bima-claim-status" className="underline font-bold">फसल बीमा क्लेम
         स्टेटस गाइड</Link> में पूरा रास्ता है। इनके अलावा आपके राज्य की अपनी schemes भी होंगी. पर उन्हें
         हमेशा राज्य कृषि विभाग के portal से verify करके ही मानिए।

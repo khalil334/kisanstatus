@@ -248,7 +248,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
         <section className="mb-8">
           <SH>Village Wise List Kaise Dekhen? (Poore Gaon Ki List)</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Apne poore gaon ki list dekhni hai? Portal par yeh feature available hai — transparency ke liye government ne diya hai.
+            Apne poore gaon ki list dekhni hai? Portal par yeh feature available hai, transparency ke liye government ne diya hai.
           </p>
           <StepList>
             <SI n={1}><strong>pmkisan.gov.in</strong> → upar menu mein <strong>Dashboard</strong> click karo</SI>
@@ -358,7 +358,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Aur agar status ekdum &quot;Active&quot; dikh raha hai, koi failure message nahi hai, phir bhi paisa nahi aaya — to release ki date dekho. Ho sakta hai us kist ka transfer aapke state mein abhi chal raha ho; sabhi ka paisa ek hi din mein credit nahi hota, batch-wise hota hai. Do-teen din ruk kar dekho, phir 155261 par call karo, call se pehle registration number aur portal ka exact message note kar lena, warna baat aage nahi badhti.
+            Aur agar status ekdum &quot;Active&quot; dikh raha hai, koi failure message nahi hai, phir bhi paisa nahi aaya, to release ki date dekho. Ho sakta hai us kist ka transfer aapke state mein abhi chal raha ho; sabhi ka paisa ek hi din mein credit nahi hota, batch-wise hota hai. Do-teen din ruk kar dekho, phir 155261 par call karo, call se pehle registration number aur portal ka exact message note kar lena, warna baat aage nahi badhti.
           </p>
         </section>
 
@@ -415,7 +415,7 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
         <section className="mb-8">
           <SH>Smartphone Nahi Hai? Teen Aur Raaste</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ghar mein internet nahi chalti to bhi naam check ho sakta hai. Pehla raasta — nazdeeki <strong>CSC
+            Ghar mein internet nahi chalti to bhi naam check ho sakta hai. Pehla raasta, nazdeeki <strong>CSC
             centre</strong>: operator Aadhaar number se status nikal dega, chhoti si fee lagti hai. Doosra —{' '}
             <strong>helpline 155261</strong>: registration number ya Aadhaar batao, wahi se status bata dete hain
             (line busy mile to subah 10 baje se pehle try karo). Teesra, gaon ke <strong>patwari ya krishi

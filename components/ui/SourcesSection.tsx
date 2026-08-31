@@ -7,7 +7,7 @@ export type SourceItem = {
 };
 
 export default function SourcesSection({
-  heading = 'Sources — Jankari Kahan Se Aayi',
+  heading = 'Sources. Jankari Kahan Se Aayi',
   checkedLabel = 'Aakhri baar jaancha gaya:',
   checkedOn,
   sources,

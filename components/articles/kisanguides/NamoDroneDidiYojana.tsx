@@ -25,7 +25,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Remote Pilot Certificate ke liye kya padhai-likhai chahiye?',
-    a: 'DGCA ke niyam ke mutabik remote pilot certificate ke liye 10th pass hona aur age 18 se upar (65 tak) honi chahiye. Training ke waqt medical fitness ka self-declaration bhi hota hai. Yaani graduate hona zaroori nahi — 10vi pass mahila bhi drone pilot ban sakti hai.',
+    a: 'DGCA ke niyam ke mutabik remote pilot certificate ke liye 10th pass hona aur age 18 se upar (65 tak) honi chahiye. Training ke waqt medical fitness ka self-declaration bhi hota hai. Yaani graduate hona zaroori nahi, 10vi pass mahila bhi drone pilot ban sakti hai.',
   },
   {
     q: 'SHG mein nahi hoon, phir bhi drone pilot ban sakti hoon kya?',
@@ -117,7 +117,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
           barbadi. Mahila ka fayda: ek naya, izzat wala aur technical rozgar.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Ek baat pehle hi saaf kar dein — iske liye SHG ke paas apni zameen ya member ka khud kisan hona
+          Ek baat pehle hi saaf kar dein, iske liye SHG ke paas apni zameen ya member ka khud kisan hona
           zaroori nahi hai. Yeh scheme service provider banane ki hai, kheti karne ki nahi. Drone kiraye
           par doosre kisano ke kheton mein jayega. Haan, cluster aisa hona chahiye jahan aas-paas kheti ka
           rakba bada ho, demand ke bina machine sirf khadi rahegi.
@@ -218,7 +218,7 @@ export default function NamoDroneDidiYojana({ article }: { article: ArticleMeta 
 
         <GovLink
           href="https://www.myscheme.gov.in/schemes/nddy"
-          label="Namo Drone Didi — Official Scheme Details (myScheme)"
+          label="Namo Drone Didi. Official Scheme Details (myScheme)"
           guide="Details Dekho"
           portalName="myscheme.gov.in"
         />

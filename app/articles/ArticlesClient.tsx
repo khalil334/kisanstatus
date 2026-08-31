@@ -500,7 +500,7 @@ export default function ArticlesClient({
             PM Kisan aur Krishi Yojanaon ki Verified Guides (2026)
           </h1>
           <p className="text-green-200 text-sm md:text-base max-w-xl mx-auto mb-5 leading-relaxed">
-            {articles.length}+ free aur verified guides — jaise status check, payment fix, crop insurance, soil health, aur mandi bhav. Sabhi jankari bilkul saral Hinglish mein, step-by-step.
+            {articles.length}+ free aur verified guides, jaise status check, payment fix, crop insurance, soil health, aur mandi bhav. Sabhi jankari bilkul saral Hinglish mein, step-by-step.
           </p>
           <a
             href="https://pmkisan.gov.in"

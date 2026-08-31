@@ -26,7 +26,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Breed Multiplication Farm ke liye kitni subsidy hai aur kaun le sakta hai?',
-    a: 'Project ki capital cost ka 50%, maximum ₹2 crore tak. Eligible hain — individual entrepreneurs, FPO/FPC, SHG, JLG aur Section 8 companies. Yeh chhote kisan wala component nahi hai. Yeh 200+ animals wala structured commercial farm hai jo high genetic merit bachhiyaan paida karke bechta hai. Application eoi.nddb.coop portal par online hoti hai.',
+    a: 'Project ki capital cost ka 50%, maximum ₹2 crore tak. Eligible hain, individual entrepreneurs, FPO/FPC, SHG, JLG aur Section 8 companies. Yeh chhote kisan wala component nahi hai. Yeh 200+ animals wala structured commercial farm hai jo high genetic merit bachhiyaan paida karke bechta hai. Application eoi.nddb.coop portal par online hoti hai.',
   },
   {
     q: 'Kya RGM mein gay kharidne ke liye paisa milta hai?',
@@ -105,7 +105,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Aur agar aap bade level par sochte ho, toh Breed Multiplication Farm par 50% capital subsidy — ₹2 crore
+          Aur agar aap bade level par sochte ho, toh Breed Multiplication Farm par 50% capital subsidy, ₹2 crore
           tak, bhi isi mission ka hissa hai. Aage poora naksha hai: kaunsa component kiske liye hai,
           paisa kaise aur kahan se milta hai, 2025 mein kya naya juda, aur woh galatfehmiyan jo logon ka time
           barbaad karti hain.
@@ -179,7 +179,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
         </div>
 
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          In teeno ka common point samjho — kharcha AI/breeding par hota hai, jo dairy ke sabse sasta sudhaar ka
+          In teeno ka common point samjho, kharcha AI/breeding par hota hai, jo dairy ke sabse sasta sudhaar ka
           rasta hai. Ek achhi nasl ki bachhiya ka market rate ₹60,000 se ₹1 lakh+ tak jaata hai. Wahi bachhiya
           agar aapki apni gay se sex-sorted semen ya IVF se paida ho jaye, toh kharcha kuch hazaar ka aur us par
           bhi subsidy. Yahi RGM ka asli economics hai.
@@ -238,7 +238,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           2025 ke revision mein ek aur cheez judi, agar aap <strong>HGM IVF bachhiya kharidte ho</strong> (khud
           paida karne ke bajaye), toh us loan par <strong>3% interest subvention</strong> milta hai. Loan milk
           union, bank ya financial institution se ho sakta hai. Matlab sarkar chahti hai ki achhi genetics wale
-          janwar kisano tak pahunchein — chahe paida karke, chahe kharid ke.
+          janwar kisano tak pahunchein, chahe paida karke, chahe kharid ke.
         </p>
 
         <Image
@@ -338,7 +338,7 @@ export default function RashtriyaGokulMissionSubsidy({ article }: { article: Art
           hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Desi nasl ka ek aur pehlu hai jo bahar se nahi dikhta — <strong>climate resilience</strong>. Gir ya
+          Desi nasl ka ek aur pehlu hai jo bahar se nahi dikhta, <strong>climate resilience</strong>. Gir ya
           Sahiwal 45 degree ki garmi mein bhi doodh deti hai jahan HF/Jersey ka production gir jaata hai. Bimari
           kam lagti hai, ilaaj ka kharcha kam. Aur A2 doodh ka premium market alag se ban raha hai. Sheher mein
           A2 ghee ₹2,000-3,000/kg tak bikta hai. Nasl sudhaar mein lagaya ek-ek rupaya lambe time mein sabse

@@ -72,7 +72,7 @@ export default function TermsPage() {
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">1. Sharton Ki Swikriti (Acceptance of Terms)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
               Main Manish, <strong>{SITE_NAME}</strong> chalata hoon. Yeh page bas itna batata hai ki is site ko
-              use karne ke kya niyam hain — jaise gaon mein koi cheez udhaar dete waqt do baatein tay kar li jaati
+              use karne ke kya niyam hain, jaise gaon mein koi cheez udhaar dete waqt do baatein tay kar li jaati
               hain, waise hi. Site kholne aur padhne ka matlab hai ki aap in baaton se sehmat hain. Sehmat na hon
               to koi baat nahi, bas site use na karein.
             </p>
@@ -109,7 +109,7 @@ export default function TermsPage() {
             <ul className="text-sm text-[var(--color-text-muted)] space-y-2">
               <li className="flex items-start gap-2">
                 <span className="text-red-500 mt-0.5" aria-hidden="true">•</span>
-                Jahan maine "Expected" ya "Not Confirmed" likha hai, woh mera pichle saalon ke hisaab se lagaya andaaza hai — sarkari elaan nahi. Kist ki asli date sarkar hi batati hai.
+                Jahan maine "Expected" ya "Not Confirmed" likha hai, woh mera pichle saalon ke hisaab se lagaya andaaza hai, sarkari elaan nahi. Kist ki asli date sarkar hi batati hai.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-red-500 mt-0.5" aria-hidden="true">•</span>
@@ -117,7 +117,7 @@ export default function TermsPage() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-red-500 mt-0.5" aria-hidden="true">•</span>
-                Koi bhi bada faisla lene se pehle pmkisan.gov.in par ek baar zaroor milaa lein — wahi aakhri sach hai.
+                Koi bhi bada faisla lene se pehle pmkisan.gov.in par ek baar zaroor milaa lein, wahi aakhri sach hai.
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-red-500 mt-0.5" aria-hidden="true">•</span>
@@ -129,7 +129,7 @@ export default function TermsPage() {
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">4. Yeh Koi Sarkari Website Nahi Hai</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              <strong>Phir se keh doon — {SITE_NAME} sarkari website nahi hai.</strong> Na main sarkari mulazim hoon,
+              <strong>Phir se keh doon, {SITE_NAME} sarkari website nahi hai.</strong> Na main sarkari mulazim hoon,
               na Krishi Mantralaya ya kisi yojana se mera koi lena-dena hai. Aapka Aadhaar, bank account — aisi koi
               cheez main kabhi nahi maangta. Asli sarkari kaam ke liye hamesha{' '}
               <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">
@@ -144,11 +144,11 @@ export default function TermsPage() {
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">Aapse bas itni ummeed hai:</p>
             <ul className="text-sm text-[var(--color-text-muted)] space-y-2">
               {[
-                'Site ka istemaal seedhe-sacche kaam ke liye karein — koi galat kaam nahi',
+                'Site ka istemaal seedhe-sacche kaam ke liye karein, koi galat kaam nahi',
                 'Site ko todne-phodne ya nuksan pahunchane ki koshish na karein',
                 'Mere likhe articles bina pooche copy karke apni site par na daalein — mehnat lagti hai likhne mein',
                 'Koi bhi zaroori baat official portal par ek baar verify kar lein',
-                'Sarkari faisle ke liye sirf is site ke bharose na baithein — yeh madad hai, pramaan nahi',
+                'Sarkari faisle ke liye sirf is site ke bharose na baithein, yeh madad hai, pramaan nahi',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-2">
                   <span className="text-[var(--color-primary)] mt-0.5" aria-hidden="true">✓</span>
@@ -163,7 +163,7 @@ export default function TermsPage() {
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
               Yahan ke sabhi articles, guides aur design maine khud banaye hain — inka copyright mera hai aur
               kanoon se surakshit hai. Bina pooche inhe copy karke kahin aur na chhapein. Haan, mere articles ka
-              link share karna ho to bilkul karein — isi liye to likhta hoon, jitne kisanon tak pahunche utna accha.
+              link share karna ho to bilkul karein, isi liye to likhta hoon, jitne kisanon tak pahunche utna accha.
             </p>
           </section>
 
@@ -172,7 +172,7 @@ export default function TermsPage() {
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
               Site chalane ka kharcha nikalne ke liye yahan Google AdSense ke ads dikh sakte hain — isi wajah se
               yeh site aapke liye muft hai. Ads content se alag dikhte hain, aur ad mein jo bhi dikhe woh meri
-              sifarish nahi hai — kaun sa ad kisko dikhana hai, yeh Google tay karta hai. Ads aapke data ka kya
+              sifarish nahi hai, kaun sa ad kisko dikhana hai, yeh Google tay karta hai. Ads aapke data ka kya
               karte hain, iske liye meri{' '}
               <Link href="/privacy-policy" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">
                 Data Protection Notice (Privacy Policy)
@@ -193,8 +193,8 @@ export default function TermsPage() {
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">9. Jimmedari Se Mukti (Limitation of Liability)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-              Seedhi baat — yeh site muft ki madad hai, koi paid service nahi. Ispar padh kar liye gaye faisle se
-              koi nuksan ho jaye — kist ruk jaye, arji reject ho jaye, kuch bhi — to uski jimmedari meri nahi
+              Seedhi baat, yeh site muft ki madad hai, koi paid service nahi. Ispar padh kar liye gaye faisle se
+              koi nuksan ho jaye — kist ruk jaye, arji reject ho jaye, kuch bhi, to uski jimmedari meri nahi
               hogi, kyunki asli record aur faisla sarkar ke paas hai. Isliye kanooni taur par meri jimmedari
               shunya (zero) tak simit hai.
             </p>
@@ -219,7 +219,7 @@ export default function TermsPage() {
           <section className="card bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl p-6">
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">12. Sampark (Contact)</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-3">
-              In niyamon mein kuch samajh na aaye ya koi sawal ho, to seedha email kar dein — main khud jawab deta hoon:
+              In niyamon mein kuch samajh na aaye ya koi sawal ho, to seedha email kar dein, main khud jawab deta hoon:
             </p>
             <div className="text-sm text-[var(--color-text-muted)] space-y-2">
               <p>Email: <a href="mailto:kisanstatus.support@gmail.com" className="text-[var(--color-primary)] underline focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded">kisanstatus.support@gmail.com</a></p>

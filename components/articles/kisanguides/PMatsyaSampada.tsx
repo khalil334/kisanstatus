@@ -91,7 +91,7 @@ export default function PMatsyaSampada() {
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-        Kyunki aquaculture mein paani ki quality, oxygen level, aur feed management seedha aapki jeb se juda hai — ek chhoti si chook poori crop khatam kar sakti hai. Jab management sahi hota hai, toh returns kaafi achhe milte hain. Isme sarkar ki PM Matsya Sampada Yojana (PMMSY) 40-60% tak ki financial assistance dekar is business ko aur bhi viable bana deti hai.
+        Kyunki aquaculture mein paani ki quality, oxygen level, aur feed management seedha aapki jeb se juda hai, ek chhoti si chook poori crop khatam kar sakti hai. Jab management sahi hota hai, toh returns kaafi achhe milte hain. Isme sarkar ki PM Matsya Sampada Yojana (PMMSY) 40-60% tak ki financial assistance dekar is business ko aur bhi viable bana deti hai.
       </p>
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">

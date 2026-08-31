@@ -46,7 +46,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
             <span className="text-white font-bold">Murgi Palan Loan NLM Subsidy</span>
           </nav>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            Murgi Palan Loan 2026: NLM Se 50% Subsidy (₹25 Lakh Tak) — Eligibility, Layer vs Broiler Aur Apply Ka Poora Process
+            Murgi Palan Loan 2026: NLM Se 50% Subsidy (₹25 Lakh Tak) Eligibility, Layer vs Broiler Aur Apply Ka Poora Process
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
@@ -163,7 +163,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>Layer vs Broiler — Pehla Bada Faisla</SH>
+        <SH>Layer vs Broiler. Pehla Bada Faisla</SH>
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
             <thead>
@@ -258,7 +258,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           hain.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Doosra bada kharcha working capital hai — har batch ke liye chooza, feed, dawai ka paisa chahiye. Iske
+          Doosra bada kharcha working capital hai, har batch ke liye chooza, feed, dawai ka paisa chahiye. Iske
           liye KCC (Animal Husbandry) sabse sasta rasta hai. Capital cost NLM + term loan se, chalane ka kharcha
           KCC se. Yeh combination yahan bhi wahi hai jo har livestock project mein kaam karta hai. Working capital
           ke options ke liye <Link href="/articles/KisanCreditCardOnlineApply2026" className="underline font-bold">KCC banwane
@@ -320,7 +320,7 @@ export default function MurgiPalanLoanNlmSubsidy({ article }: { article: Article
           <SI n={1}><strong>Subsidy ko advance samajhna</strong>, pehle financing, phir subsidy. Ulta socha toh project shuru hi nahi hoga.</SI>
           <SI n={2}><strong>Copy-paste DPR</strong>, internet se uthai DPR mein local rates nahi hote; appraisal mein pakdi jaati hai. Apne district ke asli rates par banao.</SI>
           <SI n={3}><strong>Biosecurity ko luxury samajhna</strong>, visitors ki entry, disinfection, vaccination schedule. Ek chook, poora batch saaf. Yeh kharcha nahi, bima hai.</SI>
-          <SI n={4}><strong>Market ka plan na hona</strong> — ande/meat kahan bikega, kis rate par, kaun uthayega. Yeh unit lagane se pehle tay karo, baad mein nahi.</SI>
+          <SI n={4}><strong>Market ka plan na hona</strong> ande/meat kahan bikega, kis rate par, kaun uthayega. Yeh unit lagane se pehle tay karo, baad mein nahi.</SI>
           <SI n={5}><strong>Capacity se bada unit</strong>, pehli baar mein hi sabse bada project lene ka lalach. Chhota shuru karo, seekho, phir badhao, scheme baad mein bhi rahegi.</SI>
         </StepList>
 

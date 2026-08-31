@@ -45,7 +45,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Meri purani 2-3 kistein bhi ruki hui hain. Woh milengi?',
-    a: 'Milengi — agar rukne ki wajah (eKYC pending, land seeding adhuri, spelling mismatch) ab theek ho gayi hai. Ruka hua pura amount arrears ke roop me ek saath aata hai; alag se koi application nahi lagti.',
+    a: 'Milengi, agar rukne ki wajah (eKYC pending, land seeding adhuri, spelling mismatch) ab theek ho gayi hai. Ruka hua pura amount arrears ke roop me ek saath aata hai; alag se koi application nahi lagti.',
   },
 ];
 
@@ -133,7 +133,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         </div>
 
         <section className="mb-8">
-          <SH>Sabse Pehle Woh Jawab, Jiske Liye Aap Aaye Hain</SH>
+          <SH>24vi Kist Kab Aayegi</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Date abhi announce nahi hui hai. Bas, itni si baat.
           </p>
@@ -254,7 +254,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
                 <li>✓ Land seeding complete hai</li>
                 <li>✓ eKYC ho chuki hai (&quot;Yes&quot; dikhta hai)</li>
                 <li>✓ Account Aadhaar se NPCI par mapped hai</li>
-                <li>✓ Spelling Aadhaar aur record — dono jagah same hai</li>
+                <li>✓ Spelling Aadhaar aur record, dono jagah same hai</li>
               </ul>
             </div>
             <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl p-4">
@@ -344,7 +344,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">
               <p className="font-black text-green-800 dark:text-green-300 text-sm mb-1">OTP Se (Ghar Baithe)</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Portal ya PM Kisan app par Aadhaar number daaliye, linked mobile par OTP aayega. Do minute ka kaam — shart bas itni ki Aadhaar se mobile linked ho.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Portal ya PM Kisan app par Aadhaar number daaliye, linked mobile par OTP aayega. Do minute ka kaam, shart bas itni ki Aadhaar se mobile linked ho.</p>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
               <p className="font-black text-blue-800 dark:text-blue-300 text-sm mb-1">Biometric (CSC Par)</p>
@@ -448,7 +448,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             <li>Aadhaar aur record ki spelling milaiye, mismatch ho toh abhi correction karwaiye</li>
           </ol>
           <p className="text-xs text-green-700 dark:text-green-400 mt-4 italic">
-            Koi bhi adhura raha toh amount hold par — aur phir agli cycle tak intzaar.
+            Koi bhi adhura raha toh amount hold par, aur phir agli cycle tak intzaar.
           </p>
         </div>
 

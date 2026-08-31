@@ -32,7 +32,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Claim reject ho gaya, ab kahan jaayein?',
-    a: 'Pehle rejection ki wajah likhit me maango — ye aapka haq hai. Phir teen seedhiyan: insurance company ke district office me written complaint, phir District Level Grievance Redressal (district agriculture officer ke through), aur phir state level. 14447 par call karke bhi grievance number le sakte ho. Har jagah application number, policy copy aur intimation ka saboot saath rakho.',
+    a: 'Pehle rejection ki wajah likhit me maango, ye aapka haq hai. Phir teen seedhiyan: insurance company ke district office me written complaint, phir District Level Grievance Redressal (district agriculture officer ke through), aur phir state level. 14447 par call karke bhi grievance number le sakte ho. Har jagah application number, policy copy aur intimation ka saboot saath rakho.',
   },
   {
     q: 'Premium kata tha par status me policy hi nahi dikh rahi?',
@@ -124,7 +124,7 @@ export default function FasalBimaClaimStatusCheck({ article }: { article: Yojana
           Nuksan hua. Ab ghadi shuru ho gayi. 72 ghante ke andar in me se kisi ek jagah intimation deni hai:
         </p>
         <StepList>
-          <SI n={1}><strong>14447 par call</strong> — sabse tez. Naam, policy/application number, gaon, fasal aur nuksan ki wajah batao. Complaint ka reference number likh lo.</SI>
+          <SI n={1}><strong>14447 par call</strong> sabse tez. Naam, policy/application number, gaon, fasal aur nuksan ki wajah batao. Complaint ka reference number likh lo.</SI>
           <SI n={2}><strong>Crop Insurance app</strong>, &ldquo;Report Crop Loss&rdquo; section. Photo bhi laga sakte ho, jo baad me survey me kaam aati hai.</SI>
           <SI n={3}><strong>Insurance company ki helpline</strong>, policy document par number likha hota hai.</SI>
           <SI n={4}><strong>Bank branch ya krishi vibhag</strong>, likhit application, jiski ek copy par receiving lekar apne paas rakho.</SI>
@@ -190,7 +190,7 @@ export default function FasalBimaClaimStatusCheck({ article }: { article: Yojana
           <SI n={2}><strong>Fasal ya area notified nahi</strong>, premium kat gaya, par jo fasal boyi wo us block ke liye notified list me thi hi nahi. Enrollment ke waqt hi ye check hona chahiye tha.</SI>
           <SI n={3}><strong>Boyi fasal aur bima wali fasal alag</strong>, bank ne KCC ke saath gehu ka bima kar diya, kisan ne sarson boyi. Survey me pakda jaata hai, claim zero.</SI>
           <SI n={4}><strong>Bank record ki galti</strong>. Aadhaar mismatch, galat khasra number, premium late remit hona. In me se kai galtiyan bank ki hoti hain, aur rules ke hisaab se aisi galti ka nuksan bank ko bharna padta hai. Likhit complaint karo.</SI>
-          <SI n={5}><strong>Yield guarantee se upar</strong> — widespread wale raaste me agar CCE ka yield threshold se upar aaya, to claim banta hi nahi. Ye rejection nahi, scheme ka design hai. Bima nuksan ka hai, har saal milne wala bonus nahi.</SI>
+          <SI n={5}><strong>Yield guarantee se upar</strong> widespread wale raaste me agar CCE ka yield threshold se upar aaya, to claim banta hi nahi. Ye rejection nahi, scheme ka design hai. Bima nuksan ka hai, har saal milne wala bonus nahi.</SI>
         </StepList>
 
         <SH>Kitne Din Me Paisa Aana Chahiye</SH>
@@ -246,7 +246,7 @@ export default function FasalBimaClaimStatusCheck({ article }: { article: Yojana
           receipt/SMS pehle din se hota hai, unka status check seedha hai. Par unki ek alag dikkat hoti
           hai: enrollment ke waqt khasra number ya fasal galat bhar gayi to claim ke waqt hi pata chalta
           hai. Isliye season ke shuru me hi portal par apni policy kholkar fasal, rakba aur khasra ek baar
-          milaa lo — galti abhi dikhegi to insurance company se sudhrwai ja sakti hai, katai ke baad nahi.
+          milaa lo, galti abhi dikhegi to insurance company se sudhrwai ja sakti hai, katai ke baad nahi.
         </p>
 
         <SH>WBCIS Wala Note. Agar Aapka Bima Mausam-Aadharit Hai</SH>

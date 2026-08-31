@@ -29,7 +29,7 @@ const FAQS_DATA = [
     a: 'Unit lagne ke baad. Selection hone par district level par physical verification hota hai, phir subsidy release hoti hai. Seedha bank ke through adjust ya DBT se. Matlab pashu aur shed ka intezam pehle aapko (apne paise ya bank loan se) karna hota hai. Beech ka finance plan kiye bina pashu book karna sabse aam galti hai.',
   },
   {
-    q: 'Doodh kahan bechenge — rate kya milega?',
+    q: 'Doodh kahan bechenge, rate kya milega?',
     a: 'Sabse seedha rasta Sudha (COMFED) ki gram-level dugdh samiti hai. Rate transparent, payment ka system bana-banaya. COMFED ka toll-free helpline 1800 345 6681 hai. Apne gaon mein samiti hai ya nahi, yeh unit lagane se pehle pata karo. Samiti nahi hai toh local dairy, halwai ya seedha grahak. Par rate ka likhit intezam pehle kar lo, warna doodh haath mein aur kharidar gayab.',
   },
 ];
@@ -124,7 +124,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/bihar-pashupalan-loan-yojana/dairy-shed.webp"
-          alt="Chhoti dairy unit ka shed — 2-4 pashu se shuruaat karna samajhdaari hai"
+          alt="Chhoti dairy unit ka shed, 2-4 pashu se shuruaat karna samajhdaari hai"
           width={1000}
           height={558}
           className="w-full h-auto rounded-xl my-5"
@@ -220,7 +220,7 @@ export default function BiharPashupalanLoanYojana({ article }: { article: Articl
           <SI n={3}><strong>Jati praman patra</strong>, agar reserved category ka slab chahiye.</SI>
           <SI n={4}><strong>Bank passbook / cancelled cheque</strong>. IFSC aur account number saaf dikhna chahiye.</SI>
           <SI n={5}><strong>Zameen ke kagaz ya lease deed</strong>, jahan unit lagegi. Lease hai toh likhit agreement rakho, zubani baat verification mein nahi chalti.</SI>
-          <SI n={6}><strong>Passport size photo aur mobile number</strong> — OTP isi number par aayega, chalu rakho.</SI>
+          <SI n={6}><strong>Passport size photo aur mobile number</strong> OTP isi number par aayega, chalu rakho.</SI>
           <SI n={7}><strong>Training certificate</strong> (agar hai). Optional units mein bhi file ko edge deta hai.</SI>
         </StepList>
 

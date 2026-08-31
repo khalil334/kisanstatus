@@ -66,7 +66,7 @@ export default function AnnadataSukhibhavaStatusHindi({ article }: { article: Hi
       <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
         <Image
           src="/images/articles/rajya-yojna/annadata-sukhibhava-status-check-2026/hero.webp"
-          alt="आंध्र प्रदेश का किसान खेत में — अन्नदाता सुखीभव योजना"
+          alt="आंध्र प्रदेश का किसान खेत में अन्नदाता सुखीभव योजना"
           width={1200}
           height={675}
           className="w-full object-cover"
@@ -220,7 +220,7 @@ export default function AnnadataSukhibhavaStatusHindi({ article }: { article: Hi
       </ul>
       <p>
         जमीन मालिक की सहमति वाला हिस्सा व्यवहार में सबसे कठिन होता है। कई मालिक डरते हैं कि कागज पर
-        जोतने वाले का नाम आ जाने से जमीन पर दावा बन जाएगा — ऐसा नहीं होता, यह कार्ड सिर्फ फसल मौसम के लिए
+        जोतने वाले का नाम आ जाने से जमीन पर दावा बन जाएगा ऐसा नहीं होता, यह कार्ड सिर्फ फसल मौसम के लिए
         खेती का हक दर्ज करता है, मालिकाना नहीं बदलता। यह बात मालिक को शांति से समझाने से काम बन जाता है।
       </p>
 

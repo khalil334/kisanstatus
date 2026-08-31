@@ -4,7 +4,7 @@ import { getCrossSectionLinks, getLanguagePairLink, type SectionKind } from '@/l
 export function CrossSectionLinks({
   currentPath,
   section,
-  heading = 'Site Ke Doosre Section — Yeh Bhi Dekhein',
+  heading = 'Site Ke Doosre Section. Yeh Bhi Dekhein',
 }: {
   currentPath: string;
   section: SectionKind;

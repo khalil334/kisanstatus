@@ -70,7 +70,7 @@ export default function PmKisanKhadYojanaSach({ article }: { article: Yojana2026
 
         <SH>₹11,000 Ka Hisaab Kisne Banaya?</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Formula bada simple hai, aur bilkul galat. PM Kisan Samman Nidhi se saal ke ₹6,000 milte hain — ye
+          Formula bada simple hai, aur bilkul galat. PM Kisan Samman Nidhi se saal ke ₹6,000 milte hain, ye
           asli hai, sabko pata hai. Kuch blogs ne uske upar ₹5,000 ka ek kalpanik &ldquo;fertilizer
           subsidy&rdquo; amount joda aur total ₹11,000 bana diya. Kisi ne likha pehli kist ₹6,000 aur doosri
           ₹5,000. Kisi ne kharif-rabi me baant diya. Har blog ka hisaab alag hai. Kyunki source koi hai hi
@@ -171,7 +171,7 @@ export default function PmKisanKhadYojanaSach({ article }: { article: Yojana2026
           YouTube par ye aur tez chalta hai. Thumbnail par bada sa &ldquo;₹11,000 aa gaye, list me naam
           dekho&rdquo; aur video ke andar wahi PM Kisan beneficiary status check karne ka process, jo
           ₹6,000 wali asli scheme ka hai. Dekhne wale ko lagta hai scheme confirm ho gayi, kyunki video me
-          sarkari portal dikh raha hai. Portal asli, scheme ka naam nakli — yahi trick hai. Isliye video ya
+          sarkari portal dikh raha hai. Portal asli, scheme ka naam nakli, yahi trick hai. Isliye video ya
           article me portal dikhna kaafi nahi; ye dekho ki us portal par <em>us naam ki scheme</em> likhi
           hai ya nahi.
         </p>
@@ -259,7 +259,7 @@ export default function PmKisanKhadYojanaSach({ article }: { article: Yojana2026
             <a href="https://www.fert.nic.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">fert.nic.in</a>
           </li>
           <li>
-            PIB Fact Check — sarkari yojana rumors ki jaanch.{' '}
+            PIB Fact Check, sarkari yojana rumors ki jaanch.{' '}
             <a href="https://pib.gov.in/factcheck.aspx" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in/factcheck</a>
           </li>
         </ul>

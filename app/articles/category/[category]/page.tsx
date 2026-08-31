@@ -11,7 +11,7 @@ function CategoryIntro({ category }: { category: CategorySlug }) {
       <section className="container-site mx-auto px-4 pt-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-            Kisan loan — kahan se shuru karein?
+            Kisan loan, kahan se shuru karein?
           </h2>
           <p className="text-gray-700 dark:text-gray-300 mb-3">
             “Loan chahiye” ek sawal nahi, teen alag sawal hote hain — aur teeno ka rasta alag hai:
@@ -23,7 +23,7 @@ function CategoryIntro({ category }: { category: CategorySlug }) {
               <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-green-700 dark:text-green-400 underline font-semibold">
                 Kisan Credit Card (KCC)
               </Link>{' '}
-              hai — interest subvention ke saath short-term credit.
+              hai, interest subvention ke saath short-term credit.
             </li>
             <li>
               <strong>Machinery kharidni hai</strong> (tractor, implements) to wo alag term-loan
@@ -38,7 +38,7 @@ function CategoryIntro({ category }: { category: CategorySlug }) {
               <Link href="/articles/KisanRinKahaSeLe2026" className="text-green-700 dark:text-green-400 underline font-semibold">
                 kisan rin kahan se lein
               </Link>{' '}
-              wala overview padhein — usme bank, cooperative aur Jansamarth portal ke raaste
+              wala overview padhein, usme bank, cooperative aur Jansamarth portal ke raaste
               compare kiye gaye hain.
             </li>
           </ul>
@@ -60,7 +60,7 @@ function CategoryIntro({ category }: { category: CategorySlug }) {
           </h2>
           <p className="text-gray-700 dark:text-gray-300 mb-3">
             Yahan ki guides alag-alag livestock business cover karti hain, aur har ek ke peeche
-            alag government scheme hai — isliye pehle apna business chunein, phir scheme:
+            alag government scheme hai, isliye pehle apna business chunein, phir scheme:
           </p>
           <div className="grid sm:grid-cols-2 gap-3 mb-3">
             <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
@@ -84,7 +84,7 @@ function CategoryIntro({ category }: { category: CategorySlug }) {
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Chara business ka rasta{' '}
                 <Link href="/articles/silage-making-business-guide" className="text-green-700 dark:text-green-400 underline">silage making guide</Link>{' '}
-                me hai — existing dairy belt me demand ready milti hai.
+                me hai, existing dairy belt me demand ready milti hai.
               </p>
             </div>
           </div>
@@ -102,7 +102,7 @@ function CategoryIntro({ category }: { category: CategorySlug }) {
       <section className="container-site mx-auto px-4 pt-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-            Kheti se aage — agri business ka naksha
+            Kheti se aage, agri business ka naksha
           </h2>
           <p className="text-gray-700 dark:text-gray-300 mb-3">
             In guides me teen tarah ke raaste hain, aur teeno ka support ecosystem alag hai:
@@ -118,7 +118,7 @@ function CategoryIntro({ category }: { category: CategorySlug }) {
             <li>
               <strong>Processing business:</strong>{' '}
               <Link href="/articles/pm-fme-yojana-food-processing" className="text-green-700 dark:text-green-400 underline">PM-FME food processing</Link>{' '}
-              — apni ya doosron ki upaj ko process karke value add karna.
+              apni ya doosron ki upaj ko process karke value add karna.
             </li>
             <li>
               <strong>Service business:</strong>{' '}
@@ -129,7 +129,7 @@ function CategoryIntro({ category }: { category: CategorySlug }) {
           </ol>
           <p className="text-gray-600 dark:text-gray-400 text-sm">
             Har guide me investment ka scale aur subsidy ka structure us scheme ke official portal
-            se diya gaya hai — andaaze ke numbers par plan mat banaiye.
+            se diya gaya hai, andaaze ke numbers par plan mat banaiye.
           </p>
         </div>
       </section>
@@ -144,7 +144,7 @@ function CategoryIntro({ category }: { category: CategorySlug }) {
             PM Kisan status — pehle problem pehchaniye, phir guide chuniye
           </h2>
           <p className="text-gray-700 dark:text-gray-300 mb-3">
-            Status check karne wale zyada tar kisan teen situations me hote hain — aur teeno ka
+            Status check karne wale zyada tar kisan teen situations me hote hain, aur teeno ka
             fix alag guide me hai:
           </p>
           <ul className="space-y-2 text-gray-700 dark:text-gray-300 mb-3">
@@ -167,7 +167,7 @@ function CategoryIntro({ category }: { category: CategorySlug }) {
               me step-by-step hain.
             </li>
             <li>
-              <strong>eKYC pending:</strong> sabse common block yehi hai — 2 minute ka process{' '}
+              <strong>eKYC pending:</strong> sabse common block yehi hai, 2 minute ka process{' '}
               <Link href="/articles/PmKisanEkycOnline2026" className="text-green-700 dark:text-green-400 underline font-semibold">
                 eKYC online guide
               </Link>{' '}
@@ -191,7 +191,7 @@ function CategoryIntro({ category }: { category: CategorySlug }) {
       <section className="container-site mx-auto px-4 pt-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-            Kheti ki schemes — kab kaunsi kaam aati hai?
+            Kheti ki schemes, kab kaunsi kaam aati hai?
           </h2>
           <p className="text-gray-700 dark:text-gray-300 mb-3">
             Ye guides season ke hisaab se sochne par aasan ho jaati hain:
@@ -213,7 +213,7 @@ function CategoryIntro({ category }: { category: CategorySlug }) {
               <Link href="/articles/PmfbyCropInsurance2026" className="text-green-700 dark:text-green-400 underline font-semibold">
                 PMFBY guide
               </Link>{' '}
-              me — 2% premium wali window buwai season ke saath hi khulti-bandh hoti hai.
+              me, 2% premium wali window buwai season ke saath hi khulti-bandh hoti hai.
             </li>
             <li>
               <strong>Lambi bachat:</strong> diesel pump ka kharcha{' '}
@@ -240,7 +240,7 @@ function CategoryIntro({ category }: { category: CategorySlug }) {
       <section className="container-site mx-auto px-4 pt-8">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-            Mandi bhav — sirf rate dekhna kaafi nahi
+            Mandi bhav, sirf rate dekhna kaafi nahi
           </h2>
           <p className="text-gray-700 dark:text-gray-300 mb-3">
             Sahi daam pane ke liye teen cheezein saath dekhni padti hain:
@@ -280,7 +280,7 @@ function CategoryIntro({ category }: { category: CategorySlug }) {
             </li>
           </ul>
           <p className="text-gray-600 dark:text-gray-400 text-sm">
-            Rates roz badalte hain — bechne se pehle wale din ka trend zaroor dekh lein, sirf ek
+            Rates roz badalte hain, bechne se pehle wale din ka trend zaroor dekh lein, sirf ek
             din ka rate nahi.
           </p>
         </div>

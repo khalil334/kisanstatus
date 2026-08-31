@@ -342,7 +342,7 @@ export default function PmKisanCscRegistrationCharges() {
         <section className="mb-8">
           <SH>OTP Nahi Aa Raha? CSC Se Pehle Ye Free Rasta Try Karo</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Zyadatar log center isliye jaate hain kyunki Aadhaar wale number par OTP nahi aata — number band ho gaya, SIM kho gayi, ya Aadhaar me koi purana number juda hai. Par 2026 me iske liye paise kharch karna zaroori nahi. Sarkar ne <strong>Face Authentication eKYC</strong> ka rasta khol diya hai. Chehre se verification, na OTP chahiye na fingerprint. Aur ye bilkul free hai.
+            Zyadatar log center isliye jaate hain kyunki Aadhaar wale number par OTP nahi aata, number band ho gaya, SIM kho gayi, ya Aadhaar me koi purana number juda hai. Par 2026 me iske liye paise kharch karna zaroori nahi. Sarkar ne <strong>Face Authentication eKYC</strong> ka rasta khol diya hai. Chehre se verification, na OTP chahiye na fingerprint. Aur ye bilkul free hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Do apps chahiye, dono sarkari:

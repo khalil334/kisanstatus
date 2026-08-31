@@ -43,7 +43,7 @@ export default function KisanKarjMafiAllStatesHindi({ article }: { article: Hind
       <div className="mb-6 p-4 border-2 border-gray-200 dark:border-gray-700 rounded-2xl">
         <p className="text-xs font-bold mb-2">इस पेज का update log</p>
         <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed mb-1">
-          <strong>18 अगस्त 2026</strong> — महाराष्ट्र की नई पुण्यश्लोक अहिल्यादेवी होलकर कर्जमाफी योजना के
+          <strong>18 अगस्त 2026</strong> महाराष्ट्र की नई पुण्यश्लोक अहिल्यादेवी होलकर कर्जमाफी योजना के
           पहले चरण की जानकारी जोड़ी। तेलंगाना वाले हिस्से में साफ किया कि वह योजना 2024 में पूरी हो चुकी है।
         </p>
         <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -151,7 +151,7 @@ export default function KisanKarjMafiAllStatesHindi({ article }: { article: Hind
       </p>
       <p>
         पहले चरण में लगभग 31 लाख किसान लिए गए हैं, और पहले उन्हें लिया गया जिनका बकाया ₹2 लाख तक है। जिनका
-        कर्ज इससे ज्यादा है, उनके लिए One Time Settlement का रास्ता रखा गया है — यानी ज्यादा कर्ज वाले किसान
+        कर्ज इससे ज्यादा है, उनके लिए One Time Settlement का रास्ता रखा गया है यानी ज्यादा कर्ज वाले किसान
         को पूरा माफ होने का इंतजार नहीं करना चाहिए, OTS की बात बैंक से शुरू कर देनी चाहिए।
       </p>
       <div className="my-5 p-4 border-l-4 border-amber-500 bg-amber-50 dark:bg-amber-900/20 rounded-r-xl text-sm">
@@ -215,7 +215,7 @@ export default function KisanKarjMafiAllStatesHindi({ article }: { article: Hind
         घोषणा और पैसे के बीच की दूरी समझनी हो तो पिछली बार का record देख लीजिए। दिसंबर 2019 में महाराष्ट्र
         सरकार ने महात्मा ज्योतिराव फुले शेतकरी कर्जमुक्ती योजना घोषित की. ₹2 लाख तक के crop loans,
         cut-off 30/09/2019। पहली beneficiary list <strong>24/02/2020</strong> को आई. यानी घोषणा से
-        पहली list तक ही करीब ढाई महीने। फिर आधार सत्यापन का दौर चला — किसान को खुद CSC या बैंक जाकर
+        पहली list तक ही करीब ढाई महीने। फिर आधार सत्यापन का दौर चला किसान को खुद CSC या बैंक जाकर
         अंगूठा लगाना पड़ता था, तभी रकम loan account में जाती थी।
       </p>
       <p>

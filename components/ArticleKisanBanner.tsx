@@ -31,7 +31,7 @@ function BannerEKYC() {
 
       <text x="180" y="55" fontSize="11" fill="#ddd6fe">PM KISAN eKYC VERIFICATION 2026</text>
       <text x="180" y="85" fontSize="24" fontWeight="900" fill="#fff">Aadhaar OTP se</text>
-      <text x="180" y="112" fontSize="24" fontWeight="900" fill="#c4b5fd">eKYC Karo — Free!</text>
+      <text x="180" y="112" fontSize="24" fontWeight="900" fill="#c4b5fd">eKYC Karo. Free!</text>
       <text x="180" y="140" fontSize="11" fill="#ddd6fe" fontWeight="normal">Bina eKYC ke ek bhi kist nahi milegi.</text>
       <text x="180" y="156" fontSize="11" fill="#ddd6fe">Official portal ya CSC center — dono tarike.</text>
       {['Aadhaar number daalo','OTP milega','Verify karo','Done'].map((s,i)=>(
@@ -64,7 +64,7 @@ function BannerPayment() {
       <polygon points="80,170 140,60 200,170" fill="#fff" fillOpacity="0.1"/>
       <polygon points="90,165 140,72 190,165" fill="#fff" fillOpacity="0.08"/>
 
-      <text x="240" y="55" fontSize="11" fill="#fca5a5">PM KISAN PAYMENT FAILED — SOLUTIONS 2026</text>
+      <text x="240" y="55" fontSize="11" fill="#fca5a5">PM KISAN PAYMENT FAILED. SOLUTIONS 2026</text>
       <text x="240" y="85" fontSize="22" fontWeight="900" fill="#fff">Payment Nahi Aayi?</text>
       <text x="240" y="112" fontSize="22" fontWeight="900" fill="#fed7aa">Yeh 5 Kaam Karo!</text>
       {[
@@ -124,7 +124,7 @@ function BannerRegistration() {
       <text x="200" y="52" fontSize="11" fill="#a7f3d0">PM KISAN ENROLLMENT GUIDE 2026</text>
       <text x="200" y="80" fontSize="22" fontWeight="900" fill="#fff">Naya Registration</text>
       <text x="200" y="107" fontSize="22" fontWeight="900" fill="#86efac">Kaise Karein — Free!</text>
-      <text x="200" y="134" fontSize="10" fill="#d1fae5">Online ya CSC center se — koi bhi fee nahi lagti</text>
+      <text x="200" y="134" fontSize="10" fill="#d1fae5">Online ya CSC center se, koi bhi fee nahi lagti</text>
 
       <text x="200" y="158" fontSize="9" fontWeight="bold" fill="#a7f3d0">Zaruri Documents:</text>
       {['Aadhaar Card', 'Bank Passbook', 'Khasra/Khatauni', 'Mobile Number'].map((d,i)=>(
@@ -183,7 +183,7 @@ function BannerLoan() {
       <text x="230" y="52" fontSize="11" fill="#93c5fd">KISAN CREDIT CARD (KCC) GUIDE 2026</text>
       <text x="230" y="82" fontSize="22" fontWeight="900" fill="#fff">KCC Loan — Sirf 4%</text>
       <text x="230" y="109" fontSize="22" fontWeight="900" fill="#93c5fd">Byaaj Dar Mein!</text>
-      <text x="230" y="136" fontSize="10" fill="#bfdbfe">Kisan Credit Card — Sabse Sasta Agricultural Loan</text>
+      <text x="230" y="136" fontSize="10" fill="#bfdbfe">Kisan Credit Card. Sabse Sasta Agricultural Loan</text>
 
       {[
         { name:'KCC Loan', rate:'4%', bg:'#16a34a' },
@@ -241,7 +241,7 @@ function BannerInsurance() {
       <text x="220" y="52" fontSize="11" fill="#fde68a">PMFBY CROP INSURANCE GUIDE 2026</text>
       <text x="220" y="80" fontSize="22" fontWeight="900" fill="#fff">PMFBY — Fasal</text>
       <text x="220" y="108" fontSize="22" fontWeight="900" fill="#fde68a">Kharab? Paise Milenge!</text>
-      <text x="220" y="135" fontSize="10" fill="#fef3c7">PMFBY — Sirf 2% premium mein poori fasal protect</text>
+      <text x="220" y="135" fontSize="10" fill="#fef3c7">PMFBY. Sirf 2% premium mein poori fasal protect</text>
       {[
         ['Covered','Kharif + Rabi'],
         ['Premium','Sirf 2% (Kharif)'],
@@ -302,12 +302,12 @@ function BannerBeneficiary() {
 type BannerType = 'ekyc' | 'payment' | 'registration' | 'loan' | 'insurance' | 'beneficiary';
 
 const BANNER_MAP: Record<BannerType, { component: React.FC; caption: string }> = {
-  ekyc:         { component: BannerEKYC,         caption: 'PM Kisan eKYC — Online ya CSC center se karo' },
+  ekyc:         { component: BannerEKYC,         caption: 'PM Kisan eKYC. Online ya CSC center se karo' },
   payment:      { component: BannerPayment,      caption: 'Payment Nahi Aayi? 5 steps mein fix karo' },
   registration: { component: BannerRegistration, caption: 'Naya Registration — Free mein ghar baithe karo' },
-  loan:         { component: BannerLoan,         caption: 'Kisan Credit Card (KCC) — Sabse saste byaaj dar par loan' },
+  loan:         { component: BannerLoan,         caption: 'Kisan Credit Card (KCC) Sabse saste byaaj dar par loan' },
   insurance:    { component: BannerInsurance,    caption: 'PMFBY Crop Insurance — Sirf 2% premium mein protection' },
-  beneficiary:  { component: BannerBeneficiary,  caption: 'PM Kisan Beneficiary List — Village wise naam check karo' },
+  beneficiary:  { component: BannerBeneficiary,  caption: 'PM Kisan Beneficiary List. Village wise naam check karo' },
 };
 
 interface ArticleKisanBannerProps {

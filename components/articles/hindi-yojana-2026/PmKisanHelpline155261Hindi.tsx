@@ -47,7 +47,7 @@ export default function PmKisanHelpline155261Hindi({ article }: { article: Hindi
       </p>
       <p>
         पर यहीं रुकिए मत। आधी calls इस helpline पर उन problems के लिए लगती हैं जो helpline हल कर ही नहीं
-        सकती — eKYC, land record, bank seeding। घंटा line में लगने के बाद जवाब मिलता है &ldquo;CSC
+        सकती eKYC, land record, bank seeding। घंटा line में लगने के बाद जवाब मिलता है &ldquo;CSC
         जाइए&rdquo; या &ldquo;तहसील में पता करो&rdquo;। इसलिए पहले यह तय कीजिए कि आपकी problem का सही
         दरवाजा कौन सा है।
       </p>
@@ -132,7 +132,7 @@ export default function PmKisanHelpline155261Hindi({ article }: { article: Hindi
       <Head2>Online शिकायत. जो phone से ज्यादा पक्की है</Head2>
       <p>
         pmkisan.gov.in पर <strong>Help Desk / Query Form</strong> का section है। आधार, account या mobile
-        number से query register कीजिए, category चुनिए, problem लिखिए — <strong>ticket number</strong>{' '}
+        number से query register कीजिए, category चुनिए, problem लिखिए, <strong>ticket number</strong>{' '}
         मिलता है। Phone की बात हवा में रहती है, ticket system में रहता है। 3-4 हफ्ते बाद &ldquo;Know the
         Query Status&rdquo; से जवाब देखिए; अधूरा लगे तो नई query में पुराना ticket number quote कीजिए।
       </p>
@@ -209,7 +209,7 @@ export default function PmKisanHelpline155261Hindi({ article }: { article: Hindi
       </p>
       <p>
         आपके लिए निकलने वाली बात: system निगरानी में है, और <strong>record में दर्ज शिकायत ही</strong> इस
-        निगरानी में गिनी जाती है। Phone पर हुई बात किसी आंकड़े में नहीं जाती — इसीलिए यह page बार-बार लिखित
+        निगरानी में गिनी जाती है। Phone पर हुई बात किसी आंकड़े में नहीं जाती इसीलिए यह page बार-बार लिखित
         query पर जोर देता है।
       </p>
 

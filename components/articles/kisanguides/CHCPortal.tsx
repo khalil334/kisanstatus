@@ -51,7 +51,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Machine pehle khareed lein ya approval ka wait karein?',
-    a: 'Approval aane ke baad hi khareedein. Process mein pehle physical verification hota hai — officer aapki zameen aur storage facility dekhne aata hai. Aur uske baad bills submit hote hain. Approval se pehle ki gayi kharidari par claim atakne ka poora risk aapka hai.',
+    a: 'Approval aane ke baad hi khareedein. Process mein pehle physical verification hota hai, officer aapki zameen aur storage facility dekhne aata hai. Aur uske baad bills submit hote hain. Approval se pehle ki gayi kharidari par claim atakne ka poora risk aapka hai.',
   },
   {
     q: 'Kaunsa implement pehle lena chahiye, ye kaise tay karein?',
@@ -389,7 +389,7 @@ export default function CHCPortal() {
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
           Dealer se hamesha <strong>on-road cost ka breakup</strong> likhit me lo. Ex-showroom ke upar ye kharche aate hain:
           processing + stamp duty (loan ka 0.5–1% + ₹500–2,000 flat), RTO hypothecation ₹2,000–5,000, aur compulsory
-          insurance bundle ₹15,000–25,000 saalana. Inko loan amount me include karwane ki jaldi mat karo — warna byaj
+          insurance bundle ₹15,000–25,000 saalana. Inko loan amount me include karwane ki jaldi mat karo, warna byaj
           par byaj bharoge.
         </p>
         <p className="text-sm text-gray-700 dark:text-gray-300">

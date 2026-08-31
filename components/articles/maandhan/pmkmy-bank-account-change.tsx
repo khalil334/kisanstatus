@@ -110,7 +110,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
           Pehle ek zaroori baat: ye page sirf <strong>PM Kisan Maandhan (pension wali scheme)</strong> ke liye hai. Agar aapko ₹2000 wali PM-Kisan kist ka khata badalna hai, to wo bilkul alag process hai. Uske liye <Link href="/articles/PmKisanBankAccountChangeProcess" className="underline text-green-700 dark:text-green-400">PM-Kisan bank account change guide</Link> padhein.
         </p>
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Ab asli sawal jo sabko pareshan karta hai. "is beech mera auto-debit ka kya hoga?" Seedha jawab: application dene ke baad bhi 15-30 din tak paisa <strong>purane account se hi</strong> katega. Naya khata judne ke baad hi debit shift hota hai. Isliye sabse badi galti hai application dete hi purana account khali kar dena ya band kar dena — aisa kiya to contribution miss hogi, aur miss hui contribution ko regularize karana alag jhanjhat hai (uska poora process <Link href="/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein" className="underline text-green-700 dark:text-green-400">auto-debit fail regularization guide</Link> mein diya hai). Auto-debit system asal mein kaise kaam karta hai. NACH mandate, payment cycles (har mahine 1, 11 aur 21 tarikh), default rules. Ye sab <Link href="/maandhan/pm-kisan-maandhan-auto-debit-poora-sach" className="underline text-green-700 dark:text-green-400">auto-debit ke poore sach</Link> mein detail se samjhaya gaya hai.
+          Ab asli sawal jo sabko pareshan karta hai. "is beech mera auto-debit ka kya hoga?" Seedha jawab: application dene ke baad bhi 15-30 din tak paisa <strong>purane account se hi</strong> katega. Naya khata judne ke baad hi debit shift hota hai. Isliye sabse badi galti hai application dete hi purana account khali kar dena ya band kar dena, aisa kiya to contribution miss hogi, aur miss hui contribution ko regularize karana alag jhanjhat hai (uska poora process <Link href="/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein" className="underline text-green-700 dark:text-green-400">auto-debit fail regularization guide</Link> mein diya hai). Auto-debit system asal mein kaise kaam karta hai. NACH mandate, payment cycles (har mahine 1, 11 aur 21 tarikh), default rules. Ye sab <Link href="/maandhan/pm-kisan-maandhan-auto-debit-poora-sach" className="underline text-green-700 dark:text-green-400">auto-debit ke poore sach</Link> mein detail se samjhaya gaya hai.
         </p>
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
           Achhi baat ye hai ki khata badalne par aapko phir se enrollment nahi karni padti. Purana contribution record, age calculation, aur pension amount. Sab kuch same rehta hai. Bas account details update hoti hain.
@@ -367,7 +367,7 @@ export default function BankAccountChange({ article }: { article: MaandhanArticl
                 <li>Naye IFSC code aur account number ki updated passbook lein</li>
                 <li>Bank se merger certificate lein (agar available ho)</li>
                 <li>PMKMY portal par update karne ke liye CSC me jaayein ya bank branch me application dein</li>
-                <li>Kuch cases me automatic update bhi ho jata hai — status check karein</li>
+                <li>Kuch cases me automatic update bhi ho jata hai, status check karein</li>
               </ul>
             </div>
 

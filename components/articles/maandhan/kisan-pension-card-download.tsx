@@ -51,7 +51,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Agar main 2-3 saal se contribution nahi de raha, to account band ho gaya kya?',
-    a: 'Haan, lagatar contribution na dene par account inactive ho sakta hai. Lekin kuch cases me regularization ka option hota hai — aapko baki ki rakam aur chhota sa penalty bank me jama karna hota hai. Pehle apni status portal par check karein, phir bank se baat karein.',
+    a: 'Haan, lagatar contribution na dene par account inactive ho sakta hai. Lekin kuch cases me regularization ka option hota hai, aapko baki ki rakam aur chhota sa penalty bank me jama karna hota hai. Pehle apni status portal par check karein, phir bank se baat karein.',
   },
 ];
 
@@ -169,7 +169,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
           </div>
 
           <StepList>
-            <SI n={1}><strong>Aadhaar Card (Original):</strong> Wahi jo scheme me register hua tha. Kai baar kisan ne purana Aadhaar diya hota hai, baad me naya banwa liya hai ya biometric update karwaya hai — to system me mismatch aa jata hai.</SI>
+            <SI n={1}><strong>Aadhaar Card (Original):</strong> Wahi jo scheme me register hua tha. Kai baar kisan ne purana Aadhaar diya hota hai, baad me naya banwa liya hai ya biometric update karwaya hai, to system me mismatch aa jata hai.</SI>
             <SI n={2}><strong>Wahi Registered Mobile Number:</strong> Jo form bharte waqt diya tha. OTP sirf usi par aayega. Agar number badal gaya hai, to pehle use update karwana padega (iska tarika niche bataya gaya hai).</SI>
             <SI n={3}><strong>Bank Passbook:</strong> Jis account se har mahine paisa kata jata hai. Uska account number aur IFSC code pata hona chahiye, kyunki kabhi-kabhi verification ke liye ye maanga jata hai.</SI>
             <SI n={4}><strong>Enrollment ka Approximate Saal:</strong> Agar yaad nahi hai, to koi baat nahi, Aadhaar se search ho jayega. Lekin agar saal yaad ho, to galat record nikalne ke chances kam ho jate hain.</SI>
@@ -250,7 +250,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
             <SI n={3}><strong>CSC par Aadhaar biometric se:</strong> Jis CSC se enrollment hua tha (ya koi bhi CSC), wahan operator Aadhaar biometric verify karke scheme ke system me aapka record search kar sakta hai. Apna Aadhaar aur wahi registered mobile le jaiye.</SI>
           </StepList>
           <IB>
-            Record mil jaye to sabse pehle KPAN ko teen jagah likh lijiye — phone ke notes me, ghar ki kagzaat wali file me, aur parivaar ke kisi sadasya ke paas. Dobara ye section padhne ki naubat nahi aani chahiye.
+            Record mil jaye to sabse pehle KPAN ko teen jagah likh lijiye, phone ke notes me, ghar ki kagzaat wali file me, aur parivaar ke kisi sadasya ke paas. Dobara ye section padhne ki naubat nahi aani chahiye.
           </IB>
         </section>
 
@@ -369,7 +369,7 @@ export default function PmKisanMaandhanPensionCardDownload({ article }: { articl
             <SI n={1}>Ek print nikalke halka sa lamination karwa lijiye. ₹20 lagenge, lekin ye saalon tak chalega aur phatne se bach jayega.</SI>
             <SI n={2}>Har saal ek baar apni status check karein, ki contribution sahi se kat raha hai ya nahi, aur account active hai ya nahi.</SI>
             <SI n={3}>Apne parivaar ke kisi bharosemand sadasya ko bata dijiye ki ye card kahan rakha hai, taaki zaroorat padne par wo bina bhaag-daud dhoondh sakein.</SI>
-            <SI n={4}>Agar aapki income badh gayi hai ya aap income tax return file karte hain, to scheme ke rules ke mutabiq aapka naam hat sakta hai — isliye apni eligibility check karte rahein.</SI>
+            <SI n={4}>Agar aapki income badh gayi hai ya aap income tax return file karte hain, to scheme ke rules ke mutabiq aapka naam hat sakta hai, isliye apni eligibility check karte rahein.</SI>
           </StepList>
           <IB>
             Yaad rakhiye, ye card sirf ek aam kagaz nahi hai. Ye aapke budhaape ki financial suraksha ka saboot hai. Ise sambhaal ke rakhna utna hi zaroori hai jitna apni zameen ke kagzaat ya Aadhaar card.

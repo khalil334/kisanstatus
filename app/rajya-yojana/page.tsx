@@ -5,7 +5,7 @@ import { LIVE_RAJYA_YOJANA_ARTICLES } from '@/lib/rajya-yojana-data';
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, EXTERNAL_LINK_PROPS, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import { Disclaimer } from '@/components/ArticleShared';
 
-const TITLE = 'Rajya Kisan Yojana — State Schemes Guide';
+const TITLE = 'Rajya Kisan Yojana. State Schemes Guide';
 const DESCRIPTION =
   'Har rajya ki kisan yojana ek jagah — status check, eligibility aur official portal links. PM Kisan ke saath state ka paisa kaise milta hai.';
 
@@ -72,7 +72,7 @@ export default function RajyaYojanaListingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(COLLECTION_JSON_LD) }}
       />
-      <h1 className="text-3xl font-bold mb-4">Rajya Kisan Yojana — State Schemes</h1>
+      <h1 className="text-3xl font-bold mb-4">Rajya Kisan Yojana. State Schemes</h1>
 
       <p className="text-gray-700 mb-4">
         PM Kisan ke ₹6,000/saal ke <em>upar</em> kai rajya apni alag kisan sahayata yojana chalate
@@ -80,7 +80,7 @@ export default function RajyaYojanaListingPage() {
         Mahasanman Nidhi, MP me CM Kisan Kalyan Yojana, West Bengal me Krishak Bandhu, waghera.
         Ye paisa central scheme se <strong>alag</strong> hota hai: alag portal, alag eligibility,
         alag kist schedule. Isi wajah se aksar aisa hota hai ki PM Kisan ki kist aa gayi lekin
-        state ka paisa nahi aaya — dono ko alag-alag check karna padta hai.
+        state ka paisa nahi aaya, dono ko alag-alag check karna padta hai.
       </p>
 
       <h2 className="text-2xl font-bold mb-3">Centre vs state yojana — bunyadi farak</h2>
@@ -91,7 +91,7 @@ export default function RajyaYojanaListingPage() {
         </li>
         <li>
           <strong>State yojana:</strong> har rajya ki apni scheme aur apna portal. Amount, kist ki
-          taareekh aur eligibility rajya tay karta hai — kai states me PM Kisan beneficiary hona
+          taareekh aur eligibility rajya tay karta hai, kai states me PM Kisan beneficiary hona
           pehli shart hai, kuch me alag registration lagta hai.
         </li>
         <li>
@@ -102,7 +102,7 @@ export default function RajyaYojanaListingPage() {
 
       <h2 className="text-2xl font-bold mb-3">Apne state me kya chal raha hai — kaise pata karein</h2>
       <ol className="list-decimal list-inside space-y-2 text-gray-700 mb-6">
-        <li>Neeche apne state ka guide kholiye — usme scheme ka naam, eligibility aur status-check ka exact process hai.</li>
+        <li>Neeche apne state ka guide kholiye, usme scheme ka naam, eligibility aur status-check ka exact process hai.</li>
         <li>State ka official portal (table me link) par apna registration/Aadhaar number daal kar status dekhiye.</li>
         <li>Agar aapka state list me nahi hai, to sabhi states wali list guide se shuru kijiye — usme har rajya ki active scheme ka overview hai.</li>
       </ol>

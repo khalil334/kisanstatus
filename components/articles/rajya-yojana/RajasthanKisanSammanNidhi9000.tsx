@@ -68,7 +68,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         </p>
 
         <p>
-          Ek minute, pehle ye samajh lo — confusion wahan shuru hoti hai jahan log ₹12,000 wale number ke peeche bhaagte
+          Ek minute, pehle ye samajh lo, confusion wahan shuru hoti hai jahan log ₹12,000 wale number ke peeche bhaagte
           hain. Wo abhi tak sirf ek ghoshna hai. Khaate mein aane wali raashi nahi.
           Umeed rakhna galat nahi, par usi par budget banana galat hai. Neeche dono
           baatein saaf-saaf alag karke rakhi hain: kya pakka hai, aur kya sirf umeed.
@@ -145,7 +145,7 @@ export default function RajasthanKisanSammanNidhi9000() {
           <li>Status saamne aa jaayega. Payment Successful, Pending, ya Rejected</li>
         </ol>
 
-        <ExternalLinkButton url="https://jansoochna.rajasthan.gov.in" label="Jan Soochna Portal — Status Check" />
+        <ExternalLinkButton url="https://jansoochna.rajasthan.gov.in" label="Jan Soochna Portal. Status Check" />
 
         <h3>Rajasthan Cooperative Portal</h3>
 
@@ -230,7 +230,7 @@ export default function RajasthanKisanSammanNidhi9000() {
           wo e-Mitra se milti hai. Lagbhag ₹10 per page. Portal se print nikaal kar reference ke liye
           rakh sakte hain, magar office mein certified copy hi chalti hai. Mutation (naam badalne) ki
           arzi bhi isi portal se lagti hai; Rajasthan ka apna record batata hai ki mutation case average
-          taur par lagbhag 24 din mein nipat jaate hain — matlab kist ka intezaar karne se behtar hai ki
+          taur par lagbhag 24 din mein nipat jaate hain, matlab kist ka intezaar karne se behtar hai ki
           season se pehle hi arzi laga dein.
         </p>
 

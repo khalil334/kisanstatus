@@ -53,7 +53,7 @@ export default function MSPIncomeCalcPage() {
 
       <CalcHeader
         title="MSP Income Calculator 2026"
-        subtitle="Fasal ka MSP rate jaano — kitna paisa milega government se"
+        subtitle="Fasal ka MSP rate jaano, kitna paisa milega government se"
         breadcrumb="MSP Income"
       />
 
@@ -68,7 +68,7 @@ export default function MSPIncomeCalcPage() {
         <div className="mb-6 p-5 bg-orange-50 border border-orange-200 rounded-xl text-sm text-gray-700 leading-relaxed">
           <p className="font-bold text-orange-900 mb-2">MSP Kya Hai — Fasal Ka Sahi Daam Jaano</p>
           <p className="mb-2">
-            <strong>MSP (Minimum Support Price)</strong> ek tarah ki guarantee hai — mandi mein rate kitna bhi gir jaye, government isse kam mein aapki fasal nahi khareedne degi. Ye kisano ko bade nuksan se bachane ke liye banayi gayi hai.
+            <strong>MSP (Minimum Support Price)</strong> ek tarah ki guarantee hai, mandi mein rate kitna bhi gir jaye, government isse kam mein aapki fasal nahi khareedne degi. Ye kisano ko bade nuksan se bachane ke liye banayi gayi hai.
           </p>
           <p className="mb-2">
             Jaise agar gehun ka MSP ₹2,550/quintal hai aur aapke paas 10 quintal gehun hai — to <strong>₹25,500</strong> milna tay hai, chahe mandi mein rate ₹2,000 chal raha ho ya ₹3,000.
@@ -84,7 +84,7 @@ export default function MSPIncomeCalcPage() {
           <SelectField
             label="Kaunsi fasal hai?"
             value={crop} onChange={setCrop}
-            options={Object.entries(MSP).map(([k,v])=>({value:k,label:`${v.name} — ₹${v.msp}/quintal`}))}
+            options={Object.entries(MSP).map(([k,v])=>({value:k,label:`${v.name} ₹${v.msp}/quintal`}))}
             hint="Sabhi fasalon ka MSP 2025-26 ke hisaab se hai"
           />
           <SelectField
@@ -113,7 +113,7 @@ export default function MSPIncomeCalcPage() {
           {qtl>0 && (
             <div className="mt-4 bg-orange-50 border-2 border-orange-200 rounded-2xl p-5">
               <p className="text-xs text-orange-700 font-bold uppercase tracking-wide mb-3">
-                 {cropData.name} — MSP Income 2025-26
+                 {cropData.name} MSP Income 2025-26
               </p>
               <ResultRow label="MSP Rate" value={`₹${cropData.msp.toLocaleString('en-IN')}/quintal`} />
               <ResultRow label="Total Fasal (quintal)" value={`${qtl.toFixed(2)} qtl`} />
@@ -160,11 +160,11 @@ export default function MSPIncomeCalcPage() {
           <h3 className="font-black text-gray-900 text-sm mb-4">MSP Par Fasal Kaise Bechein</h3>
           <div className="space-y-3">
             {[
-              {n:1,s:'Pehle fasal taiyar karo — safai, grading, moisture check, sab FCI standards ke hisaab se'},
+              {n:1,s:'Pehle fasal taiyar karo, safai, grading, moisture check, sab FCI standards ke hisaab se'},
               {n:2,s:'Nazdiki procurement center dhundo — FCI, MARKFED, ya state agency ke centers hote hain'},
               {n:3,s:'Documents saath rakho: Aadhaar, land records, bank passbook, crop proof (parchi)'},
               {n:4,s:'Wahan fasal weigh hogi aur quality check hoga, standards match kiya to seedha MSP par khareed lenge'},
-              {n:5,s:'Payment aam taur pe 24-72 ghante ke andar bank account mein aa jati hai — direct transfer'},
+              {n:5,s:'Payment aam taur pe 24-72 ghante ke andar bank account mein aa jati hai, direct transfer'},
               {n:6,s:'Receipt zaroor sambhal ke rakho, kabhi bhi kaam aa sakti hai'},
             ].map(({n,s})=>(
               <div key={n} className="flex gap-3 items-start">
@@ -195,7 +195,7 @@ export default function MSPIncomeCalcPage() {
             </div>
             <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl">
               <p className="font-bold text-blue-900 mb-1">Sahi Center Chuno</p>
-              <p className="text-blue-800">FCI, MARKFED ya state procurement centers hi MSP dete hain — private traders isse bachte hain</p>
+              <p className="text-blue-800">FCI, MARKFED ya state procurement centers hi MSP dete hain, private traders isse bachte hain</p>
             </div>
             <div className="p-3 bg-purple-50 border border-purple-200 rounded-xl">
               <p className="font-bold text-purple-900 mb-1">Time Par Becho</p>
@@ -211,11 +211,11 @@ export default function MSPIncomeCalcPage() {
         <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
           <p className="font-bold text-yellow-900 text-sm mb-2">MSP Mein Aksar Yeh Galtiyan Hoti Hain:</p>
           <ul className="space-y-1.5 text-xs text-yellow-800">
-            <li>Private trader ke paas MSP ki umeed se jana — woh apna hi rate dete hain, MSP nahi</li>
+            <li>Private trader ke paas MSP ki umeed se jana, woh apna hi rate dete hain, MSP nahi</li>
             <li>Moisture ya grading kharab hona — isse fasal seedhe reject ho sakti hai</li>
-            <li>Documents bhool jana — bina inke procurement possible nahi hota</li>
+            <li>Documents bhool jana, bina inke procurement possible nahi hota</li>
             <li>Der se pahunchna — mandi mein rush ho jata hai, ghante wait karna padta hai</li>
-            <li>Receipt na lena — baad mein koi dispute ho to proof nahi milega</li>
+            <li>Receipt na lena, baad mein koi dispute ho to proof nahi milega</li>
           </ul>
         </div>
 
@@ -227,13 +227,13 @@ export default function MSPIncomeCalcPage() {
           <p className="font-bold text-orange-900 text-sm mb-3">MSP Se Related Guides</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <Link href="/articles/PmKisan24viKist2026" className="p-3 bg-white border border-orange-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-orange-600 hover:text-white transition-colors">
-               PM Kisan Status — ₹6,000 Free
+               PM Kisan Status, ₹6,000 Free
             </Link>
             <Link href="/articles/KisanCreditCardOnlineApply2026" className="p-3 bg-white border border-orange-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-orange-600 hover:text-white transition-colors">
                KCC Loan — Kheti Ke Liye Paisa
             </Link>
             <Link href="/articles/PmfbyCropInsurance2026" className="p-3 bg-white border border-orange-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-orange-600 hover:text-white transition-colors">
-               Fasal Bima — MSP Ke Sath Zaroori
+               Fasal Bima. MSP Ke Sath Zaroori
             </Link>
             <Link href="/articles/soil-health-card-complete-guide-2026" className="p-3 bg-white border border-orange-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-orange-600 hover:text-white transition-colors">
               Soil Health Card — Better Yield
@@ -242,7 +242,7 @@ export default function MSPIncomeCalcPage() {
                Kheti Munafa Calculator
             </Link>
             <Link href="/articles/NanoDap500mlPriceInIndia2026" className="p-3 bg-white border border-orange-200 rounded-xl text-xs font-semibold text-gray-700 hover:bg-orange-600 hover:text-white transition-colors">
-               Nano DAP — Kam Kharcha
+               Nano DAP. Kam Kharcha
             </Link>
           </div>
         </div>
@@ -260,7 +260,7 @@ export default function MSPIncomeCalcPage() {
             </details>
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">Kya sabhi fasalon par MSP milta hai?</summary>
-              <p className="mt-2 text-gray-700">23 fasalon par MSP milta hai — gehun, dhaan, makka, bajra, kapas, sarson, moongfali, dal, ganna aur baaki. Par har jagah procurement center nahi hota, isliye apne state mein kaunsi fasal procure hoti hai ye pehle check kar lena.</p>
+              <p className="mt-2 text-gray-700">23 fasalon par MSP milta hai, gehun, dhaan, makka, bajra, kapas, sarson, moongfali, dal, ganna aur baaki. Par har jagah procurement center nahi hota, isliye apne state mein kaunsi fasal procure hoti hai ye pehle check kar lena.</p>
             </details>
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">MSP rate kitna hai 2026 mein?</summary>
@@ -268,7 +268,7 @@ export default function MSPIncomeCalcPage() {
             </details>
             <details className="bg-white border border-gray-200 rounded-lg p-3">
               <summary className="font-bold text-gray-900 cursor-pointer">MSP se zyada price kaise milega?</summary>
-              <p className="mt-2 text-gray-700">MSP toh sirf minimum hai — agar mandi mein rate usse zyada chal raha hai, wahan bech do. E-NAM par online becho toh multiple buyers compete karte hain aur kabhi behtar rate mil jata hai. FPO se judna aur organic farming karna bhi premium price dilwa sakta hai.</p>
+              <p className="mt-2 text-gray-700">MSP toh sirf minimum hai, agar mandi mein rate usse zyada chal raha hai, wahan bech do. E-NAM par online becho toh multiple buyers compete karte hain aur kabhi behtar rate mil jata hai. FPO se judna aur organic farming karna bhi premium price dilwa sakta hai.</p>
             </details>
           </div>
         </div>

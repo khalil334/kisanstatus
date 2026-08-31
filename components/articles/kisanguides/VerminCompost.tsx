@@ -239,7 +239,7 @@ export default function VerminCompost() {
 
           <li>
             <strong className="text-blue-900 dark:text-blue-200 block mb-1">2. Soil Health Management (CISS):</strong>
-            Iske under Capital Investment Subsidy Scheme mein individuals/private agencies ko mechanized agro-waste compost unit lagane par cost ka 33% tak (maximum ₹63 lakh per unit) capital subsidy milti hai. Yeh bade mechanized units (3000 tonne/saal capacity tak) ke liye hai — chhoti pit-wali unit ke liye nahi, lekin scale badhane ki soch ho toh yehi rasta hai.
+            Iske under Capital Investment Subsidy Scheme mein individuals/private agencies ko mechanized agro-waste compost unit lagane par cost ka 33% tak (maximum ₹63 lakh per unit) capital subsidy milti hai. Yeh bade mechanized units (3000 tonne/saal capacity tak) ke liye hai, chhoti pit-wali unit ke liye nahi, lekin scale badhane ki soch ho toh yehi rasta hai.
           </li>
 
           <li>

@@ -333,7 +333,7 @@ const FAQS_DATA = [
     a: 'Agar paise ki abhi zaroorat hai, current rate par bech dena hi safe hai. Market kabhi bhi neeche ja sakta hai. Aloo-pyaaz jaisi cheezein thodi der store ho sakti hain, isliye agar rate badhne ka pattern dikh raha ho toh 2-3 hafte rukna ek option hai. Lekin yeh gamble bhi hai.',
   },
   {
-    q: 'Data kahan se aata hai — bharosemand hai kya?',
+    q: 'Data kahan se aata hai, bharosemand hai kya?',
     a: 'Source agmarknet.gov.in hai, jo Ministry of Agriculture ka apna portal hai. Har mandi apna arrival aur price data isi system mein daily feed karti hai, isliye base data sarkari hi hai.',
   },
 ];
@@ -767,7 +767,7 @@ export default function MandiBhavToday() {
             className="w-full rounded-xl"
           />
           <p className="text-center text-xs text-gray-600 py-2 bg-gray-50">
-            Seb aur kela — saal bhar demand mein rehne wale do phal
+            Seb aur kela, saal bhar demand mein rehne wale do phal
           </p>
         </div>
 

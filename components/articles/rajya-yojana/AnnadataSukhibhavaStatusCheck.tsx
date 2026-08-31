@@ -106,7 +106,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <Fig
         src="dbt-bank-account.webp"
         alt="Kisan bank branch mein passbook lekar DBT aur NPCI Aadhaar mapping check karwa raha hai"
-        caption="Naam list mein hai par paisa nahi aaya — pehla check bank branch mein NPCI mapping ka"
+        caption="Naam list mein hai par paisa nahi aaya, pehla check bank branch mein NPCI mapping ka"
       />
 
       <h3>1. Bank Account DBT Enabled Nahi Hai</h3>
@@ -351,7 +351,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <p>
         Naam ka matlab hai "annadata sukhi rahe". Aap soch rahe honge ki itna paisa aata kahan se hai. Do jagah se. Paisa seedha bank account mein aata hai, taaki
         beej, khaad aur season ke baaki kharche waqt par ho sakein. Matlab paisa haath mein nahi,
-        seedha khaate mein — yahi DBT ka poora point hai.
+        seedha khaate mein, yahi DBT ka poora point hai.
       </p>
 
       <p>

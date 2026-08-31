@@ -20,7 +20,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Interest sach me 4% hai ya ye sirf ads me likha hota hai?',
-    a: '4% koi alag rate nahi — ye math hai. Loan 7% par milta hai (sarkari interest subvention ke baad). Time par poora repay karo to 3% ka prompt repayment incentive alag se milta hai. 7 minus 3 = 4% effective. Par shart wahi hai: due date se pehle repayment. Ek din bhi late hue to incentive gaya aur rate wapas 7% (ya bank ka normal rate) par chala jata hai.',
+    a: '4% koi alag rate nahi, ye math hai. Loan 7% par milta hai (sarkari interest subvention ke baad). Time par poora repay karo to 3% ka prompt repayment incentive alag se milta hai. 7 minus 3 = 4% effective. Par shart wahi hai: due date se pehle repayment. Ek din bhi late hue to incentive gaya aur rate wapas 7% (ya bank ka normal rate) par chala jata hai.',
   },
   {
     q: 'Kitne tak ka loan bina guarantee ke milta hai?',
@@ -193,7 +193,7 @@ export default function PashuKisanCreditCard({ article }: { article: Yojana2026A
         </WB>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Collateral ki baat: January 2025 se RBI ne bina security wale agriculture loan ki seema{' '}
-          <strong>₹2 lakh</strong> kar di hai (pehle ₹1.6 lakh thi — purane blogs wahi likh rahe hain). ₹2
+          <strong>₹2 lakh</strong> kar di hai (pehle ₹1.6 lakh thi, purane blogs wahi likh rahe hain). ₹2
           lakh tak na zameen girvi, na guarantor. Uske upar bank security maangega, aur ye jaayaz hai.
         </p>
 
@@ -262,7 +262,7 @@ export default function PashuKisanCreditCard({ article }: { article: Yojana2026A
           to payment cash ke bajaye usi khaate me lo jisse KCC juda hai. Chhe mahine ka aisa record ban
           gaya to enhancement ki baat khud aasaan ho jaati hai. Bank ko dikh raha hota hai ki income
           regular hai. Cash me doodh bechna aaj sasta lagta hai, par bank ke saamne aapki kamai zero
-          dikhti hai — aur zero income par koi limit nahi badhti.
+          dikhti hai, aur zero income par koi limit nahi badhti.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Doosra kaam, limit ka istemaal aur chukauta dono dikhao. Card lekar use hi na karna bhi galat

@@ -14,7 +14,7 @@ export default function GuideDisclaimer({
     <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 not-prose">
       <p className="text-sm text-gray-700 dark:text-gray-300">
         <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-        Ek baat saaf kar doon — yeh article aapko samjhane ke liye likha hai, koi pakki salah
+        Ek baat saaf kar doon, yeh article aapko samjhane ke liye likha hai, koi pakki salah
         nahi hai. Kharcha, subsidy aur kaagzi kaam har jagah alag hota hai; mere yahan kuch aur
         hota hai, aapke zile mein kuch aur. Isliye paisa lagane se pehle {consult} se ek baar
         zaroor baat kar lein.{extra ? ` ${extra}` : ''} Rate aur niyam badalte rehte hain, to

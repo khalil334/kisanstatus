@@ -58,7 +58,7 @@ export default function FtoStatusCheckPaisaKabAayega({ article }: { article: Art
       <div className="container-site max-w-3xl py-8">
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          <strong>Seedha jawab pehle:</strong> FTO (Fund Transfer Order) generate hone ke baad paisa aam taur par <strong>kuch hi dino mein</strong> account mein aa jata hai — lekin iska koi official sarkari timeline nahi hai. &quot;SBI mein 8 din, Post Office mein 25 din&quot; jaise pakke numbers jo internet par milte hain, unka koi sarkari source nahi hota. Is page par sirf wahi hai jo pakka hai. Aur ek practical 15-din rule jo kaam karta hai.
+          <strong>Seedha jawab pehle:</strong> FTO (Fund Transfer Order) generate hone ke baad paisa aam taur par <strong>kuch hi dino mein</strong> account mein aa jata hai, lekin iska koi official sarkari timeline nahi hai. &quot;SBI mein 8 din, Post Office mein 25 din&quot; jaise pakke numbers jo internet par milte hain, unka koi sarkari source nahi hota. Is page par sirf wahi hai jo pakka hai. Aur ek practical 15-din rule jo kaam karta hai.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
@@ -138,7 +138,7 @@ export default function FtoStatusCheckPaisaKabAayega({ article }: { article: Art
             jab bank ke paas aapka chalu number ho.</SI>
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
-            Dhyan do — aap padaav 2 tak ka kaam khud kar sakte ho (eKYC, seeding, NPCI). Padaav 3
+            Dhyan do, aap padaav 2 tak ka kaam khud kar sakte ho (eKYC, seeding, NPCI). Padaav 3
             se 5 tak sirf system chalta hai; wahan aapke kuch karne se raftar nahi badalti.
           </p>
         </section>
@@ -198,7 +198,7 @@ export default function FtoStatusCheckPaisaKabAayega({ article }: { article: Art
             koi iske paise mange to galat hai.</SI>
             <SI n={4}><strong>SMS ka intezaar. Par bharosa mat karo:</strong> credit ka SMS tabhi aata
             hai jab bank record mein aapka chalu number ho. SMS na aana paisa na aane ka saboot nahi
-            hai. Number purana hai to branch mein update karwao — aage ki har kist ke liye kaam
+            hai. Number purana hai to branch mein update karwao, aage ki har kist ke liye kaam
             aayega.</SI>
           </StepList>
         </section>
@@ -264,7 +264,7 @@ export default function FtoStatusCheckPaisaKabAayega({ article }: { article: Art
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
             Timing ka context bhi samajh lo: 23vi kist 20 June 2026 ko aayi thi, aur 24vi ke liye news
-            me October 2026 chal raha hai — official date abhi notify nahi hui. Matlab do kisto ke
+            me October 2026 chal raha hai, official date abhi notify nahi hui. Matlab do kisto ke
             beech 3–4 mahine ka gap normal hai. Agar aapki pichhli kist aa chuki hai aur agli ka
             intezaar hai, to wo FTO ka issue nahi, release cycle ka hissa hai. Shikayat ki zaroorat
             sirf tab hai jab release ho chuki kist aapke account tak na pahunchi ho.

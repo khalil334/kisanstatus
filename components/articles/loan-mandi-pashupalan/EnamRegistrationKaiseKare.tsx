@@ -73,7 +73,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
         <DB>
           <strong>Ek line mein poori kahani:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li>eNAM registration <strong>bilkul free</strong> — enam.gov.in par ya mandi ke help desk par; documents sirf 3 (Aadhaar, bank passbook, mobile).</li>
+            <li>eNAM registration <strong>bilkul free</strong> enam.gov.in par ya mandi ke help desk par; documents sirf 3 (Aadhaar, bank passbook, mobile).</li>
             <li>Fasal apni hi mandi le jaani hai. Sirf <strong>boli online</strong> hoti hai; zyada buyers, behtar rate, payment seedha bank mein.</li>
             <li>1,400+ mandiyan judi hain; 11/02/2024 tak <strong>1.77 crore+ kisan</strong> registered (Ministry of Agriculture ke figures).</li>
             <li>Sabse zyada fayda anaaj-dalein-tilhan-masale walon ko, grading standardised hai. <strong>Abhi enam.gov.in par check karo</strong> ki aapki mandi judi hai ya nahi.</li>
@@ -201,7 +201,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
 
         <Image
           src="/images/articles/loan-mandi-pashupalan/enam-registration-kaise-kare/gate-tulai.webp"
-          alt="Mandi gate entry par fasal ki tulai — yahin se eNAM lot banta hai"
+          alt="Mandi gate entry par fasal ki tulai, yahin se eNAM lot banta hai"
           width={1200}
           height={670}
           className="w-full h-auto rounded-xl my-5"
@@ -286,7 +286,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
           <strong>Asli misaal, record ke saath:</strong> Andhra Pradesh ke Kurnool district ki <strong>Adoni mandi</strong>
          . March 2017 se juda hua, desh ki pehli bani jisko platform par <strong>1 crore bids</strong> mile
           (11.34 lakh lots par, 20/01/2023 tak; average 9 bids per lot). Wahan assaying lab, price display boards
-          aur eNAM-integrated weighing machines lagi hain — tulai ka data seedha portal par jaata hai, haath ki
+          aur eNAM-integrated weighing machines lagi hain, tulai ka data seedha portal par jaata hai, haath ki
           gadbad ka chance khatam. Poori kahani official blog par hai:{' '}
           <a href="https://enam.gov.in/web/blog" target="_blank" rel="noopener noreferrer" className="underline font-bold">enam.gov.in/web/blog</a>.
           Matlab: jahan system theek laga hai, wahan competition sach mein hota hai.
@@ -346,7 +346,7 @@ export default function EnamRegistrationKaiseKare({ article }: { article: Articl
               <tr>
                 <td className="border border-[var(--color-border)] p-3 font-semibold">Buyers</td>
                 <td className="border border-[var(--color-border)] p-3">Sirf local vyapari</td>
-                <td className="border border-[var(--color-border)] p-3">Pura desh — online bidding</td>
+                <td className="border border-[var(--color-border)] p-3">Pura desh, online bidding</td>
               </tr>
               <tr className="bg-[var(--color-bg-alt)]">
                 <td className="border border-[var(--color-border)] p-3 font-semibold">Rate</td>

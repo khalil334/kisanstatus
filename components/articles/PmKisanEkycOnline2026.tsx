@@ -105,7 +105,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
             Suno bhai, yeh koi optional ya "baad mein kar lenge" wali cheez nahi hai. Sarkar ne DBT (Direct Benefit Transfer) rules ke under ise compulsory kar diya hai. Ab system automatically un accounts ko filter kar deta hai jinka verification pending hai.
           </p>
           <p className="text-sm text-red-900 dark:text-red-200 leading-relaxed">
-            Par ghabrane ki baat nahi hai. Process itna aasaan hai ki phone se 2 minute mein ho jata hai, kahin jaana nahi padta — portal ya app se karne par koi charge nahi. Agar phone mein dikkat hai, toh nazdeeki CSC chale jao; wahan biometric ka government-fixed charge sirf ₹15 hai, usse zyada ek rupaya bhi nahi.
+            Par ghabrane ki baat nahi hai. Process itna aasaan hai ki phone se 2 minute mein ho jata hai, kahin jaana nahi padta, portal ya app se karne par koi charge nahi. Agar phone mein dikkat hai, toh nazdeeki CSC chale jao; wahan biometric ka government-fixed charge sirf ₹15 hai, usse zyada ek rupaya bhi nahi.
           </p>
         </div>
 
@@ -315,7 +315,7 @@ export default function PmKisanEkycOnline2026({ article }: { article: ArticleMet
               { err: 'Demographic Mismatch (Naam ka farak)', fix: 'Aadhaar aur PM Kisan portal par naam EXACT same hona chahiye. "Kumar" likha hai ya nahi, ek space ka farak bhi reject karta hai. Pehle naam sudharo.' },
               { err: 'Server Down / Page Nahi Khulta', fix: 'Yeh aapki galti nahi hai. Din ke 11 baje se 4 baje tak server par load sabse zyada hota hai. Subah 6:00 AM se 8:00 AM best time hai try karne ka.' },
               { err: 'Invalid Aadhaar Number', fix: 'Dobara check karein ki aapne 12 digit sahi dale hain. Kabhi-kabhi space ya typing mistake ho jati hai.' },
-              { err: 'eKYC Done, Par Status "NO" Dikha Raha Hai', fix: 'Server sync mein time lagta hai — kuch din wait karein. Phir bhi "NO" ho toh CSC receipt ke saath dobara verify karwayein. Aur yaad rakhein: eKYC YES hone par bhi paisa NPCI seeding ke bina nahi aata. Wo bank ka alag kaam hai (upar wala section padhein).' },
+              { err: 'eKYC Done, Par Status "NO" Dikha Raha Hai', fix: 'Server sync mein time lagta hai, kuch din wait karein. Phir bhi "NO" ho toh CSC receipt ke saath dobara verify karwayein. Aur yaad rakhein: eKYC YES hone par bhi paisa NPCI seeding ke bina nahi aata. Wo bank ka alag kaam hai (upar wala section padhein).' },
             ].map(({ err, fix }) => (
               <div key={err} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl overflow-hidden shadow-sm">
                 <div className="bg-red-50 dark:bg-red-900/20 border-b border-red-100 dark:border-red-800 px-4 py-2.5">

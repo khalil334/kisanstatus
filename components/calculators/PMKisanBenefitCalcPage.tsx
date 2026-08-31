@@ -35,7 +35,7 @@ export default function PMKisanBenefitCalcPage() {
       <CalcHeader
         emoji=""
         title="PM Kisan Calculator 2026"
-        subtitle="Kitna paisa milega PM Kisan se — apne hisaab se calculate karo"
+        subtitle="Kitna paisa milega PM Kisan se, apne hisaab se calculate karo"
         breadcrumb="PM Kisan Paisa"
       />
 
@@ -56,7 +56,7 @@ export default function PMKisanBenefitCalcPage() {
             Hisaab lagayen to agar aap 3 saal se enrolled ho aur sab kist time par aayi hain, toh ab tak <strong>₹18,000</strong> mil chuke honge. 5 saal poore ho jayein toh ye figure <strong>₹30,000</strong> tak pahunch jata hai.
           </p>
           <p className="text-xs text-green-700 dark:text-green-300 mt-3">
-             Koi kist miss ho gayi ho toh ghabrao mat — eKYC aur bank seeding complete karo, arrears mein wapas mil jati hai.
+             Koi kist miss ho gayi ho toh ghabrao mat, eKYC aur bank seeding complete karo, arrears mein wapas mil jati hai.
           </p>
         </div>
 
@@ -80,7 +80,7 @@ export default function PMKisanBenefitCalcPage() {
             value={hasEkyc} onChange={setHasEkyc}
             options={[
               {value:'yes',label:'Haan — eKYC complete hai'},
-              {value:'no', label:'Nahi — abhi pending hai'},
+              {value:'no', label:'Nahi, abhi pending hai'},
             ]}
             hint="eKYC nahi hai to kist nahi aayegi"
           />
@@ -95,7 +95,7 @@ export default function PMKisanBenefitCalcPage() {
               {hasEkyc==='no' ? (
                 <>
                   <p className="font-black text-orange-800 dark:text-orange-300 mb-1">eKYC Nahi Hua — Kist Ruki Hui Hai!</p>
-                  <p className="text-sm text-orange-700 dark:text-orange-400 mb-3">Jab tak eKYC nahi hogi, payment nahi aayegi — chahe sab kuch sahi ho.</p>
+                  <p className="text-sm text-orange-700 dark:text-orange-400 mb-3">Jab tak eKYC nahi hogi, payment nahi aayegi, chahe sab kuch sahi ho.</p>
                   <Link href="/articles/PmKisanEkycOnline2026"
                     className="inline-flex items-center gap-2 bg-green-700 text-white font-bold px-5 py-2.5 rounded-xl text-sm hover:bg-green-600 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
                      eKYC Kaise Karein — Free Guide →
@@ -103,7 +103,7 @@ export default function PMKisanBenefitCalcPage() {
                 </>
               ) : (
                 <>
-                  <p className="font-black text-red-800 dark:text-red-400 mb-1">2 Hectare Se Zyada Zameen — Eligible Nahi</p>
+                  <p className="font-black text-red-800 dark:text-red-400 mb-1">2 Hectare Se Zyada Zameen. Eligible Nahi</p>
                   <p className="text-sm text-red-700 dark:text-red-400">PM Kisan ke liye 2 hectare (5 acre) tak ki zameen wale eligible hain. Zyada zameen wale ko nahi milta.</p>
                 </>
               )}
@@ -132,7 +132,7 @@ export default function PMKisanBenefitCalcPage() {
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
           {[
             {title:'₹6,000 Saalana',desc:'₹2,000 ki 3 kist — DBT se seedha bank mein'},
-            {title:'24vi Kist',desc:'October 2026 mein aane wali hai — eKYC complete karo'},
+            {title:'24vi Kist',desc:'October 2026 mein aane wali hai, eKYC complete karo'},
             {title:'eKYC Zaroori',desc:'Bina eKYC ke kist nahi aayegi — abhi free mein karo'},
           ].map(({ title,desc})=>(
             <div key={title} className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl text-center shadow-sm">
@@ -187,7 +187,7 @@ export default function PMKisanBenefitCalcPage() {
               {n:1,s:'Nazdiki CSC center jao, ya seedha pmkisan.gov.in par online apply kar do'},
               {n:2,s:'Documents ready rakho: Aadhaar, bank passbook, land records (khasra), mobile number'},
               {n:3,s:'Form mein naam, pata, bank details aur zameen ki details bharo'},
-              {n:4,s:'Uske baad verification hoti hai — 7-14 din mein status check karte rehna'},
+              {n:4,s:'Uske baad verification hoti hai, 7-14 din mein status check karte rehna'},
               {n:5,s:'Saath mein eKYC bhi complete kar lo — Aadhaar se link karke'},
               {n:6,s:'Sab sahi raha toh pehli kist 2-3 mahine mein bank account mein aa jati hai'},
             ].map(({n,s})=>(
@@ -218,11 +218,11 @@ export default function PMKisanBenefitCalcPage() {
         <div className="mt-6 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl">
           <p className="font-bold text-yellow-900 dark:text-yellow-300 text-sm mb-2">PM Kisan Mein Aksar Yeh Galtiyan Hoti Hain:</p>
           <ul className="space-y-1.5 text-xs text-yellow-800 dark:text-yellow-400">
-            <li>eKYC ko taalna — isse kist rukti hai aur arrears mein fasna padta hai</li>
+            <li>eKYC ko taalna, isse kist rukti hai aur arrears mein fasna padta hai</li>
             <li>Bank account Aadhaar se link na hona — jiski wajah se payment fail ho jati hai</li>
-            <li>Land records mein galti — naam ya area match na hone par application reject ho jata hai</li>
+            <li>Land records mein galti, naam ya area match na hone par application reject ho jata hai</li>
             <li>Mobile number badal jana bina update kiye — OTP nahi aata, eKYC atak jati hai</li>
-            <li>Status kabhi check hi na karna — pata hi nahi chalta ki kist aayi ya nahi</li>
+            <li>Status kabhi check hi na karna, pata hi nahi chalta ki kist aayi ya nahi</li>
           </ul>
         </div>
 
@@ -235,7 +235,7 @@ export default function PMKisanBenefitCalcPage() {
             </div>
             <div className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
               <p className="font-bold text-blue-900 dark:text-blue-300 mb-1">Bank Account Check Karo</p>
-              <p className="text-blue-800 dark:text-blue-400">Bank account Aadhaar se linked aur active hona chahiye — PFMS portal se ek baar confirm kar lo</p>
+              <p className="text-blue-800 dark:text-blue-400">Bank account Aadhaar se linked aur active hona chahiye. PFMS portal se ek baar confirm kar lo</p>
             </div>
             <div className="p-3 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
               <p className="font-bold text-purple-900 dark:text-purple-300 mb-1">Status Regular Check Karo</p>
@@ -259,13 +259,13 @@ export default function PMKisanBenefitCalcPage() {
                24vi Kist Status — October 2026
             </Link>
             <Link href="/articles/PmKisanEkycOnline2026" className="p-3 bg-[var(--color-card)] border border-green-200 dark:border-green-800 rounded-xl text-xs font-semibold text-[var(--color-text)] hover:bg-green-600 hover:text-white transition-colors">
-               eKYC Kaise Karein — Free Guide
+               eKYC Kaise Karein. Free Guide
             </Link>
             <Link href="/articles/PmKisanBeneficiaryList2026" className="p-3 bg-[var(--color-card)] border border-green-200 dark:border-green-800 rounded-xl text-xs font-semibold text-[var(--color-text)] hover:bg-green-600 hover:text-white transition-colors">
                Beneficiary List — Naam Check Karo
             </Link>
             <Link href="/articles/PmKisanPaymentFailedFix2026" className="p-3 bg-[var(--color-card)] border border-green-200 dark:border-green-800 rounded-xl text-xs font-semibold text-[var(--color-text)] hover:bg-green-600 hover:text-white transition-colors">
-               Payment Failed Fix — Turant
+               Payment Failed Fix. Turant
             </Link>
             <Link href="/articles/PmKisanMasterGuide2026" className="p-3 bg-[var(--color-card)] border border-green-200 dark:border-green-800 rounded-xl text-xs font-semibold text-[var(--color-text)] hover:bg-green-600 hover:text-white transition-colors">
                PM Kisan Complete Guide
@@ -285,7 +285,7 @@ export default function PMKisanBenefitCalcPage() {
             </details>
             <details className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg p-3">
               <summary className="font-bold text-[var(--color-text)] cursor-pointer">PM Kisan ke liye kaun eligible hai?</summary>
-              <p className="mt-2 text-[var(--color-text-muted)]">2 hectare (5 acre) tak zameen wale kisan eligible hote hain — chahe land owner ho ya tenant farmer. SC/ST/OBC sab shamil hain. bas eKYC complete honi chahiye aur bank account Aadhaar se linked hona chahiye.</p>
+              <p className="mt-2 text-[var(--color-text-muted)]">2 hectare (5 acre) tak zameen wale kisan eligible hote hain, chahe land owner ho ya tenant farmer. SC/ST/OBC sab shamil hain. bas eKYC complete honi chahiye aur bank account Aadhaar se linked hona chahiye.</p>
             </details>
             <details className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg p-3">
               <summary className="font-bold text-[var(--color-text)] cursor-pointer">Kist nahi aayi to kya karu?</summary>

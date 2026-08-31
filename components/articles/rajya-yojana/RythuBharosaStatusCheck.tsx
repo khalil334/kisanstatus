@@ -78,7 +78,7 @@ export default function RythuBharosaStatusCheck2026() {
 
       <ExternalLinkButton
         href="https://rytubharosa.cgg.gov.in"
-        label="Official Portal — Rythu Bharosa Telangana"
+        label="Official Portal. Rythu Bharosa Telangana"
       />
 
       <h2>Routine. Status Check Se Pehle Ye Teen Cheezein Saath Rakhein</h2>
@@ -243,7 +243,7 @@ export default function RythuBharosaStatusCheck2026() {
         Hal: Agar zameen par koi court case ya parivarik vivad (family dispute) hai, toh Dharani portal par us par "Disputed" ka tag lag jata hai. Aise cases mein payment tab tak roki jaati hai jab tak vivad khatam nahi ho jata.
       </p>
 
-      <h2>Virasat Ki Zameen — Sabse Zyada Atakne Wala Case</h2>
+      <h2>Virasat Ki Zameen. Sabse Zyada Atakne Wala Case</h2>
 
       <p>
         Waise, iske baare mein maine upar seedha nahi bataya, par ek scenario itna common hai ki alag se likhna zaroori hai. Pita ka dehant ho gaya.
@@ -351,7 +351,7 @@ export default function RythuBharosaStatusCheck2026() {
         Poora jod milaane se pehle sab khaton ke credit gin lein.
       </p>
 
-      <h2>Rythu Bandhu Se Rythu Bharosa — Kya Badla</h2>
+      <h2>Rythu Bandhu Se Rythu Bharosa. Kya Badla</h2>
 
       <p>
         Gaon mein aaj bhi purana naam hi chalta hai. Kaam karne ka tareeka wahi hai; naam badla hai aur

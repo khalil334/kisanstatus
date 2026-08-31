@@ -20,7 +20,7 @@ export default function LandSeedingDownloadPage() {
     }, 500);
   };
 
-  const pageTitle = `${state} Bhulekh Portal — Khasra-Khatauni Nikaalein (Land Seeding 2026)`;
+  const pageTitle = `${state} Bhulekh Portal. Khasra-Khatauni Nikaalein (Land Seeding 2026)`;
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -102,7 +102,7 @@ export default function LandSeedingDownloadPage() {
                 Zaroori Jaankari aur Process:
               </h3>
               <ul className="text-xs text-blue-700 dark:text-blue-400 space-y-2 list-disc list-inside">
-                <li>Land seeding ka koi ek all-India PDF nahi hota — form Patwari, CSC ya Block Agriculture Office se <strong>free</strong> milta hai. Kisi bhi agent ya middleman ko paise na dein.</li>
+                <li>Land seeding ka koi ek all-India PDF nahi hota, form Patwari, CSC ya Block Agriculture Office se <strong>free</strong> milta hai. Kisi bhi agent ya middleman ko paise na dein.</li>
                 <li>Portal se khasra-khatauni ki copy nikaal kar form ke saath lagayein, aur Patwari ya Lekhpal se details zaroor verify karwayein.</li>
                 <li>Sahi details bharne ke baad ise apne Block Agriculture Office ya nazdeeki CSC centre mein submit karein.</li>
                 <li>

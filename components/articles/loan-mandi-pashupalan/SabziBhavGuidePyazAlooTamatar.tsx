@@ -29,7 +29,7 @@ const FAQS_DATA = [
   },
   {
     q: 'NAFED buffer stock ka kisan ke bhav par kya asar hota hai?',
-    a: 'Do taraf se. Jab bhav girta hai toh NAFED/NCCF Price Stabilisation Fund ke under kisano se pyaz kharidte hain — isse mandi mein neeche ka support ban jaata hai. Aur jab retail bhav chadhta hai (aksar September-October ke aas paas) toh yahi stock market mein utara jaata hai. Isse upar ka spike dab jaata hai. Matlab: bahut bada price boom aane ki umeed par poora stock hold karna ab pehle se zyada risky hai.',
+    a: 'Do taraf se. Jab bhav girta hai toh NAFED/NCCF Price Stabilisation Fund ke under kisano se pyaz kharidte hain, isse mandi mein neeche ka support ban jaata hai. Aur jab retail bhav chadhta hai (aksar September-October ke aas paas) toh yahi stock market mein utara jaata hai. Isse upar ka spike dab jaata hai. Matlab: bahut bada price boom aane ki umeed par poora stock hold karna ab pehle se zyada risky hai.',
   },
   {
     q: 'Mandi bhav roz kahan check karein?',
@@ -113,7 +113,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Neeche teeno crops ka cycle alag-alag samjhaya hai — kab supply zyada hoti hai, kab gap aata
+          Neeche teeno crops ka cycle alag-alag samjhaya hai, kab supply zyada hoti hai, kab gap aata
           hai, cold storage ka hisaab kab banta hai aur kab nahi, aur NAFED ka buffer stock aapki planning ko
           kaise badalta hai. Sab MSP se bahar ki cheezein hain, isliye yahan bhav ka gyan hi asli hathiyar hai.
         </p>
@@ -193,7 +193,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
           Sarkar ke liye pyaz political sabzi hai. Bhav chadhte hi shor machta hai. Isliye Price Stabilisation
           Fund (PSF) ke under NAFED aur NCCF har saal rabi season mein kisano se pyaz kharid kar buffer stock
           banate hain (lakhon tonne ka target rehta hai), aur jab retail bhav chadhta hai. Aam taur par
-          September-October ke aas paas — toh yahi stock sasti rate par market mein utara jaata hai.
+          September-October ke aas paas, toh yahi stock sasti rate par market mein utara jaata hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Kisan ke liye iske do matlab hain. Achha matlab: jab bhav crash hota hai, PSF procurement ek floor bana
@@ -254,7 +254,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Tamatar ka bhav saal mein aam taur par do baar aag pakadta hai. Pehla, <strong>monsoon window
           (June-August)</strong>: barsaat se field crop kharab hota hai, transport tootta hai, supply girti hai
-          aur bhav ek dum chadh jaata hai. Doosra — kabhi-kabhi sardi ke shuru mein, jab ek belt ki fasal khatam
+          aur bhav ek dum chadh jaata hai. Doosra, kabhi-kabhi sardi ke shuru mein, jab ek belt ki fasal khatam
           aur doosri shuru hone ke beech gap aata hai. In windows mein jiski harvest taiyar hoti hai, wohi asli
           munafa kamata hai. Baaki waqt tamatar aksar lagat par ya usse neeche bikta hai.
         </p>
@@ -325,7 +325,7 @@ export default function SabziBhavGuidePyazAlooTamatar({ article }: { article: Ar
         />
         <StepList>
           <SI n={1}><strong>Harvest ke din hi poora maal bech dena</strong>, wahi din hota hai jab mandi mein supply sabse zyada aur bhav sabse kam hota hai. Jo store ho sakta hai (rabi pyaz, aloo), uska plan pehle se banao.</SI>
-          <SI n={2}><strong>Poora stock ek hi baar bechna</strong> — 2-3 lot mein becho. Peak pakadne ki koshish mein poora maal late karne se average bigad jaata hai; lot mein bechne se risk bant jaata hai.</SI>
+          <SI n={2}><strong>Poora stock ek hi baar bechna</strong> 2-3 lot mein becho. Peak pakadne ki koshish mein poora maal late karne se average bigad jaata hai; lot mein bechne se risk bant jaata hai.</SI>
           <SI n={3}><strong>Storage ka hisaab lagaye bina aloo bharna</strong>, storage + byaj + loss jodne par kai baar hold karna ghaate ka sauda nikalta hai. Break-even pehle nikalo, storage baad mein bharo.</SI>
           <SI n={4}><strong>Sirf apni mandi ka rate dekhna</strong>, paas ki mandiyon aur eNAM ka rate compare karna 5 minute ka kaam hai. Patti ki katautiyan (commission, tulai, palledari) bhi mandi-mandi alag hoti hain.</SI>
           <SI n={5}><strong>NAFED/buffer stock ko ignore karna</strong>, pyaz mein bade boom ka intezaar karne walo ka stock aksar tab bikta hai jab sarkar buffer utar chuki hoti hai. Sarkari intervention ab cycle ka permanent hissa hai. Strategy usi ke hisaab se banao.</SI>

@@ -53,7 +53,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Koi bhai paisa maang raha hai soil test ke liye, sahi hai?',
-    a: 'Nahi. Government scheme me test aur card dono free hain, kharcha sirf aane-jaane ka hai. Private lab apni fees le sakti hai, par usko “sarkari card” bata kar paisa maangna galat hai. Aisi koi website jo soil card ke naam par registration fees ya OTP maange — usse door raho; official rasta soilhealth.dac.gov.in aur aapka block agriculture office hai.',
+    a: 'Nahi. Government scheme me test aur card dono free hain, kharcha sirf aane-jaane ka hai. Private lab apni fees le sakti hai, par usko “sarkari card” bata kar paisa maangna galat hai. Aisi koi website jo soil card ke naam par registration fees ya OTP maange, usse door raho; official rasta soilhealth.dac.gov.in aur aapka block agriculture office hai.',
   },
   {
     q: 'Agronomy ki knowledge hi nahi hai. Soil report samjhu kaise?',
@@ -149,7 +149,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
                Abhi Mitti Test Ke Liye Apply Karo
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official portal par jakar <strong>online apply</strong> karo — 10 second ruko, portal khud khulega.
+              Official portal par jakar <strong>online apply</strong> karo, 10 second ruko, portal khud khulega.
             </p>
             <OfficialLinkButton
               title="Soil Health Card Portal"
@@ -356,7 +356,7 @@ export default function SoilHealthCardCompleteGuide2026({ article }: { article: 
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <p className="font-black text-sm mb-1 text-[var(--color-text)]">Card har 2 saal mein naya banta hai</p>
-              <p className="text-xs text-gray-600 dark:text-gray-400">Biennial cycle hai — matlab 2024 ka card ab purana ho raha hai. 2026 mein naya sample dene ka time aa gaya hai. Khaad ka hisaab purani report se mat chalao.</p>
+              <p className="text-xs text-gray-600 dark:text-gray-400">Biennial cycle hai, matlab 2024 ka card ab purana ho raha hai. 2026 mein naya sample dene ka time aa gaya hai. Khaad ka hisaab purani report se mat chalao.</p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
               <p className="font-black text-sm mb-1 text-[var(--color-text)]">June 2026: Khet Bachao Abhiyan</p>

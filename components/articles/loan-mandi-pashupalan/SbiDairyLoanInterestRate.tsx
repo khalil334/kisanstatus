@@ -33,7 +33,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Loan amount kaise tay hota hai. Main khud calculate kar sakta hoon?',
-    a: 'Poori tarah nahi. Allied activities mein amount Scale of Finance se tay hota hai, jo aapke district ki District Level Technical Committee fix karti hai — per animal ya per unit local cost ke hisaab se. Isi wajah se Punjab ka aur Bihar ka kisan, same 5 bhains par, alag amount le kar aate hain. Apni district ki SoF branch se ya lead bank se pata karo, phir DPR usi ke aas-paas rakho.',
+    a: 'Poori tarah nahi. Allied activities mein amount Scale of Finance se tay hota hai, jo aapke district ki District Level Technical Committee fix karti hai, per animal ya per unit local cost ke hisaab se. Isi wajah se Punjab ka aur Bihar ka kisan, same 5 bhains par, alag amount le kar aate hain. Apni district ki SoF branch se ya lead bank se pata karo, phir DPR usi ke aas-paas rakho.',
   },
   {
     q: 'YONO se online apply ho jata hai?',
@@ -124,7 +124,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
 
         <SH>Rate Banta Kaise Hai. MCLR + Spread</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          MCLR matlab Marginal Cost of Funds-Based Lending Rate — bank ko khud paisa jutane mein jo lagat aati hai,
+          MCLR matlab Marginal Cost of Funds-Based Lending Rate, bank ko khud paisa jutane mein jo lagat aati hai,
           uske hisaab se banaya gaya benchmark. Agri aur allied loan aam taur par 1-year MCLR se jude hote hain. Bank
           har mahine MCLR review karta hai, isliye yeh number sthir nahi rehta.
         </p>
@@ -239,7 +239,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
 
         <WB>
           SoF mein margin already build-in hota hai, isliye alag se margin ka sawaal aksar nahi uthta. Phir bhi
-          sanction letter mein margin ka column khud dekh lo — kai baar bade project par bank apni policy ke hisaab
+          sanction letter mein margin ka column khud dekh lo, kai baar bade project par bank apni policy ke hisaab
           se contribution maangta hai.
         </WB>
 
@@ -364,7 +364,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         <SH>Apply Ka Process. Kadam Se Kadam</SH>
         <StepList>
           <SI n={1}>
-            <strong>Branch chuno soch kar</strong> — agri branch ya jahan aapka operative account hai. Agri officer wali
+            <strong>Branch chuno soch kar</strong> agri branch ya jahan aapka operative account hai. Agri officer wali
             branch mein file tezi se aage badhti hai.
           </SI>
           <SI n={2}>
@@ -457,7 +457,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           <li>
             Dept of Animal Husbandry &amp; Dairying, &ldquo;Guidelines/SoP for exclusive Kisan Credit Cards (KCC) for
             Animal Husbandry, Dairying and Fisheries farmers&rdquo; (official PDF, 08.10.2021), Kisan Credit Cards division page.{' '}
-            <a href="https://www.dahd.gov.in/index.php/en/division/kcc" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">dahd.gov.in — Kisan Credit Cards (KCC guidelines &amp; SoP)</a>
+            <a href="https://www.dahd.gov.in/index.php/en/division/kcc" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">dahd.gov.in. Kisan Credit Cards (KCC guidelines &amp; SoP)</a>
           </li>
         </ul>
 

@@ -116,7 +116,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </p>
           <ul className="space-y-2 mb-4">
             {[
-              'Income tax bharne wale — pichhle assessment year mein tax file kiya hai toh out',
+              'Income tax bharne wale, pichhle assessment year mein tax file kiya hai toh out',
               'Serving ya retired government employee (Group D / Class IV chhod kar)',
               '\u20B910,000 ya usse zyada monthly pension pane wale retired log',
               'Doctor, engineer, vakil, CA, architect, jo practice kar rahe hain',
@@ -442,7 +442,7 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4 mb-3">
-            Table mein gap dekho. November se March char mahine, March se June teen. Rule saal mein teen kist ka hai, par zameen par timing aage-peeche hoti rehti hai. 24vi ke liye news mein October chal raha hai, lekin pmkisan.gov.in ya PIB par koi tareekh notify nahi hui — isliye humne &quot;Expected&quot; likha hai, &quot;confirm&quot; nahi. Live update <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline font-medium">24vi kist page</Link> par rehta hai.
+            Table mein gap dekho. November se March char mahine, March se June teen. Rule saal mein teen kist ka hai, par zameen par timing aage-peeche hoti rehti hai. 24vi ke liye news mein October chal raha hai, lekin pmkisan.gov.in ya PIB par koi tareekh notify nahi hui, isliye humne &quot;Expected&quot; likha hai, &quot;confirm&quot; nahi. Live update <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline font-medium">24vi kist page</Link> par rehta hai.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">

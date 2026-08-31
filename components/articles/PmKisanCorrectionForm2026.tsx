@@ -116,7 +116,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
               <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">Aadhaar Seeding Nahi Hui</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Aadhaar link toh hai lekin NPCI mapper mein seeding nahi hui — ye do alag cheezein hain. Aksar log sochte hain ki Aadhaar link hone ke baad bhi payment kyun fail hua; yahi wajah hoti hai. Poora tarika <Link href="/articles/hi/npci-aadhaar-seeding" className="underline">NPCI seeding guide</Link> mein hai.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Aadhaar link toh hai lekin NPCI mapper mein seeding nahi hui, ye do alag cheezein hain. Aksar log sochte hain ki Aadhaar link hone ke baad bhi payment kyun fail hua; yahi wajah hoti hai. Poora tarika <Link href="/articles/hi/npci-aadhaar-seeding" className="underline">NPCI seeding guide</Link> mein hai.</p>
             </div>
             <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-xl">
               <p className="font-black text-red-800 dark:text-red-300 text-sm mb-1">Gender/DOB ya Mobile Number Galat</p>
@@ -276,7 +276,7 @@ export default function PmKisanCorrectionForm2026({ article }: { article: Articl
             <SI n={1}><strong>155261 par call karo</strong>. Aur busy aaye toh doosra number <strong>011-24300606</strong> bhi hai. Call se pehle registration number, Aadhaar aur correction ki date ek kagaz par likh lo. Operator se complaint ka reference number zaroor maango.</SI>
             <SI n={2}><strong>pmkisan.gov.in ke Help Desk se online ticket banao</strong>, registration number daalo, problem chuno, submit. Jo ticket number mile use sambhal kar rakho, agli call par seedha usi ka status poochh sakte ho, kahani dobara sunane ki zaroorat nahi.</SI>
             <SI n={3}><strong>Email karo:</strong> <strong>pmkisan-ict@gov.in</strong> par, subject mein registration number, body mein 2-3 line problem, aur ticket number quote karo. Status ka screenshot attach kar do.</SI>
-            <SI n={4}>Phir bhi kuch na ho toh <strong>state nodal officer tak escalate karo</strong> — kis officer ko, kaise likhna hai, ye sab <Link href="/articles/PmKisanStateNodalOfficerList" className="underline font-bold text-green-700 dark:text-green-400">nodal officer guide</Link> mein template ke saath diya hai.</SI>
+            <SI n={4}>Phir bhi kuch na ho toh <strong>state nodal officer tak escalate karo</strong> kis officer ko, kaise likhna hai, ye sab <Link href="/articles/PmKisanStateNodalOfficerList" className="underline font-bold text-green-700 dark:text-green-400">nodal officer guide</Link> mein template ke saath diya hai.</SI>
           </StepList>
           <WB>
             <strong>Fraud Alert:</strong> Correction ke chakkar mein Google par milne wali .com sites ya WhatsApp wale “helpline numbers” se door raho. Koi bhi asli sarkari process mein aapse <strong>OTP nahi poochha jaata</strong> aur na hi “correction fee” online transfer karwai jaati hai. OTP de diya aur paisa kat gaya toh turant <strong>1930</strong> par call karo ya <strong>cybercrime.gov.in</strong> par shikayat darj karo. Aur apne bank ko usi din batao.

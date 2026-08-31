@@ -74,7 +74,7 @@ export default function ContactPage() {
       <div className="container-site max-w-3xl py-10">
 
         <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-300 dark:border-amber-700 rounded-xl mb-8 text-sm text-amber-900 dark:text-amber-300">
-          <strong>Zaruri Suchna:</strong> Ek baat pehle hi bata doon — {SITE_NAME} koi sarkari daftar nahi hai, yeh meri apni site hai.
+          <strong>Zaruri Suchna:</strong> Ek baat pehle hi bata doon, {SITE_NAME} koi sarkari daftar nahi hai, yeh meri apni site hai.
           Payment, status ya koi bhi asli kaam ho to seedha{' '}
           <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="underline font-bold hover:text-amber-700 dark:hover:text-amber-200">pmkisan.gov.in ↗</a>{' '}
           ya helpline <strong>155261</strong> ka hi upyog karein.
@@ -91,7 +91,7 @@ export default function ContactPage() {
               mein busy raha to thoda time lag sakta hai, bura na maanein.
             </p>
             <p className="text-sm text-[var(--color-text-muted)] mb-4 leading-relaxed">
-              Waise ho sakta hai aapke sawal ka jawab pehle se likha ho — ek baar mere{' '}
+              Waise ho sakta hai aapke sawal ka jawab pehle se likha ho, ek baar mere{' '}
               <Link href="/articles" className="text-[var(--color-primary)] font-bold underline hover:text-green-700 dark:hover:text-green-400">
                 Verified Guides Section
               </Link>{' '}

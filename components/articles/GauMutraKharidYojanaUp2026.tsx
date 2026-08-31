@@ -57,7 +57,7 @@ Chhattisgarh me bhi aisi ek scheme pehle chal chuki hai, wahan rate kam tha. 4 r
     heading: 'Gaon walon ke liye asal mein matlab kya hai',
     body: `Teen batein hain jo asal me farq dalti hain.
 
-Pehli — boodhi ya ghair-dudharu gaay bhi kamai ka zariya ban jati hai. Pehle wo sirf kharcha thi. Ab roz 4-5 litre bhi bik jaye to mahine bhar me thik thak jod ban jata hai, khaskar un gharon ke liye jinke paas dusra koi sahara nahi tha.
+Pehli, boodhi ya ghair-dudharu gaay bhi kamai ka zariya ban jati hai. Pehle wo sirf kharcha thi. Ab roz 4-5 litre bhi bik jaye to mahine bhar me thik thak jod ban jata hai, khaskar un gharon ke liye jinke paas dusra koi sahara nahi tha.
 
 Dusri, paisa usi din. Doodh ka hisab mahine ke baad aata hai, dairy ki parchi ke sath. Isme raqam hath me aa jati hai, aur chote ghar me ye farq bada hota hai: bacche ki kitab, dawa, ration, sab isi rozana ke paise se nikal jata hai.
 
@@ -137,7 +137,7 @@ const warnings = [
   },
   {
     h: 'Bina tolai bhugtaan',
-    p: `"Do can ka itna de deta hu" — aisa sauda kabhi mat karo. Matra napi jani chahiye, aapke samne, aur parchi milni chahiye. Bina naap ke nuksan hamesha bechne wale ka hota hai.`,
+    p: `"Do can ka itna de deta hu" aisa sauda kabhi mat karo. Matra napi jani chahiye, aapke samne, aur parchi milni chahiye. Bina naap ke nuksan hamesha bechne wale ka hota hai.`,
   },
   {
     h: 'Whatsapp par aane wale "form" aur link',
@@ -470,7 +470,7 @@ export default function GauMutraKharidYojanaUp2026({ article }: { article: Artic
               <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#7FD1AE] text-[12px] font-black text-[#1B1023]">4</span>
               <p className="text-[14px] leading-6 text-[#D8C9DE]">
                 <strong className="text-[#F5EDE3]">Kharidar na mile to bhi mutra bekar nahi.</strong>{' '}
-                Niche jeevamrit ka pura tarika diya hai — khud khaad banao, khaad ki dukan ka
+                Niche jeevamrit ka pura tarika diya hai, khud khaad banao, khaad ki dukan ka
                 bill ghatao. Bechna aur banana, dono sath chal sakte hain.
               </p>
             </li>

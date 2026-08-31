@@ -36,7 +36,7 @@ function TemplatePMKisanScheme() {
         <text x="48" y="42" textAnchor="middle" fontSize="18"></text>
 
         <text x="80" y="30" fontSize="14" fontWeight="bold" fill="#fff">Cultivator Benefit Program</text>
-        <text x="80" y="48" fontSize="10" fill="#a7f3d0">Agrarian Welfare Scheme — Govt. of India</text>
+        <text x="80" y="48" fontSize="10" fill="#a7f3d0">Agrarian Welfare Scheme. Govt. of India</text>
         <text x="80" y="63" fontSize="9" fill="#86efac">Since 2019 • 11 Crore+ Cultivators • Direct Benefit Transfer</text>
 
         {[
@@ -75,7 +75,7 @@ function TemplatePMKisanScheme() {
         <text x="240" y="274" textAnchor="middle" fontSize="8" fill="#86efac">kisanstatus.com • 100% Free Information • Verified from official portal</text>
       </svg>
       <div className="bg-white px-4 py-3 border-t border-green-100">
-        <p className="text-xs font-bold text-green-800">Cultivator Benefit Program — Complete Overview</p>
+        <p className="text-xs font-bold text-green-800">Cultivator Benefit Program. Complete Overview</p>
         <p className="text-[10px] text-gray-500 mt-0.5">Eligibility, benefit amount aur enrollment process</p>
       </div>
     </div>
@@ -129,7 +129,7 @@ function TemplateKisanLoan() {
         <text x="240" y="273" textAnchor="middle" fontSize="8" fill="#93c5fd">kisanstatus.com • Credit Facility Guide • Free Information</text>
       </svg>
       <div className="bg-white px-4 py-3 border-t border-blue-100">
-        <p className="text-xs font-bold text-blue-800">Credit Facility — KCC aur Bank Loan Guide</p>
+        <p className="text-xs font-bold text-blue-800">Credit Facility. KCC aur Bank Loan Guide</p>
         <p className="text-[10px] text-gray-500 mt-0.5">Sabse sasta loan kahan se milega — full comparison</p>
       </div>
     </div>
@@ -195,7 +195,7 @@ function TemplateFasalBima() {
         <text x="240" y="274" textAnchor="middle" fontSize="8" fill="#fde68a">kisanstatus.com • Crop Protection Guide • Free Information</text>
       </svg>
       <div className="bg-white px-4 py-3 border-t border-amber-100">
-        <p className="text-xs font-bold text-amber-800">Crop Protection Scheme — Complete Guide</p>
+        <p className="text-xs font-bold text-amber-800">Crop Protection Scheme. Complete Guide</p>
         <p className="text-[10px] text-gray-500 mt-0.5">Claim status check aur enrollment guide</p>
       </div>
     </div>
@@ -224,10 +224,10 @@ function TemplateEKYC() {
 
         <text x="20" y="26" fontSize="9" fill="#c4b5fd">DIGITAL VERIFICATION GUIDE</text>
         <text x="20" y="46" fontSize="15" fontWeight="bold" fill="#fff">Verification Kaise Karo — 2026</text>
-        <text x="20" y="62" fontSize="9" fill="#ddd6fe">Bina verification ke tranche NAHI milegi — Abhi karo!</text>
+        <text x="20" y="62" fontSize="9" fill="#ddd6fe">Bina verification ke tranche NAHI milegi. Abhi karo!</text>
 
         <rect x="20" y="78" width="440" height="30" rx="8" fill="#fee2e2" stroke="#fca5a5" strokeWidth="1"/>
-        <text x="240" y="98" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#dc2626">Digital Verification Mandatory Hai — Sabhi Cultivators Karein — Bilkul Free!</text>
+        <text x="240" y="98" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#dc2626">Digital Verification Mandatory Hai — Sabhi Cultivators Karein. Bilkul Free!</text>
 
         <text x="20" y="128" fontSize="10" fontWeight="bold" fill="#6d28d9">Step-by-Step Process:</text>
 
@@ -261,7 +261,7 @@ function TemplateEKYC() {
       </svg>
       <div className="bg-white px-4 py-3 border-t border-purple-100">
         <p className="text-xs font-bold text-purple-800">Digital Verification — Step by Step Guide</p>
-        <p className="text-[10px] text-gray-500 mt-0.5">Online OTP ya CSC biometric — dono tarike</p>
+        <p className="text-[10px] text-gray-500 mt-0.5">Online OTP ya CSC biometric, dono tarike</p>
       </div>
     </div>
   );
@@ -279,7 +279,7 @@ export default function KisanTemplates() {
             Agrarian Schemes — Quick Visual Templates
           </h2>
           <p className="text-gray-500 text-sm max-w-xl mx-auto">
-            Welfare scheme, credit facility, crop protection aur digital verification — ek nazar mein samjho
+            Welfare scheme, credit facility, crop protection aur digital verification, ek nazar mein samjho
           </p>
         </div>
 

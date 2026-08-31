@@ -18,7 +18,7 @@ import {
 export const revalidate = 3600;
 
 const PAGE_URL = `${SITE_URL}/articles/hi`;
-const PAGE_TITLE_BASE = `हिंदी योजना गाइड — ${HINDI_ARTICLES.length} आसान गाइड`;
+const PAGE_TITLE_BASE = `हिंदी योजना गाइड, ${HINDI_ARTICLES.length} आसान गाइड`;
 const PAGE_TITLE = `${PAGE_TITLE_BASE} | ${SITE_NAME}`;
 const PAGE_DESC =
   'पीएम किसान, कर्ज माफी, ट्रैक्टर सब्सिडी, KCC और मंडी भाव — सभी योजना गाइड आसान हिंदी में। हर गाइड step-by-step, बिना मुश्किल शब्दों के।';
@@ -149,7 +149,7 @@ export default function HindiArticlesHubPage() {
               हिंदी में योजना गाइड
             </h1>
             <p className="text-gray-600 dark:text-gray-400 mt-3 text-lg max-w-2xl">
-              पीएम किसान, कर्ज माफी, सब्सिडी, KCC और मंडी भाव — सभी {articles.length} गाइड आसान हिंदी में, step-by-step।
+              पीएम किसान, कर्ज माफी, सब्सिडी, KCC और मंडी भाव, सभी {articles.length} गाइड आसान हिंदी में, step-by-step।
             </p>
             <div className="flex flex-wrap gap-3 mt-6">
               {(Object.keys(CATEGORIES) as CategorySlug[])

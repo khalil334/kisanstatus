@@ -111,7 +111,7 @@ export default function PmKisanBankAccountChangeProcess() {
             Kist aane ka din nazdeek aata hai toh har kisan phone baar-baar check karta hai. Par jo account link hai wahi band pada ho, ya branch merge hone se IFSC hi badal gaya ho, toh paisa atkega hi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Portal par <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline text-green-700 dark:text-green-400">FTO Generated</Link> dikha diya jaata hai, par bank mein "Transaction Rejected" bol dete hain. Yahi se pareshani shuru hoti hai. Ek kaam ki baat: jab bhi CSC ya bank jao, ek chhoti diary mein tareekh, kisse mile aur kya bataya gaya — ye teen cheezein likh lo. Baad mein kisi bhi vivaad mein ye kaafi kaam aata hai.
+            Portal par <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline text-green-700 dark:text-green-400">FTO Generated</Link> dikha diya jaata hai, par bank mein "Transaction Rejected" bol dete hain. Yahi se pareshani shuru hoti hai. Ek kaam ki baat: jab bhi CSC ya bank jao, ek chhoti diary mein tareekh, kisse mile aur kya bataya gaya, ye teen cheezein likh lo. Baad mein kisi bhi vivaad mein ye kaafi kaam aata hai.
           </p>
 
           <SafeImage
@@ -391,7 +391,7 @@ export default function PmKisanBankAccountChangeProcess() {
             hoga. Tab wahi upar wala CSC process lagega.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Jab tak transfer nahi hota, purane record par aayi kist ko haath mat lagana — guzre hue beneficiary
+            Jab tak transfer nahi hota, purane record par aayi kist ko haath mat lagana, guzre hue beneficiary
             ke naam par paisa lene par baad mein recovery notice aa sakta hai.
           </p>
         </section>

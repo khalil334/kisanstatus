@@ -41,7 +41,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Ek hi app kaafi hai ya do-teen rakhne chahiye?',
-    a: 'Do kaafi hain — ek sarkari (eNAM ya AgMarknet data ke liye) aur ek jo aapke ilaake ki mandiyon ko achha cover karta ho. Zyada apps rakhne se data nahi badhta, sirf notification ka shor badhta hai.',
+    a: 'Do kaafi hain, ek sarkari (eNAM ya AgMarknet data ke liye) aur ek jo aapke ilaake ki mandiyon ko achha cover karta ho. Zyada apps rakhne se data nahi badhta, sirf notification ka shor badhta hai.',
   },
   {
     q: 'Aavak (arrival) ka rate se kya rishta hai?',
@@ -191,7 +191,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Sarkari apps ki taakat data ka bharosa hai, kamzori interface aur speed. Kabhi-kabhi app dheema chalega,
-          design purana lagega — lekin number wahi hai jo mandi ke record mein hai. Aur inme na ads ka shor hai, na
+          design purana lagega, lekin number wahi hai jo mandi ke record mein hai. Aur inme na ads ka shor hai, na
           aapka data bechne ka dhandha.
         </p>
 
@@ -271,7 +271,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
           onion mandiyon mein adhoora ho sakta hai. Kuch apps ka focus specific fasal par hai (sabzi-phal ke
           trading platforms), kuch ka specific states par. Isliye kisi bhi list ya review ko aankh band karke
           mat maano, install karo, apni fasal + apni 2-3 mandiyan dhundho, hafte bhar parakho, phir faisla
-          karo. Jo app aapke ilaake mein khara utre, wahi aapke liye “best app” hai — chahe reviews mein koi
+          karo. Jo app aapke ilaake mein khara utre, wahi aapke liye “best app” hai, chahe reviews mein koi
           aur number one ho.
         </p>
 
@@ -369,7 +369,7 @@ export default function MandiBhavAppComparison({ article }: { article: ArticleMe
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Agar aapki mandi eNAM se judi hai toh sirf bhav dekhne se aage badho, registration karke online bidding
           ka fayda lo, jahan doosre district ke buyers bhi aapki fasal par boli lagate hain. Registration free hai
-          aur process aasan — poora tareeka yahan hai:{' '}
+          aur process aasan, poora tareeka yahan hai:{' '}
           <Link href="/articles/enam-registration-kaise-kare" className="underline font-bold">eNAM Registration Kaise
           Kare</Link>.
         </p>

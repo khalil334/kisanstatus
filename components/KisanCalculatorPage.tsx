@@ -107,20 +107,20 @@ function PMKisanCalc() {
   const totalTranches = y * tranchesPerYear;
   const totalAmount = totalTranches * amountPerTranche;
   const eligible = hasVerification === 'yes' && Number(land) > 0 && Number(land) <= 2;
-  const marginalBonus = Number(land) <= 1 ? 'Aap small/marginal cultivator hain — priority eligible!' : '';
+  const marginalBonus = Number(land) <= 1 ? 'Aap small/marginal cultivator hain, priority eligible!' : '';
 
   return (
     <div>
       <p className="text-gray-500 text-sm mb-5">Kitna agrarian welfare benefit milega — years ke hisaab se estimate karo</p>
       <InputField label="Aap kitne saal se enrolled hain ya rahenge?" value={years} onChange={setYears} min={1} placeholder="3" hint="1 se 30 saal ke beech" />
       <InputField label="Aapki zameen (hectare mein)" value={land} onChange={setLand} min={0} placeholder="2" hint="2 hectare tak ke cultivators eligible hain" />
-      <SelectField label="Digital verification complete hai?" value={hasVerification} onChange={setHasVerification} options={[{ value: 'yes', label: 'Haan — complete hai' }, { value: 'no', label: 'Nahi — pending hai' }]} />
+      <SelectField label="Digital verification complete hai?" value={hasVerification} onChange={setHasVerification} options={[{ value: 'yes', label: 'Haan, complete hai' }, { value: 'no', label: 'Nahi — pending hai' }]} />
 
       <ResultBox color="green">
         {!eligible ? (
           <div className="text-center py-2">
             {hasVerification === 'no'
-              ? <p className="font-bold text-orange-700">Digital verification complete nahi hai — payment rok sakti hai!<br/><span className="text-sm font-normal">Official portal par free verification karein.</span></p>
+              ? <p className="font-bold text-orange-700">Digital verification complete nahi hai, payment rok sakti hai!<br/><span className="text-sm font-normal">Official portal par free verification karein.</span></p>
               : <p className="font-bold text-red-700">2 hectare se zyada zameen wale eligible nahi hain.</p>
             }
           </div>
@@ -184,7 +184,7 @@ function KCCLoanCalc() {
         </ResultBox>
       )}
       <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-xl text-xs text-blue-800">
-        <strong>Credit facility tip:</strong> Time par repay karo — 2% extra interest subvention milti hai government se. Total effective rate 5% tak aa sakta hai.
+        <strong>Credit facility tip:</strong> Time par repay karo, 2% extra interest subvention milti hai government se. Total effective rate 5% tak aa sakta hai.
       </div>
     </div>
   );
@@ -213,7 +213,7 @@ function PMFBYCalc() {
 
       {insuredAmt > 0 && (
         <ResultBox color="yellow">
-          <p className="text-xs text-yellow-700 mb-3">Premium Rate: <strong>{rate}%</strong> ({season === 'kharif' ? 'Kharif' : 'Rabi'} — {cropData.name})</p>
+          <p className="text-xs text-yellow-700 mb-3">Premium Rate: <strong>{rate}%</strong> ({season === 'kharif' ? 'Kharif' : 'Rabi'} {cropData.name})</p>
           <ResultRow label="Kul premium" value={fmt(totalPremium)} />
           <ResultRow label="Aapka share (cultivator)" value={fmt(farmerShare)} bold />
           <ResultRow label="Govt + Insurer share" value={fmt(govShare)} />
@@ -307,7 +307,7 @@ function CropProfitCalc() {
 
   return (
     <div>
-      <p className="text-gray-500 text-sm mb-5">Ek season mein fasal se kitna fayda ya nuksan — poora hisaab</p>
+      <p className="text-gray-500 text-sm mb-5">Ek season mein fasal se kitna fayda ya nuksan, poora hisaab</p>
       <InputField label="Zameen (hectare)" value={landHa} onChange={setLandHa} min={0} placeholder="1" />
       <InputField label="Selling price (₹ per quintal)" value={sellingPrice} onChange={setSellingPrice} min={0} placeholder="2000" hint="Procurement rate ya mandi rate daalein" />
       <InputField label="Expected yield (quintal per hectare)" value={yieldQtl} onChange={setYieldQtl} min={0} placeholder="25" />
@@ -373,7 +373,7 @@ export default function KisanCalculatorPage() {
       <section className="bg-gradient-to-br from-green-800 via-green-700 to-green-600 text-white py-12 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-green-200 text-xs font-bold px-4 py-2 rounded-full mb-4">
-             Free Agricultural Utilities — KisanStatus.com
+             Free Agricultural Utilities. KisanStatus.com
           </div>
           <h1 className="text-3xl md:text-4xl font-black mb-3">
             Cultivator Calculator Suite 2026
@@ -415,7 +415,7 @@ export default function KisanCalculatorPage() {
                 <span className="text-3xl">{active.emoji}</span>
                 <div>
                   <h2 className="text-xl font-black text-gray-800">{active.title}</h2>
-                  <p className="text-xs text-gray-400">Utility — KisanStatus.com</p>
+                  <p className="text-xs text-gray-400">Utility. KisanStatus.com</p>
                 </div>
               </div>
               <ActiveComponent />

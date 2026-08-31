@@ -216,7 +216,7 @@ export default function MadhumakhiPalan() {
       />
 
       <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-        Setup Ka Paisa — Subsidy Ke Intezaar Ke Bina
+        Setup Ka Paisa. Subsidy Ke Intezaar Ke Bina
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Upar likha hai ki subsidy me 3–6 mahine lag sakte hain. To sawaal ye ban jaata hai: tab tak 50 boxes ka paisa

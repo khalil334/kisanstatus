@@ -115,7 +115,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
             </div>
             <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
               <p className="font-black text-sm text-[var(--color-text)] mb-1">2. Beneficiary Status / Know Your Status (individual)</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Registration number se sirf APNA record — eKYC status, land seeding, bank seeding, aur har kist ka payment stage (FTO). "Mera paisa kyun nahi aaya" ka jawab yahan milta hai, list mein nahi.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Registration number se sirf APNA record, eKYC status, land seeding, bank seeding, aur har kist ka payment stage (FTO). "Mera paisa kyun nahi aaya" ka jawab yahan milta hai, list mein nahi.</p>
             </div>
             <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
               <p className="font-black text-sm text-[var(--color-text)] mb-1">3. Village Dashboard</p>
@@ -362,7 +362,7 @@ export default function PmKisanVillageWiseListPdfDownload() {
               <strong>Fraud Se Bacho:</strong>
             </p>
             <p className="text-xs text-red-700 dark:text-red-400">
-              Official list mein naam aur partially masked account details dikh sakti hain — itna hi data public hota hai. Koi bhi unknown link par click mat karein jo kahe ki "Yahan se complete data download karo", poora Aadhaar ya account number dikhane ka dawa karne wali har site fraud hai. Hamesha sirf <strong>pmkisan.gov.in</strong> ka use karein.
+              Official list mein naam aur partially masked account details dikh sakti hain, itna hi data public hota hai. Koi bhi unknown link par click mat karein jo kahe ki "Yahan se complete data download karo", poora Aadhaar ya account number dikhane ka dawa karne wali har site fraud hai. Hamesha sirf <strong>pmkisan.gov.in</strong> ka use karein.
             </p>
           </div>
         </section>

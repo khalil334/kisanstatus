@@ -41,7 +41,7 @@ const FAQS_DATA = [
   },
   {
     q: 'MSP kaun tay karta hai aur kaise?',
-    a: 'CACP (Commission for Agricultural Costs and Prices) recommendation deta hai, aur CCEA (Cabinet Committee on Economic Affairs) usko approve karta hai. Formula 2018-19 budget mein tay hua tha — MSP kam se kam production cost ka 1.5 guna. Cost mein hired labour, seed, khaad, sinchai, machine, leased land ka rent aur family labour ki imputed value. Sab shamil hoti hai.',
+    a: 'CACP (Commission for Agricultural Costs and Prices) recommendation deta hai, aur CCEA (Cabinet Committee on Economic Affairs) usko approve karta hai. Formula 2018-19 budget mein tay hua tha. MSP kam se kam production cost ka 1.5 guna. Cost mein hired labour, seed, khaad, sinchai, machine, leased land ka rent aur family labour ki imputed value. Sab shamil hoti hai.',
   },
   {
     q: 'A2+FL aur C2 cost mein kya fark hai, aur ye baat kyun uthti hai?',
@@ -264,7 +264,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           import karta hai, aur sarkar chahti hai kisan tilhan ki taraf shift karein.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Doosri taraf makka aur moong ko dekho — sirf ₹10 aur ₹12 ki badhotri. Ye almost flat hai. Iska matlab
+          Doosri taraf makka aur moong ko dekho, sirf ₹10 aur ₹12 ki badhotri. Ye almost flat hai. Iska matlab
           ye nahi ki fasal kharab hai; inka margin pehle se hi upar chal raha tha (makka 56%, moong 61%, poori
           list mein sabse zyada). Jab margin already achha ho, CACP badhotri dheemi rakhta hai.
         </p>
@@ -395,7 +395,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
               <tr>
                 <td className="border border-[var(--color-border)] p-3 font-semibold">Rate</td>
                 <td className="border border-[var(--color-border)] p-3">Fixed, poore desh mein ek</td>
-                <td className="border border-[var(--color-border)] p-3">Roz badalta hai — MSP se upar bhi, neeche bhi</td>
+                <td className="border border-[var(--color-border)] p-3">Roz badalta hai. MSP se upar bhi, neeche bhi</td>
               </tr>
               <tr className="bg-[var(--color-bg-alt)]">
                 <td className="border border-[var(--color-border)] p-3 font-semibold">Payment</td>

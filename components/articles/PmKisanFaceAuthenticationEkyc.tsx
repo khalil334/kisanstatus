@@ -108,7 +108,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
             </table>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Pehli line wale ho? Toh ye page aapke liye nahi hai. Seedha <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">normal eKYC guide</Link> kholo, OTP se 2 minute mein kaam ho jayega. Doosri line wale yahin ruko. Roz aise messages aate hain — "Bhaiya OTP hi nahi aa raha, kya karein?" Number purana band ho gaya, naya Aadhaar se link nahi karaya. Unhi ke liye ye poora page hai.
+            Pehli line wale ho? Toh ye page aapke liye nahi hai. Seedha <Link href="/articles/PmKisanEkycOnline2026" className="underline text-green-700 dark:text-green-400">normal eKYC guide</Link> kholo, OTP se 2 minute mein kaam ho jayega. Doosri line wale yahin ruko. Roz aise messages aate hain, "Bhaiya OTP hi nahi aa raha, kya karein?" Number purana band ho gaya, naya Aadhaar se link nahi karaya. Unhi ke liye ye poora page hai.
           </p>
 
           <Image
@@ -217,7 +217,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
           />
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Green tick ke baad kaam khatam nahi hota. 2-3 din mein database update hota hai — phir <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">list wale page</Link> mein naam check karo, eKYC "YES" dikhna chahiye. Agar hai, toh agli kist mein aapka paisa rukega nahi. Nahi dikha ek hafte tak, toh helpline <strong>155261</strong> par reference ke saath baat karo.
+            Green tick ke baad kaam khatam nahi hota. 2-3 din mein database update hota hai, phir <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">list wale page</Link> mein naam check karo, eKYC "YES" dikhna chahiye. Agar hai, toh agli kist mein aapka paisa rukega nahi. Nahi dikha ek hafte tak, toh helpline <strong>155261</strong> par reference ke saath baat karo.
           </p>
         </section>
 
@@ -300,7 +300,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
             sahi jagah hai. Wahan appointment bhi book ho jaati hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
-            Ek aur cheez jo log miss karte hain: app ka version. Purani version mein bugs the jo ab fix ho chuke hain — Play Store kholkar update check kar lo, cache clear kar lo (Settings &gt; Apps &gt; PMKisan &gt; Storage &gt; Clear Cache). Aur agar kuch bhi kaam na kare, toh helpline <strong>155261</strong> ya apne <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">state nodal officer</Link> se baat karo. Poori process ki detail ke liye <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">Master Guide</Link> bhi hai.
+            Ek aur cheez jo log miss karte hain: app ka version. Purani version mein bugs the jo ab fix ho chuke hain. Play Store kholkar update check kar lo, cache clear kar lo (Settings &gt; Apps &gt; PMKisan &gt; Storage &gt; Clear Cache). Aur agar kuch bhi kaam na kare, toh helpline <strong>155261</strong> ya apne <Link href="/articles/PmKisanStateNodalOfficerList" className="underline text-green-700 dark:text-green-400">state nodal officer</Link> se baat karo. Poori process ki detail ke liye <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">Master Guide</Link> bhi hai.
           </p>
         </section>
 

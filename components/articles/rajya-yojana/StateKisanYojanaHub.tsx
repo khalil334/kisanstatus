@@ -170,7 +170,7 @@ export default function StateKisanYojanaHub() {
         <Link href="/rajya-yojana/mp-kisan-kalyan-yojana-kist-status">MP wale guide</Link> mein hai.
       </p>
 
-      <h3>Rajasthan — Mukhyamantri Kisan Samman Nidhi</h3>
+      <h3>Rajasthan. Mukhyamantri Kisan Samman Nidhi</h3>
       <p>
         Pradesh apni taraf se ₹3,000 saalana jodta hai, jisse total ₹9,000 banta hai. Yahan ka
         gatekeeper Jan Aadhaar hai; uske bina kist atakti hai. ₹12,000 wale prastav ki asliyat
@@ -299,7 +299,7 @@ export default function StateKisanYojanaHub() {
       <p>
         <strong>Judaa panjikaran wali jagah:</strong> West Bengal (Krishak Bandhu), Odisha
         (CM Kisan) aur Andhra Pradesh apna enrolment khud chalate hain. Yahan kendriya list
-        mein hona kaafi nahi — sarkari website ya camp mein apna naam khud judwana padta
+        mein hona kaafi nahi, sarkari website ya camp mein apna naam khud judwana padta
         hai. Naye laabharthi, virasat mein zameen paane wale, ya doosri jagah se aane wale log
         aksar isi kadam par chook jaate hain aur saalon tak sochte rehte hain ki paisa apne
         aap aayega.
@@ -390,7 +390,7 @@ export default function StateKisanYojanaHub() {
 
       <p>
         In teeno mein se koi bhi problem ho to pehle use theek karayein, uske baad hi kist ka
-        intezaar karein. Ulta mat karna — log yahi ulta karte hain, maine dekha hai. Pehle intezaar,
+        intezaar karein. Ulta mat karna, log yahi ulta karte hain, maine dekha hai. Pehle intezaar,
         baad mein sudhaar. Ye kaam CSC, bank branch aur tehsil se ho jaate hain. Ek baar theek
         hone par saalon chalte hain, toh der mat karo.
       </p>

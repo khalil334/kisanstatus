@@ -32,11 +32,11 @@ export const metadata: Metadata = {
 };
 
 const READING_PATH: { slug: string; why: string }[] = [
-  { slug: 'pm-kisan-maandhan-eligibility-documents', why: 'Pehle confirm karein ki aap eligible hain — yahin se sab shuru hota hai.' },
+  { slug: 'pm-kisan-maandhan-eligibility-documents', why: 'Pehle confirm karein ki aap eligible hain, yahin se sab shuru hota hai.' },
   { slug: 'pm-kisan-maandhan-age-wise-contribution-chart-2026', why: 'Apni umar ka exact monthly contribution dekhein.' },
   { slug: 'pm-kisan-maandhan-pension-calculator', why: 'Total kitna jama hoga vs kitni pension milegi — pura hisaab.' },
   { slug: 'pm-kisan-maandhan-registration-2026', why: 'Eligibility clear hai to registration ka step-by-step process.' },
-  { slug: 'pm-kisan-maandhan-auto-debit-poora-sach', why: 'PM Kisan ki kist se ₹55–₹200 kyun kat rahe hain — enroll hone se pehle ye zaroor padhein.' },
+  { slug: 'pm-kisan-maandhan-auto-debit-poora-sach', why: 'PM Kisan ki kist se ₹55–₹200 kyun kat rahe hain, enroll hone se pehle ye zaroor padhein.' },
   { slug: 'pm-kisan-maandhan-status-check-online', why: 'Enroll ho gaye? Contribution history aur status yahan check hota hai.' },
   { slug: 'pm-kisan-maandhan-pension-card-download', why: 'Pension card / acknowledgement slip download karne ka tareeka.' },
   { slug: 'pm-kisan-maandhan-withdrawal-refund-rules', why: 'Beech me chhodna pade to kya milega — exit rules.' },
@@ -50,7 +50,7 @@ function findArticle(slug: string) {
 const COLLECTION_JSON_LD = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
-  name: 'PM Kisan Maandhan Yojana — Complete Guide',
+  name: 'PM Kisan Maandhan Yojana. Complete Guide',
   description:
     'PM Kisan Maandhan Yojana (PM-KMY) ki poori jaankari Hindi mein — ₹3000 pension ka hisaab, contribution chart, eligibility, registration aur sabhi guides.',
   url: `${SITE_URL}/maandhan`,
@@ -81,14 +81,14 @@ export default function MaandhanListingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(COLLECTION_JSON_LD) }}
       />
-      <h1 className="text-3xl font-bold mb-4">PM Kisan Maandhan Yojana — Complete Guide</h1>
+      <h1 className="text-3xl font-bold mb-4">PM Kisan Maandhan Yojana. Complete Guide</h1>
 
       <p className="text-gray-700 mb-4">
         PM Kisan Maandhan Yojana (PM-KMY) chhote aur seemant kisanon ke liye ek voluntary pension
         scheme hai — 60 saal ki umar ke baad har mahine <strong>₹3,000 ki assured pension</strong>.
         Scheme 12/09/2019 ko launch hui thi aur iska pension fund LIC manage karti hai.
         Enrollment ke liye entry age 18 se 40 saal hai, aur aapki umar ke hisaab se monthly
-        contribution ₹55 se ₹200 ke beech banta hai — jitna aap jama karte hain, utna hi central
+        contribution ₹55 se ₹200 ke beech banta hai, jitna aap jama karte hain, utna hi central
         government bhi aapke pension account me daalti hai. Ye saari conditions official portal{' '}
         <a href="https://maandhan.in" {...EXTERNAL_LINK_PROPS} className="text-green-700 underline">
           maandhan.in
@@ -138,7 +138,7 @@ export default function MaandhanListingPage() {
         <a href="https://maandhan.in" {...EXTERNAL_LINK_PROPS} className="text-green-700 underline">
           maandhan.in
         </a>
-        . Pension amount har entry age par same rehta hai — farak sirf isme hai ki aap kitne saal
+        . Pension amount har entry age par same rehta hai, farak sirf isme hai ki aap kitne saal
         aur kitna contribute karte hain.
       </p>
 
@@ -181,7 +181,7 @@ export default function MaandhanListingPage() {
         <div>
           <h3 className="font-semibold text-gray-900">Kya PM Kisan aur Maandhan dono ek saath le sakte hain?</h3>
           <p className="text-gray-700">
-            Haan. Dono alag schemes hain — PM Kisan income support hai (₹6,000/saal), Maandhan
+            Haan. Dono alag schemes hain. PM Kisan income support hai (₹6,000/saal), Maandhan
             pension hai. PM Kisan beneficiary chahe to apni kist se Maandhan contribution auto-debit
             karwa sakta hai, lekin ye poori tarah optional hai.
           </p>
@@ -208,7 +208,7 @@ export default function MaandhanListingPage() {
         <div>
           <h3 className="font-semibold text-gray-900">41 saal ke baad koi rasta hai?</h3>
           <p className="text-gray-700">
-            PM-KMY me nahi — entry window 18–40 hi hai. 40 se upar walon ke liye Atal Pension
+            PM-KMY me nahi, entry window 18–40 hi hai. 40 se upar walon ke liye Atal Pension
             Yojana ek option ho sakti hai; PMKMY vs APY comparison alag guide me hai.
           </p>
         </div>

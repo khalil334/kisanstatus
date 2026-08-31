@@ -180,7 +180,7 @@ export default function StateYojanaFinder() {
           State Yojana Finder, aapke rajya mein saal bhar kitna banta hai
         </h2>
         <p className="text-xs text-gray-600 dark:text-gray-400 mt-1 mb-0">
-          Rajya chunein, zameen bharein — central aur state ka jod, portal aur detail page ek
+          Rajya chunein, zameen bharein, central aur state ka jod, portal aur detail page ek
           saath. Sab kuch aapke browser mein chalta hai.
         </p>
       </header>

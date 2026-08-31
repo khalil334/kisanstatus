@@ -75,7 +75,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
       <Fig
         src="hero.webp"
         alt="Madhya Pradesh ka kisan gehun ke khet mein mobile par apni state kist ka status dekh raha hai"
-        caption="MP CM Kisan Kalyan Yojana — PM Kisan ke saath state ki apni kist, status SAARA portal par milta hai"
+        caption="MP CM Kisan Kalyan Yojana. PM Kisan ke saath state ki apni kist, status SAARA portal par milta hai"
         width={1200}
         height={675}
         priority
@@ -343,7 +343,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
         nishani nahi hai.
       </p>
 
-      <h2>Girdawari — Wo Kadam Jo MP Ke Kisan Bhool Jaate Hain</h2>
+      <h2>Girdawari. Wo Kadam Jo MP Ke Kisan Bhool Jaate Hain</h2>
 
       <p>
         Baaki states mein aisa koi season-wise requirement nahi hai, isliye bahar se aaye
@@ -482,7 +482,7 @@ export default function MPCMKisanKalyanYojanaKistStatus({ article }: { article: 
       <h2>Shikayat Ka Raasta. CM Helpline 181 Ka Sahi Istemaal</h2>
 
       <p>
-        SAARA ya bank se baat na bane to MP ke paas ek kaam ka hathiyaar hai — CM Helpline
+        SAARA ya bank se baat na bane to MP ke paas ek kaam ka hathiyaar hai. CM Helpline
         181. Call karne se pehle teen cheezein saamne rakhein: apna PM Kisan registration
         number, Aadhaar, aur samasya ek line mein. Complaint number jo mile use likh kar
         rakhein; follow-up isi number se hota hai aur har complaint ka jawab dena vibhag ki

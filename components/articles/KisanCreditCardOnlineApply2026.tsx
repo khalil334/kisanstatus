@@ -91,7 +91,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src={article.ogImage || '/images/kisan-credit-card-apply-online-hero.webp'}
-            alt="Kisan Credit Card application process 2026 — 4% subsidized interest rate facility for kisans"
+            alt="Kisan Credit Card application process 2026, 4% subsidized interest rate facility for kisans"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -195,7 +195,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
               </thead>
               <tbody>
                 {[
-                  ['SBI', 'YONO Krishi se online apply, ATM-cum-KCC card, sabse zyada branches', 'Rush zyada — subah jaayein; documents perfect hone par hi fast'],
+                  ['SBI', 'YONO Krishi se online apply, ATM-cum-KCC card, sabse zyada branches', 'Rush zyada, subah jaayein; documents perfect hone par hi fast'],
                   ['PNB / BOB', 'Digital process theek, processing generally smooth', 'Chhoti branches mein agriculture desk ek hi officer ke paas hota hai'],
                   ['Gramin Bank (RRB)', 'Local land records se familiar, kisan-friendly staff', 'Online portal aksar kaam nahi karta, branch hi jaana padega'],
                   ['Cooperative Bank', 'Society-level pehchaan kaam aati hai. Local verification aasaan; processing time apni society/branch se confirm karein', 'Cash withdrawal network chhota; digital services limited'],
@@ -250,7 +250,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             <li><strong>₹2 lakh se badi limit</strong>, yahan credit history ka weight badh jaata hai.</li>
           </ol>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Score kharab hai toh bhi raste hain: pehle chhoti limit (₹50,000–₹1 lakh) lekar 2 season clean repayment karo — enhancement ke time wahi history aapka sabse bada document ban jaati hai. Ya Joint Liability Group (JLG) route lo jisme group guarantee individual score ki kami cover karti hai.
+            Score kharab hai toh bhi raste hain: pehle chhoti limit (₹50,000–₹1 lakh) lekar 2 season clean repayment karo, enhancement ke time wahi history aapka sabse bada document ban jaati hai. Ya Joint Liability Group (JLG) route lo jisme group guarantee individual score ki kami cover karti hai.
           </p>
         </section>
 
@@ -393,7 +393,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Zaroori Documents Checklist — Branch Visit Se Pehle Ready Karo
+            Zaroori Documents Checklist. Branch Visit Se Pehle Ready Karo
           </p>
         </div>
 

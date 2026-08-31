@@ -134,7 +134,7 @@ export default function SearchModal({ isOpen, onClose }: { isOpen: boolean; onCl
           <div className="max-h-[60vh] overflow-y-auto">
             {!query.trim() && (
               <div className="p-6 text-center">
-                <p className="text-sm text-[var(--color-text-muted)]">Type karke search karo — articles, guides, calculators</p>
+                <p className="text-sm text-[var(--color-text-muted)]">Type karke search karo, articles, guides, calculators</p>
               </div>
             )}
 

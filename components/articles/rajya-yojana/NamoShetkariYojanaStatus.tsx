@@ -49,7 +49,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
 
       <p>
         Maharashtra mein PM Kisan ke beneficiaries ko rajya apni taraf se ek judaa
-        hapta deta hai — <strong>नमो शेतकरी महासन्मान निधी</strong> (Namo Shetkari
+        hapta deta hai, <strong>नमो शेतकरी महासन्मान निधी</strong> (Namo Shetkari
         Mahasanman Nidhi).
       </p>
 
@@ -217,7 +217,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <h2>Namo Shetkari Hapta Kadhi Milel. Kist Ka Waqt</h2>
 
       <p>
-        Namo shetkari hapta kadhi milel — ye sawaal sabse zyada poochha jaata
+        Namo shetkari hapta kadhi milel, ye sawaal sabse zyada poochha jaata
         hai. Maharashtra sarkar aam taur par kendriya kist ke kuch hafte baad apna hissa
         release karti hai. Iski wajah technical hai: pradesh pehle kendra ki disbursement file
         ka intezaar karta hai, taaki wahi verified data use ho aur double-checking na karni
@@ -325,7 +325,7 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         kaam reh jaata hai. Rukavat aane ki jagah hi nahi bachti.
       </p>
 
-      <h2>Kendriya Paisa Aa Gaya, Rajya Ka Nahi — Ye Kyun Hota Hai</h2>
+      <h2>Kendriya Paisa Aa Gaya, Rajya Ka Nahi. Ye Kyun Hota Hai</h2>
 
       <p>
         Yahi baat baar-baar sunne ko milti hai. Pm kisan aaya namo shetkari nahi aaya. Chaar

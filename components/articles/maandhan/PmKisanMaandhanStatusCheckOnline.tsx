@@ -137,7 +137,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
           <div className="flex-shrink-0 w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
           <div>
             <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-1">Browser Kholein aur Official Portal Pe Jayein</h4>
-            <p className="text-sm text-gray-700 dark:text-gray-300">Apne phone ka Chrome ya Safari browser kholein. Address bar mein type kijiye pmkmy.gov.in ya maandhan.in aur enter kijiye. Official portal khulega. Dhyan rahe — fake websites se bachein. URL sahi check kijiye. Portal ka jo official look hai usmein government of India ka logo aur LIC ka reference dikhega.</p>
+            <p className="text-sm text-gray-700 dark:text-gray-300">Apne phone ka Chrome ya Safari browser kholein. Address bar mein type kijiye pmkmy.gov.in ya maandhan.in aur enter kijiye. Official portal khulega. Dhyan rahe, fake websites se bachein. URL sahi check kijiye. Portal ka jo official look hai usmein government of India ka logo aur LIC ka reference dikhega.</p>
           </div>
         </div>
         <div className="flex gap-4">
@@ -394,7 +394,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       </h2>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        Dashboard khula hai toh sirf contribution mat dekhiye, apni personal details bhi ek baar Aadhaar se milaa lijiye: naam ki spelling, date of birth, aur bank account number. Date of birth is scheme mein sabse important field hai, kyunki pension 60 saal poore hone par shuru hoti hai — DOB galat register hui toh pension ya toh der se shuru hogi ya claim ke waqt atkegi.
+        Dashboard khula hai toh sirf contribution mat dekhiye, apni personal details bhi ek baar Aadhaar se milaa lijiye: naam ki spelling, date of birth, aur bank account number. Date of birth is scheme mein sabse important field hai, kyunki pension 60 saal poore hone par shuru hoti hai. DOB galat register hui toh pension ya toh der se shuru hogi ya claim ke waqt atkegi.
       </p>
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
@@ -490,7 +490,7 @@ export default function PmKisanMaandhanStatusCheckOnline() {
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300">
           <strong className="text-orange-600 dark:text-orange-400 block mb-2">Sources & Disclaimer:</strong>
-          Yeh article maine Maandhan Yojana ki official guidelines (DAC&FW, Krishi Mantralaya) aur maandhan.in / pmkmy.gov.in portal ko khud padh kar likha hai. Lekin portal ka roop-rang aur process badalta rehta hai. Kal ko kuch alag dikhe to hairaan na hon. Kaam hamesha official pmkmy.gov.in ya maandhan.in par hi karein, aur OTP ya password kisi bhi doosri website par kabhi na daalein — chahe woh kitni bhi asli lage. Madad chahiye to portal par diya helpline number hi use karein. Maine yeh {fmtDate(MODIFIED)} ko aakhri baar verify kiya tha.
+          Yeh article maine Maandhan Yojana ki official guidelines (DAC&FW, Krishi Mantralaya) aur maandhan.in / pmkmy.gov.in portal ko khud padh kar likha hai. Lekin portal ka roop-rang aur process badalta rehta hai. Kal ko kuch alag dikhe to hairaan na hon. Kaam hamesha official pmkmy.gov.in ya maandhan.in par hi karein, aur OTP ya password kisi bhi doosri website par kabhi na daalein, chahe woh kitni bhi asli lage. Madad chahiye to portal par diya helpline number hi use karein. Maine yeh {fmtDate(MODIFIED)} ko aakhri baar verify kiya tha.
         </p>
       </div>
 

@@ -37,7 +37,7 @@ export async function GET(): Promise<Response> {
 
   const rajyaBlock =
     LIVE_RAJYA_YOJANA_ARTICLES.length > 0
-      ? `## State Schemes — Rajya Kisan Yojana (राज्य किसान योजना)
+      ? `## State Schemes. Rajya Kisan Yojana (राज्य किसान योजना)
 
 > State-level farmer income-support schemes — status check, eligibility and official portals.
 
@@ -52,7 +52,7 @@ ${LIVE_RAJYA_YOJANA_ARTICLES.map(
 > ${SITE_DESCRIPTION}
 
 ${SITE_NAME} (${SITE_URL}) publishes step-by-step guides in Hindi/Hinglish for Indian
-farmers on central and state agriculture schemes — PM Kisan Samman Nidhi status checks,
+farmers on central and state agriculture schemes. PM Kisan Samman Nidhi status checks,
 eKYC, beneficiary lists, land seeding, Kisan Credit Card loans, crop insurance (PMFBY),
 pension (PM Kisan Maandhan), and agri-business subsidies.
 
@@ -78,13 +78,13 @@ Author: ${AUTHOR_NAME}. Contact: ${SUPPORT_EMAIL}.
 
 ## Site structure
 
-- ${SITE_URL}/ — homepage
+- ${SITE_URL}/ homepage
 - ${SITE_URL}/articles — all guides, filterable by category
-- ${SITE_URL}/maandhan — PM Kisan Maandhan pension scheme hub
+- ${SITE_URL}/maandhan. PM Kisan Maandhan pension scheme hub
 - ${SITE_URL}/calculator — free calculators (benefit, KCC EMI, PMFBY premium, MSP income, crop profit, instalment tracker, quick status check)
-- ${SITE_URL}/about — who runs this site
+- ${SITE_URL}/about, who runs this site
 - ${SITE_URL}/contact — contact and grievance help
-- ${SITE_URL}/disclaimer — independence and accuracy disclaimer
+- ${SITE_URL}/disclaimer, independence and accuracy disclaimer
 
 Machine-readable indexes: ${SITEMAP_URL} (sitemap), ${RSS_URL} (RSS feed).
 

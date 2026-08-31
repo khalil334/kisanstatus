@@ -22,7 +22,7 @@ const FAQS_DATA = [
   { q: 'Traditional DAP se ye kaise alag hai?', a: 'Liquid DAP ek foliar spray hai. Nano particles seedhe pattiyon se absorb hote hain. Traditional DAP zameen mein daala jaata hai. Dono ko ek doosre ka replacement nahi, saathi samjhein, kai experts inka combination hi suggest karte hain.' },
   { q: 'Urea ya pesticide ke saath mix karna theek hai?', a: 'Pehle compatibility test kar lena zaroori hai. Chhote patch par try karke dekhein. Kisi bhi mix se pehle KVK ya IFFCO guideline padh lena safe rahega, warna crop damage ka risk rehta hai.' },
   { q: 'Result kitne din mein dikhna shuru hota hai?', a: '7-10 din mein kuch farak nazar aa sakta hai. Do-teen sprays ke baad tasveer clearer hoti hai. Soil, mausam aur crop type par bhi kaafi kuch depend karta hai, isliye fixed timeline nahi de sakte.' },
-  { q: 'Online kahan se kharidna safe hai?', a: 'IFFCO ki official website sabse reliable option hai. Amazon-Flipkart par sirf verified seller se lein aur rate ₹600 ke aas-paas hi hona chahiye — kaafi sasta offer unauthorized seller ki nishani hai. Original packaging ka QR code scan kar ke check karein.' },
+  { q: 'Online kahan se kharidna safe hai?', a: 'IFFCO ki official website sabse reliable option hai. Amazon-Flipkart par sirf verified seller se lein aur rate ₹600 ke aas-paas hi hona chahiye, kaafi sasta offer unauthorized seller ki nishani hai. Original packaging ka QR code scan kar ke check karein.' },
   { q: 'Kya kharidne se pehle soil test karwana zaroori hai?', a: 'Zaroori nahi, par samajhdari hai. Soil Health Card ka test free hai (soilhealth.dac.gov.in) aur usse pata chalta hai ki mitti ko phosphorus chahiye bhi ya nahi. Card ke hisaab se khaad lene par nano DAP aur granular dono ka kharcha kam ho sakta hai.' },
 ];
 
@@ -169,7 +169,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/nano-dap-500ml-price-india-2026.webp"
-            alt="Nano DAP 500ml price India 2026 — state-wise rate comparison for kisans"
+            alt="Nano DAP 500ml price India 2026, state-wise rate comparison for kisans"
             width={1200}
             height={630}
             className="w-full object-cover"
@@ -300,7 +300,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
             <SI n={6}>Kisi bhi pesticide ke saath mix karne se pehle chhote patch par test kar lein</SI>
           </StepList>
           <IB>
-            <strong>Dhyan Dein:</strong> Fine spray nozzle use karein — absorption behtar hoti hai. Coarse droplets zyadatar waste ho jaate hain.
+            <strong>Dhyan Dein:</strong> Fine spray nozzle use karein, absorption behtar hoti hai. Coarse droplets zyadatar waste ho jaate hain.
           </IB>
         </section>
 
@@ -404,7 +404,7 @@ export default function NanoDap500mlPriceInIndia2026({ article }: { article: Art
               'Sirf ek baar spray karna, 2-3 sprays ke bina result adhoora rehta hai.',
               'Expired product use karna, manufacturing date check karna na bhoolein.',
               'Paani ka ratio andaaze se lena, measure karke hi dilute karein.',
-              'Baarish se theek pehle spray karna — 4-6 ghante ka dry window zaroori hai, warna wash-off ho jaata hai.',
+              'Baarish se theek pehle spray karna, 4-6 ghante ka dry window zaroori hai, warna wash-off ho jaata hai.',
             ].map((mistake) => (
               <div key={mistake} className="flex gap-2 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
                 <span className="text-red-600 dark:text-red-400 font-bold shrink-0">✗</span>

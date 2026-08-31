@@ -43,7 +43,7 @@ const FAQS_DATA = [
     a: 'Zaroori nahi hai lekin helpful bahut hai. Banks prefer karte hain ki borrower ka 1 saal ka repayment track record ho. KCC lekar time par repay karo, phir term loan easily approve hota hai. Direct term loan bhi possible hai agar income proof strong ho.',
   },
   {
-    q: 'Bataidar hoon, zameen kisi aur ke naam hai — rin milega?',
+    q: 'Bataidar hoon, zameen kisi aur ke naam hai, rin milega?',
     a: 'Haan. KCC bataidar, mokhik pattedar aur SHG/JLG samooh ke liye bhi khula hai. Dikkat kagaz ki hoti hai, patrata ki nahi. Aapke rajya me batai ka jo proof maanya hai (likhit karar, swa-ghoshna, gram-star pramanan) wo bank ko chahiye. Jitna pakka kagaz, utni aasan approval.',
   },
   {
@@ -131,7 +131,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
         <section className="mb-8">
           <SH>4 Jagah Se Rin Mil Sakta Hai. Comparison</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ek hi option nahi hai. Char sources hain — har ek ka apna advantage hai.
+            Ek hi option nahi hai. Char sources hain, har ek ka apna advantage hai.
           </p>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
@@ -272,7 +272,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
             Local level par kaam karti hain. Officers kisanon ko personally jaante hain. Process fast, 3-7 din. Small amounts ke liye best hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Member banna padta hai pehle. Thoda paperwork hai lekin ek baar member ban gaye toh credit access smooth. Rate competitive — 8-12%.
+            Member banna padta hai pehle. Thoda paperwork hai lekin ek baar member ban gaye toh credit access smooth. Rate competitive, 8-12%.
           </p>
         </section>
 
@@ -329,7 +329,7 @@ export default function KisanRinKahaSeLe2026({ article }: { article: ArticleMeta
           <StepList>
             <SI n={1}>Application aur saare documents ki ek copy apne paas rakho, aur jama karte waqt <strong>receiving muhar</strong> lagwao, tareekh ka saboot yahi hai</SI>
             <SI n={2}>Reason likhit me maango; na mile to usi baat ko application me likh kar dobara jama karo</SI>
-            <SI n={3}>Baat na bane to usi bank ke <strong>grievance cell</strong> me shikayat karo — branch se upar zonal level par file dekhi jaati hai</SI>
+            <SI n={3}>Baat na bane to usi bank ke <strong>grievance cell</strong> me shikayat karo, branch se upar zonal level par file dekhi jaati hai</SI>
             <SI n={4}>Wahan se bhi hal na nikle to <strong>RBI Banking Ombudsman</strong>, cms.rbi.org.in par online shikayat, koi fees nahi</SI>
           </StepList>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">

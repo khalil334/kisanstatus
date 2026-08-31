@@ -137,7 +137,7 @@ export default function HomeContent() {
 
             <p className="text-lg md:text-xl text-green-100 leading-relaxed mb-8 max-w-2xl mx-auto" itemProp="description">
               PM Kisan Samman Nidhi ki <strong className="text-white">24vi kist October 2026</strong> mein
-              expected hai — ₹2,000 seedha bank account mein (DBT). Yahan se apna beneficiary status
+              expected hai, ₹2,000 seedha bank account mein (DBT). Yahan se apna beneficiary status
               check karein, eKYC poori karein, aur agar status mein{' '}
               <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline font-semibold text-white hover:text-green-200">
                 FTO generated
@@ -239,14 +239,14 @@ export default function HomeContent() {
               Sabhi Sections Ek Nazar Mein
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-base max-w-xl mx-auto">
-              Calculators, pension yojana, state schemes aur Hindi guides — seedha sahi jagah pahunchein
+              Calculators, pension yojana, state schemes aur Hindi guides, seedha sahi jagah pahunchein
             </p>
           </div>
           <nav aria-label="Site sections">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto mb-8">
               {[
                 { href: '/calculator', title: 'Free Kisan Tools', desc: 'EMI, MSP, status — 7 free calculators' },
-                { href: '/maandhan', title: 'PM Kisan Maandhan', desc: '₹3000 pension — registration se exit tak har guide' },
+                { href: '/maandhan', title: 'PM Kisan Maandhan', desc: '₹3000 pension, registration se exit tak har guide' },
                 { href: '/rajya-yojana/odisha-cm-kisan-status-check-2026', title: 'CM Kisan Odisha Status Check', desc: 'Odisha CM Kisan status, village wise list aur e-KYC guide' },
                 { href: '/rajya-yojana', title: 'Rajya Yojana', desc: 'State-wise kisan schemes aur status check' },
                 { href: '/articles/hi', title: 'हिंदी गाइड', desc: 'पीएम किसान, कर्ज माफी और मंडी भाव — आसान हिंदी में' },
@@ -330,7 +330,7 @@ export default function HomeContent() {
             <h2 id="hindi-articles-heading" className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight">
               हिंदी में योजना गाइड
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mt-2 text-lg">पीएम किसान, कर्ज माफी, सब्सिडी और मंडी भाव — आसान हिंदी में</p>
+            <p className="text-gray-600 dark:text-gray-400 mt-2 text-lg">पीएम किसान, कर्ज माफी, सब्सिडी और मंडी भाव, आसान हिंदी में</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

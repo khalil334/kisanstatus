@@ -119,7 +119,7 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
           लोकसभा में लिखित उत्तर
         </a>
         )। अर्थात् recovery notice कोई
-        इक्का-दुक्का घटना नहीं — यह योजना की सफाई-प्रक्रिया का हिस्सा है, जो income tax, UIDAI और PFMS के
+        इक्का-दुक्का घटना नहीं यह योजना की सफाई-प्रक्रिया का हिस्सा है, जो income tax, UIDAI और PFMS के
         record मिलाकर चल रही है। अगर आपके पास ऐसा notice आया है, तो घबराने से पहले यह समझ लीजिए कि यह
         आता क्यों है और आपके पास रास्ते क्या हैं।
       </p>
@@ -167,7 +167,7 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
       </ul>
 
       <Panel tone="green">
-        और एक बात साफ कर दें — अगर आपकी किस्त सिर्फ <em>रुकी</em> है (eKYC या verification की वजह से),
+        और एक बात साफ कर दें अगर आपकी किस्त सिर्फ <em>रुकी</em> है (eKYC या verification की वजह से),
         तो वह recovery का मामला नहीं है। वसूली सिर्फ उनसे होती है जो नियम से अपात्र निकले। रुकी किस्त वालों
         के लिए <Link href="/articles/hi/payment-stopped-by-state">यह guide</Link> है।
       </Panel>
@@ -243,7 +243,7 @@ export default function PmKisanRecoveryNoticePaisaWapas({ article }: { article: 
         </li>
         <li>&ldquo;If not paid earlier…&rdquo; वाला विकल्प चुनें (पहली बार लौटा रहे हैं तो यही आपका रास्ता है)।</li>
         <li>आधार number / खाता number / mobile. किसी एक से अपना record खोलें, captcha भरें।</li>
-        <li>Screen पर अब तक मिली किस्तें दिखेंगी — जो लौटानी हैं, उन्हें tick करें, email और contact भरें।</li>
+        <li>Screen पर अब तक मिली किस्तें दिखेंगी जो लौटानी हैं, उन्हें tick करें, email और contact भरें।</li>
         <li>Details confirm करें, बैंक चुनकर online भुगतान करें, और <strong>receipt संभालकर रखें</strong>।</li>
       </ol>
       <p>

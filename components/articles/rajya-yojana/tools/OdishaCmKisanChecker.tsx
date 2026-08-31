@@ -100,7 +100,7 @@ export default function OdishaCmKisanChecker() {
       headline:
         acres <= 2
           ? 'Marginal cultivator, scheme ka core target group'
-          : 'Small cultivator — 5 acre limit ke andar',
+          : 'Small cultivator, 5 acre limit ke andar',
       detail:
         'Cultivator track mein raqam zameen ke area se badalti nahi hai. 5 acre ki limit ke andar har eligible kisan ko same annual grant milta hai, do barabar tranche mein, ek Kharif ke aas-paas, doosra Rabi ke aas-paas.',
       annual: 4000,

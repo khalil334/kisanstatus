@@ -72,7 +72,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Sarkari loan ka purana tareeka sab jaante hain — branch ke chakkar, har baar naya kagaz, aur mahino ka
+          Sarkari loan ka purana tareeka sab jaante hain, branch ke chakkar, har baar naya kagaz, aur mahino ka
           intezar. JanSamarth portal isi jhanjhat ko khatam karne ke liye banaya gaya: Bharat sarkar ka ek platform
           jahan credit-linked sarkari schemes ek jagah milti hain, eligibility online check hoti hai, aur application
           seedha banks tak pahunchti hai.
@@ -186,7 +186,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
 
         <SH>Apply Se Pehle. Teen Cheezein Taiyar Karo</SH>
         <StepList>
-          <SI n={1}><strong>Aadhaar-mobile link:</strong> poora process OTP par chalta hai, aur OTP sirf Aadhaar se linked number par aata hai. Number band ho gaya hai ya badal gaya hai toh pehle Aadhaar centre par update karwao — yeh sabse common atkaav hai.</SI>
+          <SI n={1}><strong>Aadhaar-mobile link:</strong> poora process OTP par chalta hai, aur OTP sirf Aadhaar se linked number par aata hai. Number band ho gaya hai ya badal gaya hai toh pehle Aadhaar centre par update karwao, yeh sabse common atkaav hai.</SI>
           <SI n={2}><strong>Farmer ID (AgriStack):</strong> KCC/crop loan ke digital flow ke liye Farmer ID zaroori hai. Nahi bani hai toh pehle banwa lo, humne iska poora process alag guide mein likha hai: <Link href="/articles/AgriStackKyaHai2026" className="underline font-bold">AgriStack Kya Hai</Link>.</SI>
           <SI n={3}><strong>Bank details + PAN:</strong> apna account number, IFSC aur PAN saamne rakho. Account aapke naam par ho aur chalu ho. DBT aur disbursement isi mein aayega.</SI>
         </StepList>
@@ -234,7 +234,7 @@ export default function JansamarthPortalLoanApply({ article }: { article: Articl
           loan lekar time par chuka chuke hain, unke liye limit ₹20 lakh tak (Tarun Plus) kar di gayi.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Gaon ke liye iska matlab seedha hai — bhains kharidni hai, atta chakki lagani hai, ya kiraye ki dukaan
+          Gaon ke liye iska matlab seedha hai, bhains kharidni hai, atta chakki lagani hai, ya kiraye ki dukaan
           shuru karni hai, toh KCC ke alawa yeh doosra darwaza hai. Process wahi hai jo upar steps mein likha:
           eligibility check, phir lender chun kar apply. Dhyan itna rakhna ki Mudra dhandhe ke liye hai, kheti ki
           fasal ke kharche ke liye nahi. Fasal ke liye KCC hi sahi jagah hai.

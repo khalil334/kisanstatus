@@ -82,7 +82,7 @@ return (
      <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
        <Image
          src={article.ogImage || '/images/articles/kisan-tractor-loan-2026/hero-banner.webp'}
-         alt="Tractor loan financing India 2026 — subsidized rates, zero down payment options, government subsidy workflow"
+         alt="Tractor loan financing India 2026, subsidized rates, zero down payment options, government subsidy workflow"
          width={1200}
          height={630}
          className="w-full object-cover"
@@ -251,7 +251,7 @@ return (
          <SI n={3}>Application form bharo, personal, land, income, tractor details</SI>
          <SI n={4}>Documents submit karo, complete set, koi missing nahi</SI>
          <SI n={5}>Field verification, bank officer zameen check karega, khasra/khatauni verify hoga</SI>
-         <SI n={6}>Sanction letter — 7-15 din mein. Amount, rate, tenure sab likha hoga</SI>
+         <SI n={6}>Sanction letter, 7-15 din mein. Amount, rate, tenure sab likha hoga</SI>
          <SI n={7}>Dealer ko direct payment, bank seedha dealer account mein bhejta hai. RC process hoti hai</SI>
          <SI n={8}>EMI shuru, ek mahine baad auto-debit. Time par bharo, CIBIL maintain rahega</SI>
        </StepList>
@@ -369,7 +369,7 @@ return (
          <SI n={5}><strong>Kharid + DBT Transfer:</strong> Selection ke baad empaneled dealer se kharid karo, bill aur machine ka serial number portal par upload karo. Officer inspection ke baad subsidy seedha Aadhaar-seeded account mein aati hai</SI>
        </StepList>
        <WB>
-         <strong>Zaroori:</strong> Har state ka exact subsidy %, limit aur application window alag hai aur saal ke beech badalti rehti hai. Final rakam apne state ke agriculture/agrimachinery portal par hi confirm karo — dealer ya agent ke bataye number par bharosa mat karo.
+         <strong>Zaroori:</strong> Har state ka exact subsidy %, limit aur application window alag hai aur saal ke beech badalti rehti hai. Final rakam apne state ke agriculture/agrimachinery portal par hi confirm karo, dealer ya agent ke bataye number par bharosa mat karo.
        </WB>
      </section>
 
@@ -509,7 +509,7 @@ return (
          <Link href="/articles/custom-hiring-centre-chc-portal" className="underline font-bold">CHC guide</Link> me hai.
        </p>
        <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-         Aur mahine ke chalte-firte kharche, diesel, driver, spare parts — ke liye term loan mat todo. Uske liye KCC
+         Aur mahine ke chalte-firte kharche, diesel, driver, spare parts, ke liye term loan mat todo. Uske liye KCC
          hai: jitna nikala utne din ka byaj, aur time par chukane par effective rate 4% ke aas-paas.{' '}
          <Link href="/articles/KisanRinKahaSeLe2026" className="underline">Rin kahan se le</Link> wale page par dono ka
          farak table me hai.
@@ -589,7 +589,7 @@ return (
      <CalcBanner
        icon=""
        title="Apni Tractor EMI Calculate Karo"
-       desc="Loan amount, interest rate, tenure daalo — monthly payment ek click mein jaano"
+       desc="Loan amount, interest rate, tenure daalo, monthly payment ek click mein jaano"
        primaryCta={{ href: '/calculator/kcc-loan-emi', label: 'EMI Calculator →' }}
        secondaryCta={{ href: '/calculator', label: 'Sab Utilities' }}
      />

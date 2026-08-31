@@ -48,7 +48,7 @@ const FAQS_DATA = [
   },
   {
     q: '₹2,000 wali PM Kisan kist se Maandhan ka contribution kat sakta hai?',
-    a: 'Haan, ye official option hai — PM-KISAN beneficiary apni samman nidhi se contribution auto-debit karwane ki consent de sakta hai. Ye poori tarah optional hai; bina aapke likhit consent ke kist se paisa nahi kat sakta.',
+    a: 'Haan, ye official option hai. PM-KISAN beneficiary apni samman nidhi se contribution auto-debit karwane ki consent de sakta hai. Ye poori tarah optional hai; bina aapke likhit consent ke kist se paisa nahi kat sakta.',
   },
   {
     q: 'Kya pension direct bank account mein aati hai?',
@@ -200,7 +200,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
           </p>
           <StepList>
             <SI n={1}>maandhan.in kholein aur Self Enrollment / Login option chunein.</SI>
-            <SI n={2}>Aadhaar-linked mobile number daalein aur OTP verify karein. OTP nahi aa raha toh pehle Aadhaar mein mobile update karwana padega — ye portal par nahi hota, Aadhaar Seva Kendra par hota hai.</SI>
+            <SI n={2}>Aadhaar-linked mobile number daalein aur OTP verify karein. OTP nahi aa raha toh pehle Aadhaar mein mobile update karwana padega, ye portal par nahi hota, Aadhaar Seva Kendra par hota hai.</SI>
             <SI n={3}>Scheme list mein se PM-KMY (Kisan Maandhan) select karein.</SI>
             <SI n={4}>Personal details, zameen ki details (Khasra/Khatauni) aur Aadhaar-seeded bank account ki jankari bharein.</SI>
             <SI n={5}>Auto-debit mandate confirm karein, aage ke saare contribution isi account se har mahine khud katenge.</SI>
@@ -297,7 +297,7 @@ export default function PmKisanMaandhanRegistration2026({ article }: { article: 
           <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] leading-relaxed mb-4 space-y-2">
             <li>Har mahine debit ka SMS check karein, na aaye toh passbook update karwa kar dekhein</li>
             <li>Account mein contribution ki date ke aas-paas balance rakhein (₹55–₹200 hi toh hai)</li>
-            <li>Debit fail ho jaye toh turant CSC ya bank jaakar mandate dobara set karwayein — <Link href="/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein" className="underline text-blue-600 dark:text-blue-400">regularization ka poora tareeka yahan hai</Link></li>
+            <li>Debit fail ho jaye toh turant CSC ya bank jaakar mandate dobara set karwayein, <Link href="/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein" className="underline text-blue-600 dark:text-blue-400">regularization ka poora tareeka yahan hai</Link></li>
             <li>KPAN number aur pehli receipt ek jagah sambhal kar rakhein, aage har kaam isi se hoga</li>
           </ul>
         </section>

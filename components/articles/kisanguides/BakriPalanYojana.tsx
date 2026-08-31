@@ -65,7 +65,7 @@ export default function BakriPalanYojana() {
 
         <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
           <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-            Zyada applications fraud ki wajah se reject nahi hoti. Ek gayab document, ek galat naam, ek photo jisme date nahi thi — bas itna hi kaafi hota hai. Ye guide isi ko sudharne ke liye hai.
+            Zyada applications fraud ki wajah se reject nahi hoti. Ek gayab document, ek galat naam, ek photo jisme date nahi thi, bas itna hi kaafi hota hai. Ye guide isi ko sudharne ke liye hai.
           </p>
         </div>
 
@@ -310,7 +310,7 @@ export default function BakriPalanYojana() {
         </div>
 
         <h2 className="text-2xl font-semibold mt-10 mb-4 text-gray-800 dark:text-gray-200">
-          Approval Ke Baad — Paisa Kaise Aur Kab Milta Hai
+          Approval Ke Baad. Paisa Kaise Aur Kab Milta Hai
         </h2>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Yahi wo hissa hai jo portal pe kahin saaf nahi likha, aur isi liye sabse zyada log yahin

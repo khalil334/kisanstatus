@@ -62,7 +62,7 @@ export default function FasalBimaClaimStatusHindi({ article }: { article: HindiA
         </figcaption>
       </figure>
       <p>
-        Receipt number वही है जो बीमा कराते समय मिला था — CSC से कराया था तो पर्ची पर, खुद portal से किया था
+        Receipt number वही है जो बीमा कराते समय मिला था CSC से कराया था तो पर्ची पर, खुद portal से किया था
         तो SMS और email में। नंबर खो गया है? KCC वाले किसान अपनी बैंक branch से policy की copy मांग सकते हैं।
         एक किसान policy number के लिए तीन महीने इधर-उधर फोन घुमाता रहा, जबकि उसकी branch के record में वह
         पहले दिन से पड़ा था।
@@ -108,7 +108,7 @@ export default function FasalBimaClaimStatusHindi({ article }: { article: HindiA
 
       <Head2>क्लेम reject क्यों होता है. 5 असली वजहें</Head2>
       <ol className="list-decimal pl-6 space-y-2 my-4 text-sm leading-relaxed">
-        <li><strong>देर से सूचना</strong> — localized नुकसान में 72 घंटे की window miss। Rejection की वजह नंबर एक।</li>
+        <li><strong>देर से सूचना</strong> localized नुकसान में 72 घंटे की window miss। Rejection की वजह नंबर एक।</li>
         <li><strong>फसल या area notified नहीं</strong>, premium कट गया, पर जो फसल बोई वह उस block की notified list में थी ही नहीं।</li>
         <li><strong>बोई फसल और बीमा वाली फसल अलग</strong>. बैंक ने KCC के साथ गेहूं का बीमा कर दिया, किसान ने सरसों बोई। Survey में पकड़ा जाता है।</li>
         <li><strong>बैंक record की गलती</strong>. आधार mismatch, गलत खसरा नंबर, premium देर से भेजना। ऐसी गलती की भरपाई नियमों के हिसाब से बैंक को करनी पड़ती है. लिखित शिकायत कीजिए।</li>
@@ -159,7 +159,7 @@ export default function FasalBimaClaimStatusHindi({ article }: { article: HindiA
         पिछली बातचीत का record साथ रखिए. बिना record के शिकायत सिर्फ शिकायत है, record के साथ वह case है।
       </p>
       <ol className="list-decimal pl-6 space-y-2 my-4 text-sm leading-relaxed">
-        <li><strong>बीमा कंपनी</strong> — policy पर लिखे toll-free पर call, फिर district office में लिखित शिकायत। 7-10 दिन का समय दीजिए।</li>
+        <li><strong>बीमा कंपनी</strong> policy पर लिखे toll-free पर call, फिर district office में लिखित शिकायत। 7-10 दिन का समय दीजिए।</li>
         <li><strong>14447 / कृषि रक्षक portal</strong>, grievance दर्ज कीजिए, ticket number लीजिए।</li>
         <li><strong>जिला स्तर</strong>. जिला कृषि अधिकारी के नाम लिखित application। District Level Monitoring Committee PMFBY की निगरानी करती है।</li>
         <li><strong>राज्य स्तर</strong>. जिले से हल न निकले तो राज्य कृषि विभाग।</li>

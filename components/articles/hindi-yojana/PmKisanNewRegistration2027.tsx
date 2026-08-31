@@ -18,7 +18,7 @@ const FAQS = [
   },
   {
     q: 'आधार में mobile number link नहीं है. क्या करूं?',
-    a: 'दो रास्ते। पहला. Aadhaar Seva Kendra जाकर आधार में नया नंबर जुड़वाएं (मामूली शुल्क), फिर खुद online apply करें। दूसरा. सीधे CSC जाएं, वहां biometric से काम हो जाता है। लेकिन आगे eKYC और status के लिए आधार-linked नंबर बार-बार चाहिए — लम्बे में पहला रास्ता ही सही है।',
+    a: 'दो रास्ते। पहला. Aadhaar Seva Kendra जाकर आधार में नया नंबर जुड़वाएं (मामूली शुल्क), फिर खुद online apply करें। दूसरा. सीधे CSC जाएं, वहां biometric से काम हो जाता है। लेकिन आगे eKYC और status के लिए आधार-linked नंबर बार-बार चाहिए, लम्बे में पहला रास्ता ही सही है।',
   },
   {
     q: 'Reference number खो गया. अब status कैसे देखूं?',
@@ -154,7 +154,7 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
         priority
           src="/images/articles/hindi-yojna/new-registration/docs-ready.webp"
           alt="आधार कार्ड, बैंक passbook और खतौनी, registration से पहले की तैयारी"
-          caption="आवेदन से पहले मेज पर यही चार चीजें — आधार, passbook, खतौनी, phone"
+          caption="आवेदन से पहले मेज पर यही चार चीजें आधार, passbook, खतौनी, phone"
         />
         <ul className="list-disc pl-5 space-y-1.5">
           <li><strong>आधार कार्ड</strong>. नाम की spelling खतौनी से मिला लें।</li>
@@ -213,7 +213,7 @@ export default function PmKisanNewRegistration2027({ article }: { article: Hindi
       <div className="my-5 p-4 border-2 border-[var(--color-border)] rounded-2xl bg-[var(--color-card)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div>
           <p className="font-bold text-[var(--color-text)] text-sm m-0">
-            PM Kisan Portal — New Farmer Registration
+            PM Kisan Portal. New Farmer Registration
           </p>
           <p className="text-xs text-[var(--color-text-muted)] mt-0.5 mb-0">
             Official website, pmkisan.gov.in

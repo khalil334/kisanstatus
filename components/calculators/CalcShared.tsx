@@ -142,7 +142,7 @@ export function CalcHeader({ emoji, title, subtitle, breadcrumb }: {
 export function CalcDisclaimer({ note }: { note: string }) {
   return (
     <div className="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-800 leading-relaxed">
-      <strong>Note:</strong> {note} Yeh sirf estimate hai — actual amount ke liye apne bank ya pmkisan.gov.in se confirm karo.
+      <strong>Note:</strong> {note} Yeh sirf estimate hai, actual amount ke liye apne bank ya pmkisan.gov.in se confirm karo.
     </div>
   );
 }

@@ -83,7 +83,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Hum seedhi baat karenge. Sach ye hai ki 25vi wali abhi kisi ko nahi pata — na humein, na un YouTube channelo ko, na un websites ko. Sarkar mahino pehle kabhi kuch announce nahi karti. Zyadatar to release se ek-do hafte pehle hi khabar aati hai, aur kai bar to PM ke kisi event ke sath hi transfer ho jata hai.
+          Hum seedhi baat karenge. Sach ye hai ki 25vi wali abhi kisi ko nahi pata, na humein, na un YouTube channelo ko, na un websites ko. Sarkar mahino pehle kabhi kuch announce nahi karti. Zyadatar to release se ek-do hafte pehle hi khabar aati hai, aur kai bar to PM ke kisi event ke sath hi transfer ho jata hai.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
@@ -176,7 +176,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           <SH>Paisa badhega ya wahi ₹2,000 rahega?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Scheme 2019 me shuru hui thi — tab se har bar wahi ₹2,000, saal ke ₹6,000. Saat saal ho gye, ek rupya nahi badha.
+            Scheme 2019 me shuru hui thi, tab se har bar wahi ₹2,000, saal ke ₹6,000. Saat saal ho gye, ek rupya nahi badha.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
@@ -241,7 +241,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </StepList>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4 mb-3">
-            Ek practical salah — roz roz dekhne se kuch jaldi nahi aata. Jab news me baat chalne lage, tab hafte me ek bar dekh lena kafi hai. Poora tareeka screenshots ke sath <Link href="/articles/PmKisanMasterGuide2026" className="text-[var(--color-primary)] underline">master guide</Link> mein hai.
+            Ek practical salah, roz roz dekhne se kuch jaldi nahi aata. Jab news me baat chalne lage, tab hafte me ek bar dekh lena kafi hai. Poora tareeka screenshots ke sath <Link href="/articles/PmKisanMasterGuide2026" className="text-[var(--color-primary)] underline">master guide</Link> mein hai.
           </p>
 
           <DB>
@@ -293,7 +293,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </p>
 
           <DB>
-            <strong>Hoshiyar raho:</strong> Iske alawa jo bhi suna hai. Amount badhna, eligibility badalna, naye documents lagna — inka koi official confirmation nahi. Jab tak pmkisan.gov.in ya PIB se na aye, aisi khabro pe bharosa mat karo, aur na hi WhatsApp pe aage bhejo.
+            <strong>Hoshiyar raho:</strong> Iske alawa jo bhi suna hai. Amount badhna, eligibility badalna, naye documents lagna, inka koi official confirmation nahi. Jab tak pmkisan.gov.in ya PIB se na aye, aisi khabro pe bharosa mat karo, aur na hi WhatsApp pe aage bhejo.
           </DB>
         </section>
 

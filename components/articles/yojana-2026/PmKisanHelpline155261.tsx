@@ -32,7 +32,7 @@ const FAQS_DATA = [
   },
   {
     q: 'State-level problem ho to Delhi wali helpline kya karegi?',
-    a: 'Sach ye hai ki kai problems, land seeding, state approval, record verification — state ke paas atki hoti hain, aur central helpline sirf forward kar sakti hai. Aise case me apne state ke nodal officer ya district krishi adhikari se seedha sampark zyada tez hota hai. Nodal officers ki poori list hamare paas alag article me hai.',
+    a: 'Sach ye hai ki kai problems, land seeding, state approval, record verification, state ke paas atki hoti hain, aur central helpline sirf forward kar sakti hai. Aise case me apne state ke nodal officer ya district krishi adhikari se seedha sampark zyada tez hota hai. Nodal officers ki poori list hamare paas alag article me hai.',
   },
   {
     q: 'Complaint karne ke paise lagte hain kya?',
@@ -157,7 +157,7 @@ export default function PmKisanHelpline155261({ article }: { article: Yojana2026
           <SI n={1}>Subah 9-10 ke beech call karo, lines sabse khali tab hoti hain. Kist release wale hafte me sabr rakho, load sabse zyada hota hai.</SI>
           <SI n={2}>155261 busy ho to 011-24300606 try karo. Kuch states me 011-23381092 bhi chalta hai.</SI>
           <SI n={3}>Jo bhi agent kahe, uska naam aur baat ki tareekh note karo. Complaint register ho to number zaroor maango.</SI>
-          <SI n={4}>Jawab na mile to wahi baat email par bhejo — pmkisan-ict@gov.in, registration number aur problem ke saath. Email ka record ban jaata hai.</SI>
+          <SI n={4}>Jawab na mile to wahi baat email par bhejo, pmkisan-ict@gov.in, registration number aur problem ke saath. Email ka record ban jaata hai.</SI>
         </StepList>
 
         <SH>Online Complaint. Jo Phone Se Zyada Pakki Hai</SH>
@@ -226,7 +226,7 @@ export default function PmKisanHelpline155261({ article }: { article: Yojana2026
           Helpline se kaam na bane, online query ka jawab bhi santosh-janak na ho. To seedhi upar ki
           seedhi. District level par <strong>krishi adhikari (DAO)</strong> ke office me likhit application
           do, saath me status ka printout aur ticket number. Usse bhi upar har state ka ek{' '}
-          <strong>nodal officer</strong> hota hai jo PM Kisan ka in-charge hai — naam, office aur sampark{' '}
+          <strong>nodal officer</strong> hota hai jo PM Kisan ka in-charge hai, naam, office aur sampark{' '}
           <Link href="/articles/PmKisanStateNodalOfficerList" className="underline font-bold">state nodal
           officer list</Link> me diye hain. Likhit shikayat ki copy apne paas rakho; agli baar &ldquo;pehle
           bhi likha tha&rdquo; kehne ke liye wahi kaam aati hai.

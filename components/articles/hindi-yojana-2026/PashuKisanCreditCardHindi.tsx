@@ -20,7 +20,7 @@ const FAQS = [
     a: 'जनवरी 2025 से RBI ने collateral-free agriculture loan की limit ₹1.6 लाख से बढ़ाकर ₹2 लाख कर दी है। मतलब ₹2 लाख तक न जमीन गिरवी, न FD, न guarantor। इससे ऊपर की राशि पर bank security मांगेगा। पुराने blogs अभी भी ₹1.6 लाख लिख रहे हैं. वह दिसंबर 2024 तक का आंकड़ा है।',
   },
   {
-    q: 'Bank वाले कह रहे हैं पशु का बीमा करवाना पड़ेगा — यह सही है?',
+    q: 'Bank वाले कह रहे हैं पशु का बीमा करवाना पड़ेगा यह सही है?',
     a: 'हां, यह normal requirement है, fraud नहीं। Bank का पैसा पशु पर लग रहा है. पशु मर गया तो loan डूबा। इसलिए ज्यादातर bank tagged और insured पशु पर ही limit बनाते हैं। Premium छोटा होता है और कुछ राज्यों में subsidy भी मिलती है।',
   },
 ];
@@ -159,7 +159,7 @@ export default function PashuKisanCreditCardHindi({ article }: { article: HindiA
         <Link href="/articles/KisanCreditCardOnlineApply2026">KCC online apply वाली guide</Link> में है।
       </p>
 
-      <Head2>किस bank में जाएं — और camp का रास्ता</Head2>
+      <Head2>किस bank में जाएं और camp का रास्ता</Head2>
       <p>
         यह सुविधा सिर्फ बड़े commercial banks तक सीमित नहीं है। <strong>Regional Rural Bank (ग्रामीण
         bank)</strong> और <strong>district cooperative bank</strong> भी KCC-AH बनाते हैं. और गांव के
@@ -205,7 +205,7 @@ export default function PashuKisanCreditCardHindi({ article }: { article: HindiA
       <p>
         Bank जाने से पहले tag का नंबर किसी कागज पर लिख लीजिए और पशु के साथ एक photo भी रख
         लीजिए जिसमें tag दिखे। Field officer के आने से पहले ये दो चीजें तैयार हों तो verification
-        उसी दिन निपट जाता है — वरना दूसरा चक्कर लगता है और file एक-दो हफ्ते और खिंच जाती है।
+        उसी दिन निपट जाता है वरना दूसरा चक्कर लगता है और file एक-दो हफ्ते और खिंच जाती है।
         बिना tag वाला पशु bank के record में गिना ही नहीं जाता. चाहे आपके पास दस भैंसें खड़ी हों।
       </p>
 
@@ -267,7 +267,7 @@ export default function PashuKisanCreditCardHindi({ article }: { article: HindiA
       <p>
         पशु हैं, tagged हैं, और आप समय पर चुका सकते हैं. तो यह गांव में मिलने वाला सबसे सस्ता
         working capital है। 4% का रास्ता सिर्फ समय पर repayment से खुलता है, और सबसे बड़ा फायदा
-        उन्हें है जिनके पास जमीन नहीं — क्योंकि यहां limit का आधार पशु है। Bank जाने से पहले पशुओं
+        उन्हें है जिनके पास जमीन नहीं क्योंकि यहां limit का आधार पशु है। Bank जाने से पहले पशुओं
         की tagging और अपना KYC दुरुस्त कर लीजिए. आधी files इन्हीं दो चीजों पर अटकती हैं।
       </p>
 

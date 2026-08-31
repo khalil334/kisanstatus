@@ -91,7 +91,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
         </p>
         <p className="text-[var(--color-text)] leading-relaxed mb-6">
           Neeche paise ka poora hisaab, eligibility, documents, apply ka process aur
-          rejection se bachne ke tarike hain — sab official structure ke hisaab se,
+          rejection se bachne ke tarike hain, sab official structure ke hisaab se,
           hawa me kuch nahi.
         </p>
 
@@ -246,7 +246,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             me barabar ho jata hai, aur panel ki umar 25 saal tak manee jati hai.
           </p>
           <p className="text-[var(--color-text)] leading-relaxed mb-4">
-            Haan, ek imaandaar baat — jahan bijli lagbhag free hai (kuch states me agriculture
+            Haan, ek imaandaar baat, jahan bijli lagbhag free hai (kuch states me agriculture
             connection par bill na ke barabar aata hai), wahan standalone solar ka financial
             case kamzor hota hai. Wahan Component C (solarisation) zyada sense banata hai,
             kyunki bachi bijli bech kar kamai hoti hai.
@@ -403,7 +403,7 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
             Ye scheme deadline par nahi, quota par band hoti hai. State ka quota bhar gaya
             to portal form to le lega, par number agli window me lagega. Isliye jis din
-            window khuli ho usi hafte apply karna sabse bada faayda hai — documents pehle
+            window khuli ho usi hafte apply karna sabse bada faayda hai, documents pehle
             se taiyaar rakho, land record pehle se durust karwao.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">

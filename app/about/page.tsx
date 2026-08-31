@@ -113,7 +113,7 @@ export default function AboutPage() {
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-2">
             About {SITE_NAME}
           </h1>
-          <p className="text-green-200 text-sm">Ek kisan ki banayi site — PM Kisan aur yojanaon ki seedhi-saadi jaankari</p>
+          <p className="text-green-200 text-sm">Ek kisan ki banayi site. PM Kisan aur yojanaon ki seedhi-saadi jaankari</p>
         </div>
       </div>
 
@@ -130,14 +130,14 @@ export default function AboutPage() {
               Yeh bas ek kisan ki taraf se baaki kisanon ke liye likhi gayi jaankari hai.
             </p>
             <p>
-              Baat 2025 ki hai — ghar mein PM Kisan ki kist atki thi. Portal khola to kuch samajh nahi aaya,
+              Baat 2025 ki hai, ghar mein PM Kisan ki kist atki thi. Portal khola to kuch samajh nahi aaya,
               gaon mein agent bola paise lagenge. Wahin thaan liya ki khud seekhunga. Dheere-dheere status check,
               eKYC, land seeding — sab samajh aa gaya. Phir socha, jo maine mehnat se seekha, woh doosron ko
               muft mein kyun na mile? Bas isi soch se yeh site bani.
             </p>
             <p>
               Dikkat asli mein yeh hai ki sarkari portals ya to English mein hain ya itne ghume hue ki aam aadmi
-              atak jaata hai. Main wahi cheez apni bhasha mein, step-by-step likhta hoon — jaise koi apna aadmi
+              atak jaata hai. Main wahi cheez apni bhasha mein, step-by-step likhta hoon, jaise koi apna aadmi
               baitha kar samjha raha ho. Aap mere{' '}
               <Link href="/articles" className="text-[var(--color-primary)] font-bold underline hover:text-green-700 dark:hover:text-green-400">
                 verified guides section
@@ -269,7 +269,7 @@ export default function AboutPage() {
         <div className="p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl text-xs text-[var(--color-text-muted)] leading-relaxed">
           <p className="font-bold text-[var(--color-text)] mb-2">Disclaimer</p>
           <p className="mb-2">
-            Phir se saaf kar doon — {SITE_NAME} sarkar ki website nahi hai. Yeh main akela chalata hoon, kisi mantralaya ya vibhag se iska koi rishta nahi.
+            Phir se saaf kar doon, {SITE_NAME} sarkar ki website nahi hai. Yeh main akela chalata hoon, kisi mantralaya ya vibhag se iska koi rishta nahi.
           </p>
           <p>
             Official verification, enrollment, ya payment related kaam ke liye hamesha{' '}

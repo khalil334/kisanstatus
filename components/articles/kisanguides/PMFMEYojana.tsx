@@ -90,7 +90,7 @@ export default function PMFMEYojana() {
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Seedha jawab pehle: agar aap achar, papad, namkeen, bakery, masala ya aisa hi koi
         chhota food unit chalate hain (ya lagana chahte hain), to PM FME scheme me project
-        cost ka <strong>35% credit-linked subsidy</strong> milta hai — zyada se zyada
+        cost ka <strong>35% credit-linked subsidy</strong> milta hai, zyada se zyada
         <strong> ₹10 lakh</strong>. Apni jeb se kam se kam 10% lagana hota hai, baaki bank
         loan. Scheme Ministry of Food Processing Industries (MoFPI) ki hai aur iski deadline
         September 2026 tak badhai gayi hai. Matlab abhi window khuli hai, lekin hamesha ke
@@ -251,7 +251,7 @@ export default function PMFMEYojana() {
 
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         Apne district ka product <a href="https://pmfme.mofpi.gov.in/" className="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">PM FME portal</a> par
-        ODOP section me dekh lo, ya District Industries Centre (DIC) me poochh lo — wahan
+        ODOP section me dekh lo, ya District Industries Centre (DIC) me poochh lo, wahan
         District Resource Person (DRP) baithte hain jo application me free me madad karte
         hain. Ye baat kam log jaante hain aur agents ko paisa de dete hain.
       </p>
@@ -444,7 +444,7 @@ export default function PMFMEYojana() {
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
         File kahin atak jaye to teen jagah dastak do: apne zile ka DIC (application ka
         record wahi rehta hai), portal par diya State Nodal Agency ka contact, aur MoFPI
-        ka helpline 011-26406557. Likhit shikayat ka jawab jaldi aata hai — phone se
+        ka helpline 011-26406557. Likhit shikayat ka jawab jaldi aata hai, phone se
         zyada email/portal grievance kaam karta hai, ye maine khud dekha hai.
       </p>
 

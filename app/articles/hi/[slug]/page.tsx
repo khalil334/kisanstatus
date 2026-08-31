@@ -191,7 +191,7 @@ export default async function HindiArticlePage({
       <CrossSectionLinks
         currentPath={`/articles/hi/${slug}`}
         section="hindi"
-        heading="साइट के दूसरे सेक्शन — ये भी देखें"
+        heading="साइट के दूसरे सेक्शन, ये भी देखें"
       />
     </main>
   );

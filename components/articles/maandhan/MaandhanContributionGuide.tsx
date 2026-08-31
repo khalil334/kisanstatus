@@ -241,7 +241,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Auto-debit optional hai — sirf tabhi lagega jab aap khud form sign karenge
+            Auto-debit optional hai, sirf tabhi lagega jab aap khud form sign karenge
           </p>
         </div>
 
@@ -333,7 +333,7 @@ export default function MaandhanContributionGuide({ article }: { article: Maandh
         <section className="mb-8">
           <SH>Aapke Baad Parivar Ka Kya. Contribution Ke Nazariye Se</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Yeh sawal contribution chart se seedha juda hai, kyunki jawab is par depend karta hai ki dehant kab hota hai. <strong>60 se pehle</strong> (pension shuru hone se pehle): spouse ke paas do raste hain. Bacha hua contribution khud dekar scheme continue karein aur 60 par poori ₹3,000 pension lein, ya jama paisa interest ke saath lekar exit kar jayein. <strong>60 ke baad</strong> (pension chalu ho chuki thi): spouse ko ₹3,000 ka aadha, <strong>₹1,500 har mahine</strong> — puri zindagi milta hai. Yeh family pension sirf legally wedded spouse ke liye hai, bachon ke liye nahi.
+            Yeh sawal contribution chart se seedha juda hai, kyunki jawab is par depend karta hai ki dehant kab hota hai. <strong>60 se pehle</strong> (pension shuru hone se pehle): spouse ke paas do raste hain. Bacha hua contribution khud dekar scheme continue karein aur 60 par poori ₹3,000 pension lein, ya jama paisa interest ke saath lekar exit kar jayein. <strong>60 ke baad</strong> (pension chalu ho chuki thi): spouse ko ₹3,000 ka aadha, <strong>₹1,500 har mahine</strong> puri zindagi milta hai. Yeh family pension sirf legally wedded spouse ke liye hai, bachon ke liye nahi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Enrollment ke waqt ek 2-minute ka kaam is poore process ko aasan bana deta hai: <strong>nominee ka naam sahi bharwana</strong>. Nominee registered ho toh claim settlement 1–2 mahine mein ho jata hai; nominee na ho toh spouse ko tehsil se Legal Heir Certificate lena padta hai aur wahi kaam 6–12 mahine kheench jata hai. Scenario-wise poore rules —{' '}

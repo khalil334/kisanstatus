@@ -110,7 +110,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       <Sec>इस line का असली अर्थ</Sec>
       <p>
         योजना में पैसा केंद्र सरकार भेजती है, पर लाभार्थियों की जांच-पड़ताल राज्य सरकार के जिम्मे है। हर किस्त
-        से पहले राज्य अपने record से मिलान करता है। इस मिलान में आपके आवेदन में कोई खटका मिला — तो राज्य
+        से पहले राज्य अपने record से मिलान करता है। इस मिलान में आपके आवेदन में कोई खटका मिला तो राज्य
         ने आपकी उस किस्त का भुगतान रोक दिया। सीधे शब्दों में: <em>पैसा release हुआ था, पर आपके नाम की मंजूरी राज्य
         स्तर पर अटक गई</em>। यह अस्थायी रोक है, स्थायी निष्कासन नहीं।
       </p>
@@ -207,7 +207,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
         बाकी सवाल बाद में।
       </p>
       <p>
-        <strong>सवाल 2 — आधार, passbook और आवेदन में नाम अक्षर-दर-अक्षर एक है?</strong> &ldquo;Ram Kumar&rdquo; और
+        <strong>सवाल 2, आधार, passbook और आवेदन में नाम अक्षर-दर-अक्षर एक है?</strong> &ldquo;Ram Kumar&rdquo; और
         &ldquo;Ramkumar&rdquo; system की नजर में दो अलग आदमी हैं। &ldquo;Devi&rdquo; कहीं है, कहीं नहीं? वह भी mismatch। फर्क
         मिले तो रास्ता एक ही है. <Link href="/articles/PmKisanCorrectionForm2026">correction form</Link>।
       </p>
@@ -294,7 +294,7 @@ export default function PmKisanPaymentStoppedByStateFix({ article }: { article: 
       <Sec>सुधार के बाद क्या होता है. और कब तक</Sec>
       <p>
         यह हिस्सा समझना जरूरी है, वरना सुधार के बाद भी रोज status देखकर घबराहट बनी रहती है। क्रम ऐसा
-        चलता है: आपका सुधार (eKYC, correction, वरासत — जो भी था) पहले <em>record में दर्ज</em> होता है।
+        चलता है: आपका सुधार (eKYC, correction, वरासत, जो भी था) पहले <em>record में दर्ज</em> होता है।
         फिर राज्य की अगली verification में आपका नाम दोबारा जांच से गुजरता है। जांच पास हुई तो नाम अगली
         beneficiary list में लौट आता है, और रुकी राशि उस release के साथ जुड़कर आती है।
       </p>

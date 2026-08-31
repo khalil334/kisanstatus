@@ -344,7 +344,7 @@ export default function MushroomKheti() {
         NHB Subsidy For Mushroom Farming: Process Aur Ground Reality
       </h2>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-        National Horticulture Board (NHB) aur State Horticulture Departments is sector ko boost dete hain. NHB ki subsidy back-ended capital investment scheme ke through aati hai — matlab pehle aap poora unit lagate hain, phir claim karte hain, tab paisa milta hai. General category kisano ke liye ye zyadatar 40% ke aas-paas rehta hai, SC/ST aur North-East ke liye percentage thoda zyada ho sakta hai state guidelines ke hisaab se.
+        National Horticulture Board (NHB) aur State Horticulture Departments is sector ko boost dete hain. NHB ki subsidy back-ended capital investment scheme ke through aati hai, matlab pehle aap poora unit lagate hain, phir claim karte hain, tab paisa milta hai. General category kisano ke liye ye zyadatar 40% ke aas-paas rehta hai, SC/ST aur North-East ke liye percentage thoda zyada ho sakta hai state guidelines ke hisaab se.
       </p>
       <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
         Ek kadwi sachai yeh hai ki subsidy process mein 3-6 mahine lag sakte hain, aur paperwork thoda complex hota hai.

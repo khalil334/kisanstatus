@@ -84,7 +84,7 @@ export function GovLink({
         <div>
           <p className="font-bold text-[var(--color-text)] text-sm">{label}</p>
           <p className="text-xs text-[var(--color-text-muted)] mt-0.5">
-            Government of India — {portalName}
+            Government of India, {portalName}
           </p>
         </div>
         <div className="flex gap-2 shrink-0">
@@ -208,7 +208,7 @@ export function BottomNav({
   return (
     <div className="pt-6 border-t border-[var(--color-border)] mt-8">
       <p className="text-xs text-[var(--color-text-muted)] uppercase font-bold tracking-wide mb-3">
-        KisanStatus.com — Quick Links
+        KisanStatus.com. Quick Links
       </p>
       <div className="flex flex-wrap gap-2">
         {links.map(({ href, l }) => (

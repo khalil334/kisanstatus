@@ -32,7 +32,7 @@ export default function SearchPage() {
              Guides Search Karein
           </h1>
           <p className="text-green-200 text-sm mb-8">
-            PM Kisan, loans, subsidy aur mandi bhav — apna sawal search karein
+            PM Kisan, loans, subsidy aur mandi bhav, apna sawal search karein
           </p>
           <SearchBar />
         </div>

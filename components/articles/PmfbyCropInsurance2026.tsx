@@ -59,7 +59,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Application status online kahan dikhta hai?',
-    a: 'pmfby.gov.in kholiye, "Application Status" mein jaakar receipt/policy number ya Aadhaar daaliye. Policy number, premium paid aur coverage — sab ek hi table mein dikh jaata hai.',
+    a: 'pmfby.gov.in kholiye, "Application Status" mein jaakar receipt/policy number ya Aadhaar daaliye. Policy number, premium paid aur coverage, sab ek hi table mein dikh jaata hai.',
   },
   {
     q: 'Shikayat ke liye kis number par call karein?',
@@ -212,7 +212,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           <SH>Enrollment Kaise Karein? (Online + Offline)</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            <strong>Loan wale kisan:</strong> Agar aapne <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-green-700 dark:text-green-400 underline font-medium">KCC</Link> ya crop loan liya hai toh bank enrollment khud kar deta hai. Kharif 2020 se scheme sabke liye <strong>voluntary</strong> hai — na lena ho toh enrollment ki cut-off date se <strong>7 din pehle</strong> bank branch mein ek simple declaration jama karna hota hai.
+            <strong>Loan wale kisan:</strong> Agar aapne <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-green-700 dark:text-green-400 underline font-medium">KCC</Link> ya crop loan liya hai toh bank enrollment khud kar deta hai. Kharif 2020 se scheme sabke liye <strong>voluntary</strong> hai, na lena ho toh enrollment ki cut-off date se <strong>7 din pehle</strong> bank branch mein ek simple declaration jama karna hota hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             <strong>Bina loan wale:</strong> Khud karna padega —
@@ -376,7 +376,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </IB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ola ya baadh jaise localized nuksan mein aapke khet ka <strong>individual survey</strong> hota hai, aur muawza usi assessment par milta hai. Ab technology ka istemaal bhi badh raha hai — <strong>YES-TECH</strong> (technology-based yield estimation) aur <strong>CROPIC</strong> app, jo geo-tagged photos se fasal ki haalat aur nuksan aankta hai.{' '}
+            Ola ya baadh jaise localized nuksan mein aapke khet ka <strong>individual survey</strong> hota hai, aur muawza usi assessment par milta hai. Ab technology ka istemaal bhi badh raha hai, <strong>YES-TECH</strong> (technology-based yield estimation) aur <strong>CROPIC</strong> app, jo geo-tagged photos se fasal ki haalat aur nuksan aankta hai.{' '}
             <span className="text-xs">
               (Source: <Src href="https://agritimes.co.in/crops/fight-against-desert-locusts-will-take-time-says-fao-chief/cropic-app-brings-real-time-crop-loss-assessment-under-pmfby/">CROPIC, Ministry of Agriculture briefing</Src>)
             </span>
@@ -462,7 +462,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
             <li><strong>Report mein deri</strong>, 72 ghante ki window nikal jaana. Sabse badi wajah, aur iska koi ilaj nahi.</li>
             <li><strong>Sirf phone par bata dena</strong>, call ke baad likhit complaint bhi zaroori hai. Bina written record ke baad mein "soochna nahi mili" kehna aasan ho jaata hai.</li>
             <li><strong>Receipt kho dena</strong>, non-loanee kisan ke paas premium receipt hi enrollment ka saboot hai. Photo kheech kar phone mein bhi rakhein.</li>
-            <li><strong>Galat khasra/survey number</strong> — enrollment ke waqt jo number register hua, claim usi zameen par milega. Pehle hi mila lein.</li>
+            <li><strong>Galat khasra/survey number</strong> enrollment ke waqt jo number register hua, claim usi zameen par milega. Pehle hi mila lein.</li>
             <li><strong>Notified crop ka dhyan na rakhna</strong>, jo crop aapke area mein notified nahi hai, uska premium bhar bhi diya toh cover nahi milega. Bijai se pehle CSC ya agriculture office se notified list poochh lein.</li>
           </ul>
         </section>

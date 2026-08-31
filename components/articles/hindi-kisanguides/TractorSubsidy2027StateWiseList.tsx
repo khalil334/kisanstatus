@@ -34,7 +34,7 @@ const FAQS = [
   },
   {
     q: 'आवेदन reject हो गया. क्या अगली बार फिर कर सकता हूं?',
-    a: 'हां — reject होने का अर्थ आम तौर पर उस साल का मौका गया, हमेशा के लिए नहीं। Rejection का कारण portal पर दिखता है. अक्सर कागज अधूरा या नाम-मिलान का फर्क। वह ठीक करके अगली window में दोबारा आवेदन करें। Lottery में नाम न आना rejection नहीं है. अगली बार फिर किस्मत आजमा सकते हैं।',
+    a: 'हां reject होने का अर्थ आम तौर पर उस साल का मौका गया, हमेशा के लिए नहीं। Rejection का कारण portal पर दिखता है. अक्सर कागज अधूरा या नाम-मिलान का फर्क। वह ठीक करके अगली window में दोबारा आवेदन करें। Lottery में नाम न आना rejection नहीं है. अगली बार फिर किस्मत आजमा सकते हैं।',
   },
   {
     q: 'ट्रैक्टर कितने साल तक बेच नहीं सकते?',
@@ -145,7 +145,7 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
       </p>
       <ul className="my-4 space-y-2 list-none pl-0">
         <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">▸</span><span><strong>सामान्य वर्ग</strong>. ज्यादातर राज्यों में करीब 25% से 40% तक।</span></li>
-        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">▸</span><span><strong>SC / ST किसान</strong> — ऊंचा स्लैब, कई राज्यों में 50% तक। जाति प्रमाण-पत्र जरूरी।</span></li>
+        <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">▸</span><span><strong>SC / ST किसान</strong> ऊंचा स्लैब, कई राज्यों में 50% तक। जाति प्रमाण-पत्र जरूरी।</span></li>
         <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">▸</span><span><strong>महिला किसान</strong>, priority category। जमीन महिला के नाम हो तो उसी के नाम से आवेदन करना फायदे का सौदा है।</span></li>
         <li className="flex gap-2 text-sm leading-relaxed"><span className="shrink-0">▸</span><span><strong>लघु-सीमांत किसान</strong>, (सीमांत = 1 हेक्टेयर तक, लघु = 2 हेक्टेयर तक). इन्हें भी higher slab मिलता है, खतौनी/land record से साबित होता है।</span></li>
       </ul>
@@ -224,7 +224,7 @@ export default function TractorSubsidy2027StateWiseList({ article }: { article: 
         UP में कृषि यंत्रीकरण योजना के तहत यंत्रों पर अनुदान मिलता है. आवेदन कृषि विभाग के DBT portal
         (&ldquo;यंत्र पर अनुदान&rdquo; section) से होता है। Token system चलता है: booking खुलते
         ही token लो, फिर तय समय में खरीद कर बिल upload करो। UP में ट्रैक्टर/यंत्रों पर अनुदान की cap
-        अक्सर ₹1 लाख तक बताई जाती है — item के हिसाब से अलग। Booking window कुछ ही दिनों में भर जाती
+        अक्सर ₹1 लाख तक बताई जाती है item के हिसाब से अलग। Booking window कुछ ही दिनों में भर जाती
         है, तो notification पर नजर रखना जरूरी है।
       </StateCard>
 

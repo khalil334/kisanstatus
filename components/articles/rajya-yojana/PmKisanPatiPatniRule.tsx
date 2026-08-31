@@ -62,7 +62,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         </p>
 
         <InfoBox type="info">
-          PM Kisan ka beneficiary <strong>&ldquo;family&rdquo;</strong> hai — pati, patni aur
+          PM Kisan ka beneficiary <strong>&ldquo;family&rdquo;</strong> hai, pati, patni aur
           naabaalig bachche (18 saal se kam) milkar ek unit. Is poore unit ko saal mein ek hi
           ₹6,000 milta hai, teen ₹2,000 ki kist mein. Zameen kam ho ya zyada, do jagah se
           paisa kisi bhi haalat mein nahi banta.
@@ -157,7 +157,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           Maan lijiye pita ke paas das bigha zameen thi. Baalig bete ko char bigha de kar
           revenue record mein mutation ho gaya. Ab kaagaz par do khatedar hain, do juda
           landholding hain, aur scheme ki definition ke hisaab se do family unit. Aise mein
-          pita ka bhi grant banta hai aur bete ka bhi — ek hi chulhe par khana banta hoga,
+          pita ka bhi grant banta hai aur bete ka bhi, ek hi chulhe par khana banta hoga,
           phir bhi ye duplicate nahi hai.
         </p>
 
@@ -296,7 +296,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
         <Fig
           src="aadhaar-ekyc-couple.webp"
           alt="Pati-patni gaon ke kiosk par Aadhaar biometric e-KYC karwa rahe hain"
-          caption="Aadhaar e-KYC ke baad har beneficiary unique identity se juda hai — duplicate registration ab data mein hi pakda jaata hai"
+          caption="Aadhaar e-KYC ke baad har beneficiary unique identity se juda hai, duplicate registration ab data mein hi pakda jaata hai"
         />
 
         <p>
@@ -426,7 +426,7 @@ export default function PmKisanPatiPatniRule({ article }: { article: RajyaYojana
           Aam taur par jawab khud saamne aa jaata hai. Ek registration har jagah saaf
           hota hai aur doosra kahin na kahin atka hua. Saaf wala rakhein, atka hua
           surrender karein. Refund ka hisaab bhi isi audit se nikal aata hai: jo kistein
-          surrender wale registration par aayi hain, wahi lautani hain — rakhe gaye
+          surrender wale registration par aayi hain, wahi lautani hain, rakhe gaye
           registration ki kistein jaayaz hain, unka refund nahi banta.
         </p>
 

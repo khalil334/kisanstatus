@@ -25,7 +25,7 @@ const FAQS_DATA = [
     a: 'Teen wajah ho sakti hain: (1) eKYC nahi hui, pehle wahi nipta lo, (2) Bank account Aadhaar se link nahi. NPCI seeding karwao, (3) Land seeding pending hai. Revenue office se contact karo. Sabse pehle status check karo portal par, wahan exact reason dikhega.',
   },
   {
-    q: 'Reference number kho gaya hai — ab kya karun?',
+    q: 'Reference number kho gaya hai, ab kya karun?',
     a: 'Koi baat nahi. Aadhaar number se hi sab check ho jaata hai. Beneficiary status mein Aadhaar daalo, puri history saamne.',
   },
   {
@@ -126,7 +126,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
             Registration khud karne ke baad sabse zyada confusion status check karne mein hoti hai. Log sochte hain "maine khud kiya, shayad koi alag reference number ya login chahiye." Aisa kuch nahi hai. System mein CSC registration aur self registration mein koi field-level farak nahi hota. Dono Aadhaar-linked entries hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Waise portal par ek dedicated option bhi hai — Farmers Corner mein <strong>"Status of Self Registered Farmer"</strong> naam se. Wahan Aadhaar daal ke sirf apni application ka verification status dekh sakte ho, approve hui ya abhi patwari ke paas atki hai. Beneficiary Status se pehle yeh wala check karna better hai agar registration naya-naya kiya hai.
+            Waise portal par ek dedicated option bhi hai. Farmers Corner mein <strong>"Status of Self Registered Farmer"</strong> naam se. Wahan Aadhaar daal ke sirf apni application ka verification status dekh sakte ho, approve hui ya abhi patwari ke paas atki hai. Beneficiary Status se pehle yeh wala check karna better hai agar registration naya-naya kiya hai.
           </p>
           <IB>
             <strong>Fayda:</strong> ₹20-50 bach jaate hain jo CSC wala charge leta hai. <strong>Nuksan:</strong> Agar koi galti ho gayi toh khud correct karna padega, koi help nahi karega. Ek common mistake: naam Aadhaar se hooba-hoo match nahi karna (middle name chhod dena, spelling farak), isse verification atak jaata hai.
@@ -200,7 +200,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         <section className="mb-8">
           <SH>Status Ka Matlab Kya Hai?</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Teen status ho sakte hain — har ek ka alag matlab hai.
+            Teen status ho sakte hain, har ek ka alag matlab hai.
           </p>
 
           <div className="space-y-3">
@@ -314,7 +314,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
               },
               {
                 problem: 'Pending dikh raha hai 30 din se zyada',
-                solution: 'Helpline 155261 par call karo. Ya nearest Block Agriculture Office jaao. Woh log manually check karke bata denge ki kahan atka hai. Zyadatar cases mein land seeding ya eKYC hi wajah hoti hai. Maan lijiye khasra number revenue records mein purane naam se register hai (jaise dada ke naam par), jabki PM Kisan form mein current owner ka naam diya gaya hai — aisi mismatch verification ko lambe samay tak atka sakti hai. Aise case mein tehsil/revenue office se naam-transfer (dakhil-kharij) record dikhana padta hai, tabhi status aage badhta hai.',
+                solution: 'Helpline 155261 par call karo. Ya nearest Block Agriculture Office jaao. Woh log manually check karke bata denge ki kahan atka hai. Zyadatar cases mein land seeding ya eKYC hi wajah hoti hai. Maan lijiye khasra number revenue records mein purane naam se register hai (jaise dada ke naam par), jabki PM Kisan form mein current owner ka naam diya gaya hai, aisi mismatch verification ko lambe samay tak atka sakti hai. Aise case mein tehsil/revenue office se naam-transfer (dakhil-kharij) record dikhana padta hai, tabhi status aage badhta hai.',
               },
             ].map(({ problem, solution }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
@@ -442,7 +442,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Self-Registration Walon Ki Checklist</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            Khud registration karne walon ke paas CSC operator ka reminder nahi hota — yeh 5 kaam khud track karne padte hain:
+            Khud registration karne walon ke paas CSC operator ka reminder nahi hota, yeh 5 kaam khud track karne padte hain:
           </p>
           <ol className="space-y-2 text-sm text-green-800 dark:text-green-300 list-decimal list-inside">
             <li>pmkisan.gov.in par Beneficiary Status mein Aadhaar se status dekhein</li>

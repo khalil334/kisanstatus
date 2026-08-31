@@ -101,7 +101,7 @@ export async function GET(): Promise<Response> {
      xmlns:atom="http://www.w3.org/2005/Atom"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>${escapeXml(`${SITE_NAME} — ${SITE_TAGLINE}`)}</title>
+    <title>${escapeXml(`${SITE_NAME} ${SITE_TAGLINE}`)}</title>
     <link>${escapeXml(SITE_URL)}</link>
     <description>${escapeXml(SITE_DESCRIPTION)}</description>
     <language>hi-IN</language>

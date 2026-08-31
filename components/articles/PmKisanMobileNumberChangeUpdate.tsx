@@ -125,7 +125,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
           <DB>
             <strong>Ye Problem Itni Common Kyun Hai?</strong>
             <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
-              Process-level wajah simple hai: PM Kisan registration ke waqt jo number diya gaya tha, system hamesha usi par OTP bhejta hai. Chahe wo SIM saalon pehle band ho chuka ho. Telecom rules ke tahat band SIM ka number kuch time baad kisi aur ko recycle bhi ho jata hai, matlab aapka OTP kisi anjaan ke phone par ja sakta hai. Isliye number update sirf convenience ka nahi, security ka bhi mamla hai — aur iska ek hi verified rasta hai: Aadhaar biometric ke through CSC/BAO par re-verification.
+              Process-level wajah simple hai: PM Kisan registration ke waqt jo number diya gaya tha, system hamesha usi par OTP bhejta hai. Chahe wo SIM saalon pehle band ho chuka ho. Telecom rules ke tahat band SIM ka number kuch time baad kisi aur ko recycle bhi ho jata hai, matlab aapka OTP kisi anjaan ke phone par ja sakta hai. Isliye number update sirf convenience ka nahi, security ka bhi mamla hai, aur iska ek hi verified rasta hai: Aadhaar biometric ke through CSC/BAO par re-verification.
             </p>
           </DB>
         </section>
@@ -418,7 +418,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               </thead>
               <tbody>
                 {[
-                  ['CSC Submission', 'Usi din', 'Receipt lo aur uski photo kheench lo — transaction ID isi par hoti hai'],
+                  ['CSC Submission', 'Usi din', 'Receipt lo aur uski photo kheench lo, transaction ID isi par hoti hai'],
                   ['Database Sync', 'Kuch din (fixed SLA publish nahi hai)', 'PM Kisan database mein naya number update hota hai'],
                   ['Pehla Signal', 'Sync ke baad', 'Naye number par portal/scheme ka SMS aana shuru ho sakta hai'],
                   ['Pakka Test', 'Sync ke baad', 'Farmer Corner mein OTP wala koi bhi step try karo. OTP naye number par aaye to update confirm'],

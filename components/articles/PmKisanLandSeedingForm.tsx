@@ -44,7 +44,7 @@ const FAQS_DATA = [
   },
   {
     q: 'eKYC ho chuka hai, phir bhi No kyun dikha raha hai?',
-    a: 'Kyunki dono alag cheezein hain. eKYC aapki pehchaan verify karta hai, seeding aapki zameen ka record jodti hai. Paisa aane ke liye teen cheezein chahiye — eKYC, seeding, aur Aadhaar se juda bank khata (DBT). Ek ho jaane se baaki do apne aap nahi hote.',
+    a: 'Kyunki dono alag cheezein hain. eKYC aapki pehchaan verify karta hai, seeding aapki zameen ka record jodti hai. Paisa aane ke liye teen cheezein chahiye, eKYC, seeding, aur Aadhaar se juda bank khata (DBT). Ek ho jaane se baaki do apne aap nahi hote.',
   },
   {
     q: 'Zameen pita ji ke naam par hai. Mera kya hoga?',
@@ -182,7 +182,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
             Isliye main aapka waqt kisi jaali download mein barbaad nahi karunga. Iski jagah wo sab bataunga jo asal mein kaam aata hai. Yeh kagaz milta kahan se hai, bharte kaise hain, saath mein kya lagana hota hai, aur har rajya ke <strong>sarkari Bhulekh portal</strong> ke seedhe links, jahan se khatauni ki copy nikalti hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Beneficiary list mein naam hone ke bawajood paisa nahi aa raha? Toh aage padhte jaayein — dus mein se nau baar dikkat yahin se shuru hoti hai.
+            Beneficiary list mein naam hone ke bawajood paisa nahi aa raha? Toh aage padhte jaayein, dus mein se nau baar dikkat yahin se shuru hoti hai.
           </p>
         </section>
 
@@ -270,7 +270,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
             </div>
           </div>
           <IB>
-            Format koi bhi ho, aakhir mein teen cheezein honi hi chahiye — sahi khasra-khatauni ka byora, Aadhaar jaisa naam, aur Patwari ka sign-stamp. Baaki format ka fark nahi padta.
+            Format koi bhi ho, aakhir mein teen cheezein honi hi chahiye, sahi khasra-khatauni ka byora, Aadhaar jaisa naam, aur Patwari ka sign-stamp. Baaki format ka fark nahi padta.
           </IB>
         </section>
 
@@ -354,7 +354,7 @@ export default function PmKisanLandSeedingFormPdf2026() {
               <li>Black ya blue pen, overwriting bilkul nahi.</li>
               <li>Khasra number khatauni se milaye bina jama na karein, sabse zyada rejection isi se hote hain.</li>
               <li>Jama karne se pehle bhare hue kagaz ki photo phone mein le lein.</li>
-              <li>Receiving lena na bhoolein — baad mein "hume mila hi nahi" wali bahas se yahi bachaati hai.</li>
+              <li>Receiving lena na bhoolein, baad mein "hume mila hi nahi" wali bahas se yahi bachaati hai.</li>
             </ul>
           </WB>
         </section>

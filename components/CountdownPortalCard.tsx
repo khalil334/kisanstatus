@@ -57,7 +57,7 @@ const CountdownPortalCard = memo(function CountdownPortalCard({
           className={`block text-center w-full px-6 py-4 ${bgColor} text-white text-sm font-bold rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98]`}
           aria-label={`${buttonText}. Opens the official portal in a new tab.`}
         >
-           Portal taiyar hai — yahan tap karke kholein
+           Portal taiyar hai, yahan tap karke kholein
         </a>
       ) : count === null ? (
         <button

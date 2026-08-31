@@ -21,7 +21,7 @@ const FAQS = [
     a: 'लक्ष्य: हर समूह को कम से कम ₹1 लाख सालाना अतिरिक्त। जमीनी हिसाब, spray का rate ₹300 से ₹500 प्रति acre, ड्रोन एक acre 7-8 minute में निपटा देता है, अच्छे दिन मे 20-25 acre निकल जाते है। पर ये मौसमी काम है. खरीफ और रबी के spray के दिनों में ही मांग रहती है।',
   },
   {
-    q: 'SHG में नहीं हूं — फिर भी ड्रोन pilot बन सकती हूं?',
+    q: 'SHG में नहीं हूं फिर भी ड्रोन pilot बन सकती हूं?',
     a: 'इस योजना का पैसा सिर्फ DAY-NRLM वाले महिला SHG को मिलता है, किसी अकेली महिला को नहीं। दो रास्ते हैं. अपने गांव के किसी समूह से जुड़ जाइए (नया समूह बनवाने में block mission office मदद करता है), या अपने खर्च पर DGCA-approved संस्थान से training लेकर किसी private ड्रोन operator के साथ काम कीजिए। पहला रास्ता सस्ता है, बस समय लगता है।',
   },
 ];
@@ -137,7 +137,7 @@ export default function NamoDroneDidiYojanaHindi({ article }: { article: HindiAr
           <tbody>
             <tr>
               <td className="border border-[var(--color-border)] p-3 font-semibold">केंद्र की मदद</td>
-              <td className="border border-[var(--color-border)] p-3">Package की कीमत का 80% — अधिकतम ₹8 लाख</td>
+              <td className="border border-[var(--color-border)] p-3">Package की कीमत का 80% अधिकतम ₹8 लाख</td>
             </tr>
             <tr className="bg-[var(--color-bg-alt)]">
               <td className="border border-[var(--color-border)] p-3 font-semibold">Package में क्या-क्या</td>
@@ -202,7 +202,7 @@ export default function NamoDroneDidiYojanaHindi({ article }: { article: HindiAr
       <p>
         पहला. समूह की अपनी बचत। जो समूह सालों से चल रहे हैं और जिनका लेन-देन साफ है, उनके पास अक्सर
         इतना corpus जमा होता है या थोड़ी कोशिश से हो जाता है। दूसरा. Agriculture Infrastructure Fund
-        (AIF) से loan, जिस पर 3% ब्याज छूट मिलती है। तीसरा रास्ता कम लोग जानते हैं — SHG की अपनी
+        (AIF) से loan, जिस पर 3% ब्याज छूट मिलती है। तीसरा रास्ता कम लोग जानते हैं SHG की अपनी
         federation (गांव संगठन/cluster level federation) भी कई बार आंतरिक loan दे देती है, और उसकी शर्तें
         बैंक से नरम होती हैं।
       </p>

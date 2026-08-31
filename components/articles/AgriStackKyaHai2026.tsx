@@ -39,7 +39,7 @@ const FAQS_DATA = [
     a: 'Kai states me haan. 14 states me PM-Kisan ke liye Farmer ID zaroori ki gayi hai: Andhra Pradesh, Assam, Bihar, Chhattisgarh, Gujarat, Karnataka, Kerala, Madhya Pradesh, Maharashtra, Odisha, Rajasthan, Tamil Nadu, Telangana aur Uttar Pradesh. Sakhti khaas kar naye registration par hai, lekin purane labharthiyon ko bhi ID banwa lene ki salah di ja rahi hai. Aapka rajya list me na ho toh bhi der mat karo, baaki rajya bhi isi taraf badh rahe hain.',
   },
   {
-    q: 'AgriStack, Farmer Registry aur Kisan ID — teeno alag cheezein hain kya?',
+    q: 'AgriStack, Farmer Registry aur Kisan ID, teeno alag cheezein hain kya?',
     a: 'Nahi, sab ek hi mission ka hissa hai. AgriStack sarkar ke Digital Agriculture Mission ka technical naam hai. Uske andar Farmer Registry ek database hai, aur usme register hone pe jo unique number milta hai wahi Kisan ID (Farmer ID) kehlata hai. Naam alag-alag sunoge, cheez ek hi hai.',
   },
 ];
@@ -174,7 +174,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
               <p className="text-xs text-[var(--color-text-muted)]">Kharif 2026 se kai states me <Link href="/articles/PmfbyCropInsurance2026" className="underline font-bold">PMFBY enrollment</Link> ke liye AgriStack registration number mandatory kiya gaya hai. Matlab bima karwana hai toh bhi yahi ID kaam aayegi.</p>
             </div>
             <div className="p-4 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
-              <p className="font-black text-[var(--color-text)] text-sm mb-1">4. eKYC ab har saal — Farmer ID iska substitute nahi hai</p>
+              <p className="font-black text-[var(--color-text)] text-sm mb-1">4. eKYC ab har saal. Farmer ID iska substitute nahi hai</p>
               <p className="text-xs text-[var(--color-text-muted)]">2026 ke niyam ke hisaab se PM-Kisan ki <Link href="/articles/PmKisanEkycOnline2026" className="underline font-bold">eKYC har saal</Link> karni hai. Biometric CSC pe ya Face Auth app se. Farmer ID banne ke baad bhi yeh saalana kaam chalta rahega.</p>
             </div>
           </div>
@@ -271,7 +271,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">2. Khud Online (Ghar Baithe)</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Har state ka apna Farmer Registry portal hai — pattern ek hi hai: <strong>upfr.agristack.gov.in</strong> (UP),
+            Har state ka apna Farmer Registry portal hai, pattern ek hi hai: <strong>upfr.agristack.gov.in</strong> (UP),
             <strong> mhfr.agristack.gov.in</strong> (Maharashtra), <strong>rjfr.agristack.gov.in</strong> (Rajasthan), <strong>brfr.agristack.gov.in</strong> (Bihar)... apne state
             waala portal kholo.
           </p>
@@ -420,7 +420,7 @@ export default function AgriStackKyaHai2026({ article }: { article: ArticleMeta 
           <h3 className="font-black text-[var(--color-text)] mb-2 text-base">Iske Baad Kya Padhein?</h3>
           <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
             Agar aapki <Link href="/articles/PmKisanEkycOnline2026" className="text-green-700 dark:text-green-400 underline font-semibold">eKYC abhi pending hai</Link> toh
-            pehle woh nipta lo — registry ke baad wahi sabse zyada atakta hai. Kisht ka status janna hai toh{' '}
+            pehle woh nipta lo, registry ke baad wahi sabse zyada atakta hai. Kisht ka status janna hai toh{' '}
             <Link href="/articles/PmKisanBeneficiaryList2026" className="text-green-700 dark:text-green-400 underline font-semibold">beneficiary list mein naam check karna</Link> seekh lo.
             Zameen ki seeding mein dikkat ho toh <Link href="/articles/PmKisanLandSeedingForm" className="text-green-700 dark:text-green-400 underline font-semibold">land seeding form waala guide</Link> kaam aayega.
             Aur kheti ke liye sasta loan chahiye toh <Link href="/articles/KisanCreditCardOnlineApply2026" className="text-green-700 dark:text-green-400 underline font-semibold">KCC apply karne ka tarika</Link> padh lo —

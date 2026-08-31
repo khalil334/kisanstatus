@@ -41,7 +41,7 @@ const FAQS_DATA = [
   },
   {
     q: 'MSP kharid mein quality cut kya hota hai?',
-    a: 'Kharid kendra par gehu FAQ (Fair Average Quality) standards par jaancha jata hai — nami, tuta dana, mitti/kachra. Standards se bahar ka maal reject ho sakta hai ya sharton ke saath liya jata hai. Isliye bechne se pehle gehu saaf karo aur sukha lo. Yeh mehnat seedha rate mein wapas milti hai.',
+    a: 'Kharid kendra par gehu FAQ (Fair Average Quality) standards par jaancha jata hai, nami, tuta dana, mitti/kachra. Standards se bahar ka maal reject ho sakta hai ya sharton ke saath liya jata hai. Isliye bechne se pehle gehu saaf karo aur sukha lo. Yeh mehnat seedha rate mein wapas milti hai.',
   },
   {
     q: 'Rate ka daily update kahan dekhein?',
@@ -135,7 +135,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </p>
 
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Ek baat jo sabse zyada poochi jaati hai — <strong>bori ka hisaab</strong>. Rate hamesha quintal
+          Ek baat jo sabse zyada poochi jaati hai, <strong>bori ka hisaab</strong>. Rate hamesha quintal
           (100 kg) mein bola jaata hai, lekin trolley mein boriyan chadhti hain. MSP par gina lo:
         </p>
         <div className="overflow-x-auto my-4">
@@ -287,7 +287,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           <strong>sharbati, lokwan, bansi jaisi premium varieties</strong> ka open market rate aam taur par MSP
           se kaafi upar chalta hai. Sharbati toh kai baar MSP se ₹1,000-2,000 upar bikta hai. Aisi variety
           sarkari kendra par dena apne premium ko muft mein chhodna hai, kyunki wahan variety ka koi extra
-          nahi milta — sab ek hi rate par taula jaata hai.
+          nahi milta, sab ek hi rate par taula jaata hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Premium maal ke liye buyers bhi alag hote hain. Flour mills, branded atta companies, seed producers

@@ -42,9 +42,9 @@ function PmKisanCalc() {
         <InputField label="Zameen (Hectare)" value={land} onChange={setLand} placeholder="2" suffix="ha" />
         <InputField label="Kitne Saal?" value={years} onChange={setYears} placeholder="5" suffix="yr" />
         <SelectField label="Registration Hai?" value={reg} onChange={setReg}
-          options={[{ value: 'yes', label: 'Haan — Registered' }, { value: 'no', label: 'Nahi — Register Karo' }]} />
+          options={[{ value: 'yes', label: 'Haan. Registered' }, { value: 'no', label: 'Nahi — Register Karo' }]} />
         <SelectField label="eKYC Complete?" value={ekyc} onChange={setEkyc}
-          options={[{ value: 'yes', label: 'Haan — Done' }, { value: 'no', label: 'Nahi — Pending' }]} />
+          options={[{ value: 'yes', label: 'Haan. Done' }, { value: 'no', label: 'Nahi — Pending' }]} />
       </div>
 
       <div className="bg-[var(--color-bg-alt)] rounded-2xl p-4 space-y-1">
@@ -54,7 +54,7 @@ function PmKisanCalc() {
         <ResultRow label={`${years} Saal Mein Total`} value={fmt(total)} highlight />
         {!eligible && (
           <p className="text-xs text-red-600 dark:text-red-400 pt-2">
-            {reg === 'no' ? 'Pehle enrollment karo bhai — official portal par free' : 'eKYC complete karo — bina verification kist nahi milti'}
+            {reg === 'no' ? 'Pehle enrollment karo bhai, official portal par free' : 'eKYC complete karo — bina verification kist nahi milti'}
           </p>
         )}
         {eligible && (
@@ -63,7 +63,7 @@ function PmKisanCalc() {
       </div>
 
       <div className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl text-xs text-blue-800 dark:text-blue-300">
-        <strong>Note:</strong> PM Kisan Samman Nidhi ₹6,000/saal sabhi registered eligible kisanon ko milta hai — zameen ki size se fark nahi padta (jab tak chote/marginal farmer hain).
+        <strong>Note:</strong> PM Kisan Samman Nidhi ₹6,000/saal sabhi registered eligible kisanon ko milta hai, zameen ki size se fark nahi padta (jab tak chote/marginal farmer hain).
       </div>
     </div>
   );
@@ -102,7 +102,7 @@ function MspCalc() {
               value={`${diff >= 0 ? '+' : ''}${fmt(Math.abs(diff))}`}
             />
             {diff < 0 && (
-              <p className="text-xs text-amber-700 dark:text-amber-400 pt-1">MSP rate par becho bhai — market se {fmt(Math.abs(diff))} zyada milega!</p>
+              <p className="text-xs text-amber-700 dark:text-amber-400 pt-1">MSP rate par becho bhai, market se {fmt(Math.abs(diff))} zyada milega!</p>
             )}
           </>
         )}
@@ -174,9 +174,9 @@ function EmiCalc() {
 
   const loanTypes: Record<string, string> = {
     kcc: 'Kisan Credit Card (KCC) — 7% (Subsidized)',
-    term: 'Agriculture Term Loan — 9-11%',
+    term: 'Agriculture Term Loan, 9-11%',
     tractor: 'Tractor Loan — 8.5-11%',
-    land: 'Zameen Kharidne Ka Loan — 9.5%',
+    land: 'Zameen Kharidne Ka Loan, 9.5%',
   };
 
   return (
@@ -199,7 +199,7 @@ function EmiCalc() {
       </div>
 
       <div className="p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl text-xs text-blue-800 dark:text-blue-300">
-        <strong>KCC Tip:</strong> Kisan Credit Card par 3 lakh tak ka loan 7% par milta hai — agar time par chukao to 3% aur subsidy bhi milti hai — effective rate sirf 4% bhai!
+        <strong>KCC Tip:</strong> Kisan Credit Card par 3 lakh tak ka loan 7% par milta hai — agar time par chukao to 3% aur subsidy bhi milti hai, effective rate sirf 4% bhai!
       </div>
     </div>
   );
@@ -360,7 +360,7 @@ export default function AgriCalculator() {
             Kisan Calculator Suite 2026
           </h2>
           <p className="text-[var(--color-text-muted)] text-sm max-w-xl mx-auto">
-            India ke kisanon ke liye — PM Kisan benefit, MSP earnings, crop profit, KCC EMI, fertilizer aur irrigation kharcha ek jagah bhai
+            India ke kisanon ke liye. PM Kisan benefit, MSP earnings, crop profit, KCC EMI, fertilizer aur irrigation kharcha ek jagah bhai
           </p>
         </div>
 

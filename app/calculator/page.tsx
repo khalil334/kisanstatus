@@ -82,7 +82,7 @@ const GROUP_STYLES: Record<string, { bar: string; chip: string; btn: string; glo
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: `Free PM Kisan Tools 2026 — ${SITE_NAME}`,
+  name: `Free PM Kisan Tools 2026, ${SITE_NAME}`,
   description: '7 free kisan utilities — status verification, KCC EMI, crop insurance premium, MSP income, profit/loss analysis.',
   numberOfItems: CALCS.length,
   itemListElement: CALCS.map((calc, index) => ({
@@ -119,7 +119,7 @@ export default function CalculatorIndexPage() {
             Free Utilities
           </span>
           <h1 className="text-2xl md:text-4xl font-black text-white mb-3">
-            Free PM Kisan Tools 2026 — EMI & MSP
+            Free PM Kisan Tools 2026. EMI & MSP
           </h1>
           <h2 className="text-green-200 text-sm md:text-base font-normal max-w-2xl mx-auto mb-6">
             7 free kisan utilities — koi registration nahi, koi charge nahi. Bank jaane se pehle apna hisaab khud karo.
@@ -228,7 +228,7 @@ export default function CalculatorIndexPage() {
             Bank ya CSC jaane se pehle 5 minute ka hisaab aapko galat decision se bacha sakta
             hai. KCC loan lene ja rahe hain? Pehle{' '}
             <Link href="/calculator/kcc-loan-emi" className="text-green-700 underline font-semibold">EMI calculator</Link>{' '}
-            par dekhein ki monthly kitna banega — 7% wala standard rate aur government subsidy
+            par dekhein ki monthly kitna banega, 7% wala standard rate aur government subsidy
             dono ka hisaab isme hai. Loan ke options samajhne ke liye{' '}
             <Link href="/articles/KisanRinKahaSeLe2026" className="text-green-700 underline">kisan rin guide</Link>{' '}
             saath me padh lein.
@@ -239,7 +239,7 @@ export default function CalculatorIndexPage() {
             se pata karein ki sarkari rate par aapki total upaj ki kitni value banti hai — phir
             mandi ke bhav se compare karein. Aur poore season ka lekha-jokha{' '}
             <Link href="/calculator/crop-profit" className="text-green-700 underline">kheti ka munafa tool</Link>{' '}
-            me: beej, khad, mazdoori, sinchai — sab kharcha daalo, net profit ya loss samne.
+            me: beej, khad, mazdoori, sinchai, sab kharcha daalo, net profit ya loss samne.
           </p>
           <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
             PM Kisan wale teen tools (status check, kist tracker, benefit calculator) ka kaam

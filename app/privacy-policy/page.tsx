@@ -63,7 +63,7 @@ export default function PrivacyPolicyPage() {
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
               Main Manish, <strong>{SITE_NAME}</strong> chalata hoon. Is page par main seedhi bhasha mein bata raha
               hoon ki jab aap <strong>{SITE_URL}</strong> par aate hain to kaunsi jaankari ikatthi hoti hai aur uska
-              kya hota hai. Koi ghuma-phira kar likhi legal bhasha nahi — jitna main samjha sakta hoon, utna saaf
+              kya hota hai. Koi ghuma-phira kar likhi legal bhasha nahi, jitna main samjha sakta hoon, utna saaf
               likha hai. Site use karne ka matlab hai ki aap in baaton se sehmat hain.
             </p>
             <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl text-sm text-yellow-900 dark:text-yellow-300">
@@ -78,7 +78,7 @@ export default function PrivacyPolicyPage() {
               <div>
                 <h3 className="font-semibold text-[var(--color-text)] mb-1">2.1 Jo Apne Aap Record Hota Hai</h3>
                 <p className="leading-relaxed">
-                  Har website ki tarah yahan bhi kuch cheezein apne aap record ho jaati hain — main inhe alag se
+                  Har website ki tarah yahan bhi kuch cheezein apne aap record ho jaati hain, main inhe alag se
                   nahi maangta, yeh technical taur par khud aati hain:
                 </p>
                 <ul className="mt-2 space-y-1 pl-4">
@@ -103,13 +103,13 @@ export default function PrivacyPolicyPage() {
                   Cookies chhoti si files hoti hain jo browser mein save hoti hain — inse site yaad rakh paati hai
                   ki aap pehle aa chuke hain. Kuch cookies is site ki apni hain, aur kuch Google Analytics aur
                   Google AdSense jaisi services lagati hain. Aap chahein to apne browser ki settings mein jaakar
-                  cookies band kar sakte hain — site phir bhi chalegi.
+                  cookies band kar sakte hain, site phir bhi chalegi.
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold text-[var(--color-text)] mb-1">2.3 Jo Main Kabhi Nahi Maangta</h3>
                 <p className="leading-relaxed">
-                  Yeh sabse zaroori baat hai — Aadhaar number, bank account, OTP, password — aisi koi bhi cheez
+                  Yeh sabse zaroori baat hai — Aadhaar number, bank account, OTP, password, aisi koi bhi cheez
                   main <strong>kabhi nahi maangta</strong>. Is site par aisa koi form hi nahi hai. Agar kahin aapko
                   is site ke naam par aisi jaankari maangi jaye, to woh dhokha hai — mujhe email karke bata dein.
                 </p>
@@ -122,9 +122,9 @@ export default function PrivacyPolicyPage() {
             <ul className="text-sm text-[var(--color-text-muted)] space-y-2">
               {[
                 'Main dekhta hoon kaun se articles log zyada padhte hain, taaki wahi topics aur behtar likhoon',
-                'Google Analytics se pata chalta hai ki log site kaise use karte hain — kahan atakte hain, kya dhoondhte hain',
+                'Google Analytics se pata chalta hai ki log site kaise use karte hain, kahan atakte hain, kya dhoondhte hain',
                 'Google AdSense aapko aapke matlab ke ads dikhata hai — isi se site ka kharcha chalta hai',
-                'Site theek se chal rahi hai ya kahin error aa raha hai — yeh dekhne ke liye',
+                'Site theek se chal rahi hai ya kahin error aa raha hai, yeh dekhne ke liye',
                 'Agar kabhi kanoon ke hisaab se kuch batana pade, to uske liye',
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2">
@@ -161,7 +161,7 @@ export default function PrivacyPolicyPage() {
               >
                 Google Analytics Opt-out Browser Add-on ↗
               </a>{' '}
-              laga kar Google Analytics se poori tarah bahar nikal sakte hain — mujhe koi aitraaz nahi.
+              laga kar Google Analytics se poori tarah bahar nikal sakte hain, mujhe koi aitraaz nahi.
             </p>
           </section>
 
@@ -201,7 +201,7 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-lg font-bold text-[var(--color-text)] mb-3">6. Doosri Websites Ke Links</h2>
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
               Articles mein main <strong>pmkisan.gov.in</strong> jaise sarkari portals ke links deta hoon. Un
-              websites par jaane ke baad wahan ke niyam lagoo hote hain, mere nahi — wahan kya data liya jaata
+              websites par jaane ke baad wahan ke niyam lagoo hote hain, mere nahi, wahan kya data liya jaata
               hai, yeh unki privacy policy batayegi. Kahin bhi apni personal jaankari daalne se pehle ek baar
               soch lein ki site asli hai ya nahi.
             </p>
@@ -221,7 +221,7 @@ export default function PrivacyPolicyPage() {
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
               Yeh site kisanon ke kaam ki hai, 13 saal se chhote bachon ke liye nahi. Main jaan-boojhkar bachon
               se koi jaankari nahi leta. Agar aapko lage ki kisi bachche ne yahan kuch personal jaankari de di
-              hai, to mujhe email kar dein — main turant hata dunga.
+              hai, to mujhe email kar dein, main turant hata dunga.
             </p>
           </section>
 

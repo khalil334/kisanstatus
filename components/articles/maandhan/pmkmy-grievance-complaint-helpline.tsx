@@ -112,7 +112,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg">
               <p className="font-bold text-gray-900 dark:text-white mb-2"> Official Email Addresses:</p>
               <ul className="space-y-1 text-[var(--color-text-muted)]">
-                <li><strong>scpms@licindia.com</strong> — PMKMY specific grievances</li>
+                <li><strong>scpms@licindia.com</strong> PMKMY specific grievances</li>
                 <li><strong>co_complaints@licindia.com</strong>. General LIC complaints</li>
               </ul>
             </div>
@@ -336,7 +336,7 @@ export default function PMKMYGrievanceComplaintHelpline({ article }: { article: 
         </section>
 
         <section className="mb-8">
-          <SH>Status Tracking — 3 Tarike</SH>
+          <SH>Status Tracking, 3 Tarike</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Jab aap kahin bhi request file karte hain, to hamesha ek reference number milta hai. Is number se aap status check kar sakte hain:
           </p>

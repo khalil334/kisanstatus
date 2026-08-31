@@ -94,7 +94,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
 
         <SH>60 Ka Number Sab Kuch Tay Karta Hai</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Scheme ke rules mein death ke baad ka har faisla is ek baat par tikta hai — dehant pension shuru
+          Scheme ke rules mein death ke baad ka har faisla is ek baat par tikta hai, dehant pension shuru
           hone se pehle hua ya baad mein. Dono ke niyam bilkul alag hain, aur zyada tar confusion isi liye
           hota hai ki log dono ko mila dete hain.
         </p>
@@ -208,7 +208,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
         </p>
 
         <StepList>
-          <SI n={1}><strong>Death certificate banwao:</strong> gram panchayat ya nagar nigam se. Yeh pehla aur mandatory kagaz hai — iske bina koi khidki nahi khulti. 2-3 copies rakho.</SI>
+          <SI n={1}><strong>Death certificate banwao:</strong> gram panchayat ya nagar nigam se. Yeh pehla aur mandatory kagaz hai, iske bina koi khidki nahi khulti. 2-3 copies rakho.</SI>
           <SI n={2}><strong>Maandhan record check karo:</strong> CSC par jaakar member ke Kisan Pension Account ki details nikalwao, nominee kaun hai, kitna contribution jama hai. Yahi ke record se aage ka rasta tay hoga.</SI>
           <SI n={3}><strong>Usi jagah jao jahan enrolment hua tha:</strong> claim usi CSC ya bank branch se process hota hai jahan se member ne join kiya tha. Koi bhi random branch file aage nahi badhayegi.</SI>
           <SI n={4}><strong>Survivor claim form bharo:</strong> deceased ki details, apni details, aur apna khud ka active bank account. Continue karna hai ya exit, form mein yahi choice bhi deni hoti hai, isliye pehle ghar mein soch kar jao.</SI>
@@ -274,7 +274,7 @@ export default function FamilyPensionRules({ article }: { article: MaandhanArtic
           mein hi hai, aur wahi contribution-plus-interest wala refund rule us par bhi lagta hai. Claim
           usi tarike se hoga jaise upar likha hai; bas CSC ke record se account ki asli sthiti (kitna jama,
           kab tak bhara) pehle nikalwa lo, taaki bank mein baithe-baithe surprise na mile. Ruki hui kiston
-          ko regular karne ka process bhi hai — agar continue karna ho, uska tarika{' '}
+          ko regular karne ka process bhi hai, agar continue karna ho, uska tarika{' '}
           <Link href="/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein" className="underline font-bold">regularization guide</Link>{' '}
           mein hai.
         </p>

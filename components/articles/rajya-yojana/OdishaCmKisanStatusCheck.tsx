@@ -36,7 +36,7 @@ const FAQS_DATA = [
   },
   {
     q: 'CM Kisan lene se PM Kisan band ho jaayega?',
-    a: 'Nahi hoga. Ye do bilkul juda budget se chalne wale programme hain, aur ek ka payment doosre ko rok nahi sakta — Odisha mein lakhon log dono ka paisa saath lete hain. Dhyan sirf ceiling par rakhein: PM Kisan mein zameen ki upper limit nahi hoti, jabki CM Kisan ka cultivator track chhoti jotdaari tak seemit hai. Is liye central wala aana aur state wala na aana ek aam sthiti hai, koi rejection nahi.',
+    a: 'Nahi hoga. Ye do bilkul juda budget se chalne wale programme hain, aur ek ka payment doosre ko rok nahi sakta. Odisha mein lakhon log dono ka paisa saath lete hain. Dhyan sirf ceiling par rakhein: PM Kisan mein zameen ki upper limit nahi hoti, jabki CM Kisan ka cultivator track chhoti jotdaari tak seemit hai. Is liye central wala aana aur state wala na aana ek aam sthiti hai, koi rejection nahi.',
   },
   {
     q: 'Ghar ke do log alag-alag form bhar dein to kya hota hai?',
@@ -143,7 +143,7 @@ export default function OdishaCmKisanStatusCheck({
         <p>
           Practically iska matlab teen cheezein hain. Ek, portal naya hai, aur purana KALIA
           wala pata ab final source nahi hai. Do, beneficiary base dobara verify kiya gaya
-          hai, is liye kuch purane naam list se hat gaye aur kuch naye jud gaye. Teen — Aadhaar
+          hai, is liye kuch purane naam list se hat gaye aur kuch naye jud gaye. Teen. Aadhaar
           e-KYC aur NPCI-mapped bank account ab dheele rules nahi hain; inke bina payment
           release hi hold ho jaati hai. Teeno mein se aakhri wala sabse zyada logon ko
           pakadta hai.
@@ -282,7 +282,7 @@ export default function OdishaCmKisanStatusCheck({
 
         <ul>
           <li>
-            Season shuru hone se pehle ek baar status dekh lein — pending e-KYC waqt rehte
+            Season shuru hone se pehle ek baar status dekh lein, pending e-KYC waqt rehte
             pakad mein aa jaati hai.
           </li>
           <li>
@@ -423,7 +423,7 @@ export default function OdishaCmKisanStatusCheck({
         <h3>Bank account NPCI mapper se juda nahi</h3>
         <p>
           DBT sirf us account mein jaata hai jo aapke Aadhaar se NPCI mapper mein linked ho.
-          Sirf bank mein Aadhaar ki photocopy dena kaafi nahi hai — branch se yahi poochein ki
+          Sirf bank mein Aadhaar ki photocopy dena kaafi nahi hai, branch se yahi poochein ki
           &ldquo;Aadhaar seeding NPCI mein hui hai ya nahi&rdquo;.
         </p>
 

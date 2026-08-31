@@ -93,7 +93,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
             <em>"FTO dikh raha hai par paisa nahi aaya. Ye kya scene hai?"</em>
           </p>
           <p className="text-sm text-amber-900 dark:text-amber-200 leading-relaxed">
-            Relax bhai, ghabrane wali koi baat nahi. Ye process ka normal hissa hai — hazaro log roz yahi status dekh ke pareshan hote hain. Is guide me sab ek jagah likha hai: ye status kya batata hai, aage kya hota hai, aur agar der ho jaye to kis din kya karna hai. Andaze se kuch nahi likha, jo pakka pata hai wahi likha hai. Aaram se padho.
+            Relax bhai, ghabrane wali koi baat nahi. Ye process ka normal hissa hai, hazaro log roz yahi status dekh ke pareshan hote hain. Is guide me sab ek jagah likha hai: ye status kya batata hai, aage kya hota hai, aur agar der ho jaye to kis din kya karna hai. Andaze se kuch nahi likha, jo pakka pata hai wahi likha hai. Aaram se padho.
           </p>
         </div>
 
@@ -303,7 +303,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
         </section>
 
         <section className="mb-8">
-          <SH>Status Page Par Kya-Kya Dikhta Hai — Har Row Ka Matlab</SH>
+          <SH>Status Page Par Kya-Kya Dikhta Hai. Har Row Ka Matlab</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Portal ka status page pehli baar kholne par thoda bhara-bhara lagta hai. Bahut saari rows, English labels, aur pata nahi chalta kaun si line important hai. Kaam ki sirf 4-5 rows hain:
           </p>

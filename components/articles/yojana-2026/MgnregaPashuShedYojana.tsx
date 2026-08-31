@@ -28,7 +28,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Job card nahi hai to kya karein?',
-    a: 'Pehle job card banwao — free hai. Gram panchayat me adult members ke naam, photo aur Aadhaar ke saath application do. Bina job card ke koi individual work sanction nahi hota. Fees mange koi? Wahi complaint ka pehla mudda.',
+    a: 'Pehle job card banwao, free hai. Gram panchayat me adult members ke naam, photo aur Aadhaar ke saath application do. Bina job card ke koi individual work sanction nahi hota. Fees mange koi? Wahi complaint ka pehla mudda.',
   },
   {
     q: 'Sarpanch ya rozgar sevak file aage nahi badha raha, kya karein?',
@@ -148,7 +148,7 @@ export default function MgnregaPashuShedYojana({ article }: { article: Yojana202
           copy maangna aapka haq hai. Usi se pata chalta hai kitna labour, kitna material sanction hua.
         </p>
 
-        <SH>Application Ka Asli Rasta — Gram Panchayat Se Hokar</SH>
+        <SH>Application Ka Asli Rasta. Gram Panchayat Se Hokar</SH>
         <StepList>
           <SI n={1}><strong>Likhit application likho</strong>, saada kagaz par: naam, job card number, pashu count, zameen ka vivaran, aur ye ki aap MGNREGA individual beneficiary work ke tahat cattle shed chahte ho. Do copy banao.</SI>
           <SI n={2}><strong>Gram panchayat me jama karo</strong>, gram rozgar sevak ya sachiv ko. Ek copy par receiving (date + sign) zaroor lo. Ye receiving hi aage kaam aayegi agar file atki.</SI>
@@ -207,7 +207,7 @@ export default function MgnregaPashuShedYojana({ article }: { article: Yojana202
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Iska fayda seedha hai: panchayat kuch bhi kahe, aap khud check kar sakte ho ki file kagaz
           me kahan tak pahunchi. &ldquo;Sanction ho gaya hai&rdquo; suna aur portal par work dikh nahi
-          raha — to sanction hua nahi hai, sirf baat hui hai. Yahi farq samajhne me kai log mahine
+          raha, to sanction hua nahi hai, sirf baat hui hai. Yahi farq samajhne me kai log mahine
           gawa dete hain.
         </p>
 

@@ -69,7 +69,7 @@ export default function KisanKarjMafiAllStates({ article }: { article: Yojana202
             <span className="text-white font-bold">Kisan Karj Mafi</span>
           </nav>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            Kisan Karj Mafi 2026 — Kis State Me Sach Me Chal Rahi Hai
+            Kisan Karj Mafi 2026. Kis State Me Sach Me Chal Rahi Hai
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
@@ -169,7 +169,7 @@ export default function KisanKarjMafiAllStates({ article }: { article: Yojana202
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Pehle charan me lagbhag 31 lakh kisan liye gaye hain, aur pehle un logon ko liya gaya jinka bakaya
           ₹2 lakh tak hai. Jinka karz isse zyada hai, unke liye One Time Settlement ka raasta rakha gaya hai
-          — yaani zyada karz wale kisan ko poora maaf hone ka intezaar nahi karna chahiye, OTS ki baat bank
+          yaani zyada karz wale kisan ko poora maaf hone ka intezaar nahi karna chahiye, OTS ki baat bank
           se shuru kar deni chahiye.
         </p>
         <WB>
@@ -245,7 +245,7 @@ export default function KisanKarjMafiAllStates({ article }: { article: Yojana202
           <SI n={5}><strong>WhatsApp par PDF.</strong> &ldquo;Aapke gaon ki list&rdquo; wali PDF me aksar link hota hai jo APK download karwata hai. Wahi APK phone se OTP padhta hai.</SI>
         </StepList>
         <DB>
-          Kisi bhi agent ko karj mafi karwane ke naam par paisa mat do. Bank record se list banti hai — beech
+          Kisi bhi agent ko karj mafi karwane ke naam par paisa mat do. Bank record se list banti hai, beech
           me koi &ldquo;setting&rdquo; nahi hoti. Aur bank me kabhi bhi apna Aadhaar OTP kisi third party se
           share na karo, chahe wo apne ko CSC operator hi bataye.
         </DB>
@@ -295,7 +295,7 @@ export default function KisanKarjMafiAllStates({ article }: { article: Yojana202
           par dekha tha&rdquo; bolna, dono ka asar bilkul alag hota hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Aur haan — karj mafi ke intezaar me chal rahi kist rokna sabse mehnga faisla hai. Kist rukti hai to
+          Aur haan, karj mafi ke intezaar me chal rahi kist rokna sabse mehnga faisla hai. Kist rukti hai to
           interest chadhta hai, khata NPA me jaata hai, aur agla loan milna band ho jaata hai. Agar aapke
           paas notice aa chuka hai to us par alag se{' '}
           <Link href="/articles/hi/recovery-notice" className="underline">recovery notice wala page</Link>{' '}

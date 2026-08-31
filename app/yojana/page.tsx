@@ -4,7 +4,7 @@ import { LIVE_YOJANA_2026_ARTICLES } from '@/lib/yojana-2026-data';
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE, AUTHOR_NAME, AUTHOR_URL } from '@/lib/site-config';
 import { Disclaimer } from '@/components/ArticleShared';
 
-const TITLE = 'Kisan Yojana Guides — Claim, Subsidy, Loan';
+const TITLE = 'Kisan Yojana Guides. Claim, Subsidy, Loan';
 const DESCRIPTION =
   'Fasal bima claim se lekar pashu shed, tractor subsidy aur karj mafi tak — har yojana ka sach, asli process aur official portal links ek jagah.';
 
@@ -73,7 +73,7 @@ export default function YojanaHubPage() {
             <span className="text-white font-bold">Yojana</span>
           </nav>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            Kisan Yojana Guides — Claim, Subsidy Aur Loan Ka Sach
+            Kisan Yojana Guides. Claim, Subsidy Aur Loan Ka Sach
           </h1>
           <p className="text-green-100 text-sm max-w-2xl">
             Har guide official portal se verify karke likhi gayi hai — kya milta hai, kya nahi milta,
@@ -85,7 +85,7 @@ export default function YojanaHubPage() {
       <div className="container-site max-w-3xl py-8">
         <section className="mb-10">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-3">
-            Yojana ka naam suna hai — par sach kitna hai?
+            Yojana ka naam suna hai, par sach kitna hai?
           </h2>
           <p className="text-[var(--color-text)] text-sm leading-relaxed mb-3">
             WhatsApp par har hafte koi nayi “yojana” ghoomti hai. Kuch asli hoti hain, kuch
@@ -95,7 +95,7 @@ export default function YojanaHubPage() {
             <Link href="/yojana/pm-kisan-khad-yojana-11000-sach" className="text-green-700 underline font-semibold">
               khad yojana guide
             </Link>{' '}
-            me hai. Waise hi karj mafi ki khabrein har chunaav ke aas-paas ugti hain — kis
+            me hai. Waise hi karj mafi ki khabrein har chunaav ke aas-paas ugti hain, kis
             state me scheme sach me chal rahi hai, ye{' '}
             <Link href="/yojana/kisan-karj-mafi-list-all-states" className="text-green-700 underline font-semibold">
               karj mafi list

@@ -105,7 +105,7 @@ export default function AutoDebitFailRegularization() {
         </div>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Phone par bank ka SMS aata hai — "Auto-debit failed". Aur dil ek baar dhak se reh jaata hai. Ho sakta hai account mein us din paise kam the, ya mandate ki date nikal gayi ho, ya bank ke system mein hi koi glitch aa gaya ho. Wajah jo bhi ho, ye article usi ke baare mein hai: kya karna hai, kitne din mein karna hai, aur kis baat se bilkul mat darna. Chaliye shuru karte hain.
+          Phone par bank ka SMS aata hai, "Auto-debit failed". Aur dil ek baar dhak se reh jaata hai. Ho sakta hai account mein us din paise kam the, ya mandate ki date nikal gayi ho, ya bank ke system mein hi koi glitch aa gaya ho. Wajah jo bhi ho, ye article usi ke baare mein hai: kya karna hai, kitne din mein karna hai, aur kis baat se bilkul mat darna. Chaliye shuru karte hain.
         </p>
 
         <div className="my-6 p-5 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 rounded-xl">
@@ -217,7 +217,7 @@ export default function AutoDebitFailRegularization() {
           <div className="my-6 rounded-xl overflow-hidden border border-[var(--color-border)]">
             <Image
               src="/images/articles/maandhan/auto-debit-fail-hone-par-regularization-kaise-karein/manual-payment-tarika.webp"
-              alt="Manual payment karne ke tarike — UPI, NEFT, branch visit, NACH reactivation"
+              alt="Manual payment karne ke tarike. UPI, NEFT, branch visit, NACH reactivation"
               width={1000}
               height={560}
               className="w-full object-cover"
@@ -426,7 +426,7 @@ export default function AutoDebitFailRegularization() {
               <span className="text-red-600 mr-3 font-bold text-xl">✗</span>
               <div>
                 <p className="text-sm font-bold text-gray-900 dark:text-white">Expired mandate ko ignore kar dena</p>
-                <p className="text-xs text-[var(--color-text-muted)]">Balance daal dena kaafi nahi hai agar mandate hi expire ho chuka ho — naya form bharna padega, koi shortcut nahi hai.</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Balance daal dena kaafi nahi hai agar mandate hi expire ho chuka ho, naya form bharna padega, koi shortcut nahi hai.</p>
               </div>
             </div>
           </div>

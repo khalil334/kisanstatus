@@ -55,7 +55,7 @@ export default function MgnregaPashuShedYojanaHindi({ article }: { article: Hind
       <figure className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
         <Image
           src="/images/articles/loan-mandi-pashupalan/dairy-farm-loan-without-collateral/pashu-shed.webp"
-          alt="गांव में पक्का पशु शेड — गाय-भैंस के लिए हवादार छत और नांद"
+          alt="गांव में पक्का पशु शेड, गाय-भैंस के लिए हवादार छत और नांद"
           width={1200}
           height={675}
           className="w-full object-cover"
@@ -129,7 +129,7 @@ export default function MgnregaPashuShedYojanaHindi({ article }: { article: Hind
         <li><strong>लिखित आवेदन लिखिए</strong>. सादा कागज पर: नाम, job card नंबर, पशुओं की संख्या, जमीन का विवरण, और यह कि आप MGNREGA individual beneficiary work के तहत cattle shed चाहते हैं। दो copy बनाइए।</li>
         <li><strong>ग्राम पंचायत में जमा कीजिए</strong>. ग्राम रोजगार सेवक या सचिव को। एक copy पर receiving (date + sign) जरूर लीजिए।</li>
         <li><strong>ग्राम सभा में नाम जुड़वाइए</strong>, individual works की list ग्राम सभा से approve होकर पंचायत के annual action plan में जाती है। Meeting में खुद जाइए और अपना नाम list में बुलवाइए। यही असली दरवाजा है. आवेदन देना काफी नहीं।</li>
-        <li><strong>Technical sanction का इंतजार</strong> — नाम plan में आने के बाद JE estimate बनाता है, फिर sanction होता है। इसके बाद ही काम शुरू।</li>
+        <li><strong>Technical sanction का इंतजार</strong> नाम plan में आने के बाद JE estimate बनाता है, फिर sanction होता है। इसके बाद ही काम शुरू।</li>
         <li><strong>काम के दौरान</strong>, muster roll में नाम, measurement book में entry, geo-tagged photo। आप खुद मजदूरी करें तो wage सीधे बैंक खाते में।</li>
       </ol>
 
@@ -176,7 +176,7 @@ export default function MgnregaPashuShedYojanaHindi({ article }: { article: Hind
       </p>
       <p>
         Material (cement, सरिया, चादर) का payment आपके हाथ में नहीं आता. वह vendor के bill के against
-        जाता है। इसीलिए कोई कहे कि “material का पैसा cash दिलवा देंगे, कुछ कमीशन लगेगा” — तो समझ
+        जाता है। इसीलिए कोई कहे कि “material का पैसा cash दिलवा देंगे, कुछ कमीशन लगेगा” तो समझ
         जाइए गड़बड़ है।
       </p>
 

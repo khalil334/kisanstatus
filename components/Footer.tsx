@@ -29,7 +29,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-white text-base mb-4" itemProp="name">{SITE_NAME}</h4>
             <p className="text-sm text-gray-400 leading-relaxed mb-4" itemProp="description">
-              Bharat ke kisaanon ke liye — PM Kisan, eKYC, kist status, aur free agricultural calculators.
+              Bharat ke kisaanon ke liye. PM Kisan, eKYC, kist status, aur free agricultural calculators.
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <span>
@@ -260,7 +260,7 @@ export default function Footer() {
               </p>
             </div>
             <p className="mt-2 text-[11px] text-gray-500">
-              Ye numbers Government of India (PM Kisan) ke official helpline hain — KisanStatus ke nahi.
+              Ye numbers Government of India (PM Kisan) ke official helpline hain. KisanStatus ke nahi.
             </p>
           </div>
           <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm" role="list">
@@ -307,7 +307,7 @@ export default function Footer() {
             </div>
             <div className="text-center md:text-right">
               <p className="text-xs text-gray-500">Ek kisan ki banayi jaankari wali site</p>
-              <p className="text-xs text-gray-600 mt-1">Sarkar se koi naata nahi — not a government website</p>
+              <p className="text-xs text-gray-600 mt-1">Sarkar se koi naata nahi, not a government website</p>
             </div>
           </div>
         </div>

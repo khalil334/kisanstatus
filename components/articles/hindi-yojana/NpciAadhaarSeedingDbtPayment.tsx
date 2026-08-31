@@ -22,7 +22,7 @@ const FAQS = [
   },
   {
     q: 'खाता बदलना है. पुराने की जगह नए खाते में पैसा चाहिए?',
-    a: 'नए बैंक में seeding consent form भरकर NPCI mapper में नया खाता seed करवा दें. आखिरी seeded खाता ही active हो जाता है, पुराना अपने आप हट जाता है। Portal के record में खाता बदलने की अलग प्रक्रिया है — उसका पूरा ब्योरा bank account change वाले page पर है।',
+    a: 'नए बैंक में seeding consent form भरकर NPCI mapper में नया खाता seed करवा दें. आखिरी seeded खाता ही active हो जाता है, पुराना अपने आप हट जाता है। Portal के record में खाता बदलने की अलग प्रक्रिया है उसका पूरा ब्योरा bank account change वाले page पर है।',
   },
   {
     q: 'Post Office / India Post Payments Bank का खाता चलेगा?',
@@ -61,7 +61,7 @@ const FAQS = [
     a: 'नहीं. सब सरकारी DBT एक ही NPCI mapper से चलती है, चाहे PM Kisan हो, gas subsidy या scholarship। एक बार बैंक में seeding Active हो गई तो सब जगह का पैसा उसी खाते में आने लगता है. अलग-अलग योजना के लिए अलग seeding नहीं करानी पड़ती।',
   },
   {
-    q: 'आधार में mobile number registered नहीं है — myAadhaar का OTP कैसे आएगा?',
+    q: 'आधार में mobile number registered नहीं है myAadhaar का OTP कैसे आएगा?',
     a: 'नहीं आएगा. OTP सिर्फ आधार-registered mobile पर जाता है। पहले नजदीकी Aadhaar Seva Kendra जाकर आधार में mobile number update करवाएं, फिर myAadhaar से status देख पाएंगे। तब तक बैंक शाखा से पूछकर भी seeding की स्थिति पता की जा सकती है।',
   },
 ];
@@ -198,7 +198,7 @@ export default function NpciAadhaarSeedingDbtPayment({ article }: { article: Hin
         inactive या खाता बंद। किस्त release होने से पहले यह जांच 5 मिनट की है, और बाद में शिकायत महीनों की।
       </Alert>
 
-      <T2>मामला कितना बड़ा है — आंकड़ों की गवाही</T2>
+      <T2>मामला कितना बड़ा है आंकड़ों की गवाही</T2>
       <p>
         यह समस्या कोई इक्का-दुक्का मामला नहीं है। 20/06/2026 को PM Kisan की 23वीं किस्त में{' '}
         <strong>9.44 करोड़+ किसान परिवारों</strong> को करीब ₹18,880 करोड़ गए. पर खबरों के मुताबिक लाखों

@@ -380,7 +380,7 @@ export default function PmKisanStateNodalOfficerList({ article }: { article: Art
             Bahut kisan ye option jaante hi nahi. pmkisan.gov.in par ek <strong>Help Desk / Grievance</strong> section hai jahan aap khud online shikayat darj kar sakte ho, na call ka wait, na email ka. Registration number daalo, problem chuno, submit karo. Badle mein ek <strong>ticket number</strong> milta hai. Use kahin likh kar rakho, kyunki agli baar 155261 par call karoge to operator se seedha usi ticket ka status poochh sakte ho. Bina number ke har call zero se shuru hoti hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Waise 155261 ke alawa ek aur number bhi hai. <strong>011-24300606</strong>. Ek busy ho to doosra try karo, dono PM Kisan ke hi hain. Aur email ka central pata <strong>pmkisan-ict@gov.in</strong> hai — state officer ka direct email na mile to yahi likho, subject me apna registration number daal kar.
+            Waise 155261 ke alawa ek aur number bhi hai. <strong>011-24300606</strong>. Ek busy ho to doosra try karo, dono PM Kisan ke hi hain. Aur email ka central pata <strong>pmkisan-ict@gov.in</strong> hai, state officer ka direct email na mile to yahi likho, subject me apna registration number daal kar.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Sabse strong combination? Ticket + email dono. Pehle Help Desk par ticket banao, phir email me wahi ticket number quote karo. Ab aapki shikayat do jagah record me hai aur officer ke paas &ldquo;humein mili hi nahi&rdquo; kehne ki gunjaish nahi bachti.

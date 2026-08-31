@@ -122,7 +122,7 @@ export default function InstallmentTrackerCalcPage() {
             PM Kisan Kist Tracker 2026
           </h1>
           <p className="text-green-100 text-sm md:text-base max-w-2xl mb-3">
-            Kist kyun ruki hai? 4 sawaal mein pata karo — eKYC, bank seeding, land seeding sab check karo
+            Kist kyun ruki hai? 4 sawaal mein pata karo, eKYC, bank seeding, land seeding sab check karo
           </p>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
@@ -139,7 +139,7 @@ export default function InstallmentTrackerCalcPage() {
             <strong>{KIST_CONFIG.current.name}</strong> {releaseDateStr} ko aa chuki hai, {KIST_CONFIG.current.beneficiaries} kisanon ke account mein {KIST_CONFIG.current.amount} pahunch bhi gaye. Agar aapke account mein abhi tak nahi dikh raha, ghabrane wali baat nahi — zyadatar cases mein wajah wahi teen hoti hai jo hum roz suno karte hain.
           </p>
           <p className="mb-2">
-            Sabse zyada log <strong>eKYC</strong> pe atakte hain — Aadhaar OTP verify nahi hua toh paisa ruk jata hai. Doosra number <strong>bank seeding</strong> ka aata hai, matlab Aadhaar aur bank account link nahi. Aur teesra, <strong>land seeding</strong> — zameen ka record abhi tak portal se match nahi hua.
+            Sabse zyada log <strong>eKYC</strong> pe atakte hain. Aadhaar OTP verify nahi hua toh paisa ruk jata hai. Doosra number <strong>bank seeding</strong> ka aata hai, matlab Aadhaar aur bank account link nahi. Aur teesra, <strong>land seeding</strong> — zameen ka record abhi tak portal se match nahi hua.
           </p>
           <p className="text-xs text-green-700 dark:text-green-300">
              Neeche 4 sawaalon ka jawab de do, hum bata denge exact wajah kya hai aur usko fix kaise karna hai.
@@ -174,9 +174,9 @@ export default function InstallmentTrackerCalcPage() {
                 onChange={(e) => setEkyc(e.target.value)}
                 className="w-full border border-[var(--color-border)] rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary-light)] bg-[var(--color-card)] text-[var(--color-text)]"
               >
-                <option value="unknown">Pata nahi — pehle check karo</option>
+                <option value="unknown">Pata nahi, pehle check karo</option>
                 <option value="yes">Haan — eKYC complete hai</option>
-                <option value="no">Nahi — abhi pending hai</option>
+                <option value="no">Nahi, abhi pending hai</option>
               </select>
             </div>
 
@@ -190,7 +190,7 @@ export default function InstallmentTrackerCalcPage() {
                 className="w-full border border-[var(--color-border)] rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary-light)] bg-[var(--color-card)] text-[var(--color-text)]"
               >
                 <option value="unknown">Pata nahi — bank se pata karo</option>
-                <option value="yes">Haan — bank ne confirm kiya</option>
+                <option value="yes">Haan, bank ne confirm kiya</option>
                 <option value="no">Nahi / Pata nahi</option>
               </select>
             </div>
@@ -205,7 +205,7 @@ export default function InstallmentTrackerCalcPage() {
                 className="w-full border border-[var(--color-border)] rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary-light)] bg-[var(--color-card)] text-[var(--color-text)]"
               >
                 <option value="unknown">Pata nahi — portal par dekho</option>
-                <option value="yes">Haan — land seeding theek hai</option>
+                <option value="yes">Haan, land seeding theek hai</option>
                 <option value="no">Nahi — problem dikh rahi hai</option>
               </select>
             </div>
@@ -219,7 +219,7 @@ export default function InstallmentTrackerCalcPage() {
                 onChange={(e) => setProgress(e.target.value)}
                 className="w-full border border-[var(--color-border)] rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--color-primary)] focus:ring-1 focus:ring-[var(--color-primary-light)] bg-[var(--color-card)] text-[var(--color-text)]"
               >
-                <option value="unknown">Pata nahi — portal par dekho</option>
+                <option value="unknown">Pata nahi, portal par dekho</option>
                 <option value="active">Active dikh raha hai</option>
                 <option value="rejected">Rejected dikh raha hai</option>
               </select>
@@ -303,7 +303,7 @@ export default function InstallmentTrackerCalcPage() {
           <div>
             <p className="font-bold text-blue-900 dark:text-blue-300 text-sm">Agli Kist</p>
             <p className="text-xs text-blue-700 dark:text-blue-400">
-              {KIST_CONFIG.next.name} — {KIST_CONFIG.next.expectedDate} (Expected)
+              {KIST_CONFIG.next.name} {KIST_CONFIG.next.expectedDate} (Expected)
             </p>
           </div>
         </div>
@@ -321,7 +321,7 @@ export default function InstallmentTrackerCalcPage() {
             </div>
             <div className="p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl">
               <p className="font-bold text-yellow-900 dark:text-yellow-300 text-xs mb-1">Land Seeding Problem</p>
-              <p className="text-xs text-yellow-800 dark:text-yellow-400">Zameen ka record abhi tak portal se match nahi hua — is baare mein patwari ya revenue office se baat karni padegi. Thoda time lagta hai, 7-14 din tak.</p>
+              <p className="text-xs text-yellow-800 dark:text-yellow-400">Zameen ka record abhi tak portal se match nahi hua, is baare mein patwari ya revenue office se baat karni padegi. Thoda time lagta hai, 7-14 din tak.</p>
             </div>
             <div className="p-3 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-xl">
               <p className="font-bold text-purple-900 dark:text-purple-300 text-xs mb-1">Application Reject</p>
@@ -334,11 +334,11 @@ export default function InstallmentTrackerCalcPage() {
           <h3 className="font-black text-[var(--color-text)] text-sm mb-4">Kist Ruki Hai To Kya Karein?</h3>
           <div className="space-y-3">
             {[
-              {n:1, s:'Pehle status check karo — pmkisan.gov.in par. Wahan reason dikhega'},
+              {n:1, s:'Pehle status check karo, pmkisan.gov.in par. Wahan reason dikhega'},
               {n:2, s:'eKYC nahi hai to turant karo — CSC center jao ya online Aadhaar OTP se'},
-              {n:3, s:'Bank seeding nahi hai to bank jao — Aadhaar link karwao, PFMS se check karo'},
+              {n:3, s:'Bank seeding nahi hai to bank jao. Aadhaar link karwao, PFMS se check karo'},
               {n:4, s:'Land seeding problem hai to patwari se baat karo — records update karwao'},
-              {n:5, s:'Sab fix karne ke baad 15-30 din mein kist aa jayegi — arrears bhi milenge'},
+              {n:5, s:'Sab fix karne ke baad 15-30 din mein kist aa jayegi, arrears bhi milenge'},
               {n:6, s:'Problem solve nahi ho rahi? Helpline 155261 par call karo — free hai'},
             ].map(({n, s}) => (
               <div key={n} className="flex gap-3 items-start">
@@ -386,7 +386,7 @@ export default function InstallmentTrackerCalcPage() {
             </details>
             <details className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg p-3">
               <summary className="font-bold text-[var(--color-text)] cursor-pointer">Kist kyun nahi aayi?</summary>
-              <p className="mt-2 text-[var(--color-text-muted)]">3 main reasons: 1) eKYC nahi hua, 2) Bank seeding nahi hui, 3) Land seeding problem. Pehle status check karo — wahan reason dikhega. Fix karo, kist wapas mil jayegi.</p>
+              <p className="mt-2 text-[var(--color-text-muted)]">3 main reasons: 1) eKYC nahi hua, 2) Bank seeding nahi hui, 3) Land seeding problem. Pehle status check karo, wahan reason dikhega. Fix karo, kist wapas mil jayegi.</p>
             </details>
             <details className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg p-3">
               <summary className="font-bold text-[var(--color-text)] cursor-pointer">FTO Generated ka matlab kya hai?</summary>
@@ -394,7 +394,7 @@ export default function InstallmentTrackerCalcPage() {
             </details>
             <details className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg p-3">
               <summary className="font-bold text-[var(--color-text)] cursor-pointer">Missed kist ka paisa milega?</summary>
-              <p className="mt-2 text-[var(--color-text-muted)]">Haan! Agar problem fix kar di hai to arrears mein mil jayega. Example: 2 kist miss hui, ab eKYC kar li — to ₹4,000 arrears mein aayenge. Par jaldi karo.</p>
+              <p className="mt-2 text-[var(--color-text-muted)]">Haan! Agar problem fix kar di hai to arrears mein mil jayega. Example: 2 kist miss hui, ab eKYC kar li, to ₹4,000 arrears mein aayenge. Par jaldi karo.</p>
             </details>
             <details className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-lg p-3">
               <summary className="font-bold text-[var(--color-text)] cursor-pointer">Helpline number kya hai?</summary>

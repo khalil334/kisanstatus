@@ -91,7 +91,7 @@ const MICRO_FAQS: { error: string; matlab: string; fix: string }[] = [
   {
     error: 'Site khul hi nahi rahi / server error aa raha hai',
     matlab: 'Relief release ke dino me lakhs log ek saath check karte hain, portal dab jaata hai.',
-    fix: 'Subah jaldi ya raat me try karo. APK ya mirror site ka shortcut mat lo — wahi sabse bada jokhim hai.',
+    fix: 'Subah jaldi ya raat me try karo. APK ya mirror site ka shortcut mat lo, wahi sabse bada jokhim hai.',
   },
   {
     error: 'Entry me kisi aur ka naam dikh raha hai apne survey number par',
@@ -137,7 +137,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Portal "Released" dikha raha hai par bank me paisa nahi aaya?',
-    a: 'DBT ka paisa account number par nahi, Aadhaar par jaata hai. Isi order me teen check karo: (1) Aadhaar-bank seeding — bank me seeding form 10 minute ka kaam hai; (2) NPCI mapping. Aadhaar ek se zyada account se juda ho to paisa wahan gaya hoga jahan mapping sabse aakhir me hui, us purane account ki passbook update karwa ke dekho; (3) account ki sehat, dormant account, KYC pending ya naam mismatch par sarkari credit laut jaata hai. Theek karwa ke re-process ki request do.',
+    a: 'DBT ka paisa account number par nahi, Aadhaar par jaata hai. Isi order me teen check karo: (1) Aadhaar-bank seeding, bank me seeding form 10 minute ka kaam hai; (2) NPCI mapping. Aadhaar ek se zyada account se juda ho to paisa wahan gaya hoga jahan mapping sabse aakhir me hui, us purane account ki passbook update karwa ke dekho; (3) account ki sehat, dormant account, KYC pending ya naam mismatch par sarkari credit laut jaata hai. Theek karwa ke re-process ki request do.',
   },
   {
     q: 'Paisa kisi aur ke khate me chala gaya, joint khata ya purane malik ka case?',
@@ -200,7 +200,7 @@ export default function PariharaPaymentStatusCheck2026({
         paisa dene ki koi zaroorat nahi.
       </InfoBox>
 
-      <h2>Pehle Ye Samjho — Parihara Hai Kya Aur Paisa Aata Kahan Se Hai</h2>
+      <h2>Pehle Ye Samjho. Parihara Hai Kya Aur Paisa Aata Kahan Se Hai</h2>
 
       <p>
         Parihara (Kannada me &quot;ಪರಿಹಾರ&quot;. Matlab relief ya muawza) Karnataka sarkar

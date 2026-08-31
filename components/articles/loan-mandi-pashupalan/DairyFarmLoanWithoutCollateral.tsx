@@ -29,7 +29,7 @@ const FAQS_DATA = [
   },
   {
     q: 'NABARD DEDS band ho gayi hai kya?',
-    a: 'DEDS ka structure abhi bhi documented hai. 25% general, 33.33% SC/ST back-ended subsidy — par iski funding saal-dar-saal intermittent rahi hai, aur kai branch officers batate hain ki naye application par subsidy sanction available nahi tha. Isliye DEDS ko plan ka base na banao. Apni district ke NABARD office ya financing bank se likhit confirm karo ki is saal window khuli hai ya nahi, phir aage badho.',
+    a: 'DEDS ka structure abhi bhi documented hai. 25% general, 33.33% SC/ST back-ended subsidy, par iski funding saal-dar-saal intermittent rahi hai, aur kai branch officers batate hain ki naye application par subsidy sanction available nahi tha. Isliye DEDS ko plan ka base na banao. Apni district ke NABARD office ya financing bank se likhit confirm karo ki is saal window khuli hai ya nahi, phir aage badho.',
   },
 ];
 
@@ -172,7 +172,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
 
         <IB>
           <strong>Ek line mein:</strong> pashu khud loan ka hypothecated asset ban jate hain. Yani jo gaay-bhains aap
-          loan se kharidoge, wahi bank ki security hain — zameen ki zaroorat isi liye khatam ho jati hai.
+          loan se kharidoge, wahi bank ki security hain, zameen ki zaroorat isi liye khatam ho jati hai.
         </IB>
 
         <SH>Teen Raaste, Ek Table</SH>
@@ -400,7 +400,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
           sizes="(max-width: 768px) 100vw, 768px"
         />
 
-        <SH>EMI Kitni Banegi — Kagaz Par Dekho</SH>
+        <SH>EMI Kitni Banegi. Kagaz Par Dekho</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Yeh figures 11% saalana rate par nikale hain, sirf andaza banane ke liye, aapke bank ka rate alag hoga
           toh EMI bhi alag banegi:
@@ -532,7 +532,7 @@ export default function DairyFarmLoanWithoutCollateral({ article }: { article: A
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Isi confusion ka ek bhai-bandh hai subvention. Subsidy project cost ka hissa maaf karti hai (jaise PMEGP
-          ki margin money), jabki interest subvention sirf byaj ka bojh ghatati hai — loan ka amount waisa hi
+          ki margin money), jabki interest subvention sirf byaj ka bojh ghatati hai, loan ka amount waisa hi
           rehta hai. AHIDF jaise bade dairy processing projects mein 3% tak subvention milta hai, par chhote farm
           ke liye subsidy hi asli farak dalti hai. Branch mein dono shabd sun kar ek samajh lena file ki planning
           bigaad deta hai.
