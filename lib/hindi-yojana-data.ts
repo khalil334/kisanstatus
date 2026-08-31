@@ -51,8 +51,8 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
   {
     slug: 'hi/nayi-registration',
     titleHi: 'पीएम किसान नई रजिस्ट्रेशन 2027: Farmer ID से ऐसे करें Apply',
-    seoTitleHi: 'पीएम किसान नई रजिस्ट्रेशन 2027: Farmer ID',
-    desc: 'पीएम किसान नई रजिस्ट्रेशन 2027 अब Farmer ID से होगी: online apply का step-by-step तरीका, जरूरी documents और आवेदन के बाद status चेक करना भी यहां सीखें।',
+    seoTitleHi: 'नई रजिस्ट्रेशन: पहले Farmer ID बनेगी',
+    desc: 'सीधे pmkisan.gov.in पर नया रजिस्ट्रेशन अब नहीं होता: पहले AgriStack पर Farmer ID बनानी पड़ती है। दोनों steps का तरीका, जरूरी documents और status चेक करना।',
     keywords: ['पीएम किसान नई रजिस्ट्रेशन', 'pm kisan new registration 2027'],
     category: 'status-check',
     publishedTime: '2026-08-09T00:42:08+03:00',

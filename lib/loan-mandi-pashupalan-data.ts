@@ -60,7 +60,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'jansamarth-portal-loan-apply',
     ogImage: '/images/articles/loan-mandi-pashupalan/jansamarth-portal-loan-apply/form-bharna.webp',
     title: 'JanSamarth Portal Se Loan: Ghar Baithe Apply',
-    desc: 'Ek portal par sabhi sarkari loan: KCC, Mudra, education, agri-infra. Eligibility check se application track tak, jansamarth.in ka step-by-step process.',
+    desc: 'jansamarth.in par 15 sarkari loan schemes ek jagah hain. Eligibility check me 4 sawal lagte hain, phir bank khud approach karta hai. KCC, Mudra aur agri-infra ka process.',
     ogTitle: 'JanSamarth Portal Loan Apply 2026 Guide',
     keywords: [
       'jansamarth portal loan apply 2026',
@@ -150,10 +150,10 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
   },
   {
     slug: 'gehu-ka-bhav-msp-vs-mandi',
-    seoTitle: 'Gehu Ka Rate 2026: MSP vs Mandi Ka Hisaab',
+    seoTitle: 'Gehu Ka Rate Aaj: MSP Rs 2,585 Vs Mandi',
     ogImage: '/images/articles/loan-mandi-pashupalan/gehu-ka-bhav-msp-vs-mandi/gehu-katai.webp',
     title: 'Gehu MSP Par Beche Ya Mandi Me? Hisaab Ye Raha',
-    desc: 'Gehu ka rate MSP ₹2,585 par lein ya mandi mein bechein? Ek bori ka seedha hisaab, saal bhar ka price pattern aur rokne ka ganit: sab yahan.',
+    desc: 'Gehu ka MSP 2026-27 me Rs 2,585 per quintal hai. Mandi rate isse kam ya zyada kab hota hai, ek bori par kitna fark padta hai, aur bechne ka sahi waqt kaunsa hai.',
     ogTitle: 'Gehu Ka Rate 2026: MSP vs Mandi, Kahan Bechein',
     keywords: [
       'gehu ka rate',

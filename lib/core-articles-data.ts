@@ -179,6 +179,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     schemes: ['pm-kisan'],
     ogImage: '/images/pm-kisan-fto-generated-featured-image-kisanstatus.webp',
     relatedSlugs: ['pm-kisan-fto-generated-ka-matlab-kya-hai', 'PmKisanPaymentFailedFix2026', 'PmKisanBeneficiaryList2026', 'PmKisan25viKist2027', 'PmKisanMasterGuide2026'],
+    noindex: true,
   },
   {
     slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
@@ -240,9 +241,9 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisan24viKist2026',
     title: 'PM Kisan 24vi Kist: October Ka Andaza Kaise Nikla, Status Kahan Dekhe',
-    desc: '23vi kist 20 June ko aa chuki hai, ab 24vi ka intezaar. Pattern ke hisaab se October 2026 expected. Andaza kaise nikla, status check aur taiyari, sab is guide me.',
+    desc: 'Official date announce nahi hui. Pichhli 23 kiston ke 4-mahine pattern se October 2026 nikalta hai: 23vi 20 June ko aayi thi. Andaza ka poora hisaab aur status check ka tarika.',
     ogTitle: 'PM Kisan 24vi Kist Kab Aayegi?',
-    seoTitle: 'PM Kisan 24vi Kist Kab Aayegi? Status Check',
+    seoTitle: 'PM Kisan 24vi Kist: October 2026 Ka Andaza',
     keywords: [
       'pm kisan 24vi kist 2026',
       'pm kisan 24vi kist kab aayegi',

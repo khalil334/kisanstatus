@@ -143,6 +143,11 @@ const nextConfig = {
       { source: '/articles/pm-kisan-land-seeding-status', destination: '/articles/PmKisanLandSeedingForm', permanent: true },
       { source: '/articles/category/registration', destination: '/articles/category/status-check', permanent: true },
       { source: '/articles/category/ekyc', destination: '/articles/category/status-check', permanent: true },
+
+      // Spam-hit recovery: 18-Aug duplicate of the proven FTO article
+      // (28 clicks / 3,492 impressions) folded into the original.
+      // Ref: docs/spam-hit/04-page-level-audit.md
+      { source: '/articles/fto-status-check-paisa-kab-aayega', destination: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', permanent: true },
     ];
   },
 

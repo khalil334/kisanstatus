@@ -46,7 +46,6 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
     author: AUTHOR_NAME,
     component: 'KisanKarjMafiAllStatesHindi',
     ogImage: '/images/articles/hindi-yojna/karj-mafi-list/karj-mafi-hero.webp',
-    noindex: true,
   },
   {
     slug: 'hi/pm-kisan-khad-yojana-sach',

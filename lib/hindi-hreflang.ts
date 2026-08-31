@@ -1,5 +1,34 @@
 import { SITE_URL } from '@/lib/site-config';
 
+/**
+ * Paths de-indexed during the 18-Aug-2026 spam-hit recovery.
+ * hreflang must not pair an indexed page with a noindex counterpart:
+ * doing so hands Google a canonical/alternate that it is told to drop.
+ * Remove a path here once its page is rewritten and re-indexed.
+ * Ref: docs/spam-hit/04-page-level-audit.md
+ */
+export const DEINDEXED_PATHS: ReadonlySet<string> = new Set([
+  '/yojana/fasal-bima-claim-status-check',
+  '/yojana/kisan-karj-mafi-list-all-states',
+  '/yojana/pm-kisan-khad-yojana-11000-sach',
+  '/yojana/pm-kisan-helpline-155261',
+  '/yojana/mgnrega-pashu-shed-yojana',
+  '/yojana/pashu-kisan-credit-card-apply',
+  '/articles/hi/fasal-bima-claim-status',
+  '/articles/hi/pm-kisan-khad-yojana-sach',
+  '/articles/hi/pm-kisan-helpline-155261',
+  '/articles/hi/mgnrega-pashu-shed-yojana',
+  '/articles/hi/pashu-kisan-credit-card',
+  '/articles/hi/rajasthan-kisan-samman-nidhi',
+  '/articles/hi/annadata-sukhibhava-status',
+  '/articles/hi/rythu-bharosa-status',
+  '/articles/hi/odisha-cm-kisan-status',
+  '/articles/hi/pati-patni-pm-kisan-rule',
+  '/articles/hi/state-kisan-yojana-list',
+  '/articles/hi/parihara-payment-status',
+  '/articles/hi/namo-drone-didi-yojana',
+]);
+
 export const HINDI_TO_HINGLISH: Readonly<Record<string, string>> = {
   'pm-kisan-25vi-kist': '/articles/PmKisan25viKist2027',
   'ekyc-mobile-se': '/articles/PmKisanEkycOnline2026',
@@ -34,7 +63,7 @@ export function hindiAlternates(slug: string): HreflangLanguages {
   const hindiUrl = `${SITE_URL}/articles/hi/${slug}`;
   const hinglishPath = HINDI_TO_HINGLISH[slug];
 
-  if (!hinglishPath) {
+  if (!hinglishPath || DEINDEXED_PATHS.has(hinglishPath)) {
     return { 'hi-IN': hindiUrl, 'x-default': hindiUrl };
   }
 
@@ -51,7 +80,7 @@ export function hinglishAlternates(
   fallback: HreflangLanguages,
 ): HreflangLanguages {
   const hindiSlug = HINGLISH_TO_HINDI[path];
-  if (!hindiSlug) return fallback;
+  if (!hindiSlug || DEINDEXED_PATHS.has(`/articles/hi/${hindiSlug}`)) return fallback;
 
   const hinglishUrl = `${SITE_URL}${path}`;
   return {
