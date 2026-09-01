@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-07-06T00:30:35+05:30';
-const MODIFIED = '2026-08-18T19:25:51+05:30';
+const MODIFIED = '2026-09-01T19:10:00+05:30';
 
 const RELATED = [
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Ka Matlab' },
@@ -83,7 +83,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Hum seedhi baat karenge. Sach ye hai ki 25vi wali abhi kisi ko nahi pata, na humein, na un YouTube channelo ko, na un websites ko. Sarkar mahino pehle kabhi kuch announce nahi karti. Zyadatar to release se ek-do hafte pehle hi khabar aati hai, aur kai bar to PM ke kisi event ke sath hi transfer ho jata hai.
+          Hum seedhi baat karenge. Sach ye hai ki 25vi wali abhi kisi ko nahi pata, na humein, na un YouTube channelo ko, na un websites ko. Sarkar mahino pehle kabhi kuch announce nahi karti. Zyadatar to release se ek-do hafte pehle hi khabar aati hai, aur kai bar to PM ke kisi event ke sath hi transfer ho jata hai. September 2026 shuru hone tak bhi haal yahi hai: pehle 24vi ka number lagega (jiski umeed October ke aas-paas ki hai), tabhi 25vi ki baat aage badhegi.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">

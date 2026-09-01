@@ -18,7 +18,7 @@ const KIST = {
 };
 
 const PUBLISHED = '2026-06-24T16:27:03+05:30';
-const MODIFIED = '2026-08-26T18:35:00+05:30';
+const MODIFIED = '2026-09-01T19:10:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisan25viKist2027', title: '25vi Kist Date & Amount' },
@@ -138,7 +138,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             Date abhi announce nahi hui hai. Bas, itni si baat.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            <strong>Aaj tak ka update ({fmtDate(MODIFIED)}):</strong> pmkisan.gov.in par 24vi kist ko lekar koi naya notice nahi hai, na PIB se koi release aayi hai. Haan, August me ek video khoob ghooma jisme dawa thi ki Raksha Bandhan par ₹4,000 aayenge. Sarkar ne saaf kar diya ki aisi koi ghoshna nahi hui. Us par neeche afwah wale section me detail se likha hai. Jaise hi kuch official aata hai, ye page usi din update hota hai. Isliye bookmark karke rakhna kaam ka hai.
+            <strong>Aaj tak ka update ({fmtDate(MODIFIED)}):</strong> September shuru ho gaya hai aur pmkisan.gov.in par 24vi kist ko lekar ab bhi koi naya notice nahi hai, na PIB se koi release aayi hai. August ke aakhir tak news reports (News18, 27 August) bhi yehi keh rahi thin ki official date announce nahi hui, expectation October ki hi hai. Haan, August me ek video khoob ghooma jisme dawa thi ki Raksha Bandhan par ₹4,000 aayenge. Sarkar ne saaf kar diya ki aisi koi ghoshna nahi hui. Us par neeche afwah wale section me detail se likha hai. Jaise hi kuch official aata hai, ye page usi din update hota hai. Isliye bookmark karke rakhna kaam ka hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Lekin jo pata hai, woh kaafi kuch bata deta hai. Pichhla transfer 20/06/2026 ko hua tha. Tarakeswar (Hooghly, West Bengal) ke event se PM ne button dabaya aur 9.44 crore parivaron ko kul ₹18,880 crore gaye. Usse pehle wala 13 March ko Guwahati se. Beech ka fasla lagbhag sava teen mahine ka, isi hisaab se agla number <strong>October 2026 ke aas-paas</strong> banta hai.
@@ -473,6 +473,10 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             <li>
               ₹4,000 Raksha Bandhan wale viral video ka khandan. PIB Fact Check.{' '}
               <a href="https://pib.gov.in/factcheck.aspx" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in/factcheck</a>
+            </li>
+            <li>
+              24th installment abhi tak announce nahi hui (27 August 2026 tak). News18 Business.{' '}
+              <a href="https://www.news18.com/business/economy/pm-kisan-24th-installment-date-heres-how-to-complete-your-e-kyc-to-receive-next-tranche-of-rs-2000-10295886.html" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">news18.com</a>
             </li>
             <li>
               Payment tracking. Public Financial Management System.{' '}

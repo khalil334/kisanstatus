@@ -20,7 +20,7 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
     ],
     category: 'status-check',
     publishedTime: '2026-07-27T20:05:06+05:30',
-    modifiedTime: '2026-08-03T10:36:37+05:30',
+    modifiedTime: '2026-09-01T19:10:00+05:30',
     author: AUTHOR_NAME,
     component: 'PmKisan25viKistKabAayegi',
     ogImage: '/images/articles/hindi-yojna/pm-kisan-25vi-kist/kisan-mobile-check.webp',
