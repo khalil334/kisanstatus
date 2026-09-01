@@ -63,7 +63,11 @@ export function hindiAlternates(slug: string): HreflangLanguages {
   const hindiUrl = `${SITE_URL}/articles/hi/${slug}`;
   const hinglishPath = HINDI_TO_HINGLISH[slug];
 
-  if (!hinglishPath || DEINDEXED_PATHS.has(hinglishPath)) {
+  if (
+    !hinglishPath ||
+    DEINDEXED_PATHS.has(hinglishPath) ||
+    DEINDEXED_PATHS.has(`/articles/hi/${slug}`)
+  ) {
     return { 'hi-IN': hindiUrl, 'x-default': hindiUrl };
   }
 
@@ -80,7 +84,13 @@ export function hinglishAlternates(
   fallback: HreflangLanguages,
 ): HreflangLanguages {
   const hindiSlug = HINGLISH_TO_HINDI[path];
-  if (!hindiSlug || DEINDEXED_PATHS.has(`/articles/hi/${hindiSlug}`)) return fallback;
+  if (
+    !hindiSlug ||
+    DEINDEXED_PATHS.has(`/articles/hi/${hindiSlug}`) ||
+    DEINDEXED_PATHS.has(path)
+  ) {
+    return fallback;
+  }
 
   const hinglishUrl = `${SITE_URL}${path}`;
   return {
