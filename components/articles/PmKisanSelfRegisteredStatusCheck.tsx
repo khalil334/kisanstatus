@@ -361,7 +361,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Isliye agar aapke gaon ke kisi aur ka paisa aa gaya aur aapka nahi, to ghabrao mat, ho sakta hai aapka FTO agle batch me ho. Status page par hi FTO ka status bhi dikhta hai. Uska poora matlab, har stage ka timeline aur 30 din se zyada atakne par kya karna hai. Sab humne{' '}
-            <Link href="/articles/fto-status-check-paisa-kab-aayega" className="underline font-bold text-green-700 dark:text-green-400">FTO status guide</Link> mein detail se likha hai. Naye self-registered kisano ke liye yahi agla page hai.
+            <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline font-bold text-green-700 dark:text-green-400">FTO status guide</Link> mein detail se likha hai. Naye self-registered kisano ke liye yahi agla page hai.
           </p>
         </section>
 

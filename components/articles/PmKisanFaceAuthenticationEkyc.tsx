@@ -340,7 +340,7 @@ export default function PmKisanFaceAuthenticationEkyc() {
           </ul>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Teeno cheezein (eKYC + bank seeding + land seeding) green hone ke baad bhi paisa batch se aata hai — FTO bante hi kuch dino me credit hota hai, ek-ek karke nahi. Wo poora hisaab{' '}
-            <Link href="/articles/fto-status-check-paisa-kab-aayega" className="underline text-green-700 dark:text-green-400">FTO status guide</Link> me hai. Aur agar 30 din se sab green hai par credit nahi. To{' '}
+            <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline text-green-700 dark:text-green-400">FTO status guide</Link> me hai. Aur agar 30 din se sab green hai par credit nahi. To{' '}
             <Link href="/articles/PmKisanPaymentFailedFix2026" className="underline text-green-700 dark:text-green-400">payment failed fix guide</Link> kholo, wahan reason-wise rasta likha hai.
           </p>
         </section>

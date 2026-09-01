@@ -184,7 +184,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai',
     title: 'FTO Ka Full Form & FTO Generated Meaning',
-    desc: 'FTO ka full form: Fund Transfer Order. Generated dikhe to order ban gaya hai, paisa bank ki taraf se aata hai. Processed aur "will be generated" ka matlab, aur der ho jaye to 15/30 din par kya karna hai.',
+    desc: 'FTO ka full form Fund Transfer Order. Generated dikhe to order ban gaya, paisa bank se aata hai. Der ho to 15/30 din par kya karein.',
     ogTitle: 'FTO Ka Full Form: FTO Generated/Processed Meaning',
     seoTitle: 'FTO Ka Full Form Aur Paisa Kab Aayega',
     keywords: [
@@ -241,7 +241,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'PmKisan24viKist2026',
     title: 'PM Kisan 24vi Kist: October Ka Andaza Kaise Nikla, Status Kahan Dekhe',
-    desc: 'Official date announce nahi hui. Pichhli 23 kiston ke 4-mahine pattern se October 2026 nikalta hai: 23vi 20 June ko aayi thi. Andaza ka poora hisaab aur status check ka tarika.',
+    desc: 'Official date announce nahi hui. 23vi kist 20 June ko aayi thi, 4-mahine pattern se October 2026 nikalta hai. Poora hisaab andar.',
     ogTitle: 'PM Kisan 24vi Kist Kab Aayegi?',
     seoTitle: 'PM Kisan 24vi Kist: October 2026 Ka Andaza',
     keywords: [
