@@ -12,8 +12,8 @@ const RELATED = [
 
 const FAQS_DATA = [
   {
-    q: 'Gehu ka MSP 2026-27 kitna hai?',
-    a: 'Gehu ka MSP ₹2,585 per quintal hai. Pichhle saal ke ₹2,425 se ₹160 zyada. Ye rate Rabi Marketing Season 2026-27 ke liye hai, jo CCEA ne 01/10/2025 ko approve kiya tha. Ek quintal matlab 100 kilo, toh per kilo ke hisaab se ₹25.85 banta hai.',
+    q: 'Gehu ka naya MSP kitna hai?',
+    a: 'Rabi Marketing Season 2027-28 ke liye gehu ka MSP ₹2,610 per quintal hai, jo CCEA ne 30/09/2026 ko approve kiya. Pichhle season (2026-27) ke ₹2,585 se sirf ₹25 zyada. Ye 2027 ki March-April wali katai par lagega. Ek quintal matlab 100 kilo, toh per kilo ₹26.10 banta hai.',
   },
   {
     q: 'Dhan (paddy) ka MSP 2026-27 kya hai?',
@@ -21,7 +21,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Is saal sabse zyada MSP kis fasal ka badha?',
-    a: 'Kharif mein sunflower seed ka, poore ₹622 per quintal, ₹7,721 se ₹8,343. Uske baad cotton (₹557), nigerseed (₹515) aur til (₹500). Rabi mein safflower sabse aage raha, ₹600 ki badhotri ke saath ₹6,540. Sarkar ka maqsad saaf hai: oilseeds ki kheti badhao, import kam karo.',
+    a: 'Kharif mein sunflower seed ka, poore ₹622 per quintal, ₹7,721 se ₹8,343. Uske baad cotton (₹557), nigerseed (₹515) aur til (₹500). Rabi 2027-28 mein bhi safflower sabse aage raha, ₹675 ki badhotri ke saath ₹7,215, uske baad sarson (₹413) aur masur (₹390). Sarkar ka maqsad saaf hai: oilseeds ki kheti badhao, import kam karo.',
   },
   {
     q: 'MSP par fasal bechna zaroori hai kya?',
@@ -81,13 +81,14 @@ const KHARIF_ROWS: Row[] = [
   { crop: 'Kapas (Long Staple)', msp: '8,667', prev: '8,110', inc: '+557', margin: '50%' },
 ];
 
+// Rabi Marketing Season 2027-28 — CCEA, 30/09/2026 (PIB). prev = RMS 2026-27.
 const RABI_ROWS: (Row & { cop: string })[] = [
-  { crop: 'Gehu (Wheat)', msp: '2,585', prev: '2,425', inc: '+160', cop: '1,239', margin: '109%' },
-  { crop: 'Jau (Barley)', msp: '2,150', prev: '1,980', inc: '+170', cop: '1,361', margin: '58%' },
-  { crop: 'Chana (Gram)', msp: '5,875', prev: '5,650', inc: '+225', cop: '3,699', margin: '59%' },
-  { crop: 'Masur (Lentil)', msp: '7,000', prev: '6,700', inc: '+300', cop: '3,705', margin: '89%' },
-  { crop: 'Sarson (Rapeseed & Mustard)', msp: '6,200', prev: '5,950', inc: '+250', cop: '3,210', margin: '93%' },
-  { crop: 'Safflower (Kusum)', msp: '6,540', prev: '5,940', inc: '+600', cop: '4,360', margin: '50%' },
+  { crop: 'Gehu (Wheat)', msp: '2,610', prev: '2,585', inc: '+25', cop: '1,264', margin: '106%' },
+  { crop: 'Jau (Barley)', msp: '2,286', prev: '2,150', inc: '+136', cop: '1,447', margin: '58%' },
+  { crop: 'Chana (Gram)', msp: '5,958', prev: '5,875', inc: '+83', cop: '3,751', margin: '59%' },
+  { crop: 'Masur (Lentil)', msp: '7,390', prev: '7,000', inc: '+390', cop: '3,854', margin: '92%' },
+  { crop: 'Sarson (Rapeseed & Mustard)', msp: '6,613', prev: '6,200', inc: '+413', cop: '3,367', margin: '96%' },
+  { crop: 'Safflower (Kusum)', msp: '7,215', prev: '6,540', inc: '+675', cop: '4,810', margin: '50%' },
 ];
 
 export default function MspList202627({ article }: { article: ArticleMeta }) {
@@ -100,15 +101,15 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
             <span>/</span>
             <Link href="/articles" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded">Articles</Link>
             <span>/</span>
-            <span className="text-white font-bold">MSP List 2026-27</span>
+            <span className="text-white font-bold">MSP List 2026-27 &amp; Rabi 2027-28</span>
           </nav>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            MSP List 2026-27: Rabi &amp; Kharif Ki Poori Table, Pichhle Saal Se Comparison
+            MSP List: Rabi 2027-28 Ke Naye Rate &amp; Kharif 2026-27 Ki Poori Table
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
-            <span>Last Updated: 05/08/2026</span>
+            <span>Last Updated: 23/10/2026</span>
             <span>11 min read</span>
           </div>
         </div>
@@ -130,7 +131,8 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         <DB>
           <strong>TL;DR, seedha kaam ki baat:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li>Gehu <strong>₹2,585</strong>, dhan (common) <strong>₹2,441</strong>, chana <strong>₹5,875</strong>, sarson <strong>₹6,200</strong> per quintal, poori Rabi + Kharif table neeche.</li>
+            <li><strong>Naya (30/09/2026):</strong> Rabi 2027-28 mein gehu <strong>₹2,610</strong> (sirf +₹25), chana <strong>₹5,958</strong>, sarson <strong>₹6,613</strong>, masur <strong>₹7,390</strong> per quintal.</li>
+            <li>Kharif 2026-27: dhan (common) <strong>₹2,441</strong>. Poori Rabi + Kharif table neeche.</li>
             <li>Sabse badi badhotri tilhan mein: sunflower <strong>+₹622</strong>, nigerseed +₹515, til +₹500.</li>
             <li>MSP par bechne ke liye <strong>state portal par registration + token</strong> zaroori, window miss ki toh season gaya.</li>
             <li>Sabse zyada paisa <strong>nami (moisture)</strong> mein katta hai. Bechne se pehle 1-2 din dhoop mein sukhao.</li>
@@ -139,7 +141,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 18/08/2026</strong>
+          <strong>Last Updated: 23/10/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -149,15 +151,16 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Is page par 2026-27 marketing season ki poori MSP list hai. 17 Kharif entries aur 6 Rabi faslein,
-          pichhle saal ke rate ke saath. Neeche ye bhi samjhaya hai ki ye rate kaise banta hai, kahan actually
+          Is page par sabse taaza MSP list hai: 17 Kharif entries (2026-27) aur 6 Rabi faslein (2027-28, jo
+          abhi bo-ai ho rahi hai), pichhle season ke rate ke saath. Neeche ye bhi samjhaya hai ki ye rate kaise banta hai, kahan actually
           milta hai, aur kab MSP chhod kar khule bazaar mein bechna behtar rehta hai.
         </p>
 
         <IB>
-          <strong>Do announcements, do season:</strong> Rabi 2026-27 ke rate CCEA ne 01/10/2025 ko approve
-          kiye (gehu, chana, sarson wagairah). Kharif 2026-27 ke rate 13/05/2026 ko aaye (dhan, kapas, soybean
-          wagairah). Isliye ek hi &quot;2026-27 list&quot; mein dono announcements ke numbers aate hain.
+          <strong>Do announcements, do season:</strong> Rabi 2027-28 ke rate CCEA ne 30/09/2026 ko approve
+          kiye (gehu, chana, sarson wagairah). Ye abhi boyi ja rahi fasal par lagenge, jiski kharid April 2027
+          se hogi. Kharif 2026-27 ke rate 13/05/2026 ko aaye (dhan, kapas, soybean wagairah). Pichhle Rabi
+          season (2026-27) ke rate table mein &quot;2026-27&quot; column mein diye hain.
         </IB>
 
         <SH>Kharif MSP List 2026-27. Dhan, Kapas, Dalhan, Tilhan</SH>
@@ -208,21 +211,22 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           loading="lazy"
         />
 
-        <SH>Rabi MSP List 2026-27. Gehu, Chana, Sarson</SH>
+        <SH>Rabi MSP List 2027-28. Gehu, Chana, Sarson</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Rabi ki bo-ai October-December mein hoti hai aur katai March-April mein. Is season ki khaas baat:
-          gehu ka margin 109% nikla. Matlab MSP production cost se do guna se bhi upar hai. Safflower mein
-          badhotri sabse zyada rahi.
+          Rabi ki bo-ai October-December mein hoti hai aur katai March-April mein. Is baar ki khaas baat:
+          gehu ka MSP sirf ₹25 badha (1% se kam), jo 2010-11 ke baad sabse kam badhotri hai. Phir bhi margin
+          106% hai, kyunki lagat ₹1,264 aanki gayi. Badi badhotri tilhan aur masur mein: safflower +₹675,
+          sarson +₹413, masur +₹390. Sarkar saaf ishaara de rahi hai ki gehu ki jagah dalhan-tilhan boyein.
         </p>
 
         <div className="overflow-x-auto my-4">
           <table className="w-full text-sm border-collapse">
-            <caption className="sr-only">Rabi crops MSP 2026-27 with previous year comparison and margin over cost</caption>
+            <caption className="sr-only">Rabi crops MSP 2027-28 with previous year comparison and margin over cost</caption>
             <thead>
               <tr className="bg-[var(--color-bg-alt)]">
                 <th className="border border-[var(--color-border)] p-3 text-left font-black">Fasal</th>
-                <th className="border border-[var(--color-border)] p-3 text-right font-black">MSP 2026-27</th>
-                <th className="border border-[var(--color-border)] p-3 text-right font-black">2025-26</th>
+                <th className="border border-[var(--color-border)] p-3 text-right font-black">MSP 2027-28</th>
+                <th className="border border-[var(--color-border)] p-3 text-right font-black">2026-27</th>
                 <th className="border border-[var(--color-border)] p-3 text-right font-black">Badhotri</th>
                 <th className="border border-[var(--color-border)] p-3 text-right font-black">Lagat</th>
                 <th className="border border-[var(--color-border)] p-3 text-right font-black">Margin</th>
@@ -243,7 +247,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           </table>
           <p className="text-xs text-[var(--color-text-muted)] mt-2 italic">
             Sabhi rate ₹ per quintal (100 kg). Lagat = all-India weighted average cost of production (A2+FL).
-            Source: CCEA decision, 01/10/2025. PIB press release.
+            Source: CCEA decision, 30/09/2026 (Rabi Marketing Season 2027-28). PIB press release.
           </p>
         </div>
 
@@ -493,8 +497,8 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">MSP Ki Table Se Zyada Kaam Ki Cheez: Nami Ka Meter</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            2026-27 ki badhotri tilhan mein sabse mote paise laayi, sunflower ₹622, nigerseed ₹515, til ₹500 —
-            jabki gehu ₹2,585 aur dhan ₹2,441 (common) par hai aur makka-moong lagbhag wahin rahe. Par saal bhar
+            Is saal ki badhotri tilhan mein sabse mote paise laayi, Kharif mein sunflower ₹622, Rabi 2027-28 mein
+            safflower ₹675 aur sarson ₹413 — jabki gehu ₹2,610 (sirf +₹25) aur dhan ₹2,441 (common) par hai aur makka-moong lagbhag wahin rahe. Par saal bhar
             ka farak in numbers se nahi, kaante par tay hota hai.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
@@ -511,7 +515,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         <SH>Official Links Aur Sources</SH>
         <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
           <li>
-            CCEA press release, Rabi Marketing Season 2026-27 MSP, 01/10/2025.{' '}
+            CCEA press release, Rabi Marketing Season 2027-28 MSP, 30/09/2026.{' '}
             <a href="https://pib.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in</a>
           </li>
           <li>
