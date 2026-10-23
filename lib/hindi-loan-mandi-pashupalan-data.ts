@@ -9,7 +9,7 @@ export const HINDI_LOAN_MANDI_PASHUPALAN_ARTICLES: readonly HindiArticle[] = [
     keywords: ['गेहूं का रेट आज', 'gehu ka bhav today', 'गेहूं MSP 2027'],
     category: 'mandi',
     publishedTime: '2026-07-22T07:56:40+05:30',
-    modifiedTime: '2026-08-15T12:56:46+05:30',
+    modifiedTime: '2026-10-23T09:38:05+05:30',
     author: AUTHOR_NAME,
     component: 'GehuKaRateAajMspVsMandiBhav',
     ogImage: '/images/articles/hindi-yojna/gehu-ka-rate/mandi-wheat.webp',

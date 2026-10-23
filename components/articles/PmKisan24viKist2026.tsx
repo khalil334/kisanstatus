@@ -10,7 +10,7 @@ import { AUTHOR_NAME } from '@/lib/site-config';
 const KIST = {
   number: '24',
   label: '24vi',
-  expectedDate: 'October 2026',
+  expectedDate: 'October-November 2026',
   confirmedDate: null as string | null,
   amount: '₹2,000',
   status: 'Expected' as 'Expected' | 'Confirmed' | 'Released',
@@ -18,7 +18,7 @@ const KIST = {
 };
 
 const PUBLISHED = '2026-06-24T16:27:03+05:30';
-const MODIFIED = '2026-09-01T11:42:37+05:30';
+const MODIFIED = '2026-10-23T09:46:18+05:30';
 
 const RELATED = [
   { slug: 'PmKisan25viKist2027', title: '25vi Kist Date & Amount' },
@@ -33,7 +33,7 @@ const FAQS_DATA = [
   },
   {
     q: 'October 2026 ka andaza kis aadhar par hai?',
-    a: 'Pichhle transfers ke gap se. 22vi 13/03/2026 ko aayi, 23vi 20 June ko, beech ka fasla kareeb 3 mahine ka. Wahi fasla aage jodo toh October ke aas paas number baithta hai. Par ye hisaab pehle bhi phisla hai. 2025 me 20vi ke baad wala gap November tak lamba ho gaya tha. Toh October likha zaroor hai, guarantee koi nahi.',
+    a: 'Pichhle transfers ke gap se. 22vi 13/03/2026 ko aayi, 23vi 20 June ko, beech ka fasla kareeb 3 mahine ka. Wahi fasla aage jodo toh October ke aas paas number baithta hai. Par ye hisaab pehle bhi phisla hai. 2025 me 20vi ke baad wala gap November tak lamba ho gaya tha. Aur is baar bhi wahi ho raha hai: 23 October tak 125 din ho chuke hain, jo pichhle teen gap (99 se 114 din) se lamba hai. Isliye ab andaza October ke aakhir se November tak ka hai, guarantee koi nahi.',
   },
   {
     q: 'Is baar amount badhega kya?',
@@ -138,10 +138,10 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             Date abhi announce nahi hui hai. Bas, itni si baat.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            <strong>Aaj tak ka update ({fmtDate(MODIFIED)}):</strong> September shuru ho gaya hai aur pmkisan.gov.in par 24vi kist ko lekar ab bhi koi naya notice nahi hai, na PIB se koi release aayi hai. August ke aakhir tak news reports (News18, 27 August) bhi yehi keh rahi thin ki official date announce nahi hui, expectation October ki hi hai. Haan, August me ek video khoob ghooma jisme dawa thi ki Raksha Bandhan par ₹4,000 aayenge. Sarkar ne saaf kar diya ki aisi koi ghoshna nahi hui. Us par neeche afwah wale section me detail se likha hai. Jaise hi kuch official aata hai, ye page usi din update hota hai. Isliye bookmark karke rakhna kaam ka hai.
+            <strong>Aaj tak ka update ({fmtDate(MODIFIED)}):</strong> October aadha se zyada nikal gaya, lekin pmkisan.gov.in par ab bhi 23vi kist (20 June) hi latest dikh rahi hai. 24vi ki koi official date nahi aayi, na PIB se koi release. 21 October tak ki news reports (CNBC TV18) bhi yehi keh rahi hain. Kai channel &quot;Diwali se pehle&quot; bol rahe hain, par ye sirf andaza hai, sarkari ghoshna nahi. Pichhli kist ko 125 din ho chuke hain, jo pichhle teen gaps (99-114 din) se lamba hai. Haan, August me ek video khoob ghooma jisme dawa thi ki Raksha Bandhan par ₹4,000 aayenge. Sarkar ne saaf kar diya ki aisi koi ghoshna nahi hui. Us par neeche afwah wale section me detail se likha hai. Jaise hi kuch official aata hai, ye page usi din update hota hai. Isliye bookmark karke rakhna kaam ka hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Lekin jo pata hai, woh kaafi kuch bata deta hai. Pichhla transfer 20/06/2026 ko hua tha. Tarakeswar (Hooghly, West Bengal) ke event se PM ne button dabaya aur 9.44 crore parivaron ko kul ₹18,880 crore gaye. Usse pehle wala 13 March ko Guwahati se. Beech ka fasla lagbhag sava teen mahine ka, isi hisaab se agla number <strong>October 2026 ke aas-paas</strong> banta hai.
+            Lekin jo pata hai, woh kaafi kuch bata deta hai. Pichhla transfer 20/06/2026 ko hua tha. Tarakeswar (Hooghly, West Bengal) ke event se PM ne button dabaya aur 9.44 crore parivaron ko kul ₹18,880 crore gaye. Usse pehle wala 13 March ko Guwahati se. Beech ka fasla lagbhag sava teen mahine ka, isi hisaab se agla number October 2026 ke aas-paas banta tha. Ab October ka zyada hissa nikal chuka hai, toh realistic andaza <strong>October ke aakhir se November 2026</strong> ka hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Ek baat imandari se: ye ginti pehle bhi galat ho chuki hai. 2025 me log aise hi calendar par ungli rakh rahe the, aur gap khinchte khinchte November tak pahunch gaya tha. Paisa kisi bade event ke saath nikalta hai, event PM ke schedule par tikta hai. Aur schedule kisi ke haath me nahi. Toh is page ka asli maqsad tareekh ka andaza nahi, ye pakka karna hai ki jis din bhi transfer ho, aapka hissa bina atke pahunche.
@@ -237,7 +237,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             Table ko dhyan se dekhiye, venue har baar alag state me hai. Bihar, UP, Tamil Nadu, Assam, Bengal. Matlab ye kisi fixed calendar par nahi chalta, kisi na kisi bade karyakram ke saath hota hai. Isiliye tareekh aakhri hafte tak hawa me latki rehti hai. 23vi ki bhi bas chaar din pehle confirm hui thi.
           </p>
           <IB>
-            <strong>Dhyan rahe:</strong> October pichhle gaps se nikla anumaan hai, koi sarkari notification nahi. pmkisan.gov.in par notice aane par hi pakka maaniye. YouTube channel chahe kitna bada ho.
+            <strong>Dhyan rahe:</strong> October-November pichhle gaps se nikla anumaan hai, koi sarkari notification nahi. pmkisan.gov.in par notice aane par hi pakka maaniye. YouTube channel chahe kitna bada ho.
           </IB>
         </section>
 
@@ -293,7 +293,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Khet ka kaam rukta nahi. Pattern ke hisaab se agla transfer October 2026 ke aas-paas
+            Khet ka kaam rukta nahi. Pattern ke hisaab se agla transfer October-November 2026 ke aas-paas
           </p>
         </div>
 
@@ -475,7 +475,11 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
               <a href="https://pib.gov.in/factcheck.aspx" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in/factcheck</a>
             </li>
             <li>
-              24th installment abhi tak announce nahi hui (27 August 2026 tak). News18 Business.{' '}
+              24th installment abhi tak announce nahi hui (21 October 2026 tak). CNBC TV18.{' '}
+              <a href="https://www.cnbctv18.com/personal-finance/pm-kisan-24th-instalment-how-to-check-payment-status-online-20015798.htm" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">cnbctv18.com</a>
+            </li>
+            <li>
+              24th installment ki official date nahi (27 August 2026 tak). News18 Business.{' '}
               <a href="https://www.news18.com/business/economy/pm-kisan-24th-installment-date-heres-how-to-complete-your-e-kyc-to-receive-next-tranche-of-rs-2000-10295886.html" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">news18.com</a>
             </li>
             <li>

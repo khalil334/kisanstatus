@@ -7,7 +7,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-06-20T21:34:06+05:30';
-const MODIFIED = '2026-07-27T07:14:25+05:30';
+const MODIFIED = '2026-10-23T09:58:31+05:30';
 
 function Src({ href, children }: { href: string; children: ReactNode }) {
   return (
@@ -244,7 +244,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </div>
 
           <DB>
-            <strong>Last Date:</strong> PMFBY ki cut-off date har state, season aur crop ke liye alag notify hoti hai. Koi ek all-India tareekh nahi hoti. Kharif mein kai states ki window July ke aakhir tak rehti hai, lekin <strong>aapke zile ke liye sahi date sirf apne rajya ki season notification ya pmfby.gov.in par hi confirm hoti hai</strong>. Date nikal gayi toh us season ka cover nahi milega, isliye enrollment aakhri din par mat chhodein.
+            <strong>Last Date:</strong> PMFBY ki cut-off date har state, season aur crop ke liye alag notify hoti hai. Koi ek all-India tareekh nahi hoti. Kharif mein kai states ki window July ke aakhir tak rehti hai. <strong>Abhi Rabi 2026-27 ka enrollment chal raha hai</strong> (gehu, chana, sarson): PMFBY guidelines mein Rabi ki indicative cut-off 15 December hai, par kai states apni alag date (jaise 31 December) notify karte hain. Lekin <strong>aapke zile ke liye sahi date sirf apne rajya ki season notification ya pmfby.gov.in par hi confirm hoti hai</strong>. Date nikal gayi toh us season ka cover nahi milega, isliye enrollment aakhri din par mat chhodein.
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
