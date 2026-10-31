@@ -11,14 +11,14 @@ const KIST = {
   number: '24',
   label: '24vi',
   expectedDate: 'October 2026',
-  confirmedDate: null as string | null,
+  confirmedDate: '30 October 2026',
   amount: '₹2,000',
-  status: 'Expected' as 'Expected' | 'Confirmed' | 'Released',
-  recipients: '9.4 Crore+',
+  status: 'Released' as 'Expected' | 'Confirmed' | 'Released',
+  recipients: '9.34 Crore+',
 };
 
 const PUBLISHED = '2026-06-24T16:27:03+05:30';
-const MODIFIED = '2026-09-01T11:42:37+05:30';
+const MODIFIED = '2026-10-31T09:15:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisan25viKist2027', title: '25vi Kist Date & Amount' },
@@ -29,11 +29,11 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Kya sarkar ne is baar ki date bata di hai?',
-    a: 'Nahi. Sarkar mahino pehle batati bhi nahi. 23vi ki official confirmation release se bas kuch din pehle aayi thi. Jo channel aaj pakki date bata raha hai, apna andaza bech raha hai.',
+    a: 'Haan. PM Kisan ke official X account par 23 October 2026 ko elaan hua tha ki 24vi kist 30 October ko release hogi. Phir 30 October 2026 ko Banaskantha (Gujarat) ke karyakram se kist release ho gayi — 9.34 crore se zyada parivaron ko kul ₹18,680 crore se zyada bheje gaye. Aapko paisa mila ya nahi, ye status se pata chalega; neeche tareeka diya hai.',
   },
   {
-    q: 'October 2026 ka andaza kis aadhar par hai?',
-    a: 'Pichhle transfers ke gap se. 22vi 13/03/2026 ko aayi, 23vi 20 June ko, beech ka fasla kareeb 3 mahine ka. Wahi fasla aage jodo toh October ke aas paas number baithta hai. Par ye hisaab pehle bhi phisla hai. 2025 me 20vi ke baad wala gap November tak lamba ho gaya tha. Toh October likha zaroor hai, guarantee koi nahi.',
+    q: '25vi kist ab kab aayegi?',
+    a: 'Abhi iski koi official date nahi hai. Pichhle rounds ka gap 3 se 4 mahine ka raha hai; usi hisaab se February–March 2027 ke aas-paas ummeed banti hai. Lekin ye sirf andaza hai — 2025 me ek gap November tak khinch gaya tha. Pakki date sarkar ke elaan se hi milegi, kisi video ya forward se nahi.',
   },
   {
     q: 'Is baar amount badhega kya?',
@@ -65,9 +65,9 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             <span aria-hidden="true">/</span>
             <span className="text-white font-bold">24vi Kist Guide</span>
           </nav>
-          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Upcoming Kist</span>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">{isReleased ? 'Latest Kist' : 'Upcoming Kist'}</span>
           <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
-            PM Kisan 24vi Kist Kab Aayegi? Release Date Ka Sach, Status Check Aur Tayyari
+            PM Kisan 24vi Kist Aa Gayi: 30 October Ko Release, Status Check Aur Paisa Na Aye To Kya Karein
           </h1>
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
@@ -133,18 +133,18 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         </div>
 
         <section className="mb-8">
-          <SH>24vi Kist Kab Aayegi</SH>
+          <SH>24vi Kist Aa Gayi — 30 October Ko Release</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Date abhi announce nahi hui hai. Bas, itni si baat.
+            30 October 2026 ko 24vi kist release ho gayi hai. Bas, yehi pakki baat hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            <strong>Aaj tak ka update ({fmtDate(MODIFIED)}):</strong> September shuru ho gaya hai aur pmkisan.gov.in par 24vi kist ko lekar ab bhi koi naya notice nahi hai, na PIB se koi release aayi hai. August ke aakhir tak news reports (News18, 27 August) bhi yehi keh rahi thin ki official date announce nahi hui, expectation October ki hi hai. Haan, August me ek video khoob ghooma jisme dawa thi ki Raksha Bandhan par ₹4,000 aayenge. Sarkar ne saaf kar diya ki aisi koi ghoshna nahi hui. Us par neeche afwah wale section me detail se likha hai. Jaise hi kuch official aata hai, ye page usi din update hota hai. Isliye bookmark karke rakhna kaam ka hai.
+            <strong>Aaj tak ka update ({fmtDate(MODIFIED)}):</strong> PM Kisan ke official X account ne 23 October 2026 ko elaan kiya tha ki 24vi kist 30 October ko aayegi. 30 October ko Banaskantha (Gujarat) ke karyakram se kist release ho gayi — 9.34 crore se zyada parivaron ke khaaton me kul ₹18,680 crore se zyada bheje gaye (PIB aur news reports ke mutabiq). Paisa khaate me dikhne me aam taur par 1–3 din lag jate hain, isliye agar abhi balance nahi badha to pehle status check karke dekho ki payment success hua hai ya kahin atka hai. Neeche poora tareeka aur atke hue paiso ki checklist di hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Lekin jo pata hai, woh kaafi kuch bata deta hai. Pichhla transfer 20/06/2026 ko hua tha. Tarakeswar (Hooghly, West Bengal) ke event se PM ne button dabaya aur 9.44 crore parivaron ko kul ₹18,880 crore gaye. Usse pehle wala 13 March ko Guwahati se. Beech ka fasla lagbhag sava teen mahine ka, isi hisaab se agla number <strong>October 2026 ke aas-paas</strong> banta hai.
+            Is baar hisaab bilkul seedha baitha. Pichhla transfer 20/06/2026 ko hua tha — Tarakeswar (Hooghly, West Bengal) ke event se PM ne button dabaya aur 9.44 crore parivaron ko kul ₹18,880 crore gaye. Usse pehle wala 13 March ko Guwahati se. Beech ka fasla is baar bhi lagbhag chaar mahine ka raha, aur 24vi kist <strong>30 October 2026</strong> ko Banaskantha se release hui. Matlab pattern kaam ka tha, lekin aakhri shabd hamesha sarkar ke elaan ka hi hota hai — isiliye is page par andaza aur elaan hamesha alag-alag likhe gaye hain.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Ek baat imandari se: ye ginti pehle bhi galat ho chuki hai. 2025 me log aise hi calendar par ungli rakh rahe the, aur gap khinchte khinchte November tak pahunch gaya tha. Paisa kisi bade event ke saath nikalta hai, event PM ke schedule par tikta hai. Aur schedule kisi ke haath me nahi. Toh is page ka asli maqsad tareekh ka andaza nahi, ye pakka karna hai ki jis din bhi transfer ho, aapka hissa bina atke pahunche.
+            Ek baat phir imandari se: kist release hona aur aapke khaate me paisa aana, do alag cheezein hain. eKYC adhoori ho, land seeding ya bank seeding me "No" dikh raha ho, to rakam release ke baad bhi ruki rehti hai — aur ye rukawat lakhon khaaton me hoti hai. Toh is page ka asli maqsad ab tareekh nahi, ye pakka karna hai ki ruka hua paisa kaise nikle. Neeche wohi checklist hai.
           </p>
         </section>
 
@@ -160,7 +160,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             {[
               { label: 'Kist', value: KIST.label },
               { label: 'Amount', value: KIST.amount },
-              { label: 'Expected', value: 'Oct 2026' },
+              { label: 'Released', value: '30 Oct 2026' },
               { label: 'Recipients', value: KIST.recipients },
             ].map(({ label, value }) => (
               <div key={label} className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-3 text-center">
@@ -206,7 +206,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
               </thead>
               <tbody>
                 {[
-                  { kist: '24vi', date: 'Oct 2026 (andaza)', venue: '—', status: 'Expected', upcoming: true },
+                  { kist: '24vi', date: '30/10/2026', venue: 'Banaskantha, Gujarat', status: 'Released' },
                   { kist: '23vi', date: '20/06/2026', venue: 'Tarakeswar, West Bengal', status: 'Released', highlight: true },
                   { kist: '22vi', date: '13/03/2026', venue: 'Guwahati, Assam', status: 'Released' },
                   { kist: '21vi', date: '19/11/2025', venue: 'Coimbatore, Tamil Nadu', status: 'Released' },
@@ -293,7 +293,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            Khet ka kaam rukta nahi. Pattern ke hisaab se agla transfer October 2026 ke aas-paas
+            Khet ka kaam rukta nahi. 24vi kist 30 October 2026 ko aa gayi — ab status check karke apna hissa pakka karo
           </p>
         </div>
 
@@ -467,7 +467,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
               <a href="https://pib.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in</a>
             </li>
             <li>
-              24vi kist expected timeline aur eKYC requirement. The Economic Times.{' '}
+              24vi kist ki date aur eKYC par release ke aas-paas ki reporting. The Economic Times.{' '}
               <a href="https://economictimes.indiatimes.com/wealth/save/pm-kisan-yojana-24th-instalment-date-prime-minister-kisan-samman-nidhi-yojana-eligibility-status-check-how-to-complete-e-kyc/articleshow/132411566.cms" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">economictimes.indiatimes.com</a>
             </li>
             <li>
@@ -475,8 +475,8 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
               <a href="https://pib.gov.in/factcheck.aspx" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in/factcheck</a>
             </li>
             <li>
-              24th installment abhi tak announce nahi hui (27 August 2026 tak). News18 Business.{' '}
-              <a href="https://www.news18.com/business/economy/pm-kisan-24th-installment-date-heres-how-to-complete-your-e-kyc-to-receive-next-tranche-of-rs-2000-10295886.html" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">news18.com</a>
+              24vi kist 30 October 2026 ko release — elaan aur release ki reporting. Jagran Josh.{' '}
+              <a href="https://www.jagranjosh.com/general-knowledge/pm-kisan-yojana-24th-installment-payment-status-check-online-steps-here-1820013456-2" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">jagranjosh.com</a>
             </li>
             <li>
               Payment tracking. Public Financial Management System.{' '}

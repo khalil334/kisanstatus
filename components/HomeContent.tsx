@@ -136,8 +136,8 @@ export default function HomeContent() {
             </h1>
 
             <p className="text-lg md:text-xl text-green-100 leading-relaxed mb-8 max-w-2xl mx-auto" itemProp="description">
-              PM Kisan Samman Nidhi ki <strong className="text-white">24vi kist October 2026</strong> mein
-              expected hai, ₹2,000 seedha bank account mein (DBT). Yahan se apna beneficiary status
+              PM Kisan Samman Nidhi ki <strong className="text-white">24vi kist 30 October 2026</strong> ko
+              release ho chuki hai, ₹2,000 seedha bank account mein (DBT). Yahan se apna beneficiary status
               check karein, eKYC poori karein, aur agar status mein{' '}
               <Link href="/articles/pm-kisan-fto-generated-ka-matlab-kya-hai" className="underline font-semibold text-white hover:text-green-200">
                 FTO generated

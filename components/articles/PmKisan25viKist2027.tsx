@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-07-06T00:30:35+05:30';
-const MODIFIED = '2026-09-01T17:23:51+05:30';
+const MODIFIED = '2026-10-31T10:00:00+05:30';
 
 const RELATED = [
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Ka Matlab' },
@@ -28,7 +28,7 @@ const FAQS_DATA = [
   },
   {
     q: '24vi nahi mili, kya 25vi milegi?',
-    a: 'Milni chahiye, lekin pehle ye pata karo ki 24vi kyun ruki. Zyadatar mamlo me wajah eKYC pending, bank me Aadhaar seeding na hona ya land record verify na hona hoti hai. Ye thik kiye bina agli wali bhi wahin atkegi. Ruki hui raqam baad me alag se credit ho jati hai, agar aap eligible ho.',
+    a: 'Milni chahiye, lekin pehle ye pata karo ki 24vi kyun ruki. 24vi kist 30 October 2026 ko Banaskantha (Gujarat) se release ho chuki hai — 9.34 crore se zyada parivaron ko kul ₹18,680 crore se zyada bheje gaye. Agar aapko nahi mili to zyadatar mamlo me wajah eKYC pending, bank me Aadhaar seeding na hona ya land record verify na hona hoti hai. Ye thik kiye bina agli wali bhi wahin atkegi. Ruki hui raqam baad me alag se credit ho jati hai, agar aap eligible ho.',
   },
   {
     q: 'Naye registration ki koi last date hai kya?',
@@ -83,11 +83,11 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-          Hum seedhi baat karenge. Sach ye hai ki 25vi wali abhi kisi ko nahi pata, na humein, na un YouTube channelo ko, na un websites ko. Sarkar mahino pehle kabhi kuch announce nahi karti. Zyadatar to release se ek-do hafte pehle hi khabar aati hai, aur kai bar to PM ke kisi event ke sath hi transfer ho jata hai. September 2026 shuru hone tak bhi haal yahi hai: pehle 24vi ka number lagega (jiski umeed October ke aas-paas ki hai), tabhi 25vi ki baat aage badhegi.
+          Hum seedhi baat karenge. Sach ye hai ki 25vi wali abhi kisi ko nahi pata, na humein, na un YouTube channelo ko, na un websites ko. Sarkar mahino pehle kabhi kuch announce nahi karti. Zyadatar to release se ek-do hafte pehle hi khabar aati hai, aur kai bar to PM ke kisi event ke sath hi transfer ho jata hai. Ab haal ye hai: 24vi kist 30 October 2026 ko Banaskantha (Gujarat) se release ho chuki hai, isliye 25vi hi agla number hai — lekin uski tareekh ka abhi koi elaan nahi hua.
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Aur ek zaruri baat, <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline font-medium">24vi kist</Link> khud abi tak nahi aayi. Jab usi ka intezaar chal raha hai, toh agli ki &quot;confirm tareekh&quot; batane wale khud soch lo kitne serious hain.
+          Aur ek zaruri baat, <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline font-medium">24vi kist</Link> 30 October 2026 ko aa chuki hai — 9.34 crore se zyada parivaron ko ₹18,680 crore se zyada mile. Ab 25vi ki &quot;confirm tareekh&quot; batane wale bhi wahi purana khel khel rahe hain, khud soch lo kitne serious hain.
         </p>
 
         <WB>
@@ -98,7 +98,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           <SH>Ab tak ka record, kya pakka hai, kya nahi</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Sabse imandaar tarika ye hai ki pichla record dekha jaye. 21vi, 22vi aur 23vi, tino aa chuki hain aur inki dates official record me hain. 24vi ka intzaar hai, jiska live update hum <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline">alag article</Link> mein rakhte hain.
+            Sabse imandaar tarika ye hai ki pichla record dekha jaye. 21vi, 22vi, 23vi aur ab 24vi — charo aa chuki hain aur inki dates official record me hain. 24vi ki poori detail hum <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline">alag article</Link> mein rakhte hain.
           </p>
 
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
@@ -115,8 +115,8 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
                   ['21vi', '19/11/2025', 'Aa chuki, ₹2,000 mila tha'],
                   ['22vi', '13/03/2026', 'Pichli wali ke kareeb 4 mahine baad aayi'],
                   ['23vi', '20/06/2026', 'Is baar gap sirf 3 mahine ka tha'],
-                  ['24vi', 'Umeed: Oct–Nov 2026', 'Abhi tak nahi aayi, intezaar chalu hai'],
-                  ['25vi', 'Uske 3-4 mahine baad', 'Door ki baat, pehle 24vi toh aa jaye'],
+                  ['24vi', '30/10/2026', 'Banaskantha (Gujarat) se release, 9.34 crore+ parivar, ₹18,680 crore+'],
+                  ['25vi', 'Uske 3-4 mahine baad', 'Ab 24vi aa chuki, 25vi hi agla number hai — date ka koi elaan nahi'],
                 ].map(([kist, date, note], i) => (
                   <tr key={kist} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{kist}</td>
@@ -133,7 +133,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
-            Isliye jo bhi confidently &quot;February pakka&quot; bol raha hai, wo bas pichla gap aage badha ke hisab laga raha hai. Hisab hum bhi laga sakte hain. Agar 24vi October-November ke aas pass aati hai, to agli uske teen-char mahine baad banti hai, matlab agle saal ki shuruaat ke aas pass. Lekin ye hisab hai, guarantee nahi. Farq samajhna zaruri hai.
+            Isliye jo bhi confidently &quot;February pakka&quot; bol raha hai, wo bas pichla gap aage badha ke hisab laga raha hai. Hisab hum bhi laga sakte hain. 24vi 30 October 2026 ko aa gayi, to agli uske teen-char mahine baad banti hai, matlab February–March 2027 ke aas-paas. Lekin ye hisab hai, guarantee nahi. Farq samajhna zaruri hai.
           </p>
         </section>
 
@@ -354,12 +354,32 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         <div className="my-8 p-6 bg-green-50 dark:bg-green-900/20 border-2 border-green-400 dark:border-green-700 rounded-2xl">
           <h3 className="font-black text-green-800 dark:text-green-300 text-lg mb-3">Sahi Hisaab. Ek Nazar Mein</h3>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed mb-3">
-            23vi aa chuki, 24vi ka intzaar hai. Matlab 25vi tak kam se kam do release cycles baki hain. Pichle gaps ke hisab se agle saal ki shuruaat se pehle umeed rakhna bekar hai, aur exact din ka to sawal hi nahi kyunki wo abi kisi ke pass nahi.
+            24vi 30 October 2026 ko aa chuki, isliye 25vi hi agla number hai. Pichle gaps (3–4 mahine) ke hisab se February–March 2027 ke aas-paas umeed banti hai — lekin ye sirf andaza hai, aur exact din ka to sawal hi nahi kyunki wo abhi kisi ke paas nahi.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
             Jo aapke hath me hai. EKYC, NPCI seeding, land record, naam ki spelling, wahi ₹2,000 atakne se bachayega. Guesswork se zyada kaam ka yahi hai. Koi dikkat ho to helpline <strong>155261</strong> pe sidha baat karo, WhatsApp forward pe nahi.
           </p>
         </div>
+
+        <section className="mb-8">
+          <SH>Sources</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Is update ki har nayi date aur figure inhi jagahon se milaayi gayi hai:
+          </p>
+          <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-2 list-disc pl-5">
+            <li>
+              24vi kist ki date ka elaan (23 October 2026) aur release (30 October 2026, Banaskantha, Gujarat). PM-KISAN official X account.{' '}
+              <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pmkisan.gov.in</a>
+            </li>
+            <li>
+              24vi kist ke aankde (9.34 crore+ parivar, ₹18,680 crore+). PIB press release aur Ministry of Agriculture ki release ke aas-paas ki reporting.{' '}
+              <a href="https://pib.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in</a>
+            </li>
+          </ul>
+          <p className="text-xs text-[var(--color-text-muted)] italic">
+            Aakhri baar in sab se milaan {fmtDate(MODIFIED)} ko kiya gaya. 25vi ki koi official date abhi nahi hai.
+          </p>
+        </section>
 
         <GovLink
           href="https://pmkisan.gov.in/BeneficiaryStatus.aspx"
