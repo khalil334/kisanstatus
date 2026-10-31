@@ -73,7 +73,7 @@ export const TOOLS = [
     border: 'border-green-200 dark:border-green-800',
     iconBg: 'bg-green-100 dark:bg-green-800 text-green-600 dark:text-green-300',
     title: 'PM Kisan Status',
-    desc: '24vi kist kab aayegi? Status check, eKYC, beneficiary list — sab yahan.',
+    desc: '24vi kist aa gayi hai. Status check, eKYC, beneficiary list — sab yahan.',
   },
   {
     href: '/articles/KisanCreditCardOnlineApply2026',
@@ -124,8 +124,8 @@ export const TOOLS = [
 
 export const FAQS = [
   {
-    question: 'PM Kisan 24vi kist kab aayegi 2026 mein?',
-    answer: 'PM Kisan ki 24vi kist October 2026 mein aane ki ummeed hai. Beneficiaries ko ₹2,000 seedha unke registered bank account mein Direct Benefit Transfer (DBT) ke through milenge. Apna status pmkisan.gov.in par check karein.',
+    question: 'PM Kisan 24vi kist kab aayi 2026 mein?',
+    answer: 'PM Kisan ki 24vi kist 30 October 2026 ko release ho chuki hai. ₹2,000 beneficiaries ke registered bank account mein Direct Benefit Transfer (DBT) ke through bheje gaye hain. Aapko paisa mila ya nahi, apna status pmkisan.gov.in par check karein.',
   },
   {
     question: 'PM Kisan status check kaise karein online?',
