@@ -243,7 +243,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     title: 'PM Kisan 24vi Kist Aa Gayi: 30 October Ko Release, Status Check Aur Paisa Na Aye To Kya Karein',
     desc: '24vi kist 30 October 2026 ko release ho gayi — 9.34 crore parivaron ko ₹2,000 bheje gaye. Paisa aaya ya nahi, status check aur atke paiso ka hal andar.',
     ogTitle: 'PM Kisan 24vi Kist Aa Gayi — 30 October Release',
-    seoTitle: 'PM Kisan 24vi Kist Aa Gayi: 30 October Ko Release, Status Check',
+    seoTitle: 'PM Kisan 24vi Kist: 30 Oct Ko Aa Gayi',
     keywords: [
       'pm kisan 24vi kist 2026',
       'pm kisan 24vi kist kab aayegi',

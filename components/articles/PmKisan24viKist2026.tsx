@@ -206,7 +206,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
               </thead>
               <tbody>
                 {[
-                  { kist: '24vi', date: '30/10/2026', venue: 'Banaskantha, Gujarat', status: 'Released' },
+                  { kist: '24vi', date: '30/10/2026', venue: 'Banaskantha, Gujarat', status: 'Released', upcoming: false },
                   { kist: '23vi', date: '20/06/2026', venue: 'Tarakeswar, West Bengal', status: 'Released', highlight: true },
                   { kist: '22vi', date: '13/03/2026', venue: 'Guwahati, Assam', status: 'Released' },
                   { kist: '21vi', date: '19/11/2025', venue: 'Coimbatore, Tamil Nadu', status: 'Released' },
