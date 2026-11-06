@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-07-06T00:30:35+05:30';
-const MODIFIED = '2026-10-31T10:00:00+05:30';
+const MODIFIED = '2026-11-06T21:00:00+05:30';
 
 const RELATED = [
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Ka Matlab' },
@@ -28,7 +28,7 @@ const FAQS_DATA = [
   },
   {
     q: '24vi nahi mili, kya 25vi milegi?',
-    a: 'Milni chahiye, lekin pehle ye pata karo ki 24vi kyun ruki. 24vi kist 30 October 2026 ko Banaskantha (Gujarat) se release ho chuki hai — 9.34 crore se zyada parivaron ko kul ₹18,680 crore se zyada bheje gaye. Agar aapko nahi mili to zyadatar mamlo me wajah eKYC pending, bank me Aadhaar seeding na hona ya land record verify na hona hoti hai. Ye thik kiye bina agli wali bhi wahin atkegi. Ruki hui raqam baad me alag se credit ho jati hai, agar aap eligible ho.',
+    a: 'Milni chahiye, lekin pehle ye pata karo ki 24vi kyun ruki. 24vi kist 30 October 2026 ko Banaskantha (Gujarat) se release ho chuki hai — 9.34 crore se zyada parivaron ko kul ₹18,690 crore se zyada bheje gaye. Agar aapko nahi mili to zyadatar mamlo me wajah eKYC pending, bank me Aadhaar seeding na hona ya land record verify na hona hoti hai. Ye thik kiye bina agli wali bhi wahin atkegi. Ruki hui raqam baad me alag se credit ho jati hai, agar aap eligible ho.',
   },
   {
     q: 'Naye registration ki koi last date hai kya?',
@@ -87,7 +87,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-6">
-          Aur ek zaruri baat, <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline font-medium">24vi kist</Link> 30 October 2026 ko aa chuki hai — 9.34 crore se zyada parivaron ko ₹18,680 crore se zyada mile. Ab 25vi ki &quot;confirm tareekh&quot; batane wale bhi wahi purana khel khel rahe hain, khud soch lo kitne serious hain.
+          Aur ek zaruri baat, <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline font-medium">24vi kist</Link> 30 October 2026 ko aa chuki hai — 9.34 crore se zyada parivaron ko ₹18,690 crore se zyada mile. Ab 25vi ki &quot;confirm tareekh&quot; batane wale bhi wahi purana khel khel rahe hain, khud soch lo kitne serious hain.
         </p>
 
         <WB>
@@ -115,7 +115,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
                   ['21vi', '19/11/2025', 'Aa chuki, ₹2,000 mila tha'],
                   ['22vi', '13/03/2026', 'Pichli wali ke kareeb 4 mahine baad aayi'],
                   ['23vi', '20/06/2026', 'Is baar gap sirf 3 mahine ka tha'],
-                  ['24vi', '30/10/2026', 'Banaskantha (Gujarat) se release, 9.34 crore+ parivar, ₹18,680 crore+'],
+                  ['24vi', '30/10/2026', 'Banaskantha (Gujarat) se release, 9.34 crore+ parivar, ₹18,690 crore+'],
                   ['25vi', 'Uske 3-4 mahine baad', 'Ab 24vi aa chuki, 25vi hi agla number hai — date ka koi elaan nahi'],
                 ].map(([kist, date, note], i) => (
                   <tr key={kist} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
@@ -134,6 +134,10 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Isliye jo bhi confidently &quot;February pakka&quot; bol raha hai, wo bas pichla gap aage badha ke hisab laga raha hai. Hisab hum bhi laga sakte hain. 24vi 30 October 2026 ko aa gayi, to agli uske teen-char mahine baad banti hai, matlab February–March 2027 ke aas-paas. Lekin ye hisab hai, guarantee nahi. Farq samajhna zaruri hai.
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Ek aur hisaab is andaze ko aur pakka karta hai. Scheme me saal ke teen period hote hain: April–July, August–November aur December–March. 24vi August–November wale period ki kist thi. Is hisaab se 25vi December 2026–March 2027 wale period ki banti hai, aur is period ki kist pichhle saal bhi March me aayi thi (22vi, 13 March 2026). Phir bhi aakhri baat wahi hai: 6 November 2026 tak sarkar ne 25vi ki koi date announce nahi ki hai — na PIB par, na portal par. Haan, ek bada aankda aur jud gaya hai: 24 kiston me milakar ab tak ₹4.64 lakh crore se zyada seedha kisanon ke khaaton me ja chuka hai.
           </p>
         </section>
 
@@ -305,6 +309,10 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Isi hafte ki taza misal dekh lo. YouTube par video ghum rahi hain: &quot;₹4,000 ki 25vi kist jaari ho gayi&quot;, &quot;25vi ki date fix&quot;. Dono daawe jhoothe hain. Rakam aaj bhi ₹2,000 hi hai aur 25vi abhi jaari nahi hui. PIB Fact Check aisi hi ek ₹4,000 wali video ko pehle bhi farzi qarar de chuka hai. Thumbnail par &quot;confirm&quot; likha dekh lene se khabar confirm nahi ho jati.
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Isliye ek simple rule bana lo. Koi bhi aisi khabar mile, chahe YouTube se, WhatsApp se, kisi website se. To 30 second nikal ke do jagah dekho: <strong>pmkisan.gov.in</strong> aur <strong>PIB ki press release</strong>. In dono me se kahin nahi hai, matlab khabar jhuti hai. Itna simple.
           </p>
 
@@ -372,7 +380,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
               <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pmkisan.gov.in</a>
             </li>
             <li>
-              24vi kist ke aankde (9.34 crore+ parivar, ₹18,680 crore+). PIB press release aur Ministry of Agriculture ki release ke aas-paas ki reporting.{' '}
+              24vi kist ke aankde (9.34 crore+ parivar, ₹18,690 crore+). PIB press release, Ministry of Agriculture & Farmers Welfare (PRID 2330171, 29 October 2026).{' '}
               <a href="https://pib.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in</a>
             </li>
           </ul>

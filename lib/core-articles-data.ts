@@ -419,7 +419,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKisan25viKist2027',
     category: 'status-check',
     publishedTime: '2026-07-06T00:30:35+05:30',
-    modifiedTime: '2026-10-31T10:00:00+05:30',
+    modifiedTime: '2026-11-06T21:00:00+05:30',
     readingTime: 8,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKisan25viKist2027'),
