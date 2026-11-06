@@ -4,7 +4,7 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-07-09T05:57:50+05:30';
-const MODIFIED = '2026-08-18T20:00:37+05:30';
+const MODIFIED = '2026-11-07T00:25:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanEkycOnline2026', title: 'eKYC Guide' },
@@ -15,7 +15,7 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'eKYC ek baar kar li thi. Phir se karni padegi kya?',
-    a: 'Haan, ab eKYC har saal karni hai. 2026 se sarkar ne saaf kar diya hai ki beneficiaries ko saalana biometric ya face eKYC karni hogi. Pichle saal ki eKYC agli kist ke liye kaafi nahi hai. 2026 ke audit me 1.13 crore se zyada naam list se hataye gaye the, jisme adhoora eKYC bada kaaran tha. Toh har kist se pehle ek baar status check kar lo.',
+    a: 'Haan, ab eKYC har saal karni hai. 2026 se sarkar ne saaf kar diya hai ki beneficiaries ko saalana biometric ya face eKYC karni hogi. Pichle saal ki eKYC agli kist ke liye kaafi nahi hai. Sakht verification ki wajah se saalon mein kul lagbhag 1.17 crore naam list se kam hue hain, aur adhoori eKYC iski badi wajah hai. Toh har kist se pehle ek baar status check kar lo.',
   },
   {
     q: 'Bina OTP ke eKYC sach mein ho jaati hai?',
@@ -312,16 +312,17 @@ export default function PmKisanFaceAuthenticationEkyc() {
             se apni pehchaan dobara verify karni hogi, warna agli kist atak sakti hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Ye niyam kitna serious hai, iska andaza is baat se lagao: 2026 ke audit me{' '}
-            <strong>1.13 crore se zyada naam</strong> beneficiary list se hataye gaye, adhoora eKYC, land record
+            Ye niyam kitna serious hai, iska andaza is baat se lagao: sakht jaanch ki wajah se saalon mein
+            kul <strong>lagbhag 1.17 crore naam</strong> list se kam hue — adhoori eKYC, land record
             mismatch aur ineligibility ke chakkar me. Matlab jo log "ho jayega baad me" bol ke taalte rahe,
             unme se lakhon ki kist ruk gayi.
           </p>
           <IB>
-            <strong>Timing ka funda:</strong> Agli (24vi) kist <Link href="/articles/PmKisan24viKist2026" className="underline font-semibold">October 2026 me expected</Link> hai.
-            eKYC abhi karwa lo. August-September me CSC khali milte hain, October me release ke aas-paas
-            har center pe bheed hoti hai aur portal bhi slow chalta hai. 10 minute ka kaam hai, kist ke
-            ₹2,000 daav pe mat lagao.
+            <strong>Timing ka funda:</strong> 24vi kist 30 October 2026 ko aa chuki hai —{' '}
+            <Link href="/articles/PmKisan24viKist2026" className="underline font-semibold">9.34 crore se zyada kisano ko ₹18,690 crore se zyada</Link>{' '}
+            bheje gaye. Agli (25vi) kist ki abhi koi official date nahi hai, isliye eKYC abhi se complete
+            rakho. Kist ki khabar aate hi CSC par bheed badh jati hai aur portal bhi slow chalta hai.
+            10 minute ka kaam hai, kist ke ₹2,000 daav pe mat lagao.
           </IB>
         </section>
 

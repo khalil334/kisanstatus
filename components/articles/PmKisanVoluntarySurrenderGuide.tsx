@@ -4,7 +4,7 @@ import { SI, StepList, IB, WB, DB, SH, GovLink, RelatedArticles, AuthorBox, Bott
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-07-09T06:01:36+05:30';
-const MODIFIED = '2026-07-28T14:26:44+05:30';
+const MODIFIED = '2026-11-07T00:25:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
@@ -15,7 +15,7 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Sarkar sach mein pakadti hai kya? Ya bas dar dikhaya jata hai?',
-    a: 'Sach mein pakadti hai. Ab tak ineligible logon se ₹416 crore se zyada ki recovery ho chuki hai. Bihar jaise state me 13 lakh se zyada log ineligible mile, zyadatar Aadhaar-ration card matching se pakde gaye, jisme ek hi parivar ke kai log paisa le rahe the. System ab data se cross-check karta hai, toh chupne ka scope pehle jaisa nahi raha.',
+    a: 'Sach mein pakadti hai. December 2025 tak ineligible logon se ₹416.75 crore ki recovery ho chuki hai. Bihar mein September 2023 tak 81,595 kisan ineligible paye gaye the — 45,879 income tax bharne wale aur 35,716 doosri wajah se — aur lagbhag ₹81.6 crore ki refund maangi gayi thi, jisme se tab tak ₹10.3 crore vasool ho chuka tha. System ab data se cross-check karta hai, toh chupne ka scope pehle jaisa nahi raha.',
   },
   {
     q: 'Zameen dada/pita ke naam hai, kheti main karta hoon, mujhe surrender karna padega?',
@@ -341,9 +341,9 @@ export default function PmKisanVoluntarySurrenderGuide() {
             "Koi nahi dekh raha, chalne do" waali soch ab 2026 me kaam nahi karegi. Verified aankde dekho:
           </p>
           <ul className="space-y-2 mb-4 text-sm text-[var(--color-text-muted)]">
-            <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>₹416 crore+ ki recovery</strong> ho chuki hai ineligible beneficiaries se. Yeh dhamki nahi, ho chuka kaam hai.</li>
-            <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>Bihar me 13 lakh+ log ineligible</strong> paye gaye (~₹780 crore galat haath me gaya). Aadhaar-ration card matching se pakde gaye, jisme ek parivar ke kai members paisa le rahe the.</li>
-            <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>2026 ke audit me 1.13 crore+ naam</strong> beneficiary list se hataye gaye, eKYC, land record aur taxpayer cross-check se.</li>
+            <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>December 2025 tak ₹416.75 crore ki recovery</strong> ho chuki hai ineligible beneficiaries se. Yeh dhamki nahi, ho chuka kaam hai.</li>
+            <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>Bihar me 81,595 kisan ineligible</strong> paye gaye the (September 2023 tak) — lagbhag ₹81.6 crore ki refund maangi gayi thi. Income tax aur doosri wajah se pakde gaye the, jisme ek parivar ke kai members paisa le rahe the.</li>
+            <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>Sakht verification se saalon mein kul lagbhag 1.17 crore naam</strong> list se kam hue — eKYC, land record aur taxpayer cross-check ki wajah se.</li>
             <li className="flex gap-2"><span className="text-red-600 shrink-0 font-bold" aria-hidden="true">→</span> <strong>March 2026 se land-ownership rule:</strong> zameen ke kagaz apne naam hone zaroori hain. Purkhon ke naam waali zameen pe bina mutation ke benefit band ho sakta hai.</li>
           </ul>
           <IB>
