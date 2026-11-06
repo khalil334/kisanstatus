@@ -45,6 +45,30 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisan24viKist2026'],
   },
   {
+    slug: 'west-bengal-mukhyamantri-krishak-samman-nidhi',
+    mainKeyword: 'west bengal mukhyamantri krishak samman nidhi',
+    secondaryKeywords: [
+      'mukhyamantri krishak samman nidhi west bengal',
+      'west bengal kisan samman nidhi 3000',
+      'krishak bandhu new name mksn',
+      'west bengal pm kisan top up 3000',
+      'mksn first installment 2000 5 november',
+      'krishak bandhu 6000 4000',
+    ],
+    title: 'West Bengal MKSN: PM Kisan Par ₹3,000 Extra',
+    description:
+      'Krishak Bandhu ab Mukhyamantri Krishak Samman Nidhi hai — PM Kisan walon ko saal ke ₹3,000 extra, pehli kist ₹2,000. Kaun eligible hai, kab milega, aur kya abhi pakka nahi hai.',
+    ogTitle: 'WB MKSN: ₹3,000 Extra, Pehli Kist 5 Nov',
+    component: 'WestBengalMukhyamantriKrishakSammanNidhi',
+    state: 'West Bengal',
+    officialPortal: 'https://krishakbandhu.wb.gov.in',
+    status: 'live',
+    published: '2026-11-06T13:13:00+05:30',
+    modified: '2026-11-06T13:13:00+05:30',
+    readTime: '11 min read',
+    relatedPaths: ['/articles/PmKisan24viKist2026', '/articles/PmKisanMasterGuide2026', '/rajya-yojana/state-kisan-yojana-list-all-states-2026'],
+  },
+  {
     slug: 'annadata-sukhibhava-status-check-2026',
     mainKeyword: 'annadata sukhibhava status check',
     secondaryKeywords: [

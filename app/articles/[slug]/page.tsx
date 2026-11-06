@@ -176,6 +176,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   KisanCreditCardOnlineApply2026: dynamic(() => import('@/components/articles/KisanCreditCardOnlineApply2026'), { ssr: true }),
   NanoDap500mlPriceInIndia2026: dynamic(() => import('@/components/articles/NanoDap500mlPriceInIndia2026'), { ssr: true }),
   PmKisan24viKist2026: dynamic(() => import('@/components/articles/PmKisan24viKist2026'), { ssr: true }),
+  PmKisanExtension2031: dynamic(() => import('@/components/articles/PmKisanExtension2031'), { ssr: true }),
   AgriStackKyaHai2026: dynamic(() => import('@/components/articles/AgriStackKyaHai2026'), { ssr: true }),
   PmKisanMasterGuide2026: dynamic(() => import('@/components/articles/PmKisanMasterGuide2026'), { ssr: true }),
   'pm-kisan-fto-generated-ka-matlab-kya-hai': dynamic(() => import('@/components/articles/pm-kisan-fto-generated-ka-matlab-kya-hai'), { ssr: true }),

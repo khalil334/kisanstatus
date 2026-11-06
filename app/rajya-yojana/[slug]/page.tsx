@@ -31,6 +31,7 @@ import OdishaCmKisanStatusCheck from '@/components/articles/rajya-yojana/OdishaC
 import PmKisanPatiPatniRule from '@/components/articles/rajya-yojana/PmKisanPatiPatniRule';
 import StateKisanYojanaHub from '@/components/articles/rajya-yojana/StateKisanYojanaHub';
 import PariharaPaymentStatusCheck2026 from '@/components/articles/rajya-yojana/PariharaPaymentStatusCheck2026';
+import WestBengalMukhyamantriKrishakSammanNidhi from '@/components/articles/rajya-yojana/WestBengalMukhyamantriKrishakSammanNidhi';
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: RajyaYojanaArticleMeta }>> = {
   RajasthanKisanSammanNidhi9000,
@@ -42,6 +43,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: RajyaYojanaArtic
   PmKisanPatiPatniRule,
   StateKisanYojanaHub,
   PariharaPaymentStatusCheck2026,
+  WestBengalMukhyamantriKrishakSammanNidhi,
 };
 
 function buildSchemas(

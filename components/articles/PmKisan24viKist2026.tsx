@@ -18,7 +18,7 @@ const KIST = {
 };
 
 const PUBLISHED = '2026-06-24T16:27:03+05:30';
-const MODIFIED = '2026-10-31T09:15:00+05:30';
+const MODIFIED = '2026-11-06T13:13:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisan25viKist2027', title: '25vi Kist Date & Amount' },
@@ -29,7 +29,7 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Kya sarkar ne is baar ki date bata di hai?',
-    a: 'Haan. PM Kisan ke official X account par 23 October 2026 ko elaan hua tha ki 24vi kist 30 October ko release hogi. Phir 30 October 2026 ko Banaskantha (Gujarat) ke karyakram se kist release ho gayi — 9.34 crore se zyada parivaron ko kul ₹18,680 crore se zyada bheje gaye. Aapko paisa mila ya nahi, ye status se pata chalega; neeche tareeka diya hai.',
+    a: 'Haan. PM Kisan ke official X account par 23 October 2026 ko elaan hua tha ki 24vi kist 30 October ko release hogi. Phir 30 October 2026 ko Banaskantha (Gujarat) ke karyakram se kist release ho gayi — 9.34 crore se zyada parivaron ko kul ₹18,690 crore se zyada bheje gaye. Aapko paisa mila ya nahi, ye status se pata chalega; neeche tareeka diya hai.',
   },
   {
     q: '25vi kist ab kab aayegi?',
@@ -138,7 +138,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             30 October 2026 ko 24vi kist release ho gayi hai. Bas, yehi pakki baat hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            <strong>Aaj tak ka update ({fmtDate(MODIFIED)}):</strong> PM Kisan ke official X account ne 23 October 2026 ko elaan kiya tha ki 24vi kist 30 October ko aayegi. 30 October ko Banaskantha (Gujarat) ke karyakram se kist release ho gayi — 9.34 crore se zyada parivaron ke khaaton me kul ₹18,680 crore se zyada bheje gaye (PIB aur news reports ke mutabiq). Paisa khaate me dikhne me aam taur par 1–3 din lag jate hain, isliye agar abhi balance nahi badha to pehle status check karke dekho ki payment success hua hai ya kahin atka hai. Neeche poora tareeka aur atke hue paiso ki checklist di hai.
+            <strong>Aaj tak ka update ({fmtDate(MODIFIED)}):</strong> PM Kisan ke official X account ne 23 October 2026 ko elaan kiya tha ki 24vi kist 30 October ko aayegi. 30 October ko Banaskantha (Gujarat) ke karyakram se kist release ho gayi — 9.34 crore se zyada parivaron ke khaaton me kul ₹18,690 crore se zyada bheje gaye (PIB ke mutabiq). Iske saath kul 24 kiston me ₹4.64 lakh crore se zyada baanta ja chuka hai. Paisa khaate me dikhne me aam taur par 1–3 din lag jate hain, isliye agar abhi balance nahi badha to pehle status check karke dekho ki payment success hua hai ya kahin atka hai. Neeche poora tareeka aur atke hue paiso ki checklist di hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Is baar hisaab bilkul seedha baitha. Pichhla transfer 20/06/2026 ko hua tha — Tarakeswar (Hooghly, West Bengal) ke event se PM ne button dabaya aur 9.44 crore parivaron ko kul ₹18,880 crore gaye. Usse pehle wala 13 March ko Guwahati se. Beech ka fasla is baar bhi lagbhag chaar mahine ka raha, aur 24vi kist <strong>30 October 2026</strong> ko Banaskantha se release hui. Matlab pattern kaam ka tha, lekin aakhri shabd hamesha sarkar ke elaan ka hi hota hai — isiliye is page par andaza aur elaan hamesha alag-alag likhe gaye hain.
@@ -151,7 +151,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <section className="mb-8">
           <SH>Scheme Naye Ho Toh 30 Second Ka Recap</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            PM Kisan Samman Nidhi February 2019 se chal rahi hai. Har eligible kisan parivar ko saal ke ₹6,000 milte hain. Teen baar me, ₹2,000 karke, seedha account me. Na koi agent beech me, na office ka chakkar (agar kagaz durust hon). 22vi tak sarkar ₹4.27 lakh crore se jyada baant chuki thi, har round me 9 crore se upar parivar.
+            PM Kisan Samman Nidhi February 2019 se chal rahi hai. Har eligible kisan parivar ko saal ke ₹6,000 milte hain. Teen baar me, ₹2,000 karke, seedha account me. Na koi agent beech me, na office ka chakkar (agar kagaz durust hon). 24vi kist ke saath sarkar kul ₹4.64 lakh crore se zyada baant chuki hai, har round me 9 crore se upar parivar.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Itne bade scale ka ek side effect bhi hai — jis din amount nikalta hai, site par itni bheed hoti hai ki apna record kholna mushkil ho jata hai. Iska tod bhi aage bataya hai.
@@ -170,7 +170,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             ))}
           </div>
           <p className="text-xs text-[var(--color-text-muted)]">
-            Recipients ka figure 23vi ke official aankde par based hai. Is baar ka final number release ke din hi pata chalega.
+            Recipients ka figure 24vi kist ke release-day ka official aankda hai — 9.34 crore se zyada parivar (PIB).
           </p>
         </section>
 
@@ -237,7 +237,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             Table ko dhyan se dekhiye, venue har baar alag state me hai. Bihar, UP, Tamil Nadu, Assam, Bengal. Matlab ye kisi fixed calendar par nahi chalta, kisi na kisi bade karyakram ke saath hota hai. Isiliye tareekh aakhri hafte tak hawa me latki rehti hai. 23vi ki bhi bas chaar din pehle confirm hui thi.
           </p>
           <IB>
-            <strong>Dhyan rahe:</strong> October pichhle gaps se nikla anumaan hai, koi sarkari notification nahi. pmkisan.gov.in par notice aane par hi pakka maaniye. YouTube channel chahe kitna bada ho.
+            <strong>Dhyan rahe:</strong> 24vi kist 30 October 2026 ko release ho chuki hai. Agli kist (25vi) ki koi official date abhi nahi hai — andaze par bharosa mat kijiye. pmkisan.gov.in par notice aane par hi pakka maaniye. YouTube channel chahe kitna bada ho.
           </IB>
         </section>
 
@@ -465,6 +465,10 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             <li>
               23vi kist release (20 June 2026, ₹18,880 crore, 9.44 crore parivar). PIB press release, Ministry of Agriculture &amp; Farmers Welfare.{' '}
               <a href="https://pib.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in</a>
+            </li>
+            <li>
+              24vi kist — ₹18,690 crore se zyada, 9.34 crore se zyada parivar, 30 October 2026. PIB press release, Ministry of Agriculture &amp; Farmers Welfare.{' '}
+              <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2330171" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in (PRID 2330171)</a>
             </li>
             <li>
               24vi kist ki date aur eKYC par release ke aas-paas ki reporting. The Economic Times.{' '}

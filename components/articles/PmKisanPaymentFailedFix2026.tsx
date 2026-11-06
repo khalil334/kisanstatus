@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-07-06T00:28:21+05:30';
-const MODIFIED = '2026-08-09T13:51:29+05:30';
+const MODIFIED = '2026-11-06T13:13:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -29,6 +29,10 @@ const FAQS_DATA = [
   {
     q: 'Status mein approved dikh raha hai par paisa nahi aaya, kya hua?',
     a: 'Approved ka matlab sirf itna hai ki government ne aapka naam clear kar diya aur paisa release kar diya. Aage ka kaam bank ka hai. Zyadatar cases mein Aadhaar NPCI seeding missing hoti hai. Branch jao, "DBT seeding" karwao, 3-7 din wait karo.',
+  },
+  {
+    q: 'Status me sab theek hai par kist ruki hui hai — kya physical verification ki wajah se?',
+    a: 'Ho sakta hai. Portal par likha hai ki shak wale cases ka benefit physical verification poori hone tak roka ja raha hai, jaise 01-02-2019 ke baad zameen khareedi ho ya parivar ke ek se zyada sadasya fayda le rahe hon. Ye bank ki galti nahi hai, isliye seeding ya IFSC theek karne se nahi khulega. Know Your Status se apna record dekhiye aur portal par bataye gaye Kisan eMitra se sampark kijiye.',
   },
   {
     q: 'Kitne din mein payment fix hoti hai bank jaane ke baad?',
@@ -343,6 +347,22 @@ export default function PmKisanPaymentFailedFix2026({ article }: { article: Arti
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
             Maan lo teen kistein fail hui thi. Toh fix hone ke baad teeno ka paisa ek saath aa sakta hai, ya kabhi kabhi alag-alag transaction mein bhi aata hai. Agar ek kist aayi aur baaki nahi aayi, ghabrao mat, kuch din aur ruk jaao.
           </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Benefit Roka Gaya Ho To: Physical Verification Wala Mamla</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Upar wali wajahen bank se judti hain. Ek wajah aisi bhi hai jo bank se nahi, scheme se judti hai. pmkisan.gov.in ke homepage par ek note likha hai: shak wale cases ka benefit tab tak roka ja raha hai jab tak physical verification poori na ho jaye. Matlab paisa bank tak pahuncha hi nahi, use scheme ne pehle hi rok diya.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Aise cases me do baatein dekhi ja rahi hain. Pehli, 01-02-2019 ke baad zameen khareedi gayi ho. Doosri, ek hi parivar ke ek se zyada sadasya fayda le rahe hon, jaise pati aur patni dono. Portal par likha hai ki aise kisano ko Know Your Status se apna record dekhna chahiye aur Kisan eMitra se sampark karna chahiye.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ise pehchanne ka tareeka ye hai: agar status me koi bank error nahi dikh raha, eKYC aur seeding bhi theek hai, phir bhi kist nahi aayi, to yehi wajah ho sakti hai. Iska fix bank jaakar nahi hoga, kyunki bank ke paas rokne ya chhodne ka faisla nahi hai. Verification poori hone ke baad hi benefit dobara shuru hoga, aur ruki hui rakam tab milegi jab case clear hoga.
+          </p>
+          <IB>
+            <strong>Bank failure se fark:</strong> Payment failed me paisa bank ne wapas kiya hota hai, seeding ya account theek karte hi agli cycle me aa jaata hai. Yahan paisa bheja hi nahi gaya, isliye bank jaane se kuch nahi hoga — verification ka intezaar karna padega.
+          </IB>
         </section>
 
         <section className="mb-8">
