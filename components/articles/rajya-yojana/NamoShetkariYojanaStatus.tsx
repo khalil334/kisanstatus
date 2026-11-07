@@ -36,8 +36,8 @@ const FAQS_DATA = [
     a: 'Jo sadasya kendriya list mein registered hai, paisa usi ke account mein aayega. Joint 7/12 mein har hissedaar apna judaa panjikaran karwa sakta hai agar uska hissa record mein alag darj hai. Bina batwara ke ek hi entry chalti hai.',
   },
   {
-    q: 'Hapta aadha aaya, ₹3,000 ki jagah kam amount dikha, aisa kyun?',
-    a: 'Hapta fixed ₹3,000 hai. Kam aata hi nahi. Kam dikha? Wo kisi aur scheme ki entry hai; passbook mein transaction ka naam dekho.',
+    q: 'Hapta ₹2,000 ki jagah kam dikha, aisa kyun?',
+    a: 'Hapta fixed ₹2,000 hai. Poora ₹2,000 aaya to wahi ek kist hai, aadha nahi. Kam dikha? Wo kisi aur scheme ki entry hogi; passbook mein transaction ka naam dekh kar pehchano kaun si kist aayi hai.',
   },
 ];
 
@@ -59,10 +59,11 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         jaane ki wajahein, bina ghumaye, jaise koi apna hi samjha raha ho.
       </p>
 
-      <InfoBox type="update" date="04/08/2026">
-        <strong>Latest Update:</strong> Agle hapte ki koi official release date announce nahi hui hai.
-        Maharashtra sarkar ne saaf kiya hai ki kendriya list ke eligible annadata ko judaa apply
-        nahi karna hai. Paisa nahi aaya hai to neeche diye tareeke se apna{' '}
+      <InfoBox type="update" date="07/11/2026">
+        <strong>Latest Update:</strong> 8vi kist March 2026 mein khaaton mein aa chuki hai.
+        9vi aur 10vi kist abhi pending hain, koi official date announce nahi hui. Diwali se
+        pehle wala ₹5,000 drought relief hai, Namo Shetkari ki kist nahi. Paisa nahi aaya hai
+        to neeche diye tareeke se apna{' '}
         <strong>namo shetkari yojana status check</strong> kar lein.
       </InfoBox>
 
@@ -106,21 +107,24 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         Ek chhoti si cheez jo bahut confusion bachati hai: dono schemes ka paisa ek hi
         account mein aata hai, lekin entries judaa naam se aati hain. Kendriya entry mein
         "PMKISAN" ka reference hota hai. Rajya wali entry treasury se aati hai
-        aur usme "NSMNY" ya Mahait/treasury ka code dikhta hai. Raqam se bhi farak saaf
-        hai: kendra wali ₹2,000 hoti hai, pradesh wali ₹3,000.
+        aur usme "NSMNY" ya Mahait/treasury ka code dikhta hai. Raqam se farak nahi pata
+        chalta: kendra wali bhi ₹2,000 hoti hai, pradesh wali bhi ₹2,000. Naam aur code hi
+        pehchan hai.
       </p>
 
       <p>
         Isliye jab koi kahe "paisa aa gaya", toh pehle entry dekh lein, kaun si aayi
-        hai? Aadhi shikayatein sirf is galatfehmi ki hoti hain: ₹2,000 aaya, log samajh
-        lete hain poori payment aa gayi, jabki pradesh ke ₹3,000 abhi pipeline mein hote
-        hain. Mobile banking ya SMS alert mein bhi yahi codes dikhte hain.
+        hai? Dono kistein ₹2,000 ki hoti hain, is liye raqam se farak nahi pata chalta,
+        sirf naam ya code se pata chalta hai. Aadhi shikayatein sirf is galatfehmi ki
+        hoti hain: ek ₹2,000 aaya, log samajh lete hain poori payment aa gayi, jabki
+        doosri kist abhi pipeline mein hoti hai. Mobile banking ya SMS alert mein bhi
+        yahi codes dikhte hain.
       </p>
 
       <h2>Scheme Kaam Kaise Karti Hai, Aur Kitna Paisa Banta Hai</h2>
 
       <p>
-        Namo Shetkari Mahasanman Nidhi Maharashtra sarkar ki ek flagship yojana hai. Iska seedha connection PM Kisan Samman Nidhi se hai. Agar aap us kendriya list ke eligible laabharthi hain, toh pradesh aapko har saal extra ₹6,000 deta hai. Ye raashi do kiston (installments) mein ₹3,000-₹3,000 karke di jaati hai.
+        Namo Shetkari Mahasanman Nidhi Maharashtra sarkar ki ek flagship yojana hai. Iska seedha connection PM Kisan Samman Nidhi se hai. Agar aap us kendriya list ke eligible laabharthi hain, toh pradesh aapko har saal extra ₹6,000 deta hai. Ye raashi teen kiston mein ₹2,000-₹2,000 karke di jaati hai, kendra ki kiston ke hi chaar-mahine wale pattern par.
       </p>
 
       <p>
@@ -143,13 +147,13 @@ export default function NamoShetkariYojanaStatusCheck2026() {
         <tr>
           <td>Namo Shetkari Mahasanman Nidhi</td>
           <td>₹6,000</td>
-          <td>2 × ₹3,000</td>
+          <td>3 × ₹2,000</td>
           <td>Maharashtra State Government</td>
         </tr>
         <tr>
           <td><strong>Total Combined Benefit</strong></td>
           <td><strong>₹12,000</strong></td>
-          <td><strong>5 Installments</strong></td>
+          <td><strong>6 Installments</strong></td>
           <td><strong>Combined</strong></td>
         </tr>
       </SchemeTable>
@@ -231,13 +235,18 @@ export default function NamoShetkariYojanaStatusCheck2026() {
           <th>Status</th>
         </tr>
         <tr>
-          <td>1st Installment</td>
-          <td>March - April 2026</td>
-          <td>Released</td>
+          <td>8th Installment</td>
+          <td>Aug - Nov 2025</td>
+          <td>Released, March 2026</td>
         </tr>
         <tr>
-          <td>2nd Installment</td>
-          <td>Date announce nahi hui</td>
+          <td>9th Installment</td>
+          <td>Dec 2025 - Mar 2026</td>
+          <td>Pending</td>
+        </tr>
+        <tr>
+          <td>10th Installment</td>
+          <td>Apr - Jul 2026</td>
           <td>Pending</td>
         </tr>
       </SchemeTable>
@@ -247,12 +256,22 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       </InfoBox>
 
       <p>
-        9va hapta (9th instalment) kab aayega. Yeh sawaal aajkal sabse zyada
-        poochha ja raha hai. Haan, yaad aaya, yojana 2023 se chal rahi hai, har saal do-teen kist aati hain, toh
-        ginti ab aage badh chuki hai. Official date sirf sarkari site aur announcement se
-        confirm hoti hai. Aur pichhla pattern yahi raha hai ki naya hissa kendriya latest
-        kist ke kuch hafte baad aata hai. Jaanch ka tareeka har baar same rehta
-        hai. Neeche wale steps follow karein.
+        8vi kist March 2026 ke aakhri hafte mein khaaton mein gayi thi: GR ke mutaabik
+        ₹1,774 crore manzoor hue the aur 89.75 lakh kisanon ko paisa mila. Uske baad se
+        do kistein ruki hui hain — 9vi, jo December 2025 se March 2026 ki avadhi ki hai,
+        aur 10vi, jo April se July 2026 ki avadhi ki hai. Matlab har eligible kisan ke
+        ₹4,000 abhi pending hain, aur 7 November 2026 tak inme se kisi ki bhi official
+        date announce nahi hui hai.
+      </p>
+
+      <p>
+        Deri ki ek wajah bhi saamne aayi hai. Sarkar is yojana ko Punyashlok Ahilyadevi
+        Holkar farm loan waiver se jodne par vichaar kar rahi hai, aur June mein manzoor
+        Cabinet note ke mutaabik loan waiver ke ek hisse ki bharpaai isi yojana se karne
+        ki baat hai. Is beech Diwali se pehle 304 drought-affected tehsilon mein ₹5,000
+        ka jo advance diya ja raha hai, wo alag rahat hai — Namo Shetkari ki kist nahi.
+        Dono ko ek na samjhein. Paisa aaya ya nahi, ye jaanchne ka tareeka wahi hai:
+        neeche wale steps follow karein.
       </p>
 
       <h2>Sthiti Kaise Dekhein</h2>
@@ -466,6 +485,20 @@ export default function NamoShetkariYojanaStatusCheck2026() {
       <InfoBox type="tip">
         <strong>Fraud se bachein:</strong> Is yojana mein bharne ke liye koi form hi nahi hai, is liye "registration karwa dunga" ya "hapta jaldi nikalwa dunga" kehne wala har aadmi jhooth bol raha hai. Sthiti dekhna, e-KYC aur 7/12 correction. Sab sarkari raste se free hote hain. Aisi demand par apne Taluka Krishi Adhikari (TAO) office mein ya Maharashtra ke Anti-Corruption Bureau ki helpline <strong>1064</strong> par shikayat darj karwaayein.
       </InfoBox>
+
+      <h2>Sources</h2>
+
+      <p>
+        Neeche wahi jagahen hain jahan se is update ki har date aur figure li gayi hai.
+        Aakhri baar 7 November 2026 ko milaan kiya gaya:
+      </p>
+
+      <ul>
+        <li><a href="https://indianexpress.com/article/cities/mumbai/namo-scheme-instalments-release-maharashtra-drought-aid-10927997/" target="_blank" rel="noopener noreferrer">The Indian Express, 19 October 2026 — do kistein pending (₹4,000), loan waiver se jodne par vichaar, ₹5,000 drought relief alag</a></li>
+        <li><a href="https://www.lokmattimes.com/national/8th-shetkari-mahasanman-nidhi-instalment-next-week-maha-minister/" target="_blank" rel="noopener noreferrer">IANS via Lokmat Times, 18 March 2026 — 8vi kist ka GR, ₹1,774 crore manzoor, Aug–Nov 2025 ki avadhi</a></li>
+        <li><a href="https://sarkariyojana.com/namo-shetkari-maha-samman-nidhi-yojana/" target="_blank" rel="noopener noreferrer">sarkariyojana.com — 8vi kist mein 89,75,298 kisan; 24 October 2026 tak 9vi ki date announce nahi hui</a></li>
+        <li><a href="https://nsmny.mahait.org" target="_blank" rel="noopener noreferrer">nsmny.mahait.org — Official portal, status check</a></li>
+      </ul>
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">

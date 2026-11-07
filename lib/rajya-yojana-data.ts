@@ -146,7 +146,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     officialPortal: 'https://nsmny.mahait.org',
     status: 'live',
     published: '2026-08-03T20:56:16+00:00',
-    modified: '2026-08-11T19:59:24+05:30',
+    modified: '2026-11-07T14:13:00+05:30',
     readTime: '11 min read',
     ogImage: '/images/articles/rajya-yojna/namo-shetkari-yojana-status-check-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanPaymentFailedFix2026', '/articles/PmKisanBeneficiaryList2026'],

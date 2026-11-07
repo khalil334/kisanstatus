@@ -176,6 +176,13 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         काम है. EKYC, बैंक seeding, land record. वह नीचे checklist में है; घोषणा के दिन वही तय करेगा
         कि पैसा आपके खाते तक पहुंचेगा या अटकेगा।
       </p>
+      <p>
+        अक्टूबर 2026 तक की स्थिति यह है कि 9वीं के साथ 10वीं किस्त (अप्रैल–जुलाई 2026-27 की अवधि)
+        भी लंबित है — यानी प्रति पात्र किसान ₹4,000 बकाया है। देरी के पीछे एक वजह यह भी बताई जा रही
+        है कि सरकार इस योजना को पुण्यश्लोक अहिल्यादेवी होल्कर किसान कर्ज़ माफी योजना से जोड़ने पर
+        विचार कर रही है। और दीवाली से पहले सूखा प्रभावित 304 तहसीलों में दिया जा रहा ₹5,000 का
+        अग्रिम अलग राहत है, नमो शेतकरी की किस्त नहीं — दोनों को एक न समझें।
+      </p>
 
       <Hd>योजना क्या है. और MP वाले model से रिश्ता</Hd>
       <p>
@@ -498,6 +505,7 @@ export default function NamoShetkariYojanaMaharashtra({ article }: { article: Hi
         checkedLabel="आखिरी बार जांचा गया:"
         checkedOn={article.modifiedTime}
         sources={[
+          { label: 'The Indian Express, 19 October 2026', href: 'https://indianexpress.com/article/cities/mumbai/namo-scheme-instalments-release-maharashtra-drought-aid-10927997/', note: '9वीं और 10वीं किस्त लंबित (₹4,000), कर्ज़ माफी योजना से जोड़ने पर विचार, ₹5,000 सूखा राहत अलग' },
           { label: 'नमो शेतकरी महासन्मान निधी portal (nsmny.mahait.org)', href: 'https://nsmny.mahait.org', note: 'status check और किस्त की आधिकारिक जानकारी, guide के steps इसी portal पर जांच कर लिखे गए हैं' },
           { label: 'PM Kisan Portal (pmkisan.gov.in)', href: 'https://pmkisan.gov.in', note: 'PM Kisan beneficiary record. नमो शेतकरी की eligibility इसी से जुड़ी है' },
           { label: 'तालुका कृषि अधिकारी कार्यालय', note: 'शिकायत और record सुधार का official रास्ता' },

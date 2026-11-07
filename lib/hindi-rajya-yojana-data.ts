@@ -23,7 +23,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     keywords: ['नमो शेतकरी योजना', 'namo shetkari yojana status', 'namo shetkari mahasanman nidhi', 'नमो शेतकरी महासन्मान निधी', 'namo shetkari yojana beneficiary list', 'namo shetkari ke paise kab aayenge'],
     category: 'farming',
     publishedTime: '2026-07-05T18:35:14+05:30',
-    modifiedTime: '2026-07-21T19:40:24+05:30',
+    modifiedTime: '2026-11-07T14:13:00+05:30',
     author: AUTHOR_NAME,
     component: 'NamoShetkariYojanaMaharashtra',
     ogImage: '/images/articles/hindi-yojna/namo-shetkari/shetkari-field.webp',
