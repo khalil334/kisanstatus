@@ -12,7 +12,7 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'PM Kisan helpline par phone hi nahi lagta, kya karoon?',
-    a: 'Kist release hone wale hafte me lines sabse zyada busy hoti hain. Teen kaam karo: subah 9-10 baje ke beech try karo (load kam hota hai), 155261 na lage to 011-24300606 lagao, aur teesra rasta sabse pakka hai. Pmkisan.gov.in ke Help Desk (Query Form) me online complaint daal do. Online query ka ticket number milta hai, jo phone call se zyada kaam ka hai.',
+    a: 'Kist release hone wale hafte me lines sabse zyada busy hoti hain. Teen kaam karo: subah 9-10 baje ke beech try karo (load kam hota hai), 155261 na lage to 011-24300606 ya toll-free 1800-115-526 lagao, aur teesra rasta sabse pakka hai. Pmkisan.gov.in ke Help Desk (Query Form) me online complaint daal do. Online query ka ticket number milta hai, jo phone call se zyada kaam ka hai.',
   },
   {
     q: 'Complaint ke kitne din me jawab aata hai?',
@@ -28,7 +28,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Email par complaint karna behtar hai ya phone par?',
-    a: 'Dono se behtar portal ka Help Desk form hai, kyunki wahan complaint system me register hoti hai aur status track hota hai. Email (pmkisan-ict@gov.in) tab kaam aata hai jab documents attach karne ho, jaise bank passbook ki copy. Email me registration number, Aadhaar ke aakhri 4 ank, aur problem saaf likho.',
+    a: 'Dono se behtar portal ka Help Desk form hai, kyunki wahan complaint system me register hoti hai aur status track hota hai. Email (pmkisan-ict@gov.in) tab kaam aata hai jab documents attach karne ho, jaise bank passbook ki copy — aur payment ka mamla ho to pmkisan-funds@gov.in par likho. Email me registration number, Aadhaar ke aakhri 4 ank, aur problem saaf likho.',
   },
   {
     q: 'State-level problem ho to Delhi wali helpline kya karegi?',
@@ -75,8 +75,11 @@ export default function PmKisanHelpline155261({ article }: { article: Yojana2026
       <div className="container-site max-w-3xl py-8">
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Numbers pehle, baat baad me. PM Kisan ki helpline <strong>155261</strong> hai, landline{' '}
-          <strong>011-24300606</strong>, aur email <strong>pmkisan-ict@gov.in</strong>. Sab pmkisan.gov.in
-          ke Contact Us page par confirmed hain. Time: aam taur par subah 9 se shaam 6, somvar se shanivar.
+          <strong>011-24300606</strong>, aur ek aur toll-free number <strong>1800-115-526</strong> bhi hai —
+          155261 busy ho to ye doosra rasta hai, wahi helpdesk lagta hai. Email do hain: aam shikayat ke
+          liye <strong>pmkisan-ict@gov.in</strong>, aur payment wale mamle (kist nahi aayi, FTO error,
+          galat bank me paisa) ke liye <strong>pmkisan-funds@gov.in</strong>. Time: aam taur par subah 9
+          se shaam 6, somvar se shanivar.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Par yahin ruk mat jao. Aadhi calls is helpline par un problems ke liye lagti hain jo helpline hal
@@ -155,9 +158,9 @@ export default function PmKisanHelpline155261({ article }: { article: Yojana2026
         </p>
         <StepList>
           <SI n={1}>Subah 9-10 ke beech call karo, lines sabse khali tab hoti hain. Kist release wale hafte me sabr rakho, load sabse zyada hota hai.</SI>
-          <SI n={2}>155261 busy ho to 011-24300606 try karo. Kuch states me 011-23381092 bhi chalta hai.</SI>
+          <SI n={2}>155261 busy ho to 011-24300606 ya toll-free 1800-115-526 try karo. Kuch states me 011-23381092 bhi chalta hai.</SI>
           <SI n={3}>Jo bhi agent kahe, uska naam aur baat ki tareekh note karo. Complaint register ho to number zaroor maango.</SI>
-          <SI n={4}>Jawab na mile to wahi baat email par bhejo, pmkisan-ict@gov.in, registration number aur problem ke saath. Email ka record ban jaata hai.</SI>
+          <SI n={4}>Jawab na mile to wahi baat email par bhejo, pmkisan-ict@gov.in — payment ka mamla ho to pmkisan-funds@gov.in — registration number aur problem ke saath. Email ka record ban jaata hai.</SI>
         </StepList>
 
         <SH>Online Complaint. Jo Phone Se Zyada Pakki Hai</SH>
@@ -182,7 +185,10 @@ export default function PmKisanHelpline155261({ article }: { article: Yojana2026
         <SH>Email Se Complaint. Format Aisa Rakho</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
           Email (<strong>pmkisan-ict@gov.in</strong>) un cases ke liye sahi hai jahan documents attach
-          karne hon — passbook ki photo, rejection ka screenshot. Format kuch aisa:
+          karne hon — passbook ki photo, rejection ka screenshot. Aur agar mamla sirf payment ka hai —
+          kist aayi nahi, FTO me atki hai, ya paisa galat khaate me gaya — to seedha{' '}
+          <strong>pmkisan-funds@gov.in</strong> par likho, wahi desk fund transfer dekhta hai. Format
+          kuch aisa:
         </p>
         <div className="my-4 p-4 bg-green-50 dark:bg-green-900/20 border-l-4 border-green-600 dark:border-green-500 rounded-r-xl text-sm leading-relaxed text-[var(--color-text)]">
           <strong>Subject:</strong> PM Kisan. Kist nahi mili, [Aadhaar ke aakhri 4 ank]<br /><br />
@@ -272,6 +278,11 @@ export default function PmKisanHelpline155261({ article }: { article: Yojana2026
           <li>
             PM Kisan. Contact Us / Help Desk, official portal.{' '}
             <a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pmkisan.gov.in</a>
+          </li>
+          <li>
+            1800-115-526 (alternate toll-free) aur pmkisan-funds@gov.in (payment email) ki pushti, helpline
+            numbers par published reports se.{' '}
+            <a href="https://zeenews.india.com/personal-finance/pm-kisan-yojana-haven-t-received-10th-instalment-yet-check-how-to-file-a-complaint-2441505.html" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">Zee News — PM Kisan complaint guide</a>
           </li>
         </ul>
 

@@ -64,7 +64,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     officialPortal: 'https://krishakbandhu.wb.gov.in',
     status: 'live',
     published: '2026-11-06T13:13:00+05:30',
-    modified: '2026-11-06T13:13:00+05:30',
+    modified: '2026-11-08T16:13:00+05:30',
     readTime: '11 min read',
     relatedPaths: ['/articles/PmKisan24viKist2026', '/articles/PmKisanMasterGuide2026', '/rajya-yojana/state-kisan-yojana-list-all-states-2026'],
   },

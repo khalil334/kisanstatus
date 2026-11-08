@@ -35,7 +35,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
 
         <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
           <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Status (06/11/2026):</strong> Krishak Bandhu ab Mukhyamantri Krishak Samman Nidhi (MKSN) hai. Notification 29 October 2026 ko jaari hui. Pehli kist ₹2,000 ke liye 5 November ki tareekh elaan me thi. Neeche kya pakka hai aur kya abhi nahi, dono alag likhe hain.
+            <strong>Status (08/11/2026):</strong> Krishak Bandhu ab Mukhyamantri Krishak Samman Nidhi (MKSN) hai. Notification 29 October 2026 ko jaari hui. 5 November ko Pursurah me pehli kist release ho gayi — Times of India ne CM ke hawaale se transfer ki pushti ki hai. Neeche kya pakka hai aur kya abhi nahi, dono alag likhe hain.
           </p>
         </div>
 
@@ -107,21 +107,21 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
         <h2>Pehli Kist 5 November: Kya Pakka Hai, Kya Nahi</h2>
 
         <p>
-          Is scheme ki sabse zyada charcha wali baat pehli kist hai. Elaan ke mutabiq 5 November 2026 ko Pursurah, Hooghly se pehli kist release honi thi, ₹2,000. Ye ₹2,000 do kiston ko ek saath dene ka tareeka tha, Component-2 ki pehli do ₹1,000 wali kistein ek saath. Scheme ki update me ye darj hai ki 5 November ko pehli kist release kar di gayi aur rakam seedha bank khaaton me DBT se bheji gayi.
+          Is scheme ki sabse zyada charcha wali baat pehli kist hai, aur ab us par sawaal nahi raha. 5 November 2026 ko Pursurah, Hooghly me hue Krishak Samman Nidhi karyakram me pehli kist release ho gayi. Times of India ki usi din ki report me likha hai ki PM Kisan walon ke liye saal ke ₹3,000 ki additional assistance disburse kar di gayi hai — matlab transfer ho gaya, sirf elaan nahi raha. Pehli baar ₹2,000 aane ki baat elaan aur scheme update se hai: Component-2 ki pehli do ₹1,000 wali kistein ek saath di gayin, aur rakam seedha bank khaaton me DBT se bheji gayi.
         </p>
 
         <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-5 my-6 rounded-r-lg not-prose shadow-sm">
-          <h3 className="font-bold text-amber-800 dark:text-amber-300 mb-2 text-sm">Imandari se, abhi kya nahi pata</h3>
+          <h3 className="font-bold text-amber-800 dark:text-amber-300 mb-2 text-sm">Abhi bhi kya nahi pata</h3>
           <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-            Pehli kist ki khabar abhi tak kisi bade akhbaar ya agency ne alag se confirm nahi ki hai. Pursurah ke karyakram par PTI ki report me CM ki doosri ghoshnaen hain, lekin ₹2,000 wale transfer ka zikr nahi hai. Rajya ki taraf se abhi tak koi beneficiary list ya payment ki alag se pushti bhi saamne nahi aayi hai.
+            Transfer ho gaya, ye ab pakka hai. Lekin rajya ki taraf se abhi tak koi beneficiary list saamne nahi aayi hai, aur 5 November ko har kisan ke khaate me exactly ₹2,000 aaye ya nahi, iski alag se pushti bhi nahi hai — ₹2,000 ka aankda elaan aur scheme update par tika hai, Times of India ki report me saal ke ₹3,000 wali assistance ke disbursement ki baat hai.
           </p>
           <p className="text-sm text-gray-700 dark:text-gray-300">
-            Isliye is page par 5 November ki kist ko &ldquo;elaan ke mutabiq release&rdquo; likha gaya hai, pakki tasdeek ke saath nahi. Apne khaate me paisa aaya ya nahi, ye sirf aapki passbook ya bank statement batayegi.
+            Apne khaate me paisa aaya ya nahi, ye sirf aapki passbook ya bank statement batayegi.
           </p>
         </div>
 
         <p>
-          Ginati par bhi dhyaan dijiye, kyunki wahan bhi alag-alag aankde ghoom rahe hain. CM ne Pursurah ke karyakram me kaha ki rajya ke 46 lakh kisan PM Kisan ke tahat labh le rahe hain. Usse pehle ki khabron me 48 lakh aur 50 lakh se zyada ke aankde bhi aaye the. Ye teeno ek hi baat nahi kehte, aur inme se koi bhi pehli kist pane walon ki pakki ginati nahi hai. CM ke 46 lakh wale bayan ko unke shabdon ke roop me padhiye, kist pane walon ki list ke roop me nahi. Jaise hi rajya ki taraf se koi list ya saaf aankda aayega, ye page update hoga.
+          Ginati par bhi dhyaan dijiye, kyunki wahan abhi bhi alag-alag aankde ghoom rahe hain. Times of India ki report me CM ke shabdon me likha hai ki &lsquo;more than 46 lakh&rsquo; kisanon ko kul ₹9,000 saalana milenge. Usse pehle ki khabron me 48 lakh aur 50 lakh se zyada ke aankde bhi aaye the. Ye teeno ek hi baat nahi kehte, aur inme se koi bhi pehli kist pane walon ki pakki ginati nahi hai — woh sirf rajya ki list batayegi. CM ke &lsquo;more than 46 lakh&rsquo; wale bayan ko unke shabdon ke roop me padhiye, kist pane walon ki list ke roop me nahi. Jaise hi rajya ki taraf se koi list ya saaf aankda aayega, ye page update hoga.
         </p>
 
         <p>
@@ -339,13 +339,14 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
           <li><a href="https://www.thestatesman.com/cities/kolkata/suvendu-to-launch-industrial-policy-on-nov-5-cabinet-approves-draft-1503656351.html" target="_blank" rel="noopener noreferrer">The Statesman, 28 October 2026 — Cabinet elaan aur pehli kist ki tareekh</a></li>
           <li><a href="https://www.thehindubusinessline.com/news/national/west-bengal-cabinet-approves-new-industry-policy-to-attract-investments/article71638834.ece" target="_blank" rel="noopener noreferrer">The Hindu BusinessLine, 28 October 2026 — Cabinet elaan aur ₹3,000 ka structure</a></li>
           <li><a href="https://www.telegraphindia.com/west-bengal/bengal-cm-suvendu-adhikari-announces-subsidy-for-4-lakh-farmers-special-package-for-three-districts/cid/2187993" target="_blank" rel="noopener noreferrer">PTI via Telegraph India, 5 November 2026 — Pursurah karyakram aur CM ka 46 lakh wala bayan</a></li>
+          <li><a href="https://timesofindia.indiatimes.com/city/kolkata/suvendu-announces-major-support-package-for-potato-farmers/articleshow/135577178.cms" target="_blank" rel="noopener noreferrer">Times of India, 5 November 2026 — Pursurah karyakram, ₹3,000 assistance ka disbursement aur 46 lakh se zyada kisanon ka aankda</a></li>
           <li><a href="http://wbpay.in/en/mukhyamantri-krishak-samman-nidhi-notification-1128-ag-en/" target="_blank" rel="noopener noreferrer">wbpay.in — Notification 1128-AG ka summary, dono components aur exclusions</a></li>
           <li><a href="https://www.govtschemes.in/west-bengal-mukhyamantri-kisan-samman-nidhi-scheme" target="_blank" rel="noopener noreferrer">govtschemes.in — Scheme ka vivran aur 5 November ki pehli kist ki update</a></li>
           <li><a href="https://krishakbandhu.wb.gov.in" target="_blank" rel="noopener noreferrer">krishakbandhu.wb.gov.in — Official portal</a></li>
         </ul>
 
         <p>
-          Aakhri baar in sab se milaan 6 November 2026 ko kiya gaya. Pehli kist ki pakki pushti ya beneficiary list aate hi ye article update hoga.
+          Aakhri baar in sab se milaan 8 November 2026 ko kiya gaya. Beneficiary list aate hi ye article phir update hoga.
         </p>
 
         <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
