@@ -115,7 +115,7 @@ export default function LanguageSwitcher() {
         className="flex items-center gap-1.5 px-3 py-2 rounded-lg border border-green-200 bg-white hover:bg-green-50 hover:border-green-300 transition-all duration-200 text-sm font-medium text-gray-700 min-h-[40px] focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
       >
         <span className="text-lg leading-none" aria-hidden="true">{current.flag}</span>
-        <span className="hidden sm:inline">{current.label}</span>
+        <span className="hidden sm:inline-block sm:w-14 sm:text-center">{current.label}</span>
         <svg
           width="16"
           height="16"

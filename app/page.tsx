@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import HomeContent from '@/components/HomeContent';
-import { Suspense } from 'react';
 import {
   SITE_URL,
   SITE_NAME,
@@ -72,37 +71,6 @@ export const metadata: Metadata = {
 };
 
 export const revalidate = 3600;
-
-function HomeLoading() {
-  return (
-    <div
-      className="min-h-screen bg-[var(--color-bg)]"
-      aria-busy="true"
-      aria-label="Page content loading, please wait"
-    >
-      <div className="relative aspect-[16/9] md:aspect-[21/9] bg-gradient-to-r from-green-800 to-green-600">
-        <div className="container-site h-full flex items-center">
-          <div className="max-w-2xl px-4 w-full">
-            <div className="h-12 bg-white/20 rounded-lg w-3/4 mb-4 animate-pulse" />
-            <div className="h-6 bg-white/20 rounded w-full mb-2 animate-pulse" />
-            <div className="h-6 bg-white/20 rounded w-5/6 mb-6 animate-pulse" />
-            <div className="h-12 bg-white/30 rounded-lg w-48 animate-pulse" />
-          </div>
-        </div>
-      </div>
-      <div className="container-site py-12 px-4">
-        <div className="grid md:grid-cols-3 gap-6">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="h-64 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl animate-pulse" />
-          ))}
-        </div>
-        <div className="text-center mt-8" aria-hidden="true">
-          <div className="loading-spinner mx-auto" />
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function HomePage() {
   return (
@@ -245,9 +213,7 @@ export default function HomePage() {
           }),
         }}
       />
-      <Suspense fallback={<HomeLoading />}>
-        <HomeContent />
-      </Suspense>
+      <HomeContent />
     </>
   );
 }

@@ -51,8 +51,6 @@ function setClientIsDark(next: boolean): void {
   themeListeners.forEach((listener) => listener());
 }
 
-const subscribeThemeNoop = () => () => {};
-
 const subscribeShortcutNoop = () => () => {};
 
 function getClientShortcutKey(): string | null {
@@ -70,7 +68,6 @@ function getServerShortcutKey(): string | null {
 
 function ThemeToggle() {
   const isDark = useSyncExternalStore(subscribeTheme, getClientIsDark, getServerIsDark);
-  const mounted = useSyncExternalStore(subscribeThemeNoop, () => true, () => false);
 
   useEffect(() => {
     const stored = localStorage.getItem('theme');
@@ -99,11 +96,10 @@ function ThemeToggle() {
     }
   };
 
-  if (!mounted) return null;
-
   return (
     <button
       onClick={toggle}
+      suppressHydrationWarning
       className="theme-toggle"
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
       title={isDark ? 'Light Mode' : 'Dark Mode'}
@@ -229,10 +225,12 @@ export default function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
               <span className="font-medium">Search</span>
-              {shortcutKey && (
-                <kbd className="hidden xl:inline-flex text-[10px] font-mono text-[var(--color-text-muted)] bg-[var(--color-card)] border border-[var(--color-border)] rounded px-1.5 py-0.5 ml-1">
+              {shortcutKey ? (
+                <kbd className="hidden xl:inline-flex justify-center w-[52px] text-[10px] font-mono text-[var(--color-text-muted)] bg-[var(--color-card)] border border-[var(--color-border)] rounded px-1.5 py-0.5 ml-1">
                   {shortcutKey}
                 </kbd>
+              ) : (
+                <span aria-hidden="true" className="hidden xl:inline-block w-[52px] ml-1" />
               )}
             </button>
 
