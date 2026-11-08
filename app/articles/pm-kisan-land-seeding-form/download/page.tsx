@@ -1,11 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { SITE_URL } from '@/lib/site-config';
 
-export default function LandSeedingDownloadPage() {
+function DownloadContent() {
   const searchParams = useSearchParams();
   const [isRedirecting, setIsRedirecting] = useState(false);
 
@@ -159,5 +159,23 @@ export default function LandSeedingDownloadPage() {
         </div>
       </div>
     </>
+  );
+}
+
+export default function LandSeedingDownloadPage() {
+  return (
+    <Suspense
+      fallback={
+        <div
+          className="min-h-screen flex items-center justify-center px-4"
+          role="status"
+          aria-label="Page load ho raha hai, kripya intezar karein"
+        >
+          <p className="text-sm text-gray-500 dark:text-gray-400">Page load ho raha hai, kripya intezar karein…</p>
+        </div>
+      }
+    >
+      <DownloadContent />
+    </Suspense>
   );
 }
