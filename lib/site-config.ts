@@ -7,7 +7,7 @@ export const COPYRIGHT_START_YEAR = 2024;
 export const CURRENT_YEAR = new Date().getFullYear();
 
 export const AUTHOR_NAME = 'Manish Kumar';
-export const AUTHOR_URL = `${SITE_URL}/about`;
+export const AUTHOR_URL = `${SITE_URL}/author/manish-kumar`;
 export const AUTHOR_LINKEDIN = 'https://www.linkedin.com/in/manish-kumar-15787942a';
 export const AUTHOR_IMAGE = '/images/author-manish-kumar.webp';
 export const AUTHOR_IMAGE_URL = `${SITE_URL}${AUTHOR_IMAGE}`;

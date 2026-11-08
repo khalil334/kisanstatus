@@ -271,6 +271,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.70,
     },
+    {
+      url: `${SITE_URL}/author/manish-kumar`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.60,
+    },
   ];
 
   const categoryPages: MetadataRoute.Sitemap = Object.keys(CATEGORIES).map((category) => {

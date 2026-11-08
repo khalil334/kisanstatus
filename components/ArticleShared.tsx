@@ -163,7 +163,7 @@ export function AuthorBox({ modified, bioKey }: { modified: string; bioKey?: str
       <div>
         <span className="inline-flex items-center gap-2">
           <Link
-            href="/about"
+            href="/author/manish-kumar"
             className="font-black text-[var(--color-text)] hover:text-[var(--color-primary)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] rounded"
           >
             {AUTHOR_NAME}
