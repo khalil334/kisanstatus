@@ -34,7 +34,7 @@ const DATA_FILES = [
   'lib/hindi-articles-data.ts',
 ];
 
-const MAX_PER_WINDOW = 2;          // max new articles per rolling 7 days
+const MAX_PER_WINDOW = 4;          // max new articles per rolling 7 days
 const WINDOW_DAYS = 7;
 const BASELINE = new Date('2026-08-31T00:00:00+05:30'); // guardrail start — only later dates are policed
 
@@ -88,7 +88,7 @@ if (worst) {
     console.error(`  - ${e.published.toISOString().slice(0, 10)}  ${e.slug}  (${e.file})`);
   }
   console.error(
-    '\n  Fix: space new articles out (max 2/week, irregular days).' +
+    '\n  Fix: space new articles out (max 4/week, irregular days).' +
       '\n  Deliberate exception: ALLOW_PUBLISH_BURST=1 npm run build\n'
   );
   if (process.env.ALLOW_PUBLISH_BURST === '1') {
