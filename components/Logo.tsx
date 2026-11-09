@@ -5,9 +5,22 @@ interface LogoProps {
   size?: 'sm' | 'md' | 'lg';
 }
 
-export default function Logo({ variant = 'light', size = 'md' }: LogoProps) {
-  const textColor = variant === 'light' ? 'text-white' : 'text-green-800';
-  const subColor = variant === 'light' ? 'text-green-200' : 'text-green-600';
+export default function Logo({ variant, size = 'md' }: LogoProps) {
+  // No variant = theme-aware (header): dark-green wordmark on light
+  // backgrounds, white on dark. An explicit variant pins the colours
+  // for a known background (e.g. 'light' on a dark-green band).
+  const textColor =
+    variant === 'light'
+      ? 'text-white'
+      : variant === 'dark'
+        ? 'text-green-800'
+        : 'text-green-800 dark:text-white';
+  const subColor =
+    variant === 'light'
+      ? 'text-green-200'
+      : variant === 'dark'
+        ? 'text-green-600'
+        : 'text-green-600 dark:text-green-200';
 
   const sizeClasses = {
     sm: { container: 'gap-2', image: 'w-8 h-8', title: 'text-sm', subtitle: 'text-[9px]', imgSize: 32 },

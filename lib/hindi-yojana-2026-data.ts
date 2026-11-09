@@ -83,11 +83,10 @@ export const HINDI_YOJANA_2026_ARTICLES: readonly HindiArticle[] = [
     ],
     category: 'status-check',
     publishedTime: '2026-08-18T15:42:46+05:30',
-    modifiedTime: '2026-08-20T20:32:15+05:30',
+    modifiedTime: '2026-11-09T05:30:00+05:30',
     author: AUTHOR_NAME,
     component: 'PmKisanHelpline155261Hindi',
     ogImage: '/og-image.webp',
-    noindex: true,
   },
   {
     slug: 'hi/mgnrega-pashu-shed-yojana',

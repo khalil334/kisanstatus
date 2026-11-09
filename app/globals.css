@@ -4,16 +4,16 @@
 
 :root {
   color-scheme: light;
-  --color-primary: #B85C1A;
-  --color-primary-dark: #954815;
-  --color-primary-light: #F3D3B3;
-  --color-accent: #3F6212;
-  --color-bg: #FAFAF9;
-  --color-bg-alt: #F7F3EE;
+  --color-primary: #1B7A43;
+  --color-primary-dark: #14532D;
+  --color-primary-light: #F0F7F0;
+  --color-accent: #EA580C;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F8FAF8;
   --color-card: #FFFFFF;
-  --color-border: #EADFD3;
-  --color-text: #292018;
-  --color-text-muted: #6B5842;
+  --color-border: #E2E8F0;
+  --color-text: #2F3B33;
+  --color-text-muted: #64748B;
   --max-w-site: 1200px;
   --transition-fast: 150ms;
   --transition-normal: 200ms;
@@ -79,7 +79,7 @@
   }
 
   body {
-    font-family: var(--font-poppins), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: var(--font-poppins), "Noto Sans Devanagari", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-size: 1rem;
     line-height: 1.7;
     color: var(--color-text);
@@ -562,9 +562,9 @@
   }
 
   .dark .pagination-button.active {
-    background: #B85C1A;
-    color: #171310;
-    border-color: #B85C1A;
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
   }
 
   .mobile-menu {
@@ -795,7 +795,7 @@
   }
 
   .dark .sticky-cta {
-    background: #B85C1A;
+    background: var(--color-primary);
     box-shadow: 0 4px 20px rgba(22, 163, 74, 0.3);
   }
 

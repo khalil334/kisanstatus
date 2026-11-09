@@ -6,7 +6,7 @@ import { buildFaqSchema } from '@/lib/faq-schema';
 const FAQS = [
   {
     q: 'हेल्पलाइन पर phone ही नहीं लगता. क्या करूं?',
-    a: 'किस्त release वाले हफ्ते में lines सबसे busy होती हैं। सुबह 9-10 बजे try कीजिए, 155261 न लगे तो 011-24300606 लगाइए, और सबसे पक्का रास्ता, pmkisan.gov.in के Help Desk (Query Form) में online शिकायत डालिए। Online query का ticket number मिलता है, जो phone call से ज्यादा काम का है।',
+    a: 'किस्त release वाले हफ्ते में lines सबसे busy होती हैं। सुबह 9-10 बजे try कीजिए, 155261 न लगे तो 011-24300606 या toll-free 1800-115-526 लगाइए, और सबसे पक्का रास्ता, pmkisan.gov.in के Help Desk (Query Form) में online शिकायत डालिए। Online query का ticket number मिलता है, जो phone call से ज्यादा काम का है।',
   },
   {
     q: 'शिकायत के कितने दिन में जवाब आता है?',
@@ -42,8 +42,11 @@ export default function PmKisanHelpline155261Hindi({ article }: { article: Hindi
 
       <p>
         Numbers पहले: PM किसान हेल्पलाइन <strong>155261</strong>, landline{' '}
-        <strong>011-24300606</strong>, email <strong>pmkisan-ict@gov.in</strong>. सब pmkisan.gov.in के
-        Contact Us page पर confirmed हैं। समय: आम तौर पर सुबह 9 से शाम 6, सोमवार से शनिवार।
+        <strong>011-24300606</strong>, और एक और toll-free number <strong>1800-115-526</strong> भी है —
+        155261 busy हो तो यही दूसरा रास्ता है, वही helpdesk लगता है। Email दो हैं: आम शिकायत के लिए{' '}
+        <strong>pmkisan-ict@gov.in</strong>, और payment वाले मामले (किस्त नहीं आई, FTO अटका, पैसा गलत
+        खाते में गया) के लिए <strong>pmkisan-funds@gov.in</strong>। सब pmkisan.gov.in के Contact Us page
+        पर confirmed हैं। समय: आम तौर पर सुबह 9 से शाम 6, सोमवार से शनिवार।
       </p>
       <p>
         पर यहीं रुकिए मत। आधी calls इस helpline पर उन problems के लिए लगती हैं जो helpline हल कर ही नहीं
@@ -106,14 +109,17 @@ export default function PmKisanHelpline155261Hindi({ article }: { article: Hindi
         Call से पहले तीन चीजें हाथ में: <strong>registration number</strong> (या आधार), आधार card, और
         status का screenshot या लिखा हुआ error। बात ऐसे शुरू कीजिए: &ldquo;Registration number यह है,
         status में यह error दिख रहा है, किस्त इतनी तारीख से नहीं आई।&rdquo; सीधा, number के साथ। सुबह 9-10
-        के बीच call कीजिए, 155261 busy हो तो 011-24300606। शिकायत register हो तो number जरूर मांगिए, और
-        जवाब न मिले तो वही बात pmkisan-ict@gov.in पर email कर दीजिए, record बन जाता है।
+        के बीच call कीजिए, 155261 busy हो तो 011-24300606 या toll-free 1800-115-526। शिकायत register हो तो number जरूर मांगिए, और
+        जवाब न मिले तो वही बात pmkisan-ict@gov.in पर email कर दीजिए — payment का मामला हो तो
+        pmkisan-funds@gov.in पर — record बन जाता है।
       </p>
 
       <Head2>ईमेल से शिकायत, format ऐसा रखिए</Head2>
       <p>
         Email (<strong>pmkisan-ict@gov.in</strong>) उन cases के लिए सही है जहां documents attach करने हों —
-        पासबुक की photo, rejection का screenshot। Format कुछ ऐसा:
+        पासबुक की photo, rejection का screenshot। और अगर मामला सिर्फ payment का है — किस्त आई नहीं, FTO
+        में अटकी है, या पैसा गलत खाते में गया — तो सीधे <strong>pmkisan-funds@gov.in</strong> पर लिखिए,
+        वही desk fund transfer देखता है। Format कुछ ऐसा:
       </p>
       <div className="my-4 p-4 bg-green-50 border-l-4 border-green-600 rounded-r-xl text-sm leading-relaxed">
         <strong>Subject:</strong> PM Kisan. किस्त नहीं मिली, [आधार के आखिरी 4 अंक]<br /><br />
@@ -235,6 +241,11 @@ export default function PmKisanHelpline155261Hindi({ article }: { article: Hindi
           </div>
         ))}
       </div>
+
+      <p className="text-xs text-[var(--color-text-muted)] mt-6">
+        स्रोत: numbers और email pmkisan.gov.in के Contact Us page पर confirmed हैं; 1800-115-526 और{' '}
+        pmkisan-funds@gov.in की पुष्टि helpline numbers पर published reports (Zee News) से।
+      </p>
     </>
   );
 }

@@ -38,7 +38,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#B85C1A' },
+    { media: '(prefers-color-scheme: light)', color: '#1B7A43' },
     { media: '(prefers-color-scheme: dark)', color: '#171310' },
   ],
   colorScheme: 'light dark',
@@ -116,7 +116,7 @@ export const metadata: Metadata = {
     'ICBM': '20.5937, 78.9629',
     'format-detection': 'telephone=no',
     'application-name': SITE_NAME,
-    'msapplication-TileColor': '#B85C1A',
+    'msapplication-TileColor': '#1B7A43',
     'msapplication-config': '/browserconfig.xml',
   },
   manifest: '/site.webmanifest',
@@ -130,7 +130,7 @@ export const metadata: Metadata = {
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
     other: [
-      { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#B85C1A' },
+      { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#1B7A43' },
     ],
   },
   appleWebApp: {

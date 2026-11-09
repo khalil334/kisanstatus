@@ -10,9 +10,9 @@ export function fmtDate(iso: string) {
 
 export function SI({ n, children }: { n: number; children: React.ReactNode }) {
   return (
-    <li className="flex gap-3 items-stretch list-none mb-2">
-      <div className="flex flex-col items-center shrink-0 w-9">
-        <div className="w-9 h-9 rounded-full bg-[var(--color-primary)] text-white text-sm font-black flex items-center justify-center shadow-md shrink-0">
+    <div className="flex gap-3 items-stretch mb-2">
+      <div className="flex flex-col items-center shrink-0 w-7">
+        <div className="w-7 h-7 rounded-full bg-[var(--color-primary)] text-white text-[15px] font-black flex items-center justify-center shadow-md shrink-0">
           {n}
         </div>
         <div className="w-0.5 flex-1 bg-gradient-to-b from-green-300 to-transparent mt-1 min-h-[12px]" />
@@ -20,12 +20,12 @@ export function SI({ n, children }: { n: number; children: React.ReactNode }) {
       <div className="flex-1 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl px-4 py-3 text-sm text-[var(--color-text)] leading-relaxed shadow-sm mb-1 hover:border-[var(--color-primary)] transition-colors">
         {children}
       </div>
-    </li>
+    </div>
   );
 }
 
 export function StepList({ children }: { children: React.ReactNode }) {
-  return <ol className="space-y-0 my-4">{children}</ol>;
+  return <div className="space-y-0 my-4">{children}</div>;
 }
 
 export function IB({ children }: { children: React.ReactNode }) {
