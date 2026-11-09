@@ -198,7 +198,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     officialPortal: 'https://cmkisan.odisha.gov.in',
     status: 'live',
     published: '2026-06-23T11:42:30+05:30',
-    modified: '2026-08-16T07:14:50+05:30',
+    modified: '2026-11-09T18:20:00+05:30',
     readTime: '10 min read',
     ogImage: '/images/articles/rajya-yojna/odisha-cm-kisan-status-check-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanBeneficiaryList2026'],

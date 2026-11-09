@@ -357,6 +357,11 @@ export default function OdishaCmKisanStatusCheck({
           label="CM Kisan portal par apna status dekhein"
         />
 
+        <InfoBox type="warning">
+          KisanStatus ek niji website hai — sarkari nahi. Hum kabhi OTP, Aadhaar ya bank
+          details nahi maangte. Asli kaam hamesha cmkisan.odisha.gov.in par karein.
+        </InfoBox>
+
         <h2>CM Kisan Odisha List Village Wise — Naam Kaise Dhoondhein (2026)</h2>
 
         <p>
@@ -401,12 +406,14 @@ export default function OdishaCmKisanStatusCheck({
         </p>
 
         <p>
-          Odisha mein ek baat khaas hai: release state ke haath mein hoti hai, is liye ek hi
-          tranche har zile mein apni raftaar se pahunchta hai. Padosi ke account mein paisa
-          aa gaya aur aapke mein nahi. Ye apne aap mein kisi gadbad ka saboot nahi hai.
-          Pakki tareekh batane wale forward par plan banane ke bajaye, apne record ki teen
-          lines (stage, bank mapping, e-KYC) durust rakhein; wahi tay karti hain ki release
-          ke din aapki file uthegi ya nahi.
+          Taaza misaal paanchvi kist hai — Nuakhai se kuch din pehle, 4 September 2026 ko
+          release hui, taaki Rabi ki taiyaari ka kharcha waqt par nikal aaye. Magar ek hi
+          tranche har zile mein apni raftaar se pahunchta hai, kyunki release state ke haath
+          mein hoti hai. Padosi ke account mein paisa aa gaya aur aapke mein nahi — ye apne
+          aap mein kisi gadbad ka saboot nahi hai. Agli kist ki tareekh ka elaan abhi baaki
+          hai; forward wali tareekhon par plan banane ke bajaye apne record ki teen lines
+          (stage, bank mapping, e-KYC) durust rakhein, wahi tay karti hain ki release ke din
+          aapki file uthegi ya nahi.
         </p>
 
         <h2>Paisa Na Aane Ki Sabse Aam Wajahein</h2>
@@ -450,14 +457,20 @@ export default function OdishaCmKisanStatusCheck({
         <h2>Aakhri Kist Kab Aayi Thi. Aur Agli Kab Aayegi?</h2>
 
         <p>
-          Sabse taaza record: <strong>chauthi kist 20 April 2026 ko Akshaya Tritiya
-          (Krushak Divas)</strong> par release hui. Cuttack ke CRRI mein hue state-level
-          function se <strong>₹838 crore se zyada, 41.68 lakh</strong> beneficiaries ke
-          khaate mein ₹2,000 karke gaye. Inme 41,049 landless aur 3,292 tribal kisan
-          shamil the. Scheme ke pattern ke hisaab se agli kist{' '}
-          <strong>Nuakhai (August–September 2026)</strong> ke aas-paas expect ki ja sakti
-          hai. Pichhle saal Nuakhai wali kist 27 August ko aayi thi. Pakki date sirf
-          state sarkar ke elaan se aati hai; portal par status check karte rahein.
+          Taaza tareen kist paanchvi hai — 4 September 2026 ko Bhubaneswar ke Krushi Shiksha
+          Sadan (OUAT) mein hue state-level function se CM Mohan Charan Majhi ne ₹833 crore se
+          zyada DBT se bheja. Har eligible kisan ke khaate mein ₹2,000 gaye: 41.35 lakh chhote
+          aur seemant kisan, aur 13,949 bhoomiheen krishi parivaar. Maqsad saaf tha — Rabi
+          2026-27 se pehle beej, khaad aur keetnashak ka kharcha nikal aaye.
+        </p>
+
+        <p>
+          Usse pehle chauthi kist 20 April 2026 ko Akshaya Tritiya (Krushak Divas) par aayi
+          thi: Cuttack ke CRRI mein hue function se ₹838 crore se zyada, 41.68 lakh
+          beneficiaries ke khaate mein ₹2,000 karke. Inme 41,049 landless aur 3,292 tribal
+          kisan shamil the. Pattern yehi rehta hai — Akshaya Tritiya aur Nuakhai ke aas-paas,
+          season ke bilkul pehle. Agli kist ki pakki tareekh abhi elaan nahi hui hai; andaze
+          par bharosa mat karein, portal par apna status dekhte rahein.
         </p>
 
         <h2>Kist Aayi Par Kam Lagi. Hisaab Kaise Milaayein</h2>
@@ -559,6 +572,7 @@ export default function OdishaCmKisanStatusCheck({
         <SourcesSection
           checkedOn={article.modified || article.published}
           sources={[
+            { label: 'The New Indian Express (5 Sep 2026) — 5th instalment release', href: 'https://www.newindianexpress.com/amp/story/states/odisha/2026/Sep/05/nuakhai-gift-odisha-cm-majhi-releases-rs-833-crore-cm-kisan-aid', note: '₹833 crore se zyada DBT, 41.35 lakh kisan aur 13,949 bhoomiheen parivaar, 4 September 2026; The Statesman, Pragativadi, Organiser aur Times of India ne bhi yahi release cover ki' },
             { label: 'CM Kisan Portal (cmkisan.odisha.gov.in)', href: 'https://cmkisan.odisha.gov.in', note: 'status check, beneficiary list, cultivator/landless track, is guide ka har step isi portal par khud check karke likha gaya hai' },
             { label: 'Agriculture & Farmers\u2019 Empowerment Dept, Govt of Odisha', href: 'https://agri.odisha.gov.in', note: 'scheme guidelines, eligibility aur exclusion rules' },
             { label: 'PM Kisan Portal (pmkisan.gov.in)', href: 'https://pmkisan.gov.in', note: 'PM Kisan aur CM Kisan ke saath-saath milne wale benefit ki puṣṭi' },
