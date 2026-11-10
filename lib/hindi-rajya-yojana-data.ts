@@ -49,7 +49,6 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     author: AUTHOR_NAME,
     component: 'RajasthanKisanSammanNidhiHindi',
     ogImage: '/images/articles/rajya-yojna/rajasthan-kisan-samman-nidhi-9000/hero.webp',
-    noindex: true,
   },
   {
     slug: 'hi/annadata-sukhibhava-status',
