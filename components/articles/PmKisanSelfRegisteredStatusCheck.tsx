@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-02-11T18:34:34+05:30';
-const MODIFIED = '2026-08-19T19:34:36+05:30';
+const MODIFIED = '2026-11-10T10:30:00+05:30';
 
 const IMG_BASE = '/images/articles/pm-kisan-self-registered-status-check';
 
@@ -149,16 +149,16 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
         </div>
 
         <section className="mb-8">
-          <SH>Status Check Kaise Karein. Step by Step</SH>
+          <SH>Apna Status Kaise Dekhein, Ek Ek Step Karke</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Yeh process bas 2 minute ka hai. Login ya password kuch nahi chahiye, sirf Aadhaar number.
+            Poora process chhota sa hai. Login ya password kuch nahi chahiye, sirf Aadhaar number.
           </p>
 
           <StepList>
             <SI n={1}>pmkisan.gov.in kholo — mobile ya computer, jo bhi ho</SI>
             <SI n={2}>Farmers Corner dhundo, homepage par upar dikhega</SI>
             <SI n={3}>"Beneficiary Status" par click karo</SI>
-            <SI n={4}>Do options milenge. Aadhaar ya Mobile number. Aadhaar select karo (zyada reliable hai)</SI>
+            <SI n={4}>Do options milenge — Aadhaar ya Mobile number. Aadhaar wala hi chuno, usi se status sabse pakka milta hai</SI>
             <SI n={5}>12-digit Aadhaar number type karo, bina space ya dash ke</SI>
             <SI n={6}>Captcha bharo aur "Get Data" button dabao</SI>
             <SI n={7}>Agar aap registered ho toh puri details dikh jayengi:</SI>
@@ -302,7 +302,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
               },
               {
                 problem: 'Mobile number galat hai',
-                solution: 'Edit option se change kar sakte ho. Purane number par OTP aayega. Agar purana number band hai toh CSC jaana padega, wahan operator biometric se verify karke update kar dega.',
+                solution: 'Edit option se change kar sakte ho. OTP usi purane number par aayega jo abhi record me darj hai. Agar purana number band hai toh CSC jaana padega, wahan operator biometric se verify karke update kar dega.',
               },
               {
                 problem: 'Bank account number wrong hai',
@@ -334,7 +334,7 @@ export default function PmKisanSelfRegisteredStatusCheck({ article }: { article:
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
               <h3 className="font-black text-blue-800 dark:text-blue-300 text-sm mb-2">1. eKYC Complete Karo</h3>
-              <p className="text-xs text-[var(--color-text-muted)]">Bina eKYC ke payment nahi aayegi. OTP ya CSC se 2 minute ka kaam hai.</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Bina eKYC ke payment nahi aayegi. OTP se ghar baithe ho jayegi, nahi to CSC par karwa lo.</p>
             </div>
 
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl">

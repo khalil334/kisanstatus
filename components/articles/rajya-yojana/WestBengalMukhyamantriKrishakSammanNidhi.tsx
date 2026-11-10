@@ -5,7 +5,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
   const faqs = [
     {
       q: 'Kya har PM Kisan beneficiary ko West Bengal se ₹3,000 extra milenge?',
-      a: 'Sirf woh PM Kisan beneficiary jinhe rajya ke niyam bhi pass karte hain. Component-2 ka fayda unhi ko hai jo PM Kisan ke eligible beneficiary hain aur rajya ki exclusion list me nahi aate. PM Kisan aata hai iska matlab ye nahi ki state wala hissa apne aap aa jayega, verification dono jagah hoti hai.',
+      a: 'Sirf woh PM Kisan beneficiary jinhe rajya ke niyam bhi pass karte hain. Component-2 ka fayda unhi ko hai jo PM Kisan ke eligible beneficiary hain aur rajya ki exclusion list me nahi aate. Sirf PM Kisan mil raha hai, is bharose mat raho ki state wala hissa apne aap aa jayega — uske liye rajya ki verification alag se pass karni hoti hai.',
     },
     {
       q: 'Pehli kist ₹2,000 ki kyun hai, ₹1,000 ki kyun nahi?',
@@ -332,7 +332,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
         <h2>Sources</h2>
 
         <p>
-          Is article ki har date aur figure inhi jagahon se milaayi gayi hai. Notification ka poora text Agriculture Department ki notification 1128-AG/O/9M(Nab)-56/2026, dated 29.10.2026 me hai:
+          Yahan di gayi tareekhein aur rakam inhi khabron aur sarkari kagazon se jaanch kar likhi gayi hain. Notification ka poora text Agriculture Department ki notification 1128-AG/O/9M(Nab)-56/2026, dated 29.10.2026 me hai:
         </p>
 
         <ul>
@@ -346,7 +346,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
         </ul>
 
         <p>
-          Aakhri baar in sab se milaan 8 November 2026 ko kiya gaya. Beneficiary list aate hi ye article phir update hoga.
+          Ye jaankari aakhri baar 8 November 2026 ko inhi sources par dobara parakhi gayi thi. Beneficiary list aate hi ye article phir update hoga.
         </p>
 
         <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">

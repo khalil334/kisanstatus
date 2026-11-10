@@ -6,13 +6,13 @@ import OfficialLinkButton from '@/components/OfficialLinkButton';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-07-09T06:59:32+05:30';
-const MODIFIED = '2026-08-09T16:20:13+05:30';
+const MODIFIED = '2026-11-10T10:30:00+05:30';
 
 const RELATED_CARDS = [
   {
     slug: 'PmKisanEkycOnline2026',
     title: 'PM Kisan eKYC Complete Guide',
-    desc: 'Naya number link karne ke baad eKYC kaise karein, step-by-step jaane.',
+    desc: 'Number badal jaaye to eKYC kaise poori karein — is card me poora tarika milega.',
   },
   {
     slug: 'PmKisanCscRegistrationCharges',
@@ -391,7 +391,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
               },
               {
                 mistake: 'Usi Din Status Check Karne Chale Jana',
-                fix: 'Mobile update usi waqt reflect nahi hota. Database sync mein kuch din lag sakte hain. Same-day check karne par purana number hi dikh sakta hai; ek-do din ruk kar test karo, aur receipt tab tak sambhal kar rakho.'
+                fix: 'Mobile update usi waqt reflect nahi hota. Naya number system me chadhne me kuch din nikal sakte hain. Same-day check karne par purana number hi dikh sakta hai; ek-do din ruk kar test karo, aur receipt tab tak sambhal kar rakho.'
               },
             ].map(({ mistake, fix }, i) => (
               <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
@@ -441,7 +441,7 @@ export default function PmKisanMobileNumberChangeUpdate({ article }: { article: 
                Beneficiary Status Check Karein
             </p>
             <p className="text-xs text-green-700 dark:text-green-400 mb-3">
-              Official portal par apna status check karne ke liye niche button par click karein.
+              Apna taaza status khud dekhna ho to niche diye button se official portal khul jayega.
             </p>
             <OfficialLinkButton
               title="PM Kisan Beneficiary Status"

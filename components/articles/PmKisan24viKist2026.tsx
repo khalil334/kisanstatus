@@ -18,7 +18,7 @@ const KIST = {
 };
 
 const PUBLISHED = '2026-06-24T16:27:03+05:30';
-const MODIFIED = '2026-11-06T13:13:00+05:30';
+const MODIFIED = '2026-11-10T10:30:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisan25viKist2027', title: '25vi Kist Date & Amount' },
@@ -455,7 +455,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
         <section className="mb-8">
           <SH>Sources</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Is article ki har date aur figure inhi jagahon se milaayi gayi hai. Aap khud bhi check kar sakte hain:
+            Upar di gayi har tareekh aur rakam in sarkari jagahon se dekh-bhaal kar hi yahan rakhi gayi hai:
           </p>
           <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-2 list-disc pl-5">
             <li>
@@ -488,7 +488,7 @@ export default function PmKisan24viKist2026({ article }: { article: ArticleMeta 
             </li>
           </ul>
           <p className="text-xs text-[var(--color-text-muted)] italic">
-            Aakhri baar in sab se milaan {fmtDate(MODIFIED)} ko kiya gaya.
+            Sabse aakhri jaanch {fmtDate(MODIFIED)} ko hui thi — us din har link dobara khola gaya.
           </p>
         </section>
 

@@ -5,7 +5,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-07-06T00:30:35+05:30';
-const MODIFIED = '2026-11-06T21:00:00+05:30';
+const MODIFIED = '2026-11-10T10:30:00+05:30';
 
 const RELATED = [
   { slug: 'pm-kisan-fto-generated-ka-matlab-kya-hai', title: 'FTO Generated Ka Matlab' },
@@ -28,7 +28,7 @@ const FAQS_DATA = [
   },
   {
     q: '24vi nahi mili, kya 25vi milegi?',
-    a: 'Milni chahiye, lekin pehle ye pata karo ki 24vi kyun ruki. 24vi kist 30 October 2026 ko Banaskantha (Gujarat) se release ho chuki hai — 9.34 crore se zyada parivaron ko kul ₹18,690 crore se zyada bheje gaye. Agar aapko nahi mili to zyadatar mamlo me wajah eKYC pending, bank me Aadhaar seeding na hona ya land record verify na hona hoti hai. Ye thik kiye bina agli wali bhi wahin atkegi. Ruki hui raqam baad me alag se credit ho jati hai, agar aap eligible ho.',
+    a: 'Milni chahiye, lekin pehle ye pata karo ki 24vi kyun ruki. 24vi kist 30 October 2026 ko Gujarat ke Banaskantha se jaari hui thi, aur usme kul ₹18,690 crore se zyada ki rakam 9.34 crore se zyada parivaron ke khaaton tak pahunchi. Agar aapko nahi mili to zyadatar mamlo me wajah eKYC pending, bank me Aadhaar seeding na hona ya land record verify na hona hoti hai. Ye thik kiye bina agli wali bhi wahin atkegi. Ruki hui raqam baad me alag se credit ho jati hai, agar aap eligible ho.',
   },
   {
     q: 'Naye registration ki koi last date hai kya?',
@@ -372,7 +372,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
         <section className="mb-8">
           <SH>Sources</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Is update ki har nayi date aur figure inhi jagahon se milaayi gayi hai:
+            Is update me jo nayi tareekh ya aankda aaya hai, woh inhi jagahon par parakhne ke baad hi joda gaya hai:
           </p>
           <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-2 list-disc pl-5">
             <li>
@@ -385,7 +385,7 @@ export default function PmKisan25viKist2027({ article }: { article: ArticleMeta 
             </li>
           </ul>
           <p className="text-xs text-[var(--color-text-muted)] italic">
-            Aakhri baar in sab se milaan {fmtDate(MODIFIED)} ko kiya gaya. 25vi ki koi official date abhi nahi hai.
+            Ye sources aakhri baar {fmtDate(MODIFIED)} ko dobara khol kar dekhe gaye the. 25vi ki koi official date abhi nahi hai.
           </p>
         </section>
 

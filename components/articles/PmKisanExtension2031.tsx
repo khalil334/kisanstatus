@@ -7,7 +7,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-11-06T13:13:00+05:30';
-const MODIFIED = '2026-11-06T13:13:00+05:30';
+const MODIFIED = '2026-11-10T10:30:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisan24viKist2026', title: '24vi Kist: 30 October Ko Release' },
@@ -128,7 +128,7 @@ export default function PmKisanExtension2031({ article }: { article: ArticleMeta
         <section className="mb-8">
           <SH>Paisa Kis Tak Pahuncha</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Cabinet ke faisle me do aankde aise hain jo aksar peeche reh jate hain, lekin wohi batate hain ki scheme kahan tak pahunchi hai. Pehla, mahila kisanon ko ab tak ₹1.06 lakh crore se zyada mil chuka hai, aur lagbhag har chaunthe beneficiary me se ek mahila hai. Matlab har chaar me se ek kist kisi mahila kisan ke naam par gayi. Gaon me jahan zameen aksar purush ke naam par hoti hai, wahan ye hissa chhota nahi hai.
+            Cabinet ke faisle me do aankde aise hain jo aksar peeche reh jate hain, lekin wohi batate hain ki scheme kahan tak pahunchi hai. Pehla, mahila kisanon ke khaaton me ab tak ₹1.06 lakh crore se zyada ki rakam ja chuki hai. Aur labharthiyon ki kul ginti ka hisaab lagao to takreeban ek-chaunthai naam auraton ke hain — har chaar me se ek kist kisi mahila kisan ke naam gayi. Gaon me jahan zameen aksar purush ke naam par hoti hai, wahan ye hissa chhota nahi hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Doosra aankda COVID ke time ka hai. Us daur me scheme ke zariye ₹1.71 lakh crore se zyada baante gaye. Jab mandiyan band thi aur mazdoori ruki hui thi, tab yehi ₹2,000 ki kist bahut se gharon me ekmatra pakki aamdani thi. Yehi wajah hai ki extension ka faisla sirf kheti ka faisla nahi, gaon ki aarthik suraksha ka faisla bhi hai.
@@ -157,7 +157,7 @@ export default function PmKisanExtension2031({ article }: { article: ArticleMeta
         <section className="mb-8">
           <SH>Doosri Taraf: Galat Haathon Se Wapsi</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Extension ke saath hi sarkar ne safai ka hisaab bhi diya hai. December 2025 tak aise logon se ₹416.75 crore wapas liye ja chuke hain jo niyam tod kar fayda le rahe the. Inme income tax bharne wale, sarkari karmchari, PSU ke log aur samvaidhanik padon par rahe log shaamil hain. Ye wohi categories hain jo scheme ki shuruaat se bahar rakhi gayi thi.
+            Extension ke saath hi sarkar ne safai ka hisaab bhi diya hai. Jo log niyam ke khilaf jaakar kist utha rahe the, unse December 2025 tak ₹416.75 crore ki wasooli ho chuki thi. Inme income tax bharne wale, sarkari karmchari, PSU ke log aur samvaidhanik padon par rahe log shaamil hain. Ye wohi categories hain jo scheme ki shuruaat se bahar rakhi gayi thi.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Recovery ka matlab sirf paisa wapas lena nahi hai. Iske peeche verification ka poora system kaam karta hai: land record, income tax ka data, sarkari naukri ka record. Isi liye portal par ab kuch cases me benefit physical verification tak roka ja raha hai. Agar aapka paisa is wajah se ruka hai to uska alag se hal hai,{' '}
@@ -234,7 +234,7 @@ export default function PmKisanExtension2031({ article }: { article: ArticleMeta
         <section className="mb-8">
           <SH>Sources</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Is article ki har date aur figure inhi jagahon se milaayi gayi hai. Aap khud bhi check kar sakte hain:
+            Is lekh me jo tareekh ya aankda jahan se liya gaya hai, uski pushti inhi sources se hui hai. Aap chaaho to har link khol kar khud mila sakte hain:
           </p>
           <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-2 list-disc pl-5">
             <li>
@@ -255,7 +255,7 @@ export default function PmKisanExtension2031({ article }: { article: ArticleMeta
             </li>
           </ul>
           <p className="text-xs text-[var(--color-text-muted)] italic">
-            Aakhri baar in sab se milaan {fmtDate(MODIFIED)} ko kiya gaya.
+            Milaan ki sabse taaza tareekh: {fmtDate(MODIFIED)}, jab ye sab link ek-ek karke phir se khole gaye the.
           </p>
         </section>
 

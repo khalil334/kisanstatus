@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   authors: [{ name: AUTHOR_NAME, url: AUTHOR_URL }],
   openGraph: {
     title: 'Drip aur Sprinkler Subsidy: PDMC ke 55% / 45% Niyam Aur Poora Process',
-    description: 'Micro-irrigation subsidy ka asli structure. PDMC assistance rates, unit cost norms, state top-up aur application process.',
+    description: 'PDMC me drip-sprinkler par kitni madad milti hai — 55% / 45% ke rates, unit cost ke norms, rajyon ke top-up aur apply karne ka process.',
     type: 'article',
     locale: 'hi_IN',
     siteName: 'KisanStatus.com',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Drip aur Sprinkler Subsidy: PDMC ke 55% / 45% Niyam',
-    description: 'Micro-irrigation subsidy ka asli structure. PDMC assistance rates, unit cost norms aur application process.',
+    description: 'Drip aur sprinkler subsidy ke PDMC rates, unit cost norms aur apply karne ka process, ek hi jagah.',
     images: ['https://kisanstatus.com/images/kisanguides/drip-sprinkler-hero.webp'],
   },
   alternates: { canonical: 'https://kisanstatus.com/articles/drip-sprinkler-irrigation-subsidy' },
@@ -211,7 +211,7 @@ export default function DripSprinkler() {
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
           <strong>Ye chhoti si line hi sabse zyada confusion mitati hai:</strong> NE aur Himalayan
           states ke liye subsidy <em>percentage</em> nahi badhta — <em>unit cost</em> 25% zyada maana
-          jaata hai (low-penetration states mein 15% zyada). Percentage wahi 55/45 rehta hai.
+          jaata hai (low-penetration states mein 15% zyada). Lekin madad ka hissa har jagah ek sa hi rehta hai — 55% ya 45%.
         </p>
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
           Yahi wajah hai ki &ldquo;hilly states mein 90% subsidy&rdquo; jaisa dawa official documents se

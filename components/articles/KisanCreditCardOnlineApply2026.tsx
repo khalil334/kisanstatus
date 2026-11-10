@@ -4,7 +4,7 @@ import { SI, StepList, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 const PUBLISHED = '2026-06-21T07:43:48+05:30';
-const MODIFIED = '2026-11-10T07:30:00+05:30';
+const MODIFIED = '2026-11-10T10:30:00+05:30';
 
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
@@ -288,7 +288,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             sizes="(max-width: 768px) 100vw, 768px"
           />
           <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            KCC Eligibility — Kaun Apply Kar Sakta Hai
+            KCC Eligibility — Ye Card Kisko Mil Sakta Hai
           </p>
         </div>
 
@@ -531,7 +531,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         <section className="mb-8">
           <SH>Sources</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Is article ki har date aur figure inhi jagahon se milaayi gayi hai. Aap khud bhi check kar sakte hain:
+            Is guide ki har jaankari neeche diye gaye sarkari sources se parakh kar hi likhi gayi hai:
           </p>
           <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-2 list-disc pl-5">
             <li>
@@ -556,7 +556,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             </li>
           </ul>
           <p className="text-xs text-[var(--color-text-muted)] italic">
-            Aakhri baar in sab se milaan {fmtDate(MODIFIED)} ko kiya gaya.
+            Ye saare source {fmtDate(MODIFIED)} ko ek baar phir khol kar jaanche gaye the.
           </p>
         </section>
 

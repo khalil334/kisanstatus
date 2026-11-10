@@ -99,7 +99,7 @@ export default function RajasthanKisanSammanNidhi9000() {
             <em>pending</em> ki taraf chala jaata hai aur kist ruk jaati hai.
           </p>
           <p className="text-sm text-gray-700 dark:text-gray-300">
-            Ye kaam e-Mitra par ya Jan Aadhaar ke through ho jaata hai, aur zyadatar kisano ka 15-20 minute ka kaam hai.
+            Ye kaam e-Mitra par ya Jan Aadhaar ke through ho jaata hai — zyadatar kisano ka kaam ek hi chakkar me nipat jaata hai.
             Banwane ka poora tarika{' '}
             <Link href="/articles/hi/farmer-id-kaise-banaye" className="text-green-700 dark:text-green-400 underline font-medium">
               farmer ID kaise banaye
@@ -118,7 +118,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <h2>7vi Kist Kab Aayegi. CM Kisan Samman Nidhi Rajasthan</h2>
 
         <p>
-          Bahut log seedha “7vi kist kab aayegi” search kar rahe hain. To saaf baat: <strong>7vi kist ka number 6vi ke baad lagega</strong>, aur 6vi abhi pending hai. Jab tak 6vi release nahi hoti, 7vi ki kisi bhi “confirm date” wali khabar ka koi matlab nahi. Internet ya WhatsApp par ghoom rahi tareekhein sirf andaaza hain. Official date sirf Rajasthan sarkar ki ghoshna ya Jan Soochna portal se hi milegi. Jaise hi koi official update aayega, ye page usi din update hoga.
+          Bahut log seedha “7vi kist kab aayegi” search kar rahe hain. To saaf baat: <strong>7vi se pehle 6vi kist aayegi</strong>, aur woh abhi tak aayi nahi hai. Jab tak 6vi release nahi hoti, 7vi ki kisi bhi “confirm date” wali khabar ka koi matlab nahi. Internet ya WhatsApp par ghoom rahi tareekhein sirf andaaza hain. Official date sirf Rajasthan sarkar ki ghoshna ya Jan Soochna portal se hi milegi. Jaise hi koi official update aayega, ye page usi din update hoga.
         </p>
 
         <p>
@@ -253,7 +253,7 @@ export default function RajasthanKisanSammanNidhi9000() {
         <h2>₹12,000 Ka Sach. Announcement Aur Notification Mein Fark Hai</h2>
 
         <p>
-          CM Bhajanlal Sharma ne prastaav rakha hai ki state apna ₹3,000 wala hissa badhakar ₹6,000 kar de, jisse total ₹12,000 tak pahunch jaaye.  Ye abhi sirf ghoshna hai, official notification nahi aaya.
+          CM Bhajanlal Sharma ne prastaav rakha hai ki state apna ₹3,000 wala hissa badhakar ₹6,000 kar de, jisse total ₹12,000 tak pahunch jaaye.  Lekin ye baat abhi manch ki ghoshna tak hi hai — is par koi sarkari aadesh jaari nahi hua.
         </p>
 
         <p>
