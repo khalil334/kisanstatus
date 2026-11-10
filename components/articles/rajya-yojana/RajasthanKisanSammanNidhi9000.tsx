@@ -46,7 +46,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
           <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Status (04/08/2026):</strong> 6vi kist abhi pending hai.  Next kist date officially announce nahi hua. Jan Soochna portal check karte rahein, kisi bhi WhatsApp forward wali tareekh par bharosa na karein.
+            <strong>Status (10/11/2026):</strong> 6vi kist abhi pending hai.  Next kist date officially announce nahi hua. Jan Soochna portal check karte rahein, kisi bhi WhatsApp forward wali tareekh par bharosa na karein.
           </p>
         </div>
 
@@ -127,7 +127,7 @@ export default function RajasthanKisanSammanNidhi9000() {
 
         <h2>Status Kaise Check Karein</h2>
 
-        <p>Do tareeke hain, dono free hain, dono online hote hain.</p>
+        <p>Teen tareeke hain, teeno free hain, teeno online hote hain.</p>
 
         <Fig
           src="status-check-phone.webp"
@@ -156,6 +156,16 @@ export default function RajasthanKisanSammanNidhi9000() {
         </ol>
 
         <ExternalLinkButton url="https://rajsahakar.rajasthan.gov.in/citizen/cmkisanstatus" label="Cooperative Portal. CM Kisan Status" />
+
+        <h3>Farmer Registry (AgriStack) Portal</h3>
+
+        <ol>
+          <li><code>rjfr.agristack.gov.in</code> kholo</li>
+          <li>Apna Farmer ID ya Aadhaar se login karo</li>
+          <li>Registry me apna record aur Kisan Samman Nidhi se judi status dekho</li>
+        </ol>
+
+        <ExternalLinkButton url="https://rjfr.agristack.gov.in" label="Farmer Registry. Rajasthan" />
 
         <h2>Eligible Kaun Hai, Kaun Nahi</h2>
 
@@ -496,15 +506,22 @@ export default function RajasthanKisanSammanNidhi9000() {
                 <td className="border border-gray-300 dark:border-gray-600 p-3">Nadbai, Bharatpur se kist, 71.8 lakh kisan, ₹718 crore</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹1,000 per kisan</td>
               </tr>
+              <tr className="bg-white dark:bg-gray-800">
+                <td className="border border-gray-300 dark:border-gray-600 p-3">22/01/2026</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">5vi kist, 65,30,752 kisan, ₹663 crore se zyada</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹1,000 per kisan</td>
+              </tr>
             </tbody>
           </table>
         </div>
 
         <p>
-          Ye aakhri line dhyan se padhein: ek kist mein 71.8 lakh kisan aur ₹718 crore. Isse do baatein
+          Aakhri do lines ko saath padhein: 18 October 2025 wali kist mein 71.8 lakh kisan aur ₹718 crore, aur January 2026 wali 5vi kist mein 65,30,752 kisan aur ₹663 crore se zyada. Isse do baatein
           pata chalti hain. Ek, scheme ka scale bahut bada hai; do, itne bade beneficiary base ko verify
           karne mein waqt lagta hai, aur yahi wajah hai ki kist ki tareekh aage-peeche hoti rehti hai.
-          Ye kisi ek kisan ki file ka issue nahi, poore system ka size hai.
+          5vi kist mein lagbhag 9 lakh kisanon ko paisa nahi mila — media reports ke mutabik wajah wahi
+          purani teen hain: Farmer ID nahi bani, e-KYC adhoori, ya parivaar ke do sadasyon ko benefit
+          mil raha tha. Ye kisi ek kisan ki file ka issue nahi, poore system ka size hai.
         </p>
 
         <h2>Dusre States Mein Kya Chal Raha Hai</h2>

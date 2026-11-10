@@ -45,7 +45,7 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     ],
     category: 'farming',
     publishedTime: '2026-08-16T08:15:15+05:30',
-    modifiedTime: '2026-08-17T23:59:45+05:30',
+    modifiedTime: '2026-11-10T07:30:00+05:30',
     author: AUTHOR_NAME,
     component: 'RajasthanKisanSammanNidhiHindi',
     ogImage: '/images/articles/rajya-yojna/rajasthan-kisan-samman-nidhi-9000/hero.webp',

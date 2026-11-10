@@ -4,7 +4,7 @@ import { SI, StepList, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 const PUBLISHED = '2026-06-21T07:43:48+05:30';
-const MODIFIED = '2026-08-13T19:14:34+05:30';
+const MODIFIED = '2026-11-10T07:30:00+05:30';
 
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
@@ -41,7 +41,7 @@ const FAQS_DATA = [
   },
   {
     q: '₹2 lakh se zyada limit chahiye lekin collateral (zameen) nahi hai. Kya karein?',
-    a: 'Do options hain. Pehla: Joint Liability Group (JLG) banakar apply karein, jisme 3-5 farmers milkar cross-guarantee dete hain. Group guarantee collateral ki jagah kaam karti hai. Doosra: pehle ₹2 lakh ki collateral-free limit lekar 2 season clean repayment banao, review me enhancement ke waqt bank ka bharosa wahi history hai. Zameen ke bina ₹2L se upar seedha jump mushkil hai, ye sach pehle jaan lo.',
+    a: 'Do options hain. Pehla: Joint Liability Group (JLG) banakar apply karein, jisme 3-5 farmers milkar cross-guarantee dete hain. Group guarantee collateral ki jagah kaam karti hai. Doosra: pehle ₹2 lakh ki collateral-free limit lekar 2 season clean repayment banao, review me enhancement ke waqt bank ka bharosa wahi history hai. Teesra rasta 1 January 2027 se khul raha hai: RBI ke naye framework me collateral-free limit ₹3 lakh tak badh sakti hai, jahan fasal ya stock ki hypothecation ho aur bank ke paas formal recovery mechanism ho — apne bank se poochhein ki ye aap par laagu hota hai ya nahi. Zameen ke bina ₹2L se upar seedha jump mushkil hai, ye sach pehle jaan lo.',
   },
   {
     q: 'Dairy farming ya poultry ke liye Kisan Credit Card mil sakta hai?',
@@ -76,6 +76,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             <span>{fmtDate(PUBLISHED)}</span>
             <span>Updated: {fmtDate(MODIFIED)}</span>
             <span>12 min read</span>
+            <span>✓ Facts verified: 10/11/2026</span>
           </div>
         </div>
       </div>
@@ -84,7 +85,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            <strong>Quick Answer:</strong> Kisan Credit Card (KCC) 2026 ek government-backed short-term loan hai jo kisanon ko <strong>4% effective byaj dar</strong> par ₹5 lakh tak ki credit suvidha deta hai. Isme beej, khaad, aur kheti ke kharchon ke liye ₹2 lakh tak collateral-free loan milta hai. Apply karne ke liye Aadhaar, updated land records (Khatauni), aur bank passbook sabse zaroori documents hain.
+            <strong>Quick Answer:</strong> Kisan Credit Card (KCC) 2026 ek government-backed short-term loan hai. ₹3 lakh tak ke short-term agri-loan par 7% base rate lagta hai, aur time par chukane par 3% subvention ke saath <strong>4% effective byaj</strong> banta hai. Interest subvention ki limit ₹5 lakh tak badha di gayi hai (Budget 2025-26) — lekin 7% wala framework ₹3 lakh tak ke loan ke liye bataya gaya hai, isliye ₹3 lakh se upar wale hisse ka rate apne bank se confirm karein. Beej, khaad aur kheti ke kharchon ke liye ₹2 lakh tak collateral-free loan milta hai. Apply karne ke liye Aadhaar, updated land records (Khatauni), aur bank passbook sabse zaroori documents hain.
           </p>
         </div>
 
@@ -133,8 +134,8 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
               <p className="text-xs text-[var(--color-text-muted)]">Max Subvention Limit</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-center">
-              <p className="font-black text-amber-800 dark:text-amber-300 text-2xl mb-1">5 Yr</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Validity Period</p>
+              <p className="font-black text-amber-800 dark:text-amber-300 text-2xl mb-1">6 Yr</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Composite Tenure, 1 Jan 2027 Se</p>
             </div>
           </div>
 
@@ -257,14 +258,20 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         <section className="mb-8">
           <SH>3 Saal Baad Kya Hota Hai. Renewal Aur Limit Enhancement</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            KCC 5 saal ke liye sanction hota hai, lekin yeh "set and forget" nahi hai. Har saal ek review hota hai, aur standard practice ke hisaab se limit mein saalana lagbhag 10% ki badhotri built-in hoti hai (cost of cultivation badhne ke hisaab se). Practically iska matlab:
+            KCC 5 saal ke liye sanction hota hai — aur 1 January 2027 se RBI ka naya KCC framework laagu ho raha hai, jisme composite facility ki tenure 6 saal hogi. Us tareekh se pehle sanction hue loan purane niyamon par hi chalenge, renewal ya maturity tak. Har saal ek review hota hai; aaj tak ki practice me limit mein saalana lagbhag 10% ki badhotri hoti thi, lekin naye framework me drawing limit DLTC Scale of Finance se tay hogi — Scale of Finance same raha to automatic 10% badhotri nahi milegi. Practically iska matlab:
           </p>
           <ul className="space-y-2 mb-4 text-sm text-[var(--color-text-muted)] list-disc list-inside">
-            <li>Pehle saal ₹1.5 lakh ki limit 5th saal tak ₹2 lakh ke aaspaas pahunch sakti hai. Bina naye application ke, bas review clear hota rahe.</li>
+            <li>Pehle saal ₹1.5 lakh ki limit 5th saal tak ₹2 lakh ke aaspaas pahunch sakti hai. Bina naye application ke, bas review clear hota rahe. Purane niyamon ke hisaab se; naye framework me ye Scale of Finance par depend karega.</li>
             <li>Review miss kiya (bank bulaye aur aap na jaao) toh limit freeze, withdrawal ruk jaata hai.</li>
-            <li>5 saal poore hone par renewal hota hai. Fresh land record aur ek simple form. Purane card ki repayment history yahan aapki sabse badi taakat hai.</li>
+            <li>5 saal poore hone par renewal hota hai — aur 1 Jan 2027 se naye framework me tenure 6 saal ki hogi. Fresh land record aur ek simple form. Purane card ki repayment history yahan aapki sabse badi taakat hai. Ek baat saaf rahe: sirf byaj bharne par renewal nahi hoga. RBI ne "renewal based only on interest payments" wala proposal reject kar diya hai, isliye review me poora hisaab dena hoga.</li>
             <li>Crop pattern badla hai (jaise sabzi se ganna) toh review ke time batao, scale of finance alag hai, limit upar ja sakti hai.</li>
           </ul>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            1 January 2027 se aur bhi kuch badlega. Crop seasons standard ho jayenge — short-duration fasal ke liye 12 mahine, long-duration ke liye 18 mahine. Collateral-free limit ₹2 lakh hi rahegi, lekin jahan fasal ya stock ki hypothecation ho aur bank ke paas formal recovery mechanism ho, wahan ₹3 lakh tak badh sakti hai. Flexi-KCC ab allied activities (dairy, poultry, fisheries) par bhi saaf taur par laagu hoga, aur limit hamesha nearest ₹1,000 par round hogi.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ek aur naya niyam jo seedha aapki jeb se juda hai: bank aapki marzi ke bina KCC account se insurance premium nahi kaat sakta. Premium deduction se pehle explicit consent zaroori hai. Agar statement me aisi koi katauti dikhe jo aapne approve nahi ki, to branch me likhit me poochhein.
+          </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ek aur cheez jo KCC ke saath free aati hai lekin log bhool jaate hain. <strong>PMFBY crop insurance ka aasan access</strong>. KCC holder ka premium bank khud debit kar sakta hai, alag se bhaag-daud nahi. Premium kitna banega, hamare <Link href="/calculator/pmfby-premium" className="text-green-700 dark:text-green-400 underline font-medium">PMFBY premium calculator</Link> se check karein.
           </p>
@@ -316,9 +323,9 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
                 {[
                   ['Base Interest Rate', '7% p.a.', 'All banks uniform'],
                   ['Effective Rate', '4% p.a.', 'Sirf prompt repayment par'],
-                  ['Collateral-Free Limit', '₹2,00,000', 'Koi security nahi chahiye'],
-                  ['Subvention Ceiling', '₹5,00,000', 'Budget 2025-26 guidelines'],
-                  ['Limit Enhancement', '+10% yearly', 'Clean repayment history par'],
+                  ['Collateral-Free Limit', '₹2,00,000', 'Koi security nahi chahiye; 1 Jan 2027 se ₹3 lakh tak (hypothecation + formal recovery par)'],
+                  ['Subvention Ceiling', '₹5,00,000', 'Budget 2025-26 guidelines; 7% framework ₹3 lakh tak bataya gaya hai'],
+                  ['Limit Enhancement', '+10% yearly', 'Purani practice; 1 Jan 2027 se Scale of Finance ke hisaab se'],
                   ['Late Penalty', '7% full rate', 'Subvention forfeit'],
                 ].map(([param, value, note], i) => (
                   <tr key={param} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
@@ -331,7 +338,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             </table>
           </div>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            <strong>Critical Insight:</strong> ₹2 lakh ke upar collateral maanga jaata hai. Lekin <strong>CGTMSE scheme</strong> ke under ₹5 lakh tak collateral-free loan possible hai. Bahut se bank officers yeh nahi batate. Specifically puchiye aur written response maangein.
+            <strong>Critical Insight:</strong> ₹2 lakh ke upar collateral maanga jaata hai. Lekin 1 January 2027 se laagu ho rahe RBI ke naye KCC framework me ye limit ₹3 lakh tak badh sakti hai — hypothecation aur formal recovery mechanism ki shart par. Ye automatic nahi hai; apne bank se likhit me poochhein ki aapke case me ye laagu hota hai ya nahi.
           </p>
         </section>
 
@@ -414,7 +421,10 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Online Portal</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            Jab branch door ho ya timing na mile. Bank ki official website par "Kisan Credit Card" section dhundo. PM Kisan beneficiaries ke liye pmkisan.gov.in par pre-filled option available hai jo data entry errors kam karta hai.
+            Jab branch door ho ya timing na mile, online rasta bhi hai — bas ye jaan lo ki kaunsa portal kis kaam ka hai. <strong>JanSamarth</strong> (jansamarth.in) government ka single-window loan portal hai: eligibility check karo, apni pasand ka bank chuno, application digitally us bank tak pahunch jaati hai. <strong>Kisan Rin Portal</strong> (fasalrin.gov.in) aur <strong>MyScheme</strong> (myscheme.gov.in) par bhi KCC ke liye apply karne ka rasta hai. PM Kisan beneficiaries ke liye pmkisan.gov.in par pre-filled option available hai jo data entry errors kam karta hai. Aur CSC centre par operator form bhar kar bhi apply kar sakta hai. West Bengal ke liye koi alag state KCC portal nahi hai — wahi JanSamarth / bank / CSC wala rasta chalta hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ek purani galatfehmi se bachein: kuch purane guides abhi bhi kehte hain ki online apply nahi hota, ya ₹1.6 lakh se upar collateral lagta hai. Dono baatein purani ho chuki hain — collateral-free limit 1 January 2025 se ₹2 lakh hai, aur upar wale portals se apply ho jaata hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             <strong>Warning:</strong> Cooperative banks aur RRBs ka online portal aksar functional nahi hota. SBI, PNB, BOB better digital infra rakhte hain. Error aaye toh branch hi reliable option hai.
@@ -495,21 +505,6 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </div>
         </section>
 
-        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
-          <Image
-            src="/images/kisan-credit-card-documents-required.webp"
-            alt="Kisan credit card documents checklist, complete list for KCC application"
-            width={1200}
-            height={630}
-            className="w-full object-cover"
-            loading="lazy"
-            sizes="(max-width: 768px) 100vw, 768px"
-          />
-          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)] border-t border-[var(--color-border)]">
-            KCC Documents Checklist. Sab Documents Ready Rakho
-          </p>
-        </div>
-
         <section className="mb-8">
           <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
             Real Questions From Bank Counters
@@ -532,6 +527,38 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             <li>7-10 din baad follow-up</li>
           </ol>
         </div>
+
+        <section className="mb-8">
+          <SH>Sources</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Is article ki har date aur figure inhi jagahon se milaayi gayi hai. Aap khud bhi check kar sakte hain:
+          </p>
+          <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-2 list-disc pl-5">
+            <li>
+              KCC backgrounder — MISS limit ₹5 lakh tak badhi, collateral-free ₹2 lakh, 7.72 crore+ active KCCs, 457 banks onboarded. PIB backgrounder, Ministry of Agriculture &amp; Farmers Welfare, 11 March 2026.{' '}
+              <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2238004" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in (PRID 2238004)</a>
+            </li>
+            <li>
+              Kisan Credit Card Directions, 2026 — revised framework, 1 January 2027 se laagu; 6-year composite tenure, standardised crop seasons, Flexi-KCC allied activities par, renewal sirf byaj bharne par nahi. Reserve Bank of India, June 2026.{' '}
+              <a href="https://www.rbi.org.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">rbi.org.in</a>
+            </li>
+            <li>
+              Interest subvention scheme ki official details. Ministry of Agriculture &amp; Farmers Welfare.{' '}
+              <a href="https://www.agriwelfare.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">agriwelfare.gov.in</a>
+            </li>
+            <li>
+              Animal Husbandry / Fisheries KCC details. Department of Animal Husbandry &amp; Dairying.{' '}
+              <a href="https://dahd.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">dahd.gov.in</a>
+            </li>
+            <li>
+              JanSamarth — government single-window loan portal.{' '}
+              <a href="https://www.jansamarth.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">jansamarth.in</a>
+            </li>
+          </ul>
+          <p className="text-xs text-[var(--color-text-muted)] italic">
+            Aakhri baar in sab se milaan {fmtDate(MODIFIED)} ko kiya gaya.
+          </p>
+        </section>
 
         <GovLink
           href="https://pmkisan.gov.in"

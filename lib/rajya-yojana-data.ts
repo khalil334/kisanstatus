@@ -39,7 +39,7 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     officialPortal: '',
     status: 'live',
     published: '2026-08-03T20:56:16+00:00',
-    modified: '2026-08-03T20:56:16+00:00',
+    modified: '2026-11-10T07:30:00+05:30',
     readTime: '10 min read',
     ogImage: '/images/articles/rajya-yojna/rajasthan-kisan-samman-nidhi-9000/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisan24viKist2026'],

@@ -129,7 +129,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'KisanCreditCardOnlineApply2026',
     title: 'Kisan Credit Card Se ₹5 Lakh Tak Kaise Le',
-    desc: 'KCC hai to ₹5 lakh tak ka loan sirf 4% interest par mil sakta hai. Online apply process, eligibility aur zaroori documents ki puri jankari yahan.',
+    desc: 'KCC par ₹3 lakh tak 4% effective byaj, ₹5 lakh tak subvention limit. RBI ke naye niyam (1 Jan 2027), online apply, eligibility aur documents ki puri jankari.',
     ogTitle: 'KCC Online Apply: ₹5 Lakh Loan 2026',
     seoTitle: 'Kisan Credit Card 2026: 4% Byaj Online Apply',
     keywords: [
@@ -146,7 +146,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'KisanCreditCardOnlineApply2026',
     category: 'loan',
     publishedTime: '2026-06-21T07:43:48+05:30',
-    modifiedTime: '2026-08-13T19:14:34+05:30',
+    modifiedTime: '2026-11-10T07:30:00+05:30',
     readingTime: 14,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('KisanCreditCardOnlineApply2026'),
