@@ -37,7 +37,7 @@ const FAQS_DATA = [
   },
   {
     q: '24vi kist kab tak aayegi mere account mein?',
-    a: 'News mein October 2026 chal raha hai, par official tareekh abhi notify nahi hui - 23vi 20 June 2026 ko aayi thi aur usse pehle ka gap 3-4 mahine ka raha hai. Agar aapki eKYC complete hai aur bank account active hai, toh credit automatic ho jayegi - aapko kuch nahi karna. Release ki khabar aane lage tab hafte mein ek baar status dekh lena kaafi hai. Aa jaye aur aapka paisa na aaye, tab helpline 155261 par call karo ya CSC center jao.'
+    a: '24vi kist aa chuki hai - 30 October 2026 ko Banaskantha, Gujarat se release hui, aur ₹2,000 seedha DBT se khaaton mein bheje gaye. Is baar kul ₹18,690 crore se zyada rakam 9.34 crore se zyada parivaaron tak pahunchi. Agar aapke account mein abhi tak credit nahi aaya, toh pehle apna status check karo - eKYC pending ho ya bank account mein koi gadbad, toh kist atki rehti hai; woh theek karne par paisa agli batch mein aa jata hai. Aur haan, 25vi kist ki abhi koi official tareekh announce nahi hui hai, uska intezar chal raha hai. Bahut der ho gayi ho toh helpline 155261 par call karo ya CSC center jao.'
   },
 ];
 
@@ -431,18 +431,18 @@ export default function PmKisanMasterGuide2026({ article }: { article: ArticleMe
                   <td className="p-3 text-green-700">Paid</td>
                   <td className="p-3">20 June 2026</td>
                 </tr>
-                <tr className="bg-gray-50 dark:bg-gray-800">
+                <tr className="bg-green-50 dark:bg-green-900/20">
                   <td className="p-3">24vi Kist</td>
                   <td className="p-3">₹2,000</td>
-                  <td className="p-3 text-amber-700">Expected</td>
-                  <td className="p-3">October 2026 (official date nahi)</td>
+                  <td className="p-3 text-green-700">Paid</td>
+                  <td className="p-3">30 October 2026</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4 mb-3">
-            Table mein gap dekho. November se March char mahine, March se June teen. Rule saal mein teen kist ka hai, par zameen par timing aage-peeche hoti rehti hai. 24vi ke liye news mein October chal raha hai, lekin pmkisan.gov.in ya PIB par koi tareekh notify nahi hui, isliye humne &quot;Expected&quot; likha hai, &quot;confirm&quot; nahi. Live update <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline font-medium">24vi kist page</Link> par rehta hai.
+            Table mein gap dekho. November se March char mahine, March se June teen, aur June se October phir char mahine. Rule saal mein teen kist ka hai, par zameen par timing aage-peeche hoti rehti hai. 24vi kist 30 October 2026 ko release ho chuki hai, isliye table mein woh bhi &quot;Paid&quot; hai. Live update <Link href="/articles/PmKisan24viKist2026" className="text-[var(--color-primary)] underline font-medium">24vi kist page</Link> par rehta hai.
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">

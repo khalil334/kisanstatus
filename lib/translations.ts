@@ -117,7 +117,7 @@ const t: Record<'hi' | 'en', Translations> = {
 
     hero_badge: 'PM Kisan Samman Nidhi 2026',
     hero_h1_line1: 'PM Kisan Status Check Karo',
-    hero_h1_line2: '23vi Kist 2026',
+    hero_h1_line2: '24vi Kist 2026',
     hero_subtitle: 'Apna PM Kisan payment status check karo, state beneficiary list dekho, aur 24vi kist ki latest jankari yahan milegi. 24vi kist 30 October 2026 ko aa gayi hai.',
     hero_cta_primary: 'Status Check Karo',
     hero_cta_secondary: 'Beneficiary List',
@@ -127,8 +127,8 @@ const t: Record<'hi' | 'en', Translations> = {
     stat_farmers_sub: 'Registered kisaan poore India mein',
     stat_amount: '₹6,000',
     stat_amount_sub: 'Saalana labh, 3 kiston mein',
-    stat_kist: '23vi Kist',
-    stat_kist_sub: '20/06/2026 ko release',
+    stat_kist: '24vi Kist',
+    stat_kist_sub: '30/10/2026 ko release',
     stat_free: '100% Free',
     stat_free_sub: 'Koi hidden charge nahi',
 
@@ -182,8 +182,8 @@ const t: Record<'hi' | 'en', Translations> = {
     footer_contact: 'Contact Us',
     footer_copyright: `© 2026 KisanStatus.com by ${AUTHOR_NAME}. Informational purposes only`,
 
-    seo_title: 'PM Kisan Status Check 2026, 23vi Kist Released | KisanStatus.com',
-    seo_description: 'PM Kisan 23vi kist status check 2026 — ₹2000 seedha bank mein. eKYC guide, beneficiary list, payment fail solution. Sab free.',
+    seo_title: 'PM Kisan Status Check 2026, 24vi Kist Released | KisanStatus.com',
+    seo_description: 'PM Kisan 24vi kist status check 2026 — ₹2000 seedha bank mein. eKYC guide, beneficiary list, payment fail solution. Sab free.',
   },
   en: {
     nav_home: 'Home',
@@ -198,7 +198,7 @@ const t: Record<'hi' | 'en', Translations> = {
 
     hero_badge: 'PM Kisan Samman Nidhi 2026',
     hero_h1_line1: 'PM Kisan Status Check 2026',
-    hero_h1_line2: '23rd Installment',
+    hero_h1_line2: '24th Installment',
     hero_subtitle: 'Check your PM Kisan payment status, view state beneficiary list, and get latest 24th installment updates here. The 24th installment was released on 30 October 2026.',
     hero_cta_primary: 'Check Status',
     hero_cta_secondary: 'Beneficiary List',
@@ -208,8 +208,8 @@ const t: Record<'hi' | 'en', Translations> = {
     stat_farmers_sub: 'Registered farmers across India',
     stat_amount: '₹6,000',
     stat_amount_sub: 'Annual benefit (3 installments)',
-    stat_kist: '23rd Installment',
-    stat_kist_sub: 'Released on 20/06/2026',
+    stat_kist: '24th Installment',
+    stat_kist_sub: 'Released on 30/10/2026',
     stat_free: '100% Free',
     stat_free_sub: 'No hidden charges',
 
@@ -263,8 +263,8 @@ const t: Record<'hi' | 'en', Translations> = {
     footer_contact: 'Contact Us',
     footer_copyright: `© 2026 KisanStatus.com by ${AUTHOR_NAME}. Informational purposes only`,
 
-    seo_title: 'PM Kisan Status Check 2026, 23rd Installment Released | KisanStatus.com',
-    seo_description: 'PM Kisan 23rd installment status check 2026. ₹2000 directly in bank. eKYC guide, beneficiary list, payment fail solution, all free.',
+    seo_title: 'PM Kisan Status Check 2026, 24th Installment Released | KisanStatus.com',
+    seo_description: 'PM Kisan 24th installment status check 2026. ₹2000 directly in bank. eKYC guide, beneficiary list, payment fail solution, all free.',
   },
 };
 

@@ -25,7 +25,7 @@ const FAQS_DATA = [
   { q: 'Bina eKYC ke order banta hai kya?', a: 'Nahi. Sarkar ne eKYC mandatory kar rakhi hai, bina iske kist rok di jati hai. OTP wali eKYC portal ya app se ghar baithe ho jati hai; mobile number Aadhaar se link nahi hai to CSC par biometric se hoti hai.' },
   { q: 'Status me "Rejected" ya "Returned by Bank" dikhe toh?', a: 'Iska matlab bank ne paisa wapas bhej diya, aksar galat IFSC, naam mismatch, ya band account ki wajah se. Ye apne aap theek nahi hota; portal ke correction option se galti sudhaar kar dobara process karwana padta hai.' },
   { q: 'OTP nahi aa raha, kya karoon?', a: 'Registered mobile number purana ya band ho gaya hoga. Nazdeeki CSC par jaakar number update karwa lo. Uske baad OTP naye number par aayega.' },
-  { q: '24vi kist kab tak expect karein?', a: '23vi kist 20 June 2026 ko release hui thi. Scheme har 4 mahine me kist deti hai, is hisaab se agli kist October–November 2026 ke aas-paas aa sakti hai. Official date sirf pmkisan.gov.in ya PIB ke elaan se hi pakki hoti hai.' },
+  { q: '24vi kist kab tak expect karein?', a: 'Expect karne ki baat khatam — 24vi kist 30 October 2026 ko release ho chuki hai. Banaskantha, Gujarat se shuruaat hui aur ₹2,000 seedha DBT se khaaton me bheje gaye. Agar aapke status me FTO generated dikh raha hai phir bhi paisa nahi aaya, to masla date ka nahi hai; Aadhaar seeding aur account ki jaanch karwao. 25vi kist ki official date abhi announce nahi hui hai — pakki tareekh sirf pmkisan.gov.in ya PIB ke elaan se hi milegi.' },
   { q: 'Helpline par kya-kya ready rakhna chahiye?', a: 'Official helpline 155261 ya 011-24300606 par call karne se pehle Aadhaar number, registration number aur bank account details saamne rakh lo. Operator shuru mein yahi poochta hai.' },
 ];
 
@@ -217,7 +217,7 @@ export default function PmKisanFtoGeneratedKaMatlabKyaHai({ article }: { article
           </p>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
-            <strong>24vi kist kab?</strong> Official date abhi announce nahi hui. 4-mahine ke pattern ke hisaab se October–November 2026 ke aas-paas expect ki ja sakti hai. Lekin pakki date sirf pmkisan.gov.in ya PIB ke elaan se aati hai, kisi YouTube video ya WhatsApp forward se nahi. Detail ke liye padhein:{' '}
+            <strong>24vi kist kab?</strong> Wo to 30 October 2026 ko release ho chuki hai. Agar aapke status mein FTO generated dikh raha hai lekin khaate mein paisa abhi tak nahi aaya, toh dikkat date ki nahi, account ya Aadhaar seeding ki ho sakti hai — pehle wahi check karo. Aur 25vi kist ki pakki date abhi announce nahi hui; woh sirf pmkisan.gov.in ya PIB ke elaan se aati hai, kisi YouTube video ya WhatsApp forward se nahi. Detail ke liye padhein:{' '}
             <Link href="/articles/PmKisan24viKist2026" className="underline font-semibold text-[var(--color-primary)] hover:opacity-80">24vi Kist. Latest Update</Link>.
           </p>
           <DB>

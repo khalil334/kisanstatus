@@ -455,22 +455,22 @@ export default function PmKisanBeneficiaryList2026({ article }: { article: Artic
         </section>
 
         <section className="mb-8">
-          <SH>24vi Kist Ke Liye Tayyar Ho</SH>
+          <SH>24vi Kist Aa Chuki Hai</SH>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
             <div className="p-4 bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl">
               <p className="text-sm font-black text-green-800 dark:text-green-300 mb-1">23vi Kist. Released</p>
               <p className="text-xs text-green-700 dark:text-green-400">9.44 Crore+ ko ₹2,000 mil chuke hain.</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border-2 border-amber-400 dark:border-amber-700 rounded-xl">
-              <p className="text-sm font-black text-amber-800 dark:text-amber-300 mb-1">24vi Kist. October 2026 Expected</p>
-              <p className="text-xs text-amber-700 dark:text-amber-400">List mein naam hona chahiye. Checklist follow karo.</p>
+              <p className="text-sm font-black text-amber-800 dark:text-amber-300 mb-1">24vi Kist. Released</p>
+              <p className="text-xs text-amber-700 dark:text-amber-400">30 October 2026 ko release hui — 9.34 crore+ parivaaron ko ₹2,000 mile. Apna naam list mein check karo.</p>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               { title: 'Complete Guide', desc: 'Sab problems ka ek jagah hal', href: '/articles/PmKisanMasterGuide2026', cta: 'Master Guide →' },
               { title: 'FTO Status', desc: 'Paisa kab aayega samjho', href: '/articles/pm-kisan-fto-generated-ka-matlab-kya-hai', cta: 'FTO Guide →' },
-              { title: '24vi Kist Status', desc: 'Expected date + eligibility', href: '/articles/PmKisan24viKist2026', cta: '24vi Guide →' },
+              { title: '24vi Kist Status', desc: 'Released — status aur poori jankari', href: '/articles/PmKisan24viKist2026', cta: '24vi Guide →' },
               { title: 'eKYC Complete Karo', desc: 'Bina eKYC kist nahi milegi', href: '/articles/PmKisanEkycOnline2026', cta: 'eKYC Guide →' },
             ].map(({ title, desc, href, cta }) => (
               <Link
