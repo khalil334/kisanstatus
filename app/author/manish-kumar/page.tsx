@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_IMAGE, AUTHOR_IMAGE_URL, AUTHOR_LINKEDIN, SUPPORT_EMAIL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
+import { SITE_URL, SITE_NAME, AUTHOR_NAME, AUTHOR_IMAGE, AUTHOR_IMAGE_URL, AUTHOR_LINKEDIN, SOCIAL_LINKS, SUPPORT_EMAIL, DEFAULT_OG_IMAGE } from '@/lib/site-config';
 import { AUTHOR_BIO } from '@/lib/author-bios';
 import { getLatestArticles } from '@/lib/articles-data';
 
@@ -34,7 +34,7 @@ const personSchema = {
   email: SUPPORT_EMAIL,
   knowsAbout: ['PM Kisan Samman Nidhi', 'Kisan Credit Card', 'PM Kisan Maandhan', 'Krishi Yojana', 'Fasal Bima'],
   description: AUTHOR_BIO,
-  sameAs: [AUTHOR_LINKEDIN],
+  sameAs: [AUTHOR_LINKEDIN, SOCIAL_LINKS.facebook],
 };
 
 const breadcrumbSchema = {
@@ -142,6 +142,17 @@ export default function AuthorPage() {
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                   </svg>
                   LinkedIn
+                </a>
+                <a
+                  href={SOCIAL_LINKS.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#1877f2] text-white text-xs font-bold rounded-xl hover:bg-[#1464cc] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1877f2]"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                  Facebook Page
                 </a>
                 <Link
                   href="/contact"
