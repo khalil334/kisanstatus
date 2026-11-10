@@ -163,6 +163,8 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         जरूरत नहीं।
       </p>
 
+      <p className="text-xs text-[var(--color-text-muted)]">✓ तथ्य जांचे गए: 10/11/2026 · स्रोत: PIB, agristack.gov.in</p>
+
       <Figure
         priority
         src="/images/articles/hindi-yojna/farmer-id-card/id-card-sample.webp"
@@ -459,6 +461,17 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         </a>
         )। सीधे शब्दों में, आपके गांव के आधे से ज्यादा किसानों की ID शायद बन भी चुकी है. और जो बचे हैं, उन्हीं
         तक पहुंचने के लिए camps और CSC का जोर है।
+      </p>
+      <p>
+        और गिनती यहीं नहीं रुकी। 23 अक्टूबर 2026 की रात तक देश भर में <strong>11 करोड़ Farmer ID</strong>{' '}
+        बन चुकी थीं — 31 मार्च 2027 की तय तारीख से पूरे पांच महीने पहले। कृषि मंत्री शिवराज सिंह चौहान
+        ने 24 अक्टूबर को इसका ऐलान किया (
+        <a href="https://pib.gov.in/PressReleasePage.aspx?PRID=2327905" target="_blank" rel="noopener noreferrer">
+          PIB release, 24 अक्टूबर 2026
+        </a>
+        )। इसी registry के जरिए अब तक <strong>6 करोड़ से ज्यादा किसानों</strong> को अलग-अलग योजनाओं का
+        सीधा फायदा मिल चुका है। यानी ID बनवाना अब किसी आने वाले नियम की तैयारी नहीं, चल रही व्यवस्था
+        का हिस्सा है।
       </p>
       <p>
         इस registry का फायदा कागज पर नहीं, जमीन पर भी दिख चुका है। महाराष्ट्र ने Kharif 2025 के

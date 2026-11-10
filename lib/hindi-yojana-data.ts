@@ -69,7 +69,7 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
     keywords: ['किसान आईडी कैसे बनाएं', 'farmer id kaise banaye', 'agristack id kaise banaye', 'farmer id banane ke liye documents', 'किसान आईडी कार्ड', 'agristack farmer id', 'farmer id banane me kitna time lagta hai', 'agristack id kya hai', 'मोबाइल से farmer id कैसे बनाएं', 'farmer id kaisi dikhti hai', 'agrisnet farmer id', 'farmer id me dvc name kya hota hai', 'किसान आईडी डाउनलोड'],
     category: 'farming',
     publishedTime: '2026-08-09T00:42:08+03:00',
-    modifiedTime: '2026-08-09T00:42:08+03:00',
+    modifiedTime: '2026-11-10T20:13:00+05:30',
     author: AUTHOR_NAME,
     component: 'FarmerIdCardKaiseBanaye2027',
     ogImage: '/images/articles/hindi-yojna/farmer-id-card/id-card-sample.webp',
