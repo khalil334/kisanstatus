@@ -35,7 +35,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
 
         <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
           <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Status (08/11/2026):</strong> Krishak Bandhu ab Mukhyamantri Krishak Samman Nidhi (MKSN) hai. Notification 29 October 2026 ko jaari hui. 5 November ko Pursurah me pehli kist release ho gayi — Times of India ne CM ke hawaale se transfer ki pushti ki hai. Neeche kya pakka hai aur kya abhi nahi, dono alag likhe hain.
+            <strong>Status (11/11/2026):</strong> Krishak Bandhu ab Mukhyamantri Krishak Samman Nidhi (MKSN) hai. Notification 29 October 2026 ko jaari hui. 5 November ko Pursurah me pehli kist release ho gayi — Times of India ne CM ke hawaale se transfer ki pushti ki hai. Neeche kya pakka hai aur kya abhi nahi, dono alag likhe hain.
           </p>
         </div>
 
@@ -260,6 +260,10 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
           Status dekhne ka sabse seedha raasta official portal hai, krishakbandhu.wb.gov.in. Wahan scheme ki guidelines aur updates milenge. Iske alawa apne block ke ADA office se bhi maloom kar sakte hain, khaas taur par agar online kuch samajh na aaye to. Component-2 ka fayda PM Kisan se juda hai, isliye PM Kisan ka status bhi saath me dekhna chahiye, woh pmkisan.gov.in par &ldquo;Know Your Status&rdquo; se milta hai.
         </p>
 
+        <p>
+          Ek cheez aur, naam me dhokha hai. Purana krishakbandhu.net domain ab sarkari site nahi hai — ek jaanch me wahan scheme se bilkul alag content dikha tha. Asli portal sirf krishakbandhu.wb.gov.in hai, wahi kholein, aur kisi milte-julte naam wali site par apna Aadhaar ya bank detail kabhi na daalein.
+        </p>
+
         <ExternalLinkButton url="https://krishakbandhu.wb.gov.in" label="Official Portal. Krishak Bandhu West Bengal" />
 
         <p>
@@ -346,7 +350,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
         </ul>
 
         <p>
-          Ye jaankari aakhri baar 8 November 2026 ko inhi sources par dobara parakhi gayi thi. Beneficiary list aate hi ye article phir update hoga.
+          Ye jaankari aakhri baar 11 November 2026 ko inhi sources par dobara parakhi gayi thi. Beneficiary list aate hi ye article phir update hoga.
         </p>
 
         <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">

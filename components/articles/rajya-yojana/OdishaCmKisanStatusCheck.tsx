@@ -19,6 +19,10 @@ const FAQS_DATA = [
     a: 'Nahi. KALIA ki jagah CM Kisan aayi hai, lekin scheme ka core kaam wahi hai. Aapka purana KALIA registration bekar nahi hua. Sirf do cheezein badli hain: status ab cmkisan.odisha.gov.in par dekhna hoga, aur beneficiary base dobara verify hua hai. Is liye kuch purane record hate aur kuch naye jude.',
   },
   {
+    q: 'Naya kisan CM Kisan me register kaise kare, kya Farmer ID zaroori hai?',
+    a: 'Haan, bina AgriStack Farmer ID ke form aage nahi badhega — pehle wohi banwayein. Phir cmkisan.odisha.gov.in par jaakar apna track — cultivator ya landless — chun kar form bharein. Registration kab se khula hai aur kya-kya chahiye, ye page ke "Naya Registration" wale hisse me likha hai.',
+  },
+  {
     q: 'Mere paas zameen nahi hai, phir bhi CM Kisan mil sakta hai?',
     a: 'Haan. Bhoomiheen krishi parivaar ke liye ismein landless track banaya gaya hai. Paisa kheti ke input ke liye nahi, balki bakri palan, murgi palan, dairy ya machhli jaise allied kaam ke liye milta hai. Aur tranche teen hote hain, cultivator side ke do ke muqable.',
   },
@@ -187,7 +191,7 @@ export default function OdishaCmKisanStatusCheck({
         <ul>
           <li>
             <Link href="/rajya-yojana/state-kisan-yojana-list-all-states-2026">
-              West Bengal Krishak Bandhu. Voter ID se status aur death benefit (state list guide me)
+              West Bengal MKSN, pehle Krishak Bandhu. PM Kisan par ₹3,000 top-up (state list guide me)
             </Link>
           </li>
           <li>
@@ -258,6 +262,23 @@ export default function OdishaCmKisanStatusCheck({
         </p>
 
         <OdishaCmKisanChecker />
+
+        <h2>Naya Registration: 6 July 2026 Se Portal Khula Hai</h2>
+
+        <p>
+          Jo kisan abhi tak CM Kisan me nahi hain, unke liye portal 6 July 2026 se naye
+          registration ke liye khula hai. Ye baat khud CM Kisan portal par likhi hai: naye
+          registration ke liye AgriStack Farmer ID zaroori hai. Bina Farmer ID ke form aage
+          nahi badhega, isliye pehle wohi banwayein, phir cmkisan.odisha.gov.in par
+          registration karein.
+        </p>
+
+        <p>
+          Registration portal par hi hota hai, kisi agent ke paas nahi. Form bharte waqt
+          apna track pehle tay karein — cultivator ya landless — kyunki galat track me form
+          bharne par file reject hoti hai. Upar wala checker isi liye hai: pehle woh bhar
+          lein to track saaf ho jaata hai, phir portal par jaayein.
+        </p>
 
         <h2>Landless Track Ka Alag Raasta. Kise Kya Karna Hai</h2>
 
@@ -573,7 +594,7 @@ export default function OdishaCmKisanStatusCheck({
           checkedOn={article.modified || article.published}
           sources={[
             { label: 'The New Indian Express (5 Sep 2026) — 5th instalment release', href: 'https://www.newindianexpress.com/amp/story/states/odisha/2026/Sep/05/nuakhai-gift-odisha-cm-majhi-releases-rs-833-crore-cm-kisan-aid', note: '₹833 crore se zyada DBT, 41.35 lakh kisan aur 13,949 bhoomiheen parivaar, 4 September 2026; The Statesman, Pragativadi, Organiser aur Times of India ne bhi yahi release cover ki' },
-            { label: 'CM Kisan Portal (cmkisan.odisha.gov.in)', href: 'https://cmkisan.odisha.gov.in', note: 'status check, beneficiary list, cultivator/landless track, is guide ka har step isi portal par khud check karke likha gaya hai' },
+            { label: 'CM Kisan Portal (cmkisan.odisha.gov.in)', href: 'https://cmkisan.odisha.gov.in', note: 'status check, beneficiary list, cultivator/landless track, is guide ka har step isi portal par khud check karke likha gaya hai; 6 July 2026 se naya registration khula hai aur AgriStack Farmer ID zaroori hai' },
             { label: 'Agriculture & Farmers\u2019 Empowerment Dept, Govt of Odisha', href: 'https://agri.odisha.gov.in', note: 'scheme guidelines, eligibility aur exclusion rules' },
             { label: 'PM Kisan Portal (pmkisan.gov.in)', href: 'https://pmkisan.gov.in', note: 'PM Kisan aur CM Kisan ke saath-saath milne wale benefit ki puṣṭi' },
           ]}
