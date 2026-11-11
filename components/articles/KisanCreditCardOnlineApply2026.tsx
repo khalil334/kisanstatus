@@ -4,7 +4,7 @@ import { SI, StepList, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 const PUBLISHED = '2026-06-21T07:43:48+05:30';
-const MODIFIED = '2026-11-10T10:30:00+05:30';
+const MODIFIED = '2026-11-11T09:30:00+05:30';
 
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
@@ -51,6 +51,10 @@ const FAQS_DATA = [
     q: 'Jansamarth portal se KCC apply karna better hai ya seedha bank jaana?',
     a: 'Jansamarth (jansamarth.in) ek single window hai jahan se application aapke chune hue bank tak pahunchti hai. Documents clean hain toh online theek hai. Lekin land record ya naam mismatch jaisa koi bhi issue hai toh branch route lo, wahan galti counter par hi pakdi jaati hai, portal par hafton baad reject hokar aati hai.',
   },
+  {
+    q: 'Kisan Credit Card yojana kab shuru hui thi?',
+    a: 'August 1998 me — 1998-99 ke Budget me iska ailaan hua tha aur NABARD ne model scheme bankon ko August 1998 me bheji thi. Shuru me sirf fasal ke liye tha; 2018-19 se dairy, machli-palan aur poultry bhi isme jud gaye, aur 2012 me electronic KCC (e-KCC) aaya.',
+  },
 ];
 
 export default function KisanCreditCardOnlineApply2026({ article }: { article: ArticleMeta }) {
@@ -76,7 +80,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             <span>{fmtDate(PUBLISHED)}</span>
             <span>Updated: {fmtDate(MODIFIED)}</span>
             <span>12 min read</span>
-            <span>✓ Facts verified: 10/11/2026</span>
+            <span>✓ Facts verified: 11/11/2026</span>
           </div>
         </div>
       </div>
@@ -85,7 +89,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
 
         <div className="my-6 p-5 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 rounded-r-xl">
           <p className="text-sm md:text-base text-blue-900 dark:text-blue-100 leading-relaxed font-medium">
-            <strong>Quick Answer:</strong> Kisan Credit Card (KCC) 2026 ek government-backed short-term loan hai. ₹3 lakh tak ke short-term agri-loan par 7% base rate lagta hai, aur time par chukane par 3% subvention ke saath <strong>4% effective byaj</strong> banta hai. Interest subvention ki limit ₹5 lakh tak badha di gayi hai (Budget 2025-26) — lekin 7% wala framework ₹3 lakh tak ke loan ke liye bataya gaya hai, isliye ₹3 lakh se upar wale hisse ka rate apne bank se confirm karein. Beej, khaad aur kheti ke kharchon ke liye ₹2 lakh tak collateral-free loan milta hai. Apply karne ke liye Aadhaar, updated land records (Khatauni), aur bank passbook sabse zaroori documents hain.
+            <strong>Quick Answer:</strong> Kisan Credit Card (KCC) 2026 ek government-backed short-term loan hai. ₹3 lakh tak ke short-term agri-loan par 7% base rate lagta hai, aur time par chukane par 3% subvention ke saath <strong>4% effective byaj</strong> banta hai. Budget 2025-26 me ₹5 lakh tak ki limit ka ailaan hua tha, lekin uska notification abhi tak nahi aaya — isliye 2025-26 ke liye operative limit ₹3 lakh hi hai (RBI circular, 13 January 2026), aur 7% wala rate bhi usi ₹3 lakh tak lagta hai; usse upar ka hissa bank ke normal rate par milega. Beej, khaad aur kheti ke kharchon ke liye ₹2 lakh tak collateral-free loan milta hai. Apply karne ke liye Aadhaar, updated land records (Khatauni), aur bank passbook sabse zaroori documents hain.
           </p>
         </div>
 
@@ -130,8 +134,8 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
               <p className="text-xs text-[var(--color-text-muted)]">Effective Interest Rate</p>
             </div>
             <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl text-center">
-              <p className="font-black text-blue-800 dark:text-blue-300 text-2xl mb-1">₹5L</p>
-              <p className="text-xs text-[var(--color-text-muted)]">Max Subvention Limit</p>
+              <p className="font-black text-blue-800 dark:text-blue-300 text-2xl mb-1">₹3L</p>
+              <p className="text-xs text-[var(--color-text-muted)]">Operative Subvention Limit, FY 2025-26</p>
             </div>
             <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl text-center">
               <p className="font-black text-amber-800 dark:text-amber-300 text-2xl mb-1">6 Yr</p>
@@ -324,7 +328,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
                   ['Base Interest Rate', '7% p.a.', 'All banks uniform'],
                   ['Effective Rate', '4% p.a.', 'Sirf prompt repayment par'],
                   ['Collateral-Free Limit', '₹2,00,000', 'Koi security nahi chahiye; 1 Jan 2027 se ₹3 lakh tak (hypothecation + formal recovery par)'],
-                  ['Subvention Ceiling', '₹5,00,000', 'Budget 2025-26 guidelines; 7% framework ₹3 lakh tak bataya gaya hai'],
+                  ['Subvention Ceiling (MISS)', '₹3,00,000', 'RBI circular 13 Jan 2026 — FY 2025-26 ke liye operative limit; Budget 2025-26 ka ₹5 lakh ailaan abhi notify nahi hua'],
                   ['Limit Enhancement', '+10% yearly', 'Purani practice; 1 Jan 2027 se Scale of Finance ke hisaab se'],
                   ['Late Penalty', '7% full rate', 'Subvention forfeit'],
                 ].map(([param, value, note], i) => (
@@ -422,6 +426,9 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Online Portal</h3>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Jab branch door ho ya timing na mile, online rasta bhi hai — bas ye jaan lo ki kaunsa portal kis kaam ka hai. <strong>JanSamarth</strong> (jansamarth.in) government ka single-window loan portal hai: eligibility check karo, apni pasand ka bank chuno, application digitally us bank tak pahunch jaati hai. <strong>Kisan Rin Portal</strong> (fasalrin.gov.in) aur <strong>MyScheme</strong> (myscheme.gov.in) par bhi KCC ke liye apply karne ka rasta hai. PM Kisan beneficiaries ke liye pmkisan.gov.in par pre-filled option available hai jo data entry errors kam karta hai. Aur CSC centre par operator form bhar kar bhi apply kar sakta hai. West Bengal ke liye koi alag state KCC portal nahi hai — wahi JanSamarth / bank / CSC wala rasta chalta hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Cooperative bank ya Gramin Bank se lena ho toh eKCC portal wala rasta bhi chal raha hai — December 2025 se is raaste se 3 lakh se zyada KCC applications onboard ho chuki hain (Financial Express, 20 September 2026). Aadhaar authentication aur land-record validation usi portal par hoti hai; sanction aur disbursal phir bhi aapke bank se hi hota hai.
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             Ek purani galatfehmi se bachein: kuch purane guides abhi bhi kehte hain ki online apply nahi hota, ya ₹1.6 lakh se upar collateral lagta hai. Dono baatein purani ho chuki hain — collateral-free limit 1 January 2025 se ₹2 lakh hai, aur upar wale portals se apply ho jaata hai.
@@ -535,7 +542,11 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
           <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-2 list-disc pl-5">
             <li>
-              KCC backgrounder — MISS limit ₹5 lakh tak badhi, collateral-free ₹2 lakh, 7.72 crore+ active KCCs, 457 banks onboarded. PIB backgrounder, Ministry of Agriculture &amp; Farmers Welfare, 11 March 2026.{' '}
+              RBI circular — Modified Interest Subvention Scheme, FY 2025-26: operative limit ₹3 lakh, 7% lending rate, 1.50% subvention, 3% prompt-repayment incentive, ₹2 lakh allied-only sub-limit. Reserve Bank of India, 13 January 2026.{' '}
+              <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13270&Mode=0" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">rbi.org.in (RBI/2025-26/193)</a>
+            </li>
+            <li>
+              KCC backgrounder — Budget 2025-26 me ₹5 lakh limit ka ailaan, collateral-free ₹2 lakh, 7.72 crore+ active KCCs, 457 banks onboarded. PIB backgrounder, Ministry of Agriculture &amp; Farmers Welfare, 11 March 2026.{' '}
               <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2238004" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in (PRID 2238004)</a>
             </li>
             <li>
