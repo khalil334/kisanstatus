@@ -12,6 +12,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: HindiArticle }>>
   PmKisan25viKistKabAayegi: dynamic(() => import('@/components/articles/hindi-yojana/PmKisan25viKistKabAayegi'), { ssr: true }),
   PmKisanStatusCheckMobileNumberSe: dynamic(() => import('@/components/articles/hindi-yojana/PmKisanStatusCheckMobileNumberSe'), { ssr: true }),
   MukhyamantriKisanKalyanYojanaMp: dynamic(() => import('@/components/articles/hindi-rajya-yojana/MukhyamantriKisanKalyanYojanaMp'), { ssr: true }),
+  MaharashtraSukhaRahat5000Hindi: dynamic(() => import('@/components/articles/hindi-rajya-yojana/MaharashtraSukhaRahat5000Hindi'), { ssr: true }),
   PmKisanNewRegistration2027: dynamic(() => import('@/components/articles/hindi-yojana/PmKisanNewRegistration2027'), { ssr: true }),
   FarmerIdCardKaiseBanaye2027: dynamic(() => import('@/components/articles/hindi-yojana/FarmerIdCardKaiseBanaye2027'), { ssr: true }),
   TractorSubsidy2027StateWiseList: dynamic(() => import('@/components/articles/hindi-kisanguides/TractorSubsidy2027StateWiseList'), { ssr: true }),

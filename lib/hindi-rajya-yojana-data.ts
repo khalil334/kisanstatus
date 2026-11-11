@@ -185,4 +185,17 @@ export const HINDI_RAJYA_YOJANA_ARTICLES: readonly HindiArticle[] = [
     ogImage: '/images/articles/rajya-yojna/parihara-payment-status-check-2026/hero.webp',
     noindex: true,
   },
+  {
+    slug: 'hi/maharashtra-sukha-rahat-5000-2026',
+    titleHi: 'महाराष्ट्र सूखा राहत ₹5,000: किसको मिला, किसको नहीं, और बाकी का क्या होगा',
+    seoTitleHi: 'महाराष्ट्र सूखा राहत ₹5,000: किसको मिला?',
+    desc: 'महाराष्ट्र के 304 सूखाग्रस्त तालुकों में ₹5,000 अग्रिम: 5 नवंबर तक 87.45 लाख किसानों को ₹4,372.83 करोड़ मिल चुका है। कौन पात्र है, पैसा नहीं आया तो क्या करें, और ₹31,000 करोड़ वाला NDRF प्रस्ताव।',
+    keywords: ['महाराष्ट्र सूखा राहत 5000', 'maharashtra drought relief 5000', 'महाराष्ट्र दुष्काळ अनुदान 5000', 'सूखा राहत 5000 स्टेटस'],
+    category: 'farming',
+    publishedTime: '2026-11-11T09:00:00+05:30',
+    modifiedTime: '2026-11-11T09:00:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'MaharashtraSukhaRahat5000Hindi',
+    ogImage: '/images/articles/hindi-yojna/maharashtra-sukha-rahat-5000/sukha-mitti-hero.webp',
+  },
 ] as const;

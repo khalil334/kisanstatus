@@ -278,6 +278,30 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     ogImage: '/images/articles/rajya-yojna/parihara-payment-status-check-2026/hero.webp',
     relatedPaths: ['/articles/PmKisanMasterGuide2026', '/articles/PmKisanPaymentFailedFix2026'],
   },
+  {
+    slug: 'maharashtra-drought-relief-5000-advance-2026',
+    mainKeyword: 'maharashtra drought relief 5000 status check',
+    secondaryKeywords: [
+      'maharashtra dushkal anudan 5000',
+      'maharashtra drought relief 5000 kaise check kare',
+      'maharashtra drought relief list',
+      '5000 rupees advance maharashtra farmer',
+      'maharashtra sukha rahat 5000',
+    ],
+    title: 'Maharashtra ₹5,000 Relief: Kisko Mila, Kab?',
+    description:
+      'Maharashtra ke 304 sukha-grast talukon me ₹5,000 advance: 5 November tak 87.45 lakh kisanon ko ₹4,372.83 crore mil chuka hai. Kaun eligible hai, paisa nahi aaya to kya karein, aur ₹31,000 crore wala NDRF prastav.',
+    ogTitle: 'Maharashtra ₹5,000 Drought Relief: Full Hisab',
+    component: 'MaharashtraDroughtRelief5000Advance2026',
+    state: 'Maharashtra',
+    officialPortal: 'https://gr.maharashtra.gov.in/Site/Upload/Government%20Resolutions/Marathi/202610271811211341.pdf',
+    status: 'live',
+    published: '2026-11-11T09:00:00+05:30',
+    modified: '2026-11-11T09:00:00+05:30',
+    readTime: '11 min read',
+    ogImage: '/images/articles/maharashtra-drought-relief-5000-advance-2026/drought-cracked-hero.webp',
+    relatedPaths: ['/rajya-yojana/namo-shetkari-yojana-status-check-2026', '/articles/PmKisanMasterGuide2026', '/rajya-yojana/state-kisan-yojana-list-all-states-2026'],
+  },
 ];
 
 export const LIVE_RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] =

@@ -32,8 +32,10 @@ import PmKisanPatiPatniRule from '@/components/articles/rajya-yojana/PmKisanPati
 import StateKisanYojanaHub from '@/components/articles/rajya-yojana/StateKisanYojanaHub';
 import PariharaPaymentStatusCheck2026 from '@/components/articles/rajya-yojana/PariharaPaymentStatusCheck2026';
 import WestBengalMukhyamantriKrishakSammanNidhi from '@/components/articles/rajya-yojana/WestBengalMukhyamantriKrishakSammanNidhi';
+import MaharashtraDroughtRelief5000Advance2026 from '@/components/articles/rajya-yojana/MaharashtraDroughtRelief5000Advance2026';
 
 const COMPONENTS: Record<string, React.ComponentType<{ article: RajyaYojanaArticleMeta }>> = {
+  MaharashtraDroughtRelief5000Advance2026,
   RajasthanKisanSammanNidhi9000,
   AnnadataSukhibhavaStatusCheck,
   MpKisanKalyanYojanaKist,
