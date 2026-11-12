@@ -220,6 +220,13 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         आधार से अलग होना</strong>। &quot;राम कुमार&quot; आधार में और &quot;रामकुमार&quot; खतौनी में. बस, verification
         अटक गया। Registration से पहले दोनों record मिला लें; फर्क हो तो पहले तहसील से ठीक कराएं।
       </p>
+      <p>
+        Maharashtra के किसानों के लिए एक राहत की खबर भी है। 7 नवंबर 2026 को राज्य के राजस्व मंत्री चंद्रशेखर
+        बावनकुले ने कहा कि जिन किसानों के land record या cultivation details अधूरे हैं, वे भी verify हो सकते
+        हैं — crop inspection अब Talathi स्तर पर e-Ferfar से होगी, और इससे करीब 70 लाख किसानों को फायदा होगा।
+        यह बात सिर्फ Maharashtra के लिए है; इसका कोई official नोटिस अभी maharashtra.gov.in पर नहीं मिला है,
+        इसलिए इसे बाकी राज्यों का नियम न समझें।
+      </p>
 
       <Sec>मोबाइल से Online registration. घर बैठे, step-by-step</Sec>
       <p>
