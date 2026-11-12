@@ -5,7 +5,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
   const faqs = [
     {
       q: 'Kya har PM Kisan beneficiary ko West Bengal se ₹3,000 extra milenge?',
-      a: 'Sirf woh PM Kisan beneficiary jinhe rajya ke niyam bhi pass karte hain. Component-2 ka fayda unhi ko hai jo PM Kisan ke eligible beneficiary hain aur rajya ki exclusion list me nahi aate. Sirf PM Kisan mil raha hai, is bharose mat raho ki state wala hissa apne aap aa jayega — uske liye rajya ki verification alag se pass karni hoti hai.',
+      a: 'Har PM Kisan beneficiary ko nahi — sirf woh jinka PM Kisan eligibility poori tarah theek hai. Component-2 ke liye PM Kisan ke apne niyam chalte hain, rajya ki alag exclusion list nahi. PM Kisan me naam hai aur wahan ki jaanch (eKYC, land seeding, bank seeding) poori hai, to rajya wala ₹3,000 automatic enrolment se aayega, verification ke baad.',
     },
     {
       q: 'Pehli kist ₹2,000 ki kyun hai, ₹1,000 ki kyun nahi?',
@@ -17,7 +17,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
     },
     {
       q: '40 decimal se kam zameen hai, kitna milega?',
-      a: 'Component-1 me ₹4,000 saalana, do baar me ₹2,000 karke, Kharif aur Rabi me. Agar aap PM Kisan ke beneficiary bhi hain to uske upar Component-2 ke ₹3,000 aur milenge, kul ₹7,000. 40 decimal ya zyada zameen par Component-1 ₹6,000 hai, to PM Kisan ke saath kul ₹9,000 banta hai.',
+      a: 'Ye is baat par hai ki PM Kisan milta hai ya nahi. PM Kisan ke beneficiary hain to aapka kul ₹9,000 saalana hoga — ₹6,000 Kendra se, ₹3,000 rajya ke Component-2 se — zameen 40 decimal se kam ho ya zyada, farak nahi padta. PM Kisan nahi milta aur zameen 40 decimal se kam hai, to sirf Component-1 ke ₹4,000 milenge, do baar me ₹2,000 karke, Kharif aur Rabi me.',
     },
     {
       q: 'Pati-patni dono ko alag-alag milega?',
@@ -35,7 +35,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
 
         <div className="mb-8 p-5 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-blue-600 not-prose shadow-sm">
           <p className="text-sm md:text-base text-gray-700 dark:text-gray-300 mb-0">
-            <strong>Status (11/11/2026):</strong> Krishak Bandhu ab Mukhyamantri Krishak Samman Nidhi (MKSN) hai. Notification 29 October 2026 ko jaari hui. 5 November ko Pursurah me pehli kist release ho gayi — Times of India ne CM ke hawaale se transfer ki pushti ki hai. Neeche kya pakka hai aur kya abhi nahi, dono alag likhe hain.
+            <strong>Status (12/11/2026):</strong> Krishak Bandhu ab Mukhyamantri Krishak Samman Nidhi (MKSN) hai. Notification 29 October 2026 ko jaari hui. 5 November ko Pursurah me pehli kist release ho gayi — Times of India ne CM ke hawaale se transfer ki pushti ki hai. Neeche kya pakka hai aur kya abhi nahi, dono alag likhe hain.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
         </p>
 
         <p>
-          Naam ke peeche do hisse hain, aur dono ko alag samajhna zaroori hai, kyunki log inhe mila kar galat hisaab laga rahe hain. Pehla hissa purani Krishak Bandhu wali madad hai, zameen ke hisaab se ₹4,000 ya ₹6,000 saalana. Doosra hissa bilkul naya hai: jo kisan PM Kisan ka fayda le rahe hain, unhe rajya ki taraf se saal ke ₹3,000 aur milenge. Dono hisse ek saath samjho to poori tasveer banti hai, alag-alag padho to aadhi.
+          Naam ke peeche do hisse hain, aur dono ko alag samajhna zaroori hai, kyunki log inhe mila kar galat hisaab laga rahe hain. Pehla hissa purani Krishak Bandhu wali madad hai, zameen ke hisaab se ₹4,000 ya ₹6,000 saalana — sirf un kisanon ke liye jo PM Kisan nahi le rahe. Doosra hissa bilkul naya hai: jo kisan PM Kisan ka fayda le rahe hain, unhe rajya ki taraf se saal ke ₹3,000 aur milenge. Ek kisan ko dono hisse ek saath nahi milte — ya to Component-1, ya Component-2. Dono ko alag-alag padho to aadhi tasveer banti hai, saath samjho to poori.
         </p>
 
         <p>
@@ -58,16 +58,16 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
         <h2>₹9,000 Ka Hisaab. Dono Hisse Ek Saath</h2>
 
         <p>
-          Sabse pehle wohi hisaab jo sabse zyada poochha ja raha hai: ek PM Kisan wale kisan ko kul kitna milega. Kendra se ₹6,000, rajya se ₹3,000, kul ₹9,000 saalana. Lekin ye ₹9,000 sirf unhe milega jinke paas 40 decimal ya zyada zameen hai aur jo PM Kisan ke beneficiary bhi hain. Kam zameen walon ka hisaab neeche table me hai.
+          Sabse pehle wohi hisaab jo sabse zyada poochha ja raha hai: ek PM Kisan wale kisan ko kul kitna milega. Kendra se ₹6,000, rajya se ₹3,000, kul ₹9,000 saalana — aur ye ₹9,000 har PM Kisan beneficiary ko milega, zameen 5 decimal ho ya 50. Zameen ki ginati is hisse me kahin nahi aati; woh sirf Component-1 me hai, jo PM Kisan walon ke liye hai hi nahi. Neeche table me dono hisse alag-alag dikhaye gaye hain, taaki hisaab milana aasan ho.
         </p>
 
         <div className="overflow-x-auto my-8 not-prose">
           <table className="w-full border-collapse border border-gray-300 dark:border-gray-600 rounded-xl overflow-hidden text-sm shadow-sm">
             <thead>
-              <tr className="bg-gray-100 dark:bg-gray-700">
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">Hissa</th>
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">Saalana Rakam</th>
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">Kis Tarah</th>
+              <tr className="bg-[var(--color-primary)]">
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left text-white">Hissa</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left text-white">Saalana Rakam</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left text-white">Kis Tarah</th>
               </tr>
             </thead>
             <tbody>
@@ -76,7 +76,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹6,000</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">3 × ₹2,000</td>
               </tr>
-              <tr className="bg-gray-50 dark:bg-gray-700">
+              <tr className="bg-[#F6FBF6] dark:bg-gray-700">
                 <td className="border border-gray-300 dark:border-gray-600 p-3">MKSN Component-2 (Rajya, PM Kisan walon ke liye)</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹3,000</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">3 × ₹1,000, har chaar mahine me</td>
@@ -86,13 +86,13 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹6,000</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">2 × ₹3,000, Kharif aur Rabi me</td>
               </tr>
-              <tr className="bg-gray-50 dark:bg-gray-700">
+              <tr className="bg-[#F6FBF6] dark:bg-gray-700">
                 <td className="border border-gray-300 dark:border-gray-600 p-3">MKSN Component-1, 40 decimal se kam zameen</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹4,000</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">2 × ₹2,000, Kharif aur Rabi me</td>
               </tr>
               <tr className="bg-white dark:bg-gray-800 font-semibold">
-                <td className="border border-gray-300 dark:border-gray-600 p-3">Kul (PM Kisan + MKSN, 40 decimal ya zyada)</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Kul — PM Kisan beneficiary (zameen kitni bhi ho)</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3 text-green-700 dark:text-green-400">₹9,000</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">6 kistein saal bhar me</td>
               </tr>
@@ -101,7 +101,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
         </div>
 
         <p>
-          Table ko dhyan se padhiye, to ek baat samajh aayegi: Component-1 aur Component-2 do alag raaste hain. Component-1 zameen par milta hai, chahe PM Kisan mile ya na mile. Component-2 sirf PM Kisan walon ko milta hai. Isliye ek kisan jiske paas 40 decimal se kam zameen hai aur PM Kisan bhi milta hai, use ₹4,000 ke saath ₹3,000 aur milenge, kul ₹7,000. Aur jise PM Kisan nahi milta, use sirf Component-1 ka hissa milega.
+          Table me do raaste saaf dikh rahe hain, aur ye do raaste kabhi ek nahi hote. PM Kisan mil raha hai to aap Component-2 wale raaste par hain: ₹6,000 Kendra se, ₹3,000 rajya se, kul ₹9,000 — zameen kitni bhi ho. PM Kisan nahi mil raha to aap Component-1 wale raaste par hain: zameen ke hisaab se ₹6,000 ya ₹4,000. ₹7,000 jaisa koi hisaab is scheme me hai hi nahi; woh galat jod hai jo dono hisson ko mila kar banaya gaya tha.
         </p>
 
         <h2>Pehli Kist 5 November: Kya Pakka Hai, Kya Nahi</h2>
@@ -137,13 +137,13 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
         <h3>Component-2: PM Kisan Walon Ke Liye ₹3,000</h3>
 
         <p>
-          Is hisse ki shart sirf ek hai: aap PM Kisan ke eligible beneficiary hone chahiye. PM Kisan ke niyam yahan bhi lagenge, aur rajya ki exclusion list bhi. Koi alag form nahi bharna, koi alag registration nahi. PM Kisan me naam hai aur rajya ke niyam pass karte hain, to automatic enrolment hoga, verification ke baad.
+          Is hisse ki shart sirf ek hai: aap PM Kisan ke eligible beneficiary hone chahiye. Notification saaf kehti hai ki is hisse ki eligibility, exclusion aur enrolment PM Kisan ke apne niyam se chalenge — rajya ki alag exclusion list yahan nahi lagti. Koi alag form nahi bharna, koi alag registration nahi. PM Kisan me naam hai aur wahan ki jaanch poori hai, to automatic enrolment hoga, verification ke baad.
         </p>
 
         <h3>Component-1: Zameen Ke Hisaab Se ₹6,000 Ya ₹4,000</h3>
 
         <p>
-          Is hisse me zameen hi pehchan hai. 40 decimal ya zyada kheti ki zameen ho to ₹6,000 saalana, usse kam ho to ₹4,000. Sirf malik hi nahi, registered bargadar, patta holder aur registered sharecropper bhi isme aate hain, apne record ke saath. Zameen ki ginati 1 July 2026 ki tareekh par tiki hai, uske baad zameen me badlav ko aam taur par nahi gina jayega, aur ye cut-off paanch saal ke liye taya hai.
+          Is hisse me zameen hi pehchan hai — lekin ek shart pehle: PM Kisan ke beneficiary is hisse me aate hi nahi, woh Component-2 me hain. Jo PM Kisan nahi le rahe, unke liye 40 decimal ya zyada kheti ki zameen ho to ₹6,000 saalana, usse kam ho to ₹4,000. Sirf malik hi nahi, registered bargadar, patta holder aur registered sharecropper bhi isme aate hain, apne record ke saath. Zameen ki ginati 1 July 2026 ki tareekh par tiki hai, uske baad zameen me badlav ko aam taur par nahi gina jayega, aur ye cut-off paanch saal ke liye taya hai.
         </p>
 
         <p>
@@ -153,22 +153,23 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
         <h2>Kaun Bahar Hai</h2>
 
         <p>
-          Notification me bahar rakhe gaye logon ki list saaf likhi hai. Inme se kisi bhi category me aate hain to MKSN ka fayda nahi milega, chahe PM Kisan milta ho ya na ho:
+          Notification ke section 5 me bahar rakhe gaye logon ki list saaf likhi hai — ye list Component-1 ke liye hai. Inme se kisi bhi category me aate hain to Component-1 ka fayda nahi milega:
         </p>
 
         <ul>
           <li>Sanstha ke naam par zameen rakhne wale (institutional landholders).</li>
+          <li>PM Kisan ke beneficiary — ye Component-1 se bahar hain, kyunki unhe Component-2 se ₹3,000 milte hain.</li>
           <li>Samvaidhanik padon par rahe ya maujooda log.</li>
           <li>Sarkari karmchari, chahe kaam kar rahe hon ya retired hon — sirf Group D, MTS aur Class IV ke karmchari isse bahar nahi hain.</li>
           <li>Pichhle assessment year me income tax bharne wale.</li>
           <li>Registered professional: doctor, engineer, lawyer, chartered accountant, architect, jo apna pesha karte hain.</li>
-          <li>Retired pensioner jinhe mahine ke ₹10,000 ya zyada pension milti ho — Group D, MTS aur Class IV phir bhi eligible hain.</li>
+          <li>Retired pensioner — Group D, MTS aur Class IV ke retired karmchari phir bhi eligible hain.</li>
           <li>NRI (Non-Resident Indian).</li>
           <li>Wo voter jinka naam SIR 2026 ke tahat voter list se hata diya gaya hai.</li>
         </ul>
 
         <p>
-          Ye list PM Kisan ki exclusion list se bahut milti-julti hai, aur wahi iska matlab hai: jo PM Kisan se bahar hai, woh aam taur par MKSN se bhi bahar hoga. Agar aapko lagta hai ki aap galti se is list me aa gaye hain, to apne block ke ADA office me record dikha kar baat karein, online shikayat se zyada kaam wahi hoga.
+          Ye list PM Kisan ki exclusion list se bahut milti-julti hai — isiliye jo PM Kisan se bahar hai, woh aam taur par Component-1 se bhi bahar hoga. Ulta, jo PM Kisan le raha hai, woh Component-1 se bahar hai, lekin Component-2 se ₹3,000 paata hai. Agar aapko lagta hai ki aap galti se is list me aa gaye hain, to apne block ke ADA office me record dikha kar baat karein, online shikayat se zyada kaam wahi hoga.
         </p>
 
         <h2>Purane Krishak Bandhu Se Kya Badla</h2>
@@ -180,10 +181,10 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
         <div className="overflow-x-auto my-8 not-prose">
           <table className="w-full border-collapse border border-gray-300 dark:border-gray-600 rounded-xl overflow-hidden text-sm shadow-sm">
             <thead>
-              <tr className="bg-gray-100 dark:bg-gray-700">
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">Baab</th>
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">Purana Krishak Bandhu (Natun)</th>
-                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left">Naya MKSN Component-1</th>
+              <tr className="bg-[var(--color-primary)]">
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left text-white">Baab</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left text-white">Purana Krishak Bandhu (Natun)</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left text-white">Naya MKSN Component-1</th>
               </tr>
             </thead>
             <tbody>
@@ -192,7 +193,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹4,000 se ₹10,000, zameen ke hisaab se</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹4,000 ya ₹6,000, sirf do slab</td>
               </tr>
-              <tr className="bg-gray-50 dark:bg-gray-700">
+              <tr className="bg-[#F6FBF6] dark:bg-gray-700">
                 <td className="border border-gray-300 dark:border-gray-600 p-3">40 decimal ya zyada</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹10,000 tak mil sakta tha</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹6,000 taya</td>
@@ -202,7 +203,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
                 <td className="border border-gray-300 dark:border-gray-600 p-3">Zameen ke hisaab se ₹4,000 se upar</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹4,000 taya</td>
               </tr>
-              <tr className="bg-gray-50 dark:bg-gray-700">
+              <tr className="bg-[#F6FBF6] dark:bg-gray-700">
                 <td className="border border-gray-300 dark:border-gray-600 p-3">Kist ka samay</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">Do kistein saalana</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">Do kistein, Kharif aur Rabi me</td>
@@ -212,7 +213,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
                 <td className="border border-gray-300 dark:border-gray-600 p-3">₹2 lakh parivar ko</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">Nayi notification me zikr nahi, jaari rehna unclear</td>
               </tr>
-              <tr className="bg-gray-50 dark:bg-gray-700">
+              <tr className="bg-[#F6FBF6] dark:bg-gray-700">
                 <td className="border border-gray-300 dark:border-gray-600 p-3">PM Kisan top-up</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">Nahi tha</td>
                 <td className="border border-gray-300 dark:border-gray-600 p-3">Component-2: ₹3,000 saalana extra</td>
@@ -222,7 +223,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
         </div>
 
         <p>
-          Table ki doosri line sabse zaroori hai. Jin kisanon ko purani scheme me ₹10,000 tak milta tha, unhe ab ₹6,000 milega. Ye koi galti nahi hai, naya niyam hi yehi hai. Iske badle me PM Kisan walon ko ₹3,000 ka naya hissa jud gaya hai, to jinhe dono milte hain unka kul ₹9,000 banta hai. Lekin jise PM Kisan nahi milta aur zameen zyada hai, uska hisaab pehle se kam ho gaya hai. Apna budget isi naye hisaab se banaiye, purani rakam par nahi.
+          Table ki doosri line sabse zaroori hai. Jin kisanon ko purani scheme me ₹10,000 tak milta tha, unhe ab Component-1 me ₹6,000 milega. Ye koi galti nahi hai, naya niyam hi yehi hai. PM Kisan walon ke liye alag raasta hai: unhe Component-2 se ₹3,000 jud gaya hai, to unka kul ₹9,000 banta hai. Lekin jise PM Kisan nahi milta aur zameen zyada hai, uska hisaab pehle se kam ho gaya hai — ₹10,000 se ₹6,000. Apna budget isi naye hisaab se banaiye, purani rakam par nahi.
         </p>
 
         <p>
@@ -336,7 +337,7 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
         <h2>Sources</h2>
 
         <p>
-          Yahan di gayi tareekhein aur rakam inhi khabron aur sarkari kagazon se jaanch kar likhi gayi hain. Notification ka poora text Agriculture Department ki notification 1128-AG/O/9M(Nab)-56/2026, dated 29.10.2026 me hai:
+          Yahan di gayi tareekhein aur rakam inhi khabron aur sarkari kagazon se jaanch kar likhi gayi hain. Notification ka poora text Agriculture Department ki notification 1128-AG/O/9M(Nab)-56/2026, dated 29.10.2026 me hai — Component-1 ki exclusion list usi ke section 5 me hai, aur Component-2 ke niyam section 4 me:
         </p>
 
         <ul>
@@ -350,7 +351,11 @@ export default function WestBengalMukhyamantriKrishakSammanNidhi() {
         </ul>
 
         <p>
-          Ye jaankari aakhri baar 11 November 2026 ko inhi sources par dobara parakhi gayi thi. Beneficiary list aate hi ye article phir update hoga.
+          Ye jaankari aakhri baar 12 November 2026 ko inhi sources par dobara parakhi gayi thi — is baar notification ke Component-1 / Component-2 wale hisse ko uske asal text se milakar theek kiya gaya hai. Beneficiary list aate hi ye article phir update hoga.
+        </p>
+
+        <p className="text-xs text-gray-500 dark:text-gray-400">
+          Cover photo: Ruppur, Nadia (West Bengal) ke dhan ke khet, suraj dhalne ke waqt — Wikimedia Commons par Subhrajyoti07 (CC BY 2.0).
         </p>
 
         <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">

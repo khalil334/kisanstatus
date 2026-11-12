@@ -64,8 +64,9 @@ export const RAJYA_YOJANA_ARTICLES: readonly RajyaYojanaArticleMeta[] = [
     officialPortal: 'https://krishakbandhu.wb.gov.in',
     status: 'live',
     published: '2026-11-06T13:13:00+05:30',
-    modified: '2026-11-11T22:19:00+05:30',
+    modified: '2026-11-12T11:20:00+05:30',
     readTime: '11 min read',
+    ogImage: '/images/articles/rajya-yojna/west-bengal-mukhyamantri-krishak-samman-nidhi/hero.webp',
     relatedPaths: ['/articles/PmKisan24viKist2026', '/articles/PmKisanMasterGuide2026', '/rajya-yojana/state-kisan-yojana-list-all-states-2026'],
   },
   {
