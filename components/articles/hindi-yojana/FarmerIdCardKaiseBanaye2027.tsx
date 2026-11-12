@@ -98,11 +98,7 @@ function Figure({ src, alt, caption, priority = false }: { src: string; alt: str
 }
 
 function Sec({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 className="text-xl font-black text-[var(--color-text)] mt-8 mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-      {children}
-    </h2>
-  );
+  return <h2 className="text-xl font-black text-[var(--color-text)] mt-9 mb-3">{children}</h2>;
 }
 
 function Th({ children }: { children: React.ReactNode }) {
@@ -219,11 +215,11 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
           </tr>
         </tbody>
       </Tbl>
-      <Note tone="warn">
+      <p>
         जो अड़चन बाकी सब से ज्यादा बार आती है, वह पहले ही बता दें, <strong>land record में नाम की spelling
         आधार से अलग होना</strong>। &quot;राम कुमार&quot; आधार में और &quot;रामकुमार&quot; खतौनी में. बस, verification
         अटक गया। Registration से पहले दोनों record मिला लें; फर्क हो तो पहले तहसील से ठीक कराएं।
-      </Note>
+      </p>
 
       <Sec>मोबाइल से Online registration. घर बैठे, step-by-step</Sec>
       <p>
@@ -333,12 +329,12 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         alt="CSC केंद्र पर biometric से Farmer ID registration कराता किसान"
         caption="CSC पर biometric verification से काम हो जाता है. आधार में mobile link न हो तब भी"
       />
-      <Note tone="ok">
+      <p>
         एक अनुभव field से. MP के एक गांव में camp लगा तो जिन किसानों के land record पहले से साफ-सुथरे थे,
         उनकी आईडी उसी हफ्ते बन गई। जिनके record में वरासत दर्ज नहीं थी (जमीन अब भी दादा के नाम), वो महीनों
         अटके रहे। सीख: <strong>record पहले सुधारो, registration बाद में</strong>. उल्टा करोगे तो इंतजार ही
         मिलेगा।
-      </Note>
+      </p>
 
       <Sec>खसरा, खतौनी, registry. तीनों का फर्क दो मिनट में</Sec>
       <p>
@@ -376,11 +372,11 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         मिलेगा. PDF आ जाएगी। एक सलाह. PDF निकालकर उसी वक्त अपने ही WhatsApp पर भेज दें। बाद में camp
         हो या बैंक, फोन में तुरंत मिल जाएगी और हर बार login करने का झंझट नहीं रहेगा।
       </p>
-      <Note tone="warn">
+      <p>
         Registration approve होने से पहले download का option नहीं आता, status pending है तो card भी नहीं
         बनेगा, इंतजार के अलावा चारा नहीं। और सुनिए. कोई app या website पैसे लेकर &ldquo;Farmer ID card
         download&rdquo; कराने की बात करे तो वहीं रुक जाइए। यह सरकारी portal से खुद निकलती है, मुफ्त।
-      </Note>
+      </p>
 
       <Sec>Status कैसे check करें?</Sec>
       <p>
@@ -588,7 +584,7 @@ export default function FarmerIdCardKaiseBanaye2027({ article }: { article: Hind
         {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })})।
       </p>
 
-      <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
+      <div className="mt-10">
         <h3 className="font-black text-[var(--color-text)] mb-3 text-base">इस विषय से जुड़े बाकी page</h3>
         <ul className="list-disc pl-5 space-y-1.5 text-sm">
           <li>

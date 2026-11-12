@@ -17,7 +17,7 @@ export function SI({ n, children }: { n: number; children: React.ReactNode }) {
         </div>
         <div className="w-0.5 flex-1 bg-gradient-to-b from-green-300 to-transparent mt-1 min-h-[12px]" />
       </div>
-      <div className="flex-1 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl px-4 py-3 text-sm text-[var(--color-text)] leading-relaxed shadow-sm mb-1 hover:border-[var(--color-primary)] transition-colors">
+      <div className="flex-1 px-1 py-0.5 text-sm text-[var(--color-text)] leading-relaxed mb-1">
         {children}
       </div>
     </div>
@@ -54,7 +54,7 @@ export function DB({ children }: { children: React.ReactNode }) {
 
 export function SH({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)] flex items-center gap-2">
+    <h2 className="text-xl font-black text-[var(--color-text)] mb-4 flex items-center gap-2">
       {children}
     </h2>
   );
@@ -118,16 +118,16 @@ export function RelatedArticles({
   if (articles.length === 0) return null;
 
   return (
-    <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
-      <h3 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
+    <div className="mt-10">
+      <h3 className="font-black text-[var(--color-text)] mb-2 text-base flex items-center gap-2">
         Related Articles — Yeh Bhi Padho
       </h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8">
         {articles.map((a) => (
           <Link
             key={a.slug}
             href={`/articles/${a.slug}`}
-            className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] hover:bg-[var(--color-bg-alt)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline group focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+            className="flex items-center gap-3 py-2.5 border-b border-[var(--color-border)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline group focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
           >
             {a.emoji && (
               <span className="text-xl shrink-0 group-hover:scale-110 transition-transform">
@@ -348,19 +348,16 @@ export function FAQBlock({
     <section className="mb-8">
       {schemaTag}
       {captionTag}
-      <div className="space-y-3">
+      <div>
         {faqs.map(({ q, a }) => (
-          <details
-            key={q}
-            className="border border-[var(--color-border)] rounded-xl overflow-hidden group"
-          >
-            <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
+          <details key={q} className="border-b border-[var(--color-border)] group">
+            <summary className="py-4 font-semibold text-[var(--color-text)] cursor-pointer hover:text-[var(--color-primary)] text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
               <span>{q}</span>
               <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">
                 +
               </span>
             </summary>
-            <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
+            <div className="pb-4 text-sm text-[var(--color-text-muted)] leading-relaxed">
               {a}
             </div>
           </details>

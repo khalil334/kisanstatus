@@ -81,11 +81,7 @@ function Figure({ src, alt, caption, priority = false }: { src: string; alt: str
 }
 
 function H2({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
-      {children}
-    </h2>
-  );
+  return <h2 className="text-xl font-black text-[var(--color-text)] mt-9 mb-3">{children}</h2>;
 }
 
 function H3({ children }: { children: React.ReactNode }) {
@@ -137,10 +133,10 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         caption="तारीख का इंतज़ार सबको है. पर असली काम record पूरा रखना है"
       />
 
-      <Note tone="info">
+      <p>
         योजना का बुनियादी गणित बदला नहीं है: पात्र किसान परिवार को साल में ₹6,000, तीन बराबर हिस्सों में, हर हिस्सा
         ₹2,000. सीधे बैंक खाते में DBT से। यह किस्त उसी सिलसिले की अगली कड़ी होगी।
-      </Note>
+      </p>
 
       <H2>तारीख को लेकर अब तक क्या पता है?</H2>
       <p>
@@ -181,11 +177,11 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         नहीं, जाल है।
       </p>
 
-      <Note tone="warn">
-        "आपकी 25वीं किस्त रोकी गई है, इस link पर click करके activate करें". ऐसे SMS/WhatsApp message ठगी
-        हैं। योजना का पैसा किसी link पर click करने से न आता है, न रुकता है। किसी भी message में आए link पर
-        बैंक details कभी न भरें।
-      </Note>
+      <p>
+        एक और पहचान आजकल रोज काम आती है. "आपकी 25वीं किस्त रोकी गई है, इस link पर click करके activate
+        करें" — ऐसे SMS/WhatsApp message ठगी हैं। योजना का पैसा किसी link पर click करने से न आता है, न
+        रुकता है। किसी भी message में आए link पर बैंक details कभी न भरें।
+      </p>
 
       <H2>इंतजार के बजाय ये 4 काम निपटा लें</H2>
       <p>
@@ -198,38 +194,25 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         alt="eKYC, NPCI seeding और land record. तीन जरूरी जांच का checklist"
         caption="किस्त से पहले ये तीन जांच YES पर होनी चाहिए"
       />
-      <div className="space-y-3 my-4">
-        <div className="border border-[var(--color-border)] rounded-xl p-4 bg-[var(--color-card)]">
-          <p className="font-bold text-sm mb-1">1. eKYC की स्थिति देखें</p>
-          <p className="text-sm leading-relaxed">
-            Portal के "Know Your Status" में eKYC का column YES होना चाहिए। NO है तो OTP से (आधार-linked
-            mobile जरूरी) या CSC पर biometric से करवा लें। तरीका{' '}
-            <Link href="/articles/hi/ekyc-mobile-se">eKYC मोबाइल से</Link> वाले लेख में step-by-step है।
-          </p>
-        </div>
-        <div className="border border-[var(--color-border)] rounded-xl p-4 bg-[var(--color-card)]">
-          <p className="font-bold text-sm mb-1">2. बैंक खाते की आधार seeding जांचें</p>
-          <p className="text-sm leading-relaxed">
-            DBT का पैसा उस खाते में जाता है जो NPCI mapper में आधार से जुड़ा हो। खाता बदला है या dormant
-            पड़ा है तो पहले यह ठीक कराएं —{' '}
-            <Link href="/articles/hi/npci-aadhaar-seeding">NPCI सीडिंग guide</Link> देखें।
-          </p>
-        </div>
-        <div className="border border-[var(--color-border)] rounded-xl p-4 bg-[var(--color-card)]">
-          <p className="font-bold text-sm mb-1">3. जमीन का record मिलाएं</p>
-          <p className="text-sm leading-relaxed">
-            खरीद-बिक्री या वरासत हुई है तो खतौनी में नाम update होना जरूरी है। Land seeding pending दिखे तो
-            पटवारी/तहसील से संपर्क करें।
-          </p>
-        </div>
-        <div className="border border-[var(--color-border)] rounded-xl p-4 bg-[var(--color-card)]">
-          <p className="font-bold text-sm mb-1">4. पिछली किस्त का payment status देखें</p>
-          <p className="text-sm leading-relaxed">
-            अगर पिछली बार FTO generate होकर भी पैसा नहीं पहुंचा था, तो वह समस्या अपने आप ठीक नहीं होगी।
-            कारण status में ही लिखा मिलेगा।
-          </p>
-        </div>
-      </div>
+      <p>
+        <strong>पहला काम, eKYC की स्थिति देख लें।</strong> Portal के "Know Your Status" में eKYC का
+        column YES होना चाहिए। NO है तो OTP से (आधार-linked mobile जरूरी) या CSC पर biometric से करवा
+        लें। तरीका <Link href="/articles/hi/ekyc-mobile-se">eKYC मोबाइल से</Link> वाले लेख में
+        step-by-step है।
+      </p>
+      <p>
+        <strong>दूसरा, बैंक खाते की आधार seeding जांचें।</strong> DBT का पैसा उस खाते में जाता है जो
+        NPCI mapper में आधार से जुड़ा हो। खाता बदला है या dormant पड़ा है तो पहले यह ठीक कराएं —{' '}
+        <Link href="/articles/hi/npci-aadhaar-seeding">NPCI सीडिंग guide</Link> देखें।
+      </p>
+      <p>
+        <strong>तीसरा, जमीन का record मिलाएं।</strong> खरीद-बिक्री या वरासत हुई है तो खतौनी में नाम
+        update होना जरूरी है। Land seeding pending दिखे तो पटवारी/तहसील से संपर्क करें।
+      </p>
+      <p>
+        <strong>और चौथा, पिछली किस्त का payment status देख लें।</strong> अगर पिछली बार FTO generate
+        होकर भी पैसा नहीं पहुंचा था, तो वह समस्या अपने आप ठीक नहीं होगी। कारण status में ही लिखा मिलेगा।
+      </p>
 
       <H3>कौन सा काम कितना समय लेता है. पहले क्या पकड़ें</H3>
       <p>
@@ -472,19 +455,17 @@ export default function PmKisan25viKistKabAayegi({ article }: { article: HindiAr
         {new Date(article.modifiedTime).toLocaleDateString('en-IN', { day: '2-digit', month: '2-digit', year: 'numeric' })} की है।
       </p>
 
-      <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-2xl">
-        <h3 className="font-black text-[var(--color-text)] mb-4 text-base flex items-center gap-2">
-          Related Articles. Yeh Bhi Padho
-        </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+      <div className="mt-10">
+        <h3 className="font-black text-[var(--color-text)] mb-3 text-base">Yeh Bhi Padho</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5">
           {RELATED.map((a) => (
             <Link
               key={a.slug}
               href={`/articles/${a.slug}`}
-              className="flex items-center gap-3 p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl hover:border-[var(--color-primary)] transition-colors text-sm font-medium text-[var(--color-text)] no-underline"
+              className="text-sm font-medium text-[var(--color-primary)] hover:underline underline-offset-4"
             >
-              {a.emoji && <span className="text-xl shrink-0">{a.emoji}</span>}
-              <span>{a.title}</span>
+              {a.emoji ? `${a.emoji} ` : ''}
+              {a.title} →
             </Link>
           ))}
         </div>

@@ -81,12 +81,12 @@ export default function OdishaCmKisanStatusCheck({
           hai. Par sachchai iske beech mein hai, aur usse samajhna is page ka pehla kaam hai.
         </p>
 
-        <InfoBox type="info">
+        <p>
           KALIA aur CM Kisan do juda scheme hain, lekin ek hi zarurat ke liye banayi gayi
           hain. Odisha ke chhote kisan aur bhoomiheen krishi parivaar ko seedha paisa dena.
           Purana enrolment aap ka claim khatam nahi karta, magar naya verification aur e-KYC
           har haal mein zaroori hai.
-        </InfoBox>
+        </p>
 
         <h2>PM Kisan Aur CM Kisan. Dono Sath Chalte Hain</h2>
 
@@ -340,12 +340,12 @@ export default function OdishaCmKisanStatusCheck({
           <li>Landholding scheme ki upper limit se zyada ho</li>
         </ul>
 
-        <InfoBox type="warning">
-          Exclusion parivaar-level par lagti hai. Agar ghar ka ek sadasya sarkari naukri mein
-          hai, to alag ration card bana lene ya alag form bharne se scheme mein entry nahi
-          milti, verification ke waqt yahi pakda jaata hai aur payment recover bhi ki ja
-          sakti hai.
-        </InfoBox>
+        <p>
+          Aur ye exclusion parivaar-level par lagti hai. Agar ghar ka ek sadasya sarkari
+          naukri mein hai, to alag ration card bana lene ya alag form bharne se scheme mein
+          entry nahi milti — verification ke waqt yahi pakda jaata hai, aur galti se mila
+          payment recover bhi kiya ja sakta hai.
+        </p>
 
         <h2>Status Check Karne Ka Sahi Tareeka</h2>
 
@@ -561,22 +561,12 @@ export default function OdishaCmKisanStatusCheck({
         />
         <section className="mb-8 not-prose">
           <p className="text-xs text-[var(--color-text-muted)] mb-3 italic">Odisha CM Kisan, status aur patrata par kisano ki asli uljhanein</p>
-          <div className="space-y-3">
+          <div className="space-y-5">
             {FAQS_DATA.map(({ q, a }) => (
-              <details
-                key={q}
-                className="border border-[var(--color-border)] rounded-xl overflow-hidden group"
-              >
-                <summary className="p-4 font-semibold text-[var(--color-text)] cursor-pointer bg-[var(--color-bg-alt)] hover:bg-green-50 dark:hover:bg-green-900/20 text-sm flex justify-between items-center gap-3 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]">
-                  <span>{q}</span>
-                  <span className="text-green-600 dark:text-green-400 text-xl group-open:rotate-45 transition-transform shrink-0">
-                    +
-                  </span>
-                </summary>
-                <div className="p-4 text-sm text-[var(--color-text-muted)] leading-relaxed border-t border-[var(--color-border)]">
-                  {a}
-                </div>
-              </details>
+              <div key={q}>
+                <p className="font-semibold text-[var(--color-text)] text-sm mb-1">{q}</p>
+                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">{a}</p>
+              </div>
             ))}
           </div>
         </section>
@@ -604,12 +594,11 @@ export default function OdishaCmKisanStatusCheck({
           <Link href="/rajya-yojana">← Sabhi rajya ki kisan yojana</Link>
         </p>
 
-      <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
-        <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">
-          <strong className="text-orange-600 dark:text-orange-400 block mb-2">Disclaimer:</strong>
-          Ye page aapko sahi disha dene bhar ke liye hai. Kisi bhi dawe ki jaanch CM Kisan portal ya apne block krishi karyalaya se karwa kar hi aage badhein.
-        </p>
-      </div>
+      <p className="mt-8 text-sm text-gray-600 dark:text-gray-400 not-prose">
+        <strong>Disclaimer:</strong> Ye page aapko sahi disha dene bhar ke liye hai. Kisi bhi
+        dawe ki jaanch CM Kisan portal ya apne block krishi karyalaya se karwa kar hi aage
+        badhein.
+      </p>
 
       </article>
     </>

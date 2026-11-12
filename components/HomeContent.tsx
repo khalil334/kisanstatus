@@ -392,7 +392,7 @@ export default function HomeContent() {
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div>
             {FAQS.map((faq, index) => (
               <FaqItem key={index} question={faq.question} answer={faq.answer} index={index} />
             ))}
