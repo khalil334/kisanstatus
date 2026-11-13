@@ -142,7 +142,7 @@ export default function BhulekhLandRecordKaiseCheckKare({ article }: { article: 
                   ['Punjab, Haryana', 'Jamabandi', 'jamabandi.punjab.gov.in / jamabandi.nic.in'],
                   ['Karnataka', 'RTC (Record of Rights)', 'bhoomi.karnataka.gov.in'],
                   ['Rajasthan', 'Khatauni (Apna Khata)', 'apnakhata.raj.nic.in'],
-                  ['Telangana', 'Dharani', 'dharani.telangana.gov.in'],
+                  ['Telangana', 'Bhu Bharati (Pahani / ROR-1B)', 'bhubharati.telangana.gov.in'],
                   ['Bihar', 'Bhumi Jankari', 'biharbhumi.bihar.gov.in'],
                   ['West Bengal', 'Banglar Bhumi', 'banglarbhumi.gov.in'],
                   ['Odisha', 'Bhulekh / ROR', 'bhulekh.ori.nic.in'],
@@ -159,6 +159,9 @@ export default function BhulekhLandRecordKaiseCheckKare({ article }: { article: 
           </div>
           <p className="text-[var(--color-text-muted)] text-xs">
             Poori list — 18 rajyon ke portal, search ke saath — neeche di gayi hai. Agar aapka rajya is table me nahi hai to directory dekhiye.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
+            Telangana ke kisan ek badlav dhyan rakhein: wahan purana Dharani portal band ho chuka hai, record ab Bhu Bharati par milta hai. Ek savdhani bhi zaruri hai — 7 November 2026 ko Telangana CID ne Bhu Bharati mutation se jude ek kathit ₹90 crore ke ghotalay me 4 logon ko giraftar kiya hai; mamla abhi jaanch me hai. Mutation sirf RDO ke authorised process se hota hai, isliye kisi operator ya agent ko mutation ke naam par paisa na dein — apna record khud bhubharati.telangana.gov.in par check karein.
           </p>
         </section>
 
@@ -287,6 +290,8 @@ export default function BhulekhLandRecordKaiseCheckKare({ article }: { article: 
             <li><a href="https://pmkisan.gov.in" target="_blank" rel="noopener noreferrer" className="underline">pmkisan.gov.in</a> — land seeding aur PM Kisan eligibility</li>
             <li><a href="https://eservices.tn.gov.in" target="_blank" rel="noopener noreferrer" className="underline">eservices.tn.gov.in</a> — Commissioner of Land Administration, Tamil Nadu: Patta Chitta view</li>
             <li><a href="https://banglarbhumi.gov.in" target="_blank" rel="noopener noreferrer" className="underline">banglarbhumi.gov.in</a> — Banglar Bhumi, West Bengal: Know Your Property / Khatian</li>
+            <li><a href="https://bhubharati.telangana.gov.in" target="_blank" rel="noopener noreferrer" className="underline">bhubharati.telangana.gov.in</a> — Bhu Bharati, Revenue Department, Telangana: Pahani / ROR-1B. Purana Dharani portal 14 April 2025 se band hai; uski jagah yahi portal chalta hai</li>
+            <li>The Times of India aur Siasat, 8 November 2026 — Telangana CID ki Bhu Bharati mutation fraud me 4 giraftariyon ki report; mamla abhi jaanch me hai</li>
             <li>The New Indian Express, 10 November 2026, aur thelandbankers.com — Karnataka e-Pouthi relaxation: bahar rehne wale waris ke liye online family tree / legal heir certificate, August 2026 se</li>
             <li><Link href="/articles/PmKisanLandSeedingForm" className="underline">KisanStatus: Land Seeding Form guide</Link> — rajya-wise Bhulekh portal links</li>
           </ul>

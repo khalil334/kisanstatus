@@ -228,6 +228,13 @@ export default function BhulekhKhatauniKaiseDekheHindi({ article }: { article: H
         कीजिए या तहसील से पूछिए। 13 नवंबर को दोबारा चेक करने पर तमिलनाडु और पश्चिम बंगाल के पोर्टल भी इस ब्राउज़र
         में टाइम आउट हो गए।
       </p>
+      <p>
+        तेलंगाना के किसान एक बदलाव ध्यान रखें: वहां पुराना धरणी पोर्टल बंद हो चुका है, रिकॉर्ड अब भू भारती
+        (bhubharati.telangana.gov.in) पर मिलता है। एक सावधानी भी जरूरी है — 7 नवंबर 2026 को तेलंगाना CID ने भू
+        भारती mutation से जुड़े एक कथित ₹90 करोड़ के घोटाले में 4 लोगों को गिरफ्तार किया है; मामला अभी जांच में
+        है। Mutation सिर्फ RDO के अधिकृत प्रोसेस से होता है, इसलिए किसी ऑपरेटर या एजेंट को mutation के नाम पर
+        पैसा न दें — अपना रिकॉर्ड खुद पोर्टल पर चेक करें।
+      </p>
       <StatePortalFinder />
 
       <H2x>कुछ और सवाल</H2x>
@@ -279,6 +286,17 @@ export default function BhulekhKhatauniKaiseDekheHindi({ article }: { article: H
             banglarbhumi.gov.in
           </a>{' '}
           — बांग्लारभूमि, पश्चिम बंगाल: Know Your Property / खतियान
+        </li>
+        <li>
+          <a href="https://bhubharati.telangana.gov.in" target="_blank" rel="noopener noreferrer">
+            bhubharati.telangana.gov.in
+          </a>{' '}
+          — भू भारती, राजस्व विभाग, तेलंगाना: पहानी / ROR-1B। पुराना धरणी पोर्टल 14 अप्रैल 2025 से बंद है; उसकी
+          जगह यही पोर्टल चलता है
+        </li>
+        <li>
+          The Times of India और Siasat, 8 नवंबर 2026 — तेलंगाना CID की भू भारती mutation फ्रॉड में 4 गिरफ्तारियों
+          की रिपोर्ट; मामला अभी जांच में है
         </li>
         <li>
           The New Indian Express, 10 नवंबर 2026, और thelandbankers.com — कर्नाटक e-Pouthi राहत: बाहर रहने वाले
