@@ -48,7 +48,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     component: 'SbiDairyLoanInterestRate',
     category: 'loan',
     publishedTime: '2026-08-05T02:51:38+00:00',
-    modifiedTime: '2026-08-12T21:50:17+05:30',
+    modifiedTime: '2026-11-14T02:13:00+05:30',
     readingTime: 11,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('sbi-dairy-loan-interest-rate'),

@@ -24,8 +24,8 @@ const FAQS_DATA = [
     a: 'MISS ke neeche animal husbandry / dairy / fisheries ke KCC par short-term credit concessional rate par milta hai, aur time par chukane par Prompt Repayment Incentive alag se milta hai. Isse effective rate kaafi neeche aa jata hai. Shart ek hi hai: repayment due date se pehle. Ek kist late hui toh us saal ka incentive haath se nikal jata hai, chahe baaki saal aap sahi chale ho.',
   },
   {
-    q: 'Budget 2025-26 mein KCC limit badhi hai. Mujhe kaise pata chalega ki mere card par lagi?',
-    a: 'Budget 2025-26 mein subvention scheme ke neeche KCC limit ₹3 lakh se ₹5 lakh ki gayi thi. Lekin aapke card ki limit apne aap nahi badhti, branch ko aapki file review karni padti hai. Passbook ya YONO par apni sanctioned limit dekho, aur agar purani limit chal rahi hai toh branch mein limit enhancement ki application do.',
+    q: 'Budget 2025-26 mein ₹5 lakh limit ka ailaan hua tha. Mere card par kab lagegi?',
+    a: 'Aaj ki tareekh mein aapke card par ₹3 lakh hi operative limit hai — RBI ke 13 January 2026 wale circular ke hisaab se. Budget 2025-26 mein ₹5 lakh ka ailaan hua tha, par uska notification abhi tak nahi aaya, isliye woh limit kagaz par hi hai. 4% wala effective rate bhi ₹3 lakh tak hi lagta hai. Aapke card ki limit apne aap nahi badhti, branch ko aapki file review karni padti hai. Passbook ya YONO par apni sanctioned limit dekho, aur agar purani limit chal rahi hai toh branch mein limit enhancement ki application do.',
   },
   {
     q: 'Collateral kitne amount tak nahi lagta?',
@@ -75,7 +75,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
-            <span>Last Updated: 05/08/2026</span>
+            <span>Last Updated: 13/11/2026</span>
             <span>11 min read</span>
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
         </div>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 05/08/2026</strong>
+          <strong>Last Updated: 13/11/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -115,7 +115,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>SBI ke paas &ldquo;dairy loan&rdquo; naam ka fixed-rate product nahi hai. Rate = <strong>MCLR + spread</strong>, branch aur profile ke hisaab se banta hai.</li>
             <li>Roz ka kharcha <strong>KCC (Animal Husbandry)</strong> se, subvention + prompt repayment se effective rate ~4% tak. Pashu/shed kharid <strong>term loan</strong> se.</li>
-            <li>Budget 2025-26 mein subvention KCC limit <strong>₹3 lakh → ₹5 lakh</strong> hui (AH/dairy ka sub-limit alag).</li>
+            <li>₹5 lakh ki limit sirf Budget 2025-26 ka ailaan hai, notification baaki — <strong>operative limit ₹3 lakh</strong> hai (RBI, Jan 2026), aur AH/dairy ka sub-limit usi ke andar alag se tay hota hai.</li>
             <li>Loan amount aapki district ke <strong>Scale of Finance</strong> se tay hota hai. Internet ke &ldquo;per animal&rdquo; number par DPR mat banao.</li>
             <li><strong>Abhi karo:</strong> branch se likhit mein poocho, kaunsa MCLR, kitna spread, reset kab.</li>
           </ul>
@@ -151,39 +151,39 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
 
         <SH>KCC (Allied) vs Term Loan. Dono Ka Kaam Alag</SH>
         <div className="overflow-x-auto my-4">
-          <table className="w-full text-sm border-collapse">
+          <table className="w-full border-collapse border border-gray-300 dark:border-gray-600 rounded-xl overflow-hidden text-sm shadow-sm">
             <thead>
-              <tr className="bg-[var(--color-bg-alt)]">
-                <th className="border border-[var(--color-border)] p-3 text-left font-black"></th>
-                <th className="border border-[var(--color-border)] p-3 text-left font-black">KCC. Animal Husbandry</th>
-                <th className="border border-[var(--color-border)] p-3 text-left font-black">Agri Term Loan (Allied)</th>
+              <tr className="bg-[var(--color-primary)]">
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left text-white"></th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left text-white">KCC. Animal Husbandry</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left text-white">Agri Term Loan (Allied)</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td className="border border-[var(--color-border)] p-3 font-semibold">Kis kaam ke liye</td>
-                <td className="border border-[var(--color-border)] p-3">Chara, dawai, labour, bijli, roz ka kharcha</td>
-                <td className="border border-[var(--color-border)] p-3">Pashu kharid, shed, chaff cutter, chilling unit</td>
+              <tr className="bg-white dark:bg-gray-800">
+                <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Kis kaam ke liye</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Chara, dawai, labour, bijli, roz ka kharcha</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Pashu kharid, shed, chaff cutter, chilling unit</td>
               </tr>
-              <tr className="bg-[var(--color-bg-alt)]">
-                <td className="border border-[var(--color-border)] p-3 font-semibold">Structure</td>
-                <td className="border border-[var(--color-border)] p-3">Revolving limit, jitna chahiye utna nikalo, wapas daalo</td>
-                <td className="border border-[var(--color-border)] p-3">Ek baar disbursement, phir fixed EMI</td>
+              <tr className="bg-[#F6FBF6] dark:bg-gray-700">
+                <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Structure</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Revolving limit, jitna chahiye utna nikalo, wapas daalo</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Ek baar disbursement, phir fixed EMI</td>
               </tr>
-              <tr>
-                <td className="border border-[var(--color-border)] p-3 font-semibold">Subvention</td>
-                <td className="border border-[var(--color-border)] p-3">MISS ke neeche milta hai + prompt repayment incentive</td>
-                <td className="border border-[var(--color-border)] p-3">Aam taur par nahi. AHIDF jaise scheme mein alag se subvention</td>
+              <tr className="bg-white dark:bg-gray-800">
+                <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Subvention</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">MISS ke neeche milta hai + prompt repayment incentive</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Aam taur par nahi. AHIDF ka period 31 March 2026 ko khatm hua, DAHD ki site par uske baad ka extension nahi dikha — term loan par subvention ki current window lender se confirm karo</td>
               </tr>
-              <tr className="bg-[var(--color-bg-alt)]">
-                <td className="border border-[var(--color-border)] p-3 font-semibold">Byaj ka bojh</td>
-                <td className="border border-[var(--color-border)] p-3">Sirf nikale gaye paise par, utne dinon ka</td>
-                <td className="border border-[var(--color-border)] p-3">Poore outstanding par, poore tenure</td>
+              <tr className="bg-[#F6FBF6] dark:bg-gray-700">
+                <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Byaj ka bojh</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Sirf nikale gaye paise par, utne dinon ka</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Poore outstanding par, poore tenure</td>
               </tr>
-              <tr>
-                <td className="border border-[var(--color-border)] p-3 font-semibold">Renewal</td>
-                <td className="border border-[var(--color-border)] p-3">Saalana review, limit badh sakti hai</td>
-                <td className="border border-[var(--color-border)] p-3">Ek baar sanction, tenure khatam hone tak</td>
+              <tr className="bg-white dark:bg-gray-800">
+                <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Renewal</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Saalana review, limit badh sakti hai</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Ek baar sanction, tenure khatam hone tak</td>
               </tr>
             </tbody>
           </table>
@@ -212,9 +212,10 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           aapke liye 4% ke aas-paas baith jata hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Budget 2025-26 mein subvention scheme ke neeche KCC ki limit ₹3 lakh se ₹5 lakh ki gayi. Dhyan dene ki baat:
-          animal husbandry / dairy / fisheries ke liye subvention ka sub-limit alag rakha gaya hai, isliye har rupya
-          concession par nahi milta. Apni branch se saaf puchho ki aapke card par kitne amount tak concessional rate
+          Budget 2025-26 mein ₹5 lakh ki limit ka ailaan hua, lekin notification na aane se aaj bhi ₹3 lakh hi
+          operative limit hai — RBI ka 13 January 2026 wala circular yahi kehta hai. Uske andar animal husbandry,
+          dairy aur fisheries ke liye subvention ka sub-limit ₹2 lakh rakha gaya hai, isliye har rupya concessional
+          rate par nahi milta. Apni branch se saaf puchho ki aapke card par kitne amount tak concessional rate
           lagu hai.
         </p>
 
@@ -258,51 +259,51 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
           asli rate MCLR + spread se banega, aur subvention lagne par effective rate isse kam ho sakta hai.
         </p>
         <div className="overflow-x-auto my-4">
-          <table className="w-full text-sm border-collapse">
+          <table className="w-full border-collapse border border-gray-300 dark:border-gray-600 rounded-xl overflow-hidden text-sm shadow-sm">
             <thead>
-              <tr className="bg-[var(--color-bg-alt)]">
-                <th className="border border-[var(--color-border)] p-3 text-left font-black">Loan</th>
-                <th className="border border-[var(--color-border)] p-3 text-left font-black">Tenure</th>
-                <th className="border border-[var(--color-border)] p-3 text-left font-black">Rate</th>
-                <th className="border border-[var(--color-border)] p-3 text-left font-black">EMI (approx)</th>
-                <th className="border border-[var(--color-border)] p-3 text-left font-black">Total Byaj (approx)</th>
+              <tr className="bg-[var(--color-primary)]">
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left text-white">Loan</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left text-white">Tenure</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left text-white">Rate</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left text-white">EMI (approx)</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left text-white">Total Byaj (approx)</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td className="border border-[var(--color-border)] p-3 font-semibold">₹1,00,000</td>
-                <td className="border border-[var(--color-border)] p-3">3 saal</td>
-                <td className="border border-[var(--color-border)] p-3">9%</td>
-                <td className="border border-[var(--color-border)] p-3">₹3,180</td>
-                <td className="border border-[var(--color-border)] p-3">₹14,479</td>
+              <tr className="bg-white dark:bg-gray-800">
+                <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">₹1,00,000</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">3 saal</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">9%</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹3,180</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹14,479</td>
               </tr>
-              <tr className="bg-[var(--color-bg-alt)]">
-                <td className="border border-[var(--color-border)] p-3 font-semibold">₹3,00,000</td>
-                <td className="border border-[var(--color-border)] p-3">5 saal</td>
-                <td className="border border-[var(--color-border)] p-3">9%</td>
-                <td className="border border-[var(--color-border)] p-3">₹6,228</td>
-                <td className="border border-[var(--color-border)] p-3">₹73,650</td>
+              <tr className="bg-[#F6FBF6] dark:bg-gray-700">
+                <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">₹3,00,000</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">5 saal</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">9%</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹6,228</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹73,650</td>
               </tr>
-              <tr>
-                <td className="border border-[var(--color-border)] p-3 font-semibold">₹3,00,000</td>
-                <td className="border border-[var(--color-border)] p-3">5 saal</td>
-                <td className="border border-[var(--color-border)] p-3">4% (subvention ke baad)</td>
-                <td className="border border-[var(--color-border)] p-3">₹5,525</td>
-                <td className="border border-[var(--color-border)] p-3">₹31,497</td>
+              <tr className="bg-white dark:bg-gray-800">
+                <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">₹3,00,000</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">5 saal</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">4% (subvention ke baad)</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹5,525</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹31,497</td>
               </tr>
-              <tr className="bg-[var(--color-bg-alt)]">
-                <td className="border border-[var(--color-border)] p-3 font-semibold">₹5,00,000</td>
-                <td className="border border-[var(--color-border)] p-3">5 saal</td>
-                <td className="border border-[var(--color-border)] p-3">9.5%</td>
-                <td className="border border-[var(--color-border)] p-3">₹10,501</td>
-                <td className="border border-[var(--color-border)] p-3">₹1,30,056</td>
+              <tr className="bg-[#F6FBF6] dark:bg-gray-700">
+                <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">₹5,00,000</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">5 saal</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">9.5%</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹10,501</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹1,30,056</td>
               </tr>
-              <tr>
-                <td className="border border-[var(--color-border)] p-3 font-semibold">₹10,00,000</td>
-                <td className="border border-[var(--color-border)] p-3">7 saal</td>
-                <td className="border border-[var(--color-border)] p-3">9.5%</td>
-                <td className="border border-[var(--color-border)] p-3">₹16,344</td>
-                <td className="border border-[var(--color-border)] p-3">₹3,72,894</td>
+              <tr className="bg-white dark:bg-gray-800">
+                <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">₹10,00,000</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">7 saal</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">9.5%</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹16,344</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">₹3,72,894</td>
               </tr>
             </tbody>
           </table>
@@ -458,6 +459,16 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
             Dept of Animal Husbandry &amp; Dairying, &ldquo;Guidelines/SoP for exclusive Kisan Credit Cards (KCC) for
             Animal Husbandry, Dairying and Fisheries farmers&rdquo; (official PDF, 08.10.2021), Kisan Credit Cards division page.{' '}
             <a href="https://www.dahd.gov.in/index.php/en/division/kcc" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">dahd.gov.in. Kisan Credit Cards (KCC guidelines &amp; SoP)</a>
+          </li>
+          <li>
+            Reserve Bank of India, Modified Interest Subvention Scheme circular, FY 2025-26 (13 January 2026) — operative
+            KCC limit ₹3 lakh; ₹2 lakh allied-only sub-limit.{' '}
+            <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13270&Mode=0" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">rbi.org.in (RBI/2025-26/193)</a>
+          </li>
+          <li>
+            Dept of Animal Husbandry &amp; Dairying, AHIDF scheme page — scheme period up to FY 2025-26 till 31.03.2026;
+            no extension into 2026-27 mentioned on the page (last updated 04.11.2026).{' '}
+            <a href="https://www.dahd.gov.in/offerings/schemes-and-services/details/animal-husbandry-infrastructure-development-fund-ahidf-cTM1UTMtQWa" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">dahd.gov.in. Animal Husbandry Infrastructure Development Fund (AHIDF)</a>
           </li>
         </ul>
 
