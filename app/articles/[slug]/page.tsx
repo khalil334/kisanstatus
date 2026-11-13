@@ -203,6 +203,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: ArticleMeta }>> 
   MushroomKheti: dynamic(() => import('@/components/articles/kisanguides/MushroomKheti'), { ssr: true }),
   MadhumakhiPalan: dynamic(() => import('@/components/articles/kisanguides/MadhumakhiPalan'), { ssr: true }),
   PMatsyaSampada: dynamic(() => import('@/components/articles/kisanguides/PMatsyaSampada'), { ssr: true }),
+  BhulekhLandRecordKaiseCheckKare: dynamic(() => import('@/components/articles/BhulekhLandRecordKaiseCheckKare'), { ssr: true }),
   SilageMaking: dynamic(() => import('@/components/articles/kisanguides/SilageMaking'), { ssr: true }),
   PMFMEYojana: dynamic(() => import('@/components/articles/kisanguides/PMFMEYojana'), { ssr: true }),
   CHCPortal: dynamic(() => import('@/components/articles/kisanguides/CHCPortal'), { ssr: true }),
