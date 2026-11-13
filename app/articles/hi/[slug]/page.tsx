@@ -18,6 +18,7 @@ const COMPONENTS: Record<string, React.ComponentType<{ article: HindiArticle }>>
   TractorSubsidy2027StateWiseList: dynamic(() => import('@/components/articles/hindi-kisanguides/TractorSubsidy2027StateWiseList'), { ssr: true }),
   GehuKaRateAajMspVsMandiBhav: dynamic(() => import('@/components/articles/hindi-loan-mandi-pashupalan/GehuKaRateAajMspVsMandiBhav'), { ssr: true }),
   PmKisanEkycMobileSeKaiseKare: dynamic(() => import('@/components/articles/hindi-yojana/PmKisanEkycMobileSeKaiseKare'), { ssr: true }),
+  BhulekhKhatauniKaiseDekheHindi: dynamic(() => import('@/components/articles/hindi-yojana/BhulekhKhatauniKaiseDekheHindi'), { ssr: true }),
   NpciAadhaarSeedingDbtPayment: dynamic(() => import('@/components/articles/hindi-yojana/NpciAadhaarSeedingDbtPayment'), { ssr: true }),
   PmKisanPaymentStoppedByStateFix: dynamic(() => import('@/components/articles/hindi-yojana/PmKisanPaymentStoppedByStateFix'), { ssr: true }),
   PmKisanRecoveryNoticePaisaWapas: dynamic(() => import('@/components/articles/hindi-yojana/PmKisanRecoveryNoticePaisaWapas'), { ssr: true }),
