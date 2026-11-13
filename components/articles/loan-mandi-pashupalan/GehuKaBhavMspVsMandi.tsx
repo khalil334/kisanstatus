@@ -13,7 +13,7 @@ const RELATED = [
 const FAQS_DATA = [
   {
     q: 'Is saal gehu ka sarkari kharid rate kya chal raha hai?',
-    a: 'Rabi Marketing Season 2026-27 ke liye gehu ka MSP ₹2,585 per quintal hai. Pichhle saal ke ₹2,425 se ₹160 zyada. Yeh rate sarkari kharid kendra par milta hai, mandi ki khuli boli mein nahi. Poori faslon ki list ke liye hamari MSP List 2026-27 guide dekho.',
+    a: 'Rabi Marketing Season 2027-28 ke liye gehu ka MSP ₹2,610 per quintal hai — pichhle season ke ₹2,585 se ₹25 zyada (CCEA, 30 September 2026). Yeh rate sarkari kharid kendra par milta hai, mandi ki khuli boli mein nahi. Poori faslon ki list ke liye hamari MSP List 2026-27 guide dekho.',
   },
   {
     q: 'MSP par bechna hamesha behtar hota hai kya?',
@@ -49,7 +49,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Kya state apna bonus bhi deta hai MSP ke upar?',
-    a: 'Kuch states dete hain. Jaise Madhya Pradesh ne 2026-27 season mein ₹40 per quintal ka state bonus diya, jisse kisan ko total ₹2,625 mila. Yeh har saal aur har state mein alag hota hai. Apne state ke procurement portal ya kharid kendra se current season ka bonus pooch lo. Yeh seedha extra paisa hai.',
+    a: 'Kuch states dete hain. Jaise Madhya Pradesh ne 2026-27 season mein ₹40 per quintal ka state bonus diya tha, jisse kisan ko total ₹2,625 mila tha. 2027-28 season ke liye abhi kisi rajya ke bonus ki ghoshna nahi aayi hai — CCEA ki 30 September 2026 ki ghoshna mein sirf MSP hai. Apne state ke procurement portal ya kharid kendra se current season ka bonus pooch lo. Yeh seedha extra paisa hai.',
   },
   {
     q: 'Premium variety (sharbati/lokwan) ka kya karein. MSP mein dena to ghata hai?',
@@ -75,7 +75,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
-            <span>Last Updated: 21/08/2026</span>
+            <span>Last Updated: 13/11/2026</span>
             <span>11 min read</span>
           </div>
         </div>
@@ -97,7 +97,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         <DB>
           <strong>Kaam Ki Baat, bechne se pehle:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
-            <li>Gehu ka MSP RMS 2026-27 mein <strong>₹2,585/quintal</strong> hai (pichhle saal se ₹160 zyada). State bonus alag: MP +₹40 = ₹2,625, Rajasthan +₹150 = ₹2,735, UP mein koi bonus nahi.</li>
+            <li>Gehu ka MSP RMS 2027-28 mein <strong>₹2,610/quintal</strong> hai (pichhle season ke ₹2,585 se ₹25 zyada). State bonus abhi ghoshit nahi: pichhle season MP +₹40 = ₹2,625 aur Rajasthan +₹150 = ₹2,735 dete the, UP mein koi bonus nahi tha.</li>
             <li>Mandi ka rate MSP se <strong>neeche</strong> chal raha hai → sarkari kendra. <strong>Upar</strong> hai aur maal saaf-sookha hai → mandi/eNAM.</li>
             <li>Sharbati/lokwan jaisi premium variety sarkari kendra par dena apna premium chhodna hai. Wahan sab ek rate par taula jaata hai.</li>
             <li>Rokne ka faisla ganit se: 6 mahine ka storage kharcha + loss ≈ ₹150/qtl paar ho toh hi jeet. <strong>Aaj ka rate agmarknet.gov.in par check karo.</strong></li>
@@ -105,7 +105,7 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 21/08/2026</strong>
+          <strong>Last Updated: 13/11/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -123,8 +123,8 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
 
         <SH>MSP Jaal Hai, Chhat Nahi</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
-          Rabi Marketing Season 2026-27 ke liye gehu ka MSP <strong>₹2,585 per quintal</strong> hai. Pichhle saal ke
-          ₹2,425 se ₹160 zyada. Yeh woh rate hai jis par sarkar apne kharid kendra par aapka gehu (FAQ quality ka)
+          Rabi Marketing Season 2027-28 ke liye gehu ka MSP <strong>₹2,610 per quintal</strong> hai. Pichhle season ke
+          ₹2,585 se ₹25 zyada — CCEA ne 30 September 2026 ko manzoori di thi. Yeh woh rate hai jis par sarkar apne kharid kendra par aapka gehu (FAQ quality ka)
           kharidne ko taiyar hai.
         </p>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
@@ -143,15 +143,15 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
             <tbody>
               <tr>
                 <td className="border border-[var(--color-border)] p-3 font-semibold">1 quintal (100 kg)</td>
-                <td className="border border-[var(--color-border)] p-3">₹2,585. MSP ka official unit</td>
+                <td className="border border-[var(--color-border)] p-3">₹2,610. MSP ka official unit</td>
               </tr>
               <tr className="bg-[var(--color-bg-alt)]">
                 <td className="border border-[var(--color-border)] p-3 font-semibold">50 kg ki bori</td>
-                <td className="border border-[var(--color-border)] p-3">₹1,292.50 (aadha quintal)</td>
+                <td className="border border-[var(--color-border)] p-3">₹1,305 (aadha quintal)</td>
               </tr>
               <tr>
                 <td className="border border-[var(--color-border)] p-3 font-semibold">10 quintal (1 tonne)</td>
-                <td className="border border-[var(--color-border)] p-3">₹25,850</td>
+                <td className="border border-[var(--color-border)] p-3">₹26,100</td>
               </tr>
             </tbody>
           </table>
@@ -313,11 +313,11 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
           <SI n={2}><strong>Slot/token:</strong> registration ke baad kharid kendra aur date ka slot milta hai. Bina slot ke maal le jaakar khada rehna padta hai.</SI>
           <SI n={3}><strong>Quality prep:</strong> gehu saaf karo, sukha lo. FAQ standards (nami, tuta dana, kachra) par jaanch hoti hai.</SI>
           <SI n={4}><strong>Taul aur payment:</strong> electronic taul ke baad payment seedha bank account mein aati hai. Receipt sambhaal kar rakho.</SI>
-          <SI n={5}><strong>State bonus check karo:</strong> 2026-27 season mein MP ne ₹40 per quintal bonus diya (total ₹2,625) aur Rajasthan ne ₹150 (total ₹2,735); UP mein koi bonus nahi tha (KisanPortal/TheTractorHub ki season reports). Yeh automatic milta hai, par pata hona chahiye taaki payment short aaye toh pakad sako.</SI>
+          <SI n={5}><strong>State bonus check karo:</strong> 2026-27 season mein MP ne ₹40 per quintal bonus diya tha (total ₹2,625) aur Rajasthan ne ₹150 (total ₹2,735); UP mein koi bonus nahi tha (KisanPortal/TheTractorHub ki season reports). 2027-28 ke liye bonus ki ghoshna abhi nahi aayi hai. Bonus automatic milta hai, par pata hona chahiye taaki payment short aaye toh pakad sako.</SI>
         </StepList>
 
         <IB>
-          <strong>System kitna asli hai. MP ka is season ka record:</strong> Rabi 2026-27 mein Madhya Pradesh mein{' '}
+          <strong>System kitna asli hai. MP ka pichhle season ka record:</strong> Rabi 2026-27 mein Madhya Pradesh mein{' '}
           <strong>19.04 lakh kisano</strong> ne wheat procurement ke liye registration kiya (pichhle saal se 3.60 lakh
           zyada), 3,171 kharid kendra chale, aur seedha Aadhaar-linked bank account mein payment gayi. Slot booking ki
           last date 30/04/2026 thi (
@@ -372,12 +372,12 @@ export default function GehuKaBhavMspVsMandi({ article }: { article: ArticleMeta
             <a href="https://agmarknet.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">agmarknet.gov.in</a>
           </li>
           <li>
-            RMS 2026-27 wheat MSP ₹2,585 & state bonus coverage.{' '}
-            <a href="https://thetractorhub.in/msp-on-wheat-2026/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">thetractorhub.in</a>
+            RMS 2027-28 wheat MSP ₹2,610 (CCEA, 30 September 2026).{' '}
+            <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2316941&reg=48&lang=2" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in (PRID 2316941)</a>
           </li>
           <li>
-            CCEA Rabi MSP press release. PIB.{' '}
-            <a href="https://pib.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in</a>
+            RMS 2026-27 wheat MSP ₹2,585 & state bonus coverage (pichhla season).{' '}
+            <a href="https://thetractorhub.in/msp-on-wheat-2026/" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">thetractorhub.in</a>
           </li>
         </ul>
 

@@ -167,7 +167,7 @@ export default function HindiArticlesHubPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {articles.map((a) => {
+            {articles.map((a, i) => {
               const categoryInfo = CATEGORIES[a.category] as { name: string; nameHi: string; icon?: string } | undefined;
               const emoji = categoryInfo?.icon || '';
               const categoryName = categoryInfo?.nameHi || categoryInfo?.name || 'Guide';
@@ -187,7 +187,8 @@ export default function HindiArticlesHubPage() {
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         quality={80}
-                        loading="lazy"
+                        priority={i === 0}
+                        loading={i === 0 ? 'eager' : 'lazy'}
                         decoding="async"
                         className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                       />

@@ -6,7 +6,7 @@ import { buildFaqSchema } from '@/lib/faq-schema';
 const FAQS = [
   {
     q: 'इस season गेहूं का MSP कितना है?',
-    a: 'Rabi Marketing Season 2026-27 के लिए केंद्र ने गेहूं का MSP ₹2,585 प्रति क्विंटल तय किया है। कुछ राज्य ऊपर से bonus देते हैं. MP में ₹40 bonus मिलाकर किसानों को ₹2,625 प्रति क्विंटल मिला। आपके राज्य की खरीद-अधिसूचना में bonus का जिक्र होता है।',
+    a: 'Rabi Marketing Season 2027-28 के लिए केंद्र ने गेहूं का MSP ₹2,610 प्रति क्विंटल तय किया है — पिछले season के ₹2,585 से ₹25 ज्यादा (CCEA, 30 सितंबर 2026)। कुछ राज्य ऊपर से bonus देते हैं. MP ने 2026-27 में ₹40 bonus देकर किसानों को ₹2,625 प्रति क्विंटल दिया था; 2027-28 के bonus की घोषणा अभी नहीं आई है। आपके राज्य की खरीद-अधिसूचना में bonus का जिक्र होता है।',
   },
   {
     q: 'मंडी में दाम MSP से नीचे मिल रहा है. बेचूं या नहीं?',
@@ -135,11 +135,13 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
 
       <H2>पहले पक्का आंकड़ा. इस season का MSP</H2>
       <p>
-        Rabi Marketing Season 2026-27 के लिए गेहूं का न्यूनतम समर्थन मूल्य केंद्र सरकार ने{' '}
-        <strong>₹2,585 प्रति क्विंटल</strong> तय किया है। यह वह दर है जिस पर सरकारी एजेंसियां registered
-        किसानों से खरीद करती हैं। कुछ राज्य अपनी ओर से bonus जोड़ते हैं. MP ने इस season ₹40 प्रति
-        क्विंटल का bonus दिया, यानी वहां के किसान को ₹2,625 मिले। आपके राज्य में bonus है या नहीं, यह
-        राज्य की खरीद-घोषणा में लिखा होता है मंडी की अफवाह पर नहीं, अधिसूचना पर भरोसा करें।
+        Rabi Marketing Season 2027-28 के लिए गेहूं का न्यूनतम समर्थन मूल्य केंद्र सरकार ने{' '}
+        <strong>₹2,610 प्रति क्विंटल</strong> तय किया है — पिछले season के ₹2,585 से ₹25 ज्यादा (CCEA,
+        30 सितंबर 2026)। यह वह दर है जिस पर सरकारी एजेंसियां registered किसानों से खरीद करती हैं।
+        कुछ राज्य अपनी ओर से bonus जोड़ते हैं. MP ने पिछले season (2026-27) ₹40 प्रति क्विंटल का bonus
+        दिया था, यानी वहां के किसान को ₹2,625 मिले थे। 2027-28 के bonus की घोषणा अभी नहीं आई है। आपके
+        राज्य में bonus है या नहीं, यह राज्य की खरीद-घोषणा में लिखा होता है मंडी की अफवाह पर नहीं,
+        अधिसूचना पर भरोसा करें।
       </p>
 
       <Box tone="tip">
@@ -170,7 +172,7 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
           <tbody>
             <tr>
               <td className={`${cell} font-medium`}>भाव कैसा?</td>
-              <td className={cell}>तय. ₹2,585 (+ राज्य bonus)</td>
+              <td className={cell}>तय. ₹2,610 (राज्य bonus अलग, अभी घोषित नहीं)</td>
               <td className={cell}>रोज बदलता. MSP से ऊपर भी, नीचे भी</td>
               <td className={cell}>आम तौर पर मंडी से नीचे</td>
             </tr>
@@ -470,9 +472,9 @@ export default function GehuKaRateAajMspVsMandiBhav({ article }: { article: Hind
       </div>
 
       <p className="text-xs text-[var(--color-text-muted)] italic">
-        आंकड़ों का हिसाब: गेहूं MSP ₹2,585/क्विंटल (RMS 2026-27) केंद्र सरकार की घोषणा से है, जो राज्य
-        खरीद-अधिसूचनाओं (गुजरात राज्य नागरिक आपूर्ति निगम, जनवरी 2026 समेत) में भी दर्ज है; MP का ₹40
-        bonus राज्य सरकार की खरीद व्यवस्था से। दैनिक भाव के लिए{' '}
+        आंकड़ों का हिसाब: गेहूं MSP ₹2,610/क्विंटल (RMS 2027-28) केंद्र सरकार की घोषणा (CCEA, 30
+        सितंबर 2026, PIB PRID 2316941) से है; पिछले season (RMS 2026-27) का MSP ₹2,585 था। MP का ₹40
+        bonus 2026-27 season का है, राज्य सरकार की खरीद व्यवस्था से। दैनिक भाव के लिए{' '}
         <a href="https://agmarknet.gov.in" target="_blank" rel="noopener noreferrer">agmarknet.gov.in</a>{' '}
         और <a href="https://enam.gov.in" target="_blank" rel="noopener noreferrer">enam.gov.in</a> ही देखें —
         यह लेख कोई live rate नहीं बताता। इस लेख की जानकारी आखिरी बार{' '}
