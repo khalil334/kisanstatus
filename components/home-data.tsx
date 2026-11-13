@@ -82,7 +82,7 @@ export const TOOLS = [
     border: 'border-blue-200 dark:border-blue-800',
     iconBg: 'bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-300',
     title: 'KCC Loan',
-    desc: '₹5 Lakh tak loan, 4% interest. Online apply process aur document checklist.',
+    desc: '₹3 lakh tak ke loan par 4% effective byaj, samay par chukane par. Apply process aur document checklist.',
   },
   {
     href: '/articles/KisanTractorLoan2026',
@@ -133,7 +133,7 @@ export const FAQS = [
   },
   {
     question: 'Kisan Credit Card (KCC) ke liye kaise apply karein?',
-    answer: 'KCC apply karne ke liye apne nazdiki bank branch jayein, application form bharein, aur land documents, Aadhaar, aur PAN card submit karein. Bank verification ke baad aapko ₹5 lakh tak ka loan 4% ki concessional interest rate par mil jayega.',
+    answer: 'KCC apply karne ke liye apne nazdiki bank branch jayein, application form bharein, aur land documents, Aadhaar, aur PAN card submit karein. Bank verification ke baad KCC card ban jata hai — ₹3 lakh tak ke crop loan par, samay par chukane par, 4% effective byaj lagta hai (RBI circular, 13 January 2026). Budget 2025-26 mein ₹5 lakh ki limit ka ailaan hua tha, lekin uska notification abhi tak nahi aaya hai.',
   },
   {
     question: 'PM Kisan eKYC kaise complete karein?',

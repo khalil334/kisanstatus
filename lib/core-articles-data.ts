@@ -215,7 +215,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     slug: 'NanoDap500mlPriceInIndia2026',
     title: 'Nano DAP 500ml Ka Sahi Rate (IFFCO) Kya Hai',
     seoTitle: 'Nano DAP 500ml Price 2026: ₹600 IFFCO Rate',
-    desc: 'Nano DAP 500ml price ₹600 hai: IFFCO ka official MRP, poore desh me ek. Dealer price ₹547.50, per acre dose aur overcharging se bachne ka tarika.',
+    desc: 'Dukaan par ₹600 se zyada maange to woh overcharging hai — dealer ko ek bottle ₹547.50 mein padti hai. Ek acre mein kitni matra lagegi aur spray ka sahi tarika bhi andar diya hai.',
     ogTitle: 'Nano DAP 500ml Price 2026 India',
     keywords: [
       'Nano DAP 500ml price India 2026',
