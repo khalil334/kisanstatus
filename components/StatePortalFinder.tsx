@@ -16,7 +16,7 @@ const STATE_PORTALS = [
   { state: 'Odisha', portal: 'bhulekh.ori.nic.in', url: 'https://bhulekh.ori.nic.in', note: 'Odisha Bhulekh portal.' },
   { state: 'Punjab', portal: 'jamabandi.punjab.gov.in', url: 'https://jamabandi.punjab.gov.in', note: 'Punjab Jamabandi portal.' },
   { state: 'Rajasthan', portal: 'apnakhata.raj.nic.in', url: 'https://apnakhata.raj.nic.in', note: 'E-Dharti gaon wise report.' },
-  { state: 'Tamil Nadu', portal: 'eservices.tnreg.gov.in', url: 'https://eservices.tnreg.gov.in', note: 'Tamil Nadu land records.' },
+  { state: 'Tamil Nadu', portal: 'eservices.tn.gov.in', url: 'https://eservices.tn.gov.in', note: 'Patta Chitta — Tamil Nadu land records (Commissioner of Land Administration).' },
   { state: 'Telangana', portal: 'dharani.telangana.gov.in', url: 'https://dharani.telangana.gov.in', note: 'Dharani portal.' },
   { state: 'Uttar Pradesh', portal: 'upbhulekh.gov.in', url: 'https://upbhulekh.gov.in', note: 'Khatauni mein beneficiary status.' },
   { state: 'Uttarakhand', portal: 'bhulekh.uk.gov.in', url: 'https://bhulekh.uk.gov.in', note: 'UK Bhulekh portal.' },
