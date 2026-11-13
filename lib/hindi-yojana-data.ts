@@ -135,4 +135,17 @@ export const HINDI_YOJANA_ARTICLES: readonly HindiArticle[] = [
     component: 'PmKisanRecoveryNoticePaisaWapas',
     ogImage: '/images/articles/hindi-yojna/recovery-notice/notice-letter.webp',
   },
+  {
+    slug: 'hi/bhulekh-khatauni-kaise-dekhe',
+    titleHi: 'भूलेख से अपनी ज़मीन का रिकॉर्ड कैसे निकालें: खतौनी, 7/12, जमाबंदी',
+    seoTitleHi: 'भूलेख से खतौनी कैसे देखें: ऑनलाइन तरीका',
+    desc: 'अपनी जमीन का रिकॉर्ड — खतौनी, 7/12 या जमाबंदी — अपने राज्य के भूलेख पोर्टल पर मुफ्त देखें। UP, महाराष्ट्र और पंजाब-हरियाणा का तरीका और 18 राज्यों के पोर्टल एक जगह।',
+    keywords: ['भूलेख खतौनी कैसे देखें', 'bhulekh khatauni kaise dekhe', 'खतौनी ऑनलाइन कैसे निकाले', '7 12 उतारा कैसे निकाले', 'जमाबंदी कैसे चेक करें'],
+    category: 'status-check',
+    publishedTime: '2026-11-13T09:00:00+05:30',
+    modifiedTime: '2026-11-13T09:00:00+05:30',
+    author: AUTHOR_NAME,
+    component: 'BhulekhKhatauniKaiseDekheHindi',
+    ogImage: '/images/articles/hindi-yojna/bhulekh-khatauni-kaise-dekhe/hal-jotai-hero.webp',
+  },
 ] as const;
