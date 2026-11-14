@@ -6,7 +6,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-07-08T03:06:14+05:30';
-const MODIFIED = '2026-07-25T23:15:52+05:30';
+const MODIFIED = '2026-11-14T15:20:00+05:30';
 
 const RELATED = [
   { slug: 'drip-sprinkler-irrigation-subsidy', title: 'Drip & Sprinkler Subsidy' },
@@ -45,7 +45,7 @@ const FAQS_DATA = [
   },
   {
     q: 'Application ke baad survey kab hota hai?',
-    a: 'Aam taur par kuch hafton me site verification hota hai, par state ke quota aur staff par depend karta hai. 30 din se zyada kuch na ho to helpline par follow-up karo.',
+    a: 'Form submit karne ke baad site verification mein kuch hafte lag sakte hain; state ke quota aur staff par depend karta hai. 30 din se zyada kuch na ho to helpline par follow-up karo.',
   },
 ];
 
@@ -117,29 +117,29 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             Ye official formula hai, MNRE ke guidelines wala:
           </p>
           <div className="overflow-x-auto mb-4">
-            <table className="w-full text-sm border border-[var(--color-border)] rounded-lg">
+            <table className="w-full text-sm border-collapse">
               <thead>
-                <tr className="bg-[var(--color-bg-alt)]">
-                  <th className="p-3 text-left font-bold">Kaun deta hai</th>
-                  <th className="p-3 text-left font-bold">Kitna</th>
+                <tr className="bg-[var(--color-primary)]">
+                  <th className="border border-gray-300 dark:border-gray-600 p-3 text-left font-bold text-white">Kaun deta hai</th>
+                  <th className="border border-gray-300 dark:border-gray-600 p-3 text-left font-bold text-white">Kitna</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-t border-[var(--color-border)]">
-                  <td className="p-3">Centre (CFA)</td>
-                  <td className="p-3">30%, benchmark ya tender cost, jo kam ho</td>
+                <tr className="bg-white dark:bg-gray-800">
+                  <td className="border border-gray-300 dark:border-gray-600 p-3">Centre (CFA)</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3">30%, benchmark ya tender cost, jo kam ho</td>
                 </tr>
-                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]">
-                  <td className="p-3">State sarkar</td>
-                  <td className="p-3">Kam se kam 30% (kuch states isse zyada dete hain)</td>
+                <tr className="bg-[#F6FBF6] dark:bg-gray-700">
+                  <td className="border border-gray-300 dark:border-gray-600 p-3">State sarkar</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3">Kam se kam 30% (kuch states isse zyada dete hain)</td>
                 </tr>
-                <tr className="border-t border-[var(--color-border)]">
-                  <td className="p-3">Aap</td>
-                  <td className="p-3">Baaki ~40%, isme se 30% tak bank loan ho sakta hai, jeb se sirf 10%</td>
+                <tr className="bg-white dark:bg-gray-800">
+                  <td className="border border-gray-300 dark:border-gray-600 p-3">Aap</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3">Baaki ~40%, isme se 30% tak bank loan ho sakta hai, jeb se sirf 10%</td>
                 </tr>
-                <tr className="border-t border-[var(--color-border)] bg-[var(--color-bg-alt)]">
-                  <td className="p-3">Special states*</td>
-                  <td className="p-3">Centre 50% deta hai. Kisan ka hissa 20% tak reh jata hai</td>
+                <tr className="bg-[#F6FBF6] dark:bg-gray-700">
+                  <td className="border border-gray-300 dark:border-gray-600 p-3">Special states*</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3">Centre 50% deta hai. Kisan ka hissa 20% tak reh jata hai</td>
                 </tr>
               </tbody>
             </table>
@@ -181,6 +181,34 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
               <p className="text-sm text-[var(--color-text-muted)]">Bijli wala pump already hai to us par solar panel lagta hai. Din me free sinchai, bachi bijli DISCOM ko bech kar kamai bhi.</p>
             </div>
           </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>Scheme Kab Tak Chalegi. Tareekh Ka Sach</SH>
+          <p className="text-[var(--color-text)] leading-relaxed mb-4">
+            Phase 1 ke projects ki aakhri tareekh 31 March 2027 hai — par ye har naye
+            application par lagu nahi hoti. Ye deadline un projects ke liye hai jinka
+            power purchase agreement sign ho chuka hai ya jinka notice to proceed 31
+            December 2025 tak issue hua tha. Component A aur C ke projects ko apna
+            financial closure 30 November 2026 tak poora karna hai; ye tareekh MNRE ke
+            office memorandum No. 32/645/2017-SPV Division, 28 September 2026 mein
+            likhi hai. MNRE ne saaf kaha hai ki 31 March 2027 ke baad aur extension
+            nahi milega.
+          </p>
+          <p className="text-[var(--color-text)] leading-relaxed mb-4">
+            Kitne pump lag chuke hain, ye bhi ab official taur par ginne layak hai.
+            12 November 2026 ko PM ne kaha tha ki PM-KUSUM ke tahat lagbhag 12 lakh
+            solar pump lag chuke hain. Portal par Component B ke 11,97,145 installed
+            pumps ka aankda (8 November 2026 ka snapshot) is baat se milta hai.
+          </p>
+          <p className="text-[var(--color-text)] leading-relaxed mb-4">
+            Aur PM-KUSUM 2.0? Abhi wo proposal hai, launch nahi. Cabinet se approval
+            nahi mila hai, koi launch date nahi aayi hai. 13 November ko MNRE mantri ne
+            kaha tha ki 2.0 ke tahat khet ki machinery ko bhi solar se chalane ka
+            proposal vichar mein hai. Jab tak official notification na aaye, 2.0 ke
+            naam par koi form, fee ya registration nahi hai — jo aapse maange, wo
+            dhokha hai.
+          </p>
         </section>
 
         <section className="mb-8">
@@ -284,21 +312,6 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
           </p>
         </section>
 
-        <div className="mb-8">
-          <Image
-            src="/images/articles/pm-kusum-yojana-solar-subsidy-2026/application-form-screenshot.webp"
-            alt="PM Kusum online registration form ka screenshot. Aadhaar, zameen details aur pump selection"
-            width={1200}
-            height={630}
-            className="rounded-2xl w-full h-auto object-cover"
-            loading="lazy"
-            sizes="(max-width: 768px) 100vw, 768px"
-          />
-          <p className="text-xs text-[var(--color-text-muted)] text-center mt-2">
-            Form seedha hai. Bas details Khatauni se hu-ba-hu bharo
-          </p>
-        </div>
-
         <section className="mb-8">
           <SH>Apply Kaise Karein. Kadam Dar Kadam</SH>
           <p className="text-[var(--color-text)] leading-relaxed mb-4">
@@ -378,21 +391,6 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
           </div>
         </section>
 
-        <div className="mb-8">
-          <Image
-            src="/images/articles/pm-kusum-yojana-solar-subsidy-2026/state-portal-screenshot.webp"
-            alt="State portal par application status tracker ka screenshot"
-            width={1200}
-            height={630}
-            className="rounded-2xl w-full h-auto object-cover"
-            loading="lazy"
-            sizes="(max-width: 768px) 100vw, 768px"
-          />
-          <p className="text-xs text-[var(--color-text-muted)] text-center mt-2">
-            Reference number se status track hota hai. 30 din se zyada pending ho to helpline
-          </p>
-        </div>
-
         <section className="mb-8">
           <SH>Jo Sawal Har Kisan Puchta Hai</SH>
           <FAQBlock faqs={FAQS_DATA} caption="PM Kusum Solar Pump FAQ 2026" />
@@ -407,9 +405,8 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
             se taiyaar rakho, land record pehle se durust karwao.
           </p>
           <p className="text-sm text-green-800 dark:text-green-300 leading-relaxed">
-            Aur scheme ki taaza window/extension ki jaankari hamesha official portal ya
-            1800-180-3333 se confirm karo, schemes ke saal-dar-saal extension hote rehte
-            hain, par bharosa sirf official notification ka karo.
+            Aur scheme ki taaza window aur deadline ki jaankari hamesha official portal ya
+            1800-180-3333 se confirm karo — bharosa sirf official notification ka karo.
           </p>
         </div>
 
@@ -420,6 +417,23 @@ export default function PmKusumYojanaSolarSubsidy2026({ article }: { article: Ar
           primaryCta={{ href: '/calculator/crop-profit', label: 'Profit Calc →' }}
           secondaryCta={{ href: '/calculator/pm-kisan-benefit', label: 'Benefit Calc' }}
         />
+
+        <SH>Sources</SH>
+        <ul className="text-sm text-[var(--color-text-muted)] space-y-2 mb-6 list-disc pl-5">
+          <li>
+            PM-KUSUM portal — subsidy structure, state nodal agencies, fake-website warning.{' '}
+            <a href="https://pmkusum.mnre.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pmkusum.mnre.gov.in</a>
+          </li>
+          <li>
+            MNRE office memorandum No. 32/645/2017-SPV Division, 28 September 2026 — financial closure 30 November 2026, completion 31 March 2027.
+          </li>
+          <li>
+            PM&apos;s address, Kisan Tak, 12 November 2026 — nearly 12 lakh solar pumps installed under PM-KUSUM.
+          </li>
+          <li>
+            MNRE Minister&apos;s statement, 31st CII Partnership Summit, 13 November 2026 — PM-KUSUM 2.0 still a proposal, no Cabinet approval yet.
+          </li>
+        </ul>
 
         <RelatedArticles articles={RELATED} />
         <AuthorBox modified={MODIFIED} bioKey="PmKusumYojanaSolarSubsidy2026" />
