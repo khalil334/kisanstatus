@@ -189,7 +189,7 @@ export default function HindiArticlesHubPage() {
                         quality={80}
                         priority={i === 0}
                         loading={i === 0 ? 'eager' : 'lazy'}
-                        decoding="async"
+                        decoding={i === 0 ? 'sync' : 'async'}
                         className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10 pointer-events-none" aria-hidden="true" />
