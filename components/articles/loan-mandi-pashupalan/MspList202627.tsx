@@ -16,6 +16,10 @@ const FAQS_DATA = [
     a: 'Gehu ka MSP ₹2,585 per quintal hai. Pichhle saal ke ₹2,425 se ₹160 zyada. Ye rate Rabi Marketing Season 2026-27 ke liye hai, jo CCEA ne 01/10/2025 ko approve kiya tha. Ek quintal matlab 100 kilo, toh per kilo ke hisaab se ₹25.85 banta hai.',
   },
   {
+    q: 'Gehu ka MSP 2027-28 kitna hai?',
+    a: '₹2,610 per quintal — pichhle season ke ₹2,585 se ₹25 zyada. CCEA ne ye rate 30 September 2026 ko approve kiya tha, Rabi Marketing Season 2027-28 ke liye. Matlab jo gehu October-December 2026 mein boya ja raha hai, uski bikri April 2027 mein isi rate par hogi.',
+  },
+  {
     q: 'Dhan (paddy) ka MSP 2026-27 kya hai?',
     a: 'Common variety ka ₹2,441 aur Grade A ka ₹2,461 per quintal. Dono mein ₹72 ki badhotri hui hai. Grade A ka rate zyada hota hai kyunki uske grain ki quality aur milling recovery behtar maani jati hai. Lekin ye grading mandi mein hoti hai, aap khud decide nahi karte.',
   },
@@ -90,6 +94,15 @@ const RABI_ROWS: (Row & { cop: string })[] = [
   { crop: 'Safflower (Kusum)', msp: '6,540', prev: '5,940', inc: '+600', cop: '4,360', margin: '50%' },
 ];
 
+const RABI_2728_ROWS: Row[] = [
+  { crop: 'Gehu (Wheat)', msp: '2,610', prev: '2,585', inc: '+25', margin: '106%' },
+  { crop: 'Jau (Barley)', msp: '2,286', prev: '2,150', inc: '+136', margin: '58%' },
+  { crop: 'Chana (Gram)', msp: '5,958', prev: '5,875', inc: '+83', margin: '59%' },
+  { crop: 'Masur (Lentil)', msp: '7,390', prev: '7,000', inc: '+390', margin: '92%' },
+  { crop: 'Sarson (Rapeseed & Mustard)', msp: '6,613', prev: '6,200', inc: '+413', margin: '96%' },
+  { crop: 'Safflower (Kusum)', msp: '7,215', prev: '6,540', inc: '+675', margin: '50%' },
+];
+
 export default function MspList202627({ article }: { article: ArticleMeta }) {
   return (
     <>
@@ -108,7 +121,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           <div className="flex flex-wrap gap-3 text-xs text-green-200">
             <span><Link href="/about" className="underline hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded">{AUTHOR_NAME}</Link></span>
             <span>{fmtDate(article.publishedTime)}</span>
-            <span>Last Updated: 05/08/2026</span>
+            <span>Last Updated: 14/11/2026</span>
             <span>11 min read</span>
           </div>
         </div>
@@ -131,6 +144,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           <strong>TL;DR, seedha kaam ki baat:</strong>
           <ul className="list-disc pl-5 mt-2 space-y-1">
             <li>Gehu <strong>₹2,585</strong>, dhan (common) <strong>₹2,441</strong>, chana <strong>₹5,875</strong>, sarson <strong>₹6,200</strong> per quintal, poori Rabi + Kharif table neeche.</li>
+            <li><strong>Naya update:</strong> Rabi 2027-28 ke rate bhi aa gaye — gehu <strong>₹2,610</strong>, sarson ₹6,613, masur ₹7,390. Nayi table neeche, 2026-27 wali se alag rakhi hai.</li>
             <li>Sabse badi badhotri tilhan mein: sunflower <strong>+₹622</strong>, nigerseed +₹515, til +₹500.</li>
             <li>MSP par bechne ke liye <strong>state portal par registration + token</strong> zaroori, window miss ki toh season gaya.</li>
             <li>Sabse zyada paisa <strong>nami (moisture)</strong> mein katta hai. Bechne se pehle 1-2 din dhoop mein sukhao.</li>
@@ -139,7 +153,7 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
         </DB>
 
         <p className="text-sm text-[var(--color-text)] mb-6">
-          <strong>Last Updated: 18/08/2026</strong>
+          <strong>Last Updated: 14/11/2026</strong>
         </p>
 
         <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -172,22 +186,22 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           <table className="w-full text-sm border-collapse">
             <caption className="sr-only">Kharif crops MSP 2026-27 with previous year comparison and margin over cost</caption>
             <thead>
-              <tr className="bg-[var(--color-bg-alt)]">
-                <th className="border border-[var(--color-border)] p-3 text-left font-black">Fasal</th>
-                <th className="border border-[var(--color-border)] p-3 text-right font-black">MSP 2026-27</th>
-                <th className="border border-[var(--color-border)] p-3 text-right font-black">2025-26</th>
-                <th className="border border-[var(--color-border)] p-3 text-right font-black">Badhotri</th>
-                <th className="border border-[var(--color-border)] p-3 text-right font-black">Margin</th>
+              <tr className="bg-[var(--color-primary)]">
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left font-black text-white">Fasal</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-right font-black text-white">MSP 2026-27</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-right font-black text-white">2025-26</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-right font-black text-white">Badhotri</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-right font-black text-white">Margin</th>
               </tr>
             </thead>
             <tbody>
               {KHARIF_ROWS.map((r, i) => (
-                <tr key={r.crop} className={i % 2 === 1 ? 'bg-[var(--color-bg-alt)]' : ''}>
-                  <td className="border border-[var(--color-border)] p-3 font-semibold">{r.crop}</td>
-                  <td className="border border-[var(--color-border)] p-3 text-right font-bold text-green-700 dark:text-green-400">₹{r.msp}</td>
-                  <td className="border border-[var(--color-border)] p-3 text-right text-[var(--color-text-muted)]">₹{r.prev}</td>
-                  <td className="border border-[var(--color-border)] p-3 text-right">{r.inc}</td>
-                  <td className="border border-[var(--color-border)] p-3 text-right font-semibold">{r.margin}</td>
+                <tr key={r.crop} className={i % 2 === 1 ? 'bg-[#F6FBF6] dark:bg-gray-700' : 'bg-white dark:bg-gray-800'}>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">{r.crop}</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3 text-right font-bold text-green-700 dark:text-green-400">₹{r.msp}</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3 text-right text-[var(--color-text-muted)]">₹{r.prev}</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3 text-right">{r.inc}</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3 text-right font-semibold">{r.margin}</td>
                 </tr>
               ))}
             </tbody>
@@ -219,24 +233,24 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           <table className="w-full text-sm border-collapse">
             <caption className="sr-only">Rabi crops MSP 2026-27 with previous year comparison and margin over cost</caption>
             <thead>
-              <tr className="bg-[var(--color-bg-alt)]">
-                <th className="border border-[var(--color-border)] p-3 text-left font-black">Fasal</th>
-                <th className="border border-[var(--color-border)] p-3 text-right font-black">MSP 2026-27</th>
-                <th className="border border-[var(--color-border)] p-3 text-right font-black">2025-26</th>
-                <th className="border border-[var(--color-border)] p-3 text-right font-black">Badhotri</th>
-                <th className="border border-[var(--color-border)] p-3 text-right font-black">Lagat</th>
-                <th className="border border-[var(--color-border)] p-3 text-right font-black">Margin</th>
+              <tr className="bg-[var(--color-primary)]">
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left font-black text-white">Fasal</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-right font-black text-white">MSP 2026-27</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-right font-black text-white">2025-26</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-right font-black text-white">Badhotri</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-right font-black text-white">Lagat</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-right font-black text-white">Margin</th>
               </tr>
             </thead>
             <tbody>
               {RABI_ROWS.map((r, i) => (
-                <tr key={r.crop} className={i % 2 === 1 ? 'bg-[var(--color-bg-alt)]' : ''}>
-                  <td className="border border-[var(--color-border)] p-3 font-semibold">{r.crop}</td>
-                  <td className="border border-[var(--color-border)] p-3 text-right font-bold text-green-700 dark:text-green-400">₹{r.msp}</td>
-                  <td className="border border-[var(--color-border)] p-3 text-right text-[var(--color-text-muted)]">₹{r.prev}</td>
-                  <td className="border border-[var(--color-border)] p-3 text-right">{r.inc}</td>
-                  <td className="border border-[var(--color-border)] p-3 text-right text-[var(--color-text-muted)]">₹{r.cop}</td>
-                  <td className="border border-[var(--color-border)] p-3 text-right font-semibold">{r.margin}</td>
+                <tr key={r.crop} className={i % 2 === 1 ? 'bg-[#F6FBF6] dark:bg-gray-700' : 'bg-white dark:bg-gray-800'}>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">{r.crop}</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3 text-right font-bold text-green-700 dark:text-green-400">₹{r.msp}</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3 text-right text-[var(--color-text-muted)]">₹{r.prev}</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3 text-right">{r.inc}</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3 text-right text-[var(--color-text-muted)]">₹{r.cop}</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3 text-right font-semibold">{r.margin}</td>
                 </tr>
               ))}
             </tbody>
@@ -256,6 +270,46 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           sizes="(max-width: 768px) 100vw, 768px"
           loading="lazy"
         />
+
+        <SH>Rabi 2027-28 Ke Naye Rate. Ab Jo Fasal Bo Rahe Ho Uske Liye</SH>
+        <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
+          CCEA ne 30 September 2026 ko Rabi Marketing Season 2027-28 ke rate approve
+          kiye. Jo gehu, sarson ya chana aap October-December 2026 mein bo rahe ho,
+          uski bikri April 2027 mein inhi naye rates par hogi. Season ka naam hamesha
+          bikri ke season se padta hai — isliye upar wali table 2026-27 ki hai aur ye
+          wali 2027-28 ki. Dono ko mila kar mat padho.
+        </p>
+
+        <div className="overflow-x-auto my-4">
+          <table className="w-full text-sm border-collapse">
+            <caption className="sr-only">Rabi crops MSP 2027-28 with previous season comparison and margin over cost</caption>
+            <thead>
+              <tr className="bg-[var(--color-primary)]">
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left font-black text-white">Fasal</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-right font-black text-white">MSP 2027-28</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-right font-black text-white">2026-27</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-right font-black text-white">Badhotri</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-right font-black text-white">Margin</th>
+              </tr>
+            </thead>
+            <tbody>
+              {RABI_2728_ROWS.map((r, i) => (
+                <tr key={r.crop} className={i % 2 === 1 ? 'bg-[#F6FBF6] dark:bg-gray-700' : 'bg-white dark:bg-gray-800'}>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">{r.crop}</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3 text-right font-bold text-green-700 dark:text-green-400">₹{r.msp}</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3 text-right text-[var(--color-text-muted)]">₹{r.prev}</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3 text-right">{r.inc}</td>
+                  <td className="border border-gray-300 dark:border-gray-600 p-3 text-right font-semibold">{r.margin}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="text-xs text-[var(--color-text-muted)] mt-2 italic">
+            Sabhi rate ₹ per quintal (100 kg). Margin = MSP ka A2+FL lagat se upar ka hissa.
+            Sabse badi badhotri safflower mein ₹675, phir sarson ₹413 aur masur ₹390; gehu mein sabse kam ₹25.
+            Source: CCEA decision, 30/09/2026. PIB press release (PRID 2316941).
+          </p>
+        </div>
 
         <SH>Is Baar Kahan Sabse Zyada Fayda Hua</SH>
         <p className="text-sm text-[var(--color-text)] leading-relaxed mb-4">
@@ -385,37 +439,37 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           <table className="w-full text-sm border-collapse">
             <caption className="sr-only">MSP procurement versus open mandi sale comparison</caption>
             <thead>
-              <tr className="bg-[var(--color-bg-alt)]">
-                <th className="border border-[var(--color-border)] p-3 text-left font-black">Pehlu</th>
-                <th className="border border-[var(--color-border)] p-3 text-left font-black">MSP / Sarkari Kharid</th>
-                <th className="border border-[var(--color-border)] p-3 text-left font-black">Khuli Mandi</th>
+              <tr className="bg-[var(--color-primary)]">
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left font-black text-white">Pehlu</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left font-black text-white">MSP / Sarkari Kharid</th>
+                <th className="border border-gray-300 dark:border-gray-600 p-3 text-left font-black text-white">Khuli Mandi</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td className="border border-[var(--color-border)] p-3 font-semibold">Rate</td>
-                <td className="border border-[var(--color-border)] p-3">Fixed, poore desh mein ek</td>
-                <td className="border border-[var(--color-border)] p-3">Roz badalta hai. MSP se upar bhi, neeche bhi</td>
+              <tr className="bg-white dark:bg-gray-800">
+                <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Rate</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Fixed, poore desh mein ek</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Roz badalta hai. MSP se upar bhi, neeche bhi</td>
               </tr>
-              <tr className="bg-[var(--color-bg-alt)]">
-                <td className="border border-[var(--color-border)] p-3 font-semibold">Payment</td>
-                <td className="border border-[var(--color-border)] p-3">DBT se bank mein, 3-7 din</td>
-                <td className="border border-[var(--color-border)] p-3">Cash ya udhaar, vyapari par depend</td>
+              <tr className="bg-[#F6FBF6] dark:bg-gray-700">
+                <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Payment</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">DBT se bank mein, 3-7 din</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Cash ya udhaar, vyapari par depend</td>
               </tr>
-              <tr>
-                <td className="border border-[var(--color-border)] p-3 font-semibold">Quality check</td>
-                <td className="border border-[var(--color-border)] p-3">Sakht norms, cut lag sakta hai</td>
-                <td className="border border-[var(--color-border)] p-3">Aksar aankh se andaza</td>
+              <tr className="bg-white dark:bg-gray-800">
+                <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Quality check</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Sakht norms, cut lag sakta hai</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Aksar aankh se andaza</td>
               </tr>
-              <tr className="bg-[var(--color-bg-alt)]">
-                <td className="border border-[var(--color-border)] p-3 font-semibold">Jhanjhat</td>
-                <td className="border border-[var(--color-border)] p-3">Registration, token, kagaz</td>
-                <td className="border border-[var(--color-border)] p-3">Fasal le jao aur bech do</td>
+              <tr className="bg-[#F6FBF6] dark:bg-gray-700">
+                <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Jhanjhat</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Registration, token, kagaz</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Fasal le jao aur bech do</td>
               </tr>
-              <tr>
-                <td className="border border-[var(--color-border)] p-3 font-semibold">Kab behtar hai</td>
-                <td className="border border-[var(--color-border)] p-3">Jab mandi rate MSP se neeche ho</td>
-                <td className="border border-[var(--color-border)] p-3">Jab mandi rate MSP se upar ho</td>
+              <tr className="bg-white dark:bg-gray-800">
+                <td className="border border-gray-300 dark:border-gray-600 p-3 font-semibold">Kab behtar hai</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Jab mandi rate MSP se neeche ho</td>
+                <td className="border border-gray-300 dark:border-gray-600 p-3">Jab mandi rate MSP se upar ho</td>
               </tr>
             </tbody>
           </table>
@@ -513,6 +567,10 @@ export default function MspList202627({ article }: { article: ArticleMeta }) {
           <li>
             CCEA press release, Rabi Marketing Season 2026-27 MSP, 01/10/2025.{' '}
             <a href="https://pib.gov.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in</a>
+          </li>
+          <li>
+            CCEA press release, Rabi Marketing Season 2027-28 MSP, 30/09/2026 (PRID 2316941).{' '}
+            <a href="https://pib.gov.in/PressReleasePage.aspx?PRID=2316941" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in</a>
           </li>
           <li>
             CCEA press release, Kharif Marketing Season 2026-27 MSP (14 crops), 13/05/2026.{' '}
