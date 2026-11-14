@@ -104,7 +104,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     slug: 'msp-list-2026-27',
     title: 'MSP List 2026-27: Rabi Aur Kharif Ke Sab Rate',
     seoTitle: 'MSP 2026-27 List: Kharif & Rabi Ke Rate',
-    desc: 'MSP 2026-27 list Kharif aur Rabi dono ek jagah: gehu ₹2,585, dhan ₹2,441, chana ₹5,875. Har fasal ka naya rate aur pichhle saal se badhotri table mein.',
+    desc: 'MSP list: Kharif + Rabi 2026-27 ke saath Rabi 2027-28 ke naye rate bhi — gehu ₹2,610, sarson ₹6,613, masur ₹7,390. Har fasal ka rate aur badhotri table mein.',
     ogTitle: 'MSP 2026-27 List: Rabi & Kharif Puri List',
     ogImage: '/images/articles/loan-mandi-pashupalan/msp-list-2026-27/kharid-kendra.webp',
     keywords: [
@@ -120,7 +120,7 @@ export const LOAN_MANDI_PASHUPALAN_ARTICLES: readonly ArticleMeta[] = [
     component: 'MspList202627',
     category: 'mandi',
     publishedTime: '2026-08-05T02:51:38+00:00',
-    modifiedTime: '2026-08-17T10:18:56+05:30',
+    modifiedTime: '2026-11-14T15:20:00+05:30',
     readingTime: 11,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('msp-list-2026-27'),
