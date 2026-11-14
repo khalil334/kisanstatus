@@ -7,7 +7,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-06-20T21:34:06+05:30';
-const MODIFIED = '2026-07-27T07:14:25+05:30';
+const MODIFIED = '2026-11-15T04:30:00+05:30';
 
 function Src({ href, children }: { href: string; children: ReactNode }) {
   return (
@@ -68,6 +68,10 @@ const FAQS_DATA = [
   {
     q: 'Survey ya khasra number galat register ho gaya, kya karein?',
     a: 'Enrollment window band hone se pehle CSC ya bank branch jaakar correction karwa lein, sahi Khatauni ki copy saath rakhein. Galat survey number claim ke waqt sabse bada roda banta hai, isliye enrollment ke turant baad status check karke details mila lena samajhdari hai.',
+  },
+  {
+    q: 'Bihar mein PMFBY kab se milega?',
+    a: 'Rabi 2026-27 season se. Enrollment 15 November 2026 se 15 January 2027 tak khula hai, aur scheme Bihar State Crop Assistance Scheme ki jagah legi. Rabi fasal par aapka premium sum insured ka 1.5% hi rahega, baaki sarkar bharegi.',
   },
   {
     q: 'Mobile app se enrollment ho sakta hai?',
@@ -252,6 +256,45 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </p>
         </section>
 
+        <section className="mb-8">
+          <SH>Bihar Aur West Bengal Mein Kya Badla?</SH>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Do rajya, jo pehle scheme se bahar the, wapas aa rahe hain — aur Bihar ke liye ye is Rabi season ki sabse badi khabar hai. Wahan ab tak fasal nuksan par rajya ki apni <strong>Bihar State Crop Assistance Scheme</strong> se madad milti thi, jisme premium nahi bharna padta tha. Rabi 2026-27 se uski jagah <strong>PMFBY</strong> lega: ab cover premium-based hoga, Rabi fasal par aapka hissa sum insured ka <strong>1.5%</strong>, aur baaki premium kendra aur rajya sarkar milkar bharenge. Enrollment ki window <strong>15 November 2026 se 15 January 2027</strong> tak khuli hai — ye aaj se hi shuru ho gayi hai. West Bengal isse pehle hi <strong>Kharif 2026 se scheme mein wapas</strong> aa chuka hai. Kharif 2026 mein PMFBY kul <strong>25 rajyon aur kendra shasit pradeshon</strong> mein chal rahi hai.{' '}
+            <span className="text-xs">
+              (Source: <Src href="https://www.uniindia.com/east-india/agriculture-bihar-pmfby-minister/245349">UNI, 14/11/2026</Src>; <Src href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc_9735_20260829_18493301.pdf">PIB, 29/08/2026</Src>)
+            </span>
+          </p>
+
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Rajya</th>
+                  <th className="p-3 text-left">Season</th>
+                  <th className="p-3 text-left">Window / Haal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-[var(--color-card)]">
+                  <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">Bihar</td>
+                  <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">Rabi 2026-27</td>
+                  <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">15 Nov 2026 – 15 Jan 2027; State Crop Assistance Scheme ki jagah PMFBY</td>
+                </tr>
+                <tr className="bg-[var(--color-bg-alt)]">
+                  <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">West Bengal</td>
+                  <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">Kharif 2026 se</td>
+                  <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">Scheme mein wapas; Kharif 2026 se enrollment chal raha hai</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Ek farq dhyan mein rakhein: Bihar ki window <strong>15 January 2027</strong> tak khuli hai, jabki zyadatar rajyon mein Rabi enrollment aam taur par 31 December tak band ho jaata hai. Apne rajya ki date ke liye sirf uski apni season notification ya pmfby.gov.in hi final hai — kisi aur rajya ki tareekh apne par lagu mat samajhiye.
+          </p>
+        </section>
+
         <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
           <Image
             src="/images/articles/pmfby-crop-insurance-2026/status-check.webp"
@@ -281,6 +324,9 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           <WB>
             "Not Found" dikhe toh enrollment adhura hai ya bank ne data submit nahi kiya. Deadline nikalne se pehle, usi din branch se confirm karwayein.
           </WB>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
+            Ek baat saaf rahe: PMFBY ki koi central beneficiary list ya gaon-wise naam ki PDF nahi nikalti. Aapka status sirf aapke apne application ya policy number se dikhta hai — kisi list mein naam dhoondhne ke chakkar mein waqt mat gawayein.
+          </p>
         </section>
 
         <section className="mb-8">
@@ -540,6 +586,12 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
             </li>
             <li>
               <Src href="https://newindiasamachar.pib.gov.in/WriteReadData/flipbook/2023/Jan/1st/English/files/basic-html/page31.html">PIB / New India Samachar</Src>, 2020 revamp, 72-ghante intimation aur North-East subsidy sharing
+            </li>
+            <li>
+              <Src href="https://www.uniindia.com/east-india/agriculture-bihar-pmfby-minister/245349">UNI India, 14/11/2026</Src>, Bihar Rabi 2026-27 enrollment window (15 Nov 2026 – 15 Jan 2027) aur Bihar State Crop Assistance Scheme ki jagah PMFBY
+            </li>
+            <li>
+              <Src href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc_9735_20260829_18493301.pdf">PIB / Ministry of Agriculture &amp; Farmers Welfare, 29/08/2026</Src>, West Bengal Kharif 2026 se wapas, Bihar Rabi 2026-27 se, Kharif 2026 mein 25 rajya/UT
             </li>
             <li>
               <Src href="https://www.newindianexpress.com/states/odisha/2025/Nov/19/pmfby-to-cover-crop-loss-by-animal-attack-inundation">Revised framework (Nov 2025)</Src>, wild animal attack add-on cover aur paddy inundation ki wapsi, Kharif 2026 se

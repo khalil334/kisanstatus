@@ -91,6 +91,7 @@ export default function SbiDairyLoanInterestRate({ article }: { article: Article
             className="w-full h-auto object-cover"
             sizes="(max-width: 768px) 100vw, 768px"
             priority
+            decoding="sync"
           />
         </div>
 
