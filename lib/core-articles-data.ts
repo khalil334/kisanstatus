@@ -494,7 +494,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'PmKusumYojanaSolarSubsidy2026',
     category: 'farming',
     publishedTime: '2026-07-08T03:06:14+05:30',
-    modifiedTime: '2026-07-25T23:15:52+05:30',
+    modifiedTime: '2026-11-14T15:20:00+05:30',
     readingTime: 12,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('PmKusumYojanaSolarSubsidy2026'),
