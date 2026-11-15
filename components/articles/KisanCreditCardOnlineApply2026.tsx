@@ -4,7 +4,7 @@ import { SI, StepList, SH, GovLink, AuthorBox, BottomNav, Disclaimer, CalcBanner
 import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 const PUBLISHED = '2026-06-21T07:43:48+05:30';
-const MODIFIED = '2026-11-11T09:30:00+05:30';
+const MODIFIED = '2026-11-15T14:00:00+05:30';
 
 function fmtDate(dateString: string): string {
   const date = new Date(dateString);
@@ -80,7 +80,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
             <span>{fmtDate(PUBLISHED)}</span>
             <span>Updated: {fmtDate(MODIFIED)}</span>
             <span>12 min read</span>
-            <span>✓ Facts verified: 11/11/2026</span>
+            <span>✓ Facts verified: 15/11/2026</span>
           </div>
         </div>
       </div>
@@ -205,7 +205,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
                   ['Gramin Bank (RRB)', 'Local land records se familiar, kisan-friendly staff', 'Online portal aksar kaam nahi karta, branch hi jaana padega'],
                   ['Cooperative Bank', 'Society-level pehchaan kaam aati hai. Local verification aasaan; processing time apni society/branch se confirm karein', 'Cash withdrawal network chhota; digital services limited'],
                 ].map(([bank, plus, minus], i) => (
-                  <tr key={bank} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
+                  <tr key={bank} className={i % 2 === 1 ? 'bg-[#F6FBF6] dark:bg-gray-700' : 'bg-white dark:bg-gray-800'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-bold text-[var(--color-text)]">{bank}</td>
                     <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{plus}</td>
                     <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{minus}</td>
@@ -260,7 +260,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         </section>
 
         <section className="mb-8">
-          <SH>3 Saal Baad Kya Hota Hai. Renewal Aur Limit Enhancement</SH>
+          <SH>Har Saal Renewal: Review, Revival Letter Aur Chukane Ki Tareekh</SH>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
             KCC 5 saal ke liye sanction hota hai — aur 1 January 2027 se RBI ka naya KCC framework laagu ho raha hai, jisme composite facility ki tenure 6 saal hogi. Us tareekh se pehle sanction hue loan purane niyamon par hi chalenge, renewal ya maturity tak. Har saal ek review hota hai; aaj tak ki practice me limit mein saalana lagbhag 10% ki badhotri hoti thi, lekin naye framework me drawing limit DLTC Scale of Finance se tay hogi — Scale of Finance same raha to automatic 10% badhotri nahi milegi. Practically iska matlab:
           </p>
@@ -275,6 +275,12 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ek aur naya niyam jo seedha aapki jeb se juda hai: bank aapki marzi ke bina KCC account se insurance premium nahi kaat sakta. Premium deduction se pehle explicit consent zaroori hai. Agar statement me aisi koi katauti dikhe jo aapne approve nahi ki, to branch me likhit me poochhein.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Renewal ka kaam saal me ek baar, due date se pehle hota hai. SBI ke KCC niyam ke hisaab se renewal ke liye ek revival letter ya declaration deni hoti hai — usi waqt bank aapki aane wali fasal aur rakba dekh kar maximum withdrawal limit dobara tay karta hai. SBI ke khaate wale YONO app se bhi renewal kar sakte hain: YONO Krishi → Khata → KCC Review → Apply. Doosre bankon me rasta alag ho sakta hai, isliye apne bank se ek baar poochh lein. Chukane ki tareekh bhi fasal se judi hai: ek Kharif fasal ka loan 31 January tak, ek Rabi fasal ka 31 July tak, aur dono season wale loan bhi 31 July tak chukane hote hain. Tareekh nikal gayi to 4% wala fayda us cycle ke liye khatm — isiliye review wali tareekh calendar me pehle se likh leni chahiye.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            1 January 2027 se ek aur badlav: RBI ke naye framework me bankon ko KCC khaatedaaron ko digital rasta dena hi hoga — UPI, debit card, mobile banking, NEFT, RTGS aur CBDC. Matlab limit milne ke baad paisa nikaalne ke liye branch ke chakkar kam honge. Ye niyam RBI ke 19 June 2026 ke teen alag circulars me aaya hai — commercial banks, regional rural banks aur rural co-operative banks ke liye alag-alag (RBI/FIDD/2026-27/402, /404 aur /405).
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
             Ek aur cheez jo KCC ke saath free aati hai lekin log bhool jaate hain. <strong>PMFBY crop insurance ka aasan access</strong>. KCC holder ka premium bank khud debit kar sakta hai, alag se bhaag-daud nahi. Premium kitna banega, hamare <Link href="/calculator/pmfby-premium" className="text-green-700 dark:text-green-400 underline font-medium">PMFBY premium calculator</Link> se check karein.
@@ -313,6 +319,42 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
         </section>
 
         <section className="mb-8">
+          <SH>KCC Kitna Bada Hai? 7 Crore Se Zyada Khaate</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            KCC koi chhota programme nahi hai — desh ke karodon kisan parivaar isse jude hain. Do alag-alag sarkari ginatiyan hain, aur dono ko unki tareekh ke saath padhna chahiye, warna number ulajh jaate hain.
+          </p>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Hisaab</th>
+                  <th className="p-3 text-left">Tareekh</th>
+                  <th className="p-3 text-left">Khaate</th>
+                  <th className="p-3 text-left">Bakaya</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white dark:bg-gray-800">
+                  <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">Lok Sabha jawab, Finance Ministry (Q. 2302)</td>
+                  <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text)]">31 Mar 2026</td>
+                  <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text)] font-bold">7.28 crore operative KCC</td>
+                  <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text)] font-bold">₹10.08 lakh crore</td>
+                </tr>
+                <tr className="bg-[#F6FBF6] dark:bg-gray-700">
+                  <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">PIB KCC backgrounder</td>
+                  <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text)]">11 Mar 2026</td>
+                  <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text)] font-bold">7.72 crore+ active KCC</td>
+                  <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text)] font-bold">~₹10.2 lakh crore</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Dono ginatiyan alag tareekh aur alag tareeke se bani hain — ek Lok Sabha me diye gaye RBI aur NABARD ke aankdon par hai, doosri PIB ke backgrounder ki snapshot hai — isliye inhe ek hi number samajh kar milana galat hoga. Bankon ki taraf se bhi scale saaf hai: KCC platform par 457 bank jude hain — 37 commercial, 46 regional rural aur 374 co-operative. Ab tak 1,998.7 lakh se zyada applications process hui hain, jinme 1,030 lakh co-operative bankon ki, 631.5 lakh commercial bankon ki aur 337.2 lakh RRBs ki hain.
+          </p>
+        </section>
+
+        <section className="mb-8">
           <SH>2026 Limits Aur Interest Rates</SH>
           <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
             <table className="w-full text-sm border-collapse">
@@ -332,7 +374,7 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
                   ['Limit Enhancement', '+10% yearly', 'Purani practice; 1 Jan 2027 se Scale of Finance ke hisaab se'],
                   ['Late Penalty', '7% full rate', 'Subvention forfeit'],
                 ].map(([param, value, note], i) => (
-                  <tr key={param} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-green-50/40 dark:bg-green-900/10'}>
+                  <tr key={param} className={i % 2 === 1 ? 'bg-[#F6FBF6] dark:bg-gray-700' : 'bg-white dark:bg-gray-800'}>
                     <td className="p-3 border-b border-[var(--color-border)] font-medium text-[var(--color-text)]">{param}</td>
                     <td className="p-3 border-b border-[var(--color-border)] text-[var(--color-text)] font-bold">{value}</td>
                     <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{note}</td>
@@ -546,11 +588,14 @@ export default function KisanCreditCardOnlineApply2026({ article }: { article: A
               <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13270&Mode=0" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">rbi.org.in (RBI/2025-26/193)</a>
             </li>
             <li>
-              KCC backgrounder — Budget 2025-26 me ₹5 lakh limit ka ailaan, collateral-free ₹2 lakh, 7.72 crore+ active KCCs, 457 banks onboarded. PIB backgrounder, Ministry of Agriculture &amp; Farmers Welfare, 11 March 2026.{' '}
+              KCC backgrounder — Budget 2025-26 me ₹5 lakh limit ka ailaan, collateral-free ₹2 lakh, 7.72 crore+ active KCCs, 457 banks onboarded (37 commercial, 46 RRB, 374 co-operative), 1,998.7 lakh+ applications processed. PIB backgrounder, Ministry of Agriculture &amp; Farmers Welfare, 11 March 2026.{' '}
               <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2238004" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">pib.gov.in (PRID 2238004)</a>
             </li>
             <li>
-              Kisan Credit Card Directions, 2026 — revised framework, 1 January 2027 se laagu; 6-year composite tenure, standardised crop seasons, Flexi-KCC allied activities par, renewal sirf byaj bharne par nahi. Reserve Bank of India, June 2026.{' '}
+              Lok Sabha jawab — 31 March 2026 tak 7.28 crore operative KCC khaate, ₹10.08 lakh crore bakaya (RBI aur NABARD ke aankde). Ministry of Finance, Unstarred Question No. 2302, 3 August 2026 (sansad.in).
+            </li>
+            <li>
+              Kisan Credit Card Directions, 2026 — revised framework, 1 January 2027 se laagu; 6-year composite tenure, standardised crop seasons, Flexi-KCC allied activities par, renewal sirf byaj bharne par nahi, aur KCC khaatedaaron ke liye digital access (UPI, debit card, mobile banking, NEFT, RTGS, CBDC) zaroori. Reserve Bank of India, 19 June 2026 — teen alag circulars: commercial banks (RBI/FIDD/2026-27/402), regional rural banks (/404), rural co-operative banks (/405).{' '}
               <a href="https://www.rbi.org.in" target="_blank" rel="noopener noreferrer" className="text-green-700 dark:text-green-400 underline">rbi.org.in</a>
             </li>
             <li>
