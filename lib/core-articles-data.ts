@@ -129,7 +129,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
   {
     slug: 'KisanCreditCardOnlineApply2026',
     title: 'Kisan Credit Card Se ₹3 Lakh Tak 4% Byaj Kaise Le',
-    desc: 'KCC par ₹3 lakh tak 4% effective byaj — ₹5 lakh ka ailaan abhi notification ka intezar kar raha hai. RBI ke naye niyam (1 Jan 2027), online apply, eligibility aur documents ki puri jankari.',
+    desc: 'KCC par ₹3 lakh tak 4% effective byaj — 7.28 crore khaaton ka scale, har saal renewal (revival letter, YONO route, chukane ki tareekhein), RBI ke naye niyam (1 Jan 2027), online apply aur documents ki puri jankari.',
     ogTitle: 'KCC Online Apply: ₹3 Lakh 4% Loan 2026',
     seoTitle: 'Kisan Credit Card 2026: 4% Byaj Online Apply',
     keywords: [
@@ -137,6 +137,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
       'KCC apply online',
       'kcc loan kaise le 2026',
       'kisan credit card interest rate 2026',
+      'kisan credit card renewal kaise kare',
       'kcc pashupalan loan',
       'kcc without cibil',
       'kcc apply sbi online',
@@ -146,7 +147,7 @@ export const CORE_ARTICLES: readonly ArticleMeta[] = [
     component: 'KisanCreditCardOnlineApply2026',
     category: 'loan',
     publishedTime: '2026-06-21T07:43:48+05:30',
-    modifiedTime: '2026-11-11T09:30:00+05:30',
+    modifiedTime: '2026-11-15T14:00:00+05:30',
     readingTime: 14,
     author: AUTHOR_NAME,
     authorBio: getAuthorBio('KisanCreditCardOnlineApply2026'),
