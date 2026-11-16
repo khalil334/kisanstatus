@@ -7,7 +7,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-11-13T09:00:00+05:30';
-const MODIFIED = '2026-11-13T09:00:00+05:30';
+const MODIFIED = '2026-11-16T07:30:00+05:30';
 
 const RELATED_CARDS = [
   {
@@ -129,10 +129,10 @@ export default function BhulekhLandRecordKaiseCheckKare({ article }: { article: 
           <div className="overflow-x-auto mb-4">
             <table className="w-full text-sm border border-[var(--color-border)] rounded-lg overflow-hidden">
               <thead>
-                <tr className="bg-[var(--color-bg-alt)]">
-                  <th className="text-left p-3 font-black text-[var(--color-text)]">Rajya</th>
-                  <th className="text-left p-3 font-black text-[var(--color-text)]">Record ka naam</th>
-                  <th className="text-left p-3 font-black text-[var(--color-text)]">Portal</th>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="text-left p-3 font-semibold">Rajya</th>
+                  <th className="text-left p-3 font-semibold">Record ka naam</th>
+                  <th className="text-left p-3 font-semibold">Portal</th>
                 </tr>
               </thead>
               <tbody>
@@ -162,6 +162,19 @@ export default function BhulekhLandRecordKaiseCheckKare({ article }: { article: 
           </p>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
             Telangana ke kisan ek badlav dhyan rakhein: wahan purana Dharani portal band ho chuka hai, record ab Bhu Bharati par milta hai. Ek savdhani bhi zaruri hai — 7 November 2026 ko Telangana CID ne Bhu Bharati mutation se jude ek kathit ₹90 crore ke ghotalay me 4 logon ko giraftar kiya hai; mamla abhi jaanch me hai. Mutation sirf RDO ke authorised process se hota hai, isliye kisi operator ya agent ko mutation ke naam par paisa na dein — apna record khud bhubharati.telangana.gov.in par check karein.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Telangana Mein Resurvey Chal Raha Hai — Bhudhar Number Kya Hai</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Telangana ke kisan ke liye is waqt ki sabse badi khabar zameen ki dobara naap-jokh hai. Rajya bhar mein 1,000 revenue gaon mein comprehensive resurvey shuru ho chuka hai, aur 10 November 2026 tak 416 gaon mein poora bhi ho gaya. Pehla phase 2,720 gaon ka hai — 32 zilon mein 70-70 gaon, Hyderabad ko chhod kar — kul 10,954 revenue gaon mein se. Poora kaam teen phase mein hoga, aur pehle phase ko November 2026 ke aakhir tak poora karne ka lakshya hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Resurvey ki wajah purani hai. 1948 mein survey number lagbhag 40 lakh the; aaj 2.29 crore ho gaye hain. Itne saalon mein zameen bati, bechi aur virasat mein aayi — purane nakse se aaj ka haq milana mushkil ho gaya, aur yahi vivaadon ki jad hai. Nayi naap DGPS rovers aur GIS/QGIS se ho rahi hai; 411 rover kaam par hain, 400 aur ke liye tender final ho chuke hain, aur data seedha Bhu Bharati portal mein ja raha hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Survey ke baad zameen malikon ko notice milega, aur jo aapatti ho, use darj karwa sakte hain — uske baad har survey number ko ek unique Bhudhar number milega, 14 ankon ka. Bhudhar card ki shuruaat Kongara gaon (Nelakondapalli mandal, Palair constituency) se ho rahi hai, jahan 665 acre ki resurvey poori hui hai. Jab tak aapke parcel ko Bhudhar number na mile, record survey number se hi bhubharati.telangana.gov.in par dhoondha jayega.
           </p>
         </section>
 
@@ -293,10 +306,14 @@ export default function BhulekhLandRecordKaiseCheckKare({ article }: { article: 
             <li><a href="https://bhubharati.telangana.gov.in" target="_blank" rel="noopener noreferrer" className="underline">bhubharati.telangana.gov.in</a> — Bhu Bharati, Revenue Department, Telangana: Pahani / ROR-1B. Purana Dharani portal 14 April 2025 se band hai; uski jagah yahi portal chalta hai</li>
             <li>The Times of India aur Siasat, 8 November 2026 — Telangana CID ki Bhu Bharati mutation fraud me 4 giraftariyon ki report; mamla abhi jaanch me hai</li>
             <li>The New Indian Express, 10 November 2026, aur thelandbankers.com — Karnataka e-Pouthi relaxation: bahar rehne wale waris ke liye online family tree / legal heir certificate, August 2026 se</li>
+            <li><a href="https://www.thehindu.com/news/national/telangana/comprehensive-telangana-land-resurvey-to-be-completed-in-three-phases-for-clear-ownership-rights-ponguleti/article71596164.ece" target="_blank" rel="noopener noreferrer" className="underline">The Hindu, 17 October 2026</a> — comprehensive land resurvey, three phases, Phase 1 = 2,720 villages, end-November 2026 target, Bhudhar 14-digit number, Kongara rollout</li>
+            <li><a href="https://www.newindianexpress.com/states/telangana/2026/Nov/11/telangana-land-re-survey-taken-up-in-1000-villages-completed-in-416-ponguleti" target="_blank" rel="noopener noreferrer" className="underline">The New Indian Express, 11 November 2026</a> — resurvey taken up in 1,000 villages, completed in 416 (10 Nov 2026 review meeting)</li>
+            <li><a href="https://www.deccanchronicle.com/southern-states/telangana/telanganas-land-re-survey-crosses-1000-village-mark-416-completed-in-phase-1-2003241" target="_blank" rel="noopener noreferrer" className="underline">Deccan Chronicle, 10 November 2026</a> — 1,000-village mark crossed, 416 completed in Phase 1</li>
+            <li><a href="https://www.siasat.com/telangana-land-re-survey-started-in-1k-villages-completed-in-416-3573707/" target="_blank" rel="noopener noreferrer" className="underline">Siasat, 10 November 2026</a> — resurvey started in 1,000 villages, completed in 416; notices to landowners, objections, then Bhudhar number</li>
             <li><Link href="/articles/PmKisanLandSeedingForm" className="underline">KisanStatus: Land Seeding Form guide</Link> — rajya-wise Bhulekh portal links</li>
           </ul>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
-            Aakhri baar portals se milaan 13 November 2026 ko kiya gaya — UP Bhulekh us din khula aur verify hua; Tamil Nadu aur West Bengal ke portal us din is browser me time out ho gaye (dono ke official domain Google search se confirm hain).
+            Aakhri baar portals se milaan 13 November 2026 ko kiya gaya — UP Bhulekh us din khula aur verify hua; Tamil Nadu aur West Bengal ke portal us din is browser me time out ho gaye (dono ke official domain Google search se confirm hain). Telangana resurvey aur Bhudhar ke aankde 16 November 2026 ko upar di gayi reports se milaye gaye.
           </p>
         </section>
 

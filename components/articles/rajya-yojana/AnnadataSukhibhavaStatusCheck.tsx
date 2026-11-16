@@ -37,8 +37,8 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
   return (
     <article className="prose prose-lg max-w-4xl mx-auto">
 
-      <InfoBox type="update" date="04/08/2026">
-        <strong>Latest Update:</strong> Andhra Pradesh sarkar ne 20/06/2026 ko Annadata Sukhibhava ka pehla installment (₹7,000: ₹5,000 State + ₹2,000 PM Kisan) jaari kar diya hai.  Agle installment ki koi date officially announce nahi hui hai. Apna <strong>annadata sukhibhava status check</strong> karne ke liye neeche diye gaye official steps follow karein.
+      <InfoBox type="update" date="16/11/2026">
+        <strong>Latest Update:</strong> Andhra Pradesh sarkar ne 30/10/2026 ko Annadata Sukhibhava ki doosri kist jaari kar di — ₹3,125.47 crore, 46,85,838 kisan parivaaron ko ₹7,000 karke (₹5,000 State + ₹2,000 PM Kisan). Teesri kist (₹6,000, summer) ki tareekh abhi announce nahi hui hai. Apna status dekhne ke liye neeche diye gaye official steps follow karein.
       </InfoBox>
 
       <h1>Annadata Sukhibhava Status Check 2026: Payment, Eligibility aur Beneficiary List</h1>
@@ -96,7 +96,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         </li>
       </ul>
 
-      <h2>List Mein Naam Hai Par Paisa Nahi Aaya</h2>
+      <h2>Naam List Mein Hai, Paisa Khate Mein Nahi</h2>
 
       <p>
         Ye alag samasya hai aur iski wajah aksar scheme mein nahi, bank ya Aadhaar ke record mein hoti
@@ -367,7 +367,7 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         <tr>
           <td>Andhra Pradesh State Govt</td>
           <td>₹14,000</td>
-          <td>₹5,000 (Kharif) + ₹4,000 (Rabi) + ₹5,000 (Summer)</td>
+          <td>₹5,000 (Kharif) + ₹5,000 (Rabi) + ₹4,000 (Summer)</td>
         </tr>
         <tr>
           <td>PM Kisan Samman Nidhi (Central)</td>
@@ -388,6 +388,10 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         the. ₹4,000 state ka aur ₹2,000 PM Kisan ka. Yaani har kist mein raqam ek jaisi nahi hoti; season aur state ke
         hisse ke hisaab se badalti hai. Isi wajah se "padosi ko zyada aaya, mujhe kam" wali baat aksar galat nikalti hai —
         dono ki kist ek hi phase ki nahi hoti.
+      </p>
+
+      <p>
+        Doosri kist 30 October 2026 ko aayi — Agriculture Minister K. Atchannaidu ne ₹3,125.47 crore jaari kiye, 46,85,838 kisan parivaaron ke liye, har ek ko ₹7,000 (₹5,000 state + ₹2,000 central). Pehli kist bhi 20 June 2026 ko itni hi raqam — ₹3,125.47 crore — ki thi, isliye dono kiston ka figure ek jaisa dikhta hai; farak sirf tareekh aur season ka hai. Kul milakar 2025-26 mein scheme se ₹8,985.41 crore baante gaye. Ek chhoti si khami bhi saamne aayi: 99.44% payment ho gaya, lekin 17,828 khaaton mein technical wajah se paisa atak gaya, aur CM ne afsaron ko jaldi theek karne ko kaha hai. Agar aapka naam list mein hai aur paisa abhi tak nahi aaya, to pehle apna bank account aur NPCI mapping check karwayein — aksar wajah wahi nikalti hai, scheme nahi.
       </p>
 
       <h2>Rythu Bharosa Se Annadata Sukhibhava Tak. Naam Kyun Badla</h2>
@@ -434,8 +438,8 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
         <tr>
           <td>2nd Installment</td>
           <td>Rabi 2026-27</td>
-          <td>Announce nahi hui</td>
-          <td>Pending</td>
+          <td>30/10/2026</td>
+          <td>Released (₹7,000)</td>
         </tr>
         <tr>
           <td>3rd Installment</td>
@@ -520,6 +524,15 @@ export default function AnnadataSukhibhavaStatusCheck2026() {
       <InfoBox type="tip">
         <strong>Fraud se bachein:</strong> Koi bhi aapse "status theek karne" ya "naam list mein dalwane" ke naam par paisa nahi maangta. Ye scheme 100% free hai. Agar koi agent paise maange, toh Andhra Pradesh Anti-Corruption Bureau ki helpline <strong>1064</strong> par ya local police ko shikayat karein.
       </InfoBox>
+
+      <div className="mt-8 p-5 bg-[var(--color-bg-alt)] border border-[var(--color-border)] rounded-xl not-prose">
+        <p className="text-sm font-bold text-[var(--color-text)] mb-2">Sources</p>
+        <ul className="text-xs text-[var(--color-text-muted)] space-y-1 list-disc pl-5">
+          <li>The Hindu, 30 Oct 2026 — 2nd instalment ₹3,125.47 crore to 46,85,838 families; ₹7,000 Kharif / ₹7,000 Rabi / ₹6,000 summer; 2025-26 total ₹8,985.41 crore</li>
+          <li>sarkariyojana.com, labhgrow.in, mintaffairs.com — same 2nd-instalment figures; 17,828 pending accounts (99.44% credited)</li>
+          <li>Official portal: <a href="https://annadathasukhibhava.ap.gov.in" target="_blank" rel="noopener noreferrer" className="underline">annadathasukhibhava.ap.gov.in</a> — Know Your Status, Beneficiary Status</li>
+        </ul>
+      </div>
 
       <div className="mt-8 p-5 bg-gray-100 dark:bg-gray-800 rounded-xl border-l-4 border-orange-500 not-prose shadow-sm">
         <p className="text-sm text-gray-700 dark:text-gray-300 mb-0">

@@ -7,7 +7,7 @@ import type { ArticleMeta } from '@/lib/articles-data';
 import { AUTHOR_NAME } from '@/lib/site-config';
 
 const PUBLISHED = '2026-06-20T21:34:06+05:30';
-const MODIFIED = '2026-11-15T04:30:00+05:30';
+const MODIFIED = '2026-11-16T07:30:00+05:30';
 
 function Src({ href, children }: { href: string; children: ReactNode }) {
   return (
@@ -184,6 +184,21 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
         </section>
 
         <section className="mb-8">
+          <SH>Kharif 2026 Mein Kitne Kisan Jude?</SH>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Scheme kitni badi hai, ye ek aankde se samajh aata hai. Kharif 2026 mein 27 August tak <strong>241.38 lakh kisano</strong> ne apni fasal ka bima karwaya, kul <strong>278.12 lakh hectare</strong> par. Pichhle Kharif se zyada — 2025 mein isi waqt tak 229.77 lakh kisan aur 269.38 lakh hectare the. Matlab ek saal mein lagbhag 12 lakh kisan aur badhe, aur insured area bhi badha.
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            2016 se ab tak ki ginti aur badi hai. Kharif 2016 se Rabi 2025-26 tak <strong>92.46 crore se zyada kisan applications</strong> ka bima hua, aur <strong>26.33 crore kisan applications</strong> ko claims mein <strong>₹2.06 lakh crore se zyada</strong> ka muawza mila. Isi saal ke Budget mein scheme ke liye <strong>₹12,200 crore</strong> rakhe gaye hain.{' '}
+            <span className="text-xs">
+              (Source: <Src href="https://ddindia.co.in/2026/08/pm-fasal-bima-yojana-a-decade-of-protecting-farmers-against-crop-risks/">DD India, August 2026</Src>; <Src href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc_9735_20260829_18493301.pdf">PIB backgrounder, 29/08/2026</Src>)
+            </span>
+          </p>
+        </section>
+
+        <section className="mb-8">
           <SH>Kya Kya Cover Hota Hai?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
@@ -253,6 +268,13 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </DB>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
+            Rabi 2026-27 ki do misalein samajh lein. <strong>Odisha</strong> mein enrollment ki aakhri tareekh <strong>15 December 2026</strong> hai — 5 acre tak bima muft hai (sirf ₹1 per plot bank verification ke liye), nau notified fasal hain (dhaan, aalu, pyaaz, moong, urad, sarso, moongphali, ganna, surajmukhi), aur Aadhaar ke saath AgriStack Farmer ID zaroori hai; loanee kisan PACS, LAMPCS ya bank branch se enroll honge, sharecropper aur bataidar bhi eligible hain. <strong>Andhra Pradesh</strong> mein window 1 October se 15 December 2026 tak hai, sirf chawal (rice) ke liye 31 December — aur wahan 2026-27 ke liye valid Farmer ID enrollment ki shart hai. Isiliye kisi ek tareekh ko poore desh ki last date samajhna galat hoga — apne rajya ki notification hi final hai.{' '}
+            <span className="text-xs">
+              (Source: <Src href="https://agri.odisha.gov.in/sites/default/files/2026-11/12167_1.pdf">Odisha Cooperation Department letter, November 2026</Src>; <Src href="https://pragativadi.com/pmfby-rabi-2026-27-odisha-free-crop-insurance-registration-till-dec-15/">Pragativadi, 12/11/2026</Src>; Andhra Pradesh G.O.MS. 06/07/2026, goir.ap.gov.in)
+            </span>
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
             Har season "last date extend ho gayi" wali afwaahein WhatsApp par udti hain. Kabhi-kabhi states sach mein window badhati hain, lekin uski confirmation sirf pmfby.gov.in ya state agriculture department ki notification se hoti hai. Forward par bharosa karke date nikal jaane se accha hai pehle hi enroll kar lena.
           </p>
         </section>
@@ -261,7 +283,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           <SH>Bihar Aur West Bengal Mein Kya Badla?</SH>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
-            Do rajya, jo pehle scheme se bahar the, wapas aa rahe hain — aur Bihar ke liye ye is Rabi season ki sabse badi khabar hai. Wahan ab tak fasal nuksan par rajya ki apni <strong>Bihar State Crop Assistance Scheme</strong> se madad milti thi, jisme premium nahi bharna padta tha. Rabi 2026-27 se uski jagah <strong>PMFBY</strong> lega: ab cover premium-based hoga, Rabi fasal par aapka hissa sum insured ka <strong>1.5%</strong>, aur baaki premium kendra aur rajya sarkar milkar bharenge. Enrollment ki window <strong>15 November 2026 se 15 January 2027</strong> tak khuli hai — ye aaj se hi shuru ho gayi hai. West Bengal isse pehle hi <strong>Kharif 2026 se scheme mein wapas</strong> aa chuka hai. Kharif 2026 mein PMFBY kul <strong>25 rajyon aur kendra shasit pradeshon</strong> mein chal rahi hai.{' '}
+            Do rajya, jo pehle scheme se bahar the, wapas aa rahe hain — aur Bihar ke liye ye is Rabi season ki sabse badi khabar hai. Wahan ab tak fasal nuksan par rajya ki apni <strong>Bihar State Crop Assistance Scheme</strong> se madad milti thi, jisme premium nahi bharna padta tha. Rabi 2026-27 se uski jagah <strong>PMFBY</strong> lega: ab cover premium-based hoga, Rabi fasal par aapka hissa sum insured ka <strong>1.5%</strong>, aur baaki premium kendra aur rajya sarkar milkar bharenge. Enrollment ki window <strong>15 November 2026 se 15 January 2027</strong> tak khuli hai — 15 November se shuru ho chuki hai. West Bengal isse pehle hi <strong>Kharif 2026 se scheme mein wapas</strong> aa chuka hai. Kharif 2026 mein PMFBY kul <strong>25 rajyon aur kendra shasit pradeshon</strong> mein chal rahi hai.{' '}
             <span className="text-xs">
               (Source: <Src href="https://www.uniindia.com/east-india/agriculture-bihar-pmfby-minister/245349">UNI, 14/11/2026</Src>; <Src href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc_9735_20260829_18493301.pdf">PIB, 29/08/2026</Src>)
             </span>
@@ -326,7 +348,26 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
             "Not Found" dikhe toh enrollment adhura hai ya bank ne data submit nahi kiya. Deadline nikalne se pehle, usi din branch se confirm karwayein.
           </WB>
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
-            Ek baat saaf rahe: PMFBY ki koi central beneficiary list ya gaon-wise naam ki PDF nahi nikalti. Aapka status sirf aapke apne application ya policy number se dikhta hai — kisi list mein naam dhoondhne ke chakkar mein waqt mat gawayein.
+            Ek baat saaf rahe: PMFBY ki koi central beneficiary list ya gaon-wise naam ki PDF nahi nikalti. Aapka status sirf aapke apne application ya policy number se dikhta hai — kisi list mein naam dhoondhne ke chakkar mein waqt mat gawayein. Gaon notified hai ya nahi, ye portal ke Reports/dashboard section mein dekha ja sakta hai — naam ki list wahan bhi nahi milti, sirf coverage.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Application Wapas Aayi Ya Reject Hui? Quality Check Ka Naya Niyam</SH>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Enrollment kar liya, premium bhi kat gaya — phir bhi application wapas aa sakti hai. Har application NCIP par mandatory quality check se guzarti hai: zameen ka haq (insurable interest), malikana ya bataidar ka saboot, bima wala area asal parcel se zyada to nahi, bimi fasal wahi jo boyi gayi, aur naam Aadhaar se milta hai ya nahi. Koi ek cheez bhi gadbad nikli to application aage nahi badhti.
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Kami nikle to insurer application ko usi channel par wapas bhej deta hai jahan se aayi thi — CSC, bank ya intermediary. Kagaz poora karke dobara bhej dein to approve ho jaati hai; na ho to reject. Isme kisan ki taraf se koi jurmana nahi lagta, aur insurer apni marzi se reject nahi kar sakta — NCIP ke zariye State Government ki manzoori ke baad hi rejection hoti hai. Poori jaanch ki zyada se zyada time-limit cut-off date se 60 din hai; cut-off aam taur par Kharif mein 31 July aur Rabi mein 31 December ke aas-paas hoti hai — lekin aapke rajya ki asal tareekh uski apni notification se hi tay hoti hai.{' '}
+            <span className="text-xs">
+              (Source: <Src href="https://www.pib.gov.in/newsite/erelcontent.aspx?relid=279690&reg=3&lang=2">PIB, Lok Sabha written reply, release ID 279690</Src>)
+            </span>
+          </p>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Reject hone par appeal ka rasta bhi likha hai. Pehle Krishi Rakshak Portal aur Helpline 14447, phir taluk, tehsil ya zila krishi adhikari, aur uske baad District Level Grievance Redressal Committee. KRPH 24×7 chalti hai, 500 se zyada executives, 10 jagah se — uske upar State Grievance Redressal Committee hai, aur zila aur rajya ki monitoring committees DM aur Principal Secretary (Agriculture) ke neeche kaam karti hain.
           </p>
         </section>
 
@@ -491,7 +532,7 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
           </StepList>
 
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-3">
-            Har stage par kagaz ka record rakhein, call ki date, complaint number, kis afsar se baat hui. Yehi record aage kaam aata hai. Grievance ke liye kendra sarkar ne <strong>Krishi Rakshak Portal aur Helpline (KRPH), 14447</strong> shuru ki hai, jo insurance companies ke database se juda hai aur multilingual support deta hai.{' '}
+            Har stage par kagaz ka record rakhein, call ki date, complaint number, kis afsar se baat hui. Yehi record aage kaam aata hai. Grievance ke liye kendra sarkar ne <strong>Krishi Rakshak Portal aur Helpline (KRPH), 14447</strong> shuru ki hai, jo insurance companies ke database se juda hai aur multilingual support deta hai. Application reject hone ki surat mein shikayat ki seedhi alag hai — KRPH 14447 se shuru karke DGRC tak; uska tareeka upar 'Quality Check' wale hisse mein diya hai.{' '}
             <span className="text-xs">
               (Source: <Src href="https://pwonlyias.com/current-affairs/pradhan-mantri-fasal-bima-yojana/">KRPH launch, Ministry of Agriculture &amp; Farmers Welfare</Src>)
             </span>
@@ -593,6 +634,18 @@ export default function PmfbyCropInsurance2026({ article }: { article: ArticleMe
             </li>
             <li>
               <Src href="https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc_9735_20260829_18493301.pdf">PIB / Ministry of Agriculture &amp; Farmers Welfare, 29/08/2026</Src>, West Bengal Kharif 2026 se wapas, Bihar Rabi 2026-27 se, Kharif 2026 mein 25 rajya/UT
+            </li>
+            <li>
+              <Src href="https://www.pib.gov.in/newsite/erelcontent.aspx?relid=279690&reg=3&lang=2">PIB, Lok Sabha written reply (release ID 279690)</Src>, NCIP mandatory quality check, 60-day timeline, KRPH 14447 appeal, DGRC/SGRC, rejection par kisan par koi jurmana nahi
+            </li>
+            <li>
+              <Src href="https://ddindia.co.in/2026/08/pm-fasal-bima-yojana-a-decade-of-protecting-farmers-against-crop-risks/">DD India, August 2026</Src>, Kharif 2026 enrollment (241.38 lakh kisan / 278.12 lakh hectare, 27 Aug 2026), cumulative claims (92.46 crore applications, 26.33 crore claims, ₹2.06 lakh crore), ₹12,200 crore Budget 2026-27
+            </li>
+            <li>
+              <Src href="https://agri.odisha.gov.in/sites/default/files/2026-11/12167_1.pdf">Odisha Cooperation Department letter (agri.odisha.gov.in, November 2026)</Src>, Rabi 2026-27 enrollment 15 December 2026 tak, 5 acre tak muft bima, 9 notified crops, sharecroppers eligible
+            </li>
+            <li>
+              Andhra Pradesh G.O.MS. dated 06/07/2026 (goir.ap.gov.in), Rabi 2026-27 enrollment 1 October–15 December 2026 (rice 31 December), Farmer ID mandatory for 2026-27 enrolment
             </li>
             <li>
               <Src href="https://www.newindianexpress.com/states/odisha/2025/Nov/19/pmfby-to-cover-crop-loss-by-animal-attack-inundation">Revised framework (Nov 2025)</Src>, wild animal attack add-on cover aur paddy inundation ki wapsi, Kharif 2026 se

@@ -494,6 +494,24 @@ export default function OdishaCmKisanStatusCheck({
           par bharosa mat karein, portal par apna status dekhte rahein.
         </p>
 
+        <h2>Dhaan Bechna Hai? Paddy Procurement Ka Alag Raasta</h2>
+
+        <p>
+          CM Kisan ki kist aur dhaan ki bikri — do alag cheezein hain, aur inhe milana sabse aam galti hai. Kist seedha khaate mein aati hai; dhaan mandi mein bechna padta hai. Kharif 2026-27 ki procurement 1 November 2026 se shuru ho chuki hai aur 31 March 2027 tak chalegi, rajya ke saare 30 zilon mein — PACS, LAMPCS aur Pani Panchayats ke zariye.
+        </p>
+
+        <p>
+          Bhaav ek line mein samajh lein: kul ₹3,100 prati quintal. Isme MSP ₹2,441 hai (common grade, Kharif 2026-27) aur baaki Samrudh Krushak Yojana ke tehat input assistance hai. Dono ko jod kar hi ₹3,100 banta hai — sirf MSP dekh kar hisaab lagayenge to raqam kam lagegi.
+        </p>
+
+        <p>
+          Ek farak jo bahut kisan miss kar jaate hain: AgriStack Farmer ID CM Kisan mein naye registration ke liye zaroori hai, lekin dhaan ki procurement wali registration ke liye nahi. Matlab Farmer ID na bane hone se aapki dhaan nahi rukegi. Bhaga Chasi (sharecropper) bhi register karke bech sakte hain — zameen malik ki digital consent aur biometric ya mobile authentication se.
+        </p>
+
+        <p>
+          Ek shart aur: is season ki registration 6 se 31 August 2026 tak khuli thi — fresh registration, renewal nahi. Jo us window mein register nahi kar paye, wo seedha mandi pahunch kar dhaan nahi bech sakte. Dhaan ki sthiti foododisha.in par dekhi ja sakti hai, aur helpline 1967 hai (working hours mein).
+        </p>
+
         <h2>Kist Aayi Par Kam Lagi. Hisaab Kaise Milaayein</h2>
 
         <p>
@@ -587,6 +605,10 @@ export default function OdishaCmKisanStatusCheck({
             { label: 'CM Kisan Portal (cmkisan.odisha.gov.in)', href: 'https://cmkisan.odisha.gov.in', note: 'status check, beneficiary list, cultivator/landless track, is guide ka har step isi portal par khud check karke likha gaya hai; 6 July 2026 se naya registration khula hai aur AgriStack Farmer ID zaroori hai' },
             { label: 'Agriculture & Farmers\u2019 Empowerment Dept, Govt of Odisha', href: 'https://agri.odisha.gov.in', note: 'scheme guidelines, eligibility aur exclusion rules' },
             { label: 'PM Kisan Portal (pmkisan.gov.in)', href: 'https://pmkisan.gov.in', note: 'PM Kisan aur CM Kisan ke saath-saath milne wale benefit ki puṣṭi' },
+            { label: 'Odisha Food Supplies & Consumer Welfare Dept letter (foododisha.in) — KMS 2026-27 paddy procurement', note: 'procurement 1 November 2026–31 March 2027, registration 6–31 August 2026, MSP + Samrudh Krushak input assistance; official document FSCW-PL-PRC-0022-2025' },
+            { label: 'Odisha Cabinet approval of Food & Paddy Procurement Policy, 10 Nov 2026 (UDN via tradeinsightnews.com)', note: '₹3,100 per quintal total, 30 districts, PACS/LAMPCS/Pani Panchayats' },
+            { label: 'financialnews.live, 3 Nov 2026 — procurement opened', note: 'MSP ₹2,441, Farmer ID not mandatory for procurement registration, registration window closed' },
+            { label: 'thebusinessbytes.com, 9 Aug 2026 — Minister Krushna Chandra Patra', note: 'AgriStack ID not mandatory for paddy procurement registration; sharecroppers eligible' },
           ]}
         />
 

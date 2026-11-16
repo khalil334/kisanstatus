@@ -5,7 +5,7 @@ import { AUTHOR_NAME } from '@/lib/site-config';
 import SourcesSection from '@/components/ui/SourcesSection';
 
 const PUBLISHED = '2026-07-09T05:39:09+05:30';
-const MODIFIED = '2026-08-09T17:42:21+05:30';
+const MODIFIED = '2026-11-16T07:30:00+05:30';
 
 const RELATED = [
   { slug: 'PmKisanCorrectionForm2026', title: 'Correction Form Guide' },
@@ -66,7 +66,7 @@ const STATE_LINKS = [
   { name: 'Gujarat', url: 'https://anyror.gujarat.gov.in' },
   { name: 'Karnataka', url: 'https://landrecords.karnataka.gov.in' },
   { name: 'Tamil Nadu', url: 'https://eservices.tn.gov.in' },
-  { name: 'Telangana', url: 'https://dharani.telangana.gov.in' },
+  { name: 'Telangana', url: 'https://bhubharati.telangana.gov.in' },
   { name: 'Andhra Pradesh', url: 'https://meebhoomi.ap.gov.in' },
   { name: 'Odisha', url: 'https://bhulekh.ori.nic.in' },
   { name: 'Punjab', url: 'https://jamabandi.punjab.gov.in' },
