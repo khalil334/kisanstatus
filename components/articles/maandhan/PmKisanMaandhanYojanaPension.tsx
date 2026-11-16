@@ -1,0 +1,638 @@
+import Link from 'next/link';
+import Image from 'next/image';
+import { SI, StepList, IB, WB, DB, SH, RelatedArticles, AuthorBox, BottomNav, Disclaimer, FAQBlock, fmtDate } from '@/components/ArticleShared';
+import CountdownRedirectButton from '@/components/CountdownRedirectButton';
+import { AUTHOR_NAME } from '@/lib/site-config';
+
+const PUBLISHED = '2026-07-09T06:45:51+05:30';
+const MODIFIED = '2026-07-26T16:22:34+05:30';
+
+const RELATED = [
+  { slug: 'PmKisanMasterGuide2026', title: 'PM Kisan Master Guide' },
+  { slug: 'PmKisanBankAccountChangeProcess', title: 'Bank Account Change' },
+  { slug: 'PmKisanBeneficiaryList2026', title: 'Beneficiary List' },
+];
+
+const FAQS_DATA = [
+  {
+    q: 'PM Kisan Maandhan Yojana kya hai?',
+    a: 'Ye ek pension scheme hai jisme chhote kisan har mahine thoda-thoda paisa jama karte hain. 60 saal ki umar ke baad unhe ₹3000 har mahine pension milti hai.',
+  },
+  {
+    q: 'Kaun iske liye eligible hai?',
+    a: 'Wo kisan jinke paas 2 hectare (5 acre) se kam zameen hai aur unki umar 18 se 40 saal ke beech hai.',
+  },
+  {
+    q: 'Har mahine kitna paisa dena padta hai?',
+    a: 'Umra par depend karta hai. 18 saal walon ko ₹55 aur 40 saal walon ko ₹200 har mahine dena padta hai.',
+  },
+  {
+    q: 'Agar beech mein paisa dena band kar dein toh?',
+    a: 'Account default mein chala jata hai. Pehle mahine koi late fee nahi; uske baad savings-bank rate jitna byaj lagta hai, aur 6 mahine baad account dormant ho jata hai. Achhi baat ye ki 3 saal tak poora bakaya + byaj dekar account dobara regular ho sakta hai. Jama paisa doobta nahi.',
+  },
+  {
+    q: 'Ye scheme PM Kisan Samman Nidhi ke sath le sakte hain?',
+    a: 'Haan bilkul. Dono alag schemes hain. PM Kisan se ₹6000 saal ka milta hai, aur Maandhan se 60 saal ke baad ₹3000 har mahine.',
+  },
+  {
+    q: '60 saal se pehle maut ho gayi toh?',
+    a: 'Do raste hain: jeevansathi (spouse) chahe to bacha hua contribution bhar kar account chalu rakh sakta hai aur 60 par poori pension le sakta hai; ya exit karke kisan ka jama hissa byaj ke saath wapas le sakta hai. 50% wali family pension (₹1500) tab lagti hai jab maut pension shuru hone ke BAAD ho.',
+  },
+  {
+    q: 'Kaise apply karein?',
+    a: 'Nazdiki CSC center, Common Service Center, ya bank branch mein jakar apply kar sakte ho. Online bhi option hai.',
+  },
+  {
+    q: 'Kya government bhi paisa deti hai?',
+    a: 'Haan, jitna paisa aap dalte ho utna hi sarkar bhi dal ti hai. Matlab aap ₹100 dalo, sarkar ₹100 dalegi, total ₹200 jama hoga.',
+  },
+  {
+    q: 'CSC wala enrollment ke liye alag "processing fee" maang raha hai. Dun?',
+    a: 'Nahi. Enrollment bilkul free hai. Dena sirf pehla monthly contribution hota hai (umar ke slab ke hisaab se ₹55 se ₹200). Alag se ₹100-200 ki "processing fee" maangna galat hai. Aisa ho toh wahin mana karo aur helpline 1800-3000-3468 par shikayat karo.',
+  },
+  {
+    q: 'Paisa jama kahan hota hai. Kaun sambhaalta hai?',
+    a: 'Pension fund LIC of India manage karti hai; auto-debit ka mandate NPCI system se chalta hai aur IDBI Bank sponsor bank hai. Passbook mein har kist par "NACH Debit" ya "LIC-PMKMY" jaisa description dikhta hai. Yahi pehchan hai ki paisa sahi jagah gaya.',
+  },
+];
+
+function ExternalLinkCard({
+  title,
+  description,
+  href,
+  buttonText,
+  icon,
+  variant = 'primary'
+}: {
+  title: string;
+  description: string;
+  href: string;
+  buttonText: string;
+  icon?: string;
+  variant?: 'primary' | 'secondary' | 'success';
+}) {
+  return (
+    <div className="bg-white dark:bg-gray-800 border-2 border-[var(--color-border)] rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
+      <div className="flex items-start gap-3 mb-3">
+        {icon ? <span className="text-3xl">{icon}</span> : null}
+        <div>
+          <h3 className="font-black text-base text-[var(--color-text)] mb-1">{title}</h3>
+          <p className="text-xs text-[var(--color-text-muted)] leading-relaxed">{description}</p>
+        </div>
+      </div>
+      <CountdownRedirectButton
+        href={href}
+        label={buttonText}
+        seconds={5}
+        variant={variant}
+      />
+    </div>
+  );
+}
+
+export default function PmKisanMaandhanYojanaPension() {
+  return (
+    <>
+      <div className="bg-[var(--color-primary)] py-8">
+        <div className="container-site max-w-3xl">
+          <nav className="text-green-200 text-xs mb-3 flex flex-wrap gap-1 items-center">
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/articles" className="hover:text-white transition-colors">Articles</Link>
+            <span>/</span>
+            <span className="text-white font-bold">Maandhan Yojana</span>
+          </nav>
+          <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">Pension Scheme Guide</span>
+          <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-3">
+            PM Kisan Maandhan Yojana Kya Hai. Ek Jagah Puri ABCD
+          </h1>
+          <div className="flex flex-wrap gap-3 text-xs text-green-200">
+            <span><Link href="/about" className="underline hover:text-white">{AUTHOR_NAME}</Link></span>
+            <span> {fmtDate(PUBLISHED)}</span>
+            <span>Updated: {fmtDate(MODIFIED)}</span>
+            <span>16 min read</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="container-site max-w-3xl py-8">
+
+        <div className="my-6 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-md">
+          <Image
+            src="/images/articles/pm-kisan-maandhan-yojana-pension/maandhan-hero.webp"
+            alt="Elderly farmer receiving pension happily under PM Kisan Maandhan Yojana"
+            width={1200}
+            height={630}
+            className="w-full object-cover"
+            style={{ maxHeight: '420px' }}
+            priority
+          />
+          <p className="text-center text-xs text-[var(--color-text-muted)] py-2 bg-[var(--color-bg-alt)]">
+            Maandhan Yojana. Buzurgi Ki Suraksha
+          </p>
+        </div>
+
+        <section className="mb-8">
+          <SH>60 Saal Ke Baad Kheti Kaun Karega?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ek baat sach batao, jab kisan budha ho jata hai, toh kheti kaun karta hai? Bete shehar chale jaate hain. Zameen banjar pad jaati hai. Aur buzurg kisan ke paas koi income nahi bachti.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Isi problem ko dekh kar sarkar ne <strong>PM Kisan Maandhan Yojana (PM-KMY)</strong> banayi. Iska seedha matlab hai. "kisan ki buzurgi ka sahara".
+          </p>
+
+          <Image
+            src="/images/articles/pm-kisan-maandhan-yojana-pension/elderly-farmer-field.webp"
+            alt="Old farmer working in field worrying about future"
+            width={800}
+            height={450}
+            className="w-full rounded-xl my-4"
+          />
+
+          <DB>
+            <strong>Field Observation:</strong>
+            <p className="text-xs text-gray-700 dark:text-gray-300 mt-2">
+              CSC operators aksar batate hain ki kai aise kisan hain jo 35-40 saal ki umar mein join karte hain, aur 60 ke baad unhe ye pension family par depend na karne ka confidence deti hai. Ek common feedback hai ki ₹3000 gaon ke basic expenses, bijli, paani, dawai, ke liye kaafi helpful hota hai.
+            </p>
+          </DB>
+
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
+            Neeche detail mein diya hai ki ye scheme kya hai, kaun join kar sakta hai, kitna paisa lagta hai, aur kaise apply karna hai. <Link href="/articles/PmKisanMasterGuide2026" className="underline text-green-700 dark:text-green-400">PM Kisan Samman Nidhi</Link> se ye alag scheme hai, isliye dhyan se padho.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>PM Kisan Maandhan Yojana Aakhir Hai Kya?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Seedhi bhasha mein samjhata hoon. Ye ek <strong>pension scheme</strong> hai jo chhote aur seemant (marginal) kisanon ke liye banayi gayi hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Iska concept simple hai:
+          </p>
+          <ul className="list-disc list-inside text-sm text-[var(--color-text-muted)] space-y-2 mb-4">
+            <li>Kisan jawani mein har mahine thoda paisa jama karta hai (₹55 se ₹200 tak)</li>
+            <li>Sarkar utna hi paisa apni taraf se jama karti hai</li>
+            <li>Ye paisa LIC aur pension fund managers manage karte hain</li>
+            <li>Jab kisan 60 saal ka ho jata hai, use har mahine ₹3000 pension milti hai</li>
+            <li>Ye pension umar bhar milti rehti hai</li>
+          </ul>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Matlab aapne jawani mein jo thoda sa paisa daala, buzurgi mein wo aapko har mahine wapas mil raha hai. Aur sarkar ka hissa bhi. Ye koi choti baat nahi hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Kaun Join Kar Sakta Hai? (Eligibility Criteria)</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Har kisan is scheme mein nahi aa sakta. Sarkar ne kuch conditions rakhi hain. Ye sab conditions puri honi chahiye:
+          </p>
+          <div className="bg-green-50 dark:bg-green-900/20 border-2 border-green-500 dark:border-green-700 rounded-xl p-5 mb-6">
+            <p className="text-sm font-black text-green-800 dark:text-green-300 mb-3">
+               Eligible Kaun Hai:
+            </p>
+            <ul className="list-disc list-inside text-xs text-green-800 dark:text-green-300 space-y-2">
+              <li>Umra <strong>18 se 40 saal</strong> ke beech honi chahiye</li>
+              <li>Zameen <strong>2 hectare (5 acre) se kam</strong> honi chahiye</li>
+              <li>Aap <strong>chhote ya seemant kisan</strong> hone chahiye</li>
+              <li>Aadhaar card aur bank account hona zaroori hai</li>
+              <li>Mobile number Aadhaar se link hona chahiye</li>
+            </ul>
+          </div>
+
+          <div className="bg-red-50 dark:bg-red-900/20 border-2 border-red-500 dark:border-red-700 rounded-xl p-5">
+            <p className="text-sm font-black text-red-800 dark:text-red-300 mb-3">
+               Kaun Join Nahi Kar Sakta:
+            </p>
+            <ul className="list-disc list-inside text-xs text-red-800 dark:text-red-300 space-y-2">
+              <li>Jo log <strong>income tax</strong> dete hain</li>
+              <li>Jo <strong>NPS (National Pension System)</strong> ya <strong>EPS (Employees Pension Scheme)</strong> ke member hain</li>
+              <li>Jo <strong>ESIC</strong> ke under aate hain</li>
+              <li>Jinke paas <strong>2 hectare se zyada</strong> zameen hai</li>
+              <li>Jo <strong>government employee</strong> hain</li>
+              <li>Jinki umra <strong>40 saal se zyada</strong> hai</li>
+            </ul>
+          </div>
+
+          <Image
+            src="/images/articles/pm-kisan-maandhan-yojana-pension/eligibility-check.webp"
+            alt="Farmer checking eligibility for Maandhan Yojana"
+            width={800}
+            height={450}
+            className="w-full rounded-xl my-4"
+          />
+
+          <IB>
+            <strong>Pehle Ye Samajh Lo:</strong> Agar aap <Link href="/articles/PmKisanBeneficiaryList2026" className="underline text-green-700 dark:text-green-400">PM Kisan Samman Nidhi</Link> ke beneficiary hain, toh aap automatically Maandhan Yojana ke liye bhi eligible hain. Dono schemes ek saath chal sakti hain.
+          </IB>
+        </section>
+
+        <section className="mb-8">
+          <SH>Har Mahine Kitna Paisa Dena Padta Hai? (Mandhan Chart)</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Ye sabse important sawal hai. Contribution aapki umra par depend karta hai. Jitni jaldi join karoge, utna kam paisa lagega aur utni zyada pension milegi.
+          </p>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Entry Age</th>
+                  <th className="p-3 text-left">Kisan Ka Contribution</th>
+                  <th className="p-3 text-left">Sarkar Ka Contribution</th>
+                  <th className="p-3 text-left">Total Monthly</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['18 saal', '₹55', '₹55', '₹110'],
+                  ['25 saal', '₹80', '₹80', '₹160'],
+                  ['30 saal', '₹105', '₹105', '₹210'],
+                  ['35 saal', '₹150', '₹150', '₹300'],
+                  ['40 saal', '₹200', '₹200', '₹400'],
+                ].map(([age, farmer, govt, total], i) => (
+                  <tr key={age} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{age}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{farmer}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-green-600 dark:text-green-400 font-bold">{govt}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text)] font-bold">{total}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <WB>
+            <strong>Example Se Samjho:</strong>
+            <p className="text-xs text-[var(--color-text-muted)] mt-2">
+              Agar aapne 25 saal ki umar mein join kiya, toh aapko har mahine ₹80 dena hai. Sarkar bhi ₹80 dalegi. 35 saal tak (60 saal ki umar tak) aap total ₹33,600 jama karoge. Lekin 60 ke baad aapko har mahine ₹3000 milenge. Lagbhag 12 mahine mein hi aapka jama kiya hua paisa wapas aa jayega. Uske baad jo bhi milega wo pure profit hai.
+            </p>
+          </WB>
+
+          <Image
+            src="/images/articles/pm-kisan-maandhan-yojana-pension/contribution-chart.webp"
+            alt="Chart showing monthly contribution based on age"
+            width={800}
+            height={600}
+            className="w-full rounded-xl my-6"
+          />
+        </section>
+
+        <section className="mb-8">
+          <SH>Apply Kaise Karein? (3 Tareeke)</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Apply karne ke 3 tareeke hain. Jo aapko aasan lage wo chuno:
+          </p>
+
+          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Method 1: CSC Center Se (Sabse Aasan)</h3>
+          <StepList>
+            <SI n={1}>Nazdiki <Link href="/articles/PmKisanCscRegistrationCharges" className="underline text-green-700 dark:text-green-400">apne gaon ke paas wale CSC</Link> par jao.</SI>
+            <SI n={2}>Aadhaar card, bank passbook, aur passport size photo le jao.</SI>
+            <SI n={3}>CSC operator ko bolo "PM Kisan Maandhan Yojana mein enroll karna hai".</SI>
+            <SI n={4}>Wo aapki details portal par dalega.</SI>
+            <SI n={5}>Aapka contribution auto-debit ke liye bank account link hoga.</SI>
+            <SI n={6}>Ek acknowledgement slip milegi. Sambhal kar rakho.</SI>
+          </StepList>
+
+          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Method 2: Bank Branch Se</h3>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Agar CSC door hai, toh apne bank branch chale jao. Wahan bhi ye facility available hai. Form milega, bharo, submit karo.
+          </p>
+
+          <h3 className="font-black text-[var(--color-text)] text-base mb-3 mt-6">Method 3: Online (Self Service)</h3>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Tech-savvy ho toh <strong>maandhan.in</strong> website par jakar khud apply kar sakte ho. Lekin ismein thodi technical knowledge chahiye.
+          </p>
+
+          <Image
+            src="/images/articles/pm-kisan-maandhan-yojana-pension/csc-enrollment.webp"
+            alt="Farmer enrolling in Maandhan Yojana at CSC center"
+            width={800}
+            height={450}
+            className="w-full rounded-xl my-4"
+          />
+        </section>
+
+        <section className="mb-8">
+          <SH>Documents Ki List</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Apply karne se pehle ye documents ready rakho:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              { doc: 'Aadhaar Card', note: 'Original + photocopy. Mobile number link hona chahiye.' },
+              { doc: 'Bank Passbook', note: 'Jis account se monthly contribution katega.' },
+              { doc: 'Passport Size Photo', note: '2-3 photos le jao, kaam aa jaati hain.' },
+              { doc: 'Mobile Phone', note: 'OTP ke liye. Aadhaar wala number.' },
+              { doc: 'Land Record (Khatauni)', note: 'Ye prove karta hai ki aap chhote kisan ho.' },
+              { doc: 'Age Proof', note: 'Aadhaar mein DOB likha hai, wahi kaafi hai.' },
+            ].map(({ doc, note }) => (
+              <div key={doc} className="p-3 bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl">
+                <p className="font-black text-sm text-[var(--color-text)] mb-1">{doc}</p>
+                <p className="text-xs text-[var(--color-text-muted)]">{note}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>60 Saal Ke Baad Kya Milega? (Full Calculation)</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ab pura hisaab dekhte hain:
+          </p>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Joining Age</th>
+                  <th className="p-3 text-left">Monthly Payment</th>
+                  <th className="p-3 text-left">Total Investment (60 tak)</th>
+                  <th className="p-3 text-left">Pension (Monthly)</th>
+                  <th className="p-3 text-left">Break-Even</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['18 saal', '₹55', '₹27,720', '₹3,000', '10 mahine'],
+                  ['25 saal', '₹80', '₹33,600', '₹3,000', '12 mahine'],
+                  ['30 saal', '₹105', '₹37,800', '₹3,000', '13 mahine'],
+                  ['35 saal', '₹150', '₹45,000', '₹3,000', '15 mahine'],
+                  ['40 saal', '₹200', '₹48,000', '₹3,000', '16 mahine'],
+                ].map(([age, monthly, total, pension, breakeven], i) => (
+                  <tr key={age} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{age}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{monthly}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{total}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-green-600 dark:text-green-400 font-bold">{pension}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-amber-600 dark:text-amber-400">{breakeven}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mt-4">
+            Jitna paisa tumne daala, wo 1-1.5 saal mein wapas aa jata hai. Uske baad jo bhi milega wo pure bonus hai. Aur pension maut tak milti rehti hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Agar 60 Saal Se Pehle Maut Ho Jaye Toh?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ye sawal bahut logon ke mann mein aata hai. Aur iska jawab bhi clear hai:
+          </p>
+          <div className="space-y-3">
+            <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 rounded-r-xl">
+              <p className="text-sm text-blue-800 dark:text-blue-300">
+                <strong>Kisan Ki Maut:</strong> Agar kisan ki maut 60 saal se pehle ho jaye, toh uski <strong>patni ko 50% pension</strong> (₹1500 har mahine) milti hai. Ye pension bhi umar bhar milti rehti hai.
+              </p>
+            </div>
+            <div className="bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500 p-4 rounded-r-xl">
+              <p className="text-sm text-purple-800 dark:text-purple-300">
+                <strong> Dono Ki Maut:</strong> Agar kisan aur patni dono ki maut ho jaye, toh <strong>nominee ko pura paisa wapas</strong> milta hai jo jama hua tha. With interest.
+              </p>
+            </div>
+            <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-4 rounded-r-xl">
+              <p className="text-sm text-green-800 dark:text-green-300">
+                <strong>60 Ke Baad Maut:</strong> Agar pension shuru hone ke baad kisan ki maut ho jaye, toh <strong>patni ko 50% pension</strong> (₹1500 har mahine) umar bhar milti rehti hai. Official documents ke mutabik, pension corpus spouse ko family pension ke roop mein jaari rehta hai.
+              </p>
+            </div>
+          </div>
+          <Image
+            src="/images/articles/pm-kisan-maandhan-yojana-pension/family-protection.webp"
+            alt="Family protected under Maandhan Yojana even after farmer death"
+            width={800}
+            height={450}
+            className="w-full rounded-xl my-4"
+          />
+        </section>
+
+        <section className="mb-8">
+          <SH>Common Problems Aur Solutions</SH>
+          <div className="space-y-3">
+            {[
+              {
+                problem: 'Monthly contribution auto-debit nahi ho raha',
+                solution: 'Bank account mein sufficient balance rakho. Agar account band ho gaya toh naya account link karo.'
+              },
+              {
+                problem: 'Naam ya details galat daal diye',
+                solution: 'CSC center par jakar correction karwao. Enrollment ke waqt hi Aadhaar se milaan kar lena sabse sasta bachav hai.'
+              },
+              {
+                problem: '2-3 mahine contribution miss ho gaya',
+                solution: 'Jitni jaldi ho sake bakaya jama karo. Pehla mahina bina fee ke regularize hota hai; uske baad savings-bank rate jitna byaj lagta hai. 6 mahine se zyada kheenchne par account dormant ho jata hai.'
+              },
+              {
+                problem: 'State change ho gaya (ek state se dusre)',
+                solution: 'Naye state ke CSC center par jakar transfer karwa lo. Process free hai.'
+              },
+            ].map(({ problem, solution }, i) => (
+              <div key={i} className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-xl p-4">
+                <p className="font-black text-sm text-red-600 dark:text-red-400 mb-2"> {problem}</p>
+                <p className="text-xs text-green-700 dark:text-green-400"><strong>Iska Hal:</strong> {solution}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>PM Kisan Samman Nidhi Se Kya Farq Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-4">
+            Bahut log confuse ho jaate hain. Dono schemes alag hain. Dekho farq:
+          </p>
+          <div className="overflow-x-auto my-4 rounded-xl border border-[var(--color-border)] shadow-sm">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-[var(--color-primary)] text-white">
+                  <th className="p-3 text-left">Feature</th>
+                  <th className="p-3 text-left">PM Kisan Samman Nidhi</th>
+                  <th className="p-3 text-left">PM Kisan Maandhan</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ['Type', 'Direct Benefit Transfer', 'Pension Scheme'],
+                  ['Amount', '₹6000 saal ka', '₹3000 har mahine (60 ke baad)'],
+                  ['Kisko Milega', 'Sabhi chhote kisan', 'Jo join karein'],
+                  ['Age Limit', 'Koi nahi', '18-40 saal join karne ke liye'],
+                  ['Contribution', 'Koi nahi (free)', '₹55-₹200 har mahine'],
+                  ['Duration', 'Jab tak eligible', 'Umar bhar pension'],
+                ].map(([feature, pmkisan, maandhan], i) => (
+                  <tr key={feature} className={i % 2 === 0 ? 'bg-[var(--color-card)]' : 'bg-[var(--color-bg-alt)]'}>
+                    <td className="p-3 border-b border-[var(--color-border)] font-medium text-xs text-[var(--color-text)]">{feature}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-[var(--color-text-muted)]">{pmkisan}</td>
+                    <td className="p-3 border-b border-[var(--color-border)] text-xs text-green-600 dark:text-green-400 font-bold">{maandhan}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <IB>
+            <strong>Best Strategy:</strong> Dono schemes ek saath join karo. PM Kisan se abhi ₹6000 saal ka milega, aur Maandhan se 60 ke baad ₹3000 har mahine. Dono milakar ek strong financial safety net banega.
+          </IB>
+        </section>
+
+        <section className="mb-8">
+          <SH>Ye Scheme Kahan Lagu Hai?</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Poore desh mein. Ye Central Sector Scheme hai, isliye niyam, contribution
+            aur pension har state mein same hain. Enrollment ka rasta bhi har jagah wahi
+            hai: nazdeeki CSC center ya maandhan.in portal. Farq bas itna padta hai ki
+            aapke ilake mein CSC kitna paas hai aur operator ko is scheme ka process
+            kitna aata hai. Agar pehla CSC mana kar de ya confuse ho, doosre center par
+            try karo — ye aam experience hai, scheme ki kami nahi.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Real Challenges Jo Samajhna Zaroori Hain</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Scheme achhi hai, lekin kuch practical challenges bhi hain:
+          </p>
+          <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl mb-3">
+            <p className="text-sm text-amber-800 dark:text-amber-300">
+              <strong>CSC Availability:</strong> Kuch remote areas mein CSC centers door hain. Travel karna padta hai, jo chhote farmers ke liye extra kharcha hai.
+            </p>
+          </div>
+          <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl mb-3">
+            <p className="text-sm text-amber-800 dark:text-amber-300">
+              <strong>Processing Time:</strong> 60 saal hone ke baad pension start hone mein 2-3 mahine lag sakte hain. Documentation complete hona zaroori hai.
+            </p>
+          </div>
+          <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl mb-3">
+            <p className="text-sm text-amber-800 dark:text-amber-300">
+              <strong>Missed Contributions:</strong> Agar monthly paisa nahi diya toh baad mein penalty ke saath bharna padta hai. Consistent payment zaroori hai.
+            </p>
+          </div>
+          <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-4 rounded-r-xl">
+            <p className="text-sm text-amber-800 dark:text-amber-300">
+              <strong>Details Ki Galti Mehngi Padti Hai:</strong> Naam, DOB ya bank details galat chali gayi to correction ke liye CSC ke chakkar lagte hain. Enrollment ke waqt hi Aadhaar se har detail milaan kar lo. Yahi sabse sasta bachav hai.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <SH>Har Mahine Ka Paisa Katta Kaise Hai. Auto-Debit Ka Sach</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Enrollment ke waqt aap ek NACH auto-debit mandate sign karte ho. Iska matlab: har mahine aapka
+            share aapke bank account se apne aap kat kar pension fund mein chala jaata hai. Fund LIC of India
+            manage karti hai, aur IDBI Bank sponsor bank ke taur par NPCI ke through ye debit chalata hai.
+            Passbook mein <strong>"NACH Debit"</strong> ya <strong>"LIC-PMKMY"</strong> jaisi entry dikhe toh
+            samajh jao system theek chal raha hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Account mein balance nahi tha aur debit fail ho gaya? Ghabrao mat. LIC agle payment cycle mein
+            demand dobara raise karti hai. Payment cycles har mahine <strong>1, 11 aur 21 tareekh</strong> ko
+            hote hain (holiday ho toh agla working day). Haan, lagatar miss hone par account default mein jaata
+            hai aur baad mein penalty ke saath regularize karna padta hai. Isliye kist wale hafte account mein
+            balance rakho. Auto-debit ka poora mechanism{' '}
+            <Link href="/maandhan/pm-kisan-maandhan-auto-debit-poora-sach" className="underline text-green-700 dark:text-green-400">alag guide</Link>{' '}
+            mein detail se likha hai.
+          </p>
+          <WB>
+            <strong>Enrollment Free Hai. Fee Fraud Se Bacho:</strong> Kuch CSC operators "processing fee" ya
+            "service charge" ke naam par ₹100–200 extra maang lete hain. Enrollment bilkul free hai. Dena sirf
+            pehla monthly contribution hota hai (₹55–₹200, umar ke hisaab se). Alag fee maange toh wahin mana
+            karo aur helpline <strong>1800-3000-3468</strong> (Mon–Sat, 9:30 AM–6 PM) par shikayat karo.
+          </WB>
+        </section>
+
+        <section className="mb-8">
+          <SH>Nominee Ka Naam, 15 Minute Ka Kaam, Saalon Ki Bachat</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Upar family pension ke rules padhe. Par wo sab kaagaz par tabhi smooth chalta hai jab nomination
+            updated ho. Jinke nominee ka naam register tha, unke parivar ka settlement 1–2 mahine mein ho jaata
+            hai; jinke record mein nominee tha hi nahi ya galat tha, wahi case 6–12 mahine tak ghisatta hai —
+            court se legal heir certificate tak baat pahunch jaati hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Isliye aaj hi check karo: CSC par jaakar apni PMKMY nomination dekho. Shaadi hui, nominee guzar
+            gaye, ya naam ki spelling galat hai. To update karwao, ye free hai aur 15 minute ka kaam hai.
+            Surviving spouse ke ₹1,500 monthly family pension ka process bhi automatic nahi hota. Claim karna
+            padta hai. Poore rules{' '}
+            <Link href="/maandhan/family-pension-rules" className="underline text-green-700 dark:text-green-400">family pension guide</Link>{' '}
+            mein hain.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Aur ek baat jo bahut kam log jaante hain: 60 se pehle scheme chhodne par sirf <em>aapka</em> jama
+            hissa byaj ke saath wapas milta hai. Sarkar ka daala hua barabar ka hissa wapas nahi milta. Isliye
+            "kuch saal chala kar chhod denge" wali soch mein asli nuksan aapka hi hai.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Kuch Galat Fahmiyan Jo Door Karni Zaroori Hain</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Kuch log sochte hain ki ye scheme fraud hai ya pension kabhi nahi milegi. Jabki is scheme ko LIC aur government jointly manage karti hain, aur ab tak lakhon kisanon ko regular pension mil rahi hai.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ek aur common confusion hai ki ₹3000 bahut kam hai. Lekin gaon ke expenses ke hisaab se ye amount bijli, paani, aur dawai ke liye kaafi helpful hota hai. Aur ye har mahine guaranteed milega.
+          </p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed">
+            Kuch log sochte hain ki sarkar baad mein rules badal degi. Lekin ye ek contractual scheme hai. Ek baar join kiya toh terms lock ho jaate hain.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <SH>Aage Kya Padhein. Topic-Wise Deep Guides</SH>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-3">
+            Ye page poori scheme ki ABCD hai. Har hisse ki detail alag guide mein hai. Apne kaam ki uthao:
+          </p>
+          <ul className="list-disc pl-5 space-y-2 text-sm text-[var(--color-text)]">
+            <li><Link href="/maandhan/pm-kisan-maandhan-eligibility-documents" className="underline text-green-700 dark:text-green-400">Eligibility aur documents</Link> — kaun join kar sakta hai, kya kagaz lagenge.</li>
+            <li><Link href="/maandhan/pm-kisan-maandhan-age-wise-contribution-chart-2026" className="underline text-green-700 dark:text-green-400">Age-wise contribution chart</Link>, apni umar ka exact monthly amount.</li>
+            <li><Link href="/maandhan/pm-kisan-maandhan-pension-calculator" className="underline text-green-700 dark:text-green-400">Pension calculator</Link>, total jama vs pension ka hisaab.</li>
+            <li><Link href="/maandhan/pm-kisan-maandhan-registration-2026" className="underline text-green-700 dark:text-green-400">Registration ka step-by-step process</Link>.</li>
+            <li><Link href="/maandhan/pm-kisan-maandhan-status-check-online" className="underline text-green-700 dark:text-green-400">Status check</Link> aur <Link href="/maandhan/pm-kisan-maandhan-pension-card-download" className="underline text-green-700 dark:text-green-400">pension card download</Link>.</li>
+            <li><Link href="/maandhan/pm-kisan-maandhan-withdrawal-refund-rules" className="underline text-green-700 dark:text-green-400">Beech mein nikalna ho to refund rules</Link> aur <Link href="/maandhan/pm-kisan-maandhan-vs-atal-pension-yojana" className="underline text-green-700 dark:text-green-400">Maandhan vs Atal Pension</Link> comparison.</li>
+            <li>Poori list ek jagah: <Link href="/maandhan" className="underline text-green-700 dark:text-green-400">Maandhan hub page</Link>.</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
+            Official Links aur Resources
+          </h2>
+          <div className="space-y-4">
+            <ExternalLinkCard
+              title="Official Maandhan Portal"
+              description="Yahan se online apply karein, apna status check karein, aur scheme ki puri jaankari lein."
+              href="https://maandhan.in"
+              buttonText="Official Portal Par Jayein"
+              variant="primary"
+            />
+            <ExternalLinkCard
+              title="PM Kisan Samman Nidhi"
+              description="PM Kisan ki beneficiary list check karein aur eKYC complete karein."
+              href="https://pmkisan.gov.in"
+              buttonText="PM Kisan Portal"
+              variant="secondary"
+            />
+            <ExternalLinkCard
+              title="CSC Center Locator"
+              description="Nazdiki CSC center dhoondhein jahan jakar aap Maandhan Yojana mein enroll kar sakte hain."
+              href="https://find.csc.gov.in"
+              buttonText="CSC Dhoondhein"
+              icon=""
+              variant="success"
+            />
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-xl font-black text-[var(--color-text)] mb-4 pb-2 border-b-2 border-[var(--color-border)]">
+            Pension Yojana. Doubts Aur Unke Jawab
+          </h2>
+          <FAQBlock faqs={FAQS_DATA} variant="cards" caption="PM Kisan Maandhan Yojana FAQ" />
+        </section>
+
+        <RelatedArticles articles={RELATED} />
+        <AuthorBox modified={MODIFIED} bioKey="PmKisanMaandhanYojanaPension" />
+        <BottomNav extraLinks={[
+          { href: '/articles/PmKisanMasterGuide2026', l: ' Master Guide' },
+          { href: '/articles/PmKisanBeneficiaryList2026', l: 'Beneficiary List' },
+          { href: '/articles/PmfbyCropInsurance2026', l: 'PMFBY Insurance' },
+        ]} />
+        <Disclaimer k="PmKisanMaandhanYojanaPension" />
+      </div>
+    </>
+  );
+}
